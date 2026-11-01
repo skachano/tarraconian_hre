@@ -1,0 +1,286 @@
+﻿##############################################################################
+# Tarraconian Chancellery - Rank & Title Prefix Flavorization
+#
+# Targets rulers/realms using name_list_franconian (Tarraconian ID 316,
+# Alpine-Tarraconian ID 337, Croato-Tarraconian ID 345, Lothringian ID 218).
+# With top_liege = yes, all vassal titles inside the Tarraconian-led HRE
+# adopt the Imperial Tarraconian chancellery rank prefixes.
+##############################################################################
+
+# === EMPIRE TIER ===
+emperor_tarraconian_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government }
+}
+
+emperor_tarraconian_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government }
+}
+
+empire_tarraconian = {
+	type = title
+	tier = empire
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government }
+}
+
+# === KINGDOM TIER ===
+king_tarraconian_admin_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		only_vassals = yes
+	}
+}
+
+king_tarraconian_admin_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		only_vassals = yes
+	}
+}
+
+kingdom_tarraconian_admin = {
+	type = title
+	tier = kingdom
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+king_tarraconian_feudal_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 440
+	name_lists = { name_list_franconian }
+	governments = { feudal_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+king_tarraconian_feudal_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 440
+	name_lists = { name_list_franconian }
+	governments = { feudal_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+kingdom_tarraconian_feudal = {
+	type = title
+	tier = kingdom
+	priority = 440
+	name_lists = { name_list_franconian }
+	governments = { feudal_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+# === DUCHY TIER (GOVERNORSHIPS & ARCHDIOCESES) ===
+duke_tarraconian_admin_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+duke_tarraconian_admin_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+duchy_tarraconian_admin = {
+	type = title
+	tier = duchy
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+duke_tarraconian_ecclesiastical_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		spouse_takes_title = no
+	}
+}
+
+duke_tarraconian_ecclesiastical_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		spouse_takes_title = no
+	}
+}
+
+duchy_tarraconian_ecclesiastical = {
+	type = title
+	tier = duchy
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+# === COUNTY TIER (MAGISTRACIES & PRINCE-BISHOPRICS) ===
+count_tarraconian_admin_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+count_tarraconian_admin_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government clan_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+county_tarraconian_admin = {
+	type = title
+	tier = county
+	priority = 450
+	name_lists = { name_list_franconian }
+	governments = { administrative_government feudal_government republic_government clan_government tribal_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}
+
+count_tarraconian_ecclesiastical_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		spouse_takes_title = no
+	}
+}
+
+count_tarraconian_ecclesiastical_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+		spouse_takes_title = no
+	}
+}
+
+county_tarraconian_ecclesiastical = {
+	type = title
+	tier = county
+	priority = 460
+	name_lists = { name_list_franconian }
+	governments = { ecclesiastical_government theocracy_government }
+	flavourization_rules = {
+		top_liege = yes
+		ignore_top_liege_government = yes
+	}
+}

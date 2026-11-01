@@ -1,0 +1,46 @@
+﻿##############################################################################
+# Tarraconian Chancellery - Decisions
+##############################################################################
+
+tarr_chancellery_ordinance_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = major
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+	}
+
+	is_valid_showing_failures_only = {
+		is_available = yes
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { has_global_variable = tarr_culture } }
+			set_global_variable = {
+				name = tarr_culture
+				value = root.culture
+			}
+		}
+		set_global_variable = {
+			name = tarr_active
+			value = yes
+		}
+		custom_tooltip = tarr_chancellery_ordinance_decision_effect_tt
+		hidden_effect = {
+			tarr_refresh_all_titles_effect = yes
+			trigger_event = tarr_chancellery.0001
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

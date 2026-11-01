@@ -1,0 +1,67 @@
+﻿namespace = tarr_chancellery
+
+##############################################################################
+# tarr_chancellery.0001 - Imperial Tarraconian Chancellery Ordinance Menu
+##############################################################################
+tarr_chancellery.0001 = {
+	type = character_event
+	title = tarr_chancellery.0001.t
+	desc = tarr_chancellery.0001.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	# Option A (Default): 1059 Historical Resolutions (HRE + Tarraconian Scope)
+	option = {
+		name = tarr_chancellery.0001.a
+		custom_tooltip = tarr_chancellery.0001.a.tt
+		hidden_effect = {
+			set_global_variable = { name = tarr_active value = yes }
+			set_global_variable = { name = tarr_culture value = root.culture }
+			remove_global_variable = tarr_direct_mode
+			remove_global_variable = tarr_scope_all
+			tarr_refresh_all_titles_effect = yes
+		}
+	}
+
+	# Option B: 1059 Historical Resolutions (All 44 De Jure Kingdoms Globally)
+	option = {
+		name = tarr_chancellery.0001.b
+		custom_tooltip = tarr_chancellery.0001.b.tt
+		hidden_effect = {
+			set_global_variable = { name = tarr_active value = yes }
+			set_global_variable = { name = tarr_culture value = root.culture }
+			remove_global_variable = tarr_direct_mode
+			set_global_variable = { name = tarr_scope_all value = yes }
+			tarr_refresh_all_titles_effect = yes
+		}
+	}
+
+	# Option C: Direct Toponymic Adaptations (HRE + Tarraconian Scope)
+	option = {
+		name = tarr_chancellery.0001.c
+		custom_tooltip = tarr_chancellery.0001.c.tt
+		hidden_effect = {
+			set_global_variable = { name = tarr_active value = yes }
+			set_global_variable = { name = tarr_culture value = root.culture }
+			set_global_variable = { name = tarr_direct_mode value = yes }
+			remove_global_variable = tarr_scope_all
+			tarr_refresh_all_titles_effect = yes
+		}
+	}
+
+	# Option D: Repeal Ordinance & Reset All Renamed Titles
+	option = {
+		name = tarr_chancellery.0001.d
+		custom_tooltip = tarr_chancellery.0001.d.tt
+		hidden_effect = {
+			remove_global_variable = tarr_active
+			remove_global_variable = tarr_direct_mode
+			remove_global_variable = tarr_scope_all
+			tarr_refresh_all_titles_effect = yes
+		}
+	}
+}

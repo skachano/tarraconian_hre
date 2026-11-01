@@ -1,0 +1,61 @@
+﻿##############################################################################
+# Tarraconian Chancellery - scripted triggers
+#
+# Global variables used by the mod:
+#   tarr_active               - the chancellery naming system is switched on
+#   tarr_culture              - the culture treated as "Tarraconian"
+#                               (dynamic cultures have no static key, so it is
+#                               stored when the player issues the ordinance)
+#   tarr_direct_mode          - use direct adaptations instead of the default
+#                               1059 historical resolutions
+#   tarr_scope_culture_only   - rename only Tarraconian-culture/held titles
+#   tarr_scope_all            - rename every title in the list
+#   (neither scope flag)      - default: HRE titles + Tarraconian titles
+##############################################################################
+
+# Scope: character. The character is the Emperor or sits inside the HRE.
+tarr_in_hre_trigger = {
+	OR = {
+		has_title = title:e_hre
+		top_liege ?= { has_title = title:e_hre }
+	}
+}
+
+# Scope: character. The character belongs to the designated Tarraconian culture.
+tarr_is_tarraconian_char_trigger = {
+	has_global_variable = tarr_culture
+	culture = global_var:tarr_culture
+}
+
+# Scope: county-tier landed title.
+tarr_county_qualifies_trigger = {
+	OR = {
+		has_global_variable = tarr_scope_all
+		culture ?= { this = global_var:tarr_culture }
+		holder ?= { tarr_is_tarraconian_char_trigger = yes }
+		holder ?= { tarr_in_hre_trigger = yes }
+	}
+}
+
+# Scope: any landed title (county, duchy, kingdom, archdiocese, head of faith).
+tarr_title_qualifies_trigger = {
+	trigger_if = {
+		limit = { tier = tier_county }
+		tarr_county_qualifies_trigger = yes
+	}
+	trigger_else_if = {
+		limit = { exists = holder }
+		OR = {
+			has_global_variable = tarr_scope_all
+			holder = { tarr_is_tarraconian_char_trigger = yes }
+			holder = { tarr_in_hre_trigger = yes }
+		}
+	}
+	trigger_else = {
+		# Unheld (de jure only) titles follow their capital county
+		OR = {
+			has_global_variable = tarr_scope_all
+			title_capital_county ?= { tarr_county_qualifies_trigger = yes }
+		}
+	}
+}

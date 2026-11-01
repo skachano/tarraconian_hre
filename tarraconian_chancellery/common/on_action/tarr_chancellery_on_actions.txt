@@ -1,0 +1,14 @@
+﻿##############################################################################
+# Tarraconian Chancellery - on_actions
+# Appends to the vanilla yearly_global_pulse (fires every 1 January) so that
+# titles entering/leaving the HRE or changing culture are renamed/reverted.
+##############################################################################
+
+yearly_global_pulse = {
+	on_actions = { tarr_chancellery_yearly_refresh }
+}
+
+tarr_chancellery_yearly_refresh = {
+	trigger = { has_global_variable = tarr_active }
+	effect = { tarr_refresh_all_titles_effect = yes }
+}
