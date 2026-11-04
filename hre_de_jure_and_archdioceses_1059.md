@@ -2144,7 +2144,7 @@
   * **[HRE]** **Pudozh** (`c_pudozh`) — *Tarraconian: **Magistrat van Pudôsch***
 * **Duchy of Chudia (Zavolochye)** (`d_chudia`) — *3/3 in HRE*
   * **[HRE]** **Kargopol** (`c_kargopol`) — *Tarraconian: **Magistrat van Kargopôl** (`[1142 Historical: Magistrat van Lâtscha-Sê]`)*
-  * **[HRE]** **Kirillov** (`c_kirillov`) — *Tarraconian: **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Dwinîtze]`)*
+  * **[HRE]** **Kirillov** (`c_kirillov`) — *Tarraconian: **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Pelschme]`)*
   * **[HRE]** **Totma** (`c_totma`) — *Tarraconian: **Magistrat van Tôtma***
 * **Duchy of Vologda** (`d_vologda`) — *4/4 in HRE*
   * **[HRE]** **Vologda** (`c_vologda`) — *Tarraconian: **Magistrat van Wologde***

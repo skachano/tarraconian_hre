@@ -2178,7 +2178,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_pudozh` (**[HRE]** Pudozh) $\rightarrow$ **Magistrat van Pudôsch**
 * **Duchy of Chudia (Zavolochye)** (`d_chudia`) $\rightarrow$ **Gubernat van Tschûdjen**
   * `c_kargopol` (**[HRE]** Kargopol) $\rightarrow$ **Magistrat van Kargopôl** (`[1142 Historical: Magistrat van Lâtsche-Sê]`)
-  * `c_kirillov` (**[HRE]** Kirillov) $\rightarrow$ **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Dwinîtze]`)
+  * `c_kirillov` (**[HRE]** Kirillov) $\rightarrow$ **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Pelschme]`)
   * `c_totma` (**[HRE]** Totma) $\rightarrow$ **Magistrat van Tôtme**
 * **Duchy of Vologda** (`d_vologda`) $\rightarrow$ **Gubernat van Wologde**
   * `c_vologda` (**[HRE]** Vologda) $\rightarrow$ **Magistrat van Wologde**
