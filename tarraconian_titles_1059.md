@@ -868,15 +868,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Grodno** (`d_grodno`) $\rightarrow$ **Gubernat van Garten** *(Historical MHG/Teutonic *Garten* for Grodno!)*
   * `c_grodno` (Gardinas) $\rightarrow$ **Magistrat van Garten** *(or **Grodno**)*
-  * `c_volkovysk` (Volkovysk) $\rightarrow$ **Magistrat van Wolkowîtzich**
-  * `c_novogrudok` (Naugardukas) $\rightarrow$ **Magistrat van Nûwenburch-in-Litouwen** *(or **Nowogrudok**)*
+  * `c_volkovysk` (Volkovysk) $\rightarrow$ **Magistrat van der Rôse** *(Option B: **Rôse**, ancient Neman tributary)*
+  * `c_novogrudok` (Naugardukas) $\rightarrow$ **Magistrat van der Plîse** *(Option B: **Plîse**, Baltic hydronym *Plesė*)*
 * **Duchy of Pinsk** (`d_pinsk`) $\rightarrow$ **Gubernat van Pîntzich**
   * `c_pinsk` (Pinsk) $\rightarrow$ **Magistrat van Pîntzich**
   * `c_slutsk` (Slutsk) $\rightarrow$ **Magistrat van Slûtzich**
   * `c_kletsk` (Kletsk) $\rightarrow$ **Magistrat van Klêtzich**
   * `c_babruysk` (Babruiskas) $\rightarrow$ **Magistrat van Babrûitzich** *(or calqued **Bîverbach** from *Babruyka* "Beaver River", or sub-barony **Rêtschitz**)*
-* **Duchy of Minsk** (`d_minsk`) $\rightarrow$ **Gubernat van Mîntzich**
-  * `c_minsk` (Minsk) $\rightarrow$ **Magistrat van Mîntzich**
+* **Duchy of Minsk** (`d_minsk`) $\rightarrow$ **Gubernat van Mêne**
+  * `c_minsk` (Minsk) $\rightarrow$ **Magistrat van Mêne**
   * `c_orsha` (Orsha) $\rightarrow$ **Magistrat van Orsche**
 * **Duchy of Polotsk** (`d_polotsk`) $\rightarrow$ **Gubernat van Polôtzich**
   * `c_polotsk` (Polotsk) $\rightarrow$ **Magistrat van Polôtzich**

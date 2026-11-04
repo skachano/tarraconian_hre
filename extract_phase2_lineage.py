@@ -36,6 +36,8 @@ import sys
 import time
 from pathlib import Path
 
+from historical_attestation_db import resolve_county_attestation
+
 
 def log(msg: str):
     print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
@@ -295,36 +297,9 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             is_cadet_seat = True
             matching_cadet_house = current_house
 
-    # 6. Strict Toponym-First 5-Tier Classification Engine
-    # Priority order:
-    # Tier 5 (Colonial Mismatch) -> Tier 4 (OTL Post-867 Foundation) -> Tier 3 (Hydronym) -> Tier 1 (Pre-867 Historical)
-    # Tier 2 is reserved strictly for legitimate Option C in-game foundations where no pre-867 center or hydronym exists.
-    
-    tier = 1
-    tier_label = "Tier 1: Pre-867 Historical / Antiquity"
-    tier_reason = "Attested pre-867 Classical, Celtic, Roman, or Early Medieval center"
-
-    # Known post-867 foundations, high-medieval castles, or colonial exonyms previously masked under Tier 2
-    EXTRA_POST_867 = {
-        'c_bergh': (1077, "Burg Berge at Altenberg founded 1060–1077 AD; pre-867 center is Carolingian palatinate Kaiserswerth"),
-        'c_luxembourg': (963, "Castle Lucilinburhuc acquired 963 AD; comital title 1083; pre-867 centers are Echternach/Arlon"),
-        'c_bouillon': (988, "Castrum Bullionis first attested 988 AD; high medieval castle"),
-        'c_namur': (907, "Namur castrum first attested 907 AD; 10th-c. comital center"),
-        'c_zagreb': (1094, "Diocese of Zagreb founded 1094 AD; Roman city of Sisak/Andautonia"),
-        'c_aalborg': (1040, "Alabu first attested on coins of Harthacnut 1040 AD"),
-        'c_metzovo': (1380, "Metsovo first attested 1380 AD in Chronicle of Ioannina"),
-        'c_lviv': (1256, "Lviv founded c. 1256 by Danylo of Halych; pre-867 center is princely capital Zvenyhorod / Swenigorot"),
-        'c_montpellier': (985, "Montpellier first attested 985 AD; pre-867 center is Roman episcopal city of Maguelone"),
-        'c_tinmallal': (1124, "Tinmel founded 1124 AD by Ibn Tumart"),
-        'c_galati': (1445, "Galați first attested 1445 AD; pre-867 center is Roman/Byzantine fortress of Dinogetia"),
-        'c_bugeac': (1550, "Bucak is Ottoman 16th-c. exonym; ancient classical hydronym is Tyras / Nistru"),
-        'c_dorohoi': (1408, "Dorohoi first attested 1408 AD; regional center on Jijia river"),
-        'c_iasi': (1395, "Iași first attested 1395 AD; regional center on Bahlui river"),
-        'c_barlad': (1159, "Bârlad first attested 1159 AD"),
-        'c_cetatea_alba': (1350, "Cetatea Albă medieval Romanian fortress; ancient classical city of Tyras / Moncastro"),
-        'c_chilia': (1318, "Chilia first attested 1318 AD; ancient Byzantine Lykostomo"),
-        'c_lapusna': (1430, "Lăpușna first attested 1430 AD")
-    }
+    # 6. Strict Toponym-First 5-Tier Classification Engine (Burden of Proof on Antiquity)
+    # Default is Tier 4. Positive evidence of attestation <= 867 AD is required to qualify for Tier 1 or Tier 3.
+    att_yr, att_ev, att_src, is_hyd, att_notes = resolve_county_attestation(county_key, county_data, md_record)
 
     # Check Tier 5: Foreign Colonial Exonym Mismatch
     if colonial_mismatch:
@@ -332,40 +307,32 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
         tier_label = "Tier 5: Foreign Colonial Exonym Mismatch (FLAGGED)"
         tier_reason = mismatch_reason
 
-    # Check explicit post-867 / previously masked foundations
-    elif county_key in EXTRA_POST_867:
-        tier = 4
-        f_yr, f_rsn = EXTRA_POST_867[county_key]
-        tier_label = "Tier 4: Post-867 Foundation / Dynastic Castle (FLAGGED)"
-        tier_reason = f_rsn
-
-    # Check Tier 4: Post-867 OTL Eponymous Foundation (from markdown previous audit or tell-tale foundation dates)
-    elif md_record:
-        prev_reason = md_record.get('previous_reason', '')
-        m_year = re.search(r"\b(1[0-4]\d\d|9\d\d)\b", prev_reason)
-        foundation_year = int(m_year.group(1)) if m_year else None
-        
-        # If founded after 867 AD
-        if foundation_year and foundation_year > 867:
-            if md_record.get('is_valid_in_previous_audit'):
-                tier = 4
-                tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED via Calendar Gap)"
-                tier_reason = f"Real-world foundation in {foundation_year} AD by historical figure absent from campaign; previously accepted under OTL calendar gap"
-            else:
-                tier = 4
-                tier_label = "Tier 4: Post-867 OTL Eponymous Foundation (FLAGGED)"
-                tier_reason = f"Post-867 foundation ({foundation_year} AD) or high-medieval dynastic castle"
-        elif md_record.get('is_flagged_in_previous_audit'):
-            tier = 4
-            tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED)"
-            tier_reason = prev_reason or "Flagged in previous chancellery audit as anachronistic foundation"
-
-    # Check Tier 3: Geographic / Hydronymic
-    if tier == 1:
-        if re.search(r"(gau|berg|gebirge|tal|wald|see|fluv|am-|an-der-)", county_key + " " + disp_name, re.I):
+    # Check positive pre-867 historical attestation (<= 867 AD)
+    elif att_yr is not None and att_yr <= 867:
+        if is_hyd:
             tier = 3
             tier_label = "Tier 3: Pre-867 Geographic / Hydronymic"
-            tier_reason = "Derived from ancient pre-867 river, mountain, or topographic regional stem"
+            tier_reason = f"Derived from ancient pre-867 hydronym or landform ({att_src}): {att_notes}"
+        else:
+            tier = 1
+            tier_label = "Tier 1: Pre-867 Historical / Antiquity"
+            tier_reason = f"Attested pre-867 ({att_yr} AD/BC) via {att_ev} ({att_src}): {att_notes}"
+
+    # Check explicit post-867 foundation (> 867 AD)
+    elif att_yr is not None and att_yr > 867:
+        tier = 4
+        if md_record and md_record.get('is_valid_in_previous_audit'):
+            tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED via Calendar Gap)"
+            tier_reason = f"Real-world foundation in {att_yr} AD by historical figure absent from campaign; previously accepted under OTL calendar gap ({att_notes})"
+        else:
+            tier_label = "Tier 4: Post-867 Foundation / Dynastic Castle (FLAGGED)"
+            tier_reason = f"Post-867 foundation in {att_yr} AD ({att_notes})"
+
+    # Default Fallback: Lacks verified pre-867 proof -> Tier 4 (FLAGGED)
+    else:
+        tier = 4
+        tier_label = "Tier 4: Post-867 Foundation / Unverified Anachronism (FLAGGED)"
+        tier_reason = "Lacks verified historical attestation prior to 867 AD; defaulted to Tier 4 under Burden of Proof on Antiquity"
 
     # 7. Sub-Barony Candidate Selection (Option A Candidate)
     baronies = county_data.get('baronies', [])
@@ -434,6 +401,13 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             'first_roman_holder': first_roman.get('holder_name') if first_roman else None,
             'first_conqueror_after_867': first_post_867.get('holder_name') if first_post_867 else None,
             'conqueror_traits': first_post_867.get('traits', []) if first_post_867 else []
+        },
+        'attestation': {
+            'year': att_yr,
+            'evidence': att_ev,
+            'source': att_src,
+            'is_hydronym': is_hyd,
+            'notes': att_notes
         },
         'classification': {
             'tier': tier,
@@ -559,15 +533,17 @@ def generate_phase2_report(trajectories: list, output_path: Path):
 
         # 5. Full Register of Flagged Titles (Tier 4 & Tier 5)
         f.write("## 5. Register of Flagged Titles Requiring Pre-867 Resolution in Phase 4\n\n")
-        f.write(f"Below is the actionable catalog of all **{len(flagged_titles)}** flagged titles inside the Roman Empire, complete with their sovereign trajectory and recommended sub-barony candidates (`Option A`):\n\n")
-        f.write("| County Key | Current Name | De Jure Kingdom | Tier | Anachronism / Mismatch Reason | Recommended Pre-867 Sub-Barony Candidate (`Option A`) |\n")
-        f.write("| :--- | :--- | :--- | :---: | :--- | :--- |\n")
+        f.write(f"Below is the actionable catalog of all **{len(flagged_titles)}** flagged titles inside the Roman Empire under the Burden of Proof on Antiquity architecture, complete with their attestation metadata, sovereign trajectory, and recommended sub-barony candidates (`Option A`):\n\n")
+        f.write("| County Key | Current Name | De Jure Kingdom | Tier | Attestation Year | Primary Source | Anachronism / Mismatch Reason | Recommended Pre-867 Sub-Barony Candidate (`Option A`) |\n")
+        f.write("| :--- | :--- | :--- | :---: | :---: | :--- | :--- | :--- |\n")
         for t in flagged_titles:
             tier_num = t['classification']['tier']
             reason = t['classification']['tier_reason']
             sub_b = t['sub_barony_candidates']['option_a_candidate']
             sub_b_str = f"`{sub_b['key']}` ({sub_b['name']})" if sub_b else "Hydronymic Fallback (`Option B`)"
-            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | {t['de_jure_kingdom']} | **Tier {tier_num}** | {reason} | {sub_b_str} |\n")
+            att_yr_str = str(t['attestation']['year']) if t['attestation']['year'] is not None else "Unverified"
+            att_src_str = t['attestation']['source']
+            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | {t['de_jure_kingdom']} | **Tier {tier_num}** | {att_yr_str} | {att_src_str} | {reason} | {sub_b_str} |\n")
         f.write("\n---\n\n")
 
         # 6. Next Steps for Phase 3 & Phase 4
@@ -648,6 +624,9 @@ def main():
             'rurikid_present': traj['colonizer_presence']['rurikid_present'],
             'colonial_mismatch': traj['colonizer_presence']['colonial_exonym_mismatch'],
             'mismatch_reason': traj['colonizer_presence']['mismatch_reason'],
+            'attestation_year': traj['attestation']['year'] if traj['attestation']['year'] is not None else '',
+            'attestation_evidence': traj['attestation']['evidence'],
+            'attestation_source': traj['attestation']['source'],
             'preliminary_tier': traj['classification']['tier'],
             'tier_label': traj['classification']['tier_label'],
             'is_flagged': traj['classification']['is_flagged_for_phase4'],

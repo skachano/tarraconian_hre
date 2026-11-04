@@ -21,7 +21,7 @@ from collections import Counter
 from pathlib import Path
 
 # Import the coupling dictionary from screen_phase3_titles
-from screen_phase3_titles import CADET_BRANCH_COUPLINGS, HISTORICAL_TITLE_DB
+from screen_phase3_titles import CADET_BRANCH_COUPLINGS, HISTORICAL_TITLE_DB, NON_CHATENOIS_HOUSE_REALIGNMENTS
 
 # Dynamic Emergent Culture Realignments (The Toponym-First Principle)
 DYNAMIC_CULTURE_REALIGNMENTS = {
@@ -421,6 +421,12 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     update_chatenois_dynasty_analysis(dynasty_rename_register, dynasty_doc_file)
     print(f"[Phase 4] Updated dynasty analysis document at {dynasty_doc_file}")
 
+    # 6. Generate Workspace Deliverable: dynasty_historical_realignment_register.md
+    dynasty_register_file = Path(repo_dir) / "dynasty_historical_realignment_register.md"
+    dynasty_register_csv = Path(output_dir) / "dynasty_historical_realignment_register.csv"
+    generate_dynasty_historical_realignment_register(dynasty_rename_register, NON_CHATENOIS_HOUSE_REALIGNMENTS, dynasty_register_file, dynasty_register_csv)
+    print(f"[Phase 4] Wrote master dynasty realignment register to {dynasty_register_file}")
+
 
 def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     total_titles = len(titles)
@@ -596,6 +602,103 @@ def update_chatenois_dynasty_analysis(houses, doc_file):
 
     with open(doc_file, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
+
+
+
+def generate_dynasty_historical_realignment_register(chatenois_houses, non_chatenois_houses, doc_file, csv_file=None):
+    """
+    Generates dynasty_historical_realignment_register.md compiling all dynasty and house names
+    that were automatically derived from anachronistic title names, enforcing the Toponym-First Principle.
+    """
+    lines = [
+        "# Master Dynastic Historical Realignment Register (Toponym-First Coupling)",
+        "",
+        "* **Project:** Tarraconian Chancellery Mod & Imperial Documentation",
+        "* **Scope:** All noble dynasties and cadet houses derived from anachronistic title names in the Holy Roman Empire and imperial borderlands.",
+        "* **Guiding Rule:** **The Toponym-First Principle** (Physical Geography & Antiquity Substrates $\\rightarrow$ Landed Title $\\rightarrow$ Dynastic Eponym).",
+        "",
+        "---",
+        "",
+        "## 1. Problem Statement & The Inversion of Dynastic Causality",
+        "",
+        "In Crusader Kings III, dynastic generation operates mechanically in reverse:",
+        "1. **Static Vanilla Map Anachronisms:** CK3 uses a single landed title map spanning 867 to 1453. Numerous titles represent post-867 High/Late Medieval castles (*Habsburg*, *Hohenzollern*, *Berg*, *Saarbrücken*, *Mark*), 12th–14th century Ostsiedlung foundations (*Lemberg*, *Uničov*, *Hirschberg*, *Koschmin*), or post-867 frontier outposts (*Novogrudok*, *Volkovysk*, *Porto-Vecchio*, *Lyubim*).",
+        "2. **Dynamic Cadet & Eponym Generation:** When an unlanded character is granted land or a ruler establishes a cadet branch, the game engine automatically stamps the holding's name onto the dynasty (e.g., *House Naugardukas* from `c_novogrudok`, *Karling-Uničov* from `b_unicov`, *Reginar-Vecchio* from `c_vecchio`, *Chatenois-Lemberg* from `c_lviv`).",
+        "3. **The Toponym-First Inversion:** Under imperial historiography, houses cannot validate or grandfather anachronistic titles. Instead, causality must be inverted: **the holding is first cleansed of its post-867 name**, and the noble house's name is subsequently realigned to the restored authentic antiquity centre or hydronym.",
+        "",
+        "---",
+        "",
+        "## 2. Non-Chatenois Dynastic & Cadet Realignment Register",
+        "",
+        "The following noble houses across the Empire and its marchlands were generated from anachronistic holding names and are hereby realigned to their authentic pre-867 seats:",
+        "",
+        "| House ID | Dynasty | Current In-Game Name | Underlying Origin Seat | Anachronism Reason | Resolved Toponym-First Seat | Realigned House Name | Tarraconian Chancellery Form | Status & Justification |",
+        "| :---: | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
+    ]
+
+    csv_rows = []
+    for hid, data in sorted(non_chatenois_houses.items(), key=lambda x: str(x[1].get("dynasty_name", ""))):
+        h_id = data["house_id"]
+        d_name = data["dynasty_name"]
+        curr_name = data["current_name"]
+        seat = data["seat_county"]
+        seat_orig = data["seat_origin"]
+        res_seat = data["resolved_seat"]
+        realigned = data["realigned_name"]
+        tarr_name = data["tarraconian_name"]
+        reason = data["coupling_reason"]
+
+        lines.append(
+            f"| `{h_id}` | **{d_name}** (`{data['dynasty_id']}`) | `{curr_name}` | `{seat}` ({seat_orig}) | Post-867 foundation | **{res_seat}** | **{realigned}** | `{tarr_name}` | {reason} |"
+        )
+        csv_rows.append([
+            h_id, data['dynasty_id'], d_name, curr_name, seat, seat_orig, res_seat, realigned, tarr_name, reason
+        ])
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## 3. The 50 Cadet Branches of House Kestenholz (Dynasty 1582, Chatenois)",
+        "",
+        "Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members:",
+        "",
+        "| House ID | Current In-Game Name | Phase 1 Baseline Name | Final Realigned Name | Underlying Seat Origin | Living Members | Head of House | Status & Justification |",
+        "| :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- |",
+    ])
+
+    for h in chatenois_houses:
+        lines.append(
+            f"| `{h['house_id']}` | **{h['current_name']}** | `{h['phase1_baseline_name']}` | **{h['final_realigned_name']}** | `{h['underlying_seat']}` | **{h['living_members']}** | {h['head_name']} (`{h['head_id']}`) | {h['status']}: {h['coupling_justification']} |"
+        )
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## 4. Summary & Implementation Instructions",
+        "",
+        "1. **County Name Localisation Primacy:** In accordance with imperial chancellery directives, **county localizations are revised** (e.g. `c_novogrudok` $\\rightarrow$ **`Plîse`**, `c_volkovysk` $\\rightarrow$ **`Rôse`**, `c_minsk` $\\rightarrow$ **`Mêne`**), while **barony names (`b_*`) remain unaltered** in the map definition.",
+        "2. **Dynastic Synchronization:** For characters holding titles in-game, house names can be realigned using the in-game House Customizer, save editing, or mod character flavorization scripts based on the **Realigned House Name** column above.",
+        "3. **Pipeline Coupling:** This document is automatically generated by Phase 4 of the Tarraconian Historical Accuracy Audit Pipeline, ensuring permanent containerized synchronization.",
+        ""
+    ])
+
+    with open(doc_file, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    if csv_file:
+        try:
+            with open(csv_file, "w", encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    "house_id", "dynasty_id", "dynasty_name", "current_name", "seat_county",
+                    "seat_origin", "resolved_seat", "realigned_name", "tarraconian_name", "coupling_reason"
+                ])
+                for row in csv_rows:
+                    writer.writerow(row)
+        except Exception as e:
+            print(f"[Phase 4] Warning: Failed to write CSV {csv_file}: {e}")
 
 
 def main():
