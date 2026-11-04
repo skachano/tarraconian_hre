@@ -33,8 +33,9 @@ The current title registers and linguistic adaptations in the documentation suff
 1. **Identify and catalog all title anachronisms** across the 100 De Jure Kingdoms (451 Duchies, 1,703 Counties) in the Roman Empire's sphere.
 2. **Reconcile titles with actual save game progression:** Trace the in-game conquest, holder dynasties, and cultural shifts from 867 to 1142 using `chatenois_867_01_01.ck3`.
 3. **Extract anachronistic dynasty & cadet branch names:** Interrogate all dynasties (`dynasties`) and cadet branches (`dynasty_house`) in the save whose names derive from anachronistic or colonial title roots, compiling an actionable rename register for the player.
-4. **Respect organically emergent in-game lore:** Ensure titles and cultures that evolved dynamically in-game (such as *Galațian-Vlachs*, *Bugeacian-Mogyër*, *Ungwârer*, *Croato-Tarraconian*) are evaluated against campaign canon.
-5. **Produce an actionable update** for `anachronistic_titles_1059.md` and rebuild the mod localization and scripted effects via `build_mod.ps1`.
+4. **Reconcile the Imperial Dynasty Name with Tarraconian Historical Linguistics:** Adjust the ruling dynasty name *Chatenois* (`dynn_Chatenois`, ID 1582) to its authentic High German / Lorraine equivalent (**House Kestenholz** / *Dat Hûs van Kestenholz*, deriving from Latin *Castinetum*), systematically updating cadet house formulas (`Chatenois-<Seat>` $\rightarrow$ `Kestenholz-<Seat>`).
+5. **Respect organically emergent in-game lore:** Ensure titles and cultures that evolved dynamically in-game (such as *Galațian-Vlachs*, *Bugeacian-Mogyër*, *Ungwârer*, *Croato-Tarraconian*) are evaluated against campaign canon.
+6. **Produce an actionable update** for `anachronistic_titles_1059.md` and rebuild the mod localization and scripted effects via `build_mod.ps1`.
 
 ---
 
@@ -181,6 +182,19 @@ flowchart TD
      * **Current Living Head & Members** (character IDs).
      * **Proposed Historical / In-Game Replacement Name** based on the title's resolved pre-867 centre (e.g., *Chatenois-Zvenyhorod* or *Chatenois-Swenigorot*).
    * Format the results into an actionable **Dynasty Rename Register** for direct player reference (in-game customization or save/mod patch).
+
+3. **Linguistic Adaptation of the Ruling Dynasty (House Chatenois $\rightarrow$ House Kestenholz):**
+   * **Etymological Origin:** The dynasty name *Châtenois* (`dynn_Chatenois`, ID `1582`) is Gallo-Romance / Old French (*Chastenois*), derived from Medieval Latin **Castinetum** (*castanea* 'chestnut' + *-etum* collective orchard suffix, meaning 'chestnut grove' or 'chestnut forest').
+   * **Authentic Germanic Equivalent:** In historical Lorraine and Alsace, localities named *Châtenois* (such as Châtenois in Bas-Rhin and Châtenois in Vosges) were consistently and historically designated in German as **Kestenholz** (Middle High German *kestene* / *kesten* 'chestnut' + *holz* 'wood / forest').
+   * **Tarraconian Chancellery Sound Laws:** Because Tarraconian is a High German imperial tongue of Rhine-Moselle Franconian origin (`language_high_german`, `heritage_central_germanic`), the French form *Chatenois* is anachronistic for the supreme imperial dynasty. Under Tarraconian orthography and phonology:
+     * Unshifted initial `k-` is retained (*Kesten-*).
+     * Middle High German affricate `-z` `[ts]` is preserved (*-holz*).
+     * The ruling dynasty is designated **House Kestenholz** (*Dat Hûs van Kestenholz*).
+   * **Systematic Cadet Branch Realignment:** All 50 cadet houses descended from Dynasty 1582 are updated to replace the French root with *Kestenholz* while reconciling any anachronistic seat suffixes:
+     * Ancestral Imperial Seat: *Chatenois-Metz* $\rightarrow$ **Kestenholz-Metz** (House `13928`, held by Augustus Wernhard).
+     * Dual-Anachronism Reconciliation: *Chatenois-Lemberg* $\rightarrow$ **Kestenholz-Swenigorot** (House `16796257`, combining the dynasty root adjustment with the pre-867 seat *Zvenyhorod* / *Swenigorot*).
+     * Outlying Cadet Houses: *Chatenois-Saumur* $\rightarrow$ **Kestenholz-Saumur**, *Chatenois-Ravenna* $\rightarrow$ **Kestenholz-Ravenna**, *Chatenois-Annonay* $\rightarrow$ **Kestenholz-Annonay**, *Chatenois-Bremen* $\rightarrow$ **Kestenholz-Bremen**, etc.
+   * Document the full 50-house register in [chatenois_dynasty_analysis.md](chatenois_dynasty_analysis.md).
 
 ### Phase 5: Documentation & Mod Integration
 
