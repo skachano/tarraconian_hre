@@ -705,7 +705,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_hont` (Hont) $\rightarrow$ **Magistrat van Hont**
   * `c_poszony` (Pressburg) $\rightarrow$ **Magistrat van Presburch** (`[1059 Historical: Magistrat van Breslousburch / Posôn]`)
 * **Duchy of Opava** (`x_script_3603`) $\rightarrow$ **Gubernat van Troppouwe**
-  * `c_opava` (Opava) $\rightarrow$ **Magistrat van Troppouwe** `[ˈtrɔ.pɔʊ.wə]` *(Attested Tarraconian county, promoted 1058; hydronym *Opava*, or `[1059 Sub-Barony: Grêtz-an-der-Morâwe]`) *
+  * `c_opava` (Opava) $\rightarrow$ **Magistrat van Troppouwewe** `[ˈtrɔ.pɔʊ.wə]` *(Attested Tarraconian county, promoted 1058; hydronym *Opava*, or `[1059 Sub-Barony: Grêtz-an-der-Morâwe]`) *
 
 ---
 
@@ -2418,7 +2418,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_jabal_kufs` (**[HRE]** Jabal Kufs) $\rightarrow$ **Magistrat van Dschabal-Kûfs**
   * `c_riqan` (**[HRE]** Riqan) $\rightarrow$ **Magistrat van Rikân**
 * **Duchy of Sistan** (`d_sistan`) $\rightarrow$ **Gubernat van Sîstân**
-  * `c_zaranj` (**[HRE]** Zaranj) $\rightarrow$ **Magistrat van Sarândsch**
+  * `c_zaranj` (**[HRE]** Zaranj) $\rightarrow$ **Magistrat van Sarântsch**
   * `c_nih` (**[HRE]** Nih) $\rightarrow$ **Magistrat van Nîch**
   * `c_farah` (**[HRE]** Farah) $\rightarrow$ **Magistrat van Farâch**
   * `c_rudbar` (**[HRE]** Rudbar) $\rightarrow$ **Magistrat van Rudbâr**
@@ -2744,7 +2744,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_kayor` (Kayor) $\rightarrow$ **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Embûl]`)
   * `c_baol` (Baol) $\rightarrow$ **Magistrat van Baôl**
 * **Duchy of Jolof** (`x_script_1782`) $\rightarrow$ **Gubernat van Dscholôf** (`[1142 Historical: Gubernat van Tjêng]`)
-  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjêng]`)
+  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjênch]`)
   * `c_namandiru` (Namandiru) $\rightarrow$ **Magistrat van Namandirû**
 
 ---
