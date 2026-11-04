@@ -460,16 +460,16 @@ def main():
         elif razed_events:
             archetype = "RAZED_REBUILT"
             rz = razed_events[0]
-            predicted_formula = f"Brandburch an der {tarr_base_name} / Wüst-{tarr_base_name}"
-            predicted_tarr_name = f"Magistrat van Brandburch an der {tarr_base_name}"
+            predicted_formula = f"Rebuilt Historical Gord: {tarr_base_name}"
+            predicted_tarr_name = res.get("tarraconian_title", f"Magistrat van {tarr_base_name}")
             predicted_rationale = f"Holding was razed on {rz['raze_date']}. Uses verified historical root '{tarr_base_name}'."
 
         # Priority 2: Recently Settled Nomadic Steppe (Dev <= 4, settled after 1000)
         elif is_nomadic and development <= 5:
             archetype = "PIONEER_ASSART_STEPPE"
             settler_str = first_sedentary_holder or "Dan"
-            predicted_formula = f"{settler_str}srode / {settler_str}sschanze / Wacht an der {tarr_base_name}"
-            predicted_tarr_name = f"Magistrat van {settler_str}sschanze"
+            predicted_formula = f"Frontier Assart / Steppe March: {tarr_base_name}"
+            predicted_tarr_name = res.get("tarraconian_title", f"Magistrat van {tarr_base_name}")
             predicted_rationale = (
                 f"Nomadic until {last_mig_date} (under {last_nomad_holder}); settled in {first_sedentary_date} "
                 f"by verified save character {first_sedentary_holder} ({first_sedentary_house}) with dev {development}."
@@ -478,28 +478,25 @@ def main():
         # Priority 3: Monastic & Holy Order Foundation
         elif ho_leases or ("poi_buried_saint" in county_pois and church_holdings_count >= 1):
             archetype = "MONASTIC_FOUNDATION"
+            predicted_formula = f"Monastic Commandery / Feudal Seat: {tarr_base_name}"
+            predicted_tarr_name = res.get("tarraconian_title", f"Magistrat van {tarr_base_name}")
             if ho_leases:
                 ho = ho_leases[0]
-                ho_f_name = ho.get("founder_name")
-                predicted_formula = f"{tarr_base_name}-Zell / {ho_f_name}szell"
-                predicted_tarr_name = f"Magistrat van {tarr_base_name}-Zell"
                 predicted_rationale = f"Leased on {ho['lease_date']} to {ho['ho_type']}. Grounded in verified ancient seat '{tarr_base_name}'."
             else:
-                predicted_formula = f"Zant-{tarr_base_name} / {tarr_base_name}-Kirchen"
-                predicted_tarr_name = f"Magistrat van Zant-{tarr_base_name}"
                 predicted_rationale = f"Features poi_buried_saint and {church_holdings_count} church holdings at ancient seat '{tarr_base_name}'."
 
         # Priority 4: Verified Coastal / Maritime Haven (Only true maritime ports)
         elif ck in coastal_haven_keys:
             archetype = "ESTUARY_TRADEPORT"
-            predicted_formula = f"{tarr_base_name}shâven / -wîk"
-            predicted_tarr_name = f"Magistrat van {tarr_base_name}shâven"
+            predicted_formula = f"Maritime Haven & Emporium: {tarr_base_name}"
+            predicted_tarr_name = res.get("tarraconian_title", f"Magistrat van {tarr_base_name}")
             predicted_rationale = f"Major maritime port and coastal trading haven at verified location '{tarr_base_name}'."
 
         # Priority 5: High Development Metropolitan / Architect Seat (Dev >= 25)
         elif development >= 25 or gp_in_county:
             archetype = "METROPOLITAN_CASTELLAN"
-            predicted_formula = f"-stadt / -burch / {tarr_base_name}"
+            predicted_formula = f"Metropolitan Civitas: {tarr_base_name}"
             predicted_tarr_name = res.get("tarraconian_title", f"Magistrat van {tarr_base_name}")
             predicted_rationale = f"High development ({development}) with {len(builder_rulers)} documented builder rulers. Ancient seat '{tarr_base_name}'."
 
@@ -597,7 +594,7 @@ def generate_markdown_report(profiles, md_path: Path):
         f"* **Audit Scope:** **{len(profiles)} Flagged Imperial Counties**",
         "* **Core Historicity Rules:**",
         "  1. **Strict Campaign Internal Consistency:** Toponyms must NOT reference characters born after 867 who never existed in the CK3 save (e.g. Yaroslav the Wise, Prince Lev, St. Cyril of White Lake, Jacob de la Gardie, Duke Adolf Friedrich).",
-        "  2. **Inland Gord Authenticity:** Established inland princely seats (*Swenigorot*, *Kaiserswerth*, *Lublin*, *Scone*) are rendered as noble cities/gords, NOT artificially affixed with maritime `-shâven`.",
+        "  2. **Established Seat Primacy (No Synthetic Suffixes):** Established ancient and medieval seats (*Freisingen*, *Breslau*, *Peremyschl*, *Swenigorot*, *Ragus*, *Utîka*, *Kasr-Dânis*, *Wollîn*, *Metsepôle*) retain their authentic canonical civic toponyms without artificial monastic (`-Zell`) or maritime (`-shâven`) affixes.",
         "  3. **Carpathian / Rutheno-Mogyër Recognition:** Acknowledges the 141-year Hungarian/Carpathian rule (887–1028) across Red Ruthenia prior to the Imperial Holy Roman reconquest.",
         "",
         "---",
@@ -662,15 +659,41 @@ def generate_markdown_report(profiles, md_path: Path):
         "### B. The Case of `c_peremyshl` (Przemyśl)",
         "* **Why 'Yaroslav-Zell' is Anachronistic:** Named after Grand Prince Yaroslav the Wise (c. 978–1054), who **never existed** in the CK3 save universe.",
         "* **The Save History:** Ancient White Croat oppidum of *Przemyśl*. On **1134.4.27**, barony `b_yaroslav_VOL` was leased to a Christian Holy Order founded by **Gotthard** (born 1000 AD in the save).",
-        "* **Final Resolution:** **Magistrat van Peremyschel-Zell** or **Gotthardszell**.",
+        "* **Final Resolution:** **Magistrat van Peremyschl** (*Peremyschler*). The local monastic commandery lease does not mutate the ancient civic toponym of the White Croat capital.",
+        "",
+        "### C. Multi-Cultural Toponym Refinements (Baltic, Taifa, Wendish, and Finnic Layers)",
+        "",
+        "Beyond the Rutheno-Mogyër zone, a thorough audit of the campaign save lineages (867–1142) reveals critical contact zones where generic Germanization or anachronistic exonyms have been refined to reflect the actual sovereign dynasties and indigenous linguistic substrates:",
+        "",
+        "1. **Old Prussian Tribal Grounding (`c_bartenstein` & `c_wormditt`):**",
+        "   * **`c_bartenstein` $\\rightarrow$ `Magistrat van Barten`:** *Bartenstein* was built in 1326 by the Teutonic Order. The province was held continuously from 750 AD by Old Prussian dynasties (`dynn_Klakis`, `dynn_Luks`). Rather than the generic hydronym *Alne*, the title resolves to the indigenous Prussian tribe that held it: the **Barta** (Old Prussian *Bartow* / *Barten*).",
+        "   * **`c_wormditt` $\\rightarrow$ `Magistrat van Wormediten`:** Rather than the broad regional bishopric name *Warmjen* (Warmia), the title grounds directly in the ancient Old Prussian settlement *Wormedīten* (*Wurmedy* 'red alder marsh'). In the campaign save, this exact seat generated the historical 985 AD Prussian ruler Golding of House **`Wormedeten`**.",
+        "   * **`c_osterode` $\\rightarrow$ `Magistrat van Sasna`:** Removes the 1329 Teutonic Order exonym *Osterode* (named after Harz Osterode) in favor of the indigenous Old Prussian tribal land **Sasna** (*Sasnō* / *Sassen*).",
+        "",
+        "2. **Al-Andalus Taifa Strongholds vs. Ghost Ruins (`c_molina` & `c_alcacer_do_sal`):**",
+        "   * **`c_molina` $\\rightarrow$ `Magistrat van Molîne`:** Replaces the abandoned archaeological ghost city of *Erkawîka* (Celtiberian Ercávica, abandoned centuries before 1059) with the active medieval fortress seat: **Molina** (Arabic حصن مُلين *Hisn Mulīn*, 'Castle of the Mills'), held in the campaign save by the Andalusian dynasty House **`Razin`** from 1081 to 1124.",
+        "   * **`c_alcacer_do_sal` $\\rightarrow$ `Magistrat van Kasr-Dânis`:** The campaign save records that in 840 AD, this maritime estuary was ruled by the *Baranis* (Berber) lord named **Adanis**. In Arabic chronicles, this fortress was historically established as **`Qaṣr Abī Dānis`** (قصر أبي دانس 'Castle of Abu Danis', which gave Portuguese *Alcácer do Sal*).",
+        "",
+        "3. **Slavic-Norse Maritime Emporia (`c_kolobrzeg`):**",
+        "   * **`c_kolobrzeg` $\\rightarrow$ `Magistrat van Wollîn`:** While Kołobrzeg sat on the eastern edge of the county, the primary capital barony in CK3 is **`b_wollin`**. The save records that in 867 AD the county was ruled by Prince Bretislav of House **`Wolini`** (`dynn_Wolini`), followed by Norse Jomsvikings (`dynn_Bleik` from 880 AD). Resolves directly to the world-renowned emporium of **Wolin** (*Jómsborg* / *Júmne*).",
+        "",
+        "4. **Livonian & Bothnian Finnic Substrates (`c_vidzeme` & `c_pedersore`):**",
+        "   * **`c_vidzeme` $\\rightarrow$ `Magistrat van Metsepôle`:** *Vidzeme* ('Middle Land') is a post-medieval 17th-century administrative term. The authentic pre-867 Livonian Finnic tribal province covering this coastline was **Metsepole** (Livonian *Mõtsapūol* 'forest edge', centered on barony `Lemisele` / Limbaži).",
+        "   * **`c_pedersore` $\\rightarrow$ `Magistrat van Mustasâri`:** *Pedersöre* ('Peter's gravel') was a Swedish crusader dedication. The ancient indigenous Finnic mother parish and earliest documented settlement of Ostrobothnia is **Mustasaari** ('Black Island').",
+        "",
+        "5. **Northern Forest Lakes: Finno-Ugric Substrate Hydronym & Volost (`c_kirillov`):**",
+        "   * **`c_kirillov` $\\rightarrow$ `Magistrat van Pelschme`:** St. Cyril of White Lake founded Kirillo-Belozersky monastery in 1397 (anachronistic). To prevent a confusing duplicate 'White Lake' collision with neighboring `c_beloozero` (**`Wîtzensê`**), the title resolves to the ancient Finno-Ugric substrate hydronym and volost **Pelshma** (*Пельшема*, barony `b_pelsina`).",
+        "   * *Linguistic & Toponymic Grounding:* Unlike Slavic *Dvinitsa* (diminutive *-itsa*), **Pelshma** (*Pelschme*) preserves the authentic pre-Slavic Balto-Finnic / Northern Finnic formant **`-ma`** (*maa* 'land/district', as in *Tot'ma*) attached to root *pel-* (Vepsian *päl-* 'upper' or Komi *pel'* 'river bend'), designating the upper district along the Sukhona basin held by Bjarmo-Vepsians in the campaign save.",
         "",
         "---",
         "",
         "## 4. Integration into Phase 3 Screening Engine",
         "",
         "Every eponym across the 209 titles is now strictly verified:",
-        "1. **Pre-867 Classical Antiquity / Hydronyms / Tribal Seats:** Classical Roman oppida, Celtic/Slavic rivers, and early Carolingian palatinates.",
-        "2. **Save-Verified Playthrough Characters:** Real actors who conquered and settled territories between 867 and 1142 (King Dan of House Hede, Count Lambert the Fox, Count Ludolf, Ekbert the Architect, Kaisarios Granatos, Bardas Hashimid-Lina, Mansur Hashimid, Gotthard)."
+        "1. **Pre-867 Classical Antiquity / Hydronyms / Tribal Seats:** Classical Roman oppida, Celtic/Slavic rivers, Baltic tribal districts, and Carolingian palatinates.",
+        "2. **Save-Verified Playthrough Characters:** Real actors who conquered and settled territories between 867 and 1142 (King Dan of House Hede, Count Lambert the Fox, Count Ludolf, Ekbert the Architect, Kaisarios Granatos, Bardas Hashimid-Lina, Mansur Hashimid, Gotthard, and Berber lord Adanis).",
+        "3. **Strict Prohibition of OTL Phantom Figures:** Absolute ban on historical post-867 eponyms absent from the save (Lev Danylovych, Yaroslav the Wise, St. Cyril of White Lake, Jacob de la Gardie, Duke Adolf Friedrich).",
+        "4. **Landed Title Primacy (Section 3.3):** Titles are grounded strictly in historical/territorial/phonological authenticity first; cadet dynasty branches and dynamic hybrid cultures are coupled downstream."
     ])
 
     with open(md_path, "w", encoding="utf-8") as f:
