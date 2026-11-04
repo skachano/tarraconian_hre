@@ -10,9 +10,26 @@
   * Preserves Middle High German affricate `-z` `[ts]` in `-holz`.
   * Under the Romano-Germanic imperial synthesis of the Tarraconian Chancellery, the authentic imperial Germanic name for House Châtenois is **House Kestenholz** (*Dat Hûs van Kestenholz*).
 
-## 2. Inventory of Cadet Houses & Proposed Tarraconian Renames
+## 2. Two-Step Revision Methodology & Title Historicity Coupling
 
-The save contains **50** cadet houses belonging to Dynasty 1582. Below is the complete register sorted by living members count:
+Cadet house names in the save game typically follow the formula `<Dynasty>-<Seat>` (e.g., *Chatenois-Lemberg*, *Chatenois-Koschmin*, *Chatenois-Hirschberg*). The audit reconciles these names through a strict **two-step pipeline**:
+
+1. **Step 1: Dynasty Stem Normalization (Phase 1 Baseline):**
+   * Replaces the Gallo-Romance stem *Chatenois* with the authentic Rhine-Moselle Franconian imperial stem **Kestenholz** (*Dat Hûs van Kestenholz*).
+   * The names in Table 3 below reflect this initial baseline shift while retaining current in-game seat suffixes.
+
+2. **Step 2: Toponymic Suffix Realignment (Phases 2–4 Coupling):**
+   * Many cadet branches are named after seats that are themselves **Tier 4 anachronisms** (post-867 OTL dynastic castles/settlements) or **Tier 5 colonial mismatches** (e.g., German *Ostsiedlung* or Tsarist Russian exonyms).
+   * Once the underlying county/barony's historical authenticity and official Tarraconian Chancellery translation are resolved in Phases 2–4, the cadet house's toponymic suffix will be revised to match the resolved historical seat:
+     * *Example 1 (Resolved Pre-867 Centre):* `c_lviv` was historically resolved from *Lemberg* (1256 OTL foundation) to the 10th-century princely capital *Swenigorot* (`b_zvenyhorod`). Accordingly, House `16796257` (*Chatenois-Lemberg*) becomes **Kestenholz-Swenigorot** (rather than *Kestenholz-Lemberg*).
+     * *Example 2 (Anachronistic Höhenburgen & Ostsiedlung Seats):* Houses named after High Medieval foundations like *Hirschberg* (13th c. Ostsiedlung), *Kammersberg* (1207 castle), *Koschmin* (12th c. town), or *Peiting* (11th c. Welf castle) will be revised in Phase 4 to their verified pre-867 centres or hydronyms in Tarraconian chancellery orthography.
+     * *Example 3 (Tarraconian Phonological Adaptation):* Authentic pre-867 seats like *Metz*, *Ravenna*, *Bremen*, *Saumur*, or *Orléans* will receive their finalized Tarraconian Chancellery forms (e.g., *Kestenholz-Metz*, *Kestenholz-Raben*, *Kestenholz-Bremen*).
+
+---
+
+## 3. Inventory of Cadet Houses & Provisional Baseline Renames
+
+The save contains **50** cadet houses belonging to Dynasty 1582. Below is the preliminary register sorted by living members count (provisional toponymic suffixes marked for Phase 4 title-coupling revision):
 
 | House ID | Current Name | Proposed Tarraconian Name | Found Date | Head of House | Living Members | Parent House |
 | :---: | :--- | :--- | :---: | :--- | :---: | :---: |

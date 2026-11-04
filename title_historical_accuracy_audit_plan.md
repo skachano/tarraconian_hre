@@ -190,11 +190,13 @@ flowchart TD
      * Unshifted initial `k-` is retained (*Kesten-*).
      * Middle High German affricate `-z` `[ts]` is preserved (*-holz*).
      * The ruling dynasty is designated **House Kestenholz** (*Dat Hûs van Kestenholz*).
-   * **Systematic Cadet Branch Realignment:** All 50 cadet houses descended from Dynasty 1582 are updated to replace the French root with *Kestenholz* while reconciling any anachronistic seat suffixes:
-     * Ancestral Imperial Seat: *Chatenois-Metz* $\rightarrow$ **Kestenholz-Metz** (House `13928`, held by Augustus Wernhard).
-     * Dual-Anachronism Reconciliation: *Chatenois-Lemberg* $\rightarrow$ **Kestenholz-Swenigorot** (House `16796257`, combining the dynasty root adjustment with the pre-867 seat *Zvenyhorod* / *Swenigorot*).
-     * Outlying Cadet Houses: *Chatenois-Saumur* $\rightarrow$ **Kestenholz-Saumur**, *Chatenois-Ravenna* $\rightarrow$ **Kestenholz-Ravenna**, *Chatenois-Annonay* $\rightarrow$ **Kestenholz-Annonay**, *Chatenois-Bremen* $\rightarrow$ **Kestenholz-Bremen**, etc.
-   * Document the full 50-house register in [chatenois_dynasty_analysis.md](chatenois_dynasty_analysis.md).
+   * **Two-Step Cadet Branch Revision Pipeline & Title-Historicity Coupling:**
+     * **Step 1 (Dynasty Stem Normalization — Phase 1 Baseline):** Replaces the Gallo-Romance stem *Chatenois* with the authentic Rhine-Moselle Franconian imperial stem **Kestenholz** (*Dat Hûs van Kestenholz*).
+     * **Step 2 (Toponymic Suffix Realignment — Phases 2–4 Coupling):** Because many cadet house names derive from in-game county seats that are themselves Tier 4 anachronisms (e.g., post-867 dynastic castles) or Tier 5 colonial exonyms, the proposed names are provisional baselines. In Phases 2–4, each cadet branch's toponymic suffix will be revised once the historicity of the underlying seat and its official Tarraconian Chancellery translation are finalized:
+       * *Resolved Pre-867 Centre:* *Chatenois-Lemberg* $\rightarrow$ **Kestenholz-Swenigorot** (House `16796257`, combining the dynasty root shift with the resolved 10th-century centre *Zvenyhorod* / *Swenigorot*).
+       * *Anachronistic Höhenburgen & Ostsiedlung Seats:* Houses named after post-867 foundations (e.g., *Chatenois-Hirschberg*, *Chatenois-Kammersberg*, *Chatenois-Koschmin*, *Chatenois-Peiting*) will update their toponymic suffix to match the verified pre-867 centre or hydronym resolved for the county.
+       * *Tarraconian Phonological Adaptation:* Authentic pre-867 seats (e.g., *Metz*, *Ravenna*, *Bremen*, *Saumur*) will receive their finalized Tarraconian Chancellery forms (*Kestenholz-Metz*, *Kestenholz-Raben*, *Kestenholz-Bremen*).
+   * Document the full 50-house register and baseline mapping in [chatenois_dynasty_analysis.md](chatenois_dynasty_analysis.md).
 
 ### Phase 5: Documentation & Mod Integration
 
