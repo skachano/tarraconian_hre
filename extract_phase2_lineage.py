@@ -53,6 +53,28 @@ def parse_anachronistic_titles_md(md_path: Path):
     log(f"Parsing previous audit database: {md_path}")
     audited = {}
 
+    KEY_SYNONYMS = {
+        'c_berg': 'c_bergh',
+        'c_munich': 'c_munchen',
+        'c_wurtemberg': 'c_wirttemberg',
+        'c_brussels': 'c_brabant',
+        'c_steyr': 'c_traungau',
+        'c_gelre': 'c_geldern',
+        'c_pressburg': 'c_pozsony',
+        'c_szepes': 'c_spis',
+        'c_krain': 'c_carniola',
+        'c_tirol': 'c_tyrol',
+        'c_przemysl': 'c_peremyshl',
+        'c_sandomierz': 'c_sandomierska',
+        'c_lublin': 'c_lubelska',
+        'c_algiers': 'c_algier',
+        'c_sieradz': 'c_sieradzka',
+        'c_plock': 'c_plocka',
+        'c_dobrzyn': 'c_dobrzynska',
+        'c_radom': 'c_radomska',
+        'c_poznan': 'c_poznanska'
+    }
+
     with open(md_path, 'r', encoding='utf-8', errors='replace') as f:
         for line in f:
             line = line.strip()
@@ -66,13 +88,14 @@ def parse_anachronistic_titles_md(md_path: Path):
                         m_name = re.search(r"\*\*([^*]+)\*\*", parts[1])
                         save_name = m_name.group(1).strip() if m_name else parts[1].strip("* ")
                         
-                        # Extract valid / invalid flag
-                        is_valid_previous = "✅" in line
-                        is_flagged_previous = "❌" in line
-
                         # Description / historical centres
                         reason = parts[4] if len(parts) > 4 else ""
                         centers = parts[5] if len(parts) > 5 else ""
+
+                        # In anachronistic_titles_1059.md, rows in tables are flagged anachronisms,
+                        # unless explicitly designated as 'Valid in 1059' or 'Valid in 1122'
+                        is_valid_previous = ("Valid in 1059" in reason or "Valid in 1122" in reason)
+                        is_flagged_previous = not is_valid_previous
 
                         audited[c_key] = {
                             'c_key': c_key,
@@ -84,7 +107,14 @@ def parse_anachronistic_titles_md(md_path: Path):
                             'raw_line': line
                         }
 
-    log(f"Parsed {len(audited)} previously audited titles from markdown reference.")
+    # Map key synonyms
+    for old_k, new_k in KEY_SYNONYMS.items():
+        if old_k in audited and new_k not in audited:
+            rec = dict(audited[old_k])
+            rec['c_key'] = new_k
+            audited[new_k] = rec
+
+    log(f"Parsed {len(audited)} previously audited titles from markdown reference (including synonyms).")
     return audited
 
 
@@ -265,41 +295,58 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             is_cadet_seat = True
             matching_cadet_house = current_house
 
-    # 6. Preliminary 5-Tier Classification Engine
+    # 6. Strict Toponym-First 5-Tier Classification Engine
     # Priority order:
-    # Tier 2 (In-Game Canon) -> Tier 5 (Colonial Mismatch) -> Tier 4 (OTL Post-867 Foundation) -> Tier 3 (Hydronym) -> Tier 1 (Pre-867 Historical)
+    # Tier 5 (Colonial Mismatch) -> Tier 4 (OTL Post-867 Foundation) -> Tier 3 (Hydronym) -> Tier 1 (Pre-867 Historical)
+    # Tier 2 is reserved strictly for legitimate Option C in-game foundations where no pre-867 center or hydronym exists.
     
     tier = 1
     tier_label = "Tier 1: Pre-867 Historical / Antiquity"
     tier_reason = "Attested pre-867 Classical, Celtic, Roman, or Early Medieval center"
 
-    # Check Tier 2: In-Game Canon
-    if is_custom_renamed or is_cadet_seat or is_hybrid_ground:
-        tier = 2
-        tier_label = "Tier 2: In-Game Alternate History Canon"
-        if is_cadet_seat:
-            tier_reason = f"Canonized by ruling cadet branch {matching_cadet_house}"
-        elif is_custom_renamed:
-            tier_reason = f"In-save custom canonical rename ({county_data.get('custom_name')})"
-        else:
-            tier_reason = f"Formed around organic in-game hybrid culture ({ground_culture})"
+    # Known post-867 foundations, high-medieval castles, or colonial exonyms previously masked under Tier 2
+    EXTRA_POST_867 = {
+        'c_bergh': (1077, "Burg Berge at Altenberg founded 1060–1077 AD; pre-867 center is Carolingian palatinate Kaiserswerth"),
+        'c_luxembourg': (963, "Castle Lucilinburhuc acquired 963 AD; comital title 1083; pre-867 centers are Echternach/Arlon"),
+        'c_bouillon': (988, "Castrum Bullionis first attested 988 AD; high medieval castle"),
+        'c_namur': (907, "Namur castrum first attested 907 AD; 10th-c. comital center"),
+        'c_zagreb': (1094, "Diocese of Zagreb founded 1094 AD; Roman city of Sisak/Andautonia"),
+        'c_aalborg': (1040, "Alabu first attested on coins of Harthacnut 1040 AD"),
+        'c_metzovo': (1380, "Metsovo first attested 1380 AD in Chronicle of Ioannina"),
+        'c_lviv': (1256, "Lviv founded c. 1256 by Danylo of Halych; pre-867 center is princely capital Zvenyhorod / Swenigorot"),
+        'c_montpellier': (985, "Montpellier first attested 985 AD; pre-867 center is Roman episcopal city of Maguelone"),
+        'c_tinmallal': (1124, "Tinmel founded 1124 AD by Ibn Tumart"),
+        'c_galati': (1445, "Galați first attested 1445 AD; pre-867 center is Roman/Byzantine fortress of Dinogetia"),
+        'c_bugeac': (1550, "Bucak is Ottoman 16th-c. exonym; ancient classical hydronym is Tyras / Nistru"),
+        'c_dorohoi': (1408, "Dorohoi first attested 1408 AD; regional center on Jijia river"),
+        'c_iasi': (1395, "Iași first attested 1395 AD; regional center on Bahlui river"),
+        'c_barlad': (1159, "Bârlad first attested 1159 AD"),
+        'c_cetatea_alba': (1350, "Cetatea Albă medieval Romanian fortress; ancient classical city of Tyras / Moncastro"),
+        'c_chilia': (1318, "Chilia first attested 1318 AD; ancient Byzantine Lykostomo"),
+        'c_lapusna': (1430, "Lăpușna first attested 1430 AD")
+    }
 
     # Check Tier 5: Foreign Colonial Exonym Mismatch
-    elif colonial_mismatch:
+    if colonial_mismatch:
         tier = 5
         tier_label = "Tier 5: Foreign Colonial Exonym Mismatch (FLAGGED)"
         tier_reason = mismatch_reason
 
+    # Check explicit post-867 / previously masked foundations
+    elif county_key in EXTRA_POST_867:
+        tier = 4
+        f_yr, f_rsn = EXTRA_POST_867[county_key]
+        tier_label = "Tier 4: Post-867 Foundation / Dynastic Castle (FLAGGED)"
+        tier_reason = f_rsn
+
     # Check Tier 4: Post-867 OTL Eponymous Foundation (from markdown previous audit or tell-tale foundation dates)
     elif md_record:
-        # Check if previous audit documented a post-867 foundation date
         prev_reason = md_record.get('previous_reason', '')
         m_year = re.search(r"\b(1[0-4]\d\d|9\d\d)\b", prev_reason)
         foundation_year = int(m_year.group(1)) if m_year else None
         
-        # If founded after 867 AD and not in-game canon
+        # If founded after 867 AD
         if foundation_year and foundation_year > 867:
-            # Check if it was accepted in previous audit purely due to 1059/1122/1142 OTL calendar gap
             if md_record.get('is_valid_in_previous_audit'):
                 tier = 4
                 tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED via Calendar Gap)"
@@ -311,13 +358,11 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
         elif md_record.get('is_flagged_in_previous_audit'):
             tier = 4
             tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED)"
-            tier_reason = "Flagged in previous chancellery audit as anachronistic foundation"
+            tier_reason = prev_reason or "Flagged in previous chancellery audit as anachronistic foundation"
 
     # Check Tier 3: Geographic / Hydronymic
     if tier == 1:
-        # Check if the name stems from a known river/mountain/lake
         if re.search(r"(gau|berg|gebirge|tal|wald|see|fluv|am-|an-der-)", county_key + " " + disp_name, re.I):
-            # If attested hydronym
             tier = 3
             tier_label = "Tier 3: Pre-867 Geographic / Hydronymic"
             tier_reason = "Derived from ancient pre-867 river, mountain, or topographic regional stem"
@@ -436,7 +481,7 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("# Phase 2 Report: Title Lineage, Sovereign Trajectories & Historical Grounding\n\n")
         f.write(f"* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)\n")
         f.write(f"* **Audit Scope:** **1,499 Counties** in the Roman Empire (`h_roman_empire`) across **97 De Jure Kingdoms**\n")
-        f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory $\\rightarrow$ Colonizer Presence Audit $\\rightarrow$ Cultural Footprint Mapping $\\rightarrow$ 5-Tier Classification\n\n")
+        f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory → Colonizer Presence Audit → Cultural Footprint Mapping → 5-Tier Classification\n\n")
         f.write("---\n\n")
 
         # 1. Executive Summary
@@ -468,7 +513,7 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("   * In the save, the steppe transitioned directly from **Pecheneg** and **Cuman / Kipchak** nomadic control into the Roman Empire.\n")
         f.write("   * *Result:* Flagged as Tier 5 mismatches; must be resolved via ancient hydronyms (*Tanais / Don*, *Borysthenes / Dnêper*, *Bakhmutka*).\n\n")
         f.write("4. **Outremer & Egypt (Zero First Crusade Continuity):**\n")
-        f.write("   * Real-world crusader fortresses (*Montréal / Shawbak* built 1115 by Baldwin I) and Fatimid foundations (*Cairo / al-Qāhira* founded 969) have no continuity with the save's direct Abbasid $\\rightarrow$ Roman Imperial trajectory.\n")
+        f.write("   * Real-world crusader fortresses (*Montréal / Shawbak* built 1115 by Baldwin I) and Fatimid foundations (*Cairo / al-Qāhira* founded 969) have no continuity with the save's direct Abbasid → Roman Imperial trajectory.\n")
         f.write("   * *Result:* Replaced by Classical Roman/Hellenistic centres (*Petra / Rekem* for Montréal, *Fustat / Babylon in Aegypto* for Cairo).\n\n")
         f.write("---\n\n")
 
@@ -481,17 +526,36 @@ def generate_phase2_report(trajectories: list, output_path: Path):
             f.write(f"| `{t['county_key']}` | **{t['save_name']}** | Post-867 | ✅ Valid (OTL) | **FLAGGED (Tier 4)** | {t['classification']['tier_reason']} |\n")
         f.write("\n---\n\n")
 
-        # 4. In-Game Canon & Cadet Branch Register
-        f.write("## 4. In-Game Canonized Titles & Cadet Branch Seats (Tier 2)\n\n")
-        f.write(f"The audit identified **{len(canon_titles)}** counties whose names derive authentically from in-game progression rather than vanilla map defaults:\n\n")
-        f.write("| County Key | Save Name | In-Game Canon Basis | Ruling Cadet Branch / Culture | Current Status in Save |\n")
-        f.write("| :--- | :--- | :--- | :--- | :--- |\n")
-        for t in canon_titles[:20]:
-            canon_basis = t['classification']['tier_reason']
-            house_str = t['current_1142']['house_name'] or 'Imperial Magistracy'
-            cult_str = t['cultural_footprint']['ground_culture']
-            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | {canon_basis} | `{house_str}` ({cult_str}) | ✅ Valid Campaign Canon |\n")
-        f.write("\n---\n\n")
+        # 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures
+        f.write("## 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures\n\n")
+        f.write("Under the **Toponym-First Principle**, landed titles represent physical geography, antiquity urban centres, and Roman territorial divisions. Anachronistic titles cannot be justified or grandfathered by in-game cadet branches or dynamic emergent cultures. Instead, causality is strictly reversed: **noble houses and dynamic cultures derive their names from the historically resolved titles**.\n\n")
+        f.write("### 4.1 Re-evaluation of Previous 'Tier 2' Titles\n\n")
+        f.write("The 55 titles previously grouped under 'Tier 2 Canon' were re-screened against strict historical criteria:\n")
+        f.write("* **Validated Antiquity Centres (Tier 1):** Titles like `c_metz` (*Divodurum*), `c_buthrotum` (*Buthrotum*), `c_lecce` (*Lupiae*), `c_ragusa` (*Ragusium*), `c_theodosiopolis`, `c_dvin`, `c_isfahan`, `c_hamadan`, `c_carcassonne`, and `c_uses` are validated as **Tier 1 (Antiquity)** on their own historical merits.\n")
+        f.write("* **Validated Hydronyms (Tier 3):** Titles like `c_spis` are validated as **Tier 3 (Hydronymic)**.\n")
+        f.write("* **Unmasked Post-867 Foundations (Tier 4):** Titles like `c_bergh` (Burg Berge 1077), `c_luxembourg` (963), `c_bouillon` (988), `c_namur` (907), `c_zagreb` (1094), `c_aalborg` (1040), `c_metzovo` (1380), `c_lviv` (1256), `c_galati` (1445), `c_bugeac` (16th c.), `c_dorohoi` (1408), `c_iasi` (1395), `c_barlad` (1159), `c_cetatea_alba` (1350), `c_chilia` (1318), `c_lapusna` (1430), `c_montpellier` (985), and `c_tinmallal` (1124) are unmasked and correctly flagged as **Tier 4** for resolution.\n\n")
+        f.write("### 4.2 Downstream Cadet House Realignment Sample\n\n")
+        f.write("| House ID | Old In-Game Name | Underlying Seat | Resolved Historical Seat | Realigned House Name |\n")
+        f.write("| :---: | :--- | :--- | :--- | :--- |\n")
+        f.write("| `26581` | **Chatenois-Berg** | `c_bergh` (Burg Berge 1077) | Carolingian Palatinate Kaiserswerth (700) | **House Kestenholz-Kaiserswerth** |\n")
+        f.write("| `16796257` | **Chatenois-Lemberg** | `c_lviv` (Lviv 1256) | 10th-c. Princely Capital Zvenyhorod | **House Kestenholz-Swenigorot** |\n")
+        f.write("| `50348946` | **Chatenois-Koschmin** | `c_koszmin` (12th c.) | Ancient Amber Road emporium Kalisz | **House Kestenholz-Kalisz** |\n")
+        f.write("| `50347588` | **Chatenois-Hirschberg** | `c_hirschberg` (13th c.) | Thermal springs Warmbrunn / Piast Legnica | **House Kestenholz-Warmbrunn** |\n")
+        f.write("| `24384` | **Chatenois-Kammersberg** | `c_kammersberg` (1207) | Ancient Mur valley settlement Murau / Judenburg | **House Kestenholz-Murau** |\n")
+        f.write("| `23583` | **Chatenois-Peiting** | `c_peiting` (11th c.) | Mother settlement Altenstadt / Schongau | **House Kestenholz-Schongau** |\n\n")
+        f.write("### 4.3 Downstream Dynamic Emergent Culture Realignment Sample\n\n")
+        f.write("| Culture ID | Old In-Game Name | Ethnogenesis Seat | Resolved Historical Toponym | Realigned Culture Name |\n")
+        f.write("| :---: | :--- | :--- | :--- | :--- |\n")
+        f.write("| `275` | **Galațian** | `c_galati` (Galați 1445) | Roman fortress Dinogetia / Dunăre | **Dinogetian-Vlachs** |\n")
+        f.write("| `288` | **Bugeacian** | `c_bugeac` (Ottoman Bucak) | Classical river Tyras / Nistru | **Tyrasian-Vlachs** |\n")
+        f.write("| `293` | **Bugeacian-Mogyër** | `c_bugeac` (Ottoman Bucak) | Classical river Tyras / Nistru | **Tyrasian-Mogyër** |\n")
+        f.write("| `286` | **Wolkensteiner** | `c_wolkenstein` (Burg 1200) | Ancient river Zschopau / Miriquidi | **Zschopauer** |\n")
+        f.write("| `260` | **Jutribocian** | `c_juterbog` (1007 AD) | Pre-867 Slavic pagus Nicici | **Nicipsian** |\n")
+        f.write("| `358` | **South Kazanskayan** | `c_kazanskaya` (Cossack 1740s) | Ancient classical hydronym Tanais / Don | **Tanaite-Turkic** |\n")
+        f.write("| `331` | **Putyvlian** | `c_putivl` (Putivl 1146) | Pre-867 Severian land on Sem river | **Semian-Severians** |\n")
+        f.write("| `367` | **Ungwârer** | `c_ungvar` (river Ung) | Pre-867 river Ung (Castrum Ung) | **Ungwârer** (Validated) |\n")
+        f.write("| `279` | **Frontenhausian** | `c_frontenhausen` (Frantenhusa) | Attested 788 AD (Breves Notitiae) | **Frontenhausian** (Validated) |\n\n")
+        f.write("---\n\n")
 
         # 5. Full Register of Flagged Titles (Tier 4 & Tier 5)
         f.write("## 5. Register of Flagged Titles Requiring Pre-867 Resolution in Phase 4\n\n")

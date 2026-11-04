@@ -23,6 +23,238 @@ from pathlib import Path
 # Import the coupling dictionary from screen_phase3_titles
 from screen_phase3_titles import CADET_BRANCH_COUPLINGS, HISTORICAL_TITLE_DB
 
+# Dynamic Emergent Culture Realignments (The Toponym-First Principle)
+DYNAMIC_CULTURE_REALIGNMENTS = {
+    275: {
+        "culture_id": 275,
+        "current_name": "Galațian",
+        "current_collective": "Galațian-Vlachs",
+        "current_prefix": "Galațian",
+        "heritage": "heritage_vlach",
+        "language": "language_wallachian",
+        "created": "924.8.8",
+        "underlying_origin_seat": "c_galati",
+        "underlying_seat_name": "Galați (1445 AD)",
+        "resolved_toponym": "Dinogetia",
+        "resolved_toponym_detail": "Roman/Late Antique fortress Dinogetia (Bisericuța-Garvăn)",
+        "realigned_name": "Dinogetian-Vlachs",
+        "realigned_collective": "Dinogetian-Vlachs",
+        "realigned_prefix": "Dinogeto-",
+        "tarraconian_culture_name": "Dinogetjanen",
+        "status": "Realigned to Roman Fortress",
+        "historical_justification": "Galați is an anachronistic 1445 foundation. Under the Toponym-First Principle, the title resolves to pre-867 Roman fortress Dinogetia on the Danube, realigning the dynamic Vlach culture to Dinogetian-Vlachs."
+    },
+    288: {
+        "culture_id": 288,
+        "current_name": "Bugeacian",
+        "current_collective": "Bugeacian-Vlachs",
+        "current_prefix": "Bugeacian",
+        "heritage": "heritage_vlach",
+        "language": "language_wallachian",
+        "created": "951.8.8",
+        "underlying_origin_seat": "c_bugeac",
+        "underlying_seat_name": "Bugeac / Budjak (16th c.)",
+        "resolved_toponym": "River Tyras (Nistru)",
+        "resolved_toponym_detail": "Classical river hydronym Tyras (Greek Τύρας / Latin Tyras)",
+        "realigned_name": "Tyrasian-Vlachs",
+        "realigned_collective": "Tyrasian-Vlachs",
+        "realigned_prefix": "Tyraso-",
+        "tarraconian_culture_name": "Tîrasjanen",
+        "status": "Realigned to Classical Hydronym",
+        "historical_justification": "Budjak/Bugeac is a 16th-century Ottoman Turkish administrative term. Realigned to the authentic pre-867 classical river hydronym Tyras."
+    },
+    293: {
+        "culture_id": 293,
+        "current_name": "Bugeacian-Mogyër",
+        "current_collective": "Bugeacian-Mogyërs",
+        "current_prefix": "Bugeacian-Mogyëro",
+        "heritage": "heritage_magyar",
+        "language": "language_wallachian",
+        "created": "956.11.10",
+        "underlying_origin_seat": "c_bugeac",
+        "underlying_seat_name": "Bugeac / Budjak (16th c.)",
+        "resolved_toponym": "River Tyras (Nistru)",
+        "resolved_toponym_detail": "Classical river hydronym Tyras (Greek Τύρας / Latin Tyras)",
+        "realigned_name": "Tyrasian-Mogyër",
+        "realigned_collective": "Tyrasian-Mogyërs",
+        "realigned_prefix": "Tyraso-Mogyëro",
+        "tarraconian_culture_name": "Tîrasisch-Mogyër",
+        "status": "Realigned to Classical Hydronym",
+        "historical_justification": "Dynamic hybrid between Magyars and local Vlachs in the Budjak steppe. Realigned from the Ottoman exonym to the classical hydronym Tyras."
+    },
+    286: {
+        "culture_id": 286,
+        "current_name": "Wolkensteiner",
+        "current_collective": "Wolkensteiner-Polabians",
+        "current_prefix": "Wolkensteiner",
+        "heritage": "heritage_west_slavic",
+        "language": "language_lechitic",
+        "created": "948.8.26",
+        "underlying_origin_seat": "c_wolkenstein",
+        "underlying_seat_name": "Wolkenstein (Burg c. 1200)",
+        "resolved_toponym": "River Zschopau / Miriquidi",
+        "resolved_toponym_detail": "Ancient Slavic hydronym Zschopau (Čopa) and Miriquidi forest",
+        "realigned_name": "Zschopauer",
+        "realigned_collective": "Zschopauer-Polabians",
+        "realigned_prefix": "Zschopau-",
+        "tarraconian_culture_name": "Tschopouwer",
+        "status": "Realigned to Ancient Hydronym",
+        "historical_justification": "Burg Wolkenstein is a High Medieval foundation (c. 1200). Pre-867 Polabian Slavic settlement on the Zschopau river in the Miriquidi forest realigns the ethnonym to Zschopauer."
+    },
+    260: {
+        "culture_id": 260,
+        "current_name": "Jutribocian",
+        "current_collective": "Jutribocian-Polabians",
+        "current_prefix": "Jutribocian",
+        "heritage": "heritage_west_slavic",
+        "language": "language_lechitic",
+        "created": "900.8.26",
+        "underlying_origin_seat": "c_juterbog",
+        "underlying_seat_name": "Jüterbog / Jutriboc (1007 AD)",
+        "resolved_toponym": "Pagus Nicici",
+        "resolved_toponym_detail": "Slavic tribal territory Nicici (attested 844 AD in Geographus Bavarus)",
+        "realigned_name": "Nicipsian",
+        "realigned_collective": "Nicipsian-Polabians",
+        "realigned_prefix": "Nicipso-",
+        "tarraconian_culture_name": "Nikitzen",
+        "status": "Realigned to Pre-867 Tribal Pagus",
+        "historical_justification": "Jüterbog/Jutriboc first appears in 1007. The authentic pre-867 Polabian tribal pagus recorded in the Bavarian Geographer (844) was the Nizici/Nicici, realigning the culture to Nicipsian."
+    },
+    358: {
+        "culture_id": 358,
+        "current_name": "South Kazanskayan",
+        "current_collective": "South Kazanskayan-Khazars",
+        "current_prefix": "South Kazanskayan",
+        "heritage": "heritage_turkic",
+        "language": "language_oghur",
+        "created": "1083.7.18",
+        "underlying_origin_seat": "c_kazanskaya",
+        "underlying_seat_name": "Kazanskaya (Stanitsa 1647)",
+        "resolved_toponym": "River Tanais (Don)",
+        "resolved_toponym_detail": "Classical river Tanais (Don) / Magistrat van Middel-Dôn",
+        "realigned_name": "Tanaite-Turkic",
+        "realigned_collective": "Tanaite-Khazars",
+        "realigned_prefix": "Tanaito-",
+        "tarraconian_culture_name": "Tanaîten (Don-Oghur)",
+        "status": "Realigned to Classical Hydronym",
+        "historical_justification": "Kazanskaya was a 1647 Don Cossack stanitsa. Tsarist Russia never conquered the steppe in this campaign. Realigned from the resolved title Middel-Dôn to Tanaite-Turkic."
+    },
+    331: {
+        "culture_id": 331,
+        "current_name": "Putyvlian",
+        "current_collective": "Putyvlian-Russians",
+        "current_prefix": "Putyvlian",
+        "heritage": "heritage_east_slavic",
+        "language": "language_east_slavic",
+        "created": "1018.3.9",
+        "underlying_origin_seat": "c_putyvl",
+        "underlying_seat_name": "Putyvl (1146 AD)",
+        "resolved_toponym": "River Sem (Seim) / Severians",
+        "resolved_toponym_detail": "Pre-867 hydronym Sem and Severian tribal territory (Severjane)",
+        "realigned_name": "Semian-Severians",
+        "realigned_collective": "Semian-Severians",
+        "realigned_prefix": "Semiano-",
+        "tarraconian_culture_name": "Sêmjanen",
+        "status": "Realigned to Ancient Hydronym & Tribe",
+        "historical_justification": "Putyvl is an 11th/12th-century foundation (first chronicle record 1146). Realigned to the ancient hydronym Sem (Seim) and Severian ethnonym."
+    },
+    270: {
+        "culture_id": 270,
+        "current_name": "Pereyaslavian",
+        "current_collective": "Pereyaslavian-Russians",
+        "current_prefix": "Pereyaslavian",
+        "heritage": "heritage_east_slavic",
+        "language": "language_east_slavic",
+        "created": "916.3.9",
+        "underlying_origin_seat": "c_pereyaslavl",
+        "underlying_seat_name": "Pereyaslavl (992 AD)",
+        "resolved_toponym": "River Trubizh",
+        "resolved_toponym_detail": "Pre-867 hydronym Trubizh and Severo-Polian borderland",
+        "realigned_name": "Trubezhan-Slavs",
+        "realigned_collective": "Trubezhan-Slavs",
+        "realigned_prefix": "Trubezho-",
+        "tarraconian_culture_name": "Trubeschjanen",
+        "status": "Realigned to Ancient Hydronym",
+        "historical_justification": "Pereyaslavl was founded in 992 AD by Vladimir the Great. Pre-867 population along the Trubizh river realigns to Trubezhan-Slavs."
+    },
+    338: {
+        "culture_id": 338,
+        "current_name": "Burgasan",
+        "current_collective": "Burgasan-Greeks",
+        "current_prefix": "Burgasan",
+        "heritage": "heritage_byzantine",
+        "language": "language_slavonic",
+        "created": "1045.2.1",
+        "underlying_origin_seat": "c_burgas",
+        "underlying_seat_name": "Burgas (17th c.)",
+        "resolved_toponym": "Deultum (Debeltos)",
+        "resolved_toponym_detail": "Roman colonia Deultum (Colonia Flavia Pacis Deultensium)",
+        "realigned_name": "Deultian",
+        "realigned_collective": "Deultian-Greeks",
+        "realigned_prefix": "Deulto-",
+        "tarraconian_culture_name": "Deultener",
+        "status": "Realigned to Roman Colonia",
+        "historical_justification": "Burgas is an Ottoman/early modern settlement. The ancient pre-867 Roman colonia and bishopric is Deultum (Debeltos), realigning the culture to Deultian."
+    },
+    279: {
+        "culture_id": 279,
+        "current_name": "Frontenhausian",
+        "current_collective": "Frontenhausian-Bavarians",
+        "current_prefix": "Frontenhausian",
+        "heritage": "heritage_central_germanic",
+        "language": "language_high_german",
+        "created": "935.2.11",
+        "underlying_origin_seat": "c_frontenhausen",
+        "underlying_seat_name": "Frantenhusa (788 AD)",
+        "resolved_toponym": "Frantenhusa",
+        "resolved_toponym_detail": "Attested 788 AD in Breves Notitiae of Salzburg",
+        "realigned_name": "Frontenhausian",
+        "realigned_collective": "Frontenhausian-Bavarians",
+        "realigned_prefix": "Frontenhuso-",
+        "tarraconian_culture_name": "Frontenhûser",
+        "status": "Validated Pre-867 Historical",
+        "historical_justification": "Frontenhausen is attested in 788 AD as Frantenhusa, confirming authentic pre-867 antiquity. Retained with Tarraconian phonological normalization."
+    },
+    367: {
+        "culture_id": 367,
+        "current_name": "Ungwârer",
+        "current_collective": "Ungwârer-Tarracono-Lothringian",
+        "current_prefix": "Ungwârer",
+        "heritage": "heritage_central_germanic",
+        "language": "language_magyar",
+        "created": "1093.11.13",
+        "underlying_origin_seat": "c_ungvar",
+        "underlying_seat_name": "Ungvár (Castrum Hung)",
+        "resolved_toponym": "River Ung",
+        "resolved_toponym_detail": "Ancient hydronym Ung (Uzh), origin of ethnonym Ungari",
+        "realigned_name": "Ungwârer",
+        "realigned_collective": "Ungwârer-Tarraconians",
+        "realigned_prefix": "Ungwâro-",
+        "tarraconian_culture_name": "Ungwârer",
+        "status": "Validated Pre-867 Hydronym",
+        "historical_justification": "Ungvár derives from the ancient river Ung, attested in 9th-century sources (Castrum Hung). Validated as authentic pre-867 hydronym."
+    },
+    303: {
+        "culture_id": 303,
+        "current_name": "Schmalkalder",
+        "current_collective": "Schmalkalder-Franconians",
+        "current_prefix": "Schmalkalder",
+        "heritage": "heritage_central_germanic",
+        "language": "language_high_german",
+        "created": "966.2.9",
+        "underlying_origin_seat": "c_schmalkalden",
+        "underlying_seat_name": "Smalcalda (874 AD)",
+        "resolved_toponym": "River Smalcalda",
+        "resolved_toponym_detail": "Pre-867 Germanic hydronym Smalcalda ('narrow water')",
+        "realigned_name": "Schmalkalder",
+        "realigned_collective": "Schmalkalder-Franconians",
+        "realigned_prefix": "Smalcaldo-",
+        "tarraconian_culture_name": "Smalcalder",
+        "status": "Validated Pre-867 Hydronym",
+        "historical_justification": "Schmalkalden derives from an ancient Germanic hydronym Smalcalda. Validated as authentic pre-867 hydronym."
+    }
+}
+
 
 def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     print("[Phase 4] Loading Phase 1 and Phase 3 data...")
@@ -152,18 +384,45 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
             ])
     print(f"[Phase 4] Wrote dynasty rename CSV to {dyn_csv}")
 
-    # 3. Generate Workspace Deliverable: audit_discrepancy_register.md
+    # 3. Process Dynamic Emergent Culture Rename Register
+    dynamic_cultures_list = list(DYNAMIC_CULTURE_REALIGNMENTS.values())
+    dynamic_cultures_list.sort(key=lambda x: x["culture_id"])
+
+    cult_json = out_path / "dynamic_cultures_to_rename.json"
+    with open(cult_json, "w", encoding="utf-8") as f:
+        json.dump(dynamic_cultures_list, f, indent=2, ensure_ascii=False)
+    print(f"[Phase 4] Wrote dynamic cultures rename JSON to {cult_json}")
+
+    cult_csv = out_path / "dynamic_cultures_to_rename.csv"
+    with open(cult_csv, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "culture_id", "current_name", "created", "heritage", "language",
+            "underlying_origin_seat", "underlying_seat_name", "resolved_toponym",
+            "realigned_name", "realigned_collective", "realigned_prefix",
+            "tarraconian_culture_name", "status", "historical_justification"
+        ])
+        for c in dynamic_cultures_list:
+            writer.writerow([
+                c["culture_id"], c["current_name"], c["created"], c["heritage"], c["language"],
+                c["underlying_origin_seat"], c["underlying_seat_name"], c["resolved_toponym"],
+                c["realigned_name"], c["realigned_collective"], c["realigned_prefix"],
+                c["tarraconian_culture_name"], c["status"], c["historical_justification"]
+            ])
+    print(f"[Phase 4] Wrote dynamic cultures rename CSV to {cult_csv}")
+
+    # 4. Generate Workspace Deliverable: audit_discrepancy_register.md
     discrepancy_file = Path(repo_dir) / "audit_discrepancy_register.md"
-    generate_audit_discrepancy_register(final_resolutions, dynasty_rename_register, discrepancy_file)
+    generate_audit_discrepancy_register(final_resolutions, dynasty_rename_register, dynamic_cultures_list, discrepancy_file)
     print(f"[Phase 4] Wrote audit discrepancy register to {discrepancy_file}")
 
-    # 4. Update Workspace Deliverable: chatenois_dynasty_analysis.md
+    # 5. Update Workspace Deliverable: chatenois_dynasty_analysis.md
     dynasty_doc_file = Path(repo_dir) / "chatenois_dynasty_analysis.md"
     update_chatenois_dynasty_analysis(dynasty_rename_register, dynasty_doc_file)
     print(f"[Phase 4] Updated dynasty analysis document at {dynasty_doc_file}")
 
 
-def generate_audit_discrepancy_register(titles, houses, report_file):
+def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     total_titles = len(titles)
     tier4_count = sum(1 for t in titles if t["tier"] == 4)
     tier5_count = sum(1 for t in titles if t["tier"] == 5)
@@ -176,7 +435,7 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         "",
         "* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)",
         f"* **Audit Scope:** **{total_titles} Flagged Imperial Counties** across **50 De Jure Kingdoms**",
-        "* **Core Framework:** 867 Alternate-History Divergence Point → Colonizer Presence Audit → Sub-Barony / Hydronymic Hierarchy → Tarraconian Chancellery Sound Laws",
+        "* **Core Framework:** 867 Alternate-History Divergence Point → Colonizer Presence Audit → Toponym-First Principle → Sub-Barony / Hydronymic Hierarchy → Tarraconian Chancellery Sound Laws",
         "",
         "---",
         "",
@@ -184,7 +443,9 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         "",
         "This register constitutes the definitive, finalized reconciliation of all landed titles inside the **Roman Empire** (`h_roman_empire`) that exhibited chronological anachronisms (Tier 4) or foreign colonial mismatches (Tier 5). Every title is paired with its verified pre-867 settlement or hydronym, along with official Tarraconian Chancellery forms and adjectives.",
         "",
-        "| Audit Category | Total Titles | Percentage | Resolution Strategy |",
+        "Under the **Toponym-First Principle & Downstream Causality Inversion Rule** (Section 3.3 of the Audit Plan), landed titles possess absolute primacy. Cadet branches of the imperial dynasty and emergent dynamic cultures adapt *from* the historically resolved titles, completely eliminating circular canonization of anachronisms.",
+        "",
+        "| Audit Category | Total Titles / Entities | Percentage | Resolution Strategy |",
         "| :--- | :---: | :---: | :--- |",
         f"| **Total Flagged Imperial Titles** | **{total_titles}** | **100.0%** | Full reconciliation against 867 campaign divergence |",
         f"| • **Tier 4: Post-867 OTL Foundations** | **{tier4_count}** | {tier4_count/total_titles*100:.1f}% | Replaced by ancient pre-867 Roman, Celtic, Carolingian, or Slavic centres |",
@@ -192,6 +453,7 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         f"| **Option A: Pre-867 Sub-Barony Centers** | **{opt_a_count}** | {opt_a_count/total_titles*100:.1f}% | Anchored to attested ancient oppida, castra, civitates, or collegiate abbeys |",
         f"| **Option B: Ancient Hydronyms / Oronyms** | **{opt_b_count}** | {opt_b_count/total_titles*100:.1f}% | Resolved via river/mountain basins applying Section 3.1 Hydronym Hierarchy |",
         f"| **Coupled Cadet Houses of House Kestenholz** | **{len(coupled_houses)}** | — | Toponymic seat suffixes updated to match resolved pre-867 centres |",
+        f"| **Realigned Dynamic Emergent Cultures** | **{len(cultures)}** | — | Dynamic culture ethnonyms realigned to resolved pre-867 centres |",
         "",
         "---",
         "",
@@ -212,7 +474,24 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         "",
         "---",
         "",
-        "## 3. Master Title Discrepancy & Resolution Register (150 Imperial Counties)",
+        "## 3. Dynamic Emergent Culture Rename Register",
+        "",
+        "Under the **Toponym-First Principle**, dynamic divergent and hybrid cultures formed during the campaign whose vanilla/save names derived from post-867 anachronistic foundations have been systematically realigned to the resolved historical toponyms of their ethnogenesis seats:",
+        "",
+        "| Culture ID | Old In-Game Name | Divergence Date | Underlying Origin Seat | Resolved Historical Toponym | Final Realigned Culture Name | Realigned Collective Noun | Tarraconian Culture Name | Status & Historical Justification |",
+        "| :---: | :--- | :---: | :--- | :--- | :--- | :--- | :--- | :--- |",
+    ])
+
+    for c in cultures:
+        lines.append(
+            f"| `{c['culture_id']}` | **{c['current_name']}** | {c['created']} | `{c['underlying_origin_seat']}` ({c['underlying_seat_name']}) | **{c['resolved_toponym']}** | **{c['realigned_name']}** | *{c['realigned_collective']}* | `{c['tarraconian_culture_name']}` | **{c['status']}:** {c['historical_justification']} |"
+        )
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        f"## 4. Master Title Discrepancy & Resolution Register ({total_titles} Imperial Counties)",
         "",
         "| County Key | Current Save Name | De Jure Kingdom | Tier | Discrepancy / Mismatch Reason | Final Historical Resolution | Official Tarraconian Chancellery Title | Official Adjective | Historical & Etymological Justification |",
         "| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |",
@@ -235,7 +514,7 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         "",
         "---",
         "",
-        "## 4. Linguistic Adaptation & Sound Law Implementation",
+        "## 5. Linguistic Adaptation & Sound Law Implementation",
         "",
         "All titles and adjectives conform to the **Romano-Germanic synthesis** of the Tarraconian Imperial Chancellery (`language_high_german`, `heritage_central_germanic`):",
         "1. **Chancellery Formulae:** Every county is titled **Magistrat van ...** (courtly Romance variant: *Veguerîe van ...*).",
@@ -247,7 +526,7 @@ def generate_audit_discrepancy_register(titles, houses, report_file):
         "",
         "---",
         "",
-        "## 5. Transition to Phase 5: Documentation Update & Mod Recompilation",
+        "## 6. Transition to Phase 5: Documentation Update & Mod Recompilation",
         "",
         "The resolutions in this register are ready for direct injection into mod configuration files:",
         "1. Update `anachronistic_titles_1059.md` and `tarraconian_titles_1059.md` with the finalized titles and adjectives.",
