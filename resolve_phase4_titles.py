@@ -8,7 +8,7 @@ This script executes Phase 4 of the audit plan:
 2. Applies Tarraconian sound laws (Rhine-Moselle Franconian MHG + Old Catalan) to formulate official Chancellery titles and adjectives.
 3. Systematically couples each of the 50 cadet branches of Dynasty 1582 (House Kestenholz) to its underlying seat and updates chatenois_dynasty_analysis.md.
 4. Generates the comprehensive audit_discrepancy_register.md in the git repository workspace.
-5. Writes machine-readable resolution tables to /tmp/ck3_audit_phase4/.
+5. Writes machine-readable resolution tables to /var/tmp/ck3_audit/phase4/.
 """
 
 import argparse
@@ -600,9 +600,9 @@ def update_chatenois_dynasty_analysis(houses, doc_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 4: Title Resolution & Dynasty Extraction Pipeline")
-    parser.add_argument("--phase1-dir", default="/tmp/ck3_audit_phase1", help="Path to Phase 1 data directory")
-    parser.add_argument("--phase3-dir", default="/tmp/ck3_audit_phase3", help="Path to Phase 3 data directory")
-    parser.add_argument("--output-dir", default="/tmp/ck3_audit_phase4", help="Output directory in /tmp")
+    parser.add_argument("--phase1-dir", default="/var/tmp/ck3_audit/phase1", help="Path to Phase 1 data directory")
+    parser.add_argument("--phase3-dir", default="/var/tmp/ck3_audit/phase3", help="Path to Phase 3 data directory")
+    parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase4", help="Output directory in /var/tmp")
     parser.add_argument("--repo-dir", default="/workspace", help="Git repository directory")
 
     args = parser.parse_args()

@@ -11,8 +11,8 @@ This script evaluates all 150 flagged Tier 4 and Tier 5 titles inside the Roman 
 5. Cadet branch realignment coupling (updating House Kestenholz cadet branch seats).
 
 Outputs:
-- Machine-readable JSON: /tmp/ck3_audit_phase3/title_screening_matrix.json
-- Machine-readable CSV:  /tmp/ck3_audit_phase3/title_screening_matrix.csv
+- Machine-readable JSON: /var/tmp/ck3_audit/phase3/title_screening_matrix.json
+- Machine-readable CSV:  /var/tmp/ck3_audit/phase3/title_screening_matrix.csv
 - Human-readable report: /workspace/phase3_title_screening_report.md
 """
 
@@ -3202,9 +3202,9 @@ def generate_markdown_report(matrix, report_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 3: Title Screening & Etymological Cross-Referencing")
-    parser.add_argument("--phase1-dir", default="/tmp/ck3_audit_phase1", help="Path to Phase 1 data directory")
-    parser.add_argument("--phase2-dir", default="/tmp/ck3_audit_phase2", help="Path to Phase 2 data directory")
-    parser.add_argument("--output-dir", default="/tmp/ck3_audit_phase3", help="Output directory in /tmp")
+    parser.add_argument("--phase1-dir", default="/var/tmp/ck3_audit/phase1", help="Path to Phase 1 data directory")
+    parser.add_argument("--phase2-dir", default="/var/tmp/ck3_audit/phase2", help="Path to Phase 2 data directory")
+    parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase3", help="Output directory in /var/tmp")
     parser.add_argument("--repo-dir", default="/workspace", help="Git repository directory")
     parser.add_argument("--md-ref", default="/workspace/anachronistic_titles_1059.md", help="Anachronistic titles reference")
     parser.add_argument("--tarr-ref", default="/workspace/tarraconian_titles_1059.md", help="Tarraconian titles reference")

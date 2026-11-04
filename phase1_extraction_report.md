@@ -1,7 +1,7 @@
 # Phase 1 Extraction Report: Landed Titles, Dynasties & Historical Canon
 
 * **Extraction Date:** 2026-11-04 07:04:20
-* **Output Directory:** `/tmp/ck3_audit_phase1`
+* **Output Directory:** `/var/tmp/ck3_audit/phase1`
 
 ## 1. Executive Summary & Core Statistics
 

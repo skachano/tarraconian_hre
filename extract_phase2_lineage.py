@@ -22,8 +22,8 @@ Executes Phase 2 of title_historical_accuracy_audit_plan.md:
        - Tier 5: Foreign Colonial Exonym Mismatch (FLAGGED)
 
 Outputs:
-  - /tmp/ck3_audit_phase2/county_lineage_trajectories.json
-  - /tmp/ck3_audit_phase2/county_lineage_matrix.csv
+  - /var/tmp/ck3_audit/phase2/county_lineage_trajectories.json
+  - /var/tmp/ck3_audit/phase2/county_lineage_matrix.csv
   - ./phase2_title_lineage_report.md (committed to repository)
 """
 
@@ -587,12 +587,12 @@ def main():
     parser = argparse.ArgumentParser(description="Phase 2: Title Lineage & Progression Mapping")
     parser.add_argument(
         "--phase1-dir",
-        default="/tmp/ck3_audit_phase1",
+        default="/var/tmp/ck3_audit/phase1",
         help="Directory containing Phase 1 JSON datasets"
     )
     parser.add_argument(
         "--output-dir",
-        default="/tmp/ck3_audit_phase2",
+        default="/var/tmp/ck3_audit/phase2",
         help="Directory to write Phase 2 machine-readable datasets"
     )
     parser.add_argument(
@@ -655,8 +655,8 @@ def main():
             'option_a_candidate_name': traj['sub_barony_candidates']['option_a_candidate']['name'] if traj['sub_barony_candidates']['option_a_candidate'] else ''
         })
 
-    # 3. Write Datasets to /tmp/ck3_audit_phase2/
-    log("Writing Phase 2 machine-readable datasets to /tmp/ck3_audit_phase2/...")
+    # 3. Write Datasets to output directory
+    log(f"Writing Phase 2 machine-readable datasets to {output_dir}...")
 
     json_out = output_dir / "county_lineage_trajectories.json"
     with open(json_out, 'w', encoding='utf-8') as f:

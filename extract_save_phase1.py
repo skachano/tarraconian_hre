@@ -1094,8 +1094,8 @@ def main():
     )
     parser.add_argument(
         "--output-dir",
-        default="/tmp/ck3_audit_phase1",
-        help="Directory to write extracted data and reports (defaults to /tmp/ck3_audit_phase1)"
+        default="/var/tmp/ck3_audit/phase1",
+        help="Directory to write extracted data and reports (defaults to /var/tmp/ck3_audit/phase1)"
     )
     parser.add_argument(
         "--rakaly-bin",
@@ -1104,7 +1104,7 @@ def main():
     )
     parser.add_argument(
         "--melted-save",
-        default="/tmp/melted_save.ck3",
+        default="/var/tmp/ck3_audit/melted_save.ck3",
         help="Path to existing or temporary melted save file"
     )
     args = parser.parse_args()
