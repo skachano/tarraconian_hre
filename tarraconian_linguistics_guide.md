@@ -1,20 +1,24 @@
-# Tarraconian Linguistic & Sound-Change Guide (ca. 1059)
+# Tarraconian Linguistic & Sound-Change Guide (ca. 1142 Update)
 
-**Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316`)  
-**Daughter Dialects:** Alpine-Tarraconian (`ID 337`), Croato-Tarraconian (`ID 345`)  
+**Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316` — 744 counties in 1142, up from 547 in 1122)  
+**Daughter Dialects & Languages:**  
+* **Alpine-Tarraconian** (*Alpîn-Tarraconisch*, `ID 337` — hybridized 1042 with Cisalpine)  
+* **Croato-Tarraconian** (*Kroatisch-Tarraconisch*, `ID 345` — hybridized 1057 with Croatian, 14 counties in 1142)  
+* **Ungwârer** (*Ungwârerisch / Ungwâri*, `ID 367` — diverged 1094 in Upper Hungary, Magyar-speaking daughter language with Central Germanic heritage & Franconian onomasticon, 2 counties in 1142)  
+
 **Linguistic Classification:** High German (Moselle/Rhine Franconian superstrate) with a heavy Old Catalan / Occitano-Romance substrate and Hispano-Latin administrative lexicon.
 
 ---
 
-## 1. Sociolinguistic Overview: A Romano-Germanic Court Tongue
+## 1. Sociolinguistic Overview: A Romano-Germanic Imperial Tongue
 
 Formed on **31 August 989** from the hybridization of **Lothringian** (a bureaucratic Franconian culture speaking High German) and **Catalan** (a courtly, maritime Occitano-Romance culture of the Spanish March / *Hispania Tarraconensis*), **Tarraconian** represents a historical "reverse Frankish" scenario.
 
-Rather than abandoning their Germanic tongue for Romance, the Lothringian imperial elite of House *Chatenois-Metz* retained **11th-century High German** (`language_high_german`) and **Franconian personal names** (`name_list_franconian`), while absorbing **Catalan courtly culture** (`ethos_courtly`), **Mediterranean maritime mercantilism**, **Iberian architecture**, and an **Imperial Magistracy** system of governance.
+Rather than abandoning their Germanic tongue for Romance, the Lothringian imperial elite of House *Chatenois-Metz* retained **11th/12th-century High German** (`language_high_german`) and **Franconian personal names** (`name_list_franconian`), while absorbing **Catalan courtly culture** (`ethos_courtly`), **Mediterranean maritime mercantilism**, **Iberian architecture**, and an **Imperial Magistracy** system of governance. By **1142**, following the restoration of **The Roman Empire** (`h_roman_empire` / **Dat Rômische Keiserrîch**) under Kaiser Adémar "the Great" and Augustus Wernhard "the Bear", Tarraconian serves as the universal chancellery language across **100 Kingdoms** (**451 Duchies** and **1,703 De Jure Counties**, of which **1,513** are inside the Roman Empire) from the Hebrides and Sápmi to Khorasan, Sindh, and the Horn of Africa.
 
 The result is a language structurally parallel to Middle English (Germanic grammar + Anglo-Norman lexicon), but with roles and geographies reversed:
 * **Core Grammar, Morphology & Phonology:** Early Middle High German (Moselle/Rhine Franconian dialect of Metz, Trier, and Mainz).
-* **Administrative, Courtly & Nautical Lexicon:** Old Catalan, Occitan, and Medieval Hispano-Latin.
+* **Administrative, Courtly & Nautical Lexicon:** Old Catalan, Occitan, and Medieval Hispano-Latin, supplemented after the Imperial Restoration by Byzantine Greek administrative borrowings.
 * **Chancellery Orthography:** High German phonemes written through the scribal conventions of Catalan-Aragonese and Imperial chancelleries.
 
 ---
@@ -28,21 +32,21 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 | Letter / Digraph | IPA Value | Pronunciation Guide & Historical Origin | Example in Tarraconian |
 | :--- | :--- | :--- | :--- |
 | **a** | `[a]` | Short open front/central vowel, as in Spanish/Catalan *mar* or German *Mann*. | **March** `[marx]` ("March / Border Province") |
-| **â** | `[aː]` | Long open vowel, as in German *Vater*. | **Prâge** `[ˈpraː.ɣə]` ("Prague") |
+| **â** | `[aː]` | Long open vowel, as in German *Vater*. | **Prâge** `[ˈpraː.ɣə]` ("Prague"), **Ungwâr** `[ˈʊŋ.waːr]` ("Užhorod") |
 | **e** (stressed) | `[ɛ]` or `[e]` | Open-mid `[ɛ]` (from Germanic *ë* or Romance *è*) or close-mid `[e]` (from primary umlaut of *a*). | **Kernten** `[ˈkɛrn.tən]` ("Carinthia") |
 | **e** (unstressed) | `[ə]` | Reduced schwa in final syllables and prefixes (*ge-*, *be-*); often dropped (apocopated) after *l, r, n* under Catalan influence. | **Raben** `[ˈra.bən]` ("Ravenna") |
 | **ê** | `[eː]` | Long close-mid front vowel; appears in Romance loans and Franconian monophthongized *ei/ē*. | **Mênz** `[meːnts]` ("Mainz"), **Tudêl** `[tu.ˈdeːl]` ("Tudela") |
 | **i / y** | `[ɪ]` or `[i]` | Short close front vowel; `y` is used interchangeably with `i` in Greek/Romance loans. | **Brixen** `[ˈbrɪk.sən]` ("Brixen") |
 | **î** | `[iː]` | Long close front vowel (has not yet diphthongized to *ei* as in Modern German). | **Rîch** `[riːç]` ("Empire / Realm"), **Lîgnitz** `[ˈliːɡ.nɪts]` ("Liegnitz") |
-| **o** | `[ɔ]` or `[o]` | Short open-mid `[ɔ]` or close-mid `[o]` (especially in Catalan/Romance loans). | **Oska** `[ˈɔs.ka]` ("Huesca") |
-| **ô** | `[oː]` | Long close-mid back vowel (from Germanic *ō/au* before dentals and Romance stressed *o*). | **Tarracôn** `[ta.ra.ˈkoːn]` ("Tarragona") |
+| **o** | `[ɔ]` or `[o]` | Short open-mid `[ɔ]` or close-mid `[o]` (especially in Catalan/Romance loans). | **Oske** `[ˈɔs.kə]` ("Huesca") |
+| **ô** | `[oː]` | Long close-mid back vowel (from Germanic *ō/au* before dentals and Romance stressed *o*). | **Tarracôn** `[ta.ra.ˈkoːn]` ("Tarragona"), **Rômisch** `[ˈroː.mɪʃ]` |
 | **u** | `[ʊ]` or `[u]` | Short close back rounded vowel. | **Munster** `[ˈmʊn.stər]` ("Münster") |
-| **û** | `[uː]` | Long close back vowel (has not yet diphthongized to *au* as in Modern German). | **Lûke** `[ˈluː.kə]` ("Lucca"), **Alenzûn** `[a.lɛn.ˈtsuːn]` ("Alençon") |
-| **ü / iu** | `[ʏ]` / `[yː]` | Close front rounded vowel (umlaut of *u* / *û*, or borrowed Old French/Occitan *u*). | **Fürst** `[fʏrst]` ("Prince") |
-| **ö / oe** | `[œ]` / `[øː]` | Mid front rounded vowel (umlaut of *o* / *ô*). | **Böhmisch** `[ˈbøː.mɪʃ]` ("Bohemian") |
-| **ei / ai** | `[ɛɪ]` | Falling diphthong; written `ai` in Romance loans and southern names. | **Keiser** `[ˈkɛɪ.zər]` ("Emperor") |
+| **û** | `[uː]` | Long close back vowel (has not yet diphthongized to *au* as in Modern German). | **Lûke** `[ˈluː.kə]` ("Lucca"), **Lûnstat** `[ˈluːn.stat]` ("Lunéville") |
+| **ü / iu** | `[ʏ]` / `[yː]` | Close front rounded vowel (umlaut of *u* / *û*, or borrowed Old French/Occitan/Greek *u/y*). | **Fürst** `[fʏrst]` ("Prince"), **Brüsch** `[brʏʃ]` ("Brysis") |
+| **ö / oe** | `[œ]` / `[øː]` | Mid front rounded vowel (umlaut of *o* / *ô*). | **Böhmisch** `[ˈbøː.mɪʃ]` ("Bohemian"), **Kölne** `[ˈkœl.nə]` |
+| **ei / ai** | `[ɛɪ]` | Falling diphthong; written `ai` in Romance/Arabic loans and southern names. | **Keiser** `[ˈkɛɪ.zər]` ("Emperor"), **Kaisarêe** `[kɛɪ.za.ˈreː.ə]` |
 | **ou / au** | `[ɔʊ]` | Rounded back diphthong; often followed by glide `-w-` (`-ouwe`). | **Anschou** `[ˈan.ʃɔʊ]` ("Anjou"), **Troppouwe** `[ˈtrɔ.pɔʊ.wə]` ("Opava") |
-| **îe / ie** | `[iː.ə]` or `[iə]` | Centering diphthong `[iə]` in German roots; disyllabic `[iː.ə]` in Romance `-ia` endings. | **Bastîe** `[bas.ˈtiː.ə]` ("Bastia"), **Veguerîe** `[vɛ.ɣə.ˈriː.ə]` ("Magistracy") |
+| **îe / ie** | `[iː.ə]` or `[iə]` | Centering diphthong `[iə]` in German roots; disyllabic `[iː.ə]` in Romance/Greek `-ia` endings. | **Bastîe** `[bas.ˈtiː.ə]` ("Bastia"), **Veguerîe** `[vɛ.ɣə.ˈriː.ə]` ("Magistracy") |
 
 ---
 
@@ -50,27 +54,27 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 
 | Letter / Digraph | IPA Value | Phonological Rule & Origin | Example in Tarraconian |
 | :--- | :--- | :--- | :--- |
-| **b** | `[b]` (`[p]` final) | Voiced bilabial stop initially/medially; devoices to `[p]` word-finally (*Auslautverhärtung*). | **Bastîe** `[bas.ˈtiː.ə]`, **Arwe** `[ˈar.wə]` |
+| **b** | `[b]` (`[p]` final) | Voiced bilabial stop initially/medially; devoices to `[p]` word-finally (*Auslautverhärtung*). | **Bastîe** `[bas.ˈtiː.ə]`, **Halep** `[ˈha.lɛp]` ("Aleppo") |
 | **c** | `[k]` or `[ts]` | `[k]` before *a, o, u, l, r* (Catalan/Latin habit); `[ts]` before *e, i*. | **Castel** `[kas.ˈtɛl]`, **Clêve** `[ˈkleː.və]` |
-| **ch** | `[x]` / `[ç]` | Voiceless velar fricative `[x]` after back vowels (*a, o, u, r*); palatal `[ç]` after front vowels (*i, e*). Used word-finally where MHG writes `-c/-g` and Old Catalan writes `-ch`. | **Burch** `[bʊrx]` ("Castle/Burg"), **Dantzich** `[ˈdan.tsɪç]` ("Gdańsk") |
+| **ch** | `[x]` / `[ç]` | Voiceless velar fricative `[x]` after back vowels (*a, o, u, r*); palatal `[ç]` after front vowels (*i, e*). Also renders Greek `χ` (*ch*) and Arabic/Turkic `kh` (`خ / ق`). | **Burch** `[bʊrx]` ("Castle/Burg"), **Chalkidîch** `[xal.ki.ˈdiːç]` |
 | **d** | `[d]` (`[t]` final) | Voiced alveolar stop; preserved in Rhine/Moselle Franconian where Upper German shifted to *t*. | **Dat** `[dat]` ("The"), **Tudêl** `[tu.ˈdeːl]` |
-| **dsch / tg** | `[dʒ]` | Voiced postalveolar affricate; used to render Italian *-ggi-/-cci-* and Old Catalan *tg/j*. | **Fodsche** `[ˈfɔd.ʒə]` ("Foggia"), **Adschatz** `[a.ˈdʒats]` ("Ajaccio") |
-| **f / v** | `[f]` or `[v]` | `f` is always voiceless `[f]`. `v` is `[v]` in Romance loans (**Veguerîe**) and intervocalically (**Clêve**), and labiodental `[f ~ v]` in Franconian **van** `[fan ~ van]`. | **van** `[van]`, **Fürst** `[fʏrst]` |
+| **dsch / tg** | `[dʒ]` | Voiced postalveolar affricate; used to render Italian *-ggi-/-cci-*, Old Catalan *tg/j*, Arabic `ج` (*j*), and Georgian `ჯ` (*j*). | **Fodsche** `[ˈfɔd.ʒə]` ("Foggia"), **Tschartschêti** / **Dscharîn** |
+| **f / v** | `[f]` or `[v]` | `f` is always voiceless `[f]`. `v` is `[v]` in Romance/Greek loans (**Veguerîe**, **Verîe**) and intervocalically (**Clêve**), and labiodental `[f ~ v]` in Franconian **van** `[fan ~ van]`. | **van** `[van]`, **Fürst** `[fʏrst]` |
 | **g / gu** | `[ɡ]` (`[ɣ]` medial) | Voiced velar stop `[ɡ]` initially; lenited to fricative `[ɣ]` between vowels (a shared Moselle Franconian and Catalan feature!). Written `gu` before *e/i* in Catalan loans. | **Gubernat** `[ɡu.bər.ˈnat]`, **Prâge** `[ˈpraː.ɣə]` |
 | **h** | `[h]` | Glottal aspirate initially; silent or lengthening marker medially. | **Herzog** `[ˈhɛr.tsɔx]` |
-| **j** | `[j]` or `[ʒ]` | Palatal approximant `[j]` in German and Slavic roots; postalveolar `[ʒ]` in Catalan/French courtly loans. | **Calatajût** `[ka.la.ta.ˈjuːt]`, **Amjens** `[am.ˈjɛns]` |
-| **k** | `[k]` | Voiceless velar stop, used before front vowels (*e, i*) where `c` would be read `[ts]`. | **Keiser** `[ˈkɛɪ.zər]`, **Kernten** `[ˈkɛrn.tən]` |
+| **j** | `[j]` or `[ʒ]` | Palatal approximant `[j]` in German, Slavic, and Turkic roots; postalveolar `[ʒ]` in Catalan/French courtly loans. | **Calatajût** `[ka.la.ta.ˈjuːt]`, **Jedisân** `[jɛ.di.ˈzaːn]` |
+| **k** | `[k]` | Voiceless velar stop, used before front vowels (*e, i*) and in Greek/Slavic/Turkic/Celtic stems. | **Keiser** `[ˈkɛɪ.zər]`, **Kertsch** `[kɛrtʃ]` ("Kerch") |
 | **l** | `[l]` (`[ɫ]` coda) | Alveolar lateral; velarized ("dark L" `[ɫ]`) in syllable codas under Catalan and Rhineland influence. | **Castel** `[kas.ˈtɛɫ]` |
-| **ll** | `[ʎ]` or `[lː]` | Palatal lateral `[ʎ]` in Catalan/Iberian names; geminate `[lː]` in German compounds. | **Castellon** `[kas.tɛ.ˈʎoːn]` |
+| **ll** | `[ʎ]` or `[lː]` | Palatal lateral `[ʎ]` in Catalan/Iberian/Gaelic names; geminate `[lː]` in German compounds. | **Castellon** `[kas.tɛ.ˈʎoːn]` |
 | **m, n** | `[m]`, `[n]` (`[ŋ]` before *k/g*) | Standard bilabial and alveolar nasals. | **Mênz** `[meːnts]` |
-| **nj / ny / nh** | `[ɲ]` | Palatal nasal borrowed from Old Catalan (`ny`), Occitan (`nh`), and Romance palatalizations (`nj`). | **Armanjach** `[ar.ma.ˈɲax]` ("Armagnac"), **Lusinjan** `[lu.zɪ.ˈɲan]` |
+| **nj / ny / nh** | `[ɲ]` | Palatal nasal borrowed from Old Catalan (`ny`), Occitan (`nh`), and Romance/Slavic/Celtic palatalizations (`nj`). | **Armanjach** `[ar.ma.ˈɲax]` ("Armagnac"), **ikonjen** `[i.ˈkoː.njən]` |
 | **p, t** | `[p]`, `[t]` | Voiceless stops. Note: Moselle/Rhine Franconian preserves unshifted `p-` initially and in `mp/rp/lp` (**Palz** `[palts]` instead of Upper German *Pfalz*). | **Palz** `[palts]`, **Plintenburch** `[ˈplɪn.tən.bʊrx]` |
 | **qu** | `[kw]` or `[k]` | `[kw]` in Latin/Germanic words; `[k]` before *e/i* in Catalan/Iberian stems. | **Aquitanjen** `[a.kwi.ˈta.ɲən]` |
 | **r** | `[r]` | Apical alveolar trill, standard in both medieval High German and Old Catalan. | **Tarracôn** `[ta.ra.ˈkoːn]` |
-| **s / ss** | `[z]`, `[s]`, or `[s̺]` | Voiced `[z]` initially before vowels and between vowels; voiceless `[s]` finally or when doubled (`ss`). Before consonants (`st-, sp-`), retracted apico-alveolar `[s̺ ~ ʃ]`. | **Zant-Sêr** `[tsant.ˈseːr]` ("Sancerre"), **Oska** `[ˈɔs.ka]` |
-| **sch** | `[ʃ]` | Voiceless postalveolar fricative (from OHG *sk* and Romance *ch / x*). | **Anschou** `[ˈan.ʃɔʊ]`, **Oschke** `[ˈɔʃ.kə]` |
-| **tsch** | `[tʃ]` | Voiceless postalveolar affricate (used for Slavic *č*, Italian *-ci-*, and Romance *ch*). | **Batsch** `[batʃ]` ("Bács"), **Lantschân** `[lan.ˈtʃaːn]` ("Lanciano") |
-| **w** | `[w]` or `[ʋ]` | Bilabial/labiodental approximant. | **Werle** `[ˈwɛr.lə]`, **Lewenburch** `[ˈlɛ.wən.bʊrx]` |
+| **s / ss** | `[z]`, `[s]`, or `[s̺]` | Voiced `[z]` initially before vowels and between vowels; voiceless `[s]` finally or when doubled (`ss`). Before consonants (`st-, sp-, sw-, sl-, sm-, sn-`), retracted apico-alveolar `[s̺ ~ ʃ]`; note that MHG `sw-, sl-, sm-` (**Swâben**, **Slêswîch**, **Smalkalden**) have not yet merged into `schw-, schl-, schm-`. | **Zant-Sêr** `[tsant.ˈseːr]` ("Sancerre"), **Oske** `[ˈɔs.kə]` |
+| **sch** | `[ʃ]` | Voiceless postalveolar fricative (from OHG *sk*, Romance *ch / x*, Slavic *š*, Arabic *sh*, and Turkic *ş*). | **Anschou** `[ˈan.ʃɔʊ]`, **Schêisar** `[ˈʃɛɪ.zar]` ("Shayzar") |
+| **tsch** | `[tʃ]` | Voiceless postalveolar affricate (used for Slavic *č*, Italian *-ci-*, Georgian *č/č'*, and Turkic *ç*). | **Batsch** `[batʃ]` ("Bács"), **Petschênêch** `[pɛ.tʃeː.ˈneːx]` |
+| **w** | `[w]` or `[ʋ]` | Bilabial/labiodental approximant. | **Werle** `[ˈwɛr.lə]`, **Swenigorot** `[ˈswɛ.ni.ɡɔ.rɔt]` |
 | **z / tz** | `[ts]` | Voiceless alveolar affricate (from the High German consonant shift of *t* $\rightarrow$ *z*). | **Zips** `[tsɪps]` ("Spiš"), **Lîgnitz** `[ˈliːɡ.nɪts]` |
 
 ---
@@ -80,113 +84,131 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 ### Rule 1: The Rhine-Moselle Franconian Consonant Profile
 Because Tarraconian descends from **Lothringian** (`name_list_franconian`), it follows the **West Central German (Moselle/Rhine Franconian)** branch of the High German Consonant Shift:
 1. **Shifted *t* $\rightarrow$ *z/ss* and *k* $\rightarrow$ *ch*:** Post-vocalic *-k* becomes `-ch` (*Rîch*), and initial/post-consonantal *t-* becomes `z-` / `tz` (*Zips*, *Mênz*).
-2. **Unshifted *p* and *d*:** Unlike Bavarian or Swabian, Tarraconian keeps initial `p-` unshifted (**Palz** "Palace/Pfalz", **Port** "Harbor") and retains `d-` where Upper German has *t-* (**Dat** "The", **Dorf** "Village", **Nider-** "Lower").
-3. **Final Devoicing (*Auslautverhärtung*) + Catalan `-ch`:** Both Middle High German and Old Catalan devoice final stops. Word-final *-g* and *-k* merge into **`-ch`** (`[x ~ ç]`):
-   * *Burg* $\rightarrow$ **Burch** `[bʊrx]`
-   * *Berg* $\rightarrow$ **Berch** `[bɛrç]`
-   * *Mark* + Catalan *Marca* $\rightarrow$ **March** `[marx]`
+2. **Unshifted *p*, *d*, and Initial *sw- / sl- / sm-*:** Unlike Bavarian or Swabian, Tarraconian keeps initial `p-` unshifted (**Palz** "Palace/Pfalz", **Port** "Harbor"), retains `d-` where Upper German has *t-* (**Dat** "The", **Dorf** "Village", **Nider-** "Lower"), and preserves Middle High German `sw-`, `sl-`, `sm-` (**Swâben**, **Slêswîch**, **Smalkalden**, **Swînvurt**) without New High German *Schw-/Schl-/Schm-* spellings.
+3. **Final Devoicing (*Auslautverhärtung*) + Catalan `-ch`:** Both Middle High German and Old Catalan systematically devoice word-final obstruents:
+   * Word-final `-g` and `-k` merge into **`-ch`** (`[x ~ ç]`): *Burg* $\rightarrow$ **Burch** `[bʊrx]`, *Berg* $\rightarrow$ **Berch** `[bɛrç]`, *Mark* + Catalan *Marca* $\rightarrow$ **March** `[marx]`, *Baalbek* $\rightarrow$ **Bâlbech**, *Mělník* $\rightarrow$ **Melnîch**.
+   * Word-final `-d` and `-b` devoice to **`-t`** and **`-p`**: *Land* $\rightarrow$ **Lant** (**Dütschlant**, **Engellant**, **Vrîslant**), *Ohrid* $\rightarrow$ **Ochrît**, *Ḥalab* $\rightarrow$ **Halep**, *Gharb* $\rightarrow$ **Gârp**.
+   * Foreign word-final `-ov / -ev / -av` vocalizes to the MHG diphthongal suffix **`-ouwe`** (`[ɔʊ.wə]`): *Opava* $\rightarrow$ **Troppouwe**, *Moskva* $\rightarrow$ **Moskouwe**, *Rostov* $\rightarrow$ **Rostouwe**, *Azov* $\rightarrow$ **Asouwe**, *Preslav* $\rightarrow$ **Preslouwe**.
 
-### Rule 2: Dual-Substrate Apocope (Dropping Final Unstressed Vowels)
-Old Catalan drops unstressed final vowels (*-o, -e*) after most consonants, while retaining *-a* (often weakened to `[ə]`). When Romance or Latin place names enter Tarraconian High German:
-* Final `-o`, `-um`, `-us` are dropped completely:
+### Rule 2: Dual-Substrate Apocope & Final Vowel Reduction
+Old Catalan drops unstressed final vowels (*-o, -e*) after most consonants, while Middle High German reduces unstressed final vowels to schwa `-e` `[ə]`. When Romance, Greek, Latin, Slavic, or Arabic place names enter Tarraconian High German:
+* Final `-o`, `-um`, `-us`, `-os`, `-on`, and `-polis` are apocopated or reduced:
   * *Tarraconem / Tarragona* $\rightarrow$ **Tarracôn** `[ta.ra.ˈkoːn]`
-  * *Lanciano* $\rightarrow$ **Lantschân** `[lan.ˈtʃaːn]`
+  * *Lanciano* $\rightarrow$ **Lantschân** `[lan.ˈtʃaːn]`, *Butrinto* $\rightarrow$ **Butrînt** `[bu.ˈtrɪnt]`
   * *Alençon* $\rightarrow$ **Alenzûn** `[a.lɛn.ˈtsuːn]`
-* Final `-a` either survives as `-a` in Iberian names (**Oska**) or reduces to High German `-e` `[ə]` (**Prâge**, **Lûke**, **Fodsche**), or drops after liquids/nasals (**Tudela** $\rightarrow$ **Tudêl** `[tu.ˈdeːl]`).
+  * *Ephesos* $\rightarrow$ **Ephês** `[ɛ.ˈfeːs]`, *Korinthos* $\rightarrow$ **Korînt** `[ko.ˈrɪnt]`, *Dorostorum* $\rightarrow$ **Durostôr**, *Damaskos* $\rightarrow$ **Damask**
+  * *Kallipolis* $\rightarrow$ **Kallîpel**, *Nikopolis* $\rightarrow$ **Nikôpel**
+* Greek `-ion` becomes **`-jen`** (**Ikônjen**, **Amôrjen**, **Filomêljen**), while `-eon`, `-ea`, and `-eia` become **`-êe`** `[eː.ə]` (**Kaisarêe**, **Nîkêe**, **Sebastêe**, **Laodikêe**, **Dorîlêe**).
+* Final `-a` / `-ia` and Slavic/Norse `-o / -a` either become `-je` / `-jen` (`[jə ~ jən]`) or `-îe` (`[iː.ə]`), or reduce to High German schwa **`-e`** `[ə]` (**Prâge**, **Lûke**, **Oske**, **Pêtre**, **Dubne**, **Trûse**, **Sigtûne**, **Samosâte**, **Edesse**), or drop after single liquids/nasals (**Tudela** $\rightarrow$ **Tudêl** `[tu.ˈdeːl]`).
 
-### Rule 3: Palatal Assimilation of Romance & Slavic Consonants
-Because Tarraconian scribes are fluent in both Romance and Germanic sounds, foreign palatals are systematically mapped:
+### Rule 3: Palatal Assimilation & Slavic `-sk` Adaptation
+Because Tarraconian scribes are fluent in both Romance and Germanic sounds, foreign palatals, sibilants, and Slavic suffixes are systematically mapped:
 * Romance `ny / nh / gn` (`/ɲ/`) $\rightarrow$ **`nj`** `[ɲ]`: *Armagnac* $\rightarrow$ **Armanjach** `[ar.ma.ˈɲax]`, *Lusignan* $\rightarrow$ **Lusinjan** `[lu.zɪ.ˈɲan]`.
-* French/Occitan `j / g(e,i) / ch` $\rightarrow$ **`sch`** `[ʃ]`: *Anjou* $\rightarrow$ **Anschou** `[ˈan.ʃɔʊ]`.
-* Italian/Slavic/Hungarian `c(e,i) / č / cs` $\rightarrow$ **`tsch`** `[tʃ]`: *Bács* $\rightarrow$ **Batsch** `[batʃ]`, *Lanciano* $\rightarrow$ **Lantschân** `[lan.ˈtʃaːn]`.
-* Slavic `-ice / -ica / -ec` $\rightarrow$ **`-itz`** `[ɪts]`: *Liegnitz* $\rightarrow$ **Lîgnitz** `[ˈliːɡ.nɪts]`.
+* French/Occitan/Arabic/Turkic `j / g(e,i) / ch / sh / ş` $\rightarrow$ **`sch`** `[ʃ]` or **`dsch`** `[dʒ]`: *Anjou* $\rightarrow$ **Anschou** `[ˈan.ʃɔʊ]`, *Shayzar* $\rightarrow$ **Schêisar** `[ˈʃɛɪ.zar]`, *Jimi* $\rightarrow$ **Dschîmi** `[ˈdʒiː.mi]`.
+* Italian/Slavic/Hungarian/Georgian/Turkic `c(e,i) / č / cs / ç` $\rightarrow$ **`tsch`** `[tʃ]`: *Bács* $\rightarrow$ **Batsch** `[batʃ]`, *Kerch* $\rightarrow$ **Kertsch** `[kɛrtʃ]`, *Pecheneg* $\rightarrow$ **Petschênêch** `[pɛ.tʃeː.ˈneːx]`.
+* Slavic `-ice / -ica / -ec` $\rightarrow$ **`-itz`** `[ɪts]`: *Liegnitz* $\rightarrow$ **Lîgnitz** `[ˈliːɡ.nɪts]`, *Strumica* $\rightarrow$ **Strûmitz** `[ˈstruː.mɪts]`.
+* **Slavic `-sk` / `-zk` Codas $\rightarrow$ `-tzich` `[tsɪç]` or `-bsch` `[pʃ]`:** Because both High German and Old Catalan palatalized historic `*sk` to `sch` `[ʃ]`, bare word-final `-sk` is phonotactically alien to Tarraconian. Following medieval German chancellery practice (cf. *Gdańsk* $\rightarrow$ *Dantzig/Dantzich*, *Połock* $\rightarrow$ *Plotzke*, *Pinsk* $\rightarrow$ *Pintzke*), Slavic `-sk` is adapted by resolving the sibilant + velar stop into the affricate + Franconian suffix **`-tzich`** `[tsɪç]`: *Słupsk* $\rightarrow$ **Slûptzich**, *Płock* $\rightarrow$ **Plôtzich**, *Połock* $\rightarrow$ **Polôtzich**, *Pińsk* $\rightarrow$ **Pîntzich**, *Mińsk* $\rightarrow$ **Mîntzich**, *Smoleńsk* $\rightarrow$ **Smolêntzich**, *Kursk* $\rightarrow$ **Kûrtzich**. After labials (`-bsk`), the cluster assimilates directly to **`-bsch`** (*Vitebsk* $\rightarrow$ **Wîtebsch**), or undergoes suffix replacement with **`-ouwe`** (*Petrovsk* $\rightarrow$ **Petrouwe**).
+
+### Rule 4: Resolution of Illicit Consonant Clusters (Epenthesis, Prosthesis & Sonorants)
+Foreign onset and coda clusters that violate Middle High German and Occitano-Romance sonority sequencing are repaired by systematic chancellery rules:
+* **Schwa/Vowel Epenthesis (Anaptyxis) & Prosthesis:** Unpronounceable initial clusters (`Wsch-`, `Mtzch-`, `Zch-`, `Tm-`, `Ps-`, `Ms-`) and syllabic sonorants (`Trn-`, `Lt-`) insert a short vowel (`e`, `i`, `a`) or prosthetic `A-`: *Wschowa* $\rightarrow$ **Wischouwe**, *Trnovo* $\rightarrow$ **Ternouwe**, *Ltava* $\rightarrow$ **Altâwe**, *Mtskheta* $\rightarrow$ **Metzchête**, *Tmutarakan* $\rightarrow$ **Tamatarchân**, *Pset* $\rightarrow$ **Pesêt**, *Mzab* $\rightarrow$ **Mesâp**.
+* **Sibilant Cluster Repair:** Initial `sr-` inserts a homorganic dental stop **`str-`** (*Sredets* $\rightarrow$ **Strêdetz**); redundant `stsch-` simplifies to **`sch-`** (*Szczecin* $\rightarrow$ **Schettîn**, *Szczytno* $\rightarrow$ **Schîtne**); and post-labial palatal glides vocalize to **`-ij-`** (*Zvyahel* $\rightarrow$ **Swijâhel**, *Vyangi* $\rightarrow$ **Wijângen**).
+* **Word-Final Syllabic Liquids (`-wl`, `-mr`):** Resolved via morphological adaptation to **`-ouwe`** (*Yaroslavl* $\rightarrow$ **Jaroslouwe**) or schwa epenthesis **`-er`** (*Qimr* $\rightarrow$ **Kîmer**).
 
 ---
 
-## 4. Administrative & Noble Title Nomenclature
+## 4. Administrative & Noble Title Nomenclature (1122 Imperial Chancellery)
 
-In your campaign, the Holy Roman Empire operates an imperial bureaucracy where counties are **Magistracies** and duchies are led by **Governors**, while Tarraconian culture has a **Courtly** ethos. This creates a distinctive blend of **Germanic Imperial** and **Catalan-Latin Administrative** titles:
+In 1122, **The Roman Empire** (`h_roman_empire`) operates an imperial bureaucracy (`administrative_government`) alongside feudal, tribal, and steppe nomadic vassals:
 
 | English / CK3 Rank | Tarraconian Title | IPA | Etymology & Usage |
 | :--- | :--- | :--- | :--- |
-| **Empire** | **Keiserrîch** / **Imperi** | `[ˈkɛɪ.zər.riːç]` / `[ɪm.ˈpɛ.ri]` | *Dat Hilige Rômische Keiserrîch* |
-| **Emperor / Empress** | **Keiser** / **Keiserin** | `[ˈkɛɪ.zər]` / `[ˈkɛɪ.zə.rɪn]` | Attested in save (`Kaiser Guntram`) |
-| **Kingdom / Viceroyalty** | **Kûnincrich** / **Regenat** | `[ˈkyː.nɪŋk.riːç]` / `[rɛ.ɣə.ˈnat]` | *Kûnincrich* for feudal crowns; *Regenat* (Catalan *Regnat*) for imperial administrative kingdoms |
-| **King / Viceroy** | **Kûninc** / **Vîzerege** | `[ˈkyː.nɪŋk]` / `[ˈviː.tsə.rɛ.ɣə]` | Old High German *kuning* + Old Catalan *rei / virrei* |
-| **Duchy (Interior)** | **Gubernat** / **Herzogamt** | `[ɡu.bər.ˈnat]` / `[ˈhɛr.tsɔx.amt]` | Reflects the save's *Governorship* system |
-| **Duchy (Border/Frontier)** | **March** | `[marx]` | Fusion of Frankish *Marka* and Catalan *Marca (Hispànica)* |
-| **Governor (Duke-tier)** | **Gubernator** / **Marchgrâf** | `[ɡu.bər.ˈnaː.tɔr]` / `[ˈmarx.ɡraːf]` | Attested in save (`Governor Burchard`, `Governor Liutpold`) |
-| **Magistracy (County)** | **Magistrat** / **Veguerîe** | `[ma.ɡɪs.ˈtraːt]` / `[vɛ.ɣə.ˈriː.ə]` | Attested in save (`Magistracy of ...`); *Veguerîe* from Catalan *vegueria* (judicial district) |
-| **Magistrate (Count-tier)** | **Magistrat** / **Ambetgrâf** | `[ma.ɡɪs.ˈtraːt]` / `[ˈam.bət.ɡraːf]` | Attested in save (`Magistrate Sieghard II`); *Ambetgrâf* = "Office-Count" |
-| **Prince-Bishopric** | **Fürstbisdom** / **Bisbalîe** | `[ˈfʏrst.bɪs.doːm]` / `[bɪz.ba.ˈliː.ə]` | Attested in save (`Prince-Bishopric of Münster`); Catalan *bisbalia* |
-| **Castle / Barony** | **Burch** / **Castel** | `[bʊrx]` / `[kas.ˈtɛɫ]` | Used interchangeably in toponyms (*Lewenburch*, *Castel-Tarracôn*) |
-| **City / Grand Municipality** | **Ciutat** / **Rîchsstat** | `[tsju.ˈtat]` / `[ˈriːçs.stat]` | Catalan *ciutat* + Franconian *stat* |
-
-### Phrasing & Syntax Rules for Titles
-1. **Prepositional Style ("of"):** Uses Franconian **`van`** `[van]` (or **`von`** `[fɔn]`):
-   * *Magistrat van Mênz* ("Magistracy of Mainz")
-   * *Gubernat van Katalunjen* ("Governorship/Duchy of Catalonia")
-2. **Adjectival Style ("-er" / "-isch"):** For major cities or ancient Roman provinces, Tarraconian attaches **`-er`** (for cities) or **`-isch`** (for regions):
-   * *Dat Tarraconische Magistrat* ("The Tarraconian Magistracy")
-   * *De Prâger Burch* ("The Castle of Prague")
+| **Roman Empire (`h_roman_empire`)** | **Dat Rômische Keiserrîch** | `[dat ˈroː.mɪ.ʃə ˈkɛɪ.zər.riːç]` | Restored Roman Hegemony (`ID 0`) |
+| **Holy Roman Empire (`e_hre`)** | **Dat Hilige Rômische Keiserrîch** | `[dat ˈhɪ.lɪ.ɣə ˈroː.mɪ.ʃə ˈkɛɪ.zər.riːç]` | Traditional Western Imperial title (`ID 199`) |
+| **Emperor / Augustus** | **Keiser** / **Augustus** | `[ˈkɛɪ.zər]` / `[ɔʊ.ˈɡʊs.tʊs]` | Attested in save (`Kaiser Adémar`, `Augustus Wernhard`) |
+| **Kingdom / Viceroyalty** | **Regenat** / **Kûnincrich** | `[rɛ.ɣə.ˈnat]` / `[ˈkyː.nɪŋk.riːç]` | *Regenat* (Catalan *Regnat*) for imperial provinces; *Kûnincrich* for royal crowns |
+| **King / Viceroy** | **Vîzerege** (`Vizerege`) / **Kûninc** | `[ˈviː.tsə.rɛ.ɣə]` / `[ˈkyː.nɪŋk]` | Old Catalan *virrei / rei* + MHG *kuning* |
+| **Duchy (Governorship)** | **Gubernat** / **Herzogamt** | `[ɡu.bər.ˈnat]` / `[ˈhɛr.tsɔx.amt]` | Reflects the Empire's *Governorship* system |
+| **Duchy (Border/Frontier)** | **March** | `[marx]` | Fusion of Frankish *Marka* and Catalan *Marca* |
+| **Governor (Duke-tier)** | **Gubernator** / **Marchgrâf** | `[ɡu.bər.ˈnaː.tɔr]` / `[ˈmarx.ɡraːf]` | Imperial Ducal Magistrate |
+| **Magistracy (County)** | **Magistrat** / **Veguerîe** | `[ma.ɡɪs.ˈtraːt]` / `[vɛ.ɣə.ˈriː.ə]` | Attested in save (`Magistrat of ...`) |
+| **Magistrate (Count-tier)** | **Ambetgrâf** / **Magistrat** | `[ˈam.bət.ɡraːf]` / `[ma.ɡɪs.ˈtraːt]` | *Ambetgrâf* = "Office-Count" |
+| **Prince-Bishopric** | **Fürstbisdom** / **Bisbalîe** | `[ˈfʏrst.bɪs.doːm]` / `[bɪz.ba.ˈliː.ə]` | Attested in save (`Fürstbisdom of Sêmarch`) |
+| **Metropolitan Archdiocese** | **Erzbisdom** / **Arzebisbalîe** | `[ˈɛrts.bɪs.doːm]` / `[ar.tsə.bɪz.ba.ˈliː.ə]` | *Erzbischof* for the Metropolitan prelate |
 
 ---
 
-## 5. Regional Toponymic Conversion Table (From the 1048–1058 Promotions)
-
-Below is how the 36 provinces converted in your save file between 1048 and 1058 are rendered in **Tarraconian**, along with their IPA transcriptions and linguistic derivations:
+## 5. Regional Toponymic Conversion Rules Across the Empire
 
 ### 5.1 Iberia & Southern Gaul (The Catalan-Occitan Substrate Zone)
 | In-Game Title | Tarraconian Name | IPA Transcription | Linguistic Derivation |
 | :--- | :--- | :--- | :--- |
-| Magistracy of **Huesca** | **Magistrat van Oska** (or **Oschke**) | `[ma.ɡɪs.ˈtraːt van ˈɔs.ka]` | Direct from Old Catalan *Osca* (Latin *Osca*, Arabic *Washqa*). |
-| Magistracy of **Calatayud** | **Magistrat van Calatajût** (or **Kaltajût**) | `[ma.ɡɪs.ˈtraːt van ka.la.ta.ˈjuːt]` | From Old Catalan *Calataiud* (Arabic *Qal'at Ayyub*), adapted to High German long `-ût`. |
+| Magistracy of **Huesca** | **Magistrat van Oske** | `[ma.ɡɪs.ˈtraːt van ˈɔs.kə]` | From Old Catalan *Osca* (Latin *Osca*, Arabic *Washqa*) with High German final schwa `-e`. |
+| Magistracy of **Calatayud** | **Magistrat van Calatajût** | `[ma.ɡɪs.ˈtraːt van ka.la.ta.ˈjuːt]` | From Old Catalan *Calataiud* (Arabic *Qal'at Ayyub*), adapted to High German long `-ût`. |
 | Magistracy of **Tudela** | **Magistrat van Tudêl** | `[ma.ɡɪs.ˈtraːt van tu.ˈdeːl]` | From Old Catalan *Tudela* with apocope of final `-a` and lengthening of stressed `ê`. |
 | Magistracy of **Béarn** | **Magistrat van Biarn** | `[ma.ɡɪs.ˈtraːt van ˈbiː.arn]` | From Old Catalan/Gascon *Biarn*. |
 | Magistracy of **Armagnac** | **Magistrat van Armanjach** | `[ma.ɡɪs.ˈtraːt van ar.ma.ˈɲax]` | Occitan *Armanhac* with palatal `nj` `[ɲ]` and word-final velar fricative `-ch` `[x]`. |
-| Magistracy of **Angoulême** | **Magistrat van Engolêsem** | `[ma.ɡɪs.ˈtraːt van ɛŋ.ɡo.ˈleː.zəm]` | From Occitan/Old Catalan *Engolesme* with epenthetic schwa in final `-sm-` cluster. |
-| Magistracy of **Lusignan** | **Magistrat van Lusinjan** | `[ma.ɡɪs.ˈtraːt van lu.zɪ.ˈɲan]` | From Occitan *Lusinhan* with palatal `nj` `[ɲ]`. |
-| Magistracy of **Valentinois** | **Magistrat van Valentsîn** | `[ma.ɡɪs.ˈtraːt van va.lɛn.ˈtsiːn]` | Franco-Provençal/Occitan *Valentinois / Valentinés* adapted to MHG `-în`. |
 
-### 5.2 Northern France & The Rhine-Moselle Heartland
+### 5.2 Northern France, Britain, Ireland & Scandinavia
 | In-Game Title | Tarraconian Name | IPA Transcription | Linguistic Derivation |
 | :--- | :--- | :--- | :--- |
 | Magistracy of **Mainz** | **Magistrat van Mênz** | `[ma.ɡɪs.ˈtraːt van meːnts]` | Native Rhine-Moselle Franconian *Mênz* (from MHG *Meinz / Mênze*). |
-| Prince-Bishopric of **Münster** | **Fürstbisdom van Munster** | `[ˈfʏrst.bɪs.doːm van ˈmʊn.stər]` | WestCentral German *Munster* (*Monasterium*). |
-| Magistracy of **Cleves** | **Magistrat van Clêve** | `[ma.ɡɪs.ˈtraːt van ˈkleː.və]` | Native Lower Rhine/Franconian *Clêve* with Catalan-style initial `Cl-`. |
-| Magistracy of **Amiens** | **Magistrat van Amjens** | `[ma.ɡɪs.ˈtraːt van am.ˈjɛns]` | Old French *Amiens* with glide `j` `[j]` and un-nasalized `-ens`. |
-| Magistracy of **Sancerre** | **Magistrat van Zant-Sêr** | `[ma.ɡɪs.ˈtraːt van tsant.ˈseːr]` | Re-analyzed via Franconian *Zant* ("Saint", from *Sanctus Satyrus*) + *Sêr*. |
-| Magistracy of **Anjou** | **Magistrat van Anschou** | `[ma.ɡɪs.ˈtraːt van ˈan.ʃɔʊ]` | Old French *Anjou* adapted with MHG `sch` `[ʃ]` and diphthong `ou` `[ɔʊ]`. |
-| Magistracy of **Alençon** | **Magistrat van Alenzûn** | `[ma.ɡɪs.ˈtraːt van a.lɛn.ˈtsuːn]` | Old French *Alençon* with affricate `z` `[ts]` and MHG `-ûn` for Romance `-on`. |
+| Magistracy of **Nancy** (`c_nancy`) | **Magistrat van Lûnstat** | `[ma.ɡɪs.ˈtraːt van ˈluːn.stat]` | Pre-1070 comital seat *Lunéville / Lünstadt* (`b_blankenberg`). |
+| Magistracy of **Gowrie** (`c_gowrie`) | **Magistrat van Gouwerîe** *(or **Skône**)* | `[ma.ɡɪs.ˈtraːt van ˈskɔː.nə]` | Scottish royal inauguration seat *Scone* (`b_coupar_angus`), resolving post-1122 *St Johnston*. |
+| Magistracy of **Ennis** (`c_ennis`) | **Magistrat van Kinkôre** | `[ma.ɡɪs.ˈtraːt van kɪŋ.ˈkoː.rə]` | Dál gCais royal fortress *Ceann Coradh / Kincora* (`b_kincora`), resolving 13th-c. *Ennis*. |
+| Magistracy of **Värend** (`c_varend`) | **Magistrat van Werent** | `[ma.ɡɪs.ˈtraːt van ˈwɛ.rənt]` | Old East Norse *Værend* adapted to Franconian `W-` and final devoiced `-t`. |
 
-### 5.3 Italy, Corsica & Sardinia (The *Alpine-Tarraconian* & Maritime Zone)
+### 5.3 Italy, Greece, Anatolia & The Levant
 | In-Game Title | Tarraconian Name | IPA Transcription | Linguistic Derivation |
 | :--- | :--- | :--- | :--- |
-| Magistracy of **Ravenna** | **Magistrat van Raben** | `[ma.ɡɪs.ˈtraːt van ˈra.bən]` | Historical Middle High German exonym *Raben* (attested in the *Rabenschlacht*). |
-| Magistracy of **Lucca** | **Magistrat van Lûke** | `[ma.ɡɪs.ˈtraːt van ˈluː.kə]` | Historical Imperial German *Lûke* for Tuscan *Lucca*. |
-| Magistracy of **Lanciano** | **Magistrat van Lantschân** | `[ma.ɡɪs.ˈtraːt van lan.ˈtʃaːn]` | Italian *Lanciano* `[lanˈtʃaːno]` with apocope of final `-o` and `tsch` `[tʃ]`. |
-| Magistracy of **Foggia** | **Magistrat van Fodsche** | `[ma.ɡɪs.ˈtraːt van ˈfɔd.ʒə]` | Apulian *Foggia* rendered with voiced affricate `dsch` `[dʒ]` and final `-e`. |
-| Magistracy of **Ajaccio** | **Magistrat van Adschatz** | `[ma.ɡɪs.ˈtraːt van a.ˈdʒats]` | From Old Catalan *Adjacium / Aiacciu* with apocope and affricate ending `-tz`. |
-| Magistracy of **Bastia** | **Magistrat van Bastîe** | `[ma.ɡɪs.ˈtraːt van bas.ˈtiː.ə]` | Italian/Catalan *Bastia* adapted to the courtly `-îe` (`[iː.ə]`) noun class. |
-| Magistracy of **Arborea** | **Magistrat van Arborêe** | `[ma.ɡɪs.ˈtraːt van ar.bo.ˈreː.ə]` | Sardinian/Catalan *Arborea* adapted to long `-êe`. |
+| Magistracy of **Byzantion** | **Magistrat van Konstantînôpel** *(or **Bisantz-am-Bospor**)* | `[kɔn.stan.tiː.ˈnoː.pəl]` | Imperial capital on the Bosporus (*Constantinople / Miklagard*). |
+| Magistracy of **Thessalonika** | **Magistrat van Sâlonîch** | `[zaː.lo.ˈniːç]` | Medieval Catalan/Western *Salonic* + MHG `-îch` (`[iːç]`). |
+| Magistracy of **Kaisereia** | **Magistrat van Kaisarêe** | `[kɛɪ.za.ˈreː.ə]` | Cappadocian metropolis *Caesarea Mazaca* adapted to *Keiser / Kaisarêe*. |
+| Magistracy of **Kerak** (`c_kerak`) | **Magistrat van Pêtre** *(or **Krach**)* | `[ma.ɡɪs.ˈtraːt van ˈpeː.trə]` | Pre-1142 Nabataean/Byzantine metropolis *Petra / Walî Mûsâ* (Crusader *Kerak* built 1142). |
+| Magistracy of **Aleppo** | **Magistrat van Halep** | `[ma.ɡɪs.ˈtraːt van ˈha.lɛp]` | Arabic *Ḥalab* (`b_halab`) with final devoicing `-b` $\rightarrow$ `-p`. |
 
-### 5.4 Central Europe, Hungary & The Balkans (The *Ostsiedlung* & *Croato-Tarraconian* Zone)
+### 5.4 Central Europe, Baltic, Steppe & Africa
 | In-Game Title | Tarraconian Name | IPA Transcription | Linguistic Derivation |
 | :--- | :--- | :--- | :--- |
-| Magistracy of **Kärnten** | **Magistrat van Kernten** | `[ma.ɡɪs.ˈtraːt van ˈkɛrn.tən]` | Standard MHG *Kernten* (Carinthia). |
-| Magistracy of **Praha** | **Magistrat van Prâge** | `[ma.ɡɪs.ˈtraːt van ˈpraː.ɣə]` | Historical MHG *Prâge* with intervocalic spirantized `g` `[ɣ]`. |
-| Magistracy of **Opava** | **Magistrat van Troppouwe** | `[ma.ɡɪs.ˈtraːt van ˈtrɔ.pɔʊ.wə]` | Historical medieval German exonym *Troppau* (MHG *Troppouwe*). |
-| Magistracy of **Liegnitz** | **Magistrat van Lîgnitz** | `[ma.ɡɪs.ˈtraːt van ˈliːɡ.nɪts]` | Silesian German *Lîgnitz* (from Polish *Legnica*). |
-| Magistracy of **Primkenau** | **Magistrat van Primkenouwe** | `[ma.ɡɪs.ˈtraːt van ˈprɪm.kə.nɔʊ.wə]` | Silesian German *Primkenau* with MHG `-ouwe` ("water-meadow"). |
-| Magistracy of **Werle** | **Magistrat van Werle** | `[ma.ɡɪs.ˈtraːt van ˈwɛr.lə]` | Retained Wendish/Germanic *Werle*. |
-| Magistracy of **Gdańsk** | **Magistrat van Dantzich** | `[ma.ɡɪs.ˈtraːt van ˈdan.tsɪç]` | MHG *Danzig* with Tarraconian final `-ch` `[ç]`. |
-| Magistracy of **Dudleb** | **Magistrat van Teindorf** (or **Dudleben**) | `[ma.ɡɪs.ˈtraːt van ˈdʊd.leː.bən]` | Slavic *Doudleby* adapted with weak plural `-en` (or historical Austrian *Tain*). |
-| Magistracy of **Spiš** | **Magistrat van Zips** | `[ma.ɡɪs.ˈtraːt van tsɪps]` | Historical medieval German exonym *Zips* for Slovak *Spiš*. |
-| Magistracy of **Orava** | **Magistrat van Arwe** | `[ma.ɡɪs.ˈtraːt van ˈar.wə]` | Historical medieval German exonym *Arwa* for *Orava*. |
-| Magistracy of **Lemberg** | **Magistrat van Lewenburch** | `[ma.ɡɪs.ˈtraːt van ˈlɛ.wən.bʊrx]` | MHG *Lewenburg / Lemberg* ("Lion's Castle") with `-burch`. |
-| Magistracy of **Cherven** | **Magistrat van Rôtenburch** (or **Tscherwen**) | `[ma.ɡɪs.ˈtraːt van ˈroː.tən.bʊrx]` | Either phonetic **Tscherwen** `[ˈtʃɛr.wən]` or calqued from Slavic *Červen* ("Red") as **Rôtenburch**. |
-| Magistracy of **Visegrád** | **Magistrat van Plintenburch** | `[ma.ɡɪs.ˈtraːt van ˈplɪn.tən.bʊrx]` | The authentic medieval German name (*Plintenburg*) for Hungarian *Visegrád*! |
-| Magistracy of **Bács** | **Magistrat van Batsch** | `[ma.ɡɪs.ˈtraːt van batʃ]` | Hungarian *Bács* `[baːtʃ]` rendered with `tsch`. |
-| Magistracy of **Baranya** | **Magistrat van Branouwe** | `[ma.ɡɪs.ˈtraːt van ˈbra.nɔʊ.wə]` | Historical German exonym *Branau* (MHG *Branouwe*) for *Baranya*. |
-| Magistracy of **Usora** | **Magistrat van Ousere** | `[ma.ɡɪs.ˈtraːt van ˈɔʊ.zə.rə]` | Bosnian river/region *Usora* adapted with initial diphthong `Ou-` and weak `-e`. |
-| Magistracy of **Donji Kraji** | **Magistrat van Nidermarch** | `[ma.ɡɪs.ˈtraːt van ˈnɪ.dər.marx]` | Direct calque of South Slavic *Donji Kraji* ("Lower Ends / Lower Marches", known in Latin as *Partes Inferiores*) into Tarraconian **Nidermarch**! |
+| Magistracy of **Lemberg** (`c_lviv`) | **Magistrat van Swenigorot** | `[ma.ɡɪs.ˈtraːt van ˈswɛ.ni.ɡɔ.rɔt]` | Pre-1256 princely seat *Zvenyhorod* (`b_zvenyhorod`) in Red Ruthenia. |
+| Magistracy of **Warmia** (`c_wormditt`) | **Magistrat van Warmjen** *(or **Wormedit**)* | `[ma.ɡɪs.ˈtraːt van ˈwar.mjən]` | Old Prussian tribal land *Warmia / Ermland* (promoted to Tarraconian by 1122). |
+| Magistracy of **Moskva** (`c_moskva`) | **Magistrat van Moskouwe** *(or **Kôlomne**)* | `[ma.ɡɪs.ˈtraːt van ˈmɔs.kɔʊ.wə]` | Hydronym of the *Moskva River* (Finno-Ugric *Musta-joki*) with MHG `-ouwe`. |
+| Magistracy of **Aqmescit** (`c_perekop`) | **Magistrat van Tâfros** *(or **Or-Kapî**)* | `[ma.ɡɪs.ˈtraːt van ˈtaː.frɔs]` | Classical/Byzantine *Taphros* ("The Trench" across the Crimean isthmus), resolving 16th-c. *Aqmescit*. |
+| Magistracy of **Alodia** (`c_alodia`) | **Magistrat van Sôbe** *(or **Alôdje**)* | `[ma.ɡɪs.ˈtraːt van ˈzoː.bə]` | Medieval Alodian royal capital *Soba* (`b_soba`) on the Blue Nile. |
+
+---
+
+## 6. Daughter Dialects & Daughter Languages of Tarraconian (ca. 1122)
+
+As the Roman Empire expanded across diverse linguistic zones between 989 and 1122, three distinct daughter varieties crystallized from Tarraconian:
+
+### 6.1 Alpine-Tarraconian (*Alpîn-Tarraconisch*, `ID 337` — Formed 1042)
+* **Linguistic Classification:** Italo-Franconian High German dialect (`language_high_german`) with a heavy **Cisalpine (Gallo-Italic)** and Lombardic adstrate.
+* **Spoken Zone (1122):** Piedmont, Lombardy, Emilia, and Tuscia (`c_tortona`, `c_aosta`, `c_canavese`, `c_bologna`, `c_arezzo`, plus colonial `c_volodymyr`).
+* **Distinctive Phonological & Lexical Features:**
+  1. **Gallo-Italic Vocalic Fronting:** Influenced by Cisalpine/Piedmontese, Alpine-Tarraconian speakers front long `û` `[uː]` toward `[yː]` (`Lûke` $\rightarrow$ `[ˈlyː.kə]`) and nasalize vowels before syllable-final `-n` (`Tortôn` `[tɔr.ˈtoːŋ]`, `Meilân` `[mɛɪ.ˈlaːŋ]`).
+  2. **Softened Affricates:** Where Standard Tarraconian pronounces initial/post-consonantal `z / tz` strongly as `[ts]`, Alpine-Tarraconian lenites it toward Cisalpine `[s ~ dz]` in rapid speech (*Bisantz* $\rightarrow$ `[bi.ˈzans]`).
+  3. **Republican & Municipal Vocabulary:** Retains northern Italian communal terms alongside Imperial German: *Komûn* ("Commune"), *Podestat* ("Podestà / Municipal Magistrate"), *Palatz* ("Civic Palace"), and *Alpe / Mont* ("Alpine Pass").
+
+### 6.2 Croato-Tarraconian (*Kroatisch-Tarraconisch*, `ID 345` — Formed 1057)
+* **Linguistic Classification:** Dinaric-Adriatic High German dialect (`language_high_german`) with a **Chakavian/Shtokavian South Slavic** and Dalmatian Romance adstrate.
+* **Spoken Zone (1122):** Dalmatia, Slavonia, and Ragusa (`c_cetina`, `c_zagreb`, `c_vukovar`, `c_ragusa`), plus garrisoned imperial fiefs in Ardennes-Lotharingia (`c_luxembourg`, `c_bouillon`, `c_namur`), Languedoc (`c_uses`, `c_montpellier`, `c_carcassonne`, `c_foix`), Jutland (`c_aalborg`), and the Atlas (`c_tadla`, `c_ziz`).
+* **Distinctive Phonological & Lexical Features:**
+  1. **Slavic Sibilant & Palatal Precision:** Speakers distinguish alveolo-palatal `[tɕ]` (*ć*) from postalveolar `[tʃ]` (*č*, written `tsch`) and syllabic trilled `[r̩]` (as in *Krk* $\rightarrow$ **Vegel / Krk**, *Vrhbosna* $\rightarrow$ **Werchbosne**).
+  2. **Vukovar/Pannonian `w` $\rightarrow$ `[v]`:** Initial bilabial `w-` is pronounced strictly as labiodental `[v]` under South Slavic influence (*Wukowâr* `[ˈvu.ko.vaːr]`).
+  3. **Dinaric Administrative & Military Lexicon:** Incorporates Croatian terms into High German morphology: *Schûpan* ("Župan / District Lord"), *Bânat* ("Banate / Frontier March"), *Klasûre* ("Defile / Mountain Gorge"), and *Gradina* ("Hillfort").
+
+### 6.3 Ungwârer (*Ungwârerisch / Ungwâri*, `ID 367` — Formed 12 April 1094)
+* **Linguistic Classification:** **Germano-Magyar Mixed Daughter Language** (`language_magyar` with `heritage_central_germanic` and `name_list_franconian`).
+* **Spoken Zone (1122):** The Northern Hungarian / Carpathian highland corridor (`c_visegrad` *Plintenburch*, `c_hewes` *Êger*, `c_borsod` *Borschot*, `c_spis` *Zips / Tschingouwe*, and `c_abauj` *Ûjwâr*).
+* **Historical & Sociolinguistic Genesis:**
+  * Named directly from the Tarraconian Chancellery name for *Ungvár* (**`Ungwâr`** `[ˈʊŋ.waːr]` + **`-er`**), **Ungwârer** arose in **1094** when second- and third-generation Tarraconian castle-wardens and border horse-archers in Upper Hungary intermarried with local Magyar-speaking horsemen and Silk Road mercenaries.
+  * While retaining their **Central Germanic aristocratic identity**, **Franconian baptismal names** (*Wernhard, Guntram, Adémar, Sieghard, Liutpold*), **Iberian-Tarraconian stone architecture**, and **Imperial HRE heraldry**, the Ungwârer adopted **Old Hungarian (`language_magyar`)** as their daily and military command language.
+* **Distinctive Phonological, Grammatical & Lexical Features:**
+  1. **Uralic Agglutination on Tarraconian Stems:** Tarraconian administrative and military nouns are inflected with Old Hungarian case suffixes and vowel harmony:
+     * *Burch* ("Castle") $\rightarrow$ **Burch-ban** ("in the castle") or compounded with Magyar *vár* as **Burchvár**
+     * *Magistrat* $\rightarrow$ **Magisztrát-ok** ("Magistrates")
+     * *Marchgrâf* $\rightarrow$ **Markgróf / Határgróf** ("Margrave / Border-Count")
+     * *Ungwâr* $\rightarrow$ **Ungwârer** (in Tarraconian) / **Ungváriak** (in spoken Ungwârer Magyar)
+  2. **Preservation of Tarraconian Long Circumflex Vowels (`â, ê, î, ô, û`):** Tarraconian long vowels map directly onto Old Hungarian long vowels (*á, é, í, ó, ú*), while the ethnonym itself preserves the Tarraconian Chancellery spelling **`Ungwârer`** (`[ˈʊŋ.waː.rər]`) even in official imperial registers.
+  3. **Carpathian-Steppe & Silk Road Military Vocabulary:** Reflecting its *Bellicose* ethos, *Saharan Nomads*, *Winter Warriors*, and 8 Silk Road innovations (*Composite Crossbow*, *Fire Medicine*, *Lacquered Armor*, *Dragon Kiln*), Ungwârer speech blends Franconian knightly terms (*Ritter, Harnisch, Banner*) with Magyar and Steppe equestrian terminology (*Hadnagy* "lieutenant", *Végvár* "border fortress", *Tábor* "encampment", and *Tüzes-nyíl* "fire-arrow").

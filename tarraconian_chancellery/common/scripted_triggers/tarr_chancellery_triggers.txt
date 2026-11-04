@@ -7,31 +7,53 @@
 #                               (dynamic cultures have no static key, so it is
 #                               stored when the player issues the ordinance)
 #   tarr_direct_mode          - use direct adaptations instead of the default
-#                               1059 historical resolutions
+#                               1059/1122 historical resolutions
 #   tarr_scope_culture_only   - rename only Tarraconian-culture/held titles
 #   tarr_scope_all            - rename every title in the list
-#   (neither scope flag)      - default: HRE titles + Tarraconian titles
+#   (neither scope flag)      - default: Roman Empire / HRE titles + Tarraconian titles
 ##############################################################################
 
-# Scope: character. The character is the Emperor or sits inside the HRE.
+# Scope: character. The character is the Emperor or sits inside the Roman Empire / HRE.
 tarr_in_hre_trigger = {
 	OR = {
+		has_title = title:h_roman_empire
 		has_title = title:e_hre
-		top_liege ?= { has_title = title:e_hre }
+		has_title = title:e_roman_empire
+		top_liege ?= {
+			OR = {
+				has_title = title:h_roman_empire
+				has_title = title:e_hre
+				has_title = title:e_roman_empire
+			}
+		}
 	}
 }
 
-# Scope: character. The character belongs to the designated Tarraconian culture.
+# Scope: character. The character belongs to Tarraconian or one of its daughter cultures.
 tarr_is_tarraconian_char_trigger = {
 	has_global_variable = tarr_culture
-	culture = global_var:tarr_culture
+	culture ?= {
+		OR = {
+			this = global_var:tarr_culture
+			any_parent_culture_or_above = {
+				this = global_var:tarr_culture
+			}
+		}
+	}
 }
 
 # Scope: county-tier landed title.
 tarr_county_qualifies_trigger = {
 	OR = {
 		has_global_variable = tarr_scope_all
-		culture ?= { this = global_var:tarr_culture }
+		culture ?= {
+			OR = {
+				this = global_var:tarr_culture
+				any_parent_culture_or_above = {
+					this = global_var:tarr_culture
+				}
+			}
+		}
 		holder ?= { tarr_is_tarraconian_char_trigger = yes }
 		holder ?= { tarr_in_hre_trigger = yes }
 	}

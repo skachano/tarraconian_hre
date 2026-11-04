@@ -17,6 +17,7 @@ tarr_rename_title_effect = {
 			has_global_variable = tarr_culture
 			tarr_title_qualifies_trigger = yes
 		}
+		reset_title_name = yes
 		if = {
 			limit = { has_global_variable = tarr_direct_mode }
 			set_title_name = $NAME$
