@@ -592,7 +592,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.14 Kingdom of Denmark (`k_denmark`) $\rightarrow$ **Kûnincrich van Denemarch**
 
-* **Duchy of Sjælland** (`d_sjaelland`) $\rightarrow$ **Gubernat van Sêlant-in-Denemarch**
+* **Duchy of Sjælland (Selandia)** (`d_sjaelland`) $\rightarrow$ **Gubernat van Selândjen**
   * `c_sjaelland` (Sjælland) $\rightarrow$ **Magistrat van Rôskilde** *(or **Sêlant**, avoiding post-1059 *København*)*
   * `c_fyn` (Fyn) $\rightarrow$ **Magistrat van Vûnen** *(or **Ôdense**)*
   * `c_lolland_falster` (Lolland-Falster) $\rightarrow$ **Magistrat van Lâlant-Valster**
@@ -623,7 +623,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Egðafylki** (`d_agder`) $\rightarrow$ **Gubernat van Agder**
   * `c_nedenes` (Austr Agðir) $\rightarrow$ **Magistrat van Ôstagder**
   * `c_agdeside` (Vestr Agðir) $\rightarrow$ **Magistrat van Westagder**
-* **Duchy of Gulaþingslög** (`d_vestlandi`) $\rightarrow$ **Gubernat van Westlant-in-Norwêgen**
+* **Duchy of Gulaþingslög (Vestlandet)** (`d_vestlandi`) $\rightarrow$ **Gubernat van Gulating**
   * `c_rogalandi` (Rogaland) $\rightarrow$ **Magistrat van Rôgalant** *(or **Stavanger**)*
   * `c_hordalandi` (Hörðaland) $\rightarrow$ **Magistrat van Hordalant** *(or **Bergen**)*
   * `c_sogn` (Sogn) $\rightarrow$ **Magistrat van Sogne**

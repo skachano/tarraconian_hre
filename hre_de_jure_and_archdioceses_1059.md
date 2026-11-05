@@ -557,7 +557,7 @@
 ### 2.14 Kingdom of Denmark (`k_denmark`) — 14/14 Counties in HRE/RE
 * **De Jure Empire:** Scandinavia (`e_scandinavia`)
 
-* **Duchy of Sjælland** (`d_sjaelland`) — *3/3 in HRE*
+* **Duchy of Sjælland (Selandia)** (`d_sjaelland`) — *3/3 in HRE*
   * **[HRE]** **Sjælland** (`c_sjaelland`)
   * **[HRE]** **Fyn** (`c_fyn`)
   * **[HRE]** **Lolland-Falster** (`c_lolland_falster`)
@@ -587,7 +587,7 @@
 * **Duchy of Egðafylki** (`d_agder`) — *2/2 in HRE*
   * **[HRE]** **Austr Agðir** (`c_nedenes`)
   * **[HRE]** **Vestr Agðir** (`c_agdeside`)
-* **Duchy of Gulaþingslög** (`d_vestlandi`) — *3/3 in HRE*
+* **Duchy of Gulaþingslög (Vestlandet)** (`d_vestlandi`) — *3/3 in HRE*
   * **[HRE]** **Rogaland** (`c_rogalandi`)
   * **[HRE]** **Hörðaland** (`c_hordalandi`)
   * **[HRE]** **Sogn** (`c_sogn`)
