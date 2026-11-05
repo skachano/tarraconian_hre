@@ -14,12 +14,11 @@ Executes Phase 2 of title_historical_accuracy_audit_plan.md:
      vanilla/documented title exonyms to detect Tier 5 Colonial Mismatches.
   4. Audit the 'OTL Calendar Gap': Re-evaluate titles accepted in previous audits
      (1059, 1122, 1142) against the 867 AD Alternate-History Divergence Point.
-  5. Classify every county across the 5-Tier Taxonomy:
+  5. Classify every county across the 3-Tier Taxonomy:
        - Tier 1: Pre-867 Historical / Antiquity
-       - Tier 2: In-Game Alternate History Canon
-       - Tier 3: Pre-867 Geographic / Hydronymic
-       - Tier 4: Post-867 OTL Eponymous Foundation (FLAGGED)
-       - Tier 5: Foreign Colonial Exonym Mismatch (FLAGGED)
+       - Tier 2: Founded After 867 on Hydronymic, Geographic, or Tribal Stems (pre-HRE morphology)
+       - Tier 3: Other Settlements Founded After 867 (default, Options A/B/C)
+       - Universal Rule: Adapt final name phonologically to Tarraconian.
 
 Outputs:
   - /var/tmp/ck3_audit/phase2/county_lineage_trajectories.json
@@ -36,7 +35,7 @@ import sys
 import time
 from pathlib import Path
 
-from historical_attestation_db import resolve_county_attestation
+from historical_attestation_db import classify_county_tier, resolve_county_attestation
 
 
 def log(msg: str):
@@ -297,42 +296,8 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             is_cadet_seat = True
             matching_cadet_house = current_house
 
-    # 6. Strict Toponym-First 5-Tier Classification Engine (Burden of Proof on Antiquity)
-    # Default is Tier 4. Positive evidence of attestation <= 867 AD is required to qualify for Tier 1 or Tier 3.
-    att_yr, att_ev, att_src, is_hyd, att_notes = resolve_county_attestation(county_key, county_data, md_record)
-
-    # Check Tier 5: Foreign Colonial Exonym Mismatch
-    if colonial_mismatch:
-        tier = 5
-        tier_label = "Tier 5: Foreign Colonial Exonym Mismatch (FLAGGED)"
-        tier_reason = mismatch_reason
-
-    # Check positive pre-867 historical attestation (<= 867 AD)
-    elif att_yr is not None and att_yr <= 867:
-        if is_hyd:
-            tier = 3
-            tier_label = "Tier 3: Pre-867 Geographic / Hydronymic"
-            tier_reason = f"Derived from ancient pre-867 hydronym or landform ({att_src}): {att_notes}"
-        else:
-            tier = 1
-            tier_label = "Tier 1: Pre-867 Historical / Antiquity"
-            tier_reason = f"Attested pre-867 ({att_yr} AD/BC) via {att_ev} ({att_src}): {att_notes}"
-
-    # Check explicit post-867 foundation (> 867 AD)
-    elif att_yr is not None and att_yr > 867:
-        tier = 4
-        if md_record and md_record.get('is_valid_in_previous_audit'):
-            tier_label = "Tier 4: Post-867 OTL Foundation (FLAGGED via Calendar Gap)"
-            tier_reason = f"Real-world foundation in {att_yr} AD by historical figure absent from campaign; previously accepted under OTL calendar gap ({att_notes})"
-        else:
-            tier_label = "Tier 4: Post-867 Foundation / Dynastic Castle (FLAGGED)"
-            tier_reason = f"Post-867 foundation in {att_yr} AD ({att_notes})"
-
-    # Default Fallback: Lacks verified pre-867 proof -> Tier 4 (FLAGGED)
-    else:
-        tier = 4
-        tier_label = "Tier 4: Post-867 Foundation / Unverified Anachronism (FLAGGED)"
-        tier_reason = "Lacks verified historical attestation prior to 867 AD; defaulted to Tier 4 under Burden of Proof on Antiquity"
+    # 6. Strict Toponym-First 3-Tier Classification Engine (Burden of Proof on Antiquity)
+    tier, tier_label, tier_reason, att_yr, att_ev, att_src, is_geo, att_notes = classify_county_tier(county_key, county_data, md_record)
 
     # 7. Sub-Barony Candidate Selection (Option A Candidate)
     baronies = county_data.get('baronies', [])
@@ -406,14 +371,14 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             'year': att_yr,
             'evidence': att_ev,
             'source': att_src,
-            'is_hydronym': is_hyd,
+            'is_geographic_stem': is_geo,
             'notes': att_notes
         },
         'classification': {
             'tier': tier,
             'tier_label': tier_label,
             'tier_reason': tier_reason,
-            'is_flagged_for_phase4': tier in (4, 5)
+            'is_flagged_for_phase4': tier in (2, 3)
         },
         'sub_barony_candidates': {
             'available_count': len(baronies),
@@ -442,33 +407,29 @@ def generate_phase2_report(trajectories: list, output_path: Path):
     roman_counties = [t for t in trajectories if t['is_in_roman_empire']]
     total_roman = len(roman_counties)
 
-    tier_counts = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    tier_counts = {1: 0, 2: 0, 3: 0}
     for t in roman_counties:
         tier_counts[t['classification']['tier']] += 1
 
     flagged_titles = [t for t in roman_counties if t['classification']['is_flagged_for_phase4']]
-    mismatch_titles = [t for t in roman_counties if t['classification']['tier'] == 5]
     calendar_gap_titles = [t for t in roman_counties if 'Calendar Gap' in t['classification']['tier_label']]
-    canon_titles = [t for t in roman_counties if t['classification']['tier'] == 2]
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("# Phase 2 Report: Title Lineage, Sovereign Trajectories & Historical Grounding\n\n")
         f.write(f"* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)\n")
         f.write(f"* **Audit Scope:** **1,499 Counties** in the Roman Empire (`h_roman_empire`) across **97 De Jure Kingdoms**\n")
-        f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory → Colonizer Presence Audit → Cultural Footprint Mapping → 5-Tier Classification\n\n")
+        f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory → Colonizer Presence Audit → Cultural Footprint Mapping → 3-Tier Classification\n\n")
         f.write("---\n\n")
 
         # 1. Executive Summary
-        f.write("## 1. Executive Summary & 5-Tier Classification Breakdown\n\n")
-        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1142 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap.\n\n")
+        f.write("## 1. Executive Summary & 3-Tier Classification Breakdown\n\n")
+        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1142 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap under the **Three-Tier Classification System**.\n\n")
         f.write("| Classification Tier | Imperial Counties | Percentage | Evaluation Rule & Action |\n")
         f.write("| :--- | :---: | :---: | :--- |\n")
-        f.write(f"| **Tier 1: Pre-867 Historical / Antiquity** | **{tier_counts[1]}** | {tier_counts[1]/total_roman*100:.1f}% | **VALID**: Attested pre-867 Roman, Celtic, Greek, Slavic, or Germanic centre; retain or adapt phonologically. |\n")
-        f.write(f"| **Tier 2: In-Game Alternate History Canon** | **{tier_counts[2]}** | {tier_counts[2]/total_roman*100:.1f}% | **CANONICAL**: Derived from in-game cadet houses, custom renames, or dynamic emergent cultures (e.g., *Swenigorot*, *Galați*). |\n")
-        f.write(f"| **Tier 3: Pre-867 Geographic / Hydronymic** | **{tier_counts[3]}** | {tier_counts[3]/total_roman*100:.1f}% | **VALID**: Named after an ancient river, mountain, or territorial hydronym (e.g., *Don*, *Dnêper*, *Nistru*). |\n")
-        f.write(f"| **Tier 4: Post-867 OTL Foundation (Flagged)** | **{tier_counts[4]}** | {tier_counts[4]/total_roman*100:.1f}% | **ANACHRONISTIC (FLAGGED)**: Founded in real-world history after 867 by an OTL figure absent from the save; must be replaced in Phase 4. |\n")
-        f.write(f"| **Tier 5: Foreign Colonial Mismatch (Flagged)** | **{tier_counts[5]}** | {tier_counts[5]/total_roman*100:.1f}% | **MISMATCH (FLAGGED)**: Uses exonym of a colonizer (Teutonic, Swedish, Tsarist Russian) that never ruled the province in the save. |\n")
-        f.write(f"| **TOTAL IMPERIAL COUNTIES AUDITED** | **{total_roman}** | **100.0%** | **{len(flagged_titles)} Total Flagged Titles ({len(flagged_titles)/total_roman*100:.1f}%)** requiring historical pre-867 resolution in Phase 4. |\n\n")
+        f.write(f"| **Tier 1: Pre-867 Historical / Antiquity** | **{tier_counts[1]}** | {tier_counts[1]/total_roman*100:.1f}% | **VALID**: Attested pre-867 Roman, Celtic, Greek, Slavic, or Germanic centre; trace chronological culture changes and adapt phonologically to Tarraconian. |\n")
+        f.write(f"| **Tier 2: Founded After 867 on Hydronymic, Geographic, or Tribal Stems** | **{tier_counts[2]}** | {tier_counts[2]/total_roman*100:.1f}% | **PRE-HRE MORPHOLOGY RESTORATION**: Settlement founded after 867 on ancient river/mountain/tribe (e.g. *Minsk*, *Volkovysk*, *Memel*, *Bartenstein*); restore pre-HRE native morphology (strip colonial -sk/-burg/-stein) before Tarraconian adaptation. |\n")
+        f.write(f"| **Tier 3: Other Settlements Founded After 867 (Default)** | **{tier_counts[3]}** | {tier_counts[3]/total_roman*100:.1f}% | **ALTERNATIVE SELECTION (FLAGGED)**: Dynastic castles (*Burg Berge*), personal foundations (*Lviv*), descriptive outposts (*Novogrudok*), or unverified titles; pick another name via Options A/B/C, changing appropriately to linguistic history. |\n")
+        f.write(f"| **TOTAL IMPERIAL COUNTIES AUDITED** | **{total_roman}** | **100.0%** | **{len(flagged_titles)} Total Flagged Titles ({len(flagged_titles)/total_roman*100:.1f}%)** requiring historical pre-867 resolution or morphology audit in Phase 4. |\n\n")
         f.write("---\n\n")
 
         # 2. Key Findings: Colonizer Presence Audit
@@ -477,15 +438,15 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("1. **The Baltic & Prussia (Zero Teutonic Order Continuity):**\n")
         f.write("   * In real history, the Northern Crusades and Teutonic Order founded fortress-colonies in the 13th century (*Marienburg*, *Königsberg*, *Allenstein*, *Bartenstein*, *Memel*).\n")
         f.write("   * In the campaign save, the **Teutonic Order never held a single Baltic county**. Prussia, Curonia, and Samogitia progressed directly from indigenous Old Prussian and Baltic pagan rule into the **Tarraconian Roman Empire** via Imperial appointments starting in the 1040s–1080s.\n")
-        f.write("   * *Result:* Retaining High German Order names is an authentic colonial mismatch; provinces must revert to ancient pre-867 centres (`b_truso` for *Marienburg*, `b_twangste` for *Königsberg*, `b_memele` for *Memel*).\n\n")
+        f.write("   * *Result:* German colonial suffixes (`-burg`, `-stein`) are stripped in Tier 2 to restore pre-HRE Baltic stems (*Mēmele* → *Memel*, *Barta* → *Barten*), while Tier 3 castle foundations revert to ancient pre-867 centres (`b_truso` for *Marienburg*, `b_twangste` for *Königsberg*).\n\n")
         f.write("2. **Finland & Karelia (Zero Swedish Crusade Footprint):**\n")
         f.write("   * In real history, Sweden colonized the southern coast of Finland (*Nyland* = New Land, *Borgå*, *Pedersöre*, *Viborg*) during the Swedish Crusades (1150–1293).\n")
         f.write("   * In the campaign save, **Sweden never ruled Finland**. The Finnish tribes maintained native sovereignty until direct integration into the Empire under Augustus Wernhard.\n")
-        f.write("   * *Result:* Swedish colonial names (*Nyland*, *Pedersöre*) are flagged as Tier 5 mismatches, requiring native Finnic roots (*Uusimaa*, *Pietarsaari*, *Porvoo*).\n\n")
+        f.write("   * *Result:* Swedish colonial names (*Nyland*, *Pedersöre*) are resolved via native Finnic roots (*Uusimaa*, *Pietarsaari*, *Porvoo*).\n\n")
         f.write("3. **Pontic Steppe & Volga Basin (Zero Cossack / Tsarist Imperial Footprint):**\n")
         f.write("   * Vanilla CK3 map keys in the Pontic steppe contain Early Modern Tsarist Russian fortress and Cossack settlements (*Bakhmut* 1571, *Millerovo* 1786, *Salavat*, *Chelyabinsk*).\n")
         f.write("   * In the save, the steppe transitioned directly from **Pecheneg** and **Cuman / Kipchak** nomadic control into the Roman Empire.\n")
-        f.write("   * *Result:* Flagged as Tier 5 mismatches; must be resolved via ancient hydronyms (*Tanais / Don*, *Borysthenes / Dnêper*, *Bakhmutka*).\n\n")
+        f.write("   * *Result:* Resolved via ancient hydronyms (*Tanais / Don*, *Borysthenes / Dnêper*, *Bakhmutka*).\n\n")
         f.write("4. **Outremer & Egypt (Zero First Crusade Continuity):**\n")
         f.write("   * Real-world crusader fortresses (*Montréal / Shawbak* built 1115 by Baldwin I) and Fatimid foundations (*Cairo / al-Qāhira* founded 969) have no continuity with the save's direct Abbasid → Roman Imperial trajectory.\n")
         f.write("   * *Result:* Replaced by Classical Roman/Hellenistic centres (*Petra / Rekem* for Montréal, *Fustat / Babylon in Aegypto* for Cairo).\n\n")
@@ -497,17 +458,17 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("| County Key | In-Game Save Name | OTL Date | Previous Status | Phase 2 Verdict | Historical Campaign Justification |\n")
         f.write("| :--- | :--- | :---: | :---: | :---: | :--- |\n")
         for t in calendar_gap_titles[:25]:
-            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | Post-867 | ✅ Valid (OTL) | **FLAGGED (Tier 4)** | {t['classification']['tier_reason']} |\n")
+            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | Post-867 | ✅ Valid (OTL) | **FLAGGED (Tier {t['classification']['tier']})** | {t['classification']['tier_reason']} |\n")
         f.write("\n---\n\n")
 
         # 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures
         f.write("## 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures\n\n")
         f.write("Under the **Toponym-First Principle**, landed titles represent physical geography, antiquity urban centres, and Roman territorial divisions. Anachronistic titles cannot be justified or grandfathered by in-game cadet branches or dynamic emergent cultures. Instead, causality is strictly reversed: **noble houses and dynamic cultures derive their names from the historically resolved titles**.\n\n")
-        f.write("### 4.1 Re-evaluation of Previous 'Tier 2' Titles\n\n")
-        f.write("The 55 titles previously grouped under 'Tier 2 Canon' were re-screened against strict historical criteria:\n")
+        f.write("### 4.1 Re-evaluation of Previous 'Canon' Titles\n\n")
+        f.write("Titles previously given false exemptions are now classified strictly under the 3-Tier model:\n")
         f.write("* **Validated Antiquity Centres (Tier 1):** Titles like `c_metz` (*Divodurum*), `c_buthrotum` (*Buthrotum*), `c_lecce` (*Lupiae*), `c_ragusa` (*Ragusium*), `c_theodosiopolis`, `c_dvin`, `c_isfahan`, `c_hamadan`, `c_carcassonne`, and `c_uses` are validated as **Tier 1 (Antiquity)** on their own historical merits.\n")
-        f.write("* **Validated Hydronyms (Tier 3):** Titles like `c_spis` are validated as **Tier 3 (Hydronymic)**.\n")
-        f.write("* **Unmasked Post-867 Foundations (Tier 4):** Titles like `c_bergh` (Burg Berge 1077), `c_luxembourg` (963), `c_bouillon` (988), `c_namur` (907), `c_zagreb` (1094), `c_aalborg` (1040), `c_metzovo` (1380), `c_lviv` (1256), `c_galati` (1445), `c_bugeac` (16th c.), `c_dorohoi` (1408), `c_iasi` (1395), `c_barlad` (1159), `c_cetatea_alba` (1350), `c_chilia` (1318), `c_lapusna` (1430), `c_montpellier` (985), and `c_tinmallal` (1124) are unmasked and correctly flagged as **Tier 4** for resolution.\n\n")
+        f.write("* **Post-867 Hydronymic & Tribal Titles (Tier 2):** Titles like `c_minsk` (*Mėna*), `c_volkovysk` (*Ros'*), `c_memel` (*Mēmele*), `c_bartenstein` (*Barta*), and `c_metzovo` are audited for pre-HRE morphology and adapted to Tarraconian.\n")
+        f.write("* **Unmasked Post-867 Settlements (Tier 3 Default):** Titles like `c_novogrudok` (New Castle 1044), `c_bergh` (Burg Berge 1077), `c_luxembourg` (963), `c_bouillon` (988), `c_namur` (907), `c_zagreb` (1094), `c_aalborg` (1040), `c_lviv` (1256), `c_galati` (1445), `c_bugeac` (16th c.), `c_dorohoi` (1408), `c_cetatea_alba` (1350), `c_chilia` (1318), `c_montpellier` (985), and `c_tinmallal` (1124) are unmasked and flagged as **Tier 3** for resolution via Options A/B/C.\n\n")
         f.write("### 4.2 Downstream Cadet House Realignment Sample\n\n")
         f.write("| House ID | Old In-Game Name | Underlying Seat | Resolved Historical Seat | Realigned House Name |\n")
         f.write("| :---: | :--- | :--- | :--- | :--- |\n")
@@ -531,10 +492,10 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("| `279` | **Frontenhausian** | `c_frontenhausen` (Frantenhusa) | Attested 788 AD (Breves Notitiae) | **Frontenhausian** (Validated) |\n\n")
         f.write("---\n\n")
 
-        # 5. Full Register of Flagged Titles (Tier 4 & Tier 5)
-        f.write("## 5. Register of Flagged Titles Requiring Pre-867 Resolution in Phase 4\n\n")
-        f.write(f"Below is the actionable catalog of all **{len(flagged_titles)}** flagged titles inside the Roman Empire under the Burden of Proof on Antiquity architecture, complete with their attestation metadata, sovereign trajectory, and recommended sub-barony candidates (`Option A`):\n\n")
-        f.write("| County Key | Current Name | De Jure Kingdom | Tier | Attestation Year | Primary Source | Anachronism / Mismatch Reason | Recommended Pre-867 Sub-Barony Candidate (`Option A`) |\n")
+        # 5. Full Register of Flagged Titles (Tier 2 & Tier 3)
+        f.write("## 5. Register of Flagged Titles Requiring Historical Review & Resolution in Phase 4\n\n")
+        f.write(f"Below is the actionable catalog of all **{len(flagged_titles)}** flagged titles inside the Roman Empire under the Three-Tier System (Tier 2 pre-HRE morphology restorations and Tier 3 settlements requiring Options A/B/C replacement), complete with their attestation metadata, sovereign trajectory, and recommended sub-barony candidates (`Option A`):\n\n")
+        f.write("| County Key | Current Name | De Jure Kingdom | Tier | Attestation Year | Primary Source | Anachronism / Substrate Reason | Recommended Pre-867 Sub-Barony Candidate (`Option A`) |\n")
         f.write("| :--- | :--- | :--- | :---: | :---: | :--- | :--- | :--- |\n")
         for t in flagged_titles:
             tier_num = t['classification']['tier']
@@ -549,10 +510,11 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         # 6. Next Steps for Phase 3 & Phase 4
         f.write("## 6. Next Steps & Transition to Phase 3\n\n")
         f.write("1. **Phase 3 (Automated Screening & Reconciliation Matrix):**\n")
-        f.write("   * Screen all 163 flagged Tier 4 & Tier 5 titles against the compiled dictionary of ancient toponyms and hydronyms.\n")
+        f.write("   * Screen all flagged Tier 2 & Tier 3 titles against the compiled dictionary of ancient toponyms, hydronyms, and pre-HRE morphologies.\n")
         f.write("   * Finalize the sub-barony candidate mapping for every flagged county.\n")
         f.write("2. **Phase 4 (Resolution Pipeline & Cadet Branch Renames):**\n")
-        f.write("   * Finalize Option A (Sub-Barony), Option B (Hydronym), and Option C (Founder Personality) resolutions.\n")
+        f.write("   * For Tier 2 titles: Restore pre-HRE native morphology (e.g., Yatvingian/Baltic *Mėna* → *Mêne*, *Rūsa* → *Rôse*, *Mēmele* → *Memel*, *Barta* → *Barten*).\n")
+        f.write("   * For Tier 3 titles: Finalize Option A (Sub-Barony), Option B (Hydronym), or Option C (Founder Personality) resolutions.\n")
         f.write("   * Apply Tarraconian sound laws to generate official Chancellery names and adjectives.\n")
         f.write("   * Systematically update cadet branch toponymic suffixes (`Kestenholz-<Seat>`).\n")
 

@@ -42,19 +42,21 @@ The current title registers and linguistic adaptations in the documentation suff
 
 ## 3. Classification Taxonomy & Evaluation Criteria
 
-Every title will be evaluated against five distinct classification tiers, strictly prioritizing historical accuracy and antiquity:
+Every title will be evaluated against a streamlined **Three-Tier Classification System**, strictly prioritizing antiquity, pre-imperial linguistic morphology, and the Toponym-First Principle:
 
-| Tier | Category | Description | Evaluation Rule |
+| Tier | Category | Definition & Scope | Evaluation Rule & Linguistic Progression |
 | :---: | :--- | :--- | :--- |
-| **Tier 1** | **Pre-867 Historical / Antiquity** | Toponym, urban center, or administrative division attested prior to the 867 start date (Classical Roman, Greek, Celtic, Germanic, Slavic, Early Medieval). | **VALID**: Retain or adapt phonologically into Tarraconian. |
-| **Tier 2** | **Legitimate Campaign Eponymous Foundations (Option C)** | Settlements or counties established/elevated during the campaign (867–1142) that lack documented pre-867 urban centers (Option A) and lack ancient hydronyms (Option B), whose names are derived from the historical founder/patriarch's traits via the **Trait-Driven Eponymous Engine** (Section 3.2). | **CANONICAL (CAMPAIGN)**: Grounded in authentic character history.<br>**Strict Restriction:** A title CANNOT be placed in Tier 2 merely because an in-game cadet branch was auto-named after a vanilla CK3 title, or because a dynamic culture diverged there. |
-| **Tier 3** | **Pre-867 Geographic / Hydronymic** | The settlement is post-867 or colonial, but the name derives directly from an ancient hydronym (river), oronym (mountain), or tribal territory existing prior to 867. | **VALID**: Retain root name as a geographic regional designation, applying the **Hydronym Hierarchy Rule** (Section 3.1). |
-| **Tier 4** | **Post-867 OTL Foundation / Dynastic Castle** | Named after a real-world post-867 individual, crusade, monastic order, or high-medieval dynastic castle absent from the save timeline. | **ANACHRONISTIC (FLAGGED)**: Must be replaced by an authentic pre-867 centre or sub-barony (`b_*`) within the province (Option A) or ancient hydronym (Option B). |
-| **Tier 5** | **Foreign Colonial Exonym Mismatch** | Title uses an exonym of a historical colonizer (e.g., German *Ostsiedlung*, Swedish, Turkish, Tsarist Russian) that never controlled the province in the save. | **MISMATCH (FLAGGED)**: Revert to the indigenous pre-867 stem or derive directly from Tarraconian / Imperial Latin sound laws applied to the indigenous root. |
+| **Tier 1** | **Pre-867 Historical / Antiquity** | Toponym, civitas, urban center, or administrative division attested prior to the 867 start date (Classical Roman, Greek, Celtic, Germanic, Slavic, Baltic, Early Medieval). | **Check the history, adapt chronologically to changing cultures as appropriate.**<br>Trace the historical settlement progression through successive cultural horizons up to Imperial integration.<br>*Universal Rule:* Adapt the final name phonologically to Tarraconian. |
+| **Tier 2** | **Founded After 867 on Hydronymic, Geographic, or Tribal Stems** | Settlements or administrative titles established after 867 AD whose root name derives directly from an ancient hydronym (river/lake), oronym (mountain), natural geographic landmark, or indigenous tribal territory. | **Check the history, and use an appropriate language for the province name's morphology *before* it became part of the (Holy) Roman Empire.**<br>Strip post-867 colonial, feudal, or foreign administrative suffixes (e.g. Slavic town suffix `-sk`/`-ysk`, German *Ostsiedlung* `-burg`/`-stein` in Baltic lands, Ottoman or Tsarist markers), restoring the authentic pre-HRE regional morphology.<br>*Universal Rule:* Adapt the final name phonologically to Tarraconian. |
+| **Tier 3** | **Other Settlements Founded After 867 (Default)** | All other settlements founded after 867 AD lacking an ancient hydronymic, geographic, or tribal root. This includes dynastic high-medieval castles (*Höhenburgen*), personal eponymous foundations (*<Prince>slavl*, *<King>sberg*), descriptive colonial outposts (*Novogrod*, *Marienburg*), and unverified titles lacking pre-867 attestation under the Burden of Proof on Antiquity. | **Pick another name according to Options A, B, or C, changing it appropriately to its linguistic history.**<br>• **Option A (Sub-Barony):** An authentic pre-867 settlement or archaeological gord within the county.<br>• **Option B (Hydronym/Geography):** Ancient pre-867 river, lake, or landform (Section 3.1).<br>• **Option C (Campaign Founder):** Personality/trait-driven eponymous foundation (Section 3.2).<br>*Universal Rule:* Adapt the final name phonologically to Tarraconian. |
+
+> [!IMPORTANT]
+> **Universal Phonological Adaptation Rule:**
+> For all tiers (**Tier 1, Tier 2, and Tier 3**), the finalized historical stem or substrate root must be adapted phonologically into Tarraconian (the Rhine-Moselle Franconian dialect of the restored Roman Empire) using established regular sound correspondence laws (e.g., *Plisa* $\rightarrow$ *Plîse*, *Rūsa* $\rightarrow$ *Rôse*, *Mėna* $\rightarrow$ *Mêne*, *Zvenyhorod* $\rightarrow$ *Swenigorot*, *Dinogetia* $\rightarrow$ *Dinogetie*).
 
 ### 3.1 Hydronym Selection & Cultural Hierarchy Rule
 
-When a river, lake, or maritime reach has multiple historical names across different cultures, the audit resolves candidate names according to a strict linguistic hierarchy reflecting the campaign's socio-political progression:
+When selecting or evaluating hydronymic stems (both in **Tier 2** pre-HRE morphology audits and **Tier 3 Option B** resolutions), the audit resolves candidate names according to a strict linguistic hierarchy reflecting the campaign's socio-political progression:
 
 1. **Germanic Names (Primary Priority):**
    * Pre-867 Frankish, High German, Gothic, or Saxon hydronyms corresponding directly to the ruling House Chatenois's Franconian/Lothringian origins (`heritage_central_germanic`) and imperial spoken tongue (`language_high_german`).
@@ -67,7 +69,7 @@ When a river, lake, or maritime reach has multiple historical names across diffe
      * **Carpathian, Dniester & Moldavian Waters:** Encountered via **Mogyër / Hungarian** and **Byzantine Greek** frontier corridors (e.g. Hungarian *Szucsáva* → *Suceava*; *Prut* via Greek/Slavic; *Siret* via Latin *Hierasus* / Mogyër *Szeret*).
      * **Pontic Steppe, Don & Volga Waters:** Encountered via **Pecheneg, Cuman / Kipchak, Khazar**, or **East Slavic** borderlands (e.g. *Jaîk / Yaik* from Turkic/Cuman; *Inhul* from Kipchak *Yeni-Göl*; *Samara* / *Medveditsa*).
      * **Iberian & North African Waters:** Encountered via **Old Catalan, Mozarabic**, or **Andalusi Arabic** contacts (e.g. *Ebre / Ebro*, *Guadiana / Wādī Āna*, *Oued N'fis*).
-     * **Baltic & Northern Waters:** Encountered via **Old Saxon, Frisian**, or **Norse** maritime pathways (e.g. *Nemunas / Mēmele* via Scalovian/Curonian; *Kymijoki*).
+     * **Baltic & Northern Waters:** Encountered via **Old Prussian, Yatvingian, Curonian, Scalovian, Old Saxon**, or **Norse** pathways (e.g. *Nemunas / Mēmele* via Scalovian/Curonian; *Plesė / Plisa* via Yatvingian; *Mėna* via Baltic substrate; *Kymijoki*).
 4. **Deprecated / Disqualified:**
    * Modern or late post-867 colonial names from nations that never mediated contact in the save (e.g., Early Modern Tsarist Russian administrative names, Ottoman Turkish replacements for Byzantine waters, or 13th-century Teutonic *Ostsiedlung* exonyms in provinces converted directly to Tarraconian).
 
@@ -75,7 +77,7 @@ When a river, lake, or maritime reach has multiple historical names across diffe
 
 ### 3.2 Option C: Character Personality & Trait-Driven Eponymous Foundation Engine
 
-When a newly conquered, elevated, or colonized county lacks both a documented pre-867 urban center (Option A) and a natural hydronymic designation (Option B), the title may be resolved as an **in-game campaign foundation** (Option C).
+When a newly conquered, elevated, or colonized county falls into **Tier 3 (Other Settlements Founded After 867)** and lacks both a documented pre-867 urban center (Option A) and a natural hydronymic designation (Option B), the title may be resolved as an **in-game campaign foundation** (Option C).
 
 Rather than assigning arbitrary names, the audit inspects the **first conquering sovereign, founding count, or cadet branch patriarch** recorded in `chatenois_867_01_01.ck3` (`holder` history chain). The founder's **personality traits, virtues/sins, and prestige levels** dictate whether and how the title is named:
 
@@ -101,7 +103,7 @@ flowchart TD
 
     subgraph Enforced["TOPONYM-FIRST CAUSALITY (ENFORCED)"]
         direction TB
-        Hist["Historical Geography & Antiquity<br><i>(Pre-867 Centers / Ancient Hydronyms)</i>"] -->|Audit & Resolution| ResTitle["Resolved Historical Title<br><b>Kaiserswerth, Swenigorot, Dinogetia, Tyras</b>"]
+        Hist["Historical Geography & Substrate<br><i>(Pre-867 Centers / Ancient Hydronyms / Pre-HRE Morphology)</i>"] -->|Audit & Resolution| ResTitle["Resolved Historical Title<br><b>Kaiserswerth, Swenigorot, Dinogetia, Tyras, Plîse, Rôse, Mêne</b>"]
         
         ResTitle -->|Downstream Derivation| ResHouse["Cadet Houses (dynasty_house)<br><b>House Kestenholz-Kaiserswerth<br>House Kestenholz-Swenigorot</b>"]
         ResTitle -->|Downstream Derivation| ResCulture["Dynamic Emergent Cultures (cultures)<br><b>Dinogetian-Vlachs<br>Tyrasian-Mogyër / Nistrian-Vlachs</b>"]
@@ -113,11 +115,9 @@ The fundamental flaw in previous audits was allowing game-mechanical artifacts (
 * Dynamic divergent and hybrid cultures (`cultures`) are automatically titled after the county or duchy in which the divergence or hybridization occurs.
 
 Under the **Toponym-First Principle**, causality is strictly reversed:
-1. **Landed Title Primacy:** Every landed title must stand on its own historical grounding. Titles previously excused as "Tier 2 Canon" (e.g., `c_bergh`, `c_luxembourg`, `c_zagreb`, `c_galati`, `c_bugeac`, `c_dorohoi`, `c_iasi`, `c_barlad`, `c_cetatea_alba`, `c_chilia`, `c_lapusna`, `c_aalborg`, `c_bouillon`, `c_namur`, `c_metzovo`) are stripped of their false exemption and audited against Tiers 1, 3, 4, and 5.
+1. **Landed Title Primacy:** Every landed title must stand on its own historical grounding. Titles previously excused as "in-game canon" (e.g., `c_bergh`, `c_luxembourg`, `c_zagreb`, `c_galati`, `c_bugeac`, `c_dorohoi`, `c_iasi`, `c_barlad`, `c_cetatea_alba`, `c_chilia`, `c_lapusna`, `c_aalborg`, `c_bouillon`, `c_namur`, `c_metzovo`) are stripped of their false exemption and audited against **Tiers 1, 2, and 3**.
 2. **Cadet House Renaming:** Noble houses and cadet branches do *not* validate titles; rather, houses derive their names *from* the historically resolved titles (`House Kestenholz-<ResolvedSeat>`).
 3. **Dynamic Emergent Culture Renaming:** Emergent cultures do *not* validate titles; rather, cultures derive their localized names and ethnogenesis markers *from* the historically resolved toponym of their geographical seat (`<ResolvedStem>-Vlachs`, `<ResolvedStem>-Mogyër`, etc.).
-
----
 
 ---
 
@@ -134,20 +134,20 @@ flowchart TD
     
     D1 --> E["Cross-Reference Matrix (Save Data vs. MD Documentation)"]
     
-    E --> F["Automated Anachronism & Colonialism Screening"]
-    F --> G["Historical & Lineage Verification Engine"]
+    E --> F["Automated Attestation & Etymology Screening"]
+    F --> G["Historical Lineage & Substrate Verification Engine"]
     
-    G --> H1["Tier 1: Pre-867 Historical / Antiquity"]
-    G --> H2["Tier 3: Pre-867 Geographic / Hydronymic"]
-    G --> H3["Tier 4 & 5: Flagged Post-867 / Colonial Titles"]
-    G --> H4["Tier 2: Legitimate Option C Campaign Foundations"]
+    G --> H1["Tier 1: Pre-867 Historical / Antiquity<br><i>(Attested ≤ 867 AD)</i>"]
+    G --> H2["Tier 2: Post-867 Hydronymic / Geographic / Tribal<br><i>(Founded > 867 on ancient hydronym/tribe)</i>"]
+    G --> H3["Tier 3: Other Post-867 Settlements (Default)<br><i>(Dynastic castles, eponymous foundations, unverified)</i>"]
     
-    H3 --> I["Resolve Historical Title: Option A (Barony), Option B (Hydronym)"]
-    H4 --> I
+    H1 --> I1["Trace History & Cultural Horizons<br><i>(Phonological adaptation to Tarraconian)</i>"]
+    H2 --> I2["Pre-HRE Language Morphology Audit<br><i>(Strip colonial suffixes; Tarraconian adaptation)</i>"]
+    H3 --> I3["Select Alternative: Option A / B / C<br><i>(Historical progression; Tarraconian adaptation)</i>"]
     
-    H1 --> J["Title Reconciliation & Discrepancy Register"]
-    H2 --> J
-    I --> J
+    I1 --> J["Title Reconciliation & Discrepancy Register"]
+    I2 --> J
+    I3 --> J
     
     J --> K1["Downstream Cadet House Realignment: House Kestenholz-ResolvedSeat"]
     J --> K2["Downstream Emergent Culture Realignment: ResolvedStem-Culture"]
@@ -179,20 +179,19 @@ flowchart TD
 2. **Parse Landed Title Structure:**
    * Extract complete hierarchy from `00_landed_titles.txt` to map every county (`c_*`) to its constituent baronies (`b_*`) and de jure duchies/kingdoms.
 
-### Phase 2: Title Lineage, Sovereign Trajectories & Toponym-First Classification
+### Phase 2: Title Lineage, Sovereign Trajectories & 3-Tier Classification
 
 1. **Determine Historical Sovereign Trajectory:**
    * For each county, map who controlled the province between 867 and 1142.
    * Identify whether the county was ever held by historic colonizers (e.g., German Teutonic Order, Holy Roman emperors prior to Chatenois expansion, Swedish crowns, Kievan Rurikids, Seljuk Turks, Umayyads/Almoravids).
-2. **Cultural Footprint Comparison:**
+2. **Cultural Footprint Comparison & Burden of Proof on Antiquity:**
    * Contrast the county's in-game culture history against the nominal culture of its vanilla/documented name.
-   * Example: If a Baltic province went from Old Prussian/Curonian straight to Tarraconian in 1050 without ever seeing the Teutonic Order, a German Order name like *Marienburg* or *Bartenstein* has zero historical continuity with the save.
-3. **Strict Toponym-First Screening (Abolition of False Tier 2 Exemptions):**
-   * Counties are evaluated strictly on their own historical merits. Presence of an in-game cadet branch (`is_cadet_seat`) or dynamic culture (`is_hybrid_ground`) no longer grants exemption:
-     * Titles with attested pre-867 urban centres or divisions are assigned to **Tier 1 (Antiquity)**.
-     * Titles derived from pre-867 rivers, mountains, or waters are assigned to **Tier 3 (Hydronymic)**.
-     * Titles founded after 867 or high-medieval castles are assigned to **Tier 4 (Post-867 Foundation)**.
-     * Titles with colonizer exonyms where the colonizer never ruled are assigned to **Tier 5 (Colonial Mismatch)**.
+   * Enforce the Burden of Proof on Antiquity: Positive proof of pre-867 attestation ($\le 867$ AD) is required to qualify for Tier 1.
+3. **Streamlined 3-Tier Screening Engine:**
+   * Counties are evaluated strictly on their historical merits:
+     * **Tier 1 (Pre-867 Historical / Antiquity):** Attested settlement, civitas, or administrative division prior to 867 AD. Trace historical progression across cultures and adapt phonologically to Tarraconian.
+     * **Tier 2 (Founded After 867 on Hydronymic, Geographic, or Tribal Stems):** Settlement founded after 867 AD, but its root derives from an ancient river, mountain, or tribal territory (e.g. *Minsk* from river *Mėna*, *Volkovysk* from river *Ros'*/*Vaŭkavyja*, *Memel* from river *Mēmele*, *Bartenstein* from tribe *Barta*). Check the history, restore the province's morphology *before* it joined the Holy Roman Empire (stripping colonial/anachronistic suffixes like `-sk`, `-ysk`, `-burg`, `-stein`), and adapt phonologically to Tarraconian.
+     * **Tier 3 (Other Settlements Founded After 867 - Default):** All other post-867 foundations (dynastic castles like *Burg Berge*, personal eponymous foundations like *Lviv* or *Roslavl*, descriptive outposts like *Novogrudok* / *Novogrod*, or unverified titles). Pick another name via Option A (sub-barony), Option B (hydronym), or Option C (campaign founder archetype), changing it appropriately to its linguistic history, and adapt phonologically to Tarraconian.
 
 ### Phase 3: Automated Screening & Etymological Cross-Referencing
 
@@ -202,18 +201,20 @@ flowchart TD
      * Swedish Crusade: `-ö`, `-borg` (post-1150), `-by` (in non-Norse native regions).
      * Russian Imperial / Cossack: `-sk`, `-ka`, `-grad`, `-stanitsa`, `Novo-`, `Bogorodi-`, `Yekaterin-`, `Aleksandr-`.
      * Crusader: *Crac des...*, *Castel...*, *Mont...* (in Outremer/Levant).
-2. **Cross-Check with Current MD Files:**
-   * Re-screen previously exempted titles against `anachronistic_titles_1059.md`. Check if the title was previously accepted purely due to the OTL calendar gap (founded between 867 and 1059/1122) or false Tier 2 in-game canon.
-   * Flag all post-867 foundations for resolution in Phase 4.
+2. **Screening Matrix for Tier 2 and Tier 3 Titles:**
+   * Differentiate Tier 2 (hydronymic/geographic/tribal roots needing pre-HRE morphology restoration) from Tier 3 (settlements requiring replacement via Options A/B/C).
+   * Evaluate candidate stems against the Hydronym Hierarchy Rule (Section 3.1) and character psychological archetypes (Section 3.2).
 
 ### Phase 4: Resolution, Reconciliation, Dynasty & Culture Downstream Pipeline
 
 1. **Title Resolution Framework:**
-   * **Option A (Sub-Barony Resolution):** Inspect all baronies (`b_*`) within the county to find an authentic pre-867 or classical settlement (e.g., `b_truso` for `c_malbork`, `b_kaiserswerth` for `c_bergh`, `b_echternach` for `c_luxembourg`).
-   * **Option B (Pre-867 Hydronym / Toponym Resolution):** Fall back to ancient rivers, mountains, or forests, strictly applying the **Hydronym Hierarchy Rule** (Section 3.1: Germanic name → Latin/Classical name → Language of direct imperial/cultural contact → Disqualifying non-contact colonial exonyms). Examples: *Tyras / Nistru*, *Borysthenes / Dnêper*, *Astaboras / Atbara*, *Jaîk / Ural*, *Erg Iguidi*.
-   * **Option C (In-Game Campaign Honorific / Personality-Driven Resolution):** Apply the **Trait-Driven Eponymous Engine** (Section 3.2). Inspect the character traits of the conquering or founding lord in `gamestate.bin`:
-     * If the ruler has **high-vanity traits** (`arrogant`, `ambitious`, `greedy`, exalted fame), name the foundation directly after them (e.g. *Adémarsburch*, *Wernhardstat*, *Castrum Adomari*).
-     * If the ruler has **pious/humble traits** (`zealous`, `humble`, `theologian`), name the foundation after a patron saint or religious dedication (e.g. *Zant-Arnolt*, *Marienburch*).
+   * **For Tier 1:** Retain historical centre, tracing chronological culture changes and adapting phonologically to Tarraconian.
+   * **For Tier 2:** Restore pre-HRE native morphology (e.g., Yatvingian/Baltic *Mėna* $\rightarrow$ *Mêne*, *Rūsa* $\rightarrow$ *Rôse*, *Mēmele* $\rightarrow$ *Memel*, *Barta* $\rightarrow$ *Barten*).
+   * **For Tier 3:**
+     * **Option A (Sub-Barony Resolution):** Inspect baronies (`b_*`) for authentic pre-867 centres (e.g. `b_kaiserswerth` for `c_bergh`, `b_echternach` for `c_luxembourg`, `b_zvenyhorod` for `c_lviv`, `b_dinogetia` for `c_galati`).
+     * **Option B (Pre-867 Hydronym / Toponym Resolution):** Use ancient rivers, mountains, or forests (e.g. *Plisa* $\rightarrow$ *Plîse* for `c_novogrudok`, *Tyras* $\rightarrow$ *Tîras* for `c_bugeac`).
+     * **Option C (Campaign Founder Archetype):** Trait-driven eponymous engine based on founder traits.
+   * **Universal Rule:** Adapt final name phonologically into Tarraconian.
      * If the ruler is a **scholar/antiquarian** (`scholar`, `philosopher`), bestow a revived Classical Latin or imperial title (e.g. *Augusta Nova*, *Traianopolis*).
      * If the ruler is a **pragmatic march-warden** (`diligent`, `architect`, `craven`, `paranoid`), name it functionally after terrain fortifications (e.g. *Passwacht*, *Schirmburch*).
 

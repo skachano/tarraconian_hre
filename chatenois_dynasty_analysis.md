@@ -18,7 +18,7 @@ Cadet house names in the save game typically follow the formula `<Dynasty>-<Seat
    * Replaces the Gallo-Romance stem *Chatenois* with the authentic Rhine-Moselle Franconian imperial stem **Kestenholz** (*Dat Hûs van Kestenholz*).
 
 2. **Step 2: Toponymic Suffix Realignment (Phases 2–4 Coupling):**
-   * Many cadet branches are named after seats that are themselves **Tier 4 anachronisms** (post-867 OTL dynastic castles/settlements) or **Tier 5 colonial mismatches** (e.g., German *Ostsiedlung* or Tsarist Russian exonyms).
+   * Many cadet branches are named after seats that are themselves **Tier 2 hydronymic foundations** (requiring pre-HRE morphology) or **Tier 3 settlements** (post-867 OTL dynastic castles/settlements).
    * In Phase 4, each cadet branch's toponymic suffix is permanently realigned to match the resolved historical seat and its official Tarraconian Chancellery translation:
      * *Resolved Pre-867 Centre:* `c_lviv` was historically resolved from *Lemberg* (1256 OTL foundation) to the 10th-century princely capital *Swenigorot* (`b_zvenyhorod`). Accordingly, House `16796257` (*Chatenois-Lemberg*) becomes **Kestenholz-Swenigorot**.
      * *Anachronistic Höhenburgen & Ostsiedlung Seats:* Houses named after High Medieval foundations like *Berg*, *Saarbrücken*, *Stężyca*, *Plzeň*, *Koschmin*, *Kammersberg*, *Hirschberg*, or *Peiting* update their toponymic suffix to their verified pre-867 centres in Tarraconian chancellery orthography (*Kestenholz-Kaiserswerth*, *Kestenholz-Zant-Arnolt*, *Kestenholz-Sitzichow*, *Kestenholz-Plzenec*, *Kestenholz-Kalisz*, *Kestenholz-Judenburg*, *Kestenholz-Legnica*, *Kestenholz-Altenstadt*).

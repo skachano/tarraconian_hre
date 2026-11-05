@@ -430,8 +430,8 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
 
 def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     total_titles = len(titles)
-    tier4_count = sum(1 for t in titles if t["tier"] == 4)
-    tier5_count = sum(1 for t in titles if t["tier"] == 5)
+    tier2_count = sum(1 for t in titles if t["tier"] == 2)
+    tier3_count = sum(1 for t in titles if t["tier"] == 3)
     opt_a_count = sum(1 for t in titles if t["selected_option"] == "Option A")
     opt_b_count = sum(1 for t in titles if t["selected_option"] == "Option B")
     coupled_houses = [h for h in houses if "Realigned" in h["status"]]
@@ -447,15 +447,15 @@ def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
         "",
         "## 1. Executive Summary & Resolution Metrics",
         "",
-        "This register constitutes the definitive, finalized reconciliation of all landed titles inside the **Roman Empire** (`h_roman_empire`) that exhibited chronological anachronisms (Tier 4) or foreign colonial mismatches (Tier 5). Every title is paired with its verified pre-867 settlement or hydronym, along with official Tarraconian Chancellery forms and adjectives.",
+        "This register constitutes the definitive, finalized reconciliation of all landed titles inside the **Roman Empire** (`h_roman_empire`) evaluated under the **Three-Tier Classification System**: Tier 2 (Post-867 Hydronymic, Geographic, or Tribal Foundations audited for pre-HRE morphology) and Tier 3 (Other Post-867 Settlements resolved via Options A, B, or C). Every title is paired with its verified pre-867 settlement or hydronym, along with official Tarraconian Chancellery forms and adjectives.",
         "",
         "Under the **Toponym-First Principle & Downstream Causality Inversion Rule** (Section 3.3 of the Audit Plan), landed titles possess absolute primacy. Cadet branches of the imperial dynasty and emergent dynamic cultures adapt *from* the historically resolved titles, completely eliminating circular canonization of anachronisms.",
         "",
         "| Audit Category | Total Titles / Entities | Percentage | Resolution Strategy |",
         "| :--- | :---: | :---: | :--- |",
         f"| **Total Flagged Imperial Titles** | **{total_titles}** | **100.0%** | Full reconciliation against 867 campaign divergence |",
-        f"| • **Tier 4: Post-867 OTL Foundations** | **{tier4_count}** | {tier4_count/total_titles*100:.1f}% | Replaced by ancient pre-867 Roman, Celtic, Carolingian, or Slavic centres |",
-        f"| • **Tier 5: Foreign Colonial Mismatches** | **{tier5_count}** | {tier5_count/total_titles*100:.1f}% | Reverted from unhistorical German/Swedish/Cossack exonyms to native roots |",
+        f"| • **Tier 2: Post-867 Hydronymic / Geographic / Tribal** | **{tier2_count}** | {tier2_count/total_titles*100:.1f}% | Pre-HRE native morphology restored (stripping colonial suffixes) before Tarraconian adaptation |",
+        f"| • **Tier 3: Other Settlements Founded After 867** | **{tier3_count}** | {tier3_count/total_titles*100:.1f}% | Dynastic castles, eponymous foundations, descriptive outposts, or unverified titles resolved via Options A/B/C |",
         f"| **Option A: Pre-867 Sub-Barony Centers** | **{opt_a_count}** | {opt_a_count/total_titles*100:.1f}% | Anchored to attested ancient oppida, castra, civitates, or collegiate abbeys |",
         f"| **Option B: Ancient Hydronyms / Oronyms** | **{opt_b_count}** | {opt_b_count/total_titles*100:.1f}% | Resolved via river/mountain basins applying Section 3.1 Hydronym Hierarchy |",
         f"| **Coupled Cadet Houses of House Kestenholz** | **{len(coupled_houses)}** | — | Toponymic seat suffixes updated to match resolved pre-867 centres |",
@@ -566,7 +566,7 @@ def update_chatenois_dynasty_analysis(houses, doc_file):
         "   * Replaces the Gallo-Romance stem *Chatenois* with the authentic Rhine-Moselle Franconian imperial stem **Kestenholz** (*Dat Hûs van Kestenholz*).",
         "",
         "2. **Step 2: Toponymic Suffix Realignment (Phases 2–4 Coupling):**",
-        "   * Many cadet branches are named after seats that are themselves **Tier 4 anachronisms** (post-867 OTL dynastic castles/settlements) or **Tier 5 colonial mismatches** (e.g., German *Ostsiedlung* or Tsarist Russian exonyms).",
+        "   * Many cadet branches are named after seats that are themselves **Tier 2 hydronymic foundations** (requiring pre-HRE morphology) or **Tier 3 settlements** (post-867 OTL dynastic castles/settlements).",
         "   * In Phase 4, each cadet branch's toponymic suffix is permanently realigned to match the resolved historical seat and its official Tarraconian Chancellery translation:",
         "     * *Resolved Pre-867 Centre:* `c_lviv` was historically resolved from *Lemberg* (1256 OTL foundation) to the 10th-century princely capital *Swenigorot* (`b_zvenyhorod`). Accordingly, House `16796257` (*Chatenois-Lemberg*) becomes **Kestenholz-Swenigorot**.",
         "     * *Anachronistic Höhenburgen & Ostsiedlung Seats:* Houses named after High Medieval foundations like *Berg*, *Saarbrücken*, *Stężyca*, *Plzeň*, *Koschmin*, *Kammersberg*, *Hirschberg*, or *Peiting* update their toponymic suffix to their verified pre-867 centres in Tarraconian chancellery orthography (*Kestenholz-Kaiserswerth*, *Kestenholz-Zant-Arnolt*, *Kestenholz-Sitzichow*, *Kestenholz-Plzenec*, *Kestenholz-Kalisz*, *Kestenholz-Judenburg*, *Kestenholz-Legnica*, *Kestenholz-Altenstadt*).",

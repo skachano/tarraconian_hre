@@ -3,12 +3,13 @@
 Phase 3: Automated Screening & Etymological Cross-Referencing
 Part of the Tarraconian Historical Accuracy Audit Pipeline.
 
-This script evaluates all 150 flagged Tier 4 and Tier 5 titles inside the Roman Empire against:
-1. Option A: Sub-barony screening for ancient pre-867 centres, Roman castra, Carolingian abbeys, Slavic gords.
-2. Option B: Hydronymic and geographic hierarchy screening (Germanic -> Latin -> Contact language -> Disqualified exonyms).
-3. Option C: Trait-Driven Eponymous Foundation Engine analyzing founding ruler psychology from save game characters.
-4. Definitive resolution recommendation and Tarraconian Chancellery sound law formulation.
-5. Cadet branch realignment coupling (updating House Kestenholz cadet branch seats).
+This script evaluates all flagged Tier 2 and Tier 3 titles inside the Roman Empire against:
+1. Tier 2 Pre-HRE Morphology Audit: Stripping colonial suffixes (-sk, -ysk, -burg, -stein) to restore indigenous pre-imperial roots.
+2. Option A: Sub-barony screening for ancient pre-867 centres, Roman castra, Carolingian abbeys, Slavic gords.
+3. Option B: Hydronymic and geographic hierarchy screening (Germanic -> Latin -> Contact language -> Disqualified exonyms).
+4. Option C: Trait-Driven Eponymous Foundation Engine analyzing founding ruler psychology from save game characters.
+5. Definitive resolution recommendation and Tarraconian Chancellery sound law formulation.
+6. Cadet branch realignment coupling (updating House Kestenholz cadet branch seats).
 
 Outputs:
 - Machine-readable JSON: /var/tmp/ck3_audit/phase3/title_screening_matrix.json
@@ -3600,8 +3601,8 @@ def generate_markdown_report(matrix, report_file):
     Produces the comprehensive Phase 3 Screening & Etymological Cross-Referencing Report.
     """
     total_count = len(matrix)
-    tier4_count = sum(1 for e in matrix if e["tier"] == 4)
-    tier5_count = sum(1 for e in matrix if e["tier"] == 5)
+    tier2_count = sum(1 for e in matrix if e["tier"] == 2)
+    tier3_count = sum(1 for e in matrix if e["tier"] == 3)
     opt_a_count = sum(1 for e in matrix if e["definitive_recommendation"]["selected_option"] == "Option A")
     opt_b_count = sum(1 for e in matrix if e["definitive_recommendation"]["selected_option"] == "Option B")
     opt_c_count = sum(1 for e in matrix if e["definitive_recommendation"]["selected_option"] == "Option C")
@@ -3614,8 +3615,8 @@ def generate_markdown_report(matrix, report_file):
         "# Phase 3 Report: Automated Screening & Etymological Cross-Referencing",
         "",
         "* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)",
-        f"* **Audit Scope:** **{total_count} Flagged Titles** (141 Tier 4 Post-867 Foundations & 9 Tier 5 Foreign Colonial Mismatches) across **{len(kingdoms)} De Jure Kingdoms**",
-        "* **Evaluation Engines:** Option A Sub-Baronies | Option B Hydronym Hierarchy (Sec. 3.1) | Option C Trait-Driven Engine (Sec. 3.2) | Cadet Branch Coupling",
+        f"* **Audit Scope:** **{total_count} Flagged Titles** ({tier2_count} Tier 2 Hydronymic/Geographic/Tribal & {tier3_count} Tier 3 Settlements) across **{len(kingdoms)} De Jure Kingdoms**",
+        "* **Evaluation Engines:** Pre-HRE Morphology Audit (Tier 2) | Option A Sub-Baronies | Option B Hydronym Hierarchy (Sec. 3.1) | Option C Trait-Driven Engine (Sec. 3.2) | Cadet Branch Coupling",
         "",
         "---",
         "",
@@ -3625,9 +3626,9 @@ def generate_markdown_report(matrix, report_file):
         "",
         "| Evaluation Metric | Total Imperial Titles | Percentage | Description & Strategic Purpose |",
         "| :--- | :---: | :---: | :--- |",
-        f"| **Total Flagged Titles Screened** | **{total_count}** | **100.0%** | Titles requiring historical pre-867 resolution |",
-        f"| • **Tier 4 (Post-867 OTL Foundations)** | **{tier4_count}** | {tier4_count/total_count*100:.1f}% | Founded in real history after 867 by figures absent from save |",
-        f"| • **Tier 5 (Foreign Colonial Mismatches)** | **{tier5_count}** | {tier5_count/total_count*100:.1f}% | German Ostsiedlung, Swedish crusade, or Cossack exonyms |",
+        f"| **Total Flagged Titles Screened** | **{total_count}** | **100.0%** | Titles requiring historical pre-867 resolution or morphology audit |",
+        f"| • **Tier 2 (Post-867 Hydronymic / Geographic / Tribal)** | **{tier2_count}** | {tier2_count/total_count*100:.1f}% | Settlements founded after 867 based on ancient river/mountain/tribe; restoring pre-HRE morphology |",
+        f"| • **Tier 3 (Other Settlements Founded After 867)** | **{tier3_count}** | {tier3_count/total_count*100:.1f}% | Dynastic castles, eponymous foundations, descriptive outposts, or unverified titles |",
         f"| **Option A Preferred (Sub-Barony Ancient Centres)** | **{opt_a_count}** | {opt_a_count/total_count*100:.1f}% | Resolved via pre-867 Roman, Celtic, Carolingian, or Slavic centres |",
         f"| **Option B Preferred (Hydronymic / Toponymic Fallback)** | **{opt_b_count}** | {opt_b_count/total_count*100:.1f}% | Resolved via ancient river basins where no urban centre exists |",
         f"| **Option C Candidates Evaluated (Trait-Driven)** | **{total_count}** | 100.0% | Simulated campaign foundation formulas based on conqueror traits |",
