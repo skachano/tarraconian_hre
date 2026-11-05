@@ -2705,7 +2705,7 @@
   * [Non-HRE] **Ansongo** (`c_ansongo`) — *Tarraconian: **Magistrat van Ansôngo***
   * [Non-HRE] **Kukiya** (`c_kukiya`) — *Tarraconian: **Magistrat van Kukîja***
   * [Non-HRE] **Tirakka** (`c_tirakka`) — *Tarraconian: **Magistrat van Tirâkka***
-* **Duchy of Tadmekka (Timbuktu)** (`d_timbuktu`) — *1/1 in HRE*
+* **Duchy of Arawan (Timbuktu)** (`d_timbuktu`) — *1/1 in HRE*
   * **[HRE]** **Arawan** (`c_arawan`) — *Tarraconian: **Magistrat van Arawân***
 * **Duchy of Dendi** (`d_dendi`) — *0/3 in HRE*
   * [Non-HRE] **Dendi** (`c_dendi`) — *Tarraconian: **Magistrat van Dêndi***

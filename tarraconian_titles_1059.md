@@ -2721,7 +2721,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_ansongo` (Ansongo) $\rightarrow$ **Magistrat van Ansônge**
   * `c_kukiya` (Kukiya) $\rightarrow$ **Magistrat van Kukîje**
   * `c_tirakka` (Tirakka) $\rightarrow$ **Magistrat van Tirâkke**
-* **Duchy of Tadmekka (Timbuktu)** (`d_timbuktu`) $\rightarrow$ **Gubernat van Tadmekke** *(direct vanilla: **Timbuktû**)*
+* **Duchy of Arawan (Timbuktu)** (`d_timbuktu`) $\rightarrow$ **Gubernat van Arawân** *(direct vanilla: **Timbuktû**)*
   * `c_arawan` (**[HRE]** Arawan) $\rightarrow$ **Magistrat van Arawân**
 * **Duchy of Dendi** (`d_dendi`) $\rightarrow$ **Gubernat van Dêndi**
   * `c_dendi` (Dendi) $\rightarrow$ **Magistrat van Dêndi**
