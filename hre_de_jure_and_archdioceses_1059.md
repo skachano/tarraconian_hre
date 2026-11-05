@@ -1060,7 +1060,7 @@
   * **[HRE]** **Aosta** (`c_aosta`)
   * **[HRE]** **Geneva** (`c_geneva`)
   * **[HRE]** **Canavese** (`c_canavese`)
-* **Duchy of Viennois** (`d_dauphine`) — *5/5 in HRE*
+* **Duchy of Viennois (Dauphiné)** (`d_dauphine`) — *5/5 in HRE*
   * **[HRE]** **Lyon** (`c_lyon`)
   * **[HRE]** **Forez** (`c_forez`)
   * **[HRE]** **Viviers** (`c_viviers`) *(Prince-Bishopric / Ecclesiastical)*

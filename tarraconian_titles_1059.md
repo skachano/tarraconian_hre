@@ -1114,7 +1114,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_aosta` (Aosta) $\rightarrow$ **Magistrat van Ouste** *(MHG *Ouste* for Aosta)*
   * `c_geneva` (Geneva) $\rightarrow$ **Magistrat van Dschenêf** *(or MHG **Genf**)*
   * `c_canavese` (Canavese) $\rightarrow$ **Magistrat van Kanavês** *(or **Ivrêe**)*
-* **Duchy of Viennois** (`d_dauphine`) $\rightarrow$ **Gubernat van Wîen-an-der-Rône** *(or **Vjenês**)*
+* **Duchy of Viennois (Dauphiné)** (`d_dauphine`) $\rightarrow$ **Gubernat van Wienergouwe** *(or **Vjenês**)*
   * `c_lyon` (Lyon) $\rightarrow$ **Magistrat van Lijûn** `[li.ˈjuːn]`
   * `c_forez` (Forez) $\rightarrow$ **Magistrat van Forês**
   * `c_viviers` (Viviers) $\rightarrow$ **Fürstbisdom van Vivjêrs**
@@ -2845,7 +2845,7 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | 12 | **Archdiocese of Bordeaux** | `d_et_bordeaux` | **Erzbisdom van Bordêls** | `[bɔr.ˈdeːɫs]` | Bordêls (`c_bordeaux`) |
 | 13 | **Archdiocese of Lyon** | `d_et_lyon` | **Erzbisdom van Lijûn** | `[li.ˈjuːn]` | Lijûn (`c_lyon`) |
 | 14 | **Archdiocese of Tarentaise** | `d_et_tarentaise` | **Erzbisdom van Tarentêse** *(or **Munster-in-Tarentêse**)* | `[ta.rən.ˈteː.zə]` | Ouste (`c_aosta`) |
-| 15 | **Archdiocese of Vienne** | `d_et_vienne` | **Erzbisdom van Wienne** *(or **Wîen-an-der-Rône**)* | `[ˈwiː.nə]` | Wienne (`c_viennois`) |
+| 15 | **Archdiocese of Vienne** | `d_et_vienne` | **Erzbisdom van Wienne** | `[ˈwiː.nə]` | Wienne (`c_viennois`) |
 | 16 | **Archdiocese of Eauze** | `d_et_eauze` | **Erzbisdom van Eûse** | `[ɛ.ˈuː.zə]` | Armanjach (`c_armagnac`) |
 | 17 | **Archdiocese of Narbonne** | `d_et_narbonne` | **Erzbisdom van Narbôn** | `[nar.ˈboːn]` | Karkassôn (`c_carcassonne`) |
 | 18 | **Archdiocese of Besançon** | `d_et_besancon` | **Erzbisdom van Bisantz** | `[bi.ˈzants]` | Bisantz (`c_besancon`) |
