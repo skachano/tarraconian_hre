@@ -71,7 +71,7 @@ pie title Distribution of Historical Settlement Archetypes (209 Counties)
 | `c_savoie` | **cn_tarr_hist_c_savoie** | k_burgundy | 20 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Môstier'; dev 20. | **Magistrat van Môstier** |
 | `c_ilek` | **cn_tarr_c_ilek** | k_caspian_steppe | 0 | `PIONEER_ASSART_STEPPE` | Nomadic until 1119.4.30 (under Aepak); settled in 1135.11.4 by verified save character Ludolf (Chatenois-Metz) with dev 0. | **Magistrat van Ilêch** |
 | `c_yaitsk` | **cn_tarr_c_yaitsk** | k_caspian_steppe | 3 | `PIONEER_ASSART_STEPPE` | Nomadic until 1126.8.27 (under Rugila); settled in 1136.7.20 by verified save character Ludolf (Chatenois-Metz) with dev 3. | **Magistrat van Jaîch** |
-| `c_burgos` | **cn_tarr_c_burgos** | k_castille | 25 | `METROPOLITAN_CASTELLAN` | High development (25) with 6 documented builder rulers. Ancient seat 'Amâje'. | **Magistrat van Amâje** |
+| `c_burgos` | **cn_tarr_c_burgos** | k_castille | 25 | `METROPOLITAN_CASTELLAN` | High development (25) with 6 documented builder rulers. Ancient seat 'Amâje'. | **Magistrat van Amâje-in-Kastîljen** |
 | `c_cuellar` | **cn_tarr_hist_c_cuellar** | k_castille | 26 | `METROPOLITAN_CASTELLAN` | High development (26) with 4 documented builder rulers. Ancient seat 'Sepulwêde'. | **Magistrat van Sepulwêde** |
 | `c_soria` | **cn_tarr_hist_c_soria** | k_castille | 22 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Numantze'; dev 22. | **Magistrat van Numantze** |
 | `c_valladolid` | **cn_tarr_hist_c_valladolid** | k_castille | 29 | `MONASTIC_FOUNDATION` | Leased on 1142.2.28 to ho_generic_monastic_county_adjective_order. Grounded in verified ancient seat 'Simankas'. | **Magistrat van Simankas** |
@@ -162,7 +162,7 @@ pie title Distribution of Historical Settlement Archetypes (209 Counties)
 | `c_valdai` | **cn_tarr_hist_c_valdai** | k_novgorod | 10 | `MONASTIC_FOUNDATION` | Leased on 1140.3.24 to ho_generic_founder_ine_canons. Grounded in verified ancient seat 'Torschok'. | **Magistrat van Torschok** |
 | `c_sennar` | **cn_tarr_hist_c_sennar** | k_nubia | 13 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Alôdje'; dev 13. | **Magistrat van Alôdje** |
 | `c_moskva` | **cn_tarr_c_moskva** | k_opolye | 10 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Kutschkouwe'; dev 10. | **Magistrat van Kutschkouwe** |
-| `c_plyos` | **cn_tarr_c_plyos** | k_opolye | 9 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Pljôs'; dev 9. | **Magistrat van Pljôs** |
+| `c_plyos` | **cn_tarr_c_plyos** | k_opolye | 9 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Plês'; dev 9. | **Magistrat van Plês** |
 | `c_tula` | **cn_tarr_hist_c_tula** | k_opolye | 8 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Prônsk'; dev 8. | **Magistrat van Prônsk** |
 | `c_tver` | **cn_tarr_hist_c_tver** | k_opolye | 10 | `MONASTIC_FOUNDATION` | Leased on 1112.2.10 to ho_generic_place_ins. Grounded in verified ancient seat 'Wolok-Lamsk'. | **Magistrat van Wolok-Lamsk** |
 | `c_glazov` | **cn_tarr_hist_c_glazov** | k_permia | 7 | `REGIONAL_FEUDAL` | Continuous regional tenure at verified ancient seat 'Tscheptse'; dev 7. | **Magistrat van Tscheptse** |

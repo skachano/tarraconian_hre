@@ -535,7 +535,7 @@ HISTORICAL_TITLE_DB = {
         "opt_a_key": "b_cherkassy",
         "opt_a_name": "Roden / Kaniv",
         "opt_a_type": "Major Kievan Rus' Ros-Dnieper Stronghold (980)",
-        "opt_b_hydronym": "Dnieper (Borysthenes / Dnêper) / Ros",
+        "opt_b_hydronym": "Dnieper (Borysthenes / Nieper) / Ros",
         "opt_b_lang": "East Slavic",
         "opt_b_name": "Rôden",
         "justification": "Roden (*Rodnya*, 980) was a famous fortified Rus' river city. Cherkasy burgh was only founded late 13th c. (1305).",
@@ -905,11 +905,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "Ancient Cantabrian Capital & Visigothic Episcopal See",
         "opt_b_hydronym": "Arlanzón",
         "opt_b_lang": "Cantabrian / Latin",
-        "opt_b_name": "Amâje",
-        "justification": "Amaya was the ancient Cantabrian oppidum and Visigothic ducal capital. Burgos was founded 884 by Diego Rodríguez Porcelos (post-867).",
+        "opt_b_name": "Amâje-in-Kastîljen",
+        "justification": "Amaya was the ancient Cantabrian oppidum and Visigothic ducal capital. Burgos was founded 884 by Diego Rodríguez Porcelos (post-867). Disambiguated from Cantabrian Amaya as Amâje-in-Kastîljen.",
         "rec_option": "Option A",
-        "tarr_name": "Amâje",
-        "tarr_adjective": "Amâjer",
+        "tarr_name": "Amâje-in-Kastîljen",
+        "tarr_adjective": "Amâje-Kastîljer",
     },
     "c_valladolid": {
         "opt_a_key": "b_valladolid",
@@ -1412,6 +1412,30 @@ HISTORICAL_TITLE_DB = {
         "tarr_name": "Wolok-Lamsk",
         "tarr_adjective": "Wolok-Lamsker",
     },
+    "c_vladimir": {
+        "opt_a_key": "b_volochok",
+        "opt_a_name": "Volochok",
+        "opt_a_type": "Ancient Nerl-Klyazma River Portage",
+        "opt_b_hydronym": "Klyazma (Klesma)",
+        "opt_b_lang": "Merya / Finno-Ugric",
+        "opt_b_name": "Klêsme",
+        "justification": "Vladimir founded 990/1108 AD by Vladimir Monomakh/the Great (absent from save); resolves to ancient pre-867 Merya river hydronym Klyazma adapted as Klêsme.",
+        "rec_option": "Option B",
+        "tarr_name": "Klêsme",
+        "tarr_adjective": "Klêsmer",
+    },
+    "c_ryazan": {
+        "opt_a_key": "b_ryazan",
+        "opt_a_name": "Ryazan (Rêsan)",
+        "opt_a_type": "Ancient Oka / Erzya Regional Center",
+        "opt_b_hydronym": "Oka",
+        "opt_b_lang": "Slavic / Erzya",
+        "opt_b_name": "Rêsan",
+        "justification": "Pereyaslavl-Ryazansky founded 1095; Old Ryazan 10th-11th c. on Oka/Erzya territory; adapted as Rêsan avoiding illicit initial Rj- cluster.",
+        "rec_option": "Option A",
+        "tarr_name": "Rêsan",
+        "tarr_adjective": "Rêsaner",
+    },
     "c_tula": {
         "opt_a_key": "b_tula",
         "opt_a_name": "Pronsk / Tulitsa",
@@ -1430,11 +1454,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "Ancient Chudic / Slavic Volga River Reach",
         "opt_b_hydronym": "Volga (Rha / Wolge)",
         "opt_b_lang": "East Slavic",
-        "opt_b_name": "Pljôs",
-        "justification": "Plyos (*Плёс*) is the ancient East Slavic geographic term for a deep river reach. Fortified 1410 by Vasily I.",
+        "opt_b_name": "Plês",
+        "justification": "Plyos (*Плёс*) is the ancient East Slavic geographic term for a deep river reach. Fortified 1410 by Vasily I. Adapted as Plês to avoid illicit Plj- cluster.",
         "rec_option": "Option B",
-        "tarr_name": "Pljôs",
-        "tarr_adjective": "Pljôser",
+        "tarr_name": "Plês",
+        "tarr_adjective": "Plêser",
     },
     "c_kirillov": {
         "opt_a_key": "b_pelsina",
@@ -2202,6 +2226,18 @@ HISTORICAL_TITLE_DB = {
         "tarr_name": "Dubne",
         "tarr_adjective": "Dubner",
     },
+    "c_volodymyr": {
+        "opt_a_key": "b_volodymyr",
+        "opt_a_name": "Zimne / Simne",
+        "opt_a_type": "Ancient Dulebe/Volhynian Tribal Gord & Hillfort (6th–9th c.)",
+        "opt_b_hydronym": "Luga River (Luha)",
+        "opt_b_lang": "Old East Slavic",
+        "opt_b_name": "Lûge",
+        "justification": "Volodymyr founded 988 AD by Vladimir the Great (absent from save); resolves to ancient pre-867 Dulebe tribal capital Zimne (Simne) on the Luga.",
+        "rec_option": "Option A",
+        "tarr_name": "Simne",
+        "tarr_adjective": "Simner",
+    },
     "c_peremyshl": {
         "opt_a_key": "b_przemysl",
         "opt_a_name": "Peremyshl",
@@ -2592,11 +2628,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "Ancient Baltic / Dnieper-Baltic River Settlement & Hillfort",
         "opt_b_hydronym": "Menka (Baltic Mėna)",
         "opt_b_lang": "Baltic",
-        "opt_b_name": "Mêne",
-        "justification": "Minsk was originally settled on the Menka (Baltic Mėna) 16 km southwest of modern Minsk. Slavic -sk suffix is an anachronistic colonial addition over the Baltic hydronym.",
+        "opt_b_name": "Alt-Mêne",
+        "justification": "Minsk was originally settled on the Menka (Baltic Mėna) 16 km southwest of modern Minsk. Slavic -sk suffix is an anachronistic colonial addition over the Baltic hydronym. Disambiguated from French Mêne as Alt-Mêne.",
         "rec_option": "Option B",
-        "tarr_name": "Mêne",
-        "tarr_adjective": "Mêner",
+        "tarr_name": "Alt-Mêne",
+        "tarr_adjective": "Alt-Mêner",
     },
     "c_novogrudok": {
         "opt_a_key": "b_novogrudok",
@@ -3743,9 +3779,10 @@ def main():
     parser.add_argument("--phase1-dir", default="/var/tmp/ck3_audit/phase1", help="Path to Phase 1 data directory")
     parser.add_argument("--phase2-dir", default="/var/tmp/ck3_audit/phase2", help="Path to Phase 2 data directory")
     parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase3", help="Output directory in /var/tmp")
-    parser.add_argument("--repo-dir", default="/workspace", help="Git repository directory")
-    parser.add_argument("--md-ref", default="/workspace/anachronistic_titles_1059.md", help="Anachronistic titles reference")
-    parser.add_argument("--tarr-ref", default="/workspace/tarraconian_titles_1059.md", help="Tarraconian titles reference")
+    repo_root = os.path.dirname(os.path.abspath(__file__))
+    parser.add_argument("--repo-dir", default=repo_root, help="Git repository directory")
+    parser.add_argument("--md-ref", default=os.path.join(repo_root, "anachronistic_titles_1059.md"), help="Anachronistic titles reference")
+    parser.add_argument("--tarr-ref", default=os.path.join(repo_root, "tarraconian_titles_1059.md"), help="Tarraconian titles reference")
 
     args = parser.parse_args()
 

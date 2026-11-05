@@ -57,9 +57,9 @@ ATTESTATION_REGISTRY = {
     'c_kostroma': (1213, 'high_medieval_foundation', 'Voskresenskaya Chronicle', True, 'Founded 1213 at Kostroma-Volga confluence'),
     'c_nizhny_novgorod': (1221, 'high_medieval_foundation', 'Lavrentian Chronicle', False, 'Founded 1221 by Yuri II; pre-867 Mari/Merya fortress Obran Osh'),
     'c_yaroslavl': (1010, 'high_medieval_foundation', 'Primary Chronicle', False, 'Founded 1010 by Yaroslav the Wise over pagan Bear Corner'),
-    'c_vladimir': (990, 'high_medieval_foundation', 'Primary Chronicle', False, 'Founded 990 by Vladimir the Great / fortified 1108 by Vladimir Monomakh on the Klyazma'),
+    'c_vladimir': (990, 'high_medieval_foundation', 'Primary Chronicle', False, 'Founded 990 by Vladimir the Great / fortified 1108 by Vladimir Monomakh; pre-867 Merya river basin is Klyazma (Klêsme)'),
     'c_suzdal': (999, 'high_medieval_foundation', 'Novgorod Codex', True, 'Attested 999 / 1024 AD in Suzdalia tribal land on the Kamenka'),
-    'c_ryazan': (1095, 'high_medieval_foundation', 'Sleptsov Chronicle', True, 'Pereyaslavl-Ryazansky founded 1095; Old Ryazan 10th-11th c. on Oka/Erzya territory'),
+    'c_ryazan': (1095, 'high_medieval_foundation', 'Sleptsov Chronicle', True, 'Pereyaslavl-Ryazansky founded 1095; Old Ryazan 10th-11th c. on Oka/Erzya territory; adapted as Rêsan'),
     'c_bryansk': (1146, 'high_medieval_foundation', 'Hypatian Chronicle', True, 'First attested 1146 as Debryansk (from debr = dense forest) on the Desna'),
     'c_gomel': (1142, 'high_medieval_foundation', 'Hypatian Chronicle', True, 'First attested 1142 as Gomey on Gomeyuk stream and Sozh river'),
     'c_turov': (980, 'high_medieval_foundation', 'Primary Chronicle', False, 'First attested 980 under Prince Rogvolod and Tur on the Pripyat'),
@@ -83,6 +83,7 @@ ATTESTATION_REGISTRY = {
     'c_lviv': (1256, 'high_medieval_foundation', 'Galician-Volhynian Chronicle', False, 'Founded c. 1256 by Danylo of Halych; pre-867 center is princely capital Zvenyhorod'),
     'c_galich': (898, 'high_medieval_foundation', 'Primary Chronicle', True, 'First mentioned 898 AD; ancient salt hill / Celtic hal- root on the Dniester'),
     'c_zaslavl': (985, 'high_medieval_foundation', 'Primary Chronicle', False, 'Founded c. 985 by Vladimir for Rogneda (Izyaslavl)'),
+    'c_volodymyr': (988, 'high_medieval_foundation', 'Primary Chronicle', False, 'Founded 988 by Vladimir the Great; pre-867 Dulebe/Volhynian capital is Zimne hillfort (Simne) on Luga River'),
 
     # =========================================================================
     # POLAND, BOHEMIA & WEST SLAVIA (TIER 1, 2 & 3)
@@ -251,6 +252,8 @@ ATTESTATION_REGISTRY = {
     'c_metzovo': (1380, 'high_medieval_foundation', 'Chronicle of Ioannina', True, 'First attested 1380 AD on Metzovo mountain / Pindus'),
     'c_molina': (1138, 'high_medieval_foundation', 'Charter of Manrique Pérez de Lara', False, 'Lordship created 1138; pre-867 Celtiberian/Roman civitas Ercávica'),
     'c_vecchio': (1539, 'high_medieval_foundation', 'Bank of Saint George Charter', False, 'Porto-Vecchio founded 1539 by Genoa; pre-867 Portus Syracusanus'),
+    'c_kerak': (1142, 'high_medieval_foundation', 'Crusader Chronicle / William of Tyre', False, 'Crusader castle Kerak (1142) and Montréal (1115); resolves to classical Nabataean metropolis Petra (Pêtre)'),
+    'c_negev': (-1200, 'classical_antiquity', 'Biblical Hebrew / Ptolemy Geography', True, 'Ancient rift valley depression between Dead Sea and Gulf of Aqaba (Ha-Aravah / Wadi Araba); resolves to Arabâ'),
 }
 
 # Ancient Kingdoms where unflagged titles have classical Roman / Hellenistic / Carolingian continuity
