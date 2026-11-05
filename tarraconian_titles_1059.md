@@ -239,7 +239,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_luxembourg` (Luxembourg) $\rightarrow$ **Magistrat van Lützelburch** (`[1059 Historical: Magistrat van Echternach / Arlôn]`)
   * `c_bouillon` (Bouillon) $\rightarrow$ **Magistrat van Buljûn** `[bʊl.ˈjuːn]`
   * `c_liege` (Liege) $\rightarrow$ **Fürstbisdom van Lüttich** `[ˈlʏ.tɪç]` *(or **Ledich**)*
-  * `c_namur` (Namur) $\rightarrow$ **Magistrat van Namûr** *(or **Nâmen**)*
+  * `c_namur` (Namur) $\rightarrow$ **Magistrat van Namûr** *(or **Nâmen**, `[1059 Historical: Magistrat van Dînant]`)*
 * **Duchy of Jülich** (`d_julich`) $\rightarrow$ **Gubernat van Jûlich** *(attested in save as `Jülichen-Franconians`)*
   * `c_aachen` (Aachen) $\rightarrow$ **Magistrat van Âchen** *(or **Keiserspalz Âchen**)*
   * `c_cleves` (Cleves) $\rightarrow$ **Magistrat van Clêve** `[ˈkleː.və]` (`[1059 Historical: Magistrat van Xanten / Nîmêgen]`)
@@ -605,7 +605,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_aarhus` (**[HRE]** Aarhus) $\rightarrow$ **Magistrat van Ârhûs**
   * `c_viborg` (**[HRE]** Viborg) $\rightarrow$ **Magistrat van Wîburch**
   * `c_ringkobing` (**[HRE]** Ringkøbing) $\rightarrow$ **Magistrat van Rinkôping** (`[1059 Historical: Magistrat van Jelling]`)
-  * `c_aalborg` (**[HRE]** Aalborg) $\rightarrow$ **Magistrat van Âlburch**
+  * `c_aalborg` (**[HRE]** Aalborg) $\rightarrow$ **Magistrat van Âlburch** (`[1059 Historical: Magistrat van Himmerlant]`)
 * **Duchy of Slesvig** (`d_slesvig`) $\rightarrow$ **March van Slêswîch**
   * `c_slesvig` (**[HRE]** Slesvig) $\rightarrow$ **Magistrat van Slêswîch** *(or **Haithabû**)*
   * `c_vorbasse` (**[HRE]** Vorbasse) $\rightarrow$ **Magistrat van Vorbasse**
@@ -705,7 +705,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_hont` (Hont) $\rightarrow$ **Magistrat van Hont**
   * `c_poszony` (Pressburg) $\rightarrow$ **Magistrat van Presburch** (`[1059 Historical: Magistrat van Breslousburch / Posôn]`)
 * **Duchy of Opava** (`x_script_3603`) $\rightarrow$ **Gubernat van Troppouwe**
-  * `c_opava` (Opava) $\rightarrow$ **Magistrat van Troppouwewe** `[ˈtrɔ.pɔʊ.wə]` *(Attested Tarraconian county, promoted 1058; hydronym *Opava*, or `[1059 Sub-Barony: Grêtz-an-der-Morâwe]`) *
+  * `c_opava` (Opava) $\rightarrow$ **Magistrat van Troppouwe** `[ˈtrɔ.pɔʊ.wə]` *(Attested Tarraconian county, promoted 1058; hydronym *Opava*, or `[1059 Sub-Barony: Grêtz-an-der-Morâwe]`) *
 
 ---
 
@@ -817,7 +817,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_zhytomyr` (**[HRE]** Żytomierz) $\rightarrow$ **Magistrat van Schitomîr**
   * `c_zvyahel` (**[HRE]** Zvyahel) $\rightarrow$ **Magistrat van Swijâhel** (`[1059 Sub-Barony: Magistrat van Kolodjâschen (Kolodiazhen) / Horodnitz]`)
   * `c_chornobyl` (**[HRE]** Chornobyl) $\rightarrow$ **Magistrat van Tschornobîl** *(Botanical hydronym/meadow name, or **Owrutsch**)*
-  * `c_ushytsia` (**[HRE]** Ushytsia) $\rightarrow$ **Magistrat van Uschitz** *(Hydronym of the Ushytsia River, or **Bakôte**)*
+  * `c_ushytsia` (**[HRE]** Ushytsia) $\rightarrow$ **Magistrat van Uschitz** *(Hydronym of the Ushytsia River, or `[1059 Sub-Barony: Magistrat van Bakôte]`)*
   * `c_korsun` (**[HRE]** Korsuń) $\rightarrow$ **Magistrat van Korsûn**
 * **Duchy of Turov** (`d_turov`) $\rightarrow$ **Gubernat van Tûrouwe**
   * `c_turov` (**[HRE]** Turov) $\rightarrow$ **Magistrat van Tûrouwe**
