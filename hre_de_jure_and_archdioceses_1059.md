@@ -1441,7 +1441,7 @@
 * **Duchy of Meath** (`d_meath`) — *2/2 in HRE*
   * **[HRE]** **Dublin** (`c_dublin`) — *Tarraconian: **Magistrat van Dublîn***
   * **[HRE]** **Athlone** (`c_athlone`) — *Tarraconian: **Magistrat van Athlône** (`[1122 Historical: Magistrat van Uisnech]`)*
-* **Duchy of Ulster** (`d_ulster`) — *3/3 in HRE*
+* **Duchy of Ulster (Ultonia)** (`d_ulster`) — *3/3 in HRE*
   * **[HRE]** **Ulster** (`c_ulster`) — *Tarraconian: **Magistrat van Ulster** (`[1122 Historical: Magistrat van Dûnpatrich]`)*
   * **[HRE]** **Oriel** (`c_oriel`) — *Tarraconian: **Magistrat van Orjêl** (`[1122 Historical: Magistrat van Armâch]`)*
   * **[HRE]** **Ailech** (`c_ailech`) — *Tarraconian: **Magistrat van Ailêch***
@@ -1449,10 +1449,10 @@
   * **[HRE]** **Mayo** (`c_mayo`) — *Tarraconian: **Magistrat van Majô** (`[1122 Historical: Magistrat van Kruachû]`)*
   * **[HRE]** **Hy Many** (`c_connacht`) — *Tarraconian: **Magistrat van Konnacht** (`[1122 Historical: Magistrat van Tuâm]`)*
   * **[HRE]** **Breifne** (`c_breifne`) — *Tarraconian: **Magistrat van Brêfne***
-* **Duchy of Leinster** (`d_leinster`) — *2/2 in HRE*
+* **Duchy of Leinster (Lagenia)** (`d_leinster`) — *2/2 in HRE*
   * **[HRE]** **Leinster** (`c_leinster`) — *Tarraconian: **Magistrat van Leinster** (`[1122 Historical: Magistrat van Ferns]`)*
   * **[HRE]** **Ossory** (`c_ossory`) — *Tarraconian: **Magistrat van Ossorîe***
-* **Duchy of Munster** (`d_munster`) — *4/4 in HRE*
+* **Duchy of Munster (Momonia)** (`d_munster`) — *4/4 in HRE*
   * **[HRE]** **Thomond** (`c_thomond`) — *Tarraconian: **Magistrat van Limerich***
   * **[HRE]** **Ennis** (`c_ennis`) — *Tarraconian: **Magistrat van Tômont** (`[1122 Historical: Magistrat van Kinkôre]`)*
   * **[HRE]** **Ormond** (`c_ormond`) — *Tarraconian: **Magistrat van Ormont** (`[1122 Historical: Magistrat van Wâtervort]`)*

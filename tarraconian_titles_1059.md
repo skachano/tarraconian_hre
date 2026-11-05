@@ -1508,7 +1508,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Meath** (`d_meath`) $\rightarrow$ **Gubernat van Mîde**
   * `c_dublin` (**[HRE]** Dublin) $\rightarrow$ **Magistrat van Dublîn**
   * `c_athlone` (**[HRE]** Athlone) $\rightarrow$ **Magistrat van Athlône** (`[1122 Historical: Magistrat van Uisnech]`)
-* **Duchy of Ulster** (`d_ulster`) $\rightarrow$ **Gubernat van Ulster**
+* **Duchy of Ulster (Ultonia)** (`d_ulster`) $\rightarrow$ **Gubernat van Ultônjen**
   * `c_ulster` (**[HRE]** Ulster) $\rightarrow$ **Magistrat van Ulster** (`[1122 Historical: Magistrat van Dûnpatrich]`)
   * `c_oriel` (**[HRE]** Oriel) $\rightarrow$ **Magistrat van Orjêl** (`[1122 Historical: Magistrat van Armâch]`)
   * `c_ailech` (**[HRE]** Ailech) $\rightarrow$ **Magistrat van Ailêch**
@@ -1516,10 +1516,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_mayo` (**[HRE]** Mayo) $\rightarrow$ **Magistrat van Majô** (`[1122 Historical: Magistrat van Kruachû]`)
   * `c_connacht` (**[HRE]** Hy Many) $\rightarrow$ **Magistrat van Konnacht** (`[1122 Historical: Magistrat van Tuâm]`)
   * `c_breifne` (**[HRE]** Breifne) $\rightarrow$ **Magistrat van Brêfne**
-* **Duchy of Leinster** (`d_leinster`) $\rightarrow$ **Gubernat van Leinster**
+* **Duchy of Leinster (Lagenia)** (`d_leinster`) $\rightarrow$ **Gubernat van Lagênjen**
   * `c_leinster` (**[HRE]** Leinster) $\rightarrow$ **Magistrat van Leinster** (`[1122 Historical: Magistrat van Ferns]`)
   * `c_ossory` (**[HRE]** Ossory) $\rightarrow$ **Magistrat van Ossorîe**
-* **Duchy of Munster** (`d_munster`) $\rightarrow$ **Gubernat van Münster-in-Îrlant**
+* **Duchy of Munster (Momonia)** (`d_munster`) $\rightarrow$ **Gubernat van Momônjen**
   * `c_thomond` (**[HRE]** Thomond) $\rightarrow$ **Magistrat van Limerich**
   * `c_ennis` (**[HRE]** Ennis) $\rightarrow$ **Magistrat van Tômont** (`[1122 Historical: Magistrat van Kinkôre]`)
   * `c_ormond` (**[HRE]** Ormond) $\rightarrow$ **Magistrat van Ormont** (`[1122 Historical: Magistrat van Wâtervort]`)
