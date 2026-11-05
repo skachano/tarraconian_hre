@@ -828,8 +828,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_hradyzk` (Hradyzk) $\rightarrow$ **Magistrat van Gradîtzich** (`[1059 Sub-Barony: Magistrat van Altâwe / Poltâwe]`)
   * `c_romen` (Romen) $\rightarrow$ **Magistrat van Rômen**
   * `c_voin` (Voin') $\rightarrow$ **Magistrat van Woîn**
-* **Duchy of Chernigov** (`d_chernigov` & `x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
-  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
+* **Duchy of Severia (Chernigov)** (`d_chernigov`) $\rightarrow$ **Gubernat van Zêweren**
   * `c_starodub` (Starodub) $\rightarrow$ **Magistrat van Starodûp** *(or **Alteich**)*
   * `c_novgorod_seversky` (Novgorod Seversky) $\rightarrow$ **Magistrat van Sêwersch-Nougarden**
   * `c_putyvl` (Putyvl) $\rightarrow$ **Magistrat van Putîwel**
@@ -840,6 +839,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sevsk` (Sevsk) $\rightarrow$ **Magistrat van Sêwtzich**
 * **Duchy of Mtsensk (Novosil)** (`d_novosil`) $\rightarrow$ **Gubernat van Metzêntzich** *(direct vanilla: **Nowosîl**)*
   * `c_novosil` (Novosil) $\rightarrow$ **Magistrat van Nowosîl**
+* **Duchy of Chernigov** (`x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
+  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
 * **Duchy of Upadal (Odoyev)** (`x_script_4712`) $\rightarrow$ **Gubernat van Upâdal** *(or **Odojouwe**)*
   * `c_odoyev` (Odoyev) $\rightarrow$ **Magistrat van Odojouwe** *(Topographic valley name on the Upa, or **Upâdal**)*
 
@@ -1343,9 +1344,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Kroumerie** (`d_kroumerie`) $\rightarrow$ **Gubernat van Bône-Konstantîn** *(Resolving post-1059 *Kroumerie*)*
   * `c_constantine` (Constantine) $\rightarrow$ **Magistrat van Konstantîn**
   * `c_annaba` (**[HRE]** Annaba) $\rightarrow$ **Magistrat van Bône** *(Old Catalan *Bona* / Latin *Hippo Regius*, or **Annâbe**)*
-* **Duchy of Gabes** (`d_gabes` & `x_script_4732`) $\rightarrow$ **Gubernat van Gâbes**
+* **Duchy of Sfax (Gabes)** (`d_gabes`) $\rightarrow$ **Gubernat van Esfâx**
   * `c_sfax` (Sfax) $\rightarrow$ **Magistrat van Esfâx**
-  * `c_gabes` (Gabes) $\rightarrow$ **Magistrat van Gâbes**
 * **Duchy of Jerid** (`d_jerid`) $\rightarrow$ **Gubernat van Dscherît**
   * `c_qashtiliya` (Qashtiliya) $\rightarrow$ **Magistrat van Kaschtîlje**
   * `c_souf` (Souf) $\rightarrow$ **Magistrat van Sûf**
@@ -1359,6 +1359,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_syrte` (Syrte) $\rightarrow$ **Magistrat van Sirte**
   * `c_labda` (Labda) $\rightarrow$ **Magistrat van Leptis** *(or **Labde**)*
   * `c_waddan` (Waddan) $\rightarrow$ **Magistrat van Waddân**
+* **Duchy of Gabes** (`x_script_4732`) $\rightarrow$ **Gubernat van Gâbes**
+  * `c_gabes` (Gabes) $\rightarrow$ **Magistrat van Gâbes**
 
 ---
 

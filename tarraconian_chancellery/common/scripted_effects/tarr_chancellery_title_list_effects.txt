@@ -676,7 +676,6 @@ tarr_apply_static_titles_effect = {
 	title:c_romen ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_romen HIST = cn_tarr_c_romen } }
 	title:c_voin ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_voin HIST = cn_tarr_c_voin } }
 	title:d_chernigov ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_chernigov HIST = cn_tarr_d_chernigov } }
-	title:c_chernigov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chernigov HIST = cn_tarr_c_chernigov } }
 	title:c_starodub ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_starodub HIST = cn_tarr_c_starodub } }
 	title:c_novgorod_seversky ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_novgorod_seversky HIST = cn_tarr_c_novgorod_seversky } }
 	title:c_putyvl ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_putyvl HIST = cn_tarr_c_putyvl } }
@@ -687,6 +686,7 @@ tarr_apply_static_titles_effect = {
 	title:c_sevsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sevsk HIST = cn_tarr_c_sevsk } }
 	title:d_novosil ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_novosil HIST = cn_tarr_d_novosil } }
 	title:c_novosil ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_novosil HIST = cn_tarr_c_novosil } }
+	title:c_chernigov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chernigov HIST = cn_tarr_c_chernigov } }
 	title:c_odoyev ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_odoyev HIST = cn_tarr_c_odoyev } }
 	title:d_novgorod ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_novgorod HIST = cn_tarr_d_novgorod } }
 	title:c_novgorod ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_novgorod HIST = cn_tarr_c_novgorod } }
@@ -1105,7 +1105,6 @@ tarr_apply_static_titles_effect = {
 	title:c_annaba ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_annaba HIST = cn_tarr_c_annaba } }
 	title:d_gabes ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_gabes HIST = cn_tarr_d_gabes } }
 	title:c_sfax ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sfax HIST = cn_tarr_c_sfax } }
-	title:c_gabes ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gabes HIST = cn_tarr_c_gabes } }
 	title:d_jerid ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_jerid HIST = cn_tarr_d_jerid } }
 	title:c_qashtiliya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_qashtiliya HIST = cn_tarr_c_qashtiliya } }
 	title:c_souf ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_souf HIST = cn_tarr_c_souf } }
@@ -1119,6 +1118,7 @@ tarr_apply_static_titles_effect = {
 	title:c_syrte ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_syrte HIST = cn_tarr_c_syrte } }
 	title:c_labda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_labda HIST = cn_tarr_c_labda } }
 	title:c_waddan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_waddan HIST = cn_tarr_c_waddan } }
+	title:c_gabes ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gabes HIST = cn_tarr_c_gabes } }
 	title:d_zammour ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_zammour HIST = cn_tarr_d_zammour } }
 	title:c_zammour ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_zammour HIST = cn_tarr_c_zammour } }
 	title:c_tindouf ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tindouf HIST = cn_tarr_hist_c_tindouf } }

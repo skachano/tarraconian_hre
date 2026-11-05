@@ -785,7 +785,7 @@
   * **[HRE]** **Hradyzk** (`c_hradyzk`) — ⚠️ **[Post-1059 Foundation]** *(Early modern town name; pre-1059 Sula-line Rus' fortress: **Zhovnyn** and **Voin'** [988])*
   * **[HRE]** **Romen** (`c_romen`) — *(Attested 1096 in Vladimir Monomakh's Testament as part of the Sula defensive line)*
   * **[HRE]** **Voin'** (`c_voin`)
-* **Duchy of Chernigov** (`d_chernigov`) — *4/4 in HRE*
+* **Duchy of Severia (Chernigov)** (`d_chernigov`) — *4/4 in HRE*
   * **[HRE]** **Starodub** (`c_starodub`) — *(Attested 1080; 9th–11th c. Severian gord)*
   * **[HRE]** **Novgorod Seversky** (`c_novgorod_seversky`) — *(Founded c. 988 by Vladimir the Great)*
   * **[HRE]** **Putyvl** (`c_putyvl`) — *(10th–11th c. Severian gord, attested 1146)*
@@ -1280,7 +1280,7 @@
 * **Duchy of Kroumerie** (`d_kroumerie`) — *2/2 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Named after the later Khroumir tribe; pre-1059 centres: **Constantine** [Cirta] and **Annaba** [Bône / Hippo Regius])*
   * **[HRE]** **Constantine** (`c_constantine`)
   * **[HRE]** **Annaba** (`c_annaba`)
-* **Duchy of Gabes** (`d_gabes`) — *1/1 in HRE*
+* **Duchy of Sfax (Gabes)** (`d_gabes`) — *1/1 in HRE*
   * **[HRE]** **Sfax** (`c_sfax`)
 * **Duchy of Jerid** (`d_jerid`) — *4/4 in HRE*
   * **[HRE]** **Qashtiliya** (`c_qashtiliya`)
