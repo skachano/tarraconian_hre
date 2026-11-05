@@ -1354,7 +1354,7 @@ tarr_apply_static_titles_effect = {
 	title:c_lori ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lori HIST = cn_tarr_c_lori } }
 	title:c_kakheti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kakheti HIST = cn_tarr_hist_c_kakheti } }
 	title:c_hereti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hereti HIST = cn_tarr_c_hereti } }
-	title:d_svealand ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_svealand HIST = cn_tarr_hist_d_svealand } }
+	title:d_svealand ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_svealand HIST = cn_tarr_d_svealand } }
 	title:c_upland ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_upland HIST = cn_tarr_hist_c_upland } }
 	title:c_gastrikland ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gastrikland HIST = cn_tarr_c_gastrikland } }
 	title:c_sodermannaland ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sodermannaland HIST = cn_tarr_hist_c_sodermannaland } }

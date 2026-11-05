@@ -1669,7 +1669,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.54 Kingdom of Sweden (`k_sweden`) $\rightarrow$ **Kûnincrich van Swêden**
 
-* **Duchy of Uppland (Svealand)** (`d_svealand`) $\rightarrow$ **Gubernat van Swêalant** (`[1122 Historical: Gubernat van Oplant]`)
+* **Duchy of Uppland (Svealand)** (`d_svealand`) $\rightarrow$ **Gubernat van Swêalant**
   * `c_upland` (**[HRE]** Uppland) $\rightarrow$ **Magistrat van Oplant** (`[1122 Historical: Magistrat van Sigtûne]`)
   * `c_gastrikland` (**[HRE]** Gestrikalandia) $\rightarrow$ **Magistrat van Gestrikelant**
   * `c_sodermannaland` (**[HRE]** Södermannaland) $\rightarrow$ **Magistrat van Sûdermannalant** (`[1122 Historical: Magistrat van Strêgnes]`)
