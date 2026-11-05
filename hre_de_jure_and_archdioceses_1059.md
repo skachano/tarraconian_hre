@@ -443,7 +443,7 @@
   * **[HRE]** **Šumadija** (`c_sumadija`)
   * **[HRE]** **Podrinje** (`c_podrinje`)
   * **[HRE]** **Hvosno** (`c_hvosno`)
-* **Duchy of Sirmium (Mačva)** (`d_macva`) — *2/2 in HRE* — *(Historically **Sirmium / Lower Srem**; Banate of Macsó created 1247)*
+* **Duchy of Lower Syrmia (Mačva)** (`d_macva`) — *2/2 in HRE* — *(Historically **Lower Syrmia / Sirmium**; Banate of Macsó created 1247)*
   * **[HRE]** **Mačva** (`c_macva`) — ⚠️ **[Post-1059 Foundation]** *(Created 1247; pre-1059 centre: **Sirmium** [Srem / Sremska Mitrovica])*
   * **[HRE]** **Beograd** (`c_beograd`)
 * **Duchy of Duklja** (`d_duklja`) — *3/3 in HRE*
@@ -1520,7 +1520,7 @@
   * [Non-HRE] **Adrianopolis** (`c_adrianopolis`) — *Tarraconian: **Magistrat van Adrianôpel***
   * [Non-HRE] **Zherkovo** (`c_zherkovo`) — *Tarraconian: **Magistrat van Scherkouwe** (`[1122 Historical: Magistrat van Oustre]`)*
   * [Non-HRE] **Rhodopes** (`c_rhodopes`) — *Tarraconian: **Magistrat van Rodôpen***
-* **Duchy of Syrmia** (`d_syrmia`) — *1/1 in HRE*
+* **Duchy of Upper Syrmia (Syrmia)** (`d_syrmia`) — *1/1 in HRE*
   * **[HRE]** **Szerém** (`c_szerem`) — *Tarraconian: **Magistrat van Sîrmjen***
 
 ---

@@ -468,7 +468,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sumadija` (Šumadija) $\rightarrow$ **Magistrat van Schumadîe** (`[1059 Historical: Magistrat van Rudnich / Morâwe]`)
   * `c_podrinje` (**[HRE]** Podrinje) $\rightarrow$ **Magistrat van Drînedal** *(calque of *Podrinje* "Along the Drina", or **Podrînje**)*
   * `c_hvosno` (Hvosno) $\rightarrow$ **Magistrat van Chwosne**
-* **Duchy of Sirmium (Mačva)** (`d_macva`) $\rightarrow$ **Gubernat van Sirmjen** *(direct vanilla: **Matschouwe**)*
+* **Duchy of Lower Syrmia (Mačva)** (`d_macva`) $\rightarrow$ **Gubernat van Nidersîrmjen** *(or **Matschouwe**)*
   * `c_macva` (Mačva) $\rightarrow$ **Magistrat van Matschouwe** (`[1059 Historical: Magistrat van Sirmjen]`)
   * `c_beograd` (Beograd) $\rightarrow$ **Magistrat van Wîtzburch** *(historical MHG *Wîzenburc / Griechisch-Weißenburg* for Belgrade, or **Belgrat**)*
 * **Duchy of Duklja** (`d_duklja`) $\rightarrow$ **Gubernat van Dioklêe** *(or **Dûklje**)*
@@ -1582,7 +1582,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_adrianopolis` (Adrianopolis) $\rightarrow$ **Magistrat van Adrianôpel**
   * `c_zherkovo` (Zherkovo) $\rightarrow$ **Magistrat van Scherkouwe** (`[1122 Historical: Magistrat van Oustre]`)
   * `c_rhodopes` (Rhodopes) $\rightarrow$ **Magistrat van Rodôpen**
-* **Duchy of Syrmia** (`d_syrmia`) $\rightarrow$ **Gubernat van Sîrmjen**
+* **Duchy of Upper Syrmia (Syrmia)** (`d_syrmia`) $\rightarrow$ **Gubernat van Obersîrmjen**
   * `c_szerem` (**[HRE]** Szerém) $\rightarrow$ **Magistrat van Sîrmjen**
 
 ---
