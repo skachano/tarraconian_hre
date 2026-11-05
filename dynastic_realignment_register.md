@@ -1,4 +1,4 @@
-# Master Dynastic Historical Realignment Register (Toponym-First Coupling)
+# Master Dynastic Realignment Register (Toponym-First Coupling)
 
 * **Project:** Tarraconian Chancellery Mod & Imperial Documentation
 * **Scope:** All noble dynasties and cadet houses derived from anachronistic title names in the Holy Roman Empire and imperial borderlands.
@@ -42,9 +42,19 @@ The following noble houses across the Empire and its marchlands were generated f
 
 ---
 
-## 3. The 50 Cadet Branches of House Kestenholz (Dynasty 1582, Chatenois)
+## 3. The Imperial Dynasty: House Châtenois / Kestenholz (ID 1582)
 
-Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members:
+### 3.1 Etymological Background & Linguistic Sound Laws
+* **Vanilla / Save Name:** `dynn_Chatenois` (*Chatenois*)
+* **Etymological Origin:** From Gallo-Romance / Old French *Chastenois* / *Châtenois*, deriving from Latin **Castinetum** (*castanea* 'chestnut' + collective suffix *-etum*, meaning 'chestnut grove' or 'chestnut woods').
+* **Historical Germanic Exonym:** In Alsace and Lorraine, toponyms named *Châtenois* (such as Châtenois in Bas-Rhin and Châtenois in Vosges) have been historically and consistently rendered in German as **Kestenholz** (Middle High German *kestene* / *kesten* 'chestnut' + *holz* 'wood / grove').
+* **Tarraconian Sound Laws (MHG / Rhine-Moselle Franconian):**
+  * Retains unshifted initial `k-` (`Kesten-`).
+  * Preserves Middle High German affricate `-z` `[ts]` in `-holz`.
+  * Under the Romano-Germanic imperial synthesis of the Tarraconian Chancellery, the authentic imperial Germanic name for House Châtenois is **House Kestenholz** (*Dat Hûs van Kestenholz*).
+
+### 3.2 Master Cadet Branch Rename Register (The 50 Houses of House Kestenholz)
+Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members count:
 
 | House ID | Current In-Game Name | Phase 1 Baseline Name | Final Realigned Name | Underlying Seat Origin | Living Members | Head of House | Status & Justification |
 | :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- |

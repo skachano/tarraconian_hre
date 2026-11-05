@@ -541,7 +541,7 @@ def main():
     )
     parser.add_argument(
         "--md-ref",
-        default=os.path.join(repo_root, "anachronistic_titles_1059.md"),
+        default=os.path.join(repo_root, "archive", "anachronistic_titles_1059.md"),
         help="Path to previous anachronistic titles markdown reference"
     )
     args = parser.parse_args()
@@ -613,7 +613,7 @@ def main():
     log(f"  Wrote: {csv_out} ({csv_out.stat().st_size / 1024:.1f} KB)")
 
     # 4. Generate Markdown Report in Repository Directory
-    report_out = repo_dir / "phase2_title_lineage_report.md"
+    report_out = repo_dir / "archive" / "phase2_title_lineage_report.md"
     generate_phase2_report(trajectories, report_out)
 
     log("Phase 2 Execution Completed Successfully!")

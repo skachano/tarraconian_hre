@@ -3629,7 +3629,7 @@ def run_screening(phase1_dir, phase2_dir, output_dir, repo_dir, md_ref, tarr_ref
     print(f"[Phase 3] Wrote CSV matrix to {csv_file}")
 
     # Generate Human-Readable Markdown Report in the workspace repo
-    report_file = Path(repo_dir) / "phase3_title_screening_report.md"
+    report_file = Path(repo_dir) / "archive" / "phase3_title_screening_report.md"
     generate_markdown_report(screening_matrix, report_file)
     print(f"[Phase 3] Wrote markdown report to {report_file}")
 
@@ -3783,7 +3783,7 @@ def main():
     parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase3", help="Output directory in /var/tmp")
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     parser.add_argument("--repo-dir", default=repo_root, help="Git repository directory")
-    parser.add_argument("--md-ref", default=os.path.join(repo_root, "anachronistic_titles_1059.md"), help="Anachronistic titles reference")
+    parser.add_argument("--md-ref", default=os.path.join(repo_root, "archive", "anachronistic_titles_1059.md"), help="Anachronistic titles reference")
     parser.add_argument("--tarr-ref", default=os.path.join(repo_root, "tarraconian_titles_1059.md"), help="Tarraconian titles reference")
 
     args = parser.parse_args()

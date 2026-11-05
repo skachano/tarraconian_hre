@@ -579,7 +579,7 @@ def main():
     print(f"Wrote CSV profiles to {out_csv}")
 
     # Write Markdown
-    md_path = args.repo_dir / "settlement_history_profile_matrix.md"
+    md_path = args.repo_dir / "archive" / "settlement_history_profile_matrix.md"
     generate_markdown_report(profiles, md_path)
     print(f"Wrote Markdown report to {md_path}")
 

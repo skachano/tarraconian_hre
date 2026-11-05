@@ -24,7 +24,7 @@ docker run --rm \
         --phase1-dir "/var/tmp/ck3_audit/phase1" \
         --output-dir "${OUTPUT_DIR}" \
         --repo-dir "/workspace" \
-        --md-ref "/workspace/anachronistic_titles_1059.md"
+        --md-ref "/workspace/archive/anachronistic_titles_1059.md"
 
 echo "=========================================================="
 echo "Phase 2 Complete! Artifacts written to ${OUTPUT_DIR} and workspace"

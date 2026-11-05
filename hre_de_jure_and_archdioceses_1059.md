@@ -2816,97 +2816,97 @@ In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Arc
 
 | Archdiocese | Title Key | Metropolitan Seat (Capital County) | De Facto Liege Title (1059) | Realm Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **Archdiocese of Toledo** | `d_et_toledo` | Tulaytulah (`c_toledo`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Tarragona** | `d_et_tarragona` | Tarragona (`c_tarragona`) | Nubia (`k_nubia`) | Seat in HRE (Liege: `k_nubia`) |
-| **Archdiocese of Sevilla** | `d_et_sevilla` | Isbiliyyah (`c_sevilla`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Braga** | `d_et_braga` | Porto (`c_porto`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Merida** | `d_et_merida` | Maridah (`c_merida`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Tingitana** | `d_et_tingitana` | Tangiers (`c_tangiers`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Rouen** | `d_et_rouen` | Rouen (`c_rouen`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Reims** | `d_et_reims` | Reims (`c_reims`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Sens** | `d_et_sens` | Isle de France (`c_ile_de_france`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Tours** | `d_et_tours` | Touraine (`c_tourraine`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Bourges** | `d_et_bourges` | Issoudun (`c_issoudun`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Bordeaux** | `d_et_bordeaux` | Bordeaux (`c_bordeaux`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Lyon** | `d_et_lyon` | Lyon (`c_lyon`) | Burgundy (`k_burgundy`) | **HRE Vassal** |
-| **Archdiocese of Tarentaise** | `d_et_tarentaise` | Aosta (`c_aosta`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Vienne** | `d_et_vienne` | Viennois (`c_viennois`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Eauze** | `d_et_eauze` | Armagnac (`c_armagnac`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Narbonne** | `d_et_narbonne` | Carcassonne (`c_carcassonne`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Besançon** | `d_et_besancon` | Besancon (`c_besancon`) | Besancon Papacy (`x_script_5088`) | **HRE Vassal** |
-| **Archdiocese of Arles** | `d_et_arles` | Venaissin (`c_venaissin`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Aix** | `d_et_aix` | Provence (`c_provence`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Embrun** | `d_et_embrun` | Forcalquier (`c_forcalquier`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Milano** | `d_et_milano` | Lombardia (`c_lombardia`) | Venice (`k_venice`) | **HRE Vassal** |
-| **Archdiocese of Cagliari** | `d_et_cagliari` | Cagliari (`c_cagliari`) | Alodia (`x_script_2942`) | **HRE Vassal** |
-| **Archdiocese of Ravenna** | `d_et_ravenna` | Ravenna (`c_ravenna`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Roma** | `d_et_roma` | Roma (`c_roma`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Toledo** | `d_et_toledo` | Tolêt (`c_toledo`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Tarragona** | `d_et_tarragona` | Tarracôn (`c_tarragona`) | Nubia (`k_nubia`) | Seat in HRE (Liege: `k_nubia`) |
+| **Archdiocese of Sevilla** | `d_et_sevilla` | Sevîlje (`c_sevilla`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Braga** | `d_et_braga` | Brâge (`c_porto`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Merida** | `d_et_merida` | Mêride (`c_merida`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Tingitana** | `d_et_tingitana` | Tandscher (`c_tangiers`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Rouen** | `d_et_rouen` | Ruwân (`c_rouen`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Reims** | `d_et_reims` | Rêms (`c_reims`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Sens** | `d_et_sens` | Sens (`c_ile_de_france`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Tours** | `d_et_tours` | Tûrs (`c_tourraine`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Bourges** | `d_et_bourges` | Bursches (`c_issoudun`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Bordeaux** | `d_et_bordeaux` | Bordêls (`c_bordeaux`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Lyon** | `d_et_lyon` | Lijûn (`c_lyon`) | Burgundy (`k_burgundy`) | **HRE Vassal** |
+| **Archdiocese of Tarentaise** | `d_et_tarentaise` | Tarentêse (`c_aosta`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Vienne** | `d_et_vienne` | Wienne (`c_viennois`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Eauze** | `d_et_eauze` | Eûse (`c_armagnac`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Narbonne** | `d_et_narbonne` | Narbôn (`c_carcassonne`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Besançon** | `d_et_besancon` | Bisantz (`c_besancon`) | Besancon Papacy (`x_script_5088`) | **HRE Vassal** |
+| **Archdiocese of Arles** | `d_et_arles` | Arle (`c_venaissin`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Aix** | `d_et_aix` | Âx-in-Proventz (`c_provence`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Embrun** | `d_et_embrun` | Embrûn (`c_forcalquier`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Milano** | `d_et_milano` | Meilân (`c_lombardia`) | Venice (`k_venice`) | **HRE Vassal** |
+| **Archdiocese of Cagliari** | `d_et_cagliari` | Kaljers (`c_cagliari`) | Alodia (`x_script_2942`) | **HRE Vassal** |
+| **Archdiocese of Ravenna** | `d_et_ravenna` | Raben (`c_ravenna`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Roma** | `d_et_roma` | Rôme (`c_roma`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
 | **Archdiocese of Bari** | `d_et_bari` | Bâr-in-Pûlje (`c_bari`) | Epirus (`k_epirus`) | **HRE Vassal** |
-| **Archdiocese of Aquileia** | `d_et_aquileia` | Aquileia (`c_aquileia`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Split** | `d_et_split` | Cetina (`c_cetina`) | Croatia (`k_croatia`) | **HRE Vassal** |
-| **Archdiocese of Salzburg** | `d_et_salzburg` | Salzburg (`c_salzburg`) | Alodia (`x_script_2942`) | **HRE Vassal** |
-| **Archdiocese of Trier** | `d_et_trier` | Trier (`c_trier`) | Valencia (`k_valencia`) | **HRE Vassal** |
-| **Archdiocese of Mainz** | `d_et_mainz` | Mainz (`c_mainz`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
-| **Archdiocese of Cologne** | `d_et_cologne` | Cologne (`c_cologne`) | Cologne Papacy (`x_script_3883`) | **HRE Vassal** |
+| **Archdiocese of Aquileia** | `d_et_aquileia` | Aglêi (`c_aquileia`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Split** | `d_et_split` | Spalât (`c_cetina`) | Croatia (`k_croatia`) | **HRE Vassal** |
+| **Archdiocese of Salzburg** | `d_et_salzburg` | Saltzburch (`c_salzburg`) | Alodia (`x_script_2942`) | **HRE Vassal** |
+| **Archdiocese of Trier** | `d_et_trier` | Trîer (`c_trier`) | Valencia (`k_valencia`) | **HRE Vassal** |
+| **Archdiocese of Mainz** | `d_et_mainz` | Mênz (`c_mainz`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Cologne** | `d_et_cologne` | Kölne (`c_cologne`) | Cologne Papacy (`x_script_3883`) | **HRE Vassal** |
 | **Tortôn Papacy** | `x_script_6119` | Kingdom / Head of Faith | Roman Empire (`h_roman_empire`) | **Active (in RE, 1122)** |
 | **Gîsenhûsen Papacy** | `x_script_6508` | Kingdom / Head of Faith | Roman Empire (`h_roman_empire`) | **Active (in RE, 1122)** |
 | **Brandenburch Papacy** | `x_script_7218` | Kingdom / Head of Faith | Roman Empire (`h_roman_empire`) | **Active (in RE, 1122)** |
-| **Archdiocese of Hamburg** | `d_et_hamburg` | Hamburg (`c_hamburg`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
+| **Archdiocese of Hamburg** | `d_et_hamburg` | Hamburch-Brêmen (`c_hamburg`) | Holy Roman Empire (`e_hre`) | **HRE Vassal** |
 
 #### B. Active Archdioceses Outside the Holy Roman Empire
 
 | Archdiocese | Title Key | Metropolitan Seat (Capital County) | De Facto Liege Title (1059) |
 | :--- | :--- | :--- | :--- |
-| **Archdiocese of York** | `d_et_york` | North Riding (`c_north_riding`) | England (`k_england`) |
-| **Archdiocese of Canterbury** | `d_et_canterbury` | Kent (`c_kent`) | England (`k_england`) |
-| **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | Reggio Calabria (`c_reggio_calabria`) | Byzantine Empire (`e_byzantium`) |
-| **Archdiocese of Constantinople** | `d_et_constantinople` | Byzantion (`c_byzantion`) | Byzantine Empire (`e_byzantium`) |
-| **Archdiocese of Jerusalem** | `d_et_jerusalem` | Jerusalem (`c_jerusalem`) | Arabian Empire (`e_arabia`) |
-| **Archdiocese of Antioch** | `d_et_antioch` | Antiocheia (`c_antiocheia`) | Independent |
-| **Archdiocese of Church of Cyprus** | `d_et_cyprus` | Nicosia (`c_nicosia`) | Byzantine Empire (`e_byzantium`) |
-| **Archdiocese of Kartli** | `d_et_kartli` | Kartli (`c_kartli`) | Independent |
-| **Archdiocese of Armenia** | `d_et_armenia` | Hayk (`c_hayk`) | Independent |
-| **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | Baghdad (`c_baghdad`) | Arabian Empire (`e_arabia`) |
-| **Archdiocese of Alexandria** | `d_et_alexandria` | Alexandria (`c_alexandria`) | Nubia (`k_nubia`) |
-| **Archdiocese of Axum** | `d_et_axum` | Tigré (`c_tigre`) | Independent |
-| **Archdiocese of Carthage** | `d_et_africa` | Tunis (`c_tunis`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of York** | `d_et_york` | Everwîch (`c_north_riding`) | England (`k_england`) |
+| **Archdiocese of Canterbury** | `d_et_canterbury` | Kantelberch (`c_kent`) | England (`k_england`) |
+| **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | Redsch-in-Kalâbrjen (`c_reggio_calabria`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of Constantinople** | `d_et_constantinople` | Konstantînôpel (`c_byzantion`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of Jerusalem** | `d_et_jerusalem` | Jerûsalêm (`c_jerusalem`) | Arabian Empire (`e_arabia`) |
+| **Archdiocese of Antioch** | `d_et_antioch` | Antjôchje (`c_antiocheia`) | Independent |
+| **Archdiocese of Church of Cyprus** | `d_et_cyprus` | Tzîpern (`c_nicosia`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of Kartli** | `d_et_kartli` | Kartlî (`c_kartli`) | Independent |
+| **Archdiocese of Armenia** | `d_et_armenia` | Armênjen (`c_hayk`) | Independent |
+| **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | Selêutzje-Tesiphôn (`c_baghdad`) | Arabian Empire (`e_arabia`) |
+| **Archdiocese of Alexandria** | `d_et_alexandria` | Alexandrîe (`c_alexandria`) | Nubia (`k_nubia`) |
+| **Archdiocese of Axum** | `d_et_axum` | Axûm (`c_tigre`) | Independent |
+| **Archdiocese of Carthage** | `d_et_africa` | Kartâch (`c_tunis`) | Byzantine Empire (`e_byzantium`) |
 
 #### C. Vacant / Unheld Archdioceses (as of 1059)
 
 | Archdiocese | Title Key | Metropolitan Seat (Capital County) | Seat in HRE? |
 | :--- | :--- | :--- | :--- |
-| **Archdiocese of Santiago** | `d_et_santiago` | Yant Yaqub (`c_santiago`) | **Yes (HRE)** |
-| **Archdiocese of Tuam** | `d_et_tuam` | Hy Many (`c_connacht`) | No |
-| **Archdiocese of Dublin** | `d_et_dublin` | Dubhlinn (`c_dublin`) | No |
-| **Archdiocese of Cashel** | `d_et_cashel` | Thomond (`c_thomond`) | No |
-| **Archdiocese of Armagh** | `d_et_armagh` | Oriel (`c_oriel`) | No |
-| **Archdiocese of Auch** | `d_et_auch` | Armagnac (`c_armagnac`) | **Yes (HRE)** |
-| **Archdiocese of Genoa** | `d_et_genoa` | Genoa (`c_genoa`) | No |
-| **Archdiocese of Torres** | `d_et_torres` | Logudoro (`c_logudoro`) | **Yes (HRE)** |
-| **Archdiocese of Oristano** | `d_et_oristano` | Arborea (`c_arborea`) | **Yes (HRE)** |
-| **Archdiocese of Cosenza** | `d_et_cosenza` | Cosenza (`c_cosenza`) | No |
-| **Archdiocese of Messina** | `d_et_messina` | Messina (`c_messina`) | **Yes (HRE)** |
-| **Archdiocese of Palermo** | `d_et_palermo` | Palermo (`c_palermo`) | **Yes (HRE)** |
-| **Archdiocese of Santa Severina** | `d_et_santa_severina` | Rossano (`c_rossano`) | **Yes (HRE)** |
-| **Archdiocese of Pisa** | `d_et_pisa` | Pisa (`c_pisa`) | **Yes (HRE)** |
-| **Archdiocese of Capua** | `d_et_capua` | Capua (`c_capua`) | No |
-| **Archdiocese of Napoli** | `d_et_napoli` | Napoli (`c_napoli`) | **Yes (HRE)** |
-| **Archdiocese of Salerno** | `d_et_salerno` | Salerno (`c_salerno`) | No |
-| **Archdiocese of Benevento** | `d_et_benevento` | Benevento (`c_benevento`) | No |
-| **Archdiocese of Trani** | `d_et_trani` | Apulia (`c_apulia`) | **Yes (HRE)** |
-| **Archdiocese of Brindisi** | `d_et_brindisi` | Lecce (`c_lecce`) | **Yes (HRE)** |
-| **Archdiocese of Esztergom** | `d_et_esztergom` | Esztergom (`c_esztergom`) | **Yes (HRE)** |
-| **Archdiocese of Kalocsa** | `d_et_kalocsa` | Székesfehérvár (`c_szekesfehervar`) | **Yes (HRE)** |
-| **Archdiocese of Ohrid** | `d_et_ohrid` | Ohrid (`c_ohrid`) | No |
-| **Archdiocese of Ragusa** | `d_et_ragusa` | Ragusa (`c_ragusa`) | **Yes (HRE)** |
-| **Archdiocese of Gniezno** | `d_et_gniezno` | Gniezno (`c_gnieznienska`) | **Yes (HRE)** |
-| **Archdiocese of Magdeburg** | `d_et_magdeburg` | Magdeburg (`c_magdeburg`) | **Yes (HRE)** |
-| **Archdiocese of Lund** | `d_et_lund` | Skåne (`c_skane`) | No |
-| **Archdiocese of Uppsala** | `d_et_uppsala` | Uppland (`c_upland`) | No |
-| **Archdiocese of Nidaros** | `d_et_nidaros` | Þrándheimr (`c_trandheim`) | No |
-| **Archdiocese of Kyiv** | `d_et_kyiv` | Kyiv (`c_kiev`) | **Yes (HRE)** |
-| **Archdiocese of Georgia** | `d_et_georgia` | Tbilisi (`c_tbilisi`) | No |
-| **Archdiocese of Tyre** | `d_et_tyre` | Acre (`c_acre`) | No |
+| **Archdiocese of Santiago** | `d_et_santiago` | Zant-Jâcop (`c_santiago`) | **Yes (HRE)** |
+| **Archdiocese of Tuam** | `d_et_tuam` | Tuwâm (`c_connacht`) | No |
+| **Archdiocese of Dublin** | `d_et_dublin` | Dublîn (`c_dublin`) | No |
+| **Archdiocese of Cashel** | `d_et_cashel` | Kaschel (`c_thomond`) | No |
+| **Archdiocese of Armagh** | `d_et_armagh` | Armâch (`c_oriel`) | No |
+| **Archdiocese of Auch** | `d_et_auch` | Ousch (`c_armagnac`) | **Yes (HRE)** |
+| **Archdiocese of Genoa** | `d_et_genoa` | Dschenouwe (`c_genoa`) | No |
+| **Archdiocese of Torres** | `d_et_torres` | Torres (`c_logudoro`) | **Yes (HRE)** |
+| **Archdiocese of Oristano** | `d_et_oristano` | Oristân (`c_arborea`) | **Yes (HRE)** |
+| **Archdiocese of Cosenza** | `d_et_cosenza` | Kosentz (`c_cosenza`) | No |
+| **Archdiocese of Messina** | `d_et_messina` | Messîne (`c_messina`) | **Yes (HRE)** |
+| **Archdiocese of Palermo** | `d_et_palermo` | Palêrm (`c_palermo`) | **Yes (HRE)** |
+| **Archdiocese of Santa Severina** | `d_et_santa_severina` | Zant-Severîn (`c_rossano`) | **Yes (HRE)** |
+| **Archdiocese of Pisa** | `d_et_pisa` | Pîse (`c_pisa`) | **Yes (HRE)** |
+| **Archdiocese of Capua** | `d_et_capua` | Capûe (`c_capua`) | No |
+| **Archdiocese of Napoli** | `d_et_napoli` | Neâpel (`c_napoli`) | **Yes (HRE)** |
+| **Archdiocese of Salerno** | `d_et_salerno` | Salern (`c_salerno`) | No |
+| **Archdiocese of Benevento** | `d_et_benevento` | Benevent (`c_benevento`) | No |
+| **Archdiocese of Trani** | `d_et_trani` | Trâni (`c_apulia`) | **Yes (HRE)** |
+| **Archdiocese of Brindisi** | `d_et_brindisi` | Brîndis (`c_lecce`) | **Yes (HRE)** |
+| **Archdiocese of Esztergom** | `d_et_esztergom` | Grân (`c_esztergom`) | **Yes (HRE)** |
+| **Archdiocese of Kalocsa** | `d_et_kalocsa` | Kalotsche (`c_szekesfehervar`) | **Yes (HRE)** |
+| **Archdiocese of Ohrid** | `d_et_ohrid` | Ochrît (`c_ohrid`) | No |
+| **Archdiocese of Ragusa** | `d_et_ragusa` | Ragûs (`c_ragusa`) | **Yes (HRE)** |
+| **Archdiocese of Gniezno** | `d_et_gniezno` | Gnêsen (`c_gnieznienska`) | **Yes (HRE)** |
+| **Archdiocese of Magdeburg** | `d_et_magdeburg` | Mâgdeburch (`c_magdeburg`) | **Yes (HRE)** |
+| **Archdiocese of Lund** | `d_et_lund` | Lunden-in-Schônen (`c_skane`) | No |
+| **Archdiocese of Uppsala** | `d_et_uppsala` | Upsâle (`c_upland`) | No |
+| **Archdiocese of Nidaros** | `d_et_nidaros` | Nîdarôs (`c_trandheim`) | No |
+| **Archdiocese of Kyiv** | `d_et_kyiv` | Kîouwe (`c_kiev`) | **Yes (HRE)** |
+| **Archdiocese of Georgia** | `d_et_georgia` | Georgjen (`c_tbilisi`) | No |
+| **Archdiocese of Tyre** | `d_et_tyre` | Tîr (`c_acre`) | No |
 
 ### 3.3 Prince-Bishoprics (County-Tier Ecclesiastical Sees in the HRE)
 

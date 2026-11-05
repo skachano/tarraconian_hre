@@ -417,16 +417,11 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     generate_audit_discrepancy_register(final_resolutions, dynasty_rename_register, dynamic_cultures_list, discrepancy_file)
     print(f"[Phase 4] Wrote audit discrepancy register to {discrepancy_file}")
 
-    # 5. Update Workspace Deliverable: chatenois_dynasty_analysis.md
-    dynasty_doc_file = Path(repo_dir) / "chatenois_dynasty_analysis.md"
-    update_chatenois_dynasty_analysis(dynasty_rename_register, dynasty_doc_file)
-    print(f"[Phase 4] Updated dynasty analysis document at {dynasty_doc_file}")
-
-    # 6. Generate Workspace Deliverable: dynasty_historical_realignment_register.md
-    dynasty_register_file = Path(repo_dir) / "dynasty_historical_realignment_register.md"
+    # 5. Generate Master Workspace Deliverable: dynastic_realignment_register.md
+    dynasty_register_file = Path(repo_dir) / "dynastic_realignment_register.md"
     dynasty_register_csv = Path(output_dir) / "dynasty_historical_realignment_register.csv"
     generate_dynasty_historical_realignment_register(dynasty_rename_register, NON_CHATENOIS_HOUSE_REALIGNMENTS, dynasty_register_file, dynasty_register_csv)
-    print(f"[Phase 4] Wrote master dynasty realignment register to {dynasty_register_file}")
+    print(f"[Phase 4] Wrote master dynastic realignment register to {dynasty_register_file}")
 
 
 def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
@@ -612,7 +607,7 @@ def generate_dynasty_historical_realignment_register(chatenois_houses, non_chate
     that were automatically derived from anachronistic title names, enforcing the Toponym-First Principle.
     """
     lines = [
-        "# Master Dynastic Historical Realignment Register (Toponym-First Coupling)",
+        "# Master Dynastic Realignment Register (Toponym-First Coupling)",
         "",
         "* **Project:** Tarraconian Chancellery Mod & Imperial Documentation",
         "* **Scope:** All noble dynasties and cadet houses derived from anachronistic title names in the Holy Roman Empire and imperial borderlands.",
@@ -660,9 +655,19 @@ def generate_dynasty_historical_realignment_register(chatenois_houses, non_chate
         "",
         "---",
         "",
-        "## 3. The 50 Cadet Branches of House Kestenholz (Dynasty 1582, Chatenois)",
+        "## 3. The Imperial Dynasty: House Châtenois / Kestenholz (ID 1582)",
         "",
-        "Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members:",
+        "### 3.1 Etymological Background & Linguistic Sound Laws",
+        "* **Vanilla / Save Name:** `dynn_Chatenois` (*Chatenois*)",
+        "* **Etymological Origin:** From Gallo-Romance / Old French *Chastenois* / *Châtenois*, deriving from Latin **Castinetum** (*castanea* 'chestnut' + collective suffix *-etum*, meaning 'chestnut grove' or 'chestnut woods').",
+        "* **Historical Germanic Exonym:** In Alsace and Lorraine, toponyms named *Châtenois* (such as Châtenois in Bas-Rhin and Châtenois in Vosges) have been historically and consistently rendered in German as **Kestenholz** (Middle High German *kestene* / *kesten* 'chestnut' + *holz* 'wood / grove').",
+        "* **Tarraconian Sound Laws (MHG / Rhine-Moselle Franconian):**",
+        "  * Retains unshifted initial `k-` (`Kesten-`).",
+        "  * Preserves Middle High German affricate `-z` `[ts]` in `-holz`.",
+        "  * Under the Romano-Germanic imperial synthesis of the Tarraconian Chancellery, the authentic imperial Germanic name for House Châtenois is **House Kestenholz** (*Dat Hûs van Kestenholz*).",
+        "",
+        "### 3.2 Master Cadet Branch Rename Register (The 50 Houses of House Kestenholz)",
+        "Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members count:",
         "",
         "| House ID | Current In-Game Name | Phase 1 Baseline Name | Final Realigned Name | Underlying Seat Origin | Living Members | Head of House | Status & Justification |",
         "| :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- |",

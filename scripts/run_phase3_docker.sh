@@ -25,7 +25,7 @@ docker run --rm \
         --phase2-dir "/var/tmp/ck3_audit/phase2" \
         --output-dir "${OUTPUT_DIR}" \
         --repo-dir "/workspace" \
-        --md-ref "/workspace/anachronistic_titles_1059.md" \
+        --md-ref "/workspace/archive/anachronistic_titles_1059.md" \
         --tarr-ref "/workspace/tarraconian_titles_1059.md"
 
 echo "=========================================================="
