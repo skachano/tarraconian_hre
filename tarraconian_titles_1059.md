@@ -95,7 +95,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 57 | **Anbiya** | `k_anbiya` | **Kûnincrich van Anbîe** *(or **Sanhadsche**)* | `[an.ˈbiː.ə]` | **10/10 RE** — Arabic *Anbiyā'* / Berber *Ṣanhāja*. |
 | 58 | **Blemmyia** | `k_blemmyia` | **Kûnincrich van Blemîen** *(or **Bedschalant**)* | `[blɛ.ˈmiː.ən]` | **10/10 RE** — Classical *Blemmyia* / Beja *Bedscha*. |
 | 59 | **Georgia** | `k_georgia` | **Kûnincrich van Georgjen** *(1122 Hist: **Kûnincrich van Kartlî**)* | *Georgisch* | **9/12 RE** — Added in 1122 Imperial Chancellery update. |
-| 60 | **Vladimir (Opolye)** | `k_opolye` | **Kûnincrich van Wladimîr** *(1122 Hist: **Kûnincrich van Opôlje**)* | *Wladimîrisch* | **9/11 RE** — Added in 1122 Imperial Chancellery update. |
+| 60 | **Vladimir (Opolye)** | `k_opolye` | **Kûnincrich van Opôlje** *(1122 Hist: **Kûnincrich van Opôlje**)* | *Wladimîrisch* | **9/11 RE** — Added in 1122 Imperial Chancellery update. |
 | 61 | **Sicily (Mainland)** | `k_sicily` | **Kûnincrich van Neâpel** *(or **itziljen**)* | `[nɛ.ˈaː.pəl]` | **9/9 RE** — Peninsular Sicily (*Apuljen und Capûe*). |
 | 62 | **Alodia** | `x_script_2942` | **Kûnincrich van Alôdje** *(1122 Hist: **Kûnincrich van Sôbe**)* | *Alôdisch* | **9/9 RE** — Added in 1122 Imperial Chancellery update. |
 | 63 | **Bulgaria** | `k_bulgaria` | **Kûnincrich van Bulgârjen** | *Bulgârisch* | **8/21 RE** — Added in 1122 Imperial Chancellery update. |
@@ -218,7 +218,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_holland` (Holland) $\rightarrow$ **Magistrat van Hollant** *(or **Flârdingen** `[ˈflaːr.dɪŋ.ən]`, pre-1059 comital seat of Dirk III–IV)*
   * `c_westfriesland` (Westfriesland) $\rightarrow$ **Magistrat van Westvrîslant**
   * `c_zeeland` (Zeeland) $\rightarrow$ **Magistrat van Sêlant** *(or **Walcheren**)*
-* **Duchy of Gelre** (`d_gelre`) $\rightarrow$ **Gubernat van Geldern** (`[1059 Historical: Gubernat van Zutfen / Hamalant]`)
+* **Duchy of Zutphen (Gelre)** (`d_gelre`) $\rightarrow$ **Gubernat van Zutfen** *(or **Hamalant**, direct vanilla: **Geldern**)*
   * `c_guelders` (Guelders) $\rightarrow$ **Magistrat van Geldern** (`[1059 Historical: Magistrat van Roermunt / Kessel]`)
   * `c_arnhem` (Arnheim) $\rightarrow$ **Magistrat van Arnheim**
   * `c_zutphen` (Zutphen) $\rightarrow$ **Magistrat van Zutfen**
@@ -235,11 +235,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.3 Kingdom of Lotharingia (`k_lotharingia`) $\rightarrow$ **Kûnincrich van Lôthringen**
 
-* **Duchy of Luxembourg** (`d_luxembourg`) $\rightarrow$ **Gubernat van Lützelburch** (`[1059 Historical: Gubernat van Ardennen / Echternach]`)
+* **Duchy of Ardennes (Luxembourg)** (`d_luxembourg`) $\rightarrow$ **Gubernat van Ardennen** *(or **Echternach**, direct vanilla: **Lützelburch**)*
   * `c_luxembourg` (Luxembourg) $\rightarrow$ **Magistrat van Lützelburch** (`[1059 Historical: Magistrat van Echternach / Arlôn]`)
   * `c_bouillon` (Bouillon) $\rightarrow$ **Magistrat van Buljûn** `[bʊl.ˈjuːn]`
   * `c_liege` (Liege) $\rightarrow$ **Fürstbisdom van Lüttich** `[ˈlʏ.tɪç]` *(or **Ledich**)*
-  * `c_namur` (Namur) $\rightarrow$ **Magistrat van Namûr** *(or **Nâmen**)*
+  * `c_namur` (Namur) $\rightarrow$ **Magistrat van Namûr** *(or **Nâmen**, `[1059 Historical: Magistrat van Dînant]`)*
 * **Duchy of Jülich** (`d_julich`) $\rightarrow$ **Gubernat van Jûlich** *(attested in save as `Jülichen-Franconians`)*
   * `c_aachen` (Aachen) $\rightarrow$ **Magistrat van Âchen** *(or **Keiserspalz Âchen**)*
   * `c_cleves` (Cleves) $\rightarrow$ **Magistrat van Clêve** `[ˈkleː.və]` (`[1059 Historical: Magistrat van Xanten / Nîmêgen]`)
@@ -307,7 +307,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_freistadt` (Freistadt) $\rightarrow$ **Magistrat van Vrîstat** (`[1059 Historical: Magistrat van Rîtmarch (Riedmark)]`)
   * `c_amstetten` (Amstetten) $\rightarrow$ **Magistrat van Amstetten**
   * `c_krems` (Krems) $\rightarrow$ **Magistrat van Krems**
-* **Duchy of Tyrol** (`d_tyrol`) $\rightarrow$ **Gubernat van Tirôl** (`[1059 Historical: March van Bôtzen-Brixen / Inndal]`)
+* **Duchy of Bozen-Brixen (Tyrol)** (`d_tyrol`) $\rightarrow$ **March van Bôtzen-Brixen** *(or **Inndal**, direct vanilla: **Tirôl**)*
   * `c_innsbruck` (Innsbruck) $\rightarrow$ **Magistrat van Insbrücke** (`[1059 Historical: Magistrat van Wilten (Veldidena)]`)
   * `c_brixen` (Brixen) $\rightarrow$ **Magistrat van Brixen** `[ˈbrɪk.sən]`
   * `c_lienz` (Lienz) $\rightarrow$ **Magistrat van Lîentz** (`[1059 Historical: Magistrat van Innichen / Lîentz]`)
@@ -389,7 +389,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_zollern` (Zollern) $\rightarrow$ **Magistrat van Zolre** (`[1059 Historical: Magistrat van Hechingen]`)
   * `c_hohenberg` (Hohenberg) $\rightarrow$ **Magistrat van Hôhenberch** (`[1059 Historical: Magistrat van Rôtwîl (Rottweil)]`)
   * `c_furstenberg` (Nellenburg) $\rightarrow$ **Magistrat van Nellenburch**
-* **Duchy of Anhalt** (`d_anhalt`) $\rightarrow$ **Gubernat van Anhalt** (`[1059 Historical: Gubernat van Swâbengouwe / Ballenstet]`)
+* **Duchy of Schwabengau (Anhalt)** (`d_anhalt`) $\rightarrow$ **Gubernat van Swâbengouwe** *(or **Ballenstet**, direct vanilla: **Anhalt**)*
   * `c_dessau` (Dessau) $\rightarrow$ **Magistrat van Dessouwe** (`[1059 Historical: Magistrat van Zerbst / Nîenburch]`)
   * `c_halberstadt` (Halberstadt) $\rightarrow$ **Magistrat van Halberstat**
   * `c_magdeburg` (Magdeburg) $\rightarrow$ **Magistrat van Mâgdeburch**
@@ -468,7 +468,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sumadija` (Šumadija) $\rightarrow$ **Magistrat van Schumadîe** (`[1059 Historical: Magistrat van Rudnich / Morâwe]`)
   * `c_podrinje` (**[HRE]** Podrinje) $\rightarrow$ **Magistrat van Drînedal** *(calque of *Podrinje* "Along the Drina", or **Podrînje**)*
   * `c_hvosno` (Hvosno) $\rightarrow$ **Magistrat van Chwosne**
-* **Duchy of Mačva** (`d_macva`) $\rightarrow$ **Gubernat van Matschouwe** (`[1059 Historical: Gubernat van Sirmjen (Sirmium)]`)
+* **Duchy of Lower Syrmia (Mačva)** (`d_macva`) $\rightarrow$ **Gubernat van Nidersîrmjen** *(or **Matschouwe**)*
   * `c_macva` (Mačva) $\rightarrow$ **Magistrat van Matschouwe** (`[1059 Historical: Magistrat van Sirmjen]`)
   * `c_beograd` (Beograd) $\rightarrow$ **Magistrat van Wîtzburch** *(historical MHG *Wîzenburc / Griechisch-Weißenburg* for Belgrade, or **Belgrat**)*
 * **Duchy of Duklja** (`d_duklja`) $\rightarrow$ **Gubernat van Dioklêe** *(or **Dûklje**)*
@@ -476,7 +476,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_pomorje` (**[HRE]** Pomorje) $\rightarrow$ **Magistrat van Sêmarch** *(calque of *Pomorje* "Seacoast", or **Antivâri**)*
   * `c_travunia` (**[HRE]** Travunija) $\rightarrow$ **Magistrat van Trabûnje** *(or **Tribûnje**)*
 
-* **Duchy of Vidin** (`d_vidin`) $\rightarrow$ **Gubernat van Widîn** (`[1122 Historical: Gubernat van Bonônje]`)
+* **Duchy of Bononia (Vidin)** (`d_vidin`) $\rightarrow$ **Gubernat van Bonônje** *(or **Widîn**)*
   * `c_vidin` (Vidin) $\rightarrow$ **Magistrat van Widîn** (`[1122 Historical: Magistrat van Bonônje]`)
   * `c_branicevo` (Braničevo) $\rightarrow$ **Magistrat van Branitschêwe**
 
@@ -492,7 +492,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_napoli` (**[HRE]** Napoli) $\rightarrow$ **Magistrat van Neâpel** `[nɛ.ˈaː.pəl]` *(or **Nâpols** from Old Catalan)*
 * **Duchy of Apulia** (`d_apulia`) $\rightarrow$ **Gubernat van Apuljen** *(or **Pûlje** from Catalan *Pulla*)*
   * `c_apulia` (**[HRE]** Apulia) $\rightarrow$ **Magistrat van Pûlje** *(or **Melfi / Trâni**)*
-  * `c_bari` (**[HRE]** Bari) $\rightarrow$ **Magistrat van Bâr** *(or **Bâri**)*
+  * `c_bari` (**[HRE]** Bari) $\rightarrow$ **Magistrat van Bâr-in-Pûlje** *(or **Bâri**)*
   * `c_lecce` (**[HRE]** Lecce) $\rightarrow$ **Magistrat van Letsche** `[ˈlɛ.tʃə]`
 * **Duchy of Salerno** (`d_salerno`) $\rightarrow$ **Gubernat van Salern**
   * `c_salerno` (Salerno) $\rightarrow$ **Magistrat van Salern**
@@ -592,7 +592,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.14 Kingdom of Denmark (`k_denmark`) $\rightarrow$ **Kûnincrich van Denemarch**
 
-* **Duchy of Sjælland** (`d_sjaelland`) $\rightarrow$ **Gubernat van Sêlant-in-Denemarch**
+* **Duchy of Sjælland (Selandia)** (`d_sjaelland`) $\rightarrow$ **Gubernat van Selândjen**
   * `c_sjaelland` (Sjælland) $\rightarrow$ **Magistrat van Rôskilde** *(or **Sêlant**, avoiding post-1059 *København*)*
   * `c_fyn` (Fyn) $\rightarrow$ **Magistrat van Vûnen** *(or **Ôdense**)*
   * `c_lolland_falster` (Lolland-Falster) $\rightarrow$ **Magistrat van Lâlant-Valster**
@@ -605,7 +605,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_aarhus` (**[HRE]** Aarhus) $\rightarrow$ **Magistrat van Ârhûs**
   * `c_viborg` (**[HRE]** Viborg) $\rightarrow$ **Magistrat van Wîburch**
   * `c_ringkobing` (**[HRE]** Ringkøbing) $\rightarrow$ **Magistrat van Rinkôping** (`[1059 Historical: Magistrat van Jelling]`)
-  * `c_aalborg` (**[HRE]** Aalborg) $\rightarrow$ **Magistrat van Âlburch**
+  * `c_aalborg` (**[HRE]** Aalborg) $\rightarrow$ **Magistrat van Âlburch** (`[1059 Historical: Magistrat van Himmerlant]`)
 * **Duchy of Slesvig** (`d_slesvig`) $\rightarrow$ **March van Slêswîch**
   * `c_slesvig` (**[HRE]** Slesvig) $\rightarrow$ **Magistrat van Slêswîch** *(or **Haithabû**)*
   * `c_vorbasse` (**[HRE]** Vorbasse) $\rightarrow$ **Magistrat van Vorbasse**
@@ -623,7 +623,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Egðafylki** (`d_agder`) $\rightarrow$ **Gubernat van Agder**
   * `c_nedenes` (Austr Agðir) $\rightarrow$ **Magistrat van Ôstagder**
   * `c_agdeside` (Vestr Agðir) $\rightarrow$ **Magistrat van Westagder**
-* **Duchy of Gulaþingslög** (`d_vestlandi`) $\rightarrow$ **Gubernat van Westlant-in-Norwêgen**
+* **Duchy of Gulaþingslög (Vestlandet)** (`d_vestlandi`) $\rightarrow$ **Gubernat van Gulating**
   * `c_rogalandi` (Rogaland) $\rightarrow$ **Magistrat van Rôgalant** *(or **Stavanger**)*
   * `c_hordalandi` (Hörðaland) $\rightarrow$ **Magistrat van Hordalant** *(or **Bergen**)*
   * `c_sogn` (Sogn) $\rightarrow$ **Magistrat van Sogne**
@@ -634,7 +634,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Upplönd** (`d_dalir`) $\rightarrow$ **Gubernat van Oplant**
   * `c_hedmork` (Heiðmörk) $\rightarrow$ **Magistrat van Heidemarch**
   * `c_gudbrandsdalir` (Guðbrandsdalir) $\rightarrow$ **Magistrat van Gûtbrandsdal**
-  * `c_eystridalir` (Eystridalir) $\rightarrow$ **Magistrat van Ôsterdal**
+  * `c_eystridalir` (Eystridalir) $\rightarrow$ **Magistrat van Ôsterdal-an-der-Glomme**
   * `c_gauldala` (Gauldælafylki) $\rightarrow$ **Magistrat van Gouldal**
 * **Duchy of Hálogaland** (`d_halogaland`) $\rightarrow$ **Gubernat van Hâlogalant**
   * `c_vastvag` (Lófótr) $\rightarrow$ **Magistrat van Lôvôten**
@@ -704,7 +704,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_bars` (Tekov) $\rightarrow$ **Magistrat van Barsch** *(or **Tekouwe**)*
   * `c_hont` (Hont) $\rightarrow$ **Magistrat van Hont**
   * `c_poszony` (Pressburg) $\rightarrow$ **Magistrat van Presburch** (`[1059 Historical: Magistrat van Breslousburch / Posôn]`)
-* **Duchy of Opava** (`x_script_3603`) $\rightarrow$ **Gubernat van Troppouwe**
+* **Duchy of Holasici (Opava)** (`x_script_3603`) $\rightarrow$ **Gubernat van Holasitzje** *(or **Troppouwe**)*
   * `c_opava` (Opava) $\rightarrow$ **Magistrat van Troppouwe** `[ˈtrɔ.pɔʊ.wə]` *(Attested Tarraconian county, promoted 1058; hydronym *Opava*, or `[1059 Sub-Barony: Grêtz-an-der-Morâwe]`) *
 
 ---
@@ -729,7 +729,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mazovia** (`d_mazovia`) $\rightarrow$ **Gubernat van Masôvjen**
   * `c_plocka` (**[HRE]** Płock) $\rightarrow$ **Magistrat van Plôtzich**
   * `c_czerska` (**[HRE]** Czersk) $\rightarrow$ **Magistrat van Tschêrtzich**
-  * `c_gostyninska` (**[HRE]** Gostynin) $\rightarrow$ **Magistrat van Gostîn** (`[1059 Historical: Magistrat van Wladislâwje (Włocławek)]`)
+  * `c_gostyninska` (**[HRE]** Gostynin) $\rightarrow$ **Magistrat van Gostîn** (`[1059 Historical: Magistrat van Lâdislouwe (Włocławek)]`)
   * `c_lomzynska` (Łomża) $\rightarrow$ **Magistrat van Altlomsche** *(for pre-1059 *Stara Łomża*)*
   * `c_zakroczymska` (**[HRE]** Zakroczym) $\rightarrow$ **Magistrat van Sakrotschîm**
 * **Duchy of Opolania** (`d_upper_silesia`) $\rightarrow$ **Gubernat van Oberslêsjen** *(or **Oppeln**)*
@@ -774,7 +774,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.20 Kingdom of Volynia (`k_galicia-volhynia`) $\rightarrow$ **Kûnincrich van Wolînjen**
 
 * **Duchy of Volhynia** (`d_volhynia`) $\rightarrow$ **Gubernat van Wolînjen**
-  * `c_volodymyr` (Volodymyr) $\rightarrow$ **Magistrat van Wladimîr** *(or **Lodomêrje**)*
+  * `c_volodymyr` (Volodymyr) $\rightarrow$ **Magistrat van Simne** *(or **Lûge**)*
   * `c_peresopnytsia` (Peresopnytsia) $\rightarrow$ **Magistrat van Peresopnitz**
   * `c_berestye` (Berestye) $\rightarrow$ **Magistrat van Berestîe** *(or **Brest**)*
   * `c_dorohychyn` (Dorohychyn) $\rightarrow$ **Magistrat van Dorohitschin**
@@ -784,7 +784,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_terebovl` (Terebovl) $\rightarrow$ **Magistrat van Terebôwel**
   * `c_zaslavl` (Zaslavl) $\rightarrow$ **Magistrat van Saslouwe** (`[1059 Sub-Barony: Magistrat van Dubne / Ostrôch]`)
 * **Duchy of Cherven Cities** (`d_cherven_cities`) $\rightarrow$ **Gubernat van den Rôtenbürgen** *(or **Tscherwen**)*
-  * `c_cherven` (Cherven) $\rightarrow$ **Magistrat van Rôtenburch** `[ˈroː.tən.bʊrx]` *(or **Tscherwen**, attested Tarraconian county, promoted 1049)*
+  * `c_cherven` (Cherven) $\rightarrow$ **Magistrat van Rôtenburch-an-der-Hûtzwe** `[ˈroː.tən.bʊrç an dər ˈhuːts.wə]` *(or **Tscherwen**, attested Tarraconian county, promoted 1049)*
   * `c_belz` (Belz) $\rightarrow$ **Magistrat van Beltz**
   * `c_peremyshl` (Peremyshl) $\rightarrow$ **Magistrat van Peremîschel**
 
@@ -817,7 +817,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_zhytomyr` (**[HRE]** Żytomierz) $\rightarrow$ **Magistrat van Schitomîr**
   * `c_zvyahel` (**[HRE]** Zvyahel) $\rightarrow$ **Magistrat van Swijâhel** (`[1059 Sub-Barony: Magistrat van Kolodjâschen (Kolodiazhen) / Horodnitz]`)
   * `c_chornobyl` (**[HRE]** Chornobyl) $\rightarrow$ **Magistrat van Tschornobîl** *(Botanical hydronym/meadow name, or **Owrutsch**)*
-  * `c_ushytsia` (**[HRE]** Ushytsia) $\rightarrow$ **Magistrat van Uschitz** *(Hydronym of the Ushytsia River, or **Bakôte**)*
+  * `c_ushytsia` (**[HRE]** Ushytsia) $\rightarrow$ **Magistrat van Uschitz** *(Hydronym of the Ushytsia River, or `[1059 Sub-Barony: Magistrat van Bakôte]`)*
   * `c_korsun` (**[HRE]** Korsuń) $\rightarrow$ **Magistrat van Korsûn**
 * **Duchy of Turov** (`d_turov`) $\rightarrow$ **Gubernat van Tûrouwe**
   * `c_turov` (**[HRE]** Turov) $\rightarrow$ **Magistrat van Tûrouwe**
@@ -828,19 +828,20 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_hradyzk` (Hradyzk) $\rightarrow$ **Magistrat van Gradîtzich** (`[1059 Sub-Barony: Magistrat van Altâwe / Poltâwe]`)
   * `c_romen` (Romen) $\rightarrow$ **Magistrat van Rômen**
   * `c_voin` (Voin') $\rightarrow$ **Magistrat van Woîn**
-* **Duchy of Chernigov** (`d_chernigov` & `x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
-  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
+* **Duchy of Severia (Chernigov)** (`d_chernigov`) $\rightarrow$ **Gubernat van Zêweren**
   * `c_starodub` (Starodub) $\rightarrow$ **Magistrat van Starodûp** *(or **Alteich**)*
   * `c_novgorod_seversky` (Novgorod Seversky) $\rightarrow$ **Magistrat van Sêwersch-Nougarden**
   * `c_putyvl` (Putyvl) $\rightarrow$ **Magistrat van Putîwel**
   * `c_kursk` (Kursk) $\rightarrow$ **Magistrat van Kûrtzich**
-* **Duchy of Karachev** (`d_karachev`) $\rightarrow$ **Gubernat van Karatschouwe**
+* **Duchy of Serensk (Karachev)** (`d_karachev`) $\rightarrow$ **Gubernat van Serêntzich** *(direct vanilla: **Karatschouwe**)*
   * `c_karachev` (Karachev) $\rightarrow$ **Magistrat van Karatschouwe**
-  * `c_kozelsk` (Kozelsk) $\rightarrow$ **Magistrat van Kosêltzich** *(or **Serênsk**)*
+  * `c_kozelsk` (Kozelsk) $\rightarrow$ **Magistrat van Kosêltzich** *(or **Serêntzich**)*
   * `c_sevsk` (Sevsk) $\rightarrow$ **Magistrat van Sêwtzich**
-* **Duchy of Novosil** (`d_novosil`) $\rightarrow$ **Gubernat van Nowosîl**
+* **Duchy of Mtsensk (Novosil)** (`d_novosil`) $\rightarrow$ **Gubernat van Metzêntzich** *(direct vanilla: **Nowosîl**)*
   * `c_novosil` (Novosil) $\rightarrow$ **Magistrat van Nowosîl**
-* **Duchy of Odoyev** (`x_script_4712`) $\rightarrow$ **Gubernat van Odojouwe** *(or **Upâdal**)*
+* **Duchy of Chernigov** (`x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
+  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
+* **Duchy of Upadal (Odoyev)** (`x_script_4712`) $\rightarrow$ **Gubernat van Upâdal** *(or **Odojouwe**)*
   * `c_odoyev` (Odoyev) $\rightarrow$ **Magistrat van Odojouwe** *(Topographic valley name on the Upa, or **Upâdal**)*
 
 ---
@@ -868,15 +869,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Grodno** (`d_grodno`) $\rightarrow$ **Gubernat van Garten** *(Historical MHG/Teutonic *Garten* for Grodno!)*
   * `c_grodno` (Gardinas) $\rightarrow$ **Magistrat van Garten** *(or **Grodno**)*
-  * `c_volkovysk` (Volkovysk) $\rightarrow$ **Magistrat van Wolkowîtzich**
-  * `c_novogrudok` (Naugardukas) $\rightarrow$ **Magistrat van Nûwenburch-in-Litouwen** *(or **Nowogrudok**)*
+  * `c_volkovysk` (Volkovysk) $\rightarrow$ **Magistrat van der Rôse** *(Option B: **Rôse**, ancient Neman tributary)*
+  * `c_novogrudok` (Naugardukas) $\rightarrow$ **Magistrat van der Plîse** *(Option B: **Plîse**, Baltic hydronym *Plesė*)*
 * **Duchy of Pinsk** (`d_pinsk`) $\rightarrow$ **Gubernat van Pîntzich**
   * `c_pinsk` (Pinsk) $\rightarrow$ **Magistrat van Pîntzich**
   * `c_slutsk` (Slutsk) $\rightarrow$ **Magistrat van Slûtzich**
   * `c_kletsk` (Kletsk) $\rightarrow$ **Magistrat van Klêtzich**
   * `c_babruysk` (Babruiskas) $\rightarrow$ **Magistrat van Babrûitzich** *(or calqued **Bîverbach** from *Babruyka* "Beaver River", or sub-barony **Rêtschitz**)*
-* **Duchy of Minsk** (`d_minsk`) $\rightarrow$ **Gubernat van Mîntzich**
-  * `c_minsk` (Minsk) $\rightarrow$ **Magistrat van Mîntzich**
+* **Duchy of Minsk** (`d_minsk`) $\rightarrow$ **Gubernat van Alt-Mêne**
+  * `c_minsk` (Minsk) $\rightarrow$ **Magistrat van Alt-Mêne**
   * `c_orsha` (Orsha) $\rightarrow$ **Magistrat van Orsche**
 * **Duchy of Polotsk** (`d_polotsk`) $\rightarrow$ **Gubernat van Polôtzich**
   * `c_polotsk` (Polotsk) $\rightarrow$ **Magistrat van Polôtzich**
@@ -893,14 +894,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.25 Kingdom of Moldavia (`k_moldavia`) $\rightarrow$ **Kûnincrich van Moldouwe**
 
-* **Duchy of Muntenia** (`d_muntenia`) $\rightarrow$ **Gubernat van Muntênjen** *(or **Grôtzwalachîe**)*
+* **Duchy of Lower Muntenia (Muntenia)** (`d_muntenia`) $\rightarrow$ **Gubernat van Nidermuntênjen** *(or **Grôtzwalachîe**)*
   * `c_giurgiu` (Giurgiu) $\rightarrow$ **Magistrat van Zant-Jörgen** (`[1059 Historical: Magistrat van Dafne-an-der-Tuonouwe]`)
   * `c_bucuresti` (Ialomita) $\rightarrow$ **Magistrat van Jalomitz** *(Hydronym of the Ialomița River)*
   * `c_calarasi` (Călărași) $\rightarrow$ **Magistrat van Kalarasch** (`[1059 Historical: Magistrat van Durostôr / Sonneninsel]`)
   * `c_buzau` (Buzău) $\rightarrow$ **Magistrat van Busouwe** *(Ancient river *Mousaios / Buzău*)*
   * `c_braila` (Brăila) $\rightarrow$ **Magistrat van Braîle** (`[1059 Historical: Magistrat van Dinogêtje]`)
-* **Duchy of Bukovina** (`d_bukovina`) $\rightarrow$ **Gubernat van Bûchenlant** (`[1059 Historical: March van Suczouwe / Sîret]`)
-  * `c_suceava` (**[HRE]** Suceava) $\rightarrow$ **Magistrat van Suczouwe** `[ˈzʊ.tsɔʊ.wə]` *(Historical MHG *Suczouwe* from Hungarian *Szucsáva*, matching its in-game **Mogyër** culture, or sub-barony **Sîret**)*
+* **Duchy of Suceava (Bukovina)** (`d_bukovina`) $\rightarrow$ **March van Sutschouwe** *(or **Sîret**, direct vanilla: **Bûchenlant**)*
+  * `c_suceava` (**[HRE]** Suceava) $\rightarrow$ **Magistrat van Sutschouwe** `[ˈzʊ.tʃɔʊ.wə]` *(Historical MHG form from Hungarian *Szucsáva*, matching its in-game **Mogyër** culture, or sub-barony **Sîret**)*
   * `c_neamnt` (**[HRE]** Neamț) $\rightarrow$ **Magistrat van Nêmetz** *(or calqued **Dütschenstein** from Slavic *Němьcь* "Germans" + *Piatra* "Rock")*
   * `c_dorohoi` (**[HRE]** Dorohoi) $\rightarrow$ **Magistrat van Dorohôi** (`[1059 Geographic/Sub-Barony: Magistrat van Schischje (Jijia) / Harlouwe (Hârlău)]`)
   * `c_hotin` (**[HRE]** Hotin) $\rightarrow$ **Magistrat van Chotîn**
@@ -911,13 +912,13 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_barlad` (Bârlad) $\rightarrow$ **Magistrat van Berlat** *(Hydronym of the Bârlad River)*
   * `c_galati` (Galați) $\rightarrow$ **Magistrat van Galatz** `[ɡa.ˈlats]` *(Canonical in-game origin of **Galațian** `ID 275` culture!)*
   * `c_stoenesti` (Stoenești) $\rightarrow$ **Magistrat van Stojenêscht** (`[1059 Geographic/Sub-Barony: Magistrat van Trotusch (Trotuș) / Bakouwe (Bacău)]`)
-* **Duchy of Bugeac** (`d_bugeac`) $\rightarrow$ **Gubernat van Budschach** *(Canonical in-game **Bugeacian** `ID 288` culture, or `[1059 Historical: Gubernat van Ongel]`)*
+* **Duchy of Ongal (Bugeac)** (`d_bugeac`) $\rightarrow$ **Gubernat van Ongel** *(or **Tîras**, direct vanilla: **Budschach**)*
   * `c_tigheci` (Tigheci) $\rightarrow$ **Magistrat van Tigêtsch** *(or **Tigêtschwalt** for the *Codrii Tigheciului*)*
   * `c_cetatea_alba` (Cetatea Albă) $\rightarrow$ **Magistrat van Wîtzenburch-am-Nister** *(calque of *Cetatea Albă / Belgorod*, or **Moukaster**)*
   * `c_chilia` (Chilia) $\rightarrow$ **Magistrat van Kilîe**
   * `c_lapusna` (Lăpușna) $\rightarrow$ **Magistrat van Lapuschne** *(Hydronym of the Lăpușna River)*
 
-* **Duchy of Dobrudja** (`d_dobrudja`) $\rightarrow$ **Gubernat van Dobrûdsche** (`[1122 Historical: Gubernat van Klein-Skîthjen]`)
+* **Duchy of Scythia Minor (Dobrudja)** (`d_dobrudja`) $\rightarrow$ **Gubernat van Klein-Skîthjen** *(direct vanilla: **Dobrûdsche**)*
   * `c_constanta` (Constanta) $\rightarrow$ **Magistrat van Konstantze** (`[1122 Historical: Magistrat van Tômis]`)
   * `c_mesembria` (**[HRE]** Mesembria) $\rightarrow$ **Magistrat van Mesembrîe**
 
@@ -1065,7 +1066,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Auvergne** (`d_auvergne`) $\rightarrow$ **Gubernat van Alvernje** `[al.ˈvɛr.ɲə]` *(Old Catalan *Alvèrnia*)*
   * `c_auvergne` (Auvergne) $\rightarrow$ **Magistrat van Alvernje**
   * `c_clermont_sur_allier` (Clermont-sur-Allier) $\rightarrow$ **Magistrat van Clârmunt-an-Aljêr**
-  * `c_thiers` (Thiers) $\rightarrow$ **Magistrat van Tjêrs**
+  * `c_thiers` (Thiers) $\rightarrow$ **Magistrat van Têrs**
   * `c_velay` (Velay) $\rightarrow$ **Magistrat van Velai** *(or **Puî**)*
 * **Duchy of Bourbon** (`d_bourbon`) $\rightarrow$ **Gubernat van Burbûn**
   * `c_bourbon` (Bourbon) $\rightarrow$ **Magistrat van Burbûn**
@@ -1079,7 +1080,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_puigcerda` (Cerdaña) $\rightarrow$ **Magistrat van Tzerdanje** `[tsər.ˈda.ɲə]` *(Old Catalan *Cerdanya*; `[1059 Capital: Lîvje (Llívia)]`)*
   * `c_girona` (Girona) $\rightarrow$ **Magistrat van Dschirôn** `[dʒi.ˈroːn]` *(Old Catalan *Girona*)*
   * `c_rossello` (Rosselló) $\rightarrow$ **Magistrat van Rosseljôn** `[ro.sə.ˈʎoːn]`
-  * `c_lleida` (Lleida) $\rightarrow$ **Magistrat van Ljeide** `[ˈʎɛɪ.də]`
+  * `c_lleida` (Lleida) $\rightarrow$ **Magistrat van Lleide** `[ˈʎɛɪ.də]`
   * `c_tarragona` (Tarragona) $\rightarrow$ **Magistrat van Tarracôn** `[ta.ra.ˈkoːn]` *(Eponymous cultural metropolis of Tarraconian!)*
 
 ---
@@ -1098,7 +1099,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.29 Kingdom of Burgundy (`k_burgundy`) $\rightarrow$ **Kûnincrich van Burgundjen** *(or **Arêlât**)*
 
-* **Duchy of Piedmonte** (`d_piedmonte`) $\rightarrow$ **Gubernat van Piemunt** (`[1059 Historical: March van Turîn-Ivrêe]`)
+* **Duchy of Turin-Ivrea (Piedmont)** (`d_piedmonte`) $\rightarrow$ **March van Turîn-Ivrêe** *(direct vanilla: **Piemunt**)*
   * `c_monferrato` (Monferrato) $\rightarrow$ **Magistrat van Muntferrât** (`[1059 Historical: Magistrat van Akwi (Acqui)]`)
   * `c_turin` (Turin) $\rightarrow$ **Magistrat van Turîn**
   * `c_novara` (Novara) $\rightarrow$ **Fürstbisdom van Novâr**
@@ -1113,11 +1114,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_aosta` (Aosta) $\rightarrow$ **Magistrat van Ouste** *(MHG *Ouste* for Aosta)*
   * `c_geneva` (Geneva) $\rightarrow$ **Magistrat van Dschenêf** *(or MHG **Genf**)*
   * `c_canavese` (Canavese) $\rightarrow$ **Magistrat van Kanavês** *(or **Ivrêe**)*
-* **Duchy of Viennois** (`d_dauphine`) $\rightarrow$ **Gubernat van Wîen-an-der-Rône** *(or **Vjenês**)*
+* **Duchy of Viennois (Dauphiné)** (`d_dauphine`) $\rightarrow$ **Gubernat van Wienergouwe** *(or **Vjenês**)*
   * `c_lyon` (Lyon) $\rightarrow$ **Magistrat van Lijûn** `[li.ˈjuːn]`
   * `c_forez` (Forez) $\rightarrow$ **Magistrat van Forês**
   * `c_viviers` (Viviers) $\rightarrow$ **Fürstbisdom van Vivjêrs**
-  * `c_viennois` (Viennois) $\rightarrow$ **Magistrat van Vjêne**
+  * `c_viennois` (Viennois) $\rightarrow$ **Magistrat van Wienne**
   * `c_valentinois` (Valentinois) $\rightarrow$ **Magistrat van Valentsîn** `[va.lɛn.ˈtsiːn]` *(Attested Tarraconian county, promoted 1054)*
 * **Duchy of Upper Burgundy** (`d_upper_burgundy`) $\rightarrow$ **Gubernat van Hôchburgunt** *(or **Vrîgrâfschaft**)*
   * `c_besancon` (Besancon) $\rightarrow$ **Magistrat van Bisantz** `[bi.ˈzants]` *(Authentic MHG name for Besançon!)*
@@ -1137,7 +1138,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_calatrava` (Calatrava) $\rightarrow$ **Magistrat van Kalatrâve**
   * `c_almader` (Alarcos) $\rightarrow$ **Magistrat van Alarkôs** (`[1059 Historical: Magistrat van Orêt (Oreto)]`)
   * `c_andujar` (Jaén) $\rightarrow$ **Magistrat van Dschajên** *(Old Catalan *Jaén*)*
-* **Duchy of Granada** (`d_granada`) $\rightarrow$ **Gubernat van Granâde** (`[1059 Historical: Gubernat van Elvîre (Ilbīra)]`)
+* **Duchy of Elvira (Granada)** (`d_granada`) $\rightarrow$ **Gubernat van Elvîre** *(direct vanilla: **Granâde**)*
   * `c_granada` (Granada) $\rightarrow$ **Magistrat van Granâde** *(or **Elvîre**)*
   * `c_almeria` (Almeria) $\rightarrow$ **Magistrat van Almerîe**
   * `c_cabra` (Cabra) $\rightarrow$ **Magistrat van Kâbre**
@@ -1146,7 +1147,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sevilla` (Isbiliyyah) $\rightarrow$ **Magistrat van Sevîlje**
   * `c_cadiz` (Qadis) $\rightarrow$ **Magistrat van Kâditz** *(or **Scherês / Sidônje**)*
   * `c_algeciras` (al-Gazirah al-Hadra) $\rightarrow$ **Magistrat van Aldschesîres** *(Old Catalan *Algesires*)*
-  * `c_niebla` (Labla) $\rightarrow$ **Magistrat van Njêble** *(or **Lâble**)*
+  * `c_niebla` (Labla) $\rightarrow$ **Magistrat van Nêble** *(or **Lâble**)*
   * `c_moura` (al-Manijah) $\rightarrow$ **Magistrat van Môre** *(or **Manîsche**)*
 * **Duchy of Toledo** (`d_toledo`) $\rightarrow$ **Gubernat van Tolêt** `[to.ˈleːt]` *(Old Catalan/Latin *Toledo / Toletum* with apocope)*
   * `c_toledo` (Tulaytulah) $\rightarrow$ **Magistrat van Tolêt**
@@ -1208,7 +1209,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.33 Kingdom of Castile (`k_castille`) $\rightarrow$ **Kûnincrich van Castêlje**
 
 * **Duchy of Castile** (`d_castilla`) $\rightarrow$ **Gubernat van Castêlje**
-  * `c_burgos` (Burgos) $\rightarrow$ **Magistrat van Bûrgos** *(or **Bürgen**)*
+  * `c_burgos` (Burgos) $\rightarrow$ **Magistrat van Amâje-in-Kastîljen** *(or **Bûrgos**)*
   * `c_valladolid` (Balad al-Walid) $\rightarrow$ **Magistrat van Valjadolît** (`[1059 Historical: Magistrat van Simankes (Simancas)]`)
   * `c_soria` (Soria) $\rightarrow$ **Magistrat van Sôrje** (`[1059 Historical: Magistrat van Osme (Osma)]`)
   * `c_cuellar` (Cuellar) $\rightarrow$ **Magistrat van Kwêljar** (`[1059 Historical: Magistrat van Sepûlvede (Sepúlveda)]`)
@@ -1266,7 +1267,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.37 Kingdom of Maghreb (`k_maghreb`) $\rightarrow$ **Kûnincrich van Magrep** *(or **Mauretanjen**)*
 
-* **Duchy of Marrakesh** (`d_marrakesh`) $\rightarrow$ **Gubernat van Marrâkesch** (`[1059 Historical: Gubernat van Agmât]`)
+* **Duchy of Aghmat (Marrakesh)** (`d_marrakesh`) $\rightarrow$ **Gubernat van Agmât** *(direct vanilla: **Marrâkesch**)*
   * `c_marrakesh` (**[HRE]** Marrakesh) $\rightarrow$ **Magistrat van Marrâkesch** (`[1059 Historical: Magistrat van Agmât]`)
   * `c_tadla` (**[HRE]** Tadla) $\rightarrow$ **Magistrat van Tadle**
   * `c_fazaz` (**[HRE]** Fazaz) $\rightarrow$ **Magistrat van Fasâtz**
@@ -1314,7 +1315,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Alger** (`d_alger`) $\rightarrow$ **Gubernat van Aldschêr** *(Old Catalan *Alger*)*
   * `c_algier` (**[HRE]** Algier) $\rightarrow$ **Magistrat van Aldschêr** `[al.ˈdʒeːr]`
   * `c_tanas` (Tanas) $\rightarrow$ **Magistrat van Tênes**
-* **Duchy of Bejaia** (`d_bejaia`) $\rightarrow$ **Gubernat van Budschîe** *(Old Catalan *Bugia*; `[1059 Historical: Gubernat van Kalât-Hammât / Saldê]`)*
+* **Duchy of Qal'at Hammad (Bejaia)** (`d_bejaia`) $\rightarrow$ **Gubernat van Kalât-Hammât** *(or **Saldê**, direct vanilla: **Budschîe**)*
   * `c_bejaia` (Bejaia) $\rightarrow$ **Magistrat van Budschîe** (`[1059 Historical: Magistrat van Kalât-Hammât]`)
   * `c_satif` (Satif) $\rightarrow$ **Magistrat van Satîf**
 * **Duchy of Zab** (`d_zab`) $\rightarrow$ **Gubernat van Sâp**
@@ -1343,9 +1344,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Kroumerie** (`d_kroumerie`) $\rightarrow$ **Gubernat van Bône-Konstantîn** *(Resolving post-1059 *Kroumerie*)*
   * `c_constantine` (Constantine) $\rightarrow$ **Magistrat van Konstantîn**
   * `c_annaba` (**[HRE]** Annaba) $\rightarrow$ **Magistrat van Bône** *(Old Catalan *Bona* / Latin *Hippo Regius*, or **Annâbe**)*
-* **Duchy of Gabes** (`d_gabes` & `x_script_4732`) $\rightarrow$ **Gubernat van Gâbes**
-  * `c_sfax` (Sfax) $\rightarrow$ **Magistrat van Sfâx**
-  * `c_gabes` (Gabes) $\rightarrow$ **Magistrat van Gâbes**
+* **Duchy of Sfax (Gabes)** (`d_gabes`) $\rightarrow$ **Gubernat van Esfâx**
+  * `c_sfax` (Sfax) $\rightarrow$ **Magistrat van Esfâx**
 * **Duchy of Jerid** (`d_jerid`) $\rightarrow$ **Gubernat van Dscherît**
   * `c_qashtiliya` (Qashtiliya) $\rightarrow$ **Magistrat van Kaschtîlje**
   * `c_souf` (Souf) $\rightarrow$ **Magistrat van Sûf**
@@ -1359,6 +1359,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_syrte` (Syrte) $\rightarrow$ **Magistrat van Sirte**
   * `c_labda` (Labda) $\rightarrow$ **Magistrat van Leptis** *(or **Labde**)*
   * `c_waddan` (Waddan) $\rightarrow$ **Magistrat van Waddân**
+* **Duchy of Gabes** (`x_script_4732`) $\rightarrow$ **Gubernat van Gâbes**
+  * `c_gabes` (Gabes) $\rightarrow$ **Magistrat van Gâbes**
 
 ---
 
@@ -1456,7 +1458,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.44 Kingdom of Brabant (`x_script_3965`) $\rightarrow$ **Kûnincrich van Brâbant**
 
-* **Duchy of Brabant** (`d_brabant`) $\rightarrow$ **Gubernat van Brâbant** (`[1059 Historical: Gubernat van Lôven (Leuven)]`)
+* **Duchy of Leuven (Brabant)** (`d_brabant`) $\rightarrow$ **Gubernat van Lôven** *(direct vanilla: **Brâbant**)*
   * `c_brabant` (Brabant) $\rightarrow$ **Magistrat van Lôven** *(or **Brüssel / Nivelles**)*
   * `c_antwerpen` (Antwerpen) $\rightarrow$ **Magistrat van Antwerpen** *(or **March van Antwerpen**, resolving *Breda*)*
   * `c_hainaut` (Hainaut) $\rightarrow$ **Magistrat van Hennegouwe** `[ˈhɛ.nə.ɡɔʊ.wə]`
@@ -1506,7 +1508,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Meath** (`d_meath`) $\rightarrow$ **Gubernat van Mîde**
   * `c_dublin` (**[HRE]** Dublin) $\rightarrow$ **Magistrat van Dublîn**
   * `c_athlone` (**[HRE]** Athlone) $\rightarrow$ **Magistrat van Athlône** (`[1122 Historical: Magistrat van Uisnech]`)
-* **Duchy of Ulster** (`d_ulster`) $\rightarrow$ **Gubernat van Ulster**
+* **Duchy of Ulster (Ultonia)** (`d_ulster`) $\rightarrow$ **Gubernat van Ultônjen**
   * `c_ulster` (**[HRE]** Ulster) $\rightarrow$ **Magistrat van Ulster** (`[1122 Historical: Magistrat van Dûnpatrich]`)
   * `c_oriel` (**[HRE]** Oriel) $\rightarrow$ **Magistrat van Orjêl** (`[1122 Historical: Magistrat van Armâch]`)
   * `c_ailech` (**[HRE]** Ailech) $\rightarrow$ **Magistrat van Ailêch**
@@ -1514,10 +1516,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_mayo` (**[HRE]** Mayo) $\rightarrow$ **Magistrat van Majô** (`[1122 Historical: Magistrat van Kruachû]`)
   * `c_connacht` (**[HRE]** Hy Many) $\rightarrow$ **Magistrat van Konnacht** (`[1122 Historical: Magistrat van Tuâm]`)
   * `c_breifne` (**[HRE]** Breifne) $\rightarrow$ **Magistrat van Brêfne**
-* **Duchy of Leinster** (`d_leinster`) $\rightarrow$ **Gubernat van Leinster**
+* **Duchy of Leinster (Lagenia)** (`d_leinster`) $\rightarrow$ **Gubernat van Lagênjen**
   * `c_leinster` (**[HRE]** Leinster) $\rightarrow$ **Magistrat van Leinster** (`[1122 Historical: Magistrat van Ferns]`)
   * `c_ossory` (**[HRE]** Ossory) $\rightarrow$ **Magistrat van Ossorîe**
-* **Duchy of Munster** (`d_munster`) $\rightarrow$ **Gubernat van Münster-in-Îrlant**
+* **Duchy of Munster (Momonia)** (`d_munster`) $\rightarrow$ **Gubernat van Momônjen**
   * `c_thomond` (**[HRE]** Thomond) $\rightarrow$ **Magistrat van Limerich**
   * `c_ennis` (**[HRE]** Ennis) $\rightarrow$ **Magistrat van Tômont** (`[1122 Historical: Magistrat van Kinkôre]`)
   * `c_ormond` (**[HRE]** Ormond) $\rightarrow$ **Magistrat van Ormont** (`[1122 Historical: Magistrat van Wâtervort]`)
@@ -1582,7 +1584,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_adrianopolis` (Adrianopolis) $\rightarrow$ **Magistrat van Adrianôpel**
   * `c_zherkovo` (Zherkovo) $\rightarrow$ **Magistrat van Scherkouwe** (`[1122 Historical: Magistrat van Oustre]`)
   * `c_rhodopes` (Rhodopes) $\rightarrow$ **Magistrat van Rodôpen**
-* **Duchy of Syrmia** (`d_syrmia`) $\rightarrow$ **Gubernat van Sîrmjen**
+* **Duchy of Upper Syrmia (Syrmia)** (`d_syrmia`) $\rightarrow$ **Gubernat van Obersîrmjen**
   * `c_szerem` (**[HRE]** Szerém) $\rightarrow$ **Magistrat van Sîrmjen**
 
 ---
@@ -1669,15 +1671,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.54 Kingdom of Sweden (`k_sweden`) $\rightarrow$ **Kûnincrich van Swêden**
 
-* **Duchy of Uppland (Svealand)** (`d_svealand`) $\rightarrow$ **Gubernat van Swêalant** (`[1122 Historical: Gubernat van Oplant]`)
+* **Duchy of Uppland (Svealand)** (`d_svealand`) $\rightarrow$ **Gubernat van Swêalant**
   * `c_upland` (**[HRE]** Uppland) $\rightarrow$ **Magistrat van Oplant** (`[1122 Historical: Magistrat van Sigtûne]`)
   * `c_gastrikland` (**[HRE]** Gestrikalandia) $\rightarrow$ **Magistrat van Gestrikelant**
   * `c_sodermannaland` (**[HRE]** Södermannaland) $\rightarrow$ **Magistrat van Sûdermannalant** (`[1122 Historical: Magistrat van Strêgnes]`)
   * `c_aland` (**[HRE]** Aland) $\rightarrow$ **Magistrat van Âlant**
-* **Duchy of Bergslagen** (`d_bergslagen`) $\rightarrow$ **Gubernat van Berchslâgen** (`[1122 Historical: Gubernat van Îsernbêrelant]`)
+* **Duchy of Järnbäraland (Bergslagen)** (`d_bergslagen`) $\rightarrow$ **Gubernat van Îsernbêrelant** *(direct vanilla: **Berchslâgen**)*
   * `c_vastmanland` (**[HRE]** Västmannaland) $\rightarrow$ **Magistrat van Westmannalant** (`[1122 Historical: Magistrat van Westerâs]`)
   * `c_varmland` (**[HRE]** Värmaland) $\rightarrow$ **Magistrat van Wermelant**
-  * `c_dalarna` (**[HRE]** Övre Dalarna) $\rightarrow$ **Magistrat van Ôwer-Dâlarne** (`[1122 Historical: Magistrat van Môre]`)
+  * `c_dalarna` (**[HRE]** Övre Dalarna) $\rightarrow$ **Magistrat van Ôwer-Dâlarne** (`[1122 Historical: Magistrat van Môre-in-Dâlen]`)
   * `c_dalabergslagen` (**[HRE]** Dalabergslagen) $\rightarrow$ **Magistrat van Dalaberchslâgen** (`[1122 Historical: Magistrat van Husabî]`)
 * **Duchy of Västergötland** (`d_vastergotland`) $\rightarrow$ **Gubernat van Westergôtlant**
   * `c_vastergotland` (**[HRE]** Västergötland) $\rightarrow$ **Magistrat van Westergôtlant** (`[1122 Historical: Magistrat van Lôdöse]`)
@@ -1717,7 +1719,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_natangia` (**[HRE]** Natangia) $\rightarrow$ **Magistrat van Natângjen**
   * `c_konigsberg` (**[HRE]** Sambia (Königsberg)) $\rightarrow$ **Magistrat van Samlant** (`[1122 Historical: Magistrat van Twangste]`)
   * `c_bartenstein` (**[HRE]** Bartia (Bartenstein)) $\rightarrow$ **Magistrat van Bartenstein** (`[1122 Historical: Magistrat van Bartlant]`)
-* **Duchy of Masuria** (`d_masuria`) $\rightarrow$ **Gubernat van Masûren** (`[1122 Historical: Gubernat van Galindjen]`)
+* **Duchy of Galindia (Masuria)** (`d_masuria`) $\rightarrow$ **Gubernat van Galindjen** *(direct vanilla: **Masûren**)*
   * `c_torun` (**[HRE]** Chełmno (Toruń)) $\rightarrow$ **Magistrat van Tôrun** (`[1122 Historical: Magistrat van Kulm]`)
   * `c_osterode` (Sasna (Osterode)) $\rightarrow$ **Magistrat van Osterôde** (`[1122 Historical: Magistrat van Sassen-in-Prûssen]`)
   * `c_allenstein` (Galindia (Allenstein)) $\rightarrow$ **Magistrat van Allenstein** (`[1122 Historical: Magistrat van Galindjen]`)
@@ -1741,41 +1743,41 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.56 Kingdom of Vladimir (Opolye) (`k_opolye`) $\rightarrow$ **Kûnincrich van Wladimîr** (`[1122 Historical: Kûnincrich van Opôlje]`)
+### 3.56 Kingdom of Vladimir (Opolye) (`k_opolye`) $\rightarrow$ **Kûnincrich van Opôlje** (`[1122 Historical: Kûnincrich van Opôlje]`)
 
 * **Duchy of Opolye (Vladimir)** (`d_opolye`) $\rightarrow$ **Gubernat van Opôlje**
   * `c_yaroslavl` (**[HRE]** Yaroslavl) $\rightarrow$ **Magistrat van Jaroslouwe** (`[1122 Historical: Magistrat van Rostouwe]`)
-  * `c_vladimir` (**[HRE]** Vladimir) $\rightarrow$ **Magistrat van Wladimîr**
+  * `c_vladimir` (**[HRE]** Vladimir) $\rightarrow$ **Magistrat van Klêsme** *(or **Wolotschôch**)*
   * `c_suzdal` (**[HRE]** Suzdal) $\rightarrow$ **Magistrat van Sûsdal**
   * `c_tver` (**[HRE]** Tver) $\rightarrow$ **Magistrat van Twer** (`[1122 Historical: Magistrat van Woloch-Lâmtzich]`)
   * `c_moskva` (**[HRE]** Moskva) $\rightarrow$ **Magistrat van Moskouwe**
-* **Duchy of Ryazan** (`d_ryazan`) $\rightarrow$ **Gubernat van Rjasân**
-  * `c_ryazan` (**[HRE]** Ryazan) $\rightarrow$ **Magistrat van Rjasân**
+* **Duchy of Ryazan** (`d_ryazan`) $\rightarrow$ **Gubernat van Rêsan**
+  * `c_ryazan` (**[HRE]** Ryazan) $\rightarrow$ **Magistrat van Rêsan**
   * `c_tula` (**[HRE]** Tula) $\rightarrow$ **Magistrat van Tûle** (`[1122 Historical: Magistrat van Prôntzich]`)
   * `c_murom` (**[HRE]** Murom) $\rightarrow$ **Magistrat van Mûrom**
 * **Duchy of Obran Osh (Nizhny Novgorod)** (`d_nizhny_novgorod`) $\rightarrow$ **Gubernat van Obrân-Osch**
   * `c_nizhny_novgorod` (Obran Osh) $\rightarrow$ **Magistrat van Obrân-Osch**
-  * `c_plyos` (**[HRE]** Plyos) $\rightarrow$ **Magistrat van Pljôs**
+  * `c_plyos` (**[HRE]** Plyos) $\rightarrow$ **Magistrat van Plês**
   * `c_manturovo` (Manturovo) $\rightarrow$ **Magistrat van Manturôwe** (`[1122 Historical: Magistrat van Galitsch-Mêrje]`)
 
 ---
 
 ### 3.57 Kingdom of Pontic Steppe / Zaporizhia (`k_pontic_steppe`) $\rightarrow$ **Kûnincrich van der Pontischen Steppe** (`[1122 Historical: Kûnincrich van Kumânjen]`)
 
-* **Duchy of Jedisan** (`d_yedisan`) $\rightarrow$ **Gubernat van Jedisân** (`[1122 Historical: Gubernat van Bôch-Dnêster]`)
+* **Duchy of Boh-Dniester (Jedisan)** (`d_yedisan`) $\rightarrow$ **Gubernat van Bôch-Niester** *(direct vanilla: **Jedisân**)*
   * `c_ladyzyn` (**[HRE]** Ladyzyn) $\rightarrow$ **Magistrat van Ladîschin** (`[1122 Historical: Magistrat van Sût-Bôch]`)
   * `c_uman` (**[HRE]** Uman) $\rightarrow$ **Magistrat van Umân**
-  * `c_dnipro` (**[HRE]** Buri-chai) $\rightarrow$ **Magistrat van Bûri-Tschai** (`[1122 Historical: Magistrat van Dnêper-Furt]`)
-* **Duchy of South Jedisan** (`d_kizilyedisan`) $\rightarrow$ **Gubernat van Sût-Jedisân** (`[1122 Historical: Gubernat van Olbîe-Steppe]`)
-  * `c_cherkassy` (**[HRE]** Cherkassy) $\rightarrow$ **Magistrat van Tscherkassen** (`[1122 Historical: Magistrat van Rôden-am-Dnêper]`)
+  * `c_dnipro` (**[HRE]** Buri-chai) $\rightarrow$ **Magistrat van Bûri-Tschai** (`[1122 Historical: Magistrat van Nieper-Furt]`)
+* **Duchy of Olbia Steppe (South Jedisan)** (`d_kizilyedisan`) $\rightarrow$ **Gubernat van Olbîe-Steppe** *(direct vanilla: **Sût-Jedisân**)*
+  * `c_cherkassy` (**[HRE]** Cherkassy) $\rightarrow$ **Magistrat van Tscherkassen** (`[1122 Historical: Magistrat van Rôden-am-Nieper]`)
   * `c_odessa` (**[HRE]** Kara-Kerman) $\rightarrow$ **Magistrat van Swartzburch** (`[1122 Historical: Magistrat van Olbîe]`)
   * `c_kherson` (**[HRE]** Ingul) $\rightarrow$ **Magistrat van Ingûl**
-  * `c_lower_dniepr` (**[HRE]** Lower Dniepr) $\rightarrow$ **Magistrat van Nîder-Dnêper**
+  * `c_lower_dniepr` (**[HRE]** Lower Dniepr) $\rightarrow$ **Magistrat van Nîder-Nieper**
 * **Duchy of Levedia** (`d_levedia`) $\rightarrow$ **Gubernat van Lewêdje**
   * `c_samar` (**[HRE]** Samar) $\rightarrow$ **Magistrat van Samâr**
   * `c_bakhmut` (**[HRE]** Bakhmut) $\rightarrow$ **Magistrat van Bachmût** (`[1122 Historical: Magistrat van Tôr-Salz]`)
   * `c_lozova` (**[HRE]** Lozova) $\rightarrow$ **Magistrat van Losouwe**
-* **Duchy of Red Levedia** (`d_red_levedia`) $\rightarrow$ **Gubernat van Rôt-Lewêdje** (`[1122 Historical: Gubernat van Oleschje]`)
+* **Duchy of Oleshye (Red Levedia)** (`d_red_levedia`) $\rightarrow$ **Gubernat van Oleschje** *(direct vanilla: **Rôt-Lewêdje**)*
   * `c_khortytsia` (**[HRE]** Yilki Su (Khortytsia)) $\rightarrow$ **Magistrat van Chortîtze** (`[1122 Historical: Magistrat van Jîlki-Sû]`)
   * `c_oleshye` (**[HRE]** Kyzyl Jar (Oleshye)) $\rightarrow$ **Magistrat van Kîsil-Jâr** (`[1122 Historical: Magistrat van Oleschje]`)
 * **Duchy of Don Valley** (`d_don_valley`) $\rightarrow$ **Gubernat van Dôndal**
@@ -1786,11 +1788,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Tana** (`d_tana`) $\rightarrow$ **Gubernat van Tâne**
   * `c_tana` (**[HRE]** Tana) $\rightarrow$ **Magistrat van Tâne**
   * `c_kuzeytorg` (**[HRE]** Kuzeyrtorg) $\rightarrow$ **Magistrat van Kuseîtorch**
-* **Duchy of Crimea** (`d_crimea`) $\rightarrow$ **Gubernat van Krîm** (`[1122 Historical: Gubernat van Taurjen]`)
+* **Duchy of Tauria (Crimea)** (`d_crimea`) $\rightarrow$ **Gubernat van Taurjen** *(direct vanilla: **Krîm**)*
   * `c_kerch` (**[HRE]** Kerch) $\rightarrow$ **Magistrat van Kêrtsch** (`[1122 Historical: Magistrat van Pantikapêe]`)
   * `c_kalos_limen` (**[HRE]** Güzliev (Kalos Limen)) $\rightarrow$ **Magistrat van Güsliouwe** (`[1122 Historical: Magistrat van Kalôs-Limên]`)
   * `c_perekop` (**[HRE]** Aqmescit (Perekop)) $\rightarrow$ **Magistrat van Perekôp** (`[1122 Historical: Magistrat van Tâfros]`)
-* **Duchy of Azov** (`d_azov`) $\rightarrow$ **Gubernat van Asouwe** (`[1122 Historical: Gubernat van Tamatarchân]`)
+* **Duchy of Tamatarkha (Azov)** (`d_azov`) $\rightarrow$ **Gubernat van Tamatarchân** *(direct vanilla: **Asouwe**)*
   * `c_tmutarakan` (**[HRE]** Tmutarakan) $\rightarrow$ **Magistrat van Tamatarchân** (`[1122 Historical: Magistrat van Tamâtarche]`)
   * `c_khumar` (**[HRE]** Khumar) $\rightarrow$ **Magistrat van Chumâr**
   * `c_azov` (**[HRE]** Azak (Azov)) $\rightarrow$ **Magistrat van Asouwe** (`[1122 Historical: Magistrat van Asâch]`)
@@ -1816,8 +1818,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_khopyor` (**[HRE]** Khopyor) $\rightarrow$ **Magistrat van Chopjôr**
   * `c_tuluchezeva` (**[HRE]** Tuluchezeva) $\rightarrow$ **Magistrat van Tulutschêswe**
   * `c_balachev` (**[HRE]** Balachev) $\rightarrow$ **Magistrat van Balaschouwe**
-* **Duchy of Tambov** (`d_tambov`) $\rightarrow$ **Gubernat van Tambouwe** (`[1122 Historical: Gubernat van Zne]`)
-  * `c_tambov` (**[HRE]** Tambov) $\rightarrow$ **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Zne-Tambouwe]`)
+* **Duchy of Tsna (Tambov)** (`d_tambov`) $\rightarrow$ **Gubernat van Znedal** *(direct vanilla: **Tambouwe**)*
+  * `c_tambov` (**[HRE]** Tambov) $\rightarrow$ **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Znedal-Tambouwe]`)
   * `c_matya` (**[HRE]** Matya) $\rightarrow$ **Magistrat van Mâtje**
   * `c_durovka` (**[HRE]** Durovka) $\rightarrow$ **Magistrat van Durôwke**
 
@@ -1845,7 +1847,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_yar-calli` (Yar Calli) $\rightarrow$ **Magistrat van Jâr-Tschallî**
   * `c_karabolam` (Karabolam) $\rightarrow$ **Magistrat van Karabolâm**
   * `c_samar_VB` (Samar (Volga)) $\rightarrow$ **Magistrat van Wolge-Samâr**
-* **Duchy of Kazan** (`d_kazan`) $\rightarrow$ **Gubernat van Kasân** (`[1122 Historical: Gubernat van Kaschân]`)
+* **Duchy of Kashan (Kazan)** (`d_kazan`) $\rightarrow$ **Gubernat van Kaschân** *(direct vanilla: **Kasân**)*
   * `c_kazan` (Kazan) $\rightarrow$ **Magistrat van Kasân** (`[1122 Historical: Magistrat van Kaschân]`)
   * `c_mamadych` (Mamadych) $\rightarrow$ **Magistrat van Mamadîsch**
   * `c_yoshkar-ola` (Charla (Yoshkar-Ola)) $\rightarrow$ **Magistrat van Tschârle**
@@ -1877,7 +1879,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.61 Kingdom of Wallachia (Dacia) (`k_dacia`) $\rightarrow$ **Kûnincrich van Walachîe** (`[1122 Historical: Kûnincrich van Dâzjen]`)
 
-* **Duchy of Transylvanian Alps (Muntenia)** (`d_transylvanian_alps`) $\rightarrow$ **Gubernat van Muntênjen**
+* **Duchy of Higher Muntenia (Transylvanian Alps)** (`d_transylvanian_alps`) $\rightarrow$ **Gubernat van Obermuntênjen** *(or **Ardschêsch** / **Transilvânische Alpen**)*
   * `c_campulung` (Târgoviște (Câmpulung)) $\rightarrow$ **Magistrat van Langenvelt** (`[1122 Historical: Magistrat van Ardschêsch]`)
   * `c_polovragi` (**[HRE]** Polovragi) $\rightarrow$ **Magistrat van Polowrâdschi**
   * `c_tabla_butii` (**[HRE]** Tabla Buții) $\rightarrow$ **Magistrat van Tâbla-Bûtzi**
@@ -1900,8 +1902,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.62 Kingdom of Jerusalem (`k_jerusalem`) $\rightarrow$ **Kûnincrich van Jerûsalem**
 
 * **Duchy of Oultrejourdain** (`d_oultrejourdain`) $\rightarrow$ **Gubernat van Ôwerjordân**
-  * `c_kerak` (**[HRE]** Kerak) $\rightarrow$ **Magistrat van Kerâch** (`[1122 Historical: Magistrat van Montrejâl]`)
-  * `c_negev` (**[HRE]** Negev) $\rightarrow$ **Magistrat van Nêgef** (`[1122 Historical: Magistrat van Pêtre]`)
+  * `c_kerak` (**[HRE]** Kerak) $\rightarrow$ **Magistrat van Pêtre** (`[1122 Historical: Magistrat van Pêtre]`)
+  * `c_negev` (**[HRE]** Negev) $\rightarrow$ **Magistrat van Arabâ** (`[1122 Historical: Magistrat van Arabâ]`)
 * **Duchy of Palestine** (`d_palestine`) $\rightarrow$ **Gubernat van Palestîne**
   * `c_jerusalem` (**[HRE]** Jerusalem) $\rightarrow$ **Magistrat van Jerûsalem**
   * `c_ghazza` (**[HRE]** Ghazza) $\rightarrow$ **Magistrat van Gâse** (`[1122 Historical: Magistrat van Askalôn]`)
@@ -1935,8 +1937,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Lebanon** (`d_lebanon`) $\rightarrow$ **Gubernat van Lîbanon**
   * `c_beirut` (**[HRE]** Beirut) $\rightarrow$ **Magistrat van Beirût**
   * `c_tripoli` (**[HRE]** Tripoli) $\rightarrow$ **Magistrat van Trîpel-in-Sîrjen**
-* **Duchy of Damascus** (`d_damascus`) $\rightarrow$ **Gubernat van Damask**
-  * `c_damascus` (**[HRE]** Damascus) $\rightarrow$ **Magistrat van Damask**
+* **Duchy of Damascus** (`d_damascus`) $\rightarrow$ **Gubernat van Damasch**
+  * `c_damascus` (**[HRE]** Damascus) $\rightarrow$ **Magistrat van Damasch**
   * `c_juwair` (**[HRE]** Juwair) $\rightarrow$ **Magistrat van Dschuwêir**
   * `c_baalbek` (**[HRE]** Baalbek) $\rightarrow$ **Magistrat van Bâlbech** (`[1122 Historical: Magistrat van Heljôpel]`)
   * `c_hauran` (**[HRE]** Hauran) $\rightarrow$ **Magistrat van Haurân** (`[1122 Historical: Magistrat van Bôstre]`)
@@ -2009,13 +2011,13 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.67 Kingdom of Alodia (`x_script_2942`) $\rightarrow$ **Kûnincrich van Alôdje** (`[1122 Historical: Kûnincrich van Sôbe]`)
 
-* **Duchy of Alwa** (`d_alwa`) $\rightarrow$ **Gubernat van Alwe** (`[1122 Historical: Gubernat van Sôbe]`)
+* **Duchy of Soba (Alwa)** (`d_alwa`) $\rightarrow$ **Gubernat van Sôbe** *(direct vanilla: **Alwe**)*
   * `c_alodia` (**[HRE]** Alodia) $\rightarrow$ **Magistrat van Alôdje** (`[1122 Historical: Magistrat van Sôbe]`)
   * `c_naga` (**[HRE]** Naga) $\rightarrow$ **Magistrat van Nâge**
   * `c_gezira` (**[HRE]** Gezira) $\rightarrow$ **Magistrat van Dschesîre**
   * `c_eleila` (**[HRE]** Eleila) $\rightarrow$ **Magistrat van Elêile**
   * `c_ushara` (**[HRE]** Ushara) $\rightarrow$ **Magistrat van Uschâre**
-* **Duchy of Sennar (Alodia)** (`d_sennar`) $\rightarrow$ **Gubernat van Sennâr** (`[1122 Historical: Gubernat van Môjaberch]`)
+* **Duchy of Moyaberch (Sennar)** (`d_sennar`) $\rightarrow$ **Gubernat van Môjaberch** *(direct vanilla: **Sennâr**)*
   * `c_sennar` (**[HRE]** Sennar) $\rightarrow$ **Magistrat van Sennâr** (`[1122 Historical: Magistrat van Môjaberch]`)
   * `c_fazughli` (**[HRE]** Fazughli) $\rightarrow$ **Magistrat van Fasûgli**
   * `c_tagali` (**[HRE]** Tagali) $\rightarrow$ **Magistrat van Tagâli**
@@ -2027,7 +2029,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Apuljen (Apulia)** (`d_apulia`) $\rightarrow$ **Gubernat van Apuljen**
   * `c_apulia` (**[HRE]** Pûlje (Apulia)) $\rightarrow$ **Magistrat van Pûlje**
-  * `c_bari` (**[HRE]** Bâr (Bari)) $\rightarrow$ **Magistrat van Bâr**
+  * `c_bari` (**[HRE]** Bâr-in-Pûlje (Bari)) $\rightarrow$ **Magistrat van Bâr-in-Pûlje**
   * `c_lecce` (**[HRE]** Letsche (Lecce)) $\rightarrow$ **Magistrat van Letsche**
 
 ---
@@ -2150,7 +2152,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sortavala` (**[HRE]** Sortavala) $\rightarrow$ **Magistrat van Sortawâle**
   * `c_salinis` (**[HRE]** Salinis) $\rightarrow$ **Magistrat van Salmî**
   * `c_onega` (**[HRE]** Onega (Aunus)) $\rightarrow$ **Magistrat van Onêge-Sê** (`[1142 Historical: Magistrat van Aunûs]`)
-  * `c_viena` (**[HRE]** Viena) $\rightarrow$ **Magistrat van Wjêne** (`[1142 Historical: Magistrat van Kêm]`)
+  * `c_viena` (**[HRE]** Viena) $\rightarrow$ **Magistrat van Wiene** (`[1142 Historical: Magistrat van Kêm]`)
   * `c_kontupohja` (**[HRE]** Kontupohja) $\rightarrow$ **Magistrat van Kontupôchje** (`[1142 Historical: Magistrat van Sêsjärwi]`)
 
 ---
@@ -2171,14 +2173,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.77 Kingdom of Bjarmaland (`k_bjarmaland`) $\rightarrow$ **Kûnincrich van Bjarmelant**
 
-* **Duchy of Biarmia** (`d_biarmia`) $\rightarrow$ **Gubernat van Bjarmjen**
+* **Duchy of Biarmia** (`d_biarmia`) $\rightarrow$ **Gubernat van Biarmjen**
   * `c_kholmogory` (**[HRE]** Kholmogory) $\rightarrow$ **Magistrat van Cholmogôre**
   * `c_onega_BJA` (**[HRE]** Onega) $\rightarrow$ **Magistrat van Onêge-Münde**
   * `c_povenets` (**[HRE]** Povenets) $\rightarrow$ **Magistrat van Powenêtz** (`[1142 Historical: Magistrat van Wîch-Sê]`)
   * `c_pudozh` (**[HRE]** Pudozh) $\rightarrow$ **Magistrat van Pudôsch**
 * **Duchy of Chudia (Zavolochye)** (`d_chudia`) $\rightarrow$ **Gubernat van Tschûdjen**
   * `c_kargopol` (**[HRE]** Kargopol) $\rightarrow$ **Magistrat van Kargopôl** (`[1142 Historical: Magistrat van Lâtsche-Sê]`)
-  * `c_kirillov` (**[HRE]** Kirillov) $\rightarrow$ **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Dwinîtze]`)
+  * `c_kirillov` (**[HRE]** Kirillov) $\rightarrow$ **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Pelschme]`)
   * `c_totma` (**[HRE]** Totma) $\rightarrow$ **Magistrat van Tôtme**
 * **Duchy of Vologda** (`d_vologda`) $\rightarrow$ **Gubernat van Wologde**
   * `c_vologda` (**[HRE]** Vologda) $\rightarrow$ **Magistrat van Wologde**
@@ -2205,13 +2207,13 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.79 Kingdom of Bashkiria (`k_bashkiria`) $\rightarrow$ **Kûnincrich van Baschkîrjen**
 
-* **Duchy of Aqtobe** (`d_aqtobe`) $\rightarrow$ **Gubernat van Aktöbe** (`[1142 Historical: Gubernat van Tschalap-Kermân]`)
+* **Duchy of Chalap-Kerman (Aqtobe)** (`d_aqtobe`) $\rightarrow$ **Gubernat van Tschalap-Kermân** *(direct vanilla: **Aktöbe**)*
   * `c_aqtobe` (Aqtobe) $\rightarrow$ **Magistrat van Aktöbe** (`[1142 Historical: Magistrat van Tschalap-Kermân]`)
   * `c_orenburg` (Or (Orenburg)) $\rightarrow$ **Magistrat van Ôr-Flutz**
   * `c_ilek` (**[HRE]** Ilek) $\rightarrow$ **Magistrat van Ilêch**
   * `c_atamansku` (Atamansku) $\rightarrow$ **Magistrat van Atamântzich** (`[1142 Historical: Magistrat van Suwundûch]`)
   * `c_kbumak` (Kbumak (Kumak)) $\rightarrow$ **Magistrat van Kumâch**
-* **Duchy of Bugurslan** (`d_bugurslan`) $\rightarrow$ **Gubernat van Buguruslân** (`[1142 Historical: Gubernat van Urân-Samâre]`)
+* **Duchy of Uran-Samara (Bugurslan)** (`d_bugurslan`) $\rightarrow$ **Gubernat van Urân-Samâre** *(direct vanilla: **Buguruslân**)*
   * `c_bugurslan` (Bugurslan) $\rightarrow$ **Magistrat van Buguruslân** (`[1142 Historical: Magistrat van Urân-Samâre]`)
   * `c_salavat` (Salavat) $\rightarrow$ **Magistrat van Salawât** (`[1142 Historical: Magistrat van Tôratau]`)
   * `c_kumertau` (Kumertau) $\rightarrow$ **Magistrat van Kümertau** (`[1142 Historical: Magistrat van Bursjân-Îch]`)
@@ -2257,7 +2259,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_karran` (Karran) $\rightarrow$ **Magistrat van Karrân**
 * **Duchy of Khuttal** (`d_khuttal`) $\rightarrow$ **Gubernat van Chuttâl**
   * `c_khuttal` (Khuttal) $\rightarrow$ **Magistrat van Chuttâl** (`[1142 Historical: Magistrat van Hulbûch]`)
-  * `c_wakhsh` (Wakhsh) $\rightarrow$ **Magistrat van Wâchsch**
+  * `c_wakhsh` (Wakhsh) $\rightarrow$ **Magistrat van Wâsch**
   * `c_chaghaniyan` (Chaghaniyan) $\rightarrow$ **Magistrat van Tschaganijân** (`[1142 Historical: Magistrat van Termês]`)
   * `c_rasht` (Rasht (Karategin)) $\rightarrow$ **Magistrat van Râscht-in-Pamîr**
 * **Duchy of Osrushana** (`d_osrushana`) $\rightarrow$ **Gubernat van Osruschâne**
@@ -2271,7 +2273,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_nasrabad` (Nasrabad) $\rightarrow$ **Magistrat van Nasrabât**
   * `c_uzgend` (Uzgend) $\rightarrow$ **Magistrat van Usgênt**
 * **Duchy of Khwarezm** (`d_khorezm`) $\rightarrow$ **Gubernat van Chwâresm**
-  * `c_gurganj` (Gurganj) $\rightarrow$ **Magistrat van Gurgândsch**
+  * `c_gurganj` (Gurganj) $\rightarrow$ **Magistrat van Gurgântsch**
   * `c_darghan` (Darghan) $\rightarrow$ **Magistrat van Dargân**
   * `c_kath` (Kath) $\rightarrow$ **Magistrat van Kâth**
   * `c_ghardaman` (Ghardaman) $\rightarrow$ **Magistrat van Gardamân**
@@ -2418,7 +2420,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_jabal_kufs` (**[HRE]** Jabal Kufs) $\rightarrow$ **Magistrat van Dschabal-Kûfs**
   * `c_riqan` (**[HRE]** Riqan) $\rightarrow$ **Magistrat van Rikân**
 * **Duchy of Sistan** (`d_sistan`) $\rightarrow$ **Gubernat van Sîstân**
-  * `c_zaranj` (**[HRE]** Zaranj) $\rightarrow$ **Magistrat van Sarândsch**
+  * `c_zaranj` (**[HRE]** Zaranj) $\rightarrow$ **Magistrat van Sarântsch**
   * `c_nih` (**[HRE]** Nih) $\rightarrow$ **Magistrat van Nîch**
   * `c_farah` (**[HRE]** Farah) $\rightarrow$ **Magistrat van Farâch**
   * `c_rudbar` (**[HRE]** Rudbar) $\rightarrow$ **Magistrat van Rudbâr**
@@ -2540,7 +2542,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Asir** (`d_asir`) $\rightarrow$ **Gubernat van Asîr**
   * `c_aqiq` (**[HRE]** Aqiq) $\rightarrow$ **Magistrat van Akîch**
   * `c_asir` (**[HRE]** Asir) $\rightarrow$ **Magistrat van Asîr**
-* **Duchy of Najd** (`d_najd`) $\rightarrow$ **Gubernat van Natscht**
+* **Duchy of Najd** (`d_najd`) $\rightarrow$ **Gubernat van Nedsch**
   * `c_sharaf` (**[HRE]** Sharaf) $\rightarrow$ **Magistrat van Scharâf** (`[1142 Historical: Magistrat van Darîje]`)
   * `c_hail` (**[HRE]** Ha'il) $\rightarrow$ **Magistrat van Haîl** (`[1142 Historical: Magistrat van Faît]`)
   * `c_shaqiq` (**[HRE]** Shaqiq) $\rightarrow$ **Magistrat van Schakîch**
@@ -2616,7 +2618,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_hayq` (**[HRE]** Hayq) $\rightarrow$ **Magistrat van Haîch**
   * `c_angot` (**[HRE]** Angot) $\rightarrow$ **Magistrat van Angôt**
   * `c_amhara` (**[HRE]** Amhara) $\rightarrow$ **Magistrat van Amhâre**
-* **Duchy of Gondar** (`d_gondar`) $\rightarrow$ **Gubernat van Gondâr** (`[1142 Historical: Gubernat van Dembîje]`)
+* **Duchy of Dembiya (Gondar)** (`d_gondar`) $\rightarrow$ **Gubernat van Dembîje** *(direct vanilla: **Gondâr**)*
   * `c_dembiya` (**[HRE]** Dämbiya) $\rightarrow$ **Magistrat van Dembîje**
   * `c_begemder` (**[HRE]** Begemder) $\rightarrow$ **Magistrat van Bêgemder**
   * `c_semien` (**[HRE]** Semien) $\rightarrow$ **Magistrat van Semjên**
@@ -2721,7 +2723,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_ansongo` (Ansongo) $\rightarrow$ **Magistrat van Ansônge**
   * `c_kukiya` (Kukiya) $\rightarrow$ **Magistrat van Kukîje**
   * `c_tirakka` (Tirakka) $\rightarrow$ **Magistrat van Tirâkke**
-* **Duchy of Timbuktu** (`d_timbuktu`) $\rightarrow$ **Gubernat van Timbuktû**
+* **Duchy of Arawan (Timbuktu)** (`d_timbuktu`) $\rightarrow$ **Gubernat van Arawân** *(direct vanilla: **Timbuktû**)*
   * `c_arawan` (**[HRE]** Arawan) $\rightarrow$ **Magistrat van Arawân**
 * **Duchy of Dendi** (`d_dendi`) $\rightarrow$ **Gubernat van Dêndi**
   * `c_dendi` (Dendi) $\rightarrow$ **Magistrat van Dêndi**
@@ -2740,11 +2742,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_silla` (Silla) $\rightarrow$ **Magistrat van Sîlle**
   * `c_jowol` (Jowol) $\rightarrow$ **Magistrat van Dschowôl**
   * `c_galam` (Galam) $\rightarrow$ **Magistrat van Galâm**
-* **Duchy of Djolof** (`d_djolof`) $\rightarrow$ **Gubernat van Dscholôf** (`[1142 Historical: Gubernat van Embûl]`)
+* **Duchy of Mboul (Djolof)** (`d_djolof`) $\rightarrow$ **Gubernat van Embûl** *(direct vanilla: **Dscholôf**)*
   * `c_kayor` (Kayor) $\rightarrow$ **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Embûl]`)
   * `c_baol` (Baol) $\rightarrow$ **Magistrat van Baôl**
-* **Duchy of Jolof** (`x_script_1782`) $\rightarrow$ **Gubernat van Dscholôf** (`[1142 Historical: Gubernat van Tjêng]`)
-  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjêng]`)
+* **Duchy of Tieng (Jolof)** (`x_script_1782`) $\rightarrow$ **Gubernat van Tschêng** *(direct vanilla: **Dscholôf**)*
+  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tschênch]`)
   * `c_namandiru` (Namandiru) $\rightarrow$ **Magistrat van Namandirû**
 
 ---
@@ -2843,7 +2845,7 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | 12 | **Archdiocese of Bordeaux** | `d_et_bordeaux` | **Erzbisdom van Bordêls** | `[bɔr.ˈdeːɫs]` | Bordêls (`c_bordeaux`) |
 | 13 | **Archdiocese of Lyon** | `d_et_lyon` | **Erzbisdom van Lijûn** | `[li.ˈjuːn]` | Lijûn (`c_lyon`) |
 | 14 | **Archdiocese of Tarentaise** | `d_et_tarentaise` | **Erzbisdom van Tarentêse** *(or **Munster-in-Tarentêse**)* | `[ta.rən.ˈteː.zə]` | Ouste (`c_aosta`) |
-| 15 | **Archdiocese of Vienne** | `d_et_vienne` | **Erzbisdom van Vjêne** *(or **Wîen-an-der-Rône**)* | `[ˈvjeː.nə]` | Vjêne (`c_viennois`) |
+| 15 | **Archdiocese of Vienne** | `d_et_vienne` | **Erzbisdom van Wienne** | `[ˈwiː.nə]` | Wienne (`c_viennois`) |
 | 16 | **Archdiocese of Eauze** | `d_et_eauze` | **Erzbisdom van Eûse** | `[ɛ.ˈuː.zə]` | Armanjach (`c_armagnac`) |
 | 17 | **Archdiocese of Narbonne** | `d_et_narbonne` | **Erzbisdom van Narbôn** | `[nar.ˈboːn]` | Karkassôn (`c_carcassonne`) |
 | 18 | **Archdiocese of Besançon** | `d_et_besancon` | **Erzbisdom van Bisantz** | `[bi.ˈzants]` | Bisantz (`c_besancon`) |
@@ -2854,7 +2856,7 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | 23 | **Archdiocese of Cagliari** | `d_et_cagliari` | **Erzbisdom van Kaljers** | `[ˈka.ʎərs]` | Kaljers (`c_cagliari`) |
 | 24 | **Archdiocese of Ravenna** | `d_et_ravenna` | **Erzbisdom van Raben** | `[ˈra.bən]` | Raben (`c_ravenna`) |
 | 25 | **Archdiocese of Roma** | `d_et_roma` | **Erzbisdom van Rôme** | `[ˈroː.mə]` | Rôme (`c_roma`) |
-| 26 | **Archdiocese of Bari** | `d_et_bari` | **Erzbisdom van Bâr** | `[baːr]` | Bâr (`c_bari`) |
+| 26 | **Archdiocese of Bari** | `d_et_bari` | **Erzbisdom van Bâr-in-Pûlje** | `[baːr ɪn ˈpuː.ljə]` | Bâr-in-Pûlje (`c_bari`) |
 | 27 | **Archdiocese of Aquileia** | `d_et_aquileia` | **Erzbisdom van Aglêi** *(or **Patriarchat van Aglêi**)* | `[a.ˈɡlɛɪ]` | Aglêi (`c_aquileia`) |
 | 28 | **Archdiocese of Split** | `d_et_split` | **Erzbisdom van Spalât** | `[spa.ˈlaːt]` | Tzetîne (`c_cetina`) |
 | 29 | **Archdiocese of Salzburg** | `d_et_salzburg` | **Erzbisdom van Saltzburch** | `[ˈzalts.bʊrx]` | Saltzburch (`c_salzburg`) |
@@ -2876,7 +2878,7 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | 40 | **Archdiocese of Church of Cyprus** | `d_et_cyprus` | **Erzbisdom van Tzîpern** *(or **Nikôsje**)* | `[ˈtsiː.pərn]` |
 | 41 | **Archdiocese of Kartli** | `d_et_kartli` | **Erzbisdom van Kartlî** *(or **Metzchête**)* | `[ˈkart.liː]` |
 | 42 | **Archdiocese of Armenia** | `d_et_armenia` | **Erzbisdom van Armênjen** | `[ar.ˈmeː.njən]` |
-| 43 | **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | **Erzbisdom van Selêutzje-Ktesiphôn** *(or **Bagdât**)* | `[zɛ.ˈleːʊ.tsjə]` |
+| 43 | **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | **Erzbisdom van Selêutzje-Tesiphôn** *(or **Bagdât**)* | `[zɛ.ˈleːʊ.tsjə]` |
 | 44 | **Archdiocese of Alexandria** | `d_et_alexandria` | **Erzbisdom van Alexandrîe** | `[a.lɛk.san.ˈdriː.ə]` |
 | 45 | **Archdiocese of Axum** | `d_et_axum` | **Erzbisdom van Axûm** | `[ak.ˈsuːm]` |
 | 46 | **Archdiocese of Carthage** | `d_et_africa` | **Erzbisdom van Kartâch** *(or **Tûnis**)* | `[kar.ˈtaːx]` |
