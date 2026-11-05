@@ -199,7 +199,7 @@
   * **[HRE]** **Holland** (`c_holland`)
   * **[HRE]** **Westfriesland** (`c_westfriesland`)
   * **[HRE]** **Zeeland** (`c_zeeland`)
-* **Duchy of Gelre** (`d_gelre`) — *3/3 in HRE*
+* **Duchy of Zutphen (Gelre)** (`d_gelre`) — *3/3 in HRE*
   * **[HRE]** **Guelders** (`c_guelders`)
   * **[HRE]** **Arnheim** (`c_arnhem`)
   * **[HRE]** **Zutphen** (`c_zutphen`)
@@ -215,7 +215,7 @@
 ### 2.3 Kingdom of Lotharingia (`k_lotharingia`) — 23/23 Counties in HRE/RE
 * **De Jure Empire:** Holy Roman Empire (`e_hre`)
 
-* **Duchy of Luxembourg** (`d_luxembourg`) — *4/4 in HRE*
+* **Duchy of Ardennes (Luxembourg)** (`d_luxembourg`) — *4/4 in HRE*
   * **[HRE]** **Luxembourg** (`c_luxembourg`)
   * **[HRE]** **Bouillon** (`c_bouillon`)
   * **[HRE]** **Liege** (`c_liege`) *(Prince-Bishopric / Ecclesiastical)*
@@ -286,7 +286,7 @@
   * **[HRE]** **Freistadt** (`c_freistadt`) — ⚠️ **[Post-1059 Foundation]** *(Founded c. 1220 by the Babenbergs; pre-1059 centres: **Riedmark** and **Perg** / **Machland**)*
   * **[HRE]** **Amstetten** (`c_amstetten`)
   * **[HRE]** **Krems** (`c_krems`)
-* **Duchy of Tyrol** (`d_tyrol`) — *3/3 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Castle Tyrol near Meran built c. 1100; pre-1059 regional names: **March of Trent / Bozen** or **Inntal / Norital**)*
+* **March of Bozen-Brixen (Tyrol)** (`d_tyrol`) — *3/3 in HRE* — *(Historically **March of Bozen-Brixen**; Castle Tyrol built c. 1100)*
   * **[HRE]** **Innsbruck** (`c_innsbruck`) — ⚠️ **[Post-1059 Foundation]** *(Founded c. 1180; pre-1059 centres: **Wilten** [Veldidena] and **Thaur** [827])*
   * **[HRE]** **Brixen** (`c_brixen`)
   * **[HRE]** **Lienz** (`c_lienz`)
@@ -367,7 +367,7 @@
   * **[HRE]** **Zollern** (`c_zollern`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1061; pre-1059 centres: **Hechingen** [786] and **Balingen** [863, Scherra])*
   * **[HRE]** **Hohenberg** (`c_hohenberg`) — ⚠️ **[Post-1059 Foundation]** *(Counts of Hohenberg attested 1170; pre-1059 centre: **Rottweil** [Carolingian/Salian royal palatinate, 771])*
   * **[HRE]** **Nellenburg** (`c_furstenberg`)
-* **Duchy of Anhalt** (`d_anhalt`) — *6/6 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Burg Anhalt built c. 1123 by Otto the Rich of Ballenstedt; pre-1059 name: **Ostmark / Schwabengau** or **Ballenstedt**)*
+* **Duchy of Schwabengau (Anhalt)** (`d_anhalt`) — *6/6 in HRE* — *(Historically **Schwabengau / Ballenstedt**; Burg Anhalt built c. 1123)*
   * **[HRE]** **Dessau** (`c_dessau`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1213; pre-1059 centres: **Nienburg an der Saale** [Imperial Abbey 975] and **Zerbst** [949])*
   * **[HRE]** **Halberstadt** (`c_halberstadt`)
   * **[HRE]** **Magdeburg** (`c_magdeburg`)
@@ -443,7 +443,7 @@
   * **[HRE]** **Šumadija** (`c_sumadija`)
   * **[HRE]** **Podrinje** (`c_podrinje`)
   * **[HRE]** **Hvosno** (`c_hvosno`)
-* **Duchy of Mačva** (`d_macva`) — *2/2 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Banate of Macsó created in 1247 by Béla IV; pre-1059 name: **Lower Srem** / **Sirmium**)*
+* **Duchy of Sirmium (Mačva)** (`d_macva`) — *2/2 in HRE* — *(Historically **Sirmium / Lower Srem**; Banate of Macsó created 1247)*
   * **[HRE]** **Mačva** (`c_macva`) — ⚠️ **[Post-1059 Foundation]** *(Created 1247; pre-1059 centre: **Sirmium** [Srem / Sremska Mitrovica])*
   * **[HRE]** **Beograd** (`c_beograd`)
 * **Duchy of Duklja** (`d_duklja`) — *3/3 in HRE*
@@ -666,7 +666,7 @@
   * **[HRE]** **Tekov** (`c_bars`)
   * **[HRE]** **Hont** (`c_hont`)
   * **[HRE]** **Pressburg** (`c_poszony`) — ⚠️ **[Ostsiedlung Anachronism]** *(Later German exonym; 10th–11th c. forms were **Brezalauspurc / Preslavasburg** and Hungarian **Pozsony**)*
-* **Duchy of Opava** (`x_script_3603`) — *1/1 in HRE* — ⚠️ **[Post-1059 Foundation]** *(First attested 1195, Duchy created 1269; pre-1059 Holasici Slavic capital: **Hradec nad Moravicí** [Gradec, 9th–11th c.])*
+* **Duchy of Holasici (Opava)** (`x_script_3603`) — *1/1 in HRE* — *(Historically **Holasici** / Gradec; Opava first attested 1195)*
   * **[HRE]** **Opava** (`c_opava`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1195; pre-1059 centre: **Hradec nad Moravicí**)*
 
 ### 2.18 Kingdom of Poland (`k_poland`) — 36/36 Counties in HRE/RE
@@ -790,15 +790,15 @@
   * **[HRE]** **Novgorod Seversky** (`c_novgorod_seversky`) — *(Founded c. 988 by Vladimir the Great)*
   * **[HRE]** **Putyvl** (`c_putyvl`) — *(10th–11th c. Severian gord, attested 1146)*
   * **[HRE]** **Kursk** (`c_kursk`) — *(Attested 1032 in the Life of Theodosius of the Caves)*
-* **Duchy of Karachev** (`d_karachev`) — *3/3 in HRE*
+* **Duchy of Serensk (Karachev)** (`d_karachev`) — *3/3 in HRE*
   * **[HRE]** **Karachev** (`c_karachev`) — *(Attested 1146; 10th–11th c. Vyatichi gord)*
   * **[HRE]** **Kozelsk** (`c_kozelsk`) — *(Attested 1146; pre-1059 Vyatichi craft town nearby: **Serensk**)*
   * **[HRE]** **Sevsk** (`c_sevsk`) — *(Attested 1146 as Sevsko)*
-* **Duchy of Novosil** (`d_novosil`) — *1/1 in HRE*
+* **Duchy of Mtsensk (Novosil)** (`d_novosil`) — *1/1 in HRE*
   * **[HRE]** **Novosil** (`c_novosil`) — *(Attested 1155; Vyatichi gord)*
 * **Duchy of Chernigov** (`x_script_4589`) — *1/1 in HRE*
   * **[HRE]** **Chernigov** (`c_chernigov`)
-* **Duchy of Odoyev** (`x_script_4712`) — *1/1 in HRE* — ⚠️ **[Post-1059 Foundation]** *(First attested 1375; pre-1059 upper Oka Vyatichi centre: **Suponevo / Moshchenoye**)*
+* **Duchy of Upadal (Odoyev)** (`x_script_4712`) — *1/1 in HRE* — *(Historically **Upadal** [Upper Oka]; Odoyev attested 1375)*
   * **[HRE]** **Odoyev** (`c_odoyev`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1375)*
 
 ### 2.23 Kingdom of Novgorod (`k_novgorod`) — 11/11 Counties in HRE/RE
@@ -854,7 +854,7 @@
   * [Non-HRE] **Călărași** (`c_calarasi`) — ⚠️ **[Post-1059 Foundation]** *(17th-c. name; pre-1059 Byzantine Danube island fortress: **Păcuiul lui Soare** / **Durostorum**)*
   * [Non-HRE] **Buzău** (`c_buzau`)
   * [Non-HRE] **Brăila** (`c_braila`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1368; pre-1059 Byzantine Danube stronghold: **Dinogetia** [Garvăn])*
-* **Duchy of Bukovina** (`d_bukovina`) — *4/4 in HRE* — ⚠️ **[Post-1059 Foundation]** *('Bukowina' first attested 1392; pre-1059 Bolokhovian/Tivertsi frontier)*
+* **March of Suceava (Bukovina)** (`d_bukovina`) — *4/4 in HRE* — *(Historically **March of Suceava / Siret**; Bukovina attested 1392)*
   * **[HRE]** **Suceava** (`c_suceava`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1388; pre-1059 centres: **Siret** and **Baia**)*
   * **[HRE]** **Neamț** (`c_neamnt`) — ⚠️ **[Post-1059 Foundation]** *(Citadel built late 14th c., derived from Slavic 'Němьcь' [German/Teutonic]; pre-1059 centre: **Piatra / Bistrița valley**)*
   * **[HRE]** **Dorohoi** (`c_dorohoi`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1407)*
@@ -866,7 +866,7 @@
   * [Non-HRE] **Bârlad** (`c_barlad`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1174)*
   * [Non-HRE] **Galați** (`c_galati`) — ⚠️ **[Post-1059 Foundation]** *(First attested 1445; pre-1059 lower Danube port: **Bărboși / Dinogetia**)*
   * [Non-HRE] **Stoenești** (`c_stoenesti`) — ⚠️ **[Post-1059 Foundation]** *(15th-c. village)*
-* **Duchy of Bugeac** (`d_bugeac`) — *1/4 in HRE* — ⚠️ **[Post-1059 Foundation]** *(16th-c. Ottoman/Tatar 'Bucak'; pre-1059 name: **Onglos**)*
+* **Duchy of Ongal (Bugeac)** (`d_bugeac`) — *1/4 in HRE* — *(Historically **Ongal / Tiras**; Bugeac 16th c.)*
   * **[HRE]** **Tigheci** (`c_tigheci`) — ⚠️ **[Post-1059 Foundation]** *(First attested 15th c.)*
   * [Non-HRE] **Cetatea Albă** (`c_cetatea_alba`) — *(Pre-1059 Byzantine/Slavic names: **Maurokastron** and **Belgorod** [ancient Tyras])*
   * [Non-HRE] **Chilia** (`c_chilia`) — *(Byzantine Danube delta port **Lykostomo / Chilia**)*
@@ -1045,7 +1045,7 @@
 ### 2.29 Kingdom of Burgundy (`k_burgundy`) — 23/23 Counties in HRE/RE
 * **De Jure Empire:** Holy Roman Empire (`e_hre`)
 
-* **Duchy of Piedmonte** (`d_piedmonte`) — *4/4 in HRE* — *(Note: Term 'Piemonte' [Pedemontium] first appears in the late 12th c.; in 1059 this was the **March of Turin / Ivrea**)*
+* **March of Turin-Ivrea (Piedmont)** (`d_piedmonte`) — *4/4 in HRE* — *(Historically **March of Turin / Ivrea**; Piemonte late 12th c.)*
   * **[HRE]** **Monferrato** (`c_monferrato`)
   * **[HRE]** **Turin** (`c_turin`)
   * **[HRE]** **Novara** (`c_novara`) *(Prince-Bishopric / Ecclesiastical)*
@@ -1083,7 +1083,7 @@
   * **[HRE]** **Calatrava** (`c_calatrava`)
   * **[HRE]** **Alarcos** (`c_almader`) — ⚠️ **[Post-1059 Foundation]** *(Developed as a late 12th-c. fortress [Battle of Alarcos 1195]; pre-1059 centres: **Qal'at Rabah** [Calatrava la Vieja] and **Oreto**)*
   * **[HRE]** **Jaén** (`c_andujar`)
-* **Duchy of Granada** (`d_granada`) — *4/4 in HRE*
+* **Duchy of Elvira (Granada)** (`d_granada`) — *4/4 in HRE*
   * **[HRE]** **Granada** (`c_granada`)
   * **[HRE]** **Almeria** (`c_almeria`)
   * **[HRE]** **Cabra** (`c_cabra`)
@@ -1205,7 +1205,7 @@
 ### 2.37 Kingdom of Maghreb (`k_maghreb`) — 24/24 Counties in HRE/RE
 * **De Jure Empire:** Maghreb (`e_maghreb`)
 
-* **Duchy of Marrakesh** (`d_marrakesh`) — *6/6 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Marrakesh founded c. 1062–1070 by the Almoravids; pre-1059 regional capital: **Aghmat**)*
+* **Duchy of Aghmat (Marrakesh)** (`d_marrakesh`) — *6/6 in HRE* — *(Historically **Aghmat**; Marrakesh founded c. 1062–1070)*
   * **[HRE]** **Marrakesh** (`c_marrakesh`) — ⚠️ **[Post-1059 Foundation]** *(Founded c. 1062–1070; pre-1059 capital: **Aghmat**)*
   * **[HRE]** **Tadla** (`c_tadla`)
   * **[HRE]** **Fazaz** (`c_fazaz`)
@@ -1252,7 +1252,7 @@
 * **Duchy of Alger** (`d_alger`) — *2/2 in HRE*
   * **[HRE]** **Algier** (`c_algier`) — *(Re-founded c. 960 as 'Jaza'ir Bani Mazghanna' by Buluggin ibn Ziri on ancient **Icosium**)*
   * **[HRE]** **Tanas** (`c_tanas`)
-* **Duchy of Bejaia** (`d_bejaia`) — *2/2 in HRE* — ⚠️ **[Post-1059 Foundation]** *(Re-founded as 'al-Nasiriyya' [Béjaïa] in 1067 by Hammadid ruler al-Nasir; pre-1059 Hammadid capital: **Qal'at Bani Hammad** [1007] and ancient **Saldae**)*
+* **Duchy of Qal'at Hammad (Bejaia)** (`d_bejaia`) — *2/2 in HRE* — *(Historically **Qal'at Bani Hammad / Saldae**; Bejaia founded 1067)*
   * **[HRE]** **Bejaia** (`c_bejaia`) — ⚠️ **[Post-1059 Foundation]** *(Re-founded 1067; pre-1059 centres: **Qal'at Bani Hammad** and **Saldae**)*
   * **[HRE]** **Satif** (`c_satif`)
 * **Duchy of Zab** (`d_zab`) — *3/3 in HRE*
@@ -1389,7 +1389,7 @@
 ### 2.44 Kingdom of Brabant (`x_script_3965`) — 4/4 Counties in HRE/RE
 * **De Jure Empire:** Holy Roman Empire (`e_hre`)
 
-* **Duchy of Brabant** (`d_brabant`) — *4/4 in HRE*
+* **Duchy of Leuven (Brabant)** (`d_brabant`) — *4/4 in HRE*
   * **[HRE]** **Brabant** (`c_brabant`)
   * **[HRE]** **Antwerpen** (`c_antwerpen`)
   * **[HRE]** **Hainaut** (`c_hainaut`)
@@ -1617,7 +1617,7 @@
   * **[HRE]** **Gestrikalandia** (`c_gastrikland`) — *Tarraconian: **Magistrat van Gestrikelant***
   * **[HRE]** **Södermannaland** (`c_sodermannaland`) — *Tarraconian: **Magistrat van Sûdermannalant** (`[1122 Historical: Magistrat van Strêgnes]`)*
   * **[HRE]** **Aland** (`c_aland`) — *Tarraconian: **Magistrat van Âlant***
-* **Duchy of Bergslagen** (`d_bergslagen`) — *4/4 in HRE*
+* **Duchy of Järnbäraland (Bergslagen)** (`d_bergslagen`) — *4/4 in HRE*
   * **[HRE]** **Västmannaland** (`c_vastmanland`) — *Tarraconian: **Magistrat van Westmannalant** (`[1122 Historical: Magistrat van Westerâs]`)*
   * **[HRE]** **Värmaland** (`c_varmland`) — *Tarraconian: **Magistrat van Wermelant***
   * **[HRE]** **Övre Dalarna** (`c_dalarna`) — *Tarraconian: **Magistrat van Ôwer-Dâlarna** (`[1122 Historical: Magistrat van Môre-in-Dâlen]`)*
@@ -1661,7 +1661,7 @@
   * **[HRE]** **Natangia** (`c_natangia`) — *Tarraconian: **Magistrat van Natângjen***
   * **[HRE]** **Sambia (Königsberg)** (`c_konigsberg`) — *Tarraconian: **Magistrat van Samlant** (`[1122 Historical: Magistrat van Twangste]`)*
   * **[HRE]** **Bartia (Bartenstein)** (`c_bartenstein`) — *Tarraconian: **Magistrat van Bartenstein** (`[1122 Historical: Magistrat van Bartlant]`)*
-* **Duchy of Masuria** (`d_masuria`) — *4/4 in HRE*
+* **Duchy of Galindia (Masuria)** (`d_masuria`) — *4/4 in HRE*
   * **[HRE]** **Chełmno (Toruń)** (`c_torun`) — *Tarraconian: **Magistrat van Tôrun** (`[1122 Historical: Magistrat van Kulm]`)*
   * **[HRE]** **Sasna (Osterode)** (`c_osterode`) — *Tarraconian: **Magistrat van Osterôde** (`[1122 Historical: Magistrat van Sassen-in-Prûssen]`)*
   * **[HRE]** **Galindia (Allenstein)** (`c_allenstein`) — *Tarraconian: **Magistrat van Allenstein** (`[1122 Historical: Magistrat van Galindjen]`)*
@@ -1708,11 +1708,11 @@
 ### 2.57 Kingdom of Pontic Steppe / Zaporizhia (`k_pontic_steppe`) — 40/44 Counties in HRE/RE
 * **De Jure Empire:** Khazaria [e_caspian-pontic_steppe]
 
-* **Duchy of Jedisan** (`d_yedisan`) — *3/3 in HRE*
+* **Duchy of Boh-Dniester (Jedisan)** (`d_yedisan`) — *3/3 in HRE*
   * **[HRE]** **Ladyzyn** (`c_ladyzyn`) — *Tarraconian: **Magistrat van Ladîschin** (`[1122 Historical: Magistrat van Sût-Bôch]`)*
   * **[HRE]** **Uman** (`c_uman`) — *Tarraconian: **Magistrat van Umân***
   * **[HRE]** **Buri-chai** (`c_dnipro`) — *Tarraconian: **Magistrat van Bûri-Tschai** (`[1122 Historical: Magistrat van Nieper-Furt]`)*
-* **Duchy of South Jedisan** (`d_kizilyedisan`) — *4/4 in HRE*
+* **Duchy of Olbia Steppe (South Jedisan)** (`d_kizilyedisan`) — *4/4 in HRE*
   * **[HRE]** **Cherkassy** (`c_cherkassy`) — *Tarraconian: **Magistrat van Tscherkassen** (`[1122 Historical: Magistrat van Rôden-am-Nieper]`)*
   * **[HRE]** **Kara-Kerman** (`c_odessa`) — *Tarraconian: **Magistrat van Swartzburch** (`[1122 Historical: Magistrat van Olbîe]`)*
   * **[HRE]** **Ingul** (`c_kherson`) — *Tarraconian: **Magistrat van Ingûl***
@@ -1721,7 +1721,7 @@
   * **[HRE]** **Samar** (`c_samar`) — *Tarraconian: **Magistrat van Samâr***
   * **[HRE]** **Bakhmut** (`c_bakhmut`) — *Tarraconian: **Magistrat van Bachmût** (`[1122 Historical: Magistrat van Tôr-Salz]`)*
   * **[HRE]** **Lozova** (`c_lozova`) — *Tarraconian: **Magistrat van Losouwe***
-* **Duchy of Red Levedia** (`d_red_levedia`) — *2/2 in HRE*
+* **Duchy of Oleshye (Red Levedia)** (`d_red_levedia`) — *2/2 in HRE*
   * **[HRE]** **Yilki Su (Khortytsia)** (`c_khortytsia`) — *Tarraconian: **Magistrat van Chortîtze** (`[1122 Historical: Magistrat van Jîlki-Sû]`)*
   * **[HRE]** **Kyzyl Jar (Oleshye)** (`c_oleshye`) — *Tarraconian: **Magistrat van Kîsil-Jâr** (`[1122 Historical: Magistrat van Oleschje]`)*
 * **Duchy of Don Valley** (`d_don_valley`) — *4/4 in HRE*
@@ -1732,11 +1732,11 @@
 * **Duchy of Tana** (`d_tana`) — *2/2 in HRE*
   * **[HRE]** **Tana** (`c_tana`) — *Tarraconian: **Magistrat van Tâne***
   * **[HRE]** **Kuzeyrtorg** (`c_kuzeytorg`) — *Tarraconian: **Magistrat van Kuseîtorg***
-* **Duchy of Crimea** (`d_crimea`) — *3/3 in HRE*
+* **Duchy of Tauria (Crimea)** (`d_crimea`) — *3/3 in HRE*
   * **[HRE]** **Kerch** (`c_kerch`) — *Tarraconian: **Magistrat van Kêrtsch** (`[1122 Historical: Magistrat van Pantikapêon]`)*
   * **[HRE]** **Güzliev (Kalos Limen)** (`c_kalos_limen`) — *Tarraconian: **Magistrat van Güsliêw** (`[1122 Historical: Magistrat van Kalôs-Limên]`)*
   * **[HRE]** **Aqmescit (Perekop)** (`c_perekop`) — *Tarraconian: **Magistrat van Perekôp** (`[1122 Historical: Magistrat van Tâfros]`)*
-* **Duchy of Azov** (`d_azov`) — *3/3 in HRE*
+* **Duchy of Tamatarkha (Azov)** (`d_azov`) — *3/3 in HRE*
   * **[HRE]** **Tmutarakan** (`c_tmutarakan`) — *Tarraconian: **Magistrat van Tmutarakân** (`[1122 Historical: Magistrat van Tamâtarcha]`)*
   * **[HRE]** **Khumar** (`c_khumar`) — *Tarraconian: **Magistrat van Chumâr***
   * **[HRE]** **Azak (Azov)** (`c_azov`) — *Tarraconian: **Magistrat van Asôw** (`[1122 Historical: Magistrat van Asâk]`)*
@@ -1762,7 +1762,7 @@
   * **[HRE]** **Khopyor** (`c_khopyor`) — *Tarraconian: **Magistrat van Chopjôr***
   * **[HRE]** **Tuluchezeva** (`c_tuluchezeva`) — *Tarraconian: **Magistrat van Tulutschêswe***
   * **[HRE]** **Balachev** (`c_balachev`) — *Tarraconian: **Magistrat van Balaschôw***
-* **Duchy of Tambov** (`d_tambov`) — *3/3 in HRE*
+* **Duchy of Tsna (Tambov)** (`d_tambov`) — *3/3 in HRE*
   * **[HRE]** **Tambov** (`c_tambov`) — *Tarraconian: **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Zna-Tambouwe]`)*
   * **[HRE]** **Matya** (`c_matya`) — *Tarraconian: **Magistrat van Mâtja***
   * **[HRE]** **Durovka** (`c_durovka`) — *Tarraconian: **Magistrat van Durôwka***
@@ -1793,7 +1793,7 @@
   * [Non-HRE] **Yar Calli** (`c_yar-calli`) — *Tarraconian: **Magistrat van Jâr-Tschallî***
   * [Non-HRE] **Karabolam** (`c_karabolam`) — *Tarraconian: **Magistrat van Karabolâm***
   * [Non-HRE] **Samar (Volga)** (`c_samar_VB`) — *Tarraconian: **Magistrat van Wolge-Samâr***
-* **Duchy of Kazan** (`d_kazan`) — *0/5 in HRE*
+* **Duchy of Kashan (Kazan)** (`d_kazan`) — *0/5 in HRE*
   * [Non-HRE] **Kazan** (`c_kazan`) — *Tarraconian: **Magistrat van Kasân** (`[1122 Historical: Magistrat van Kaschân]`)*
   * [Non-HRE] **Mamadych** (`c_mamadych`) — *Tarraconian: **Magistrat van Mamadîsch***
   * [Non-HRE] **Charla (Yoshkar-Ola)** (`c_yoshkar-ola`) — *Tarraconian: **Magistrat van Tschârla***
@@ -1965,13 +1965,13 @@
 ### 2.67 Kingdom of Alodia (`x_script_2942`) — 9/9 Counties in HRE/RE
 * **De Jure Empire:** Abyssinia [e_abyssinia]
 
-* **Duchy of Alwa** (`d_alwa`) — *5/5 in HRE*
+* **Duchy of Soba (Alwa)** (`d_alwa`) — *5/5 in HRE*
   * **[HRE]** **Alodia** (`c_alodia`) — *Tarraconian: **Magistrat van Alôdje** (`[1122 Historical: Magistrat van Sôbe]`)*
   * **[HRE]** **Naga** (`c_naga`) — *Tarraconian: **Magistrat van Nâga***
   * **[HRE]** **Gezira** (`c_gezira`) — *Tarraconian: **Magistrat van Dschesîra***
   * **[HRE]** **Eleila** (`c_eleila`) — *Tarraconian: **Magistrat van Elêila***
   * **[HRE]** **Ushara** (`c_ushara`) — *Tarraconian: **Magistrat van Uschâra***
-* **Duchy of Sennar (Alodia)** (`d_sennar`) — *4/4 in HRE*
+* **Duchy of Moyaberch (Sennar)** (`d_sennar`) — *4/4 in HRE*
   * **[HRE]** **Sennar** (`c_sennar`) — *Tarraconian: **Magistrat van Sennâr** (`[1122 Historical: Magistrat van Môjaberch]`)*
   * **[HRE]** **Fazughli** (`c_fazughli`) — *Tarraconian: **Magistrat van Fasûgli***
   * **[HRE]** **Tagali** (`c_tagali`) — *Tarraconian: **Magistrat van Tagâli***
@@ -2173,13 +2173,13 @@
 ### 2.79 Kingdom of Bashkiria (`k_bashkiria`) — 1/24 Counties in HRE/RE
 * **De Jure Empire:** Volga-Ural [e_volga-ural]
 
-* **Duchy of Aqtobe** (`d_aqtobe`) — *1/5 in HRE*
+* **Duchy of Chalap-Kerman (Aqtobe)** (`d_aqtobe`) — *1/5 in HRE*
   * [Non-HRE] **Aqtobe** (`c_aqtobe`) — *Tarraconian: **Magistrat van Aktöbe** (`[1142 Historical: Magistrat van Tschalap-Kermân]`)*
   * [Non-HRE] **Or (Orenburg)** (`c_orenburg`) — *Tarraconian: **Magistrat van Ôr-Flutz***
   * **[HRE]** **Ilek** (`c_ilek`) — *Tarraconian: **Magistrat van Ilêch***
   * [Non-HRE] **Atamansku** (`c_atamansku`) — *Tarraconian: **Magistrat van Atamânsk** (`[1142 Historical: Magistrat van Suwundûk]`)*
   * [Non-HRE] **Kbumak (Kumak)** (`c_kbumak`) — *Tarraconian: **Magistrat van Kumâk***
-* **Duchy of Bugurslan** (`d_bugurslan`) — *0/3 in HRE*
+* **Duchy of Uran-Samara (Bugurslan)** (`d_bugurslan`) — *0/3 in HRE*
   * [Non-HRE] **Bugurslan** (`c_bugurslan`) — *Tarraconian: **Magistrat van Buguruslân** (`[1142 Historical: Magistrat van Urân-Samâre]`)*
   * [Non-HRE] **Salavat** (`c_salavat`) — *Tarraconian: **Magistrat van Salawât** (`[1142 Historical: Magistrat van Tôratau]`)*
   * [Non-HRE] **Kumertau** (`c_kumertau`) — *Tarraconian: **Magistrat van Kümertau** (`[1142 Historical: Magistrat van Bursjân-Îk]`)*
@@ -2595,7 +2595,7 @@
   * **[HRE]** **Hayq** (`c_hayq`) — *Tarraconian: **Magistrat van Haîk***
   * **[HRE]** **Angot** (`c_angot`) — *Tarraconian: **Magistrat van Angôt***
   * **[HRE]** **Amhara** (`c_amhara`) — *Tarraconian: **Magistrat van Amhâra***
-* **Duchy of Gondar** (`d_gondar`) — *3/3 in HRE*
+* **Duchy of Dembiya (Gondar)** (`d_gondar`) — *3/3 in HRE*
   * **[HRE]** **Dämbiya** (`c_dembiya`) — *Tarraconian: **Magistrat van Dembîje***
   * **[HRE]** **Begemder** (`c_begemder`) — *Tarraconian: **Magistrat van Bêgemder***
   * **[HRE]** **Semien** (`c_semien`) — *Tarraconian: **Magistrat van Semjên***
@@ -2705,7 +2705,7 @@
   * [Non-HRE] **Ansongo** (`c_ansongo`) — *Tarraconian: **Magistrat van Ansôngo***
   * [Non-HRE] **Kukiya** (`c_kukiya`) — *Tarraconian: **Magistrat van Kukîja***
   * [Non-HRE] **Tirakka** (`c_tirakka`) — *Tarraconian: **Magistrat van Tirâkka***
-* **Duchy of Timbuktu** (`d_timbuktu`) — *1/1 in HRE*
+* **Duchy of Tadmekka (Timbuktu)** (`d_timbuktu`) — *1/1 in HRE*
   * **[HRE]** **Arawan** (`c_arawan`) — *Tarraconian: **Magistrat van Arawân***
 * **Duchy of Dendi** (`d_dendi`) — *0/3 in HRE*
   * [Non-HRE] **Dendi** (`c_dendi`) — *Tarraconian: **Magistrat van Dêndi***
@@ -2725,10 +2725,10 @@
   * [Non-HRE] **Silla** (`c_silla`) — *Tarraconian: **Magistrat van Sîlla***
   * [Non-HRE] **Jowol** (`c_jowol`) — *Tarraconian: **Magistrat van Dschowôl***
   * [Non-HRE] **Galam** (`c_galam`) — *Tarraconian: **Magistrat van Galâm***
-* **Duchy of Djolof** (`d_djolof`) — *0/2 in HRE*
+* **Duchy of Mboul (Djolof)** (`d_djolof`) — *0/2 in HRE*
   * [Non-HRE] **Kayor** (`c_kayor`) — *Tarraconian: **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Mbûl]`)*
   * [Non-HRE] **Baol** (`c_baol`) — *Tarraconian: **Magistrat van Baôl***
-* **Duchy of Jolof** (`x_script_1782`) — *1/2 in HRE*
+* **Duchy of Tieng (Jolof)** (`x_script_1782`) — *1/2 in HRE*
   * **[HRE]** **Jolof** (`c_jolof`) — *Tarraconian: **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjênch]`)*
   * [Non-HRE] **Namandiru** (`c_namandiru`) — *Tarraconian: **Magistrat van Namandirû***
 
@@ -2916,7 +2916,7 @@ In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Arc
 | **Prince-Bishopric of Osnabrück** | `c_osnabruck` | Westfalen (`d_westfalen`) | Germany (`k_east_francia`) |
 | **Prince-Bishopric of Münster** | `c_munster` | Westfalen (`d_westfalen`) | Germany (`k_east_francia`) |
 | **Prince-Bishopric of Nedersticht** | `c_nedersticht` | Utrecht (`d_utrecht`) | Frisia (`k_frisia`) |
-| **Prince-Bishopric of Liege** | `c_liege` | Luxembourg (`d_luxembourg`) | Lotharingia (`k_lotharingia`) |
+| **Prince-Bishopric of Liege** | `c_liege` | Ardennes (`d_luxembourg`) | Lotharingia (`k_lotharingia`) |
 | **Prince-Bishopric of Trier** | `c_trier` | Metz (`d_upper_lorraine`) | Lotharingia (`k_lotharingia`) |
 | **Prince-Bishopric of Cologne** | `c_cologne` | Lower Lotharingia (`d_lower_lorraine`) | Lotharingia (`k_lotharingia`) |
 | **Prince-Bishopric of Arnsberg** | `c_arnsberg` | Lower Lotharingia (`d_lower_lorraine`) | Lotharingia (`k_lotharingia`) |
@@ -2928,7 +2928,7 @@ In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Arc
 | **Prince-Bishopric of Erbach** | `c_erbach` | West Franconia (`d_west_franconia`) | Germany (`k_east_francia`) |
 | **Prince-Bishopric of Konstanz** | `c_sankt_gallen` | Currezia (`d_currezia`) | Germany (`k_east_francia`) |
 | **Prince-Bishopric of Aquileia** | `c_aquileia` | Friuli (`d_friuli`) | Italy (`k_italy`) |
-| **Prince-Bishopric of Novara** | `c_novara` | Piedmonte (`d_piedmonte`) | Burgundy (`k_burgundy`) |
+| **Prince-Bishopric of Novara** | `c_novara` | Turin-Ivrea (`d_piedmonte`) | Burgundy (`k_burgundy`) |
 | **Prince-Bishopric of Cremona** | `c_cremona` | Lombardy (`d_lombardia`) | Italy (`k_italy`) |
 | **Prince-Bishopric of Ravenna** | `c_ravenna` | Romagna (`d_romagna`) | Romagna (`k_romagna`) |
 | **Prince-Bishopric of Roma** | `c_roma` | Latium (`d_latium`) | Romagna (`k_romagna`) |

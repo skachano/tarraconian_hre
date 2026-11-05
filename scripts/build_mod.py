@@ -221,7 +221,7 @@ def parse_gazetteer(md_path: Path):
             continue
 
         # 4. Section 3 Duchy bullets
-        m = re.match(r'^\*\s+\*\*Duchy[^`]+`([a-zA-Z0-9_\-]+)`.*?\$\\rightarrow\$\s*\*\*([^*]+)\*\*', line)
+        m = re.match(r'^\*\s+\*\*(?:Duchy|March)[^`]+`([a-zA-Z0-9_\-]+)`.*?\$\\rightarrow\$\s*\*\*([^*]+)\*\*', line)
         if m:
             direct = clean_toponym(m.group(2))
             hist = direct
@@ -290,12 +290,12 @@ def build_scripted_effects(entries):
         "\ttitle:c_ahqaf.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1416 HIST = cn_tarr_x_script_1416 } }",
         "\ttitle:c_sharka.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4597 HIST = cn_tarr_x_script_4597 } }",
         "\ttitle:c_ganale.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1373 HIST = cn_tarr_x_script_1373 } }",
-        "\ttitle:c_jolof.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1782 HIST = cn_tarr_hist_x_script_1782 } }",
+        "\ttitle:c_jolof.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1782 HIST = cn_tarr_x_script_1782 } }",
         "\ttitle:c_vijnot.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_6239 HIST = cn_tarr_x_script_6239 } }",
         "",
         "\t# Dynamic Kingdoms (resolved via their de jure duchies)",
         "\ttitle:d_sicily.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4328 HIST = cn_tarr_x_script_4328 } }",
-        "\ttitle:d_brabant.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3965 HIST = cn_tarr_hist_d_brabant } }",
+        "\ttitle:d_brabant.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3965 HIST = cn_tarr_d_brabant } }",
         "\ttitle:d_alwa.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2942 HIST = cn_tarr_hist_x_script_2942 } }",
         "\ttitle:d_apulia.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_6717 HIST = cn_tarr_x_script_6717 } }",
         "\ttitle:d_paphlagonia.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4774 HIST = cn_tarr_x_script_4774 } }",
