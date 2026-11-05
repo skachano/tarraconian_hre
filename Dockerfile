@@ -6,4 +6,4 @@ LABEL description="Containerized CK3 Save Game & Landed Title Extraction Engine"
 WORKDIR /workspace
 
 # rakaly can be mounted from host /tmp or installed
-ENTRYPOINT ["python3", "/workspace/extract_save_phase1.py"]
+ENTRYPOINT ["python3", "/workspace/scripts/extract_save_phase1.py"]

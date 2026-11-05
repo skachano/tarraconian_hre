@@ -20,6 +20,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # Import the coupling dictionary from screen_phase3_titles
 from screen_phase3_titles import CADET_BRANCH_COUPLINGS, HISTORICAL_TITLE_DB, NON_CHATENOIS_HOUSE_REALIGNMENTS
 
@@ -706,7 +707,7 @@ def main():
     parser.add_argument("--phase1-dir", default="/var/tmp/ck3_audit/phase1", help="Path to Phase 1 data directory")
     parser.add_argument("--phase3-dir", default="/var/tmp/ck3_audit/phase3", help="Path to Phase 3 data directory")
     parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase4", help="Output directory in /var/tmp")
-    repo_root = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     parser.add_argument("--repo-dir", default=repo_root, help="Git repository directory")
 
     args = parser.parse_args()

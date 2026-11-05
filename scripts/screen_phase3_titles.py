@@ -21,6 +21,8 @@ import argparse
 import csv
 import json
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import re
 import sys
 from collections import Counter, defaultdict
@@ -3779,7 +3781,7 @@ def main():
     parser.add_argument("--phase1-dir", default="/var/tmp/ck3_audit/phase1", help="Path to Phase 1 data directory")
     parser.add_argument("--phase2-dir", default="/var/tmp/ck3_audit/phase2", help="Path to Phase 2 data directory")
     parser.add_argument("--output-dir", default="/var/tmp/ck3_audit/phase3", help="Output directory in /var/tmp")
-    repo_root = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     parser.add_argument("--repo-dir", default=repo_root, help="Git repository directory")
     parser.add_argument("--md-ref", default=os.path.join(repo_root, "anachronistic_titles_1059.md"), help="Anachronistic titles reference")
     parser.add_argument("--tarr-ref", default=os.path.join(repo_root, "tarraconian_titles_1059.md"), help="Tarraconian titles reference")

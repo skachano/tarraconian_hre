@@ -20,7 +20,7 @@ from collections import defaultdict
 def run_analysis():
     phase1_dir = Path("/var/tmp/ck3_audit/phase1")
     phase4_dir = Path("/var/tmp/ck3_audit/phase4")
-    repo_dir = Path("/home/siarzhuk/code/personal/tarraconian_hre")
+    repo_dir = Path(__file__).resolve().parent.parent
 
     with open(phase4_dir / "final_title_resolutions.json", "r", encoding="utf-8") as f:
         resolutions = json.load(f)

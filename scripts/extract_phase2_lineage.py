@@ -533,14 +533,15 @@ def main():
         default="/var/tmp/ck3_audit/phase2",
         help="Directory to write Phase 2 machine-readable datasets"
     )
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     parser.add_argument(
         "--repo-dir",
-        default=".",
+        default=repo_root,
         help="Repository workspace directory to write report markdown"
     )
     parser.add_argument(
         "--md-ref",
-        default="anachronistic_titles_1059.md",
+        default=os.path.join(repo_root, "anachronistic_titles_1059.md"),
         help="Path to previous anachronistic titles markdown reference"
     )
     args = parser.parse_args()

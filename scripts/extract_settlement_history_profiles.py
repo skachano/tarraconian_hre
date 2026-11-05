@@ -253,7 +253,8 @@ def main():
     parser.add_argument("--phase3-dir", type=Path, default=Path("/var/tmp/ck3_audit/phase3"))
     parser.add_argument("--phase4-dir", type=Path, default=Path("/var/tmp/ck3_audit/phase4"))
     parser.add_argument("--output-dir", type=Path, default=Path("/var/tmp/ck3_audit/phase3"))
-    parser.add_argument("--repo-dir", type=Path, default=Path("/home/siarzhuk/code/personal/tarraconian_hre"))
+    repo_root = Path(__file__).resolve().parent.parent
+    parser.add_argument("--repo-dir", type=Path, default=repo_root)
     args = parser.parse_args()
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
