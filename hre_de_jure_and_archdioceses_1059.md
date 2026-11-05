@@ -848,7 +848,7 @@
 ### 2.25 Kingdom of Moldavia (`k_moldavia`) — 6/21 Counties in HRE/RE
 * **De Jure Empire:** Carpathia (`e_carpathia`)
 
-* **Duchy of Muntenia** (`d_muntenia`) — *0/5 in HRE*
+* **Duchy of Lower Muntenia (Muntenia)** (`d_muntenia`) — *0/5 in HRE*
   * [Non-HRE] **Giurgiu** (`c_giurgiu`) — ⚠️ **[Post-1059 Foundation]** *(14th-c. Genoese/Wallachian port; pre-1059 Danube fort: **Turris / Daphne**)*
   * [Non-HRE] **Ialomita** (`c_bucuresti`) — *(River name; pre-1059 regional centres: **Dridu** and **Slon**, prior to Bucharest [1459])*
   * [Non-HRE] **Călărași** (`c_calarasi`) — ⚠️ **[Post-1059 Foundation]** *(17th-c. name; pre-1059 Byzantine Danube island fortress: **Păcuiul lui Soare** / **Durostorum**)*
@@ -1827,7 +1827,7 @@
 ### 2.61 Kingdom of Wallachia (Dacia) (`k_dacia`) — 3/14 Counties in HRE/RE
 * **De Jure Empire:** Carpathia [e_carpathia]
 
-* **Duchy of Transylvanian Alps (Muntenia)** (`d_transylvanian_alps`) — *2/3 in HRE*
+* **Duchy of Higher Muntenia (Transylvanian Alps)** (`d_transylvanian_alps`) — *2/3 in HRE*
   * [Non-HRE] **Târgoviște (Câmpulung)** (`c_campulung`) — *Tarraconian: **Magistrat van Langenfelt** (`[1122 Historical: Magistrat van Ardschêsch]`)*
   * **[HRE]** **Polovragi** (`c_polovragi`) — *Tarraconian: **Magistrat van Polowrâdschi***
   * **[HRE]** **Tabla Buții** (`c_tabla_butii`) — *Tarraconian: **Magistrat van Tâbla-Bûtzi***

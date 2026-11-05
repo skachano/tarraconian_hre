@@ -893,7 +893,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.25 Kingdom of Moldavia (`k_moldavia`) $\rightarrow$ **Kûnincrich van Moldouwe**
 
-* **Duchy of Muntenia** (`d_muntenia`) $\rightarrow$ **Gubernat van Muntênjen** *(or **Grôtzwalachîe**)*
+* **Duchy of Lower Muntenia (Muntenia)** (`d_muntenia`) $\rightarrow$ **Gubernat van Nidermuntênjen** *(or **Grôtzwalachîe**)*
   * `c_giurgiu` (Giurgiu) $\rightarrow$ **Magistrat van Zant-Jörgen** (`[1059 Historical: Magistrat van Dafne-an-der-Tuonouwe]`)
   * `c_bucuresti` (Ialomita) $\rightarrow$ **Magistrat van Jalomitz** *(Hydronym of the Ialomița River)*
   * `c_calarasi` (Călărași) $\rightarrow$ **Magistrat van Kalarasch** (`[1059 Historical: Magistrat van Durostôr / Sonneninsel]`)
@@ -1877,7 +1877,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.61 Kingdom of Wallachia (Dacia) (`k_dacia`) $\rightarrow$ **Kûnincrich van Walachîe** (`[1122 Historical: Kûnincrich van Dâzjen]`)
 
-* **Duchy of Transylvanian Alps (Muntenia)** (`d_transylvanian_alps`) $\rightarrow$ **Gubernat van Muntênjen**
+* **Duchy of Higher Muntenia (Transylvanian Alps)** (`d_transylvanian_alps`) $\rightarrow$ **Gubernat van Obermuntênjen** *(or **Ardschêsch** / **Transilvânische Alpen**)*
   * `c_campulung` (Târgoviște (Câmpulung)) $\rightarrow$ **Magistrat van Langenvelt** (`[1122 Historical: Magistrat van Ardschêsch]`)
   * `c_polovragi` (**[HRE]** Polovragi) $\rightarrow$ **Magistrat van Polowrâdschi**
   * `c_tabla_butii` (**[HRE]** Tabla Buții) $\rightarrow$ **Magistrat van Tâbla-Bûtzi**
