@@ -1763,7 +1763,7 @@
   * **[HRE]** **Tuluchezeva** (`c_tuluchezeva`) — *Tarraconian: **Magistrat van Tulutschêswe***
   * **[HRE]** **Balachev** (`c_balachev`) — *Tarraconian: **Magistrat van Balaschôw***
 * **Duchy of Tsna (Tambov)** (`d_tambov`) — *3/3 in HRE*
-  * **[HRE]** **Tambov** (`c_tambov`) — *Tarraconian: **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Zna-Tambouwe]`)*
+  * **[HRE]** **Tambov** (`c_tambov`) — *Tarraconian: **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Znedal-Tambouwe]`)*
   * **[HRE]** **Matya** (`c_matya`) — *Tarraconian: **Magistrat van Mâtja***
   * **[HRE]** **Durovka** (`c_durovka`) — *Tarraconian: **Magistrat van Durôwka***
 
@@ -2729,7 +2729,7 @@
   * [Non-HRE] **Kayor** (`c_kayor`) — *Tarraconian: **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Mbûl]`)*
   * [Non-HRE] **Baol** (`c_baol`) — *Tarraconian: **Magistrat van Baôl***
 * **Duchy of Tieng (Jolof)** (`x_script_1782`) — *1/2 in HRE*
-  * **[HRE]** **Jolof** (`c_jolof`) — *Tarraconian: **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjênch]`)*
+  * **[HRE]** **Jolof** (`c_jolof`) — *Tarraconian: **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tschênch]`)*
   * [Non-HRE] **Namandiru** (`c_namandiru`) — *Tarraconian: **Magistrat van Namandirû***
 
 ---

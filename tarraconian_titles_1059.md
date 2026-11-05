@@ -834,11 +834,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_novgorod_seversky` (Novgorod Seversky) $\rightarrow$ **Magistrat van Sêwersch-Nougarden**
   * `c_putyvl` (Putyvl) $\rightarrow$ **Magistrat van Putîwel**
   * `c_kursk` (Kursk) $\rightarrow$ **Magistrat van Kûrtzich**
-* **Duchy of Serensk (Karachev)** (`d_karachev`) $\rightarrow$ **Gubernat van Serênsk** *(direct vanilla: **Karatschouwe**)*
+* **Duchy of Serensk (Karachev)** (`d_karachev`) $\rightarrow$ **Gubernat van Serêntzich** *(direct vanilla: **Karatschouwe**)*
   * `c_karachev` (Karachev) $\rightarrow$ **Magistrat van Karatschouwe**
-  * `c_kozelsk` (Kozelsk) $\rightarrow$ **Magistrat van Kosêltzich** *(or **Serênsk**)*
+  * `c_kozelsk` (Kozelsk) $\rightarrow$ **Magistrat van Kosêltzich** *(or **Serêntzich**)*
   * `c_sevsk` (Sevsk) $\rightarrow$ **Magistrat van Sêwtzich**
-* **Duchy of Mtsensk (Novosil)** (`d_novosil`) $\rightarrow$ **Gubernat van Mtzênsk** *(direct vanilla: **Nowosîl**)*
+* **Duchy of Mtsensk (Novosil)** (`d_novosil`) $\rightarrow$ **Gubernat van Metzêntzich** *(direct vanilla: **Nowosîl**)*
   * `c_novosil` (Novosil) $\rightarrow$ **Magistrat van Nowosîl**
 * **Duchy of Upadal (Odoyev)** (`x_script_4712`) $\rightarrow$ **Gubernat van Upâdal** *(or **Odojouwe**)*
   * `c_odoyev` (Odoyev) $\rightarrow$ **Magistrat van Odojouwe** *(Topographic valley name on the Upa, or **Upâdal**)*
@@ -899,8 +899,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_calarasi` (Călărași) $\rightarrow$ **Magistrat van Kalarasch** (`[1059 Historical: Magistrat van Durostôr / Sonneninsel]`)
   * `c_buzau` (Buzău) $\rightarrow$ **Magistrat van Busouwe** *(Ancient river *Mousaios / Buzău*)*
   * `c_braila` (Brăila) $\rightarrow$ **Magistrat van Braîle** (`[1059 Historical: Magistrat van Dinogêtje]`)
-* **Duchy of Suceava (Bukovina)** (`d_bukovina`) $\rightarrow$ **March van Suczouwe** *(or **Sîret**, direct vanilla: **Bûchenlant**)*
-  * `c_suceava` (**[HRE]** Suceava) $\rightarrow$ **Magistrat van Suczouwe** `[ˈzʊ.tsɔʊ.wə]` *(Historical MHG *Suczouwe* from Hungarian *Szucsáva*, matching its in-game **Mogyër** culture, or sub-barony **Sîret**)*
+* **Duchy of Suceava (Bukovina)** (`d_bukovina`) $\rightarrow$ **March van Sutschouwe** *(or **Sîret**, direct vanilla: **Bûchenlant**)*
+  * `c_suceava` (**[HRE]** Suceava) $\rightarrow$ **Magistrat van Sutschouwe** `[ˈzʊ.tʃɔʊ.wə]` *(Historical MHG form from Hungarian *Szucsáva*, matching its in-game **Mogyër** culture, or sub-barony **Sîret**)*
   * `c_neamnt` (**[HRE]** Neamț) $\rightarrow$ **Magistrat van Nêmetz** *(or calqued **Dütschenstein** from Slavic *Němьcь* "Germans" + *Piatra* "Rock")*
   * `c_dorohoi` (**[HRE]** Dorohoi) $\rightarrow$ **Magistrat van Dorohôi** (`[1059 Geographic/Sub-Barony: Magistrat van Schischje (Jijia) / Harlouwe (Hârlău)]`)
   * `c_hotin` (**[HRE]** Hotin) $\rightarrow$ **Magistrat van Chotîn**
@@ -1816,8 +1816,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_khopyor` (**[HRE]** Khopyor) $\rightarrow$ **Magistrat van Chopjôr**
   * `c_tuluchezeva` (**[HRE]** Tuluchezeva) $\rightarrow$ **Magistrat van Tulutschêswe**
   * `c_balachev` (**[HRE]** Balachev) $\rightarrow$ **Magistrat van Balaschouwe**
-* **Duchy of Tsna (Tambov)** (`d_tambov`) $\rightarrow$ **Gubernat van Zne** *(direct vanilla: **Tambouwe**)*
-  * `c_tambov` (**[HRE]** Tambov) $\rightarrow$ **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Zne-Tambouwe]`)
+* **Duchy of Tsna (Tambov)** (`d_tambov`) $\rightarrow$ **Gubernat van Znedal** *(direct vanilla: **Tambouwe**)*
+  * `c_tambov` (**[HRE]** Tambov) $\rightarrow$ **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Znedal-Tambouwe]`)
   * `c_matya` (**[HRE]** Matya) $\rightarrow$ **Magistrat van Mâtje**
   * `c_durovka` (**[HRE]** Durovka) $\rightarrow$ **Magistrat van Durôwke**
 
@@ -2171,7 +2171,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.77 Kingdom of Bjarmaland (`k_bjarmaland`) $\rightarrow$ **Kûnincrich van Bjarmelant**
 
-* **Duchy of Biarmia** (`d_biarmia`) $\rightarrow$ **Gubernat van Bjarmjen**
+* **Duchy of Biarmia** (`d_biarmia`) $\rightarrow$ **Gubernat van Biarmjen**
   * `c_kholmogory` (**[HRE]** Kholmogory) $\rightarrow$ **Magistrat van Cholmogôre**
   * `c_onega_BJA` (**[HRE]** Onega) $\rightarrow$ **Magistrat van Onêge-Münde**
   * `c_povenets` (**[HRE]** Povenets) $\rightarrow$ **Magistrat van Powenêtz** (`[1142 Historical: Magistrat van Wîch-Sê]`)
@@ -2743,8 +2743,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mboul (Djolof)** (`d_djolof`) $\rightarrow$ **Gubernat van Embûl** *(direct vanilla: **Dscholôf**)*
   * `c_kayor` (Kayor) $\rightarrow$ **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Embûl]`)
   * `c_baol` (Baol) $\rightarrow$ **Magistrat van Baôl**
-* **Duchy of Tieng (Jolof)** (`x_script_1782`) $\rightarrow$ **Gubernat van Tjêng** *(direct vanilla: **Dscholôf**)*
-  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tjênch]`)
+* **Duchy of Tieng (Jolof)** (`x_script_1782`) $\rightarrow$ **Gubernat van Tschêng** *(direct vanilla: **Dscholôf**)*
+  * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tschênch]`)
   * `c_namandiru` (Namandiru) $\rightarrow$ **Magistrat van Namandirû**
 
 ---

@@ -106,6 +106,7 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Îsernbêrelant': 'Îsernbêrelantisch',
         'Ôsterbotten': 'Ôsterbottisch',
         'Tjênch': 'Tjênger',
+        'Tschênch': 'Tschênger',
         'Egitânje': 'Egitânjisch',
         'Finnmarch': 'Finnmarchisch',
     }
