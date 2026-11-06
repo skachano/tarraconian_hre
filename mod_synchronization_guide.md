@@ -2,7 +2,7 @@
 
 * **Project:** Tarraconian Imperial Chancellery (`tarraconian_chancellery`)
 * **Target Game:** Crusader Kings III (v1.20.*)
-* **Primary Script:** [build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/build_mod.ps1)
+* **Primary Script:** [scripts/build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.ps1) (or [scripts/build_mod.py](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.py))
 * **Source Register:** [tarraconian_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_titles_1059.md)
 * **Companion References:**
   * [anachronistic_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/anachronistic_titles_1059.md) (Pre-1059 Historical Toponymic Resolutions)
@@ -75,7 +75,7 @@ Open a PowerShell prompt and execute:
 
 ```powershell
 Set-Location "C:\Users\siarg\Documents\Projects\Tarraconian"
-powershell -ExecutionPolicy Bypass -File .\build_mod.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\build_mod.ps1
 ```
 
 > [!IMPORTANT]
@@ -123,10 +123,10 @@ Because Crusader Kings III caches localization and bakes renamed title strings d
 > * The mangled strings then get baked into the save file (e.g. `Dat Rﾃｴmische Keiserrﾃｮch`).
 
 #### How to Ensure `build_mod.ps1` Retains its UTF-8 BOM
-Whenever modifying [build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/build_mod.ps1), ensure it is saved with a UTF-8 BOM:
+Whenever modifying [scripts/build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.ps1), ensure it is saved with a UTF-8 BOM:
 
 ```powershell
-$path = "C:\Users\siarg\Documents\Projects\Tarraconian\build_mod.ps1"
+$path = "C:\Users\siarg\Documents\Projects\Tarraconian\scripts\build_mod.ps1"
 $content = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
 $utf8Bom = [System.Text.UTF8Encoding]::new($true)
 [System.IO.File]::WriteAllText($path, $content, $utf8Bom)
@@ -134,7 +134,7 @@ $utf8Bom = [System.Text.UTF8Encoding]::new($true)
 
 You can check whether the script has a BOM with:
 ```powershell
-$bytes = [System.IO.File]::ReadAllBytes("C:\Users\siarg\Documents\Projects\Tarraconian\build_mod.ps1")
+$bytes = [System.IO.File]::ReadAllBytes("C:\Users\siarg\Documents\Projects\Tarraconian\scripts\build_mod.ps1")
 [BitConverter]::ToString($bytes[0..2])
 # Expected Output: EF-BB-BF
 ```
