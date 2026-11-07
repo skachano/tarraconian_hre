@@ -2745,7 +2745,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mboul (Djolof)** (`d_djolof`) $\rightarrow$ **Gubernat van Embûl** *(direct vanilla: **Dscholôf**)*
   * `c_kayor` (Kayor) $\rightarrow$ **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Embûl]`)
   * `c_baol` (Baol) $\rightarrow$ **Magistrat van Baôl**
-* **Duchy of Tieng (Jolof)** (`x_script_1782`) $\rightarrow$ **Gubernat van Tschêng** *(direct vanilla: **Dscholôf**)*
+* **Duchy of Tieng (Jolof)** (`x_script_1782`) $\rightarrow$ **Gubernat van Dscholôf** (`[1142 Historical: Gubernat van Tschêng]`)
   * `c_jolof` (**[HRE]** Jolof) $\rightarrow$ **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tschênch]`)
   * `c_namandiru` (Namandiru) $\rightarrow$ **Magistrat van Namandirû**
 

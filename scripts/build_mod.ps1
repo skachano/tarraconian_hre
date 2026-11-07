@@ -213,7 +213,7 @@ $effectLines.Add('	title:c_vijnot.de_jure_liege ?= { tarr_rename_title_effect = 
 $effectLines.Add('')
 $effectLines.Add('	# Dynamic Kingdoms (resolved via their de jure duchies)')
 $effectLines.Add('	title:d_sicily.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4328 HIST = cn_tarr_x_script_4328 } }')
-$effectLines.Add('	title:d_brabant.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3965 HIST = cn_tarr_hist_d_brabant } }')
+$effectLines.Add('	title:d_brabant.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3965 HIST = cn_tarr_d_brabant } }')
 $effectLines.Add('	title:d_alwa.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2942 HIST = cn_tarr_hist_x_script_2942 } }')
 $effectLines.Add('	title:d_apulia.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_6717 HIST = cn_tarr_x_script_6717 } }')
 $effectLines.Add('	title:d_paphlagonia.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4774 HIST = cn_tarr_x_script_4774 } }')
@@ -328,5 +328,22 @@ try { [System.IO.File]::WriteAllLines($locOutPath, $locLines, $utf8Bom) } catch 
 $paradoxLocPath = 'C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery\localization\english\tarraconian_titles_l_english.yml'
 try { [System.IO.File]::WriteAllLines($paradoxLocPath, $locLines, $utf8Bom) } catch { Write-Output "Note: Could not write directly to $paradoxLocPath in sandbox" }
 
+
+# Sync full mod directory to Paradox CK3 mod directory
+$paradoxModRoot = 'C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod'
+$paradoxModDir = Join-Path $paradoxModRoot 'tarraconian_chancellery'
+$srcModDir = 'C:\Users\siarg\Documents\Projects\Tarraconian\tarraconian_chancellery'
+
+try {
+    if (Test-Path $paradoxModRoot) {
+        Copy-Item -Path "$srcModDir\*" -Destination $paradoxModDir -Recurse -Force -ErrorAction Stop
+        $descContent = Get-Content "$srcModDir\descriptor.mod" -Raw
+        $modFileContent = $descContent.Trim() + [Environment]::NewLine + 'path="C:/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/mod/tarraconian_chancellery"' + [Environment]::NewLine
+        [System.IO.File]::WriteAllText((Join-Path $paradoxModRoot 'tarraconian_chancellery.mod'), $modFileContent, [System.Text.Encoding]::UTF8)
+        Write-Output "Successfully synced all mod files to $paradoxModDir"
+    }
+} catch {
+    Write-Output "Note: Could not sync to Paradox mod directory ($($_.Exception.Message))"
+}
 Write-Output "Generated $effectsOutPath ($($effectLines.Count) lines)"
 Write-Output "Generated $locOutPath ($($locLines.Count) lines)"
