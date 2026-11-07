@@ -157,7 +157,7 @@ python3 scripts/resolve_phase4_titles.py
 3. Review newly generated cadet houses and dynamic cultures in [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) to ensure strict adherence to the Toponym-First Principle.
 
 ### Step 5: Update Master Gazetteers & Synchronize
-1. Update [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) with newly resolved titles, calques, adjectives, and IPA transcriptions.
+1. Update [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) with newly resolved titles, calques, adjectives, and IPA transcriptions (or apply audited Procedure 2 updates with `python3 scripts/apply_procedure2_title_updates.py`).
 2. Synchronize all title entries between the HRE gazetteer and Tarraconian titles:
    ```bash
    python3 scripts/sync_hre_gazetteer.py

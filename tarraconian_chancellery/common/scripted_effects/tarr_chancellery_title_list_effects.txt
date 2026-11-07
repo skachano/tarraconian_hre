@@ -1605,8 +1605,8 @@ tarr_apply_static_titles_effect = {
 	title:c_beszterce ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_beszterce HIST = cn_tarr_hist_c_beszterce } }
 	title:c_hunyad ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hunyad HIST = cn_tarr_hist_c_hunyad } }
 	title:d_oultrejourdain ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_oultrejourdain HIST = cn_tarr_d_oultrejourdain } }
-	title:c_kerak ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kerak HIST = cn_tarr_c_kerak } }
-	title:c_negev ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_negev HIST = cn_tarr_c_negev } }
+	title:c_kerak ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kerak HIST = cn_tarr_hist_c_kerak } }
+	title:c_negev ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_negev HIST = cn_tarr_hist_c_negev } }
 	title:d_palestine ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_palestine HIST = cn_tarr_d_palestine } }
 	title:c_jerusalem ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_jerusalem HIST = cn_tarr_c_jerusalem } }
 	title:c_ghazza ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ghazza HIST = cn_tarr_hist_c_ghazza } }

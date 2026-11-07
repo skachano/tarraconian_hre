@@ -26,12 +26,12 @@ def clean_toponym(raw: str) -> str:
     s = re.sub(r'\s*\([^)]*\)', '', s)
     # Strip any rank prefix + optional van (with or without space)
     s = re.sub(
-        r'^(Keiserrîch|Keiserrich|Kûnincrich|Kunincrich|Regenat|Gubernat|March|Erzbisdom|Fürstbisdom|Furstbisdom|Magistrat)\s*(van\s*|van)?(der\s+|den\s+)?',
+        r'^(Keiserrîch|Keiserrich|Kûnincrich|Kunincrich|Regenat|Gubernat|March|Erzbisdom|Fürstbisdom|Furstbisdom|Magistrat)\s*(van\s*|van)?(der\s+|den\s+|dem\s+|dat\s+|des\s+)?',
         '',
         s,
         flags=re.IGNORECASE
     )
-    s = re.sub(r'^[^\s]+\s+van\s+(der\s+|den\s+)?', '', s)
+    s = re.sub(r'^[^\s]+\s+van\s+(der\s+|den\s+|dem\s+|dat\s+|des\s+)?', '', s)
     # Strip trailing asterisks or quotes
     s = s.strip('* "\'')
     return s.strip()
