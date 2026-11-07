@@ -34,58 +34,78 @@ def log(msg: str):
     print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
 
 
-def parse_landed_titles(filepath: Path):
+def parse_landed_titles(filepath_or_dir: Path):
     """
-    Parses 00_landed_titles.txt to extract the canonical de jure hierarchy
-    and mapping of baronies to province IDs.
+    Parses landed title files (00_landed_titles.txt, 01_japan.txt, 02_china.txt, etc.)
+    to extract the canonical de jure hierarchy and mapping of baronies to province IDs.
     """
-    log(f"Parsing vanilla landed titles from: {filepath}")
+    files_to_parse = []
+    if filepath_or_dir.is_dir():
+        files_to_parse = [p for p in sorted(filepath_or_dir.glob("*.txt")) if "noble_famil" not in p.name]
+    elif filepath_or_dir.is_file():
+        parent_dir = filepath_or_dir.parent
+        # If this is 00_landed_titles.txt and sibling landed title files exist, parse all of them
+        companion_files = [p for p in sorted(parent_dir.glob("*.txt")) if "noble_famil" not in p.name]
+        if len(companion_files) > 1 and filepath_or_dir.name == "00_landed_titles.txt":
+            files_to_parse = companion_files
+        else:
+            files_to_parse = [filepath_or_dir]
+    else:
+        log(f"Warning: Landed titles path not found at {filepath_or_dir}")
+        return {
+            'all_titles': {},
+            'county_to_baronies': {},
+            'county_de_jure': {},
+            'barony_to_province': {}
+        }
+
+    log(f"Parsing landed titles from {len(files_to_parse)} file(s): {[f.name for f in files_to_parse]}")
     titles = {}  # title_key -> {'tier': str, 'parent': str, 'province': int or None}
-    stack = []
-    depth = 0
-
-    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
-        for line in f:
-            line = re.sub(r'#.*', '', line).strip()
-            if not line:
-                continue
-
-            # Check province ID assignment for baronies
-            m_prov = re.search(r'\bprovince\s*=\s*(\d+)', line)
-            if m_prov and stack:
-                cur_key = stack[-1][0]
-                if cur_key in titles:
-                    titles[cur_key]['province'] = int(m_prov.group(1))
-
-            tokens = re.findall(r'[a-zA-Z0-9_@]+|[{}]', line)
-            for i, t in enumerate(tokens):
-                if t == '{':
-                    depth += 1
-                    if i > 0 and tokens[i - 1].startswith(('e_', 'k_', 'd_', 'c_', 'b_')):
-                        title_key = tokens[i - 1]
-                        parent = None
-                        for ancestor, _ in reversed(stack):
-                            if ancestor:
-                                parent = ancestor
-                                break
-                        stack.append((title_key, depth))
-                        titles[title_key] = {
-                            'tier': title_key[0],
-                            'parent': parent,
-                            'province': None
-                        }
-                    else:
-                        stack.append((None, depth))
-                elif t == '}':
-                    while stack and stack[-1][1] == depth:
-                        stack.pop()
-                    depth -= 1
-
-    # Build de jure ancestor mapping and county -> baronies mapping
+    barony_to_province = {}
     county_to_baronies = {}
     county_de_jure = {}
-    barony_to_province = {}
 
+    for filepath in files_to_parse:
+        stack = []
+        depth = 0
+        with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
+            for line in f:
+                line = re.sub(r'#.*', '', line).strip()
+                if not line:
+                    continue
+
+                # Check province ID assignment for baronies
+                m_prov = re.search(r'\bprovince\s*=\s*(\d+)', line)
+                if m_prov and stack:
+                    cur_key = stack[-1][0]
+                    if cur_key in titles:
+                        titles[cur_key]['province'] = int(m_prov.group(1))
+
+                tokens = re.findall(r'[a-zA-Z0-9_@\-]+|[{}]', line)
+                for i, t in enumerate(tokens):
+                    if t == '{':
+                        depth += 1
+                        if i > 0 and tokens[i - 1].startswith(('e_', 'k_', 'd_', 'c_', 'b_')):
+                            title_key = tokens[i - 1]
+                            parent = None
+                            for ancestor, _ in reversed(stack):
+                                if ancestor:
+                                    parent = ancestor
+                                    break
+                            stack.append((title_key, depth))
+                            titles[title_key] = {
+                                'tier': title_key[0],
+                                'parent': parent,
+                                'province': None
+                            }
+                        else:
+                            stack.append((None, depth))
+                    elif t == '}':
+                        while stack and stack[-1][1] == depth:
+                            stack.pop()
+                        depth -= 1
+
+    # Build de jure ancestor mapping and county -> baronies mapping
     for key, data in titles.items():
         tier = data['tier']
         if tier == 'b':
@@ -104,7 +124,7 @@ def parse_landed_titles(filepath: Path):
                 'empire': parent_e
             }
 
-    log(f"Parsed {len(titles)} vanilla titles ({len(county_de_jure)} counties, {len(barony_to_province)} baronies)")
+    log(f"Parsed {len(titles)} game titles ({len(county_de_jure)} counties, {len(barony_to_province)} baronies)")
     return {
         'all_titles': titles,
         'county_to_baronies': county_to_baronies,
@@ -124,7 +144,11 @@ def ensure_melted_save(save_path: Path, melted_path: Path, rakaly_bin: Path) -> 
         return melted_path
 
     if not save_path.is_file():
-        raise FileNotFoundError(f"Save file not found at: {save_path}")
+        alt_save = Path("/var/tmp/ck3_audit/chatenois_867_01_01.ck3")
+        if alt_save.is_file():
+            save_path = alt_save
+        else:
+            raise FileNotFoundError(f"Save file not found at: {save_path}")
 
     log(f"Melting save game {save_path} -> {melted_path} using {rakaly_bin}...")
     cmd = [str(rakaly_bin), "melt", str(save_path), "-u", "stringify", "-o", str(melted_path)]
@@ -133,6 +157,7 @@ def ensure_melted_save(save_path: Path, melted_path: Path, rakaly_bin: Path) -> 
         raise RuntimeError(f"Rakaly melt failed: {res.stderr}")
 
     log(f"Melt successful! File size: {melted_path.stat().st_size / 1024 / 1024:.1f} MB")
+    return melted_path
     return melted_path
 
 
@@ -199,9 +224,15 @@ def parse_melted_save(melted_path: Path, landed_info: dict):
                 if line.startswith('}'):
                     in_county_mgr = False
                     cur_cm_county = None
-                elif line.startswith('\t\tc_'):
-                    cur_cm_county = line.strip().split('=')[0]
-                    county_mgr[cur_cm_county] = {}
+                elif line.startswith('\t\t') and not line.startswith('\t\t\t') and '={' in line:
+                    c_cand = line.strip().split('=')[0].strip()
+                    if c_cand.startswith('c_'):
+                        cur_cm_county = c_cand
+                        county_mgr[cur_cm_county] = {}
+                    else:
+                        cur_cm_county = None
+                elif cur_cm_county and line.startswith('\t\t}'):
+                    cur_cm_county = None
                 elif cur_cm_county and line.startswith('\t\t\t') and not line.startswith('\t\t\t\t'):
                     parts = line.strip().split('=', 1)
                     if len(parts) == 2:
@@ -713,13 +744,47 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             cur_id = liege_id
         return titles_by_id.get(cur_id)
 
+    # Detect baseline HRE counties prior to latest expansion (e.g. 1142 baseline)
+    baseline_hre_counties = set()
+    repo_root = Path(__file__).resolve().parent.parent
+    try:
+        git_res = subprocess.run(
+            ["git", "-C", str(repo_root), "show", "bc67621048c85fa09ae707f97ef5fd5ea5b2524d~1:hre_de_jure_and_archdioceses_1059.md"],
+            capture_output=True, text=True, check=True
+        )
+        baseline_hre_counties = set(re.findall(r'\*\s*\*\*\[HRE\]\*\*\s*.*?\(`(c_[a-zA-Z0-9_\-]+)`\)', git_res.stdout))
+        log(f"Detected {len(baseline_hre_counties)} baseline HRE counties prior to 1154 expansion from git.")
+    except Exception as e:
+        log(f"Warning: Git baseline lookup failed ({e}).")
+
     # 1. Process Counties & Landed Titles
+    # Union of parsed game counties and save-game counties (excluding noble family estates)
+    all_county_keys = set(vanilla_counties.keys())
+    for t_id, t_obj in titles_by_id.items():
+        k = t_obj.get('key', '')
+        if k.startswith('c_') and not k.startswith('c_nf_'):
+            all_county_keys.add(k)
+
     processed_counties = {}
     csv_counties_rows = []
+    newly_integrated_counties = {}
+    newly_integrated_csv_rows = []
 
-    for c_key, de_jure in vanilla_counties.items():
+    for c_key in sorted(all_county_keys):
         save_title = titles_by_key.get(c_key, {})
         c_mgr = county_mgr.get(c_key, {})
+        de_jure = vanilla_counties.get(c_key)
+        if not de_jure:
+            d_id = save_title.get('de_jure_liege')
+            d_obj = titles_by_id.get(d_id, {})
+            d_key = d_obj.get('key')
+            k_id = d_obj.get('de_jure_liege')
+            k_obj = titles_by_id.get(k_id, {})
+            k_key = k_obj.get('key')
+            e_id = k_obj.get('de_jure_liege')
+            e_obj = titles_by_id.get(e_id, {})
+            e_key = e_obj.get('key')
+            de_jure = {'duchy': d_key, 'kingdom': k_key, 'empire': e_key}
 
         c_culture_id = c_mgr.get('culture')
         cult_info = cultures.get(c_culture_id, {}) if c_culture_id is not None else {}
@@ -737,6 +802,8 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         holder_hid = holder_char.get('dynasty_house')
         holder_house = houses.get(holder_hid, {}) if holder_hid else {}
         holder_house_name = holder_house.get('localized_name') or holder_house.get('name', 'None')
+        if holder_house_name.startswith('dynn_'):
+            holder_house_name = holder_house_name[len('dynn_'):]
         is_chatenois_holder = (holder_house.get('dynasty') == 1582)
 
         # Holder culture resolution with fallbacks (house head -> dynasty -> county)
@@ -755,16 +822,27 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         top_liege = get_top_liege(save_title.get('id')) if save_title.get('id') is not None else None
         top_liege_key = top_liege.get('key', 'None') if top_liege else 'None'
         is_in_roman_empire = top_liege_key in ('h_roman_empire', 'e_roman_empire', 'e_hre')
+        is_newly_integrated = bool(is_in_roman_empire and c_key not in baseline_hre_counties)
 
         # Baronies
-        constituent_baronies = county_to_baronies.get(c_key, [])
+        constituent_baronies = county_to_baronies.get(c_key)
+        if constituent_baronies is None:
+            vassals = save_title.get('de_jure_vassals', [])
+            constituent_baronies = [
+                titles_by_id.get(vid, {}).get('key')
+                for vid in vassals
+                if titles_by_id.get(vid, {}).get('key', '').startswith('b_')
+            ]
+
         baronies_data = []
         built_baronies_names = []
 
         for b_key in constituent_baronies:
             b_prov_id = barony_to_prov.get(b_key)
-            prov_data = provinces.get(b_prov_id, {}) if b_prov_id else {}
             b_save_title = titles_by_key.get(b_key, {})
+            if b_prov_id is None:
+                b_prov_id = b_save_title.get('province')
+            prov_data = provinces.get(b_prov_id, {}) if b_prov_id else {}
 
             b_entry = {
                 'key': b_key,
@@ -801,13 +879,17 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
                 h_cult_id = c_culture_id
             h_cult = cultures.get(h_cult_id, {}) if h_cult_id is not None else {}
 
+            h_house_clean = h_house.get('localized_name') or h_house.get('name', 'Unknown')
+            if h_house_clean.startswith('dynn_'):
+                h_house_clean = h_house_clean[len('dynn_'):]
+
             h_entry = {
                 'date': h.get('date'),
                 'type': h.get('type'),
                 'holder_id': hid,
                 'holder_name': h_char.get('first_name', 'Unknown'),
                 'nickname': h_char.get('nickname', ''),
-                'house_name': h_house.get('localized_name') or h_house.get('name', 'Unknown'),
+                'house_name': h_house_clean,
                 'dynasty_id': h_house.get('dynasty'),
                 'culture_name': h_cult.get('name', 'Unknown'),
                 'traits': h_char.get('traits_decoded', [])
@@ -838,6 +920,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             'de_jure_empire': de_jure.get('empire'),
             'de_facto_top_liege': top_liege_key,
             'is_in_roman_empire': is_in_roman_empire,
+            'is_newly_integrated': is_newly_integrated,
             'culture_id': c_culture_id,
             'culture_name': cult_name,
             'culture_heritage': cult_heritage,
@@ -860,7 +943,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         }
         processed_counties[c_key] = county_record
 
-        csv_counties_rows.append({
+        csv_row = {
             'county_key': c_key,
             'save_name': county_record['name'] or '',
             'custom_name': county_record['custom_name'] or '',
@@ -870,6 +953,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             'de_jure_empire': de_jure.get('empire') or '',
             'top_liege': top_liege_key,
             'is_in_roman_empire': is_in_roman_empire,
+            'is_newly_integrated': is_newly_integrated,
             'county_culture': cult_name,
             'county_heritage': cult_heritage,
             'county_language': cult_lang,
@@ -884,7 +968,12 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             'founding_holder_traits': ';'.join(conquering_lord.get('traits', [])) if conquering_lord else '',
             'constituent_baronies_count': len(baronies_data),
             'built_baronies': ', '.join(built_baronies_names)
-        })
+        }
+        csv_counties_rows.append(csv_row)
+
+        if is_newly_integrated:
+            newly_integrated_counties[c_key] = county_record
+            newly_integrated_csv_rows.append(csv_row)
 
     # 2. Process Dynasty 1582 ("Chatenois") & All Houses
     log("Analyzing Chatenois Dynasty (ID 1582) and all cadet branches...")
@@ -901,15 +990,32 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         head_char = characters.get(head_id, {})
 
         # Proposed Tarraconian adjustment for Chatenois
-        proposed_name = h_name
+        clean_name = h_name
+        if clean_name.startswith('dynn_'):
+            clean_name = clean_name[len('dynn_'):]
+        if clean_name.startswith('dynnp_'):
+            clean_name = clean_name[len('dynnp_'):]
+
+        proposed_name = clean_name
         if is_chatenois:
-            if h_name == 'dynn_Chatenois' or h_name == 'Chatenois':
+            if clean_name in ('Chatenois', 'Chastenois'):
                 proposed_name = 'Kestenholz'
-            elif h_name.startswith('Chatenois-'):
-                stem = h_name[len('Chatenois-'):]
+            elif clean_name.startswith('Chatenois-'):
+                stem = clean_name[len('Chatenois-'):]
                 proposed_name = f"Kestenholz-{stem}"
+            elif clean_name.startswith('Kestenholz'):
+                proposed_name = clean_name
             else:
-                proposed_name = f"Kestenholz ({h_name})"
+                proposed_name = f"Kestenholz-{clean_name}"
+
+        found_recent = False
+        if hdata.get('found_date'):
+            try:
+                found_yr = float(hdata['found_date'].split('.')[0])
+                if 1142.0 <= found_yr <= 1200.0:
+                    found_recent = True
+            except ValueError:
+                pass
 
         house_entry = {
             'house_id': hid,
@@ -920,6 +1026,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             'proposed_tarraconian_name': proposed_name,
             'is_chatenois': is_chatenois,
             'found_date': hdata.get('found_date', ''),
+            'found_recent': found_recent,
             'founder_id': founder_id,
             'founder_name': founder_char.get('first_name', ''),
             'head_id': head_id,
@@ -939,6 +1046,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             'proposed_tarraconian_name': proposed_name,
             'is_chatenois': is_chatenois,
             'found_date': hdata.get('found_date', ''),
+            'found_recent': found_recent,
             'head_id': head_id or '',
             'head_name': head_char.get('first_name', ''),
             'head_nickname': head_char.get('nickname', ''),
@@ -956,7 +1064,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
     titles_json_path = output_dir / "titles_data.json"
     with open(titles_json_path, 'w', encoding='utf-8') as f:
         json.dump(processed_counties, f, indent=2, ensure_ascii=False)
-    log(f"  Wrote: {titles_json_path} ({titles_json_path.stat().st_size / 1024 / 1024:.1f} MB)")
+    log(f"  Wrote: {titles_json_path} ({titles_json_path.stat().st_size / 1024 / 1024:.1f} MB, {len(processed_counties)} counties)")
 
     # B. counties_summary.csv
     counties_csv_path = output_dir / "counties_summary.csv"
@@ -965,6 +1073,20 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         writer.writeheader()
         writer.writerows(csv_counties_rows)
     log(f"  Wrote: {counties_csv_path} ({counties_csv_path.stat().st_size / 1024:.1f} KB)")
+
+    # B2. newly_integrated_counties.json & newly_integrated_counties.csv
+    newly_json_path = output_dir / "newly_integrated_counties.json"
+    with open(newly_json_path, 'w', encoding='utf-8') as f:
+        json.dump(newly_integrated_counties, f, indent=2, ensure_ascii=False)
+    log(f"  Wrote: {newly_json_path} ({len(newly_integrated_counties)} newly integrated counties)")
+
+    newly_csv_path = output_dir / "newly_integrated_counties.csv"
+    with open(newly_csv_path, 'w', encoding='utf-8', newline='') as f:
+        if newly_integrated_csv_rows:
+            writer = csv.DictWriter(f, fieldnames=list(newly_integrated_csv_rows[0].keys()))
+            writer.writeheader()
+            writer.writerows(newly_integrated_csv_rows)
+    log(f"  Wrote: {newly_csv_path} ({newly_csv_path.stat().st_size / 1024:.1f} KB)")
 
     # C. dynasties_and_houses.json
     dyn_json_path = output_dir / "dynasties_and_houses.json"
@@ -1038,40 +1160,99 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
     # I. phase1_extraction_report.md
     report_md_path = output_dir / "phase1_extraction_report.md"
     total_roman_counties = sum(1 for c in processed_counties.values() if c['is_in_roman_empire'])
+    total_newly_integrated = len(newly_integrated_counties)
+
+    # Compute newly integrated kingdom distribution
+    newly_by_k = {}
+    for ck, cdata in newly_integrated_counties.items():
+        k_key = cdata.get('de_jure_kingdom') or 'k_unknown'
+        e_key = cdata.get('de_jure_empire') or 'e_unknown'
+        if k_key not in newly_by_k:
+            newly_by_k[k_key] = {'kingdom': k_key, 'empire': e_key, 'counties': []}
+        newly_by_k[k_key]['counties'].append(ck)
+    sorted_newly_k = sorted(newly_by_k.values(), key=lambda x: len(x['counties']), reverse=True)
+
+    # Compute newly integrated culture distribution
+    newly_cult_counts = {}
+    for cdata in newly_integrated_counties.values():
+        cname = cdata.get('culture_name', 'Unknown')
+        newly_cult_counts[cname] = newly_cult_counts.get(cname, 0) + 1
+    sorted_newly_cults = sorted(newly_cult_counts.items(), key=lambda x: x[1], reverse=True)
+
+    # Filter recent Chatenois cadet branches
+    recent_chatenois = [ch for ch in chatenois_houses if ch.get('found_recent')]
+
     with open(report_md_path, 'w', encoding='utf-8') as f:
         f.write("# Phase 1 Extraction Report: Landed Titles, Dynasties & Historical Canon\n\n")
         f.write(f"* **Extraction Date:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"* **Active Campaign Save:** `chatenois_867_01_01.ck3` (27 December 1154)\n")
         f.write(f"* **Output Directory:** `{output_dir}`\n\n")
         f.write("## 1. Executive Summary & Core Statistics\n\n")
         f.write(f"| Metric | Extracted Count | Description |\n")
         f.write(f"| :--- | :---: | :--- |\n")
-        f.write(f"| **De Jure Counties Processed** | **{len(processed_counties)}** | Total counties mapped from vanilla landed titles hierarchy |\n")
+        f.write(f"| **De Jure Counties Processed** | **{len(processed_counties)}** | Total counties mapped across base game & expansion regions |\n")
         f.write(f"| **Counties in Roman Empire** | **{total_roman_counties}** ({total_roman_counties / len(processed_counties) * 100:.1f}%) | Counties whose de facto top liege is `h_roman_empire` / `e_hre` |\n")
+        f.write(f"| **Newly Integrated Counties (1142 $\\rightarrow$ 1154)** | **{total_newly_integrated}** | Frontier expansion titles incorporated since baseline milestone |\n")
         f.write(f"| **Active Cultures** | **{len(cultures)}** | Extracted from `culture_manager` with ethos, language & heritage |\n")
         f.write(f"| **Dynasties & Cadet Houses** | **{len(dynasties)}** dynasties / **{len(houses)}** houses | Total noble lineages recorded in save gamestate |\n")
-        f.write(f"| **Chatenois Cadet Houses** | **{len(chatenois_houses)}** | Branches of Dynasty 1582 evaluated for Germanic rename |\n")
+        f.write(f"| **Chatenois Cadet Houses** | **{len(chatenois_houses)}** | Branches of Dynasty 1582 (including **{len(recent_chatenois)}** founded since 1142) |\n")
         f.write(f"| **Historical Characters Decoded** | **{len(characters)}** | Title holders, history conquerors, and house heads with personality traits |\n")
         f.write(f"| **Mapped Built Baronies** | **{sum(len(c['baronies']) for c in processed_counties.values())}** | Baronies with province holdings, buildings, and fort levels |\n\n")
-        f.write("## 2. Culture Distribution in the Empire\n\n")
+
+        f.write("## 2. Culture Distribution Across the Restored Empire\n\n")
         roman_cult_counts = {}
         for c in processed_counties.values():
             if c['is_in_roman_empire']:
                 c_name = c['culture_name']
                 roman_cult_counts[c_name] = roman_cult_counts.get(c_name, 0) + 1
         sorted_cults = sorted(roman_cult_counts.items(), key=lambda x: x[1], reverse=True)[:15]
-        f.write("Top 15 cultures across counties inside the Roman Empire:\n\n")
+        f.write(f"Top 15 cultures across all {total_roman_counties} counties inside the Roman Empire:\n\n")
         f.write("| Culture | Counties Count | Percentage |\n")
         f.write("| :--- | :---: | :---: |\n")
         for c_name, count in sorted_cults:
             f.write(f"| **{c_name}** | {count} | {count / total_roman_counties * 100:.1f}% |\n")
-        f.write("\n## 3. Chatenois Dynasty Germanic Adjustment\n\n")
+
+        f.write("\n## 3. Comprehensive Audit of Newly Integrated Frontiers (1142 $\\rightarrow$ 1154)\n\n")
+        f.write(f"Between 1142 and 1154, the Roman Empire under Augustus Wernhard expanded by **{total_newly_integrated} counties** across **{len(newly_by_k)} de jure kingdoms**.\n\n")
+        
+        f.write("### 3.1 Kingdom-Level Frontier Breakdown\n\n")
+        f.write("| De Jure Kingdom | De Jure Empire | Newly Integrated Counties | Sample County Keys |\n")
+        f.write("| :--- | :--- | :---: | :--- |\n")
+        for k_entry in sorted_newly_k[:25]:
+            sample_keys = ', '.join(f"`{ck}`" for ck in k_entry['counties'][:4])
+            if len(k_entry['counties']) > 4:
+                sample_keys += f" (+{len(k_entry['counties']) - 4} more)"
+            f.write(f"| **`{k_entry['kingdom']}`** | `{k_entry['empire']}` | **{len(k_entry['counties'])}** | {sample_keys} |\n")
+        if len(sorted_newly_k) > 25:
+            f.write(f"| *... and {len(sorted_newly_k) - 25} other kingdoms* | | | |\n")
+
+        f.write("\n### 3.2 Cultural Demographics of the Expansion Frontier\n\n")
+        f.write(f"Top cultures among the {total_newly_integrated} newly integrated counties:\n\n")
+        f.write("| Culture | Counties Count | Percentage of Frontier |\n")
+        f.write("| :--- | :---: | :---: |\n")
+        for c_name, count in sorted_newly_cults[:15]:
+            f.write(f"| **{c_name}** | {count} | {count / total_newly_integrated * 100:.1f}% |\n")
+
+        f.write("\n## 4. Chatenois Dynasty Germanic Adjustment & Recent Cadet Houses\n\n")
         f.write("As detailed in [chatenois_dynasty_analysis.md](chatenois_dynasty_analysis.md), the ruling dynasty **Chatenois** (ID `1582`) derives from Latin *Castinetum* ('chestnut grove'). In historical German / Lorraine tradition and Tarraconian sound laws, the name is **Kestenholz**.\n\n")
-        f.write("Key cadet branches adjusted:\n")
+        
+        if recent_chatenois:
+            f.write("### 4.1 Cadet Houses Formed During Recent Expansion (1142 $\\rightarrow$ 1154)\n\n")
+            f.write("| House ID | Save Name | Proposed Tarraconian Name | Found Date | Head of House | Living Members |\n")
+            f.write("| :---: | :--- | :--- | :---: | :--- | :---: |\n")
+            for rh in recent_chatenois:
+                h_str = f"{rh['head_name']} \"{rh['head_nickname']}\"" if rh['head_nickname'] else rh['head_name']
+                f.write(f"| `{rh['house_id']}` | **{rh['current_display_name']}** | `{rh['proposed_tarraconian_name']}` | {rh['found_date']} | {h_str} (`{rh['head_id']}`) | {rh['living_members_count']} |\n")
+
+        f.write("\n### 4.2 Top Historical Cadet Branches (Overall)\n\n")
         for ch in chatenois_houses[:8]:
             f.write(f"* `{ch['current_display_name']}` $\\rightarrow$ **`{ch['proposed_tarraconian_name']}`** ({ch['living_members_count']} living members, Head: {ch['head_name']} `{ch['head_id']}`)\n")
-        f.write("\n## 4. Generated Artifacts & File Inventory\n\n")
-        f.write(f"* `titles_data.json`: Complete county-level dictionary with history, baronies, development, and liege chains.\n")
+
+        f.write("\n## 5. Generated Artifacts & File Inventory\n\n")
+        f.write(f"* `titles_data.json`: Complete county-level dictionary ({len(processed_counties)} counties) with history, baronies, development, and liege chains.\n")
         f.write(f"* `counties_summary.csv`: Tabular spreadsheet of all counties for rapid screening and analysis.\n")
+        f.write(f"* `newly_integrated_counties.json`: Dedicated dataset of all {total_newly_integrated} newly integrated imperial frontier counties.\n")
+        f.write(f"* `newly_integrated_counties.csv`: Dedicated spreadsheet of newly integrated titles for Phase 2/3 processing.\n")
         f.write(f"* `dynasties_and_houses.json` & `dynasties_and_houses.csv`: Full register of dynasties, houses, living member counts, and proposed renames.\n")
         f.write(f"* `cultures_data.json`: Full culture definitions including hybrid parentage, ethos, language, and traditions.\n")
         f.write(f"* `historical_characters.json`: Character records with decoded traits ready for Option C personality engine.\n")
