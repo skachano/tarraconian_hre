@@ -37,9 +37,9 @@ def clean_toponym(raw: str) -> str:
     return s.strip()
 
 def extract_first_hist(raw_hist_group: str) -> str:
-    # Remove parenthetical notes before splitting on '/' so slashes inside (...) do not split
+    # Remove parenthetical notes before splitting so slashes inside (...) do not split
     no_parens = re.sub(r'\s*\([^)]*\)', '', raw_hist_group)
-    first = no_parens.split('/')[0]
+    first = re.split(r'\s*(?:[/;—]|\bor\b)\s*', no_parens)[0]
     return clean_toponym(first)
 
 def get_tarr_adj(name: str, key: str) -> str:
@@ -109,6 +109,7 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Tschênch': 'Tschênger',
         'Egitânje': 'Egitânjisch',
         'Finnmarch': 'Finnmarchisch',
+        'Grôzwazzer': 'Grôzwazzerisch',
     }
     if name in explicit_adjs:
         return explicit_adjs[name]
@@ -211,7 +212,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]]*:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
@@ -226,7 +227,7 @@ def parse_gazetteer(md_path: Path):
         if m:
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]]*:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             all_keys = re.findall(r'`([dx]_[a-zA-Z0-9_\-]+)`', line)
@@ -244,7 +245,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]]*:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
