@@ -423,6 +423,11 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     generate_dynasty_historical_realignment_register(dynasty_rename_register, NON_CHATENOIS_HOUSE_REALIGNMENTS, dynasty_register_file, dynasty_register_csv)
     print(f"[Phase 4] Wrote master dynastic realignment register to {dynasty_register_file}")
 
+    # 6. Update Chatenois Dynasty Analysis
+    chatenois_doc = Path(phase1_dir) / "chatenois_dynasty_analysis.md"
+    update_chatenois_dynasty_analysis(dynasty_rename_register, chatenois_doc)
+    print(f"[Phase 4] Wrote updated Chatenois dynasty analysis to {chatenois_doc}")
+
 
 def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     total_titles = len(titles)
@@ -435,8 +440,8 @@ def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     lines = [
         "# Audit Discrepancy Register: Historical Accuracy & Title Resolutions",
         "",
-        "* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)",
-        f"* **Audit Scope:** **{total_titles} Flagged Imperial Counties** across **50 De Jure Kingdoms**",
+        "* **Campaign Date:** 27 December 1154 (`chatenois_867_01_01.ck3`)",
+        f"* **Audit Scope:** **{total_titles} Flagged Imperial Counties** across **{len(set(t['kingdom'] for t in titles))} De Jure Kingdoms**",
         "* **Core Framework:** 867 Alternate-History Divergence Point → Colonizer Presence Audit → Toponym-First Principle → Sub-Barony / Hydronymic Hierarchy → Tarraconian Chancellery Sound Laws",
         "",
         "---",
@@ -570,9 +575,9 @@ def update_chatenois_dynasty_analysis(houses, doc_file):
         "",
         "---",
         "",
-        "## 3. Final Master Cadet Branch Rename Register (The 50 Houses of House Kestenholz)",
+        f"## 3. Final Master Cadet Branch Rename Register (The {len(houses)} Houses of House Kestenholz)",
         "",
-        "Below is the complete, finalized register of all **50** cadet branches of Dynasty 1582, sorted by living members count, featuring their Phase 1 baseline name and their finalized Step 2 coupled realigned name:",
+        f"Below is the complete, finalized register of all **{len(houses)}** cadet branches of Dynasty 1582, sorted by living members count, featuring their Phase 1 baseline name and their finalized Step 2 coupled realigned name:",
         "",
         "| House ID | Current In-Game Name | Phase 1 Baseline Name | Final Realigned Name | Underlying Seat Origin | Living Members | Head of House | Status & Justification |",
         "| :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- |",
@@ -666,8 +671,8 @@ def generate_dynasty_historical_realignment_register(chatenois_houses, non_chate
         "  * Preserves Middle High German affricate `-z` `[ts]` in `-holz`.",
         "  * Under the Romano-Germanic imperial synthesis of the Tarraconian Chancellery, the authentic imperial Germanic name for House Châtenois is **House Kestenholz** (*Dat Hûs van Kestenholz*).",
         "",
-        "### 3.2 Master Cadet Branch Rename Register (The 50 Houses of House Kestenholz)",
-        "Coupled realignments for all 50 cadet houses of the imperial dynasty, sorted by living members count:",
+        f"### 3.2 Master Cadet Branch Rename Register (The {len(chatenois_houses)} Houses of House Kestenholz)",
+        f"Coupled realignments for all {len(chatenois_houses)} cadet houses of the imperial dynasty, sorted by living members count:",
         "",
         "| House ID | Current In-Game Name | Phase 1 Baseline Name | Final Realigned Name | Underlying Seat Origin | Living Members | Head of House | Status & Justification |",
         "| :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- |",

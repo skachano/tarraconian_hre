@@ -1606,7 +1606,7 @@
   * **[HRE]** **Ayrshire** (`c_ayrshire`) — *Tarraconian: **Magistrat van Âr** (`[1122 Historical: Magistrat van Kîl]`)*
   * **[HRE]** **Annandale** (`c_annandale`) — *Tarraconian: **Magistrat van Annandâl***
 * **Duchy of Isles (Western Isles)** (`d_western_isles`) — *3/3 in HRE*
-  * **[HRE]** **Inner Hebrides** (`c_inner_hebrides`) — *Tarraconian: **Magistrat van Inner-Hebrîden** (`[1122 Historical: Magistrat van Îona]`)*
+  * **[HRE]** **Inner Hebrides** (`c_inner_hebrides`) — *Tarraconian: **Magistrat van Inner-Hebrîden** (`[1122 Historical: Magistrat van Îone]`)*
   * **[HRE]** **Outer Hebrides** (`c_outer_hebrides`) — *Tarraconian: **Magistrat van Ûter-Hebrîden** (`[1122 Historical: Magistrat van Ljôdhas]`)*
   * **[HRE]** **Argyll** (`c_argyll`) — *Tarraconian: **Magistrat van Argîl** (`[1122 Historical: Magistrat van Dâlrîade]`)*
 * **Duchy of Lothian** (`d_lothian`) — *5/5 in HRE*
@@ -1617,7 +1617,7 @@
   * **[HRE]** **Lanarkshire** (`c_lanarkshire`) — *Tarraconian: **Magistrat van Lanarch** (`[1122 Historical: Magistrat van Klîdesdal]`)*
 * **Duchy of Moray** (`d_moray`) — *6/6 in HRE*
   * **[HRE]** **Moray** (`c_moray`) — *Tarraconian: **Magistrat van Murêwe***
-  * **[HRE]** **Ross** (`c_ross`) — *Tarraconian: **Magistrat van Ros-in-Alba***
+  * **[HRE]** **Ross** (`c_ross`) — *Tarraconian: **Magistrat van Ros-in-Albe***
   * **[HRE]** **Buchan** (`c_buchan`) — *Tarraconian: **Magistrat van Bûchan***
   * **[HRE]** **Sutherland** (`c_sutherland`) — *Tarraconian: **Magistrat van Sûderlant***
   * **[HRE]** **Caithness** (`c_caithness`) — *Tarraconian: **Magistrat van Katanês***
@@ -1646,7 +1646,7 @@
   * **[HRE]** **Thomond** (`c_thomond`) — *Tarraconian: **Magistrat van Limerich***
   * **[HRE]** **Ennis** (`c_ennis`) — *Tarraconian: **Magistrat van Tômont** (`[1122 Historical: Magistrat van Kinkôre]`)*
   * **[HRE]** **Ormond** (`c_ormond`) — *Tarraconian: **Magistrat van Ormont** (`[1122 Historical: Magistrat van Wâtervort]`)*
-  * **[HRE]** **Desmond** (`c_desmond`) — *Tarraconian: **Magistrat van Desmont** (`[1122 Historical: Magistrat van Kork]`)*
+  * **[HRE]** **Desmond** (`c_desmond`) — *Tarraconian: **Magistrat van Desmont** (`[1122 Historical: Magistrat van Korch]`)*
 
 ---
 
@@ -1655,7 +1655,7 @@
 
 * **Duchy of Thrace** (`d_thrace`) — *3/3 in HRE*
   * **[HRE]** **Byzantion** (`c_byzantion`) — *Tarraconian: **Magistrat van Konstantinôpel** (`[1122 Historical: Magistrat van Bîsantz]`)*
-  * **[HRE]** **Kallipolis** (`c_kalliopolis`) — *Tarraconian: **Magistrat van Kallîpolis***
+  * **[HRE]** **Kallipolis** (`c_kalliopolis`) — *Tarraconian: **Magistrat van Kallîpel***
   * **[HRE]** **Brysis** (`c_brysis`) — *Tarraconian: **Magistrat van Brîsis** (`[1122 Historical: Magistrat van Arkadîôpel]`)*
 
 ---
@@ -1672,14 +1672,14 @@
 * **Duchy of Athens** (`d_athens`) — *3/3 in HRE*
   * **[HRE]** **Attica** (`c_attica`) — *Tarraconian: **Magistrat van Attîke** (`[1122 Historical: Magistrat van Athên]`)*
   * **[HRE]** **Boeotia** (`c_boeotia`) — *Tarraconian: **Magistrat van Böôtjen** (`[1122 Historical: Magistrat van Thêben]`)*
-  * **[HRE]** **Euboea** (`c_euboea`) — *Tarraconian: **Magistrat van Euböa** (`[1122 Historical: Magistrat van Negropont]`)*
+  * **[HRE]** **Euboea** (`c_euboea`) — *Tarraconian: **Magistrat van Euböe** (`[1122 Historical: Magistrat van Negropont]`)*
 * **Duchy of Achaia** (`d_achaia`) — *4/4 in HRE*
   * **[HRE]** **Achaia** (`c_achaia`) — *Tarraconian: **Magistrat van Achâje** (`[1122 Historical: Magistrat van Patrâs]`)*
   * **[HRE]** **Korinthos** (`c_korinthos`) — *Tarraconian: **Magistrat van Korînth***
   * **[HRE]** **Messenia** (`c_messenia`) — *Tarraconian: **Magistrat van Messênjen***
   * **[HRE]** **Laconia** (`c_laconia`) — *Tarraconian: **Magistrat van Lakônjen** (`[1122 Historical: Magistrat van Lakedêmôn]`)*
 * **Duchy of Ephesos** (`d_ephese`) — *2/2 in HRE*
-  * **[HRE]** **Ionia** (`c_ionia`) — *Tarraconian: **Magistrat van Jônjen** (`[1122 Historical: Magistrat van Smîrna]`)*
+  * **[HRE]** **Ionia** (`c_ionia`) — *Tarraconian: **Magistrat van Jônjen** (`[1122 Historical: Magistrat van Smîrne]`)*
   * **[HRE]** **Aeolis** (`c_aeolis`) — *Tarraconian: **Magistrat van Äôljen** (`[1122 Historical: Magistrat van Pergamôn]`)*
 
 ---
@@ -1688,20 +1688,20 @@
 * **De Jure Empire:** Byzantine Empire [e_byzantium]
 
 * **Duchy of Moesia (Turnovo)** (`d_turnovo`) — *6/6 in HRE*
-  * **[HRE]** **Tarnovgrad** (`c_turnovo`) — *Tarraconian: **Magistrat van Trnouwe** (`[1122 Historical: Magistrat van Tscherwen-in-Mösjen]`)*
-  * **[HRE]** **Sredets** (`c_sredets`) — *Tarraconian: **Magistrat van Srêdetz** (`[1122 Historical: Magistrat van Sardîke]`)*
-  * **[HRE]** **Nikopolis** (`c_nikopolis`) — *Tarraconian: **Magistrat van Nikôpolis***
-  * **[HRE]** **Silistra** (`c_dorostorum`) — *Tarraconian: **Magistrat van Dorostôrum** (`[1122 Historical: Magistrat van Preslâw]`)*
+  * **[HRE]** **Tarnovgrad** (`c_turnovo`) — *Tarraconian: **Magistrat van Ternouwe** (`[1122 Historical: Magistrat van Tscherwen-in-Mösjen]`)*
+  * **[HRE]** **Sredets** (`c_sredets`) — *Tarraconian: **Magistrat van Strêdetz** (`[1122 Historical: Magistrat van Sardîke]`)*
+  * **[HRE]** **Nikopolis** (`c_nikopolis`) — *Tarraconian: **Magistrat van Nikôpel-an-der-Tuonouwe***
+  * **[HRE]** **Silistra** (`c_dorostorum`) — *Tarraconian: **Magistrat van Durostôr** (`[1122 Historical: Magistrat van Preslouwe]`)*
   * **[HRE]** **Vratsa** (`c_vratsa`) — *Tarraconian: **Magistrat van Wratze***
   * **[HRE]** **Aytos** (`c_aytos`) — *Tarraconian: **Magistrat van Aîtôs***
 * **Duchy of Bulgaria** (`d_bulgaria`) — *7/7 in HRE*
-  * **[HRE]** **Naissos** (`c_naissus`) — *Tarraconian: **Magistrat van Naîssos** (`[1122 Historical: Magistrat van Nîsch]`)*
+  * **[HRE]** **Naissos** (`c_naissus`) — *Tarraconian: **Magistrat van Naîs** (`[1122 Historical: Magistrat van Nîsch]`)*
   * **[HRE]** **Pomoravlje** (`c_pomoravlje`) — *Tarraconian: **Magistrat van Pomorâwlje** (`[1122 Historical: Magistrat van Morâwe]`)*
   * **[HRE]** **Velbazhd** (`c_velbazhd`) — *Tarraconian: **Magistrat van Welbascht***
-  * **[HRE]** **Pirin** (`c_pirin`) — *Tarraconian: **Magistrat van Pîrin** (`[1122 Historical: Magistrat van Melnîk]`)*
+  * **[HRE]** **Pirin** (`c_pirin`) — *Tarraconian: **Magistrat van Pîrin** (`[1122 Historical: Magistrat van Melnîch]`)*
   * **[HRE]** **Strumica** (`c_strumica`) — *Tarraconian: **Magistrat van Strûmitze***
   * **[HRE]** **Skopje** (`c_skopje`) — *Tarraconian: **Magistrat van Skôpje** (`[1122 Historical: Magistrat van Skûpi]`)*
-  * **[HRE]** **Ohrid** (`c_ohrid`) — *Tarraconian: **Magistrat van Ochrîd** (`[1122 Historical: Magistrat van Lîchnidos]`)*
+  * **[HRE]** **Ohrid** (`c_ohrid`) — *Tarraconian: **Magistrat van Ochrît** (`[1122 Historical: Magistrat van Lîchnit]`)*
 * **Duchy of Philippopolis** (`d_philippopolis`) — *7/7 in HRE*
   * **[HRE]** **Philippopolis** (`c_philippopolis`) — *Tarraconian: **Magistrat van Filippôpel***
   * **[HRE]** **Kran** (`c_kran`) — *Tarraconian: **Magistrat van Krân***
@@ -1719,21 +1719,21 @@
 * **De Jure Empire:** Byzantine Empire [e_byzantium]
 
 * **Duchy of Opsikion** (`d_opsikion`) — *4/4 in HRE*
-  * **[HRE]** **Nikaea** (`c_nikaea`) — *Tarraconian: **Magistrat van Nîkêa***
-  * **[HRE]** **Mysia** (`c_mysia`) — *Tarraconian: **Magistrat van Mîsjen** (`[1122 Historical: Magistrat van Kîsikos]`)*
-  * **[HRE]** **Prusa** (`c_prusa`) — *Tarraconian: **Magistrat van Prûsa***
-  * **[HRE]** **Phrygia** (`c_phrygia`) — *Tarraconian: **Magistrat van Frîgjen** (`[1122 Historical: Magistrat van Dorîlêon]`)*
+  * **[HRE]** **Nikaea** (`c_nikaea`) — *Tarraconian: **Magistrat van Nîkêe***
+  * **[HRE]** **Mysia** (`c_mysia`) — *Tarraconian: **Magistrat van Mîsjen** (`[1122 Historical: Magistrat van Kîsich]`)*
+  * **[HRE]** **Prusa** (`c_prusa`) — *Tarraconian: **Magistrat van Prûse***
+  * **[HRE]** **Phrygia** (`c_phrygia`) — *Tarraconian: **Magistrat van Frîgjen** (`[1122 Historical: Magistrat van Dorîlêe]`)*
 * **Duchy of Thrakesion** (`d_thracesia`) — *4/4 in HRE*
   * **[HRE]** **Lydia** (`c_lydia`) — *Tarraconian: **Magistrat van Lîdjen** (`[1122 Historical: Magistrat van Sârdes]`)*
-  * **[HRE]** **Thyatira** (`c_thyatira`) — *Tarraconian: **Magistrat van Thîatîra***
-  * **[HRE]** **Hadrianeia** (`c_hadrianeia`) — *Tarraconian: **Magistrat van Adrianêa***
-  * **[HRE]** **Chonae** (`c_chonae`) — *Tarraconian: **Magistrat van Chônê** (`[1122 Historical: Magistrat van Laodikêa]`)*
+  * **[HRE]** **Thyatira** (`c_thyatira`) — *Tarraconian: **Magistrat van Thîatîre***
+  * **[HRE]** **Hadrianeia** (`c_hadrianeia`) — *Tarraconian: **Magistrat van Adrianêe***
+  * **[HRE]** **Chonae** (`c_chonae`) — *Tarraconian: **Magistrat van Chônê** (`[1122 Historical: Magistrat van Laodikêe]`)*
 * **Duchy of Optimatoi** (`d_optimatoi`) — *2/2 in HRE*
   * **[HRE]** **Bithynia** (`c_bithynia`) — *Tarraconian: **Magistrat van Bithînjen** (`[1122 Historical: Magistrat van Nikomêdje]`)*
-  * **[HRE]** **Tarsos** (`c_tarsos`) — *Tarraconian: **Magistrat van Tarsôs-in-Bithînjen** (`[1122 Historical: Magistrat van Prûsjas]`)*
+  * **[HRE]** **Tarsos** (`c_tarsos`) — *Tarraconian: **Magistrat van Tarsôs-in-Bithînjen** (`[1122 Historical: Magistrat van Prûsje]`)*
 * **Duchy of Bucellaria** (`d_bucellaria`) — *3/3 in HRE*
-  * **[HRE]** **Honorias** (`c_honorias`) — *Tarraconian: **Magistrat van Honôrjas** (`[1122 Historical: Magistrat van Heraklêa-Pontîke]`)*
-  * **[HRE]** **Galatia** (`c_galatia`) — *Tarraconian: **Magistrat van Galâtjen** (`[1122 Historical: Magistrat van Ankîra]`)*
+  * **[HRE]** **Honorias** (`c_honorias`) — *Tarraconian: **Magistrat van Honôrjas** (`[1122 Historical: Magistrat van Heraklêe-Pontîke]`)*
+  * **[HRE]** **Galatia** (`c_galatia`) — *Tarraconian: **Magistrat van Galâtjen** (`[1122 Historical: Magistrat van Ankîre]`)*
   * **[HRE]** **Hadrianopolis** (`c_hadrianopolis`) — *Tarraconian: **Magistrat van Hadrianôpel-in-Paflagônjen***
 
 ---
@@ -1744,27 +1744,27 @@
 * **Duchy of Cilicia** (`d_cilicia`) — *4/4 in HRE*
   * **[HRE]** **Cilicia** (`c_cilicia`) — *Tarraconian: **Magistrat van Kilîkjen** (`[1122 Historical: Magistrat van Tarsûs]`)*
   * **[HRE]** **Seleucia** (`c_seleucia`) — *Tarraconian: **Magistrat van Seleukîe***
-  * **[HRE]** **Lycandus** (`c_lycandus`) — *Tarraconian: **Magistrat van Lîkandos***
-  * **[HRE]** **Tall Hamid** (`c_tall_hamid`) — *Tarraconian: **Magistrat van Tal-Hamît** (`[1122 Historical: Magistrat van Anasârba]`)*
+  * **[HRE]** **Lycandus** (`c_lycandus`) — *Tarraconian: **Magistrat van Lîkant***
+  * **[HRE]** **Tall Hamid** (`c_tall_hamid`) — *Tarraconian: **Magistrat van Tal-Hamît** (`[1122 Historical: Magistrat van Anasârbe]`)*
 * **Duchy of Cibyrrhaeot** (`d_cibyrrhaeot`) — *3/3 in HRE*
-  * **[HRE]** **Lycia** (`c_lycia`) — *Tarraconian: **Magistrat van Lîkjen** (`[1122 Historical: Magistrat van Mîra]`)*
+  * **[HRE]** **Lycia** (`c_lycia`) — *Tarraconian: **Magistrat van Lîkjen** (`[1122 Historical: Magistrat van Mîre]`)*
   * **[HRE]** **Caria** (`c_caria`) — *Tarraconian: **Magistrat van Kârjen** (`[1122 Historical: Magistrat van Halikarnâs]`)*
-  * **[HRE]** **Pamphylia** (`c_pamphylia`) — *Tarraconian: **Magistrat van Pamfîljen** (`[1122 Historical: Magistrat van Attalêa]`)*
+  * **[HRE]** **Pamphylia** (`c_pamphylia`) — *Tarraconian: **Magistrat van Pamfîljen** (`[1122 Historical: Magistrat van Attalêe]`)*
 * **Duchy of Anatolia** (`d_anatolia`) — *7/7 in HRE*
-  * **[HRE]** **Lycaonia** (`c_lycaonia`) — *Tarraconian: **Magistrat van Lîkaônjen** (`[1122 Historical: Magistrat van Ikônjon]`)*
-  * **[HRE]** **Pacatiana** (`c_pacatiana`) — *Tarraconian: **Magistrat van Pakatjâne** (`[1122 Historical: Magistrat van Sînnada]`)*
-  * **[HRE]** **Pisidia** (`c_pisidia`) — *Tarraconian: **Magistrat van Pisîdjen** (`[1122 Historical: Magistrat van Sagalâssos]`)*
+  * **[HRE]** **Lycaonia** (`c_lycaonia`) — *Tarraconian: **Magistrat van Lîkaônjen** (`[1122 Historical: Magistrat van Ikônjen]`)*
+  * **[HRE]** **Pacatiana** (`c_pacatiana`) — *Tarraconian: **Magistrat van Pakatjâne** (`[1122 Historical: Magistrat van Sînnade]`)*
+  * **[HRE]** **Pisidia** (`c_pisidia`) — *Tarraconian: **Magistrat van Pisîdjen** (`[1122 Historical: Magistrat van Sagalâs]`)*
   * **[HRE]** **Selge** (`c_selge`) — *Tarraconian: **Magistrat van Sêlge***
-  * **[HRE]** **Galatia Salutaris** (`c_galatia_salutaris`) — *Tarraconian: **Magistrat van Heil-Galâtjen** (`[1122 Historical: Magistrat van Polîbotos]`)*
-  * **[HRE]** **Philomelion** (`c_philomelium`) — *Tarraconian: **Magistrat van Filomêljon** (`[1122 Historical: Magistrat van Amôrjon]`)*
+  * **[HRE]** **Galatia Salutaris** (`c_galatia_salutaris`) — *Tarraconian: **Magistrat van Heil-Galâtjen** (`[1122 Historical: Magistrat van Polîbot]`)*
+  * **[HRE]** **Philomelion** (`c_philomelium`) — *Tarraconian: **Magistrat van Filomêljen** (`[1122 Historical: Magistrat van Amôrjen]`)*
   * **[HRE]** **Isauria** (`c_isauria`) — *Tarraconian: **Magistrat van Isaurjen***
 * **Duchy of Cappadocia** (`d_cappadocia`) — *2/2 in HRE*
-  * **[HRE]** **Cappadocia** (`c_cappadocia`) — *Tarraconian: **Magistrat van Kappadôkjen** (`[1122 Historical: Magistrat van Tîana]`)*
-  * **[HRE]** **Lower Galatia** (`c_lower_galatia`) — *Tarraconian: **Magistrat van Nîder-Galâtjen** (`[1122 Historical: Magistrat van Parnâssos]`)*
+  * **[HRE]** **Cappadocia** (`c_cappadocia`) — *Tarraconian: **Magistrat van Kappadôkjen** (`[1122 Historical: Magistrat van Tîane]`)*
+  * **[HRE]** **Lower Galatia** (`c_lower_galatia`) — *Tarraconian: **Magistrat van Nîder-Galâtjen** (`[1122 Historical: Magistrat van Parnâs]`)*
 * **Duchy of Charsianon** (`d_charsianon`) — *3/3 in HRE*
   * **[HRE]** **Charsianon** (`c_charsianon`) — *Tarraconian: **Magistrat van Charsjanôn***
-  * **[HRE]** **Kaisereia** (`c_kaisereia`) — *Tarraconian: **Magistrat van Kaisarêa***
-  * **[HRE]** **Kyzistra** (`c_kyzistra`) — *Tarraconian: **Magistrat van Kîsistra***
+  * **[HRE]** **Kaisereia** (`c_kaisereia`) — *Tarraconian: **Magistrat van Kaisarêe***
+  * **[HRE]** **Kyzistra** (`c_kyzistra`) — *Tarraconian: **Magistrat van Kîsistre***
 
 ---
 
@@ -1772,9 +1772,9 @@
 * **De Jure Empire:** Byzantine Empire [e_byzantium]
 
 * **Duchy of Sebasteia** (`d_sebasteia`) — *3/3 in HRE*
-  * **[HRE]** **Sebasteia** (`c_sebasteia`) — *Tarraconian: **Magistrat van Sebastêa***
+  * **[HRE]** **Sebasteia** (`c_sebasteia`) — *Tarraconian: **Magistrat van Sebastêe***
   * **[HRE]** **Azysia** (`c_azysia`) — *Tarraconian: **Magistrat van Asîsje***
-  * **[HRE]** **Ablastha** (`c_ablastha`) — *Tarraconian: **Magistrat van Ablâstha***
+  * **[HRE]** **Ablastha** (`c_ablastha`) — *Tarraconian: **Magistrat van Ablâsthe***
 
 ---
 
@@ -1784,17 +1784,17 @@
 * **Duchy of Tao-Klarjeti** (`d_tao-klarjeti`) — *4/4 in HRE*
   * **[HRE]** **Tao** (`c_tao`) — *Tarraconian: **Magistrat van Taô***
   * **[HRE]** **Klarjeti** (`c_klarjeti`) — *Tarraconian: **Magistrat van Klardschêt** (`[1122 Historical: Magistrat van Artanûdschi]`)*
-  * **[HRE]** **Kartli** (`c_kartli`) — *Tarraconian: **Magistrat van Kartlî** (`[1122 Historical: Magistrat van Uplistsîche]`)*
+  * **[HRE]** **Kartli** (`c_kartli`) — *Tarraconian: **Magistrat van Kartlî** (`[1122 Historical: Magistrat van Upliszîche]`)*
   * **[HRE]** **Acampse** (`c_acampse`) — *Tarraconian: **Magistrat van Akâmpse** (`[1122 Historical: Magistrat van Pêtre-in-Lâsjen]`)*
 * **Duchy of Abkhazia** (`d_abkhazia`) — *2/4 in HRE*
-  * [Non-HRE] **Abkhazia** (`c_abkhazia`) — *Tarraconian: **Magistrat van Abchâsjen** (`[1122 Historical: Magistrat van Zchûmi]`)*
+  * [Non-HRE] **Abkhazia** (`c_abkhazia`) — *Tarraconian: **Magistrat van Abchâsjen** (`[1122 Historical: Magistrat van Zechûm]`)*
   * [Non-HRE] **Odishi** (`c_odishi`) — *Tarraconian: **Magistrat van Odîschi** (`[1122 Historical: Magistrat van Kutaîssi]`)*
   * **[HRE]** **Svaneti** (`c_svaneti`) — *Tarraconian: **Magistrat van Swanêtjen***
   * **[HRE]** **Guria** (`c_guria`) — *Tarraconian: **Magistrat van Gûrjen** (`[1122 Historical: Magistrat van Batûmi]`)*
 * **Duchy of Georgia (Kartli)** (`d_georgia`) — *4/4 in HRE*
   * **[HRE]** **Tbilisi** (`c_tbilisi`) — *Tarraconian: **Magistrat van Tiflîs***
   * **[HRE]** **Lori** (`c_lori`) — *Tarraconian: **Magistrat van Lôri***
-  * **[HRE]** **Kakheti** (`c_kakheti`) — *Tarraconian: **Magistrat van Kachêtjen** (`[1122 Historical: Magistrat van Mtzchêta]`)*
+  * **[HRE]** **Kakheti** (`c_kakheti`) — *Tarraconian: **Magistrat van Kachêtjen** (`[1122 Historical: Magistrat van Metzchête]`)*
   * **[HRE]** **Hereti** (`c_hereti`) — *Tarraconian: **Magistrat van Herêtjen***
 
 ---
@@ -1803,23 +1803,23 @@
 * **De Jure Empire:**  [e_scandinavia]
 
 * **Duchy of Uppland (Svealand)** (`d_svealand`) — *4/4 in HRE*
-  * **[HRE]** **Uppland** (`c_upland`) — *Tarraconian: **Magistrat van Oplant** (`[1122 Historical: Magistrat van Sigtûna]`)*
+  * **[HRE]** **Uppland** (`c_upland`) — *Tarraconian: **Magistrat van Oplant** (`[1122 Historical: Magistrat van Sigtûne]`)*
   * **[HRE]** **Gestrikalandia** (`c_gastrikland`) — *Tarraconian: **Magistrat van Gestrikelant***
   * **[HRE]** **Södermannaland** (`c_sodermannaland`) — *Tarraconian: **Magistrat van Sûdermannalant** (`[1122 Historical: Magistrat van Strêgnes]`)*
   * **[HRE]** **Aland** (`c_aland`) — *Tarraconian: **Magistrat van Âlant***
 * **Duchy of Järnbäraland (Bergslagen)** (`d_bergslagen`) — *4/4 in HRE*
   * **[HRE]** **Västmannaland** (`c_vastmanland`) — *Tarraconian: **Magistrat van Westmannalant** (`[1122 Historical: Magistrat van Westerâs]`)*
   * **[HRE]** **Värmaland** (`c_varmland`) — *Tarraconian: **Magistrat van Wermelant***
-  * **[HRE]** **Övre Dalarna** (`c_dalarna`) — *Tarraconian: **Magistrat van Ôwer-Dâlarna** (`[1122 Historical: Magistrat van Môre-in-Dâlen]`)*
+  * **[HRE]** **Övre Dalarna** (`c_dalarna`) — *Tarraconian: **Magistrat van Ôwer-Dâlarne** (`[1122 Historical: Magistrat van Môre-in-Dâlen]`)*
   * **[HRE]** **Dalabergslagen** (`c_dalabergslagen`) — *Tarraconian: **Magistrat van Dalaberchslâgen** (`[1122 Historical: Magistrat van Husabî]`)*
 * **Duchy of Västergötland** (`d_vastergotland`) — *4/4 in HRE*
   * **[HRE]** **Västergötland** (`c_vastergotland`) — *Tarraconian: **Magistrat van Westergôtlant** (`[1122 Historical: Magistrat van Lôdöse]`)*
-  * **[HRE]** **Skara** (`c_skara`) — *Tarraconian: **Magistrat van Skâra***
+  * **[HRE]** **Skara** (`c_skara`) — *Tarraconian: **Magistrat van Skâre***
   * **[HRE]** **Dal** (`c_dal`) — *Tarraconian: **Magistrat van Dâl-in-Gôtlant***
   * **[HRE]** **Nordmark** (`c_nordmark`) — *Tarraconian: **Magistrat van Nortmarch-in-Wermelant***
 * **Duchy of Östergötland** (`d_ostergotland`) — *3/3 in HRE*
   * **[HRE]** **Östergötland** (`c_ostergotland`) — *Tarraconian: **Magistrat van Ôstergôtlant** (`[1122 Historical: Magistrat van Sûderköping]`)*
-  * **[HRE]** **Kinda** (`c_kinda`) — *Tarraconian: **Magistrat van Kînda** (`[1122 Historical: Magistrat van Skänninge]`)*
+  * **[HRE]** **Kinda** (`c_kinda`) — *Tarraconian: **Magistrat van Kînde** (`[1122 Historical: Magistrat van Skänninge]`)*
   * **[HRE]** **Neeric** (`c_narke`) — *Tarraconian: **Magistrat van Nêrke** (`[1122 Historical: Magistrat van Örebrô]`)*
 * **Duchy of Småland** (`d_smaland`) — *6/6 in HRE*
   * **[HRE]** **Möre** (`c_more`) — *Tarraconian: **Magistrat van Möre** (`[1122 Historical: Magistrat van Kalmâr]`)*
@@ -1833,7 +1833,7 @@
   * **[HRE]** **Medelpad** (`c_medelpad`) — *Tarraconian: **Magistrat van Mêdelpat***
   * **[HRE]** **Ångermanland** (`c_angermanland`) — *Tarraconian: **Magistrat van Angermanlant***
 * **Duchy of Visby (Gotland)** (`d_gotland`) — *1/1 in HRE*
-  * **[HRE]** **Gotland** (`c_gutland`) — *Tarraconian: **Magistrat van Gôtland** (`[1122 Historical: Magistrat van Wîsbî]`)*
+  * **[HRE]** **Gotland** (`c_gutland`) — *Tarraconian: **Magistrat van Gôtlant** (`[1122 Historical: Magistrat van Wîsbî]`)*
 
 ---
 
@@ -1846,7 +1846,7 @@
   * **[HRE]** **Yatvyagi** (`c_yatvyagi`) — *Tarraconian: **Magistrat van Jatwîgen***
   * **[HRE]** **Braslau** (`c_braslau`) — *Tarraconian: **Magistrat van Braslouwe***
 * **Duchy of Prussia** (`d_prussia`) — *5/5 in HRE*
-  * **[HRE]** **Pomesania (Marienburg)** (`c_malbork`) — *Tarraconian: **Magistrat van Pomesânjen** (`[1122 Historical: Magistrat van Trûsô]`)*
+  * **[HRE]** **Pomesania (Marienburg)** (`c_malbork`) — *Tarraconian: **Magistrat van Pomesânjen** (`[1122 Historical: Magistrat van Trûse]`)*
   * **[HRE]** **Warmia (Ermland)** (`c_wormditt`) — *Tarraconian: **Magistrat van Warmjen** (`[1122 Historical: Magistrat van Tolkemît]`)*
   * **[HRE]** **Natangia** (`c_natangia`) — *Tarraconian: **Magistrat van Natângjen***
   * **[HRE]** **Sambia (Königsberg)** (`c_konigsberg`) — *Tarraconian: **Magistrat van Samlant** (`[1122 Historical: Magistrat van Twangste]`)*
@@ -1865,12 +1865,12 @@
   * **[HRE]** **Raseiniai** (`c_raseiniai`) — *Tarraconian: **Magistrat van Rassêinen***
   * **[HRE]** **Scalovia** (`c_scalovia`) — *Tarraconian: **Magistrat van Schalouwen***
   * **[HRE]** **Memel** (`c_memel`) — *Tarraconian: **Magistrat van Memel***
-  * **[HRE]** **Palanga** (`c_palanga`) — *Tarraconian: **Magistrat van Palânga***
+  * **[HRE]** **Palanga** (`c_palanga`) — *Tarraconian: **Magistrat van Palânge***
   * **[HRE]** **Siauliai** (`c_siauliai`) — *Tarraconian: **Magistrat van Schaulen***
 * **Duchy of Latgalia** (`d_latgalians`) — *4/4 in HRE*
   * **[HRE]** **Talava** (`c_talava`) — *Tarraconian: **Magistrat van Tâlawe***
   * **[HRE]** **Kokenois** (`c_kokenois`) — *Tarraconian: **Magistrat van Kokenhûsen***
-  * **[HRE]** **Jersika** (`c_jersika`) — *Tarraconian: **Magistrat van Gêrzike***
+  * **[HRE]** **Jersika** (`c_jersika`) — *Tarraconian: **Magistrat van Gêrsike***
   * **[HRE]** **Aluksne** (`c_aluksne`) — *Tarraconian: **Magistrat van Alûksne***
 
 ---
@@ -1879,14 +1879,14 @@
 * **De Jure Empire:** Russia [e_russia]
 
 * **Duchy of Opolye (Vladimir)** (`d_opolye`) — *5/5 in HRE*
-  * **[HRE]** **Yaroslavl** (`c_yaroslavl`) — *Tarraconian: **Magistrat van Jaroslâwl** (`[1122 Historical: Magistrat van Rostôw]`)*
+  * **[HRE]** **Yaroslavl** (`c_yaroslavl`) — *Tarraconian: **Magistrat van Jaroslouwe** (`[1122 Historical: Magistrat van Rostouwe]`)*
   * **[HRE]** **Vladimir** (`c_vladimir`) — *Tarraconian: **Magistrat van Klêsme***
   * **[HRE]** **Suzdal** (`c_suzdal`) — *Tarraconian: **Magistrat van Sûsdal***
-  * **[HRE]** **Tver** (`c_tver`) — *Tarraconian: **Magistrat van Twer** (`[1122 Historical: Magistrat van Wolok-Lamsk]`)*
+  * **[HRE]** **Tver** (`c_tver`) — *Tarraconian: **Magistrat van Twer** (`[1122 Historical: Magistrat van Woloch-Lâmtzich]`)*
   * **[HRE]** **Moskva** (`c_moskva`) — *Tarraconian: **Magistrat van Moskouwe***
 * **Duchy of Ryazan** (`d_ryazan`) — *3/3 in HRE*
   * **[HRE]** **Ryazan** (`c_ryazan`) — *Tarraconian: **Magistrat van Rêsan***
-  * **[HRE]** **Tula** (`c_tula`) — *Tarraconian: **Magistrat van Tûle** (`[1122 Historical: Magistrat van Pronsk]`)*
+  * **[HRE]** **Tula** (`c_tula`) — *Tarraconian: **Magistrat van Tûle** (`[1122 Historical: Magistrat van Prôntzich]`)*
   * **[HRE]** **Murom** (`c_murom`) — *Tarraconian: **Magistrat van Mûrom***
 * **Duchy of Obran Osh (Nizhny Novgorod)** (`d_nizhny_novgorod`) — *2/3 in HRE*
   * [Non-HRE] **Obran Osh** (`c_nizhny_novgorod`) — *Tarraconian: **Magistrat van Obrân-Osch***
@@ -1917,45 +1917,45 @@
 * **Duchy of Don Valley** (`d_don_valley`) — *4/4 in HRE*
   * **[HRE]** **Sarysyn** (`c_sarysyn`) — *Tarraconian: **Magistrat van Sarîssin***
   * **[HRE]** **Golden Hills** (`c_golden_hills`) — *Tarraconian: **Magistrat van Gûldenberch-am-Dôn***
-  * **[HRE]** **Kazanskaya** (`c_kazanskaya`) — *Tarraconian: **Magistrat van Kasanskaja** (`[1122 Historical: Magistrat van Bogutschâr]`)*
-  * **[HRE]** **South Kazanskaya (Millerovo)** (`c_millerovo`) — *Tarraconian: **Magistrat van Millerôwe** (`[1122 Historical: Magistrat van Kalitouwe]`)*
+  * **[HRE]** **Kazanskaya** (`c_kazanskaya`) — *Tarraconian: **Magistrat van Kasanskaje** (`[1122 Historical: Magistrat van Bogutschâr]`)*
+  * **[HRE]** **South Kazanskaya (Millerovo)** (`c_millerovo`) — *Tarraconian: **Magistrat van Millerôwe** (`[1122 Historical: Magistrat van Kalitwe]`)*
 * **Duchy of Tana** (`d_tana`) — *2/2 in HRE*
   * **[HRE]** **Tana** (`c_tana`) — *Tarraconian: **Magistrat van Tâne***
-  * **[HRE]** **Kuzeyrtorg** (`c_kuzeytorg`) — *Tarraconian: **Magistrat van Kuseîtorg***
+  * **[HRE]** **Kuzeyrtorg** (`c_kuzeytorg`) — *Tarraconian: **Magistrat van Kuseîtorch***
 * **Duchy of Tauria (Crimea)** (`d_crimea`) — *3/3 in HRE*
-  * **[HRE]** **Kerch** (`c_kerch`) — *Tarraconian: **Magistrat van Kêrtsch** (`[1122 Historical: Magistrat van Pantikapêon]`)*
-  * **[HRE]** **Güzliev (Kalos Limen)** (`c_kalos_limen`) — *Tarraconian: **Magistrat van Güsliêw** (`[1122 Historical: Magistrat van Kalôs-Limên]`)*
+  * **[HRE]** **Kerch** (`c_kerch`) — *Tarraconian: **Magistrat van Kêrtsch** (`[1122 Historical: Magistrat van Pantikapêe]`)*
+  * **[HRE]** **Güzliev (Kalos Limen)** (`c_kalos_limen`) — *Tarraconian: **Magistrat van Güsliouwe** (`[1122 Historical: Magistrat van Kalôs-Limên]`)*
   * **[HRE]** **Aqmescit (Perekop)** (`c_perekop`) — *Tarraconian: **Magistrat van Perekôp** (`[1122 Historical: Magistrat van Tâfros]`)*
 * **Duchy of Tamatarkha (Azov)** (`d_azov`) — *3/3 in HRE*
-  * **[HRE]** **Tmutarakan** (`c_tmutarakan`) — *Tarraconian: **Magistrat van Tmutarakân** (`[1122 Historical: Magistrat van Tamâtarcha]`)*
+  * **[HRE]** **Tmutarakan** (`c_tmutarakan`) — *Tarraconian: **Magistrat van Tamatarchân** (`[1122 Historical: Magistrat van Tamâtarche]`)*
   * **[HRE]** **Khumar** (`c_khumar`) — *Tarraconian: **Magistrat van Chumâr***
-  * **[HRE]** **Azak (Azov)** (`c_azov`) — *Tarraconian: **Magistrat van Asôw** (`[1122 Historical: Magistrat van Asâk]`)*
+  * **[HRE]** **Azak (Azov)** (`c_azov`) — *Tarraconian: **Magistrat van Asouwe** (`[1122 Historical: Magistrat van Asâch]`)*
 * **Duchy of Mordvinia** (`d_mordvinia`) — *3/3 in HRE*
   * **[HRE]** **Cheboksary** (`c_cheboksary`) — *Tarraconian: **Magistrat van Tscheboksâr** (`[1122 Historical: Magistrat van Ziwîl-Wolge]`)*
-  * **[HRE]** **Lachyk-Uba** (`c_lachyk-uba`) — *Tarraconian: **Magistrat van Latschîk-Uba***
-  * **[HRE]** **Rakcha** (`c_rakcha`) — *Tarraconian: **Magistrat van Rakscha***
+  * **[HRE]** **Lachyk-Uba** (`c_lachyk-uba`) — *Tarraconian: **Magistrat van Latschîch-Ûbe***
+  * **[HRE]** **Rakcha** (`c_rakcha`) — *Tarraconian: **Magistrat van Raksche***
 * **Duchy of Saran** (`d_saran`) — *3/3 in HRE*
   * **[HRE]** **Saran** (`c_saran`) — *Tarraconian: **Magistrat van Sarân***
-  * **[HRE]** **Serdosk** (`c_serdosk`) — *Tarraconian: **Magistrat van Serdôsk***
-  * **[HRE]** **Kozlov** (`c_kozlov`) — *Tarraconian: **Magistrat van Koslouwe** (`[1122 Historical: Magistrat van Wâld-Worônesch]`)*
+  * **[HRE]** **Serdosk** (`c_serdosk`) — *Tarraconian: **Magistrat van Serdôtzich***
+  * **[HRE]** **Kozlov** (`c_kozlov`) — *Tarraconian: **Magistrat van Koslouwe** (`[1122 Historical: Magistrat van Wâlt-Worônesch]`)*
 * **Duchy of Voronezh** (`d_voronezh`) — *4/4 in HRE*
   * **[HRE]** **Voronezh** (`c_voronezh`) — *Tarraconian: **Magistrat van Worônesch***
-  * **[HRE]** **Karatayak** (`c_karatayak`) — *Tarraconian: **Magistrat van Karatâjak***
+  * **[HRE]** **Karatayak** (`c_karatayak`) — *Tarraconian: **Magistrat van Karatâjach***
   * **[HRE]** **Oskol** (`c_oskol`) — *Tarraconian: **Magistrat van Oskôl***
-  * **[HRE]** **Khursa** (`c_khursa`) — *Tarraconian: **Magistrat van Chûrsa***
+  * **[HRE]** **Khursa** (`c_khursa`) — *Tarraconian: **Magistrat van Chûrse***
 * **Duchy of Chuvashia (Burtas)** (`d_chuvashia`) — *0/4 in HRE*
   * [Non-HRE] **Saratau** (`c_saratov`) — *Tarraconian: **Magistrat van Saratau***
   * [Non-HRE] **Penza** (`c_penza`) — *Tarraconian: **Magistrat van Pense***
   * [Non-HRE] **Atkara** (`c_atkarsk`) — *Tarraconian: **Magistrat van Atkâre***
-  * [Non-HRE] **Medveditsa (Petrovsk)** (`c_petrovsk`) — *Tarraconian: **Magistrat van Petrousk** (`[1122 Historical: Magistrat van Medwedîtze]`)*
+  * [Non-HRE] **Medveditsa (Petrovsk)** (`c_petrovsk`) — *Tarraconian: **Magistrat van Petrouwe** (`[1122 Historical: Magistrat van Medwedîtze]`)*
 * **Duchy of Khopyor** (`d_khopyor`) — *3/3 in HRE*
   * **[HRE]** **Khopyor** (`c_khopyor`) — *Tarraconian: **Magistrat van Chopjôr***
   * **[HRE]** **Tuluchezeva** (`c_tuluchezeva`) — *Tarraconian: **Magistrat van Tulutschêswe***
-  * **[HRE]** **Balachev** (`c_balachev`) — *Tarraconian: **Magistrat van Balaschôw***
+  * **[HRE]** **Balachev** (`c_balachev`) — *Tarraconian: **Magistrat van Balaschouwe***
 * **Duchy of Tsna (Tambov)** (`d_tambov`) — *3/3 in HRE*
   * **[HRE]** **Tambov** (`c_tambov`) — *Tarraconian: **Magistrat van Tambouwe** (`[1122 Historical: Magistrat van Znedal-Tambouwe]`)*
-  * **[HRE]** **Matya** (`c_matya`) — *Tarraconian: **Magistrat van Mâtja***
-  * **[HRE]** **Durovka** (`c_durovka`) — *Tarraconian: **Magistrat van Durôwka***
+  * **[HRE]** **Matya** (`c_matya`) — *Tarraconian: **Magistrat van Mâtje***
+  * **[HRE]** **Durovka** (`c_durovka`) — *Tarraconian: **Magistrat van Durôwke***
 
 ---
 
@@ -1966,11 +1966,11 @@
   * **[HRE]** **Pecheneg** (`c_pecheneg`) — *Tarraconian: **Magistrat van Petschenêgen***
   * **[HRE]** **Jambalar** (`c_jambalar`) — *Tarraconian: **Magistrat van Dschambalâr***
   * **[HRE]** **Yaitsk** (`c_yaitsk`) — *Tarraconian: **Magistrat van Jaîch***
-  * [Non-HRE] **Qyzylyaitsk** (`c_qyzylyaitsk`) — *Tarraconian: **Magistrat van Rôt-Jaîk***
+  * [Non-HRE] **Qyzylyaitsk** (`c_qyzylyaitsk`) — *Tarraconian: **Magistrat van Rôt-Jaîch***
 * **Duchy of Manatau** (`d_manatau`) — *0/3 in HRE*
   * [Non-HRE] **Manatau** (`c_manatau`) — *Tarraconian: **Magistrat van Manatau***
   * [Non-HRE] **Jaksybai** (`c_jaksybai`) — *Tarraconian: **Magistrat van Dschaksibâi***
-  * [Non-HRE] **Basagha** (`c_basagha`) — *Tarraconian: **Magistrat van Basâga***
+  * [Non-HRE] **Basagha** (`c_basagha`) — *Tarraconian: **Magistrat van Basâge***
 
 ---
 
@@ -1986,16 +1986,16 @@
 * **Duchy of Kashan (Kazan)** (`d_kazan`) — *0/5 in HRE*
   * [Non-HRE] **Kazan** (`c_kazan`) — *Tarraconian: **Magistrat van Kasân** (`[1122 Historical: Magistrat van Kaschân]`)*
   * [Non-HRE] **Mamadych** (`c_mamadych`) — *Tarraconian: **Magistrat van Mamadîsch***
-  * [Non-HRE] **Charla (Yoshkar-Ola)** (`c_yoshkar-ola`) — *Tarraconian: **Magistrat van Tschârla***
-  * [Non-HRE] **Mari-Turek** (`c_mari-turek`) — *Tarraconian: **Magistrat van Mâri-Turêk***
-  * [Non-HRE] **Elabuga** (`c_elabuga`) — *Tarraconian: **Magistrat van Jelabûga***
+  * [Non-HRE] **Charla (Yoshkar-Ola)** (`c_yoshkar-ola`) — *Tarraconian: **Magistrat van Tschârle***
+  * [Non-HRE] **Mari-Turek** (`c_mari-turek`) — *Tarraconian: **Magistrat van Mâri-Turêch***
+  * [Non-HRE] **Elabuga** (`c_elabuga`) — *Tarraconian: **Magistrat van Jelabûge***
 * **Duchy of Jalmat** (`d_jalmat`) — *0/3 in HRE*
   * [Non-HRE] **Jalmat** (`c_jalmat`) — *Tarraconian: **Magistrat van Dschalmât***
   * [Non-HRE] **Belebey** (`c_belebey`) — *Tarraconian: **Magistrat van Belebêi***
   * [Non-HRE] **Siun** (`c_siun`) — *Tarraconian: **Magistrat van Sjûn***
 * **Duchy of Martyuba** (`d_martyuba`) — *1/2 in HRE*
   * [Non-HRE] **Martyuba** (`c_martyuba`) — *Tarraconian: **Magistrat van Martjûbe***
-  * **[HRE]** **Cykma** (`c_cykma`) — *Tarraconian: **Magistrat van Zîkma***
+  * **[HRE]** **Cykma** (`c_cykma`) — *Tarraconian: **Magistrat van Zîkme***
 
 ---
 
@@ -2004,7 +2004,7 @@
 
 * **Duchy of Ural** (`d_ural`) — *1/3 in HRE*
   * [Non-HRE] **Ural** (`c_ural`) — *Tarraconian: **Magistrat van Urâl***
-  * **[HRE]** **Votkinsk** (`c_votkinsk`) — *Tarraconian: **Magistrat van Wotkîn** (`[1122 Historical: Magistrat van Obwa]`)*
+  * **[HRE]** **Votkinsk** (`c_votkinsk`) — *Tarraconian: **Magistrat van Wotkîn** (`[1122 Historical: Magistrat van Obwe]`)*
   * [Non-HRE] **Kerken** (`c_kerken`) — *Tarraconian: **Magistrat van Kêrken***
 * **Duchy of Udmurtia** (`d_udmurtia`) — *1/4 in HRE*
   * [Non-HRE] **Kargadan** (`c_kargadan`) — *Tarraconian: **Magistrat van Kargadân***
@@ -2018,7 +2018,7 @@
 * **De Jure Empire:** Carpathia [e_carpathia]
 
 * **Duchy of Higher Muntenia (Transylvanian Alps)** (`d_transylvanian_alps`) — *3/3 in HRE*
-  * **[HRE]** **Târgoviște (Câmpulung)** (`c_campulung`) — *Tarraconian: **Magistrat van Langenfelt** (`[1122 Historical: Magistrat van Ardschêsch]`)*
+  * **[HRE]** **Târgoviște (Câmpulung)** (`c_campulung`) — *Tarraconian: **Magistrat van Langenvelt** (`[1122 Historical: Magistrat van Ardschêsch]`)*
   * **[HRE]** **Polovragi** (`c_polovragi`) — *Tarraconian: **Magistrat van Polowrâdschi***
   * **[HRE]** **Tabla Buții** (`c_tabla_butii`) — *Tarraconian: **Magistrat van Tâbla-Bûtzi***
 * **Duchy of Oltenia** (`d_oltenia`) — *4/4 in HRE*
@@ -2027,13 +2027,13 @@
   * **[HRE]** **Calafat** (`c_calafat`) — *Tarraconian: **Magistrat van Kalafât** (`[1122 Historical: Magistrat van Drobête]`)*
   * **[HRE]** **Craiova** (`c_craiova`) — *Tarraconian: **Magistrat van Krajouwe** (`[1122 Historical: Magistrat van Pelendâwe]`)*
 * **Duchy of Transylvania** (`d_transylvania`) — *7/7 in HRE*
-  * **[HRE]** **Fehér** (`c_feher`) — *Tarraconian: **Magistrat van Wîssenburch** (`[1122 Historical: Magistrat van Bêlgrat-in-Erdel]`)*
+  * **[HRE]** **Fehér** (`c_feher`) — *Tarraconian: **Magistrat van Wîtzenburch** (`[1122 Historical: Magistrat van Bêlgrat-in-Erdel]`)*
   * **[HRE]** **Székelyföld** (`c_szekelyfold`) — *Tarraconian: **Magistrat van Sêklerlant** (`[1122 Historical: Magistrat van Küküllö]`)*
   * **[HRE]** **Barcaság** (`c_barcasag`) — *Tarraconian: **Magistrat van Burtzenlant** (`[1122 Historical: Magistrat van Balwanjosch]`)*
-  * **[HRE]** **Fogaras** (`c_fogaras`) — *Tarraconian: **Magistrat van Fogarasch** (`[1122 Historical: Magistrat van Alba-Jûlja]`)*
-  * **[HRE]** **Torda** (`c_torda`) — *Tarraconian: **Magistrat van Tôrenburch** (`[1122 Historical: Magistrat van Tôrda]`)*
+  * **[HRE]** **Fogaras** (`c_fogaras`) — *Tarraconian: **Magistrat van Fogarasch** (`[1122 Historical: Magistrat van Albe-Jûlje]`)*
+  * **[HRE]** **Torda** (`c_torda`) — *Tarraconian: **Magistrat van Tôrenburch** (`[1122 Historical: Magistrat van Tôrde]`)*
   * **[HRE]** **Beszterce** (`c_beszterce`) — *Tarraconian: **Magistrat van Bîstritz** (`[1122 Historical: Magistrat van Dobôke]`)*
-  * **[HRE]** **Hunyad** (`c_hunyad`) — *Tarraconian: **Magistrat van Hunjât** (`[1122 Historical: Magistrat van Dêwa]`)*
+  * **[HRE]** **Hunyad** (`c_hunyad`) — *Tarraconian: **Magistrat van Hunjât** (`[1122 Historical: Magistrat van Dêwe]`)*
 
 ---
 
@@ -2045,12 +2045,12 @@
   * **[HRE]** **Negev** (`c_negev`) — *Tarraconian: **Magistrat van Arabâ** (`[1122 Historical: Magistrat van Arabâ]`)*
 * **Duchy of Palestine** (`d_palestine`) — *3/3 in HRE*
   * **[HRE]** **Jerusalem** (`c_jerusalem`) — *Tarraconian: **Magistrat van Jerûsalem***
-  * **[HRE]** **Ghazza** (`c_ghazza`) — *Tarraconian: **Magistrat van Gâsa** (`[1122 Historical: Magistrat van Askalôn]`)*
-  * **[HRE]** **Jaffa** (`c_jaffa`) — *Tarraconian: **Magistrat van Jâffa** (`[1122 Historical: Magistrat van Zêsarêa]`)*
+  * **[HRE]** **Ghazza** (`c_ghazza`) — *Tarraconian: **Magistrat van Gâse** (`[1122 Historical: Magistrat van Askalôn]`)*
+  * **[HRE]** **Jaffa** (`c_jaffa`) — *Tarraconian: **Magistrat van Jâffe** (`[1122 Historical: Magistrat van Zêsarêe]`)*
 * **Duchy of Urdunn** (`d_urdunn`) — *3/3 in HRE*
   * **[HRE]** **Tiberias** (`c_tiberias`) — *Tarraconian: **Magistrat van Tibêrjas***
-  * **[HRE]** **Acre** (`c_acre`) — *Tarraconian: **Magistrat van Akkôn** (`[1122 Historical: Magistrat van Tîrus]`)*
-  * **[HRE]** **Irbid** (`c_irbid`) — *Tarraconian: **Magistrat van Irbît** (`[1122 Historical: Magistrat van Gêrasa]`)*
+  * **[HRE]** **Acre** (`c_acre`) — *Tarraconian: **Magistrat van Akkôn** (`[1122 Historical: Magistrat van Tîr]`)*
+  * **[HRE]** **Irbid** (`c_irbid`) — *Tarraconian: **Magistrat van Irbît** (`[1122 Historical: Magistrat van Gêrase]`)*
 
 ---
 
@@ -2058,33 +2058,33 @@
 * **De Jure Empire:** Oriens [e_oriens]
 
 * **Duchy of Aleppo** (`d_aleppo`) — *4/4 in HRE*
-  * **[HRE]** **Aleppo** (`c_aleppo`) — *Tarraconian: **Magistrat van Aleppô** (`[1122 Historical: Magistrat van Hâlap]`)*
-  * **[HRE]** **Suriya** (`c_suriya`) — *Tarraconian: **Magistrat van Sûrja***
-  * **[HRE]** **Syrrusafa** (`c_syrrusafa`) — *Tarraconian: **Magistrat van Russâfa** (`[1122 Historical: Magistrat van Sergjôpel]`)*
+  * **[HRE]** **Aleppo** (`c_aleppo`) — *Tarraconian: **Magistrat van Halep** (`[1122 Historical: Magistrat van Hâlap]`)*
+  * **[HRE]** **Suriya** (`c_suriya`) — *Tarraconian: **Magistrat van Sûrje***
+  * **[HRE]** **Syrrusafa** (`c_syrrusafa`) — *Tarraconian: **Magistrat van Russâfe** (`[1122 Historical: Magistrat van Sergjôpel]`)*
   * **[HRE]** **Qinnasrin** (`c_qinnasrin`) — *Tarraconian: **Magistrat van Kinnasrîn** (`[1122 Historical: Magistrat van Chalkîs-in-Sîrjen]`)*
 * **Duchy of Edessa** (`d_edessa`) — *4/4 in HRE*
-  * **[HRE]** **Edessa** (`c_edessa`) — *Tarraconian: **Magistrat van Edessa***
-  * **[HRE]** **Samosata** (`c_samosata`) — *Tarraconian: **Magistrat van Samosâta***
-  * **[HRE]** **Marash** (`c_marash`) — *Tarraconian: **Magistrat van Marâsch** (`[1122 Historical: Magistrat van Germanikêa]`)*
+  * **[HRE]** **Edessa** (`c_edessa`) — *Tarraconian: **Magistrat van Edesse***
+  * **[HRE]** **Samosata** (`c_samosata`) — *Tarraconian: **Magistrat van Samosâte***
+  * **[HRE]** **Marash** (`c_marash`) — *Tarraconian: **Magistrat van Marâsch** (`[1122 Historical: Magistrat van Germanikêe]`)*
   * **[HRE]** **Aintab** (`c_aintab`) — *Tarraconian: **Magistrat van Aintâp** (`[1122 Historical: Magistrat van Dolîche]`)*
 * **Duchy of Homs** (`d_homs`) — *3/3 in HRE*
-  * **[HRE]** **Homs** (`c_homs`) — *Tarraconian: **Magistrat van Homs** (`[1122 Historical: Magistrat van Emêsa]`)*
-  * **[HRE]** **Shayzar** (`c_shayzar`) — *Tarraconian: **Magistrat van Scheisâr** (`[1122 Historical: Magistrat van Larîssa-in-Sîrjen]`)*
-  * **[HRE]** **Hama** (`c_hama`) — *Tarraconian: **Magistrat van Hâma** (`[1122 Historical: Magistrat van Epifanêa]`)*
+  * **[HRE]** **Homs** (`c_homs`) — *Tarraconian: **Magistrat van Homs** (`[1122 Historical: Magistrat van Emêse]`)*
+  * **[HRE]** **Shayzar** (`c_shayzar`) — *Tarraconian: **Magistrat van Scheisâr** (`[1122 Historical: Magistrat van Larîsse-in-Sîrjen]`)*
+  * **[HRE]** **Hama** (`c_hama`) — *Tarraconian: **Magistrat van Hâme** (`[1122 Historical: Magistrat van Epifanêe]`)*
 * **Duchy of Antioch** (`d_antioch`) — *2/2 in HRE*
   * **[HRE]** **Antiocheia** (`c_antiocheia`) — *Tarraconian: **Magistrat van Antiôchje***
   * **[HRE]** **Alexandretta** (`c_alexandretta`) — *Tarraconian: **Magistrat van Alexandrêtte***
 * **Duchy of Lebanon** (`d_lebanon`) — *2/2 in HRE*
   * **[HRE]** **Beirut** (`c_beirut`) — *Tarraconian: **Magistrat van Beirût***
-  * **[HRE]** **Tripoli** (`c_tripoli`) — *Tarraconian: **Magistrat van Trîpolis-in-Sîrjen***
+  * **[HRE]** **Tripoli** (`c_tripoli`) — *Tarraconian: **Magistrat van Trîpel-in-Sîrjen***
 * **Duchy of Damascus** (`d_damascus`) — *4/4 in HRE*
   * **[HRE]** **Damascus** (`c_damascus`) — *Tarraconian: **Magistrat van Damasch***
   * **[HRE]** **Juwair** (`c_juwair`) — *Tarraconian: **Magistrat van Dschuwêir***
-  * **[HRE]** **Baalbek** (`c_baalbek`) — *Tarraconian: **Magistrat van Bâlbek** (`[1122 Historical: Magistrat van Heljôpel]`)*
-  * **[HRE]** **Hauran** (`c_hauran`) — *Tarraconian: **Magistrat van Haurân** (`[1122 Historical: Magistrat van Bôstra]`)*
+  * **[HRE]** **Baalbek** (`c_baalbek`) — *Tarraconian: **Magistrat van Bâlbech** (`[1122 Historical: Magistrat van Heljôpel]`)*
+  * **[HRE]** **Hauran** (`c_hauran`) — *Tarraconian: **Magistrat van Haurân** (`[1122 Historical: Magistrat van Bôstre]`)*
 * **Duchy of Palmyra** (`d_palmyra`) — *3/3 in HRE*
   * **[HRE]** **Palmyra** (`c_palmyra`) — *Tarraconian: **Magistrat van Palmîre** (`[1122 Historical: Magistrat van Tadmûr]`)*
-  * **[HRE]** **Sukhna** (`c_sukhna`) — *Tarraconian: **Magistrat van Sûchna***
+  * **[HRE]** **Sukhna** (`c_sukhna`) — *Tarraconian: **Magistrat van Sûchne***
   * **[HRE]** **Qaryatan** (`c_qaryatan`) — *Tarraconian: **Magistrat van Karjatân***
 
 ---
@@ -2093,18 +2093,18 @@
 * **De Jure Empire:** Abyssinia [e_abyssinia]
 
 * **Duchy of Nobatia** (`d_nobatia`) — *5/5 in HRE*
-  * **[HRE]** **Qasr Ibrim** (`c_qasr_ibrim`) — *Tarraconian: **Magistrat van Kasr-Ibrîm** (`[1122 Historical: Magistrat van Prîmis]`)*
+  * **[HRE]** **Qasr Ibrim** (`c_qasr_ibrim`) — *Tarraconian: **Magistrat van Kasser-Ibrîm** (`[1122 Historical: Magistrat van Prîmis]`)*
   * **[HRE]** **Faras** (`c_faras`) — *Tarraconian: **Magistrat van Fâras** (`[1122 Historical: Magistrat van Pachôras]`)*
-  * **[HRE]** **Batn al-hajar** (`c_batn_al-hajar`) — *Tarraconian: **Magistrat van Steynbûch** (`[1122 Historical: Magistrat van Sêmna]`)*
-  * **[HRE]** **Qurta** (`c_qurta`) — *Tarraconian: **Magistrat van Kûrta***
-  * **[HRE]** **Kalabsha** (`c_kalabsha`) — *Tarraconian: **Magistrat van Kalâbscha** (`[1122 Historical: Magistrat van Tâlmis]`)*
+  * **[HRE]** **Batn al-hajar** (`c_batn_al-hajar`) — *Tarraconian: **Magistrat van Steinbûch** (`[1122 Historical: Magistrat van Sêmne]`)*
+  * **[HRE]** **Qurta** (`c_qurta`) — *Tarraconian: **Magistrat van Kûrte***
+  * **[HRE]** **Kalabsha** (`c_kalabsha`) — *Tarraconian: **Magistrat van Kalâbsche** (`[1122 Historical: Magistrat van Tâlmis]`)*
 * **Duchy of Makuria** (`d_makuria`) — *2/6 in HRE*
-  * [Non-HRE] **Dongola** (`c_dongola`) — *Tarraconian: **Magistrat van Dongôla***
+  * [Non-HRE] **Dongola** (`c_dongola`) — *Tarraconian: **Magistrat van Dongôle***
   * [Non-HRE] **Sai** (`c_sai`) — *Tarraconian: **Magistrat van Sâi***
   * [Non-HRE] **Meroë** (`c_meroe`) — *Tarraconian: **Magistrat van Merôe***
-  * [Non-HRE] **Wadi el-milk** (`c_wadi_el-milk`) — *Tarraconian: **Magistrat van Wâdi-el-Mîlk***
+  * [Non-HRE] **Wadi el-milk** (`c_wadi_el-milk`) — *Tarraconian: **Magistrat van Wâdi-el-Mîlch***
   * **[HRE]** **Abwab** (`c_abwab`) — *Tarraconian: **Magistrat van Al-Abwâp***
-  * **[HRE]** **Atbara** (`c_atbara`) — *Tarraconian: **Magistrat van Atbâra***
+  * **[HRE]** **Atbara** (`c_atbara`) — *Tarraconian: **Magistrat van Atbâre***
 * **Duchy of Shamir** (`d_shamir`) — *3/3 in HRE*
   * **[HRE]** **Shamir** (`c_shamir`) — *Tarraconian: **Magistrat van Schamîr***
   * **[HRE]** **Abu Hammad** (`c_abu_hammad`) — *Tarraconian: **Magistrat van Abû-Hammât***
@@ -2130,20 +2130,20 @@
 * **De Jure Empire:** Kanem-Bornu [e_kanem_bornu]
 
 * **Duchy of Dárfúr** (`d_darfur`) — *3/4 in HRE*
-  * **[HRE]** **El-Fasher** (`c_el_fasher`) — *Tarraconian: **Magistrat van El-Fâscher** (`[1122 Historical: Magistrat van Tûrra]`)*
+  * **[HRE]** **El-Fasher** (`c_el_fasher`) — *Tarraconian: **Magistrat van El-Fâscher** (`[1122 Historical: Magistrat van Tûrre]`)*
   * **[HRE]** **Dár al-Saíd** (`c_dar_al-said`) — *Tarraconian: **Magistrat van Dâr-es-Saît***
   * **[HRE]** **Dár al-Ríh** (`c_dar-al-rih`) — *Tarraconian: **Magistrat van Dâr-er-Rîch***
   * [Non-HRE] **East Darfur** (`c_east_darfur`) — *Tarraconian: **Magistrat van Ôst-Dârfûr***
 * **Duchy of West Dárfúr** (`d_west_darfur`) — *0/3 in HRE*
   * [Non-HRE] **Ayn Farah** (`c_ayn_farah`) — *Tarraconian: **Magistrat van Aîn-Farâch***
-  * [Non-HRE] **Qimr** (`c_qimr`) — *Tarraconian: **Magistrat van Kîmr***
+  * [Non-HRE] **Qimr** (`c_qimr`) — *Tarraconian: **Magistrat van Kîmer***
   * [Non-HRE] **Masalit** (`c_masalit`) — *Tarraconian: **Magistrat van Masalît***
 * **Duchy of Wadaï** (`d_wadai`) — *0/6 in HRE*
   * [Non-HRE] **Wadaï** (`c_wadai`) — *Tarraconian: **Magistrat van Wadâi***
-  * [Non-HRE] **Dár Sila** (`c_dar_sila`) — *Tarraconian: **Magistrat van Dâr-Sîla***
+  * [Non-HRE] **Dár Sila** (`c_dar_sila`) — *Tarraconian: **Magistrat van Dâr-Sîle***
   * [Non-HRE] **Kadam** (`c_kadam`) — *Tarraconian: **Magistrat van Kadâm***
   * [Non-HRE] **Fitri** (`c_fitri`) — *Tarraconian: **Magistrat van Fîtri***
-  * [Non-HRE] **Fellata** (`c_fellata`) — *Tarraconian: **Magistrat van Fellâta***
+  * [Non-HRE] **Fellata** (`c_fellata`) — *Tarraconian: **Magistrat van Fellâte***
   * [Non-HRE] **Ghazzal** (`c_ghazzal`) — *Tarraconian: **Magistrat van Gassâl***
 * **Duchy of Kordofan** (`d_kordofan`) — *3/3 in HRE*
   * **[HRE]** **Kordofan** (`c_kordofan`) — *Tarraconian: **Magistrat van Kordofân***
@@ -2157,10 +2157,10 @@
 
 * **Duchy of Soba (Alwa)** (`d_alwa`) — *5/5 in HRE*
   * **[HRE]** **Alodia** (`c_alodia`) — *Tarraconian: **Magistrat van Alôdje** (`[1122 Historical: Magistrat van Sôbe]`)*
-  * **[HRE]** **Naga** (`c_naga`) — *Tarraconian: **Magistrat van Nâga***
-  * **[HRE]** **Gezira** (`c_gezira`) — *Tarraconian: **Magistrat van Dschesîra***
-  * **[HRE]** **Eleila** (`c_eleila`) — *Tarraconian: **Magistrat van Elêila***
-  * **[HRE]** **Ushara** (`c_ushara`) — *Tarraconian: **Magistrat van Uschâra***
+  * **[HRE]** **Naga** (`c_naga`) — *Tarraconian: **Magistrat van Nâge***
+  * **[HRE]** **Gezira** (`c_gezira`) — *Tarraconian: **Magistrat van Dschesîre***
+  * **[HRE]** **Eleila** (`c_eleila`) — *Tarraconian: **Magistrat van Elêile***
+  * **[HRE]** **Ushara** (`c_ushara`) — *Tarraconian: **Magistrat van Uschâre***
 * **Duchy of Moyaberch (Sennar)** (`d_sennar`) — *4/4 in HRE*
   * **[HRE]** **Sennar** (`c_sennar`) — *Tarraconian: **Magistrat van Sennâr** (`[1122 Historical: Magistrat van Môjaberch]`)*
   * **[HRE]** **Fazughli** (`c_fazughli`) — *Tarraconian: **Magistrat van Fasûgli***
@@ -2186,10 +2186,10 @@
   * **[HRE]** **Paphlagonia** (`c_paphlagonia`) — *Tarraconian: **Magistrat van Paflagônjen** (`[1122 Historical: Magistrat van Amâstris]`)*
   * **[HRE]** **Pompeiopolis** (`c_pompeiopolis`) — *Tarraconian: **Magistrat van Pompejôpel** (`[1122 Historical: Magistrat van Kastamôn]`)*
 * **Duchy of Armeniac** (`d_armeniac`) — *4/4 in HRE*
-  * **[HRE]** **Helenopontus** (`c_helenopontus`) — *Tarraconian: **Magistrat van Helenopôntus** (`[1122 Historical: Magistrat van Amâsja]`)*
+  * **[HRE]** **Helenopontus** (`c_helenopontus`) — *Tarraconian: **Magistrat van Helenopônt** (`[1122 Historical: Magistrat van Amâsje]`)*
   * **[HRE]** **Sinope** (`c_sinope`) — *Tarraconian: **Magistrat van Sinôpe***
-  * **[HRE]** **Euchaita** (`c_euchaita`) — *Tarraconian: **Magistrat van Euchaîta***
-  * **[HRE]** **Zela** (`c_zela`) — *Tarraconian: **Magistrat van Sêla***
+  * **[HRE]** **Euchaita** (`c_euchaita`) — *Tarraconian: **Magistrat van Euchaîte***
+  * **[HRE]** **Zela** (`c_zela`) — *Tarraconian: **Magistrat van Sêle***
 
 ---
 
@@ -2202,7 +2202,7 @@
 * **Duchy of Thessalonika** (`d_thessalonika`) — *3/3 in HRE*
   * **[HRE]** **Thessalonika** (`c_thessalonika`) — *Tarraconian: **Magistrat van Thessalonîke***
   * **[HRE]** **Chalkidike** (`c_chalkidike`) — *Tarraconian: **Magistrat van Chalkidîke***
-  * **[HRE]** **Veria** (`c_veria`) — *Tarraconian: **Magistrat van Bêröa***
+  * **[HRE]** **Veria** (`c_veria`) — *Tarraconian: **Magistrat van Bêrêe***
 
 ---
 
@@ -2220,7 +2220,7 @@
 
 * **Duchy of Cyprus** (`d_cyprus`) — *2/2 in HRE*
   * **[HRE]** **Nicosia** (`c_nicosia`) — *Tarraconian: **Magistrat van Nikosje** (`[1142 Historical: Magistrat van Leukosîe]`)*
-  * **[HRE]** **Famagusta** (`c_famagusta`) — *Tarraconian: **Magistrat van Famagust** (`[1142 Historical: Magistrat van Ammochôstos]`)*
+  * **[HRE]** **Famagusta** (`c_famagusta`) — *Tarraconian: **Magistrat van Famagust** (`[1142 Historical: Magistrat van Ammochôst]`)*
 
 ---
 
@@ -2240,7 +2240,7 @@
   * **[HRE]** **Bagrewand** (`c_bagrewand`) — *Tarraconian: **Magistrat van Bagrewânt** (`[1142 Historical: Magistrat van Walaschkêrt]`)*
   * **[HRE]** **Vanand (Kars)** (`c_vanand`) — *Tarraconian: **Magistrat van Kârs** (`[1142 Historical: Magistrat van Wanânt]`)*
   * **[HRE]** **Khachen** (`c_khachen`) — *Tarraconian: **Magistrat van Chatschên** (`[1142 Historical: Magistrat van Gardmân]`)*
-  * **[HRE]** **Suenik** (`c_suenik`) — *Tarraconian: **Magistrat van Sünîk** (`[1142 Historical: Magistrat van Kapân]`)*
+  * **[HRE]** **Suenik** (`c_suenik`) — *Tarraconian: **Magistrat van Sünîch** (`[1142 Historical: Magistrat van Kapân]`)*
   * **[HRE]** **Dvin** (`c_dvin`) — *Tarraconian: **Magistrat van Dwîn***
 
 ---
@@ -2256,20 +2256,20 @@
 * **Duchy of Vuovdisámieana (Forest Sápmi)** (`d_vuovdisamieana`) — *4/4 in HRE*
   * **[HRE]** **Biton** (`c_biton`) — *Tarraconian: **Magistrat van Bîton***
   * **[HRE]** **Julevädno** (`c_julevadno`) — *Tarraconian: **Magistrat van Lûle-Flutz***
-  * **[HRE]** **Kittila** (`c_kittila`) — *Tarraconian: **Magistrat van Kittilâ***
+  * **[HRE]** **Kittila** (`c_kittila`) — *Tarraconian: **Magistrat van Kîttile***
   * **[HRE]** **Torne** (`c_torne`) — *Tarraconian: **Magistrat van Tôrne-Flutz***
 * **Duchy of Duortnoseatnu (Torne Valley)** (`d_duortnoseatnu`) — *5/5 in HRE*
   * **[HRE]** **Siggevara** (`c_siggevara`) — *Tarraconian: **Magistrat van Siggewâre***
   * **[HRE]** **Suondavara** (`c_suondavara`) — *Tarraconian: **Magistrat van Suondawâre***
-  * **[HRE]** **Rounala** (`c_rounala`) — *Tarraconian: **Magistrat van Rounalâ***
+  * **[HRE]** **Rounala** (`c_rounala`) — *Tarraconian: **Magistrat van Rôunale***
   * **[HRE]** **Aviovara** (`c_aviovara`) — *Tarraconian: **Magistrat van Awjowâre***
   * **[HRE]** **Kárášjohka** (`c_karasjohka`) — *Tarraconian: **Magistrat van Karaschjoch***
 * **Duchy of Giemajohka (Kemi Lapland)** (`d_giemajohka`) — *7/7 in HRE*
-  * **[HRE]** **Peäccam** (`c_peaccam`) — *Tarraconian: **Magistrat van Petsamô***
-  * **[HRE]** **Kitka** (`c_kitka`) — *Tarraconian: **Magistrat van Kitkâ***
+  * **[HRE]** **Peäccam** (`c_peaccam`) — *Tarraconian: **Magistrat van Pêtzame***
+  * **[HRE]** **Kitka** (`c_kitka`) — *Tarraconian: **Magistrat van Kîtke***
   * **[HRE]** **Koutajoki** (`c_koutajoki`) — *Tarraconian: **Magistrat van Koutajôki***
   * **[HRE]** **Akkel** (`c_akkel`) — *Tarraconian: **Magistrat van Akkêl***
-  * **[HRE]** **Sombio** (`c_sombio`) — *Tarraconian: **Magistrat van Sombjô***
+  * **[HRE]** **Sombio** (`c_sombio`) — *Tarraconian: **Magistrat van Sômbje***
   * **[HRE]** **Inari** (`c_inari`) — *Tarraconian: **Magistrat van Inâri***
   * **[HRE]** **Skolt** (`c_skolt`) — *Tarraconian: **Magistrat van Skôlt***
 * **Duchy of Guoládat (Kola)** (`d_guoldat`) — *4/4 in HRE*
@@ -2284,13 +2284,13 @@
 * **De Jure Empire:** Scandinavia [e_scandinavia]
 
 * **Duchy of Finland** (`d_finland`) — *5/5 in HRE*
-  * **[HRE]** **Finland (Turku)** (`c_finland`) — *Tarraconian: **Magistrat van Tûrku** (`[1142 Historical: Magistrat van Rikalâ]`)*
+  * **[HRE]** **Finland (Turku)** (`c_finland`) — *Tarraconian: **Magistrat van Tûrku** (`[1142 Historical: Magistrat van Rîkale]`)*
   * **[HRE]** **Nyland** (`c_nyland`) — *Tarraconian: **Magistrat van Nîlant** (`[1142 Historical: Magistrat van Espô]`)*
   * **[HRE]** **Satakunta** (`c_satakunta`) — *Tarraconian: **Magistrat van Satakûnte** (`[1142 Historical: Magistrat van Teljê]`)*
-  * **[HRE]** **Messukylä** (`c_messukyla`) — *Tarraconian: **Magistrat van Messukîla** (`[1142 Historical: Magistrat van Rûowêsi]`)*
-  * **[HRE]** **Tavasts** (`c_tavasts`) — *Tarraconian: **Magistrat van Tawastlant** (`[1142 Historical: Magistrat van Wanâja]`)*
+  * **[HRE]** **Messukylä** (`c_messukyla`) — *Tarraconian: **Magistrat van Messukîle** (`[1142 Historical: Magistrat van Rûowêsi]`)*
+  * **[HRE]** **Tavasts** (`c_tavasts`) — *Tarraconian: **Magistrat van Tawastlant** (`[1142 Historical: Magistrat van Wanâje]`)*
 * **Duchy of Savo** (`d_savo`) — *3/3 in HRE*
-  * **[HRE]** **Savo (Olavinlinna)** (`c_olavinlinna`) — *Tarraconian: **Magistrat van Sawô** (`[1142 Historical: Magistrat van Sawilacht]`)*
+  * **[HRE]** **Savo (Olavinlinna)** (`c_olavinlinna`) — *Tarraconian: **Magistrat van Sâwe** (`[1142 Historical: Magistrat van Sawilacht]`)*
   * **[HRE]** **Sysmä** (`c_sysma`) — *Tarraconian: **Magistrat van Sîsmä***
   * **[HRE]** **Pielinen** (`c_pielinen`) — *Tarraconian: **Magistrat van Pîelinen***
 * **Duchy of Pohjanmaa (Ostrobothnia)** (`d_pohjanmaa`) — *4/4 in HRE*
@@ -2299,13 +2299,13 @@
   * **[HRE]** **Mustasaari** (`c_mustasaari`) — *Tarraconian: **Magistrat van Mustasâri** (`[1142 Historical: Magistrat van Lewänlûchte]`)*
   * **[HRE]** **Kainuu** (`c_kainuu`) — *Tarraconian: **Magistrat van Kainû** (`[1142 Historical: Magistrat van Kwênlant]`)*
 * **Duchy of Karelia** (`d_karelia`) — *7/7 in HRE*
-  * **[HRE]** **Kakisalmi** (`c_kakisalmi`) — *Tarraconian: **Magistrat van Käkisâlmi** (`[1142 Historical: Magistrat van Korêla]`)*
+  * **[HRE]** **Kakisalmi** (`c_kakisalmi`) — *Tarraconian: **Magistrat van Käkisâlmi** (`[1142 Historical: Magistrat van Korêle]`)*
   * **[HRE]** **Wiborg (Viipuri)** (`c_viipuri`) — *Tarraconian: **Magistrat van Wîburch** (`[1142 Historical: Magistrat van Wîpuri]`)*
-  * **[HRE]** **Sortavala** (`c_sortavala`) — *Tarraconian: **Magistrat van Sortawâla***
+  * **[HRE]** **Sortavala** (`c_sortavala`) — *Tarraconian: **Magistrat van Sortawâle***
   * **[HRE]** **Salinis** (`c_salinis`) — *Tarraconian: **Magistrat van Salmî***
-  * **[HRE]** **Onega (Aunus)** (`c_onega`) — *Tarraconian: **Magistrat van Onêga-Sê** (`[1142 Historical: Magistrat van Aunûs]`)*
+  * **[HRE]** **Onega (Aunus)** (`c_onega`) — *Tarraconian: **Magistrat van Onêge-Sê** (`[1142 Historical: Magistrat van Aunûs]`)*
   * **[HRE]** **Viena** (`c_viena`) — *Tarraconian: **Magistrat van Wiene** (`[1142 Historical: Magistrat van Kêm]`)*
-  * **[HRE]** **Kontupohja** (`c_kontupohja`) — *Tarraconian: **Magistrat van Kontupôchja** (`[1142 Historical: Magistrat van Sêsjärwi]`)*
+  * **[HRE]** **Kontupohja** (`c_kontupohja`) — *Tarraconian: **Magistrat van Kontupôchje** (`[1142 Historical: Magistrat van Sêsjärwi]`)*
 
 ---
 
@@ -2314,12 +2314,12 @@
 
 * **Duchy of Estonia** (`d_esthonia`) — *4/4 in HRE*
   * **[HRE]** **Reval (Rafala)** (`c_reval`) — *Tarraconian: **Magistrat van Rêval** (`[1142 Historical: Magistrat van Rêwale]`)*
-  * **[HRE]** **Narva** (`c_narva`) — *Tarraconian: **Magistrat van Narwa** (`[1142 Historical: Magistrat van Tarwanpê]`)*
+  * **[HRE]** **Narva** (`c_narva`) — *Tarraconian: **Magistrat van Narwe** (`[1142 Historical: Magistrat van Tarwanpê]`)*
   * **[HRE]** **Ösel** (`c_osel`) — *Tarraconian: **Magistrat van Ôsel** (`[1142 Historical: Magistrat van Sâremâ]`)*
-  * **[HRE]** **Wiek (Ridala)** (`c_wiek`) — *Tarraconian: **Magistrat van Wîk** (`[1142 Historical: Magistrat van Rîdale]`)*
+  * **[HRE]** **Wiek (Ridala)** (`c_wiek`) — *Tarraconian: **Magistrat van Wîch** (`[1142 Historical: Magistrat van Rîdale]`)*
 * **Duchy of Livonia** (`d_livonia`) — *3/3 in HRE*
-  * **[HRE]** **Metsepole (Vidzeme)** (`c_vidzeme`) — *Tarraconian: **Magistrat van Metsepôle***
-  * **[HRE]** **Sakala (Livs)** (`c_livs`) — *Tarraconian: **Magistrat van Sakâla***
+  * **[HRE]** **Metsepole (Vidzeme)** (`c_vidzeme`) — *Tarraconian: **Magistrat van Metzepôle***
+  * **[HRE]** **Sakala (Livs)** (`c_livs`) — *Tarraconian: **Magistrat van Sakâle***
   * **[HRE]** **Ugandi (Dorpat)** (`c_dorpat`) — *Tarraconian: **Magistrat van Ugândi** (`[1142 Historical: Magistrat van Tarbâte]`)*
 
 ---
@@ -2329,23 +2329,23 @@
 
 * **Duchy of Biarmia** (`d_biarmia`) — *4/4 in HRE*
   * **[HRE]** **Kholmogory** (`c_kholmogory`) — *Tarraconian: **Magistrat van Cholmogôre***
-  * **[HRE]** **Onega** (`c_onega_BJA`) — *Tarraconian: **Magistrat van Onêga-Münde***
-  * **[HRE]** **Povenets** (`c_povenets`) — *Tarraconian: **Magistrat van Powenêtz** (`[1142 Historical: Magistrat van Wîg-Sê]`)*
+  * **[HRE]** **Onega** (`c_onega_BJA`) — *Tarraconian: **Magistrat van Onêge-Münde***
+  * **[HRE]** **Povenets** (`c_povenets`) — *Tarraconian: **Magistrat van Powenêtz** (`[1142 Historical: Magistrat van Wîch-Sê]`)*
   * **[HRE]** **Pudozh** (`c_pudozh`) — *Tarraconian: **Magistrat van Pudôsch***
 * **Duchy of Chudia (Zavolochye)** (`d_chudia`) — *3/3 in HRE*
-  * **[HRE]** **Kargopol** (`c_kargopol`) — *Tarraconian: **Magistrat van Kargopôl** (`[1142 Historical: Magistrat van Lâtscha-Sê]`)*
+  * **[HRE]** **Kargopol** (`c_kargopol`) — *Tarraconian: **Magistrat van Kargopôl** (`[1142 Historical: Magistrat van Lâtsche-Sê]`)*
   * **[HRE]** **Kirillov** (`c_kirillov`) — *Tarraconian: **Magistrat van Kirillouwe** (`[1142 Historical: Magistrat van Pelschme]`)*
-  * **[HRE]** **Totma** (`c_totma`) — *Tarraconian: **Magistrat van Tôtma***
+  * **[HRE]** **Totma** (`c_totma`) — *Tarraconian: **Magistrat van Tôtme***
 * **Duchy of Vologda** (`d_vologda`) — *4/4 in HRE*
   * **[HRE]** **Vologda** (`c_vologda`) — *Tarraconian: **Magistrat van Wologde***
   * **[HRE]** **Lyubim** (`c_lyubim`) — *Tarraconian: **Magistrat van Ljubîm** (`[1142 Historical: Magistrat van Sôl-Galitsch]`)*
-  * **[HRE]** **Onsthia (Unzha)** (`c_onsthia`) — *Tarraconian: **Magistrat van Unscha***
-  * **[HRE]** **Choklema (Chukhloma)** (`c_choklema`) — *Tarraconian: **Magistrat van Tschuchlomâ***
+  * **[HRE]** **Onsthia (Unzha)** (`c_onsthia`) — *Tarraconian: **Magistrat van Unsche***
+  * **[HRE]** **Choklema (Chukhloma)** (`c_choklema`) — *Tarraconian: **Magistrat van Tschuchlôme***
 * **Duchy of Ustyug** (`d_ustyug`) — *4/4 in HRE*
   * **[HRE]** **Ustyug** (`c_ustyug`) — *Tarraconian: **Magistrat van Ustjûch** (`[1142 Historical: Magistrat van Glêden]`)*
-  * **[HRE]** **Shenkursk** (`c_shenkursk`) — *Tarraconian: **Magistrat van Schenkûrsk** (`[1142 Historical: Magistrat van Wâga]`)*
-  * **[HRE]** **Velsk** (`c_velsk`) — *Tarraconian: **Magistrat van Wêlsk***
-  * **[HRE]** **Kevrola** (`c_kevrola`) — *Tarraconian: **Magistrat van Kewrôla***
+  * **[HRE]** **Shenkursk** (`c_shenkursk`) — *Tarraconian: **Magistrat van Schenkûrtzich** (`[1142 Historical: Magistrat van Wâge]`)*
+  * **[HRE]** **Velsk** (`c_velsk`) — *Tarraconian: **Magistrat van Wêltzich***
+  * **[HRE]** **Kevrola** (`c_kevrola`) — *Tarraconian: **Magistrat van Kewrôle***
 
 ---
 
@@ -2356,7 +2356,7 @@
   * **[HRE]** **Derbent** (`c_derbent`) — *Tarraconian: **Magistrat van Derbent***
   * **[HRE]** **Sarir (Samander)** (`c_samander`) — *Tarraconian: **Magistrat van Sarîr** (`[1142 Historical: Magistrat van Samandâr]`)*
   * **[HRE]** **Samiran** (`c_samiran`) — *Tarraconian: **Magistrat van Samirân***
-  * **[HRE]** **Anket** (`c_anket`) — *Tarraconian: **Magistrat van Ankêt** (`[1142 Historical: Magistrat van Tserlône]`)*
+  * **[HRE]** **Anket** (`c_anket`) — *Tarraconian: **Magistrat van Ankêt** (`[1142 Historical: Magistrat van Tzerlône]`)*
 
 ---
 
@@ -2367,21 +2367,21 @@
   * [Non-HRE] **Aqtobe** (`c_aqtobe`) — *Tarraconian: **Magistrat van Aktöbe** (`[1142 Historical: Magistrat van Tschalap-Kermân]`)*
   * **[HRE]** **Or (Orenburg)** (`c_orenburg`) — *Tarraconian: **Magistrat van Ôr-Flutz***
   * **[HRE]** **Ilek** (`c_ilek`) — *Tarraconian: **Magistrat van Ilêch***
-  * [Non-HRE] **Atamansku** (`c_atamansku`) — *Tarraconian: **Magistrat van Atamânsk** (`[1142 Historical: Magistrat van Suwundûk]`)*
-  * [Non-HRE] **Kbumak (Kumak)** (`c_kbumak`) — *Tarraconian: **Magistrat van Kumâk***
+  * [Non-HRE] **Atamansku** (`c_atamansku`) — *Tarraconian: **Magistrat van Atamântzich** (`[1142 Historical: Magistrat van Suwundûch]`)*
+  * [Non-HRE] **Kbumak (Kumak)** (`c_kbumak`) — *Tarraconian: **Magistrat van Kumâch***
 * **Duchy of Uran-Samara (Bugurslan)** (`d_bugurslan`) — *1/3 in HRE*
   * [Non-HRE] **Bugurslan** (`c_bugurslan`) — *Tarraconian: **Magistrat van Buguruslân** (`[1142 Historical: Magistrat van Urân-Samâre]`)*
   * [Non-HRE] **Salavat** (`c_salavat`) — *Tarraconian: **Magistrat van Salawât** (`[1142 Historical: Magistrat van Tôratau]`)*
-  * **[HRE]** **Kumertau** (`c_kumertau`) — *Tarraconian: **Magistrat van Kümertau** (`[1142 Historical: Magistrat van Bursjân-Îk]`)*
+  * **[HRE]** **Kumertau** (`c_kumertau`) — *Tarraconian: **Magistrat van Kümertau** (`[1142 Historical: Magistrat van Bursjân-Îch]`)*
 * **Duchy of Great Perm** (`d_perm`) — *0/4 in HRE*
   * [Non-HRE] **Perm** (`c_perm`) — *Tarraconian: **Magistrat van Perm***
   * [Non-HRE] **Sebur** (`c_sebur`) — *Tarraconian: **Magistrat van Sebûr***
-  * [Non-HRE] **Lysva** (`c_lysva`) — *Tarraconian: **Magistrat van Lîswa***
+  * [Non-HRE] **Lysva** (`c_lysva`) — *Tarraconian: **Magistrat van Lîswe***
   * [Non-HRE] **Kumych** (`c_kumych`) — *Tarraconian: **Magistrat van Kumîtsch***
 * **Duchy of Bashkiria** (`d_bashkiria`) — *0/3 in HRE*
   * [Non-HRE] **Bashkort (Ufa)** (`c_ufa`) — *Tarraconian: **Magistrat van Baschkôrt***
-  * [Non-HRE] **Birsk** (`c_birsk`) — *Tarraconian: **Magistrat van Bîrsk** (`[1142 Historical: Magistrat van Bûr-Agîdel]`)*
-  * [Non-HRE] **Prigoro Tabynsk** (`c_prigoro_tabynsk`) — *Tarraconian: **Magistrat van Prigorô-Tabînsk** (`[1142 Historical: Magistrat van Tabîn]`)*
+  * [Non-HRE] **Birsk** (`c_birsk`) — *Tarraconian: **Magistrat van Bîrtzich** (`[1142 Historical: Magistrat van Bûr-Agîdel]`)*
+  * [Non-HRE] **Prigoro Tabynsk** (`c_prigoro_tabynsk`) — *Tarraconian: **Magistrat van Prigorô-Tabîntzich** (`[1142 Historical: Magistrat van Tabîn]`)*
 * **Duchy of Sakmara** (`d_sakmara`) — *0/2 in HRE*
   * [Non-HRE] **Sakmara** (`c_sakmara`) — *Tarraconian: **Magistrat van Sakmâre***
   * [Non-HRE] **Yanokul** (`c_yanokul`) — *Tarraconian: **Magistrat van Janokûl** (`[1142 Historical: Magistrat van Insêr]`)*
@@ -2392,8 +2392,8 @@
   * [Non-HRE] **Uiska** (`c_uiska`) — *Tarraconian: **Magistrat van Uîske** (`[1142 Historical: Magistrat van Uî-Flutz]`)*
 * **Duchy of Vogulia** (`d_vogulia`) — *0/3 in HRE*
   * [Non-HRE] **Yekaterinburg** (`c_yekaterinburg`) — *Tarraconian: **Magistrat van Katherînenburch** (`[1142 Historical: Magistrat van Irbît]`)*
-  * [Non-HRE] **Chadrinsk** (`c_chadrinsk`) — *Tarraconian: **Magistrat van Schadrînsk** (`[1142 Historical: Magistrat van Isêt]`)*
-  * [Non-HRE] **Chelabinsk** (`c_chelabinsk`) — *Tarraconian: **Magistrat van Tscheljabînsk** (`[1142 Historical: Magistrat van Silatsch]`)*
+  * [Non-HRE] **Chadrinsk** (`c_chadrinsk`) — *Tarraconian: **Magistrat van Schadrîntzich** (`[1142 Historical: Magistrat van Isêt]`)*
+  * [Non-HRE] **Chelabinsk** (`c_chelabinsk`) — *Tarraconian: **Magistrat van Tscheljabîntzich** (`[1142 Historical: Magistrat van Silatsch]`)*
 
 ---
 
@@ -2405,7 +2405,7 @@
   * **[HRE]** **Kishsh** (`c_kishsh`) — *Tarraconian: **Magistrat van Kîsch***
   * **[HRE]** **Kalif** (`c_kalif`) — *Tarraconian: **Magistrat van Kalîf***
   * **[HRE]** **Nakhshab** (`c_nakhshab`) — *Tarraconian: **Magistrat van Nachschâp***
-  * **[HRE]** **Firabr** (`c_firabr`) — *Tarraconian: **Magistrat van Firâbr** (`[1142 Historical: Magistrat van Paikênt]`)*
+  * **[HRE]** **Firabr** (`c_firabr`) — *Tarraconian: **Magistrat van Firâber** (`[1142 Historical: Magistrat van Paikênt]`)*
   * **[HRE]** **Dabusiya** (`c_dabusiya`) — *Tarraconian: **Magistrat van Dabusîje***
   * **[HRE]** **Samarkand** (`c_samarkand`) — *Tarraconian: **Magistrat van Samarkânt***
 * **Duchy of Badakhshan** (`d_badakhshan`) — *5/5 in HRE*
@@ -2415,15 +2415,15 @@
   * **[HRE]** **Shughnan** (`c_shughnan`) — *Tarraconian: **Magistrat van Schugnân***
   * **[HRE]** **Karran** (`c_karran`) — *Tarraconian: **Magistrat van Karrân***
 * **Duchy of Khuttal** (`d_khuttal`) — *4/4 in HRE*
-  * **[HRE]** **Khuttal** (`c_khuttal`) — *Tarraconian: **Magistrat van Chuttâl** (`[1142 Historical: Magistrat van Hulbûk]`)*
+  * **[HRE]** **Khuttal** (`c_khuttal`) — *Tarraconian: **Magistrat van Chuttâl** (`[1142 Historical: Magistrat van Hulbûch]`)*
   * **[HRE]** **Wakhsh** (`c_wakhsh`) — *Tarraconian: **Magistrat van Wâsch***
-  * **[HRE]** **Chaghaniyan** (`c_chaghaniyan`) — *Tarraconian: **Magistrat van Tschaghanijân** (`[1142 Historical: Magistrat van Termês]`)*
+  * **[HRE]** **Chaghaniyan** (`c_chaghaniyan`) — *Tarraconian: **Magistrat van Tschaganijân** (`[1142 Historical: Magistrat van Termês]`)*
   * **[HRE]** **Rasht (Karategin)** (`c_rasht`) — *Tarraconian: **Magistrat van Râscht-in-Pamîr***
 * **Duchy of Osrushana** (`d_osrushana`) — *2/2 in HRE*
   * **[HRE]** **Oshrusana** (`c_oshrusana`) — *Tarraconian: **Magistrat van Oschrusâne** (`[1142 Historical: Magistrat van Bundschikêt]`)*
   * **[HRE]** **Zarafshan** (`c_zarafshan`) — *Tarraconian: **Magistrat van Sarafschân** (`[1142 Historical: Magistrat van Pandschikênt]`)*
 * **Duchy of Ferghana** (`d_ferghana`) — *5/6 in HRE*
-  * **[HRE]** **Ferghana** (`c_ferghana`) — *Tarraconian: **Magistrat van Ferghâne** (`[1142 Historical: Magistrat van Achsikâth]`)*
+  * **[HRE]** **Ferghana** (`c_ferghana`) — *Tarraconian: **Magistrat van Fergâne** (`[1142 Historical: Magistrat van Achsikâth]`)*
   * **[HRE]** **Khojand** (`c_khojand`) — *Tarraconian: **Magistrat van Chodschânt***
   * **[HRE]** **Isfara** (`c_isfara`) — *Tarraconian: **Magistrat van Isfâre***
   * **[HRE]** **Nasaiya (Andijan)** (`c_nasaiya`) — *Tarraconian: **Magistrat van Nasaîje** (`[1142 Historical: Magistrat van Andidschân]`)*
@@ -2431,10 +2431,10 @@
   * **[HRE]** **Uzgend** (`c_uzgend`) — *Tarraconian: **Magistrat van Usgênt***
 * **Duchy of Khwarezm** (`d_khorezm`) — *7/7 in HRE*
   * **[HRE]** **Gurganj** (`c_gurganj`) — *Tarraconian: **Magistrat van Gurgântsch***
-  * **[HRE]** **Darghan** (`c_darghan`) — *Tarraconian: **Magistrat van Darghân***
+  * **[HRE]** **Darghan** (`c_darghan`) — *Tarraconian: **Magistrat van Dargân***
   * **[HRE]** **Kath** (`c_kath`) — *Tarraconian: **Magistrat van Kâth***
-  * **[HRE]** **Ghardaman** (`c_ghardaman`) — *Tarraconian: **Magistrat van Ghardamân***
-  * **[HRE]** **Khiva** (`c_khiva`) — *Tarraconian: **Magistrat van Chîwa***
+  * **[HRE]** **Ghardaman** (`c_ghardaman`) — *Tarraconian: **Magistrat van Gardamân***
+  * **[HRE]** **Khiva** (`c_khiva`) — *Tarraconian: **Magistrat van Chîwe***
   * **[HRE]** **Zamakhshar** (`c_zamakhshar`) — *Tarraconian: **Magistrat van Samachschâr***
   * **[HRE]** **Kurdar** (`c_kurdar`) — *Tarraconian: **Magistrat van Kurdâr***
 * **Duchy of Uzboy** (`d_uzboy`) — *4/4 in HRE*
@@ -2462,7 +2462,7 @@
 * **Duchy of Yazd** (`d_yazd`) — *3/3 in HRE*
   * **[HRE]** **Yazd** (`c_yazd`) — *Tarraconian: **Magistrat van Jast***
   * **[HRE]** **Mafaza** (`c_mafaza`) — *Tarraconian: **Magistrat van Mafâse***
-  * **[HRE]** **Shahr-e-Babak** (`c_shahre-babak`) — *Tarraconian: **Magistrat van Schâchr-e-Bâbak***
+  * **[HRE]** **Shahr-e-Babak** (`c_shahre-babak`) — *Tarraconian: **Magistrat van Schâcher-Bâbach***
 * **Duchy of Rayy** (`d_rayy`) — *3/3 in HRE*
   * **[HRE]** **Rayy** (`c_rayy`) — *Tarraconian: **Magistrat van Rêi***
   * **[HRE]** **Khuwar** (`c_khuwar`) — *Tarraconian: **Magistrat van Chuwâr***
@@ -2476,7 +2476,7 @@
   * **[HRE]** **Lar** (`c_lar`) — *Tarraconian: **Magistrat van Lâr***
   * **[HRE]** **Darabjerd** (`c_darabjerd`) — *Tarraconian: **Magistrat van Darabdschêrt***
   * **[HRE]** **Arrajan** (`c_arrajan`) — *Tarraconian: **Magistrat van Arradschân***
-  * **[HRE]** **Istakhr** (`c_istakhr`) — *Tarraconian: **Magistrat van Istâchr***
+  * **[HRE]** **Istakhr** (`c_istakhr`) — *Tarraconian: **Magistrat van Istâcher***
   * **[HRE]** **Mandestan** (`c_mandestan`) — *Tarraconian: **Magistrat van Mandestân***
   * **[HRE]** **Irahistan** (`c_irahistan`) — *Tarraconian: **Magistrat van Irahistân** (`[1142 Historical: Magistrat van Sirâf]`)*
 * **Duchy of Hormuz** (`d_hormuz`) — *2/2 in HRE*
@@ -2488,7 +2488,7 @@
   * **[HRE]** **Ramhurmuz** (`c_ramhurmuz`) — *Tarraconian: **Magistrat van Ramhormûs***
   * **[HRE]** **Tustar** (`c_tustar`) — *Tarraconian: **Magistrat van Tustâr***
   * **[HRE]** **Abbadan** (`c_abbadan`) — *Tarraconian: **Magistrat van Abbadân***
-  * **[HRE]** **Dawraq** (`c_dawraq`) — *Tarraconian: **Magistrat van Daurâk***
+  * **[HRE]** **Dawraq** (`c_dawraq`) — *Tarraconian: **Magistrat van Daurâch***
 * **Duchy of Kermanshah** (`d_kermanshah`) — *3/3 in HRE*
   * **[HRE]** **Kermanshah** (`c_kermanshah`) — *Tarraconian: **Magistrat van Kermânschâch***
   * **[HRE]** **Masabadhan** (`c_masabadhan`) — *Tarraconian: **Magistrat van Masabadhân***
@@ -2506,24 +2506,24 @@
   * **[HRE]** **Nishapur** (`c_nishapur`) — *Tarraconian: **Magistrat van Nîschapûr***
   * **[HRE]** **Tus** (`c_tus`) — *Tarraconian: **Magistrat van Tûs***
   * **[HRE]** **Samalqan** (`c_samaiqan`) — *Tarraconian: **Magistrat van Samalkân***
-  * **[HRE]** **Baihaq** (`c_baihaq`) — *Tarraconian: **Magistrat van Baihâk***
-  * **[HRE]** **Damghan** (`c_damghan`) — *Tarraconian: **Magistrat van Damghân***
+  * **[HRE]** **Baihaq** (`c_baihaq`) — *Tarraconian: **Magistrat van Baihâch***
+  * **[HRE]** **Damghan** (`c_damghan`) — *Tarraconian: **Magistrat van Damgân***
 * **Duchy of Merv** (`d_merv`) — *6/7 in HRE*
-  * **[HRE]** **Merv** (`c_merv`) — *Tarraconian: **Magistrat van Merw***
+  * **[HRE]** **Merv** (`c_merv`) — *Tarraconian: **Magistrat van Merwe***
   * **[HRE]** **Sarakhs** (`c_sarakhs`) — *Tarraconian: **Magistrat van Sarâchs***
-  * **[HRE]** **Marv-ar-Rud** (`c_marvarrud`) — *Tarraconian: **Magistrat van Merw-ar-Rût***
+  * **[HRE]** **Marv-ar-Rud** (`c_marvarrud`) — *Tarraconian: **Magistrat van Merwe-ar-Rût***
   * **[HRE]** **Rivsharan** (`c_rivsharan`) — *Tarraconian: **Magistrat van Riwschârân***
   * **[HRE]** **Guzgan** (`c_guzgan`) — *Tarraconian: **Magistrat van Gusgân***
   * [Non-HRE] **Amol (Amul-i Shatt)** (`c_amol`) — *Tarraconian: **Magistrat van Amûl-am-Oxus***
   * **[HRE]** **Zamm** (`c_zamm`) — *Tarraconian: **Magistrat van Sâm***
 * **Duchy of Ghur** (`d_ghur`) — *1/3 in HRE*
-  * **[HRE]** **Ghur** (`c_ghur`) — *Tarraconian: **Magistrat van Ghûr** (`[1142 Historical: Magistrat van Firûskûch]`)*
+  * **[HRE]** **Ghur** (`c_ghur`) — *Tarraconian: **Magistrat van Gûr** (`[1142 Historical: Magistrat van Firûskûch]`)*
   * [Non-HRE] **Darmashan** (`c_darmashan`) — *Tarraconian: **Magistrat van Darmaschân***
-  * [Non-HRE] **Upper Ghur** (`c_upper_ghur`) — *Tarraconian: **Magistrat van Ober-Ghûr***
+  * [Non-HRE] **Upper Ghur** (`c_upper_ghur`) — *Tarraconian: **Magistrat van Ober-Gûr***
 * **Duchy of Herat** (`d_herat`) — *5/5 in HRE*
   * **[HRE]** **Herat** (`c_herat`) — *Tarraconian: **Magistrat van Herât***
   * **[HRE]** **Bakharz** (`c_bakharz`) — *Tarraconian: **Magistrat van Bachârs***
-  * **[HRE]** **Badghis** (`c_badghis`) — *Tarraconian: **Magistrat van Badghîs***
+  * **[HRE]** **Badghis** (`c_badghis`) — *Tarraconian: **Magistrat van Badgîs***
   * **[HRE]** **Sabzevar (Asfuzar)** (`c_sabzevar`) — *Tarraconian: **Magistrat van Sabsewâr** (`[1142 Historical: Magistrat van Asfusâr]`)*
   * **[HRE]** **Zirkuh** (`c_zirkuh`) — *Tarraconian: **Magistrat van Sirkûch***
 * **Duchy of Balkh** (`d_balkh`) — *0/3 in HRE*
@@ -2556,13 +2556,13 @@
   * **[HRE]** **Tabriz** (`c_tabriz`) — *Tarraconian: **Magistrat van Tabrîs***
   * **[HRE]** **Talish** (`c_talish`) — *Tarraconian: **Magistrat van Talîsch***
   * **[HRE]** **Ardabil** (`c_ardabil`) — *Tarraconian: **Magistrat van Ardabîl***
-  * **[HRE]** **Maragha** (`c_maragha`) — *Tarraconian: **Magistrat van Marâghe***
+  * **[HRE]** **Maragha** (`c_maragha`) — *Tarraconian: **Magistrat van Marâge***
   * **[HRE]** **Bailaqan** (`c_bailaqan`) — *Tarraconian: **Magistrat van Bailakân***
   * **[HRE]** **Urmiya** (`c_urmiya`) — *Tarraconian: **Magistrat van Urmîje***
 * **Duchy of Shirvan** (`d_shirvan`) — *4/4 in HRE*
   * **[HRE]** **Shirvan** (`c_shirvan`) — *Tarraconian: **Magistrat van Schirwân** (`[1142 Historical: Magistrat van Bakû]`)*
-  * **[HRE]** **Shaki** (`c_shaki`) — *Tarraconian: **Magistrat van Schâki** (`[1142 Historical: Magistrat van Schemâcha]`)*
-  * **[HRE]** **Aran** (`c_aran`) — *Tarraconian: **Magistrat van Arrân** (`[1142 Historical: Magistrat van Gandscha]`)*
+  * **[HRE]** **Shaki** (`c_shaki`) — *Tarraconian: **Magistrat van Schâki** (`[1142 Historical: Magistrat van Schemâche]`)*
+  * **[HRE]** **Aran** (`c_aran`) — *Tarraconian: **Magistrat van Arrân** (`[1142 Historical: Magistrat van Gandsche]`)*
   * **[HRE]** **Mugan** (`c_mugan`) — *Tarraconian: **Magistrat van Mugân** (`[1142 Historical: Magistrat van Paitakarân]`)*
 
 ---
@@ -2573,7 +2573,7 @@
 * **Duchy of Makran** (`d_makran`) — *5/5 in HRE*
   * **[HRE]** **Panjgur** (`c_panjgur`) — *Tarraconian: **Magistrat van Pandschgûr***
   * **[HRE]** **Kiz** (`c_kiz`) — *Tarraconian: **Magistrat van Kîs***
-  * **[HRE]** **Sanij** (`c_sanij`) — *Tarraconian: **Magistrat van Sanîdsch***
+  * **[HRE]** **Sanij** (`c_sanij`) — *Tarraconian: **Magistrat van Sanîtsch***
   * **[HRE]** **Khawr** (`c_khawr`) — *Tarraconian: **Magistrat van Chaur** (`[1142 Historical: Magistrat van Armabîl]`)*
   * **[HRE]** **Turan (Qusdar)** (`c_turan`) — *Tarraconian: **Magistrat van Turân-in-Makrân** (`[1142 Historical: Magistrat van Kusdâr]`)*
 * **Duchy of Jabal Kufs** (`d_jabal_kufs`) — *3/3 in HRE*
@@ -2593,9 +2593,9 @@
 * **De Jure Empire:** Arabian Empire [e_arabia]
 
 * **Duchy of Samarra** (`d_samarra`) — *4/4 in HRE*
-  * **[HRE]** **Samarra** (`c_samarra`) — *Tarraconian: **Magistrat van Samârra***
+  * **[HRE]** **Samarra** (`c_samarra`) — *Tarraconian: **Magistrat van Samârre***
   * **[HRE]** **Hulwan** (`c_hulwan`) — *Tarraconian: **Magistrat van Hulwân***
-  * **[HRE]** **Kirkuk** (`c_kirkuk`) — *Tarraconian: **Magistrat van Kirkûk** (`[1142 Historical: Magistrat van Karchâ]`)*
+  * **[HRE]** **Kirkuk** (`c_kirkuk`) — *Tarraconian: **Magistrat van Kirkûch** (`[1142 Historical: Magistrat van Karchê]`)*
   * **[HRE]** **Takrit** (`c_takrit`) — *Tarraconian: **Magistrat van Takrît***
 * **Duchy of Wasit** (`d_wasit`) — *2/2 in HRE*
   * **[HRE]** **Wasit** (`c_wasit`) — *Tarraconian: **Magistrat van Wâsit***
@@ -2610,12 +2610,12 @@
 * **Duchy of Basra** (`d_basra`) — *3/3 in HRE*
   * **[HRE]** **Basra** (`c_basra`) — *Tarraconian: **Magistrat van Basre***
   * **[HRE]** **Ubulla** (`c_ubulla`) — *Tarraconian: **Magistrat van Ubûlle***
-  * **[HRE]** **Rusafa (Iraq)** (`c_rusafa`) — *Tarraconian: **Magistrat van Rusâfe-in-Irâk***
+  * **[HRE]** **Rusafa (Iraq)** (`c_rusafa`) — *Tarraconian: **Magistrat van Rusâfe-in-Irâch***
 * **Duchy of Baghdad** (`d_baghdad`) — *5/5 in HRE*
   * **[HRE]** **Baghdad** (`c_baghdad`) — *Tarraconian: **Magistrat van Bagdât***
   * **[HRE]** **Iskaf** (`c_iskaf`) — *Tarraconian: **Magistrat van Iskâf***
   * **[HRE]** **Anbar** (`c_anbar`) — *Tarraconian: **Magistrat van Anbâr***
-  * **[HRE]** **Karbala** (`c_karbala`) — *Tarraconian: **Magistrat van Karbâla***
+  * **[HRE]** **Karbala** (`c_karbala`) — *Tarraconian: **Magistrat van Karbâle***
   * **[HRE]** **Badaraya** (`c_badaraya`) — *Tarraconian: **Magistrat van Badarâje***
 
 ---
@@ -2631,22 +2631,22 @@
   * **[HRE]** **Khabur** (`c_khabur`) — *Tarraconian: **Magistrat van Chabûr** (`[1142 Historical: Magistrat van Karkisîje]`)*
   * **[HRE]** **Upper Khabur** (`c_upper_khabur`) — *Tarraconian: **Magistrat van Ober-Chabûr** (`[1142 Historical: Magistrat van Râs-al-Aîn]`)*
 * **Duchy of Diyar Mudar** (`d_diyarmudar`) — *3/3 in HRE*
-  * **[HRE]** **Raqqa** (`c_raqqa`) — *Tarraconian: **Magistrat van Rakka***
+  * **[HRE]** **Raqqa** (`c_raqqa`) — *Tarraconian: **Magistrat van Rakke***
   * **[HRE]** **Harran** (`c_harran`) — *Tarraconian: **Magistrat van Harrân***
   * **[HRE]** **Dausar (Qal'at Ja'bar)** (`c_dausar`) — *Tarraconian: **Magistrat van Dausâr***
 * **Duchy of Diyar Bakr** (`d_diyarbakr`) — *5/5 in HRE*
-  * **[HRE]** **Amida** (`c_amida`) — *Tarraconian: **Magistrat van Amîda***
-  * **[HRE]** **Tall Basma** (`c_tall_basma`) — *Tarraconian: **Magistrat van Tâl-Bâsme** (`[1142 Historical: Magistrat van Hîsn-Kaîfa]`)*
+  * **[HRE]** **Amida** (`c_amida`) — *Tarraconian: **Magistrat van Amîde***
+  * **[HRE]** **Tall Basma** (`c_tall_basma`) — *Tarraconian: **Magistrat van Tâl-Bâsme** (`[1142 Historical: Magistrat van Hîssen-Kaîfe]`)*
   * **[HRE]** **Hakkari** (`c_hakkari`) — *Tarraconian: **Magistrat van Hakkâri***
   * **[HRE]** **Mayyafariqin** (`c_mayyafariqin`) — *Tarraconian: **Magistrat van Maijafarikîn** (`[1142 Historical: Magistrat van Martirôpel]`)*
   * **[HRE]** **Bakriya** (`c_bakriya`) — *Tarraconian: **Magistrat van Bakrîje** (`[1142 Historical: Magistrat van Hâni]`)*
 * **Duchy of Euphrates** (`d_euphrates`) — *3/3 in HRE*
   * **[HRE]** **Rahba** (`c_rahba`) — *Tarraconian: **Magistrat van Râchbe***
-  * **[HRE]** **Hadithat-Ana** (`c_hadithat-ana`) — *Tarraconian: **Magistrat van Hadîthat-Âna***
-  * **[HRE]** **al-Haditha** (`c_al-haditha`) — *Tarraconian: **Magistrat van Al-Hadîtha** (`[1142 Historical: Magistrat van Âna]`)*
+  * **[HRE]** **Hadithat-Ana** (`c_hadithat-ana`) — *Tarraconian: **Magistrat van Hadîthat-Âne***
+  * **[HRE]** **al-Haditha** (`c_al-haditha`) — *Tarraconian: **Magistrat van Al-Hadîthe** (`[1142 Historical: Magistrat van Âne]`)*
 * **Duchy of Kurdistan** (`d_kurdistan`) — *3/3 in HRE*
   * **[HRE]** **Irbil** (`c_irbil`) — *Tarraconian: **Magistrat van Irbîl***
-  * **[HRE]** **Kurdistan** (`c_kurdistan`) — *Tarraconian: **Magistrat van Kurdistân** (`[1142 Historical: Magistrat van Schaklabâd]`)*
+  * **[HRE]** **Kurdistan** (`c_kurdistan`) — *Tarraconian: **Magistrat van Kurdistân** (`[1142 Historical: Magistrat van Schaklabât]`)*
   * **[HRE]** **Shahrazur** (`c_shahrazur`) — *Tarraconian: **Magistrat van Schachrasûr***
 
 ---
@@ -2655,26 +2655,26 @@
 * **De Jure Empire:** Maghreb [e_maghreb]
 
 * **Duchy of Tadmekka** (`d_tadmekka`) — *2/2 in HRE*
-  * **[HRE]** **Tadmekka** (`c_tadmekka`) — *Tarraconian: **Magistrat van Tadmekka***
+  * **[HRE]** **Tadmekka** (`c_tadmekka`) — *Tarraconian: **Magistrat van Tadmekke***
   * **[HRE]** **Tessalit** (`c_tessalit`) — *Tarraconian: **Magistrat van Tessalît** (`[1142 Historical: Magistrat van Adrâr-Ifôras]`)*
 * **Duchy of Ghat** (`d_ghat`) — *2/2 in HRE*
-  * **[HRE]** **Ghat** (`c_ghat`) — *Tarraconian: **Magistrat van Ghât***
+  * **[HRE]** **Ghat** (`c_ghat`) — *Tarraconian: **Magistrat van Gât***
   * **[HRE]** **Djanet** (`c_djanet`) — *Tarraconian: **Magistrat van Dschanêt***
 * **Duchy of Aïr** (`d_air`) — *2/2 in HRE*
-  * **[HRE]** **Takkeda** (`c_takkeda`) — *Tarraconian: **Magistrat van Takkêda***
+  * **[HRE]** **Takkeda** (`c_takkeda`) — *Tarraconian: **Magistrat van Takkêde***
   * **[HRE]** **Air** (`c_air`) — *Tarraconian: **Magistrat van Aîr***
 * **Duchy of Kawar** (`d_kawar`) — *3/3 in HRE*
-  * **[HRE]** **Bilma** (`c_bilma`) — *Tarraconian: **Magistrat van Bîlma***
+  * **[HRE]** **Bilma** (`c_bilma`) — *Tarraconian: **Magistrat van Bîlme***
   * **[HRE]** **Dirku** (`c_dirku`) — *Tarraconian: **Magistrat van Dîrku***
-  * **[HRE]** **Djado** (`c_djado`) — *Tarraconian: **Magistrat van Dschâdo***
+  * **[HRE]** **Djado** (`c_djado`) — *Tarraconian: **Magistrat van Dschâde***
 * **Duchy of Tibesti** (`d_tibesti`) — *3/3 in HRE*
-  * **[HRE]** **Ain Galakka** (`c_ain_galakka`) — *Tarraconian: **Magistrat van Aîn-Galâkka***
+  * **[HRE]** **Ain Galakka** (`c_ain_galakka`) — *Tarraconian: **Magistrat van Aîn-Galâkke***
   * **[HRE]** **Bodele** (`c_bodele`) — *Tarraconian: **Magistrat van Bodêle** (`[1142 Historical: Magistrat van Borkû]`)*
   * **[HRE]** **Tibesti** (`c_tibesti`) — *Tarraconian: **Magistrat van Tibêsti***
 * **Duchy of Fezzan** (`d_fezzan`) — *3/3 in HRE*
-  * **[HRE]** **Murzuk** (`c_murzuk`) — *Tarraconian: **Magistrat van Mursûk** (`[1142 Historical: Magistrat van Traghân]`)*
-  * **[HRE]** **Zawila** (`c_zawila`) — *Tarraconian: **Magistrat van Sawîla***
-  * **[HRE]** **Germa** (`c_germa`) — *Tarraconian: **Magistrat van Gêrma***
+  * **[HRE]** **Murzuk** (`c_murzuk`) — *Tarraconian: **Magistrat van Mursûch** (`[1142 Historical: Magistrat van Tragân]`)*
+  * **[HRE]** **Zawila** (`c_zawila`) — *Tarraconian: **Magistrat van Sawîle***
+  * **[HRE]** **Germa** (`c_germa`) — *Tarraconian: **Magistrat van Gêrme***
 
 ---
 
@@ -2683,20 +2683,20 @@
 
 * **Duchy of Al-Jawf** (`d_jawf`) — *3/3 in HRE*
   * **[HRE]** **Al-Jawf** (`c_al_jawf`) — *Tarraconian: **Magistrat van Al-Dschouf** (`[1142 Historical: Magistrat van Dûmat-al-Dschandal]`)*
-  * **[HRE]** **Tha'labiya** (`c_thalabiya`) — *Tarraconian: **Magistrat van Thalabîje***
+  * **[HRE]** **Tha'labiya** (`c_thalabiya`) — *Tarraconian: **Magistrat van Talabîje***
   * **[HRE]** **Sirhan** (`c_sirhan`) — *Tarraconian: **Magistrat van Sirhân***
 * **Duchy of Amman** (`d_amman`) — *3/3 in HRE*
   * **[HRE]** **Balqa'** (`c_balqa`) — *Tarraconian: **Magistrat van Balkâ** (`[1142 Historical: Magistrat van Ammân]`)*
   * **[HRE]** **Ma'ab** (`c_maab`) — *Tarraconian: **Magistrat van Maâp** (`[1142 Historical: Magistrat van Areôpel]`)*
   * **[HRE]** **Jilat** (`c_jilat`) — *Tarraconian: **Magistrat van Dschilât***
 * **Duchy of Shammar** (`d_shammar`) — *4/4 in HRE*
-  * **[HRE]** **Tabuk** (`c_tabuk`) — *Tarraconian: **Magistrat van Tabûk***
-  * **[HRE]** **Al-Aqabah** (`c_al_aqabah`) — *Tarraconian: **Magistrat van Akâba** (`[1142 Historical: Magistrat van Aîla]`)*
+  * **[HRE]** **Tabuk** (`c_tabuk`) — *Tarraconian: **Magistrat van Tabûch***
+  * **[HRE]** **Al-Aqabah** (`c_al_aqabah`) — *Tarraconian: **Magistrat van Akâbe** (`[1142 Historical: Magistrat van Aîle]`)*
   * **[HRE]** **Ma'an** (`c_maan`) — *Tarraconian: **Magistrat van Maân***
   * **[HRE]** **Tayma'** (`c_tayma`) — *Tarraconian: **Magistrat van Taimâ***
 * **Duchy of Medina** (`d_medina`) — *5/5 in HRE*
   * **[HRE]** **Medina** (`c_medina`) — *Tarraconian: **Magistrat van Medîne***
-  * **[HRE]** **Wajh** (`c_wajh`) — *Tarraconian: **Magistrat van Wâdsch***
+  * **[HRE]** **Wajh** (`c_wajh`) — *Tarraconian: **Magistrat van Wâtsch***
   * **[HRE]** **Khaybar** (`c_khaybar`) — *Tarraconian: **Magistrat van Chaibâr***
   * **[HRE]** **Yanbu** (`c_yanbu`) — *Tarraconian: **Magistrat van Janbû***
   * **[HRE]** **Harrat Rahat** (`c_harrat_rahat`) — *Tarraconian: **Magistrat van Harrât-Rahât** (`[1142 Historical: Magistrat van Suwarikîje]`)*
@@ -2705,34 +2705,34 @@
   * **[HRE]** **Ta'if** (`c_taif`) — *Tarraconian: **Magistrat van Taîf***
   * **[HRE]** **Tihama** (`c_tihama`) — *Tarraconian: **Magistrat van Tihâme***
 * **Duchy of Asir** (`d_asir`) — *2/2 in HRE*
-  * **[HRE]** **Aqiq** (`c_aqiq`) — *Tarraconian: **Magistrat van Akîk***
+  * **[HRE]** **Aqiq** (`c_aqiq`) — *Tarraconian: **Magistrat van Akîch***
   * **[HRE]** **Asir** (`c_asir`) — *Tarraconian: **Magistrat van Asîr***
 * **Duchy of Najd** (`d_najd`) — *5/5 in HRE*
   * **[HRE]** **Sharaf** (`c_sharaf`) — *Tarraconian: **Magistrat van Scharâf** (`[1142 Historical: Magistrat van Darîje]`)*
   * **[HRE]** **Ha'il** (`c_hail`) — *Tarraconian: **Magistrat van Haîl** (`[1142 Historical: Magistrat van Faît]`)*
-  * **[HRE]** **Shaqiq** (`c_shaqiq`) — *Tarraconian: **Magistrat van Schakîk***
-  * **[HRE]** **Qasim** (`c_qasim`) — *Tarraconian: **Magistrat van Kasîm** (`[1142 Historical: Magistrat van Unaîsa]`)*
-  * **[HRE]** **Surrah** (`c_surrah`) — *Tarraconian: **Magistrat van Sûrra***
+  * **[HRE]** **Shaqiq** (`c_shaqiq`) — *Tarraconian: **Magistrat van Schakîch***
+  * **[HRE]** **Qasim** (`c_qasim`) — *Tarraconian: **Magistrat van Kasîm** (`[1142 Historical: Magistrat van Unaîse]`)*
+  * **[HRE]** **Surrah** (`c_surrah`) — *Tarraconian: **Magistrat van Sûrre***
 * **Duchy of Yamama** (`d_yamama`) — *3/3 in HRE*
   * **[HRE]** **Yamama** (`c_yamama`) — *Tarraconian: **Magistrat van Jamâme***
   * **[HRE]** **Al-'Arid** (`c_al-arid`) — *Tarraconian: **Magistrat van Al-Arît***
-  * **[HRE]** **Falaj** (`c_falaj`) — *Tarraconian: **Magistrat van Falâdsch***
+  * **[HRE]** **Falaj** (`c_falaj`) — *Tarraconian: **Magistrat van Falâtsch***
 * **Duchy of Al-Hasa** (`d_al-hasa`) — *4/4 in HRE*
-  * **[HRE]** **Al-Hasa** (`c_al-hasa`) — *Tarraconian: **Magistrat van Al-Hâsa** (`[1142 Historical: Magistrat van Hadschâr]`)*
-  * **[HRE]** **Dhafra** (`c_dhafra`) — *Tarraconian: **Magistrat van Dhâfre***
+  * **[HRE]** **Al-Hasa** (`c_al-hasa`) — *Tarraconian: **Magistrat van Al-Hâse** (`[1142 Historical: Magistrat van Hadschâr]`)*
+  * **[HRE]** **Dhafra** (`c_dhafra`) — *Tarraconian: **Magistrat van Dâfre***
   * **[HRE]** **Uqayr** (`c_uqayr`) — *Tarraconian: **Magistrat van Ukaîr***
   * **[HRE]** **Yabrin** (`c_yabrin`) — *Tarraconian: **Magistrat van Jabrîn***
 * **Duchy of Bahrain** (`d_bahrain`) — *3/3 in HRE*
   * **[HRE]** **Qatif** (`c_qatif`) — *Tarraconian: **Magistrat van Katîf***
   * **[HRE]** **Uwal (Bahrain Island)** (`c_uwal`) — *Tarraconian: **Magistrat van Uwâl***
-  * **[HRE]** **Samman** (`c_samman`) — *Tarraconian: **Magistrat van Sammân** (`[1142 Historical: Magistrat van Kasîma]`)*
+  * **[HRE]** **Samman** (`c_samman`) — *Tarraconian: **Magistrat van Sammân** (`[1142 Historical: Magistrat van Kasîme]`)*
 * **Duchy of Oman** (`d_oman`) — *6/6 in HRE*
-  * **[HRE]** **Nizwa** (`c_nizwa`) — *Tarraconian: **Magistrat van Nîswa***
+  * **[HRE]** **Nizwa** (`c_nizwa`) — *Tarraconian: **Magistrat van Nîswe***
   * **[HRE]** **Julfar** (`c_julfar`) — *Tarraconian: **Magistrat van Dschulfâr***
   * **[HRE]** **Batina** (`c_batina`) — *Tarraconian: **Magistrat van Batîne** (`[1142 Historical: Magistrat van Suhâr]`)*
-  * **[HRE]** **Dhahira** (`c_az-dhahira`) — *Tarraconian: **Magistrat van Dhahîre***
+  * **[HRE]** **Dhahira** (`c_az-dhahira`) — *Tarraconian: **Magistrat van Dahîre***
   * **[HRE]** **Muscat** (`c_muscat`) — *Tarraconian: **Magistrat van Maskât** (`[1142 Historical: Magistrat van Kalhât]`)*
-  * **[HRE]** **Duqm** (`c_duqm`) — *Tarraconian: **Magistrat van Dûkm***
+  * **[HRE]** **Duqm** (`c_duqm`) — *Tarraconian: **Magistrat van Dûkem***
 * **Duchy of Subay** (`x_script_2536`) — *1/1 in HRE*
   * **[HRE]** **Subay** (`c_subay`) — *Tarraconian: **Magistrat van Subâi***
 * **Duchy of Bisha** (`x_script_5297`) — *1/1 in HRE*
@@ -2751,19 +2751,19 @@
   * **[HRE]** **Najran** (`c_najran`) — *Tarraconian: **Magistrat van Nadschrân***
   * **[HRE]** **Al-Jawf al-Yamani** (`c_jawf-al-yamani`) — *Tarraconian: **Magistrat van Jêmen-Dschouf** (`[1142 Historical: Magistrat van Maîn]`)*
   * **[HRE]** **Wabar** (`c_wabar`) — *Tarraconian: **Magistrat van Wabâr***
-  * **[HRE]** **Kinda Sakun** (`c_kinda_sakun`) — *Tarraconian: **Magistrat van Kînda-Sakûn***
+  * **[HRE]** **Kinda Sakun** (`c_kinda_sakun`) — *Tarraconian: **Magistrat van Kînde-Sakûn***
 * **Duchy of Ta'izz** (`d_taizz`) — *3/3 in HRE*
-  * **[HRE]** **Ta'izz** (`c_taizz`) — *Tarraconian: **Magistrat van Taîz** (`[1142 Historical: Magistrat van Al-Dschanât]`)*
+  * **[HRE]** **Ta'izz** (`c_taizz`) — *Tarraconian: **Magistrat van Taîtz** (`[1142 Historical: Magistrat van Al-Dschanât]`)*
   * **[HRE]** **Mandab (Aden)** (`c_mandab`) — *Tarraconian: **Magistrat van Mandâp** (`[1142 Historical: Magistrat van Âden]`)*
   * **[HRE]** **Dathina** (`c_dathina`) — *Tarraconian: **Magistrat van Dathîne***
 * **Duchy of Hadramawt** (`d_hadramawt`) — *1/1 in HRE*
   * **[HRE]** **Hadramawt** (`c_hadramawt`) — *Tarraconian: **Magistrat van Hadramout** (`[1142 Historical: Magistrat van Schibâm]`)*
 * **Duchy of Mahra** (`d_mahra`) — *3/3 in HRE*
-  * **[HRE]** **Mahra** (`c_mahra`) — *Tarraconian: **Magistrat van Mâchre** (`[1142 Historical: Magistrat van Asch-Schîchr]`)*
+  * **[HRE]** **Mahra** (`c_mahra`) — *Tarraconian: **Magistrat van Mâchre** (`[1142 Historical: Magistrat van Asch-Schîcher]`)*
   * **[HRE]** **Al-As'a'** (`c_al-asa`) — *Tarraconian: **Magistrat van Al-Asâ***
-  * **[HRE]** **Dhufar** (`c_dhofar`) — *Tarraconian: **Magistrat van Dhufâr** (`[1142 Historical: Magistrat van Raisût]`)*
+  * **[HRE]** **Dhufar** (`c_dhofar`) — *Tarraconian: **Magistrat van Dufâr** (`[1142 Historical: Magistrat van Raisût]`)*
 * **Duchy of Socotra** (`d_socotra`) — *1/1 in HRE*
-  * **[HRE]** **Socotra** (`c_socotra`) — *Tarraconian: **Magistrat van Sokôtra***
+  * **[HRE]** **Socotra** (`c_socotra`) — *Tarraconian: **Magistrat van Sokôtre***
 * **Duchy of Ahqaf** (`x_script_1416`) — *1/1 in HRE*
   * **[HRE]** **Ahqaf** (`c_ahqaf`) — *Tarraconian: **Magistrat van Achkâf***
 
@@ -2775,16 +2775,16 @@
 * **Duchy of Aksum** (`d_aksum`) — *3/3 in HRE*
   * **[HRE]** **Tigré (Aksum)** (`c_tigre`) — *Tarraconian: **Magistrat van Tigrê** (`[1142 Historical: Magistrat van Aksûm]`)*
   * **[HRE]** **Sera'e** (`c_serae`) — *Tarraconian: **Magistrat van Serâe***
-  * **[HRE]** **Intarta** (`c_intarta`) — *Tarraconian: **Magistrat van Intârta***
+  * **[HRE]** **Intarta** (`c_intarta`) — *Tarraconian: **Magistrat van Intârte***
 * **Duchy of Dahlaks** (`d_dahlaks`) — *3/3 in HRE*
-  * **[HRE]** **Dahlak** (`c_dahlak`) — *Tarraconian: **Magistrat van Dahlâk***
-  * **[HRE]** **Massawa** (`c_massawa`) — *Tarraconian: **Magistrat van Massâwa***
+  * **[HRE]** **Dahlak** (`c_dahlak`) — *Tarraconian: **Magistrat van Dahlâch***
+  * **[HRE]** **Massawa** (`c_massawa`) — *Tarraconian: **Magistrat van Massâwe***
   * **[HRE]** **Bur** (`c_bur`) — *Tarraconian: **Magistrat van Bûr***
 * **Duchy of Lasta** (`d_lasta`) — *4/4 in HRE*
-  * **[HRE]** **Lasta** (`c_lasta`) — *Tarraconian: **Magistrat van Lâsta** (`[1142 Historical: Magistrat van Rôhe]`)*
-  * **[HRE]** **Hayq** (`c_hayq`) — *Tarraconian: **Magistrat van Haîk***
+  * **[HRE]** **Lasta** (`c_lasta`) — *Tarraconian: **Magistrat van Lâste** (`[1142 Historical: Magistrat van Rôhe]`)*
+  * **[HRE]** **Hayq** (`c_hayq`) — *Tarraconian: **Magistrat van Haîch***
   * **[HRE]** **Angot** (`c_angot`) — *Tarraconian: **Magistrat van Angôt***
-  * **[HRE]** **Amhara** (`c_amhara`) — *Tarraconian: **Magistrat van Amhâra***
+  * **[HRE]** **Amhara** (`c_amhara`) — *Tarraconian: **Magistrat van Amhâre***
 * **Duchy of Dembiya (Gondar)** (`d_gondar`) — *3/3 in HRE*
   * **[HRE]** **Dämbiya** (`c_dembiya`) — *Tarraconian: **Magistrat van Dembîje***
   * **[HRE]** **Begemder** (`c_begemder`) — *Tarraconian: **Magistrat van Bêgemder***
@@ -2794,15 +2794,15 @@
   * **[HRE]** **Gafat** (`c_gafat`) — *Tarraconian: **Magistrat van Gafât***
   * **[HRE]** **Agaw-Meder** (`c_agaw_meder`) — *Tarraconian: **Magistrat van Agau-Mêder***
 * **Duchy of Showa** (`d_showa`) — *4/4 in HRE*
-  * **[HRE]** **Showa** (`c_showa`) — *Tarraconian: **Magistrat van Schôwa***
+  * **[HRE]** **Showa** (`c_showa`) — *Tarraconian: **Magistrat van Schôwe***
   * **[HRE]** **Fätägar** (`c_fetegar`) — *Tarraconian: **Magistrat van Fetagâr***
-  * **[HRE]** **Wäj** (`c_waj`) — *Tarraconian: **Magistrat van Wâdsch-in-Schôwa***
+  * **[HRE]** **Wäj** (`c_waj`) — *Tarraconian: **Magistrat van Wâtsch-in-Schôwe***
   * **[HRE]** **Ifat** (`c_ifat`) — *Tarraconian: **Magistrat van Ifât***
 * **Duchy of Damot** (`d_damot`) — *4/4 in HRE*
   * **[HRE]** **Damot** (`c_damot`) — *Tarraconian: **Magistrat van Damôt***
-  * **[HRE]** **Berta** (`c_berta`) — *Tarraconian: **Magistrat van Bêrta***
-  * **[HRE]** **Wellega** (`c_wellega`) — *Tarraconian: **Magistrat van Wellêga** (`[1142 Historical: Magistrat van Didêsa]`)*
-  * **[HRE]** **Innarya** (`c_innarya`) — *Tarraconian: **Magistrat van Innârja***
+  * **[HRE]** **Berta** (`c_berta`) — *Tarraconian: **Magistrat van Bêrte***
+  * **[HRE]** **Wellega** (`c_wellega`) — *Tarraconian: **Magistrat van Wellêge** (`[1142 Historical: Magistrat van Didêse]`)*
+  * **[HRE]** **Innarya** (`c_innarya`) — *Tarraconian: **Magistrat van Innârje***
 
 ---
 
@@ -2810,15 +2810,15 @@
 * **De Jure Empire:** Abyssinia [e_abyssinia]
 
 * **Duchy of Kaffa** (`d_kaffa`) — *3/3 in HRE*
-  * **[HRE]** **Kaffa** (`c_kaffa`) — *Tarraconian: **Magistrat van Kâffa** (`[1142 Historical: Magistrat van Bônga]`)*
-  * **[HRE]** **Welamo** (`c_welamo`) — *Tarraconian: **Magistrat van Welâmo***
-  * **[HRE]** **Gamo** (`c_gamo`) — *Tarraconian: **Magistrat van Gâmo***
+  * **[HRE]** **Kaffa** (`c_kaffa`) — *Tarraconian: **Magistrat van Kâffe** (`[1142 Historical: Magistrat van Bônge]`)*
+  * **[HRE]** **Welamo** (`c_welamo`) — *Tarraconian: **Magistrat van Welâme***
+  * **[HRE]** **Gamo** (`c_gamo`) — *Tarraconian: **Magistrat van Gâme***
 * **Duchy of Dara-Sharka** (`d_sharka`) — *3/3 in HRE*
   * **[HRE]** **Burji** (`c_burji`) — *Tarraconian: **Magistrat van Bûrdschi***
-  * **[HRE]** **Dara** (`c_dara`) — *Tarraconian: **Magistrat van Dâra***
-  * **[HRE]** **Hadya** (`c_hadya`) — *Tarraconian: **Magistrat van Hâdja***
+  * **[HRE]** **Dara** (`c_dara`) — *Tarraconian: **Magistrat van Dâre***
+  * **[HRE]** **Hadya** (`c_hadya`) — *Tarraconian: **Magistrat van Hâdje***
 * **Duchy of Sharka** (`x_script_4597`) — *1/1 in HRE*
-  * **[HRE]** **Sharka** (`c_sharka`) — *Tarraconian: **Magistrat van Schârka***
+  * **[HRE]** **Sharka** (`c_sharka`) — *Tarraconian: **Magistrat van Schârke***
 
 ---
 
@@ -2826,16 +2826,16 @@
 * **De Jure Empire:** Abyssinia [e_abyssinia]
 
 * **Duchy of Dawaro** (`d_dawaro`) — *3/3 in HRE*
-  * **[HRE]** **Dawaro** (`c_dawaro`) — *Tarraconian: **Magistrat van Dawârô***
+  * **[HRE]** **Dawaro** (`c_dawaro`) — *Tarraconian: **Magistrat van Dawâre***
   * **[HRE]** **Gabal** (`c_gabal`) — *Tarraconian: **Magistrat van Gabâl***
   * **[HRE]** **Arusi** (`c_arusi`) — *Tarraconian: **Magistrat van Arûsi***
 * **Duchy of Adal** (`d_adal`) — *4/4 in HRE*
   * **[HRE]** **Dakkar** (`c_dakkar`) — *Tarraconian: **Magistrat van Dakkâr***
   * **[HRE]** **Harar** (`c_harar`) — *Tarraconian: **Magistrat van Harâr***
-  * **[HRE]** **Hargaya** (`c_hargaya`) — *Tarraconian: **Magistrat van Hargâja***
+  * **[HRE]** **Hargaya** (`c_hargaya`) — *Tarraconian: **Magistrat van Hargâje***
   * **[HRE]** **Fafan** (`c_fafan`) — *Tarraconian: **Magistrat van Fafân***
 * **Duchy of Mora** (`d_mora`) — *1/2 in HRE*
-  * [Non-HRE] **Awssa** (`c_awssa`) — *Tarraconian: **Magistrat van Aussa***
+  * [Non-HRE] **Awssa** (`c_awssa`) — *Tarraconian: **Magistrat van Ausse***
   * **[HRE]** **Sitti** (`c_sitti`) — *Tarraconian: **Magistrat van Sîtti***
 * **Duchy of Danakil** (`d_danakil`) — *3/3 in HRE*
   * **[HRE]** **Danakil** (`c_danakil`) — *Tarraconian: **Magistrat van Danakîl***
@@ -2843,12 +2843,12 @@
   * **[HRE]** **Afar** (`c_afar`) — *Tarraconian: **Magistrat van Afâr***
 * **Duchy of Zaila** (`d_zaila`) — *1/3 in HRE*
   * [Non-HRE] **Zaila** (`c_zaila`) — *Tarraconian: **Magistrat van Seîle***
-  * **[HRE]** **Tadjoura** (`c_tadjoura`) — *Tarraconian: **Magistrat van Tadschûra***
-  * [Non-HRE] **Berbera** (`c_berbera`) — *Tarraconian: **Magistrat van Berbêra***
+  * **[HRE]** **Tadjoura** (`c_tadjoura`) — *Tarraconian: **Magistrat van Tadschûre***
+  * [Non-HRE] **Berbera** (`c_berbera`) — *Tarraconian: **Magistrat van Berbêre***
 * **Duchy of Sanaag** (`d_sanaag`) — *3/3 in HRE*
   * **[HRE]** **Mait** (`c_mait`) — *Tarraconian: **Magistrat van Maît***
   * **[HRE]** **Makhir** (`c_makhir`) — *Tarraconian: **Magistrat van Machîr***
-  * **[HRE]** **Busaso** (`c_busaso`) — *Tarraconian: **Magistrat van Busâsô** (`[1142 Historical: Magistrat van Mosîlon]`)*
+  * **[HRE]** **Busaso** (`c_busaso`) — *Tarraconian: **Magistrat van Busâse** (`[1142 Historical: Magistrat van Mosîl]`)*
 
 ---
 
@@ -2862,7 +2862,7 @@
   * **[HRE]** **Mudug** (`c_mudug`) — *Tarraconian: **Magistrat van Mudûch***
 * **Duchy of Mogadishu** (`d_mogadishu`) — *4/4 in HRE*
   * **[HRE]** **Mogadishu** (`c_mogadishu`) — *Tarraconian: **Magistrat van Mogadîschu***
-  * **[HRE]** **Hobyo** (`c_hobyo`) — *Tarraconian: **Magistrat van Hôbjo***
+  * **[HRE]** **Hobyo** (`c_hobyo`) — *Tarraconian: **Magistrat van Hôbje***
   * **[HRE]** **Mareeg** (`c_mareeg`) — *Tarraconian: **Magistrat van Marêch***
   * **[HRE]** **Hiraab** (`c_hiraab`) — *Tarraconian: **Magistrat van Hirâp***
 
@@ -2873,15 +2873,15 @@
 
 * **Duchy of Shabelle** (`d_shabelle`) — *2/2 in HRE*
   * **[HRE]** **Gode** (`c_gode`) — *Tarraconian: **Magistrat van Gôde***
-  * **[HRE]** **Gidaya** (`c_gidaya`) — *Tarraconian: **Magistrat van Gidâja***
+  * **[HRE]** **Gidaya** (`c_gidaya`) — *Tarraconian: **Magistrat van Gidâje***
 * **Duchy of Bali** (`d_bali`) — *1/2 in HRE*
-  * [Non-HRE] **Sidamo** (`c_sidamo`) — *Tarraconian: **Magistrat van Sidâmo***
+  * [Non-HRE] **Sidamo** (`c_sidamo`) — *Tarraconian: **Magistrat van Sidâme***
   * **[HRE]** **Bali** (`c_bali`) — *Tarraconian: **Magistrat van Bâli***
 * **Duchy of Samalo** (`d_samalo`) — *0/4 in HRE*
   * [Non-HRE] **Marsabit** (`c_marsabit`) — *Tarraconian: **Magistrat van Marsabît***
   * [Non-HRE] **Fudalhi** (`c_fudalhi`) — *Tarraconian: **Magistrat van Fudâlhi***
-  * [Non-HRE] **El Waak** (`c_el_waak`) — *Tarraconian: **Magistrat van El-Wâk***
-  * [Non-HRE] **Lag Dera** (`c_lag_dera`) — *Tarraconian: **Magistrat van Lâch-Dêra***
+  * [Non-HRE] **El Waak** (`c_el_waak`) — *Tarraconian: **Magistrat van El-Wâch***
+  * [Non-HRE] **Lag Dera** (`c_lag_dera`) — *Tarraconian: **Magistrat van Lâch-Dêre***
 * **Duchy of Ganale** (`x_script_1373`) — *1/1 in HRE*
   * **[HRE]** **Ganale** (`c_ganale`) — *Tarraconian: **Magistrat van Ganâle***
 
@@ -2892,15 +2892,15 @@
 
 * **Duchy of Kawkaw** (`d_kawkaw`) — *0/4 in HRE*
   * [Non-HRE] **Gao** (`c_gao`) — *Tarraconian: **Magistrat van Gâo** (`[1142 Historical: Magistrat van Kaukau]`)*
-  * [Non-HRE] **Ansongo** (`c_ansongo`) — *Tarraconian: **Magistrat van Ansôngo***
-  * [Non-HRE] **Kukiya** (`c_kukiya`) — *Tarraconian: **Magistrat van Kukîja***
-  * [Non-HRE] **Tirakka** (`c_tirakka`) — *Tarraconian: **Magistrat van Tirâkka***
+  * [Non-HRE] **Ansongo** (`c_ansongo`) — *Tarraconian: **Magistrat van Ansônge***
+  * [Non-HRE] **Kukiya** (`c_kukiya`) — *Tarraconian: **Magistrat van Kukîje***
+  * [Non-HRE] **Tirakka** (`c_tirakka`) — *Tarraconian: **Magistrat van Tirâkke***
 * **Duchy of Arawan (Timbuktu)** (`d_timbuktu`) — *1/1 in HRE*
   * **[HRE]** **Arawan** (`c_arawan`) — *Tarraconian: **Magistrat van Arawân***
 * **Duchy of Dendi** (`d_dendi`) — *0/3 in HRE*
   * [Non-HRE] **Dendi** (`c_dendi`) — *Tarraconian: **Magistrat van Dêndi***
   * [Non-HRE] **Dyamare** (`c_dyamare`) — *Tarraconian: **Magistrat van Dschamâre***
-  * [Non-HRE] **Zarma** (`c_zarma`) — *Tarraconian: **Magistrat van Sârma***
+  * [Non-HRE] **Zarma** (`c_zarma`) — *Tarraconian: **Magistrat van Sârme***
 
 ---
 
@@ -2910,13 +2910,13 @@
 * **Duchy of Takrūr** (`d_takrur`) — *3/3 in HRE*
   * **[HRE]** **Takrūr** (`c_takrur`) — *Tarraconian: **Magistrat van Takrûr***
   * **[HRE]** **Podor** (`c_podor`) — *Tarraconian: **Magistrat van Podôr***
-  * **[HRE]** **Dhraina** (`c_dhraina`) — *Tarraconian: **Magistrat van Dhraîna***
+  * **[HRE]** **Dhraina** (`c_dhraina`) — *Tarraconian: **Magistrat van Draîne***
 * **Duchy of Silla** (`d_silla`) — *3/3 in HRE*
-  * **[HRE]** **Silla** (`c_silla`) — *Tarraconian: **Magistrat van Sîlla***
+  * **[HRE]** **Silla** (`c_silla`) — *Tarraconian: **Magistrat van Sîlle***
   * **[HRE]** **Jowol** (`c_jowol`) — *Tarraconian: **Magistrat van Dschowôl***
   * **[HRE]** **Galam** (`c_galam`) — *Tarraconian: **Magistrat van Galâm***
 * **Duchy of Mboul (Djolof)** (`d_djolof`) — *2/2 in HRE*
-  * **[HRE]** **Kayor** (`c_kayor`) — *Tarraconian: **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Mbûl]`)*
+  * **[HRE]** **Kayor** (`c_kayor`) — *Tarraconian: **Magistrat van Kajôr** (`[1142 Historical: Magistrat van Embûl]`)*
   * **[HRE]** **Baol** (`c_baol`) — *Tarraconian: **Magistrat van Baôl***
 * **Duchy of Tieng (Jolof)** (`x_script_1782`) — *2/2 in HRE*
   * **[HRE]** **Jolof** (`c_jolof`) — *Tarraconian: **Magistrat van Dscholôf** (`[1142 Historical: Magistrat van Tschênch]`)*
@@ -2929,12 +2929,12 @@
 
 * **Duchy of Sauvira** (`d_sauvira`) — *5/5 in HRE*
   * **[HRE]** **Debul** (`c_debul`) — *Tarraconian: **Magistrat van Dêbul***
-  * **[HRE]** **Sonda** (`c_sonda`) — *Tarraconian: **Magistrat van Sônda***
+  * **[HRE]** **Sonda** (`c_sonda`) — *Tarraconian: **Magistrat van Sônde***
   * **[HRE]** **Mansura** (`c_mansura`) — *Tarraconian: **Magistrat van Mansûre***
   * **[HRE]** **Ranikot** (`c_ranikot`) — *Tarraconian: **Magistrat van Ranikôt** (`[1142 Historical: Magistrat van Scharusân]`)*
   * **[HRE]** **Siwistan** (`c_siwistan`) — *Tarraconian: **Magistrat van Siwistân***
 * **Duchy of Bhakkar** (`d_bhakkar`) — *4/4 in HRE*
-  * **[HRE]** **Bhakkar** (`c_bhakkar`) — *Tarraconian: **Magistrat van Bhakkâr***
+  * **[HRE]** **Bhakkar** (`c_bhakkar`) — *Tarraconian: **Magistrat van Bakkâr***
   * **[HRE]** **Aror** (`c_aror`) — *Tarraconian: **Magistrat van Arôr***
   * **[HRE]** **Rajanpur** (`c_rajanpur`) — *Tarraconian: **Magistrat van Radschanpûr** (`[1142 Historical: Magistrat van Rôdschan]`)*
   * **[HRE]** **Sibi** (`c_sibi`) — *Tarraconian: **Magistrat van Sîbi***
@@ -2950,10 +2950,10 @@
 * **De Jure Empire:** Byzantine Empire [e_byzantium]
 
 * **Duchy of Thessaly (Thessali)** (`d_thessaly`) — *4/4 in HRE*
-  * **[HRE]** **Thessalia (Larissa)** (`c_thessalia`) — *Tarraconian: **Magistrat van Thessâlje** (`[1142 Historical: Magistrat van Larîssa]`)*
+  * **[HRE]** **Thessalia (Larissa)** (`c_thessalia`) — *Tarraconian: **Magistrat van Thessâlje** (`[1142 Historical: Magistrat van Larîsse]`)*
   * **[HRE]** **Demetrias** (`c_demetrias`) — *Tarraconian: **Magistrat van Demêtrjas***
   * **[HRE]** **Neopatras** (`c_neopatras`) — *Tarraconian: **Magistrat van Neopâtras** (`[1142 Historical: Magistrat van Hipâte]`)*
-  * **[HRE]** **Thessaliotis (Trikala)** (`c_thessaliotis`) — *Tarraconian: **Magistrat van Thessaliôtis** (`[1142 Historical: Magistrat van Trikâla]`)*
+  * **[HRE]** **Thessaliotis (Trikala)** (`c_thessaliotis`) — *Tarraconian: **Magistrat van Thessaliôt** (`[1142 Historical: Magistrat van Trikâle]`)*
 
 ---
 
@@ -2963,7 +2963,7 @@
 * **Duchy of Khazaria** (`d_khazaria`) — *3/3 in HRE*
   * **[HRE]** **Sarkel** (`c_sarkel`) — *Tarraconian: **Magistrat van Sarkêl***
   * **[HRE]** **Astrakhan** (`c_astrakhan`) — *Tarraconian: **Magistrat van Astrachân** (`[1142 Historical: Magistrat van Atîl-Chasarân]`)*
-  * **[HRE]** **Beksima** (`c_beksima`) — *Tarraconian: **Magistrat van Beksîma***
+  * **[HRE]** **Beksima** (`c_beksima`) — *Tarraconian: **Magistrat van Beksîme***
 
 ---
 
@@ -2973,8 +2973,8 @@
 * **Duchy of Chaldia** (`d_chaldia`) — *4/4 in HRE*
   * **[HRE]** **Trebizond** (`c_trebizond`) — *Tarraconian: **Magistrat van Trapezûnt***
   * **[HRE]** **Cerasus** (`c_cerasus`) — *Tarraconian: **Magistrat van Kerasûnt***
-  * **[HRE]** **Colonea** (`c_colonea`) — *Tarraconian: **Magistrat van Kolôneia***
-  * **[HRE]** **Satala** (`c_satala`) — *Tarraconian: **Magistrat van Satâla***
+  * **[HRE]** **Colonea** (`c_colonea`) — *Tarraconian: **Magistrat van Kolônêe***
+  * **[HRE]** **Satala** (`c_satala`) — *Tarraconian: **Magistrat van Satâle***
 
 ---
 
@@ -2982,39 +2982,39 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Amdo** (`d_amdo`) — *6/6 in HRE*
-  * **[HRE]** **Amdo** (`c_amdo`)
-  * **[HRE]** **Aqênganggyai** (`c_aqenganggyai`)
-  * **[HRE]** **Chumarho** (`c_chumarho`)
-  * **[HRE]** **Dangla** (`c_dangla`)
-  * **[HRE]** **Nyainrong** (`c_nyainrong`)
-  * **[HRE]** **Yenshipin** (`c_yenshipin`)
+  * **[HRE]** **Amdo** (`c_amdo`) — *Tarraconian: **Magistrat van Amdô****
+  * **[HRE]** **Aqênganggyai** (`c_aqenganggyai`) — *Tarraconian: **Magistrat van Atschênganggyai****
+  * **[HRE]** **Chumarho** (`c_chumarho`) — *Tarraconian: **Magistrat van Tschumarhô****
+  * **[HRE]** **Dangla** (`c_dangla`) — *Tarraconian: **Magistrat van Dangle****
+  * **[HRE]** **Nyainrong** (`c_nyainrong`) — *Tarraconian: **Magistrat van Nyainrong****
+  * **[HRE]** **Yenshipin** (`c_yenshipin`) — *Tarraconian: **Magistrat van Jenschipin****
 * **Duchy of Tuyuhun** (`d_tuyuhun`) — *6/6 in HRE*
-  * **[HRE]** **Dêrlênka** (`c_derlenka`)
-  * **[HRE]** **Fuqi** (`c_fuqi`)
-  * **[HRE]** **Gêrqên** (`c_gerqen`)
-  * **[HRE]** **Tu'ulain** (`c_tuulain`)
-  * **[HRE]** **Xigortang** (`c_xigortang`)
-  * **[HRE]** **Ülam** (`c_ulam`)
+  * **[HRE]** **Dêrlênka** (`c_derlenka`) — *Tarraconian: **Magistrat van Dêrlênke****
+  * **[HRE]** **Fuqi** (`c_fuqi`) — *Tarraconian: **Magistrat van Futschi****
+  * **[HRE]** **Gêrqên** (`c_gerqen`) — *Tarraconian: **Magistrat van Gêrtschên****
+  * **[HRE]** **Tu'ulain** (`c_tuulain`) — *Tarraconian: **Magistrat van Tûlain****
+  * **[HRE]** **Xigortang** (`c_xigortang`) — *Tarraconian: **Magistrat van Schigortang****
+  * **[HRE]** **Ülam** (`c_ulam`) — *Tarraconian: **Magistrat van Ülam****
 * **Duchy of Nagormo** (`d_nagormo`) — *5/5 in HRE*
-  * **[HRE]** **Hohaséco** (`c_hohaseco`)
-  * **[HRE]** **Kumkol** (`c_kumkol`)
-  * **[HRE]** **Lenghu** (`c_lenghu`)
-  * **[HRE]** **Mangnai** (`c_mangnai`)
-  * **[HRE]** **Nagormo** (`c_nagormo`)
+  * **[HRE]** **Hohaséco** (`c_hohaseco`) — *Tarraconian: **Magistrat van Hohasêtzô****
+  * **[HRE]** **Kumkol** (`c_kumkol`) — *Tarraconian: **Magistrat van Kumkol****
+  * **[HRE]** **Lenghu** (`c_lenghu`) — *Tarraconian: **Magistrat van Lenghu****
+  * **[HRE]** **Mangnai** (`c_mangnai`) — *Tarraconian: **Magistrat van Mangnai****
+  * **[HRE]** **Nagormo** (`c_nagormo`) — *Tarraconian: **Magistrat van Nagormô****
 * **Duchy of Qumarlêb** (`d_qumarleb`) — *3/3 in HRE*
-  * **[HRE]** **Chindu** (`c_chindu`)
-  * **[HRE]** **Ngoring** (`c_ngoring`)
-  * **[HRE]** **Qumarlêb** (`c_qumarleb`)
+  * **[HRE]** **Chindu** (`c_chindu`) — *Tarraconian: **Magistrat van Tschindu****
+  * **[HRE]** **Ngoring** (`c_ngoring`) — *Tarraconian: **Magistrat van Ingoring****
+  * **[HRE]** **Qumarlêb** (`c_qumarleb`) — *Tarraconian: **Magistrat van Tschumarlêp****
 * **Duchy of Zadoi** (`d_zadoi`) — *3/3 in HRE*
-  * **[HRE]** **Trandam** (`c_trandam`)
-  * **[HRE]** **Zadoi** (`c_zadoi`)
-  * **[HRE]** **Zhidoi** (`c_zhidoi`)
+  * **[HRE]** **Trandam** (`c_trandam`) — *Tarraconian: **Magistrat van Trandam****
+  * **[HRE]** **Zadoi** (`c_zadoi`) — *Tarraconian: **Magistrat van Sadoi****
+  * **[HRE]** **Zhidoi** (`c_zhidoi`) — *Tarraconian: **Magistrat van Dschidoi****
 * **Duchy of Aksay** (`d_aksay`) — *2/2 in HRE*
-  * **[HRE]** **Aksay** (`c_aksay`)
-  * **[HRE]** **Haltang** (`c_haltang`)
+  * **[HRE]** **Aksay** (`c_aksay`) — *Tarraconian: **Magistrat van Aksay****
+  * **[HRE]** **Haltang** (`c_haltang`) — *Tarraconian: **Magistrat van Haltang****
 * **Duchy of Xining** (`d_xining`) — *2/2 in HRE*
-  * **[HRE]** **Datong** (`c_datong`)
-  * **[HRE]** **Xining** (`c_xining`)
+  * **[HRE]** **Datong** (`c_datong`) — *Tarraconian: **Magistrat van Datong****
+  * **[HRE]** **Xining** (`c_xining`) — *Tarraconian: **Magistrat van Schining****
 
 ---
 
@@ -3022,39 +3022,39 @@
 * **De Jure Empire:** Yongliang (`e_yongliang`)
 
 * **Duchy of Shuofang** (`d_shuofang`) — *6/6 in HRE*
-  * **[HRE]** **Huaiyuan** (`c_huaiyuan`)
-  * **[HRE]** **Huizhou** (`c_huizhou`)
-  * **[HRE]** **Lingzhou** (`c_lingzhou`)
-  * **[HRE]** **Weizhou** (`c_weizhou_3`)
-  * **[HRE]** **Wulan** (`c_wulan`)
-  * **[HRE]** **Xiongzhou** (`c_xiongzhou`)
+  * **[HRE]** **Huaiyuan** (`c_huaiyuan`) — *Tarraconian: **Magistrat van Huai-Juan****
+  * **[HRE]** **Huizhou** (`c_huizhou`) — *Tarraconian: **Magistrat van Huidschou****
+  * **[HRE]** **Lingzhou** (`c_lingzhou`) — *Tarraconian: **Magistrat van Lingdschou****
+  * **[HRE]** **Weizhou** (`c_weizhou_3`) — *Tarraconian: **Magistrat van Weidschou****
+  * **[HRE]** **Wulan** (`c_wulan`) — *Tarraconian: **Magistrat van Wulan****
+  * **[HRE]** **Xiongzhou** (`c_xiongzhou`) — *Tarraconian: **Magistrat van Schiongdschou****
 * **Duchy of Xiasui** (`d_xiasui`) — *6/6 in HRE*
-  * **[HRE]** **Quye** (`c_quye`)
-  * **[HRE]** **Suizhou** (`c_suizhou`)
-  * **[HRE]** **Xiazhou** (`c_xiazhou`)
-  * **[HRE]** **Yanzhou** (`c_wuyuan`)
-  * **[HRE]** **Yinzhou** (`c_yinzhou`)
-  * **[HRE]** **Youzhou** (`c_youzhou_2`)
+  * **[HRE]** **Quye** (`c_quye`) — *Tarraconian: **Magistrat van Tschuye****
+  * **[HRE]** **Suizhou** (`c_suizhou`) — *Tarraconian: **Magistrat van Suidschou****
+  * **[HRE]** **Xiazhou** (`c_xiazhou`) — *Tarraconian: **Magistrat van Schiadschou****
+  * **[HRE]** **Yanzhou** (`c_wuyuan`) — *Tarraconian: **Magistrat van Jandschou****
+  * **[HRE]** **Yinzhou** (`c_yinzhou`) — *Tarraconian: **Magistrat van Jindschou****
+  * **[HRE]** **Youzhou** (`c_youzhou_2`) — *Tarraconian: **Magistrat van Joudschou****
 * **Duchy of Juyan** (`d_juyan`) — *4/4 in HRE*
-  * **[HRE]** **Heihe** (`c_heihe`)
-  * **[HRE]** **Mazongshan** (`c_mazongshan`)
-  * **[HRE]** **Tongcheng** (`c_tongcheng`)
-  * **[HRE]** **Wentugaole** (`c_wentugaole`)
+  * **[HRE]** **Heihe** (`c_heihe`) — *Tarraconian: **Magistrat van Heihe****
+  * **[HRE]** **Mazongshan** (`c_mazongshan`) — *Tarraconian: **Magistrat van Mazongschan****
+  * **[HRE]** **Tongcheng** (`c_tongcheng`) — *Tarraconian: **Magistrat van Tongtscheng****
+  * **[HRE]** **Wentugaole** (`c_wentugaole`) — *Tarraconian: **Magistrat van Wentugaole****
 * **Duchy of Jingyuan** (`d_jingyuan`) — *3/3 in HRE*
-  * **[HRE]** **Jingzhou** (`c_jingzhou`)
-  * **[HRE]** **Xiaoguan** (`c_xiaoguan`)
-  * **[HRE]** **Yuanzhou** (`c_yuanzhou_2`)
+  * **[HRE]** **Jingzhou** (`c_jingzhou`) — *Tarraconian: **Magistrat van Dschingdschou****
+  * **[HRE]** **Xiaoguan** (`c_xiaoguan`) — *Tarraconian: **Magistrat van Schiaoguan****
+  * **[HRE]** **Yuanzhou** (`c_yuanzhou_2`) — *Tarraconian: **Magistrat van Juandschou****
 * **Duchy of Wuluhai** (`d_langshan`) — *3/3 in HRE*
-  * **[HRE]** **Hequ** (`c_hequ`)
-  * **[HRE]** **Wuda** (`c_keyimen`)
-  * **[HRE]** **Wuluhai** (`c_langshan`)
+  * **[HRE]** **Hequ** (`c_hequ`) — *Tarraconian: **Magistrat van Hetschu****
+  * **[HRE]** **Wuda** (`c_keyimen`) — *Tarraconian: **Magistrat van Wude****
+  * **[HRE]** **Wuluhai** (`c_langshan`) — *Tarraconian: **Magistrat van Wuluhai****
 * **Duchy of Zhenfan** (`d_xiutu`) — *3/3 in HRE*
-  * **[HRE]** **Alxa** (`c_alxa`)
-  * **[HRE]** **Tenggeli** (`c_tengger`)
-  * **[HRE]** **Zhenfan** (`c_zhenfan`)
+  * **[HRE]** **Alxa** (`c_alxa`) — *Tarraconian: **Magistrat van Alsche****
+  * **[HRE]** **Tenggeli** (`c_tengger`) — *Tarraconian: **Magistrat van Tenggeli****
+  * **[HRE]** **Zhenfan** (`c_zhenfan`) — *Tarraconian: **Magistrat van Dschenfan****
 * **Duchy of Tiande** (`d_tiande`) — *2/2 in HRE*
-  * **[HRE]** **Fengzhou** (`c_lxj_fengzhou`)
-  * **[HRE]** **Tiande** (`c_tiande`)
+  * **[HRE]** **Fengzhou** (`c_lxj_fengzhou`) — *Tarraconian: **Magistrat van Fengdschou****
+  * **[HRE]** **Tiande** (`c_tiande`) — *Tarraconian: **Magistrat van Tiande****
 
 ---
 
@@ -3062,36 +3062,36 @@
 * **De Jure Empire:** Andong (`e_andong`)
 
 * **Duchy of Linhuang** (`d_LIAO_linhuang`) — *6/6 in HRE*
-  * **[HRE]** **Dalian** (`c_LIAO_dalian`)
-  * **[HRE]** **Heicaoan** (`c_LIAO_heicaoan`)
-  * **[HRE]** **Linhuang** (`c_LIAO_linhuang`)
-  * **[HRE]** **Longhuazhou** (`c_LIAO_longhuazhou`)
-  * **[HRE]** **Raozhou** (`c_LIAO_raozhou`)
-  * **[HRE]** **Ulagaian** (`c_LIAO_ulagaian`)
+  * **[HRE]** **Dalian** (`c_LIAO_dalian`) — *Tarraconian: **Magistrat van Dalian****
+  * **[HRE]** **Heicaoan** (`c_LIAO_heicaoan`) — *Tarraconian: **Magistrat van Heitzaoan****
+  * **[HRE]** **Linhuang** (`c_LIAO_linhuang`) — *Tarraconian: **Magistrat van Linhuang****
+  * **[HRE]** **Longhuazhou** (`c_LIAO_longhuazhou`) — *Tarraconian: **Magistrat van Longhuadschou****
+  * **[HRE]** **Raozhou** (`c_LIAO_raozhou`) — *Tarraconian: **Magistrat van Raodschou****
+  * **[HRE]** **Ulagaian** (`c_LIAO_ulagaian`) — *Tarraconian: **Magistrat van Ulagaian****
 * **Duchy of Raole** (`d_LIAO_zhongjing`) — *6/6 in HRE*
-  * **[HRE]** **Chengde** (`c_lzj_chengde`)
-  * **[HRE]** **Chengdexi** (`c_lzj_chengdexi`)
-  * **[HRE]** **Dading** (`c_LIAO_dading`)
-  * **[HRE]** **Fengzhou** (`c_liao_fengzhou`)
-  * **[HRE]** **Woye** (`c_woye`)
-  * **[HRE]** **Yuyidong** (`c_lxj_yuyidong`)
+  * **[HRE]** **Chengde** (`c_lzj_chengde`) — *Tarraconian: **Magistrat van Tschengde****
+  * **[HRE]** **Chengdexi** (`c_lzj_chengdexi`) — *Tarraconian: **Magistrat van Tschengdeschi****
+  * **[HRE]** **Dading** (`c_LIAO_dading`) — *Tarraconian: **Magistrat van Dading****
+  * **[HRE]** **Fengzhou** (`c_liao_fengzhou`) — *Tarraconian: **Magistrat van Fengdschou****
+  * **[HRE]** **Woye** (`c_woye`) — *Tarraconian: **Magistrat van Woye****
+  * **[HRE]** **Yuyidong** (`c_lxj_yuyidong`) — *Tarraconian: **Magistrat van Juyidong****
 * **Duchy of Qingxingan** (`d_SW_qingxingan`) — *5/5 in HRE*
-  * **[HRE]** **Huangtouguo** (`c_SW_huangtouguo`)
-  * **[HRE]** **Luotuoguo** (`c_SW_luotuoguo`)
-  * **[HRE]** **Nabeiguo** (`c_SW_nabeiguo`)
-  * **[HRE]** **Xinghuangtou** (`c_SW_xinghuangtou`)
-  * **[HRE]** **Xingnabei** (`c_SW_xingnabei`)
+  * **[HRE]** **Huangtouguo** (`c_SW_huangtouguo`) — *Tarraconian: **Magistrat van Huangtouguô****
+  * **[HRE]** **Luotuoguo** (`c_SW_luotuoguo`) — *Tarraconian: **Magistrat van Luotuoguô****
+  * **[HRE]** **Nabeiguo** (`c_SW_nabeiguo`) — *Tarraconian: **Magistrat van Nabeiguô****
+  * **[HRE]** **Xinghuangtou** (`c_SW_xinghuangtou`) — *Tarraconian: **Magistrat van Schinghuangtou****
+  * **[HRE]** **Xingnabei** (`c_SW_xingnabei`) — *Tarraconian: **Magistrat van Schingnabei****
 * **Duchy of Talu** (`d_LIAO_shangjing`) — *5/5 in HRE*
-  * **[HRE]** **Changchun** (`c_LIAO_changchun`)
-  * **[HRE]** **Horqinan** (`c_LIAO_horqinan`)
-  * **[HRE]** **Ningzhou** (`c_LIAO_ningzhou`)
-  * **[HRE]** **Taizhou** (`c_LIAO_taizhou`)
-  * **[HRE]** **Wuzhou** (`c_LIAO_wuzhou`)
+  * **[HRE]** **Changchun** (`c_LIAO_changchun`) — *Tarraconian: **Magistrat van Tschangtschun****
+  * **[HRE]** **Horqinan** (`c_LIAO_horqinan`) — *Tarraconian: **Magistrat van Hortschinan****
+  * **[HRE]** **Ningzhou** (`c_LIAO_ningzhou`) — *Tarraconian: **Magistrat van Ningdschou****
+  * **[HRE]** **Taizhou** (`c_LIAO_taizhou`) — *Tarraconian: **Magistrat van Taidschou****
+  * **[HRE]** **Wuzhou** (`c_LIAO_wuzhou`) — *Tarraconian: **Magistrat van Wudschou****
 * **Duchy of Puyudao** (`d_SW_puyudao`) — *4/4 in HRE*
-  * **[HRE]** **Damoguo** (`c_SW_damoguo`)
-  * **[HRE]** **Heilonghean** (`c_SW_heilonghean`)
-  * **[HRE]** **Puyuzhou** (`c_SW_puyuzhou`)
-  * **[HRE]** **Shanbeiguo** (`c_SW_shanbeiguo`)
+  * **[HRE]** **Damoguo** (`c_SW_damoguo`) — *Tarraconian: **Magistrat van Damoguô****
+  * **[HRE]** **Heilonghean** (`c_SW_heilonghean`) — *Tarraconian: **Magistrat van Heilonghean****
+  * **[HRE]** **Puyuzhou** (`c_SW_puyuzhou`) — *Tarraconian: **Magistrat van Puyudschou****
+  * **[HRE]** **Shanbeiguo** (`c_SW_shanbeiguo`) — *Tarraconian: **Magistrat van Schanbeiguô****
 
 ---
 
@@ -3099,37 +3099,37 @@
 * **De Jure Empire:** Japan (`e_japan`)
 
 * **Duchy of Nankaidō** (`d_nankaido`) — *6/6 in HRE*
-  * **[HRE]** **Awa** (`c_awa`)
-  * **[HRE]** **Awaji** (`c_awaji`)
-  * **[HRE]** **Iyo** (`c_iyo`)
-  * **[HRE]** **Kii** (`c_kii`)
-  * **[HRE]** **Sanuki** (`c_sanuki`)
-  * **[HRE]** **Tosa** (`c_tosa`)
+  * **[HRE]** **Awa** (`c_awa`) — *Tarraconian: **Magistrat van Awe****
+  * **[HRE]** **Awaji** (`c_awaji`) — *Tarraconian: **Magistrat van Awadschi****
+  * **[HRE]** **Iyo** (`c_iyo`) — *Tarraconian: **Magistrat van Iyô****
+  * **[HRE]** **Kii** (`c_kii`) — *Tarraconian: **Magistrat van Kî****
+  * **[HRE]** **Sanuki** (`c_sanuki`) — *Tarraconian: **Magistrat van Sanuki****
+  * **[HRE]** **Tosa** (`c_tosa`) — *Tarraconian: **Magistrat van Tose****
 * **Duchy of East San'indō** (`d_east_sanindo`) — *4/4 in HRE*
-  * **[HRE]** **Inaba** (`c_inaba`)
-  * **[HRE]** **Tajima** (`c_tajima`)
-  * **[HRE]** **Tanba** (`c_tanba`)
-  * **[HRE]** **Tango** (`c_tango`)
+  * **[HRE]** **Inaba** (`c_inaba`) — *Tarraconian: **Magistrat van Inabe****
+  * **[HRE]** **Tajima** (`c_tajima`) — *Tarraconian: **Magistrat van Tadschime****
+  * **[HRE]** **Tanba** (`c_tanba`) — *Tarraconian: **Magistrat van Tanbe****
+  * **[HRE]** **Tango** (`c_tango`) — *Tarraconian: **Magistrat van Tangô****
 * **Duchy of East San'yōdō** (`d_east_sanyodo`) — *4/4 in HRE*
-  * **[HRE]** **Bitchū** (`c_bitchu`)
-  * **[HRE]** **Bizen** (`c_bizen`)
-  * **[HRE]** **Harima** (`c_harima`)
-  * **[HRE]** **Mimasaka** (`c_mimasaka`)
+  * **[HRE]** **Bitchū** (`c_bitchu`) — *Tarraconian: **Magistrat van Bitschû****
+  * **[HRE]** **Bizen** (`c_bizen`) — *Tarraconian: **Magistrat van Bizen****
+  * **[HRE]** **Harima** (`c_harima`) — *Tarraconian: **Magistrat van Harime****
+  * **[HRE]** **Mimasaka** (`c_mimasaka`) — *Tarraconian: **Magistrat van Mimasake****
 * **Duchy of Kinai** (`d_kinai`) — *4/4 in HRE*
-  * **[HRE]** **Kawachi** (`c_kawachi`)
-  * **[HRE]** **Settsu** (`c_settsu`)
-  * **[HRE]** **Yamashiro** (`c_yamashiro`)
-  * **[HRE]** **Yamato** (`c_yamato`)
+  * **[HRE]** **Kawachi** (`c_kawachi`) — *Tarraconian: **Magistrat van Kawatschi****
+  * **[HRE]** **Settsu** (`c_settsu`) — *Tarraconian: **Magistrat van Settzu****
+  * **[HRE]** **Yamashiro** (`c_yamashiro`) — *Tarraconian: **Magistrat van Jamaschirô****
+  * **[HRE]** **Yamato** (`c_yamato`) — *Tarraconian: **Magistrat van Jamatô****
 * **Duchy of West San'indō** (`d_west_sanindo`) — *4/4 in HRE*
-  * **[HRE]** **Hōki** (`c_hoki`)
-  * **[HRE]** **Iwami** (`c_iwami`)
-  * **[HRE]** **Izumo** (`c_izumo`)
-  * **[HRE]** **Oki** (`c_oki`)
+  * **[HRE]** **Hōki** (`c_hoki`) — *Tarraconian: **Magistrat van Hôki****
+  * **[HRE]** **Iwami** (`c_iwami`) — *Tarraconian: **Magistrat van Iwami****
+  * **[HRE]** **Izumo** (`c_izumo`) — *Tarraconian: **Magistrat van Izumô****
+  * **[HRE]** **Oki** (`c_oki`) — *Tarraconian: **Magistrat van Oki****
 * **Duchy of West San'yōdō** (`d_west_sanyodo`) — *4/4 in HRE*
-  * **[HRE]** **Aki** (`c_aki`)
-  * **[HRE]** **Bingo** (`c_bingo`)
-  * **[HRE]** **Nagato** (`c_nagato`)
-  * **[HRE]** **Suō** (`c_suo`)
+  * **[HRE]** **Aki** (`c_aki`) — *Tarraconian: **Magistrat van Aki****
+  * **[HRE]** **Bingo** (`c_bingo`) — *Tarraconian: **Magistrat van Bingô****
+  * **[HRE]** **Nagato** (`c_nagato`) — *Tarraconian: **Magistrat van Nagatô****
+  * **[HRE]** **Suō** (`c_suo`) — *Tarraconian: **Magistrat van Suô****
 
 ---
 
@@ -3137,33 +3137,33 @@
 * **De Jure Empire:** Japan (`e_japan`)
 
 * **Duchy of Hokurikudō** (`d_hokurikudo`) — *5/5 in HRE*
-  * **[HRE]** **Echigo** (`c_echigo`)
-  * **[HRE]** **Echizen** (`c_echizen`)
-  * **[HRE]** **Etchū** (`c_etchu`)
-  * **[HRE]** **Kaga** (`c_kaga`)
-  * **[HRE]** **Noto** (`c_noto`)
+  * **[HRE]** **Echigo** (`c_echigo`) — *Tarraconian: **Magistrat van Etschigô****
+  * **[HRE]** **Echizen** (`c_echizen`) — *Tarraconian: **Magistrat van Etschizen****
+  * **[HRE]** **Etchū** (`c_etchu`) — *Tarraconian: **Magistrat van Etschû****
+  * **[HRE]** **Kaga** (`c_kaga`) — *Tarraconian: **Magistrat van Kage****
+  * **[HRE]** **Noto** (`c_noto`) — *Tarraconian: **Magistrat van Notô****
 * **Duchy of Tōkaidō** (`d_tokaido`) — *5/5 in HRE*
-  * **[HRE]** **Ise** (`c_ise`)
-  * **[HRE]** **Mikawa** (`c_mikawa`)
-  * **[HRE]** **Owari** (`c_owari`)
-  * **[HRE]** **Suruga** (`c_suruga`)
-  * **[HRE]** **Tōtōmi** (`c_totomi`)
+  * **[HRE]** **Ise** (`c_ise`) — *Tarraconian: **Magistrat van Ise****
+  * **[HRE]** **Mikawa** (`c_mikawa`) — *Tarraconian: **Magistrat van Mikawe****
+  * **[HRE]** **Owari** (`c_owari`) — *Tarraconian: **Magistrat van Owari****
+  * **[HRE]** **Suruga** (`c_suruga`) — *Tarraconian: **Magistrat van Suruge****
+  * **[HRE]** **Tōtōmi** (`c_totomi`) — *Tarraconian: **Magistrat van Tôtômi****
 * **Duchy of Tōsandō** (`d_tosando`) — *5/5 in HRE*
-  * **[HRE]** **Hida** (`c_hida`)
-  * **[HRE]** **Kai** (`c_kai`)
-  * **[HRE]** **Mino** (`c_mino`)
-  * **[HRE]** **Shinano** (`c_shinano`)
-  * **[HRE]** **Ōmi** (`c_omi`)
+  * **[HRE]** **Hida** (`c_hida`) — *Tarraconian: **Magistrat van Hide****
+  * **[HRE]** **Kai** (`c_kai`) — *Tarraconian: **Magistrat van Kai****
+  * **[HRE]** **Mino** (`c_mino`) — *Tarraconian: **Magistrat van Minô****
+  * **[HRE]** **Shinano** (`c_shinano`) — *Tarraconian: **Magistrat van Schinanô****
+  * **[HRE]** **Ōmi** (`c_omi`) — *Tarraconian: **Magistrat van Ômi****
 * **Duchy of East Bandō** (`d_east_bando`) — *4/4 in HRE*
-  * **[HRE]** **Hitachi** (`c_hitachi`)
-  * **[HRE]** **Kazusa** (`c_kazusa`)
-  * **[HRE]** **Shimotsuke** (`c_shimotsuke`)
-  * **[HRE]** **Shimōsa** (`c_shimosa`)
+  * **[HRE]** **Hitachi** (`c_hitachi`) — *Tarraconian: **Magistrat van Hitatschi****
+  * **[HRE]** **Kazusa** (`c_kazusa`) — *Tarraconian: **Magistrat van Kazuse****
+  * **[HRE]** **Shimotsuke** (`c_shimotsuke`) — *Tarraconian: **Magistrat van Schimotzuke****
+  * **[HRE]** **Shimōsa** (`c_shimosa`) — *Tarraconian: **Magistrat van Schimôse****
 * **Duchy of West Bandō** (`d_west_bando`) — *4/4 in HRE*
-  * **[HRE]** **Izu** (`c_izu`)
-  * **[HRE]** **Kōzuke** (`c_kozuke`)
-  * **[HRE]** **Musashi** (`c_musashi`)
-  * **[HRE]** **Sagami** (`c_sagami`)
+  * **[HRE]** **Izu** (`c_izu`) — *Tarraconian: **Magistrat van Izu****
+  * **[HRE]** **Kōzuke** (`c_kozuke`) — *Tarraconian: **Magistrat van Kôzuke****
+  * **[HRE]** **Musashi** (`c_musashi`) — *Tarraconian: **Magistrat van Musaschi****
+  * **[HRE]** **Sagami** (`c_sagami`) — *Tarraconian: **Magistrat van Sagami****
 
 ---
 
@@ -3171,33 +3171,33 @@
 * **De Jure Empire:** Yongliang (`e_yongliang`)
 
 * **Duchy of Gansu** (`d_gansu`) — *6/6 in HRE*
-  * **[HRE]** **Ganzhou** (`c_ganzhou`)
-  * **[HRE]** **Jiankang** (`c_jiankang`)
-  * **[HRE]** **Liaoquan** (`c_liaoquan`)
-  * **[HRE]** **Suzhou** (`c_jiuquan`)
-  * **[HRE]** **Yumen** (`c_yumen`)
-  * **[HRE]** **Zhenwu** (`c_zhenwu_1`)
+  * **[HRE]** **Ganzhou** (`c_ganzhou`) — *Tarraconian: **Magistrat van Gandschou****
+  * **[HRE]** **Jiankang** (`c_jiankang`) — *Tarraconian: **Magistrat van Dschiankâng****
+  * **[HRE]** **Liaoquan** (`c_liaoquan`) — *Tarraconian: **Magistrat van Liaotschuan****
+  * **[HRE]** **Suzhou** (`c_jiuquan`) — *Tarraconian: **Magistrat van Sudschou****
+  * **[HRE]** **Yumen** (`c_yumen`) — *Tarraconian: **Magistrat van Jumen****
+  * **[HRE]** **Zhenwu** (`c_zhenwu_1`) — *Tarraconian: **Magistrat van Dschenwu****
 * **Duchy of Guasha** (`d_guasha`) — *6/6 in HRE*
-  * **[HRE]** **Guazhou** (`c_guazhou`)
-  * **[HRE]** **Hehe** (`c_hehe`)
-  * **[HRE]** **Shazhou** (`c_shazhou`)
-  * **[HRE]** **Shouchang** (`c_shouchang`)
-  * **[HRE]** **Xincheng** (`c_xincheng`)
-  * **[HRE]** **Ziting** (`c_ziting`)
+  * **[HRE]** **Guazhou** (`c_guazhou`) — *Tarraconian: **Magistrat van Guadschou****
+  * **[HRE]** **Hehe** (`c_hehe`) — *Tarraconian: **Magistrat van Hehe****
+  * **[HRE]** **Shazhou** (`c_shazhou`) — *Tarraconian: **Magistrat van Schadschou****
+  * **[HRE]** **Shouchang** (`c_shouchang`) — *Tarraconian: **Magistrat van Schoutschang****
+  * **[HRE]** **Xincheng** (`c_xincheng`) — *Tarraconian: **Magistrat van Schintscheng****
+  * **[HRE]** **Ziting** (`c_ziting`) — *Tarraconian: **Magistrat van Siting****
 * **Duchy of Hexi** (`d_hexi`) — *5/5 in HRE*
-  * **[HRE]** **Baishan** (`c_baishan`)
-  * **[HRE]** **Baiyin** (`c_zhanyin`)
-  * **[HRE]** **Fanhe** (`c_fanhe`)
-  * **[HRE]** **Guangwu** (`c_guangwu`)
-  * **[HRE]** **Liangzhou** (`c_liangzhou`)
+  * **[HRE]** **Baishan** (`c_baishan`) — *Tarraconian: **Magistrat van Baischan****
+  * **[HRE]** **Baiyin** (`c_zhanyin`) — *Tarraconian: **Magistrat van Baiyin****
+  * **[HRE]** **Fanhe** (`c_fanhe`) — *Tarraconian: **Magistrat van Fanhe****
+  * **[HRE]** **Guangwu** (`c_guangwu`) — *Tarraconian: **Magistrat van Guangwu****
+  * **[HRE]** **Liangzhou** (`c_liangzhou`) — *Tarraconian: **Magistrat van Liangdschou****
 * **Duchy of Shanzhou** (`d_longyou`) — *4/4 in HRE*
-  * **[HRE]** **Hezhou** (`c_hezhou_2`)
-  * **[HRE]** **Kuozhou** (`c_kuozhou`)
-  * **[HRE]** **Lanzhou** (`c_lanzhou_1`)
-  * **[HRE]** **Shanzhou** (`c_xiningzhou`)
+  * **[HRE]** **Hezhou** (`c_hezhou_2`) — *Tarraconian: **Magistrat van Hedschou****
+  * **[HRE]** **Kuozhou** (`c_kuozhou`) — *Tarraconian: **Magistrat van Kuodschou****
+  * **[HRE]** **Lanzhou** (`c_lanzhou_1`) — *Tarraconian: **Magistrat van Landschou****
+  * **[HRE]** **Shanzhou** (`c_xiningzhou`) — *Tarraconian: **Magistrat van Schandschou****
 * **Duchy of Qilian** (`d_qilian`) — *2/2 in HRE*
-  * **[HRE]** **Qilin** (`c_qilin`)
-  * **[HRE]** **Yalong** (`c_yalong`)
+  * **[HRE]** **Qilin** (`c_qilin`) — *Tarraconian: **Magistrat van Tschilin****
+  * **[HRE]** **Yalong** (`c_yalong`) — *Tarraconian: **Magistrat van Jalong****
 
 ---
 
@@ -3205,32 +3205,32 @@
 * **De Jure Empire:** Samhan (`e_goryeo`)
 
 * **Duchy of Donggye** (`d_donggye`) — *4/4 in HRE*
-  * **[HRE]** **Deungju** (`c_deungju`)
-  * **[HRE]** **Goseong** (`c_goseong`)
-  * **[HRE]** **Myeongju** (`c_myeongju`)
-  * **[HRE]** **Wonju** (`c_wonju`)
+  * **[HRE]** **Deungju** (`c_deungju`) — *Tarraconian: **Magistrat van Deungdschu****
+  * **[HRE]** **Goseong** (`c_goseong`) — *Tarraconian: **Magistrat van Goseong****
+  * **[HRE]** **Myeongju** (`c_myeongju`) — *Tarraconian: **Magistrat van Myeongdschu****
+  * **[HRE]** **Wonju** (`c_wonju`) — *Tarraconian: **Magistrat van Wonju****
 * **Duchy of Gyeongju** (`d_gyeongju`) — *4/4 in HRE*
-  * **[HRE]** **Andong** (`c_andong`)
-  * **[HRE]** **Gyeongju** (`c_gyeongju`)
-  * **[HRE]** **Ilseon** (`c_ilseon`)
-  * **[HRE]** **Sangju** (`c_sangju`)
+  * **[HRE]** **Andong** (`c_andong`) — *Tarraconian: **Magistrat van Andong****
+  * **[HRE]** **Gyeongju** (`c_gyeongju`) — *Tarraconian: **Magistrat van Gyeongdschu****
+  * **[HRE]** **Ilseon** (`c_ilseon`) — *Tarraconian: **Magistrat van Ilseon****
+  * **[HRE]** **Sangju** (`c_sangju`) — *Tarraconian: **Magistrat van Sangdschu****
 * **Duchy of Gyoju** (`d_gyoju`) — *4/4 in HRE*
-  * **[HRE]** **Chunju** (`c_chunju`)
-  * **[HRE]** **Dongju** (`c_dongju`)
-  * **[HRE]** **Gyoju** (`c_gyoju`)
-  * **[HRE]** **Inje** (`c_inje`)
+  * **[HRE]** **Chunju** (`c_chunju`) — *Tarraconian: **Magistrat van Tschunju****
+  * **[HRE]** **Dongju** (`c_dongju`) — *Tarraconian: **Magistrat van Dongdschu****
+  * **[HRE]** **Gyoju** (`c_gyoju`) — *Tarraconian: **Magistrat van Gyodschu****
+  * **[HRE]** **Inje** (`c_inje`) — *Tarraconian: **Magistrat van Inje****
 * **Duchy of Jinju** (`d_jinju`) — *4/4 in HRE*
-  * **[HRE]** **Guemju** (`c_guemju`)
-  * **[HRE]** **Hamyang** (`c_hamyang`)
-  * **[HRE]** **Jinju** (`c_jinju`)
-  * **[HRE]** **Ulju** (`c_ulju`)
+  * **[HRE]** **Guemju** (`c_guemju`) — *Tarraconian: **Magistrat van Guemdschu****
+  * **[HRE]** **Hamyang** (`c_hamyang`) — *Tarraconian: **Magistrat van Hamyang****
+  * **[HRE]** **Jinju** (`c_jinju`) — *Tarraconian: **Magistrat van Dschindschu****
+  * **[HRE]** **Ulju** (`c_ulju`) — *Tarraconian: **Magistrat van Uldschu****
 * **Duchy of Wòju** (`d_BAL_southern_balhae`) — *4/4 in HRE*
-  * **[HRE]** **Fēngzhōu** (`c_BAL_fengzhou`)
-  * **[HRE]** **North Lóngyuán** (`c_BAL_northyongwon`)
-  * **[HRE]** **Nánhai** (`c_BAL_namhae`)
-  * **[HRE]** **South Lóngyuán** (`c_BAL_southyongwon`)
-* **Duchy of X Script 2362** (`x_script_2362`) — *1/1 in HRE*
-  * **[HRE]** **Ulleong** (`c_ulleong`)
+  * **[HRE]** **Fēngzhōu** (`c_BAL_fengzhou`) — *Tarraconian: **Magistrat van Fêngdschôu****
+  * **[HRE]** **North Lóngyuán** (`c_BAL_northyongwon`) — *Tarraconian: **Magistrat van Nort-Lôngyuân****
+  * **[HRE]** **Nánhai** (`c_BAL_namhae`) — *Tarraconian: **Magistrat van Nânhai****
+  * **[HRE]** **South Lóngyuán** (`c_BAL_southyongwon`) — *Tarraconian: **Magistrat van Sût-Lôngyuân****
+* **Duchy of Ulleong** (`x_script_2362`) — *1/1 in HRE*
+  * **[HRE]** **Ulleong** (`c_ulleong`) — *Tarraconian: **Magistrat van Ulleong****
 
 ---
 
@@ -3238,28 +3238,28 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Lahore** (`d_lahore`) — *7/7 in HRE*
-  * **[HRE]** **Bhera** (`c_bhera`)
-  * **[HRE]** **Gurjaratra** (`c_gurjaratra`)
-  * **[HRE]** **Kangra** (`c_kangra`)
-  * **[HRE]** **Lahur** (`c_lahur`)
-  * **[HRE]** **Sakala** (`c_sakala`)
-  * **[HRE]** **Shorkot** (`c_shorkot`)
-  * **[HRE]** **Trigarta** (`c_trigarta`)
+  * **[HRE]** **Bhera** (`c_bhera`) — *Tarraconian: **Magistrat van Bere****
+  * **[HRE]** **Gurjaratra** (`c_gurjaratra`) — *Tarraconian: **Magistrat van Gurdscharatre****
+  * **[HRE]** **Kangra** (`c_kangra`) — *Tarraconian: **Magistrat van Kangre****
+  * **[HRE]** **Lahur** (`c_lahur`) — *Tarraconian: **Magistrat van Lahur****
+  * **[HRE]** **Sakala** (`c_sakala`) — *Tarraconian: **Magistrat van Sakale****
+  * **[HRE]** **Shorkot** (`c_shorkot`) — *Tarraconian: **Magistrat van Schorkot****
+  * **[HRE]** **Trigarta** (`c_trigarta`) — *Tarraconian: **Magistrat van Trigarte****
 * **Duchy of Multan** (`d_multan`) — *6/6 in HRE*
-  * **[HRE]** **Kafirkot** (`c_kafirkot`)
-  * **[HRE]** **Kalat** (`c_kalat`)
-  * **[HRE]** **Karor** (`c_karor`)
-  * **[HRE]** **Karur** (`c_karur`)
-  * **[HRE]** **Multan** (`c_multan`)
-  * **[HRE]** **Uch** (`c_uch`)
+  * **[HRE]** **Kafirkot** (`c_kafirkot`) — *Tarraconian: **Magistrat van Kafirkot****
+  * **[HRE]** **Kalat** (`c_kalat`) — *Tarraconian: **Magistrat van Kalat****
+  * **[HRE]** **Karor** (`c_karor`) — *Tarraconian: **Magistrat van Karor****
+  * **[HRE]** **Karur** (`c_karur`) — *Tarraconian: **Magistrat van Karur****
+  * **[HRE]** **Multan** (`c_multan`) — *Tarraconian: **Magistrat van Multan****
+  * **[HRE]** **Uch** (`c_uch`) — *Tarraconian: **Magistrat van Utsch****
 * **Duchy of Gandhara** (`d_gandhara`) — *5/5 in HRE*
-  * **[HRE]** **Bannu** (`c_bannu`)
-  * **[HRE]** **Nandana** (`c_nandana`)
-  * **[HRE]** **Purushapura** (`c_purushapura`)
-  * **[HRE]** **Udabhanda** (`c_udabhanda`)
-  * **[HRE]** **Urgun** (`c_urgun`)
-* **Duchy of X Script 1315** (`x_script_1315`) — *1/1 in HRE*
-  * **[HRE]** **Dipalpur** (`c_dipalpur`)
+  * **[HRE]** **Bannu** (`c_bannu`) — *Tarraconian: **Magistrat van Bannu****
+  * **[HRE]** **Nandana** (`c_nandana`) — *Tarraconian: **Magistrat van Nandane****
+  * **[HRE]** **Purushapura** (`c_purushapura`) — *Tarraconian: **Magistrat van Puruschapure****
+  * **[HRE]** **Udabhanda** (`c_udabhanda`) — *Tarraconian: **Magistrat van Udabhande****
+  * **[HRE]** **Urgun** (`c_urgun`) — *Tarraconian: **Magistrat van Urgun****
+* **Duchy of Dipalpur** (`x_script_1315`) — *1/1 in HRE*
+  * **[HRE]** **Dipalpur** (`c_dipalpur`) — *Tarraconian: **Magistrat van Dipalpur****
 
 ---
 
@@ -3267,41 +3267,41 @@
 * **De Jure Empire:** Andong (`e_andong`)
 
 * **Duchy of Bóhai** (`d_BAL_parhae`) — *5/5 in HRE*
-  * **[HRE]** **East Xiandé** (`c_BAL_east_hyeondeok`)
-  * **[HRE]** **Lóngquán** (`c_BAL_yongcheon`)
-  * **[HRE]** **Tóngzhōu** (`c_BAL_dongju`)
-  * **[HRE]** **West Xiandé** (`c_BAL_west_hyeondeok`)
-  * **[HRE]** **Yingzhōu** (`c_BAL_yeongju`)
+  * **[HRE]** **East Xiandé** (`c_BAL_east_hyeondeok`) — *Tarraconian: **Magistrat van Ôst-Schiandê****
+  * **[HRE]** **Lóngquán** (`c_BAL_yongcheon`) — *Tarraconian: **Magistrat van Lôngtschuân****
+  * **[HRE]** **Tóngzhōu** (`c_BAL_dongju`) — *Tarraconian: **Magistrat van Tôngdschôu****
+  * **[HRE]** **West Xiandé** (`c_BAL_west_hyeondeok`) — *Tarraconian: **Magistrat van West-Schiandê****
+  * **[HRE]** **Yingzhōu** (`c_BAL_yeongju`) — *Tarraconian: **Magistrat van Jingdschôu****
 * **Duchy of Liaodong** (`d_LIAO_dongjing`) — *4/5 in HRE*
-  * **[HRE]** **Guidezhou** (`c_LIAO_guidezhou`)
-  * **[HRE]** **Shenyang** (`c_LIAO_shenyang`)
-  * **[HRE]** **Yínzhōu** (`c_LIAO_yinzhou`)
-  * **[HRE]** **Zhenzhou** (`c_LIAO_zhenzhou`)
-  * [Non-HRE] **Diezhou** (`c_LIAO_diezhou`)
+  * **[HRE]** **Guidezhou** (`c_LIAO_guidezhou`) — *Tarraconian: **Magistrat van Guidedschou****
+  * **[HRE]** **Shenyang** (`c_LIAO_shenyang`) — *Tarraconian: **Magistrat van Schenyang****
+  * **[HRE]** **Yínzhōu** (`c_LIAO_yinzhou`) — *Tarraconian: **Magistrat van Jîndschôu****
+  * **[HRE]** **Zhenzhou** (`c_LIAO_zhenzhou`) — *Tarraconian: **Magistrat van Dschendschou****
+  * [Non-HRE] **Diezhou** (`c_LIAO_diezhou`) — *Tarraconian: **Magistrat van Diedschou****
 * **Duchy of Fúyú** (`d_BAL_buyeo`) — *4/4 in HRE*
-  * **[HRE]** **Changchun** (`c_BAL_changchun`)
-  * **[HRE]** **Fuzhou** (`c_BAL_fuzhou`)
-  * **[HRE]** **Xinzhou** (`c_BAL_xinzhou`)
-  * **[HRE]** **Yizhou** (`c_BAL_yizhou`)
+  * **[HRE]** **Changchun** (`c_BAL_changchun`) — *Tarraconian: **Magistrat van Tschangtschun****
+  * **[HRE]** **Fuzhou** (`c_BAL_fuzhou`) — *Tarraconian: **Magistrat van Fudschou****
+  * **[HRE]** **Xinzhou** (`c_BAL_xinzhou`) — *Tarraconian: **Magistrat van Schindschou****
+  * **[HRE]** **Yizhou** (`c_BAL_yizhou`) — *Tarraconian: **Magistrat van Jidschou****
 * **Duchy of Moe-Su** (`d_BAL_moe_su`) — *3/3 in HRE*
-  * **[HRE]** **Chénzhōu** (`c_BAL_sokju`)
-  * **[HRE]** **Makhil** (`c_BAL_makhil`)
-  * **[HRE]** **West Makhil** (`c_BAL_west_makhil`)
+  * **[HRE]** **Chénzhōu** (`c_BAL_sokju`) — *Tarraconian: **Magistrat van Tschêndschôu****
+  * **[HRE]** **Makhil** (`c_BAL_makhil`) — *Tarraconian: **Magistrat van Makhil****
+  * **[HRE]** **West Makhil** (`c_BAL_west_makhil`) — *Tarraconian: **Magistrat van West-Makhil****
 * **Duchy of Yālü-Zhangling** (`d_BAL_amnok_jangryeong`) — *2/4 in HRE*
-  * **[HRE]** **East Zhangling** (`c_BAL_east_jangryeong`)
-  * **[HRE]** **West Zhangling** (`c_BAL_west_jangryeong`)
-  * [Non-HRE] **East Yālü** (`c_BAL_east_amnok`)
-  * [Non-HRE] **West Yālü** (`c_BAL_west_amnok`)
+  * **[HRE]** **East Zhangling** (`c_BAL_east_jangryeong`) — *Tarraconian: **Magistrat van Ôst-Dschangling****
+  * **[HRE]** **West Zhangling** (`c_BAL_west_jangryeong`) — *Tarraconian: **Magistrat van West-Dschangling****
+  * [Non-HRE] **East Yālü** (`c_BAL_east_amnok`) — *Tarraconian: **Magistrat van Ôst-Jâlü****
+  * [Non-HRE] **West Yālü** (`c_BAL_west_amnok`) — *Tarraconian: **Magistrat van West-Jâlü****
 * **Duchy of Sushenguo** (`d_SW_sushenguo`) — *0/5 in HRE*
-  * [Non-HRE] **Fancao** (`c_SW_fancao`)
-  * [Non-HRE] **Gonghejiang** (`c_SW_gonghejiang`)
-  * [Non-HRE] **Heilonglin** (`c_SW_heilonglin`)
-  * [Non-HRE] **Lupingyuan** (`c_SW_lupingyuan`)
-  * [Non-HRE] **Suihua** (`c_SW_suihua`)
+  * [Non-HRE] **Fancao** (`c_SW_fancao`) — *Tarraconian: **Magistrat van Fantzaô****
+  * [Non-HRE] **Gonghejiang** (`c_SW_gonghejiang`) — *Tarraconian: **Magistrat van Gonghejiang****
+  * [Non-HRE] **Heilonglin** (`c_SW_heilonglin`) — *Tarraconian: **Magistrat van Heilonglin****
+  * [Non-HRE] **Lupingyuan** (`c_SW_lupingyuan`) — *Tarraconian: **Magistrat van Lupingyuan****
+  * [Non-HRE] **Suihua** (`c_SW_suihua`) — *Tarraconian: **Magistrat van Suihue****
 * **Duchy of Ruzheguo** (`d_SW_ruzheguo`) — *0/3 in HRE*
-  * [Non-HRE] **Dongruzhe** (`c_SW_dongruzhe`)
-  * [Non-HRE] **Jiqin Hari** (`c_SW_jiqin_hari`)
-  * [Non-HRE] **Ruzhejiang** (`c_SW_ruzhejiang`)
+  * [Non-HRE] **Dongruzhe** (`c_SW_dongruzhe`) — *Tarraconian: **Magistrat van Dongrudsche****
+  * [Non-HRE] **Jiqin Hari** (`c_SW_jiqin_hari`) — *Tarraconian: **Magistrat van Jitschin Hari****
+  * [Non-HRE] **Ruzhejiang** (`c_SW_ruzhejiang`) — *Tarraconian: **Magistrat van Rudschejiang****
 
 ---
 
@@ -3309,31 +3309,31 @@
 * **De Jure Empire:** Turan (`e_turan`)
 
 * **Duchy of Khotan** (`d_khotan`) — *4/5 in HRE*
-  * **[HRE]** **Cherchen** (`c_cherchen`)
-  * **[HRE]** **Dondan Oilik** (`c_dondan_oilik`)
-  * **[HRE]** **Karghalik** (`c_karghalik`)
-  * **[HRE]** **Keriya** (`c_keriya`)
-  * [Non-HRE] **Khotan** (`c_khotan`)
+  * **[HRE]** **Cherchen** (`c_cherchen`) — *Tarraconian: **Magistrat van Tschertschen****
+  * **[HRE]** **Dondan Oilik** (`c_dondan_oilik`) — *Tarraconian: **Magistrat van Dondan Oilich****
+  * **[HRE]** **Karghalik** (`c_karghalik`) — *Tarraconian: **Magistrat van Karghalich****
+  * **[HRE]** **Keriya** (`c_keriya`) — *Tarraconian: **Magistrat van Keriye****
+  * [Non-HRE] **Khotan** (`c_khotan`) — *Tarraconian: **Magistrat van Chotan****
 * **Duchy of Karashar** (`d_karashar`) — *4/4 in HRE*
-  * **[HRE]** **Karashar** (`c_karashar`)
-  * **[HRE]** **Kucha** (`c_kucha`)
-  * **[HRE]** **Luntai** (`c_luntai`)
-  * **[HRE]** **Toksun** (`c_toksun`)
+  * **[HRE]** **Karashar** (`c_karashar`) — *Tarraconian: **Magistrat van Karaschar****
+  * **[HRE]** **Kucha** (`c_kucha`) — *Tarraconian: **Magistrat van Kutsche****
+  * **[HRE]** **Luntai** (`c_luntai`) — *Tarraconian: **Magistrat van Luntai****
+  * **[HRE]** **Toksun** (`c_toksun`) — *Tarraconian: **Magistrat van Toksun****
 * **Duchy of Kashgar** (`d_kashgar`) — *3/4 in HRE*
-  * **[HRE]** **Kashgar** (`c_kashgar`)
-  * **[HRE]** **Maralbeshi** (`c_maralbeshi`)
-  * **[HRE]** **Terek Pass** (`c_terek_pass`)
-  * [Non-HRE] **Yarkand** (`c_yarkand`)
+  * **[HRE]** **Kashgar** (`c_kashgar`) — *Tarraconian: **Magistrat van Kaschgar****
+  * **[HRE]** **Maralbeshi** (`c_maralbeshi`) — *Tarraconian: **Magistrat van Maralbeschi****
+  * **[HRE]** **Terek Pass** (`c_terek_pass`) — *Tarraconian: **Magistrat van Terechpass****
+  * [Non-HRE] **Yarkand** (`c_yarkand`) — *Tarraconian: **Magistrat van Jarkant****
 * **Duchy of Charkliq** (`d_charkliq`) — *3/3 in HRE*
-  * **[HRE]** **Charkliq** (`c_charkliq`)
-  * **[HRE]** **Lop Nur** (`c_luobupo`)
-  * **[HRE]** **Miran** (`c_dunhuang`)
+  * **[HRE]** **Charkliq** (`c_charkliq`) — *Tarraconian: **Magistrat van Tscharklitsch****
+  * **[HRE]** **Lop Nur** (`c_luobupo`) — *Tarraconian: **Magistrat van Lop Nur****
+  * **[HRE]** **Miran** (`c_dunhuang`) — *Tarraconian: **Magistrat van Miran****
 * **Duchy of Loulan** (`d_loulan`) — *3/3 in HRE*
-  * **[HRE]** **Dafang** (`c_dafang`)
-  * **[HRE]** **Kumtag** (`c_kumtag`)
-  * **[HRE]** **Loulan** (`c_loulan`)
-* **Duchy of X Script 1553** (`x_script_1553`) — *1/1 in HRE*
-  * **[HRE]** **Aksu** (`c_aksu`)
+  * **[HRE]** **Dafang** (`c_dafang`) — *Tarraconian: **Magistrat van Dafang****
+  * **[HRE]** **Kumtag** (`c_kumtag`) — *Tarraconian: **Magistrat van Kumtach****
+  * **[HRE]** **Loulan** (`c_loulan`) — *Tarraconian: **Magistrat van Loulan****
+* **Duchy of Aksu** (`x_script_1553`) — *1/1 in HRE*
+  * **[HRE]** **Aksu** (`c_aksu`) — *Tarraconian: **Magistrat van Aksu****
 
 ---
 
@@ -3341,26 +3341,26 @@
 * **De Jure Empire:** Samhan (`e_goryeo`)
 
 * **Duchy of Yukju** (`d_yukju`) — *4/4 in HRE*
-  * **[HRE]** **Gwiju** (`c_gwiju`)
-  * **[HRE]** **Jangjeong** (`c_jangjeong`)
-  * **[HRE]** **Taeju** (`c_taeju`)
-  * **[HRE]** **Yeongju** (`c_uiju`)
+  * **[HRE]** **Gwiju** (`c_gwiju`) — *Tarraconian: **Magistrat van Gwidschu****
+  * **[HRE]** **Jangjeong** (`c_jangjeong`) — *Tarraconian: **Magistrat van Dschangdscheong****
+  * **[HRE]** **Taeju** (`c_taeju`) — *Tarraconian: **Magistrat van Taedschu****
+  * **[HRE]** **Yeongju** (`c_uiju`) — *Tarraconian: **Magistrat van Dscheongdschu****
 * **Duchy of Bukgye** (`d_bukgye`) — *3/3 in HRE*
-  * **[HRE]** **Seogyeong** (`c_seogyeong`)
-  * **[HRE]** **Seongju** (`c_seongju`)
-  * **[HRE]** **Yeongwon** (`c_yeongwon`)
+  * **[HRE]** **Seogyeong** (`c_seogyeong`) — *Tarraconian: **Magistrat van Seogyeong****
+  * **[HRE]** **Seongju** (`c_seongju`) — *Tarraconian: **Magistrat van Seongdschu****
+  * **[HRE]** **Yeongwon** (`c_yeongwon`) — *Tarraconian: **Magistrat van Jeongwon****
 * **Duchy of Gaeseong** (`d_gaeseong`) — *3/3 in HRE*
-  * **[HRE]** **Gaeseong** (`c_gaeseong`)
-  * **[HRE]** **Gokju** (`c_gokju`)
-  * **[HRE]** **Pyeongju** (`c_pyeongju`)
+  * **[HRE]** **Gaeseong** (`c_gaeseong`) — *Tarraconian: **Magistrat van Gaeseong****
+  * **[HRE]** **Gokju** (`c_gokju`) — *Tarraconian: **Magistrat van Gokdschu****
+  * **[HRE]** **Pyeongju** (`c_pyeongju`) — *Tarraconian: **Magistrat van Pyeongdschu****
 * **Duchy of Gwangju** (`d_gwangju`) — *3/3 in HRE*
-  * **[HRE]** **Dangseong** (`c_dangseong`)
-  * **[HRE]** **Gwangju** (`c_gwangju`)
-  * **[HRE]** **Yangju** (`c_yangju`)
+  * **[HRE]** **Dangseong** (`c_dangseong`) — *Tarraconian: **Magistrat van Dangseong****
+  * **[HRE]** **Gwangju** (`c_gwangju`) — *Tarraconian: **Magistrat van Gwangdschu****
+  * **[HRE]** **Yangju** (`c_yangju`) — *Tarraconian: **Magistrat van Jangdschu****
 * **Duchy of Haeju** (`d_haeju`) — *3/3 in HRE*
-  * **[HRE]** **Haeju** (`c_haeju`)
-  * **[HRE]** **Hwangju** (`c_hwangju`)
-  * **[HRE]** **Pungju** (`c_pungju`)
+  * **[HRE]** **Haeju** (`c_haeju`) — *Tarraconian: **Magistrat van Haedschu****
+  * **[HRE]** **Hwangju** (`c_hwangju`) — *Tarraconian: **Magistrat van Hwangdschu****
+  * **[HRE]** **Pungju** (`c_pungju`) — *Tarraconian: **Magistrat van Pungdschu****
 
 ---
 
@@ -3368,24 +3368,24 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Hedong** (`d_hedong`) — *5/5 in HRE*
-  * **[HRE]** **Fenzhou** (`c_fenzhou`)
-  * **[HRE]** **Lanzhou** (`c_lanzhou`)
-  * **[HRE]** **Shizhou** (`c_shizhou`)
-  * **[HRE]** **Taiyuan** (`c_taiyuan`)
-  * **[HRE]** **Yizhou** (`c_liaozhou`)
+  * **[HRE]** **Fenzhou** (`c_fenzhou`) — *Tarraconian: **Magistrat van Fendschou****
+  * **[HRE]** **Lanzhou** (`c_lanzhou`) — *Tarraconian: **Magistrat van Landschou****
+  * **[HRE]** **Shizhou** (`c_shizhou`) — *Tarraconian: **Magistrat van Schidschou****
+  * **[HRE]** **Taiyuan** (`c_taiyuan`) — *Tarraconian: **Magistrat van Taiyuan****
+  * **[HRE]** **Yizhou** (`c_liaozhou`) — *Tarraconian: **Magistrat van Jidschou****
 * **Duchy of Hezhong** (`d_hezhong`) — *5/5 in HRE*
-  * **[HRE]** **Cizhou** (`c_cizhou`)
-  * **[HRE]** **Hezhong** (`c_hezhong`)
-  * **[HRE]** **Jiangzhou** (`c_jiangzhou_2`)
-  * **[HRE]** **Jinzhou** (`c_pingyang`)
-  * **[HRE]** **Xizhou** (`c_xizhou`)
+  * **[HRE]** **Cizhou** (`c_cizhou`) — *Tarraconian: **Magistrat van Zidschou****
+  * **[HRE]** **Hezhong** (`c_hezhong`) — *Tarraconian: **Magistrat van Hedschong****
+  * **[HRE]** **Jiangzhou** (`c_jiangzhou_2`) — *Tarraconian: **Magistrat van Dschiangdschou****
+  * **[HRE]** **Jinzhou** (`c_pingyang`) — *Tarraconian: **Magistrat van Dschindschou****
+  * **[HRE]** **Xizhou** (`c_xizhou`) — *Tarraconian: **Magistrat van Schidschou****
 * **Duchy of Zelu** (`d_zelu`) — *3/3 in HRE*
-  * **[HRE]** **Luzhou** (`c_longde`)
-  * **[HRE]** **Qinzhou** (`c_yangcheng`)
-  * **[HRE]** **Zezhou** (`c_zezhou`)
+  * **[HRE]** **Luzhou** (`c_longde`) — *Tarraconian: **Magistrat van Ludschou****
+  * **[HRE]** **Qinzhou** (`c_yangcheng`) — *Tarraconian: **Magistrat van Tschindschou****
+  * **[HRE]** **Zezhou** (`c_zezhou`) — *Tarraconian: **Magistrat van Sedschou****
 * **Duchy of Yanmen** (`d_yanmen`) — *2/2 in HRE*
-  * **[HRE]** **Daizhou** (`c_daizhou`)
-  * **[HRE]** **Xinzhou** (`c_xinzhou`)
+  * **[HRE]** **Daizhou** (`c_daizhou`) — *Tarraconian: **Magistrat van Daidschou****
+  * **[HRE]** **Xinzhou** (`c_xinzhou`) — *Tarraconian: **Magistrat van Schindschou****
 
 ---
 
@@ -3393,22 +3393,22 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Yunshuo** (`d_yunshuo`) — *5/5 in HRE*
-  * **[HRE]** **Datong** (`c_datong_2`)
-  * **[HRE]** **Hongzhou** (`c_hongzhou_2`)
-  * **[HRE]** **Shuozhou** (`c_shuozhou`)
-  * **[HRE]** **Yingzhou** (`c_yingzhou_5`)
-  * **[HRE]** **Yuzhou** (`c_yuzhou`)
+  * **[HRE]** **Datong** (`c_datong_2`) — *Tarraconian: **Magistrat van Datong****
+  * **[HRE]** **Hongzhou** (`c_hongzhou_2`) — *Tarraconian: **Magistrat van Hongdschou****
+  * **[HRE]** **Shuozhou** (`c_shuozhou`) — *Tarraconian: **Magistrat van Schuodschou****
+  * **[HRE]** **Yingzhou** (`c_yingzhou_5`) — *Tarraconian: **Magistrat van Jingdschou****
+  * **[HRE]** **Yuzhou** (`c_yuzhou`) — *Tarraconian: **Magistrat van Judschou****
 * **Duchy of Zhenwu** (`d_xinan`) — *5/5 in HRE*
-  * **[HRE]** **Fuzhou** (`c_fuzhou`)
-  * **[HRE]** **Linzhou** (`c_linzhou`)
-  * **[HRE]** **Qingshan** (`c_qingshan`)
-  * **[HRE]** **Shengzhou** (`c_shengzhou`)
-  * **[HRE]** **Yunneizhou** (`c_lxj_yunneizhou`)
+  * **[HRE]** **Fuzhou** (`c_fuzhou`) — *Tarraconian: **Magistrat van Fudschou****
+  * **[HRE]** **Linzhou** (`c_linzhou`) — *Tarraconian: **Magistrat van Lindschou****
+  * **[HRE]** **Qingshan** (`c_qingshan`) — *Tarraconian: **Magistrat van Tschingschan****
+  * **[HRE]** **Shengzhou** (`c_shengzhou`) — *Tarraconian: **Magistrat van Schengdschou****
+  * **[HRE]** **Yunneizhou** (`c_lxj_yunneizhou`) — *Tarraconian: **Magistrat van Junneidschou****
 * **Duchy of Sanggan** (`d_sanggan`) — *4/4 in HRE*
-  * **[HRE]** **Huai'an** (`c_huaian`)
-  * **[HRE]** **Jiushijiuquan** (`c_jiushijiuquan`)
-  * **[HRE]** **Rouyuan** (`c_rouyuan`)
-  * **[HRE]** **Yongxing** (`c_yongxing`)
+  * **[HRE]** **Huai'an** (`c_huaian`) — *Tarraconian: **Magistrat van Huai-An****
+  * **[HRE]** **Jiushijiuquan** (`c_jiushijiuquan`) — *Tarraconian: **Magistrat van Dschiuschidschiutschuan****
+  * **[HRE]** **Rouyuan** (`c_rouyuan`) — *Tarraconian: **Magistrat van Rouyuan****
+  * **[HRE]** **Yongxing** (`c_yongxing`) — *Tarraconian: **Magistrat van Jongsching****
 
 ---
 
@@ -3416,42 +3416,42 @@
 * **De Jure Empire:** Turan (`e_turan`)
 
 * **Duchy of Aral il** (`d_aral_il`) — *5/5 in HRE*
-  * **[HRE]** **Ak-Dzulpas** (`c_ak-dzulpas`)
-  * **[HRE]** **Aralkizil** (`c_aralkizil`)
-  * **[HRE]** **Kara-Mugai** (`c_kara-mugai`)
-  * **[HRE]** **Raimskoe** (`c_raimskoe`)
-  * **[HRE]** **Yangikent** (`c_yangikent`)
+  * **[HRE]** **Ak-Dzulpas** (`c_ak-dzulpas`) — *Tarraconian: **Magistrat van Achzulpas****
+  * **[HRE]** **Aralkizil** (`c_aralkizil`) — *Tarraconian: **Magistrat van Aralkizil****
+  * **[HRE]** **Kara-Mugai** (`c_kara-mugai`) — *Tarraconian: **Magistrat van Kara-Mugai****
+  * **[HRE]** **Raimskoe** (`c_raimskoe`) — *Tarraconian: **Magistrat van Raimskoe****
+  * **[HRE]** **Yangikent** (`c_yangikent`) — *Tarraconian: **Magistrat van Jangikent****
 * **Duchy of Itil** (`d_itil`) — *2/4 in HRE*
-  * **[HRE]** **Itil** (`c_itil`)
-  * **[HRE]** **Saqsin** (`c_saqsin`)
-  * [Non-HRE] **Ukek** (`c_ukek`)
-  * [Non-HRE] **Uzen** (`c_uzen`)
+  * **[HRE]** **Itil** (`c_itil`) — *Tarraconian: **Magistrat van Itil****
+  * **[HRE]** **Saqsin** (`c_saqsin`) — *Tarraconian: **Magistrat van Satschsin****
+  * [Non-HRE] **Ukek** (`c_ukek`) — *Tarraconian: **Magistrat van Ukech****
+  * [Non-HRE] **Uzen** (`c_uzen`) — *Tarraconian: **Magistrat van Uzen****
 * **Duchy of Mangyshlak** (`d_transcaspiana`) — *2/4 in HRE*
-  * **[HRE]** **Buzachi** (`c_buzachi`)
-  * **[HRE]** **Mangyshlak** (`c_mangyshlak`)
-  * [Non-HRE] **Qaraustyurt** (`c_qaraustyurt`)
-  * [Non-HRE] **Qyzylustyurt** (`c_qyzylustyurt`)
+  * **[HRE]** **Buzachi** (`c_buzachi`) — *Tarraconian: **Magistrat van Buzatschi****
+  * **[HRE]** **Mangyshlak** (`c_mangyshlak`) — *Tarraconian: **Magistrat van Mangyschlach****
+  * [Non-HRE] **Qaraustyurt** (`c_qaraustyurt`) — *Tarraconian: **Magistrat van Tscharaustyurt****
+  * [Non-HRE] **Qyzylustyurt** (`c_qyzylustyurt`) — *Tarraconian: **Magistrat van Tschyzylustyurt****
 * **Duchy of Garabogazkol** (`d_garabogazkol`) — *2/3 in HRE*
-  * **[HRE]** **Bekdas** (`c_bekdas`)
-  * **[HRE]** **Garabogazkol** (`c_garabogazkol`)
-  * [Non-HRE] **Oglamych** (`c_oglamych`)
+  * **[HRE]** **Bekdas** (`c_bekdas`) — *Tarraconian: **Magistrat van Bekdas****
+  * **[HRE]** **Garabogazkol** (`c_garabogazkol`) — *Tarraconian: **Magistrat van Garabogazkol****
+  * [Non-HRE] **Oglamych** (`c_oglamych`) — *Tarraconian: **Magistrat van Oglamytsch****
 * **Duchy of Jemba** (`d_jemba`) — *0/6 in HRE*
-  * [Non-HRE] **Akkityk** (`c_akkityk`)
-  * [Non-HRE] **Churuk** (`c_churuk`)
-  * [Non-HRE] **Kos-Buwak** (`c_kos-buwak`)
-  * [Non-HRE] **Namastau** (`c_namastau`)
-  * [Non-HRE] **Qoshagyl** (`c_qoshagyl`)
-  * [Non-HRE] **Tengiz** (`c_tengiz`)
+  * [Non-HRE] **Akkityk** (`c_akkityk`) — *Tarraconian: **Magistrat van Akkitîch****
+  * [Non-HRE] **Churuk** (`c_churuk`) — *Tarraconian: **Magistrat van Tschuruch****
+  * [Non-HRE] **Kos-Buwak** (`c_kos-buwak`) — *Tarraconian: **Magistrat van Kos-Buwach****
+  * [Non-HRE] **Namastau** (`c_namastau`) — *Tarraconian: **Magistrat van Namastau****
+  * [Non-HRE] **Qoshagyl** (`c_qoshagyl`) — *Tarraconian: **Magistrat van Tschoschagyl****
+  * [Non-HRE] **Tengiz** (`c_tengiz`) — *Tarraconian: **Magistrat van Tengiz****
 * **Duchy of Alania** (`d_alania`) — *0/4 in HRE*
-  * [Non-HRE] **Besinda** (`c_besinada`)
-  * [Non-HRE] **Cabardinia** (`c_cabardinia`)
-  * [Non-HRE] **Maghas** (`c_maghas`)
-  * [Non-HRE] **Zichia** (`c_zichia`)
+  * [Non-HRE] **Besinda** (`c_besinada`) — *Tarraconian: **Magistrat van Besinde****
+  * [Non-HRE] **Cabardinia** (`c_cabardinia`) — *Tarraconian: **Magistrat van Zabardinje****
+  * [Non-HRE] **Maghas** (`c_maghas`) — *Tarraconian: **Magistrat van Maghas****
+  * [Non-HRE] **Zichia** (`c_zichia`) — *Tarraconian: **Magistrat van Sitschje****
 * **Duchy of Atyrau** (`d_atyrau`) — *0/4 in HRE*
-  * [Non-HRE] **Atyrau** (`c_atyrau`)
-  * [Non-HRE] **Baisary** (`c_baisary`)
-  * [Non-HRE] **Kainar** (`c_kainar`)
-  * [Non-HRE] **Sagiz** (`c_sagiz`)
+  * [Non-HRE] **Atyrau** (`c_atyrau`) — *Tarraconian: **Magistrat van Atyrau****
+  * [Non-HRE] **Baisary** (`c_baisary`) — *Tarraconian: **Magistrat van Baisary****
+  * [Non-HRE] **Kainar** (`c_kainar`) — *Tarraconian: **Magistrat van Kainar****
+  * [Non-HRE] **Sagiz** (`c_sagiz`) — *Tarraconian: **Magistrat van Sagiz****
 
 ---
 
@@ -3459,30 +3459,30 @@
 * **De Jure Empire:** Andong (`e_andong`)
 
 * **Duchy of Shuàibīn-Ānbiān** (`d_BAL_yeojintang`) — *4/4 in HRE*
-  * **[HRE]** **Dìngli** (`c_BAL_jeongni`)
-  * **[HRE]** **North Ānbiān** (`c_BAL_north_anbyeon`)
-  * **[HRE]** **Shuàibīn** (`c_BAL_solbin`)
-  * **[HRE]** **Ānbiān** (`c_BAL_anbyeon`)
+  * **[HRE]** **Dìngli** (`c_BAL_jeongni`) — *Tarraconian: **Magistrat van Dingli****
+  * **[HRE]** **North Ānbiān** (`c_BAL_north_anbyeon`) — *Tarraconian: **Magistrat van Nort-Ânbiân****
+  * **[HRE]** **Shuàibīn** (`c_BAL_solbin`) — *Tarraconian: **Magistrat van Schuaibîn****
+  * **[HRE]** **Ānbiān** (`c_BAL_anbyeon`) — *Tarraconian: **Magistrat van Ânbiân****
 * **Duchy of Ānyuan** (`d_BAL_anwon`) — *4/4 in HRE*
-  * **[HRE]** **Heuksu Anwon** (`c_BAL_heuksu_anwon`)
-  * **[HRE]** **North Ānyuan** (`c_BAL_north_anwon`)
-  * **[HRE]** **Níngzhōu** (`c_BAL_ningzhou`)
-  * **[HRE]** **Supin** (`c_BAL_supin`)
+  * **[HRE]** **Heuksu Anwon** (`c_BAL_heuksu_anwon`) — *Tarraconian: **Magistrat van Heuksu Anwon****
+  * **[HRE]** **North Ānyuan** (`c_BAL_north_anwon`) — *Tarraconian: **Magistrat van Nort-Ânyuan****
+  * **[HRE]** **Níngzhōu** (`c_BAL_ningzhou`) — *Tarraconian: **Magistrat van Nîngdschôu****
+  * **[HRE]** **Supin** (`c_BAL_supin`) — *Tarraconian: **Magistrat van Supin****
 * **Duchy of Tielì** (`d_BAL_cheolli`) — *3/3 in HRE*
-  * **[HRE]** **Délizhèn** (`c_BAL_delizhen`)
-  * **[HRE]** **Huligai** (`c_BAL_huligai`)
-  * **[HRE]** **West Tielì** (`c_BAL_west_cheolli`)
+  * **[HRE]** **Délizhèn** (`c_BAL_delizhen`) — *Tarraconian: **Magistrat van Dêlidschen****
+  * **[HRE]** **Huligai** (`c_BAL_huligai`) — *Tarraconian: **Magistrat van Huligai****
+  * **[HRE]** **West Tielì** (`c_BAL_west_cheolli`) — *Tarraconian: **Magistrat van West-Tieli****
 * **Duchy of Huáiyuan** (`d_BAL_hoewon`) — *0/5 in HRE*
-  * [Non-HRE] **Central Huáiyuǎn** (`c_BAL_central_hoewon`)
-  * [Non-HRE] **Dazhou** (`c_BAL_dazhou`)
-  * [Non-HRE] **East Huáiyuǎn** (`c_BAL_east_hoewon`)
-  * [Non-HRE] **Ilanshan** (`c_BAL_ilanshan`)
-  * [Non-HRE] **South Huáiyuǎn** (`c_BAL_south_hoewon`)
+  * [Non-HRE] **Central Huáiyuǎn** (`c_BAL_central_hoewon`) — *Tarraconian: **Magistrat van Middel-Huâiyuan****
+  * [Non-HRE] **Dazhou** (`c_BAL_dazhou`) — *Tarraconian: **Magistrat van Dadschou****
+  * [Non-HRE] **East Huáiyuǎn** (`c_BAL_east_hoewon`) — *Tarraconian: **Magistrat van Ôst-Huâiyuan****
+  * [Non-HRE] **Ilanshan** (`c_BAL_ilanshan`) — *Tarraconian: **Magistrat van Ilanschan****
+  * [Non-HRE] **South Huáiyuǎn** (`c_BAL_south_hoewon`) — *Tarraconian: **Magistrat van Sût-Huâiyuan****
 * **Duchy of Dōngpíng** (`d_BAL_dongpyeong`) — *0/2 in HRE*
-  * [Non-HRE] **Jixi** (`c_BAL_jixi`)
-  * [Non-HRE] **Yizhou** (`c_BAL_dongpyeong_yizhou`)
-* **Duchy of X Script 1250** (`x_script_1250`) — *0/1 in HRE*
-  * [Non-HRE] **Vanda** (`c_eman_vanda`)
+  * [Non-HRE] **Jixi** (`c_BAL_jixi`) — *Tarraconian: **Magistrat van Jischi****
+  * [Non-HRE] **Yizhou** (`c_BAL_dongpyeong_yizhou`) — *Tarraconian: **Magistrat van Jidschou****
+* **Duchy of Vanda** (`x_script_1250`) — *0/1 in HRE*
+  * [Non-HRE] **Vanda** (`c_eman_vanda`) — *Tarraconian: **Magistrat van Wande****
 
 ---
 
@@ -3490,20 +3490,20 @@
 * **De Jure Empire:** Samhan (`e_goryeo`)
 
 * **Duchy of Chungju** (`d_chungju`) — *4/4 in HRE*
-  * **[HRE]** **Cheongju** (`c_cheongju`)
-  * **[HRE]** **Chungju** (`c_chungju`)
-  * **[HRE]** **Gongju** (`c_gongju`)
-  * **[HRE]** **Hongju** (`c_hongju`)
+  * **[HRE]** **Cheongju** (`c_cheongju`) — *Tarraconian: **Magistrat van Tscheongdschu****
+  * **[HRE]** **Chungju** (`c_chungju`) — *Tarraconian: **Magistrat van Tschungdschu****
+  * **[HRE]** **Gongju** (`c_gongju`) — *Tarraconian: **Magistrat van Gongdschu****
+  * **[HRE]** **Hongju** (`c_hongju`) — *Tarraconian: **Magistrat van Hongdschu****
 * **Duchy of Jeonju** (`d_jeonju`) — *3/3 in HRE*
-  * **[HRE]** **Jeonju** (`c_jeonju`)
-  * **[HRE]** **Jillye** (`c_jillye`)
-  * **[HRE]** **Namwon** (`c_namwon`)
+  * **[HRE]** **Jeonju** (`c_jeonju`) — *Tarraconian: **Magistrat van Jeonju****
+  * **[HRE]** **Jillye** (`c_jillye`) — *Tarraconian: **Magistrat van Jillye****
+  * **[HRE]** **Namwon** (`c_namwon`) — *Tarraconian: **Magistrat van Namwon****
 * **Duchy of Naju** (`d_naju`) — *3/3 in HRE*
-  * **[HRE]** **Boseong** (`c_boseong`)
-  * **[HRE]** **Jangheung** (`c_jangheung`)
-  * **[HRE]** **Naju** (`c_naju`)
+  * **[HRE]** **Boseong** (`c_boseong`) — *Tarraconian: **Magistrat van Boseong****
+  * **[HRE]** **Jangheung** (`c_jangheung`) — *Tarraconian: **Magistrat van Dschangheung****
+  * **[HRE]** **Naju** (`c_naju`) — *Tarraconian: **Magistrat van Nadschu****
 * **Duchy of Tamna** (`d_tamna`) — *1/1 in HRE*
-  * **[HRE]** **Tamna** (`c_tamna`)
+  * **[HRE]** **Tamna** (`c_tamna`) — *Tarraconian: **Magistrat van Tamne****
 
 ---
 
@@ -3511,17 +3511,17 @@
 * **De Jure Empire:** Japan (`e_japan`)
 
 * **Duchy of Dazaifu** (`d_north_saikaido`) — *6/6 in HRE*
-  * **[HRE]** **Bungo** (`c_bungo`)
-  * **[HRE]** **Buzen** (`c_buzen`)
-  * **[HRE]** **Chikugo** (`c_chikugo`)
-  * **[HRE]** **Chikuzen** (`c_chikuzen`)
-  * **[HRE]** **Hizen** (`c_hizen`)
-  * **[HRE]** **Tsushima** (`c_tsushima`)
+  * **[HRE]** **Bungo** (`c_bungo`) — *Tarraconian: **Magistrat van Bungô****
+  * **[HRE]** **Buzen** (`c_buzen`) — *Tarraconian: **Magistrat van Buzen****
+  * **[HRE]** **Chikugo** (`c_chikugo`) — *Tarraconian: **Magistrat van Tschikugô****
+  * **[HRE]** **Chikuzen** (`c_chikuzen`) — *Tarraconian: **Magistrat van Tschikuzen****
+  * **[HRE]** **Hizen** (`c_hizen`) — *Tarraconian: **Magistrat van Hizen****
+  * **[HRE]** **Tsushima** (`c_tsushima`) — *Tarraconian: **Magistrat van Zuschime****
 * **Duchy of South Saikaidō** (`d_south_saikaido`) — *4/4 in HRE*
-  * **[HRE]** **Higo** (`c_higo`)
-  * **[HRE]** **Hyūga** (`c_hyuga`)
-  * **[HRE]** **Satsuma** (`c_satsuma`)
-  * **[HRE]** **Ōsumi** (`c_osumi`)
+  * **[HRE]** **Higo** (`c_higo`) — *Tarraconian: **Magistrat van Higô****
+  * **[HRE]** **Hyūga** (`c_hyuga`) — *Tarraconian: **Magistrat van Hyûge****
+  * **[HRE]** **Satsuma** (`c_satsuma`) — *Tarraconian: **Magistrat van Satzume****
+  * **[HRE]** **Ōsumi** (`c_osumi`) — *Tarraconian: **Magistrat van Ôsumi****
 
 ---
 
@@ -3529,18 +3529,18 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Youzhou** (`d_youzhou`) — *6/6 in HRE*
-  * **[HRE]** **Guizhou** (`c_guizhou_2`)
-  * **[HRE]** **Jizhou** (`c_jizhou_1`)
-  * **[HRE]** **Pinzhou** (`c_pinzhou`)
-  * **[HRE]** **Tanzhou** (`c_tanzhou_2`)
-  * **[HRE]** **Youzhou** (`c_youzhou`)
-  * **[HRE]** **Zhuozhou** (`c_zhuozhou`)
+  * **[HRE]** **Guizhou** (`c_guizhou_2`) — *Tarraconian: **Magistrat van Guidschou****
+  * **[HRE]** **Jizhou** (`c_jizhou_1`) — *Tarraconian: **Magistrat van Dschidschou****
+  * **[HRE]** **Pinzhou** (`c_pinzhou`) — *Tarraconian: **Magistrat van Pindschou****
+  * **[HRE]** **Tanzhou** (`c_tanzhou_2`) — *Tarraconian: **Magistrat van Tandschou****
+  * **[HRE]** **Youzhou** (`c_youzhou`) — *Tarraconian: **Magistrat van Joudschou****
+  * **[HRE]** **Zhuozhou** (`c_zhuozhou`) — *Tarraconian: **Magistrat van Dschuodschou****
 * **Duchy of Yideng** (`d_yideng`) — *2/2 in HRE*
-  * **[HRE]** **Dingzhou** (`c_dingzhou`)
-  * **[HRE]** **Yizhou** (`c_yizhou_1`)
+  * **[HRE]** **Dingzhou** (`c_dingzhou`) — *Tarraconian: **Magistrat van Dingdschou****
+  * **[HRE]** **Yizhou** (`c_yizhou_1`) — *Tarraconian: **Magistrat van Jidschou****
 * **Duchy of Yingmo** (`d_yingmo`) — *2/2 in HRE*
-  * **[HRE]** **Mozhou** (`c_mozhou`)
-  * **[HRE]** **Yingzhou** (`c_hejian`)
+  * **[HRE]** **Mozhou** (`c_mozhou`) — *Tarraconian: **Magistrat van Modschou****
+  * **[HRE]** **Yingzhou** (`c_hejian`) — *Tarraconian: **Magistrat van Jingdschou****
 
 ---
 
@@ -3548,34 +3548,34 @@
 * **De Jure Empire:** Amur (`e_amur`)
 
 * **Duchy of Nivkhia** (`d_eman_nivkhia`) — *3/3 in HRE*
-  * **[HRE]** **Amgun** (`c_eman_amgun`)
-  * **[HRE]** **Nurgan** (`c_eman_nurgan`)
-  * **[HRE]** **Tugur** (`c_eman_tugur`)
-* **Duchy of X Script 1439** (`x_script_1439`) — *1/2 in HRE*
-  * **[HRE]** **Choripi** (`c_eman_choripi`)
-  * [Non-HRE] **Murkonno** (`c_eman_murkonno`)
-* **Duchy of X Script 2047** (`x_script_2047`) — *1/1 in HRE*
-  * **[HRE]** **Molihewen** (`c_eman_molihewen`)
-* **Duchy of X Script 2533** (`x_script_2533`) — *1/1 in HRE*
-  * **[HRE]** **Boli** (`c_eman_boli`)
-* **Duchy of X Script 2799** (`x_script_2799`) — *1/1 in HRE*
-  * **[HRE]** **Mohean** (`c_eman_mohean`)
-* **Duchy of X Script 2924** (`x_script_2924`) — *1/1 in HRE*
-  * **[HRE]** **Yerenhe** (`c_eman_yerenhe`)
+  * **[HRE]** **Amgun** (`c_eman_amgun`) — *Tarraconian: **Magistrat van Amgun****
+  * **[HRE]** **Nurgan** (`c_eman_nurgan`) — *Tarraconian: **Magistrat van Nurgan****
+  * **[HRE]** **Tugur** (`c_eman_tugur`) — *Tarraconian: **Magistrat van Tugur****
+* **Duchy of Choripi** (`x_script_1439`) — *1/2 in HRE*
+  * **[HRE]** **Choripi** (`c_eman_choripi`) — *Tarraconian: **Magistrat van Tschoripi****
+  * [Non-HRE] **Murkonno** (`c_eman_murkonno`) — *Tarraconian: **Magistrat van Murkonnô****
+* **Duchy of Molihewen** (`x_script_2047`) — *1/1 in HRE*
+  * **[HRE]** **Molihewen** (`c_eman_molihewen`) — *Tarraconian: **Magistrat van Molihewen****
+* **Duchy of Boli** (`x_script_2533`) — *1/1 in HRE*
+  * **[HRE]** **Boli** (`c_eman_boli`) — *Tarraconian: **Magistrat van Boli****
+* **Duchy of Mohean** (`x_script_2799`) — *1/1 in HRE*
+  * **[HRE]** **Mohean** (`c_eman_mohean`) — *Tarraconian: **Magistrat van Mohean****
+* **Duchy of Yerenhe** (`x_script_2924`) — *1/1 in HRE*
+  * **[HRE]** **Yerenhe** (`c_eman_yerenhe`) — *Tarraconian: **Magistrat van Jerenhe****
 * **Duchy of Samagero** (`d_eman_samagero`) — *0/4 in HRE*
-  * [Non-HRE] **Kerin** (`c_eman_kerin`)
-  * [Non-HRE] **Khadul** (`c_eman_khadul`)
-  * [Non-HRE] **Tudali** (`c_eman_tudali`)
-  * [Non-HRE] **Yam Alin** (`c_eman_yam_alin`)
+  * [Non-HRE] **Kerin** (`c_eman_kerin`) — *Tarraconian: **Magistrat van Kerin****
+  * [Non-HRE] **Khadul** (`c_eman_khadul`) — *Tarraconian: **Magistrat van Chadul****
+  * [Non-HRE] **Tudali** (`c_eman_tudali`) — *Tarraconian: **Magistrat van Tudali****
+  * [Non-HRE] **Yam Alin** (`c_eman_yam_alin`) — *Tarraconian: **Magistrat van Jam Alin****
 * **Duchy of Bureya** (`d_eman_bureya`) — *0/2 in HRE*
-  * [Non-HRE] **Birija** (`c_eman_birija`)
-  * [Non-HRE] **Turma** (`c_eman_turma`)
+  * [Non-HRE] **Birija** (`c_eman_birija`) — *Tarraconian: **Magistrat van Birije****
+  * [Non-HRE] **Turma** (`c_eman_turma`) — *Tarraconian: **Magistrat van Turme****
 * **Duchy of Amar** (`d_eman_amar`) — *0/1 in HRE*
-  * [Non-HRE] **Nimen** (`c_eman_nimen`)
-* **Duchy of X Script 1737** (`x_script_1737`) — *0/1 in HRE*
-  * [Non-HRE] **Urehokto** (`c_eman_urehokto`)
-* **Duchy of X Script 2388** (`x_script_2388`) — *0/1 in HRE*
-  * [Non-HRE] **Urmi** (`c_eman_urmi`)
+  * [Non-HRE] **Nimen** (`c_eman_nimen`) — *Tarraconian: **Magistrat van Nimen****
+* **Duchy of Urehokto** (`x_script_1737`) — *0/1 in HRE*
+  * [Non-HRE] **Urehokto** (`c_eman_urehokto`) — *Tarraconian: **Magistrat van Urehoktô****
+* **Duchy of Urmi** (`x_script_2388`) — *0/1 in HRE*
+  * [Non-HRE] **Urmi** (`c_eman_urmi`) — *Tarraconian: **Magistrat van Urmi****
 
 ---
 
@@ -3583,15 +3583,15 @@
 * **De Jure Empire:** Andong (`e_andong`)
 
 * **Duchy of Liaoxi** (`d_liaoxi`) — *5/6 in HRE*
-  * **[HRE]** **Chaoyang** (`c_LIAO_chaoyang`)
-  * **[HRE]** **Jinzhou** (`c_LIAO_jinzhou`)
-  * **[HRE]** **Liaoxi** (`c_lnj_liaoxi`)
-  * **[HRE]** **Liaoxibei** (`c_lnj_liaoxibei`)
-  * **[HRE]** **Xianzhou** (`c_LIAO_xianzhou`)
-  * [Non-HRE] **Liaozhou** (`c_LIAO_liaozhou`)
+  * **[HRE]** **Chaoyang** (`c_LIAO_chaoyang`) — *Tarraconian: **Magistrat van Tschaoyang****
+  * **[HRE]** **Jinzhou** (`c_LIAO_jinzhou`) — *Tarraconian: **Magistrat van Jindschou****
+  * **[HRE]** **Liaoxi** (`c_lnj_liaoxi`) — *Tarraconian: **Magistrat van Liaoschi****
+  * **[HRE]** **Liaoxibei** (`c_lnj_liaoxibei`) — *Tarraconian: **Magistrat van Liaoschibei****
+  * **[HRE]** **Xianzhou** (`c_LIAO_xianzhou`) — *Tarraconian: **Magistrat van Schiandschou****
+  * [Non-HRE] **Liaozhou** (`c_LIAO_liaozhou`) — *Tarraconian: **Magistrat van Liaodschou****
 * **Duchy of Yuyi** (`d_yanyun_yuyi`) — *2/2 in HRE*
-  * **[HRE]** **Huanzhou** (`c_lxj_huanzhou`)
-  * **[HRE]** **Yangchengzhou** (`c_lxj_yangchengzhou`)
+  * **[HRE]** **Huanzhou** (`c_lxj_huanzhou`) — *Tarraconian: **Magistrat van Huandschou****
+  * **[HRE]** **Yangchengzhou** (`c_lxj_yangchengzhou`) — *Tarraconian: **Magistrat van Jangtschengdschou****
 
 ---
 
@@ -3599,15 +3599,15 @@
 * **De Jure Empire:** Japan (`e_japan`)
 
 * **Duchy of Hitakami** (`d_hitakami`) — *4/4 in HRE*
-  * **[HRE]** **Isawa** (`c_isawa`)
-  * **[HRE]** **Iwaki** (`c_iwaki`)
-  * **[HRE]** **Iwase** (`c_iwase`)
-  * **[HRE]** **Korehari** (`c_korehari`)
+  * **[HRE]** **Isawa** (`c_isawa`) — *Tarraconian: **Magistrat van Isawe****
+  * **[HRE]** **Iwaki** (`c_iwaki`) — *Tarraconian: **Magistrat van Iwaki****
+  * **[HRE]** **Iwase** (`c_iwase`) — *Tarraconian: **Magistrat van Iwase****
+  * **[HRE]** **Korehari** (`c_korehari`) — *Tarraconian: **Magistrat van Korehari****
 * **Duchy of Nushiro** (`d_nushiro`) — *2/2 in HRE*
-  * **[HRE]** **Nushiro** (`c_nushiro`)
-  * **[HRE]** **Tokisara** (`c_tokisara`)
-* **Duchy of X Script 1505** (`x_script_1505`) — *1/1 in HRE*
-  * **[HRE]** **Tsugaru** (`c_tsugaru`)
+  * **[HRE]** **Nushiro** (`c_nushiro`) — *Tarraconian: **Magistrat van Nuschirô****
+  * **[HRE]** **Tokisara** (`c_tokisara`) — *Tarraconian: **Magistrat van Tokisare****
+* **Duchy of Tsugaru** (`x_script_1505`) — *1/1 in HRE*
+  * **[HRE]** **Tsugaru** (`c_tsugaru`) — *Tarraconian: **Magistrat van Zugaru****
 
 ---
 
@@ -3615,18 +3615,18 @@
 * **De Jure Empire:** Turan (`e_turan`)
 
 * **Duchy of Chah** (`d_chah`) — *3/4 in HRE*
-  * **[HRE]** **Chah** (`c_chah`)
-  * **[HRE]** **Shavgar** (`c_shavgar`)
-  * **[HRE]** **Sütkend** (`c_sutkend`)
-  * [Non-HRE] **Otrar** (`c_otrar`)
+  * **[HRE]** **Chah** (`c_chah`) — *Tarraconian: **Magistrat van Tschah****
+  * **[HRE]** **Shavgar** (`c_shavgar`) — *Tarraconian: **Magistrat van Schawgar****
+  * **[HRE]** **Sütkend** (`c_sutkend`) — *Tarraconian: **Magistrat van Sütkent****
+  * [Non-HRE] **Otrar** (`c_otrar`) — *Tarraconian: **Magistrat van Otrar****
 * **Duchy of Syr Darya** (`d_syr_darya`) — *3/3 in HRE*
-  * **[HRE]** **Jend** (`c_jend`)
-  * **[HRE]** **Sighnaq** (`c_sighnaq`)
-  * **[HRE]** **Uzgend** (`c_uzgend_KARA`)
+  * **[HRE]** **Jend** (`c_jend`) — *Tarraconian: **Magistrat van Dschent****
+  * **[HRE]** **Sighnaq** (`c_sighnaq`) — *Tarraconian: **Magistrat van Sighnatsch****
+  * **[HRE]** **Uzgend** (`c_uzgend_KARA`) — *Tarraconian: **Magistrat van Uzgent****
 * **Duchy of Muyunkum** (`d_muyunkum`) — *0/3 in HRE*
-  * [Non-HRE] **Mushun** (`c_mushun`)
-  * [Non-HRE] **Quriltay** (`c_quriltay`)
-  * [Non-HRE] **Shelji** (`c_shelji`)
+  * [Non-HRE] **Mushun** (`c_mushun`) — *Tarraconian: **Magistrat van Muschun****
+  * [Non-HRE] **Quriltay** (`c_quriltay`) — *Tarraconian: **Magistrat van Tschuriltay****
+  * [Non-HRE] **Shelji** (`c_shelji`) — *Tarraconian: **Magistrat van Schelji****
 
 ---
 
@@ -3634,13 +3634,13 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Kasmira** (`d_kasmira`) — *3/3 in HRE*
-  * **[HRE]** **Allai** (`c_allai`)
-  * **[HRE]** **Astore** (`c_astore`)
-  * **[HRE]** **Kasmira** (`c_kasmira`)
+  * **[HRE]** **Allai** (`c_allai`) — *Tarraconian: **Magistrat van Allai****
+  * **[HRE]** **Astore** (`c_astore`) — *Tarraconian: **Magistrat van Astore****
+  * **[HRE]** **Kasmira** (`c_kasmira`) — *Tarraconian: **Magistrat van Kasmire****
 * **Duchy of Pamir** (`d_pamir`) — *2/3 in HRE*
-  * **[HRE]** **Gilgit** (`c_gilgit`)
-  * **[HRE]** **Yasin** (`c_yasin`)
-  * [Non-HRE] **Golaghmuli** (`c_golaghmuli`)
+  * **[HRE]** **Gilgit** (`c_gilgit`) — *Tarraconian: **Magistrat van Gilgit****
+  * **[HRE]** **Yasin** (`c_yasin`) — *Tarraconian: **Magistrat van Jasin****
+  * [Non-HRE] **Golaghmuli** (`c_golaghmuli`) — *Tarraconian: **Magistrat van Golaghmuli****
 
 ---
 
@@ -3648,37 +3648,37 @@
 * **De Jure Empire:** Mongolia (`e_mongolia`)
 
 * **Duchy of Heicheziguo** (`d_SW_heicheziguo`) — *4/4 in HRE*
-  * **[HRE]** **Dongcheziguo** (`c_SW_dongcheziguo`)
-  * **[HRE]** **Hongxingan** (`c_SW_hongxingan`)
-  * **[HRE]** **Hulunbuir** (`c_SW_hulunbuir`)
-  * **[HRE]** **Zhongcheziguo** (`c_SW_zhongcheziguo`)
+  * **[HRE]** **Dongcheziguo** (`c_SW_dongcheziguo`) — *Tarraconian: **Magistrat van Dongtscheziguô****
+  * **[HRE]** **Hongxingan** (`c_SW_hongxingan`) — *Tarraconian: **Magistrat van Hongschingan****
+  * **[HRE]** **Hulunbuir** (`c_SW_hulunbuir`) — *Tarraconian: **Magistrat van Hulunbuir****
+  * **[HRE]** **Zhongcheziguo** (`c_SW_zhongcheziguo`) — *Tarraconian: **Magistrat van Dschongtscheziguô****
 * **Duchy of Dashiweiguo** (`d_SW_dashiweiguo`) — *0/5 in HRE*
-  * [Non-HRE] **Ergunia** (`c_SW_ergunia`)
-  * [Non-HRE] **Hailar** (`c_SW_hailar`)
-  * [Non-HRE] **Heiergun** (`c_SW_heiergun`)
-  * [Non-HRE] **Mengwuo** (`c_SW_mengwuo`)
-  * [Non-HRE] **Pibeihe** (`c_SW_pibeihe`)
+  * [Non-HRE] **Ergunia** (`c_SW_ergunia`) — *Tarraconian: **Magistrat van Ergunje****
+  * [Non-HRE] **Hailar** (`c_SW_hailar`) — *Tarraconian: **Magistrat van Hailar****
+  * [Non-HRE] **Heiergun** (`c_SW_heiergun`) — *Tarraconian: **Magistrat van Heiergun****
+  * [Non-HRE] **Mengwuo** (`c_SW_mengwuo`) — *Tarraconian: **Magistrat van Mengwuô****
+  * [Non-HRE] **Pibeihe** (`c_SW_pibeihe`) — *Tarraconian: **Magistrat van Pibeihe****
 * **Duchy of Orkhon** (`d_orkhon`) — *0/4 in HRE*
-  * [Non-HRE] **Karabalgasun** (`c_karabalgasun`)
-  * [Non-HRE] **Karakorum** (`c_karakorum`)
-  * [Non-HRE] **Khanjargalant** (`c_khanjargalant`)
-  * [Non-HRE] **Mumo** (`c_mumo`)
+  * [Non-HRE] **Karabalgasun** (`c_karabalgasun`) — *Tarraconian: **Magistrat van Karabalgasun****
+  * [Non-HRE] **Karakorum** (`c_karakorum`) — *Tarraconian: **Magistrat van Karakorôn****
+  * [Non-HRE] **Khanjargalant** (`c_khanjargalant`) — *Tarraconian: **Magistrat van Chanjargalant****
+  * [Non-HRE] **Mumo** (`c_mumo`) — *Tarraconian: **Magistrat van Mumô****
 * **Duchy of Wajiezi** (`d_EM_wajiezi`) — *0/4 in HRE*
-  * [Non-HRE] **Khiltsaiz** (`c_EM_khiltsaiz`)
-  * [Non-HRE] **Khoyorgol** (`c_EM_khoyorgol`)
-  * [Non-HRE] **Shilka** (`c_EM_shilka`)
-  * [Non-HRE] **Talbai** (`c_SW_talbai`)
+  * [Non-HRE] **Khiltsaiz** (`c_EM_khiltsaiz`) — *Tarraconian: **Magistrat van Chiltzaiz****
+  * [Non-HRE] **Khoyorgol** (`c_EM_khoyorgol`) — *Tarraconian: **Magistrat van Chojorgol****
+  * [Non-HRE] **Shilka** (`c_EM_shilka`) — *Tarraconian: **Magistrat van Schilke****
+  * [Non-HRE] **Talbai** (`c_SW_talbai`) — *Tarraconian: **Magistrat van Talbai****
 * **Duchy of Ongi** (`d_gobi_ongi`) — *0/3 in HRE*
-  * [Non-HRE] **Ongi Gol** (`c_gobi_ongi_gol`)
-  * [Non-HRE] **Ulaan Govi** (`c_gobi_ulaan_govi`)
-  * [Non-HRE] **Ulaan Nuur** (`c_gobi_ulaan_nuur`)
+  * [Non-HRE] **Ongi Gol** (`c_gobi_ongi_gol`) — *Tarraconian: **Magistrat van Ongi Gol****
+  * [Non-HRE] **Ulaan Govi** (`c_gobi_ulaan_govi`) — *Tarraconian: **Magistrat van Ulângowi****
+  * [Non-HRE] **Ulaan Nuur** (`c_gobi_ulaan_nuur`) — *Tarraconian: **Magistrat van Ulânnûr****
 * **Duchy of Yujuelu** (`d_EM_yujuelu`) — *0/3 in HRE*
-  * [Non-HRE] **Tsetsen** (`c_EM_tsetsen`)
-  * [Non-HRE] **Urtolgod** (`c_EM_urtolgod`)
-  * [Non-HRE] **Yujuelu** (`c_EM_yujuelu`)
+  * [Non-HRE] **Tsetsen** (`c_EM_tsetsen`) — *Tarraconian: **Magistrat van Zezen****
+  * [Non-HRE] **Urtolgod** (`c_EM_urtolgod`) — *Tarraconian: **Magistrat van Urtolgot****
+  * [Non-HRE] **Yujuelu** (`c_EM_yujuelu`) — *Tarraconian: **Magistrat van Jujuelu****
 * **Duchy of Dadaels** (`d_gobi_dadaels`) — *0/2 in HRE*
-  * [Non-HRE] **Dadaels** (`c_em_dadaels`)
-  * [Non-HRE] **Ulaantatar** (`c_gobi_ulaantatar`)
+  * [Non-HRE] **Dadaels** (`c_em_dadaels`) — *Tarraconian: **Magistrat van Dadaels****
+  * [Non-HRE] **Ulaantatar** (`c_gobi_ulaantatar`) — *Tarraconian: **Magistrat van Ulântatar****
 
 ---
 
@@ -3686,17 +3686,17 @@
 * **De Jure Empire:** Mali (`e_mali`)
 
 * **Duchy of Kasa** (`d_kasa`) — *3/3 in HRE*
-  * **[HRE]** **Geba** (`c_geba`)
-  * **[HRE]** **Jame** (`c_jame`)
-  * **[HRE]** **Kasa** (`c_kasa`)
+  * **[HRE]** **Geba** (`c_geba`) — *Tarraconian: **Magistrat van Gebe****
+  * **[HRE]** **Jame** (`c_jame`) — *Tarraconian: **Magistrat van Dschâm****
+  * **[HRE]** **Kasa** (`c_kasa`) — *Tarraconian: **Magistrat van Kase****
 * **Duchy of Kaabu** (`d_kaabu`) — *1/1 in HRE*
-  * **[HRE]** **Jara** (`c_jara`)
+  * **[HRE]** **Jara** (`c_jara`) — *Tarraconian: **Magistrat van Dschare****
 * **Duchy of Wuli** (`d_wuli`) — *0/2 in HRE*
-  * [Non-HRE] **Niomi** (`c_niomi`)
-  * [Non-HRE] **Saalum** (`c_saalum`)
-* **Duchy of X Script 2481** (`x_script_2481`) — *0/2 in HRE*
-  * [Non-HRE] **Kaabu** (`c_kaabu`)
-  * [Non-HRE] **Wuli** (`c_wuli`)
+  * [Non-HRE] **Niomi** (`c_niomi`) — *Tarraconian: **Magistrat van Niomi****
+  * [Non-HRE] **Saalum** (`c_saalum`) — *Tarraconian: **Magistrat van Sâlûm****
+* **Duchy of Kaabu** (`x_script_2481`) — *0/2 in HRE*
+  * [Non-HRE] **Kaabu** (`c_kaabu`) — *Tarraconian: **Magistrat van Kâbu****
+  * [Non-HRE] **Wuli** (`c_wuli`) — *Tarraconian: **Magistrat van Wuli****
 
 ---
 
@@ -3704,25 +3704,25 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Limbuwan** (`d_limbuwan`) — *3/3 in HRE*
-  * **[HRE]** **Ilam** (`c_ilam`)
-  * **[HRE]** **Khotang** (`c_khotang`)
-  * **[HRE]** **Yangwarok** (`c_yangwarok`)
+  * **[HRE]** **Ilam** (`c_ilam`) — *Tarraconian: **Magistrat van Ilam****
+  * **[HRE]** **Khotang** (`c_khotang`) — *Tarraconian: **Magistrat van Chotang****
+  * **[HRE]** **Yangwarok** (`c_yangwarok`) — *Tarraconian: **Magistrat van Jangwaroch****
 * **Duchy of Khasa** (`d_khasa`) — *0/6 in HRE*
-  * [Non-HRE] **Bajura** (`c_bajura`)
-  * [Non-HRE] **Dang** (`c_dang`)
-  * [Non-HRE] **Jagatipur** (`c_jagatipur`)
-  * [Non-HRE] **Jumla** (`c_jumla`)
-  * [Non-HRE] **Kaski** (`c_kaski`)
-  * [Non-HRE] **Lumbini** (`c_lumbini`)
+  * [Non-HRE] **Bajura** (`c_bajura`) — *Tarraconian: **Magistrat van Badschûre****
+  * [Non-HRE] **Dang** (`c_dang`) — *Tarraconian: **Magistrat van Dang****
+  * [Non-HRE] **Jagatipur** (`c_jagatipur`) — *Tarraconian: **Magistrat van Dschagatipur****
+  * [Non-HRE] **Jumla** (`c_jumla`) — *Tarraconian: **Magistrat van Dschumle****
+  * [Non-HRE] **Kaski** (`c_kaski`) — *Tarraconian: **Magistrat van Kaski****
+  * [Non-HRE] **Lumbini** (`c_lumbini`) — *Tarraconian: **Magistrat van Lumbini****
 * **Duchy of Kurmanchal** (`d_kurmanchal`) — *0/4 in HRE*
-  * [Non-HRE] **Doti** (`c_doti`)
-  * [Non-HRE] **Garwhal** (`c_garwhal`)
-  * [Non-HRE] **Kali Kumaon** (`c_kali_kumaon`)
-  * [Non-HRE] **Kumaon** (`c_kumaon`)
+  * [Non-HRE] **Doti** (`c_doti`) — *Tarraconian: **Magistrat van Doti****
+  * [Non-HRE] **Garwhal** (`c_garwhal`) — *Tarraconian: **Magistrat van Garwhal****
+  * [Non-HRE] **Kali Kumaon** (`c_kali_kumaon`) — *Tarraconian: **Magistrat van Kali Kumaon****
+  * [Non-HRE] **Kumaon** (`c_kumaon`) — *Tarraconian: **Magistrat van Kumaon****
 * **Duchy of Nepal** (`d_nepal`) — *0/3 in HRE*
-  * [Non-HRE] **Bhaktapur** (`c_bhaktapur`)
-  * [Non-HRE] **Janakpur** (`c_janakpur`)
-  * [Non-HRE] **Kathmandu** (`c_kathmandu`)
+  * [Non-HRE] **Bhaktapur** (`c_bhaktapur`) — *Tarraconian: **Magistrat van Baktapur****
+  * [Non-HRE] **Janakpur** (`c_janakpur`) — *Tarraconian: **Magistrat van Dschanakpur****
+  * [Non-HRE] **Kathmandu** (`c_kathmandu`) — *Tarraconian: **Magistrat van Kathmandu****
 
 ---
 
@@ -3730,23 +3730,23 @@
 * **De Jure Empire:** Amur (`e_amur`)
 
 * **Duchy of Sahaliyan** (`d_sahaliyan`) — *1/3 in HRE*
-  * **[HRE]** **Kusunkotan** (`c_kusunkotan`)
-  * [Non-HRE] **Pogibi** (`c_pogibi`)
-  * [Non-HRE] **Tarayka** (`c_tarayka`)
+  * **[HRE]** **Kusunkotan** (`c_kusunkotan`) — *Tarraconian: **Magistrat van Kusunkotan****
+  * [Non-HRE] **Pogibi** (`c_pogibi`) — *Tarraconian: **Magistrat van Pogibi****
+  * [Non-HRE] **Tarayka** (`c_tarayka`) — *Tarraconian: **Magistrat van Tarayke****
 * **Duchy of Sikhotebei** (`d_eman_sikhotebei`) — *1/3 in HRE*
-  * **[HRE]** **Beihean** (`c_eman_beihean`)
-  * [Non-HRE] **Heishuiyang** (`c_eman_heishuiyang`)
-  * [Non-HRE] **Wuguihai** (`c_eman_wuguihai`)
+  * **[HRE]** **Beihean** (`c_eman_beihean`) — *Tarraconian: **Magistrat van Beihean****
+  * [Non-HRE] **Heishuiyang** (`c_eman_heishuiyang`) — *Tarraconian: **Magistrat van Heischui-Jang****
+  * [Non-HRE] **Wuguihai** (`c_eman_wuguihai`) — *Tarraconian: **Magistrat van Wuguihai****
 * **Duchy of Menas** (`d_menas`) — *0/4 in HRE*
-  * [Non-HRE] **Chupka** (`c_chupka`)
-  * [Non-HRE] **Menas** (`c_menas`)
-  * [Non-HRE] **Simenas** (`c_simenas`)
-  * [Non-HRE] **Soya** (`c_soya`)
+  * [Non-HRE] **Chupka** (`c_chupka`) — *Tarraconian: **Magistrat van Tschupke****
+  * [Non-HRE] **Menas** (`c_menas`) — *Tarraconian: **Magistrat van Menas****
+  * [Non-HRE] **Simenas** (`c_simenas`) — *Tarraconian: **Magistrat van Simenas****
+  * [Non-HRE] **Soya** (`c_soya`) — *Tarraconian: **Magistrat van Soye****
 * **Duchy of Sum** (`d_sum`) — *0/4 in HRE*
-  * [Non-HRE] **Ioci** (`c_ioci`)
-  * [Non-HRE] **Iskar** (`c_iskar`)
-  * [Non-HRE] **Sum** (`c_sum`)
-  * [Non-HRE] **Uskes** (`c_uskes`)
+  * [Non-HRE] **Ioci** (`c_ioci`) — *Tarraconian: **Magistrat van Iotzi****
+  * [Non-HRE] **Iskar** (`c_iskar`) — *Tarraconian: **Magistrat van Iskar****
+  * [Non-HRE] **Sum** (`c_sum`) — *Tarraconian: **Magistrat van Sum****
+  * [Non-HRE] **Uskes** (`c_uskes`) — *Tarraconian: **Magistrat van Uskes****
 
 ---
 
@@ -3754,21 +3754,21 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Haritanaka** (`d_haritanaka`) — *1/3 in HRE*
-  * **[HRE]** **Sarasvati** (`c_sarasvati`)
-  * [Non-HRE] **Hisar** (`c_hisar`)
-  * [Non-HRE] **Tribandapura** (`c_tribandapura`)
+  * **[HRE]** **Sarasvati** (`c_sarasvati`) — *Tarraconian: **Magistrat van Saraswati****
+  * [Non-HRE] **Hisar** (`c_hisar`) — *Tarraconian: **Magistrat van Hisar****
+  * [Non-HRE] **Tribandapura** (`c_tribandapura`) — *Tarraconian: **Magistrat van Tribandapure****
 * **Duchy of Kuru** (`d_kuru`) — *1/3 in HRE*
-  * **[HRE]** **Sthanisvara** (`c_sthanisvara`)
-  * [Non-HRE] **Delhi** (`c_delhi`)
-  * [Non-HRE] **Hastinapura** (`c_hastinapura`)
+  * **[HRE]** **Sthanisvara** (`c_sthanisvara`) — *Tarraconian: **Magistrat van Stanisware****
+  * [Non-HRE] **Delhi** (`c_delhi`) — *Tarraconian: **Magistrat van Delhi****
+  * [Non-HRE] **Hastinapura** (`c_hastinapura`) — *Tarraconian: **Magistrat van Hastinapure****
 * **Duchy of Mathura** (`d_mathura`) — *0/3 in HRE*
-  * [Non-HRE] **Kol** (`c_kol`)
-  * [Non-HRE] **Mathura** (`c_mathura`)
-  * [Non-HRE] **Sripatha** (`c_sripatha`)
+  * [Non-HRE] **Kol** (`c_kol`) — *Tarraconian: **Magistrat van Kol****
+  * [Non-HRE] **Mathura** (`c_mathura`) — *Tarraconian: **Magistrat van Mathure****
+  * [Non-HRE] **Sripatha** (`c_sripatha`) — *Tarraconian: **Magistrat van Sripathe****
 * **Duchy of Vodamayutja** (`d_vodamayutja`) — *0/3 in HRE*
-  * [Non-HRE] **Katehar** (`c_katehar`)
-  * [Non-HRE] **Sambhal** (`c_sambhal`)
-  * [Non-HRE] **Vodamayutja** (`c_vodamayutja`)
+  * [Non-HRE] **Katehar** (`c_katehar`) — *Tarraconian: **Magistrat van Katehar****
+  * [Non-HRE] **Sambhal** (`c_sambhal`) — *Tarraconian: **Magistrat van Sambhal****
+  * [Non-HRE] **Vodamayutja** (`c_vodamayutja`) — *Tarraconian: **Magistrat van Wodamayutje****
 
 ---
 
@@ -3776,16 +3776,16 @@
 * **De Jure Empire:** Mongolia (`e_mongolia`)
 
 * **Duchy of Shatuoguo** (`d_gobi_shatuoguo`) — *2/5 in HRE*
-  * **[HRE]** **Dorngovi** (`c_gobi_dorngovi`)
-  * **[HRE]** **Maominggan** (`c_gobi_maominggan`)
-  * [Non-HRE] **Abakhai** (`c_gobi_abakhai`)
-  * [Non-HRE] **Abga** (`c_gobi_abga`)
-  * [Non-HRE] **Sonkhot** (`c_gobi_sonkhot`)
+  * **[HRE]** **Dorngovi** (`c_gobi_dorngovi`) — *Tarraconian: **Magistrat van Dorngowi****
+  * **[HRE]** **Maominggan** (`c_gobi_maominggan`) — *Tarraconian: **Magistrat van Maominggan****
+  * [Non-HRE] **Abakhai** (`c_gobi_abakhai`) — *Tarraconian: **Magistrat van Abakhai****
+  * [Non-HRE] **Abga** (`c_gobi_abga`) — *Tarraconian: **Magistrat van Abge****
+  * [Non-HRE] **Sonkhot** (`c_gobi_sonkhot`) — *Tarraconian: **Magistrat van Sonkhot****
 * **Duchy of Wuguguo** (`d_em_wuguguo`) — *0/4 in HRE*
-  * [Non-HRE] **Akhulun** (`c_em_akhulun`)
-  * [Non-HRE] **Hepung** (`c_em_hepung`)
-  * [Non-HRE] **Karakopi** (`c_em_karakopi`)
-  * [Non-HRE] **Khartereg** (`c_em_khartereg`)
+  * [Non-HRE] **Akhulun** (`c_em_akhulun`) — *Tarraconian: **Magistrat van Akhulun****
+  * [Non-HRE] **Hepung** (`c_em_hepung`) — *Tarraconian: **Magistrat van Hepung****
+  * [Non-HRE] **Karakopi** (`c_em_karakopi`) — *Tarraconian: **Magistrat van Karakopi****
+  * [Non-HRE] **Khartereg** (`c_em_khartereg`) — *Tarraconian: **Magistrat van Charterech****
 
 ---
 
@@ -3793,37 +3793,37 @@
 * **De Jure Empire:** Tartaria (`e_tartaria`)
 
 * **Duchy of Kara Khoja** (`d_kara_khoja`) — *1/4 in HRE*
-  * **[HRE]** **Kara Khoja** (`c_kara_khoja`)
-  * [Non-HRE] **Barkul** (`c_barkul`)
-  * [Non-HRE] **Burgasutai** (`c_burgasutai`)
-  * [Non-HRE] **Chamil** (`c_chamil`)
+  * **[HRE]** **Kara Khoja** (`c_kara_khoja`) — *Tarraconian: **Magistrat van Karachoje****
+  * [Non-HRE] **Barkul** (`c_barkul`) — *Tarraconian: **Magistrat van Barkul****
+  * [Non-HRE] **Burgasutai** (`c_burgasutai`) — *Tarraconian: **Magistrat van Burgasutai****
+  * [Non-HRE] **Chamil** (`c_chamil`) — *Tarraconian: **Magistrat van Tschamil****
 * **Duchy of Beshbalik** (`d_beshbalik`) — *0/4 in HRE*
-  * [Non-HRE] **Beshbalik** (`c_beshbalik`)
-  * [Non-HRE] **Bugur** (`c_bugur`)
-  * [Non-HRE] **Jimsar** (`c_jimsar`)
-  * [Non-HRE] **Yangjibaliq** (`c_yangjibaliq`)
+  * [Non-HRE] **Beshbalik** (`c_beshbalik`) — *Tarraconian: **Magistrat van Beschbalich****
+  * [Non-HRE] **Bugur** (`c_bugur`) — *Tarraconian: **Magistrat van Bugur****
+  * [Non-HRE] **Jimsar** (`c_jimsar`) — *Tarraconian: **Magistrat van Dschimsar****
+  * [Non-HRE] **Yangjibaliq** (`c_yangjibaliq`) — *Tarraconian: **Magistrat van Jangdschibalitsch****
 * **Duchy of Gurbantünggüt** (`d_gurbantunggut`) — *0/4 in HRE*
-  * [Non-HRE] **Hoboksar** (`c_hoboksar`)
-  * [Non-HRE] **Jie** (`c_jie_DZU`)
-  * [Non-HRE] **Kaerji** (`c_kaerji`)
-  * [Non-HRE] **Ulan Chuzir** (`c_ulan_chuzir`)
+  * [Non-HRE] **Hoboksar** (`c_hoboksar`) — *Tarraconian: **Magistrat van Hoboksar****
+  * [Non-HRE] **Jie** (`c_jie_DZU`) — *Tarraconian: **Magistrat van Dschie****
+  * [Non-HRE] **Kaerji** (`c_kaerji`) — *Tarraconian: **Magistrat van Kaerdschi****
+  * [Non-HRE] **Ulan Chuzir** (`c_ulan_chuzir`) — *Tarraconian: **Magistrat van Ulan Tschuzir****
 * **Duchy of Kökaltay** (`d_altay`) — *0/4 in HRE*
-  * [Non-HRE] **Altay** (`c_altay`)
-  * [Non-HRE] **Burqin** (`c_burqin`)
-  * [Non-HRE] **Qinggil** (`c_qinggil`)
-  * [Non-HRE] **Tengerge** (`c_tengerge`)
+  * [Non-HRE] **Altay** (`c_altay`) — *Tarraconian: **Magistrat van Altay****
+  * [Non-HRE] **Burqin** (`c_burqin`) — *Tarraconian: **Magistrat van Burtschin****
+  * [Non-HRE] **Qinggil** (`c_qinggil`) — *Tarraconian: **Magistrat van Tschinggil****
+  * [Non-HRE] **Tengerge** (`c_tengerge`) — *Tarraconian: **Magistrat van Tengerge****
 * **Duchy of Naiman Gobi** (`d_naiman_gobi`) — *0/4 in HRE*
-  * [Non-HRE] **Balgun** (`c_balgun`)
-  * [Non-HRE] **Boro Burgasu** (`c_boro_burgasu`)
-  * [Non-HRE] **Kabtag** (`c_kabtag`)
-  * [Non-HRE] **Kara Asirgan** (`c_kara_asirgan`)
+  * [Non-HRE] **Balgun** (`c_balgun`) — *Tarraconian: **Magistrat van Balgun****
+  * [Non-HRE] **Boro Burgasu** (`c_boro_burgasu`) — *Tarraconian: **Magistrat van Boroburgasu****
+  * [Non-HRE] **Kabtag** (`c_kabtag`) — *Tarraconian: **Magistrat van Kabtach****
+  * [Non-HRE] **Kara Asirgan** (`c_kara_asirgan`) — *Tarraconian: **Magistrat van Karasirgan****
 * **Duchy of Akaltay** (`d_akaltay`) — *0/3 in HRE*
-  * [Non-HRE] **Agairik** (`c_agairik`)
-  * [Non-HRE] **Narym** (`c_narym_DZU`)
-  * [Non-HRE] **Torangy Kul** (`c_torangy_kul`)
+  * [Non-HRE] **Agairik** (`c_agairik`) — *Tarraconian: **Magistrat van Agairich****
+  * [Non-HRE] **Narym** (`c_narym_DZU`) — *Tarraconian: **Magistrat van Narym****
+  * [Non-HRE] **Torangy Kul** (`c_torangy_kul`) — *Tarraconian: **Magistrat van Torangykul****
 * **Duchy of Khovd** (`d_khovd`) — *0/2 in HRE*
-  * [Non-HRE] **Harhiraa** (`c_harhiraa`)
-  * [Non-HRE] **Tsambagarau** (`c_tsambagarau`)
+  * [Non-HRE] **Harhiraa** (`c_harhiraa`) — *Tarraconian: **Magistrat van Harhirae****
+  * [Non-HRE] **Tsambagarau** (`c_tsambagarau`) — *Tarraconian: **Magistrat van Zambagarau****
 
 ---
 
@@ -3831,14 +3831,14 @@
 * **De Jure Empire:** Persian Empire (`e_persia`)
 
 * **Duchy of Zabulistan** (`d_zabulistan`) — *1/4 in HRE*
-  * **[HRE]** **Ghazna** (`c_ghazna`)
-  * [Non-HRE] **Rukhaj** (`c_rukhaj`)
-  * [Non-HRE] **Zabulistan** (`c_zabulistan`)
-  * [Non-HRE] **Zamindawar** (`c_zamindawar`)
+  * **[HRE]** **Ghazna** (`c_ghazna`) — *Tarraconian: **Magistrat van Gasne****
+  * [Non-HRE] **Rukhaj** (`c_rukhaj`) — *Tarraconian: **Magistrat van Ruchatsch****
+  * [Non-HRE] **Zabulistan** (`c_zabulistan`) — *Tarraconian: **Magistrat van Sabulistan****
+  * [Non-HRE] **Zamindawar** (`c_zamindawar`) — *Tarraconian: **Magistrat van Samindawar****
 * **Duchy of Kabulistan** (`d_kabul`) — *0/3 in HRE*
-  * [Non-HRE] **Bamian** (`c_bamian`)
-  * [Non-HRE] **Chitral** (`c_chitral`)
-  * [Non-HRE] **Kabul** (`c_kabul`)
+  * [Non-HRE] **Bamian** (`c_bamian`) — *Tarraconian: **Magistrat van Bamian****
+  * [Non-HRE] **Chitral** (`c_chitral`) — *Tarraconian: **Magistrat van Tschitral****
+  * [Non-HRE] **Kabul** (`c_kabul`) — *Tarraconian: **Magistrat van Kabul****
 
 ---
 
@@ -3846,78 +3846,78 @@
 * **De Jure Empire:** Mongolia (`e_mongolia`)
 
 * **Duchy of Selenga Valley** (`d_selenga_valley`) — *0/5 in HRE*
-  * [Non-HRE] **Baibalik** (`c_baibalik`)
-  * [Non-HRE] **Karatsagaan** (`c_karatsagaan`)
-  * [Non-HRE] **Khökhöö** (`c_khokhoo`)
-  * [Non-HRE] **Selenga** (`c_selenga`)
-  * [Non-HRE] **Tunka** (`c_tunka`)
+  * [Non-HRE] **Baibalik** (`c_baibalik`) — *Tarraconian: **Magistrat van Baibalich****
+  * [Non-HRE] **Karatsagaan** (`c_karatsagaan`) — *Tarraconian: **Magistrat van Karatschagân****
+  * [Non-HRE] **Khökhöö** (`c_khokhoo`) — *Tarraconian: **Magistrat van Chöchô****
+  * [Non-HRE] **Selenga** (`c_selenga`) — *Tarraconian: **Magistrat van Selenge****
+  * [Non-HRE] **Tunka** (`c_tunka`) — *Tarraconian: **Magistrat van Tunke****
 * **Duchy of Yenisei-Kan** (`d_yenisei_kan`) — *0/5 in HRE*
-  * [Non-HRE] **Kankhot** (`c_kansk`)
-  * [Non-HRE] **Kyzyl Char** (`c_krasnoyarsk`)
-  * [Non-HRE] **Mana** (`c_mana`)
-  * [Non-HRE] **Shishina** (`c_shishina`)
-  * [Non-HRE] **Tagul** (`c_tagul`)
+  * [Non-HRE] **Kankhot** (`c_kansk`) — *Tarraconian: **Magistrat van Kankhot****
+  * [Non-HRE] **Kyzyl Char** (`c_krasnoyarsk`) — *Tarraconian: **Magistrat van Kyzyl Tschar****
+  * [Non-HRE] **Mana** (`c_mana`) — *Tarraconian: **Magistrat van Mane****
+  * [Non-HRE] **Shishina** (`c_shishina`) — *Tarraconian: **Magistrat van Schischine****
+  * [Non-HRE] **Tagul** (`c_tagul`) — *Tarraconian: **Magistrat van Tagul****
 * **Duchy of Angara** (`d_angara`) — *0/4 in HRE*
-  * [Non-HRE] **Kada** (`c_kada`)
-  * [Non-HRE] **Kitoï** (`c_kitoi`)
-  * [Non-HRE] **Kymyl'Tey** (`c_kymyl_tey`)
-  * [Non-HRE] **Okangara** (`c_okangara`)
+  * [Non-HRE] **Kada** (`c_kada`) — *Tarraconian: **Magistrat van Kade****
+  * [Non-HRE] **Kitoï** (`c_kitoi`) — *Tarraconian: **Magistrat van Kitoy****
+  * [Non-HRE] **Kymyl'Tey** (`c_kymyl_tey`) — *Tarraconian: **Magistrat van Kymyltey****
+  * [Non-HRE] **Okangara** (`c_okangara`) — *Tarraconian: **Magistrat van Okangare****
 * **Duchy of Bargujin Tukum** (`d_bargujin_tukum`) — *0/4 in HRE*
-  * [Non-HRE] **Chuya** (`c_chuya`)
-  * [Non-HRE] **Karabaigal** (`c_karabaigal`)
-  * [Non-HRE] **Kotera** (`c_kotera`)
-  * [Non-HRE] **Vitim** (`c_vitim`)
+  * [Non-HRE] **Chuya** (`c_chuya`) — *Tarraconian: **Magistrat van Tschuye****
+  * [Non-HRE] **Karabaigal** (`c_karabaigal`) — *Tarraconian: **Magistrat van Karabaigal****
+  * [Non-HRE] **Kotera** (`c_kotera`) — *Tarraconian: **Magistrat van Kotere****
+  * [Non-HRE] **Vitim** (`c_vitim`) — *Tarraconian: **Magistrat van Witim****
 * **Duchy of Dauria** (`d_dauria`) — *0/4 in HRE*
-  * [Non-HRE] **Bargajan** (`c_bargajan`)
-  * [Non-HRE] **Kotokel** (`c_kotokel`)
-  * [Non-HRE] **Muya** (`c_muya`)
-  * [Non-HRE] **Yera** (`c_yera`)
+  * [Non-HRE] **Bargajan** (`c_bargajan`) — *Tarraconian: **Magistrat van Bargajan****
+  * [Non-HRE] **Kotokel** (`c_kotokel`) — *Tarraconian: **Magistrat van Kotokel****
+  * [Non-HRE] **Muya** (`c_muya`) — *Tarraconian: **Magistrat van Muye****
+  * [Non-HRE] **Yera** (`c_yera`) — *Tarraconian: **Magistrat van Jere****
 * **Duchy of Eastern Sayan** (`d_eastern_sayan`) — *0/4 in HRE*
-  * [Non-HRE] **Karauda** (`c_karauda`)
-  * [Non-HRE] **Kropot** (`c_kropot`)
-  * [Non-HRE] **Mönkh Saridag** (`c_monkh_saridag`)
-  * [Non-HRE] **Shityy** (`c_shityy`)
+  * [Non-HRE] **Karauda** (`c_karauda`) — *Tarraconian: **Magistrat van Karaude****
+  * [Non-HRE] **Kropot** (`c_kropot`) — *Tarraconian: **Magistrat van Kropot****
+  * [Non-HRE] **Mönkh Saridag** (`c_monkh_saridag`) — *Tarraconian: **Magistrat van Mönchsaridach****
+  * [Non-HRE] **Shityy** (`c_shityy`) — *Tarraconian: **Magistrat van Schitî****
 * **Duchy of Onon** (`d_EM_onon`) — *0/4 in HRE*
-  * [Non-HRE] **Doodonon** (`c_EM_doodonon`)
-  * [Non-HRE] **Jiangbian** (`c_EM_jiangbian`)
-  * [Non-HRE] **Kizilkhentii** (`c_EM_kizilkhentii`)
-  * [Non-HRE] **Ononum** (`c_EM_ononum`)
+  * [Non-HRE] **Doodonon** (`c_EM_doodonon`) — *Tarraconian: **Magistrat van Dôdonon****
+  * [Non-HRE] **Jiangbian** (`c_EM_jiangbian`) — *Tarraconian: **Magistrat van Dschiangbian****
+  * [Non-HRE] **Kizilkhentii** (`c_EM_kizilkhentii`) — *Tarraconian: **Magistrat van Chisilchentî****
+  * [Non-HRE] **Ononum** (`c_EM_ononum`) — *Tarraconian: **Magistrat van Ononum****
 * **Duchy of Tataria** (`d_em_tataria`) — *0/4 in HRE*
-  * [Non-HRE] **Dutulun** (`c_em_dutulun`)
-  * [Non-HRE] **Gobidada** (`c_em_gobidada`)
-  * [Non-HRE] **Kherulendada** (`c_em_kherulendada`)
-  * [Non-HRE] **Zhen** (`c_em_zhen`)
+  * [Non-HRE] **Dutulun** (`c_em_dutulun`) — *Tarraconian: **Magistrat van Dutulun****
+  * [Non-HRE] **Gobidada** (`c_em_gobidada`) — *Tarraconian: **Magistrat van Gobidade****
+  * [Non-HRE] **Kherulendada** (`c_em_kherulendada`) — *Tarraconian: **Magistrat van Cherulendade****
+  * [Non-HRE] **Zhen** (`c_em_zhen`) — *Tarraconian: **Magistrat van Dschen****
 * **Duchy of Ögräsh** (`d_ogrash`) — *0/4 in HRE*
-  * [Non-HRE] **Khaldun** (`c_EM_khaldun`)
-  * [Non-HRE] **Khentii** (`c_khentii`)
-  * [Non-HRE] **Naushki** (`c_naushki`)
-  * [Non-HRE] **Örgöö** (`c_ulaanbaatar`)
+  * [Non-HRE] **Khaldun** (`c_EM_khaldun`) — *Tarraconian: **Magistrat van Chaldun****
+  * [Non-HRE] **Khentii** (`c_khentii`) — *Tarraconian: **Magistrat van Chentî****
+  * [Non-HRE] **Naushki** (`c_naushki`) — *Tarraconian: **Magistrat van Nauschki****
+  * [Non-HRE] **Örgöö** (`c_ulaanbaatar`) — *Tarraconian: **Magistrat van Örgô****
 * **Duchy of Blue Khakassia** (`d_blue_khakassia`) — *0/3 in HRE*
-  * [Non-HRE] **Anja** (`c_anja`)
-  * [Non-HRE] **Kizir** (`c_kizir`)
-  * [Non-HRE] **Kyzylkul** (`c_kyzylkul`)
+  * [Non-HRE] **Anja** (`c_anja`) — *Tarraconian: **Magistrat van Anje****
+  * [Non-HRE] **Kizir** (`c_kizir`) — *Tarraconian: **Magistrat van Kizir****
+  * [Non-HRE] **Kyzylkul** (`c_kyzylkul`) — *Tarraconian: **Magistrat van Kyzylkul****
 * **Duchy of Eülge** (`d_lena`) — *0/3 in HRE*
-  * [Non-HRE] **Eülge** (`c_lena`)
-  * [Non-HRE] **Gatsuurgazar** (`c_gatsuurgazar`)
-  * [Non-HRE] **Ilga** (`c_ilga`)
+  * [Non-HRE] **Eülge** (`c_lena`) — *Tarraconian: **Magistrat van Eülge****
+  * [Non-HRE] **Gatsuurgazar** (`c_gatsuurgazar`) — *Tarraconian: **Magistrat van Gatzûrgazar****
+  * [Non-HRE] **Ilga** (`c_ilga`) — *Tarraconian: **Magistrat van Ilge****
 * **Duchy of Khakass Hollow** (`d_khakass_hollow`) — *0/3 in HRE*
-  * [Non-HRE] **Abakan** (`c_abakan`)
-  * [Non-HRE] **Jerjul** (`c_jerjul`)
-  * [Non-HRE] **Julym** (`c_julym`)
+  * [Non-HRE] **Abakan** (`c_abakan`) — *Tarraconian: **Magistrat van Abakan****
+  * [Non-HRE] **Jerjul** (`c_jerjul`) — *Tarraconian: **Magistrat van Dscherdschul****
+  * [Non-HRE] **Julym** (`c_julym`) — *Tarraconian: **Magistrat van Tschulîm****
 * **Duchy of Togina** (`d_togina`) — *0/3 in HRE*
-  * [Non-HRE] **Arzhan** (`c_arzhan`)
-  * [Non-HRE] **Azas** (`c_azas`)
-  * [Non-HRE] **Tapsa** (`c_tapsa`)
+  * [Non-HRE] **Arzhan** (`c_arzhan`) — *Tarraconian: **Magistrat van Ardschan****
+  * [Non-HRE] **Azas** (`c_azas`) — *Tarraconian: **Magistrat van Azas****
+  * [Non-HRE] **Tapsa** (`c_tapsa`) — *Tarraconian: **Magistrat van Tapse****
 * **Duchy of Tsagaanbaigal** (`d_tsagaanbaigal`) — *0/3 in HRE*
-  * [Non-HRE] **Erhüü** (`c_irkutsk`)
-  * [Non-HRE] **Olkhon** (`c_olkhon`)
-  * [Non-HRE] **Ryty** (`c_ryty`)
+  * [Non-HRE] **Erhüü** (`c_irkutsk`) — *Tarraconian: **Magistrat van Erhû****
+  * [Non-HRE] **Olkhon** (`c_olkhon`) — *Tarraconian: **Magistrat van Olkhon****
+  * [Non-HRE] **Ryty** (`c_ryty`) — *Tarraconian: **Magistrat van Ryty****
 * **Duchy of Baigaluuls** (`d_baigaluuls`) — *0/2 in HRE*
-  * [Non-HRE] **Baigaluuls** (`c_baigaluuls`)
-  * [Non-HRE] **Uulynkhöl** (`c_uulynkhol`)
+  * [Non-HRE] **Baigaluuls** (`c_baigaluuls`) — *Tarraconian: **Magistrat van Baigalûls****
+  * [Non-HRE] **Uulynkhöl** (`c_uulynkhol`) — *Tarraconian: **Magistrat van Ûlynchöl****
 * **Duchy of Uda Valley** (`d_uda_valley`) — *0/2 in HRE*
-  * [Non-HRE] **Chikoy** (`c_chikoy`)
-  * [Non-HRE] **Uda** (`c_ulan_ude`)
+  * [Non-HRE] **Chikoy** (`c_chikoy`) — *Tarraconian: **Magistrat van Tschikoy****
+  * [Non-HRE] **Uda** (`c_ulan_ude`) — *Tarraconian: **Magistrat van Ude****
 
 ---
 
@@ -3925,41 +3925,41 @@
 * **De Jure Empire:** Tartaria (`e_tartaria`)
 
 * **Duchy of Betpa** (`d_betpa`) — *0/4 in HRE*
-  * [Non-HRE] **Betpa** (`c_betpa`)
-  * [Non-HRE] **Bulat** (`c_bulat`)
-  * [Non-HRE] **Manaka** (`c_manaka`)
-  * [Non-HRE] **Targyl** (`c_targyl`)
+  * [Non-HRE] **Betpa** (`c_betpa`) — *Tarraconian: **Magistrat van Betpe****
+  * [Non-HRE] **Bulat** (`c_bulat`) — *Tarraconian: **Magistrat van Bulat****
+  * [Non-HRE] **Manaka** (`c_manaka`) — *Tarraconian: **Magistrat van Manake****
+  * [Non-HRE] **Targyl** (`c_targyl`) — *Tarraconian: **Magistrat van Targyl****
 * **Duchy of Karabas** (`d_karabas`) — *0/4 in HRE*
-  * [Non-HRE] **Jasky Kart** (`c_jasky_kart`)
-  * [Non-HRE] **Karabas** (`c_karabas`)
-  * [Non-HRE] **Ku Jeku** (`c_ku_jeku`)
-  * [Non-HRE] **Uliuty** (`c_uliuty`)
+  * [Non-HRE] **Jasky Kart** (`c_jasky_kart`) — *Tarraconian: **Magistrat van Dschasky Kart****
+  * [Non-HRE] **Karabas** (`c_karabas`) — *Tarraconian: **Magistrat van Karabas****
+  * [Non-HRE] **Ku Jeku** (`c_ku_jeku`) — *Tarraconian: **Magistrat van Kujeku****
+  * [Non-HRE] **Uliuty** (`c_uliuty`) — *Tarraconian: **Magistrat van Uliuty****
 * **Duchy of Kentarlau** (`d_kentarlau`) — *0/4 in HRE*
-  * [Non-HRE] **Aigun** (`c_aigun`)
-  * [Non-HRE] **Jiran Suat** (`c_jiren_suat`)
-  * [Non-HRE] **Koi-Bagar** (`c_koi-bagar`)
-  * [Non-HRE] **Kulan-Uynak** (`c_kulan_uynak`)
+  * [Non-HRE] **Aigun** (`c_aigun`) — *Tarraconian: **Magistrat van Aigun****
+  * [Non-HRE] **Jiran Suat** (`c_jiren_suat`) — *Tarraconian: **Magistrat van Dschiran Suat****
+  * [Non-HRE] **Koi-Bagar** (`c_koi-bagar`) — *Tarraconian: **Magistrat van Koi-Bagar****
+  * [Non-HRE] **Kulan-Uynak** (`c_kulan_uynak`) — *Tarraconian: **Magistrat van Kulan-Uynach****
 * **Duchy of Qarasaryarka** (`d_saryarka`) — *0/4 in HRE*
-  * [Non-HRE] **Kaska** (`c_kaska`)
-  * [Non-HRE] **Qyzylteniz** (`c_qyzylteniz`)
-  * [Non-HRE] **Teniz** (`c_teniz`)
-  * [Non-HRE] **Togotai** (`c_togotai`)
+  * [Non-HRE] **Kaska** (`c_kaska`) — *Tarraconian: **Magistrat van Kaske****
+  * [Non-HRE] **Qyzylteniz** (`c_qyzylteniz`) — *Tarraconian: **Magistrat van Tschyzylteniz****
+  * [Non-HRE] **Teniz** (`c_teniz`) — *Tarraconian: **Magistrat van Teniz****
+  * [Non-HRE] **Togotai** (`c_togotai`) — *Tarraconian: **Magistrat van Togotai****
 * **Duchy of Degelen** (`d_degelen`) — *0/3 in HRE*
-  * [Non-HRE] **Ak-Taylak** (`c_ak-taylak`)
-  * [Non-HRE] **Arkat** (`c_arkat`)
-  * [Non-HRE] **Degelen** (`c_degelen`)
+  * [Non-HRE] **Ak-Taylak** (`c_ak-taylak`) — *Tarraconian: **Magistrat van Achtaylach****
+  * [Non-HRE] **Arkat** (`c_arkat`) — *Tarraconian: **Magistrat van Arkat****
+  * [Non-HRE] **Degelen** (`c_degelen`) — *Tarraconian: **Magistrat van Degelen****
 * **Duchy of Jinghiz** (`d_jinghiz`) — *0/3 in HRE*
-  * [Non-HRE] **Jinghiz** (`c_jinghiz`)
-  * [Non-HRE] **Kandygatai** (`c_kandygatai`)
-  * [Non-HRE] **Tekar** (`c_tekar`)
+  * [Non-HRE] **Jinghiz** (`c_jinghiz`) — *Tarraconian: **Magistrat van Dschinghis****
+  * [Non-HRE] **Kandygatai** (`c_kandygatai`) — *Tarraconian: **Magistrat van Kandygatai****
+  * [Non-HRE] **Tekar** (`c_tekar`) — *Tarraconian: **Magistrat van Tekar****
 * **Duchy of Karkaraly** (`d_karkaraly`) — *0/3 in HRE*
-  * [Non-HRE] **Karkaraly** (`c_karkaraly`)
-  * [Non-HRE] **Nurtay** (`c_nurtay`)
-  * [Non-HRE] **Uch Katyn** (`c_uch_katyn`)
+  * [Non-HRE] **Karkaraly** (`c_karkaraly`) — *Tarraconian: **Magistrat van Karkaraly****
+  * [Non-HRE] **Nurtay** (`c_nurtay`) — *Tarraconian: **Magistrat van Nurtay****
+  * [Non-HRE] **Uch Katyn** (`c_uch_katyn`) — *Tarraconian: **Magistrat van Utsch Katyn****
 * **Duchy of Tokumbay** (`d_tokumbay`) — *0/3 in HRE*
-  * [Non-HRE] **Arkalyk** (`c_arkalyk`)
-  * [Non-HRE] **Kulan Utmas** (`c_kulan_utmas`)
-  * [Non-HRE] **Tokumbay** (`c_tokumbay`)
+  * [Non-HRE] **Arkalyk** (`c_arkalyk`) — *Tarraconian: **Magistrat van Arkalîch****
+  * [Non-HRE] **Kulan Utmas** (`c_kulan_utmas`) — *Tarraconian: **Magistrat van Kulan Utmas****
+  * [Non-HRE] **Tokumbay** (`c_tokumbay`) — *Tarraconian: **Magistrat van Tokumbay****
 
 ---
 
@@ -3967,41 +3967,41 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Qamdo** (`d_qamdo`) — *0/5 in HRE*
-  * [Non-HRE] **Banbar** (`c_banbar`)
-  * [Non-HRE] **Baqên** (`c_baqen`)
-  * [Non-HRE] **Dêngqên** (`c_dengqen`)
-  * [Non-HRE] **Qamdo** (`c_qamdo`)
-  * [Non-HRE] **Sog** (`c_sog`)
+  * [Non-HRE] **Banbar** (`c_banbar`) — *Tarraconian: **Magistrat van Banbar****
+  * [Non-HRE] **Baqên** (`c_baqen`) — *Tarraconian: **Magistrat van Batschên****
+  * [Non-HRE] **Dêngqên** (`c_dengqen`) — *Tarraconian: **Magistrat van Dêngtschên****
+  * [Non-HRE] **Qamdo** (`c_qamdo`) — *Tarraconian: **Magistrat van Tschamdô****
+  * [Non-HRE] **Sog** (`c_sog`) — *Tarraconian: **Magistrat van Soch****
 * **Duchy of Batang** (`d_batang`) — *0/4 in HRE*
-  * [Non-HRE] **Batang** (`c_batang`)
-  * [Non-HRE] **Dêqên** (`c_deqen`)
-  * [Non-HRE] **Gyaitang** (`c_gyaitang`)
-  * [Non-HRE] **Markam** (`c_markam`)
+  * [Non-HRE] **Batang** (`c_batang`) — *Tarraconian: **Magistrat van Batang****
+  * [Non-HRE] **Dêqên** (`c_deqen`) — *Tarraconian: **Magistrat van Dêtschên****
+  * [Non-HRE] **Gyaitang** (`c_gyaitang`) — *Tarraconian: **Magistrat van Gyaitang****
+  * [Non-HRE] **Markam** (`c_markam`) — *Tarraconian: **Magistrat van Markam****
 * **Duchy of Boyül** (`d_boyul`) — *0/3 in HRE*
-  * [Non-HRE] **Baxoi** (`c_baxoi`)
-  * [Non-HRE] **Bomê** (`c_bome`)
-  * [Non-HRE] **Zogang** (`c_zogang`)
+  * [Non-HRE] **Baxoi** (`c_baxoi`) — *Tarraconian: **Magistrat van Baschoi****
+  * [Non-HRE] **Bomê** (`c_bome`) — *Tarraconian: **Magistrat van Bomê****
+  * [Non-HRE] **Zogang** (`c_zogang`) — *Tarraconian: **Magistrat van Sogang****
 * **Duchy of Dêgê** (`d_dege`) — *0/3 in HRE*
-  * [Non-HRE] **Dêgê** (`c_dege`)
-  * [Non-HRE] **Garzê** (`c_garze`)
-  * [Non-HRE] **Pelyül** (`c_pelyul`)
+  * [Non-HRE] **Dêgê** (`c_dege`) — *Tarraconian: **Magistrat van Dêgê****
+  * [Non-HRE] **Garzê** (`c_garze`) — *Tarraconian: **Magistrat van Gartzê****
+  * [Non-HRE] **Pelyül** (`c_pelyul`) — *Tarraconian: **Magistrat van Pel-Jül****
 * **Duchy of Lhatok** (`d_lhatok`) — *0/3 in HRE*
-  * [Non-HRE] **Gonjo** (`c_gonjo`)
-  * [Non-HRE] **Lhatok** (`c_lhatok`)
-  * [Non-HRE] **Zhag'yab** (`c_zhagyab`)
+  * [Non-HRE] **Gonjo** (`c_gonjo`) — *Tarraconian: **Magistrat van Gondschô****
+  * [Non-HRE] **Lhatok** (`c_lhatok`) — *Tarraconian: **Magistrat van Lhatoch****
+  * [Non-HRE] **Zhag'yab** (`c_zhagyab`) — *Tarraconian: **Magistrat van Dschagyap****
 * **Duchy of Litang** (`d_litang`) — *0/3 in HRE*
-  * [Non-HRE] **Lenggu** (`c_lenggu`)
-  * [Non-HRE] **Litang** (`c_litang`)
-  * [Non-HRE] **Nyagrong** (`c_nyagrong`)
+  * [Non-HRE] **Lenggu** (`c_lenggu`) — *Tarraconian: **Magistrat van Lenggu****
+  * [Non-HRE] **Litang** (`c_litang`) — *Tarraconian: **Magistrat van Litang****
+  * [Non-HRE] **Nyagrong** (`c_nyagrong`) — *Tarraconian: **Magistrat van Nyagrong****
 * **Duchy of Lingtsang** (`d_lingtsang`) — *0/2 in HRE*
-  * [Non-HRE] **Ariksar** (`c_ariksar`)
-  * [Non-HRE] **Lingtsang** (`c_lingtsang`)
+  * [Non-HRE] **Ariksar** (`c_ariksar`) — *Tarraconian: **Magistrat van Ariksar****
+  * [Non-HRE] **Lingtsang** (`c_lingtsang`) — *Tarraconian: **Magistrat van Lingtzang****
 * **Duchy of Nangqên** (`d_nangqen`) — *0/2 in HRE*
-  * [Non-HRE] **Gyêgumdo** (`c_gyegumdo`)
-  * [Non-HRE] **Nangqên** (`c_nangqen`)
+  * [Non-HRE] **Gyêgumdo** (`c_gyegumdo`) — *Tarraconian: **Magistrat van Gyêgumdô****
+  * [Non-HRE] **Nangqên** (`c_nangqen`) — *Tarraconian: **Magistrat van Nangtschên****
 * **Duchy of Nyingchi** (`d_nyingchi`) — *0/2 in HRE*
-  * [Non-HRE] **Gongbo** (`c_gongbo`)
-  * [Non-HRE] **Nyingchi** (`c_nyingchi`)
+  * [Non-HRE] **Gongbo** (`c_gongbo`) — *Tarraconian: **Magistrat van Gongbô****
+  * [Non-HRE] **Nyingchi** (`c_nyingchi`) — *Tarraconian: **Magistrat van Nyingtschi****
 
 ---
 
@@ -4009,38 +4009,38 @@
 * **De Jure Empire:** Tartaria (`e_tartaria`)
 
 * **Duchy of Zhetysu** (`d_zhetysu`) — *0/6 in HRE*
-  * [Non-HRE] **Aksuyek** (`c_aksuyek`)
-  * [Non-HRE] **Almaty** (`c_almaty`)
-  * [Non-HRE] **Kaskelen** (`c_kaskelen`)
-  * [Non-HRE] **Kopathal** (`c_kopathal`)
-  * [Non-HRE] **Qayaliq** (`c_qayaliq`)
-  * [Non-HRE] **Uchkul** (`c_uchkul`)
+  * [Non-HRE] **Aksuyek** (`c_aksuyek`) — *Tarraconian: **Magistrat van Aksuyech****
+  * [Non-HRE] **Almaty** (`c_almaty`) — *Tarraconian: **Magistrat van Almaty****
+  * [Non-HRE] **Kaskelen** (`c_kaskelen`) — *Tarraconian: **Magistrat van Kaskelen****
+  * [Non-HRE] **Kopathal** (`c_kopathal`) — *Tarraconian: **Magistrat van Kopathal****
+  * [Non-HRE] **Qayaliq** (`c_qayaliq`) — *Tarraconian: **Magistrat van Tschayalitsch****
+  * [Non-HRE] **Uchkul** (`c_uchkul`) — *Tarraconian: **Magistrat van Utschkul****
 * **Duchy of Alakol** (`d_alakol`) — *0/4 in HRE*
-  * [Non-HRE] **Bazarka** (`c_bazarka`)
-  * [Non-HRE] **Guzkol** (`c_guzkol`)
-  * [Non-HRE] **Kokpekty** (`c_kokpekty`)
-  * [Non-HRE] **Lepsink** (`c_lepsink`)
+  * [Non-HRE] **Bazarka** (`c_bazarka`) — *Tarraconian: **Magistrat van Bazarke****
+  * [Non-HRE] **Guzkol** (`c_guzkol`) — *Tarraconian: **Magistrat van Guzkol****
+  * [Non-HRE] **Kokpekty** (`c_kokpekty`) — *Tarraconian: **Magistrat van Kokpekty****
+  * [Non-HRE] **Lepsink** (`c_lepsink`) — *Tarraconian: **Magistrat van Lepsînch****
 * **Duchy of Semey** (`d_semey`) — *0/4 in HRE*
-  * [Non-HRE] **Kalbin** (`c_kalbin`)
-  * [Non-HRE] **Koksemey** (`c_koksemey`)
-  * [Non-HRE] **Sasyk Kul** (`c_sasyk_kul`)
-  * [Non-HRE] **Semey** (`c_semey`)
+  * [Non-HRE] **Kalbin** (`c_kalbin`) — *Tarraconian: **Magistrat van Kalbin****
+  * [Non-HRE] **Koksemey** (`c_koksemey`) — *Tarraconian: **Magistrat van Koksemey****
+  * [Non-HRE] **Sasyk Kul** (`c_sasyk_kul`) — *Tarraconian: **Magistrat van Sasîchkul****
+  * [Non-HRE] **Semey** (`c_semey`) — *Tarraconian: **Magistrat van Semey****
 * **Duchy of Talas Alatau** (`d_talas_alatau`) — *0/4 in HRE*
-  * [Non-HRE] **Balashagun** (`c_balashagun`)
-  * [Non-HRE] **Cherik** (`c_cherik`)
-  * [Non-HRE] **Suyab** (`c_suyab`)
-  * [Non-HRE] **Taraz** (`c_taraz`)
+  * [Non-HRE] **Balashagun** (`c_balashagun`) — *Tarraconian: **Magistrat van Balaschagun****
+  * [Non-HRE] **Cherik** (`c_cherik`) — *Tarraconian: **Magistrat van Tscherich****
+  * [Non-HRE] **Suyab** (`c_suyab`) — *Tarraconian: **Magistrat van Suyap****
+  * [Non-HRE] **Taraz** (`c_taraz`) — *Tarraconian: **Magistrat van Taraz****
 * **Duchy of Tarbagatai** (`d_tarbagatai`) — *0/4 in HRE*
-  * [Non-HRE] **Ebi-Nor** (`c_ebi-nor`)
-  * [Non-HRE] **Emil** (`c_emil`)
-  * [Non-HRE] **Jinsko** (`c_jinsko`)
-  * [Non-HRE] **Karamay** (`c_karamay`)
+  * [Non-HRE] **Ebi-Nor** (`c_ebi-nor`) — *Tarraconian: **Magistrat van Ebi-Nor****
+  * [Non-HRE] **Emil** (`c_emil`) — *Tarraconian: **Magistrat van Emil****
+  * [Non-HRE] **Jinsko** (`c_jinsko`) — *Tarraconian: **Magistrat van Dschinskô****
+  * [Non-HRE] **Karamay** (`c_karamay`) — *Tarraconian: **Magistrat van Karamay****
 * **Duchy of Ili-Alatau** (`d_ili-alatau`) — *0/3 in HRE*
-  * [Non-HRE] **Ghulja** (`c_ghulja`)
-  * [Non-HRE] **Iliq** (`c_iliq`)
-  * [Non-HRE] **Kash** (`c_kash`)
-* **Duchy of X Script 8046** (`x_script_8046`) — *0/1 in HRE*
-  * [Non-HRE] **Chuguchak** (`c_chuguchak`)
+  * [Non-HRE] **Ghulja** (`c_ghulja`) — *Tarraconian: **Magistrat van Guldsche****
+  * [Non-HRE] **Iliq** (`c_iliq`) — *Tarraconian: **Magistrat van Ilitsch****
+  * [Non-HRE] **Kash** (`c_kash`) — *Tarraconian: **Magistrat van Kasch****
+* **Duchy of Chuguchak** (`x_script_8046`) — *0/1 in HRE*
+  * [Non-HRE] **Chuguchak** (`c_chuguchak`) — *Tarraconian: **Magistrat van Tschugutschach****
 
 ---
 
@@ -4048,35 +4048,35 @@
 * **De Jure Empire:** Yongliang (`e_yongliang`)
 
 * **Duchy of Qincheng** (`d_qincheng`) — *0/5 in HRE*
-  * [Non-HRE] **Chengzhou** (`c_chengzhou`)
-  * [Non-HRE] **Jiezhou** (`c_jiezhou`)
-  * [Non-HRE] **Minzhou** (`c_minzhou`)
-  * [Non-HRE] **Qinzhou** (`c_qinzhou_1`)
-  * [Non-HRE] **Weizhou** (`c_weizhou_2`)
+  * [Non-HRE] **Chengzhou** (`c_chengzhou`) — *Tarraconian: **Magistrat van Tschengdschou****
+  * [Non-HRE] **Jiezhou** (`c_jiezhou`) — *Tarraconian: **Magistrat van Dschiedschou****
+  * [Non-HRE] **Minzhou** (`c_minzhou`) — *Tarraconian: **Magistrat van Mindschou****
+  * [Non-HRE] **Qinzhou** (`c_qinzhou_1`) — *Tarraconian: **Magistrat van Tschindschou****
+  * [Non-HRE] **Weizhou** (`c_weizhou_2`) — *Tarraconian: **Magistrat van Weidschou****
 * **Duchy of Binning** (`d_binning`) — *0/4 in HRE*
-  * [Non-HRE] **Binzhou** (`c_binzhou`)
-  * [Non-HRE] **Huanzhou** (`c_huanzhou`)
-  * [Non-HRE] **Jinzhou** (`c_jinzhou`)
-  * [Non-HRE] **Qingzhou** (`c_qingyang`)
+  * [Non-HRE] **Binzhou** (`c_binzhou`) — *Tarraconian: **Magistrat van Bindschou****
+  * [Non-HRE] **Huanzhou** (`c_huanzhou`) — *Tarraconian: **Magistrat van Huandschou****
+  * [Non-HRE] **Jinzhou** (`c_jinzhou`) — *Tarraconian: **Magistrat van Dschindschou****
+  * [Non-HRE] **Qingzhou** (`c_qingyang`) — *Tarraconian: **Magistrat van Tschingdschou****
 * **Duchy of Fufang** (`d_fufang`) — *0/4 in HRE*
-  * [Non-HRE] **Danzhou** (`c_danzhou`)
-  * [Non-HRE] **Fangzhou** (`c_fangzhou`)
-  * [Non-HRE] **Fuzhou** (`c_fuzhou_5`)
-  * [Non-HRE] **Yanzhou** (`c_yan_an`)
+  * [Non-HRE] **Danzhou** (`c_danzhou`) — *Tarraconian: **Magistrat van Dandschou****
+  * [Non-HRE] **Fangzhou** (`c_fangzhou`) — *Tarraconian: **Magistrat van Fangdschou****
+  * [Non-HRE] **Fuzhou** (`c_fuzhou_5`) — *Tarraconian: **Magistrat van Fudschou****
+  * [Non-HRE] **Yanzhou** (`c_yan_an`) — *Tarraconian: **Magistrat van Jandschou****
 * **Duchy of Yongxing** (`d_yongxing`) — *0/4 in HRE*
-  * [Non-HRE] **Huazhou** (`c_huayin`)
-  * [Non-HRE] **Jingzhao** (`c_jingzhao`)
-  * [Non-HRE] **Tongzhou** (`c_tongzhou`)
-  * [Non-HRE] **Yaozhou** (`c_yaozhou`)
+  * [Non-HRE] **Huazhou** (`c_huayin`) — *Tarraconian: **Magistrat van Huadschou****
+  * [Non-HRE] **Jingzhao** (`c_jingzhao`) — *Tarraconian: **Magistrat van Dschingdschaô****
+  * [Non-HRE] **Tongzhou** (`c_tongzhou`) — *Tarraconian: **Magistrat van Tongdschou****
+  * [Non-HRE] **Yaozhou** (`c_yaozhou`) — *Tarraconian: **Magistrat van Jaodschou****
 * **Duchy of Fengxiang** (`d_fengxiang`) — *0/2 in HRE*
-  * [Non-HRE] **Fengxiang** (`c_fengxiang`)
-  * [Non-HRE] **Longzhou** (`c_longzhou_2`)
+  * [Non-HRE] **Fengxiang** (`c_fengxiang`) — *Tarraconian: **Magistrat van Fengschiang****
+  * [Non-HRE] **Longzhou** (`c_longzhou_2`) — *Tarraconian: **Magistrat van Longdschou****
 * **Duchy of Jinshang** (`d_jinshang`) — *0/2 in HRE*
-  * [Non-HRE] **Jinzhou** (`c_jinzhou_1`)
-  * [Non-HRE] **Shangzhou** (`c_shangzhou`)
+  * [Non-HRE] **Jinzhou** (`c_jinzhou_1`) — *Tarraconian: **Magistrat van Dschindschou****
+  * [Non-HRE] **Shangzhou** (`c_shangzhou`) — *Tarraconian: **Magistrat van Schangdschou****
 * **Duchy of Xingfeng** (`d_xingfeng`) — *0/2 in HRE*
-  * [Non-HRE] **Fengzhou** (`c_fengzhou`)
-  * [Non-HRE] **Xingqing** (`c_xingqing`)
+  * [Non-HRE] **Fengzhou** (`c_fengzhou`) — *Tarraconian: **Magistrat van Fengdschou****
+  * [Non-HRE] **Xingqing** (`c_xingqing`) — *Tarraconian: **Magistrat van Schingtsching****
 
 ---
 
@@ -4084,28 +4084,28 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Guge** (`d_ngari`) — *0/6 in HRE*
-  * [Non-HRE] **Gar** (`c_gar`)
-  * [Non-HRE] **Gomoco** (`c_gomoco`)
-  * [Non-HRE] **Gê'gyai** (`c_gegyai`)
-  * [Non-HRE] **Gêrzê** (`c_gerze`)
-  * [Non-HRE] **Kyunglung** (`c_kyunglung`)
-  * [Non-HRE] **Tsaparang** (`c_tsaparang`)
+  * [Non-HRE] **Gar** (`c_gar`) — *Tarraconian: **Magistrat van Gar****
+  * [Non-HRE] **Gomoco** (`c_gomoco`) — *Tarraconian: **Magistrat van Gomotzô****
+  * [Non-HRE] **Gê'gyai** (`c_gegyai`) — *Tarraconian: **Magistrat van Gêgyai****
+  * [Non-HRE] **Gêrzê** (`c_gerze`) — *Tarraconian: **Magistrat van Gêrtzê****
+  * [Non-HRE] **Kyunglung** (`c_kyunglung`) — *Tarraconian: **Magistrat van Kyunglung****
+  * [Non-HRE] **Tsaparang** (`c_tsaparang`) — *Tarraconian: **Magistrat van Zaparang****
 * **Duchy of Purang** (`d_purang`) — *0/6 in HRE*
-  * [Non-HRE] **Coqên** (`c_coqen`)
-  * [Non-HRE] **Cuonaco** (`c_cuonaco`)
-  * [Non-HRE] **Drongpa** (`c_zhongba`)
-  * [Non-HRE] **Lunggar** (`c_lunggar`)
-  * [Non-HRE] **Manthang** (`c_manthang`)
-  * [Non-HRE] **Purang** (`c_purang`)
+  * [Non-HRE] **Coqên** (`c_coqen`) — *Tarraconian: **Magistrat van Zotschên****
+  * [Non-HRE] **Cuonaco** (`c_cuonaco`) — *Tarraconian: **Magistrat van Zuonatzô****
+  * [Non-HRE] **Drongpa** (`c_zhongba`) — *Tarraconian: **Magistrat van Drongpe****
+  * [Non-HRE] **Lunggar** (`c_lunggar`) — *Tarraconian: **Magistrat van Lunggar****
+  * [Non-HRE] **Manthang** (`c_manthang`) — *Tarraconian: **Magistrat van Manthang****
+  * [Non-HRE] **Purang** (`c_purang`) — *Tarraconian: **Magistrat van Purang****
 * **Duchy of Co'nyi** (`d_conyi`) — *0/4 in HRE*
-  * [Non-HRE] **Cozhêlhoma** (`c_cozhelhoma`)
-  * [Non-HRE] **Garco** (`c_garco`)
-  * [Non-HRE] **Garkung** (`c_garkung`)
-  * [Non-HRE] **Sêwa** (`c_sewa`)
+  * [Non-HRE] **Cozhêlhoma** (`c_cozhelhoma`) — *Tarraconian: **Magistrat van Zodschêlhome****
+  * [Non-HRE] **Garco** (`c_garco`) — *Tarraconian: **Magistrat van Gartzô****
+  * [Non-HRE] **Garkung** (`c_garkung`) — *Tarraconian: **Magistrat van Garkung****
+  * [Non-HRE] **Sêwa** (`c_sewa`) — *Tarraconian: **Magistrat van Sêwe****
 * **Duchy of Nyima** (`d_nyima`) — *0/3 in HRE*
-  * [Non-HRE] **Aso** (`c_aso`)
-  * [Non-HRE] **Nyima** (`c_nyima`)
-  * [Non-HRE] **Xainza** (`c_xainza`)
+  * [Non-HRE] **Aso** (`c_aso`) — *Tarraconian: **Magistrat van Asô****
+  * [Non-HRE] **Nyima** (`c_nyima`) — *Tarraconian: **Magistrat van Nyime****
+  * [Non-HRE] **Xainza** (`c_xainza`) — *Tarraconian: **Magistrat van Schainze****
 
 ---
 
@@ -4113,29 +4113,29 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Gyalrong** (`d_gyalrong`) — *0/5 in HRE*
-  * [Non-HRE] **Barkam** (`c_barkam`)
-  * [Non-HRE] **Ngawa** (`c_ngawa`)
-  * [Non-HRE] **Quqên** (`c_quqen`)
-  * [Non-HRE] **Sungqu** (`c_sungqu`)
-  * [Non-HRE] **Zoigê** (`c_zoige`)
+  * [Non-HRE] **Barkam** (`c_barkam`) — *Tarraconian: **Magistrat van Barkam****
+  * [Non-HRE] **Ngawa** (`c_ngawa`) — *Tarraconian: **Magistrat van Ingawe****
+  * [Non-HRE] **Quqên** (`c_quqen`) — *Tarraconian: **Magistrat van Tschutschên****
+  * [Non-HRE] **Sungqu** (`c_sungqu`) — *Tarraconian: **Magistrat van Sungtschu****
+  * [Non-HRE] **Zoigê** (`c_zoige`) — *Tarraconian: **Magistrat van Soigê****
 * **Duchy of Chakla** (`d_chakla`) — *0/4 in HRE*
-  * [Non-HRE] **Chakla** (`c_chakla`)
-  * [Non-HRE] **Dawu** (`c_dawu`)
-  * [Non-HRE] **Lhagang** (`c_lhagang`)
-  * [Non-HRE] **Sêrtar** (`c_sertar`)
+  * [Non-HRE] **Chakla** (`c_chakla`) — *Tarraconian: **Magistrat van Tschakle****
+  * [Non-HRE] **Dawu** (`c_dawu`) — *Tarraconian: **Magistrat van Dawu****
+  * [Non-HRE] **Lhagang** (`c_lhagang`) — *Tarraconian: **Magistrat van Lhagang****
+  * [Non-HRE] **Sêrtar** (`c_sertar`) — *Tarraconian: **Magistrat van Sêrtar****
 * **Duchy of Gainlho** (`d_gainlho`) — *0/4 in HRE*
-  * [Non-HRE] **Jonê** (`c_jone`)
-  * [Non-HRE] **Maqu** (`c_maqu`)
-  * [Non-HRE] **Sangqu** (`c_sangqu`)
-  * [Non-HRE] **Têwo** (`c_tewo`)
+  * [Non-HRE] **Jonê** (`c_jone`) — *Tarraconian: **Magistrat van Dschonê****
+  * [Non-HRE] **Maqu** (`c_maqu`) — *Tarraconian: **Magistrat van Matschu****
+  * [Non-HRE] **Sangqu** (`c_sangqu`) — *Tarraconian: **Magistrat van Sangtschu****
+  * [Non-HRE] **Têwo** (`c_tewo`) — *Tarraconian: **Magistrat van Têwô****
 * **Duchy of Golog** (`d_golog`) — *0/3 in HRE*
-  * [Non-HRE] **Baima** (`c_baima`)
-  * [Non-HRE] **Madoi** (`c_madoi`)
-  * [Non-HRE] **Maqên** (`c_maqen`)
+  * [Non-HRE] **Baima** (`c_baima`) — *Tarraconian: **Magistrat van Baime****
+  * [Non-HRE] **Madoi** (`c_madoi`) — *Tarraconian: **Magistrat van Madoi****
+  * [Non-HRE] **Maqên** (`c_maqen`) — *Tarraconian: **Magistrat van Matschên****
 * **Duchy of Malho** (`d_malho`) — *0/3 in HRE*
-  * [Non-HRE] **Mangra** (`c_mangra`)
-  * [Non-HRE] **Rebgong** (`c_rebgong`)
-  * [Non-HRE] **Zêkog** (`c_zekog`)
+  * [Non-HRE] **Mangra** (`c_mangra`) — *Tarraconian: **Magistrat van Mangre****
+  * [Non-HRE] **Rebgong** (`c_rebgong`) — *Tarraconian: **Magistrat van Rebgong****
+  * [Non-HRE] **Zêkog** (`c_zekog`) — *Tarraconian: **Magistrat van Sêkoch****
 
 ---
 
@@ -4143,34 +4143,34 @@
 * **De Jure Empire:** Azania (`e_azania`)
 
 * **Duchy of West Ajuraan** (`d_west_ajuraan`) — *0/5 in HRE*
-  * [Non-HRE] **Bardhere** (`c_jubba`)
-  * [Non-HRE] **Baydhabo** (`c_baydhabo`)
-  * [Non-HRE] **Luuq** (`c_luuq`)
-  * [Non-HRE] **Qalaafe** (`c_qalaafe`)
-  * [Non-HRE] **Qoryooley** (`c_jilib`)
+  * [Non-HRE] **Bardhere** (`c_jubba`) — *Tarraconian: **Magistrat van Bardhere****
+  * [Non-HRE] **Baydhabo** (`c_baydhabo`) — *Tarraconian: **Magistrat van Baydhabô****
+  * [Non-HRE] **Luuq** (`c_luuq`) — *Tarraconian: **Magistrat van Lûtsch****
+  * [Non-HRE] **Qalaafe** (`c_qalaafe`) — *Tarraconian: **Magistrat van Tschalâfe****
+  * [Non-HRE] **Qoryooley** (`c_jilib`) — *Tarraconian: **Magistrat van Tschoryôley****
 * **Duchy of Pate** (`d_pate`) — *0/4 in HRE*
-  * [Non-HRE] **Ewaso Ng'iro** (`c_ewaso_ngiro`)
-  * [Non-HRE] **Lamu** (`c_lamu`)
-  * [Non-HRE] **Malindi** (`c_malindi`)
-  * [Non-HRE] **Pate** (`c_pate`)
+  * [Non-HRE] **Ewaso Ng'iro** (`c_ewaso_ngiro`) — *Tarraconian: **Magistrat van Ewaso-Ingirô****
+  * [Non-HRE] **Lamu** (`c_lamu`) — *Tarraconian: **Magistrat van Lamu****
+  * [Non-HRE] **Malindi** (`c_malindi`) — *Tarraconian: **Magistrat van Malindi****
+  * [Non-HRE] **Pate** (`c_pate`) — *Tarraconian: **Magistrat van Pate****
 * **Duchy of Bonde la Ufa** (`d_bonde_la_ufa`) — *0/2 in HRE*
-  * [Non-HRE] **Mto Tana** (`c_mto_tana`)
-  * [Non-HRE] **Taveta** (`c_taveta`)
+  * [Non-HRE] **Mto Tana** (`c_mto_tana`) — *Tarraconian: **Magistrat van Tane****
+  * [Non-HRE] **Taveta** (`c_taveta`) — *Tarraconian: **Magistrat van Tawete****
 * **Duchy of Zanzibar** (`d_zanzibar`) — *0/2 in HRE*
-  * [Non-HRE] **Mrima** (`c_mrima`)
-  * [Non-HRE] **Zanzibar** (`c_zanzibar`)
+  * [Non-HRE] **Mrima** (`c_mrima`) — *Tarraconian: **Magistrat van Mrime****
+  * [Non-HRE] **Zanzibar** (`c_zanzibar`) — *Tarraconian: **Magistrat van Sanzibar****
 * **Duchy of Mombasa** (`d_mombasa`) — *0/1 in HRE*
-  * [Non-HRE] **Mombasa** (`c_mombasa`)
-* **Duchy of X Script 1506** (`x_script_1506`) — *0/1 in HRE*
-  * [Non-HRE] **Kilimanjaro** (`c_kilimanjaro`)
-* **Duchy of X Script 1816** (`x_script_1816`) — *0/1 in HRE*
-  * [Non-HRE] **Tanga** (`c_tanga`)
-* **Duchy of X Script 1894** (`x_script_1894`) — *0/1 in HRE*
-  * [Non-HRE] **Kirinyaga** (`c_kirinyaga`)
-* **Duchy of X Script 2263** (`x_script_2263`) — *0/1 in HRE*
-  * [Non-HRE] **Mto Galana** (`c_mto_galana`)
-* **Duchy of X Script 3608** (`x_script_3608`) — *0/1 in HRE*
-  * [Non-HRE] **Pemba** (`c_pemba`)
+  * [Non-HRE] **Mombasa** (`c_mombasa`) — *Tarraconian: **Magistrat van Mombase****
+* **Duchy of Kilimanjaro** (`x_script_1506`) — *0/1 in HRE*
+  * [Non-HRE] **Kilimanjaro** (`c_kilimanjaro`) — *Tarraconian: **Magistrat van Kilimandscharô****
+* **Duchy of Tanga** (`x_script_1816`) — *0/1 in HRE*
+  * [Non-HRE] **Tanga** (`c_tanga`) — *Tarraconian: **Magistrat van Tange****
+* **Duchy of Kirinyaga** (`x_script_1894`) — *0/1 in HRE*
+  * [Non-HRE] **Kirinyaga** (`c_kirinyaga`) — *Tarraconian: **Magistrat van Kirinyage****
+* **Duchy of Galana** (`x_script_2263`) — *0/1 in HRE*
+  * [Non-HRE] **Mto Galana** (`c_mto_galana`) — *Tarraconian: **Magistrat van Galane****
+* **Duchy of Pemba** (`x_script_3608`) — *0/1 in HRE*
+  * [Non-HRE] **Pemba** (`c_pemba`) — *Tarraconian: **Magistrat van Pembe****
 
 ---
 
@@ -4178,28 +4178,28 @@
 * **De Jure Empire:** Kanem-Bornu (`e_kanem_bornu`)
 
 * **Duchy of Kano** (`d_kano`) — *0/4 in HRE*
-  * [Non-HRE] **Daura** (`c_daura`)
-  * [Non-HRE] **Kano** (`c_kano`)
-  * [Non-HRE] **Katagum** (`c_katagum`)
-  * [Non-HRE] **Rano** (`c_rano`)
+  * [Non-HRE] **Daura** (`c_daura`) — *Tarraconian: **Magistrat van Daure****
+  * [Non-HRE] **Kano** (`c_kano`) — *Tarraconian: **Magistrat van Kanô****
+  * [Non-HRE] **Katagum** (`c_katagum`) — *Tarraconian: **Magistrat van Katagum****
+  * [Non-HRE] **Rano** (`c_rano`) — *Tarraconian: **Magistrat van Ranô****
 * **Duchy of Katsina** (`d_katsina`) — *0/3 in HRE*
-  * [Non-HRE] **Kaduna** (`c_kaduna`)
-  * [Non-HRE] **Katsina** (`c_katsina`)
-  * [Non-HRE] **Zaria** (`c_zaria`)
+  * [Non-HRE] **Kaduna** (`c_kaduna`) — *Tarraconian: **Magistrat van Kadune****
+  * [Non-HRE] **Katsina** (`c_katsina`) — *Tarraconian: **Magistrat van Katzine****
+  * [Non-HRE] **Zaria** (`c_zaria`) — *Tarraconian: **Magistrat van Sarje****
 * **Duchy of Kebbi** (`d_kebbi`) — *0/3 in HRE*
-  * [Non-HRE] **Kebbi** (`c_kebbi`)
-  * [Non-HRE] **Sokoto** (`c_sokoto`)
-  * [Non-HRE] **Yauri** (`c_yauri`)
+  * [Non-HRE] **Kebbi** (`c_kebbi`) — *Tarraconian: **Magistrat van Kebbi****
+  * [Non-HRE] **Sokoto** (`c_sokoto`) — *Tarraconian: **Magistrat van Sokotô****
+  * [Non-HRE] **Yauri** (`c_yauri`) — *Tarraconian: **Magistrat van Jauri****
 * **Duchy of Kwararafa** (`d_kwararafa`) — *0/3 in HRE*
-  * [Non-HRE] **Bauchi** (`c_bauchi`)
-  * [Non-HRE] **Keffi** (`c_keffi`)
-  * [Non-HRE] **Kwararafa** (`c_kwararafa`)
+  * [Non-HRE] **Bauchi** (`c_bauchi`) — *Tarraconian: **Magistrat van Bautschi****
+  * [Non-HRE] **Keffi** (`c_keffi`) — *Tarraconian: **Magistrat van Keffi****
+  * [Non-HRE] **Kwararafa** (`c_kwararafa`) — *Tarraconian: **Magistrat van Kwararafe****
 * **Duchy of Gobir** (`d_gobir`) — *0/2 in HRE*
-  * [Non-HRE] **Gobir** (`c_gobir`)
-  * [Non-HRE] **Tahoua** (`c_tahoua`)
+  * [Non-HRE] **Gobir** (`c_gobir`) — *Tarraconian: **Magistrat van Gobir****
+  * [Non-HRE] **Tahoua** (`c_tahoua`) — *Tarraconian: **Magistrat van Tahoue****
 * **Duchy of Kagha** (`d_kagha`) — *0/2 in HRE*
-  * [Non-HRE] **Fika** (`c_fika`)
-  * [Non-HRE] **Kagha** (`c_kagha`)
+  * [Non-HRE] **Fika** (`c_fika`) — *Tarraconian: **Magistrat van Fike****
+  * [Non-HRE] **Kagha** (`c_kagha`) — *Tarraconian: **Magistrat van Kaghe****
 
 ---
 
@@ -4207,26 +4207,26 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Ziqing** (`d_ziqing`) — *0/5 in HRE*
-  * [Non-HRE] **Dengzhou** (`c_dengzhou`)
-  * [Non-HRE] **Laizhou** (`c_laizhou`)
-  * [Non-HRE] **Qingzhou** (`c_qingzhou`)
-  * [Non-HRE] **Weizhou** (`c_weizhou_4`)
-  * [Non-HRE] **Zizhou** (`c_zichuan`)
+  * [Non-HRE] **Dengzhou** (`c_dengzhou`) — *Tarraconian: **Magistrat van Dengdschou****
+  * [Non-HRE] **Laizhou** (`c_laizhou`) — *Tarraconian: **Magistrat van Laidschou****
+  * [Non-HRE] **Qingzhou** (`c_qingzhou`) — *Tarraconian: **Magistrat van Tschingdschou****
+  * [Non-HRE] **Weizhou** (`c_weizhou_4`) — *Tarraconian: **Magistrat van Weidschou****
+  * [Non-HRE] **Zizhou** (`c_zichuan`) — *Tarraconian: **Magistrat van Sidschou****
 * **Duchy of Xusi** (`d_xusi`) — *0/4 in HRE*
-  * [Non-HRE] **Huaiyang** (`c_huaiyang`)
-  * [Non-HRE] **Sizhou** (`c_sizhou_2`)
-  * [Non-HRE] **Suzhou** (`c_suzhou`)
-  * [Non-HRE] **Xuzhou** (`c_xuzhou_1`)
+  * [Non-HRE] **Huaiyang** (`c_huaiyang`) — *Tarraconian: **Magistrat van Huai-Jang****
+  * [Non-HRE] **Sizhou** (`c_sizhou_2`) — *Tarraconian: **Magistrat van Sidschou****
+  * [Non-HRE] **Suzhou** (`c_suzhou`) — *Tarraconian: **Magistrat van Sudschou****
+  * [Non-HRE] **Xuzhou** (`c_xuzhou_1`) — *Tarraconian: **Magistrat van Schudschou****
 * **Duchy of Yanhai** (`d_yanhai`) — *0/4 in HRE*
-  * [Non-HRE] **Haizhou** (`c_haizhou`)
-  * [Non-HRE] **Mizhou** (`c_mizhou`)
-  * [Non-HRE] **Yanzhou** (`c_yanzhou`)
-  * [Non-HRE] **Yizhou** (`c_langya`)
+  * [Non-HRE] **Haizhou** (`c_haizhou`) — *Tarraconian: **Magistrat van Haidschou****
+  * [Non-HRE] **Mizhou** (`c_mizhou`) — *Tarraconian: **Magistrat van Midschou****
+  * [Non-HRE] **Yanzhou** (`c_yanzhou`) — *Tarraconian: **Magistrat van Jandschou****
+  * [Non-HRE] **Yizhou** (`c_langya`) — *Tarraconian: **Magistrat van Jidschou****
 * **Duchy of Yuncao** (`d_yuncao`) — *0/4 in HRE*
-  * [Non-HRE] **Caozhou** (`c_caozhou`)
-  * [Non-HRE] **Puzhou** (`c_puzhou_2`)
-  * [Non-HRE] **Qizhou** (`c_qizhou`)
-  * [Non-HRE] **Yunzhou** (`c_yunzhou`)
+  * [Non-HRE] **Caozhou** (`c_caozhou`) — *Tarraconian: **Magistrat van Zaodschou****
+  * [Non-HRE] **Puzhou** (`c_puzhou_2`) — *Tarraconian: **Magistrat van Pudschou****
+  * [Non-HRE] **Qizhou** (`c_qizhou`) — *Tarraconian: **Magistrat van Tschidschou****
+  * [Non-HRE] **Yunzhou** (`c_yunzhou`) — *Tarraconian: **Magistrat van Jundschou****
 
 ---
 
@@ -4234,26 +4234,26 @@
 * **De Jure Empire:** Mali (`e_mali`)
 
 * **Duchy of Kaniaga** (`d_kaniaga`) — *0/4 in HRE*
-  * [Non-HRE] **Kaarta** (`c_kaarta`)
-  * [Non-HRE] **Kaniaga** (`c_kaniaga`)
-  * [Non-HRE] **Kita** (`c_kita`)
-  * [Non-HRE] **Soso** (`c_soso`)
+  * [Non-HRE] **Kaarta** (`c_kaarta`) — *Tarraconian: **Magistrat van Kârte****
+  * [Non-HRE] **Kaniaga** (`c_kaniaga`) — *Tarraconian: **Magistrat van Kaniage****
+  * [Non-HRE] **Kita** (`c_kita`) — *Tarraconian: **Magistrat van Kite****
+  * [Non-HRE] **Soso** (`c_soso`) — *Tarraconian: **Magistrat van Sosô****
 * **Duchy of Diafunu** (`d_diafunu`) — *0/3 in HRE*
-  * [Non-HRE] **Guidimaka** (`c_guidimaka`)
-  * [Non-HRE] **Kingui** (`c_kingui`)
-  * [Non-HRE] **Yelimane** (`c_yelimane`)
+  * [Non-HRE] **Guidimaka** (`c_guidimaka`) — *Tarraconian: **Magistrat van Guidimake****
+  * [Non-HRE] **Kingui** (`c_kingui`) — *Tarraconian: **Magistrat van Kingui****
+  * [Non-HRE] **Yelimane** (`c_yelimane`) — *Tarraconian: **Magistrat van Jelimane****
 * **Duchy of Mema** (`d_mema`) — *0/3 in HRE*
-  * [Non-HRE] **Kouga** (`c_kouga`)
-  * [Non-HRE] **Massina** (`c_massina`)
-  * [Non-HRE] **Mema** (`c_mema`)
+  * [Non-HRE] **Kouga** (`c_kouga`) — *Tarraconian: **Magistrat van Kouge****
+  * [Non-HRE] **Massina** (`c_massina`) — *Tarraconian: **Magistrat van Massine****
+  * [Non-HRE] **Mema** (`c_mema`) — *Tarraconian: **Magistrat van Meme****
 * **Duchy of Tagant** (`d_tagant`) — *0/3 in HRE*
-  * [Non-HRE] **Hodh** (`c_hodh`)
-  * [Non-HRE] **Tagant** (`c_tagant`)
-  * [Non-HRE] **Tichitt** (`c_tichitt`)
+  * [Non-HRE] **Hodh** (`c_hodh`) — *Tarraconian: **Magistrat van Hodh****
+  * [Non-HRE] **Tagant** (`c_tagant`) — *Tarraconian: **Magistrat van Tagant****
+  * [Non-HRE] **Tichitt** (`c_tichitt`) — *Tarraconian: **Magistrat van Titschitt****
 * **Duchy of Wagadu** (`d_wagadu`) — *0/3 in HRE*
-  * [Non-HRE] **Awkar** (`c_awkar`)
-  * [Non-HRE] **Masin** (`c_masin`)
-  * [Non-HRE] **Walata** (`c_walata`)
+  * [Non-HRE] **Awkar** (`c_awkar`) — *Tarraconian: **Magistrat van Awkar****
+  * [Non-HRE] **Masin** (`c_masin`) — *Tarraconian: **Magistrat van Masin****
+  * [Non-HRE] **Walata** (`c_walata`) — *Tarraconian: **Magistrat van Walate****
 
 ---
 
@@ -4261,26 +4261,26 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Kanyakubja** (`d_kanyakubja`) — *0/6 in HRE*
-  * [Non-HRE] **Asni** (`c_asni`)
-  * [Non-HRE] **Kalpi** (`c_kalpi`)
-  * [Non-HRE] **Kanyakubja** (`c_kanyakubja`)
-  * [Non-HRE] **Lakhnau** (`c_lakhnau`)
-  * [Non-HRE] **Mānikpur** (`c_manikpur`)
-  * [Non-HRE] **Prayaga** (`c_prayaga`)
+  * [Non-HRE] **Asni** (`c_asni`) — *Tarraconian: **Magistrat van Asni****
+  * [Non-HRE] **Kalpi** (`c_kalpi`) — *Tarraconian: **Magistrat van Kalpi****
+  * [Non-HRE] **Kanyakubja** (`c_kanyakubja`) — *Tarraconian: **Magistrat van Kanjakubdsche****
+  * [Non-HRE] **Lakhnau** (`c_lakhnau`) — *Tarraconian: **Magistrat van Lakhnau****
+  * [Non-HRE] **Mānikpur** (`c_manikpur`) — *Tarraconian: **Magistrat van Mânikpur****
+  * [Non-HRE] **Prayaga** (`c_prayaga`) — *Tarraconian: **Magistrat van Prayage****
 * **Duchy of Jejakabhukti** (`d_jejakabhukti`) — *0/3 in HRE*
-  * [Non-HRE] **Damoh** (`c_damoh`)
-  * [Non-HRE] **Kalanjara** (`c_kalanjara`)
-  * [Non-HRE] **Mahoba** (`c_mahoba`)
+  * [Non-HRE] **Damoh** (`c_damoh`) — *Tarraconian: **Magistrat van Damoh****
+  * [Non-HRE] **Kalanjara** (`c_kalanjara`) — *Tarraconian: **Magistrat van Kalandschare****
+  * [Non-HRE] **Mahoba** (`c_mahoba`) — *Tarraconian: **Magistrat van Mahobe****
 * **Duchy of Kasi** (`d_kasi`) — *0/3 in HRE*
-  * [Non-HRE] **Chunar** (`c_chunar`)
-  * [Non-HRE] **Jaunpur** (`c_jaunpur`)
-  * [Non-HRE] **Varanasi** (`c_varanasi`)
+  * [Non-HRE] **Chunar** (`c_chunar`) — *Tarraconian: **Magistrat van Tschunar****
+  * [Non-HRE] **Jaunpur** (`c_jaunpur`) — *Tarraconian: **Magistrat van Dschounpur****
+  * [Non-HRE] **Varanasi** (`c_varanasi`) — *Tarraconian: **Magistrat van Waranasi****
 * **Duchy of Saryupara** (`d_saryupara`) — *0/3 in HRE*
-  * [Non-HRE] **Ayodhyā** (`c_ayodhya`)
-  * [Non-HRE] **Naimisa** (`c_naimisa`)
-  * [Non-HRE] **Sravasti** (`c_sravasti`)
-* **Duchy of X Script 4892** (`x_script_4892`) — *0/1 in HRE*
-  * [Non-HRE] **Gurgi** (`c_gurgi`)
+  * [Non-HRE] **Ayodhyā** (`c_ayodhya`) — *Tarraconian: **Magistrat van Ajôdje****
+  * [Non-HRE] **Naimisa** (`c_naimisa`) — *Tarraconian: **Magistrat van Naimise****
+  * [Non-HRE] **Sravasti** (`c_sravasti`) — *Tarraconian: **Magistrat van Srawasti****
+* **Duchy of Gurgi** (`x_script_4892`) — *0/1 in HRE*
+  * [Non-HRE] **Gurgi** (`c_gurgi`) — *Tarraconian: **Magistrat van Gurgi****
 
 ---
 
@@ -4288,25 +4288,25 @@
 * **De Jure Empire:** Mali (`e_mali`)
 
 * **Duchy of Manding** (`d_manding`) — *0/6 in HRE*
-  * [Non-HRE] **Bure** (`c_bure`)
-  * [Non-HRE] **Dakajalan** (`c_dakajalan`)
-  * [Non-HRE] **Kankan** (`c_kankan`)
-  * [Non-HRE] **Niani** (`c_niani`)
-  * [Non-HRE] **Sibi** (`c_sibi_mali`)
-  * [Non-HRE] **Tabon** (`c_tabon`)
+  * [Non-HRE] **Bure** (`c_bure`) — *Tarraconian: **Magistrat van Bure****
+  * [Non-HRE] **Dakajalan** (`c_dakajalan`) — *Tarraconian: **Magistrat van Dakadschalan****
+  * [Non-HRE] **Kankan** (`c_kankan`) — *Tarraconian: **Magistrat van Kankan****
+  * [Non-HRE] **Niani** (`c_niani`) — *Tarraconian: **Magistrat van Niani****
+  * [Non-HRE] **Sibi** (`c_sibi_mali`) — *Tarraconian: **Magistrat van Sibi****
+  * [Non-HRE] **Tabon** (`c_tabon`) — *Tarraconian: **Magistrat van Tabon****
 * **Duchy of Bambuk** (`d_bambuk`) — *0/4 in HRE*
-  * [Non-HRE] **Bambuk** (`c_bambuk`)
-  * [Non-HRE] **Bundu** (`c_bundu`)
-  * [Non-HRE] **Gangaran** (`c_gangaran`)
-  * [Non-HRE] **Konko** (`c_konko`)
+  * [Non-HRE] **Bambuk** (`c_bambuk`) — *Tarraconian: **Magistrat van Bambuch****
+  * [Non-HRE] **Bundu** (`c_bundu`) — *Tarraconian: **Magistrat van Bundu****
+  * [Non-HRE] **Gangaran** (`c_gangaran`) — *Tarraconian: **Magistrat van Gangaran****
+  * [Non-HRE] **Konko** (`c_konko`) — *Tarraconian: **Magistrat van Konkô****
 * **Duchy of Loma** (`d_loma`) — *0/4 in HRE*
-  * [Non-HRE] **Futa Jalon** (`c_futa_jalon`)
-  * [Non-HRE] **Kisi** (`c_kisi`)
-  * [Non-HRE] **Kuranko** (`c_kuranko`)
-  * [Non-HRE] **Solimana** (`c_solimana`)
+  * [Non-HRE] **Futa Jalon** (`c_futa_jalon`) — *Tarraconian: **Magistrat van Futa-Dschalon****
+  * [Non-HRE] **Kisi** (`c_kisi`) — *Tarraconian: **Magistrat van Kisi****
+  * [Non-HRE] **Kuranko** (`c_kuranko`) — *Tarraconian: **Magistrat van Kurankô****
+  * [Non-HRE] **Solimana** (`c_solimana`) — *Tarraconian: **Magistrat van Solimane****
 * **Duchy of Fura Jalon** (`d_futa_jalon`) — *0/2 in HRE*
-  * [Non-HRE] **Kokoli** (`c_kokoli`)
-  * [Non-HRE] **Timbi** (`c_timbi`)
+  * [Non-HRE] **Kokoli** (`c_kokoli`) — *Tarraconian: **Magistrat van Kokoli****
+  * [Non-HRE] **Timbi** (`c_timbi`) — *Tarraconian: **Magistrat van Timbi****
 
 ---
 
@@ -4314,27 +4314,27 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Ladakh** (`d_ladakh`) — *0/4 in HRE*
-  * [Non-HRE] **Demchok** (`c_demchok`)
-  * [Non-HRE] **Diskit** (`c_diskit`)
-  * [Non-HRE] **Khurnak** (`c_khurnak`)
-  * [Non-HRE] **Leh** (`c_leh`)
+  * [Non-HRE] **Demchok** (`c_demchok`) — *Tarraconian: **Magistrat van Demtschoch****
+  * [Non-HRE] **Diskit** (`c_diskit`) — *Tarraconian: **Magistrat van Diskit****
+  * [Non-HRE] **Khurnak** (`c_khurnak`) — *Tarraconian: **Magistrat van Churnach****
+  * [Non-HRE] **Leh** (`c_leh`) — *Tarraconian: **Magistrat van Leh****
 * **Duchy of Baltiyül** (`d_baltiyul`) — *0/3 in HRE*
-  * [Non-HRE] **Khaplu** (`c_khaplu`)
-  * [Non-HRE] **Shigar** (`c_shigar`)
-  * [Non-HRE] **Skardu** (`c_skardu`)
+  * [Non-HRE] **Khaplu** (`c_khaplu`) — *Tarraconian: **Magistrat van Chaplu****
+  * [Non-HRE] **Shigar** (`c_shigar`) — *Tarraconian: **Magistrat van Schigar****
+  * [Non-HRE] **Skardu** (`c_skardu`) — *Tarraconian: **Magistrat van Skardu****
 * **Duchy of Zanskar** (`d_zanskar`) — *0/3 in HRE*
-  * [Non-HRE] **Darcha** (`c_darcha`)
-  * [Non-HRE] **Padum** (`c_padum`)
-  * [Non-HRE] **Purig** (`c_purig`)
+  * [Non-HRE] **Darcha** (`c_darcha`) — *Tarraconian: **Magistrat van Dartsche****
+  * [Non-HRE] **Padum** (`c_padum`) — *Tarraconian: **Magistrat van Padum****
+  * [Non-HRE] **Purig** (`c_purig`) — *Tarraconian: **Magistrat van Purich****
 * **Duchy of Aksai Chin** (`d_aksai_chin`) — *0/2 in HRE*
-  * [Non-HRE] **Sumdo** (`c_sumdo`)
-  * [Non-HRE] **Thaldat** (`c_thaldat`)
+  * [Non-HRE] **Sumdo** (`c_sumdo`) — *Tarraconian: **Magistrat van Sumdô****
+  * [Non-HRE] **Thaldat** (`c_thaldat`) — *Tarraconian: **Magistrat van Taldat****
 * **Duchy of Kinnaur** (`d_kinnaur`) — *0/2 in HRE*
-  * [Non-HRE] **Dhankar** (`c_dhankar`)
-  * [Non-HRE] **Kamru** (`c_kamru`)
+  * [Non-HRE] **Dhankar** (`c_dhankar`) — *Tarraconian: **Magistrat van Dankar****
+  * [Non-HRE] **Kamru** (`c_kamru`) — *Tarraconian: **Magistrat van Kamru****
 * **Duchy of Rutog** (`d_rutog`) — *0/2 in HRE*
-  * [Non-HRE] **Memar** (`c_memar`)
-  * [Non-HRE] **Rutog** (`c_rutog`)
+  * [Non-HRE] **Memar** (`c_memar`) — *Tarraconian: **Magistrat van Memar****
+  * [Non-HRE] **Rutog** (`c_rutog`) — *Tarraconian: **Magistrat van Rutoch****
 
 ---
 
@@ -4342,26 +4342,26 @@
 * **De Jure Empire:** Tartaria (`e_tartaria`)
 
 * **Duchy of Aqturgay** (`d_turgay`) — *0/4 in HRE*
-  * [Non-HRE] **Chumkar Kia** (`c_chumkar_kia`)
-  * [Non-HRE] **Murun Tomis** (`c_murun_tomis`)
-  * [Non-HRE] **Tumar** (`c_tumar`)
-  * [Non-HRE] **Turgay** (`c_turgay`)
+  * [Non-HRE] **Chumkar Kia** (`c_chumkar_kia`) — *Tarraconian: **Magistrat van Tschumkar-Kîe****
+  * [Non-HRE] **Murun Tomis** (`c_murun_tomis`) — *Tarraconian: **Magistrat van Murun Tomis****
+  * [Non-HRE] **Tumar** (`c_tumar`) — *Tarraconian: **Magistrat van Tumar****
+  * [Non-HRE] **Turgay** (`c_turgay`) — *Tarraconian: **Magistrat van Turgay****
 * **Duchy of Aral Karakum** (`d_aral_karakum`) — *0/3 in HRE*
-  * [Non-HRE] **Aral Karakum** (`c_aral_karakum`)
-  * [Non-HRE] **Chalkar** (`c_chalkar`)
-  * [Non-HRE] **Terekli** (`c_terekli`)
+  * [Non-HRE] **Aral Karakum** (`c_aral_karakum`) — *Tarraconian: **Magistrat van Aral Karakum****
+  * [Non-HRE] **Chalkar** (`c_chalkar`) — *Tarraconian: **Magistrat van Tschalkar****
+  * [Non-HRE] **Terekli** (`c_terekli`) — *Tarraconian: **Magistrat van Terekli****
 * **Duchy of Barsuki** (`d_barsuki`) — *0/3 in HRE*
-  * [Non-HRE] **Airyuk** (`c_airyuk`)
-  * [Non-HRE] **Barsuki** (`c_barsuki`)
-  * [Non-HRE] **Jamantau** (`c_jamantau`)
+  * [Non-HRE] **Airyuk** (`c_airyuk`) — *Tarraconian: **Magistrat van Airyuch****
+  * [Non-HRE] **Barsuki** (`c_barsuki`) — *Tarraconian: **Magistrat van Barsuki****
+  * [Non-HRE] **Jamantau** (`c_jamantau`) — *Tarraconian: **Magistrat van Jamantau****
 * **Duchy of Kökturgay** (`d_kokturgay`) — *0/3 in HRE*
-  * [Non-HRE] **Achu** (`c_achu`)
-  * [Non-HRE] **Jilali** (`c_jilali`)
-  * [Non-HRE] **Ulu Jitanjik** (`c_ulu_jitanjik`)
+  * [Non-HRE] **Achu** (`c_achu`) — *Tarraconian: **Magistrat van Atschu****
+  * [Non-HRE] **Jilali** (`c_jilali`) — *Tarraconian: **Magistrat van Jilali****
+  * [Non-HRE] **Ulu Jitanjik** (`c_ulu_jitanjik`) — *Tarraconian: **Magistrat van Ulu-Dschilantschîch****
 * **Duchy of Qyzylsaryarka** (`d_qyzylsaryarka`) — *0/3 in HRE*
-  * [Non-HRE] **Eghiz Kara** (`c_eghiz_kara`)
-  * [Non-HRE] **Jilanjik** (`c_jilanjik`)
-  * [Non-HRE] **Ulytau** (`c_ulytau`)
+  * [Non-HRE] **Eghiz Kara** (`c_eghiz_kara`) — *Tarraconian: **Magistrat van Eghiz Kare****
+  * [Non-HRE] **Jilanjik** (`c_jilanjik`) — *Tarraconian: **Magistrat van Dschilantschîch****
+  * [Non-HRE] **Ulytau** (`c_ulytau`) — *Tarraconian: **Magistrat van Ulytau****
 
 ---
 
@@ -4369,25 +4369,25 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Chengde** (`d_chengde`) — *0/4 in HRE*
-  * [Non-HRE] **Jizhou** (`c_jizhou`)
-  * [Non-HRE] **Shenzhou** (`c_shenzhou_1`)
-  * [Non-HRE] **Zhaozhou** (`c_zhaozhou`)
-  * [Non-HRE] **Zhenzhou** (`c_zhenzhou`)
+  * [Non-HRE] **Jizhou** (`c_jizhou`) — *Tarraconian: **Magistrat van Dschidschou****
+  * [Non-HRE] **Shenzhou** (`c_shenzhou_1`) — *Tarraconian: **Magistrat van Schendschou****
+  * [Non-HRE] **Zhaozhou** (`c_zhaozhou`) — *Tarraconian: **Magistrat van Dschaodschou****
+  * [Non-HRE] **Zhenzhou** (`c_zhenzhou`) — *Tarraconian: **Magistrat van Dschendschou****
 * **Duchy of Cangjing** (`d_cangjing`) — *0/3 in HRE*
-  * [Non-HRE] **Cangzhou** (`c_cangzhou`)
-  * [Non-HRE] **Dezhou** (`c_dezhou`)
-  * [Non-HRE] **Dizhou** (`c_dizhou`)
+  * [Non-HRE] **Cangzhou** (`c_cangzhou`) — *Tarraconian: **Magistrat van Zangdschou****
+  * [Non-HRE] **Dezhou** (`c_dezhou`) — *Tarraconian: **Magistrat van Dedschou****
+  * [Non-HRE] **Dizhou** (`c_dizhou`) — *Tarraconian: **Magistrat van Didschou****
 * **Duchy of Weibo** (`d_weibo`) — *0/3 in HRE*
-  * [Non-HRE] **Beizhou** (`c_beizhou`)
-  * [Non-HRE] **Bozhou** (`c_bozhou_1`)
-  * [Non-HRE] **Weizhou** (`c_weizhou`)
+  * [Non-HRE] **Beizhou** (`c_beizhou`) — *Tarraconian: **Magistrat van Beidschou****
+  * [Non-HRE] **Bozhou** (`c_bozhou_1`) — *Tarraconian: **Magistrat van Bodschou****
+  * [Non-HRE] **Weizhou** (`c_weizhou`) — *Tarraconian: **Magistrat van Weidschou****
 * **Duchy of Xingming** (`d_xingming`) — *0/3 in HRE*
-  * [Non-HRE] **Mingzhou** (`c_mingzhou`)
-  * [Non-HRE] **Xiangzhou** (`c_xiangzhou`)
-  * [Non-HRE] **Xingzhou** (`c_xingzhou`)
+  * [Non-HRE] **Mingzhou** (`c_mingzhou`) — *Tarraconian: **Magistrat van Mingdschou****
+  * [Non-HRE] **Xiangzhou** (`c_xiangzhou`) — *Tarraconian: **Magistrat van Schiangdschou****
+  * [Non-HRE] **Xingzhou** (`c_xingzhou`) — *Tarraconian: **Magistrat van Schingdschou****
 * **Duchy of Heyang** (`d_heyang`) — *0/2 in HRE*
-  * [Non-HRE] **Huaizhou** (`c_huaizhou`)
-  * [Non-HRE] **Weizhou** (`c_weizhou_1`)
+  * [Non-HRE] **Huaizhou** (`c_huaizhou`) — *Tarraconian: **Magistrat van Huaidschou****
+  * [Non-HRE] **Weizhou** (`c_weizhou_1`) — *Tarraconian: **Magistrat van Weidschou****
 
 ---
 
@@ -4395,25 +4395,25 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Biansong** (`d_biansong`) — *0/5 in HRE*
-  * [Non-HRE] **Bianzhou** (`c_bianzhou`)
-  * [Non-HRE] **Bozhou** (`c_bozhou`)
-  * [Non-HRE] **Shanzhou** (`c_shanzhou`)
-  * [Non-HRE] **Songzhou** (`c_songzhou`)
-  * [Non-HRE] **Yingzhou** (`c_yingzhou`)
+  * [Non-HRE] **Bianzhou** (`c_bianzhou`) — *Tarraconian: **Magistrat van Biandschou****
+  * [Non-HRE] **Bozhou** (`c_bozhou`) — *Tarraconian: **Magistrat van Bodschou****
+  * [Non-HRE] **Shanzhou** (`c_shanzhou`) — *Tarraconian: **Magistrat van Schandschou****
+  * [Non-HRE] **Songzhou** (`c_songzhou`) — *Tarraconian: **Magistrat van Songdschou****
+  * [Non-HRE] **Yingzhou** (`c_yingzhou`) — *Tarraconian: **Magistrat van Jingdschou****
 * **Duchy of Chenxu** (`d_chenxu`) — *0/4 in HRE*
-  * [Non-HRE] **Caizhou** (`c_caizhou`)
-  * [Non-HRE] **Chenzhou** (`c_huaining`)
-  * [Non-HRE] **Shenzhou** (`c_shenzhou`)
-  * [Non-HRE] **Xuzhou** (`c_yingchuan`)
+  * [Non-HRE] **Caizhou** (`c_caizhou`) — *Tarraconian: **Magistrat van Zaidschou****
+  * [Non-HRE] **Chenzhou** (`c_huaining`) — *Tarraconian: **Magistrat van Tschendschou****
+  * [Non-HRE] **Shenzhou** (`c_shenzhou`) — *Tarraconian: **Magistrat van Schendschou****
+  * [Non-HRE] **Xuzhou** (`c_yingchuan`) — *Tarraconian: **Magistrat van Schudschou****
 * **Duchy of Dongji** (`d_dongji`) — *0/2 in HRE*
-  * [Non-HRE] **Henan** (`c_henan`)
-  * [Non-HRE] **Ruzhou** (`c_ruzhou`)
+  * [Non-HRE] **Henan** (`c_henan`) — *Tarraconian: **Magistrat van Henan****
+  * [Non-HRE] **Ruzhou** (`c_ruzhou`) — *Tarraconian: **Magistrat van Rudschou****
 * **Duchy of Shanguo** (`d_shanguo`) — *0/2 in HRE*
-  * [Non-HRE] **Guozhou** (`c_guozhou`)
-  * [Non-HRE] **Shanzhou** (`c_shanzhou_2`)
+  * [Non-HRE] **Guozhou** (`c_guozhou`) — *Tarraconian: **Magistrat van Guodschou****
+  * [Non-HRE] **Shanzhou** (`c_shanzhou_2`) — *Tarraconian: **Magistrat van Schandschou****
 * **Duchy of Zhenghua** (`d_zhenghua`) — *0/2 in HRE*
-  * [Non-HRE] **Huazhou** (`c_huazhou`)
-  * [Non-HRE] **Zhengzhou** (`c_zhengzhou`)
+  * [Non-HRE] **Huazhou** (`c_huazhou`) — *Tarraconian: **Magistrat van Huadschou****
+  * [Non-HRE] **Zhengzhou** (`c_zhengzhou`) — *Tarraconian: **Magistrat van Dschengdschou****
 
 ---
 
@@ -4421,24 +4421,24 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Dzayül** (`d_dzayul`) — *0/4 in HRE*
-  * [Non-HRE] **Golag** (`c_golag`)
-  * [Non-HRE] **Rima** (`c_rima`)
-  * [Non-HRE] **Roing** (`c_roing`)
-  * [Non-HRE] **Tezu** (`c_tezu`)
+  * [Non-HRE] **Golag** (`c_golag`) — *Tarraconian: **Magistrat van Golach****
+  * [Non-HRE] **Rima** (`c_rima`) — *Tarraconian: **Magistrat van Rime****
+  * [Non-HRE] **Roing** (`c_roing`) — *Tarraconian: **Magistrat van Roing****
+  * [Non-HRE] **Tezu** (`c_tezu`) — *Tarraconian: **Magistrat van Tezu****
 * **Duchy of Lhoyul** (`d_lhoyul`) — *0/4 in HRE*
-  * [Non-HRE] **Along** (`c_along`)
-  * [Non-HRE] **Itanagar** (`c_itanagar`)
-  * [Non-HRE] **Mainling** (`c_mainling`)
-  * [Non-HRE] **Pemako** (`c_pemako`)
+  * [Non-HRE] **Along** (`c_along`) — *Tarraconian: **Magistrat van Along****
+  * [Non-HRE] **Itanagar** (`c_itanagar`) — *Tarraconian: **Magistrat van Itanagar****
+  * [Non-HRE] **Mainling** (`c_mainling`) — *Tarraconian: **Magistrat van Mainling****
+  * [Non-HRE] **Pemako** (`c_pemako`) — *Tarraconian: **Magistrat van Pemakô****
 * **Duchy of Paro** (`d_paro`) — *0/4 in HRE*
-  * [Non-HRE] **Chungthang** (`c_chungthang`)
-  * [Non-HRE] **Daramdin** (`c_daramdin`)
-  * [Non-HRE] **Paro** (`c_paro`)
-  * [Non-HRE] **Punakha** (`c_punakha`)
+  * [Non-HRE] **Chungthang** (`c_chungthang`) — *Tarraconian: **Magistrat van Tschungthang****
+  * [Non-HRE] **Daramdin** (`c_daramdin`) — *Tarraconian: **Magistrat van Daramdin****
+  * [Non-HRE] **Paro** (`c_paro`) — *Tarraconian: **Magistrat van Parô****
+  * [Non-HRE] **Punakha** (`c_punakha`) — *Tarraconian: **Magistrat van Punakhe****
 * **Duchy of Bumthang** (`d_bumthang`) — *0/3 in HRE*
-  * [Non-HRE] **Bumthang** (`c_bumthang`)
-  * [Non-HRE] **Kurmaed** (`c_kurmaed`)
-  * [Non-HRE] **Trongsa** (`c_trongsa`)
+  * [Non-HRE] **Bumthang** (`c_bumthang`) — *Tarraconian: **Magistrat van Bumthang****
+  * [Non-HRE] **Kurmaed** (`c_kurmaed`) — *Tarraconian: **Magistrat van Kurmaet****
+  * [Non-HRE] **Trongsa** (`c_trongsa`) — *Tarraconian: **Magistrat van Trongse****
 
 ---
 
@@ -4446,25 +4446,25 @@
 * **De Jure Empire:** Khazaria (`e_caspian-pontic_steppe`)
 
 * **Duchy of Mugodzhar Hills** (`d_mugodzhar_hills`) — *0/4 in HRE*
-  * [Non-HRE] **Jitikul** (`c_jitikul`)
-  * [Non-HRE] **Kos Uba** (`c_kos_uba`)
-  * [Non-HRE] **Kosh Kurbay** (`c_kosh_kurbay`)
-  * [Non-HRE] **Mugodzhar Hills** (`c_mugodzhar_hills`)
+  * [Non-HRE] **Jitikul** (`c_jitikul`) — *Tarraconian: **Magistrat van Dschetiköl****
+  * [Non-HRE] **Kos Uba** (`c_kos_uba`) — *Tarraconian: **Magistrat van Kos Ube****
+  * [Non-HRE] **Kosh Kurbay** (`c_kosh_kurbay`) — *Tarraconian: **Magistrat van Kosch Kurbay****
+  * [Non-HRE] **Mugodzhar Hills** (`c_mugodzhar_hills`) — *Tarraconian: **Magistrat van Mugodschar Hills****
 * **Duchy of Atbasar** (`d_atbasar`) — *0/3 in HRE*
-  * [Non-HRE] **Atbasar** (`c_atbasar`)
-  * [Non-HRE] **Jangyztau** (`c_jangyztau`)
-  * [Non-HRE] **Kafa** (`c_kafa`)
+  * [Non-HRE] **Atbasar** (`c_atbasar`) — *Tarraconian: **Magistrat van Atbasar****
+  * [Non-HRE] **Jangyztau** (`c_jangyztau`) — *Tarraconian: **Magistrat van Dschangîstouwe****
+  * [Non-HRE] **Kafa** (`c_kafa`) — *Tarraconian: **Magistrat van Kafe****
 * **Duchy of Kurgan** (`d_kurgan`) — *0/3 in HRE*
-  * [Non-HRE] **Kostanay** (`c_kostanay`)
-  * [Non-HRE] **Kurgan** (`c_kurgan`)
-  * [Non-HRE] **Sabakyul** (`c_sabakyul`)
+  * [Non-HRE] **Kostanay** (`c_kostanay`) — *Tarraconian: **Magistrat van Kostanay****
+  * [Non-HRE] **Kurgan** (`c_kurgan`) — *Tarraconian: **Magistrat van Kurgan****
+  * [Non-HRE] **Sabakyul** (`c_sabakyul`) — *Tarraconian: **Magistrat van Sabakkul****
 * **Duchy of Kush-Murun** (`d_kush-murun`) — *0/3 in HRE*
-  * [Non-HRE] **Abugan** (`c_abugan`)
-  * [Non-HRE] **Karasu** (`c_karasu`)
-  * [Non-HRE] **Kush-Murun** (`c_kush-murun`)
+  * [Non-HRE] **Abugan** (`c_abugan`) — *Tarraconian: **Magistrat van Abugan****
+  * [Non-HRE] **Karasu** (`c_karasu`) — *Tarraconian: **Magistrat van Karasu****
+  * [Non-HRE] **Kush-Murun** (`c_kush-murun`) — *Tarraconian: **Magistrat van Kusch-Murun****
 * **Duchy of Tobol-Ishim** (`d_tobol-ishim`) — *0/2 in HRE*
-  * [Non-HRE] **Kyzylzhar** (`c_petropavl`)
-  * [Non-HRE] **Vargashi** (`c_vargashi`)
+  * [Non-HRE] **Kyzylzhar** (`c_petropavl`) — *Tarraconian: **Magistrat van Kyzyldschar****
+  * [Non-HRE] **Vargashi** (`c_vargashi`) — *Tarraconian: **Magistrat van Wargaschi****
 
 ---
 
@@ -4472,24 +4472,24 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Ajmer** (`d_ajmer`) — *0/5 in HRE*
-  * [Non-HRE] **Ajayameru** (`c_ajayameru`)
-  * [Non-HRE] **Gwalior** (`c_gwalior`)
-  * [Non-HRE] **Ranthambore** (`c_ranthambore`)
-  * [Non-HRE] **Sakarāi** (`c_sakarai`)
-  * [Non-HRE] **Vairata** (`c_vairata`)
+  * [Non-HRE] **Ajayameru** (`c_ajayameru`) — *Tarraconian: **Magistrat van Adschajameru****
+  * [Non-HRE] **Gwalior** (`c_gwalior`) — *Tarraconian: **Magistrat van Gwalior****
+  * [Non-HRE] **Ranthambore** (`c_ranthambore`) — *Tarraconian: **Magistrat van Ranthambore****
+  * [Non-HRE] **Sakarāi** (`c_sakarai`) — *Tarraconian: **Magistrat van Sakarâi****
+  * [Non-HRE] **Vairata** (`c_vairata`) — *Tarraconian: **Magistrat van Wairate****
 * **Duchy of Maru** (`d_maru`) — *0/4 in HRE*
-  * [Non-HRE] **Godwad** (`c_godwad`)
-  * [Non-HRE] **Mandavyapura** (`c_mandavyapura`)
-  * [Non-HRE] **Medantaka** (`c_medantaka`)
-  * [Non-HRE] **Naddūla** (`c_naddula`)
+  * [Non-HRE] **Godwad** (`c_godwad`) — *Tarraconian: **Magistrat van Godwat****
+  * [Non-HRE] **Mandavyapura** (`c_mandavyapura`) — *Tarraconian: **Magistrat van Mandawyapure****
+  * [Non-HRE] **Medantaka** (`c_medantaka`) — *Tarraconian: **Magistrat van Medantake****
+  * [Non-HRE] **Naddūla** (`c_naddula`) — *Tarraconian: **Magistrat van Naddûle****
 * **Duchy of Jangladesh** (`d_jangladesh`) — *0/3 in HRE*
-  * [Non-HRE] **Nagauda** (`c_nagauda`)
-  * [Non-HRE] **Reni** (`c_reni`)
-  * [Non-HRE] **Vikramapura** (`c_vikramapura`)
+  * [Non-HRE] **Nagauda** (`c_nagauda`) — *Tarraconian: **Magistrat van Nagaude****
+  * [Non-HRE] **Reni** (`c_reni`) — *Tarraconian: **Magistrat van Reni****
+  * [Non-HRE] **Vikramapura** (`c_vikramapura`) — *Tarraconian: **Magistrat van Wikramapure****
 * **Duchy of Medapata** (`d_medapata`) — *0/3 in HRE*
-  * [Non-HRE] **Chitrakut** (`c_chitrakut`)
-  * [Non-HRE] **Kota** (`c_kota`)
-  * [Non-HRE] **Medapata** (`c_medapata`)
+  * [Non-HRE] **Chitrakut** (`c_chitrakut`) — *Tarraconian: **Magistrat van Tschitrakut****
+  * [Non-HRE] **Kota** (`c_kota`) — *Tarraconian: **Magistrat van Kote****
+  * [Non-HRE] **Medapata** (`c_medapata`) — *Tarraconian: **Magistrat van Medapate****
 
 ---
 
@@ -4497,22 +4497,22 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Saurashtra** (`d_saurashtra`) — *0/4 in HRE*
-  * [Non-HRE] **Bhumilka** (`c_bhumilka`)
-  * [Non-HRE] **Somnath** (`c_somnath`)
-  * [Non-HRE] **Valabhi** (`c_valabhi`)
-  * [Non-HRE] **Vardhamāna** (`c_vardhamana`)
+  * [Non-HRE] **Bhumilka** (`c_bhumilka`) — *Tarraconian: **Magistrat van Bumilke****
+  * [Non-HRE] **Somnath** (`c_somnath`) — *Tarraconian: **Magistrat van Somnath****
+  * [Non-HRE] **Valabhi** (`c_valabhi`) — *Tarraconian: **Magistrat van Walabhi****
+  * [Non-HRE] **Vardhamāna** (`c_vardhamana`) — *Tarraconian: **Magistrat van Wardhamâne****
 * **Duchy of Anartta** (`d_anartta`) — *0/3 in HRE*
-  * [Non-HRE] **Dhamalpur** (`c_dhamalpur`)
-  * [Non-HRE] **Dvaraka** (`c_dvaraka`)
-  * [Non-HRE] **Kutch** (`c_kutch`)
+  * [Non-HRE] **Dhamalpur** (`c_dhamalpur`) — *Tarraconian: **Magistrat van Damalpur****
+  * [Non-HRE] **Dvaraka** (`c_dvaraka`) — *Tarraconian: **Magistrat van Dwarake****
+  * [Non-HRE] **Kutch** (`c_kutch`) — *Tarraconian: **Magistrat van Kutsch****
 * **Duchy of Gurjara Mandala** (`d_gurjara_mandala`) — *0/3 in HRE*
-  * [Non-HRE] **Khetaka** (`c_khetaka`)
-  * [Non-HRE] **Mohadavasaka** (`c_mohadavasaka`)
-  * [Non-HRE] **Sarasvata Mandala** (`c_sarasvata_mandala`)
+  * [Non-HRE] **Khetaka** (`c_khetaka`) — *Tarraconian: **Magistrat van Chetake****
+  * [Non-HRE] **Mohadavasaka** (`c_mohadavasaka`) — *Tarraconian: **Magistrat van Mohadawasake****
+  * [Non-HRE] **Sarasvata Mandala** (`c_sarasvata_mandala`) — *Tarraconian: **Magistrat van Saraswate-Mandale****
 * **Duchy of Lata** (`d_lata`) — *0/3 in HRE*
-  * [Non-HRE] **Daman** (`c_daman`)
-  * [Non-HRE] **Navasarika** (`c_navasarika`)
-  * [Non-HRE] **Vadodara** (`c_vadodara`)
+  * [Non-HRE] **Daman** (`c_daman`) — *Tarraconian: **Magistrat van Daman****
+  * [Non-HRE] **Navasarika** (`c_navasarika`) — *Tarraconian: **Magistrat van Nawasarike****
+  * [Non-HRE] **Vadodara** (`c_vadodara`) — *Tarraconian: **Magistrat van Wadodare****
 
 ---
 
@@ -4520,22 +4520,22 @@
 * **De Jure Empire:** Kanem-Bornu (`e_kanem_bornu`)
 
 * **Duchy of Baguirmi** (`d_baguirmi`) — *0/6 in HRE*
-  * [Non-HRE] **Baguirmi** (`c_baguirmi`)
-  * [Non-HRE] **Banre** (`c_banre`)
-  * [Non-HRE] **Kuku** (`c_kuku`)
-  * [Non-HRE] **Masa** (`c_masa`)
-  * [Non-HRE] **Tendukheda** (`c_barma`)
-  * [Non-HRE] **Tumak** (`c_tumak`)
+  * [Non-HRE] **Baguirmi** (`c_baguirmi`) — *Tarraconian: **Magistrat van Baguirmi****
+  * [Non-HRE] **Banre** (`c_banre`) — *Tarraconian: **Magistrat van Banre****
+  * [Non-HRE] **Kuku** (`c_kuku`) — *Tarraconian: **Magistrat van Kuku****
+  * [Non-HRE] **Masa** (`c_masa`) — *Tarraconian: **Magistrat van Mase****
+  * [Non-HRE] **Tendukheda** (`c_barma`) — *Tarraconian: **Magistrat van Tendukhede****
+  * [Non-HRE] **Tumak** (`c_tumak`) — *Tarraconian: **Magistrat van Tumach****
 * **Duchy of Wandala** (`d_wandala`) — *0/5 in HRE*
-  * [Non-HRE] **Diamare** (`c_diamare`)
-  * [Non-HRE] **Garoua** (`c_garoua`)
-  * [Non-HRE] **Kera** (`c_kera`)
-  * [Non-HRE] **Kotoko** (`c_kotoko`)
-  * [Non-HRE] **Wandala** (`c_wandala`)
+  * [Non-HRE] **Diamare** (`c_diamare`) — *Tarraconian: **Magistrat van Diamare****
+  * [Non-HRE] **Garoua** (`c_garoua`) — *Tarraconian: **Magistrat van Garoue****
+  * [Non-HRE] **Kera** (`c_kera`) — *Tarraconian: **Magistrat van Kere****
+  * [Non-HRE] **Kotoko** (`c_kotoko`) — *Tarraconian: **Magistrat van Kotokô****
+  * [Non-HRE] **Wandala** (`c_wandala`) — *Tarraconian: **Magistrat van Wandale****
 * **Duchy of Salamat** (`d_salamat`) — *0/1 in HRE*
-  * [Non-HRE] **Dár Rashíd** (`c_dar_rashid`)
-* **Duchy of X Script 3271** (`x_script_3271`) — *0/1 in HRE*
-  * [Non-HRE] **Salamat** (`c_salamat`)
+  * [Non-HRE] **Dár Rashíd** (`c_dar_rashid`) — *Tarraconian: **Magistrat van Dâr Raschît****
+* **Duchy of Salamat** (`x_script_3271`) — *0/1 in HRE*
+  * [Non-HRE] **Salamat** (`c_salamat`) — *Tarraconian: **Magistrat van Salamat****
 
 ---
 
@@ -4543,21 +4543,21 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Lhasa** (`d_lhasa`) — *0/5 in HRE*
-  * [Non-HRE] **Damxung** (`c_damxung`)
-  * [Non-HRE] **Gyama** (`c_gyama`)
-  * [Non-HRE] **Lhasa** (`c_lhasa`)
-  * [Non-HRE] **Lhünzhub** (`c_lhunzhub`)
-  * [Non-HRE] **Nyêmo** (`c_nyemo`)
+  * [Non-HRE] **Damxung** (`c_damxung`) — *Tarraconian: **Magistrat van Damschung****
+  * [Non-HRE] **Gyama** (`c_gyama`) — *Tarraconian: **Magistrat van Gyame****
+  * [Non-HRE] **Lhasa** (`c_lhasa`) — *Tarraconian: **Magistrat van Lhase****
+  * [Non-HRE] **Lhünzhub** (`c_lhunzhub`) — *Tarraconian: **Magistrat van Lhündschup****
+  * [Non-HRE] **Nyêmo** (`c_nyemo`) — *Tarraconian: **Magistrat van Nyêmô****
 * **Duchy of Yarlung** (`d_yarlung`) — *0/5 in HRE*
-  * [Non-HRE] **Comai** (`c_comai`)
-  * [Non-HRE] **Gyaca** (`c_gyaca`)
-  * [Non-HRE] **Nagarzê** (`c_nagarze`)
-  * [Non-HRE] **Nang** (`c_nang`)
-  * [Non-HRE] **Zêtang** (`c_zetang`)
+  * [Non-HRE] **Comai** (`c_comai`) — *Tarraconian: **Magistrat van Zomai****
+  * [Non-HRE] **Gyaca** (`c_gyaca`) — *Tarraconian: **Magistrat van Gyatze****
+  * [Non-HRE] **Nagarzê** (`c_nagarze`) — *Tarraconian: **Magistrat van Nagartzê****
+  * [Non-HRE] **Nang** (`c_nang`) — *Tarraconian: **Magistrat van Nang****
+  * [Non-HRE] **Zêtang** (`c_zetang`) — *Tarraconian: **Magistrat van Sêtang****
 * **Duchy of Nagqu** (`d_nagchu`) — *0/3 in HRE*
-  * [Non-HRE] **Baingoin** (`c_baingoin`)
-  * [Non-HRE] **Lhari** (`c_lhari`)
-  * [Non-HRE] **Nagqu** (`c_nagchu`)
+  * [Non-HRE] **Baingoin** (`c_baingoin`) — *Tarraconian: **Magistrat van Baingoin****
+  * [Non-HRE] **Lhari** (`c_lhari`) — *Tarraconian: **Magistrat van Lhari****
+  * [Non-HRE] **Nagqu** (`c_nagchu`) — *Tarraconian: **Magistrat van Nagtschu****
 
 ---
 
@@ -4565,23 +4565,23 @@
 * **De Jure Empire:** Rajasthan (`e_rajastan`)
 
 * **Duchy of Akara-Dasarna** (`d_akara_dasarna`) — *0/4 in HRE*
-  * [Non-HRE] **Candhoba** (`c_candhoba`)
-  * [Non-HRE] **Chanderi** (`c_chanderi`)
-  * [Non-HRE] **Sarangpur** (`c_sarangpur`)
-  * [Non-HRE] **Vidisa** (`c_vidisa`)
+  * [Non-HRE] **Candhoba** (`c_candhoba`) — *Tarraconian: **Magistrat van Zandhobe****
+  * [Non-HRE] **Chanderi** (`c_chanderi`) — *Tarraconian: **Magistrat van Tschanderi****
+  * [Non-HRE] **Sarangpur** (`c_sarangpur`) — *Tarraconian: **Magistrat van Sarangpur****
+  * [Non-HRE] **Vidisa** (`c_vidisa`) — *Tarraconian: **Magistrat van Widise****
 * **Duchy of Anupa** (`d_anupa`) — *0/4 in HRE*
-  * [Non-HRE] **Asirgarh** (`c_asirgarh`)
-  * [Non-HRE] **Burhanpur** (`c_burhanpur`)
-  * [Non-HRE] **Mandapika** (`c_mandapika`)
-  * [Non-HRE] **Thalner** (`c_thalner`)
+  * [Non-HRE] **Asirgarh** (`c_asirgarh`) — *Tarraconian: **Magistrat van Asirgar****
+  * [Non-HRE] **Burhanpur** (`c_burhanpur`) — *Tarraconian: **Magistrat van Burhanpur****
+  * [Non-HRE] **Mandapika** (`c_mandapika`) — *Tarraconian: **Magistrat van Mandapike****
+  * [Non-HRE] **Thalner** (`c_thalner`) — *Tarraconian: **Magistrat van Talner****
 * **Duchy of Avanti** (`d_dadhipadra`) — *0/1 in HRE*
-  * [Non-HRE] **Dhara** (`c_dhara`)
-* **Duchy of X Script 1314** (`x_script_1314`) — *0/1 in HRE*
-  * [Non-HRE] **Dadhipadra** (`c_dadhipadra`)
-* **Duchy of X Script 3406** (`x_script_3406`) — *0/1 in HRE*
-  * [Non-HRE] **Ujjayini** (`c_ujjayini`)
-* **Duchy of X Script 3434** (`x_script_3434`) — *0/1 in HRE*
-  * [Non-HRE] **Dasapura** (`c_dasapura`)
+  * [Non-HRE] **Dhara** (`c_dhara`) — *Tarraconian: **Magistrat van Dare****
+* **Duchy of Dadhipadra** (`x_script_1314`) — *0/1 in HRE*
+  * [Non-HRE] **Dadhipadra** (`c_dadhipadra`) — *Tarraconian: **Magistrat van Dadhipadre****
+* **Duchy of Ujjayini** (`x_script_3406`) — *0/1 in HRE*
+  * [Non-HRE] **Ujjayini** (`c_ujjayini`) — *Tarraconian: **Magistrat van Udschajinî****
+* **Duchy of Dasapura** (`x_script_3434`) — *0/1 in HRE*
+  * [Non-HRE] **Dasapura** (`c_dasapura`) — *Tarraconian: **Magistrat van Dasapure****
 
 ---
 
@@ -4589,20 +4589,20 @@
 * **De Jure Empire:** Mali (`e_mali`)
 
 * **Duchy of Yatenga** (`d_yatenga`) — *0/4 in HRE*
-  * [Non-HRE] **Bandiagara** (`c_bandiagara`)
-  * [Non-HRE] **Gondo** (`c_gondo`)
-  * [Non-HRE] **Seno** (`c_seno`)
-  * [Non-HRE] **Yatenga** (`c_yatenga`)
+  * [Non-HRE] **Bandiagara** (`c_bandiagara`) — *Tarraconian: **Magistrat van Bandiagare****
+  * [Non-HRE] **Gondo** (`c_gondo`) — *Tarraconian: **Magistrat van Gondô****
+  * [Non-HRE] **Seno** (`c_seno`) — *Tarraconian: **Magistrat van Senô****
+  * [Non-HRE] **Yatenga** (`c_yatenga`) — *Tarraconian: **Magistrat van Jatenge****
 * **Duchy of Lower Gurma** (`d_lower_gurma`) — *0/3 in HRE*
-  * [Non-HRE] **Bura** (`c_bura`)
-  * [Non-HRE] **Gurma** (`c_gurma`)
-  * [Non-HRE] **Say** (`c_say`)
+  * [Non-HRE] **Bura** (`c_bura`) — *Tarraconian: **Magistrat van Bure****
+  * [Non-HRE] **Gurma** (`c_gurma`) — *Tarraconian: **Magistrat van Gurme****
+  * [Non-HRE] **Say** (`c_say`) — *Tarraconian: **Magistrat van Say****
 * **Duchy of Upper Gurma** (`d_upper_gurma`) — *0/3 in HRE*
-  * [Non-HRE] **Kurumba** (`c_kurumba`)
-  * [Non-HRE] **Oudalan** (`c_oudalan`)
-  * [Non-HRE] **Upper Gurma** (`c_upper_gurma`)
-* **Duchy of X Script 2703** (`x_script_2703`) — *0/1 in HRE*
-  * [Non-HRE] **Biun** (`c_biun`)
+  * [Non-HRE] **Kurumba** (`c_kurumba`) — *Tarraconian: **Magistrat van Kurumbe****
+  * [Non-HRE] **Oudalan** (`c_oudalan`) — *Tarraconian: **Magistrat van Oudalan****
+  * [Non-HRE] **Upper Gurma** (`c_upper_gurma`) — *Tarraconian: **Magistrat van Ôver-Gurme****
+* **Duchy of Biun** (`x_script_2703`) — *0/1 in HRE*
+  * [Non-HRE] **Biun** (`c_biun`) — *Tarraconian: **Magistrat van Biun****
 
 ---
 
@@ -4610,18 +4610,18 @@
 * **De Jure Empire:** Tartaria (`e_tartaria`)
 
 * **Duchy of Salair** (`d_salair`) — *0/5 in HRE*
-  * [Non-HRE] **Biia** (`c_biia`)
-  * [Non-HRE] **Kyin** (`c_kyin`)
-  * [Non-HRE] **Ob** (`c_ob`)
-  * [Non-HRE] **Sorok** (`c_sorok`)
-  * [Non-HRE] **Torema** (`c_torema`)
+  * [Non-HRE] **Biia** (`c_biia`) — *Tarraconian: **Magistrat van Bije****
+  * [Non-HRE] **Kyin** (`c_kyin`) — *Tarraconian: **Magistrat van Kyin****
+  * [Non-HRE] **Ob** (`c_ob`) — *Tarraconian: **Magistrat van Op****
+  * [Non-HRE] **Sorok** (`c_sorok`) — *Tarraconian: **Magistrat van Soroch****
+  * [Non-HRE] **Torema** (`c_torema`) — *Tarraconian: **Magistrat van Toreme****
 * **Duchy of Aley** (`d_aley`) — *0/3 in HRE*
-  * [Non-HRE] **Aley** (`c_aley`)
-  * [Non-HRE] **Kondoma** (`c_kondoma`)
-  * [Non-HRE] **Korgon** (`c_korgon`)
+  * [Non-HRE] **Aley** (`c_aley`) — *Tarraconian: **Magistrat van Aley****
+  * [Non-HRE] **Kondoma** (`c_kondoma`) — *Tarraconian: **Magistrat van Kondome****
+  * [Non-HRE] **Korgon** (`c_korgon`) — *Tarraconian: **Magistrat van Korgon****
 * **Duchy of Altaishan** (`d_altaishan`) — *0/2 in HRE*
-  * [Non-HRE] **Tavan Bogd** (`c_tavan_bogd`)
-  * [Non-HRE] **Terektai** (`c_terektai`)
+  * [Non-HRE] **Tavan Bogd** (`c_tavan_bogd`) — *Tarraconian: **Magistrat van Tawan Bogt****
+  * [Non-HRE] **Terektai** (`c_terektai`) — *Tarraconian: **Magistrat van Terektai****
 
 ---
 
@@ -4629,18 +4629,18 @@
 * **De Jure Empire:** Tibet (`e_tibet`)
 
 * **Duchy of Sa'gya** (`d_sagya`) — *0/4 in HRE*
-  * [Non-HRE] **Gyirong** (`c_gyirong`)
-  * [Non-HRE] **Kyakyaru** (`c_kyakyaru`)
-  * [Non-HRE] **Nyalam** (`c_nyalam`)
-  * [Non-HRE] **Sa'gya** (`c_sagya`)
+  * [Non-HRE] **Gyirong** (`c_gyirong`) — *Tarraconian: **Magistrat van Gyirong****
+  * [Non-HRE] **Kyakyaru** (`c_kyakyaru`) — *Tarraconian: **Magistrat van Kyakyaru****
+  * [Non-HRE] **Nyalam** (`c_nyalam`) — *Tarraconian: **Magistrat van Nyalam****
+  * [Non-HRE] **Sa'gya** (`c_sagya`) — *Tarraconian: **Magistrat van Sagye****
 * **Duchy of Ngamring** (`d_ngamring`) — *0/3 in HRE*
-  * [Non-HRE] **Cazê** (`c_caze`)
-  * [Non-HRE] **Kagar** (`c_kagar`)
-  * [Non-HRE] **Tongmoin** (`c_xaitongmoin`)
+  * [Non-HRE] **Cazê** (`c_caze`) — *Tarraconian: **Magistrat van Zazê****
+  * [Non-HRE] **Kagar** (`c_kagar`) — *Tarraconian: **Magistrat van Kagar****
+  * [Non-HRE] **Tongmoin** (`c_xaitongmoin`) — *Tarraconian: **Magistrat van Tongmoin****
 * **Duchy of Xigazê** (`d_xigaze`) — *0/3 in HRE*
-  * [Non-HRE] **Gyangzê** (`c_gyangze`)
-  * [Non-HRE] **Kangmar** (`c_kangmar`)
-  * [Non-HRE] **Xigazê** (`c_xigaze`)
+  * [Non-HRE] **Gyangzê** (`c_gyangze`) — *Tarraconian: **Magistrat van Gyangzê****
+  * [Non-HRE] **Kangmar** (`c_kangmar`) — *Tarraconian: **Magistrat van Kangmar****
+  * [Non-HRE] **Xigazê** (`c_xigaze`) — *Tarraconian: **Magistrat van Schigazê****
 
 ---
 
@@ -4648,13 +4648,13 @@
 * **De Jure Empire:** Mali (`e_mali`)
 
 * **Duchy of Jenne** (`d_jenne`) — *0/4 in HRE*
-  * [Non-HRE] **Bindugu** (`c_bindugu`)
-  * [Non-HRE] **Dodugu** (`c_dodugu`)
-  * [Non-HRE] **Jenne** (`c_jenne`)
-  * [Non-HRE] **Kurmina** (`c_kurmina`)
+  * [Non-HRE] **Bindugu** (`c_bindugu`) — *Tarraconian: **Magistrat van Bindugu****
+  * [Non-HRE] **Dodugu** (`c_dodugu`) — *Tarraconian: **Magistrat van Dodugu****
+  * [Non-HRE] **Jenne** (`c_jenne`) — *Tarraconian: **Magistrat van Dschenne****
+  * [Non-HRE] **Kurmina** (`c_kurmina`) — *Tarraconian: **Magistrat van Kurmine****
 * **Duchy of Bobo** (`d_bobo`) — *0/2 in HRE*
-  * [Non-HRE] **Bena** (`c_bena`)
-  * [Non-HRE] **Sikasso** (`c_sikasso`)
+  * [Non-HRE] **Bena** (`c_bena`) — *Tarraconian: **Magistrat van Bene****
+  * [Non-HRE] **Sikasso** (`c_sikasso`) — *Tarraconian: **Magistrat van Sikassô****
 
 ---
 
@@ -4662,9 +4662,9 @@
 * **De Jure Empire:** Andong (`e_andong`)
 
 * **Duchy of Lingxiguo** (`d_SW_lingxiguo`) — *0/3 in HRE*
-  * [Non-HRE] **Heiheguo** (`c_SW_heiheguo`)
-  * [Non-HRE] **Lingxiguo** (`c_SW_lingxiguo`)
-  * [Non-HRE] **Powoguo** (`c_SW_powoguo`)
+  * [Non-HRE] **Heiheguo** (`c_SW_heiheguo`) — *Tarraconian: **Magistrat van Heiheguô****
+  * [Non-HRE] **Lingxiguo** (`c_SW_lingxiguo`) — *Tarraconian: **Magistrat van Lingschiguô****
+  * [Non-HRE] **Powoguo** (`c_SW_powoguo`) — *Tarraconian: **Magistrat van Powoguô****
 
 ---
 
@@ -4739,7 +4739,7 @@ In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Arc
 | :--- | :--- | :--- | :--- |
 | **Archdiocese of York** | `d_et_york` | Everwîch (`c_north_riding`) | England (`k_england`) |
 | **Archdiocese of Canterbury** | `d_et_canterbury` | Kantelberch (`c_kent`) | England (`k_england`) |
-| **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | Redsch-in-Kalâbrjen (`c_reggio_calabria`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | Retsch-in-Kalâbrjen (`c_reggio_calabria`) | Byzantine Empire (`e_byzantium`) |
 | **Archdiocese of Constantinople** | `d_et_constantinople` | Konstantînôpel (`c_byzantion`) | Byzantine Empire (`e_byzantium`) |
 | **Archdiocese of Jerusalem** | `d_et_jerusalem` | Jerûsalêm (`c_jerusalem`) | Arabian Empire (`e_arabia`) |
 | **Archdiocese of Antioch** | `d_et_antioch` | Antjôchje (`c_antiocheia`) | Independent |

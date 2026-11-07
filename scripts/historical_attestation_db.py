@@ -16,7 +16,10 @@ Enforces the Streamlined 3-Tier Classification System & Burden of Proof on Antiq
   - Universal Rule: For all tiers, adapt the final name phonologically to Tarraconian.
 """
 
+import os
+from pathlib import Path
 import re
+import sys
 
 # Comprehensive registry of verified historical dates, classical civitates, and medieval foundations
 # Tuple format: (attestation_year, evidence_category, primary_source, is_geographic_stem, notes)
@@ -270,7 +273,13 @@ CLASSICAL_OR_ANCIENT_KINGDOMS = {
     'k_croatia', 'k_serbia', 'k_bulgaria', 'k_hungary', 'k_dacia',
     'k_east_francia', 'k_bavaria', 'k_saxony', 'k_frisia',
     'k_arabia', 'k_yemen', 'e_arabia', 'k_persia', 'k_khorasan', 'k_daylam', 'k_makran', 'k_transoxiana',
-    'k_denmark', 'k_norway', 'k_sweden'
+    'k_denmark', 'k_norway', 'k_sweden',
+    # Ancient Indian / Indus / Gandharan Civilizations
+    'k_punjab', 'k_sindh', 'k_kashmir', 'k_delhi', 'k_kabulistan', 'k_himalaya',
+    # Ancient East Asian & Silk Road Civilizations (Tang / Han / Ritsuryo / Three Kingdoms)
+    'k_yamato', 'k_azuma', 'k_tsukushi', 'k_hitakami',
+    'k_silla', 'k_goguryeo', 'k_baekje', 'k_balhae',
+    'k_hedong', 'k_daibei', 'k_youji', 'k_hexi', 'k_xia', 'k_amdo', 'k_khotan', 'k_syr_darya', 'k_oghuz_il'
 }
 
 
@@ -304,11 +313,11 @@ def resolve_county_attestation(county_key: str, county_data: dict, md_record: di
     if re.search(r"(gau|gebirge|tal|wald|fluv|am-|an-der-)", county_key + " " + name, re.I):
         return -500, 'ancient_hydronym', 'Classical Geography / Regional Toponym', True, 'Derived from ancient river, mountain, or topographic regional stem'
 
-    # 4. Classical Roman / Hellenistic / Carolingian Civitas Continuity
+    # 4. Classical Roman / Hellenistic / Carolingian / Ancient Civilizational Civitas Continuity
     # Valid only in recognized ancient provincial kingdoms and excluding late castle/colonial stems
     if kd in CLASSICAL_OR_ANCIENT_KINGDOMS:
         if not re.search(r"(burg|stein|grad|sk|novo|aleksandr|stanitsa|gorod)$", county_key):
-            return 100, 'classical_civitas', 'Roman / Hellenistic Provincial Civitas (Antonine Itinerary / Ptolemy / Notitia Dignitatum)', False, 'Ancient Mediterranean / European civitas or diocese with documented pre-867 continuity'
+            return 100, 'classical_civitas', 'Classical Roman / Hellenistic / Ancient Provincial Continuity', False, 'Ancient Mediterranean / European / Asian civitas, commandery, or provincial division with documented pre-867 continuity'
 
     # 5. Default Fallback under Burden of Proof on Antiquity
     return None, 'unverified_default', 'None', False, 'Lacks verified historical attestation prior to 867 AD; defaulted to Tier 3 under Burden of Proof on Antiquity'
@@ -335,6 +344,7 @@ def classify_county_tier(county_key: str, county_data: dict, md_record: dict = N
         tier_reason = f"Attested pre-867 ({att_yr} AD/BC) via {att_ev} ({att_src}): {att_notes}"
         return tier, tier_label, tier_reason, att_yr, att_ev, att_src, is_geo, att_notes
 
+
     # 2. Tier 2: Post-867 foundation based on hydronym, geographic, or tribal name
     if is_geo:
         tier = 2
@@ -353,4 +363,477 @@ def classify_county_tier(county_key: str, county_data: dict, md_record: dict = N
         f"hydronymic or tribal stem ({att_src}): {att_notes}. Must be resolved via Options A, B, or C."
     )
     return tier, tier_label, tier_reason, att_yr, att_ev, att_src, is_geo, att_notes
+
+
+def load_enriched_historical_db(repo_dir=None):
+    """
+    Builds the unified, fully enriched database of historical title resolutions,
+    combining the curated HISTORICAL_TITLE_DB, explicit regional historical registers,
+    archive/anachronistic_titles_1059.md, and tarraconian_titles_1059.md.
+    Enforces the Burden of Proof on Antiquity: zero unverified baronies allowed as Option A.
+    """
+    if repo_dir is None:
+        repo_dir = Path(__file__).resolve().parent.parent
+    else:
+        repo_dir = Path(repo_dir)
+
+    try:
+        from screen_phase3_titles import HISTORICAL_TITLE_DB as BASE_DB
+        enriched = dict(BASE_DB)
+    except Exception:
+        enriched = {}
+
+    REGIONAL_HISTORICAL = {
+        # Poland & Mazovia
+        "c_czerska": {
+            "opt_a_key": "b_czersk",
+            "opt_a_name": "Czersk",
+            "opt_a_type": "11th-c. Piast fortified stronghold and ducal capital of Mazovia",
+            "opt_b_hydronym": "Vistula River Reach",
+            "opt_b_lang": "West Slavic Toponym",
+            "opt_b_name": "Tschêrtzich",
+            "justification": "Czersk was the ancient Piast capital of southern Mazovia on the Vistula. Warsaw (b_warszawa) was a late c. 1300 foundation. Retains Czersk (Tschêrtzich).",
+            "rec_option": "Option A",
+            "tarr_name": "Tschêrtzich",
+            "tarr_adjective": "Tschêrtzicher"
+        },
+        "c_zakroczymska": {
+            "opt_a_key": "b_zakroczym",
+            "opt_a_name": "Zakroczym",
+            "opt_a_type": "11th-c. Piast fortified crossing on the Vistula",
+            "opt_b_hydronym": "Vistula River Crossing",
+            "opt_b_lang": "West Slavic Toponym",
+            "opt_b_name": "Sakrotschîm",
+            "justification": "Zakroczym was an 11th-c. Piast fortress guarding the Vistula-Narew confluence. Retains Zakroczym (Sakrotschîm).",
+            "rec_option": "Option A",
+            "tarr_name": "Sakrotschîm",
+            "tarr_adjective": "Sakrotschîmer"
+        },
+        "c_lomzynska": {
+            "opt_a_key": "None",
+            "opt_a_name": "Stara Łomża (Old Lomza)",
+            "opt_a_type": "9th-10th c. Mazovian fortified gord on the Narew River",
+            "opt_b_hydronym": "Narew River",
+            "opt_b_lang": "West Slavic Toponym",
+            "opt_b_name": "Altlomsche",
+            "justification": "Modern Łomża dates to the late 14th c.; the authentic early medieval Piast center was Stara Łomża on the Narew. Resolved to Altlomsche.",
+            "rec_option": "Option A",
+            "tarr_name": "Altlomsche",
+            "tarr_adjective": "Altlomscher"
+        },
+        "c_lubelska": {
+            "opt_a_key": "None",
+            "opt_a_name": "Bystrzyca Castle Hill",
+            "opt_a_type": "6th-8th c. Slavic settlement on Castle Hill on the Bystrzyca",
+            "opt_b_hydronym": "Bystrzyca River",
+            "opt_b_lang": "West Slavic Hydronym",
+            "opt_b_name": "Bistritze",
+            "justification": "Lublin was first attested in 1198. Castle Hill was settled by Slavs from the 6th c. on the Bystrzyca River. Resolved via Option B to Bistritze.",
+            "rec_option": "Option B",
+            "tarr_name": "Bistritze",
+            "tarr_adjective": "Bistritzer"
+        },
+        "c_leczycka": {
+            "opt_a_key": "None",
+            "opt_a_name": "Tum Gord (Old Łęczyca)",
+            "opt_a_type": "8th-10th c. Slavic fortified tribal gord on the Bzura River at Tum",
+            "opt_b_hydronym": "Bzura River (Btsûre)",
+            "opt_b_lang": "West Slavic Hydronym",
+            "opt_b_name": "Btsûre",
+            "justification": "New Łęczyca was chartered in the 13th c.; the authentic pre-867 center was the 8th-c. Slavic ringwall at Tum on the Bzura. Resolved to Tum-an-der-Btsûre.",
+            "rec_option": "Option A",
+            "tarr_name": "Tûm-an-der-Btsûre",
+            "tarr_adjective": "Tûmer"
+        },
+        "c_sieradzka": {
+            "opt_a_key": "None",
+            "opt_a_name": "Warta Gord",
+            "opt_a_type": "11th-c. Piast castellan gord on the Warta River",
+            "opt_b_hydronym": "Warta River (Warte)",
+            "opt_b_lang": "West Slavic Hydronym",
+            "opt_b_name": "Warte",
+            "justification": "Sieradz gord on the Warta river was first attested in 1136 in the Papal Bull of Gniezno. Resolved via Option B to Warte.",
+            "rec_option": "Option B",
+            "tarr_name": "Warte",
+            "tarr_adjective": "Wartisch"
+        },
+
+        # Finland & Karelia
+        "c_finland": {
+            "opt_a_key": "b_rikala",
+            "opt_a_name": "Rikala",
+            "opt_a_type": "Iron Age / Pre-867 Finnic trading center and hillfort on Halikko River",
+            "opt_b_hydronym": "Aura River (Aure)",
+            "opt_b_lang": "Finnic Hydronym",
+            "opt_b_name": "Aure-Flutz",
+            "justification": "Turku (b_turku) was founded c. 1229/1300 following the Swedish Crusade. The authentic pre-867 Iron Age trading center was Rikala (b_rikala). Resolved to Rikala (Rîkale).",
+            "rec_option": "Option A",
+            "tarr_name": "Rîkale",
+            "tarr_adjective": "Rîkaler"
+        },
+        "c_satakunta": {
+            "opt_a_key": "b_telja",
+            "opt_a_name": "Teljä",
+            "opt_a_type": "Iron Age / Pre-867 trading center and harbor on the Kokemäki River",
+            "opt_b_hydronym": "Kokemäki River (Kôkemäki)",
+            "opt_b_lang": "Finnic Hydronym",
+            "opt_b_name": "Teljê",
+            "justification": "Ulvila (b_ulvila) was chartered in 1365; Pori in 1558. The authentic pre-867 Satakunta trading center was Teljä (b_telja) on the Kokemäki River. Resolved to Teljä (Teljê).",
+            "rec_option": "Option A",
+            "tarr_name": "Teljê",
+            "tarr_adjective": "Teljêer"
+        },
+        "c_tavasts": {
+            "opt_a_key": "None",
+            "opt_a_name": "Vanaja (Häme Sacred Center)",
+            "opt_a_type": "Pre-867 Iron Age tribal sacred center and hillfort on Lake Vanajavesi",
+            "opt_b_hydronym": "Lake Vanajavesi (Wanâje)",
+            "opt_b_lang": "Finnic Hydronym",
+            "opt_b_name": "Wanâje",
+            "justification": "Hämeenlinna castle (b_hameenlinna) was founded c. 1250–1300 by Birger Jarl. The authentic pre-867 Tavastian tribal center was Vanaja on Lake Vanajavesi. Resolved to Vanaja (Wanâje).",
+            "rec_option": "Option A",
+            "tarr_name": "Wanâje",
+            "tarr_adjective": "Wanâjer"
+        },
+        "c_kainuu": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Kvenland (Kwênlant / Kainuu)",
+            "opt_b_lang": "Finnic / Old Norse Ethnonym",
+            "opt_b_name": "Kwênlant",
+            "justification": "Kajaani castle (b_kajaani) was built in 1604 by Charles IX. Kvenland (Kainuu) is attested in Ohthere c. 890. Resolved via Option B to Kvenland (Kwênlant).",
+            "rec_option": "Option B",
+            "tarr_name": "Kwênlant",
+            "tarr_adjective": "Kwênischer"
+        },
+        "c_nyland": {
+            "opt_a_key": "b_espoo",
+            "opt_a_name": "Espoo",
+            "opt_a_type": "Iron Age–12th c. Tavastian-Estonian seasonal coastal trading littoral",
+            "opt_b_hydronym": "Gulf of Finland Littoral",
+            "opt_b_lang": "Finnic Toponym",
+            "opt_b_name": "Nîlant",
+            "justification": "Nyland (Uusimaa) is a mid-13th c. Swedish colonial name; Porvoo (b_porvoo) dates to 1380. Resolved via pre-crusade coastal center Espoo (b_espoo) as Espô.",
+            "rec_option": "Option A",
+            "tarr_name": "Espô",
+            "tarr_adjective": "Espôer"
+        },
+
+        # Ruthenia & East Slavia
+        "c_vitebsk": {
+            "opt_a_key": "b_vitebsk",
+            "opt_a_name": "Castle Hill / Vitba",
+            "opt_a_type": "Pre-867 Dnieper-Dvina Baltic / Early Slavic Settlement at Vitba Confluence",
+            "opt_b_hydronym": "Vitba (Baltic Vytinė / Vidba)",
+            "opt_b_lang": "Baltic / Old East Slavic",
+            "opt_b_name": "Wîtbe",
+            "justification": "Vitebsk was founded in 974/1021 on the ancient Baltic river Vitba (Vidba). Haradok (b_haradok) is an anachronistic 13th-century diminutive outpost (gorodok). Under Tier 2, stripping the post-867 town suffix -sk restores the authentic ancient hydronym Vitba (Wîtbe).",
+            "rec_option": "Option B",
+            "tarr_name": "Wîtbe",
+            "tarr_adjective": "Wîtbisch"
+        },
+        "c_pinsk": {
+            "opt_a_key": "b_pinsk",
+            "opt_a_name": "Pina Reach",
+            "opt_a_type": "Early Slavic / Baltic Settlement on the Pina",
+            "opt_b_hydronym": "Pina (Baltic / Slavic Pina)",
+            "opt_b_lang": "Baltic / Slavic Hydronym",
+            "opt_b_name": "Pîne",
+            "justification": "Pinsk was first attested in 1097 on the river Pina. Lahishyn (b_lahishyn) is an anachronistic late 15th-century settlement (1495). Under Tier 2, stripping the town suffix -sk restores the ancient hydronym Pina (Pîne).",
+            "rec_option": "Option B",
+            "tarr_name": "Pîne",
+            "tarr_adjective": "Pîner"
+        },
+        "c_zhytomyr": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Teteriv River (Teterîw)",
+            "opt_b_lang": "Old East Slavic Hydronym",
+            "opt_b_name": "Teterîw-Flutz",
+            "justification": "Zhytomyr is first attested in 1392 (legendary 884 unverified). Lacks documented pre-867 center; resolved via Option B to Teteriv River (Teterîw-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Teterîw-Flutz",
+            "tarr_adjective": "Teterîwisch"
+        },
+        "c_chernigov": {
+            "opt_a_key": "None",
+            "opt_a_name": "Severian Gord",
+            "opt_a_type": "Early Slavic / Severian tribal center on the Desna",
+            "opt_b_hydronym": "Desna River (Dêsne)",
+            "opt_b_lang": "Old East Slavic / Baltic Hydronym",
+            "opt_b_name": "Tschernigouwe",
+            "justification": "First chronicled in 907 AD Rus-Byzantine treaty. Under Tier 2/Option B, resolved to ancient Severian capital on the Desna as Tschernigouwe.",
+            "rec_option": "Option B",
+            "tarr_name": "Tschernigouwe",
+            "tarr_adjective": "Tschernigouwer"
+        },
+        "c_pereyaslavl": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Trubezh River (Trubêsch)",
+            "opt_b_lang": "Old East Slavic Hydronym",
+            "opt_b_name": "Trubêsch",
+            "justification": "Pereyaslavl was founded in 992 by Vladimir the Great. Lacks pre-867 center; resolved via Option B to Trubezh River (Trubêsch).",
+            "rec_option": "Option B",
+            "tarr_name": "Trubêsch",
+            "tarr_adjective": "Trubêschisch"
+        },
+        "c_korsun": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Ros River (Rôs-Flutz)",
+            "opt_b_lang": "Old East Slavic Hydronym",
+            "opt_b_name": "Rôs-Flutz",
+            "justification": "Korsun was founded in 1032 by Yaroslav the Wise on the Ros defensive line. Resolved via Option B to Ros River (Rôs-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Rôs-Flutz",
+            "tarr_adjective": "Rôsisch"
+        },
+        "c_turov": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Pripyat River Basin (Prîpjat)",
+            "opt_b_lang": "Old East Slavic Hydronym",
+            "opt_b_name": "Prîpjat",
+            "justification": "Turov was first attested in 980 under Prince Tur. Resolved via Option B to Pripyat River basin (Prîpjat).",
+            "rec_option": "Option B",
+            "tarr_name": "Prîpjat",
+            "tarr_adjective": "Prîpjatisch"
+        },
+        "c_putyvl": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Seym River (Sêim-Flutz)",
+            "opt_b_lang": "Old East Slavic Hydronym",
+            "opt_b_name": "Sêim-Flutz",
+            "justification": "Putyvl was first attested in 1146 in the Hypatian Chronicle. Resolved via Option B to Seym River (Sêim-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Sêim-Flutz",
+            "tarr_adjective": "Sêimisch"
+        },
+        "c_vladimir": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Klyazma River Basin (Klêsme)",
+            "opt_b_lang": "Finno-Ugric / Merya Hydronym",
+            "opt_b_name": "Klêsme",
+            "justification": "Vladimir-on-Klyazma was founded in 990/1108. The pre-867 indigenous Merya river basin is Klyazma (Klêsme). Resolved via Option B.",
+            "rec_option": "Option B",
+            "tarr_name": "Klêsme",
+            "tarr_adjective": "Klêsmisch"
+        },
+
+        # Baltic & Lithuania
+        "c_vilnius": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Vilnia River at Neris Confluence",
+            "opt_b_lang": "Baltic Hydronym",
+            "opt_b_name": "Wîlnje-Flutz",
+            "justification": "Vilnius was first attested in 1323 in the letters of Gediminas. Under Tier 2, stripping the town suffix -sk/us restores the ancient Baltic hydronym Vilnia (Wîlnje-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Wîlnje-Flutz",
+            "tarr_adjective": "Wîlnjisch"
+        },
+        "c_kaunas": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Nemunas-Neris Confluence",
+            "opt_b_lang": "Baltic Hydronym",
+            "opt_b_name": "Nêmûn-Nêris",
+            "justification": "Kaunas castle was first attested in 1361. Resolved via Option B to the ancient Nemunas-Neris confluence (Nêmûn-Nêris).",
+            "rec_option": "Option B",
+            "tarr_name": "Nêmûn-Nêris",
+            "tarr_adjective": "Nêmûner"
+        },
+        "c_trakai": {
+            "opt_a_key": "None",
+            "opt_a_name": "Merkinė (Merkine)",
+            "opt_a_type": "Ancient Yotvingian/Lithuanian hillfort at Merkys-Nemunas confluence",
+            "opt_b_hydronym": "Lake Galvė (Gâlwe-Sê)",
+            "opt_b_lang": "Baltic Hydronym",
+            "opt_b_name": "Gâlwe-Sê",
+            "justification": "Old Trakai was founded c. 1316 by Gediminas. Resolved via Option B to Lake Galvė (Gâlwe-Sê) / ancient Merkinė.",
+            "rec_option": "Option B",
+            "tarr_name": "Gâlwe-Sê",
+            "tarr_adjective": "Gâlwisch"
+        },
+
+        # Urals, Steppe & Outremer
+        "c_kumertau": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Burzyan Clan Territory on the Ik River",
+            "opt_b_lang": "Turkic / Bashkir Toponym",
+            "opt_b_name": "Bursjân-Îk",
+            "justification": "Kumertau is a 1947 Soviet coal mining settlement. Resolved via Option B to ancestral medieval Burzyan Bashkir territory on the Ik river (Bursjân-Îk).",
+            "rec_option": "Option B",
+            "tarr_name": "Bursjân-Îk",
+            "tarr_adjective": "Bursjâner"
+        },
+        "c_nytva": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Kama River Basin (Kâme-Flutz)",
+            "opt_b_lang": "Permic / Finno-Ugric Hydronym",
+            "opt_b_name": "Kâme-Flutz",
+            "justification": "Nytva was founded in 1756 as a copper smelting mill. Lacks pre-867 center; resolved via Option B to Kama River basin (Kâme-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Kâme-Flutz",
+            "tarr_adjective": "Kâmisch"
+        },
+        "c_iasi": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Bahlui River / Jász Tribal Territory",
+            "opt_b_lang": "Iranian / Alan Tribal Ethnonym",
+            "opt_b_name": "Jâsch",
+            "justification": "First attested 1395; derived from Sarmatian/Alan tribe Iazyges / Jassi on the Bahlui river. Resolved via Option B to Jâsch.",
+            "rec_option": "Option B",
+            "tarr_name": "Jâsch",
+            "tarr_adjective": "Jâscher"
+        },
+        "c_jersika": {
+            "opt_a_key": "None",
+            "opt_a_name": "Gersika / Gêrsike",
+            "opt_a_type": "Ancient Latgalian hillfort and principality on the Daugava River",
+            "opt_b_hydronym": "Daugava River Reach (Dûna)",
+            "opt_b_lang": "Latgalian / Middle High German",
+            "opt_b_name": "Gêrsike",
+            "justification": "Gersika (Jersika) on the Daugava was the ancient Latgalian hillfort documented in the Livonian Chronicle. Resolved to Gêrsike.",
+            "rec_option": "Option A",
+            "tarr_name": "Gêrsike",
+            "tarr_adjective": "Gêrsiker"
+        }
+    }
+
+    enriched.update(REGIONAL_HISTORICAL)
+
+    # 1. Parse anachronistic_titles_1059.md
+    anach_path = repo_dir / "archive" / "anachronistic_titles_1059.md"
+    if anach_path.exists():
+        with open(anach_path, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                if not line.startswith("|"):
+                    continue
+                parts = [p.strip() for p in line.split("|")]
+                if len(parts) < 6:
+                    continue
+                m = re.search(r"`([cd]_[a-zA-Z0-9_]+)`", parts[1])
+                if not m:
+                    continue
+                ck = m.group(1)
+                if not ck.startswith("c_") or ck in enriched:
+                    continue
+                reason = parts[5] if len(parts) > 5 else ""
+                res = parts[6] if len(parts) > 6 else ""
+
+                m_b = re.search(r"`(b_[a-zA-Z0-9_]+)`", res)
+                b_key = m_b.group(1) if m_b else None
+                m_bold = re.findall(r"\*\*([^*]+)\*\*", res)
+
+                # Extract Tarraconian name from arrow
+                tarr_name = m_bold[-1] if m_bold else ck.replace("c_", "").capitalize()
+                m_arrow = re.search(r"(?:\$\\rightarrow\$|\\rightarrow|->|→)\s*\*{0,2}(?:Magistrat|Fürstbisdom|Bisbalîe)?\s*(?:van\s+)?\*{0,2}([^*\(\]]+)", res)
+                if m_arrow:
+                    tarr_name = m_arrow.group(1).strip()
+
+                m_opt_b = re.search(r"Option B:\s*\*\*([^*]+)\*\*", res)
+                opt_b_name = m_opt_b.group(1).strip() if m_opt_b else tarr_name
+
+                has_pre867 = bool(b_key or ("Roman" in res or "ancient" in res.lower() or "Abbey" in res or "gord" in res.lower()))
+                if has_pre867 and b_key:
+                    rec_opt = "Option A"
+                    opt_a_name = m_bold[0] if m_bold else b_key
+                    opt_a_type = f"Pre-867 Provincial Center / Fortified Gord: {opt_a_name}"
+                    opt_a_key = b_key
+                else:
+                    rec_opt = "Option B"
+                    opt_a_name = "None"
+                    opt_a_key = "None"
+                    opt_a_type = "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)"
+
+                enriched[ck] = {
+                    "opt_a_key": opt_a_key,
+                    "opt_a_name": opt_a_name,
+                    "opt_a_type": opt_a_type,
+                    "opt_b_hydronym": f"{opt_b_name} River / Basin",
+                    "opt_b_lang": "Historical Toponymic Substrate",
+                    "opt_b_name": opt_b_name,
+                    "justification": f"{reason[:120]}. Resolved via {res[:120]}.",
+                    "rec_option": rec_opt,
+                    "tarr_name": tarr_name,
+                    "tarr_adjective": f"{tarr_name}er"
+                }
+
+    # 2. Parse tarraconian_titles_1059.md
+    tarr_path = repo_dir / "tarraconian_titles_1059.md"
+    if tarr_path.exists():
+        with open(tarr_path, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                m = re.search(r"`(c_[a-zA-Z0-9_]+)`", line)
+                if not m:
+                    continue
+                ck = m.group(1)
+                if ck in enriched:
+                    continue
+                arrow_pos = -1
+                for arrow in ["$\\rightarrow$", "\\rightarrow", "->", "→"]:
+                    if arrow in line:
+                        arrow_pos = line.find(arrow) + len(arrow)
+                        break
+                if arrow_pos > 0:
+                    after_arrow = line[arrow_pos:]
+                    m_bold = re.search(r"\*\*([^*]+)\*\*(.*)$", after_arrow)
+                    if m_bold:
+                        full_name = m_bold.group(1).strip()
+                        rest = m_bold.group(2).strip()
+                        tarr_name = re.sub(r"^(Magistrat|Fürstbisdom|Bisbalîe)\s+van\s+(der\s+)?", "", full_name).strip()
+                        hist_m = re.search(r"\[(?:\d{4}\s+)?(?:Historical|Slavic-Root):\s*(?:Magistrat|Fürstbisdom)?\s*(?:van\s+)?([^\]]+)\]", rest)
+                        hist_res = hist_m.group(1).strip() if hist_m else None
+
+                        if hist_res:
+                            center_name = hist_res.split("/")[0].strip()
+                            center_clean = re.sub(r"\s*\([^)]*\)", "", center_name).strip()
+                            enriched[ck] = {
+                                "opt_a_key": "None",
+                                "opt_a_name": center_clean,
+                                "opt_a_type": f"Documented Historical Center: {center_clean}",
+                                "opt_b_hydronym": f"{tarr_name} River / Basin",
+                                "opt_b_lang": "Tarraconian Chancellery Standard",
+                                "opt_b_name": tarr_name,
+                                "justification": f"Resolved via verified historical center {hist_res} documented in tarraconian_titles_1059.md.",
+                                "rec_option": "Option A",
+                                "tarr_name": center_clean,
+                                "tarr_adjective": f"{center_clean}er"
+                            }
+                        else:
+                            is_river_lake = any(suffix in tarr_name for suffix in ["-Flutz", "-Sê", "-Küste", "-Dal", "-Gebirch", "-Wâre"])
+                            enriched[ck] = {
+                                "opt_a_key": "None",
+                                "opt_a_name": "None",
+                                "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+                                "opt_b_hydronym": f"{tarr_name} Hydronym / Basin",
+                                "opt_b_lang": "Native Substrate / Section 3.1 Hydronym Hierarchy",
+                                "opt_b_name": tarr_name,
+                                "justification": f"Lacks documented pre-867 urban center; resolved via Option B {tarr_name} under Burden of Proof on Antiquity.",
+                                "rec_option": "Option B",
+                                "tarr_name": tarr_name,
+                                "tarr_adjective": f"{tarr_name}isch" if is_river_lake else f"{tarr_name}er"
+                            }
+
+    return enriched
 

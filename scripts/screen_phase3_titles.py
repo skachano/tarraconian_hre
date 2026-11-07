@@ -28,6 +28,8 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from historical_attestation_db import load_enriched_historical_db
+
 
 # ==============================================================================
 # 1. ETYMOLOGICAL & HISTORICAL REFERENCE DICTIONARY FOR FLAGGED TITLES
@@ -673,11 +675,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "Pomeranian Castellan Gord on the Słupia (9th c.)",
         "opt_b_hydronym": "Słupia",
         "opt_b_lang": "Slavic",
-        "opt_b_name": "Slûpsk",
-        "justification": "Słupsk was a 9th-c. Pomeranian tribal ringwall on the Słupia River. German town Stolp chartered 1310 by Brandenburg.",
+        "opt_b_name": "Slûptzich",
+        "justification": "Słupsk was a 9th-c. Pomeranian tribal ringwall on the Słupia River. German town Stolp chartered 1310 by Brandenburg. Suffix -sk adapts to -tzich as Slûptzich.",
         "rec_option": "Option A",
-        "tarr_name": "Slûpsk",
-        "tarr_adjective": "Slûpsker",
+        "tarr_name": "Slûptzich",
+        "tarr_adjective": "Slûptzicher",
     },
     "c_brandenburg": {
         "opt_a_key": "b_potsdam",
@@ -1408,11 +1410,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "11th-c. Novgorodian Portage Fortress & Tvertsa River",
         "opt_b_hydronym": "Tvertsa (Finnic Tiuri)",
         "opt_b_lang": "Finnic / Slavic",
-        "opt_b_name": "Wolok-Lamsk",
-        "justification": "Volok-Lamsky (b_volok_lamsky, 1078) was the ancient Novgorodian portage. Tver fortress attested 1135.",
+        "opt_b_name": "Woloch-Lâmtzich",
+        "justification": "Volok-Lamsky (b_volok_lamsky, 1078) was the ancient Novgorodian portage. Tver fortress attested 1135. Adapted to Tarraconian as Woloch-Lâmtzich.",
         "rec_option": "Option A",
-        "tarr_name": "Wolok-Lamsk",
-        "tarr_adjective": "Wolok-Lamsker",
+        "tarr_name": "Woloch-Lâmtzich",
+        "tarr_adjective": "Woloch-Lâmtzicher",
     },
     "c_vladimir": {
         "opt_a_key": "b_volochok",
@@ -1444,11 +1446,11 @@ HISTORICAL_TITLE_DB = {
         "opt_a_type": "Ancient Vyatich Stronghold Pronsk & Tulitsa River",
         "opt_b_hydronym": "Tulitsa / Upa",
         "opt_b_lang": "East Slavic",
-        "opt_b_name": "Prônsk",
-        "justification": "Pronsk was a 10th-c. Vyatich/Ryazan tribal fortified town. Tula attested 1146.",
+        "opt_b_name": "Prôntzich",
+        "justification": "Pronsk was a 10th-c. Vyatich/Ryazan tribal fortified town. Tula attested 1146. Suffix -sk adapts to -tzich as Prôntzich.",
         "rec_option": "Option A",
-        "tarr_name": "Prônsk",
-        "tarr_adjective": "Prônsker",
+        "tarr_name": "Prôntzich",
+        "tarr_adjective": "Prôntzicher",
     },
     "c_plyos": {
         "opt_a_key": "b_plyos",
@@ -2684,6 +2686,30 @@ HISTORICAL_TITLE_DB = {
         "tarr_name": "Slûtzich",
         "tarr_adjective": "Slûtzicher",
     },
+    "c_vitebsk": {
+        "opt_a_key": "b_vitebsk",
+        "opt_a_name": "Castle Hill / Vitba",
+        "opt_a_type": "Pre-867 Dnieper-Dvina Baltic / Early Slavic Settlement at Vitba Confluence",
+        "opt_b_hydronym": "Vitba (Baltic Vytinė / Vidba)",
+        "opt_b_lang": "Baltic / Old East Slavic",
+        "opt_b_name": "Wîtbe",
+        "justification": "Vitebsk was founded in 974/1021 on the ancient Baltic river Vitba (Vidba). Haradok (b_haradok) is an anachronistic 13th-century diminutive outpost (gorodok). Under Tier 2, stripping the post-867 town suffix -sk restores the authentic ancient hydronym Vitba (Wîtbe).",
+        "rec_option": "Option B",
+        "tarr_name": "Wîtbe",
+        "tarr_adjective": "Wîtbisch",
+    },
+    "c_pinsk": {
+        "opt_a_key": "b_pinsk",
+        "opt_a_name": "Pina Reach",
+        "opt_a_type": "Early Slavic / Baltic Settlement on the Pina",
+        "opt_b_hydronym": "Pina (Baltic / Slavic Pina)",
+        "opt_b_lang": "Baltic / Slavic Hydronym",
+        "opt_b_name": "Pîne",
+        "justification": "Pinsk was first attested in 1097 on the river Pina. Lahishyn (b_lahishyn) is an anachronistic late 15th-century settlement (1495). Under Tier 2, stripping the town suffix -sk restores the ancient hydronym Pina (Pîne).",
+        "rec_option": "Option B",
+        "tarr_name": "Pîne",
+        "tarr_adjective": "Pîner",
+    },
     "c_kletsk": {
         "opt_a_key": "b_kletsk",
         "opt_a_name": "Kletsk",
@@ -2758,15 +2784,15 @@ HISTORICAL_TITLE_DB = {
     },
     "c_brzeg": {
         "opt_a_key": "b_brzeg",
-        "opt_a_name": "Brzeg / Brieg",
-        "opt_a_type": "Slavic Vistulan/Silesian Fisher Settlement on the Oder",
+        "opt_a_name": "Rîtschen / Ryczyn",
+        "opt_a_type": "Pre-867 Silesian Castellan Gord on the Oder at Ryczyn",
         "opt_b_hydronym": "Oder (Odra / Ôder)",
         "opt_b_lang": "Slavic / Germanic",
-        "opt_b_name": "Brzêch",
-        "justification": "Brzeg received German town law in 1248. Pre-867 substrate is Slavic riverside settlement (*brzeg* 'shore').",
+        "opt_b_name": "Rîtschen",
+        "justification": "Brzeg received German town law in 1248. The authentic pre-867 castellan gord on the Oder was Ryczyn (Rîtschen), avoiding unassimilated Polish rz.",
         "rec_option": "Option A",
-        "tarr_name": "Brzêch",
-        "tarr_adjective": "Brzêcher",
+        "tarr_name": "Rîtschen",
+        "tarr_adjective": "Rîtschener",
     },
     "c_aluksne": {
         "opt_a_key": "b_aluksne",
@@ -2863,6 +2889,78 @@ HISTORICAL_TITLE_DB = {
         "rec_option": "Option B",
         "tarr_name": "Vilne",
         "tarr_adjective": "Vilner",
+    },
+    "c_blankenburg": {
+        "opt_a_key": "b_blankenburg",
+        "opt_a_name": "Quedlinburch",
+        "opt_a_type": "Carolingian Royal Palatinate & Imperial Abbey 936",
+        "opt_b_hydronym": "Bode",
+        "opt_b_lang": "Old Saxon / German",
+        "opt_b_name": "Bode",
+        "justification": "Blankenburg castle built 1123 by Lothair of Supplinburg; resolves to ancient Ottonian palatinate and abbey Quedlinburg on the Bode.",
+        "rec_option": "Option A",
+        "tarr_name": "Quedlinburch",
+        "tarr_adjective": "Quedlinburcher",
+    },
+    "c_falkenstein": {
+        "opt_a_key": "b_falkenstein",
+        "opt_a_name": "Chîmsê",
+        "opt_a_type": "Ancient Bavarian Sacred Lake & Herrenchiemsee Abbey (629 AD)",
+        "opt_b_hydronym": "Chiemsee / Alz",
+        "opt_b_lang": "Bavarian Celtic / Old High German",
+        "opt_b_name": "Chîmsê",
+        "justification": "Falkenstein castle founded 1130 by Count Sigiboto IV; resolves to ancient Herrenchiemsee abbey (629 AD) and lake Chiemsee.",
+        "rec_option": "Option B",
+        "tarr_name": "Chîmsê",
+        "tarr_adjective": "Chîmsêer",
+    },
+    "c_naumburg": {
+        "opt_a_key": "b_naumburg",
+        "opt_a_name": "Tzîtz",
+        "opt_a_type": "Ancient Slavic Gord & Ottonian Bishopric Zeitz (968 AD)",
+        "opt_b_hydronym": "Saale / Unstrut",
+        "opt_b_lang": "Polabian Slavic / Old High German",
+        "opt_b_name": "Tzîtz",
+        "justification": "Naumburg ('New Castle') founded 1028 when Bishopric of Zeitz (968) was moved; resolves to ancient episcopal seat Tzîtz (Zeitz).",
+        "rec_option": "Option A",
+        "tarr_name": "Tzîtz",
+        "tarr_adjective": "Tzîtzer",
+    },
+    "c_orenburg": {
+        "opt_a_key": "b_orenburg",
+        "opt_a_name": "Ôr",
+        "opt_a_type": "Ancient Turkic/Kipchak River Confluence Settlement",
+        "opt_b_hydronym": "Or / Yaik",
+        "opt_b_lang": "Turkic / Scythian",
+        "opt_b_name": "Ôr-Flutz",
+        "justification": "Tsarist Orenburg founded 1735; resolves to ancient Turkic river confluence Or (Ôr-Flutz) on the Yaik.",
+        "rec_option": "Option B",
+        "tarr_name": "Ôr-Flutz",
+        "tarr_adjective": "Ôr-Flutzer",
+    },
+    "c_wolkenstein": {
+        "opt_a_key": "b_waldenburg",
+        "opt_a_name": "Rochlitz",
+        "opt_a_type": "Ancient Slavic Gord on Zschopau & Mulde",
+        "opt_b_hydronym": "Zschopau",
+        "opt_b_lang": "Slavic / Old High German",
+        "opt_b_name": "Tschopô",
+        "justification": "Wolkenstein castle built c. 1200; resolves to ancient Slavic watercourse Zschopau (Tschopô) or Rochlitz.",
+        "rec_option": "Option B",
+        "tarr_name": "Tschopô",
+        "tarr_adjective": "Tschopôer",
+    },
+    "c_osel": {
+        "opt_a_key": "b_kuressare",
+        "opt_a_name": "Sâremâ",
+        "opt_a_type": "Ancient Finnic / Estonian Island County & Stronghold",
+        "opt_b_hydronym": "Saaremaa / Baltic Sea",
+        "opt_b_lang": "Finnic / Old Norse",
+        "opt_b_name": "Sâremâ",
+        "justification": "Arensburg (Kuressaare) was a 14th-century Teutonic episcopal fortress; resolves to ancient Finnic island name Saaremaa (Sâremâ) or Old Norse Eysýsla (Ôsel).",
+        "rec_option": "Option A",
+        "tarr_name": "Sâremâ",
+        "tarr_adjective": "Sâremâer",
     },
 
 }
@@ -2988,16 +3086,32 @@ CADET_BRANCH_COUPLINGS = {
         "baseline_name": "Kestenholz-Koschmin",
         "seat_county": "c_kalisz",
         "seat_origin": "b_kalisz (Kalisz)",
-        "realigned_name": "Kestenholz-Kalisz",
-        "coupling_reason": "Underlying seat Koschmin (12th-c. town) in Kalisz land resolves to ancient Roman Amber Road emporium Kalisz.",
+        "realigned_name": "Kestenholz-Kalisch",
+        "coupling_reason": "Underlying seat Koschmin (12th-c. town) in Kalisz land resolves to ancient Roman Amber Road emporium Kalisz (Kalisch).",
     },
     24384: {
         "current_name": "Chatenois-Kammersberg",
         "baseline_name": "Kestenholz-Kammersberg",
         "seat_county": "c_graz",
         "seat_origin": "b_judenburg (Judenburg)",
-        "realigned_name": "Kestenholz-Judenburg",
-        "coupling_reason": "Underlying seat Kammersberg (1207 castle in Styria) resolves to ancient Mur valley settlement Judenburg.",
+        "realigned_name": "Kestenholz-Judenburch",
+        "coupling_reason": "Underlying seat Kammersberg (1207 castle in Styria) resolves to ancient Mur valley settlement Judenburch.",
+    },
+    16802188: {
+        "current_name": "dynn_Gudensberg",
+        "baseline_name": "Kestenholz-Gudensberg",
+        "seat_county": "c_hessen",
+        "seat_origin": "b_gudensberg (Gudensberch)",
+        "realigned_name": "Kestenholz-Gudensberch",
+        "coupling_reason": "Toponymic seat Gudensberg normalized to Tarraconian phonotactics with regular final devoicing (-berg -> -berch).",
+    },
+    26581: {
+        "current_name": "Chatenois-Berg",
+        "baseline_name": "Kestenholz-Berg",
+        "seat_county": "c_bergh",
+        "seat_origin": "c_bergh (Berch)",
+        "realigned_name": "Kestenholz-Berch",
+        "coupling_reason": "Toponymic seat Berg normalized to Tarraconian phonotactics with regular final devoicing (-berg -> -berch).",
     },
     50347588: {
         "current_name": "Chatenois-Hirschberg",
@@ -3030,6 +3144,15 @@ CADET_BRANCH_COUPLINGS = {
         "seat_origin": "b_chur (Chur)",
         "realigned_name": "Kestenholz-Kûr",
         "coupling_reason": "Underlying seat Sargans (12th-c. castle) resolves to Roman provincial capital of Curia Raetorum (Chur).",
+    },
+    27907: {
+        "current_name": "Chatenois-Ösel",
+        "baseline_name": "Kestenholz-O_sel",
+        "seat_county": "c_osel",
+        "seat_origin": "c_osel (Ösel / Saaremaa)",
+        "realigned_name": "Kestenholz-Sâremâ",
+        "tarraconian_name": "Kestenholz-Sâremâ",
+        "coupling_reason": "Underlying seat c_osel resolved to authentic native Finnic Saaremaa (Sâremâ).",
     },
 
     # Authentic pre-867 seats receiving finalized Tarraconian sound-change forms
@@ -3363,10 +3486,10 @@ NON_CHATENOIS_HOUSE_REALIGNMENTS = {
         "head_id": "16888401",
         "seat_county": "c_tula",
         "seat_origin": "c_tula (14th-c. Muscovite frontier town)",
-        "resolved_seat": "Pronsk / Tulitsa",
-        "realigned_name": "Pronsk",
-        "tarraconian_name": "Pronsk",
-        "coupling_reason": "Tula attested 14th c. Realigned to 10th-c. Vyatichi hillfort Pronsk or Tulitsa river.",
+        "resolved_seat": "Prôntzich / Tulitsa",
+        "realigned_name": "Prôntzich",
+        "tarraconian_name": "Prôntzich",
+        "coupling_reason": "Tula attested 14th c. Realigned to 10th-c. Vyatichi hillfort Prôntzich (Pronsk) or Tulitsa river.",
     },
     22261: {
         "house_id": 22261,
@@ -3441,7 +3564,11 @@ def run_screening(phase1_dir, phase2_dir, output_dir, repo_dir, md_ref, tarr_ref
     with open(Path(phase1_dir) / "chatenois_dynasty_analysis.json", "r", encoding="utf-8") as f:
         cadet_data = json.load(f)
 
-    # Filter to the 150 flagged Imperial counties
+    # Load unified, enriched historical title database
+    historical_db = load_enriched_historical_db(repo_dir)
+    print(f"[Phase 3] Loaded {len(historical_db)} historical title resolutions from master database and markdown registries.")
+
+    # Filter to the flagged Imperial counties
     flagged_titles = [
         t for t in trajectories
         if t.get("classification", {}).get("is_flagged_for_phase4") and t.get("is_in_roman_empire")
@@ -3465,34 +3592,30 @@ def run_screening(phase1_dir, phase2_dir, output_dir, repo_dir, md_ref, tarr_ref
         sovereign = item.get("sovereign_trajectory", {})
         conq_name = sovereign.get("first_conqueror_after_867") or "Lambert"
         conq_traits = sovereign.get("conqueror_traits", [])
-        current_holder = item.get("current_1142", {})
+        current_holder = item.get("current_holder") or item.get("current_1142", {})
         house_name = current_holder.get("house_name", "")
 
-        # 1. Option A (Sub-Barony)
-        hist_ref = HISTORICAL_TITLE_DB.get(ck)
-        if hist_ref and hist_ref.get("opt_a_key"):
+        # 1. Option A (Sub-Barony / Documented Historical Centre)
+        hist_ref = historical_db.get(ck)
+        if hist_ref and hist_ref.get("opt_a_key") and hist_ref["opt_a_key"] != "None":
             opt_a_key = hist_ref["opt_a_key"]
             opt_a_name = hist_ref["opt_a_name"]
             opt_a_type = hist_ref["opt_a_type"]
-            # Look up barony details in titles_data
             b_match = next((b for b in baronies if b["key"] == opt_a_key), None)
             opt_a_holding = b_match.get("holding_type") if b_match else "castle_holding"
             opt_a_fort = b_match.get("fort_level", 0) if b_match else 0
+        elif hist_ref and hist_ref.get("rec_option") == "Option A" and hist_ref.get("opt_a_name") and hist_ref["opt_a_name"] != "None":
+            opt_a_key = "None"
+            opt_a_name = hist_ref["opt_a_name"]
+            opt_a_type = hist_ref.get("opt_a_type", f"Documented Historical Centre: {opt_a_name}")
+            opt_a_holding = "historical_centre"
+            opt_a_fort = 0
         else:
-            # Fallback to sub_barony_candidates from Phase 2
-            p2_opt_a = item.get("sub_barony_candidates", {}).get("option_a_candidate")
-            if p2_opt_a:
-                opt_a_key = p2_opt_a.get("key", "")
-                opt_a_name = p2_opt_a.get("name", "")
-                opt_a_type = f"Built Holding ({p2_opt_a.get('holding_type', '')})"
-                opt_a_holding = p2_opt_a.get("holding_type", "")
-                opt_a_fort = p2_opt_a.get("fort_level", 0)
-            else:
-                opt_a_key = "None"
-                opt_a_name = "None"
-                opt_a_type = "No Pre-867 Urban Centre Available (Tier 5 or Uninhabited Steppe)"
-                opt_a_holding = "None"
-                opt_a_fort = 0
+            opt_a_key = "None"
+            opt_a_name = "None"
+            opt_a_type = "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)"
+            opt_a_holding = "None"
+            opt_a_fort = 0
 
         # 2. Option B (Hydronym / Toponym)
         if hist_ref and hist_ref.get("opt_b_hydronym"):
@@ -3500,32 +3623,27 @@ def run_screening(phase1_dir, phase2_dir, output_dir, repo_dir, md_ref, tarr_ref
             opt_b_lang = hist_ref["opt_b_lang"]
             opt_b_name = hist_ref["opt_b_name"]
         else:
-            opt_b_hydronym = f"{ck.replace('c_', '').capitalize()} River"
-            opt_b_lang = "Direct Contact Toponym"
-            opt_b_name = ck.replace("c_", "").capitalize()
+            clean_stem = re.sub(r"^(c_|c_BAL_|c_LIAO_|c_SW_)", "", ck).capitalize()
+            opt_b_hydronym = f"{clean_stem} River / Regional Basin"
+            opt_b_lang = "Native Toponymic Substrate"
+            opt_b_name = clean_stem
 
         # 3. Option C (Trait-Driven Engine)
         arch_name, form_type, sim_c_name, arch_just = analyze_founder_archetype(
             conq_name, conq_traits, house_name
         )
 
-        # 4. Definitive Recommendation
+        # 4. Definitive Recommendation (Burden of Proof on Antiquity)
         if hist_ref:
-            rec_option = hist_ref.get("rec_option", "Option A")
-            tarr_name = hist_ref.get("tarr_name", opt_a_name)
+            rec_option = hist_ref.get("rec_option", "Option B")
+            tarr_name = hist_ref.get("tarr_name", opt_b_name)
             tarr_adjective = hist_ref.get("tarr_adjective", f"{tarr_name}er")
             justification = hist_ref.get("justification", tier_reason)
         else:
-            if opt_a_key != "None":
-                rec_option = "Option A"
-                tarr_name = opt_a_name
-                tarr_adjective = f"{opt_a_name}er"
-                justification = f"Resolved via constituent pre-867 barony {opt_a_key}."
-            else:
-                rec_option = "Option B"
-                tarr_name = opt_b_name
-                tarr_adjective = f"{opt_b_name}isch"
-                justification = f"Resolved via Section 3.1 Hydronym Hierarchy to ancient river {opt_b_hydronym}."
+            rec_option = "Option B"
+            tarr_name = opt_b_name
+            tarr_adjective = f"{opt_b_name}er"
+            justification = f"Lacks documented pre-867 western urban center; resolved via Option B indigenous regional stem {tarr_name} under Burden of Proof on Antiquity."
 
         # 5. Cadet Branch Coupling
         coupled_house = next(
@@ -3630,11 +3748,11 @@ def run_screening(phase1_dir, phase2_dir, output_dir, repo_dir, md_ref, tarr_ref
 
     # Generate Human-Readable Markdown Report in the workspace repo
     report_file = Path(repo_dir) / "archive" / "phase3_title_screening_report.md"
-    generate_markdown_report(screening_matrix, report_file)
+    generate_markdown_report(screening_matrix, report_file, cadet_data)
     print(f"[Phase 3] Wrote markdown report to {report_file}")
 
 
-def generate_markdown_report(matrix, report_file):
+def generate_markdown_report(matrix, report_file, cadet_data=None):
     """
     Produces the comprehensive Phase 3 Screening & Etymological Cross-Referencing Report.
     """
@@ -3652,7 +3770,7 @@ def generate_markdown_report(matrix, report_file):
     lines = [
         "# Phase 3 Report: Automated Screening & Etymological Cross-Referencing",
         "",
-        "* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)",
+        "* **Campaign Date:** 27 December 1154 (`chatenois_867_01_01.ck3`)",
         f"* **Audit Scope:** **{total_count} Flagged Titles** ({tier2_count} Tier 2 Hydronymic/Geographic/Tribal & {tier3_count} Tier 3 Settlements) across **{len(kingdoms)} De Jure Kingdoms**",
         "* **Evaluation Engines:** Pre-HRE Morphology Audit (Tier 2) | Option A Sub-Baronies | Option B Hydronym Hierarchy (Sec. 3.1) | Option C Trait-Driven Engine (Sec. 3.2) | Cadet Branch Coupling",
         "",
@@ -3705,7 +3823,7 @@ def generate_markdown_report(matrix, report_file):
         "",
         "---",
         "",
-        "## 3. Cadet Branch Realignment Coupling (The 50 Houses of House Kestenholz)",
+        "## 3. Cadet Branch Realignment Coupling (The 53 Houses of House Kestenholz)",
         "",
         "A critical mandate of the audit is ensuring that cadet branches of Dynasty 1582 do not retain provisional anachronistic toponyms. Below are the key coupled houses whose seat suffixes update to match their resolved pre-867 centres:",
         "",
@@ -3713,14 +3831,19 @@ def generate_markdown_report(matrix, report_file):
         "| :---: | :--- | :--- | :--- | :--- | :---: | :--- |",
     ])
 
+    cadet_lookup = {}
+    if cadet_data and "cadet_branches" in cadet_data:
+        cadet_lookup = {b["house_id"]: b for b in cadet_data["cadet_branches"]}
+
     coupled_houses = [
         (hid, data) for hid, data in CADET_BRANCH_COUPLINGS.items()
-        if "Berg" in data["current_name"] or "Saarbrücken" in data["current_name"] or "Stężyca" in data["current_name"] or "Plzeň" in data["current_name"] or "Koschmin" in data["current_name"] or "Kammersberg" in data["current_name"] or "Hirschberg" in data["current_name"] or "Peiting" in data["current_name"] or "Swenigorot" in data["current_name"] or "Amersfoort" in data["current_name"] or "Sargans" in data["current_name"]
+        if "Berg" in data["current_name"] or "Saarbrücken" in data["current_name"] or "Stężyca" in data["current_name"] or "Plzeň" in data["current_name"] or "Koschmin" in data["current_name"] or "Kammersberg" in data["current_name"] or "Hirschberg" in data["current_name"] or "Peiting" in data["current_name"] or "Swenigorot" in data["current_name"] or "Amersfoort" in data["current_name"] or "Sargans" in data["current_name"] or "Ösel" in data["current_name"]
     ]
 
     for hid, data in coupled_houses:
+        living = cadet_lookup.get(hid, {}).get("living_members_count", "—")
         lines.append(
-            f"| `{hid}` | **{data['current_name']}** | `{data['baseline_name']}` | `{data['seat_origin']}` | **{data['realigned_name']}** | — | {data['coupling_reason']} |"
+            f"| `{hid}` | **{data['current_name']}** | `{data['baseline_name']}` | `{data['seat_origin']}` | **{data['realigned_name']}** | {living} | {data['coupling_reason']} |"
         )
 
     lines.extend([

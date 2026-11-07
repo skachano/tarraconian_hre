@@ -35,7 +35,7 @@ import sys
 import time
 from pathlib import Path
 
-from historical_attestation_db import classify_county_tier, resolve_county_attestation
+from historical_attestation_db import classify_county_tier, resolve_county_attestation, load_enriched_historical_db
 
 
 def log(msg: str):
@@ -157,7 +157,7 @@ def load_phase1_data(phase1_dir: Path):
     }
 
 
-def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: dict, houses: dict, cultures: dict):
+def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: dict, houses: dict, cultures: dict, enriched_db: dict = None):
     """
     Analyzes the 867-1142 sovereign trajectory, colonizer footprint, culture transitions,
     and assigns a preliminary 5-tier classification.
@@ -300,24 +300,52 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
     tier, tier_label, tier_reason, att_yr, att_ev, att_src, is_geo, att_notes = classify_county_tier(county_key, county_data, md_record)
 
     # 7. Sub-Barony Candidate Selection (Option A Candidate)
+    # Strictly enforces Burden of Proof on Antiquity: zero unverified baronies allowed!
     baronies = county_data.get('baronies', [])
     pre_867_barony_candidates = []
     option_a_candidate = None
 
-    for b in baronies:
-        b_key = b.get('key', '')
-        b_name = b.get('name', '')
-        # Filter out modern/anachronistic barony names
-        if b_key and not re.search(r"(burg|stein|grad|sk)$", b_key):
-            pre_867_barony_candidates.append(b_key)
-            if not option_a_candidate:
-                option_a_candidate = {
-                    'key': b_key,
-                    'name': b_name,
-                    'province_id': b.get('province_id'),
-                    'holding_type': b.get('holding_type'),
-                    'fort_level': b.get('fort_level')
-                }
+    hist_ref = enriched_db.get(county_key) if enriched_db else None
+    if hist_ref and hist_ref.get('opt_a_key') and hist_ref['opt_a_key'] != 'None':
+        target_b_key = hist_ref['opt_a_key']
+        b_match = next((b for b in baronies if b.get('key') == target_b_key), None)
+        if b_match:
+            pre_867_barony_candidates.append(target_b_key)
+            option_a_candidate = {
+                'key': target_b_key,
+                'name': hist_ref.get('opt_a_name', b_match.get('name', '')),
+                'province_id': b_match.get('province_id'),
+                'holding_type': b_match.get('holding_type'),
+                'fort_level': b_match.get('fort_level')
+            }
+        else:
+            option_a_candidate = {
+                'key': target_b_key,
+                'name': hist_ref.get('opt_a_name', target_b_key),
+                'province_id': None,
+                'holding_type': 'historical_centre',
+                'fort_level': 0
+            }
+    elif hist_ref and hist_ref.get('rec_option') == 'Option A' and hist_ref.get('opt_a_name') and hist_ref['opt_a_name'] != 'None':
+        option_a_candidate = {
+            'key': 'None',
+            'name': hist_ref.get('opt_a_name', ''),
+            'province_id': None,
+            'holding_type': 'historical_centre',
+            'fort_level': 0
+        }
+    elif tier == 1:
+        # Tier 1 titles retain their primary seat as verified antiquity
+        primary_b = baronies[0] if baronies else None
+        if primary_b:
+            pre_867_barony_candidates.append(primary_b.get('key', ''))
+            option_a_candidate = {
+                'key': primary_b.get('key', ''),
+                'name': primary_b.get('name', ''),
+                'province_id': primary_b.get('province_id'),
+                'holding_type': primary_b.get('holding_type'),
+                'fort_level': primary_b.get('fort_level')
+            }
 
     return {
         'county_key': county_key,
@@ -328,6 +356,7 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
         'de_jure_kingdom': k_name,
         'de_jure_empire': e_name,
         'is_in_roman_empire': is_roman,
+        'is_newly_integrated': county_data.get('is_newly_integrated', False),
         'start_867': {
             'date': start_holder.get('date') if start_holder else '',
             'holder_id': start_holder.get('holder_id') if start_holder else None,
@@ -336,6 +365,13 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
             'culture_name': start_culture
         },
         'current_1142': {
+            'holder_id': current_holder.get('id'),
+            'holder_name': current_holder.get('name'),
+            'house_name': current_holder.get('house_name'),
+            'culture_name': current_holder.get('culture_name'),
+            'is_chatenois': is_chatenois_held
+        },
+        'current_holder': {
             'holder_id': current_holder.get('id'),
             'holder_name': current_holder.get('name'),
             'house_name': current_holder.get('house_name'),
@@ -387,6 +423,9 @@ def analyze_sovereign_trajectory(county_key: str, county_data: dict, md_record: 
         },
         'markdown_audit_reference': {
             'is_in_previous_audit': bool(md_record),
+            'was_valid_previous': md_record.get('is_valid_in_previous_audit', False) if md_record else False,
+            'was_flagged_previous': md_record.get('is_flagged_in_previous_audit', False) if md_record else False,
+            'previous_reason': md_record.get('previous_reason') if md_record else None,
             'previous_centers': md_record.get('previous_centers') if md_record else None
         }
     }
@@ -406,24 +445,36 @@ def generate_phase2_report(trajectories: list, output_path: Path):
     total_counties = len(trajectories)
     roman_counties = [t for t in trajectories if t['is_in_roman_empire']]
     total_roman = len(roman_counties)
+    newly_counties = [t for t in roman_counties if t.get('is_newly_integrated')]
 
     tier_counts = {1: 0, 2: 0, 3: 0}
     for t in roman_counties:
         tier_counts[t['classification']['tier']] += 1
 
+    newly_tier_counts = {1: 0, 2: 0, 3: 0}
+    for t in newly_counties:
+        newly_tier_counts[t['classification']['tier']] += 1
+
     flagged_titles = [t for t in roman_counties if t['classification']['is_flagged_for_phase4']]
-    calendar_gap_titles = [t for t in roman_counties if 'Calendar Gap' in t['classification']['tier_label']]
+    newly_flagged = [t for t in newly_counties if t['classification']['is_flagged_for_phase4']]
+    calendar_gap_titles = [
+        t for t in roman_counties
+        if (t['attestation']['year'] is not None and 867 < t['attestation']['year'] <= 1154)
+        or t['markdown_audit_reference'].get('was_valid_previous')
+    ]
+    calendar_gap_titles.sort(key=lambda x: (x['attestation']['year'] if x['attestation']['year'] is not None else 9999, x['county_key']))
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("# Phase 2 Report: Title Lineage, Sovereign Trajectories & Historical Grounding\n\n")
-        f.write(f"* **Campaign Date:** 20 August 1142 (`chatenois_867_01_01.ck3`)\n")
-        f.write(f"* **Audit Scope:** **1,499 Counties** in the Roman Empire (`h_roman_empire`) across **97 De Jure Kingdoms**\n")
+        f.write(f"* **Campaign Date:** 27 December 1154 (`chatenois_867_01_01.ck3`)\n")
+        f.write(f"* **Audit Scope:** **{total_roman:,} Counties** in the Roman Empire (`h_roman_empire`) across **{len(set(t['de_jure_kingdom'] for t in roman_counties))} De Jure Kingdoms**\n")
+        f.write(f"* **Newly Integrated Frontier:** **{len(newly_counties)} Expansion Counties** (1142 $\\rightarrow$ 1154) across **{len(set(t['de_jure_kingdom'] for t in newly_counties))} Kingdoms**\n")
         f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory → Colonizer Presence Audit → Cultural Footprint Mapping → 3-Tier Classification\n\n")
         f.write("---\n\n")
 
         # 1. Executive Summary
         f.write("## 1. Executive Summary & 3-Tier Classification Breakdown\n\n")
-        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1142 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap under the **Three-Tier Classification System**.\n\n")
+        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1154 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap under the **Three-Tier Classification System**.\n\n")
         f.write("| Classification Tier | Imperial Counties | Percentage | Evaluation Rule & Action |\n")
         f.write("| :--- | :---: | :---: | :--- |\n")
         f.write(f"| **Tier 1: Pre-867 Historical / Antiquity** | **{tier_counts[1]}** | {tier_counts[1]/total_roman*100:.1f}% | **VALID**: Attested pre-867 Roman, Celtic, Greek, Slavic, or Germanic centre; trace chronological culture changes and adapt phonologically to Tarraconian. |\n")
@@ -452,24 +503,44 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("   * *Result:* Replaced by Classical Roman/Hellenistic centres (*Petra / Rekem* for Montréal, *Fustat / Babylon in Aegypto* for Cairo).\n\n")
         f.write("---\n\n")
 
-        # 3. Reconciliation of the "OTL Calendar Gap"
-        f.write("## 3. Reconciliation of the 'OTL Calendar Gap' (Titles Re-Evaluated from 1059/1122)\n\n")
+        # 3. Newly Integrated Frontiers Audit
+        f.write("## 3. Sovereign Trajectories & Historical Grounding of Newly Integrated Frontier Titles (1142 $\\rightarrow$ 1154)\n\n")
+        f.write(f"Between 1142 and 1154, the Roman Empire under Augustus Wernhard expanded across **{len(newly_counties)} newly integrated counties** in **{len(set(t['de_jure_kingdom'] for t in newly_counties))} de jure kingdoms**.\n\n")
+        f.write("### 3.1 Frontier 3-Tier Classification Breakdown\n\n")
+        f.write("| Frontier Classification Tier | Counties | Percentage of Frontier | Status |\n")
+        f.write("| :--- | :---: | :---: | :--- |\n")
+        f.write(f"| **Tier 1: Pre-867 Antiquity / Classical Provincial Centers** | **{newly_tier_counts[1]}** | {newly_tier_counts[1]/len(newly_counties)*100:.1f}% | Valid ancient centres (Ritsuryō kuni, Han/Tang commanderies, Korean Three Kingdoms, Indus civitates) |\n")
+        f.write(f"| **Tier 2: Founded After 867 on Hydronymic/Geographic Stems** | **{newly_tier_counts[2]}** | {newly_tier_counts[2]/len(newly_counties)*100:.1f}% | Pre-HRE morphology restorations on ancient watercourses/mountains |\n")
+        f.write(f"| **Tier 3: Other Post-867 Foundations / Unverified (Default)** | **{newly_tier_counts[3]}** | {newly_tier_counts[3]/len(newly_counties)*100:.1f}% | Flagged for Option A (Sub-Barony), B (Hydronym), or C (Founder) replacement |\n")
+        f.write(f"| **TOTAL NEWLY INTEGRATED TITLES** | **{len(newly_counties)}** | **100.0%** | **{len(newly_flagged)} Flagged Frontier Titles ({len(newly_flagged)/len(newly_counties)*100:.1f}%)** |\n\n")
+        f.write("### 3.2 Regional Frontier Clusters & Sovereign Grounding\n\n")
+        f.write("* **Far East & East Asia (236 counties):** Ancient Yamato/Ritsuryō provinces (`k_yamato`, `k_azuma`, `k_tsukushi`, `k_hitakami`), Korean Three Kingdoms (`k_silla`, `k_goguryeo`, `k_baekje`, `k_balhae`), and Tang military commanderies (`k_hedong`, `k_daibei`, `k_youji`). Frontier Jurchen/Khitan steppe areas (`k_luzhen`, `k_khitan`, `k_shiwei`, `k_raole`) contain unverified late outposts flagged under Tier 3.\n")
+        f.write("* **Central Asia & Silk Road (136 counties):** Ancient Sogdian oases and Tang protectorates (`k_transoxiana`, `k_khotan`, `k_amdo`, `k_hexi`, `k_xia`, `k_syr_darya`). Nomadic corridors (`k_oghuz_il`, `k_dzungaria`, `k_gobi`, `k_otuken`) flagged for hydronymic restoration or seasonal yurt settlement replacement.\n")
+        f.write("* **Indus Valley & Himalayas (38 counties):** Ancient Vedic/Indus mahajanapadas (`k_punjab`, `k_sindh`, `k_kashmir`, `k_delhi`, `k_kabulistan`, `k_himalaya`) with deep antiquity continuity dating to Taxila, Multan, and Gandhara.\n")
+        f.write("* **Balkans, Pontic Steppe & Caucasus (40 counties):** Byzantine/Danubian themes (`k_bulgaria`, `k_nikaea`, `k_strymon`), Moldavian/Wallachian marches (`k_moldavia`, `k_wallachia`), and Georgian principalities (`k_georgia`).\n")
+        f.write("* **Sahel, Africa & Ural Steppe (15 counties):** Trans-Saharan trade termini (`k_takrur`, `k_kaabu`, `k_darfur`) and Permian river basins (`k_permia`, `k_bashkiria`).\n\n")
+        f.write("---\n\n")
+
+        # 4. Reconciliation of the "OTL Calendar Gap"
+        f.write("## 4. Reconciliation of the 'OTL Calendar Gap' (Titles Re-Evaluated from 1059/1122)\n\n")
         f.write("The previous chancellery audits in `anachronistic_titles_1059.md` accepted titles if they were attested in real history before 1059, 1122, or 1142. Phase 2 re-evaluates them strictly against the **867 divergence point**:\n\n")
         f.write("| County Key | In-Game Save Name | OTL Date | Previous Status | Phase 2 Verdict | Historical Campaign Justification |\n")
         f.write("| :--- | :--- | :---: | :---: | :---: | :--- |\n")
-        for t in calendar_gap_titles[:25]:
-            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | Post-867 | ✅ Valid (OTL) | **FLAGGED (Tier {t['classification']['tier']})** | {t['classification']['tier_reason']} |\n")
+        for t in calendar_gap_titles[:35]:
+            att_yr = f"{t['attestation']['year']} AD" if t['attestation']['year'] else "Post-867"
+            prev_status = "✅ Valid in 1059/1122" if t['markdown_audit_reference'].get('was_valid_previous') else "Unflagged (OTL)"
+            f.write(f"| `{t['county_key']}` | **{t['save_name']}** | {att_yr} | {prev_status} | **Tier {t['classification']['tier']}** | {t['classification']['tier_reason']} |\n")
         f.write("\n---\n\n")
 
-        # 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures
-        f.write("## 4. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures\n\n")
+        # 5. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures
+        f.write("## 5. Toponym-First Realignment of Cadet Houses & Dynamic Emergent Cultures\n\n")
         f.write("Under the **Toponym-First Principle**, landed titles represent physical geography, antiquity urban centres, and Roman territorial divisions. Anachronistic titles cannot be justified or grandfathered by in-game cadet branches or dynamic emergent cultures. Instead, causality is strictly reversed: **noble houses and dynamic cultures derive their names from the historically resolved titles**.\n\n")
-        f.write("### 4.1 Re-evaluation of Previous 'Canon' Titles\n\n")
+        f.write("### 5.1 Re-evaluation of Previous 'Canon' Titles\n\n")
         f.write("Titles previously given false exemptions are now classified strictly under the 3-Tier model:\n")
         f.write("* **Validated Antiquity Centres (Tier 1):** Titles like `c_metz` (*Divodurum*), `c_buthrotum` (*Buthrotum*), `c_lecce` (*Lupiae*), `c_ragusa` (*Ragusium*), `c_theodosiopolis`, `c_dvin`, `c_isfahan`, `c_hamadan`, `c_carcassonne`, and `c_uses` are validated as **Tier 1 (Antiquity)** on their own historical merits.\n")
         f.write("* **Post-867 Hydronymic & Tribal Titles (Tier 2):** Titles like `c_minsk` (*Mėna*), `c_volkovysk` (*Ros'*), `c_memel` (*Mēmele*), `c_bartenstein` (*Barta*), and `c_metzovo` are audited for pre-HRE morphology and adapted to Tarraconian.\n")
         f.write("* **Unmasked Post-867 Settlements (Tier 3 Default):** Titles like `c_novogrudok` (New Castle 1044), `c_bergh` (Burg Berge 1077), `c_luxembourg` (963), `c_bouillon` (988), `c_namur` (907), `c_zagreb` (1094), `c_aalborg` (1040), `c_lviv` (1256), `c_galati` (1445), `c_bugeac` (16th c.), `c_dorohoi` (1408), `c_cetatea_alba` (1350), `c_chilia` (1318), `c_montpellier` (985), and `c_tinmallal` (1124) are unmasked and flagged as **Tier 3** for resolution via Options A/B/C.\n\n")
-        f.write("### 4.2 Downstream Cadet House Realignment Sample\n\n")
+        f.write("### 5.2 Downstream Cadet House Realignment Sample\n\n")
         f.write("| House ID | Old In-Game Name | Underlying Seat | Resolved Historical Seat | Realigned House Name |\n")
         f.write("| :---: | :--- | :--- | :--- | :--- |\n")
         f.write("| `26581` | **Chatenois-Berg** | `c_bergh` (Burg Berge 1077) | Carolingian Palatinate Kaiserswerth (700) | **House Kestenholz-Kaiserswerth** |\n")
@@ -478,7 +549,7 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("| `50347588` | **Chatenois-Hirschberg** | `c_hirschberg` (13th c.) | Thermal springs Warmbrunn / Piast Legnica | **House Kestenholz-Warmbrunn** |\n")
         f.write("| `24384` | **Chatenois-Kammersberg** | `c_kammersberg` (1207) | Ancient Mur valley settlement Murau / Judenburg | **House Kestenholz-Murau** |\n")
         f.write("| `23583` | **Chatenois-Peiting** | `c_peiting` (11th c.) | Mother settlement Altenstadt / Schongau | **House Kestenholz-Schongau** |\n\n")
-        f.write("### 4.3 Downstream Dynamic Emergent Culture Realignment Sample\n\n")
+        f.write("### 5.3 Downstream Dynamic Emergent Culture Realignment Sample\n\n")
         f.write("| Culture ID | Old In-Game Name | Ethnogenesis Seat | Resolved Historical Toponym | Realigned Culture Name |\n")
         f.write("| :---: | :--- | :--- | :--- | :--- |\n")
         f.write("| `275` | **Galațian** | `c_galati` (Galați 1445) | Roman fortress Dinogetia / Dunăre | **Dinogetian-Vlachs** |\n")
@@ -492,8 +563,8 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("| `279` | **Frontenhausian** | `c_frontenhausen` (Frantenhusa) | Attested 788 AD (Breves Notitiae) | **Frontenhausian** (Validated) |\n\n")
         f.write("---\n\n")
 
-        # 5. Full Register of Flagged Titles (Tier 2 & Tier 3)
-        f.write("## 5. Register of Flagged Titles Requiring Historical Review & Resolution in Phase 4\n\n")
+        # 6. Full Register of Flagged Titles (Tier 2 & Tier 3)
+        f.write("## 6. Register of Flagged Titles Requiring Historical Review & Resolution in Phase 4\n\n")
         f.write(f"Below is the actionable catalog of all **{len(flagged_titles)}** flagged titles inside the Roman Empire under the Three-Tier System (Tier 2 pre-HRE morphology restorations and Tier 3 settlements requiring Options A/B/C replacement), complete with their attestation metadata, sovereign trajectory, and recommended sub-barony candidates (`Option A`):\n\n")
         f.write("| County Key | Current Name | De Jure Kingdom | Tier | Attestation Year | Primary Source | Anachronism / Substrate Reason | Recommended Pre-867 Sub-Barony Candidate (`Option A`) |\n")
         f.write("| :--- | :--- | :--- | :---: | :---: | :--- | :--- | :--- |\n")
@@ -507,8 +578,8 @@ def generate_phase2_report(trajectories: list, output_path: Path):
             f.write(f"| `{t['county_key']}` | **{t['save_name']}** | {t['de_jure_kingdom']} | **Tier {tier_num}** | {att_yr_str} | {att_src_str} | {reason} | {sub_b_str} |\n")
         f.write("\n---\n\n")
 
-        # 6. Next Steps for Phase 3 & Phase 4
-        f.write("## 6. Next Steps & Transition to Phase 3\n\n")
+        # 7. Next Steps for Phase 3 & Phase 4
+        f.write("## 7. Next Steps & Transition to Phase 3\n\n")
         f.write("1. **Phase 3 (Automated Screening & Reconciliation Matrix):**\n")
         f.write("   * Screen all flagged Tier 2 & Tier 3 titles against the compiled dictionary of ancient toponyms, hydronyms, and pre-HRE morphologies.\n")
         f.write("   * Finalize the sub-barony candidate mapping for every flagged county.\n")
@@ -558,6 +629,7 @@ def main():
     # 1. Load Data
     phase1_data = load_phase1_data(phase1_dir)
     md_audited = parse_anachronistic_titles_md(md_ref_path)
+    enriched_db = load_enriched_historical_db(repo_dir)
 
     titles = phase1_data['titles']
     houses = phase1_data['houses']
@@ -570,7 +642,7 @@ def main():
 
     for c_key, c_data in titles.items():
         md_rec = md_audited.get(c_key)
-        traj = analyze_sovereign_trajectory(c_key, c_data, md_rec, houses, cultures)
+        traj = analyze_sovereign_trajectory(c_key, c_data, md_rec, houses, cultures, enriched_db)
         trajectories.append(traj)
 
         matrix_rows.append({
