@@ -5,8 +5,10 @@
 * **Active Campaign Save:** Parameterized (`<active_save_game>.ck3` — e.g. `chatenois_867_01_01.ck3` or `/var/tmp/ck3_audit/melted_save.ck3`)
 * **Campaign Timeline:** 867 AD $\rightarrow$ Active Save Milestone (e.g. 1142, 1160, 1180, 1200+)
 * **Master Documentation & Registers:**
+  * [README.md](file:///home/siarzhuk/code/personal/tarraconian_hre/README.md) — Central Repository Documentation & Expansion Playbook
   * [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) — Imperial De Jure Hierarchy & Provincial Register
   * [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) — Master Tarraconian Toponym Register
+  * [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) — Semantic Calque Dictionary & Appropriateness Protocols
   * [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md) — Historical Discrepancy & Title Resolution Register
   * [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) — Master Dynastic & Cadet Branch Realignment Register
   * [mod_synchronization_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/mod_synchronization_guide.md) — Mod Build & In-Game Integration Guide
@@ -251,6 +253,9 @@ Every expansion cycle or major campaign milestone must satisfy these acceptance 
 ---
 
 ## 7. Future Expansion Operational Playbook (Quick Reference)
+
+> [!NOTE]
+> The primary, centralized operational playbook is maintained in **[README.md § 4](file:///home/siarzhuk/code/personal/tarraconian_hre/README.md#4-expansion-operational-playbook-step-by-step-guide)** alongside the project's master architecture and continuity protocols. The quick reference below is preserved for pipeline audit reference.
 
 Follow this step-by-step checklist whenever the campaign timeline advances or the Roman Empire annexes new lands:
 
