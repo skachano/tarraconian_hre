@@ -290,7 +290,7 @@ The following tables demonstrate how specific titles across the Empire in [tarra
 | :--- | :--- | :--- | :--- |
 | `c_cetatea_alba` | Cetatea Albă / Bilhorod | **Magistrat van Wîtzenburch-am-Nister** | Already established primary calque (*Cetatea Albă / Belgorod* = "White Castle on the Dniester"). |
 | `c_vyshhorod` | Vyshhorod | **Magistrat van Hôchburch** *(or **Wischigorot**)* | Slavic *vyše* ("higher / above") + *gorod* ("citadel/gord"). |
-| `c_novgorod` | Novgorod | **Magistrat van Nîenburch** *(or **Nougarden**)* | Slavic *novy* ("new") + *gorod* ("city/gord"). |
+| `c_novgorod` | Novgorod | **Magistrat van Nîenburch-am-Wolchouwe** | Slavic *novy* ("new") + *gorod* ("city/gord"), qualified by the Volkhov river (*Wolchouwe*). |
 | `c_beloozero` | Beloozero | **Magistrat van Wîtzensê** *(or **Belosêr**)* | Slavic *bely* ("white") + *ozero* ("lake"). |
 | `c_zelengora` | Zelengora | **Magistrat van Grûnenberch** *(or **Selengôre**)* | South Slavic *zelena* ("green") + *gora* ("mountain"). |
 | `c_zlatibor` | Zlatibor | **Magistrat van Goltwalt** *(or **Slatibôr**)* | South Slavic *zlati* ("golden") + *bor* ("pine forest"). |

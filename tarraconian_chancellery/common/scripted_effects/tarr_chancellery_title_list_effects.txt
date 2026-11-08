@@ -51,7 +51,7 @@ tarr_apply_static_titles_effect = {
 	title:k_ireland ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_ireland HIST = cn_tarr_k_ireland } }
 	title:k_hellas ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_hellas HIST = cn_tarr_k_hellas } }
 	title:k_denmark ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_denmark HIST = cn_tarr_k_denmark } }
-	title:k_dacia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_dacia HIST = cn_tarr_k_dacia } }
+	title:k_dacia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_dacia HIST = cn_tarr_hist_k_dacia } }
 	title:k_sorbia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_sorbia HIST = cn_tarr_k_sorbia } }
 	title:k_makran ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_makran HIST = cn_tarr_k_makran } }
 	title:k_frisia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_frisia HIST = cn_tarr_k_frisia } }
@@ -464,10 +464,6 @@ tarr_apply_static_titles_effect = {
 	title:d_capua ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_capua HIST = cn_tarr_d_capua } }
 	title:c_capua ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_capua HIST = cn_tarr_c_capua } }
 	title:c_napoli ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_napoli HIST = cn_tarr_c_napoli } }
-	title:d_apulia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_apulia HIST = cn_tarr_d_apulia } }
-	title:c_apulia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_apulia HIST = cn_tarr_c_apulia } }
-	title:c_bari ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bari HIST = cn_tarr_c_bari } }
-	title:c_lecce ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lecce HIST = cn_tarr_c_lecce } }
 	title:d_salerno ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_salerno HIST = cn_tarr_d_salerno } }
 	title:c_salerno ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_salerno HIST = cn_tarr_c_salerno } }
 	title:c_camarda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_camarda HIST = cn_tarr_c_camarda } }
@@ -1700,6 +1696,10 @@ tarr_apply_static_titles_effect = {
 	title:c_fazughli ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_fazughli HIST = cn_tarr_c_fazughli } }
 	title:c_tagali ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tagali HIST = cn_tarr_c_tagali } }
 	title:c_gumuz ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gumuz HIST = cn_tarr_c_gumuz } }
+	title:d_apulia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_apulia HIST = cn_tarr_d_apulia } }
+	title:c_apulia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_apulia HIST = cn_tarr_c_apulia } }
+	title:c_bari ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bari HIST = cn_tarr_c_bari } }
+	title:c_lecce ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lecce HIST = cn_tarr_c_lecce } }
 	title:d_paphlagonia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_paphlagonia HIST = cn_tarr_d_paphlagonia } }
 	title:c_paphlagonia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_paphlagonia HIST = cn_tarr_hist_c_paphlagonia } }
 	title:c_pompeiopolis ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pompeiopolis HIST = cn_tarr_hist_c_pompeiopolis } }
@@ -1782,7 +1782,7 @@ tarr_apply_static_titles_effect = {
 	title:c_kainuu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kainuu HIST = cn_tarr_hist_c_kainuu } }
 	title:d_karelia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_karelia HIST = cn_tarr_d_karelia } }
 	title:c_kakisalmi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kakisalmi HIST = cn_tarr_hist_c_kakisalmi } }
-	title:c_viipuri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_viipuri HIST = cn_tarr_hist_c_viipuri } }
+	title:c_viipuri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_viipuri HIST = cn_tarr_c_viipuri } }
 	title:c_sortavala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sortavala HIST = cn_tarr_c_sortavala } }
 	title:c_salinis ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_salinis HIST = cn_tarr_c_salinis } }
 	title:c_onega ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_onega HIST = cn_tarr_hist_c_onega } }

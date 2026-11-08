@@ -97,6 +97,7 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Bâr-in-Pûlje': 'Bâr-Pûljer',
         'Alt-Mêne': 'Alt-Mêner',
         'Rôtenburch-an-der-Hûtzwe': 'Rôtenburch-an-der-Hûtzwer',
+        'Nîenburch-am-Wolchouwe': 'Nîenburch-Wolchouwer',
         'Amâje-in-Kastîljen': 'Amâje-Kastîljer',
         'Môre-in-Dâlen': 'Môre-Dâler',
         'Ôsterdal-an-der-Glomme': 'Ôsterdal-Glommer',
@@ -209,12 +210,12 @@ def parse_gazetteer(md_path: Path):
             continue
 
         # 3. Section 3 Kingdom headers
-        m = re.match(r'^###\s+3\.\d+\s+Kingdom[^(]+\(`([a-zA-Z0-9_\-]+)`\)\s+\$\\rightarrow\$\s+\*\*([^*]+)\*\*', line)
+        m = re.match(r'^###\s+3\.\d+\s+Kingdom.*?\(`([a-zA-Z0-9_\-]+)`\)\s+\$\\rightarrow\$\s+\*\*([^*]+)\*\*', line)
         if m:
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {

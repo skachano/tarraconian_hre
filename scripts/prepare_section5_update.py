@@ -9,8 +9,8 @@ section5_db = {
     # 5.1 Khitan Liao Dynastic Foundations (24 Counties)
     "c_LIAO_changchun": (
         "Yitong River / Songhua Basin (伊通河 / 宋瓦水)",
-        "Magistrat van Langlenten",
-        "Auspicious foundation established in 926 AD by Yelü Abaoji after conquering Bohai; named 'Eternal Spring' (长春). Calqued semantically to Langlenten and anchored geographically to the Yitong River basin."
+        "Magistrat van Langlentz-in-Chitân",
+        "Auspicious foundation established in 926 AD by Yelü Abaoji after conquering Bohai; named 'Eternal Spring' (长春). Calqued semantically to Langlentz-in-Chitân and anchored geographically to the Yitong River basin."
     ),
     "c_LIAO_chaoyang": (
         "Daling River Basin (大凌河 / 白狼水)",
@@ -54,8 +54,8 @@ section5_db = {
     ),
     "c_LIAO_ningzhou": (
         "Fuzhou River Basin (复州河 / 宁州川)",
-        "Magistrat van Rûwegouwe",
-        "Post-867 Liao garrison prefecture in southern Liaodong; characters 宁州 denote 'Tranquil Prefecture'. Calqued to Rûwegouwe."
+        "Magistrat van Rûwegouwe-in-Chitân",
+        "Post-867 Liao garrison prefecture in southern Liaodong; characters 宁州 denote 'Tranquil Prefecture'. Calqued to Rûwegouwe-in-Chitân."
     ),
     "c_LIAO_raozhou": (
         "Lower Laoha River Basin (老哈河下游)",
@@ -64,8 +64,8 @@ section5_db = {
     ),
     "c_LIAO_taizhou": (
         "Taoer River Basin (洮儿河 / 泰州川)",
-        "Magistrat van Grôzfridgouwe",
-        "Post-867 Khitan border commandery on the Taoer River; characters 泰州 denote 'Exalted Peace Prefecture'. Calqued to Grôzfridgouwe."
+        "Magistrat van Grôzfridgouwe-in-Chitân",
+        "Post-867 Khitan border commandery on the Taoer River; characters 泰州 denote 'Exalted Peace Prefecture'. Calqued to Grôzfridgouwe-in-Chitân."
     ),
     "c_LIAO_ulagaian": (
         "Ulz River / Ulagaian Basin (乌勒吉河 / 兀鲁回水)",
@@ -84,8 +84,8 @@ section5_db = {
     ),
     "c_liao_fengzhou": (
         "Dahei River / Hetao Basin (大黑河 / 丰州川)",
-        "Magistrat van Rîchgouwe",
-        "Post-867 Liao garrison prefecture in southern Inner Mongolia; characters 丰州 denote 'Bountiful Harvest Prefecture'. Calqued to Rîchgouwe."
+        "Magistrat van Rîchgouwe-in-Chitân",
+        "Post-867 Liao garrison prefecture in southern Inner Mongolia; characters 丰州 denote 'Bountiful Harvest Prefecture'. Calqued to Rîchgouwe-in-Chitân."
     ),
     "c_lnj_liaoxi": (
         "Western Liao River Basin (西辽河)",
@@ -156,8 +156,8 @@ section5_db = {
     ),
     "c_BAL_ningzhou": (
         "Razdolnaya / Suifen River Basin (绥芬河)",
-        "Magistrat van Rûwegouwe",
-        "Eastern Bohai coastal prefecture; characters 宁州 denote 'Tranquil Prefecture'. Calqued to Rûwegouwe."
+        "Magistrat van Rûwegouwe-in-Lûdsen",
+        "Eastern Bohai coastal prefecture; characters 宁州 denote 'Tranquil Prefecture'. Calqued to Rûwegouwe-in-Lûdsen."
     ),
     "c_BAL_north_anbyeon": (
         "Upper Mudan River Basin (忽汗河上源)",
@@ -317,8 +317,8 @@ section5_db = {
     ),
     "c_yuanzhou_2": (
         "Upper Qingshui River Basin (清水河上源 / 原州原)",
-        "Magistrat van Veltgouwe",
-        "Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe."
+        "Magistrat van Veltgouwe-in-Schjê",
+        "Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe-in-Schjê."
     ),
 }
 
