@@ -85,7 +85,11 @@ When selecting or evaluating hydronymic stems (both in **Tier 2** pre-HRE morpho
      * **Iberian, Maghreb & Saharan Waters:** Encountered via **Old Catalan, Mozarabic**, or **Andalusi Arabic / Berber** contacts (e.g. *Ebre / Ebro*, *Guadiana / Wādī Āna*, *Oued N'fis*, *Wādī Drāa*).
      * **Baltic & Fennoscandian Waters:** Encountered via **Old Prussian, Yatvingian, Curonian, Scalovian, Old Saxon**, or **Norse** pathways (e.g. *Nemunas / Mēmele* via Scalovian/Curonian; *Plesė / Plisa* via Yatvingian; *Mėna* via Baltic substrate; *Kymijoki*).
      * **Near Eastern & Mesopotamian Waters:** Encountered via **Syriac / Aramaic, Byzantine Greek**, or **Classical Arabic** borderlands (e.g. *Khabur*, *Yarmouk*, *Barada*).
-4. **Deprecated / Disqualified:**
+4. **East Asian / Sinosphere Logographic Toponyms (Harmonized Calque Paradigm):**
+   * Where Sinospheric administrative titles founded after 867 AD (e.g., Khitan Liao commanderies, Bohai/Jurchen frontier posts) are composed of ideographic Chinese characters (`汉字` / *Hànzì*) expressing auspicious semantic concepts rather than feudal eponymous lords, the titles are resolved by dual harmonization:
+     * **(a) Physical Substrate Anchoring (Option B):** Territorial jurisdiction is anchored to the authentic pre-867 physical hydronym, mountain range, or indigenous river basin (e.g., *Yitong River / Songhua Basin*, *Daling River*, *Shira Muren*, *Mudan River*, *Xiao Pass*).
+     * **(b) Semantic Calquing:** The semantic meaning of the logographic characters is directly calqued into Tarraconian (e.g., `长春` 'Eternal Spring' $\rightarrow$ *Langlenten*, `大定` 'Great Settlement' $\rightarrow$ *Grôzfest*, `安边` 'Pacified March' $\rightarrow$ *Fridmarch*). This completely avoids the causal paradox of European eponymous foundations while preserving authentic Sinitic statecraft semantics.
+5. **Deprecated / Disqualified:**
    * Modern or late post-867 colonial names from nations that never mediated contact in the save (e.g., Early Modern Tsarist Russian administrative names, Ottoman Turkish replacements for Byzantine waters, or 13th-century Teutonic *Ostsiedlung* exonyms in provinces converted directly to Tarraconian).
 
 ---

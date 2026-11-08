@@ -309,7 +309,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |82|`c_jizhou_1`|**Jizhou**|**蓟州**|—| **Magistrat van Distelgouwe** |✅ Pre-867 Classical|**[RE]**|han|41|4|b_yuyang [castle], b_sanhe [city], b_...|
 |83|`c_pinzhou`|**Pinzhou**|**平州**|—| **Magistrat van Ebenegouwe** |✅ Pre-867 Classical|**[RE]**|han|33|4|b_lulong [castle], b_anxi_2 [church],...|
 |84|`c_tanzhou_2`|**Tanzhou**|**檀州**|—| **Magistrat van Sandelgouwe** |✅ Pre-867 Classical|**[RE]**|khitan|32|4|b_miyun [castle], b_yanle [castle], b...|
-|85|`c_youzhou`|**Youzhou**|**幽州**|—| **Gubernat van Jôugouwe** |✅ Pre-867 Classical|**[RE]**|han|44|5|b_ji [castle], b_lu [city], b_changpi...|
+|85|`c_youzhou`|**Youzhou**|**幽州**|—| **Magistrat van Jôugouwe** |✅ Pre-867 Classical|**[RE]**|han|44|5|b_ji [castle], b_lu [city], b_changpi...|
 |86|`c_zhuozhou`|**Zhuozhou**|**涿州**|—| **Magistrat van Dschuôkgouwe** |✅ Pre-867 Classical|**[RE]**|han|36|2|b_fanyang [castle], b_guan [city]|
 
 ### 2.2 Empire of Liangyi (`e_liangyi` / 梁益) — **Keiserrîch van Lîangjî**
@@ -324,7 +324,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|87|`c_dali`|**Dali**|**大理**|—| **Gubernat van Grôzrecht** |✅ Pre-867 Classical|`k_qianzhong`|bai|39|3|b_dali_1 [castle], b_ningbei [city], ...|
+|87|`c_dali`|**Dali**|**大理**|—| **Magistrat van Grôzrecht** |✅ Pre-867 Classical|`k_qianzhong`|bai|39|3|b_dali_1 [castle], b_ningbei [city], ...|
 |88|`c_nongdong`|**Nongdong**|**弄栋**|—| **Magistrat van Padbalk** |✅ Pre-867 Classical|`k_qianzhong`|bai|33|2|b_nongdong [castle], b_shenli [church]|
 |89|`c_weichu`|**Weichu**|**威楚**|—| **Magistrat van Machttschû** |✅ Pre-867 Classical|`k_qianzhong`|bai|43|2|b_elu [castle], b_moyu [city]|
 
@@ -332,7 +332,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|90|`c_huichuan`|**Huichuan**|**会川**|—| **Gubernat van dem Samelingbache** |✅ Pre-867 Classical|`k_qianzhong`|Huichuan|35|3|b_huichuan_1 [castle], b_nuodan [city...|
+|90|`c_huichuan`|**Huichuan**|**会川**|—| **Magistrat van dem Samelingbache** |✅ Pre-867 Classical|`k_qianzhong`|Huichuan|35|3|b_huichuan_1 [castle], b_nuodan [city...|
 |91|`c_jianchang_1`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz** |✅ Pre-867 Classical|`k_qianzhong`|Huichuan|25|2|b_yuexi [castle], b_taideng [city]|
 
 ##### Duchy of Jianchuan (`d_jianchuan` / 剑川) — **Gubernat van dem Swertbache** — *0/3 in Roman Empire*
@@ -340,7 +340,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |92|`c_chengji`|**Chengji**|**成偈**|—| **Magistrat van Vollbrâchthilich** |✅ Pre-867 Classical|`k_qianzhong`|kachin|27|3|b_chengji_1 [castle], b_luogong [city...|
-|93|`c_jianchuan`|**Jianchuan**|**剑川**|—| **Gubernat van dem Swertbache** |✅ Pre-867 Classical|`k_qianzhong`|kachin|30|3|b_jianchuan [castle], b_lanxi [city],...|
+|93|`c_jianchuan`|**Jianchuan**|**剑川**|—| **Magistrat van dem Swertbache** |✅ Pre-867 Classical|`k_qianzhong`|kachin|30|3|b_jianchuan [castle], b_lanxi [city],...|
 |94|`c_xiangcheng`|**Xiangcheng**|**香城**|—| **Magistrat van Sôtruchendburch** |✅ Pre-867 Classical|`k_qianzhong`|yi|26|3|b_kunmimg [castle], b_lidou [city], b...|
 
 ##### Duchy of Tonghai (`d_tonghai` / 通海) — **Gubernat van Dörchgancmêr** — *0/3 in Roman Empire*
@@ -348,7 +348,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |95|`c_muze`|**Muze**|**目则**|—| **Magistrat van Schouwenorm** |✅ Pre-867 Classical|`k_qianzhong`|yi|51|3|b_muze [castle], b_ayue [city], b_men...|
-|96|`c_tonghai`|**Tonghai**|**通海**|—| **Gubernat van Dörchgancmêr** |✅ Pre-867 Classical|`k_qianzhong`|bai|49|4|b_tonghai [castle], b_xie [city], b_q...|
+|96|`c_tonghai`|**Tonghai**|**通海**|—| **Magistrat van Dörchgancmêr** |✅ Pre-867 Classical|`k_qianzhong`|bai|49|4|b_tonghai [castle], b_xie [city], b_q...|
 |97|`c_zuining`|**Zuining**|**最宁**|—| **Magistrat van Vollrûwe** |✅ Pre-867 Classical|`k_qianzhong`|bai|43|3|b_hami_2 [castle], b_baogu [city], b_...|
 
 ##### Duchy of Tuodong (`d_tuodong` / 拓东) — **Gubernat van Ontgont-Ôst** — *0/3 in Roman Empire*
@@ -365,7 +365,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |101|`c_buri`|**Buri**|**步日**|—| **Magistrat van Stêsunnen** |✅ Pre-867 Classical|`k_qianzhong`|tai|41|3|b_buri_2 [temple_citadel], b_buteng [...|
 |102|`c_weiyuan`|**Weiyuan**|**威远**|—| **Magistrat van Machtferne** |✅ Pre-867 Classical|`k_qianzhong`|bai|37|2|b_weiyuan_1 [castle], b_luotuo [city]|
-|103|`c_yinsheng`|**Yinsheng**|**银生**|—| **Gubernat van Silberlêven** |✅ Pre-867 Classical|`k_qianzhong`|bai|45|3|b_menggu [castle], b_kainan [city], b...|
+|103|`c_yinsheng`|**Yinsheng**|**银生**|—| **Magistrat van Silberlêven** |✅ Pre-867 Classical|`k_qianzhong`|bai|45|3|b_menggu [castle], b_kainan [city], b...|
 
 #### 2.2.2 Kingdom of Dongchuan (`k_dongchuan` / 东川) — **Kûnincrich van dem Ôstbache**
 *Extent: **12 Counties** | Development: **504** (avg 42.0) | Roman Control: **0/12** | Flagged Anachronisms: **0***
@@ -812,7 +812,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |284|`c_jiuquan`|**Suzhou**|**肃州**|—| **Magistrat van Strêngegouwe** |✅ Pre-867 Classical|**[RE]**|tocharian|22|3|b_jiuquan [castle], b_dongting [city]...|
 |285|`c_liaoquan`|**Liaoquan**|**蓼泉**|—| **Magistrat van Pêperkruytbrunn** |✅ Pre-867 Classical|**[RE]**|han|23|3|b_liaoquan [castle], b_ganjun [city],...|
 |286|`c_yumen`|**Yumen**|**玉门**|—| **Magistrat van Jâdetôr** |✅ Pre-867 Classical|**[RE]**|han|26|3|b_yumen [castle], b_jinshan [city], b...|
-|287|`c_zhenwu_1`|**Zhenwu**|**振武**|—| **Gubernat van Wâpenmacht** |✅ Pre-867 Classical|**[RE]**|han|21|2|b_zhenwu [castle], b_baiting [city]|
+|287|`c_zhenwu_1`|**Zhenwu**|**振武**|—| **Magistrat van Wâpenmacht** |✅ Pre-867 Classical|**[RE]**|han|21|2|b_zhenwu [castle], b_baiting [city]|
 
 ##### Duchy of Guasha (`d_guasha` / 瓜沙) — **Gubernat van Melûnsant** — *6/6 in Roman Empire*
 

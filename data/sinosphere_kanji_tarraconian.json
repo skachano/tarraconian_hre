@@ -63,7 +63,7 @@
     "titles": [
       "Dalian (`c_LIAO_dalian`)",
       "Heicaoan (`c_LIAO_heicaoan`)",
-      "Ulagaian (`c_LIAO_ulagaian`)",
+      "Ulagaijan (`c_LIAO_ulagaian`)",
       "Heilonghean (`c_SW_heilonghean`)"
     ],
     "id": 3
@@ -106,7 +106,7 @@
     "title_count": 3,
     "titles": [
       "Baishan (`c_baishan`)",
-      "Baiyin (`c_zhanyin`)",
+      "Baijin (`c_zhanyin`)",
       "Baizhou (`c_baizhou`)"
     ],
     "id": 5
@@ -127,7 +127,7 @@
     "tarr_example": "c_baekje 百济 -> Bêkdschelant",
     "title_count": 1,
     "titles": [
-      "Baekje (`k_baekje`)"
+      "Baekdsche (`k_baekje`)"
     ],
     "id": 6
   },
@@ -2662,7 +2662,7 @@
     "tarr_example": "c_gongcheng 共城 -> Magistrat van Gemênburch",
     "title_count": 1,
     "titles": [
-      "Gonghejiang (`c_SW_gonghejiang`)"
+      "Gonghe-Dschiang (`c_SW_gonghejiang`)"
     ],
     "id": 126
   },
@@ -3147,7 +3147,7 @@
     "tarr_example": "c_hanzhou_sc 含州 -> Magistrat van Kûmpegouwe",
     "title_count": 1,
     "titles": [
-      "Hamyang (`c_hamyang`)"
+      "Hamjang (`c_hamyang`)"
     ],
     "id": 149
   },
@@ -3315,7 +3315,7 @@
       "Hezhou (`c_liyang`)",
       "Yamato (`k_yamato`)",
       "Yamato (`c_yamato`)",
-      "Gonghejiang (`c_SW_gonghejiang`)"
+      "Gonghe-Dschiang (`c_SW_gonghejiang`)"
     ],
     "id": 157
   },
@@ -3336,7 +3336,7 @@
     "title_count": 27,
     "titles": [
       "Hebei (`k_hebei`)",
-      "Heyang (`d_heyang`)",
+      "Hejang (`d_heyang`)",
       "Hedong (`k_hedong`)",
       "Hedong (`d_hedong`)"
     ],
@@ -3440,7 +3440,7 @@
     "titles": [
       "Heihe (`c_heihe`)",
       "Heicaoan (`c_LIAO_heicaoan`)",
-      "Heuksu Anwon (`c_BAL_heuksu_anwon`)",
+      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)",
       "Heiergun (`c_SW_heiergun`)"
     ],
     "id": 163
@@ -3933,8 +3933,8 @@
     "tarr_example": "c_huizhou 回州 -> Magistrat van Hôeigouwe",
     "title_count": 2,
     "titles": [
-      "Ulagaian (`c_LIAO_ulagaian`)",
-      "Ulagaian (`c_LIAO_ulagaian`)"
+      "Ulagaijan (`c_LIAO_ulagaian`)",
+      "Ulagaijan (`c_LIAO_ulagaian`)"
     ],
     "id": 186
   },
@@ -4056,7 +4056,7 @@
     "tarr_example": "c_jinan 济南 -> Magistrat van Sûtvurt / c_jeju 济州 -> Övergouwe",
     "title_count": 2,
     "titles": [
-      "Baekje (`k_baekje`)",
+      "Baekdsche (`k_baekje`)",
       "Jiqin Hari (`c_SW_jiqin_hari`)"
     ],
     "id": 192
@@ -4624,7 +4624,7 @@
     "tarr_example": "c_jinzhou_sc 进州 -> Magistrat van Vödderegouwe",
     "title_count": 1,
     "titles": [
-      "Jillye (`c_jillye`)"
+      "Dschillje (`c_jillye`)"
     ],
     "id": 219
   },
@@ -4955,8 +4955,8 @@
     "title_count": 3,
     "titles": [
       "Kaizhou (`c_kaizhou`)",
-      "Gaeseong (`d_gaeseong`)",
-      "Gaeseong (`c_gaeseong`)"
+      "Gaesong (`d_gaeseong`)",
+      "Gaesong (`c_gaeseong`)"
     ],
     "id": 235
   },
@@ -5477,7 +5477,7 @@
     "tarr_example": "c_lizhou_sc 礼州 -> Magistrat van Sêdengouwe / c_delizhen 德理镇 -> Dôgetmarct",
     "title_count": 1,
     "titles": [
-      "Jillye (`c_jillye`)"
+      "Dschillje (`c_jillye`)"
     ],
     "id": 260
   },
@@ -5756,7 +5756,7 @@
     "title_count": 2,
     "titles": [
       "Linzhou (`c_linzhou`)",
-      "Inje (`c_inje`)"
+      "Indsche (`c_inje`)"
     ],
     "id": 273
   },
@@ -5844,7 +5844,7 @@
       "Lingzhou (`c_lingzhou_1`)",
       "Lingling (`d_lingling`)",
       "Jiangling (`c_jiangling`)",
-      "Ulleong (`c_ulleong`)"
+      "Ullong (`c_ulleong`)"
     ],
     "id": 277
   },
@@ -6215,9 +6215,9 @@
     "tarr_example": "c_luzhou_sd 鲁州 -> Magistrat van Lûgouwe",
     "title_count": 3,
     "titles": [
-      "Ulagaian (`c_LIAO_ulagaian`)",
+      "Ulagaijan (`c_LIAO_ulagaian`)",
       "Talu (`d_LIAO_shangjing`)",
-      "Ulagaian (`c_LIAO_ulagaian`)"
+      "Ulagaijan (`c_LIAO_ulagaian`)"
     ],
     "id": 295
   },
@@ -6237,7 +6237,7 @@
     "tarr_example": "c_luzhou_sx 鹿州 -> Magistrat van Hirschgouwe",
     "title_count": 1,
     "titles": [
-      "Lupingyuan (`c_SW_lupingyuan`)"
+      "Lupingjuan (`c_SW_lupingyuan`)"
     ],
     "id": 296
   },
@@ -6467,7 +6467,7 @@
     "tarr_example": "c_maozhou_hb 鄚州 -> Magistrat van Mâkgouwe",
     "title_count": 3,
     "titles": [
-      "Moe-Su (`d_BAL_moe_su`)",
+      "Moe-Sû (`d_BAL_moe_su`)",
       "Makhil (`c_BAL_makhil`)",
       "West Makhil (`c_BAL_west_makhil`)"
     ],
@@ -7325,7 +7325,7 @@
     "tarr_example": "c_pingzhou 坪州 -> Magistrat van Ebenegouwe",
     "title_count": 1,
     "titles": [
-      "Lupingyuan (`c_SW_lupingyuan`)"
+      "Lupingjuan (`c_SW_lupingyuan`)"
     ],
     "id": 348
   },
@@ -7953,8 +7953,8 @@
     "title_count": 3,
     "titles": [
       "Quanzhou (`c_quanzhou_2`)",
-      "Jeonju (`d_jeonju`)",
-      "Jeonju (`c_jeonju`)"
+      "Dschondschu (`d_jeonju`)",
+      "Dschondschu (`c_jeonju`)"
     ],
     "id": 378
   },
@@ -8165,7 +8165,7 @@
     "tarr_example": "c_rouyuan 柔远 -> Magistrat van Zachtferne",
     "title_count": 1,
     "titles": [
-      "Rouyuan (`c_rouyuan`)"
+      "Roujuan (`c_rouyuan`)"
     ],
     "id": 388
   },
@@ -8395,7 +8395,7 @@
     "title_count": 2,
     "titles": [
       "Shanchan (`c_shanchan`)",
-      "Ilseon (`c_ilseon`)"
+      "Ilson (`c_ilseon`)"
     ],
     "id": 399
   },
@@ -9036,10 +9036,10 @@
     "tarr_example": "c_suwon 水原 -> Magistrat van Wazzerbrunn / c_heishui 黑水 -> Swartzwazzer",
     "title_count": 5,
     "titles": [
-      "Heuksu Anwon (`c_BAL_heuksu_anwon`)",
+      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)",
       "Choripi (`c_eman_choripi`)",
       "Heishuiyang (`c_eman_heishuiyang`)",
-      "Heuksu Anwon (`c_BAL_heuksu_anwon`)"
+      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)"
     ],
     "id": 430
   },
@@ -9185,7 +9185,7 @@
     "tarr_example": "c_suzhou_sx 涑州 -> Magistrat van Sûkgouwe",
     "title_count": 1,
     "titles": [
-      "Moe-Su (`d_BAL_moe_su`)"
+      "Moe-Sû (`d_BAL_moe_su`)"
     ],
     "id": 437
   },
@@ -9370,7 +9370,7 @@
     "tarr_example": "c_taiyuan 太原 -> Magistrat van Grôzveit",
     "title_count": 2,
     "titles": [
-      "Taiyuan (`c_taiyuan`)",
+      "Taijuan (`c_taiyuan`)",
       "Dazaifu (`d_north_saikaido`)"
     ],
     "id": 446
@@ -9455,7 +9455,7 @@
     "title_count": 2,
     "titles": [
       "Tangzhou (`c_tangzhou`)",
-      "Dangseong (`c_dangseong`)"
+      "Dangsong (`c_dangseong`)"
     ],
     "id": 450
   },
@@ -9535,7 +9535,7 @@
     "tarr_example": "c_tizhou 蹄州 -> Magistrat van Hôfgouwe",
     "title_count": 1,
     "titles": [
-      "Inje (`c_inje`)"
+      "Indsche (`c_inje`)"
     ],
     "id": 454
   },
@@ -10260,8 +10260,8 @@
     "title_count": 3,
     "titles": [
       "Wòju (`d_BAL_southern_balhae`)",
-      "Woye (`c_woye`)",
-      "Woye (`c_woye`)"
+      "Woje (`c_woye`)",
+      "Woje (`c_woye`)"
     ],
     "id": 489
   },
@@ -10346,7 +10346,7 @@
     "titles": [
       "Wuluhai (`d_langshan`)",
       "Wuluhai (`c_langshan`)",
-      "Ulagaian (`c_LIAO_ulagaian`)",
+      "Ulagaijan (`c_LIAO_ulagaian`)",
       "Mengwuo (`c_SW_mengwuo`)"
     ],
     "id": 493
@@ -11435,7 +11435,7 @@
     "tarr_example": "c_luoyang 洛阳 -> Magistrat van Lôchsunne / c_hanyang 汉阳 -> Hânsunne / c_BAL_liaoyang 辽阳 -> Ljôsunne",
     "title_count": 12,
     "titles": [
-      "Heyang (`d_heyang`)",
+      "Hejang (`d_heyang`)",
       "Huaiyang (`c_huaiyang`)",
       "Liyang (`c_liyang_2`)",
       "Guiyang (`c_guiyang`)"
@@ -11503,7 +11503,7 @@
       "Quye (`c_quye`)",
       "Shimotsuke (`c_shimotsuke`)",
       "Kōzuke (`c_kozuke`)",
-      "Woye (`c_woye`)"
+      "Woje (`c_woye`)"
     ],
     "id": 548
   },
@@ -11523,7 +11523,7 @@
     "tarr_example": "c_ilseon 一善 -> Magistrat van Eênbêst",
     "title_count": 1,
     "titles": [
-      "Ilseon (`c_ilseon`)"
+      "Ilson (`c_ilseon`)"
     ],
     "id": 549
   },
@@ -11793,7 +11793,7 @@
     "titles": [
       "Yinsheng (`d_yinsheng`)",
       "Yinsheng (`c_yinsheng`)",
-      "Baiyin (`c_zhanyin`)",
+      "Baijin (`c_zhanyin`)",
       "Yinzhou (`c_yinzhou`)"
     ],
     "id": 562
@@ -12229,7 +12229,7 @@
     "title_count": 2,
     "titles": [
       "Yulin (`c_yulin`)",
-      "Ulleong (`c_ulleong`)"
+      "Ullong (`c_ulleong`)"
     ],
     "id": 583
   },
@@ -12313,7 +12313,7 @@
     "title_count": 13,
     "titles": [
       "Zhongyuan (`e_zhongyuan`)",
-      "Taiyuan (`c_taiyuan`)",
+      "Taijuan (`c_taiyuan`)",
       "Xiyuan (`d_xiyuan`)",
       "Jingyuan (`d_jingyuan`)"
     ],
@@ -12335,7 +12335,7 @@
     "tarr_example": "c_dongyuan 东塬 -> Magistrat van Ôst-Leemhôch",
     "title_count": 1,
     "titles": [
-      "Lupingyuan (`c_SW_lupingyuan`)"
+      "Lupingjuan (`c_SW_lupingyuan`)"
     ],
     "id": 588
   },
@@ -12395,7 +12395,7 @@
     "tarr_example": "c_weiyuan 威远 -> Magistrat van Machtferne / c_huaiyuan 怀远 -> Koesterferne / c_totomi 远江 -> Ferneflôz",
     "title_count": 14,
     "titles": [
-      "Rouyuan (`c_rouyuan`)",
+      "Roujuan (`c_rouyuan`)",
       "Weiyuan (`c_weiyuan`)",
       "Huaiyuan (`c_huaiyuan`)",
       "Yeongwon (`c_yeongwon`)"

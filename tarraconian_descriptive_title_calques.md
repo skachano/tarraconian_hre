@@ -177,8 +177,8 @@ In regions where **Chinese characters** (*Hànzì*, *Hanja*, *Kanji*, *Chữ Há
 > **The Phonetic Loan (*Jiajie / Ateji*) Exception:**
 > Do NOT force semantic calques onto ancient pre-Han indigenous names where Chinese characters were used purely as phonetic transcription alphabets:
 > * **Silla (新羅):** Characters mean "New Silk Net", but transcribe native Korean *Seorabeol* (Capital). Keep phonetically as **`Sille`**.
-> * **Baekje (百濟):** Characters mean "Hundred Crossings", but transcribe an ancient Buyeo tribal name. Keep phonetically as **`Bêkdsche`**.
-> * **Yamato (大和):** Characters mean "Great Harmony", but transcribe an indigenous Japonic toponym. Keep phonetically as **`Jamato`**.
+> * **Baekje (百濟):** Characters mean "Hundred Crossings", but transcribe an ancient Buyeo tribal name. Keep phonetically as **`Baekdsche`**.
+> * **Yamato (大和):** Characters mean "Great Harmony", but transcribe an indigenous Japonic toponym. Keep phonetically as **`Jamatô`**.
 
 ### 3.9 The Steppe, Turanian & Iranian Matrix (Turkic, Oghur, Persian & Sogdian)
 Across the Pontic-Caspian Steppe, Turan, Khorasan, and Persia (where over 3,800 pre-Tarraconian rulers governed imperial territories), toponyms are heavily dominated by pastoral, hydronymic, and fortress descriptors:
@@ -390,7 +390,7 @@ The following tables demonstrate how specific titles across the Empire in [tarra
 | `c_incheon` | Incheon (仁川) | **Magistrat van dem Miltflôz** *(or **Gûtebache**)* | 仁 (*Benevolence / Virtue*) + 川 (*Stream / River*) $\rightarrow$ "The Benevolent River". |
 | `c_jeju` | Jeju (濟州) | **Magistrat van der Övergouwe** *(or **Vêr-Insel**)* | 濟 (*Ferry / Crossing Waters*) + 州 (*Prefecture/Island*) $\rightarrow$ "The Crossing/Ferry Island". |
 | `c_gangwon` | Gangwon (江原) | **Magistrat van Flôzbrunn** | 江 (*River*) + 原 (*Source / Springhead*) $\rightarrow$ headwaters of the Han and Nakdong rivers. |
-| `c_gyeongju` | Gyeongju (慶州) | **Magistrat van Fröudengouwe** *(or **Gyeongdschu**)* | 慶 (*Celebration / Rejoicing*) + 州 (*Province*) $\rightarrow$ auspicious administrative naming. |
+| `c_gyeongju` | Gyeongju (慶州) | **Magistrat van Fröudengouwe** *(or **Gjongdschu**)* | 慶 (*Celebration / Rejoicing*) + 州 (*Province*) $\rightarrow$ auspicious administrative naming. |
 | `c_hanoi` | Hà Nội (河內) | **Magistrat van Binnenflôz** *(or **Hanôi**)* | 河 (*River*, Red River) + 內 (*Inside / Encircled*) $\rightarrow$ "Settlement Inside the River Bight". |
 | `c_haiphong` | Hải Phòng (海防) | **Magistrat van der Sêwart** | 海 (*Sea / Coast*) + 防 (*Defense / Guard*) $\rightarrow$ historical naval fortress defending Tonkin. |
 | `c_tokyo` | Tōkyō / Dongjing (東京) | **Magistrat van der Ôst-Hôfstat** | 東 (*East*) + 京 (*Capital*) $\rightarrow$ "The Eastern Capital". |
