@@ -13,6 +13,7 @@ Preserves UTF-8 with BOM and Windows CRLF line endings.
 import os
 import re
 import sys
+import shutil
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -986,11 +987,28 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         cid = c['culture_id']
         name = c['realigned_name']
         coll = c['collective_noun']
-        tname = c['tarr_name']
+        tname = re.sub(r'\s*\([^)]*\)', '', c['tarr_name']).strip()
         prefix_m = re.match(r"^([^\s\-]+)", name)
         prefix_stem = prefix_m.group(1) if prefix_m else name
-        prefix = f"{prefix_stem.rstrip('ian').rstrip('an')}-" if not prefix_stem.endswith('-') else prefix_stem
-        tprefix = f"{tname.rstrip('en').rstrip('er')}isch-"
+        if prefix_stem.endswith('-'):
+            prefix = prefix_stem
+        elif prefix_stem.endswith('ian'):
+            prefix = f"{prefix_stem[:-3]}-"
+        elif prefix_stem.endswith('an'):
+            prefix = f"{prefix_stem[:-2]}-"
+        else:
+            prefix = f"{prefix_stem}-"
+        tstem = tname
+        if tstem.endswith('isch'):
+            tprefix = f"{tstem}-"
+        elif tstem.endswith('en'):
+            tprefix = f"{tstem[:-2]}isch-"
+        elif tstem.endswith('er'):
+            tprefix = f"{tstem[:-2]}isch-"
+        elif tstem.endswith('e'):
+            tprefix = f"{tstem[:-1]}isch-"
+        else:
+            tprefix = f"{tstem}isch-"
 
         lines.extend([
             f' # Culture {cid}: {c["current_name"]} -> {name}',
@@ -1123,6 +1141,27 @@ def main():
     with open(LOC_PATH, 'w', encoding='utf-8-sig', newline='') as f:
         f.write(loc_content)
     print(f"Wrote {len(loc_content.splitlines())} lines to {LOC_PATH}")
+
+    # 4. Sync to Paradox Interactive CK3 mod directory if accessible
+    paradox_mod_root = Path.home() / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod"
+    try:
+        if paradox_mod_root.exists():
+            paradox_mod_dir = paradox_mod_root / "tarraconian_chancellery"
+            paradox_mod_dir.mkdir(parents=True, exist_ok=True)
+            src_mod_dir = REPO_ROOT / "tarraconian_chancellery"
+            for item in src_mod_dir.glob("**/*"):
+                if item.is_file():
+                    rel = item.relative_to(src_mod_dir)
+                    dest = paradox_mod_dir / rel
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(item, dest)
+            mod_desc = (src_mod_dir / "descriptor.mod").read_text(encoding='utf-8')
+            posix_path = str(paradox_mod_dir).replace("\\", "/")
+            mod_file_content = f'{mod_desc.strip()}\npath="{posix_path}"\n'
+            (paradox_mod_root / "tarraconian_chancellery.mod").write_text(mod_file_content, encoding='utf-8')
+            print(f"Successfully synced mod assets to {paradox_mod_dir}")
+    except Exception as e:
+        print(f"Note: Could not sync to Paradox mod directory ({e})")
 
 if __name__ == '__main__':
     main()

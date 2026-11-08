@@ -171,11 +171,11 @@ def verify():
         return False
     else:
         print("ALL AUDIT AND MOD INTEGRATION VERIFICATIONS PASSED!")
-        print(f"  • Total Gazetteer Titles: {len(gazetteer_entries)}")
-        print(f"  • Static Titles in Effects: {len(static_keys_in_effects)}")
-        print(f"  • Dynamic Renaming Rules: {len(name_refs) - len(static_keys_in_effects)}")
-        print(f"  • Total Localized Strings: {len(loc_dict)}")
-        print(f"  • Zero Orphan Triggers / Zero Missing Localization Keys")
+        print(f"  * Total Gazetteer Titles: {len(gazetteer_entries)}")
+        print(f"  * Static Titles in Effects: {len(static_keys_in_effects)}")
+        print(f"  * Dynamic Renaming Rules: {len(name_refs) - len(static_keys_in_effects)}")
+        print(f"  * Total Localized Strings: {len(loc_dict)}")
+        print(f"  * Zero Orphan Triggers / Zero Missing Localization Keys")
         return True
 
 if __name__ == '__main__':

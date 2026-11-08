@@ -8517,14 +8517,14 @@
  tarr_culture_270_prefix:0 "Trubezh-"
  tarr_culture_270_tarr_name:0 "Trubeschjanen"
  tarr_culture_270_tarr_collective:0 "Trubeschjanen"
- tarr_culture_270_tarr_prefix:0 "Trubeschjaisch-"
+ tarr_culture_270_tarr_prefix:0 "Trubeschjanisch-"
  # Culture 275: Galațian -> Dinogetian-Vlachs
  tarr_culture_275_name:0 "Dinogetian-Vlachs"
  tarr_culture_275_collective:0 "Dinogetian-Vlachs"
  tarr_culture_275_prefix:0 "Dinoget-"
  tarr_culture_275_tarr_name:0 "Dinogetjanen"
  tarr_culture_275_tarr_collective:0 "Dinogetjanen"
- tarr_culture_275_tarr_prefix:0 "Dinogetjaisch-"
+ tarr_culture_275_tarr_prefix:0 "Dinogetjanisch-"
  # Culture 279: Frontenhausian -> Frontenhausian
  tarr_culture_279_name:0 "Frontenhausian"
  tarr_culture_279_collective:0 "Frontenhausian-Bavarians"
@@ -8545,14 +8545,14 @@
  tarr_culture_288_prefix:0 "Tyras-"
  tarr_culture_288_tarr_name:0 "Tîrasjanen"
  tarr_culture_288_tarr_collective:0 "Tîrasjanen"
- tarr_culture_288_tarr_prefix:0 "Tîrasjaisch-"
+ tarr_culture_288_tarr_prefix:0 "Tîrasjanisch-"
  # Culture 293: Bugeacian-Mogyër -> Tyrasian-Mogyër
  tarr_culture_293_name:0 "Tyrasian-Mogyër"
  tarr_culture_293_collective:0 "Tyrasian-Mogyërs"
  tarr_culture_293_prefix:0 "Tyras-"
  tarr_culture_293_tarr_name:0 "Tîrasisch-Mogyër"
  tarr_culture_293_tarr_collective:0 "Tîrasisch-Mogyër"
- tarr_culture_293_tarr_prefix:0 "Tîrasisch-Mogyëisch-"
+ tarr_culture_293_tarr_prefix:0 "Tîrasisch-Mogyërisch-"
  # Culture 303: Schmalkalder -> Schmalkalder
  tarr_culture_303_name:0 "Schmalkalder"
  tarr_culture_303_collective:0 "Schmalkalder-Franconians"
@@ -8566,7 +8566,7 @@
  tarr_culture_331_prefix:0 "Sem-"
  tarr_culture_331_tarr_name:0 "Sêmjanen"
  tarr_culture_331_tarr_collective:0 "Sêmjanen"
- tarr_culture_331_tarr_prefix:0 "Sêmjaisch-"
+ tarr_culture_331_tarr_prefix:0 "Sêmjanisch-"
  # Culture 338: Burgasan -> Deultian
  tarr_culture_338_name:0 "Deultian"
  tarr_culture_338_collective:0 "Deultian-Greeks"
@@ -8578,16 +8578,16 @@
  tarr_culture_358_name:0 "Tanaite-Turkic"
  tarr_culture_358_collective:0 "Tanaite-Khazars"
  tarr_culture_358_prefix:0 "Tanaite-"
- tarr_culture_358_tarr_name:0 "Tanaîten (Don-Oghur)"
- tarr_culture_358_tarr_collective:0 "Tanaîten (Don-Oghur)"
- tarr_culture_358_tarr_prefix:0 "Tanaîten (Don-Oghur)isch-"
+ tarr_culture_358_tarr_name:0 "Tanaîten"
+ tarr_culture_358_tarr_collective:0 "Tanaîten"
+ tarr_culture_358_tarr_prefix:0 "Tanaîtisch-"
  # Culture 367: Ungwârer -> Ungwârer
  tarr_culture_367_name:0 "Ungwârer"
  tarr_culture_367_collective:0 "Ungwârer-Tarraconians"
  tarr_culture_367_prefix:0 "Ungwârer-"
  tarr_culture_367_tarr_name:0 "Ungwârer"
  tarr_culture_367_tarr_collective:0 "Ungwârer"
- tarr_culture_367_tarr_prefix:0 "Ungwâisch-"
+ tarr_culture_367_tarr_prefix:0 "Ungwârisch-"
 
  # === Cadet House & Noble Dynasty Names ===
  tarr_house_kestenholz_raben:0 "Kestenholz-Raben"

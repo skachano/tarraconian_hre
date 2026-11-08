@@ -1280,7 +1280,7 @@ tarr_apply_dynastic_and_cultural_realignment_effect = {
 			}
 		}
 	}
-	# Culture 358: South Kazanskayan -> Tanaite-Turkic (Tanaîten (Don-Oghur))
+	# Culture 358: South Kazanskayan -> Tanaite-Turkic (Tanaîten)
 	title:c_kazanskaya ?= {
 		if = {
 			limit = {
