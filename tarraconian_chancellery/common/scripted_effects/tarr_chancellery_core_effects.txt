@@ -39,4 +39,8 @@ tarr_rename_title_effect = {
 tarr_refresh_all_titles_effect = {
 	tarr_apply_static_titles_effect = yes
 	tarr_apply_dynamic_titles_effect = yes
+	if = {
+		limit = { has_global_variable = tarr_active }
+		tarr_apply_dynastic_and_cultural_realignment_effect = yes
+	}
 }

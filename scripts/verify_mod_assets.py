@@ -15,8 +15,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_title_list_effects.txt"
+DYNASTIC_EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_dynastic_effects.txt"
+CORE_EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_core_effects.txt"
 LOC_PATH = REPO_ROOT / "tarraconian_chancellery" / "localization" / "english" / "tarraconian_titles_l_english.yml"
 GAZETTEER_PATH = REPO_ROOT / "tarraconian_titles_1059.md"
+DYNASTIC_REGISTER_PATH = REPO_ROOT / "dynastic_realignment_register.md"
 
 def verify():
     errors = []
@@ -113,6 +116,52 @@ def verify():
         for dk in set(dyn_names + dyn_hists):
             if dk not in loc_dict:
                 errors.append(f"Dynamic title references missing loc key: {dk}")
+
+    # 7. Check dynastic and cultural scripted effects and register coverage
+    assert DYNASTIC_EFFECTS_PATH.exists(), "DYNASTIC_EFFECTS file missing"
+    with open(DYNASTIC_EFFECTS_PATH, 'rb') as f:
+        dyn_effects_bytes = f.read()
+    assert dyn_effects_bytes.startswith(b'\xef\xbb\xbf'), "DYNASTIC_EFFECTS file missing UTF-8 BOM"
+    dyn_effects_text = dyn_effects_bytes.decode('utf-8-sig')
+    assert '\r\n' in dyn_effects_text, "DYNASTIC_EFFECTS file does not have CRLF line endings"
+
+    # Extract all loc keys from dynastic effects
+    dyn_loc_keys = set()
+    for pattern in [
+        r'noun\s*=\s*([a-zA-Z0-9_\-]+)',
+        r'collective_noun\s*=\s*([a-zA-Z0-9_\-]+)',
+        r'prefix\s*=\s*([a-zA-Z0-9_\-]+)',
+        r'set_house_name\s*=\s*([a-zA-Z0-9_\-]+)',
+        r'set_dynasty_name\s*=\s*([a-zA-Z0-9_\-]+)'
+    ]:
+        dyn_loc_keys.update(re.findall(pattern, dyn_effects_text))
+
+    print(f"Total unique localization keys referenced in dynastic effects: {len(dyn_loc_keys)}")
+    missing_dyn_loc = [k for k in dyn_loc_keys if k not in loc_dict]
+    if missing_dyn_loc:
+        errors.append(f"Missing {len(missing_dyn_loc)} dynastic localization keys in yml: {missing_dyn_loc[:10]}")
+    else:
+        print("  -> Zero missing localization keys for dynastic effects! (100% matched)")
+
+    # Check core effects hooks
+    with open(CORE_EFFECTS_PATH, 'r', encoding='utf-8') as f:
+        core_text = f.read()
+    if 'tarr_apply_dynastic_and_cultural_realignment_effect = yes' not in core_text:
+        errors.append("tarr_apply_dynastic_and_cultural_realignment_effect not hooked into tarr_chancellery_core_effects.txt")
+    else:
+        print("  -> Dynastic and cultural effects cleanly hooked into core chancellery pulse!")
+
+    # Check register dynn_* overrides
+    from build_mod import parse_dynastic_register
+    s2, s3, s4 = parse_dynastic_register(DYNASTIC_REGISTER_PATH)
+    with open(DYNASTIC_REGISTER_PATH, 'r', encoding='utf-8') as f:
+        reg_text = f.read()
+    register_dynn_keys = set(re.findall(r'`(dynn_[a-zA-Z0-9_\-]+)`', reg_text))
+    missing_dynn = [k for k in register_dynn_keys if k not in loc_dict]
+    if missing_dynn:
+        errors.append(f"Register dynn_* overrides missing in yml: {missing_dynn}")
+    else:
+        print(f"  -> All {len(register_dynn_keys)} register dynn_* overrides defined in localization! (100% matched)")
 
     print("\n--- SUMMARY ---")
     if errors:

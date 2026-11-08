@@ -420,13 +420,18 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     # 5. Generate Master Workspace Deliverable: dynastic_realignment_register.md
     dynasty_register_file = Path(repo_dir) / "dynastic_realignment_register.md"
     dynasty_register_csv = Path(output_dir) / "dynasty_historical_realignment_register.csv"
-    generate_dynasty_historical_realignment_register(dynasty_rename_register, NON_CHATENOIS_HOUSE_REALIGNMENTS, dynasty_register_file, dynasty_register_csv)
+    generate_dynasty_historical_realignment_register(dynasty_rename_register, NON_CHATENOIS_HOUSE_REALIGNMENTS, dynamic_cultures_list, dynasty_register_file, dynasty_register_csv)
     print(f"[Phase 4] Wrote master dynastic realignment register to {dynasty_register_file}")
 
     # 6. Update Chatenois Dynasty Analysis
     chatenois_doc = Path(phase1_dir) / "chatenois_dynasty_analysis.md"
-    update_chatenois_dynasty_analysis(dynasty_rename_register, chatenois_doc)
-    print(f"[Phase 4] Wrote updated Chatenois dynasty analysis to {chatenois_doc}")
+    try:
+        update_chatenois_dynasty_analysis(dynasty_rename_register, chatenois_doc)
+        print(f"[Phase 4] Wrote updated Chatenois dynasty analysis to {chatenois_doc}")
+    except OSError:
+        alt_doc = Path(output_dir) / "chatenois_dynasty_analysis.md"
+        update_chatenois_dynasty_analysis(dynasty_rename_register, alt_doc)
+        print(f"[Phase 4] Wrote updated Chatenois dynasty analysis to {alt_doc}")
 
 
 def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
@@ -606,32 +611,33 @@ def update_chatenois_dynasty_analysis(houses, doc_file):
 
 
 
-def generate_dynasty_historical_realignment_register(chatenois_houses, non_chatenois_houses, doc_file, csv_file=None):
+def generate_dynasty_historical_realignment_register(chatenois_houses, non_chatenois_houses, cultures, doc_file, csv_file=None):
     """
-    Generates dynasty_historical_realignment_register.md compiling all dynasty and house names
+    Generates dynastic_realignment_register.md compiling all dynasty, house, and emergent culture names
     that were automatically derived from anachronistic title names, enforcing the Toponym-First Principle.
     """
     lines = [
         "# Master Dynastic Realignment Register (Toponym-First Coupling)",
         "",
         "* **Project:** Tarraconian Chancellery Mod & Imperial Documentation",
-        "* **Scope:** All noble dynasties and cadet houses derived from anachronistic title names in the Holy Roman Empire and imperial borderlands.",
-        "* **Guiding Rule:** **The Toponym-First Principle** (Physical Geography & Antiquity Substrates $\\rightarrow$ Landed Title $\\rightarrow$ Dynastic Eponym).",
+        "* **Scope:** All noble dynasties, cadet houses, and dynamic emergent cultures derived from anachronistic title names in the Holy Roman Empire and imperial borderlands.",
+        "* **Guiding Rule:** **The Toponym-First Principle** (Physical Geography & Antiquity Substrates $\\rightarrow$ Landed Title $\\rightarrow$ Dynastic & Cultural Eponym).",
         "",
         "---",
         "",
         "## 1. Problem Statement & The Inversion of Dynastic Causality",
         "",
-        "In Crusader Kings III, dynastic generation operates mechanically in reverse:",
-        "1. **Static Vanilla Map Anachronisms:** CK3 uses a single landed title map spanning 867 to 1453. Numerous titles represent post-867 High/Late Medieval castles (*Habsburg*, *Hohenzollern*, *Berg*, *Saarbrücken*, *Mark*), 12th–14th century Ostsiedlung foundations (*Lemberg*, *Uničov*, *Hirschberg*, *Koschmin*), or post-867 frontier outposts (*Novogrudok*, *Volkovysk*, *Porto-Vecchio*, *Lyubim*).",
-        "2. **Dynamic Cadet & Eponym Generation:** When an unlanded character is granted land or a ruler establishes a cadet branch, the game engine automatically stamps the holding's name onto the dynasty (e.g., *House Naugardukas* from `c_novogrudok`, *Karling-Uničov* from `b_unicov`, *Reginar-Vecchio* from `c_vecchio`, *Chatenois-Lemberg* from `c_lviv`).",
-        "3. **The Toponym-First Inversion:** Under imperial historiography, houses cannot validate or grandfather anachronistic titles. Instead, causality must be inverted: **the holding is first cleansed of its post-867 name**, and the noble house's name is subsequently realigned to the restored authentic antiquity centre or hydronym.",
+        "In Crusader Kings III, dynastic and cultural generation operates mechanically in reverse:",
+        "1. **Static Vanilla Map Anachronisms:** CK3 uses a single landed title map spanning 867 to 1453. Numerous titles represent post-867 High/Late Medieval castles (*Habsburg*, *Hohenzollern*, *Berg*, *Saarbrücken*, *Mark*, *Pernstein*, *Coburg*), 12th–14th century Ostsiedlung foundations (*Lemberg*, *Uničov*, *Hirschberg*, *Koschmin*, *Güstrow*, *Buxtehude*, *Celle*, *Wittenberg*, *Jihlava*), or post-867 frontier outposts (*Novogrudok*, *Volkovysk*, *Porto-Vecchio*, *Lyubim*, *Povenets*, *Tambov*).",
+        "2. **Dynamic Cadet & Eponym Generation:** When an unlanded character is granted land or a ruler establishes a cadet branch, the game engine automatically stamps the holding's name onto the dynasty (e.g., *House Naugardukas* from `c_novogrudok`, *Karling-Uničov* from `b_unicov`, *Reginar-Vecchio* from `c_vecchio`, *Chatenois-Lemberg* from `c_lviv`, *Umayyad-Povenets* from `c_povenets`, *Gellones-Güstrow* from `b_gustrow`).",
+        "3. **Dynamic Emergent Culture Ethnogenesis:** When dynamic hybrid or divergent cultures form, the game automatically anchors their collective ethnonym to the capital holding of the diverged realm (e.g., *Galațian-Vlachs* from `c_galati`, *Bugeacian-Vlachs* from `c_bugeac`, *Wolkensteiner-Polabians* from `c_wolkenstein`, *Jutribocian-Polabians* from `c_juterbog`, *South Kazanskayan-Khazars* from `c_kazanskaya`).",
+        "4. **The Toponym-First Inversion:** Under imperial historiography, noble houses and dynamic emergent cultures cannot validate or grandfather anachronistic titles. Instead, causality must be strictly inverted: **the holding is first cleansed of its post-867 name**, and the noble house or emergent culture is subsequently realigned to the restored authentic antiquity centre or hydronym.",
         "",
         "---",
         "",
         "## 2. Non-Chatenois Dynastic & Cadet Realignment Register",
         "",
-        "The following noble houses across the Empire and its marchlands were generated from anachronistic holding names and are hereby realigned to their authentic pre-867 seats:",
+        "The following noble houses and newly elevated dynasties across the Empire and its marchlands were generated from anachronistic holding names and are hereby realigned to their authentic pre-867 seats:",
         "",
         "| House ID | Dynasty | Current In-Game Name | Underlying Origin Seat | Anachronism Reason | Resolved Toponym-First Seat | Realigned House Name | Tarraconian Chancellery Form | Status & Justification |",
         "| :---: | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
@@ -687,11 +693,29 @@ def generate_dynasty_historical_realignment_register(chatenois_houses, non_chate
         "",
         "---",
         "",
-        "## 4. Summary & Implementation Instructions",
+        "## 4. Dynamic Emergent Culture Realignment Register",
+        "",
+        "Under the **Toponym-First Principle & Downstream Causality Inversion Rule** (Section 3.3 of the Master Audit Plan), dynamic divergent and hybrid cultures formed during the campaign whose vanilla or save-generated names derived from post-867 anachronistic foundations are systematically realigned to the resolved historical toponyms of their ethnogenesis seats. Emergent cultures cannot validate or grandfather anachronistic titles; rather, ethnonyms derive *from* the historically resolved physical geography, antiquity civitates, and authentic hydronyms:",
+        "",
+        "| Culture ID | Current In-Game Name | Divergence Date | Underlying Origin Seat | Resolved Historical Toponym | Final Realigned Culture Name | Realigned Collective Noun | Tarraconian Culture Name | Status & Historical Justification |",
+        "| :---: | :--- | :---: | :--- | :--- | :--- | :--- | :--- | :--- |",
+    ])
+
+    for c in cultures:
+        lines.append(
+            f"| `{c['culture_id']}` | **{c['current_name']}** | {c['created']} | `{c['underlying_origin_seat']}` ({c['underlying_seat_name']}) | **{c['resolved_toponym']}** | **{c['realigned_name']}** | *{c['realigned_collective']}* | `{c['tarraconian_culture_name']}` | **{c['status']}:** {c['historical_justification']} |"
+        )
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## 5. Summary & Implementation Instructions",
         "",
         "1. **County Name Localisation Primacy:** In accordance with imperial chancellery directives, **county localizations are revised** (e.g. `c_novogrudok` $\\rightarrow$ **`Plîse`**, `c_volkovysk` $\\rightarrow$ **`Rôse`**, `c_minsk` $\\rightarrow$ **`Mêne`**), while **barony names (`b_*`) remain unaltered** in the map definition.",
         "2. **Dynastic Synchronization:** For characters holding titles in-game, house names can be realigned using the in-game House Customizer, save editing, or mod character flavorization scripts based on the **Realigned House Name** column above.",
-        "3. **Pipeline Coupling:** This document is automatically generated by Phase 4 of the Tarraconian Historical Accuracy Audit Pipeline, ensuring permanent containerized synchronization.",
+        "3. **Dynamic Emergent Culture Localization:** Emergent cultures derived from post-867 anachronisms must be customized via in-game culture reform / hybridization menus or mod localization override keys using the **Final Realigned Culture Name** and **Tarraconian Culture Name** specifications above.",
+        "4. **Pipeline Coupling:** This document is automatically generated by Phase 4 of the Tarraconian Historical Accuracy Audit Pipeline, ensuring permanent containerized synchronization.",
         ""
     ])
 
