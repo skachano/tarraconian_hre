@@ -317,8 +317,8 @@ section5_db = {
     ),
     "c_yuanzhou_2": (
         "Upper Qingshui River Basin (清水河上源 / 原州原)",
-        "Magistrat van Veltgouwe-in-Schjê",
-        "Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe-in-Schjê."
+        "Magistrat van Veltgouwe-in-dem-Sommerlant",
+        "Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe-in-dem-Sommerlant."
     ),
 }
 

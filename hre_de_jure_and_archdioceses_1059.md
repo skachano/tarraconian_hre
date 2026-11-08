@@ -3033,7 +3033,7 @@
   * **[HRE]** **Suizhou** (`c_suizhou`) — *Tarraconian: **Magistrat van Stillgouwe****
   * **[HRE]** **Xiazhou** (`c_xiazhou`) — *Tarraconian: **Magistrat van Hîagouwe****
   * **[HRE]** **Yanzhou** (`c_wuyuan`) — *Tarraconian: **Magistrat van Salzgouwe****
-  * **[HRE]** **Yinzhou** (`c_yinzhou`) — *Tarraconian: **Magistrat van Silbergouwe-in-Schjê****
+  * **[HRE]** **Yinzhou** (`c_yinzhou`) — *Tarraconian: **Magistrat van Silbergouwe-in-dem-Sommerlant****
   * **[HRE]** **Youzhou** (`c_youzhou_2`) — *Tarraconian: **Magistrat van Gnadegouwe****
 * **Duchy of Juyan** (`d_juyan`) — *4/4 in HRE*
   * **[HRE]** **Heihe** (`c_heihe`) — *Tarraconian: **Magistrat van Swartzflôz****
@@ -3043,7 +3043,7 @@
 * **Duchy of Jingyuan** (`d_jingyuan`) — *3/3 in HRE*
   * **[HRE]** **Jingzhou** (`c_jingzhou`) — *Tarraconian: **Magistrat van Dschingflôz****
   * **[HRE]** **Xiaoguan** (`c_xiaoguan`) — *Tarraconian: **Magistrat van Schilfklûse****
-  * **[HRE]** **Yuanzhou** (`c_yuanzhou_2`) — *Tarraconian: **Magistrat van Veltgouwe-in-Schjê****
+  * **[HRE]** **Yuanzhou** (`c_yuanzhou_2`) — *Tarraconian: **Magistrat van Veltgouwe-in-dem-Sommerlant****
 * **Duchy of Wuluhai** (`d_langshan`) — *3/3 in HRE*
   * **[HRE]** **Hequ** (`c_hequ`) — *Tarraconian: **Magistrat van Flôzkrûmme****
   * **[HRE]** **Wuda** (`c_keyimen`) — *Tarraconian: **Magistrat van Swartzrêk****

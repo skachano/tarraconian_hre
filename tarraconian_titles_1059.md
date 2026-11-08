@@ -137,7 +137,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 99 | **Songhay** | `k_songhay` | **Kûnincrich van Songâi** *(1142 Hist: **Kûnincrich van Kaukau**)* | *Songâisch* | **1/8 RE** — Added in 1142 Imperial Chancellery update. |
 | 100 | **Permia** | `k_permia` | **Kûnincrich van Permjen** *(1122 Hist: **Kûnincrich van Grôzperm**)* | *Permisch* | **1/7 RE** — Added in 1122 Imperial Chancellery update. |
 | 101 | **Amdo** | `k_amdo` | **Kûnincrich van Amdô** | *Amdôisch* | **27/27 RE** — Added in 1154 Imperial Chancellery update. |
-| 102 | **Xia** | `k_xia` | **Kûnincrich van dem Sommerlant** *(or **Schjê**)* | *Sommerlantisch* | **27/27 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Xià* (夏). |
+| 102 | **Xia** | `k_xia` | **Kûnincrich van dem Sommerlant** *(or **Hîa**)* | *Sommerlantisch* | **27/27 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Xià* (夏). |
 | 103 | **Khitan** | `k_khitan` | **Kûnincrich van Chitân** *(or **Chitan**)* | *Chitânisch* | **26/26 RE** — Added in 1154 Imperial Chancellery update. |
 | 104 | **Yamato** | `k_yamato` | **Kûnincrich van Jamato** *(or **Jamatô**)* | *Jamatoer* | **26/26 RE** — Added in 1154 Imperial Chancellery update. |
 | 105 | **Azuma** | `k_azuma` | **Kûnincrich van Azuma** *(or **Azume**)* | *Azumaer* | **23/23 RE** — Added in 1154 Imperial Chancellery update. |
@@ -2896,7 +2896,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.102 Kingdom of Xia (`k_xia`) $\rightarrow$ **Kûnincrich van dem Sommerlant** *(or **Schjê**)*
+### 3.102 Kingdom of Xia (`k_xia`) $\rightarrow$ **Kûnincrich van dem Sommerlant** *(or **Hîa**)*
 
 * **Duchy of Shuofang** (`d_shuofang`) $\rightarrow$ **Gubernat van Nordwartkant** *(or **Schuofang**)*
   * `c_huaiyuan` (**[HRE]** Huaiyuan) $\rightarrow$ **Magistrat van Koesterferne** *(or **Huaijuan**)*
@@ -2910,7 +2910,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_suizhou` (**[HRE]** Suizhou) $\rightarrow$ **Magistrat van Stillgouwe** *(or **Suidschou**)*
   * `c_xiazhou` (**[HRE]** Xiazhou) $\rightarrow$ **Magistrat van Hîagouwe** *(or **Schiadschou**)*
   * `c_wuyuan` (**[HRE]** Yanzhou) $\rightarrow$ **Magistrat van Salzgouwe** *(or **Jandschou**)*
-  * `c_yinzhou` (**[HRE]** Yinzhou) $\rightarrow$ **Magistrat van Silbergouwe-in-Schjê** *(or **Jindschou**)*
+  * `c_yinzhou` (**[HRE]** Yinzhou) $\rightarrow$ **Magistrat van Silbergouwe-in-dem-Sommerlant** *(or **Jindschou**)*
   * `c_youzhou_2` (**[HRE]** Youzhou) $\rightarrow$ **Magistrat van Gnadegouwe** *(or **Joudschou**)*
 * **Duchy of Juyan** (`d_juyan`) $\rightarrow$ **Gubernat van Sêtelangdûrende** *(or **Dschûjan**)*
   * `c_heihe` (**[HRE]** Heihe) $\rightarrow$ **Magistrat van Swartzflôz** *(or **Heihe**)*
@@ -2920,7 +2920,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Jingyuan** (`d_jingyuan`) $\rightarrow$ **Gubernat van Dschingveit** *(or **Dschingjuan**)*
   * `c_jingzhou` (**[HRE]** Jingzhou) $\rightarrow$ **Magistrat van Dschingflôz** *(or **Dschingdschou**)*
   * `c_xiaoguan` (**[HRE]** Xiaoguan) $\rightarrow$ **Magistrat van Schilfklûse** *(or **Schiaoguan**)*
-  * `c_yuanzhou_2` (**[HRE]** Yuanzhou) $\rightarrow$ **Magistrat van Veltgouwe-in-Schjê** *(or **Juandschou**)*
+  * `c_yuanzhou_2` (**[HRE]** Yuanzhou) $\rightarrow$ **Magistrat van Veltgouwe-in-dem-Sommerlant** *(or **Juandschou**)*
 * **Duchy of Wuluhai** (`d_langshan`) $\rightarrow$ **Gubernat van Ôtlâmêr** *(or **Wuluhai**)*
   * `c_hequ` (**[HRE]** Hequ) $\rightarrow$ **Magistrat van Flôzkrûmme** *(or **Hetschu**)*
   * `c_keyimen` (**[HRE]** Wuda) $\rightarrow$ **Magistrat van Swartzrêk** *(or **Wude**)*

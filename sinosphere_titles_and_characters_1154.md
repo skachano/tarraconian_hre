@@ -753,13 +753,13 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |266|`c_jingzhou`|**Jingzhou**|**泾州**|—| **Magistrat van Zînflôzgouwe** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Jing River Basin (泾水 / 安定原)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Jingzhou River / Regional Basin (Jingzhou)*|**[RE]**|Wulan|64|3|b_baoding [castle], b_linjing [city],...|
 |267|`c_xiaoguan`|**Xiaoguan**|**萧关**|—| **Magistrat van Schilfklûse** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Mount Liupan / Xiao Pass Choke (六盘山 / 萧关峡)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Xiaoguan River / Regional Basin (Xiaoguan)*|**[RE]**|Wulan|42|2|b_xioaguan [castle], b_huaide [city]|
-|268|`c_yuanzhou_2`|**Yuanzhou**|**原州**|—| **Magistrat van Veltgouwe-in-Schjê** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Upper Qingshui River Basin (清水河上源 / 原州原)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Yuanzhou_2 River / Regional Basin (Yuanzhou_2)*|**[RE]**|sogdian|62|3|b_pinggao [castle], b_baiquan [city],...|
+|268|`c_yuanzhou_2`|**Yuanzhou**|**原州**|—| **Magistrat van Veltgouwe-in-dem-Sommerlant** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Upper Qingshui River Basin (清水河上源 / 原州原)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Yuanzhou_2 River / Regional Basin (Yuanzhou_2)*|**[RE]**|sogdian|62|3|b_pinggao [castle], b_baiquan [city],...|
 
 > [!NOTE]
 > **Historical Anachronism Resolutions in Duchy of Jingyuan:**
 > * **`c_jingzhou` (Jingzhou / 泾州):** Frontier screening flag; resolved to the ancient Jing River (Jinghe) basin. *Resolved via Option B: **Jing River Basin (泾水 / 安定原)**; Tarraconian Chancellery title: **Magistrat van Zînflôzgouwe**.*
 > * **`c_xiaoguan` (Xiaoguan / 萧关):** Xiao Pass (萧关) on Mount Liupan; flagged as a military pass rather than an ancient civil oppidum. *Resolved via Option B: **Mount Liupan / Xiao Pass Choke (六盘山 / 萧关峡)**; Tarraconian Chancellery title: **Magistrat van Schilfklûse**.*
-> * **`c_yuanzhou_2` (Yuanzhou / 原州):** Duplicate key disambiguation; resolved to the Upper Qingshui / Yuan basin. *Resolved via Option B: **Upper Qingshui River Basin (清水河上源 / 原州原)**; Tarraconian Chancellery title: **Magistrat van Veltgouwe-in-Schjê**.*
+> * **`c_yuanzhou_2` (Yuanzhou / 原州):** Duplicate key disambiguation; resolved to the Upper Qingshui / Yuan basin. *Resolved via Option B: **Upper Qingshui River Basin (清水河上源 / 原州原)**; Tarraconian Chancellery title: **Magistrat van Veltgouwe-in-dem-Sommerlant**.*
 
 ##### Duchy of Jinshang (`d_jinshang` / 金商) — **Gubernat van Goltschâng** — **Gubernat van Goltschâng** — *0/2 in Roman Empire*
 
@@ -891,7 +891,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |321|`c_suizhou`|**Suizhou**|**绥州**|—| **Magistrat van Stillgouwe** |**Magistrat van Stillgouwe**|✅ Pre-867 Classical|**[RE]**|tangut|46|3|b_longquan [castle], b_suide [city], ...|
 |322|`c_wuyuan`|**Yanzhou**|**盐州**|—| **Magistrat van Salzgouwe** |**Magistrat van Salzgouwe**|✅ Pre-867 Classical|**[RE]**|tangut|52|4|b_wuyuan [castle], b_baichi [city], b...|
 |323|`c_xiazhou`|**Xiazhou**|**夏州**|—| **Magistrat van Hîagouwe** |**Magistrat van Hîagouwe**|✅ Pre-867 Classical|**[RE]**|tangut|42|4|b_shuofang [castle], b_ningshuo [city...|
-|324|`c_yinzhou`|**Yinzhou**|**银州**|—| **Magistrat van Silbergouwe-in-Schjê** |**Magistrat van Silbergouwe**|✅ Pre-867 Classical|**[RE]**|tuyuhun|31|3|b_rulin [castle], b_zhenxiang [castle...|
+|324|`c_yinzhou`|**Yinzhou**|**银州**|—| **Magistrat van Silbergouwe-in-dem-Sommerlant** |**Magistrat van Silbergouwe**|✅ Pre-867 Classical|**[RE]**|tuyuhun|31|3|b_rulin [castle], b_zhenxiang [castle...|
 |325|`c_youzhou_2`|**Youzhou**|**宥州**|—| **Magistrat van Gnadegouwe** |**Magistrat van Gnadegouwe**|✅ Pre-867 Classical|**[RE]**|tangut|36|4|b_changze [castle], b_yanen [city], b...|
 
 ##### Duchy of Zhenfan (`d_xiutu` / 镇番) — **Gubernat van Wartpost** — **Gubernat van Wartpost** — *3/3 in Roman Empire*
@@ -1888,5 +1888,5 @@ In the Sinosphere, however, administrative foundations were named logographicall
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 |59|`c_jingzhou`|**Jingzhou**|**泾州**|Guannei (`k_guannei`)|Frontier screening flag; resolved to the ancient Jing River (Jinghe) basin.|**Option B:** `Jing River Basin` (泾水 / 安定原)| **Magistrat van Zînflôzgouwe** |Ancient classical commandery named after the Jing River (attested 1000 BC in the Shijing); characters 泾州 denote 'Jing River Prefecture'. Calqued to Zînflôzgouwe.|
 |60|`c_xiaoguan`|**Xiaoguan**|**萧关**|Guannei (`k_guannei`)|Xiao Pass (萧关) on Mount Liupan; flagged as a military pass rather than an ancient civil oppidum.|**Option B:** `Mount Liupan / Xiao Pass Choke` (六盘山 / 萧关峡)| **Magistrat van Schilfklûse** |Xiao Pass (萧关) across Mount Liupan, fortified by Qin/Han antiquity (2nd century BC); characters 萧关 denote 'Artemisia/Reed Pass'. Calqued to Schilfklûse.|
-|61|`c_yuanzhou_2`|**Yuanzhou**|**原州**|Guannei (`k_guannei`)|Duplicate key disambiguation; resolved to the Upper Qingshui / Yuan basin.|**Option B:** `Upper Qingshui River Basin` (清水河上源 / 原州原)| **Magistrat van Veltgouwe-in-Schjê** |Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe-in-Schjê.|
+|61|`c_yuanzhou_2`|**Yuanzhou**|**原州**|Guannei (`k_guannei`)|Duplicate key disambiguation; resolved to the Upper Qingshui / Yuan basin.|**Option B:** `Upper Qingshui River Basin` (清水河上源 / 原州原)| **Magistrat van Veltgouwe-in-dem-Sommerlant** |Ancient Northern Wei commandery on the Upper Qingshui; characters 原州 denote 'Highland Plain Prefecture'. Calqued to Veltgouwe-in-dem-Sommerlant.|
 
