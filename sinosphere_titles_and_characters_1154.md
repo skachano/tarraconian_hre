@@ -141,7 +141,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |22|`c_huaizhou`|**Huaizhou**|**怀州**|—| **Magistrat van Koestergouwe** |**Magistrat van Koestergouwe**|✅ Pre-867 Classical|`k_hebei`|han|72|2|b_heyang [castle], b_henei [city]|
 |23|`c_weizhou_1`|**Weizhou**|**卫州**|—| **Magistrat van Wachtgouwe** |**Magistrat van Wachtgouwe**|✅ Pre-867 Classical|`k_hebei`|han|69|2|b_ji_2 [castle], b_wei [city]|
 
-##### Duchy of Weibo (`d_weibo` / 魏博) — **Gubernat van Wêiweit** — **Gubernat van Wêjwît** — *0/3 in Roman Empire*
+##### Duchy of Weibo (`d_weibo` / 魏博) — **Gubernat van Wêjwît** — **Gubernat van Wêjwît** — *0/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -259,7 +259,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |66|`c_mizhou`|**Mizhou**|**密州**|—| **Magistrat van Dichtegouwe** |**Magistrat van Dichtegouwe**|✅ Pre-867 Classical|`k_qingxu`|han|49|5|b_zhucheng [castle], b_gaomi [city], ...|
 |67|`c_yanzhou`|**Yanzhou**|**兖州**|—| **Magistrat van Jângouwe** |**Magistrat van Jângouwe**|✅ Pre-867 Classical|`k_qingxu`|han|53|5|b_xiaqiu [castle], b_laiwu [city], b_...|
 
-##### Duchy of Yuncao (`d_yuncao` / 郓曹) — **Gubernat van Wallstat-Tsô** — **Gubernat van Wallstat-Zô** — *0/4 in Roman Empire*
+##### Duchy of Yuncao (`d_yuncao` / 郓曹) — **Gubernat van Wallstat-Zô** — **Gubernat van Wallstat-Zô** — *0/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -398,7 +398,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |118|`c_wanzhou`|**Wanzhou**|**万州**|—| **Magistrat van Têndûsentgouwe** |**Magistrat van Têndûsentgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|47|4|b_nanpu [castle], b_wuning_1 [city], ...|
 |119|`c_zhongzhou`|**Zhongzhou**|**忠州**|—| **Magistrat van Trûwegouwe** |**Magistrat van Trûwegouwe**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|43|3|b_linjiang [castle], b_dianjiang [cit...|
 
-##### Duchy of Qianzhong (`d_qianzhong` / 黔中) — **Gubernat van Schwartzgouwemidden** — **Gubernat van dem Swartzmidden** — *0/7 in Roman Empire*
+##### Duchy of Qianzhong (`d_qianzhong` / 黔中) — **Gubernat van dem Swartzmidden** — **Gubernat van dem Swartzmidden** — *0/7 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -441,7 +441,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |138|`c_sie`|**Sie**|**思峨**|—| **Magistrat van Sînnesteil** |**Magistrat van Sînnesteil**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|42|4|b_sie [castle], b_yujing [city], b_fe...|
 |139|`c_zongzhou`|**Zongzhou**|**总州**|—| **Magistrat van Stamgouwe** |**Magistrat van Stamgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|33|3|b_songshui [castle], b_yanquan [churc...|
 
-##### Duchy of Shimen (`d_shimen` / 石门) — **Gubernat van Steintôr** — **Gubernat van dem Stêntôre** — *0/3 in Roman Empire*
+##### Duchy of Shimen (`d_shimen` / 石门) — **Gubernat van dem Stêntôre** — **Gubernat van dem Stêntôre** — *0/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -653,7 +653,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |224|`c_ningduzhou`|**Ningduzhou**|**宁都州**|—| **Magistrat van RûweStatgouwe** |**Magistrat van Rûwestatgouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|58|4|b_yudu [castle], b_huichang [church],...|
 |225|`c_qianzhou`|**Qianzhou**|**虔州**|—| **Magistrat van Vromgouwe** |**Magistrat van Vromgouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|49|2|b_gan [castle], b_anyuan [church]|
 
-#### 2.3.6 Kingdom of Liangzhe (`k_liangzhe` / 两浙) — **Kûnincrich van den Tweê-Tsche**
+#### 2.3.6 Kingdom of Liangzhe (`k_liangzhe` / 两浙) — **Kûnincrich van Twê-Zschêlant**
 *Extent: **11 Counties** | Development: **890** (avg 80.9) | Roman Control: **0/11** | Flagged Anachronisms: **0***
 
 ##### Duchy of Zhedong (`d_zhedong` / 浙东) — **Gubernat van Zschêôst** — **Gubernat van Zschêôst** — *0/7 in Roman Empire*
@@ -680,7 +680,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 #### 2.3.7 Kingdom of Shannan (`k_shannan` / 山南) — **Kûnincrich van dem Sûtberch**
 *Extent: **19 Counties** | Development: **1,366** (avg 71.9) | Roman Control: **0/19** | Flagged Anachronisms: **0***
 
-##### Duchy of Eyue (`d_eyue` / 鄂岳) — **Gubernat van Êkhôchberch** — **Gubernat van Êch-Hôchberch** — *0/5 in Roman Empire*
+##### Duchy of Eyue (`d_eyue` / 鄂岳) — **Gubernat van Êch-Hôchberch** — **Gubernat van Êch-Hôchberch** — *0/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -768,7 +768,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |269|`c_jinzhou_1`|**Jinzhou**|**金州**|—| **Magistrat van Goltgouwe-am-Flôze** |**Magistrat van Goltgouwe**|✅ Pre-867 Classical|`k_guannei`|han|73|4|b_xicheng [castle], b_ankang [castle]...|
 |270|`c_shangzhou`|**Shangzhou**|**商州**|—| **Magistrat van Koufgouwe** |**Magistrat van Schângouwe**|✅ Pre-867 Classical|`k_guannei`|han|68|4|b_shangluo [castle], b_shangjin [city...|
 
-##### Duchy of Qincheng (`d_qincheng` / 秦成) — **Gubernat van Tsînvollbrâcht** — **Gubernat van Zînvollbrâcht** — *0/5 in Roman Empire*
+##### Duchy of Qincheng (`d_qincheng` / 秦成) — **Gubernat van Zînvollbrâcht** — **Gubernat van Zînvollbrâcht** — *0/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -785,7 +785,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |276|`c_fengzhou`|**Fengzhou**|**凤州**|—| **Magistrat van Rîchegouwe** |**Magistrat van Rîchegouwe**|✅ Pre-867 Classical|`k_guannei`|han|75|2|b_liangquan [castle], b_hechi [city]|
 |277|`c_xingqing`|**Xingqing**|**兴庆**|—| **Magistrat van Upgancfröude** |**Magistrat van Upgancfröude**|✅ Pre-867 Classical|`k_guannei`|han|59|2|b_shunzheng [castle], b_changju [city]|
 
-##### Duchy of Yongxing (`d_yongxing` / 永兴) — **Gubernat van Ewichbloy** — **Gubernat van Êwichbloy** — *0/4 in Roman Empire*
+##### Duchy of Yongxing (`d_yongxing` / 永兴) — **Gubernat van Êwichbloy** — **Gubernat van Êwichbloy** — *0/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -857,7 +857,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |307|`c_tongcheng`|**Tongcheng**|**桐城**|—| **Magistrat van Kiriburch** |**Magistrat van Kiriburch**|✅ Pre-867 Classical|**[RE]**|yughur|15|2|b_heicheng [castle], b_sogo [city]|
 |308|`c_wentugaole`|**Wentugaole**|**温图高勒**|—| **Magistrat van WormTôHôchLê** |**Magistrat van Wormtôhôchlê**|✅ Pre-867 Classical|**[RE]**|han|13|2|b_wentugaole [castle], b_gurinai [city]|
 
-##### Duchy of Wuluhai (`d_langshan` / 兀剌海) — **Gubernat van ÔtLâMêr** — **Gubernat van Ôtlâmêr** — *3/3 in Roman Empire*
+##### Duchy of Wuluhai (`d_langshan` / 兀剌海) — **Gubernat van Ôtlâmêr** — **Gubernat van Ôtlâmêr** — *3/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1073,7 +1073,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |391|`c_tamna`|**Tamna**|**耽罗**|—| **Magistrat van TâmlôInsel** |**Magistrat van Tâmlôinsel**|✅ Pre-867 Classical|**[RE]**|Samhan|23|2|b_Goryeo_Tamna_Tamna [castle], b_Gory...|
 
-#### 3.1.2 Kingdom of Goguryeo (`k_goguryeo` / 高句丽) — **Kûnincrich van Gôgûrjeo**
+#### 3.1.2 Kingdom of Goguryeo (`k_goguryeo` / 高句丽) — **Kûnincrich van Gogurjô**
 *Extent: **20 Counties** | Development: **525** (avg 26.2) | Roman Control: **20/20** | Flagged Anachronisms: **0***
 
 ##### Duchy of Bukgye (`d_bukgye` / 北界) — **Gubernat van Nordmarch** — **Gubernat van Nordmarch** — *3/3 in Roman Empire*
@@ -1081,7 +1081,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |392|`c_seogyeong`|**Seogyeong**|**西京**|—| **Magistrat van Westhôfstat** |**Magistrat van Westhôfstat**|✅ Pre-867 Classical|**[RE]**|Yukju|29|4|b_Goryeo_Bukgye_Seogyeong [castle], b...|
-|393|`c_seongju`|**Seongju**|**成州**|—| **Magistrat van Vollbrâchtgouwe-in-Gôgûrjeo** |**Magistrat van Vollbrâchtgouwe**|✅ Pre-867 Classical|**[RE]**|silla|24|4|b_Goryeo_Bukgye_Seongju [castle], b_G...|
+|393|`c_seongju`|**Seongju**|**成州**|—| **Magistrat van Vollbrâchtgouwe-in-Gogurjô** |**Magistrat van Vollbrâchtgouwe**|✅ Pre-867 Classical|**[RE]**|silla|24|4|b_Goryeo_Bukgye_Seongju [castle], b_G...|
 |394|`c_yeongwon`|**Yeongwon**|**宁远**|—| **Magistrat van Rûweferne** |**Magistrat van Rûweferne**|✅ Pre-867 Classical|**[RE]**|Samhan|20|4|b_Goryeo_Bukgye_Yeongwon [castle], b_...|
 
 ##### Duchy of Gaeseong (`d_gaeseong` / 开城) — **Gubernat van Openburch** — **Gubernat van Openburch** — *3/3 in Roman Empire*
@@ -1090,9 +1090,9 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |395|`c_gaeseong`|**Gaeseong**|**开城**|—| **Magistrat van Openburch** |**Magistrat van Openburch**|✅ Pre-867 Classical|**[RE]**|Yukju|28|4|b_Goryeo_Gaeseong_Gaeseong [castle], ...|
 |396|`c_gokju`|**Gokju**|**谷州**|—| **Magistrat van Dalgouwe** |**Magistrat van Dalgouwe**|✅ Pre-867 Classical|**[RE]**|Samhan|24|4|b_Goryeo_Seohae_Gokju [castle], b_Gor...|
-|397|`c_pyeongju`|**Pyeongju**|**平州**|—| **Magistrat van Ebenegouwe-in-Gôgûrjeo** |**Magistrat van Ebenegouwe**|✅ Pre-867 Classical|**[RE]**|Samhan|26|2|b_Goryeo_Seohae_Pyeongju [castle], b_...|
+|397|`c_pyeongju`|**Pyeongju**|**平州**|—| **Magistrat van Ebenegouwe-in-Gogurjô** |**Magistrat van Ebenegouwe**|✅ Pre-867 Classical|**[RE]**|Samhan|26|2|b_Goryeo_Seohae_Pyeongju [castle], b_...|
 
-##### Duchy of Gwangju (`d_gwangju` / 广州) — **Gubernat van Weitgouwe** — **Gubernat van Wîtgouwe** — *3/3 in Roman Empire*
+##### Duchy of Gwangju (`d_gwangju` / 广州) — **Gubernat van Wîtgouwe** — **Gubernat van Wîtgouwe** — *3/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1113,9 +1113,9 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|405|`c_haeju`|**Haeju**|**海州**|—| **Magistrat van Mêrgouwe-in-Gôgûrjeo** |**Magistrat van Mêrgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|27|3|b_Goryeo_Seohae_Haeju [castle], b_Gor...|
+|405|`c_haeju`|**Haeju**|**海州**|—| **Magistrat van Mêrgouwe-in-Gogurjô** |**Magistrat van Mêrgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|27|3|b_Goryeo_Seohae_Haeju [castle], b_Gor...|
 |406|`c_hwangju`|**Hwangju**|**黄州**|—| **Magistrat van Gelbgouwe** |**Magistrat van Gelbgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|25|3|b_Goryeo_Seohae_Hwangju [castle], b_G...|
-|407|`c_pungju`|**Pungju**|**丰州**|—| **Magistrat van Rîchgouwe-in-Gôgûrjeo** |**Magistrat van Rîchgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|25|3|b_Goryeo_Seohae_Pungju [castle], b_Go...|
+|407|`c_pungju`|**Pungju**|**丰州**|—| **Magistrat van Rîchgouwe-in-Gogurjô** |**Magistrat van Rîchgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|25|3|b_Goryeo_Seohae_Pungju [castle], b_Go...|
 
 ##### Duchy of Yukju (`d_yukju` / 六州) — **Gubernat van Sêhsgouwe** — **Gubernat van Sêhsgouwe** — *4/4 in Roman Empire*
 
@@ -1123,8 +1123,8 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |408|`c_gwiju`|**Gwiju**|**龟州**|—| **Magistrat van Schildpadgouwe** |**Magistrat van Schildpadgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|27|3|b_Goryeo_Bukgye_Gwiju [castle], b_Gor...|
 |409|`c_jangjeong`|**Jangjeong**|**长静**|—| **Magistrat van Langstill** |**Magistrat van Langstill**|✅ Pre-867 Classical|**[RE]**|Yukju|27|3|b_Goryeo_Bukgye_Jangjeong [castle], b...|
-|410|`c_taeju`|**Taeju**|**泰州**|—| **Magistrat van Grôzfridgouwe-in-Gôgûrjeo** |**Magistrat van Grôzfridgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|26|3|b_Goryeo_Bukgye_Taeju [castle], b_Gor...|
-|411|`c_uiju`|**Yeongju**|**灵州**|—| **Magistrat van Geistgouwe-in-Gôgûrjeo** |**Magistrat van Geistgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|18|2|b_Goryeo_Bukgye_Uiju [castle], b_Gory...|
+|410|`c_taeju`|**Taeju**|**泰州**|—| **Magistrat van Grôzfridgouwe-in-Gogurjô** |**Magistrat van Grôzfridgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|26|3|b_Goryeo_Bukgye_Taeju [castle], b_Gor...|
+|411|`c_uiju`|**Yeongju**|**灵州**|—| **Magistrat van Geistgouwe-in-Gogurjô** |**Magistrat van Geistgouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|18|2|b_Goryeo_Bukgye_Uiju [castle], b_Gory...|
 
 #### 3.1.3 Kingdom of Silla (`k_silla` / 新罗) — **Kûnincrich van Schilla**
 *Extent: **13 Counties** | Development: **409** (avg 31.5) | Roman Control: **13/13** | Flagged Anachronisms: **0***
@@ -1165,7 +1165,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.2.1 Kingdom of Azuma (`k_azuma` / 吾妻) — **Kûnincrich van Azuma**
 *Extent: **23 Counties** | Development: **876** (avg 38.1) | Roman Control: **23/23** | Flagged Anachronisms: **0***
 
-##### Duchy of East Bandō (`d_east_bando` / 东坂东) — **Gubernat van ÔstLeiteÔst** — **Gubernat van Ôst-Bandô** — *4/4 in Roman Empire*
+##### Duchy of East Bandō (`d_east_bando` / 东坂东) — **Gubernat van Ôst-Bandô** — **Gubernat van Ôst-Bandô** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1174,7 +1174,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |427|`c_shimosa`|**Shimōsa**|**下总**|下総| **Magistrat van Niderhoubt** |**Magistrat van Niderhoubt**|✅ Pre-867 Classical|**[RE]**|japanese|24|4|b_katsushika [castle], b_katori [chur...|
 |428|`c_shimotsuke`|**Shimotsuke**|**下野**|—| **Magistrat van Niderfelt** |**Magistrat van Niderfelt**|✅ Pre-867 Classical|**[RE]**|japanese|30|5|b_ashikaga [castle], b_futara [church...|
 
-##### Duchy of Hokurikudō (`d_hokurikudo` / 北陆道) — **Gubernat van NordLantStrâte** — **Gubernat van der Nordlantstrâte** — *5/5 in Roman Empire*
+##### Duchy of Hokurikudō (`d_hokurikudo` / 北陆道) — **Gubernat van der Nordlantstrâte** — **Gubernat van der Nordlantstrâte** — *5/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1184,7 +1184,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |432|`c_kaga`|**Kaga**|**加贺**|加賀| **Magistrat van Kâgagouwe** |**Magistrat van Kâgagouwe**|✅ Pre-867 Classical|**[RE]**|japanese|45|2|b_enuma [castle], b_haku [church]|
 |433|`c_noto`|**Noto**|**能登**|—| **Magistrat van Nôtogouwe** |**Magistrat van Nôtogouwe**|✅ Pre-867 Classical|**[RE]**|japanese|38|2|b_kashima [castle], b_fugeshi [church]|
 
-##### Duchy of Tōkaidō (`d_tokaido` / 东海道) — **Gubernat van Ôstmêrstrâte** — **Gubernat van der Ôstmêrstrâte** — *5/5 in Roman Empire*
+##### Duchy of Tōkaidō (`d_tokaido` / 东海道) — **Gubernat van der Ôstmêrstrâte** — **Gubernat van der Ôstmêrstrâte** — *5/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1194,7 +1194,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |437|`c_suruga`|**Suruga**|**骏河**|駿河| **Magistrat van Rosflôz** |**Magistrat van Rosflôz**|✅ Pre-867 Classical|**[RE]**|japanese|28|3|b_abe [castle], b_fuji [church], b_sh...|
 |438|`c_totomi`|**Tōtōmi**|**远江**|遠江| **Magistrat van Ferneflôz** |**Magistrat van Ferneflôz**|✅ Pre-867 Classical|**[RE]**|japanese|36|3|b_toyoda [castle], b_suchi [church], ...|
 
-##### Duchy of Tōsandō (`d_tosando` / 东山道) — **Gubernat van ÔstBerchStrâte** — **Gubernat van der Ôstberchstrâte** — *5/5 in Roman Empire*
+##### Duchy of Tōsandō (`d_tosando` / 东山道) — **Gubernat van der Ôstberchstrâte** — **Gubernat van der Ôstberchstrâte** — *5/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1204,7 +1204,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |442|`c_omi`|**Ōmi**|**近江**|—| **Magistrat van Nâheflôz** |**Magistrat van Nâheflôz**|✅ Pre-867 Classical|**[RE]**|japanese|60|4|b_koka [castle], b_enryaku_ji [church...|
 |443|`c_shinano`|**Shinano**|**信浓**|信濃| **Magistrat van Trûwenwazzer** |**Magistrat van Trûwenwazzer**|✅ Pre-867 Classical|**[RE]**|japanese|41|4|b_tsukama [castle], b_zenko_ji [churc...|
 
-##### Duchy of West Bandō (`d_west_bando` / 西坂东) — **Gubernat van WestLeiteÔst** — **Gubernat van West-Bandô** — *4/4 in Roman Empire*
+##### Duchy of West Bandō (`d_west_bando` / 西坂东) — **Gubernat van West-Bandô** — **Gubernat van West-Bandô** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1213,10 +1213,10 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |446|`c_musashi`|**Musashi**|**武藏**|武蔵| **Magistrat van Wâpenhort** |**Magistrat van Wâpenhort**|✅ Pre-867 Classical|**[RE]**|japanese|30|5|b_tama_musashi [castle], b_adachi_mus...|
 |447|`c_sagami`|**Sagami**|**相模**|—| **Magistrat van Treffmôster** |**Magistrat van Treffmôster**|✅ Pre-867 Classical|**[RE]**|japanese|25|3|b_kamakura [castle], b_hakone [church...|
 
-#### 3.2.2 Kingdom of Tsukushi (`k_tsukushi` / 筑紫) — **Kûnincrich van Tsukûschi**
+#### 3.2.2 Kingdom of Tsukushi (`k_tsukushi` / 筑紫) — **Kûnincrich van Zukuschi**
 *Extent: **10 Counties** | Development: **277** (avg 27.7) | Roman Control: **10/10** | Flagged Anachronisms: **0***
 
-##### Duchy of Dazaifu (`d_north_saikaido` / 太宰府) — **Gubernat van AllergrôzstAmbetAmbet** — **Gubernat van Dazaifu** — *6/6 in Roman Empire*
+##### Duchy of Dazaifu (`d_north_saikaido` / 太宰府) — **Gubernat van Dazaifu** — **Gubernat van Dazaifu** — *6/6 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1227,7 +1227,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |452|`c_hizen`|**Hizen**|**肥前**|—| **Magistrat van VettVörlant** |**Magistrat van Vettvörlant**|✅ Pre-867 Classical|**[RE]**|japanese|29|4|b_saga [castle], b_matsura [city], b_...|
 |453|`c_tsushima`|**Tsushima**|**对马**|対馬| **Magistrat van Tegenros** |**Magistrat van Zuschime *(or Tegenros)***|✅ Pre-867 Classical|**[RE]**|japanese|28|1|b_yora [castle]|
 
-##### Duchy of South Saikaidō (`d_south_saikaido` / 南西海道) — **Gubernat van SûtWestMêrStrâte** — **Gubernat van der Sût-Westmêrstrâte** — *4/4 in Roman Empire*
+##### Duchy of South Saikaidō (`d_south_saikaido` / 南西海道) — **Gubernat van der Sût-Westmêrstrâte** — **Gubernat van der Sût-Westmêrstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1239,7 +1239,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.2.3 Kingdom of Yamato (`k_yamato` / 大和) — **Kûnincrich van Jamato**
 *Extent: **26 Counties** | Development: **1,150** (avg 44.2) | Roman Control: **26/26** | Flagged Anachronisms: **0***
 
-##### Duchy of East San'indō (`d_east_sanindo` / 东山阴道) — **Gubernat van ÔstSchatenberchstrâte** — **Gubernat van der Ôst-Schatenberchstrâte** — *4/4 in Roman Empire*
+##### Duchy of East San'indō (`d_east_sanindo` / 东山阴道) — **Gubernat van der Ôst-Schatenberchstrâte** — **Gubernat van der Ôst-Schatenberchstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1248,7 +1248,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |460|`c_tanba`|**Tanba**|**丹波**|—| **Magistrat van Zinôberwelle** |**Magistrat van Zinôberwelle**|✅ Pre-867 Classical|**[RE]**|japanese|57|3|b_kuwada [castle], b_funai [city], b_...|
 |461|`c_tango`|**Tango**|**丹后**|丹後| **Magistrat van Zinôberachter** |**Magistrat van Zinôberachter**|✅ Pre-867 Classical|**[RE]**|japanese|52|2|b_kumano_tango [castle], b_kasa_tango...|
 
-##### Duchy of East San'yōdō (`d_east_sanyodo` / 东山阳道) — **Gubernat van ÔstBerchSunnenStrâte** — **Gubernat van der Ôst-Sunnenberchstrâte** — *4/4 in Roman Empire*
+##### Duchy of East San'yōdō (`d_east_sanyodo` / 东山阳道) — **Gubernat van der Ôst-Sunnenberchstrâte** — **Gubernat van der Ôst-Sunnenberchstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1257,7 +1257,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |464|`c_harima`|**Harima**|**播磨**|—| **Magistrat van Hârimagouwe** |**Magistrat van Hârimagouwe**|✅ Pre-867 Classical|**[RE]**|japanese|57|5|b_shikama [castle], b_ibo [city], b_a...|
 |465|`c_mimasaka`|**Mimasaka**|**美作**|—| **Magistrat van Schönwerc** |**Magistrat van Schônwerch**|✅ Pre-867 Classical|**[RE]**|japanese|43|3|b_tomata [castle], b_mashima [city], ...|
 
-##### Duchy of Kinai (`d_kinai` / 畿内) — **Gubernat van Keisermarchbinnen** — **Gubernat van der Keisermarch** — *4/4 in Roman Empire*
+##### Duchy of Kinai (`d_kinai` / 畿内) — **Gubernat van der Keisermarch** — **Gubernat van der Keisermarch** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1266,7 +1266,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |468|`c_yamashiro`|**Yamashiro**|**山城**|—| **Magistrat van Berchburch** |**Magistrat van Berchburch**|✅ Pre-867 Classical|**[RE]**|japanese|69|2|b_kyo [castle], b_uji [church]|
 |469|`c_yamato`|**Yamato**|**大和**|—| **Magistrat van GrôzJamato** |**Magistrat van Grôzjamato**|✅ Pre-867 Classical|**[RE]**|japanese|56|4|b_yoshino [castle], b_kofuku_ji [chur...|
 
-##### Duchy of Nankaidō (`d_nankaido` / 南海道) — **Gubernat van SûtMêrStrâte** — **Gubernat van der Sûtmêrstrâte** — *6/6 in Roman Empire*
+##### Duchy of Nankaidō (`d_nankaido` / 南海道) — **Gubernat van der Sûtmêrstrâte** — **Gubernat van der Sûtmêrstrâte** — *6/6 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1277,7 +1277,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |474|`c_sanuki`|**Sanuki**|**赞岐**|讃岐| **Magistrat van Lôvengî** |**Magistrat van Lôvengî**|✅ Pre-867 Classical|**[RE]**|japanese|42|3|b_yashima [castle], b_kotohira [churc...|
 |475|`c_tosa`|**Tosa**|**土佐**|—| **Magistrat van Tôsagouwe** |**Magistrat van Tôsagouwe**|✅ Pre-867 Classical|**[RE]**|japanese|40|5|b_nagaoka [castle], b_kami [city], b_...|
 
-##### Duchy of West San'indō (`d_west_sanindo` / 西山阴道) — **Gubernat van WestSchatenberchstrâte** — **Gubernat van der West-Schatenberchstrâte** — *4/4 in Roman Empire*
+##### Duchy of West San'indō (`d_west_sanindo` / 西山阴道) — **Gubernat van der West-Schatenberchstrâte** — **Gubernat van der West-Schatenberchstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1286,7 +1286,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |478|`c_izumo`|**Izumo**|**出云**|出雲| **Magistrat van Ûzwolchen** |**Magistrat van Ûzwolchen**|✅ Pre-867 Classical|**[RE]**|japanese|33|4|b_ou [castle], b_kizuki_taisha [churc...|
 |479|`c_oki`|**Oki**|**隐岐**|隠岐| **Magistrat van Dunkelforke** |**Magistrat van Dunkelforke**|✅ Pre-867 Classical|**[RE]**|japanese|24|1|b_oki [castle]|
 
-##### Duchy of West San'yōdō (`d_west_sanyodo` / 西山阳道) — **Gubernat van WestBerchSunnenStrâte** — **Gubernat van der West-Sunnenberchstrâte** — *4/4 in Roman Empire*
+##### Duchy of West San'yōdō (`d_west_sanyodo` / 西山阳道) — **Gubernat van der West-Sunnenberchstrâte** — **Gubernat van der West-Sunnenberchstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1303,7 +1303,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.3.1 Kingdom of Bóhai (`k_balhae` / 渤海) — **Kûnincrich van dem Bôchmêre**
 *Extent: **25 Counties** | Development: **586** (avg 23.4) | Roman Control: **22/25** | Flagged Anachronisms: **0***
 
-##### Duchy of Yālü-Zhangling (`d_BAL_amnok_jangryeong` / 鸭渌‑长岭) — **Gubernat van AntflôzGrûnewazzerLangRücke** — **Gubernat van dem Antflôze ende Langrücke** — *2/4 in Roman Empire*
+##### Duchy of Yālü-Zhangling (`d_BAL_amnok_jangryeong` / 鸭渌‑长岭) — **Gubernat van dem Antflôze ende Langrücke** — **Gubernat van dem Antflôze ende Langrücke** — *2/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1432,7 +1432,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_BAL_huligai` (Huligai / 胡里改):** Ilun Hurka route of the Jurchen tribes along the Mudanjiang River. *Resolved via Option B: **Mudan River / Huligai Basin (胡里改川 / 依兰)**; Tarraconian Chancellery title: **Magistrat van Hûligâibache**.*
 > * **`c_BAL_west_cheolli` (West Tielì / 西铁利):** Descriptive subdivision of Tieli Jurchen territory. *Resolved via Option B: **Huanashan / West Tieli Basin (铁利川 / 依兰西)**; Tarraconian Chancellery title: **Magistrat van West-Îsenlant**.*
 
-##### Duchy of Dōngpíng (`d_BAL_dongpyeong` / 东平) — **Gubernat van Ôstebene** — **Gubernat van Ôst-Ebene** — *0/2 in Roman Empire*
+##### Duchy of Dōngpíng (`d_BAL_dongpyeong` / 东平) — **Gubernat van Ôst-Ebene** — **Gubernat van Ôst-Ebene** — *0/2 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1449,7 +1449,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |532|`c_BAL_ilanshan`|**Ilanshan**|**依兰山**|—| **Magistrat van TrûweBlômenberch** |**Magistrat van Trûweblômenberch**|✅ Pre-867 Classical|`k_luzhen`|jurchen|9|2|b_FIC_Amur_Ilanshan [castle], b_FIC_A...|
 |533|`c_BAL_south_hoewon`|**South Huáiyuǎn**|**南怀远**|懷遠| **Magistrat van SûtKoesterFerne** |**Magistrat van Sûtkoesterferne**|✅ Pre-867 Classical|`d_eman_sikhotebei`|jurchen|16|3|b_FIC_EMan_Baihuaicun [castle], b_FIC...|
 
-##### Duchy of Shuàibīn-Ānbiān (`d_BAL_yeojintang` / 率宾-安边) — **Gubernat van SolbînGastFridMarch** — **Gubernat van Solbîn-Gastfridmarch** — *4/4 in Roman Empire*
+##### Duchy of Shuàibīn-Ānbiān (`d_BAL_yeojintang` / 率宾-安边) — **Gubernat van Solbîn-Gastfridmarch** — **Gubernat van Solbîn-Gastfridmarch** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1522,7 +1522,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.3.5 Kingdom of Shiwei (`k_shiwei` / 室韦) — **Kûnincrich van Schîwêj**
 *Extent: **29 Counties** | Development: **182** (avg 6.3) | Roman Control: **13/29** | Flagged Anachronisms: **13***
 
-##### Duchy of Dashiweiguo (`d_SW_dashiweiguo` / 大室韦国) — **Gubernat van GrôzSchîweilant** — **Gubernat van Grôz-Schîweilant** — *0/5 in Roman Empire*
+##### Duchy of Dashiweiguo (`d_SW_dashiweiguo` / 大室韦国) — **Gubernat van Grôz-Schîweilant** — **Gubernat van Grôz-Schîweilant** — *0/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1532,7 +1532,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |555|`c_SW_mengwuo`|**Mengwuo**|**蒙兀国**|—| **Magistrat van Mongwûlant** |**Magistrat van Mongwûlant**|✅ Pre-867 Classical|`k_shiwei`|shiwei|7|4|b_FIC_Mong_Banukhol [castle], b_FIC_M...|
 |556|`c_SW_pibeihe`|**Pibeihe**|**皮被河**|—| **Magistrat van PelzDekkeflôz** |**Magistrat van Pelzdekkeflôz**|✅ Pre-867 Classical|`c_SW_pibeihe`|khitan|0|3|b_Mong_Pibeihe [herder]|
 
-##### Duchy of Heicheziguo (`d_SW_heicheziguo` / 黑车子国) — **Gubernat van SwartzWagenEdelLant** — **Gubernat van dem Swartzwagenlant** — *4/4 in Roman Empire*
+##### Duchy of Heicheziguo (`d_SW_heicheziguo` / 黑车子国) — **Gubernat van dem Swartzwagenlant** — **Gubernat van dem Swartzwagenlant** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1548,7 +1548,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_SW_hulunbuir` (Hulunbuir / 阔连捕鱼儿):** Modern banner / post-867 lake pastoral area; lacks ancient town. *Resolved via Option B: **Hulun Lake Basin (呼伦湖 / 阔连海子)**; Tarraconian Chancellery title: **Magistrat van Wîdschakelvancfischken**.*
 > * **`c_SW_zhongcheziguo` (Zhongcheziguo / 中车子国):** Nomadic clan division ('Middle Cart Tribe'). *Resolved via Option B: **Middle Hailar River Basin (海拉尔河中游)**; Tarraconian Chancellery title: **Magistrat van dem Midden-Wagenlant**.*
 
-##### Duchy of Lingxiguo (`d_SW_lingxiguo` / 岭西国) — **Gubernat van RückeWestLant** — **Gubernat van dem Westrückelant** — *0/3 in Roman Empire*
+##### Duchy of Lingxiguo (`d_SW_lingxiguo` / 岭西国) — **Gubernat van dem Westrückelant** — **Gubernat van dem Westrückelant** — *0/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1556,7 +1556,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |562|`c_SW_lingxiguo`|**Lingxiguo**|**岭西国**|—| **Magistrat van RückeWestLant** |**Magistrat van Rückewestlant**|✅ Pre-867 Classical|`k_shiwei`|mongol|7|3|b_FIC_Amur_Jialingxi [castle], b_FIC_...|
 |563|`c_SW_powoguo`|**Powoguo**|**婆莴国**|—| **Magistrat van BâWôLant** |**Magistrat van Bâwôlant**|✅ Pre-867 Classical|`k_shiwei`|shiwei|8|4|b_FIC_Amur_Jiapowo [castle], b_FIC_Am...|
 
-##### Duchy of Puyudao (`d_SW_puyudao` / 蒲与道) — **Gubernat van LischtBîStrâte** — **Gubernat van der Pûjûstrâte** — *4/4 in Roman Empire*
+##### Duchy of Puyudao (`d_SW_puyudao` / 蒲与道) — **Gubernat van der Pûjûstrâte** — **Gubernat van der Pûjûstrâte** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1572,7 +1572,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_SW_puyuzhou` (Puyuzhou / 蒲与州):** Post-867 Jin/Liao route prefecture; unverified in 867 AD. *Resolved via Option B: **Wuyur River Basin (乌裕尔河 / 蒲与川)**; Tarraconian Chancellery title: **Magistrat van Lischtbîgouwe**.*
 > * **`c_SW_shanbeiguo` (Shanbeiguo / 山北国):** Descriptive tribal division ('North Mountain Tribe'). *Resolved via Option B: **Northern Khingan Slope (大兴安岭北坡)**; Tarraconian Chancellery title: **Magistrat van Berchnordlant**.*
 
-##### Duchy of Qingxingan (`d_SW_qingxingan` / 青兴安) — **Gubernat van BlouUpgancFrid** — **Gubernat van dem Blou-Upgancstrant** — *5/5 in Roman Empire*
+##### Duchy of Qingxingan (`d_SW_qingxingan` / 青兴安) — **Gubernat van dem Blou-Upgancstrant** — **Gubernat van dem Blou-Upgancstrant** — *5/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1590,7 +1590,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_SW_xinghuangtou` (Xinghuangtou / 兴黄头):** Descriptive tribal division; unverified urban center. *Resolved via Option B: **Chaoer River / Xinghuangtou Plateau (绰尔河)**; Tarraconian Chancellery title: **Magistrat van Upgancgelbhoubt**.*
 > * **`c_SW_xingnabei` (Xingnabei / 兴讷北):** Descriptive tribal division; unverified urban center. *Resolved via Option B: **Duobukur River Basin (多布库尔河)**; Tarraconian Chancellery title: **Magistrat van Upgancswîchnord**.*
 
-##### Duchy of Ruzheguo (`d_SW_ruzheguo` / 如者国) — **Gubernat van RechtLiuteLant** — **Gubernat van dem Rechtliutelant** — *0/3 in Roman Empire*
+##### Duchy of Ruzheguo (`d_SW_ruzheguo` / 如者国) — **Gubernat van dem Rechtliutelant** — **Gubernat van dem Rechtliutelant** — *0/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1598,7 +1598,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |574|`c_SW_jiqin_hari`|**Jiqin Hari**|**济沁哈日**|—| **Magistrat van VurtTsînflôzChâSunnen** |**Magistrat van Dschîkîn-Harî *(or Vurt-Zînflôz)***|✅ Pre-867 Classical|`k_balhae`|khitan|5|4|b_Jiqin_Hari [castle], b_FIC_Amur_Jia...|
 |575|`c_SW_ruzhejiang`|**Ruzhejiang**|**如者江**|—| **Magistrat van RechtLiuteflôz** |**Magistrat van Rechtliuteflôz**|✅ Pre-867 Classical|`k_balhae`|Xingnabei|15|3|b_FIC_Amur_Ruzhejiang [castle], b_FIC...|
 
-##### Duchy of Sushenguo (`d_SW_sushenguo` / 肃慎国) — **Gubernat van StrêngeVromLant** — **Gubernat van Strêngevromlant** — *0/5 in Roman Empire*
+##### Duchy of Sushenguo (`d_SW_sushenguo` / 肃慎国) — **Gubernat van Strêngevromlant** — **Gubernat van Strêngevromlant** — *0/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1616,7 +1616,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.4.1 Kingdom of Amur (`k_amur` / 阿穆尔) — **Kûnincrich van Amûrlant**
 *Extent: **22 Counties** | Development: **241** (avg 11.0) | Roman Control: **9/22** | Flagged Anachronisms: **9***
 
-##### Duchy of Amar (`d_eman_amar` / 阿玛尔) — **Gubernat van BochtAgâtEr** — **Gubernat van Bochtagâter** — *0/4 in Roman Empire*
+##### Duchy of Amar (`d_eman_amar` / 阿玛尔) — **Gubernat van Bochtagâter** — **Gubernat van Bochtagâter** — *0/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1625,7 +1625,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |583|`c_eman_urmi`|**Urmi**|**乌尔米**|—| **Magistrat van SwartzErRîs** |**Magistrat van Swartzerrîs**|✅ Pre-867 Classical|`k_luzhen`|mohe|12|2|b_fic_eman_urmi [castle], b_fic_eman_...|
 |584|`c_eman_vanda`|**Vanda**|**完达**|—| **Magistrat van Vollrêk** |**Magistrat van Vollrêk**|✅ Pre-867 Classical|`k_luzhen`|mohe|13|3|b_fic_eman_vandarin [castle], b_fic_e...|
 
-##### Duchy of Boli (`d_eman_boli` / 勃利) — **Gubernat van Bôlwên** — **Gubernat van dem Bôliflôze** — *4/4 in Roman Empire*
+##### Duchy of Boli (`d_eman_boli` / 勃利) — **Gubernat van dem Bôliflôze** — **Gubernat van dem Bôliflôze** — *4/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1641,7 +1641,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_eman_mohean` (Mohean / 莫罕):** Remote Amur basin territory; lacks pre-867 urban foundation. *Resolved via Option B: **Bureya River Basin (布列亚河 / 莫罕川)**; Tarraconian Chancellery title: **Magistrat van Môhân**.*
 > * **`c_eman_molihewen` (Molihewen / 末里合温):** Remote forest outpost; lacks pre-867 verified settlement. *Resolved via Option B: **Zeya River Basin (结雅河 / 末里合温川)**; Tarraconian Chancellery title: **Magistrat van Môlîhêwên**.*
 
-##### Duchy of Bureya (`d_eman_bureya` / 布列亚) — **Gubernat van LînwandRîgeNider** — **Gubernat van Lînwandrîgenider** — *0/3 in Roman Empire*
+##### Duchy of Bureya (`d_eman_bureya` / 布列亚) — **Gubernat van Lînwandrîgenider** — **Gubernat van Lînwandrîgenider** — *0/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1649,7 +1649,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |590|`c_eman_turma`|**Turma**|**特尔马**|—| **Magistrat van BêstErRos** |**Magistrat van Bêsterros**|✅ Pre-867 Classical|`k_luzhen`|mohe|14|3|b_fic_eman_turma [castle], b_fic_eman...|
 |591|`c_eman_urehokto`|**Urehokto**|**乌哷和克托**|—| **Magistrat van SwartzLêJamatoZêgeTô** |**Magistrat van Swartzlêjamatozêgetô**|✅ Pre-867 Classical|`k_luzhen`|mohe|14|2|b_fic_eman_umilimo [castle], b_fic_em...|
 
-##### Duchy of Nivkhia (`d_eman_nivkhia` / 尼夫赫) — **Gubernat van NîFûGlantz** — **Gubernat van Nîfûglantz** — *3/3 in Roman Empire*
+##### Duchy of Nivkhia (`d_eman_nivkhia` / 尼夫赫) — **Gubernat van Nîfûglantz** — **Gubernat van Nîfûglantz** — *3/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1663,7 +1663,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > * **`c_eman_nurgan` (Nurgan / 奴儿干):** Named after the Ming dynasty Nurgan Regional Military Commission (奴儿干都司), established in 1409 AD. Lacks pre-867 urban center. *Resolved via Option B: **Amur Estuary / Liman Coast (黑龙江入海口 / 奴儿干特林)**; Tarraconian Chancellery title: **Magistrat van Nûrgânmarch**.*
 > * **`c_eman_tugur` (Tugur / 图古尔):** Okhotsk sea coastal tract; unverified prior to 867 AD. *Resolved via Option B: **Tugur Bay & River Coast (图古尔湾 / 鄂霍次克海岸)**; Tarraconian Chancellery title: **Magistrat van Tûgûrbucht**.*
 
-##### Duchy of Samagero (`d_eman_samagero` / 萨玛格罗) — **Gubernat van SatsûAgâtGêrLô** — **Gubernat van Samagêro** — *0/4 in Roman Empire*
+##### Duchy of Samagero (`d_eman_samagero` / 萨玛格罗) — **Gubernat van Samagêro** — **Gubernat van Samagêro** — *0/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1672,7 +1672,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |597|`c_eman_tudali`|**Tudali**|**图达里**|—| **Magistrat van TôRêkDorp** |**Magistrat van Tôrêkdorp**|✅ Pre-867 Classical|`d_eman_sikhotebei`|nivkh|12|3|b_fic_eman_tudali [castle], b_fic_ema...|
 |598|`c_eman_yam_alin`|**Yam Alin**|**杨山**|—| **Magistrat van Abeêlberch** |**Magistrat van Abeêlberch**|✅ Pre-867 Classical|`d_eman_samagero`|nivkh|9|3|b_fic_eman_yam_alin [castle]|
 
-##### Duchy of Sikhotebei (`d_eman_sikhotebei` / 西河大北) — **Gubernat van WestFlôzGrôzNord** — **Gubernat van dem Nord-Sichoteberch** — *2/4 in Roman Empire*
+##### Duchy of Sikhotebei (`d_eman_sikhotebei` / 西河大北) — **Gubernat van dem Nord-Sichoteberch** — **Gubernat van dem Nord-Sichoteberch** — *2/4 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1698,7 +1698,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |605|`c_simenas`|**Simenas**|**大东风**|—| **Magistrat van GrôzÔstWint** |**Magistrat van Grôzôstwint**|✅ Pre-867 Classical|`k_aynumosir`|Ainu-Mohe|9|4|b_kusuri [castle], b_sir_etok [church]|
 |606|`c_soya`|**Soya**|**宗谷**|—| **Magistrat van Stamdal** |**Magistrat van Stamdal**|✅ Pre-867 Classical|`d_eman_sikhotebei`|Ainu-Mohe|17|4|b_mopet [castle], b_soya [city], b_na...|
 
-##### Duchy of Sahaliyan (`d_sahaliyan` / 撒合辇) — **Gubernat van ZâeZâmenKeiserwagen** — **Gubernat van Zâezâmenkeiserwagen** — *1/3 in Roman Empire*
+##### Duchy of Sahaliyan (`d_sahaliyan` / 撒合辇) — **Gubernat van Zâezâmenkeiserwagen** — **Gubernat van Zâezâmenkeiserwagen** — *1/3 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1722,7 +1722,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 #### 3.4.3 Kingdom of Hitakami (`k_hitakami` / 日高见) — **Kûnincrich van Hîtakamî**
 *Extent: **7 Counties** | Development: **225** (avg 32.1) | Roman Control: **7/7** | Flagged Anachronisms: **0***
 
-##### Duchy of Hitakami (`d_hitakami` / 日高见) — **Gubernat van SunnenHôchSchouwe** — **Gubernat van Sunnenhôchschouwe** — *5/5 in Roman Empire*
+##### Duchy of Hitakami (`d_hitakami` / 日高见) — **Gubernat van Sunnenhôchschouwe** — **Gubernat van Sunnenhôchschouwe** — *5/5 in Roman Empire*
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -1755,7 +1755,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |8|**Lingnan**|`k_lingnan`|**岭南**| **Kûnincrich van dem Sûtrücke** |**Kûnincrich van dem Sûtrücke**|Lingnan (`e_lingnan`)|**22**|80|1,093|49.7|**0/22** (0.0%)|0|Lingnan|
 |9|**Amur**|`k_amur`|**阿穆尔**| **Kûnincrich van Amûrlant** |**Kûnincrich van Amûrlant**|Amur (`e_amur`)|**22**|65|241|11.0|**9/22** (40.9%)|**9 flagged**|Roman Empire|
 |10|**Lingxi**|`k_lingxi`|**岭西**| **Kûnincrich van dem Westrücke** |**Kûnincrich van dem Westrücke**|Lingnan (`e_lingnan`)|**21**|65|837|39.9|**0/21** (0.0%)|0|Lingnan|
-|11|**Goguryeo**|`k_goguryeo`|**高句丽**| **Kûnincrich van Gôgûrjeo** |**Kûnincrich van Gôgûrjeo**|Samhan (`e_goryeo`)|**20**|63|525|26.2|**20/20** (100.0%)|0|Roman Empire|
+|11|**Goguryeo**|`k_goguryeo`|**高句丽**| **Kûnincrich van Gogurjô** |**Kûnincrich van Gogurjô**|Samhan (`e_goryeo`)|**20**|63|525|26.2|**20/20** (100.0%)|0|Roman Empire|
 |12|**Shannan**|`k_shannan`|**山南**| **Kûnincrich van dem Sûtberch** |**Kûnincrich van dem Sûtberch**|Jingyang (`e_jingyang`)|**19**|74|1,366|71.9|**0/19** (0.0%)|0|Qianzhong|
 |13|**Luzhen**|`k_luzhen`|**虑真**| **Kûnincrich van Sinswâr** |**Kûnincrich van Sinswâr**|Andong (`e_andong`)|**18**|53|330|18.3|**11/18** (61.1%)|**11 flagged**|Roman Empire|
 |14|**Qianzhong**|`k_qianzhong`|**黔中**| **Kûnincrich van dem Swartzmidden** |**Kûnincrich van dem Swartzmidden**|Liangyi (`e_liangyi`)|**18**|54|674|37.4|**0/18** (0.0%)|0|Qianzhong|
@@ -1773,12 +1773,12 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 |26|**Dongchuan**|`k_dongchuan`|**东川**| **Kûnincrich van dem Ôstbache** |**Kûnincrich van dem Ôstbache**|Liangyi (`e_liangyi`)|**12**|30|504|42.0|**0/12** (0.0%)|0|Xichuan|
 |27|**Xichuan**|`k_xichuan`|**西川**| **Kûnincrich van dem Westbache** |**Kûnincrich van dem Westbache**|Liangyi (`e_liangyi`)|**12**|33|452|37.7|**0/12** (0.0%)|0|Xichuan|
 |28|**Khitan**|`k_khitan`|**契丹**| **Kûnincrich van Chitân** |**Kûnincrich van Chitân**|Andong (`e_andong`)|**11**|39|155|14.1|**11/11** (100.0%)|**11 flagged**|Roman Empire|
-|29|**Liangzhe**|`k_liangzhe`|**两浙**| **Kûnincrich van den Tweê-Tsche** |**Kûnincrich van den Tweê-Tsche**|Jingyang (`e_jingyang`)|**11**|42|890|80.9|**0/11** (0.0%)|0|Liangzhe|
+|29|**Liangzhe**|`k_liangzhe`|**两浙**| **Kûnincrich van Twê-Zschêlant** |**Kûnincrich van Twê-Zschêlant**|Jingyang (`e_jingyang`)|**11**|42|890|80.9|**0/11** (0.0%)|0|Liangzhe|
 |30|**Baekje**|`k_baekje`|**百济**| **Kûnincrich van Bêkdsche** |**Kûnincrich van Bêkdsche**|Samhan (`e_goryeo`)|**11**|34|298|27.1|**11/11** (100.0%)|0|Roman Empire|
 |31|**Aynumosir**|`k_aynumosir`|**阿伊努茅希利**| **Kûnincrich van Ajnulant** |**Kûnincrich van Ajnulant**|Amur (`e_amur`)|**11**|38|78|7.1|**1/11** (9.1%)|**1 flagged**|Aynumosir|
 |32|**Huainan**|`k_huainan`|**淮南**| **Kûnincrich van dem Sûthuai** |**Kûnincrich van dem Sûthuai**|Jingyang (`e_jingyang`)|**10**|38|633|63.3|**0/10** (0.0%)|0|Huainan|
 |33|**Youji**|`k_youji`|**幽蓟**| **Kûnincrich van Düsterdistel** |**Kûnincrich van Düsterdistel**|Zhongyuan (`e_zhongyuan`)|**10**|32|389|38.9|**10/10** (100.0%)|0|Roman Empire|
-|34|**Tsukushi**|`k_tsukushi`|**筑紫**| **Kûnincrich van Tsukûschi** |**Kûnincrich van Zukuschi**|Japan (`e_japan`)|**10**|38|277|27.7|**10/10** (100.0%)|0|Roman Empire|
+|34|**Tsukushi**|`k_tsukushi`|**筑紫**| **Kûnincrich van Zukuschi** |**Kûnincrich van Zukuschi**|Japan (`e_japan`)|**10**|38|277|27.7|**10/10** (100.0%)|0|Roman Empire|
 |35|**Hunan**|`k_hunan`|**湖南**| **Kûnincrich van dem Sûtsê** |**Kûnincrich van dem Sûtsê**|Jingyang (`e_jingyang`)|**9**|36|473|52.6|**0/9** (0.0%)|0|Lingnan|
 |36|**Đại Việt**|`k_viet`|**大越**| **Kûnincrich van Jüetlant** |**Kûnincrich van Jüetlant**|Lingnan (`e_lingnan`)|**9**|32|489|54.3|**0/9** (0.0%)|0|Đại Việt|
 |37|**Fujian**|`k_fujian`|**福建**| **Kûnincrich van Sêlichbache** |**Kûnincrich van Sêlichbache**|Jingyang (`e_jingyang`)|**9**|36|697|77.4|**0/9** (0.0%)|0|Liangzhe|

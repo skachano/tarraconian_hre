@@ -3343,24 +3343,24 @@
 * **Duchy of Yukju** (`d_yukju`) — *4/4 in HRE*
   * **[HRE]** **Gwiju** (`c_gwiju`) — *Tarraconian: **Magistrat van Schildpadgouwe****
   * **[HRE]** **Jangjeong** (`c_jangjeong`) — *Tarraconian: **Magistrat van Langstill****
-  * **[HRE]** **Taeju** (`c_taeju`) — *Tarraconian: **Magistrat van Grôzfridgouwe-in-Gôgûrjeo****
-  * **[HRE]** **Yeongju** (`c_uiju`) — *Tarraconian: **Magistrat van Geistgouwe-in-Gôgûrjeo****
+  * **[HRE]** **Taeju** (`c_taeju`) — *Tarraconian: **Magistrat van Grôzfridgouwe-in-Gogurjô****
+  * **[HRE]** **Yeongju** (`c_uiju`) — *Tarraconian: **Magistrat van Geistgouwe-in-Gogurjô****
 * **Duchy of Bukgye** (`d_bukgye`) — *3/3 in HRE*
   * **[HRE]** **Seogyeong** (`c_seogyeong`) — *Tarraconian: **Magistrat van Westhôfstat****
-  * **[HRE]** **Seongju** (`c_seongju`) — *Tarraconian: **Magistrat van Vollbrâchtgouwe-in-Gôgûrjeo****
+  * **[HRE]** **Seongju** (`c_seongju`) — *Tarraconian: **Magistrat van Vollbrâchtgouwe-in-Gogurjô****
   * **[HRE]** **Yeongwon** (`c_yeongwon`) — *Tarraconian: **Magistrat van Rûweferne****
 * **Duchy of Gaeseong** (`d_gaeseong`) — *3/3 in HRE*
   * **[HRE]** **Gaeseong** (`c_gaeseong`) — *Tarraconian: **Magistrat van Openburch****
   * **[HRE]** **Gokju** (`c_gokju`) — *Tarraconian: **Magistrat van Dalgouwe****
-  * **[HRE]** **Pyeongju** (`c_pyeongju`) — *Tarraconian: **Magistrat van Ebenegouwe-in-Gôgûrjeo****
+  * **[HRE]** **Pyeongju** (`c_pyeongju`) — *Tarraconian: **Magistrat van Ebenegouwe-in-Gogurjô****
 * **Duchy of Gwangju** (`d_gwangju`) — *3/3 in HRE*
   * **[HRE]** **Dangseong** (`c_dangseong`) — *Tarraconian: **Magistrat van Tângburch****
   * **[HRE]** **Gwangju** (`c_gwangju`) — *Tarraconian: **Magistrat van Wîtgouwe****
   * **[HRE]** **Yangju** (`c_yangju`) — *Tarraconian: **Magistrat van Abeêlgouwe****
 * **Duchy of Haeju** (`d_haeju`) — *3/3 in HRE*
-  * **[HRE]** **Haeju** (`c_haeju`) — *Tarraconian: **Magistrat van Mêrgouwe-in-Gôgûrjeo****
+  * **[HRE]** **Haeju** (`c_haeju`) — *Tarraconian: **Magistrat van Mêrgouwe-in-Gogurjô****
   * **[HRE]** **Hwangju** (`c_hwangju`) — *Tarraconian: **Magistrat van Gelbgouwe****
-  * **[HRE]** **Pungju** (`c_pungju`) — *Tarraconian: **Magistrat van Rîchgouwe-in-Gôgûrjeo****
+  * **[HRE]** **Pungju** (`c_pungju`) — *Tarraconian: **Magistrat van Rîchgouwe-in-Gogurjô****
 
 ---
 
@@ -3987,7 +3987,7 @@
   * [Non-HRE] **Pelyül** (`c_pelyul`) — *Tarraconian: **Magistrat van Pel-Jül****
 * **Duchy of Lhatok** (`d_lhatok`) — *0/3 in HRE*
   * [Non-HRE] **Gonjo** (`c_gonjo`) — *Tarraconian: **Magistrat van Gondschô****
-  * [Non-HRE] **Lhatok** (`c_lhatok`) — *Tarraconian: **Magistrat van Lhatoch****
+  * [Non-HRE] **Lhatok** (`c_lhatok`) — *Tarraconian: **Magistrat van Lâtoch****
   * [Non-HRE] **Zhag'yab** (`c_zhagyab`) — *Tarraconian: **Magistrat van Dschagyap****
 * **Duchy of Litang** (`d_litang`) — *0/3 in HRE*
   * [Non-HRE] **Lenggu** (`c_lenggu`) — *Tarraconian: **Magistrat van Lenggu****
@@ -4121,7 +4121,7 @@
 * **Duchy of Chakla** (`d_chakla`) — *0/4 in HRE*
   * [Non-HRE] **Chakla** (`c_chakla`) — *Tarraconian: **Magistrat van Tschakle****
   * [Non-HRE] **Dawu** (`c_dawu`) — *Tarraconian: **Magistrat van Dawu****
-  * [Non-HRE] **Lhagang** (`c_lhagang`) — *Tarraconian: **Magistrat van Lhagang****
+  * [Non-HRE] **Lhagang** (`c_lhagang`) — *Tarraconian: **Magistrat van Lâgang****
   * [Non-HRE] **Sêrtar** (`c_sertar`) — *Tarraconian: **Magistrat van Sêrtar****
 * **Duchy of Gainlho** (`d_gainlho`) — *0/4 in HRE*
   * [Non-HRE] **Jonê** (`c_jone`) — *Tarraconian: **Magistrat van Dschonê****
@@ -4545,8 +4545,8 @@
 * **Duchy of Lhasa** (`d_lhasa`) — *0/5 in HRE*
   * [Non-HRE] **Damxung** (`c_damxung`) — *Tarraconian: **Magistrat van Damschung****
   * [Non-HRE] **Gyama** (`c_gyama`) — *Tarraconian: **Magistrat van Gyame****
-  * [Non-HRE] **Lhasa** (`c_lhasa`) — *Tarraconian: **Magistrat van Lhase****
-  * [Non-HRE] **Lhünzhub** (`c_lhunzhub`) — *Tarraconian: **Magistrat van Lhündschup****
+  * [Non-HRE] **Lhasa** (`c_lhasa`) — *Tarraconian: **Magistrat van Lâse****
+  * [Non-HRE] **Lhünzhub** (`c_lhunzhub`) — *Tarraconian: **Magistrat van Lündschup****
   * [Non-HRE] **Nyêmo** (`c_nyemo`) — *Tarraconian: **Magistrat van Nyêmô****
 * **Duchy of Yarlung** (`d_yarlung`) — *0/5 in HRE*
   * [Non-HRE] **Comai** (`c_comai`) — *Tarraconian: **Magistrat van Zomai****
@@ -4556,7 +4556,7 @@
   * [Non-HRE] **Zêtang** (`c_zetang`) — *Tarraconian: **Magistrat van Sêtang****
 * **Duchy of Nagqu** (`d_nagchu`) — *0/3 in HRE*
   * [Non-HRE] **Baingoin** (`c_baingoin`) — *Tarraconian: **Magistrat van Baingoin****
-  * [Non-HRE] **Lhari** (`c_lhari`) — *Tarraconian: **Magistrat van Lhari****
+  * [Non-HRE] **Lhari** (`c_lhari`) — *Tarraconian: **Magistrat van Lâri****
   * [Non-HRE] **Nagqu** (`c_nagchu`) — *Tarraconian: **Magistrat van Nagtschu****
 
 ---

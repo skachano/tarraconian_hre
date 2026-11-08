@@ -146,7 +146,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 108 | **Punjab** | `k_punjab` | **Kûnincrich van Punjap** | *Punjapisch* | **19/19 RE** — Added in 1154 Imperial Chancellery update. |
 | 109 | **Bóhai** | `k_balhae` | **Kûnincrich van dem Bôchmêre** *(or **Bôhai**)* | *Bôchmêrer* | **18/29 RE** — Added in 1154 Imperial Chancellery update. |
 | 110 | **Khotan** | `k_khotan` | **Kûnincrich van Chotan** | *Chotanisch* | **18/20 RE** — Added in 1154 Imperial Chancellery update. |
-| 111 | **Goguryeo** | `k_goguryeo` | **Kûnincrich van Gôgûrjeo** *(or **Gogurjô**)* | *Gôgûrjeoer* | **16/16 RE** — Added in 1154 Imperial Chancellery update. |
+| 111 | **Goguryeo** | `k_goguryeo` | **Kûnincrich van Gogurjô** | *Gogurjôisch* | **16/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 112 | **Hedong** | `k_hedong` | **Kûnincrich van dem Ôstflôze** *(or **Hedong**)* | *Ôstflôzisch* | **15/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Hédōng* (河东). |
 | 113 | **Daibei** | `k_daibei` | **Kûnincrich van Dênordlant** *(or **Daibei**)* | *Dênordlantisch* | **14/14 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Dàiběi* (代北). |
 | 114 | **Oghuz il** | `k_oghuz_il` | **Kûnincrich van Oghuz Il** | *Oghuz Ilisch* | **11/30 RE** — Added in 1154 Imperial Chancellery update. |
@@ -174,7 +174,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 136 | **Guannei** | `k_guannei` | **Kûnincrich van der Binnenklûse** *(or **Binnenklûsen**)* | *Binnenklûser* | **0/23 RE** — Added in 1154 Imperial Chancellery update; calque of Chinese *Guānnèi*. |
 | 137 | **Gugé** | `k_guge` | **Kûnincrich van Gugê** | *Gugêisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
 | 138 | **Gyalrong** | `k_gyalrong` | **Kûnincrich van Gyalrong** | *Gyalrongisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
-| 139 | **Zanj** | `k_zanj` | **Kûnincrich van Sanj** | *Sanjisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
+| 139 | **Zanj** | `k_zanj` | **Kûnincrich van Zantsch** | *Zantschisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
 | 140 | **Hausaland** | `k_hausaland` | **Kûnincrich van Hausalant** | *Hausalantisch* | **0/17 RE** — Added in 1154 Imperial Chancellery update. |
 | 141 | **Qingxu** | `k_qingxu` | **Kûnincrich van Blousacht** *(or **Tschingschu**)* | *Blousachtisch* | **0/17 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Qīngxú* (青徐). |
 | 142 | **Ghana** | `k_ghana` | **Kûnincrich van Ghane** | *Ghaneer* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
@@ -184,17 +184,17 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 146 | **Uly Dala** | `k_cuman` | **Kûnincrich van Uly Dale** | *Uly Daleer* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 147 | **Hebei** | `k_hebei` | **Kûnincrich van dem Nordflôze** *(or **Hebei**)* | *Nordflôzisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Héběi* (河北). |
 | 148 | **Henan** | `k_henan` | **Kûnincrich van dem Sûtflôze** *(or **Henan**)* | *Sûtflôzisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Hénán* (河南). |
-| 149 | **Lhomon** | `k_lhomon` | **Kûnincrich van Lhomon** | *Lhomonisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
-| 150 | **Qara Dala** | `k_qara_dala` | **Kûnincrich van Tschara Dale** | *Tschara Daleer* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
-| 151 | **Rajputana** | `k_rajputana` | **Kûnincrich van Rajputane** | *Rajputaneer* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
-| 152 | **Gujarat** | `k_gujarat` | **Kûnincrich van Gujarat** | *Gujaratisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
+| 149 | **Lhomon** | `k_lhomon` | **Kûnincrich van Sût-Monenlant** *(or **Lômon**)* | *Sût-Monenlantisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update; calque of Tibetan *Lho-mon*. |
+| 150 | **Qara Dala** | `k_qara_dala` | **Kûnincrich van Chara Dale** | *Chara Daleer* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
+| 151 | **Rajputana** | `k_rajputana` | **Kûnincrich van Râdschputâne** | *Râdschputânisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
+| 152 | **Gujarat** | `k_gujarat` | **Kûnincrich van Gudscharât** | *Gudscharâtisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
 | 153 | **Sao** | `k_sao` | **Kûnincrich van Saô** | *Saôisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
 | 154 | **Ü** | `k_u` | **Kûnincrich van Ützang** | *Ützangisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
 | 155 | **Malwa** | `k_malwa` | **Kûnincrich van Malwe** | *Malweer* | **0/12 RE** — Added in 1154 Imperial Chancellery update. |
 | 156 | **Gurma** | `k_gurma` | **Kûnincrich van Gurme** | *Gurmeer* | **0/11 RE** — Added in 1154 Imperial Chancellery update. |
 | 157 | **Kipchak** | `k_kipchak` | **Kûnincrich van Kiptschach** | *Kiptschachisch* | **0/10 RE** — Added in 1154 Imperial Chancellery update. |
 | 158 | **Tsang** | `k_tsang` | **Kûnincrich van Zang** | *Zangisch* | **0/10 RE** — Added in 1154 Imperial Chancellery update. |
-| 159 | **Jenne** | `k_jenne` | **Kûnincrich van Jenne** | *Jenneer* | **0/6 RE** — Added in 1154 Imperial Chancellery update. |
+| 159 | **Jenne** | `k_jenne` | **Kûnincrich van Dschenne** | *Dschenneer* | **0/6 RE** — Added in 1154 Imperial Chancellery update. |
 | 160 | **Shiwei** | `k_shiwei` | **Kûnincrich van Schîwêj** *(or **Schiwei**)* | *Schîwêjisch* | **0/3 RE** — Added in 1154 Imperial Chancellery update. |
 
 ---
@@ -3206,29 +3206,29 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.111 Kingdom of Goguryeo (`k_goguryeo`) $\rightarrow$ **Kûnincrich van Gôgûrjeo** *(or **Gogurjô**)*
+### 3.111 Kingdom of Goguryeo (`k_goguryeo`) $\rightarrow$ **Kûnincrich van Gogurjô**
 
 * **Duchy of Yukju** (`d_yukju`) $\rightarrow$ **Gubernat van Sêhsgouwe** *(or **Jukdschu**)*
   * `c_gwiju` (**[HRE]** Gwiju) $\rightarrow$ **Magistrat van Schildpadgouwe** *(or **Gwidschu**)*
   * `c_jangjeong` (**[HRE]** Jangjeong) $\rightarrow$ **Magistrat van Langstill** *(or **Dschangdschong**)*
-  * `c_taeju` (**[HRE]** Taeju) $\rightarrow$ **Magistrat van Grôzfridgouwe-in-Gôgûrjeo** *(or **Taedschu**)*
-  * `c_uiju` (**[HRE]** Yeongju) $\rightarrow$ **Magistrat van Geistgouwe-in-Gôgûrjeo** *(or **Dschongdschu**)*
+  * `c_taeju` (**[HRE]** Taeju) $\rightarrow$ **Magistrat van Grôzfridgouwe-in-Gogurjô** *(or **Taedschu**)*
+  * `c_uiju` (**[HRE]** Yeongju) $\rightarrow$ **Magistrat van Geistgouwe-in-Gogurjô** *(or **Dschongdschu**)*
 * **Duchy of Bukgye** (`d_bukgye`) $\rightarrow$ **Gubernat van Nordmarch** *(or **Bukgye**)*
   * `c_seogyeong` (**[HRE]** Seogyeong) $\rightarrow$ **Magistrat van Westhôfstat** *(or **Ebeneveit**)*
-  * `c_seongju` (**[HRE]** Seongju) $\rightarrow$ **Magistrat van Vollbrâchtgouwe-in-Gôgûrjeo** *(or **Songdschu**)*
+  * `c_seongju` (**[HRE]** Seongju) $\rightarrow$ **Magistrat van Vollbrâchtgouwe-in-Gogurjô** *(or **Songdschu**)*
   * `c_yeongwon` (**[HRE]** Yeongwon) $\rightarrow$ **Magistrat van Rûweferne** *(or **Jongwon**)*
 * **Duchy of Gaeseong** (`d_gaeseong`) $\rightarrow$ **Gubernat van Openburch** *(or **Gaesong**)*
   * `c_gaeseong` (**[HRE]** Gaeseong) $\rightarrow$ **Magistrat van Openburch** *(or **Gaesong**)*
   * `c_gokju` (**[HRE]** Gokju) $\rightarrow$ **Magistrat van Dalgouwe** *(or **Gokdschu**)*
-  * `c_pyeongju` (**[HRE]** Pyeongju) $\rightarrow$ **Magistrat van Ebenegouwe-in-Gôgûrjeo** *(or **Pjongdschu**)*
+  * `c_pyeongju` (**[HRE]** Pyeongju) $\rightarrow$ **Magistrat van Ebenegouwe-in-Gogurjô** *(or **Pjongdschu**)*
 * **Duchy of Gwangju** (`d_gwangju`) $\rightarrow$ **Gubernat van Wîtgouwe** *(or **Gwangdschu**)*
   * `c_dangseong` (**[HRE]** Dangseong) $\rightarrow$ **Magistrat van Tângburch** *(or **Dangsong**)*
   * `c_gwangju` (**[HRE]** Gwangju) $\rightarrow$ **Magistrat van Wîtgouwe** *(or **Gwangdschu**)*
   * `c_yangju` (**[HRE]** Yangju) $\rightarrow$ **Magistrat van Abeêlgouwe** *(or **Jangdschu**)*
 * **Duchy of Haeju** (`d_haeju`) $\rightarrow$ **Gubernat van Mêrgouwe** *(or **Haedschu**)*
-  * `c_haeju` (**[HRE]** Haeju) $\rightarrow$ **Magistrat van Mêrgouwe-in-Gôgûrjeo** *(or **Haedschu**)*
+  * `c_haeju` (**[HRE]** Haeju) $\rightarrow$ **Magistrat van Mêrgouwe-in-Gogurjô** *(or **Haedschu**)*
   * `c_hwangju` (**[HRE]** Hwangju) $\rightarrow$ **Magistrat van Gelbgouwe** *(or **Hwangdschu**)*
-  * `c_pungju` (**[HRE]** Pungju) $\rightarrow$ **Magistrat van Rîchgouwe-in-Gôgûrjeo** *(or **Pungdschu**)*
+  * `c_pungju` (**[HRE]** Pungju) $\rightarrow$ **Magistrat van Rîchgouwe-in-Gogurjô** *(or **Pungdschu**)*
 
 ---
 
@@ -3294,8 +3294,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mangyshlak** (`d_transcaspiana`) $\rightarrow$ **Gubernat van Mangyschlach**
   * `c_buzachi` (**[HRE]** Buzachi) $\rightarrow$ **Magistrat van Buzatschi**
   * `c_mangyshlak` (**[HRE]** Mangyshlak) $\rightarrow$ **Magistrat van Mangyschlach**
-  * `c_qaraustyurt` ([Non-HRE] Qaraustyurt) $\rightarrow$ **Magistrat van Tscharaustyurt**
-  * `c_qyzylustyurt` ([Non-HRE] Qyzylustyurt) $\rightarrow$ **Magistrat van Tschyzylustyurt**
+  * `c_qaraustyurt` ([Non-HRE] Qaraustyurt) $\rightarrow$ **Magistrat van Charaustyurt**
+  * `c_qyzylustyurt` ([Non-HRE] Qyzylustyurt) $\rightarrow$ **Magistrat van Chyzylustyurt**
 * **Duchy of Garabogazkol** (`d_garabogazkol`) $\rightarrow$ **Gubernat van Garabogazkol**
   * `c_bekdas` (**[HRE]** Bekdas) $\rightarrow$ **Magistrat van Bekdas**
   * `c_garabogazkol` (**[HRE]** Garabogazkol) $\rightarrow$ **Magistrat van Garabogazkol**
@@ -3785,9 +3785,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_jiren_suat` ([Non-HRE] Jiran Suat) $\rightarrow$ **Magistrat van Dschiran Suat**
   * `c_koi-bagar` ([Non-HRE] Koi-Bagar) $\rightarrow$ **Magistrat van Koi-Bagar**
   * `c_kulan_uynak` ([Non-HRE] Kulan-Uynak) $\rightarrow$ **Magistrat van Kulan-Uynach**
-* **Duchy of Qarasaryarka** (`d_saryarka`) $\rightarrow$ **Gubernat van Tscharasaryarke**
+* **Duchy of Qarasaryarka** (`d_saryarka`) $\rightarrow$ **Gubernat van Charasaryarke**
   * `c_kaska` ([Non-HRE] Kaska) $\rightarrow$ **Magistrat van Kaske**
-  * `c_qyzylteniz` ([Non-HRE] Qyzylteniz) $\rightarrow$ **Magistrat van Tschyzylteniz**
+  * `c_qyzylteniz` ([Non-HRE] Qyzylteniz) $\rightarrow$ **Magistrat van Chyzylteniz**
   * `c_teniz` ([Non-HRE] Teniz) $\rightarrow$ **Magistrat van Teniz**
   * `c_togotai` ([Non-HRE] Togotai) $\rightarrow$ **Magistrat van Togotai**
 * **Duchy of Degelen** (`d_degelen`) $\rightarrow$ **Gubernat van Degelen**
@@ -3830,9 +3830,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_dege` ([Non-HRE] Dêgê) $\rightarrow$ **Magistrat van Dêgê**
   * `c_garze` ([Non-HRE] Garzê) $\rightarrow$ **Magistrat van Gartzê**
   * `c_pelyul` ([Non-HRE] Pelyül) $\rightarrow$ **Magistrat van Pel-Jül**
-* **Duchy of Lhatok** (`d_lhatok`) $\rightarrow$ **Gubernat van Lhatoch**
+* **Duchy of Lhatok** (`d_lhatok`) $\rightarrow$ **Gubernat van Lâtoch** *(or calqued **Gotendach**)*
   * `c_gonjo` ([Non-HRE] Gonjo) $\rightarrow$ **Magistrat van Gondschô**
-  * `c_lhatok` ([Non-HRE] Lhatok) $\rightarrow$ **Magistrat van Lhatoch**
+  * `c_lhatok` ([Non-HRE] Lhatok) $\rightarrow$ **Magistrat van Lâtoch**
   * `c_zhagyab` ([Non-HRE] Zhag'yab) $\rightarrow$ **Magistrat van Dschagyap**
 * **Duchy of Litang** (`d_litang`) $\rightarrow$ **Gubernat van Litang**
   * `c_lenggu` ([Non-HRE] Lenggu) $\rightarrow$ **Magistrat van Lenggu**
@@ -3940,7 +3940,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_manthang` ([Non-HRE] Manthang) $\rightarrow$ **Magistrat van Manthang**
   * `c_purang` ([Non-HRE] Purang) $\rightarrow$ **Magistrat van Purang**
 * **Duchy of Co'nyi** (`d_conyi`) $\rightarrow$ **Gubernat van Zonyi**
-  * `c_cozhelhoma` ([Non-HRE] Cozhêlhoma) $\rightarrow$ **Magistrat van Zodschêlhome**
+  * `c_cozhelhoma` ([Non-HRE] Cozhêlhoma) $\rightarrow$ **Magistrat van Zodschêlôme**
   * `c_garco` ([Non-HRE] Garco) $\rightarrow$ **Magistrat van Gartzô**
   * `c_garkung` ([Non-HRE] Garkung) $\rightarrow$ **Magistrat van Garkung**
   * `c_sewa` ([Non-HRE] Sêwa) $\rightarrow$ **Magistrat van Sêwe**
@@ -3962,9 +3962,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Chakla** (`d_chakla`) $\rightarrow$ **Gubernat van Tschakle**
   * `c_chakla` ([Non-HRE] Chakla) $\rightarrow$ **Magistrat van Tschakle**
   * `c_dawu` ([Non-HRE] Dawu) $\rightarrow$ **Magistrat van Dawu**
-  * `c_lhagang` ([Non-HRE] Lhagang) $\rightarrow$ **Magistrat van Lhagang**
+  * `c_lhagang` ([Non-HRE] Lhagang) $\rightarrow$ **Magistrat van Lâgang**
   * `c_sertar` ([Non-HRE] Sêrtar) $\rightarrow$ **Magistrat van Sêrtar**
-* **Duchy of Gainlho** (`d_gainlho`) $\rightarrow$ **Gubernat van Gainlhô**
+* **Duchy of Gainlho** (`d_gainlho`) $\rightarrow$ **Gubernat van Gainlô**
   * `c_jone` ([Non-HRE] Jonê) $\rightarrow$ **Magistrat van Dschonê**
   * `c_maqu` ([Non-HRE] Maqu) $\rightarrow$ **Magistrat van Matschu**
   * `c_sangqu` ([Non-HRE] Sangqu) $\rightarrow$ **Magistrat van Sangtschu**
@@ -3973,14 +3973,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_baima` ([Non-HRE] Baima) $\rightarrow$ **Magistrat van Baime**
   * `c_madoi` ([Non-HRE] Madoi) $\rightarrow$ **Magistrat van Madoi**
   * `c_maqen` ([Non-HRE] Maqên) $\rightarrow$ **Magistrat van Matschên**
-* **Duchy of Malho** (`d_malho`) $\rightarrow$ **Gubernat van Malhô**
+* **Duchy of Malho** (`d_malho`) $\rightarrow$ **Gubernat van Malô**
   * `c_mangra` ([Non-HRE] Mangra) $\rightarrow$ **Magistrat van Mangre**
   * `c_rebgong` ([Non-HRE] Rebgong) $\rightarrow$ **Magistrat van Rebgong**
   * `c_zekog` ([Non-HRE] Zêkog) $\rightarrow$ **Magistrat van Sêkoch**
 
 ---
 
-### 3.139 Kingdom of Zanj (`k_zanj`) $\rightarrow$ **Kûnincrich van Sanj**
+### 3.139 Kingdom of Zanj (`k_zanj`) $\rightarrow$ **Kûnincrich van Zantsch**
 
 * **Duchy of West Ajuraan** (`d_west_ajuraan`) $\rightarrow$ **Gubernat van West-Adschurân**
   * `c_jubba` ([Non-HRE] Bardhere) $\rightarrow$ **Magistrat van Bardhere**
@@ -4191,7 +4191,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_achu` ([Non-HRE] Achu) $\rightarrow$ **Magistrat van Atschu**
   * `c_jilali` ([Non-HRE] Jilali) $\rightarrow$ **Magistrat van Jilali**
   * `c_ulu_jitanjik` ([Non-HRE] Ulu Jitanjik) $\rightarrow$ **Magistrat van Ulu-Dschilantschîch**
-* **Duchy of Qyzylsaryarka** (`d_qyzylsaryarka`) $\rightarrow$ **Gubernat van Tschyzylsaryarke**
+* **Duchy of Qyzylsaryarka** (`d_qyzylsaryarka`) $\rightarrow$ **Gubernat van Chyzylsaryarke**
   * `c_eghiz_kara` ([Non-HRE] Eghiz Kara) $\rightarrow$ **Magistrat van Eghiz Kare**
   * `c_jilanjik` ([Non-HRE] Jilanjik) $\rightarrow$ **Magistrat van Dschilantschîch**
   * `c_ulytau` ([Non-HRE] Ulytau) $\rightarrow$ **Magistrat van Ulytau**
@@ -4248,14 +4248,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.149 Kingdom of Lhomon (`k_lhomon`) $\rightarrow$ **Kûnincrich van Lhomon**
+### 3.149 Kingdom of Lhomon (`k_lhomon`) $\rightarrow$ **Kûnincrich van Sût-Monenlant** *(or **Lômon**)*
 
 * **Duchy of Dzayül** (`d_dzayul`) $\rightarrow$ **Gubernat van Dzalant** *(or **Dza-Jül**)*
   * `c_golag` ([Non-HRE] Golag) $\rightarrow$ **Magistrat van Golach**
   * `c_rima` ([Non-HRE] Rima) $\rightarrow$ **Magistrat van Rime**
   * `c_roing` ([Non-HRE] Roing) $\rightarrow$ **Magistrat van Roing**
   * `c_tezu` ([Non-HRE] Tezu) $\rightarrow$ **Magistrat van Tezu**
-* **Duchy of Lhoyul** (`d_lhoyul`) $\rightarrow$ **Gubernat van Sûtlant** *(or **Lho-Jül**)*
+* **Duchy of Lhoyul** (`d_lhoyul`) $\rightarrow$ **Gubernat van Sûtlant** *(or **Lô-Jül**)*
   * `c_along` ([Non-HRE] Along) $\rightarrow$ **Magistrat van Along**
   * `c_itanagar` ([Non-HRE] Itanagar) $\rightarrow$ **Magistrat van Itanagar**
   * `c_mainling` ([Non-HRE] Mainling) $\rightarrow$ **Magistrat van Mainling**
@@ -4272,7 +4272,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.150 Kingdom of Qara Dala (`k_qara_dala`) $\rightarrow$ **Kûnincrich van Tschara Dale**
+### 3.150 Kingdom of Qara Dala (`k_qara_dala`) $\rightarrow$ **Kûnincrich van Chara Dale**
 
 * **Duchy of Mugodzhar Hills** (`d_mugodzhar_hills`) $\rightarrow$ **Gubernat van Mugodschar Hills**
   * `c_jitikul` ([Non-HRE] Jitikul) $\rightarrow$ **Magistrat van Dschetiköl**
@@ -4297,7 +4297,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.151 Kingdom of Rajputana (`k_rajputana`) $\rightarrow$ **Kûnincrich van Rajputane**
+### 3.151 Kingdom of Rajputana (`k_rajputana`) $\rightarrow$ **Kûnincrich van Râdschputâne**
 
 * **Duchy of Ajmer** (`d_ajmer`) $\rightarrow$ **Gubernat van Adschmêr**
   * `c_ajayameru` ([Non-HRE] Ajayameru) $\rightarrow$ **Magistrat van Adschajameru**
@@ -4321,7 +4321,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.152 Kingdom of Gujarat (`k_gujarat`) $\rightarrow$ **Kûnincrich van Gujarat**
+### 3.152 Kingdom of Gujarat (`k_gujarat`) $\rightarrow$ **Kûnincrich van Gudscharât**
 
 * **Duchy of Saurashtra** (`d_saurashtra`) $\rightarrow$ **Gubernat van Sauraschtre**
   * `c_bhumilka` ([Non-HRE] Bhumilka) $\rightarrow$ **Magistrat van Bumilke**
@@ -4367,11 +4367,11 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.154 Kingdom of Ü (`k_u`) $\rightarrow$ **Kûnincrich van Ützang**
 
-* **Duchy of Lhasa** (`d_lhasa`) $\rightarrow$ **Gubernat van Lhase**
+* **Duchy of Lhasa** (`d_lhasa`) $\rightarrow$ **Gubernat van Lâse** *(or calqued **Gotenhôf**)*
   * `c_damxung` ([Non-HRE] Damxung) $\rightarrow$ **Magistrat van Damschung**
   * `c_gyama` ([Non-HRE] Gyama) $\rightarrow$ **Magistrat van Gyame**
-  * `c_lhasa` ([Non-HRE] Lhasa) $\rightarrow$ **Magistrat van Lhase**
-  * `c_lhunzhub` ([Non-HRE] Lhünzhub) $\rightarrow$ **Magistrat van Lhündschup**
+  * `c_lhasa` ([Non-HRE] Lhasa) $\rightarrow$ **Magistrat van Lâse** *(or calqued **Gotenhôf**)*
+  * `c_lhunzhub` ([Non-HRE] Lhünzhub) $\rightarrow$ **Magistrat van Lündschup**
   * `c_nyemo` ([Non-HRE] Nyêmo) $\rightarrow$ **Magistrat van Nyêmô**
 * **Duchy of Yarlung** (`d_yarlung`) $\rightarrow$ **Gubernat van Jarlung**
   * `c_comai` ([Non-HRE] Comai) $\rightarrow$ **Magistrat van Zomai**
@@ -4381,7 +4381,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_zetang` ([Non-HRE] Zêtang) $\rightarrow$ **Magistrat van Sêtang**
 * **Duchy of Nagqu** (`d_nagchu`) $\rightarrow$ **Gubernat van Nagtschu**
   * `c_baingoin` ([Non-HRE] Baingoin) $\rightarrow$ **Magistrat van Baingoin**
-  * `c_lhari` ([Non-HRE] Lhari) $\rightarrow$ **Magistrat van Lhari**
+  * `c_lhari` ([Non-HRE] Lhari) $\rightarrow$ **Magistrat van Lâri**
   * `c_nagchu` ([Non-HRE] Nagqu) $\rightarrow$ **Magistrat van Nagtschu**
 
 ---
@@ -4465,7 +4465,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.159 Kingdom of Jenne (`k_jenne`) $\rightarrow$ **Kûnincrich van Jenne**
+### 3.159 Kingdom of Jenne (`k_jenne`) $\rightarrow$ **Kûnincrich van Dschenne**
 
 * **Duchy of Jenne** (`d_jenne`) $\rightarrow$ **Gubernat van Dschenne**
   * `c_bindugu` ([Non-HRE] Bindugu) $\rightarrow$ **Magistrat van Bindugu**

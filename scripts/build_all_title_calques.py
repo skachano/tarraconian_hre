@@ -41,7 +41,7 @@ manual_kingdoms = {
     "k_hunan": "Kûnincrich van dem Sûtsê",
     "k_jiangdong": "Kûnincrich van dem Ôstflôze",
     "k_jiangxi": "Kûnincrich van dem Westflôze",
-    "k_liangzhe": "Kûnincrich van den Tweê-Tsche",
+    "k_liangzhe": "Kûnincrich van Twê-Zschêlant",
     "k_shannan": "Kûnincrich van dem Sûtberch",
     "k_guannei": "Kûnincrich van der Binnenklûse",
     "k_hexi": "Kûnincrich van dem Westflôze",
@@ -50,10 +50,10 @@ manual_kingdoms = {
     "k_lingxi": "Kûnincrich van dem Westrücke",
     "k_viet": "Kûnincrich van Jüetlant",
     "k_baekje": "Kûnincrich van Bêkdsche",
-    "k_goguryeo": "Kûnincrich van Gôgûrjeo",
+    "k_goguryeo": "Kûnincrich van Gogurjô",
     "k_silla": "Kûnincrich van Schilla",
     "k_azuma": "Kûnincrich van Azuma",
-    "k_tsukushi": "Kûnincrich van Tsukûschi",
+    "k_tsukushi": "Kûnincrich van Zukuschi",
     "k_yamato": "Kûnincrich van Jamato",
     "k_balhae": "Kûnincrich van dem Bôchmêre",
     "k_khitan": "Kûnincrich van Chitân",
@@ -113,7 +113,7 @@ def generate_calque(key, name, simp, tier="c"):
     if simp == "郑滑": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Dschêngglitscher"
     if simp == "徐泗": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Schûsî"
     if simp == "兖海": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Jânmêr"
-    if simp == "郓曹": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Wallstat-Tsô"
+    if simp == "郓曹": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Wallstat-Zô"
     if simp == "淄青": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Zîblou"
     if simp == "易定": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Îfest"
     if simp == "瀛莫": return f"{'Gubernat' if tier=='d' else 'Magistrat'} van Ôstmêr-Mô"
