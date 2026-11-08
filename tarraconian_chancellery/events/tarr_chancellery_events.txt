@@ -1,4 +1,4 @@
-﻿namespace = tarr_chancellery
+namespace = tarr_chancellery
 
 ##############################################################################
 # tarr_chancellery.0001 - Imperial Tarraconian Chancellery Ordinance Menu
@@ -27,7 +27,7 @@ tarr_chancellery.0001 = {
 		}
 	}
 
-	# Option B: 1059 Historical Resolutions (All 44 De Jure Kingdoms Globally)
+	# Option B: 1059-1154 Historical Resolutions (All 160 De Jure Kingdoms Globally)
 	option = {
 		name = tarr_chancellery.0001.b
 		custom_tooltip = tarr_chancellery.0001.b.tt
