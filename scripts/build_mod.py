@@ -13,6 +13,7 @@ Preserves UTF-8 with BOM and Windows CRLF line endings.
 import os
 import re
 import sys
+import shutil
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -21,6 +22,7 @@ DYNASTIC_REGISTER_PATH = REPO_ROOT / "dynastic_realignment_register.md"
 EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_title_list_effects.txt"
 DYNASTIC_EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_dynastic_effects.txt"
 LOC_PATH = REPO_ROOT / "tarraconian_chancellery" / "localization" / "english" / "tarraconian_titles_l_english.yml"
+REPLACE_LOC_PATH = REPO_ROOT / "tarraconian_chancellery" / "localization" / "replace" / "english" / "tarraconian_dynasty_overrides_l_english.yml"
 
 def clean_toponym(raw: str) -> str:
     s = raw.strip()
@@ -47,7 +49,7 @@ def extract_first_hist(raw_hist_group: str) -> str:
 def get_tarr_adj(name: str, key: str) -> str:
     if not name:
         return name
-    if key in ('e_hre', 'h_roman_empire', 'e_roman_empire'):
+    if key in ('e_hre', 'h_roman_empire'):
         return 'Rômisch-Keiserlich'
     if key == 'k_papal_state':
         return 'Rômisch-Pâbestlich'
@@ -200,11 +202,6 @@ def parse_gazetteer(md_path: Path):
     # Empire & Hegemony titles
     entries['h_roman_empire'] = {
         'key': 'h_roman_empire',
-        'direct': 'Dat Rômische Keiserrîch',
-        'hist': 'Dat Rômische Keiserrîch',
-    }
-    entries['e_roman_empire'] = {
-        'key': 'e_roman_empire',
         'direct': 'Dat Rômische Keiserrîch',
         'hist': 'Dat Rômische Keiserrîch',
     }
@@ -512,422 +509,517 @@ def build_dynastic_scripted_effects(s2_entries, s3_entries, s4_entries):
         "tarr_apply_dynastic_and_cultural_realignment_effect = {",
         "\t# =========================================================================",
         "\t# 1. Dynamic Emergent Cultures (set_culture_name)",
-        "\t# Scoped via active 1154 counties and character holders, guarded by",
-        "\t# cultural pillars and protected against overwriting Tarraconian.",
+        "\t# Scoped via every_culture_global using unique pillar / name_list / tradition",
+        "\t# signatures, overwriting stale save-baked culture names while protecting Tarraconian.",
         "\t# =========================================================================",
     ]
 
-    # (counties, char_holder_titles, pillar_guards)
-    culture_scopes = {
+    # Exact 1/394 unique predicates verified against last_save.ck3 (0 static vanilla collisions)
+    culture_predicates = {
         '260': (
-            ['c_juterbog'],
+            ['heritage_west_slavic', 'language_lechitic', 'ethos_egalitarian'],
             [],
-            ['has_cultural_pillar = heritage_west_slavic', 'has_cultural_pillar = language_lechitic', 'has_cultural_pillar = ethos_egalitarian']
+            ['tradition_hereditary_hierarchy'],
         ),
         '270': (
-            ['c_pereyaslavl'],
-            [],
-            ['has_cultural_pillar = heritage_east_slavic', 'has_cultural_pillar = language_east_slavic']
+            ['heritage_east_slavic', 'language_east_slavic', 'ethos_stoic'],
+            ['name_list_russian'],
+            ['tradition_hard_working'],
         ),
         '275': (
-            ['c_galati'],
+            ['heritage_vlach', 'language_wallachian', 'ethos_bureaucratic'],
             [],
-            ['has_cultural_pillar = heritage_vlach', 'has_cultural_pillar = ethos_bureaucratic']
+            [],
         ),
         '279': (
-            ['c_munchen', 'c_passau', 'c_ingolstadt', 'c_eschenlohe', 'c_falkenstein', 'c_rothenburg'],
-            ['c_falkenstein', 'c_passau'],
-            ['has_cultural_pillar = heritage_central_germanic', 'has_cultural_pillar = language_high_german', 'has_cultural_pillar = ethos_stoic']
+            ['heritage_central_germanic', 'language_high_german', 'ethos_stoic'],
+            ['name_list_bavarian'],
+            [],
         ),
         '286': (
+            ['heritage_west_slavic', 'language_lechitic', 'ethos_egalitarian'],
             [],
-            ['c_naumburg', 'b_altenburg', 'b_lubben'],
-            ['has_cultural_pillar = heritage_west_slavic', 'has_cultural_pillar = language_lechitic']
+            ['tradition_mountaineer_ruralism'],
         ),
         '288': (
-            ['c_galati', 'c_buzau', 'c_braila', 'c_calarasi', 'c_bucuresti', 'c_campulung', 'c_giurgiu', 'c_stoenesti'],
-            ['c_braila', 'c_bucuresti', 'c_buzau'],
-            ['has_cultural_pillar = heritage_vlach', 'has_cultural_pillar = ethos_spiritual']
+            ['heritage_vlach', 'language_wallachian', 'ethos_spiritual'],
+            [],
+            [],
         ),
         '293': (
-            ['c_chilia', 'c_cetatea_alba', 'c_iasi', 'c_barlad', 'c_lapusna'],
+            ['heritage_magyar', 'language_wallachian', 'ethos_spiritual'],
             [],
-            ['has_cultural_pillar = heritage_magyar', 'has_cultural_pillar = language_wallachian']
+            [],
         ),
         '303': (
-            ['c_schmalkalden', 'c_orlamunde', 'c_gleichenstein', 'c_lobdaburg'],
+            ['heritage_central_germanic', 'language_high_german', 'ethos_spiritual'],
+            ['name_list_franconian'],
             [],
-            ['has_cultural_pillar = heritage_central_germanic', 'has_cultural_pillar = language_high_german', 'has_cultural_pillar = ethos_spiritual']
         ),
         '331': (
-            ['c_novgorod_seversky'],
-            [],
-            ['has_cultural_pillar = heritage_east_slavic', 'has_cultural_pillar = language_east_slavic']
+            ['heritage_east_slavic', 'language_east_slavic', 'ethos_stoic'],
+            ['name_list_russian'],
+            ['tradition_stand_and_fight'],
         ),
         '338': (
-            ['c_burgas', 'c_thessalonika', 'c_adrianopolis', 'c_kran', 'c_mosynopolis', 'c_pirin', 'c_serres', 'c_strumica'],
+            ['heritage_byzantine', 'language_slavonic', 'ethos_stoic'],
             [],
-            ['has_cultural_pillar = heritage_byzantine', 'has_cultural_pillar = language_slavonic']
+            [],
         ),
         '358': (
-            ['c_kazanskaya', 'c_sarysyn', 'c_balachev', 'c_millerovo'],
-            ['c_talava'],
-            ['has_cultural_pillar = heritage_turkic', 'has_cultural_pillar = language_oghur']
+            ['heritage_turkic', 'language_oghur', 'ethos_bellicose'],
+            ['name_list_khazar'],
+            ['tradition_stand_and_fight'],
         ),
         '367': (
-            ['c_hewes', 'c_spis'],
-            ['c_ungvar', 'c_fogaras', 'c_polovragi'],
-            ['has_cultural_pillar = heritage_central_germanic', 'has_cultural_pillar = language_magyar']
+            ['heritage_central_germanic', 'language_magyar', 'ethos_bellicose'],
+            [],
+            [],
         ),
     }
 
     for c in s4_entries:
         cid = c['culture_id']
-        counties, char_titles, pillars = culture_scopes.get(cid, ([c['seat']], [], []))
-        lines.append(f"\t# Culture {cid}: {c['current_name']} -> {c['realigned_name']} ({c['tarr_name']})")
-        for cty in counties:
-            lines.extend([
-                f"\ttitle:{cty} ?= {{",
-                "\t\tif = {",
-                "\t\t\tlimit = {",
-                "\t\t\t\texists = culture",
-                "\t\t\t\tNOT = { culture = title:c_barcelona.culture }",
-            ])
-            for p in pillars:
-                lines.append(f"\t\t\t\tculture = {{ {p} }}")
-            lines.extend([
-                "\t\t\t}",
-                "\t\t\tif = {",
-                "\t\t\t\tlimit = { has_global_variable = tarr_direct_mode }",
-                "\t\t\t\tculture = {",
-                "\t\t\t\t\tset_culture_name = {",
-                f"\t\t\t\t\t\tnoun = tarr_culture_{cid}_tarr_name",
-                f"\t\t\t\t\t\tcollective_noun = tarr_culture_{cid}_tarr_collective",
-                f"\t\t\t\t\t\tprefix = tarr_culture_{cid}_tarr_prefix",
-                "\t\t\t\t\t}",
-                "\t\t\t\t}",
-                "\t\t\t}",
-                "\t\t\telse = {",
-                "\t\t\t\tculture = {",
-                "\t\t\t\t\tset_culture_name = {",
-                f"\t\t\t\t\t\tnoun = tarr_culture_{cid}_name",
-                f"\t\t\t\t\t\tcollective_noun = tarr_culture_{cid}_collective",
-                f"\t\t\t\t\t\tprefix = tarr_culture_{cid}_prefix",
-                "\t\t\t\t\t}",
-                "\t\t\t\t}",
-                "\t\t\t}",
-                "\t\t}",
-                "\t}",
-            ])
-        for cht in char_titles:
-            lines.extend([
-                f"\ttitle:{cht}.holder ?= {{",
-                "\t\tif = {",
-                "\t\t\tlimit = {",
-                "\t\t\t\texists = culture",
-                "\t\t\t\tNOT = { culture = title:c_barcelona.culture }",
-            ])
-            for p in pillars:
-                lines.append(f"\t\t\t\tculture = {{ {p} }}")
-            lines.extend([
-                "\t\t\t}",
-                "\t\t\tif = {",
-                "\t\t\t\tlimit = { has_global_variable = tarr_direct_mode }",
-                "\t\t\t\tculture = {",
-                "\t\t\t\t\tset_culture_name = {",
-                f"\t\t\t\t\t\tnoun = tarr_culture_{cid}_tarr_name",
-                f"\t\t\t\t\t\tcollective_noun = tarr_culture_{cid}_tarr_collective",
-                f"\t\t\t\t\t\tprefix = tarr_culture_{cid}_tarr_prefix",
-                "\t\t\t\t\t}",
-                "\t\t\t\t}",
-                "\t\t\t}",
-                "\t\t\telse = {",
-                "\t\t\t\tculture = {",
-                "\t\t\t\t\tset_culture_name = {",
-                f"\t\t\t\t\t\tnoun = tarr_culture_{cid}_name",
-                f"\t\t\t\t\t\tcollective_noun = tarr_culture_{cid}_collective",
-                f"\t\t\t\t\t\tprefix = tarr_culture_{cid}_prefix",
-                "\t\t\t\t\t}",
-                "\t\t\t\t}",
-                "\t\t\t}",
-                "\t\t}",
-                "\t}",
-            ])
-
-    lines.extend([
-        "",
-        "\t# =========================================================================",
-        "\t# 2. Imperial Cadet Branches (House Kestenholz / Chatenois - dynasty:667)",
-        "\t# Covers all 39 living non-dynn_ cadet branches (32 direct static title",
-        "\t# holders + 7 relational/dynastic scopes) without save-file modification.",
-        "\t# =========================================================================",
-    ])
-
-    # 2A. Dynasty-level house head scopes for Noble Family houses without static titles
-    lines.extend([
-        "\t# House 24600: Chatenois-Arnedo -> Kestenholz-Arnedo",
-        "\tdynasty:667 ?= {",
-        "\t\tevery_dynasty_house = {",
-        "\t\t\tlimit = {",
-        "\t\t\t\texists = house_head",
-        "\t\t\t\thouse_head = { is_female = no age = 23 }",
-        "\t\t\t}",
-        "\t\t\tset_house_name = tarr_house_kestenholz_arnedo",
-        "\t\t}",
-        "\t\t# House 26976: Chatenois-Lecce -> Kestenholz-Lecce",
-        "\t\tevery_dynasty_house = {",
-        "\t\t\tlimit = {",
-        "\t\t\t\texists = house_head",
-        "\t\t\t\thouse_head = { is_female = yes age = 21 }",
-        "\t\t\t}",
-        "\t\t\tset_house_name = tarr_house_kestenholz_lecce",
-        "\t\t}",
-        "\t}",
-    ])
-
-    # 2B. Direct static title holder scopes for all 32 landed Kestenholz cadet branches
-    direct_kestenholz_holders = [
-        # (house_id, comment, titles, loc_key)
-        ('13928', 'Chatenois-Metz -> Kestenholz-Metz (Imperial House)', ['h_roman_empire', 'c_barcelona', 'd_jabal_kufs'], 'tarr_house_kestenholz_metz'),
-        ('19476', 'Chatenois-Ravenna -> Kestenholz-Raben', ['d_westfalen', 'c_osnabruck', 'c_agadir'], 'tarr_house_kestenholz_raben'),
-        ('16791696', 'Chatenois-Saumur -> Kestenholz-Saumur', ['d_smolensk', 'c_bihar', 'c_al-buhaira'], 'tarr_house_kestenholz_saumur'),
-        ('18311', 'Chatenois-Annonay -> Kestenholz-Annonay', ['d_sicily', 'c_novgorod', 'c_agrigento'], 'tarr_house_kestenholz_annonay'),
-        ('16799240', 'Chatenois-Fécamp -> Kestenholz-Fécamp', ['d_armagnac', 'c_armagnac'], 'tarr_house_kestenholz_fecamp'),
-        ('18122', 'Chatenois-Albret -> Kestenholz-Albret', ['c_sevede', 'c_eschenlohe', 'c_allenstein'], 'tarr_house_kestenholz_albret'),
-        ('16796964', 'Flanders -> Kestenholz-Flanders', ['d_carinthia', 'c_kammersberg', 'c_attica'], 'tarr_house_kestenholz_flanders'),
-        ('16790779', 'Chatenois-Geteina -> Kestenholz-Geteina', ['c_fazughli', 'c_mainz', 'c_benevento'], 'tarr_house_kestenholz_geteina'),
-        ('16797465', 'Chatenois-Dillingen -> Kestenholz-Dillingen', ['c_kaiserslautern', 'c_paphlagonia'], 'tarr_house_kestenholz_dillingen'),
-        ('50346404', 'Chatenois-Amersfoort -> Kestenholz-Utrecht', ['d_alwa', 'c_alodia'], 'tarr_house_kestenholz_utrecht'),
-        ('50348946', 'Chatenois-Koschmin -> Kestenholz-Kalisch', ['d_iceland', 'c_gnieznienska', 'c_kaliska'], 'tarr_house_kestenholz_kalisch'),
-        ('50347588', 'Chatenois-Hirschberg -> Kestenholz-Legnica', ['d_nordgau', 'c_eichstadt'], 'tarr_house_kestenholz_legnica'),
-        ('16799191', 'Chatenois-Tyddewi -> Kestenholz-Tyddewi', ['c_yatvyagi'], 'tarr_house_kestenholz_tyddewi'),
-        ('24384', 'Chatenois-Kammersberg -> Kestenholz-Judenburch', ['c_baqlin', 'c_djarin'], 'tarr_house_kestenholz_judenburch'),
-        ('33573102', 'Cologne -> Kestenholz-Cologne', ['c_pavia', 'c_pagania'], 'tarr_house_kestenholz_cologne'),
-        ('26275', 'Chatenois-Buthrotum -> Kestenholz-Buthrotum', ['k_epirus', 'c_buthrotum'], 'tarr_house_kestenholz_buthrotum'),
-        ('19355', 'Chatenois-Pau -> Kestenholz-Pau', ['c_arnsberg', 'c_hallstatt', 'c_alencon'], 'tarr_house_kestenholz_pau'),
-        ('25659', 'Chatenois-Mérida -> Kestenholz-Mêrida', ['d_badajoz', 'c_badajoz', 'c_merida'], 'tarr_house_kestenholz_merida'),
-        ('16796257', 'Chatenois-Swenigorot -> Kestenholz-Swenigorot', ['c_iasi', 'c_torda'], 'tarr_house_kestenholz_swenigorot'),
-        ('23237', 'Chatenois-Sennar -> Kestenholz-Sennar', ['c_hohenau'], 'tarr_house_kestenholz_sennar'),
-        ('25175', 'Chatenois-Blasien -> Kestenholz-Blasien', ['d_anhalt', 'c_blankenburg'], 'tarr_house_kestenholz_blasien'),
-        ('25769', 'Chatenois-Bechyně -> Kestenholz-Bechin', ['b_akto'], 'tarr_house_kestenholz_bechin'),
-        ('16789468', 'Chatenois-Stężyca -> Kestenholz-Sitzichow', ['d_rashka', 'c_krakowska', 'c_stezycka'], 'tarr_house_kestenholz_sitzichow'),
-        ('26541', 'Chatenois-Moraca -> Kestenholz-Moraca', ['d_duklja', 'c_duklja'], 'tarr_house_kestenholz_moraca'),
-        ('26581', 'Chatenois-Berg -> Kestenholz-Berch', ['c_bergh', 'c_cologne', 'c_murom'], 'tarr_house_kestenholz_berch'),
-        ('25655', 'Chatenois-Terebovl -> Kestenholz-Terebovl', ['d_northumberland', 'c_halych', 'c_amaya'], 'tarr_house_kestenholz_terebovl'),
-        ('22345', 'Chatenois-Mons -> Kestenholz-Bergen', ['d_cyrenaica', 'c_awjila'], 'tarr_house_kestenholz_bergen'),
-        ('26913', 'Chatenois-Sargans -> Kestenholz-Kûr', ['d_currezia', 'c_grisons'], 'tarr_house_kestenholz_kur'),
-        ('24655', 'Chatenois-Plzeň -> Kestenholz-Plzenec', ['c_frontenhausen', 'c_iskaf'], 'tarr_house_kestenholz_plzenec'),
-        ('16802581', 'Chatenois-Vendôme -> Kestenholz-Vendôme', ['d_orleans', 'c_orleans', 'c_vendome'], 'tarr_house_kestenholz_vendome'),
-        ('24627', 'Chatenois-Zutphen -> Kestenholz-Zutphen', ['d_gelre', 'c_arnhem', 'c_zutphen'], 'tarr_house_kestenholz_zutphen'),
-        ('23892', 'Chatenois-Baht -> Kestenholz-Baht', ['d_fes', 'c_fes'], 'tarr_house_kestenholz_baht'),
-    ]
-
-    for hid, comment, t_list, key in direct_kestenholz_holders:
-        lines.append(f"\t# House {hid}: {comment}")
-        for t in t_list:
-            lines.extend([
-                f"\ttitle:{t}.holder ?= {{",
-                "\t\tif = {",
-                "\t\t\tlimit = { house ?= { dynasty ?= dynasty:667 } }",
-                f"\t\t\thouse = {{ set_house_name = {key} }}",
-                "\t\t}",
-                "\t}",
-            ])
-
-    # 2C. Relational 1-hop scopes for unlanded/administrative Kestenholz cadet branches
-    relational_kestenholz = [
-        ('18111', 'Chatenois-Bremen -> Kestenholz-Bremen', 'c_mainz', 'primary_spouse', 'tarr_house_kestenholz_bremen'),
-        ('20743', 'Flanders -> Kestenholz-Flanders', 'd_hereford', 'primary_spouse', 'tarr_house_kestenholz_flanders'),
-        ('23583', 'Chatenois-Peiting -> Kestenholz-Altenstadt', 'd_ciscaucasia', 'primary_spouse', 'tarr_house_kestenholz_altenstadt'),
-        ('25132', 'Chatenois-Orléans -> Kestenholz-Orleans', 'd_socotra', 'primary_spouse', 'tarr_house_kestenholz_orleans'),
-        ('26976', 'Chatenois-Lecce -> Kestenholz-Lecce (via betrothed)', 'c_eman_yerenhe', 'betrothed', 'tarr_house_kestenholz_lecce'),
-        ('33566549', 'Chatenois-Saarbrücken -> Kestenholz-Zant-Arnolt', 'c_sieradzka', 'primary_spouse', 'tarr_house_kestenholz_zant_arnolt'),
-    ]
-
-    for hid, comment, anchor_title, rel_scope, key in relational_kestenholz:
+        pillars, name_lists, traditions = culture_predicates[cid]
         lines.extend([
-            f"\t# House {hid}: {comment}",
-            f"\ttitle:{anchor_title}.holder.{rel_scope} ?= {{",
+            f"\t# Culture {cid}: {c['current_name']} -> {c['realigned_name']} ({c['tarr_name']})",
+            "\tevery_culture_global = {",
+            "\t\tlimit = {",
+            "\t\t\tNOT = { this = title:c_barcelona.culture }",
+            "\t\t\ttrigger_if = {",
+            "\t\t\t\tlimit = { has_global_variable = tarr_culture }",
+            "\t\t\t\tNOT = { this = global_var:tarr_culture }",
+            "\t\t\t}",
+        ])
+        for p in pillars:
+            lines.append(f"\t\t\thas_cultural_pillar = {p}")
+        for nl in name_lists:
+            lines.append(f"\t\t\thas_name_list = {nl}")
+        for tr in traditions:
+            lines.append(f"\t\t\thas_cultural_tradition = {tr}")
+        lines.extend([
+            "\t\t}",
             "\t\tif = {",
-            "\t\t\tlimit = { house ?= { dynasty ?= dynasty:667 } }",
-            f"\t\t\thouse = {{ set_house_name = {key} }}",
+            "\t\t\tlimit = { has_global_variable = tarr_direct_mode }",
+            "\t\t\tset_culture_name = {",
+            f"\t\t\t\tnoun = tarr_culture_{cid}_tarr_name",
+            f"\t\t\t\tcollective_noun = tarr_culture_{cid}_tarr_collective",
+            f"\t\t\t\tprefix = tarr_culture_{cid}_tarr_prefix",
+            "\t\t\t}",
+            "\t\t}",
+            "\t\telse = {",
+            "\t\t\tset_culture_name = {",
+            f"\t\t\t\tnoun = tarr_culture_{cid}_name",
+            f"\t\t\t\tcollective_noun = tarr_culture_{cid}_collective",
+            f"\t\t\t\tprefix = tarr_culture_{cid}_prefix",
+            "\t\t\t}",
             "\t\t}",
             "\t}",
         ])
 
-    lines.extend([
-        "",
-        "\t# =========================================================================",
-        "\t# 3. Non-Chatenois Historical Cadet Branches & Elevated Dynasties (Section 2)",
-        "\t# Covers all 29 living non-dynn_ houses (17 direct static holders +",
-        "\t# 12 relational/dynastic scopes) plus ancestral seats for extinct branches.",
-        "\t# =========================================================================",
-    ])
-
-    # 3A. Direct static title holder scopes for vanilla dynasty cadet branches
-    # Uses exact vanilla database keys: Billung=656, Karling=25061, Palemonaitis=9116,
-    # Gellones=100217, Reginar=7198, Umayyad=597, Cetchathach=9217, Ebrauc=1029002
-    vanilla_cadet_mappings = [
-        ('33574710', 'Billung-Gleichen -> Billung-Erfurt', ['c_marmaros', 'c_erfurt'], '656', 'tarr_house_billung_erfurt'),
-        ('16800201', 'Gellones-Güstrow -> Gellones-Wurle', ['d_friuli', 'c_aquileia'], '100217', 'tarr_house_gellones_wurle'),
-        ('50343822', 'Karling-Uničov -> Karling-Litovel', ['d_moravia', 'c_brno', 'c_olomouc'], '25061', 'tarr_house_karling_litovel'),
-        ('33571287', 'Karling-Korosten -> Karling-Ush', ['d_spoleto', 'c_abruzzi', 'c_korosten'], '25061', 'tarr_house_karling_ush'),
-        ('14423', 'Karling-Opava -> Karling-Troppouwe (ancestral)', ['c_opava'], '25061', 'tarr_house_karling_troppouwe'),
-        ('16800883', 'Palemonaitis-Jurmala -> Palemonaitis-Lielupe', ['c_selpils', 'c_jurmala'], '9116', 'tarr_house_palemonaitis_lielupe'),
-        ('27674', 'Palemonaitis-Siauliai -> Palemonaitis-Schaulen', ['c_siauliai'], '9116', 'tarr_house_palemonaitis_schaulen'),
-        ('67131755', 'Reginar-Vecchio -> Reginar-Sirakusan', ['d_alsace', 'c_ajaccio', 'c_vecchio'], '7198', 'tarr_house_reginar_sirakusan'),
-        ('33577966', 'Umayyad-Povenets -> Umayyad-Wîchsê', ['c_pudozh', 'c_povenets'], '597', 'tarr_house_umayyad_wichse'),
-        ('12948', 'Cétchathach-Athlone -> Cétchathach-Uisnech (ancestral)', ['c_athlone'], '9217', 'tarr_house_cetchathach_uisnech'),
-        ('16797551', 'Ebrauc-Athlone -> Ebrauc-Uisnech (ancestral)', ['c_athlone'], '1029002', 'tarr_house_ebrauc_uisnech'),
+    # Vanilla multi-house / named dynasties excluded from unrelated dynamic elevated rules
+    excluded_vanilla_dynasties = [
+        '667', '25061', '656', '100217', '9116', '7198',
+        '597', '9217', '1029002', '836', '830', '4039',
     ]
 
-    for hid, comment, t_list, dyn_key, hkey in vanilla_cadet_mappings:
-        lines.append(f"\t# House {hid}: {comment}")
-        for title in t_list:
-            lines.extend([
-                f"\ttitle:{title}.holder ?= {{",
-                "\t\tif = {",
-                f"\t\t\tlimit = {{ house ?= {{ dynasty ?= dynasty:{dyn_key} }} }}",
-                f"\t\t\thouse = {{ set_house_name = {hkey} }}",
-                "\t\t}",
-                "\t}",
-            ])
+    def append_house_apply(indent: str, hid: str, loc_key: str, tag: str, rename_dyn: bool = False):
+        lines.extend([
+            f"{indent}house = {{",
+            f"{indent}\tset_house_name = {loc_key}",
+            f"{indent}\tset_variable = {{ name = tarr_house_tag value = flag:{tag} }}",
+            f"{indent}}}",
+        ])
+        if rename_dyn:
+            lines.append(f"{indent}dynasty ?= {{ set_dynasty_name = {loc_key} }}")
+        lines.append(f"{indent}set_global_variable = {{ name = tarr_pin_{hid} value = yes }}")
 
-    # 3B. Relational & Dynasty-level scopes for unlanded vanilla dynasty cadet branches
-    vanilla_relational_mappings = [
-        ('12726', 'Karling-Calw -> Karling-Hirsau', 'd_kiev', 'primary_spouse', '25061', 'tarr_house_karling_hirsau'),
-        ('24293', 'Palemonaitis-Orsha -> Palemonaitis-Orsche', 'c_siauliai', 'primary_spouse', '9116', 'tarr_house_palemonaitis_orsche'),
-        ('24307', 'Palemonaitis-Kazanskaya -> Palemonaitis-Middel-Dôn', 'c_selpils', 'mother', '9116', 'tarr_house_palemonaitis_middel_don'),
-        ('24355', 'Palemonaitis-Raseiniai -> Palemonaitis-Rassêinen', 'd_vologda', 'primary_spouse', '9116', 'tarr_house_palemonaitis_rasseinen'),
-        ('33574947', 'Palemonaitis-Kokenois -> Palemonaitis-Kukena', 'c_selpils', 'primary_spouse', '9116', 'tarr_house_palemonaitis_kukena'),
-    ]
+    def append_char_limit_block(indent: str, hid: str, loc_key: str, tag: str,
+                                dyn_key: str = None, exclude_vanilla: bool = False,
+                                rename_dyn: bool = False, extra_limits=None):
+        lines.extend([
+            f"{indent}if = {{",
+            f"{indent}\tlimit = {{",
+            f"{indent}\t\texists = house",
+            f"{indent}\t\thouse = {{ NOT = {{ has_variable = tarr_house_tag }} }}",
+        ])
+        if dyn_key is not None:
+            lines.append(f"{indent}\t\tdynasty ?= dynasty:{dyn_key}")
+        if exclude_vanilla:
+            lines.append(f"{indent}\t\tNOR = {{")
+            for vd in excluded_vanilla_dynasties:
+                lines.append(f"{indent}\t\t\tdynasty ?= dynasty:{vd}")
+            lines.append(f"{indent}\t\t}}")
+        if extra_limits:
+            for ex in extra_limits:
+                lines.append(f"{indent}\t\t{ex}")
+        lines.append(f"{indent}\t}}")
+        append_house_apply(indent + "\t", hid, loc_key, tag, rename_dyn=rename_dyn)
+        lines.append(f"{indent}}}")
 
-    for hid, comment, anchor_title, rel_scope, dyn_key, hkey in vanilla_relational_mappings:
+    def emit_title_rule(hid: str, comment: str, titles, loc_key: str, tag: str,
+                        rel_scope: str = None, dyn_key: str = None,
+                        exclude_vanilla: bool = False, rename_dyn: bool = False):
         lines.extend([
             f"\t# House {hid}: {comment}",
-            f"\ttitle:{anchor_title}.holder.{rel_scope} ?= {{",
-            "\t\tif = {",
-            f"\t\t\tlimit = {{ house ?= {{ dynasty ?= dynasty:{dyn_key} }} }}",
-            f"\t\t\thouse = {{ set_house_name = {hkey} }}",
-            "\t\t}",
-            "\t}",
+            "\tif = {",
+            f"\t\tlimit = {{ NOT = {{ has_global_variable = tarr_pin_{hid} }} }}",
         ])
+        for t in titles:
+            scope_expr = f"title:{t}.holder.{rel_scope}" if rel_scope else f"title:{t}.holder"
+            lines.append(f"\t\t{scope_expr} ?= {{")
+            append_char_limit_block("\t\t\t", hid, loc_key, tag, dyn_key=dyn_key,
+                                    exclude_vanilla=exclude_vanilla, rename_dyn=rename_dyn)
+            lines.append("\t\t}")
+        lines.append("\t}")
 
-    lines.extend([
-        "\t# House 27311: Hede-Tambov -> Hede-Tzene (dynasty:836)",
-        "\tdynasty:836 ?= {",
-        "\t\tevery_dynasty_house = {",
-        "\t\t\tlimit = {",
-        "\t\t\t\texists = house_head",
-        "\t\t\t\thouse_head = { is_female = no age = 37 }",
-        "\t\t\t}",
-        "\t\t\tset_house_name = tarr_house_hede_tzene",
-        "\t\t}",
-        "\t}",
-        "\t# House 16796949: Borg-Shenkursk -> Borg-Wâga (dynasty:830)",
-        "\tdynasty:830 ?= {",
-        "\t\tevery_dynasty_house = {",
-        "\t\t\tlimit = {",
-        "\t\t\t\texists = house_head",
-        "\t\t\t\thouse_head = { is_female = yes }",
-        "\t\t\t}",
-        "\t\t\tset_house_name = tarr_house_borg_waga",
-        "\t\t}",
-        "\t}",
-    ])
+    def emit_courtier_rule(hid: str, comment: str, titles, loc_key: str, tag: str,
+                           dyn_key: str = None, exclude_vanilla: bool = False,
+                           rename_dyn: bool = False, extra_limits=None):
+        lines.extend([
+            f"\t# House {hid}: {comment}",
+            "\tif = {",
+            f"\t\tlimit = {{ NOT = {{ has_global_variable = tarr_pin_{hid} }} }}",
+        ])
+        for t in titles:
+            lines.extend([
+                f"\t\ttitle:{t}.holder ?= {{",
+                "\t\t\tevery_courtier_or_guest = {",
+            ])
+            append_char_limit_block("\t\t\t\t", hid, loc_key, tag, dyn_key=dyn_key,
+                                    exclude_vanilla=exclude_vanilla, rename_dyn=rename_dyn,
+                                    extra_limits=extra_limits)
+            lines.extend(["\t\t\t}", "\t\t}"])
+        lines.append("\t}")
+
+    def emit_domicile_rule(hid: str, comment: str, dyn_key: str, county: str, loc_key: str, tag: str):
+        lines.extend([
+            f"\t# House {hid}: {comment}",
+            "\tif = {",
+            f"\t\tlimit = {{ NOT = {{ has_global_variable = tarr_pin_{hid} }} }}",
+            f"\t\tdynasty:{dyn_key} ?= {{",
+            "\t\t\tevery_dynasty_member = {",
+            "\t\t\t\tlimit = {",
+            "\t\t\t\t\tis_alive = yes",
+            "\t\t\t\t\texists = domicile",
+            f"\t\t\t\t\tdomicile.domicile_location.county ?= title:{county}",
+            "\t\t\t\t}",
+        ])
+        append_char_limit_block("\t\t\t\t", hid, loc_key, tag, dyn_key=dyn_key)
+        lines.extend(["\t\t\t}", "\t\t}", "\t}"])
 
     lines.extend([
         "",
         "\t# =========================================================================",
-        "\t# 4. Elevated Noble Houses & Dynamic Dynasties",
+        "\t# 2. Collateral Damage Restorations (V1 Script Recoveries)",
+        "\t# Restores unrelated dynasties/houses misnamed by prior unguarded runs.",
         "\t# =========================================================================",
     ])
 
-    # 4A. Direct static title holders for Elevated Dynasties & Dynamic Cadet Houses
-    # (house_id, comment, titles, loc_key, rename_dynasty_too)
-    elevated_direct_mappings = [
-        ('16800136', 'Buxtehude -> Este', ['c_hamburg', 'b_buxtehude'], 'tarr_house_este', True),
-        ('67125621', 'Celle -> Alre', ['c_starodub', 'c_lanzhou'], 'tarr_house_alre', True),
-        ('50349259', 'Coburg -> Îtze', ['c_coburg'], 'tarr_house_itze', True),
-        ('25935', 'Leoben -> Göss', ['b_nawa'], 'tarr_house_goss', True),
-        ('33568115', 'Philippopolis-Priština -> Philippopolis-Ulpiana', ['c_zlatibor', 'b_zvecan'], 'tarr_house_philippopolis_ulpiana', False),
-        ('28114', 'Roslavl -> Ôster', ['c_roslavl'], 'tarr_house_oster', True),
-        ('16803302', 'Steyr -> Enns', ['b_steyr'], 'tarr_house_enns', True),
-        ('21816', 'Vologda -> Walgede', ['d_vologda', 'c_vologda', 'c_capua'], 'tarr_house_walgede', True),
-        ('27893', 'Werle -> Wurle', ['c_werle'], 'tarr_house_wurle', True),
-        ('16792693', 'Naugardukas -> iš Plesės (ancestral)', ['c_novogrudok'], 'tarr_house_plise', True),
-        ('21909', 'Babruysk -> Berezina (ancestral)', ['c_babruysk'], 'tarr_house_berezina', True),
-        ('22261', 'Stężyca -> Sitzichow (ancestral)', ['c_sandomierz'], 'tarr_house_sitzichow', True),
+    collateral_unrelated = [
+        ('16793861', 'Restore Suerbeer (previously overwritten by Berezina)', ['c_berlin', 'c_novosil', 'c_wormditt'], 'dynn_Suerbeer', 'suerbeer', True),
+        ('18404', 'Restore Sachsen (previously overwritten by iš Plesės)', ['c_novogrudok', 'd_pinsk'], 'dynn_Sachsen', 'sachsen', True),
+        ('21733', 'Restore Gnezdovo (previously overwritten by iš Plesės)', ['d_minsk', 'c_minsk', 'c_thouars'], 'tarr_house_gnezdovo', 'gnezdovo', True),
+        ('28330', 'Restore Xu (previously overwritten by Alre)', ['c_lanzhou'], 'dynn_Xu_8BB8', 'xu_8bb8', True),
     ]
+    for hid, comment, titles, loc_key, tag, rename_dyn in collateral_unrelated:
+        emit_title_rule(hid, comment, titles, loc_key, tag, exclude_vanilla=True, rename_dyn=rename_dyn)
 
-    for hid, comment, t_list, hkey, rename_dyn in elevated_direct_mappings:
-        lines.append(f"\t# House {hid}: {comment}")
-        for title in t_list:
-            lines.extend([
-                f"\ttitle:{title}.holder ?= {{",
-                "\t\tif = {",
-                "\t\t\tlimit = {",
-                "\t\t\t\texists = house",
-                "\t\t\t\tNOT = { house ?= { dynasty ?= dynasty:667 } }",
-                "\t\t\t\tNOT = { house ?= { dynasty ?= dynasty:25061 } }",
-                "\t\t\t\tNOT = { house ?= { dynasty ?= dynasty:656 } }",
-                "\t\t\t\tNOT = { house ?= { dynasty ?= dynasty:100217 } }",
-                "\t\t\t}",
-                f"\t\t\thouse = {{ set_house_name = {hkey} }}",
-            ])
-            if rename_dyn:
-                lines.append(f"\t\t\thouse.dynasty ?= {{ set_dynasty_name = {hkey} }}")
-            lines.extend([
-                "\t\t}",
-                "\t}",
-            ])
+    emit_title_rule('1652', 'Restore House Hede founder branch (previously clobbered by age=37)',
+                    ['c_memar'], 'dynn_Hede', 'hede', rel_scope='primary_spouse', dyn_key='836')
+    emit_title_rule('33572174', 'Restore Borg-Morarna (previously clobbered by is_female=yes)',
+                    ['c_SUM_barus'], 'tarr_house_borg_morarna', 'borg_morarna', rel_scope='primary_spouse', dyn_key='830')
 
-    # 4B. Relational scopes for unlanded Elevated Dynasties & Dynamic Cadet Houses
     lines.extend([
-        "\t# House 17334: Jihlava -> Rokytna (via spouse of c_bornholm holder)",
-        "\ttitle:c_bornholm.holder.primary_spouse ?= {",
-        "\t\tif = {",
-        "\t\t\tlimit = { exists = house }",
-        "\t\t\thouse = { set_house_name = tarr_house_rokytna }",
-        "\t\t\thouse.dynasty ?= { set_dynasty_name = tarr_house_rokytna }",
-        "\t\t}",
-        "\t}",
-        "\t# House 16800196: Soundavara-Lyubim -> Soundavara-Obnore (via spouse of c_scalovia holder)",
-        "\t# House 33569509: Soundavara-Molina -> Soundavara-Erkawîka (via same dynasty, male house head)",
-        "\t# House 23369: Sheksna-Kholmogory -> Sheksna-Dwina (via spouse of Soundavara-Obnore house head)",
-        "\ttitle:c_scalovia.holder.primary_spouse ?= {",
-        "\t\tif = {",
-        "\t\t\tlimit = { exists = house }",
-        "\t\t\thouse = {",
-        "\t\t\t\tset_house_name = tarr_house_soundavara_obnore",
-        "\t\t\t\thouse_head.primary_spouse ?= {",
-        "\t\t\t\t\tif = {",
-        "\t\t\t\t\t\tlimit = { exists = house }",
-        "\t\t\t\t\t\thouse = { set_house_name = tarr_house_sheksna_dwina }",
-        "\t\t\t\t\t}",
+        "",
+        "\t# =========================================================================",
+        "\t# 3. Imperial Cadet Branches (House Kestenholz / Chatenois - dynasty:667)",
+        "\t# Covers all living Kestenholz cadet branches with character-scoped dynasty:667",
+        "\t# guards and house variable pinning (direct holders first, then courtier/domicile).",
+        "\t# =========================================================================",
+    ])
+
+    kestenholz_direct = [
+        ('13928', 'Chatenois-Metz -> Kestenholz-Metz (restore from Wurle)', ['h_roman_empire', 'c_barcelona', 'd_jabal_kufs', 'c_bampur'], 'tarr_house_kestenholz_metz', 'kestenholz_metz'),
+        ('19476', 'Chatenois-Ravenna -> Kestenholz-Raben', ['d_westfalen', 'c_osnabruck', 'd_lombardia', 'd_prussia'], 'tarr_house_kestenholz_raben', 'kestenholz_raben'),
+        ('16791696', 'Chatenois-Saumur -> Kestenholz-Saumur', ['d_smolensk', 'd_somerset', 'd_bihar', 'c_bihar', 'c_tadla'], 'tarr_house_kestenholz_saumur', 'kestenholz_saumur'),
+        ('18311', 'Chatenois-Annonay -> Kestenholz-Annonay', ['d_hesse', 'd_luki', 'd_novgorod', 'c_novgorod', 'c_rusa'], 'tarr_house_kestenholz_annonay', 'kestenholz_annonay'),
+        ('22711', 'dynn_Bluome -> Kestenholz-Bluome', ['k_navarra', 'c_viscaya', 'c_vastergotland'], 'tarr_house_kestenholz_bluome', 'kestenholz_bluome'),
+        ('16799240', 'Chatenois-Fécamp -> Kestenholz-Fécamp', ['d_deheubarth', 'd_lower_silesia', 'd_mazovia', 'c_breslau'], 'tarr_house_kestenholz_fecamp', 'kestenholz_fecamp'),
+        ('18122', 'Chatenois-Albret -> Kestenholz-Albret', ['c_sevede', 'c_eschenlohe', 'd_opolye'], 'tarr_house_kestenholz_albret', 'kestenholz_albret'),
+        ('16796964', 'Flanders -> Kestenholz-Flanders (restore from Kestenholz-Arnedo)', ['k_andalusia', 'd_sevilla', 'd_carinthia', 'c_karnten', 'c_munchen'], 'tarr_house_kestenholz_flanders', 'kestenholz_flanders'),
+        ('16790779', 'Chatenois-Geteina -> Kestenholz-Geteina', ['d_thracesia', 'c_gezira'], 'tarr_house_kestenholz_geteina', 'kestenholz_geteina'),
+        ('16797465', 'Chatenois-Dillingen -> Kestenholz-Dillingen', ['c_kaiserslautern', 'd_paphlagonia', 'c_paphlagonia', 'c_zichia'], 'tarr_house_kestenholz_dillingen', 'kestenholz_dillingen'),
+        ('16796344', 'dynn_Carenwall -> Kestenholz-Carenwall (restore from Walgede)', ['d_sebasteia', 'c_sebasteia', 'c_hont', 'c_lipto'], 'tarr_house_kestenholz_carenwall', 'kestenholz_carenwall'),
+        ('16799847', 'dynn_Carenwall -> Kestenholz-Carenwall', ['k_galicia-volhynia', 'c_el_fasher', 'd_ulster', 'c_ulster'], 'tarr_house_kestenholz_carenwall', 'kestenholz_carenwall'),
+        ('28856', 'dynn_Carenwall -> Kestenholz-Carenwall (Duklja/Usora branch)', ['d_usora', 'c_zachlumia'], 'tarr_house_kestenholz_carenwall', 'kestenholz_carenwall'),
+        ('50346404', 'Chatenois-Amersfoort -> Kestenholz-Utrecht', ['d_alwa', 'c_alodia', 'd_sanaag', 'd_kanem'], 'tarr_house_kestenholz_utrecht', 'kestenholz_utrecht'),
+        ('50348946', 'Chatenois-Koschmin -> Kestenholz-Kalisch', ['d_iceland', 'c_wschowska', 'b_prades_rossello'], 'tarr_house_kestenholz_kalisch', 'kestenholz_kalisch'),
+        ('50347588', 'Chatenois-Hirschberg -> Kestenholz-Legnica', ['d_nordgau', 'c_eichstadt', 'c_ljubljana', 'c_korinthos'], 'tarr_house_kestenholz_legnica', 'kestenholz_legnica'),
+        ('16799191', 'Chatenois-Tyddewi -> Kestenholz-Tyddewi', ['c_beszterce', 'c_stoenesti', 'c_guizhou_2'], 'tarr_house_kestenholz_tyddewi', 'kestenholz_tyddewi'),
+        ('24384', 'Chatenois-Kammersberg -> Kestenholz-Judenburch', ['d_albany', 'c_baqlin', 'c_djarin'], 'tarr_house_kestenholz_judenburch', 'kestenholz_judenburch'),
+        ('16798500', 'dynn_Diest -> Kestenholz-Diest', ['b_olot', 'c_satif', 'c_tiris'], 'tarr_house_kestenholz_diest', 'kestenholz_diest'),
+        ('27663', 'dynn_Orlamunde -> Kestenholz-Orlamunde', ['c_boleslav', 'c_rennes', 'c_clermont_sur_allier'], 'tarr_house_kestenholz_orlamunde', 'kestenholz_orlamunde'),
+        ('33573102', 'Cologne -> Kestenholz-Cologne', ['c_pavia'], 'tarr_house_kestenholz_cologne', 'kestenholz_cologne'),
+        ('23583', 'Chatenois-Peiting -> Kestenholz-Altenstadt', ['k_bohemia', 'd_bohemia', 'c_praha', 'd_asturias'], 'tarr_house_kestenholz_altenstadt', 'kestenholz_altenstadt'),
+        ('19355', 'Chatenois-Pau -> Kestenholz-Pau', ['c_hallstatt'], 'tarr_house_kestenholz_pau', 'kestenholz_pau'),
+        ('25132', 'Chatenois-Orléans -> Kestenholz-Orleans', ['b_balaguer'], 'tarr_house_kestenholz_orleans', 'kestenholz_orleans'),
+        ('25659', 'Chatenois-Mérida -> Kestenholz-Mêrida', ['d_badajoz', 'c_badajoz', 'd_castilla', 'b_vic'], 'tarr_house_kestenholz_merida', 'kestenholz_merida'),
+        ('16796257', 'Chatenois-Swenigorot -> Kestenholz-Swenigorot', ['c_iasi', 'd_kuyavia', 'c_campulung'], 'tarr_house_kestenholz_swenigorot', 'kestenholz_swenigorot'),
+        ('23237', 'Chatenois-Sennar -> Kestenholz-Sennar (restore from Arnedo)', ['c_hohenau'], 'tarr_house_kestenholz_sennar', 'kestenholz_sennar'),
+        ('25175', 'Chatenois-Blasien -> Kestenholz-Blasien', ['d_anhalt', 'c_dessau'], 'tarr_house_kestenholz_blasien', 'kestenholz_blasien'),
+        ('25769', 'Chatenois-Bechyně -> Kestenholz-Bechin', ['b_talekan'], 'tarr_house_kestenholz_bechin', 'kestenholz_bechin'),
+        ('16789468', 'Chatenois-Stężyca -> Kestenholz-Sitzichow', ['d_rashka', 'c_rashka', 'd_flanders', 'c_brugge'], 'tarr_house_kestenholz_sitzichow', 'kestenholz_sitzichow'),
+        ('16802188', 'dynn_Gudensberg -> Kestenholz-Gudensberch', ['d_aleppo', 'c_aleppo', 'd_pereyaslavl', 'c_pereyaslavl'], 'tarr_house_kestenholz_gudensberch', 'kestenholz_gudensberch'),
+        ('26541', 'Chatenois-Moraca -> Kestenholz-Moraca', ['d_duklja', 'c_duklja'], 'tarr_house_kestenholz_moraca', 'kestenholz_moraca'),
+        ('26581', 'Chatenois-Berg -> Kestenholz-Berch', ['k_lotharingia', 'd_luxembourg', 'd_bornu'], 'tarr_house_kestenholz_berch', 'kestenholz_berch'),
+        ('25655', 'Chatenois-Terebovl -> Kestenholz-Terebovl', ['k_castille', 'd_northumberland', 'd_don_valley', 'c_voronezh'], 'tarr_house_kestenholz_terebovl', 'kestenholz_terebovl'),
+        ('22345', 'Chatenois-Mons -> Kestenholz-Bergen', ['c_tripolitana'], 'tarr_house_kestenholz_bergen', 'kestenholz_bergen'),
+        ('18111', 'Chatenois-Bremen -> Kestenholz-Bremen', ['c_mainz'], 'tarr_house_kestenholz_bremen', 'kestenholz_bremen'),
+        ('26913', 'Chatenois-Sargans -> Kestenholz-Kûr', ['d_currezia', 'c_grisons', 'd_kaffa'], 'tarr_house_kestenholz_kur', 'kestenholz_kur'),
+        ('16802581', 'Chatenois-Vendôme -> Kestenholz-Vendôme', ['d_orleans', 'c_orleans'], 'tarr_house_kestenholz_vendome', 'kestenholz_vendome'),
+        ('16801965', 'dynn_Suerbeer -> Kestenholz-Suerbeer', ['d_azov', 'c_tmutarakan'], 'tarr_house_kestenholz_suerbeer', 'kestenholz_suerbeer'),
+        ('24627', 'Chatenois-Zutphen -> Kestenholz-Zutphen', ['d_gelre', 'c_guelders', 'c_zagorje'], 'tarr_house_kestenholz_zutphen', 'kestenholz_zutphen'),
+        ('16802071', 'dynn_Muhlhausen -> Kestenholz-Muhlhausen', ['k_sardinia', 'c_cagliari'], 'tarr_house_kestenholz_muhlhausen', 'kestenholz_muhlhausen'),
+        ('27907', 'dynn_O_sel -> Kestenholz-Sâremâ', ['d_alger', 'c_algier'], 'tarr_house_kestenholz_sarema', 'kestenholz_sarema'),
+        ('23892', 'Chatenois-Baht -> Kestenholz-Baht', ['d_fes', 'c_fes'], 'tarr_house_kestenholz_baht', 'kestenholz_baht'),
+        ('50353419', 'Chatenois-Capua -> Kestenholz-Capua (restore from Walgede)', ['d_capua', 'c_capua', 'd_viken'], 'tarr_house_kestenholz_capua', 'kestenholz_capua'),
+    ]
+    for hid, comment, titles, loc_key, tag in kestenholz_direct:
+        emit_title_rule(hid, comment, titles, loc_key, tag, dyn_key='667')
+
+    # Unlanded Kestenholz spouses, courtiers & unique noble-family domiciles
+    emit_title_rule('24600', 'Chatenois-Arnedo -> Kestenholz-Arnedo (via d_moravia spouse)',
+                    ['d_moravia'], 'tarr_house_kestenholz_arnedo', 'kestenholz_arnedo',
+                    rel_scope='primary_spouse', dyn_key='667')
+    emit_title_rule('26976', 'Chatenois-Lecce -> Kestenholz-Lecce (via c_eman_yerenhe spouse)',
+                    ['c_eman_yerenhe'], 'tarr_house_kestenholz_lecce', 'kestenholz_lecce',
+                    rel_scope='primary_spouse', dyn_key='667')
+    emit_domicile_rule('26275', 'Chatenois-Buthrotum -> Kestenholz-Buthrotum (domicile c_cephalonia)',
+                       '667', 'c_cephalonia', 'tarr_house_kestenholz_buthrotum', 'kestenholz_buthrotum')
+    emit_domicile_rule('20743', 'Flanders -> Kestenholz-Flanders (domicile c_venezia)',
+                       '667', 'c_venezia', 'tarr_house_kestenholz_flanders', 'kestenholz_flanders')
+    emit_domicile_rule('24655', 'Chatenois-Plzeň -> Kestenholz-Plzenec (domicile c_regensburg)',
+                       '667', 'c_regensburg', 'tarr_house_kestenholz_plzenec', 'kestenholz_plzenec')
+    emit_domicile_rule('33566549', 'Chatenois-Saarbrücken -> Kestenholz-Zant-Arnolt (domicile c_valencia)',
+                       '667', 'c_valencia', 'tarr_house_kestenholz_zant_arnolt', 'kestenholz_zant_arnolt')
+    # Runs AFTER 13928 & 22711 are tagged so NOT = { has_variable = tarr_house_tag } isolates 16799007 cleanly
+    emit_courtier_rule('16799007', 'dynn_Verona -> Kestenholz-Verona (untagged dynasty:667 in c_najran court)',
+                       ['c_najran'], 'tarr_house_kestenholz_verona', 'kestenholz_verona', dyn_key='667')
+
+    lines.extend([
+        "",
+        "\t# =========================================================================",
+        "\t# 4. Non-Chatenois Historical Cadet Branches & Dynasties (Section 2)",
+        "\t# =========================================================================",
+    ])
+
+    vanilla_cadet_direct = [
+        ('33574710', 'Billung-Gleichen -> Billung-Erfurt', ['c_marmaros', 'c_shamir'], '656', 'tarr_house_billung_erfurt', 'billung_erfurt'),
+        ('16800201', 'Gellones-Güstrow -> Gellones-Wurle', ['c_more', 'c_rugen', 'd_angria', 'c_minden'], '100217', 'tarr_house_gellones_wurle', 'gellones_wurle'),
+        ('50343822', 'Karling-Uničov -> Karling-Litovel', ['c_jihlava', 'd_bukovina', 'c_suceava'], '25061', 'tarr_house_karling_litovel', 'karling_litovel'),
+        ('33571287', 'Karling-Korosten -> Karling-Ush', ['c_sagami'], '25061', 'tarr_house_karling_ush', 'karling_ush'),
+        ('16800883', 'Palemonaitis-Jurmala -> Palemonaitis-Lielupe', ['c_selpils'], '9116', 'tarr_house_palemonaitis_lielupe', 'palemonaitis_lielupe'),
+        ('67131755', 'Reginar-Vecchio -> Reginar-Sirakusan', ['d_alsace', 'c_strassburg', 'd_corsica', 'c_ajaccio', 'd_aksay'], '7198', 'tarr_house_reginar_sirakusan', 'reginar_sirakusan'),
+        ('26438', 'Hede-Kazanskaya -> Hede-Middel-Dôn (restore from Hede-Tzene)', ['d_latgalians', 'c_talava'], '836', 'tarr_house_hede_middel_don', 'hede_middel_don'),
+    ]
+    for hid, comment, titles, dyn_key, loc_key, tag in vanilla_cadet_direct:
+        emit_title_rule(hid, comment, titles, loc_key, tag, dyn_key=dyn_key)
+
+    # Single-house S2 dynn_* conversions (excluding multi-house vanilla dynasties)
+    single_house_s2 = [
+        ('22244', 'dynn_Luxembourg -> Echternach', ['c_vermandois'], 'tarr_house_echternach', 'echternach', True),
+        ('27863', 'dynn_Pernstein -> Swratka', ['d_qilian', 'c_qilin'], 'tarr_house_swratka', 'swratka', True),
+        ('24454', 'dynn_Silesia-Glogau -> Silesia-Dziadosz', ['c_carcassonne'], 'tarr_house_silesia_dziadosz', 'silesia_dziadosz', True),
+        ('16803030', 'dynn_Tula -> Prôntzich', ['b_dori'], 'tarr_house_prontzich', 'prontzich', True),
+        ('16804037', 'dynn_der_Mark -> Soest', ['c_linlithgowshire'], 'tarr_house_soest', 'soest', True),
+    ]
+    for hid, comment, titles, loc_key, tag, rename_dyn in single_house_s2:
+        emit_title_rule(hid, comment, titles, loc_key, tag, exclude_vanilla=True, rename_dyn=rename_dyn)
+
+    emit_courtier_rule('67124011', 'dynn_Wittenberg -> Belzig (dynasty:4039 in d_powys court)',
+                       ['d_powys'], 'tarr_house_belzig', 'belzig', dyn_key='4039')
+    emit_courtier_rule('12726', 'Karling-Calw -> Karling-Hirsau (dynasty:25061 in d_kiev court)',
+                       ['d_kiev'], 'tarr_house_karling_hirsau', 'karling_hirsau', dyn_key='25061')
+    emit_domicile_rule('12726', 'Karling-Calw -> Karling-Hirsau (domicile c_aachen fallback)',
+                       '25061', 'c_aachen', 'tarr_house_karling_hirsau', 'karling_hirsau')
+    emit_courtier_rule('33577966', 'Umayyad-Povenets -> Umayyad-Wîchsê (dynasty:597 in d_chudia court)',
+                       ['d_chudia'], 'tarr_house_umayyad_wichse', 'umayyad_wichse', dyn_key='597')
+    emit_domicile_rule('27311', 'Hede-Tambov -> Hede-Tzene (dynasty:836 domicile c_northumberland)',
+                       '836', 'c_northumberland', 'tarr_house_hede_tzene', 'hede_tzene')
+    emit_title_rule('16796949', 'Borg-Shenkursk -> Borg-Wâga (via c_darcha spouse)',
+                    ['c_darcha'], 'tarr_house_borg_waga', 'borg_waga', rel_scope='primary_spouse', dyn_key='830')
+
+    # Palemonaitis (dynasty:9116) relational chain in strict order
+    emit_title_rule('33574947', 'Palemonaitis-Kokenois -> Palemonaitis-Kukena (via c_selpils spouse)',
+                    ['c_selpils'], 'tarr_house_palemonaitis_kukena', 'palemonaitis_kukena',
+                    rel_scope='primary_spouse', dyn_key='9116')
+    emit_title_rule('24355', 'Palemonaitis-Raseiniai -> Palemonaitis-Rassêinen (via d_vologda spouse)',
+                    ['d_vologda'], 'tarr_house_palemonaitis_rasseinen', 'palemonaitis_rasseinen',
+                    rel_scope='primary_spouse', dyn_key='9116')
+    emit_courtier_rule('24293', 'Palemonaitis-Orsha -> Palemonaitis-Orsche (via c_zemigalians court)',
+                       ['c_zemigalians'], 'tarr_house_palemonaitis_orsche', 'palemonaitis_orsche', dyn_key='9116')
+    lines.extend([
+        "\t# House 24307: Palemonaitis-Kazanskaya -> Palemonaitis-Middel-Dôn (via d_gotland & d_pamir guests)",
+        "\tif = {",
+        "\t\tlimit = { NOT = { has_global_variable = tarr_pin_24307 } }",
+        "\t\ttitle:d_gotland.holder ?= {",
+        "\t\t\tevery_courtier_or_guest = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\tdynasty ?= dynasty:9116",
+        "\t\t\t\t\texists = house",
+        "\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t\tNOT = { house = dynasty:9116.dynasty_founder.house }",
         "\t\t\t\t}",
+        "\t\t\t\thouse = {",
+        "\t\t\t\t\tset_house_name = tarr_house_palemonaitis_middel_don",
+        "\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:palemonaitis_middel_don }",
+        "\t\t\t\t}",
+        "\t\t\t\tset_global_variable = { name = tarr_pin_24307 value = yes }",
         "\t\t\t}",
-        "\t\t\tdynasty ?= {",
-        "\t\t\t\tevery_dynasty_house = {",
+        "\t\t}",
+        "\t\tif = {",
+        "\t\t\tlimit = { NOT = { has_global_variable = tarr_pin_24307 } }",
+        "\t\t\ttitle:d_pamir.holder ?= {",
+        "\t\t\t\tevery_courtier_or_guest = {",
         "\t\t\t\t\tlimit = {",
-        "\t\t\t\t\t\texists = house_head",
-        "\t\t\t\t\t\thouse_head = { is_female = no }",
+        "\t\t\t\t\t\tdynasty ?= dynasty:9116",
+        "\t\t\t\t\t\texists = house",
+        "\t\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t\t\tNOT = { house = dynasty:9116.dynasty_founder.house }",
         "\t\t\t\t\t}",
-        "\t\t\t\t\tset_house_name = tarr_house_soundavara_erkawika",
+        "\t\t\t\t\thouse = {",
+        "\t\t\t\t\t\tset_house_name = tarr_house_palemonaitis_middel_don",
+        "\t\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:palemonaitis_middel_don }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t\tset_global_variable = { name = tarr_pin_24307 value = yes }",
         "\t\t\t\t}",
         "\t\t\t}",
         "\t\t}",
         "\t}",
-        "\t# House 16801742: Brunnsholm-Sebezh -> Brunnsholm-Sebêsch (via noble guest at d_yanmen)",
-        "\ttitle:d_yanmen.holder ?= {",
-        "\t\tevery_pool_guest = {",
-        "\t\t\tlimit = { exists = house }",
-        "\t\t\thouse = { set_house_name = tarr_house_brunnsholm_sebesch }",
+        "\t# House 27674: Palemonaitis-Siauliai -> Palemonaitis-Schaulen (child of H=24293)",
+        "\tif = {",
+        "\t\tlimit = { NOT = { has_global_variable = tarr_pin_27674 } }",
+        "\t\tdynasty:9116 ?= {",
+        "\t\t\tevery_dynasty_member = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\tis_alive = yes",
+        "\t\t\t\t\thouse ?= { var:tarr_house_tag ?= flag:palemonaitis_orsche }",
+        "\t\t\t\t}",
+        "\t\t\t\tevery_child = {",
+        "\t\t\t\t\tlimit = {",
+        "\t\t\t\t\t\tis_alive = yes",
+        "\t\t\t\t\t\tdynasty ?= dynasty:9116",
+        "\t\t\t\t\t\texists = house",
+        "\t\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t\t\tNOT = { house = dynasty:9116.dynasty_founder.house }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t\thouse = {",
+        "\t\t\t\t\t\tset_house_name = tarr_house_palemonaitis_schaulen",
+        "\t\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:palemonaitis_schaulen }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t\tset_global_variable = { name = tarr_pin_27674 value = yes }",
+        "\t\t\t\t}",
+        "\t\t\t}",
         "\t\t}",
         "\t}",
     ])
 
-    lines.append("}\n")
+    lines.extend([
+        "",
+        "\t# =========================================================================",
+        "\t# 5. Elevated Noble Houses & Dynamic Dynasties (Section 4 / S2)",
+        "\t# All rules exclude vanilla multi-house dynasties, require untagged houses,",
+        "\t# and permanently pin on first match to prevent conquest collateral drift.",
+        "\t# =========================================================================",
+    ])
+
+    elevated_direct = [
+        ('16800136', 'Buxtehude -> Este', ['c_hamburg', 'b_buxtehude'], 'tarr_house_este', 'este', True),
+        ('67125621', 'Celle -> Alre', ['c_starodub'], 'tarr_house_alre', 'alre', True),
+        ('25935', 'Leoben -> Göss', ['b_nawa'], 'tarr_house_goss', 'goss', True),
+        ('33568115', 'Philippopolis-Priština -> Philippopolis-Ulpiana', ['c_zlatibor', 'b_zvecan'], 'tarr_house_philippopolis_ulpiana', 'philippopolis_ulpiana', False),
+        ('28114', 'Roslavl -> Ôster', ['c_roslavl'], 'tarr_house_oster', 'oster', True),
+        ('16803302', 'Steyr -> Enns', ['b_steyr'], 'tarr_house_enns', 'enns', True),
+        ('21816', 'Vologda -> Walgede', ['d_vologda', 'c_vologda'], 'tarr_house_walgede', 'walgede', True),
+    ]
+    for hid, comment, titles, loc_key, tag, rename_dyn in elevated_direct:
+        emit_title_rule(hid, comment, titles, loc_key, tag, exclude_vanilla=True, rename_dyn=rename_dyn)
+
+    emit_courtier_rule('50349259', 'Coburg -> Îtze (house head guest at c_hohenberg)',
+                       ['c_hohenberg'], 'tarr_house_itze', 'itze',
+                       exclude_vanilla=True, rename_dyn=True,
+                       extra_limits=['is_house_head = yes', 'is_female = yes'])
+    emit_title_rule('17334', 'Jihlava -> Rokytna (via c_bornholm spouse)',
+                    ['c_bornholm'], 'tarr_house_rokytna', 'rokytna',
+                    rel_scope='primary_spouse', exclude_vanilla=True, rename_dyn=True)
+    emit_courtier_rule('16801742', 'Brunnsholm-Sebezh -> Brunnsholm-Sebêsch (courtier at b_sheffield)',
+                       ['b_sheffield'], 'tarr_house_brunnsholm_sebesch', 'brunnsholm_sebesch',
+                       exclude_vanilla=True, rename_dyn=False,
+                       extra_limits=['is_house_head = yes', 'is_female = yes'])
+
+    lines.extend([
+        "\t# House 16800196 & 33569509: Soundavara-Obnore (spouse of c_scalovia) & Soundavara-Erkawîka (male house_head)",
+        "\tif = {",
+        "\t\tlimit = { NOT = { has_global_variable = tarr_pin_16800196 } }",
+        "\t\ttitle:c_scalovia.holder.primary_spouse ?= {",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\texists = house",
+        "\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t}",
+        "\t\t\t\thouse = {",
+        "\t\t\t\t\tset_house_name = tarr_house_soundavara_obnore",
+        "\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:soundavara_obnore }",
+        "\t\t\t\t}",
+        "\t\t\t\tset_global_variable = { name = tarr_pin_16800196 value = yes }",
+        "\t\t\t\tdynasty ?= {",
+        "\t\t\t\t\tevery_dynasty_member = {",
+        "\t\t\t\t\t\tlimit = {",
+        "\t\t\t\t\t\t\tis_alive = yes",
+        "\t\t\t\t\t\t\tis_house_head = yes",
+        "\t\t\t\t\t\t\tis_male = yes",
+        "\t\t\t\t\t\t\texists = house",
+        "\t\t\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t\t\t}",
+        "\t\t\t\t\t\thouse = {",
+        "\t\t\t\t\t\t\tset_house_name = tarr_house_soundavara_erkawika",
+        "\t\t\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:soundavara_erkawika }",
+        "\t\t\t\t\t\t}",
+        "\t\t\t\t\t\tset_global_variable = { name = tarr_pin_33569509 value = yes }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t}",
+        "\t}",
+        "\t# House 23369: Sheksna-Kholmogory -> Sheksna-Dwina (HRE noble family domicile c_qaraustyurt)",
+        "\tif = {",
+        "\t\tlimit = { NOT = { has_global_variable = tarr_pin_23369 } }",
+        "\t\ttitle:h_roman_empire.holder ?= {",
+        "\t\t\tevery_noble_family = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\tholder ?= {",
+        "\t\t\t\t\t\tis_alive = yes",
+        "\t\t\t\t\t\texists = domicile",
+        "\t\t\t\t\t\tdomicile.domicile_location.county ?= title:c_qaraustyurt",
+        "\t\t\t\t\t\texists = house",
+        "\t\t\t\t\t\thouse = { NOT = { has_variable = tarr_house_tag } }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t}",
+        "\t\t\t\tholder ?= {",
+        "\t\t\t\t\thouse = {",
+        "\t\t\t\t\t\tset_house_name = tarr_house_sheksna_dwina",
+        "\t\t\t\t\t\tset_variable = { name = tarr_house_tag value = flag:sheksna_dwina }",
+        "\t\t\t\t\t}",
+        "\t\t\t\t\tset_global_variable = { name = tarr_pin_23369 value = yes }",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t}",
+        "\t}",
+        "\tset_global_variable = { name = tarr_v2_collateral_fix_applied value = yes }",
+        "}",
+        "",
+    ])
     return "\r\n".join(lines)
 
 def build_localization(entries, s2_entries, s3_entries, s4_entries):
@@ -991,37 +1083,6 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
             lines.append(f' cn_tarr_hist_{k}:0 "{h_name}"')
             lines.append(f' cn_tarr_hist_{k}_adj:0 "{h_adj}"')
 
-    # === Master Dynastic Realignment Overrides (Section 2 & 3) ===
-    lines.extend([
-        "",
-        " # === Master Dynastic Realignment Overrides (Toponym-First Coupling) ===",
-        ' dynn_Chatenois:0 "Kestenholz"',
-        ' dynn_Egisheim:0 "Egisheim"',
-        ' dynn_Dachsburg:0 "Dachsburg"',
-        ' dynn_Lorraine:0 "Lorraine"',
-        ' dynn_de_Blamont:0 "de Blâmont"',
-        ' dynn_Harjaroda:0 "Kestenholz-Harjaroda"',
-        ' dynn_Beichlingen:0 "Kestenholz-Beichlingen"',
-        ' dynn_der_Mark:0 "van Soest"',
-        ' dynn_Gudensberg:0 "Gudensberch"',
-        ' dynn_Pernstein:0 "Swratka"',
-        ' dynn_Luxembourg:0 "Echternach"',
-        ' dynn_Memel:0 "Pilsāts"',
-        ' dynn_Tigheci:0 "Tîghetsch"',
-        ' dynn_Tula:0 "Prôntzich"',
-        ' dynn_Wittenberg:0 "Belzig"',
-        ' dynn_Silesia-Glogau:0 "Silesia-Dziadosz"',
-        ' dynn_Bluome:0 "Kestenholz-Bluome"',
-        ' dynn_Carenwall:0 "Kestenholz-Carenwall"',
-        ' dynn_Diest:0 "Kestenholz-Diest"',
-        ' dynn_Orlamunde:0 "Kestenholz-Orlamunde"',
-        ' dynn_Verona:0 "Kestenholz-Verona"',
-        ' dynn_Suerbeer:0 "Kestenholz-Suerbeer"',
-        ' dynn_Muhlhausen:0 "Kestenholz-Muhlhausen"',
-        ' dynn_O_sel:0 "Kestenholz-Sâremâ"',
-        ' dynn_Montjoie:0 "Kestenholz-Montjoie"',
-    ])
-
     # === Dynamic Emergent Culture Realignments (Section 4) ===
     lines.extend([
         "",
@@ -1031,11 +1092,28 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         cid = c['culture_id']
         name = c['realigned_name']
         coll = c['collective_noun']
-        tname = c['tarr_name']
+        tname = re.sub(r'\s*\([^)]*\)', '', c['tarr_name']).strip()
         prefix_m = re.match(r"^([^\s\-]+)", name)
         prefix_stem = prefix_m.group(1) if prefix_m else name
-        prefix = f"{prefix_stem.rstrip('ian').rstrip('an')}-" if not prefix_stem.endswith('-') else prefix_stem
-        tprefix = f"{tname.rstrip('en').rstrip('er')}isch-"
+        if prefix_stem.endswith('-'):
+            prefix = prefix_stem
+        elif prefix_stem.endswith('ian'):
+            prefix = f"{prefix_stem[:-3]}-"
+        elif prefix_stem.endswith('an'):
+            prefix = f"{prefix_stem[:-2]}-"
+        else:
+            prefix = f"{prefix_stem}-"
+        tstem = tname
+        if tstem.endswith('isch'):
+            tprefix = f"{tstem}-"
+        elif tstem.endswith('en'):
+            tprefix = f"{tstem[:-2]}isch-"
+        elif tstem.endswith('er'):
+            tprefix = f"{tstem[:-2]}isch-"
+        elif tstem.endswith('e'):
+            tprefix = f"{tstem[:-1]}isch-"
+        else:
+            tprefix = f"{tstem}isch-"
 
         lines.extend([
             f' # Culture {cid}: {c["current_name"]} -> {name}',
@@ -1094,6 +1172,15 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         ' tarr_house_kestenholz_arnedo:0 "Kestenholz-Arnedo"',
         ' tarr_house_kestenholz_machynlleth:0 "Kestenholz-Machynlleth"',
         ' tarr_house_kestenholz_house_10882:0 "Kestenholz"',
+        ' tarr_house_kestenholz_bluome:0 "Kestenholz-Bluome"',
+        ' tarr_house_kestenholz_carenwall:0 "Kestenholz-Carenwall"',
+        ' tarr_house_kestenholz_diest:0 "Kestenholz-Diest"',
+        ' tarr_house_kestenholz_orlamunde:0 "Kestenholz-Orlamunde"',
+        ' tarr_house_kestenholz_verona:0 "Kestenholz-Verona"',
+        ' tarr_house_kestenholz_suerbeer:0 "Kestenholz-Suerbeer"',
+        ' tarr_house_kestenholz_muhlhausen:0 "Kestenholz-Muhlhausen"',
+        ' tarr_house_kestenholz_capua:0 "Kestenholz-Capua"',
+        ' tarr_house_kestenholz_montjoie:0 "Kestenholz-Montjoie"',
         # Non-Chatenois cadet branches
         ' tarr_house_billung_erfurt:0 "Billung-Erfurt"',
         ' tarr_house_karling_litovel:0 "Karling-Litovel"',
@@ -1112,7 +1199,16 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         ' tarr_house_cetchathach_uisnech:0 "Cétchathach-Uisnech"',
         ' tarr_house_ebrauc_uisnech:0 "Ebrauc-Uisnech"',
         ' tarr_house_hede_tzene:0 "Hede-Tzene"',
+        ' tarr_house_hede_middel_don:0 "Hede-Middel-Dôn"',
         ' tarr_house_borg_waga:0 "Borg-Wâga"',
+        ' tarr_house_borg_morarna:0 "Borg-Morarna"',
+        ' tarr_house_echternach:0 "Echternach"',
+        ' tarr_house_swratka:0 "Swratka"',
+        ' tarr_house_silesia_dziadosz:0 "Silesia-Dziadosz"',
+        ' tarr_house_prontzich:0 "Prôntzich"',
+        ' tarr_house_belzig:0 "Belzig"',
+        ' tarr_house_soest:0 "Soest"',
+        ' tarr_house_gnezdovo:0 "Gnezdovo"',
         # Elevated dynasties
         ' tarr_house_plise:0 "iš Plesės"',
         ' tarr_house_berezina:0 "Berezina"',
@@ -1134,6 +1230,17 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
     ])
 
     lines.append("")
+    return "\r\n".join(lines)
+
+def build_replace_localization():
+    lines = [
+        "l_english:",
+        " # === Global Replace Overrides for Non-Colliding Historical Dynasties ===",
+        ' dynn_Chatenois:0 "Kestenholz"',
+        ' dynn_Memel:0 "Pilsāts"',
+        ' dynn_Tigheci:0 "Tîghetsch"',
+        "",
+    ]
     return "\r\n".join(lines)
 
 def main():
@@ -1162,12 +1269,51 @@ def main():
         f.write(dynastic_effects_content)
     print(f"Wrote {len(dynastic_effects_content.splitlines())} lines to {DYNASTIC_EFFECTS_PATH}")
 
-    # 3. Generate localization YAML
+    # 3. Generate localization YAML & replace overrides
     loc_content = build_localization(entries, s2_entries, s3_entries, s4_entries)
     LOC_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(LOC_PATH, 'w', encoding='utf-8-sig', newline='') as f:
         f.write(loc_content)
     print(f"Wrote {len(loc_content.splitlines())} lines to {LOC_PATH}")
+
+    replace_loc_content = build_replace_localization()
+    REPLACE_LOC_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(REPLACE_LOC_PATH, 'w', encoding='utf-8-sig', newline='') as f:
+        f.write(replace_loc_content)
+    print(f"Wrote {len(replace_loc_content.splitlines())} lines to {REPLACE_LOC_PATH}")
+
+    # 3b. Ensure all handwritten mod .txt files have UTF-8 BOM + CRLF line endings
+    src_mod_dir = REPO_ROOT / "tarraconian_chancellery"
+    for txt_path in src_mod_dir.glob("**/*.txt"):
+        raw_txt = txt_path.read_text(encoding='utf-8-sig')
+        norm_txt = raw_txt.replace('\r\n', '\n').replace('\n', '\r\n')
+        with open(txt_path, 'w', encoding='utf-8-sig', newline='') as f:
+            f.write(norm_txt)
+
+    # 4. Sync to Paradox Interactive CK3 mod directory if accessible
+    paradox_mod_root = Path.home() / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod"
+    try:
+        if paradox_mod_root.exists():
+            paradox_mod_dir = paradox_mod_root / "tarraconian_chancellery"
+            paradox_mod_dir.mkdir(parents=True, exist_ok=True)
+            for dest_item in list(paradox_mod_dir.glob("**/*")):
+                if dest_item.is_file():
+                    rel = dest_item.relative_to(paradox_mod_dir)
+                    if not (src_mod_dir / rel).exists():
+                        dest_item.unlink()
+            for item in src_mod_dir.glob("**/*"):
+                if item.is_file():
+                    rel = item.relative_to(src_mod_dir)
+                    dest = paradox_mod_dir / rel
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(item, dest)
+            mod_desc = (src_mod_dir / "descriptor.mod").read_text(encoding='utf-8')
+            posix_path = str(paradox_mod_dir).replace("\\", "/")
+            mod_file_content = f'{mod_desc.strip()}\npath="{posix_path}"\n'
+            (paradox_mod_root / "tarraconian_chancellery.mod").write_text(mod_file_content, encoding='utf-8')
+            print(f"Successfully synced mod assets to {paradox_mod_dir}")
+    except Exception as e:
+        print(f"Note: Could not sync to Paradox mod directory ({e})")
 
 if __name__ == '__main__':
     main()

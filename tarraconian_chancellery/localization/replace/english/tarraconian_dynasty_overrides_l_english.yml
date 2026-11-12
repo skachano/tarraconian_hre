@@ -1,0 +1,5 @@
+﻿l_english:
+ # === Global Replace Overrides for Non-Colliding Historical Dynasties ===
+ dynn_Chatenois:0 "Kestenholz"
+ dynn_Memel:0 "Pilsāts"
+ dynn_Tigheci:0 "Tîghetsch"

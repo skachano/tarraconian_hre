@@ -5,7 +5,6 @@
 
 tarr_apply_static_titles_effect = {
 	title:h_roman_empire ?= { tarr_rename_title_effect = { NAME = cn_tarr_h_roman_empire HIST = cn_tarr_h_roman_empire } }
-	title:e_roman_empire ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_roman_empire HIST = cn_tarr_e_roman_empire } }
 	title:e_hre ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_hre HIST = cn_tarr_e_hre } }
 	title:k_france ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_france HIST = cn_tarr_k_france } }
 	title:k_east_francia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_east_francia HIST = cn_tarr_k_east_francia } }

@@ -18,47 +18,88 @@ EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effe
 DYNASTIC_EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_dynastic_effects.txt"
 CORE_EFFECTS_PATH = REPO_ROOT / "tarraconian_chancellery" / "common" / "scripted_effects" / "tarr_chancellery_core_effects.txt"
 LOC_PATH = REPO_ROOT / "tarraconian_chancellery" / "localization" / "english" / "tarraconian_titles_l_english.yml"
+REPLACE_LOC_PATH = REPO_ROOT / "tarraconian_chancellery" / "localization" / "replace" / "english" / "tarraconian_dynasty_overrides_l_english.yml"
+MOD_DIR = REPO_ROOT / "tarraconian_chancellery"
+VANILLA_GAME_DIR = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game")
 GAZETTEER_PATH = REPO_ROOT / "tarraconian_titles_1059.md"
 DYNASTIC_REGISTER_PATH = REPO_ROOT / "dynastic_realignment_register.md"
+
+def parse_yml_file(path: Path, errors: list, warnings: list) -> dict:
+    raw = path.read_bytes()
+    if not raw.startswith(b'\xef\xbb\xbf'):
+        errors.append(f"{path.relative_to(REPO_ROOT)} missing UTF-8 BOM")
+    text = raw.decode('utf-8-sig')
+    if '\r\n' not in text or '\n' in text.replace('\r\n', ''):
+        errors.append(f"{path.relative_to(REPO_ROOT)} must use CRLF line endings consistently")
+    result = {}
+    dups = []
+    for line in text.splitlines():
+        line_clean = line.strip()
+        if not line_clean or line_clean.startswith('#') or line_clean == 'l_english:':
+            continue
+        m = re.match(r'^([a-zA-Z0-9_\-\.]+):0\s*"(.*)"$', line_clean)
+        if m:
+            k, v = m.group(1), m.group(2)
+            if k in result:
+                dups.append(k)
+            result[k] = v
+        else:
+            warnings.append(f"Unmatched loc line in {path.name}: {line_clean}")
+    if dups:
+        errors.append(f"Found {len(dups)} duplicate keys in {path.name}: {dups[:5]}")
+    return result
 
 def verify():
     errors = []
     warnings = []
 
-    # 1. Read files
-    with open(EFFECTS_PATH, 'rb') as f:
-        effects_bytes = f.read()
-    assert effects_bytes.startswith(b'\xef\xbb\xbf'), "EFFECTS file missing UTF-8 BOM"
-    effects_text = effects_bytes.decode('utf-8-sig')
-    assert '\r\n' in effects_text, "EFFECTS file does not have CRLF line endings"
+    # 1. Check UTF-8 BOM, CRLF, brace balance, and banned broken constructs across ALL .txt mod files
+    banned_patterns = [
+        (r'house\.dynasty', 'house.dynasty invalid effect/scope'),
+        (r'house\s*\??=\s*\{\s*dynasty\b', 'house ?= { dynasty invalid scope'),
+        (r'\bevery_pool_guest\b', 'every_pool_guest invalid effect'),
+        (r'\bage\s*=', 'fragile age = selector'),
+        (r'\be_roman_empire\b', 'non-existent title e_roman_empire'),
+        (r'\bc_erfurt\b', 'non-existent title c_erfurt'),
+        (r'\bc_jurmala\b', 'non-existent title c_jurmala'),
+        (r'\bc_sandomierz\b', 'non-existent title c_sandomierz'),
+    ]
+    for txt_path in sorted(MOD_DIR.glob("**/*.txt")):
+        raw = txt_path.read_bytes()
+        rel = txt_path.relative_to(REPO_ROOT)
+        if not raw.startswith(b'\xef\xbb\xbf'):
+            errors.append(f"{rel} missing UTF-8 BOM")
+        text = raw.decode('utf-8-sig')
+        if '\r\n' not in text or '\n' in text.replace('\r\n', ''):
+            errors.append(f"{rel} must use CRLF line endings")
+        if text.count('{') != text.count('}'):
+            errors.append(f"{rel} has unbalanced braces ({{={text.count('{')}, }}={text.count('}')})")
+        code_lines = [line.split('#', 1)[0] for line in text.splitlines()]
+        for pat, desc in banned_patterns:
+            for line_no, code_line in enumerate(code_lines, 1):
+                m = re.search(pat, code_line)
+                if m:
+                    errors.append(f"{rel}:{line_no}: banned pattern ({desc}): {m.group(0)}")
 
-    with open(LOC_PATH, 'rb') as f:
-        loc_bytes = f.read()
-    assert loc_bytes.startswith(b'\xef\xbb\xbf'), "LOC file missing UTF-8 BOM"
-    loc_text = loc_bytes.decode('utf-8-sig')
-    assert '\r\n' in loc_text, "LOC file does not have CRLF line endings"
+    with open(EFFECTS_PATH, 'r', encoding='utf-8-sig') as f:
+        effects_text = f.read()
 
-    # 2. Parse localization keys
-    loc_lines = loc_text.splitlines()
-    loc_dict = {}
-    duplicates = []
-    for line in loc_lines:
-        line_clean = line.strip()
-        if not line_clean or line_clean.startswith('#') or line_clean == 'l_english:':
-            continue
-        m = re.match(r'^([a-zA-Z0-9_\-\.]+):0\s*\"(.*)\"$', line_clean)
-        if m:
-            k, v = m.group(1), m.group(2)
-            if k in loc_dict:
-                duplicates.append(k)
-            loc_dict[k] = v
-        else:
-            warnings.append(f"Unmatched loc line: {line_clean}")
+    # 2. Parse localization & replace localization files
+    loc_dict = parse_yml_file(LOC_PATH, errors, warnings)
+    main_dynn = [k for k in loc_dict if k.startswith('dynn_')]
+    if main_dynn:
+        errors.append(f"{LOC_PATH.name} must not override dynn_* keys (move safe ones to replace/): {main_dynn[:5]}")
 
-    if duplicates:
-        errors.append(f"Found {len(duplicates)} duplicate localization keys: {duplicates[:5]}")
+    if not REPLACE_LOC_PATH.exists():
+        errors.append(f"Missing replace localization file: {REPLACE_LOC_PATH}")
+        replace_dict = {}
+    else:
+        replace_dict = parse_yml_file(REPLACE_LOC_PATH, errors, warnings)
+        expected_replace = {'dynn_Chatenois', 'dynn_Memel', 'dynn_Tigheci'}
+        if set(replace_dict.keys()) != expected_replace:
+            errors.append(f"{REPLACE_LOC_PATH.name} keys {set(replace_dict.keys())} != {expected_replace}")
 
-    print(f"Total parsed localization entries: {len(loc_dict)}")
+    print(f"Total parsed localization entries: {len(loc_dict)} (+ {len(replace_dict)} in replace/)")
 
     # 3. Check every NAME and HIST in effects
     name_refs = re.findall(r'NAME\s*=\s*([a-zA-Z0-9_\-]+)', effects_text)
@@ -136,32 +177,83 @@ def verify():
     ]:
         dyn_loc_keys.update(re.findall(pattern, dyn_effects_text))
 
+    # Load vanilla dynasty loc keys when CK3 game directory is available
+    vanilla_dynn_keys = set()
+    if VANILLA_GAME_DIR.exists():
+        for vp in (VANILLA_GAME_DIR / "localization" / "english").rglob("*.yml"):
+            vt = vp.read_text(encoding='utf-8-sig', errors='ignore')
+            vanilla_dynn_keys.update(re.findall(r'^\s*(dynn_[a-zA-Z0-9_\-]+):', vt, re.M))
+
     print(f"Total unique localization keys referenced in dynastic effects: {len(dyn_loc_keys)}")
-    missing_dyn_loc = [k for k in dyn_loc_keys if k not in loc_dict]
+    missing_dyn_loc = [
+        k for k in dyn_loc_keys
+        if k not in loc_dict and k not in replace_dict and k not in vanilla_dynn_keys
+    ]
     if missing_dyn_loc:
-        errors.append(f"Missing {len(missing_dyn_loc)} dynastic localization keys in yml: {missing_dyn_loc[:10]}")
+        errors.append(f"Missing {len(missing_dyn_loc)} dynastic localization keys: {missing_dyn_loc[:10]}")
     else:
         print("  -> Zero missing localization keys for dynastic effects! (100% matched)")
 
+    # Validate vanilla titles, dynasties, name_lists, pillars, traditions referenced in mod scripts
+    if VANILLA_GAME_DIR.exists():
+        van_titles = set()
+        for tp in (VANILLA_GAME_DIR / "common" / "landed_titles").rglob("*.txt"):
+            tt = tp.read_text(encoding='utf-8-sig', errors='ignore')
+            van_titles.update(re.findall(r'^\s*([ehkdcb]_[a-zA-Z0-9_\-]+)\s*=\s*\{', tt, re.M))
+        van_dyns = set()
+        for dp in (VANILLA_GAME_DIR / "common" / "dynasties").glob("*.txt"):
+            dt = dp.read_text(encoding='utf-8-sig', errors='ignore')
+            van_dyns.update(re.findall(r'^([a-zA-Z0-9_]+)\s*=\s*\{', dt, re.M))
+        van_nl = set()
+        for np in (VANILLA_GAME_DIR / "common" / "culture" / "name_lists").glob("*.txt"):
+            nt = np.read_text(encoding='utf-8-sig', errors='ignore')
+            van_nl.update(re.findall(r'^(name_list_[a-zA-Z0-9_]+)\s*=\s*\{', nt, re.M))
+        van_pil = set()
+        for pp in (VANILLA_GAME_DIR / "common" / "culture" / "pillars").glob("*.txt"):
+            pt = pp.read_text(encoding='utf-8-sig', errors='ignore')
+            van_pil.update(re.findall(r'^([a-zA-Z0-9_]+)\s*=\s*\{', pt, re.M))
+        van_trad = set()
+        for rp in (VANILLA_GAME_DIR / "common" / "culture" / "traditions").glob("*.txt"):
+            rt = rp.read_text(encoding='utf-8-sig', errors='ignore')
+            van_trad.update(re.findall(r'^(tradition_[a-zA-Z0-9_]+)\s*=\s*\{', rt, re.M))
+
+        all_mod_txt = "\n".join(p.read_text(encoding='utf-8-sig') for p in MOD_DIR.glob("**/*.txt"))
+        bad_titles = sorted(set(re.findall(r'\btitle:([a-zA-Z0-9_\-]+)\b', all_mod_txt)) - van_titles)
+        bad_dyns = sorted(set(re.findall(r'\bdynasty:([a-zA-Z0-9_]+)\b', all_mod_txt)) - van_dyns)
+        bad_nl = sorted(set(re.findall(r'\bhas_name_list\s*=\s*([a-zA-Z0-9_]+)', all_mod_txt)) - van_nl)
+        bad_pil = sorted(set(re.findall(r'\bhas_cultural_pillar\s*=\s*([a-zA-Z0-9_]+)', all_mod_txt)) - van_pil)
+        bad_trad = sorted(set(re.findall(r'\bhas_cultural_tradition\s*=\s*([a-zA-Z0-9_]+)', all_mod_txt)) - van_trad)
+        if bad_titles: errors.append(f"Invalid vanilla titles referenced: {bad_titles[:10]}")
+        if bad_dyns: errors.append(f"Invalid vanilla dynasties referenced: {bad_dyns[:10]}")
+        if bad_nl: errors.append(f"Invalid vanilla name_lists referenced: {bad_nl[:10]}")
+        if bad_pil: errors.append(f"Invalid vanilla pillars referenced: {bad_pil[:10]}")
+        if bad_trad: errors.append(f"Invalid vanilla traditions referenced: {bad_trad[:10]}")
+        if not (bad_titles or bad_dyns or bad_nl or bad_pil or bad_trad):
+            print("  -> All title/dynasty/name_list/pillar/tradition keys validated against CK3 game files!")
+
     # Check core effects hooks
-    with open(CORE_EFFECTS_PATH, 'r', encoding='utf-8') as f:
+    with open(CORE_EFFECTS_PATH, 'r', encoding='utf-8-sig') as f:
         core_text = f.read()
     if 'tarr_apply_dynastic_and_cultural_realignment_effect = yes' not in core_text:
         errors.append("tarr_apply_dynastic_and_cultural_realignment_effect not hooked into tarr_chancellery_core_effects.txt")
     else:
         print("  -> Dynastic and cultural effects cleanly hooked into core chancellery pulse!")
 
-    # Check register dynn_* overrides
+    # Check register dynn_* & Section 4 coverage
     from build_mod import parse_dynastic_register
     s2, s3, s4 = parse_dynastic_register(DYNASTIC_REGISTER_PATH)
-    with open(DYNASTIC_REGISTER_PATH, 'r', encoding='utf-8') as f:
-        reg_text = f.read()
-    register_dynn_keys = set(re.findall(r'`(dynn_[a-zA-Z0-9_\-]+)`', reg_text))
-    missing_dynn = [k for k in register_dynn_keys if k not in loc_dict]
-    if missing_dynn:
-        errors.append(f"Register dynn_* overrides missing in yml: {missing_dynn}")
+    missing_cul_rules = [c['culture_id'] for c in s4 if f"tarr_culture_{c['culture_id']}_name" not in dyn_effects_text]
+    if missing_cul_rules:
+        errors.append(f"Missing Section 4 culture rules in dynastic effects: {missing_cul_rules}")
     else:
-        print(f"  -> All {len(register_dynn_keys)} register dynn_* overrides defined in localization! (100% matched)")
+        print(f"  -> All {len(s4)} Section 4 emergent culture realignments covered cleanly!")
+
+    replace_only_needed = {'dynn_Chatenois', 'dynn_Memel', 'dynn_Tigheci'}
+    missing_replace = [k for k in replace_only_needed if k not in replace_dict]
+    if missing_replace:
+        errors.append(f"Missing replace/ dynn_* overrides: {missing_replace}")
+    else:
+        print(f"  -> All {len(replace_only_needed)} safe global dynn_* overrides present in replace/!")
 
     print("\n--- SUMMARY ---")
     if errors:
@@ -171,11 +263,11 @@ def verify():
         return False
     else:
         print("ALL AUDIT AND MOD INTEGRATION VERIFICATIONS PASSED!")
-        print(f"  • Total Gazetteer Titles: {len(gazetteer_entries)}")
-        print(f"  • Static Titles in Effects: {len(static_keys_in_effects)}")
-        print(f"  • Dynamic Renaming Rules: {len(name_refs) - len(static_keys_in_effects)}")
-        print(f"  • Total Localized Strings: {len(loc_dict)}")
-        print(f"  • Zero Orphan Triggers / Zero Missing Localization Keys")
+        print(f"  * Total Gazetteer Titles: {len(gazetteer_entries)}")
+        print(f"  * Static Titles in Effects: {len(static_keys_in_effects)}")
+        print(f"  * Dynamic Renaming Rules: {len(name_refs) - len(static_keys_in_effects)}")
+        print(f"  * Total Localized Strings: {len(loc_dict)}")
+        print(f"  * Zero Orphan Triggers / Zero Missing Localization Keys")
         return True
 
 if __name__ == '__main__':

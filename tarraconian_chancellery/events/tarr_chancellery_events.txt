@@ -1,4 +1,4 @@
-namespace = tarr_chancellery
+﻿namespace = tarr_chancellery
 
 ##############################################################################
 # tarr_chancellery.0001 - Imperial Tarraconian Chancellery Ordinance Menu

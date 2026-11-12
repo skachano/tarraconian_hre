@@ -7,2597 +7,3984 @@
 tarr_apply_dynastic_and_cultural_realignment_effect = {
 	# =========================================================================
 	# 1. Dynamic Emergent Cultures (set_culture_name)
-	# Scoped via active 1154 counties and character holders, guarded by
-	# cultural pillars and protected against overwriting Tarraconian.
+	# Scoped via every_culture_global using unique pillar / name_list / tradition
+	# signatures, overwriting stale save-baked culture names while protecting Tarraconian.
 	# =========================================================================
 	# Culture 260: Jutribocian -> Nicipsian (Nikitzen)
-	title:c_juterbog ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_west_slavic
+			has_cultural_pillar = language_lechitic
+			has_cultural_pillar = ethos_egalitarian
+			has_cultural_tradition = tradition_hereditary_hierarchy
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_west_slavic }
-				culture = { has_cultural_pillar = language_lechitic }
-				culture = { has_cultural_pillar = ethos_egalitarian }
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_260_tarr_name
+				collective_noun = tarr_culture_260_tarr_collective
+				prefix = tarr_culture_260_tarr_prefix
 			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_260_tarr_name
-						collective_noun = tarr_culture_260_tarr_collective
-						prefix = tarr_culture_260_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_260_name
-						collective_noun = tarr_culture_260_collective
-						prefix = tarr_culture_260_prefix
-					}
-				}
+		}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_260_name
+				collective_noun = tarr_culture_260_collective
+				prefix = tarr_culture_260_prefix
 			}
 		}
 	}
 	# Culture 270: Pereyaslavian -> Trubezhan-Slavs (Trubeschjanen)
-	title:c_pereyaslavl ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = language_east_slavic
+			has_cultural_pillar = ethos_stoic
+			has_name_list = name_list_russian
+			has_cultural_tradition = tradition_hard_working
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_east_slavic }
-				culture = { has_cultural_pillar = language_east_slavic }
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_270_tarr_name
+				collective_noun = tarr_culture_270_tarr_collective
+				prefix = tarr_culture_270_tarr_prefix
 			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_270_tarr_name
-						collective_noun = tarr_culture_270_tarr_collective
-						prefix = tarr_culture_270_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_270_name
-						collective_noun = tarr_culture_270_collective
-						prefix = tarr_culture_270_prefix
-					}
-				}
+		}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_270_name
+				collective_noun = tarr_culture_270_collective
+				prefix = tarr_culture_270_prefix
 			}
 		}
 	}
 	# Culture 275: Galațian -> Dinogetian-Vlachs (Dinogetjanen)
-	title:c_galati ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_vlach
+			has_cultural_pillar = language_wallachian
+			has_cultural_pillar = ethos_bureaucratic
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_bureaucratic }
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_275_tarr_name
+				collective_noun = tarr_culture_275_tarr_collective
+				prefix = tarr_culture_275_tarr_prefix
 			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_275_tarr_name
-						collective_noun = tarr_culture_275_tarr_collective
-						prefix = tarr_culture_275_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_275_name
-						collective_noun = tarr_culture_275_collective
-						prefix = tarr_culture_275_prefix
-					}
-				}
+		}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_275_name
+				collective_noun = tarr_culture_275_collective
+				prefix = tarr_culture_275_prefix
 			}
 		}
 	}
 	# Culture 279: Frontenhausian -> Frontenhausian (Frontenhûser)
-	title:c_munchen ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_central_germanic
+			has_cultural_pillar = language_high_german
+			has_cultural_pillar = ethos_stoic
+			has_name_list = name_list_bavarian
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_279_tarr_name
+				collective_noun = tarr_culture_279_tarr_collective
+				prefix = tarr_culture_279_tarr_prefix
 			}
 		}
-	}
-	title:c_passau ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_ingolstadt ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_eschenlohe ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_falkenstein ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_rothenburg ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_falkenstein.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_passau.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_stoic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_tarr_name
-						collective_noun = tarr_culture_279_tarr_collective
-						prefix = tarr_culture_279_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_279_name
-						collective_noun = tarr_culture_279_collective
-						prefix = tarr_culture_279_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_279_name
+				collective_noun = tarr_culture_279_collective
+				prefix = tarr_culture_279_prefix
 			}
 		}
 	}
 	# Culture 286: Wolkensteiner -> Zschopauer (Tschopouwer)
-	title:c_naumburg.holder ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_west_slavic
+			has_cultural_pillar = language_lechitic
+			has_cultural_pillar = ethos_egalitarian
+			has_cultural_tradition = tradition_mountaineer_ruralism
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_west_slavic }
-				culture = { has_cultural_pillar = language_lechitic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_tarr_name
-						collective_noun = tarr_culture_286_tarr_collective
-						prefix = tarr_culture_286_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_name
-						collective_noun = tarr_culture_286_collective
-						prefix = tarr_culture_286_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_286_tarr_name
+				collective_noun = tarr_culture_286_tarr_collective
+				prefix = tarr_culture_286_tarr_prefix
 			}
 		}
-	}
-	title:b_altenburg.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_west_slavic }
-				culture = { has_cultural_pillar = language_lechitic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_tarr_name
-						collective_noun = tarr_culture_286_tarr_collective
-						prefix = tarr_culture_286_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_name
-						collective_noun = tarr_culture_286_collective
-						prefix = tarr_culture_286_prefix
-					}
-				}
-			}
-		}
-	}
-	title:b_lubben.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_west_slavic }
-				culture = { has_cultural_pillar = language_lechitic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_tarr_name
-						collective_noun = tarr_culture_286_tarr_collective
-						prefix = tarr_culture_286_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_286_name
-						collective_noun = tarr_culture_286_collective
-						prefix = tarr_culture_286_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_286_name
+				collective_noun = tarr_culture_286_collective
+				prefix = tarr_culture_286_prefix
 			}
 		}
 	}
 	# Culture 288: Bugeacian -> Tyrasian-Vlachs (Tîrasjanen)
-	title:c_galati ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_vlach
+			has_cultural_pillar = language_wallachian
+			has_cultural_pillar = ethos_spiritual
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_288_tarr_name
+				collective_noun = tarr_culture_288_tarr_collective
+				prefix = tarr_culture_288_tarr_prefix
 			}
 		}
-	}
-	title:c_buzau ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_braila ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_calarasi ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_bucuresti ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_campulung ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_giurgiu ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_stoenesti ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_braila.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_bucuresti.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_buzau.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_vlach }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_tarr_name
-						collective_noun = tarr_culture_288_tarr_collective
-						prefix = tarr_culture_288_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_288_name
-						collective_noun = tarr_culture_288_collective
-						prefix = tarr_culture_288_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_288_name
+				collective_noun = tarr_culture_288_collective
+				prefix = tarr_culture_288_prefix
 			}
 		}
 	}
 	# Culture 293: Bugeacian-Mogyër -> Tyrasian-Mogyër (Tîrasisch-Mogyër)
-	title:c_chilia ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_magyar
+			has_cultural_pillar = language_wallachian
+			has_cultural_pillar = ethos_spiritual
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_magyar }
-				culture = { has_cultural_pillar = language_wallachian }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_tarr_name
-						collective_noun = tarr_culture_293_tarr_collective
-						prefix = tarr_culture_293_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_name
-						collective_noun = tarr_culture_293_collective
-						prefix = tarr_culture_293_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_293_tarr_name
+				collective_noun = tarr_culture_293_tarr_collective
+				prefix = tarr_culture_293_tarr_prefix
 			}
 		}
-	}
-	title:c_cetatea_alba ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_magyar }
-				culture = { has_cultural_pillar = language_wallachian }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_tarr_name
-						collective_noun = tarr_culture_293_tarr_collective
-						prefix = tarr_culture_293_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_name
-						collective_noun = tarr_culture_293_collective
-						prefix = tarr_culture_293_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_iasi ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_magyar }
-				culture = { has_cultural_pillar = language_wallachian }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_tarr_name
-						collective_noun = tarr_culture_293_tarr_collective
-						prefix = tarr_culture_293_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_name
-						collective_noun = tarr_culture_293_collective
-						prefix = tarr_culture_293_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_barlad ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_magyar }
-				culture = { has_cultural_pillar = language_wallachian }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_tarr_name
-						collective_noun = tarr_culture_293_tarr_collective
-						prefix = tarr_culture_293_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_name
-						collective_noun = tarr_culture_293_collective
-						prefix = tarr_culture_293_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_lapusna ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_magyar }
-				culture = { has_cultural_pillar = language_wallachian }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_tarr_name
-						collective_noun = tarr_culture_293_tarr_collective
-						prefix = tarr_culture_293_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_293_name
-						collective_noun = tarr_culture_293_collective
-						prefix = tarr_culture_293_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_293_name
+				collective_noun = tarr_culture_293_collective
+				prefix = tarr_culture_293_prefix
 			}
 		}
 	}
 	# Culture 303: Schmalkalder -> Schmalkalder (Smalcalder)
-	title:c_schmalkalden ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_central_germanic
+			has_cultural_pillar = language_high_german
+			has_cultural_pillar = ethos_spiritual
+			has_name_list = name_list_franconian
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_tarr_name
-						collective_noun = tarr_culture_303_tarr_collective
-						prefix = tarr_culture_303_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_name
-						collective_noun = tarr_culture_303_collective
-						prefix = tarr_culture_303_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_303_tarr_name
+				collective_noun = tarr_culture_303_tarr_collective
+				prefix = tarr_culture_303_tarr_prefix
 			}
 		}
-	}
-	title:c_orlamunde ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_tarr_name
-						collective_noun = tarr_culture_303_tarr_collective
-						prefix = tarr_culture_303_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_name
-						collective_noun = tarr_culture_303_collective
-						prefix = tarr_culture_303_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_gleichenstein ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_tarr_name
-						collective_noun = tarr_culture_303_tarr_collective
-						prefix = tarr_culture_303_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_name
-						collective_noun = tarr_culture_303_collective
-						prefix = tarr_culture_303_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_lobdaburg ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_high_german }
-				culture = { has_cultural_pillar = ethos_spiritual }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_tarr_name
-						collective_noun = tarr_culture_303_tarr_collective
-						prefix = tarr_culture_303_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_303_name
-						collective_noun = tarr_culture_303_collective
-						prefix = tarr_culture_303_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_303_name
+				collective_noun = tarr_culture_303_collective
+				prefix = tarr_culture_303_prefix
 			}
 		}
 	}
 	# Culture 331: Putyvlian -> Semian-Severians (Sêmjanen)
-	title:c_novgorod_seversky ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = language_east_slavic
+			has_cultural_pillar = ethos_stoic
+			has_name_list = name_list_russian
+			has_cultural_tradition = tradition_stand_and_fight
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_east_slavic }
-				culture = { has_cultural_pillar = language_east_slavic }
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_331_tarr_name
+				collective_noun = tarr_culture_331_tarr_collective
+				prefix = tarr_culture_331_tarr_prefix
 			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_331_tarr_name
-						collective_noun = tarr_culture_331_tarr_collective
-						prefix = tarr_culture_331_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_331_name
-						collective_noun = tarr_culture_331_collective
-						prefix = tarr_culture_331_prefix
-					}
-				}
+		}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_331_name
+				collective_noun = tarr_culture_331_collective
+				prefix = tarr_culture_331_prefix
 			}
 		}
 	}
 	# Culture 338: Burgasan -> Deultian (Deultener)
-	title:c_burgas ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = language_slavonic
+			has_cultural_pillar = ethos_stoic
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_338_tarr_name
+				collective_noun = tarr_culture_338_tarr_collective
+				prefix = tarr_culture_338_tarr_prefix
 			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
+		}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_338_name
+				collective_noun = tarr_culture_338_collective
+				prefix = tarr_culture_338_prefix
 			}
 		}
 	}
-	title:c_thessalonika ?= {
+	# Culture 358: South Kazanskayan -> Tanaite-Turkic (Tanaîten)
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = language_oghur
+			has_cultural_pillar = ethos_bellicose
+			has_name_list = name_list_khazar
+			has_cultural_tradition = tradition_stand_and_fight
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_358_tarr_name
+				collective_noun = tarr_culture_358_tarr_collective
+				prefix = tarr_culture_358_tarr_prefix
 			}
 		}
-	}
-	title:c_adrianopolis ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_kran ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_mosynopolis ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_pirin ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_serres ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_strumica ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_byzantine }
-				culture = { has_cultural_pillar = language_slavonic }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_tarr_name
-						collective_noun = tarr_culture_338_tarr_collective
-						prefix = tarr_culture_338_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_338_name
-						collective_noun = tarr_culture_338_collective
-						prefix = tarr_culture_338_prefix
-					}
-				}
-			}
-		}
-	}
-	# Culture 358: South Kazanskayan -> Tanaite-Turkic (Tanaîten (Don-Oghur))
-	title:c_kazanskaya ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_turkic }
-				culture = { has_cultural_pillar = language_oghur }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_tarr_name
-						collective_noun = tarr_culture_358_tarr_collective
-						prefix = tarr_culture_358_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_name
-						collective_noun = tarr_culture_358_collective
-						prefix = tarr_culture_358_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_sarysyn ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_turkic }
-				culture = { has_cultural_pillar = language_oghur }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_tarr_name
-						collective_noun = tarr_culture_358_tarr_collective
-						prefix = tarr_culture_358_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_name
-						collective_noun = tarr_culture_358_collective
-						prefix = tarr_culture_358_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_balachev ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_turkic }
-				culture = { has_cultural_pillar = language_oghur }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_tarr_name
-						collective_noun = tarr_culture_358_tarr_collective
-						prefix = tarr_culture_358_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_name
-						collective_noun = tarr_culture_358_collective
-						prefix = tarr_culture_358_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_millerovo ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_turkic }
-				culture = { has_cultural_pillar = language_oghur }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_tarr_name
-						collective_noun = tarr_culture_358_tarr_collective
-						prefix = tarr_culture_358_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_name
-						collective_noun = tarr_culture_358_collective
-						prefix = tarr_culture_358_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_talava.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_turkic }
-				culture = { has_cultural_pillar = language_oghur }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_tarr_name
-						collective_noun = tarr_culture_358_tarr_collective
-						prefix = tarr_culture_358_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_358_name
-						collective_noun = tarr_culture_358_collective
-						prefix = tarr_culture_358_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_358_name
+				collective_noun = tarr_culture_358_collective
+				prefix = tarr_culture_358_prefix
 			}
 		}
 	}
 	# Culture 367: Ungwârer -> Ungwârer (Ungwârer)
-	title:c_hewes ?= {
+	every_culture_global = {
+		limit = {
+			NOT = { this = title:c_barcelona.culture }
+			trigger_if = {
+				limit = { has_global_variable = tarr_culture }
+				NOT = { this = global_var:tarr_culture }
+			}
+			has_cultural_pillar = heritage_central_germanic
+			has_cultural_pillar = language_magyar
+			has_cultural_pillar = ethos_bellicose
+		}
 		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_magyar }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_tarr_name
-						collective_noun = tarr_culture_367_tarr_collective
-						prefix = tarr_culture_367_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_name
-						collective_noun = tarr_culture_367_collective
-						prefix = tarr_culture_367_prefix
-					}
-				}
+			limit = { has_global_variable = tarr_direct_mode }
+			set_culture_name = {
+				noun = tarr_culture_367_tarr_name
+				collective_noun = tarr_culture_367_tarr_collective
+				prefix = tarr_culture_367_tarr_prefix
 			}
 		}
-	}
-	title:c_spis ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_magyar }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_tarr_name
-						collective_noun = tarr_culture_367_tarr_collective
-						prefix = tarr_culture_367_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_name
-						collective_noun = tarr_culture_367_collective
-						prefix = tarr_culture_367_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_ungvar.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_magyar }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_tarr_name
-						collective_noun = tarr_culture_367_tarr_collective
-						prefix = tarr_culture_367_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_name
-						collective_noun = tarr_culture_367_collective
-						prefix = tarr_culture_367_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_fogaras.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_magyar }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_tarr_name
-						collective_noun = tarr_culture_367_tarr_collective
-						prefix = tarr_culture_367_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_name
-						collective_noun = tarr_culture_367_collective
-						prefix = tarr_culture_367_prefix
-					}
-				}
-			}
-		}
-	}
-	title:c_polovragi.holder ?= {
-		if = {
-			limit = {
-				exists = culture
-				NOT = { culture = title:c_barcelona.culture }
-				culture = { has_cultural_pillar = heritage_central_germanic }
-				culture = { has_cultural_pillar = language_magyar }
-			}
-			if = {
-				limit = { has_global_variable = tarr_direct_mode }
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_tarr_name
-						collective_noun = tarr_culture_367_tarr_collective
-						prefix = tarr_culture_367_tarr_prefix
-					}
-				}
-			}
-			else = {
-				culture = {
-					set_culture_name = {
-						noun = tarr_culture_367_name
-						collective_noun = tarr_culture_367_collective
-						prefix = tarr_culture_367_prefix
-					}
-				}
+		else = {
+			set_culture_name = {
+				noun = tarr_culture_367_name
+				collective_noun = tarr_culture_367_collective
+				prefix = tarr_culture_367_prefix
 			}
 		}
 	}
 
 	# =========================================================================
-	# 2. Imperial Cadet Branches (House Kestenholz / Chatenois - dynasty:667)
-	# Covers all 39 living non-dynn_ cadet branches (32 direct static title
-	# holders + 7 relational/dynastic scopes) without save-file modification.
+	# 2. Collateral Damage Restorations (V1 Script Recoveries)
+	# Restores unrelated dynasties/houses misnamed by prior unguarded runs.
 	# =========================================================================
-	# House 24600: Chatenois-Arnedo -> Kestenholz-Arnedo
-	dynasty:667 ?= {
-		every_dynasty_house = {
-			limit = {
-				exists = house_head
-				house_head = { is_female = no age = 23 }
+	# House 16793861: Restore Suerbeer (previously overwritten by Berezina)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16793861 } }
+		title:c_berlin.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Suerbeer
+					set_variable = { name = tarr_house_tag value = flag:suerbeer }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Suerbeer }
+				set_global_variable = { name = tarr_pin_16793861 value = yes }
 			}
-			set_house_name = tarr_house_kestenholz_arnedo
 		}
-		# House 26976: Chatenois-Lecce -> Kestenholz-Lecce
-		every_dynasty_house = {
-			limit = {
-				exists = house_head
-				house_head = { is_female = yes age = 21 }
+		title:c_novosil.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Suerbeer
+					set_variable = { name = tarr_house_tag value = flag:suerbeer }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Suerbeer }
+				set_global_variable = { name = tarr_pin_16793861 value = yes }
 			}
-			set_house_name = tarr_house_kestenholz_lecce
+		}
+		title:c_wormditt.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Suerbeer
+					set_variable = { name = tarr_house_tag value = flag:suerbeer }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Suerbeer }
+				set_global_variable = { name = tarr_pin_16793861 value = yes }
+			}
 		}
 	}
-	# House 13928: Chatenois-Metz -> Kestenholz-Metz (Imperial House)
-	title:h_roman_empire.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_metz }
+	# House 18404: Restore Sachsen (previously overwritten by iš Plesės)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_18404 } }
+		title:c_novogrudok.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Sachsen
+					set_variable = { name = tarr_house_tag value = flag:sachsen }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Sachsen }
+				set_global_variable = { name = tarr_pin_18404 value = yes }
+			}
+		}
+		title:d_pinsk.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Sachsen
+					set_variable = { name = tarr_house_tag value = flag:sachsen }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Sachsen }
+				set_global_variable = { name = tarr_pin_18404 value = yes }
+			}
 		}
 	}
-	title:c_barcelona.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_metz }
+	# House 21733: Restore Gnezdovo (previously overwritten by iš Plesės)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_21733 } }
+		title:d_minsk.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_gnezdovo
+					set_variable = { name = tarr_house_tag value = flag:gnezdovo }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_gnezdovo }
+				set_global_variable = { name = tarr_pin_21733 value = yes }
+			}
+		}
+		title:c_minsk.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_gnezdovo
+					set_variable = { name = tarr_house_tag value = flag:gnezdovo }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_gnezdovo }
+				set_global_variable = { name = tarr_pin_21733 value = yes }
+			}
+		}
+		title:c_thouars.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_gnezdovo
+					set_variable = { name = tarr_house_tag value = flag:gnezdovo }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_gnezdovo }
+				set_global_variable = { name = tarr_pin_21733 value = yes }
+			}
 		}
 	}
-	title:d_jabal_kufs.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_metz }
+	# House 28330: Restore Xu (previously overwritten by Alre)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_28330 } }
+		title:c_lanzhou.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = dynn_Xu_8BB8
+					set_variable = { name = tarr_house_tag value = flag:xu_8bb8 }
+				}
+				dynasty ?= { set_dynasty_name = dynn_Xu_8BB8 }
+				set_global_variable = { name = tarr_pin_28330 value = yes }
+			}
+		}
+	}
+	# House 1652: Restore House Hede founder branch (previously clobbered by age=37)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_1652 } }
+		title:c_memar.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:836
+				}
+				house = {
+					set_house_name = dynn_Hede
+					set_variable = { name = tarr_house_tag value = flag:hede }
+				}
+				set_global_variable = { name = tarr_pin_1652 value = yes }
+			}
+		}
+	}
+	# House 33572174: Restore Borg-Morarna (previously clobbered by is_female=yes)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33572174 } }
+		title:c_SUM_barus.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:830
+				}
+				house = {
+					set_house_name = tarr_house_borg_morarna
+					set_variable = { name = tarr_house_tag value = flag:borg_morarna }
+				}
+				set_global_variable = { name = tarr_pin_33572174 value = yes }
+			}
+		}
+	}
+
+	# =========================================================================
+	# 3. Imperial Cadet Branches (House Kestenholz / Chatenois - dynasty:667)
+	# Covers all living Kestenholz cadet branches with character-scoped dynasty:667
+	# guards and house variable pinning (direct holders first, then courtier/domicile).
+	# =========================================================================
+	# House 13928: Chatenois-Metz -> Kestenholz-Metz (restore from Wurle)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_13928 } }
+		title:h_roman_empire.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_metz
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_metz }
+				}
+				set_global_variable = { name = tarr_pin_13928 value = yes }
+			}
+		}
+		title:c_barcelona.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_metz
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_metz }
+				}
+				set_global_variable = { name = tarr_pin_13928 value = yes }
+			}
+		}
+		title:d_jabal_kufs.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_metz
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_metz }
+				}
+				set_global_variable = { name = tarr_pin_13928 value = yes }
+			}
+		}
+		title:c_bampur.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_metz
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_metz }
+				}
+				set_global_variable = { name = tarr_pin_13928 value = yes }
+			}
 		}
 	}
 	# House 19476: Chatenois-Ravenna -> Kestenholz-Raben
-	title:d_westfalen.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_raben }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_19476 } }
+		title:d_westfalen.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_raben
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_raben }
+				}
+				set_global_variable = { name = tarr_pin_19476 value = yes }
+			}
 		}
-	}
-	title:c_osnabruck.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_raben }
+		title:c_osnabruck.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_raben
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_raben }
+				}
+				set_global_variable = { name = tarr_pin_19476 value = yes }
+			}
 		}
-	}
-	title:c_agadir.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_raben }
+		title:d_lombardia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_raben
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_raben }
+				}
+				set_global_variable = { name = tarr_pin_19476 value = yes }
+			}
+		}
+		title:d_prussia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_raben
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_raben }
+				}
+				set_global_variable = { name = tarr_pin_19476 value = yes }
+			}
 		}
 	}
 	# House 16791696: Chatenois-Saumur -> Kestenholz-Saumur
-	title:d_smolensk.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_saumur }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16791696 } }
+		title:d_smolensk.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_saumur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_saumur }
+				}
+				set_global_variable = { name = tarr_pin_16791696 value = yes }
+			}
 		}
-	}
-	title:c_bihar.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_saumur }
+		title:d_somerset.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_saumur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_saumur }
+				}
+				set_global_variable = { name = tarr_pin_16791696 value = yes }
+			}
 		}
-	}
-	title:c_al-buhaira.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_saumur }
+		title:d_bihar.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_saumur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_saumur }
+				}
+				set_global_variable = { name = tarr_pin_16791696 value = yes }
+			}
+		}
+		title:c_bihar.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_saumur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_saumur }
+				}
+				set_global_variable = { name = tarr_pin_16791696 value = yes }
+			}
+		}
+		title:c_tadla.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_saumur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_saumur }
+				}
+				set_global_variable = { name = tarr_pin_16791696 value = yes }
+			}
 		}
 	}
 	# House 18311: Chatenois-Annonay -> Kestenholz-Annonay
-	title:d_sicily.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_annonay }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_18311 } }
+		title:d_hesse.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_annonay
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_annonay }
+				}
+				set_global_variable = { name = tarr_pin_18311 value = yes }
+			}
+		}
+		title:d_luki.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_annonay
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_annonay }
+				}
+				set_global_variable = { name = tarr_pin_18311 value = yes }
+			}
+		}
+		title:d_novgorod.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_annonay
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_annonay }
+				}
+				set_global_variable = { name = tarr_pin_18311 value = yes }
+			}
+		}
+		title:c_novgorod.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_annonay
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_annonay }
+				}
+				set_global_variable = { name = tarr_pin_18311 value = yes }
+			}
+		}
+		title:c_rusa.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_annonay
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_annonay }
+				}
+				set_global_variable = { name = tarr_pin_18311 value = yes }
+			}
 		}
 	}
-	title:c_novgorod.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_annonay }
+	# House 22711: dynn_Bluome -> Kestenholz-Bluome
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_22711 } }
+		title:k_navarra.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bluome
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bluome }
+				}
+				set_global_variable = { name = tarr_pin_22711 value = yes }
+			}
 		}
-	}
-	title:c_agrigento.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_annonay }
+		title:c_viscaya.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bluome
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bluome }
+				}
+				set_global_variable = { name = tarr_pin_22711 value = yes }
+			}
+		}
+		title:c_vastergotland.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bluome
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bluome }
+				}
+				set_global_variable = { name = tarr_pin_22711 value = yes }
+			}
 		}
 	}
 	# House 16799240: Chatenois-Fécamp -> Kestenholz-Fécamp
-	title:d_armagnac.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_fecamp }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16799240 } }
+		title:d_deheubarth.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_fecamp
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_fecamp }
+				}
+				set_global_variable = { name = tarr_pin_16799240 value = yes }
+			}
 		}
-	}
-	title:c_armagnac.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_fecamp }
+		title:d_lower_silesia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_fecamp
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_fecamp }
+				}
+				set_global_variable = { name = tarr_pin_16799240 value = yes }
+			}
+		}
+		title:d_mazovia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_fecamp
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_fecamp }
+				}
+				set_global_variable = { name = tarr_pin_16799240 value = yes }
+			}
+		}
+		title:c_breslau.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_fecamp
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_fecamp }
+				}
+				set_global_variable = { name = tarr_pin_16799240 value = yes }
+			}
 		}
 	}
 	# House 18122: Chatenois-Albret -> Kestenholz-Albret
-	title:c_sevede.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_albret }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_18122 } }
+		title:c_sevede.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_albret
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_albret }
+				}
+				set_global_variable = { name = tarr_pin_18122 value = yes }
+			}
+		}
+		title:c_eschenlohe.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_albret
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_albret }
+				}
+				set_global_variable = { name = tarr_pin_18122 value = yes }
+			}
+		}
+		title:d_opolye.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_albret
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_albret }
+				}
+				set_global_variable = { name = tarr_pin_18122 value = yes }
+			}
 		}
 	}
-	title:c_eschenlohe.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_albret }
+	# House 16796964: Flanders -> Kestenholz-Flanders (restore from Kestenholz-Arnedo)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16796964 } }
+		title:k_andalusia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_flanders
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+				}
+				set_global_variable = { name = tarr_pin_16796964 value = yes }
+			}
 		}
-	}
-	title:c_allenstein.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_albret }
+		title:d_sevilla.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_flanders
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+				}
+				set_global_variable = { name = tarr_pin_16796964 value = yes }
+			}
 		}
-	}
-	# House 16796964: Flanders -> Kestenholz-Flanders
-	title:d_carinthia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_flanders }
+		title:d_carinthia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_flanders
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+				}
+				set_global_variable = { name = tarr_pin_16796964 value = yes }
+			}
 		}
-	}
-	title:c_kammersberg.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_flanders }
+		title:c_karnten.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_flanders
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+				}
+				set_global_variable = { name = tarr_pin_16796964 value = yes }
+			}
 		}
-	}
-	title:c_attica.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_flanders }
+		title:c_munchen.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_flanders
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+				}
+				set_global_variable = { name = tarr_pin_16796964 value = yes }
+			}
 		}
 	}
 	# House 16790779: Chatenois-Geteina -> Kestenholz-Geteina
-	title:c_fazughli.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_geteina }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16790779 } }
+		title:d_thracesia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_geteina
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_geteina }
+				}
+				set_global_variable = { name = tarr_pin_16790779 value = yes }
+			}
 		}
-	}
-	title:c_mainz.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_geteina }
-		}
-	}
-	title:c_benevento.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_geteina }
+		title:c_gezira.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_geteina
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_geteina }
+				}
+				set_global_variable = { name = tarr_pin_16790779 value = yes }
+			}
 		}
 	}
 	# House 16797465: Chatenois-Dillingen -> Kestenholz-Dillingen
-	title:c_kaiserslautern.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_dillingen }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16797465 } }
+		title:c_kaiserslautern.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_dillingen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_dillingen }
+				}
+				set_global_variable = { name = tarr_pin_16797465 value = yes }
+			}
+		}
+		title:d_paphlagonia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_dillingen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_dillingen }
+				}
+				set_global_variable = { name = tarr_pin_16797465 value = yes }
+			}
+		}
+		title:c_paphlagonia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_dillingen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_dillingen }
+				}
+				set_global_variable = { name = tarr_pin_16797465 value = yes }
+			}
+		}
+		title:c_zichia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_dillingen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_dillingen }
+				}
+				set_global_variable = { name = tarr_pin_16797465 value = yes }
+			}
 		}
 	}
-	title:c_paphlagonia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_dillingen }
+	# House 16796344: dynn_Carenwall -> Kestenholz-Carenwall (restore from Walgede)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16796344 } }
+		title:d_sebasteia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16796344 value = yes }
+			}
+		}
+		title:c_sebasteia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16796344 value = yes }
+			}
+		}
+		title:c_hont.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16796344 value = yes }
+			}
+		}
+		title:c_lipto.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16796344 value = yes }
+			}
+		}
+	}
+	# House 16799847: dynn_Carenwall -> Kestenholz-Carenwall
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16799847 } }
+		title:k_galicia-volhynia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16799847 value = yes }
+			}
+		}
+		title:c_el_fasher.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16799847 value = yes }
+			}
+		}
+		title:d_ulster.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16799847 value = yes }
+			}
+		}
+		title:c_ulster.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_16799847 value = yes }
+			}
+		}
+	}
+	# House 28856: dynn_Carenwall -> Kestenholz-Carenwall (Duklja/Usora branch)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_28856 } }
+		title:d_usora.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_28856 value = yes }
+			}
+		}
+		title:c_zachlumia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_carenwall
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_carenwall }
+				}
+				set_global_variable = { name = tarr_pin_28856 value = yes }
+			}
 		}
 	}
 	# House 50346404: Chatenois-Amersfoort -> Kestenholz-Utrecht
-	title:d_alwa.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_utrecht }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50346404 } }
+		title:d_alwa.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_utrecht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_utrecht }
+				}
+				set_global_variable = { name = tarr_pin_50346404 value = yes }
+			}
 		}
-	}
-	title:c_alodia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_utrecht }
+		title:c_alodia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_utrecht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_utrecht }
+				}
+				set_global_variable = { name = tarr_pin_50346404 value = yes }
+			}
+		}
+		title:d_sanaag.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_utrecht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_utrecht }
+				}
+				set_global_variable = { name = tarr_pin_50346404 value = yes }
+			}
+		}
+		title:d_kanem.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_utrecht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_utrecht }
+				}
+				set_global_variable = { name = tarr_pin_50346404 value = yes }
+			}
 		}
 	}
 	# House 50348946: Chatenois-Koschmin -> Kestenholz-Kalisch
-	title:d_iceland.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_kalisch }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50348946 } }
+		title:d_iceland.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kalisch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kalisch }
+				}
+				set_global_variable = { name = tarr_pin_50348946 value = yes }
+			}
 		}
-	}
-	title:c_gnieznienska.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_kalisch }
+		title:c_wschowska.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kalisch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kalisch }
+				}
+				set_global_variable = { name = tarr_pin_50348946 value = yes }
+			}
 		}
-	}
-	title:c_kaliska.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_kalisch }
+		title:b_prades_rossello.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kalisch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kalisch }
+				}
+				set_global_variable = { name = tarr_pin_50348946 value = yes }
+			}
 		}
 	}
 	# House 50347588: Chatenois-Hirschberg -> Kestenholz-Legnica
-	title:d_nordgau.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_legnica }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50347588 } }
+		title:d_nordgau.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_legnica
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_legnica }
+				}
+				set_global_variable = { name = tarr_pin_50347588 value = yes }
+			}
 		}
-	}
-	title:c_eichstadt.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_legnica }
+		title:c_eichstadt.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_legnica
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_legnica }
+				}
+				set_global_variable = { name = tarr_pin_50347588 value = yes }
+			}
+		}
+		title:c_ljubljana.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_legnica
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_legnica }
+				}
+				set_global_variable = { name = tarr_pin_50347588 value = yes }
+			}
+		}
+		title:c_korinthos.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_legnica
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_legnica }
+				}
+				set_global_variable = { name = tarr_pin_50347588 value = yes }
+			}
 		}
 	}
 	# House 16799191: Chatenois-Tyddewi -> Kestenholz-Tyddewi
-	title:c_yatvyagi.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_tyddewi }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16799191 } }
+		title:c_beszterce.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_tyddewi
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_tyddewi }
+				}
+				set_global_variable = { name = tarr_pin_16799191 value = yes }
+			}
+		}
+		title:c_stoenesti.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_tyddewi
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_tyddewi }
+				}
+				set_global_variable = { name = tarr_pin_16799191 value = yes }
+			}
+		}
+		title:c_guizhou_2.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_tyddewi
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_tyddewi }
+				}
+				set_global_variable = { name = tarr_pin_16799191 value = yes }
+			}
 		}
 	}
 	# House 24384: Chatenois-Kammersberg -> Kestenholz-Judenburch
-	title:c_baqlin.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_judenburch }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24384 } }
+		title:d_albany.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_judenburch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_judenburch }
+				}
+				set_global_variable = { name = tarr_pin_24384 value = yes }
+			}
+		}
+		title:c_baqlin.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_judenburch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_judenburch }
+				}
+				set_global_variable = { name = tarr_pin_24384 value = yes }
+			}
+		}
+		title:c_djarin.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_judenburch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_judenburch }
+				}
+				set_global_variable = { name = tarr_pin_24384 value = yes }
+			}
 		}
 	}
-	title:c_djarin.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_judenburch }
+	# House 16798500: dynn_Diest -> Kestenholz-Diest
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16798500 } }
+		title:b_olot.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_diest
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_diest }
+				}
+				set_global_variable = { name = tarr_pin_16798500 value = yes }
+			}
+		}
+		title:c_satif.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_diest
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_diest }
+				}
+				set_global_variable = { name = tarr_pin_16798500 value = yes }
+			}
+		}
+		title:c_tiris.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_diest
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_diest }
+				}
+				set_global_variable = { name = tarr_pin_16798500 value = yes }
+			}
+		}
+	}
+	# House 27663: dynn_Orlamunde -> Kestenholz-Orlamunde
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_27663 } }
+		title:c_boleslav.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_orlamunde
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_orlamunde }
+				}
+				set_global_variable = { name = tarr_pin_27663 value = yes }
+			}
+		}
+		title:c_rennes.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_orlamunde
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_orlamunde }
+				}
+				set_global_variable = { name = tarr_pin_27663 value = yes }
+			}
+		}
+		title:c_clermont_sur_allier.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_orlamunde
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_orlamunde }
+				}
+				set_global_variable = { name = tarr_pin_27663 value = yes }
+			}
 		}
 	}
 	# House 33573102: Cologne -> Kestenholz-Cologne
-	title:c_pavia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_cologne }
-		}
-	}
-	title:c_pagania.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_cologne }
-		}
-	}
-	# House 26275: Chatenois-Buthrotum -> Kestenholz-Buthrotum
-	title:k_epirus.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_buthrotum }
-		}
-	}
-	title:c_buthrotum.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_buthrotum }
-		}
-	}
-	# House 19355: Chatenois-Pau -> Kestenholz-Pau
-	title:c_arnsberg.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_pau }
-		}
-	}
-	title:c_hallstatt.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_pau }
-		}
-	}
-	title:c_alencon.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_pau }
-		}
-	}
-	# House 25659: Chatenois-Mérida -> Kestenholz-Mêrida
-	title:d_badajoz.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_merida }
-		}
-	}
-	title:c_badajoz.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_merida }
-		}
-	}
-	title:c_merida.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_merida }
-		}
-	}
-	# House 16796257: Chatenois-Swenigorot -> Kestenholz-Swenigorot
-	title:c_iasi.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_swenigorot }
-		}
-	}
-	title:c_torda.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_swenigorot }
-		}
-	}
-	# House 23237: Chatenois-Sennar -> Kestenholz-Sennar
-	title:c_hohenau.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_sennar }
-		}
-	}
-	# House 25175: Chatenois-Blasien -> Kestenholz-Blasien
-	title:d_anhalt.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_blasien }
-		}
-	}
-	title:c_blankenburg.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_blasien }
-		}
-	}
-	# House 25769: Chatenois-Bechyně -> Kestenholz-Bechin
-	title:b_akto.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_bechin }
-		}
-	}
-	# House 16789468: Chatenois-Stężyca -> Kestenholz-Sitzichow
-	title:d_rashka.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_sitzichow }
-		}
-	}
-	title:c_krakowska.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_sitzichow }
-		}
-	}
-	title:c_stezycka.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_sitzichow }
-		}
-	}
-	# House 26541: Chatenois-Moraca -> Kestenholz-Moraca
-	title:d_duklja.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_moraca }
-		}
-	}
-	title:c_duklja.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_moraca }
-		}
-	}
-	# House 26581: Chatenois-Berg -> Kestenholz-Berch
-	title:c_bergh.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_berch }
-		}
-	}
-	title:c_cologne.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_berch }
-		}
-	}
-	title:c_murom.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_berch }
-		}
-	}
-	# House 25655: Chatenois-Terebovl -> Kestenholz-Terebovl
-	title:d_northumberland.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_terebovl }
-		}
-	}
-	title:c_halych.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_terebovl }
-		}
-	}
-	title:c_amaya.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_terebovl }
-		}
-	}
-	# House 22345: Chatenois-Mons -> Kestenholz-Bergen
-	title:d_cyrenaica.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_bergen }
-		}
-	}
-	title:c_awjila.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_bergen }
-		}
-	}
-	# House 26913: Chatenois-Sargans -> Kestenholz-Kûr
-	title:d_currezia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_kur }
-		}
-	}
-	title:c_grisons.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_kur }
-		}
-	}
-	# House 24655: Chatenois-Plzeň -> Kestenholz-Plzenec
-	title:c_frontenhausen.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_plzenec }
-		}
-	}
-	title:c_iskaf.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_plzenec }
-		}
-	}
-	# House 16802581: Chatenois-Vendôme -> Kestenholz-Vendôme
-	title:d_orleans.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_vendome }
-		}
-	}
-	title:c_orleans.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_vendome }
-		}
-	}
-	title:c_vendome.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_vendome }
-		}
-	}
-	# House 24627: Chatenois-Zutphen -> Kestenholz-Zutphen
-	title:d_gelre.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_zutphen }
-		}
-	}
-	title:c_arnhem.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_zutphen }
-		}
-	}
-	title:c_zutphen.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_zutphen }
-		}
-	}
-	# House 23892: Chatenois-Baht -> Kestenholz-Baht
-	title:d_fes.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_baht }
-		}
-	}
-	title:c_fes.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_baht }
-		}
-	}
-	# House 18111: Chatenois-Bremen -> Kestenholz-Bremen
-	title:c_mainz.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_bremen }
-		}
-	}
-	# House 20743: Flanders -> Kestenholz-Flanders
-	title:d_hereford.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_flanders }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33573102 } }
+		title:c_pavia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_cologne
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_cologne }
+				}
+				set_global_variable = { name = tarr_pin_33573102 value = yes }
+			}
 		}
 	}
 	# House 23583: Chatenois-Peiting -> Kestenholz-Altenstadt
-	title:d_ciscaucasia.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_altenstadt }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_23583 } }
+		title:k_bohemia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_altenstadt
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_altenstadt }
+				}
+				set_global_variable = { name = tarr_pin_23583 value = yes }
+			}
+		}
+		title:d_bohemia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_altenstadt
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_altenstadt }
+				}
+				set_global_variable = { name = tarr_pin_23583 value = yes }
+			}
+		}
+		title:c_praha.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_altenstadt
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_altenstadt }
+				}
+				set_global_variable = { name = tarr_pin_23583 value = yes }
+			}
+		}
+		title:d_asturias.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_altenstadt
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_altenstadt }
+				}
+				set_global_variable = { name = tarr_pin_23583 value = yes }
+			}
+		}
+	}
+	# House 19355: Chatenois-Pau -> Kestenholz-Pau
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_19355 } }
+		title:c_hallstatt.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_pau
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_pau }
+				}
+				set_global_variable = { name = tarr_pin_19355 value = yes }
+			}
 		}
 	}
 	# House 25132: Chatenois-Orléans -> Kestenholz-Orleans
-	title:d_socotra.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_orleans }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25132 } }
+		title:b_balaguer.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_orleans
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_orleans }
+				}
+				set_global_variable = { name = tarr_pin_25132 value = yes }
+			}
 		}
 	}
-	# House 26976: Chatenois-Lecce -> Kestenholz-Lecce (via betrothed)
-	title:c_eman_yerenhe.holder.betrothed ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_lecce }
+	# House 25659: Chatenois-Mérida -> Kestenholz-Mêrida
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25659 } }
+		title:d_badajoz.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_merida
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_merida }
+				}
+				set_global_variable = { name = tarr_pin_25659 value = yes }
+			}
+		}
+		title:c_badajoz.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_merida
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_merida }
+				}
+				set_global_variable = { name = tarr_pin_25659 value = yes }
+			}
+		}
+		title:d_castilla.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_merida
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_merida }
+				}
+				set_global_variable = { name = tarr_pin_25659 value = yes }
+			}
+		}
+		title:b_vic.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_merida
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_merida }
+				}
+				set_global_variable = { name = tarr_pin_25659 value = yes }
+			}
 		}
 	}
-	# House 33566549: Chatenois-Saarbrücken -> Kestenholz-Zant-Arnolt
-	title:c_sieradzka.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:667 } }
-			house = { set_house_name = tarr_house_kestenholz_zant_arnolt }
+	# House 16796257: Chatenois-Swenigorot -> Kestenholz-Swenigorot
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16796257 } }
+		title:c_iasi.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_swenigorot
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_swenigorot }
+				}
+				set_global_variable = { name = tarr_pin_16796257 value = yes }
+			}
+		}
+		title:d_kuyavia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_swenigorot
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_swenigorot }
+				}
+				set_global_variable = { name = tarr_pin_16796257 value = yes }
+			}
+		}
+		title:c_campulung.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_swenigorot
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_swenigorot }
+				}
+				set_global_variable = { name = tarr_pin_16796257 value = yes }
+			}
+		}
+	}
+	# House 23237: Chatenois-Sennar -> Kestenholz-Sennar (restore from Arnedo)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_23237 } }
+		title:c_hohenau.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sennar
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sennar }
+				}
+				set_global_variable = { name = tarr_pin_23237 value = yes }
+			}
+		}
+	}
+	# House 25175: Chatenois-Blasien -> Kestenholz-Blasien
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25175 } }
+		title:d_anhalt.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_blasien
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_blasien }
+				}
+				set_global_variable = { name = tarr_pin_25175 value = yes }
+			}
+		}
+		title:c_dessau.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_blasien
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_blasien }
+				}
+				set_global_variable = { name = tarr_pin_25175 value = yes }
+			}
+		}
+	}
+	# House 25769: Chatenois-Bechyně -> Kestenholz-Bechin
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25769 } }
+		title:b_talekan.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bechin
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bechin }
+				}
+				set_global_variable = { name = tarr_pin_25769 value = yes }
+			}
+		}
+	}
+	# House 16789468: Chatenois-Stężyca -> Kestenholz-Sitzichow
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16789468 } }
+		title:d_rashka.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sitzichow
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sitzichow }
+				}
+				set_global_variable = { name = tarr_pin_16789468 value = yes }
+			}
+		}
+		title:c_rashka.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sitzichow
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sitzichow }
+				}
+				set_global_variable = { name = tarr_pin_16789468 value = yes }
+			}
+		}
+		title:d_flanders.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sitzichow
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sitzichow }
+				}
+				set_global_variable = { name = tarr_pin_16789468 value = yes }
+			}
+		}
+		title:c_brugge.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sitzichow
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sitzichow }
+				}
+				set_global_variable = { name = tarr_pin_16789468 value = yes }
+			}
+		}
+	}
+	# House 16802188: dynn_Gudensberg -> Kestenholz-Gudensberch
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16802188 } }
+		title:d_aleppo.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_gudensberch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_gudensberch }
+				}
+				set_global_variable = { name = tarr_pin_16802188 value = yes }
+			}
+		}
+		title:c_aleppo.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_gudensberch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_gudensberch }
+				}
+				set_global_variable = { name = tarr_pin_16802188 value = yes }
+			}
+		}
+		title:d_pereyaslavl.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_gudensberch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_gudensberch }
+				}
+				set_global_variable = { name = tarr_pin_16802188 value = yes }
+			}
+		}
+		title:c_pereyaslavl.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_gudensberch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_gudensberch }
+				}
+				set_global_variable = { name = tarr_pin_16802188 value = yes }
+			}
+		}
+	}
+	# House 26541: Chatenois-Moraca -> Kestenholz-Moraca
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26541 } }
+		title:d_duklja.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_moraca
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_moraca }
+				}
+				set_global_variable = { name = tarr_pin_26541 value = yes }
+			}
+		}
+		title:c_duklja.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_moraca
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_moraca }
+				}
+				set_global_variable = { name = tarr_pin_26541 value = yes }
+			}
+		}
+	}
+	# House 26581: Chatenois-Berg -> Kestenholz-Berch
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26581 } }
+		title:k_lotharingia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_berch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_berch }
+				}
+				set_global_variable = { name = tarr_pin_26581 value = yes }
+			}
+		}
+		title:d_luxembourg.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_berch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_berch }
+				}
+				set_global_variable = { name = tarr_pin_26581 value = yes }
+			}
+		}
+		title:d_bornu.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_berch
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_berch }
+				}
+				set_global_variable = { name = tarr_pin_26581 value = yes }
+			}
+		}
+	}
+	# House 25655: Chatenois-Terebovl -> Kestenholz-Terebovl
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25655 } }
+		title:k_castille.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_terebovl
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_terebovl }
+				}
+				set_global_variable = { name = tarr_pin_25655 value = yes }
+			}
+		}
+		title:d_northumberland.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_terebovl
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_terebovl }
+				}
+				set_global_variable = { name = tarr_pin_25655 value = yes }
+			}
+		}
+		title:d_don_valley.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_terebovl
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_terebovl }
+				}
+				set_global_variable = { name = tarr_pin_25655 value = yes }
+			}
+		}
+		title:c_voronezh.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_terebovl
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_terebovl }
+				}
+				set_global_variable = { name = tarr_pin_25655 value = yes }
+			}
+		}
+	}
+	# House 22345: Chatenois-Mons -> Kestenholz-Bergen
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_22345 } }
+		title:c_tripolitana.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bergen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bergen }
+				}
+				set_global_variable = { name = tarr_pin_22345 value = yes }
+			}
+		}
+	}
+	# House 18111: Chatenois-Bremen -> Kestenholz-Bremen
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_18111 } }
+		title:c_mainz.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_bremen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_bremen }
+				}
+				set_global_variable = { name = tarr_pin_18111 value = yes }
+			}
+		}
+	}
+	# House 26913: Chatenois-Sargans -> Kestenholz-Kûr
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26913 } }
+		title:d_currezia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kur }
+				}
+				set_global_variable = { name = tarr_pin_26913 value = yes }
+			}
+		}
+		title:c_grisons.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kur }
+				}
+				set_global_variable = { name = tarr_pin_26913 value = yes }
+			}
+		}
+		title:d_kaffa.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_kur
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_kur }
+				}
+				set_global_variable = { name = tarr_pin_26913 value = yes }
+			}
+		}
+	}
+	# House 16802581: Chatenois-Vendôme -> Kestenholz-Vendôme
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16802581 } }
+		title:d_orleans.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_vendome
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_vendome }
+				}
+				set_global_variable = { name = tarr_pin_16802581 value = yes }
+			}
+		}
+		title:c_orleans.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_vendome
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_vendome }
+				}
+				set_global_variable = { name = tarr_pin_16802581 value = yes }
+			}
+		}
+	}
+	# House 16801965: dynn_Suerbeer -> Kestenholz-Suerbeer
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16801965 } }
+		title:d_azov.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_suerbeer
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_suerbeer }
+				}
+				set_global_variable = { name = tarr_pin_16801965 value = yes }
+			}
+		}
+		title:c_tmutarakan.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_suerbeer
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_suerbeer }
+				}
+				set_global_variable = { name = tarr_pin_16801965 value = yes }
+			}
+		}
+	}
+	# House 24627: Chatenois-Zutphen -> Kestenholz-Zutphen
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24627 } }
+		title:d_gelre.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_zutphen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_zutphen }
+				}
+				set_global_variable = { name = tarr_pin_24627 value = yes }
+			}
+		}
+		title:c_guelders.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_zutphen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_zutphen }
+				}
+				set_global_variable = { name = tarr_pin_24627 value = yes }
+			}
+		}
+		title:c_zagorje.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_zutphen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_zutphen }
+				}
+				set_global_variable = { name = tarr_pin_24627 value = yes }
+			}
+		}
+	}
+	# House 16802071: dynn_Muhlhausen -> Kestenholz-Muhlhausen
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16802071 } }
+		title:k_sardinia.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_muhlhausen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_muhlhausen }
+				}
+				set_global_variable = { name = tarr_pin_16802071 value = yes }
+			}
+		}
+		title:c_cagliari.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_muhlhausen
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_muhlhausen }
+				}
+				set_global_variable = { name = tarr_pin_16802071 value = yes }
+			}
+		}
+	}
+	# House 27907: dynn_O_sel -> Kestenholz-Sâremâ
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_27907 } }
+		title:d_alger.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sarema
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sarema }
+				}
+				set_global_variable = { name = tarr_pin_27907 value = yes }
+			}
+		}
+		title:c_algier.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_sarema
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_sarema }
+				}
+				set_global_variable = { name = tarr_pin_27907 value = yes }
+			}
+		}
+	}
+	# House 23892: Chatenois-Baht -> Kestenholz-Baht
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_23892 } }
+		title:d_fes.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_baht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_baht }
+				}
+				set_global_variable = { name = tarr_pin_23892 value = yes }
+			}
+		}
+		title:c_fes.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_baht
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_baht }
+				}
+				set_global_variable = { name = tarr_pin_23892 value = yes }
+			}
+		}
+	}
+	# House 50353419: Chatenois-Capua -> Kestenholz-Capua (restore from Walgede)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50353419 } }
+		title:d_capua.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_capua
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_capua }
+				}
+				set_global_variable = { name = tarr_pin_50353419 value = yes }
+			}
+		}
+		title:c_capua.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_capua
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_capua }
+				}
+				set_global_variable = { name = tarr_pin_50353419 value = yes }
+			}
+		}
+		title:d_viken.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_capua
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_capua }
+				}
+				set_global_variable = { name = tarr_pin_50353419 value = yes }
+			}
+		}
+	}
+	# House 24600: Chatenois-Arnedo -> Kestenholz-Arnedo (via d_moravia spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24600 } }
+		title:d_moravia.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_arnedo
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_arnedo }
+				}
+				set_global_variable = { name = tarr_pin_24600 value = yes }
+			}
+		}
+	}
+	# House 26976: Chatenois-Lecce -> Kestenholz-Lecce (via c_eman_yerenhe spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26976 } }
+		title:c_eman_yerenhe.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:667
+				}
+				house = {
+					set_house_name = tarr_house_kestenholz_lecce
+					set_variable = { name = tarr_house_tag value = flag:kestenholz_lecce }
+				}
+				set_global_variable = { name = tarr_pin_26976 value = yes }
+			}
+		}
+	}
+	# House 26275: Chatenois-Buthrotum -> Kestenholz-Buthrotum (domicile c_cephalonia)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26275 } }
+		dynasty:667 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_cephalonia
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:667
+					}
+					house = {
+						set_house_name = tarr_house_kestenholz_buthrotum
+						set_variable = { name = tarr_house_tag value = flag:kestenholz_buthrotum }
+					}
+					set_global_variable = { name = tarr_pin_26275 value = yes }
+				}
+			}
+		}
+	}
+	# House 20743: Flanders -> Kestenholz-Flanders (domicile c_venezia)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_20743 } }
+		dynasty:667 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_venezia
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:667
+					}
+					house = {
+						set_house_name = tarr_house_kestenholz_flanders
+						set_variable = { name = tarr_house_tag value = flag:kestenholz_flanders }
+					}
+					set_global_variable = { name = tarr_pin_20743 value = yes }
+				}
+			}
+		}
+	}
+	# House 24655: Chatenois-Plzeň -> Kestenholz-Plzenec (domicile c_regensburg)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24655 } }
+		dynasty:667 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_regensburg
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:667
+					}
+					house = {
+						set_house_name = tarr_house_kestenholz_plzenec
+						set_variable = { name = tarr_house_tag value = flag:kestenholz_plzenec }
+					}
+					set_global_variable = { name = tarr_pin_24655 value = yes }
+				}
+			}
+		}
+	}
+	# House 33566549: Chatenois-Saarbrücken -> Kestenholz-Zant-Arnolt (domicile c_valencia)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33566549 } }
+		dynasty:667 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_valencia
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:667
+					}
+					house = {
+						set_house_name = tarr_house_kestenholz_zant_arnolt
+						set_variable = { name = tarr_house_tag value = flag:kestenholz_zant_arnolt }
+					}
+					set_global_variable = { name = tarr_pin_33566549 value = yes }
+				}
+			}
+		}
+	}
+	# House 16799007: dynn_Verona -> Kestenholz-Verona (untagged dynasty:667 in c_najran court)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16799007 } }
+		title:c_najran.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:667
+					}
+					house = {
+						set_house_name = tarr_house_kestenholz_verona
+						set_variable = { name = tarr_house_tag value = flag:kestenholz_verona }
+					}
+					set_global_variable = { name = tarr_pin_16799007 value = yes }
+				}
+			}
 		}
 	}
 
 	# =========================================================================
-	# 3. Non-Chatenois Historical Cadet Branches & Elevated Dynasties (Section 2)
-	# Covers all 29 living non-dynn_ houses (17 direct static holders +
-	# 12 relational/dynastic scopes) plus ancestral seats for extinct branches.
+	# 4. Non-Chatenois Historical Cadet Branches & Dynasties (Section 2)
 	# =========================================================================
 	# House 33574710: Billung-Gleichen -> Billung-Erfurt
-	title:c_marmaros.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:656 } }
-			house = { set_house_name = tarr_house_billung_erfurt }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33574710 } }
+		title:c_marmaros.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:656
+				}
+				house = {
+					set_house_name = tarr_house_billung_erfurt
+					set_variable = { name = tarr_house_tag value = flag:billung_erfurt }
+				}
+				set_global_variable = { name = tarr_pin_33574710 value = yes }
+			}
 		}
-	}
-	title:c_erfurt.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:656 } }
-			house = { set_house_name = tarr_house_billung_erfurt }
+		title:c_shamir.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:656
+				}
+				house = {
+					set_house_name = tarr_house_billung_erfurt
+					set_variable = { name = tarr_house_tag value = flag:billung_erfurt }
+				}
+				set_global_variable = { name = tarr_pin_33574710 value = yes }
+			}
 		}
 	}
 	# House 16800201: Gellones-Güstrow -> Gellones-Wurle
-	title:d_friuli.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:100217 } }
-			house = { set_house_name = tarr_house_gellones_wurle }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16800201 } }
+		title:c_more.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:100217
+				}
+				house = {
+					set_house_name = tarr_house_gellones_wurle
+					set_variable = { name = tarr_house_tag value = flag:gellones_wurle }
+				}
+				set_global_variable = { name = tarr_pin_16800201 value = yes }
+			}
 		}
-	}
-	title:c_aquileia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:100217 } }
-			house = { set_house_name = tarr_house_gellones_wurle }
+		title:c_rugen.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:100217
+				}
+				house = {
+					set_house_name = tarr_house_gellones_wurle
+					set_variable = { name = tarr_house_tag value = flag:gellones_wurle }
+				}
+				set_global_variable = { name = tarr_pin_16800201 value = yes }
+			}
+		}
+		title:d_angria.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:100217
+				}
+				house = {
+					set_house_name = tarr_house_gellones_wurle
+					set_variable = { name = tarr_house_tag value = flag:gellones_wurle }
+				}
+				set_global_variable = { name = tarr_pin_16800201 value = yes }
+			}
+		}
+		title:c_minden.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:100217
+				}
+				house = {
+					set_house_name = tarr_house_gellones_wurle
+					set_variable = { name = tarr_house_tag value = flag:gellones_wurle }
+				}
+				set_global_variable = { name = tarr_pin_16800201 value = yes }
+			}
 		}
 	}
 	# House 50343822: Karling-Uničov -> Karling-Litovel
-	title:d_moravia.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_litovel }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50343822 } }
+		title:c_jihlava.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:25061
+				}
+				house = {
+					set_house_name = tarr_house_karling_litovel
+					set_variable = { name = tarr_house_tag value = flag:karling_litovel }
+				}
+				set_global_variable = { name = tarr_pin_50343822 value = yes }
+			}
 		}
-	}
-	title:c_brno.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_litovel }
+		title:d_bukovina.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:25061
+				}
+				house = {
+					set_house_name = tarr_house_karling_litovel
+					set_variable = { name = tarr_house_tag value = flag:karling_litovel }
+				}
+				set_global_variable = { name = tarr_pin_50343822 value = yes }
+			}
 		}
-	}
-	title:c_olomouc.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_litovel }
+		title:c_suceava.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:25061
+				}
+				house = {
+					set_house_name = tarr_house_karling_litovel
+					set_variable = { name = tarr_house_tag value = flag:karling_litovel }
+				}
+				set_global_variable = { name = tarr_pin_50343822 value = yes }
+			}
 		}
 	}
 	# House 33571287: Karling-Korosten -> Karling-Ush
-	title:d_spoleto.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_ush }
-		}
-	}
-	title:c_abruzzi.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_ush }
-		}
-	}
-	title:c_korosten.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_ush }
-		}
-	}
-	# House 14423: Karling-Opava -> Karling-Troppouwe (ancestral)
-	title:c_opava.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_troppouwe }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33571287 } }
+		title:c_sagami.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:25061
+				}
+				house = {
+					set_house_name = tarr_house_karling_ush
+					set_variable = { name = tarr_house_tag value = flag:karling_ush }
+				}
+				set_global_variable = { name = tarr_pin_33571287 value = yes }
+			}
 		}
 	}
 	# House 16800883: Palemonaitis-Jurmala -> Palemonaitis-Lielupe
-	title:c_selpils.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_lielupe }
-		}
-	}
-	title:c_jurmala.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_lielupe }
-		}
-	}
-	# House 27674: Palemonaitis-Siauliai -> Palemonaitis-Schaulen
-	title:c_siauliai.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_schaulen }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16800883 } }
+		title:c_selpils.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:9116
+				}
+				house = {
+					set_house_name = tarr_house_palemonaitis_lielupe
+					set_variable = { name = tarr_house_tag value = flag:palemonaitis_lielupe }
+				}
+				set_global_variable = { name = tarr_pin_16800883 value = yes }
+			}
 		}
 	}
 	# House 67131755: Reginar-Vecchio -> Reginar-Sirakusan
-	title:d_alsace.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:7198 } }
-			house = { set_house_name = tarr_house_reginar_sirakusan }
-		}
-	}
-	title:c_ajaccio.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:7198 } }
-			house = { set_house_name = tarr_house_reginar_sirakusan }
-		}
-	}
-	title:c_vecchio.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:7198 } }
-			house = { set_house_name = tarr_house_reginar_sirakusan }
-		}
-	}
-	# House 33577966: Umayyad-Povenets -> Umayyad-Wîchsê
-	title:c_pudozh.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:597 } }
-			house = { set_house_name = tarr_house_umayyad_wichse }
-		}
-	}
-	title:c_povenets.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:597 } }
-			house = { set_house_name = tarr_house_umayyad_wichse }
-		}
-	}
-	# House 12948: Cétchathach-Athlone -> Cétchathach-Uisnech (ancestral)
-	title:c_athlone.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9217 } }
-			house = { set_house_name = tarr_house_cetchathach_uisnech }
-		}
-	}
-	# House 16797551: Ebrauc-Athlone -> Ebrauc-Uisnech (ancestral)
-	title:c_athlone.holder ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:1029002 } }
-			house = { set_house_name = tarr_house_ebrauc_uisnech }
-		}
-	}
-	# House 12726: Karling-Calw -> Karling-Hirsau
-	title:d_kiev.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:25061 } }
-			house = { set_house_name = tarr_house_karling_hirsau }
-		}
-	}
-	# House 24293: Palemonaitis-Orsha -> Palemonaitis-Orsche
-	title:c_siauliai.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_orsche }
-		}
-	}
-	# House 24307: Palemonaitis-Kazanskaya -> Palemonaitis-Middel-Dôn
-	title:c_selpils.holder.mother ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_middel_don }
-		}
-	}
-	# House 24355: Palemonaitis-Raseiniai -> Palemonaitis-Rassêinen
-	title:d_vologda.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_rasseinen }
-		}
-	}
-	# House 33574947: Palemonaitis-Kokenois -> Palemonaitis-Kukena
-	title:c_selpils.holder.primary_spouse ?= {
-		if = {
-			limit = { house ?= { dynasty ?= dynasty:9116 } }
-			house = { set_house_name = tarr_house_palemonaitis_kukena }
-		}
-	}
-	# House 27311: Hede-Tambov -> Hede-Tzene (dynasty:836)
-	dynasty:836 ?= {
-		every_dynasty_house = {
-			limit = {
-				exists = house_head
-				house_head = { is_female = no age = 37 }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_67131755 } }
+		title:d_alsace.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:7198
+				}
+				house = {
+					set_house_name = tarr_house_reginar_sirakusan
+					set_variable = { name = tarr_house_tag value = flag:reginar_sirakusan }
+				}
+				set_global_variable = { name = tarr_pin_67131755 value = yes }
 			}
-			set_house_name = tarr_house_hede_tzene
+		}
+		title:c_strassburg.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:7198
+				}
+				house = {
+					set_house_name = tarr_house_reginar_sirakusan
+					set_variable = { name = tarr_house_tag value = flag:reginar_sirakusan }
+				}
+				set_global_variable = { name = tarr_pin_67131755 value = yes }
+			}
+		}
+		title:d_corsica.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:7198
+				}
+				house = {
+					set_house_name = tarr_house_reginar_sirakusan
+					set_variable = { name = tarr_house_tag value = flag:reginar_sirakusan }
+				}
+				set_global_variable = { name = tarr_pin_67131755 value = yes }
+			}
+		}
+		title:c_ajaccio.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:7198
+				}
+				house = {
+					set_house_name = tarr_house_reginar_sirakusan
+					set_variable = { name = tarr_house_tag value = flag:reginar_sirakusan }
+				}
+				set_global_variable = { name = tarr_pin_67131755 value = yes }
+			}
+		}
+		title:d_aksay.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:7198
+				}
+				house = {
+					set_house_name = tarr_house_reginar_sirakusan
+					set_variable = { name = tarr_house_tag value = flag:reginar_sirakusan }
+				}
+				set_global_variable = { name = tarr_pin_67131755 value = yes }
+			}
 		}
 	}
-	# House 16796949: Borg-Shenkursk -> Borg-Wâga (dynasty:830)
-	dynasty:830 ?= {
-		every_dynasty_house = {
-			limit = {
-				exists = house_head
-				house_head = { is_female = yes }
+	# House 26438: Hede-Kazanskaya -> Hede-Middel-Dôn (restore from Hede-Tzene)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_26438 } }
+		title:d_latgalians.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:836
+				}
+				house = {
+					set_house_name = tarr_house_hede_middel_don
+					set_variable = { name = tarr_house_tag value = flag:hede_middel_don }
+				}
+				set_global_variable = { name = tarr_pin_26438 value = yes }
 			}
-			set_house_name = tarr_house_borg_waga
+		}
+		title:c_talava.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:836
+				}
+				house = {
+					set_house_name = tarr_house_hede_middel_don
+					set_variable = { name = tarr_house_tag value = flag:hede_middel_don }
+				}
+				set_global_variable = { name = tarr_pin_26438 value = yes }
+			}
+		}
+	}
+	# House 22244: dynn_Luxembourg -> Echternach
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_22244 } }
+		title:c_vermandois.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_echternach
+					set_variable = { name = tarr_house_tag value = flag:echternach }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_echternach }
+				set_global_variable = { name = tarr_pin_22244 value = yes }
+			}
+		}
+	}
+	# House 27863: dynn_Pernstein -> Swratka
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_27863 } }
+		title:d_qilian.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_swratka
+					set_variable = { name = tarr_house_tag value = flag:swratka }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_swratka }
+				set_global_variable = { name = tarr_pin_27863 value = yes }
+			}
+		}
+		title:c_qilin.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_swratka
+					set_variable = { name = tarr_house_tag value = flag:swratka }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_swratka }
+				set_global_variable = { name = tarr_pin_27863 value = yes }
+			}
+		}
+	}
+	# House 24454: dynn_Silesia-Glogau -> Silesia-Dziadosz
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24454 } }
+		title:c_carcassonne.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_silesia_dziadosz
+					set_variable = { name = tarr_house_tag value = flag:silesia_dziadosz }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_silesia_dziadosz }
+				set_global_variable = { name = tarr_pin_24454 value = yes }
+			}
+		}
+	}
+	# House 16803030: dynn_Tula -> Prôntzich
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16803030 } }
+		title:b_dori.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_prontzich
+					set_variable = { name = tarr_house_tag value = flag:prontzich }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_prontzich }
+				set_global_variable = { name = tarr_pin_16803030 value = yes }
+			}
+		}
+	}
+	# House 16804037: dynn_der_Mark -> Soest
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16804037 } }
+		title:c_linlithgowshire.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_soest
+					set_variable = { name = tarr_house_tag value = flag:soest }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_soest }
+				set_global_variable = { name = tarr_pin_16804037 value = yes }
+			}
+		}
+	}
+	# House 67124011: dynn_Wittenberg -> Belzig (dynasty:4039 in d_powys court)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_67124011 } }
+		title:d_powys.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:4039
+					}
+					house = {
+						set_house_name = tarr_house_belzig
+						set_variable = { name = tarr_house_tag value = flag:belzig }
+					}
+					set_global_variable = { name = tarr_pin_67124011 value = yes }
+				}
+			}
+		}
+	}
+	# House 12726: Karling-Calw -> Karling-Hirsau (dynasty:25061 in d_kiev court)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_12726 } }
+		title:d_kiev.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:25061
+					}
+					house = {
+						set_house_name = tarr_house_karling_hirsau
+						set_variable = { name = tarr_house_tag value = flag:karling_hirsau }
+					}
+					set_global_variable = { name = tarr_pin_12726 value = yes }
+				}
+			}
+		}
+	}
+	# House 12726: Karling-Calw -> Karling-Hirsau (domicile c_aachen fallback)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_12726 } }
+		dynasty:25061 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_aachen
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:25061
+					}
+					house = {
+						set_house_name = tarr_house_karling_hirsau
+						set_variable = { name = tarr_house_tag value = flag:karling_hirsau }
+					}
+					set_global_variable = { name = tarr_pin_12726 value = yes }
+				}
+			}
+		}
+	}
+	# House 33577966: Umayyad-Povenets -> Umayyad-Wîchsê (dynasty:597 in d_chudia court)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33577966 } }
+		title:d_chudia.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:597
+					}
+					house = {
+						set_house_name = tarr_house_umayyad_wichse
+						set_variable = { name = tarr_house_tag value = flag:umayyad_wichse }
+					}
+					set_global_variable = { name = tarr_pin_33577966 value = yes }
+				}
+			}
+		}
+	}
+	# House 27311: Hede-Tambov -> Hede-Tzene (dynasty:836 domicile c_northumberland)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_27311 } }
+		dynasty:836 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					exists = domicile
+					domicile.domicile_location.county ?= title:c_northumberland
+				}
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:836
+					}
+					house = {
+						set_house_name = tarr_house_hede_tzene
+						set_variable = { name = tarr_house_tag value = flag:hede_tzene }
+					}
+					set_global_variable = { name = tarr_pin_27311 value = yes }
+				}
+			}
+		}
+	}
+	# House 16796949: Borg-Shenkursk -> Borg-Wâga (via c_darcha spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16796949 } }
+		title:c_darcha.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:830
+				}
+				house = {
+					set_house_name = tarr_house_borg_waga
+					set_variable = { name = tarr_house_tag value = flag:borg_waga }
+				}
+				set_global_variable = { name = tarr_pin_16796949 value = yes }
+			}
+		}
+	}
+	# House 33574947: Palemonaitis-Kokenois -> Palemonaitis-Kukena (via c_selpils spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33574947 } }
+		title:c_selpils.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:9116
+				}
+				house = {
+					set_house_name = tarr_house_palemonaitis_kukena
+					set_variable = { name = tarr_house_tag value = flag:palemonaitis_kukena }
+				}
+				set_global_variable = { name = tarr_pin_33574947 value = yes }
+			}
+		}
+	}
+	# House 24355: Palemonaitis-Raseiniai -> Palemonaitis-Rassêinen (via d_vologda spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24355 } }
+		title:d_vologda.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					dynasty ?= dynasty:9116
+				}
+				house = {
+					set_house_name = tarr_house_palemonaitis_rasseinen
+					set_variable = { name = tarr_house_tag value = flag:palemonaitis_rasseinen }
+				}
+				set_global_variable = { name = tarr_pin_24355 value = yes }
+			}
+		}
+	}
+	# House 24293: Palemonaitis-Orsha -> Palemonaitis-Orsche (via c_zemigalians court)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24293 } }
+		title:c_zemigalians.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						dynasty ?= dynasty:9116
+					}
+					house = {
+						set_house_name = tarr_house_palemonaitis_orsche
+						set_variable = { name = tarr_house_tag value = flag:palemonaitis_orsche }
+					}
+					set_global_variable = { name = tarr_pin_24293 value = yes }
+				}
+			}
+		}
+	}
+	# House 24307: Palemonaitis-Kazanskaya -> Palemonaitis-Middel-Dôn (via d_gotland & d_pamir guests)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_24307 } }
+		title:d_gotland.holder ?= {
+			every_courtier_or_guest = {
+				limit = {
+					dynasty ?= dynasty:9116
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOT = { house = dynasty:9116.dynasty_founder.house }
+				}
+				house = {
+					set_house_name = tarr_house_palemonaitis_middel_don
+					set_variable = { name = tarr_house_tag value = flag:palemonaitis_middel_don }
+				}
+				set_global_variable = { name = tarr_pin_24307 value = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { has_global_variable = tarr_pin_24307 } }
+			title:d_pamir.holder ?= {
+				every_courtier_or_guest = {
+					limit = {
+						dynasty ?= dynasty:9116
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						NOT = { house = dynasty:9116.dynasty_founder.house }
+					}
+					house = {
+						set_house_name = tarr_house_palemonaitis_middel_don
+						set_variable = { name = tarr_house_tag value = flag:palemonaitis_middel_don }
+					}
+					set_global_variable = { name = tarr_pin_24307 value = yes }
+				}
+			}
+		}
+	}
+	# House 27674: Palemonaitis-Siauliai -> Palemonaitis-Schaulen (child of H=24293)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_27674 } }
+		dynasty:9116 ?= {
+			every_dynasty_member = {
+				limit = {
+					is_alive = yes
+					house ?= { var:tarr_house_tag ?= flag:palemonaitis_orsche }
+				}
+				every_child = {
+					limit = {
+						is_alive = yes
+						dynasty ?= dynasty:9116
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						NOT = { house = dynasty:9116.dynasty_founder.house }
+					}
+					house = {
+						set_house_name = tarr_house_palemonaitis_schaulen
+						set_variable = { name = tarr_house_tag value = flag:palemonaitis_schaulen }
+					}
+					set_global_variable = { name = tarr_pin_27674 value = yes }
+				}
+			}
 		}
 	}
 
 	# =========================================================================
-	# 4. Elevated Noble Houses & Dynamic Dynasties
+	# 5. Elevated Noble Houses & Dynamic Dynasties (Section 4 / S2)
+	# All rules exclude vanilla multi-house dynasties, require untagged houses,
+	# and permanently pin on first match to prevent conquest collateral drift.
 	# =========================================================================
 	# House 16800136: Buxtehude -> Este
-	title:c_hamburg.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16800136 } }
+		title:c_hamburg.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_este
+					set_variable = { name = tarr_house_tag value = flag:este }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_este }
+				set_global_variable = { name = tarr_pin_16800136 value = yes }
 			}
-			house = { set_house_name = tarr_house_este }
-			house.dynasty ?= { set_dynasty_name = tarr_house_este }
 		}
-	}
-	title:b_buxtehude.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+		title:b_buxtehude.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_este
+					set_variable = { name = tarr_house_tag value = flag:este }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_este }
+				set_global_variable = { name = tarr_pin_16800136 value = yes }
 			}
-			house = { set_house_name = tarr_house_este }
-			house.dynasty ?= { set_dynasty_name = tarr_house_este }
 		}
 	}
 	# House 67125621: Celle -> Alre
-	title:c_starodub.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_67125621 } }
+		title:c_starodub.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_alre
+					set_variable = { name = tarr_house_tag value = flag:alre }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_alre }
+				set_global_variable = { name = tarr_pin_67125621 value = yes }
 			}
-			house = { set_house_name = tarr_house_alre }
-			house.dynasty ?= { set_dynasty_name = tarr_house_alre }
-		}
-	}
-	title:c_lanzhou.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_alre }
-			house.dynasty ?= { set_dynasty_name = tarr_house_alre }
-		}
-	}
-	# House 50349259: Coburg -> Îtze
-	title:c_coburg.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_itze }
-			house.dynasty ?= { set_dynasty_name = tarr_house_itze }
 		}
 	}
 	# House 25935: Leoben -> Göss
-	title:b_nawa.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_25935 } }
+		title:b_nawa.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_goss
+					set_variable = { name = tarr_house_tag value = flag:goss }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_goss }
+				set_global_variable = { name = tarr_pin_25935 value = yes }
 			}
-			house = { set_house_name = tarr_house_goss }
-			house.dynasty ?= { set_dynasty_name = tarr_house_goss }
 		}
 	}
 	# House 33568115: Philippopolis-Priština -> Philippopolis-Ulpiana
-	title:c_zlatibor.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_33568115 } }
+		title:c_zlatibor.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_philippopolis_ulpiana
+					set_variable = { name = tarr_house_tag value = flag:philippopolis_ulpiana }
+				}
+				set_global_variable = { name = tarr_pin_33568115 value = yes }
 			}
-			house = { set_house_name = tarr_house_philippopolis_ulpiana }
 		}
-	}
-	title:b_zvecan.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+		title:b_zvecan.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_philippopolis_ulpiana
+					set_variable = { name = tarr_house_tag value = flag:philippopolis_ulpiana }
+				}
+				set_global_variable = { name = tarr_pin_33568115 value = yes }
 			}
-			house = { set_house_name = tarr_house_philippopolis_ulpiana }
 		}
 	}
 	# House 28114: Roslavl -> Ôster
-	title:c_roslavl.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_28114 } }
+		title:c_roslavl.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_oster
+					set_variable = { name = tarr_house_tag value = flag:oster }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_oster }
+				set_global_variable = { name = tarr_pin_28114 value = yes }
 			}
-			house = { set_house_name = tarr_house_oster }
-			house.dynasty ?= { set_dynasty_name = tarr_house_oster }
 		}
 	}
 	# House 16803302: Steyr -> Enns
-	title:b_steyr.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16803302 } }
+		title:b_steyr.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_enns
+					set_variable = { name = tarr_house_tag value = flag:enns }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_enns }
+				set_global_variable = { name = tarr_pin_16803302 value = yes }
 			}
-			house = { set_house_name = tarr_house_enns }
-			house.dynasty ?= { set_dynasty_name = tarr_house_enns }
 		}
 	}
 	# House 21816: Vologda -> Walgede
-	title:d_vologda.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_walgede }
-			house.dynasty ?= { set_dynasty_name = tarr_house_walgede }
-		}
-	}
-	title:c_vologda.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_walgede }
-			house.dynasty ?= { set_dynasty_name = tarr_house_walgede }
-		}
-	}
-	title:c_capua.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_walgede }
-			house.dynasty ?= { set_dynasty_name = tarr_house_walgede }
-		}
-	}
-	# House 27893: Werle -> Wurle
-	title:c_werle.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_wurle }
-			house.dynasty ?= { set_dynasty_name = tarr_house_wurle }
-		}
-	}
-	# House 16792693: Naugardukas -> iš Plesės (ancestral)
-	title:c_novogrudok.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_plise }
-			house.dynasty ?= { set_dynasty_name = tarr_house_plise }
-		}
-	}
-	# House 21909: Babruysk -> Berezina (ancestral)
-	title:c_babruysk.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_berezina }
-			house.dynasty ?= { set_dynasty_name = tarr_house_berezina }
-		}
-	}
-	# House 22261: Stężyca -> Sitzichow (ancestral)
-	title:c_sandomierz.holder ?= {
-		if = {
-			limit = {
-				exists = house
-				NOT = { house ?= { dynasty ?= dynasty:667 } }
-				NOT = { house ?= { dynasty ?= dynasty:25061 } }
-				NOT = { house ?= { dynasty ?= dynasty:656 } }
-				NOT = { house ?= { dynasty ?= dynasty:100217 } }
-			}
-			house = { set_house_name = tarr_house_sitzichow }
-			house.dynasty ?= { set_dynasty_name = tarr_house_sitzichow }
-		}
-	}
-	# House 17334: Jihlava -> Rokytna (via spouse of c_bornholm holder)
-	title:c_bornholm.holder.primary_spouse ?= {
-		if = {
-			limit = { exists = house }
-			house = { set_house_name = tarr_house_rokytna }
-			house.dynasty ?= { set_dynasty_name = tarr_house_rokytna }
-		}
-	}
-	# House 16800196: Soundavara-Lyubim -> Soundavara-Obnore (via spouse of c_scalovia holder)
-	# House 33569509: Soundavara-Molina -> Soundavara-Erkawîka (via same dynasty, male house head)
-	# House 23369: Sheksna-Kholmogory -> Sheksna-Dwina (via spouse of Soundavara-Obnore house head)
-	title:c_scalovia.holder.primary_spouse ?= {
-		if = {
-			limit = { exists = house }
-			house = {
-				set_house_name = tarr_house_soundavara_obnore
-				house_head.primary_spouse ?= {
-					if = {
-						limit = { exists = house }
-						house = { set_house_name = tarr_house_sheksna_dwina }
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_21816 } }
+		title:d_vologda.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
 					}
 				}
+				house = {
+					set_house_name = tarr_house_walgede
+					set_variable = { name = tarr_house_tag value = flag:walgede }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_walgede }
+				set_global_variable = { name = tarr_pin_21816 value = yes }
 			}
-			dynasty ?= {
-				every_dynasty_house = {
+		}
+		title:c_vologda.holder ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_walgede
+					set_variable = { name = tarr_house_tag value = flag:walgede }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_walgede }
+				set_global_variable = { name = tarr_pin_21816 value = yes }
+			}
+		}
+	}
+	# House 50349259: Coburg -> Îtze (house head guest at c_hohenberg)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_50349259 } }
+		title:c_hohenberg.holder ?= {
+			every_courtier_or_guest = {
+				if = {
 					limit = {
-						exists = house_head
-						house_head = { is_female = no }
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						NOR = {
+							dynasty ?= dynasty:667
+							dynasty ?= dynasty:25061
+							dynasty ?= dynasty:656
+							dynasty ?= dynasty:100217
+							dynasty ?= dynasty:9116
+							dynasty ?= dynasty:7198
+							dynasty ?= dynasty:597
+							dynasty ?= dynasty:9217
+							dynasty ?= dynasty:1029002
+							dynasty ?= dynasty:836
+							dynasty ?= dynasty:830
+							dynasty ?= dynasty:4039
+						}
+						is_house_head = yes
+						is_female = yes
 					}
-					set_house_name = tarr_house_soundavara_erkawika
+					house = {
+						set_house_name = tarr_house_itze
+						set_variable = { name = tarr_house_tag value = flag:itze }
+					}
+					dynasty ?= { set_dynasty_name = tarr_house_itze }
+					set_global_variable = { name = tarr_pin_50349259 value = yes }
 				}
 			}
 		}
 	}
-	# House 16801742: Brunnsholm-Sebezh -> Brunnsholm-Sebêsch (via noble guest at d_yanmen)
-	title:d_yanmen.holder ?= {
-		every_pool_guest = {
-			limit = { exists = house }
-			house = { set_house_name = tarr_house_brunnsholm_sebesch }
+	# House 17334: Jihlava -> Rokytna (via c_bornholm spouse)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_17334 } }
+		title:c_bornholm.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+					NOR = {
+						dynasty ?= dynasty:667
+						dynasty ?= dynasty:25061
+						dynasty ?= dynasty:656
+						dynasty ?= dynasty:100217
+						dynasty ?= dynasty:9116
+						dynasty ?= dynasty:7198
+						dynasty ?= dynasty:597
+						dynasty ?= dynasty:9217
+						dynasty ?= dynasty:1029002
+						dynasty ?= dynasty:836
+						dynasty ?= dynasty:830
+						dynasty ?= dynasty:4039
+					}
+				}
+				house = {
+					set_house_name = tarr_house_rokytna
+					set_variable = { name = tarr_house_tag value = flag:rokytna }
+				}
+				dynasty ?= { set_dynasty_name = tarr_house_rokytna }
+				set_global_variable = { name = tarr_pin_17334 value = yes }
+			}
 		}
 	}
+	# House 16801742: Brunnsholm-Sebezh -> Brunnsholm-Sebêsch (courtier at b_sheffield)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16801742 } }
+		title:b_sheffield.holder ?= {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+						NOR = {
+							dynasty ?= dynasty:667
+							dynasty ?= dynasty:25061
+							dynasty ?= dynasty:656
+							dynasty ?= dynasty:100217
+							dynasty ?= dynasty:9116
+							dynasty ?= dynasty:7198
+							dynasty ?= dynasty:597
+							dynasty ?= dynasty:9217
+							dynasty ?= dynasty:1029002
+							dynasty ?= dynasty:836
+							dynasty ?= dynasty:830
+							dynasty ?= dynasty:4039
+						}
+						is_house_head = yes
+						is_female = yes
+					}
+					house = {
+						set_house_name = tarr_house_brunnsholm_sebesch
+						set_variable = { name = tarr_house_tag value = flag:brunnsholm_sebesch }
+					}
+					set_global_variable = { name = tarr_pin_16801742 value = yes }
+				}
+			}
+		}
+	}
+	# House 16800196 & 33569509: Soundavara-Obnore (spouse of c_scalovia) & Soundavara-Erkawîka (male house_head)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_16800196 } }
+		title:c_scalovia.holder.primary_spouse ?= {
+			if = {
+				limit = {
+					exists = house
+					house = { NOT = { has_variable = tarr_house_tag } }
+				}
+				house = {
+					set_house_name = tarr_house_soundavara_obnore
+					set_variable = { name = tarr_house_tag value = flag:soundavara_obnore }
+				}
+				set_global_variable = { name = tarr_pin_16800196 value = yes }
+				dynasty ?= {
+					every_dynasty_member = {
+						limit = {
+							is_alive = yes
+							is_house_head = yes
+							is_male = yes
+							exists = house
+							house = { NOT = { has_variable = tarr_house_tag } }
+						}
+						house = {
+							set_house_name = tarr_house_soundavara_erkawika
+							set_variable = { name = tarr_house_tag value = flag:soundavara_erkawika }
+						}
+						set_global_variable = { name = tarr_pin_33569509 value = yes }
+					}
+				}
+			}
+		}
+	}
+	# House 23369: Sheksna-Kholmogory -> Sheksna-Dwina (HRE noble family domicile c_qaraustyurt)
+	if = {
+		limit = { NOT = { has_global_variable = tarr_pin_23369 } }
+		title:h_roman_empire.holder ?= {
+			every_noble_family = {
+				limit = {
+					holder ?= {
+						is_alive = yes
+						exists = domicile
+						domicile.domicile_location.county ?= title:c_qaraustyurt
+						exists = house
+						house = { NOT = { has_variable = tarr_house_tag } }
+					}
+				}
+				holder ?= {
+					house = {
+						set_house_name = tarr_house_sheksna_dwina
+						set_variable = { name = tarr_house_tag value = flag:sheksna_dwina }
+					}
+					set_global_variable = { name = tarr_pin_23369 value = yes }
+				}
+			}
+		}
+	}
+	set_global_variable = { name = tarr_v2_collateral_fix_applied value = yes }
 }
