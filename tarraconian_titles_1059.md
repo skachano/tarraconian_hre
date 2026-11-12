@@ -2453,7 +2453,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Balkh** (`d_balkh`) $\rightarrow$ **Gubernat van Balch**
   * `c_balkh` (Balkh) $\rightarrow$ **Magistrat van Balch**
   * `c_west-tokharestan` (West-Tokharestan) $\rightarrow$ **Magistrat van West-Tocharistân** (`[1142 Historical: Magistrat van Samangân]`)
-  * `c_east-tokharestan` (East-Tokharestan) $\rightarrow$ **Magistrat van Ôst-Tocharistân** (`[1142 Historical: Magistrat van Walwalîdsch]`)
+  * `c_east-tokharestan` (East-Tokharestan) $\rightarrow$ **Magistrat van Ôst-Tocharistân** (`[1142 Historical: Magistrat van Walwalîtsch]`)
 * **Duchy of Nasa** (`d_nasa`) $\rightarrow$ **Gubernat van Nasâ**
   * `c_abivard` (**[HRE]** Abivard) $\rightarrow$ **Magistrat van Abiwârt**
   * `c_farava` (**[HRE]** Farava) $\rightarrow$ **Magistrat van Farâwe**
@@ -4535,7 +4535,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Arakan** (`d_arakan`) $\rightarrow$ **Gubernat van Arakân**
   * `c_ramu` (**[HRE]** Ramu) $\rightarrow$ **Magistrat van Ramu**
   * `c_sandoway` (**[HRE]** Sandoway) $\rightarrow$ **Magistrat van Sandôwei**
-  * `c_thabeik_taung` (**[HRE]** Thabeik Taung) $\rightarrow$ **Magistrat van Tabêik Taung**
+  * `c_thabeik_taung` (**[HRE]** Thabeik Taung) $\rightarrow$ **Magistrat van Tabêich Taung**
   * `c_vaisali` (**[HRE]** Vaiśālĩ) $\rightarrow$ **Magistrat van Waisâli**
 * **Duchy of Rāmaññadeśa** (`d_ramannadesa`) $\rightarrow$ **Gubernat van Râmanyadêsch**
   * `c_dagon` (**[HRE]** Dagon) $\rightarrow$ **Magistrat van Dagôn**
@@ -4645,7 +4645,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_chiang_khaeng` (**[HRE]** Chiang Khaeng) $\rightarrow$ **Magistrat van Tschjang Chêng**
   * `c_luang_prabang` (**[HRE]** Muang Sua) $\rightarrow$ **Magistrat van Muang Sue**
   * `c_nan_asia` (**[HRE]** Nan) $\rightarrow$ **Magistrat van Nan**
-  * `c_ngoenyang` (**[HRE]** Ngoenyang) $\rightarrow$ **Magistrat van Ngönjang**
+  * `c_ngoenyang` (**[HRE]** Ngoenyang) $\rightarrow$ **Magistrat van Ingönjang**
 * **Duchy of Sukhothai** (`d_sukhothai`) $\rightarrow$ **Gubernat van Suchôtai**
   * `c_chakangrao` (**[HRE]** Chakangrao) $\rightarrow$ **Magistrat van Tschakangrau**
   * `c_lampang` (**[HRE]** Lampang) $\rightarrow$ **Magistrat van Lampang**
@@ -4800,7 +4800,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_JAV_mataram` (**[HRE]** Mataram) $\rightarrow$ **Magistrat van Mataram**
 * **Duchy of Bali** (`d_IDO_bali`) $\rightarrow$ **Gubernat van Bali**
   * `c_IDO_bali` (**[HRE]** Bali) $\rightarrow$ **Magistrat van Bali**
-  * `c_IDO_lombok_and_sumbawa` (**[HRE]** Lombok and Sumbawa) $\rightarrow$ **Magistrat van Lombôk-Sumbâwe**
+  * `c_IDO_lombok_and_sumbawa` (**[HRE]** Lombok and Sumbawa) $\rightarrow$ **Magistrat van Lombôch-Sumbâwe**
   * `c_JAV_madura` (**[HRE]** Madura) $\rightarrow$ **Magistrat van Madûre**
 * **Duchy of Taruma** (`d_JAV_taruma`) $\rightarrow$ **Gubernat van Tarume**
   * `c_JAV_cimanuk` (**[HRE]** Cimanuk) $\rightarrow$ **Magistrat van Tschîmanuch**
@@ -5001,8 +5001,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_cakrakuta` ([Non-HRE] Cakrakuta) $\rightarrow$ **Magistrat van Tschakrakûte**
 * **Duchy of Puri** (`x_script_2975`) $\rightarrow$ **Gubernat van Puri**
   * `c_puri` ([Non-HRE] Puri) $\rightarrow$ **Magistrat van Puri**
-* **Duchy of Rayapura** (`x_script_5729`) $\rightarrow$ **Gubernat van Rajapure**
-  * `c_rayapura` ([Non-HRE] Rayapura) $\rightarrow$ **Magistrat van Rajapure**
+* **Duchy of Rayapura** (`x_script_5729`) $\rightarrow$ **Gubernat van Râdschapure**
+  * `c_rayapura` ([Non-HRE] Rayapura) $\rightarrow$ **Magistrat van Râdschapure**
 
 ---
 

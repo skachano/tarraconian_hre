@@ -2562,7 +2562,7 @@
 * **Duchy of Balkh** (`d_balkh`) — *3/3 in HRE*
   * **[HRE]** **Balkh** (`c_balkh`) — *Tarraconian: **Magistrat van Balch***
   * **[HRE]** **West-Tokharestan** (`c_west-tokharestan`) — *Tarraconian: **Magistrat van West-Tocharistân** (`[1142 Historical: Magistrat van Samangân]`)*
-  * **[HRE]** **East-Tokharestan** (`c_east-tokharestan`) — *Tarraconian: **Magistrat van Ôst-Tocharistân** (`[1142 Historical: Magistrat van Walwalîdsch]`)*
+  * **[HRE]** **East-Tokharestan** (`c_east-tokharestan`) — *Tarraconian: **Magistrat van Ôst-Tocharistân** (`[1142 Historical: Magistrat van Walwalîtsch]`)*
 * **Duchy of Nasa** (`d_nasa`) — *2/2 in HRE*
   * **[HRE]** **Abivard** (`c_abivard`) — *Tarraconian: **Magistrat van Abiwârt***
   * **[HRE]** **Farava** (`c_farava`) — *Tarraconian: **Magistrat van Farâwe***
@@ -4723,7 +4723,7 @@
 * **Duchy of Arakan** (`d_arakan`) — *4/4 in HRE*
   * **[HRE]** **Ramu** (`c_ramu`) — *Tarraconian: **Magistrat van Ramu***
   * **[HRE]** **Sandoway** (`c_sandoway`) — *Tarraconian: **Magistrat van Sandôwei***
-  * **[HRE]** **Thabeik Taung** (`c_thabeik_taung`) — *Tarraconian: **Magistrat van Tabêik Taung***
+  * **[HRE]** **Thabeik Taung** (`c_thabeik_taung`) — *Tarraconian: **Magistrat van Tabêich Taung***
   * **[HRE]** **Vaiśālĩ** (`c_vaisali`) — *Tarraconian: **Magistrat van Waisâli***
 * **Duchy of Rāmaññadeśa** (`d_ramannadesa`) — *4/4 in HRE*
   * **[HRE]** **Dagon** (`c_dagon`) — *Tarraconian: **Magistrat van Dagôn***
@@ -4836,7 +4836,7 @@
   * **[HRE]** **Chiang Khaeng** (`c_chiang_khaeng`) — *Tarraconian: **Magistrat van Tschjang Chêng***
   * **[HRE]** **Muang Sua** (`c_luang_prabang`) — *Tarraconian: **Magistrat van Muang Sue***
   * **[HRE]** **Nan** (`c_nan_asia`) — *Tarraconian: **Magistrat van Nan***
-  * **[HRE]** **Ngoenyang** (`c_ngoenyang`) — *Tarraconian: **Magistrat van Ngönjang***
+  * **[HRE]** **Ngoenyang** (`c_ngoenyang`) — *Tarraconian: **Magistrat van Ingönjang***
 * **Duchy of Sukhothai** (`d_sukhothai`) — *4/4 in HRE*
   * **[HRE]** **Chakangrao** (`c_chakangrao`) — *Tarraconian: **Magistrat van Tschakangrau***
   * **[HRE]** **Lampang** (`c_lampang`) — *Tarraconian: **Magistrat van Lampang***
@@ -4997,7 +4997,7 @@
   * **[HRE]** **Mataram** (`c_JAV_mataram`) — *Tarraconian: **Magistrat van Mataram***
 * **Duchy of Bali** (`d_IDO_bali`) — *3/3 in HRE*
   * **[HRE]** **Bali** (`c_IDO_bali`) — *Tarraconian: **Magistrat van Bali***
-  * **[HRE]** **Lombok and Sumbawa** (`c_IDO_lombok_and_sumbawa`) — *Tarraconian: **Magistrat van Lombôk-Sumbâwe***
+  * **[HRE]** **Lombok and Sumbawa** (`c_IDO_lombok_and_sumbawa`) — *Tarraconian: **Magistrat van Lombôch-Sumbâwe***
   * **[HRE]** **Madura** (`c_JAV_madura`) — *Tarraconian: **Magistrat van Madûre***
 * **Duchy of Taruma** (`d_JAV_taruma`) — *3/3 in HRE*
   * **[HRE]** **Cimanuk** (`c_JAV_cimanuk`) — *Tarraconian: **Magistrat van Tschîmanuch***
@@ -5209,7 +5209,7 @@
 * **Duchy of Puri** (`x_script_2975`) — *0/1 in HRE*
   * [Non-HRE] **Puri** (`c_puri`) — *Tarraconian: **Magistrat van Puri***
 * **Duchy of Rayapura** (`x_script_5729`) — *0/1 in HRE*
-  * [Non-HRE] **Rayapura** (`c_rayapura`) — *Tarraconian: **Magistrat van Rajapure***
+  * [Non-HRE] **Rayapura** (`c_rayapura`) — *Tarraconian: **Magistrat van Râdschapure***
 
 ---
 
