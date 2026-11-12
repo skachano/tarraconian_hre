@@ -4,5 +4,5 @@ tags={
 	"Culture"
 	"Historical"
 }
-name="Tarraconian Imperial Chancellery (1059-1154)"
+name="Tarraconian Imperial Chancellery (1059-1171)"
 supported_version="1.20.*"

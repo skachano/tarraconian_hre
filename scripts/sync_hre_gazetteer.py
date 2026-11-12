@@ -90,6 +90,20 @@ def sync_hre_gazetteer(repo_dir=None):
                 new_line = new_line.replace(old_target, new_target, 1)
                 print(f"[Sync] Updated {key} title: '{current_name}' -> '{expected}'")
                 changes += 1
+        else:
+            # County line lacking Tarraconian annotation (e.g. newly added kingdoms/counties)
+            m_plain = re.match(r'^(\s*\*\s*(?:\*\*\[HRE\]\*\*|\[Non-HRE\])\s*.*?\(`(c_[a-zA-Z0-9_\-]+)`\))\s*$', new_line)
+            if m_plain:
+                key = m_plain.group(2)
+                if key in canonical_names:
+                    expected = canonical_names[key]
+                    new_line = (
+                        f"{m_plain.group(1)} — *Tarraconian: **{expected}** (`[{canonical_hists[key]}]`)*"
+                        if key in canonical_hists
+                        else f"{m_plain.group(1)} — *Tarraconian: **{expected}***"
+                    )
+                    print(f"[Sync] Annotated {key}: '{expected}'")
+                    changes += 1
 
         # 2. Match historical note pattern in HRE gazetteer:
         m_h = re.search(r'`([a-zA-Z0-9_\-]+)`.*?\[((?:\d{4}\s+)?(?:Historical|Slavic-Root):[^\]]+)\]', new_line)

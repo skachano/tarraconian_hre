@@ -158,6 +158,32 @@ tarr_apply_static_titles_effect = {
 	title:k_tsang ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_tsang HIST = cn_tarr_k_tsang } }
 	title:k_jenne ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_jenne HIST = cn_tarr_k_jenne } }
 	title:k_shiwei ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_shiwei HIST = cn_tarr_k_shiwei } }
+	title:k_pagan ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_pagan HIST = cn_tarr_k_pagan } }
+	title:k_malayadvipa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_malayadvipa HIST = cn_tarr_k_malayadvipa } }
+	title:k_tanjungnagara ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_tanjungnagara HIST = cn_tarr_k_tanjungnagara } }
+	title:k_dvaravati ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_dvaravati HIST = cn_tarr_k_dvaravati } }
+	title:k_bihar ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_bihar HIST = cn_tarr_k_bihar } }
+	title:k_kabisay-an ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_kabisay-an HIST = cn_tarr_k_kabisay-an } }
+	title:k_sulawesi ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_sulawesi HIST = cn_tarr_k_sulawesi } }
+	title:k_lusung ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_lusung HIST = cn_tarr_k_lusung } }
+	title:k_hujung_medini ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_hujung_medini HIST = cn_tarr_k_hujung_medini } }
+	title:k_yavakadvipa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_yavakadvipa HIST = cn_tarr_k_yavakadvipa } }
+	title:k_maluku ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_maluku HIST = cn_tarr_k_maluku } }
+	title:k_tamilakam ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_tamilakam HIST = cn_tarr_k_tamilakam } }
+	title:k_bengal ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_bengal HIST = cn_tarr_k_bengal } }
+	title:k_lanka ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_lanka HIST = cn_tarr_k_lanka } }
+	title:k_kamarupa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_kamarupa HIST = cn_tarr_k_kamarupa } }
+	title:k_karnata ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_karnata HIST = cn_tarr_k_karnata } }
+	title:k_chenla ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_chenla HIST = cn_tarr_k_chenla } }
+	title:k_telingana ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_telingana HIST = cn_tarr_k_telingana } }
+	title:k_liuqiu ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_liuqiu HIST = cn_tarr_k_liuqiu } }
+	title:k_orissa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_orissa HIST = cn_tarr_k_orissa } }
+	title:k_andhra ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_andhra HIST = cn_tarr_k_andhra } }
+	title:k_funan ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_funan HIST = cn_tarr_k_funan } }
+	title:k_maharastra ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_maharastra HIST = cn_tarr_k_maharastra } }
+	title:k_champa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_champa HIST = cn_tarr_k_champa } }
+	title:k_gondwana ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_gondwana HIST = cn_tarr_k_gondwana } }
+	title:k_ruucuu ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_ruucuu HIST = cn_tarr_k_ruucuu } }
 	title:d_bedford ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_bedford HIST = cn_tarr_d_bedford } }
 	title:c_middlesex ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_middlesex HIST = cn_tarr_c_middlesex } }
 	title:c_essex ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_essex HIST = cn_tarr_c_essex } }
@@ -722,10 +748,6 @@ tarr_apply_static_titles_effect = {
 	title:c_chornobyl ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chornobyl HIST = cn_tarr_c_chornobyl } }
 	title:c_ushytsia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ushytsia HIST = cn_tarr_hist_c_ushytsia } }
 	title:c_korsun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_korsun HIST = cn_tarr_c_korsun } }
-	title:d_turov ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_turov HIST = cn_tarr_d_turov } }
-	title:c_turov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_turov HIST = cn_tarr_c_turov } }
-	title:c_korosten ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_korosten HIST = cn_tarr_c_korosten } }
-	title:c_dubrovytsia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dubrovytsia HIST = cn_tarr_c_dubrovytsia } }
 	title:d_pereyaslavl ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_pereyaslavl HIST = cn_tarr_d_pereyaslavl } }
 	title:c_pereyaslavl ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pereyaslavl HIST = cn_tarr_c_pereyaslavl } }
 	title:c_hradyzk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hradyzk HIST = cn_tarr_hist_c_hradyzk } }
@@ -742,7 +764,6 @@ tarr_apply_static_titles_effect = {
 	title:c_sevsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sevsk HIST = cn_tarr_c_sevsk } }
 	title:d_novosil ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_novosil HIST = cn_tarr_d_novosil } }
 	title:c_novosil ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_novosil HIST = cn_tarr_c_novosil } }
-	title:c_chernigov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chernigov HIST = cn_tarr_c_chernigov } }
 	title:c_odoyev ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_odoyev HIST = cn_tarr_c_odoyev } }
 	title:d_novgorod ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_novgorod HIST = cn_tarr_d_novgorod } }
 	title:c_novgorod ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_novgorod HIST = cn_tarr_c_novgorod } }
@@ -780,6 +801,11 @@ tarr_apply_static_titles_effect = {
 	title:c_roslavl ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_roslavl HIST = cn_tarr_hist_c_roslavl } }
 	title:c_mozhaysk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mozhaysk HIST = cn_tarr_c_mozhaysk } }
 	title:c_toropets ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_toropets HIST = cn_tarr_c_toropets } }
+	title:d_turov ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_turov HIST = cn_tarr_d_turov } }
+	title:c_turov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_turov HIST = cn_tarr_c_turov } }
+	title:c_korosten ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_korosten HIST = cn_tarr_c_korosten } }
+	title:c_dubrovytsia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dubrovytsia HIST = cn_tarr_c_dubrovytsia } }
+	title:c_chernigov ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chernigov HIST = cn_tarr_c_chernigov } }
 	title:d_muntenia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_muntenia HIST = cn_tarr_d_muntenia } }
 	title:c_giurgiu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_giurgiu HIST = cn_tarr_hist_c_giurgiu } }
 	title:c_bucuresti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bucuresti HIST = cn_tarr_c_bucuresti } }
@@ -1567,17 +1593,9 @@ tarr_apply_static_titles_effect = {
 	title:c_yoshkar-ola ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_yoshkar-ola HIST = cn_tarr_c_yoshkar-ola } }
 	title:c_mari-turek ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mari-turek HIST = cn_tarr_c_mari-turek } }
 	title:c_elabuga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_elabuga HIST = cn_tarr_c_elabuga } }
-	title:d_jalmat ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_jalmat HIST = cn_tarr_d_jalmat } }
-	title:c_jalmat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_jalmat HIST = cn_tarr_c_jalmat } }
-	title:c_belebey ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_belebey HIST = cn_tarr_c_belebey } }
-	title:c_siun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_siun HIST = cn_tarr_c_siun } }
 	title:d_martyuba ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_martyuba HIST = cn_tarr_d_martyuba } }
 	title:c_martyuba ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_martyuba HIST = cn_tarr_c_martyuba } }
 	title:c_cykma ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_cykma HIST = cn_tarr_c_cykma } }
-	title:d_ural ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ural HIST = cn_tarr_d_ural } }
-	title:c_ural ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ural HIST = cn_tarr_c_ural } }
-	title:c_votkinsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_votkinsk HIST = cn_tarr_hist_c_votkinsk } }
-	title:c_kerken ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kerken HIST = cn_tarr_c_kerken } }
 	title:d_udmurtia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_udmurtia HIST = cn_tarr_d_udmurtia } }
 	title:c_kargadan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kargadan HIST = cn_tarr_c_kargadan } }
 	title:c_palniki ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_palniki HIST = cn_tarr_c_palniki } }
@@ -1669,7 +1687,6 @@ tarr_apply_static_titles_effect = {
 	title:c_el_fasher ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_el_fasher HIST = cn_tarr_hist_c_el_fasher } }
 	title:c_dar_al-said ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dar_al-said HIST = cn_tarr_c_dar_al-said } }
 	title:c_dar-al-rih ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dar-al-rih HIST = cn_tarr_c_dar-al-rih } }
-	title:c_east_darfur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_east_darfur HIST = cn_tarr_c_east_darfur } }
 	title:d_west_darfur ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_west_darfur HIST = cn_tarr_d_west_darfur } }
 	title:c_ayn_farah ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ayn_farah HIST = cn_tarr_c_ayn_farah } }
 	title:c_qimr ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_qimr HIST = cn_tarr_c_qimr } }
@@ -1685,6 +1702,7 @@ tarr_apply_static_titles_effect = {
 	title:c_kordofan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kordofan HIST = cn_tarr_c_kordofan } }
 	title:c_west_kordofan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_west_kordofan HIST = cn_tarr_c_west_kordofan } }
 	title:c_south_kordofan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_south_kordofan HIST = cn_tarr_c_south_kordofan } }
+	title:c_east_darfur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_east_darfur HIST = cn_tarr_c_east_darfur } }
 	title:d_alwa ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_alwa HIST = cn_tarr_d_alwa } }
 	title:c_alodia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_alodia HIST = cn_tarr_hist_c_alodia } }
 	title:c_naga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_naga HIST = cn_tarr_c_naga } }
@@ -1852,6 +1870,14 @@ tarr_apply_static_titles_effect = {
 	title:c_yekaterinburg ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_yekaterinburg HIST = cn_tarr_hist_c_yekaterinburg } }
 	title:c_chadrinsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chadrinsk HIST = cn_tarr_hist_c_chadrinsk } }
 	title:c_chelabinsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chelabinsk HIST = cn_tarr_hist_c_chelabinsk } }
+	title:d_jalmat ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_jalmat HIST = cn_tarr_d_jalmat } }
+	title:c_jalmat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_jalmat HIST = cn_tarr_c_jalmat } }
+	title:c_belebey ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_belebey HIST = cn_tarr_c_belebey } }
+	title:c_siun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_siun HIST = cn_tarr_c_siun } }
+	title:d_ural ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ural HIST = cn_tarr_d_ural } }
+	title:c_ural ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ural HIST = cn_tarr_c_ural } }
+	title:c_votkinsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_votkinsk HIST = cn_tarr_hist_c_votkinsk } }
+	title:c_kerken ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kerken HIST = cn_tarr_c_kerken } }
 	title:d_soghd ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_soghd HIST = cn_tarr_d_soghd } }
 	title:c_bukhara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bukhara HIST = cn_tarr_c_bukhara } }
 	title:c_kishsh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kishsh HIST = cn_tarr_c_kishsh } }
@@ -3037,6 +3063,10 @@ tarr_apply_static_titles_effect = {
 	title:d_uda_valley ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_uda_valley HIST = cn_tarr_d_uda_valley } }
 	title:c_chikoy ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chikoy HIST = cn_tarr_c_chikoy } }
 	title:c_ulan_ude ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ulan_ude HIST = cn_tarr_c_ulan_ude } }
+	title:d_chuna_valley ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_chuna_valley HIST = cn_tarr_d_chuna_valley } }
+	title:c_bratsk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bratsk HIST = cn_tarr_c_bratsk } }
+	title:c_tulun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tulun HIST = cn_tarr_c_tulun } }
+	title:c_chuna ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chuna HIST = cn_tarr_c_chuna } }
 	title:d_betpa ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_betpa HIST = cn_tarr_d_betpa } }
 	title:c_betpa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_betpa HIST = cn_tarr_c_betpa } }
 	title:c_bulat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bulat HIST = cn_tarr_c_bulat } }
@@ -3604,6 +3634,449 @@ tarr_apply_static_titles_effect = {
 	title:c_SW_heiheguo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SW_heiheguo HIST = cn_tarr_c_SW_heiheguo } }
 	title:c_SW_lingxiguo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SW_lingxiguo HIST = cn_tarr_c_SW_lingxiguo } }
 	title:c_SW_powoguo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SW_powoguo HIST = cn_tarr_c_SW_powoguo } }
+	title:d_tengchong ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tengchong HIST = cn_tarr_d_tengchong } }
+	title:c_momauk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_momauk HIST = cn_tarr_c_momauk } }
+	title:c_monyin ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_monyin HIST = cn_tarr_c_monyin } }
+	title:c_myitkyina ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_myitkyina HIST = cn_tarr_c_myitkyina } }
+	title:c_nandian ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nandian HIST = cn_tarr_c_nandian } }
+	title:c_putao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_putao HIST = cn_tarr_c_putao } }
+	title:d_pagan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_pagan HIST = cn_tarr_d_pagan } }
+	title:c_ava ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ava HIST = cn_tarr_hist_c_ava } }
+	title:c_minbu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_minbu HIST = cn_tarr_c_minbu } }
+	title:c_pagan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pagan HIST = cn_tarr_c_pagan } }
+	title:c_sagaing ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sagaing HIST = cn_tarr_c_sagaing } }
+	title:c_yamethin ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_yamethin HIST = cn_tarr_c_yamethin } }
+	title:d_arakan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_arakan HIST = cn_tarr_d_arakan } }
+	title:c_ramu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ramu HIST = cn_tarr_c_ramu } }
+	title:c_sandoway ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sandoway HIST = cn_tarr_c_sandoway } }
+	title:c_thabeik_taung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_thabeik_taung HIST = cn_tarr_c_thabeik_taung } }
+	title:c_vaisali ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vaisali HIST = cn_tarr_c_vaisali } }
+	title:d_ramannadesa ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ramannadesa HIST = cn_tarr_d_ramannadesa } }
+	title:c_dagon ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dagon HIST = cn_tarr_c_dagon } }
+	title:c_kusumi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kusumi HIST = cn_tarr_c_kusumi } }
+	title:c_sittaung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sittaung HIST = cn_tarr_c_sittaung } }
+	title:c_thaton ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_thaton HIST = cn_tarr_c_thaton } }
+	title:d_tagaung ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tagaung HIST = cn_tarr_d_tagaung } }
+	title:c_hanlan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hanlan HIST = cn_tarr_c_hanlan } }
+	title:c_kale ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kale HIST = cn_tarr_c_kale } }
+	title:c_madaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_madaya HIST = cn_tarr_c_madaya } }
+	title:c_takon ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_takon HIST = cn_tarr_c_takon } }
+	title:d_sriksetra ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_sriksetra HIST = cn_tarr_d_sriksetra } }
+	title:c_hinthada ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hinthada HIST = cn_tarr_c_hinthada } }
+	title:c_magwe ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_magwe HIST = cn_tarr_c_magwe } }
+	title:c_toungoo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_toungoo HIST = cn_tarr_hist_c_toungoo } }
+	title:c_sriksetra ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sriksetra HIST = cn_tarr_c_sriksetra } }
+	title:d_mongnai ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_mongnai HIST = cn_tarr_d_mongnai } }
+	title:c_hsenwi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hsenwi HIST = cn_tarr_c_hsenwi } }
+	title:c_mongnai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mongnai HIST = cn_tarr_c_mongnai } }
+	title:c_nyaungshwe ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nyaungshwe HIST = cn_tarr_c_nyaungshwe } }
+	title:d_yongchang ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_yongchang HIST = cn_tarr_d_yongchang } }
+	title:c_yongchang_jingmadian ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_yongchang_jingmadian HIST = cn_tarr_c_yongchang_jingmadian } }
+	title:c_moeng_laem ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_moeng_laem HIST = cn_tarr_c_moeng_laem } }
+	title:c_yongchang_yongchang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_yongchang_yongchang HIST = cn_tarr_c_yongchang_yongchang } }
+	title:c_kyaukse ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kyaukse HIST = cn_tarr_c_kyaukse } }
+	title:c_pegu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pegu HIST = cn_tarr_c_pegu } }
+	title:d_SUM_jambi ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SUM_jambi HIST = cn_tarr_d_SUM_jambi } }
+	title:c_SUM_dharmasraya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_dharmasraya HIST = cn_tarr_c_SUM_dharmasraya } }
+	title:c_SUM_indragiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_indragiri HIST = cn_tarr_c_SUM_indragiri } }
+	title:c_SUM_jambi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_jambi HIST = cn_tarr_c_SUM_jambi } }
+	title:c_SUM_karang_brahi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_karang_brahi HIST = cn_tarr_c_SUM_karang_brahi } }
+	title:c_SUM_lingga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_lingga HIST = cn_tarr_c_SUM_lingga } }
+	title:d_SUM_palembang ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SUM_palembang HIST = cn_tarr_d_SUM_palembang } }
+	title:c_SUM_bangka-belitung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_bangka-belitung HIST = cn_tarr_c_SUM_bangka-belitung } }
+	title:c_SUM_east_sumatra ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_east_sumatra HIST = cn_tarr_hist_c_SUM_east_sumatra } }
+	title:c_SUM_lampung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_lampung HIST = cn_tarr_c_SUM_lampung } }
+	title:c_SUM_palembang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_palembang HIST = cn_tarr_c_SUM_palembang } }
+	title:c_SUM_pasemah ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_pasemah HIST = cn_tarr_c_SUM_pasemah } }
+	title:d_SUM_riau ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SUM_riau HIST = cn_tarr_d_SUM_riau } }
+	title:c_SUM_kampar ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_kampar HIST = cn_tarr_c_SUM_kampar } }
+	title:c_SUM_meranti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_meranti HIST = cn_tarr_c_SUM_meranti } }
+	title:c_SUM_muara_takus ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_muara_takus HIST = cn_tarr_c_SUM_muara_takus } }
+	title:c_SUM_pekanbaru ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_pekanbaru HIST = cn_tarr_hist_c_SUM_pekanbaru } }
+	title:c_SUM_rokan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_rokan HIST = cn_tarr_c_SUM_rokan } }
+	title:d_SUM_aceh ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SUM_aceh HIST = cn_tarr_d_SUM_aceh } }
+	title:c_SUM_lambri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_lambri HIST = cn_tarr_c_SUM_lambri } }
+	title:c_SUM_panai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_panai HIST = cn_tarr_c_SUM_panai } }
+	title:c_SUM_perlak ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_perlak HIST = cn_tarr_c_SUM_perlak } }
+	title:d_SUM_minangkabau ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SUM_minangkabau HIST = cn_tarr_d_SUM_minangkabau } }
+	title:c_SUM_bengkulu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_bengkulu HIST = cn_tarr_c_SUM_bengkulu } }
+	title:c_SUM_minangkabau ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_minangkabau HIST = cn_tarr_c_SUM_minangkabau } }
+	title:c_SUM_riak_nan_berbedur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_riak_nan_berbedur HIST = cn_tarr_c_SUM_riak_nan_berbedur } }
+	title:c_SUM_barus ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SUM_barus HIST = cn_tarr_c_SUM_barus } }
+	title:d_handumans ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_handumans HIST = cn_tarr_d_handumans } }
+	title:c_andamans ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_andamans HIST = cn_tarr_c_andamans } }
+	title:c_mentawai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mentawai HIST = cn_tarr_c_mentawai } }
+	title:c_nakkavaram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nakkavaram HIST = cn_tarr_c_nakkavaram } }
+	title:d_nias ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_nias HIST = cn_tarr_d_nias } }
+	title:c_nias ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nias HIST = cn_tarr_c_nias } }
+	title:d_BOR_barune ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_BOR_barune HIST = cn_tarr_d_BOR_barune } }
+	title:c_BOR_brunei ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_brunei HIST = cn_tarr_c_BOR_brunei } }
+	title:c_BOR_kudat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_kudat HIST = cn_tarr_hist_c_BOR_kudat } }
+	title:c_BOR_lahad_datu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_lahad_datu HIST = cn_tarr_hist_c_BOR_lahad_datu } }
+	title:c_BOR_menjelutung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_menjelutung HIST = cn_tarr_c_BOR_menjelutung } }
+	title:c_BOR_nabawan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_nabawan HIST = cn_tarr_c_BOR_nabawan } }
+	title:d_BOR_kutai ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_BOR_kutai HIST = cn_tarr_d_BOR_kutai } }
+	title:c_BOR_berau ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_berau HIST = cn_tarr_c_BOR_berau } }
+	title:c_BOR_kutai_jauh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_kutai_jauh HIST = cn_tarr_c_BOR_kutai_jauh } }
+	title:c_BOR_kutai_utara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_kutai_utara HIST = cn_tarr_c_BOR_kutai_utara } }
+	title:c_BOR_martapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_martapura HIST = cn_tarr_c_BOR_martapura } }
+	title:d_BOR_nan_sarunai ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_BOR_nan_sarunai HIST = cn_tarr_d_BOR_nan_sarunai } }
+	title:c_BOR_banjar ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_banjar HIST = cn_tarr_c_BOR_banjar } }
+	title:c_BOR_sampit ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_sampit HIST = cn_tarr_c_BOR_sampit } }
+	title:c_BOR_tabalung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_tabalung HIST = cn_tarr_c_BOR_tabalung } }
+	title:c_BOR_taiao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_taiao HIST = cn_tarr_c_BOR_taiao } }
+	title:d_BOR_santubong ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_BOR_santubong HIST = cn_tarr_d_BOR_santubong } }
+	title:c_BOR_iban ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_iban HIST = cn_tarr_c_BOR_iban } }
+	title:c_BOR_rajang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_rajang HIST = cn_tarr_c_BOR_rajang } }
+	title:c_BOR_santubong ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_santubong HIST = cn_tarr_c_BOR_santubong } }
+	title:c_BOR_tanah_taman ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_tanah_taman HIST = cn_tarr_c_BOR_tanah_taman } }
+	title:d_BOR_tanjungpura ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_BOR_tanjungpura HIST = cn_tarr_d_BOR_tanjungpura } }
+	title:c_BOR_sambas ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_sambas HIST = cn_tarr_c_BOR_sambas } }
+	title:c_BOR_sintang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_sintang HIST = cn_tarr_c_BOR_sintang } }
+	title:c_BOR_sukadana ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_sukadana HIST = cn_tarr_c_BOR_sukadana } }
+	title:c_BOR_waringin ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_BOR_waringin HIST = cn_tarr_c_BOR_waringin } }
+	title:d_muang_sua ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_muang_sua HIST = cn_tarr_d_muang_sua } }
+	title:c_chiang_khaeng ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chiang_khaeng HIST = cn_tarr_c_chiang_khaeng } }
+	title:c_luang_prabang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_luang_prabang HIST = cn_tarr_c_luang_prabang } }
+	title:c_nan_asia ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nan_asia HIST = cn_tarr_c_nan_asia } }
+	title:c_ngoenyang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ngoenyang HIST = cn_tarr_c_ngoenyang } }
+	title:d_sukhothai ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_sukhothai HIST = cn_tarr_d_sukhothai } }
+	title:c_chakangrao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chakangrao HIST = cn_tarr_c_chakangrao } }
+	title:c_lampang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lampang HIST = cn_tarr_c_lampang } }
+	title:c_phetchabun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_phetchabun HIST = cn_tarr_c_phetchabun } }
+	title:c_sukhothai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sukhothai HIST = cn_tarr_c_sukhothai } }
+	title:d_haripunjaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_haripunjaya HIST = cn_tarr_d_haripunjaya } }
+	title:c_haripunjaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_haripunjaya HIST = cn_tarr_c_haripunjaya } }
+	title:c_hlaingbwe ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hlaingbwe HIST = cn_tarr_c_hlaingbwe } }
+	title:c_mae_hong_son ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mae_hong_son HIST = cn_tarr_c_mae_hong_son } }
+	title:d_lop_buri ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_lop_buri HIST = cn_tarr_d_lop_buri } }
+	title:c_khu_bua ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_khu_bua HIST = cn_tarr_c_khu_bua } }
+	title:c_lop_buri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lop_buri HIST = cn_tarr_c_lop_buri } }
+	title:c_nakhon_pathom ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nakhon_pathom HIST = cn_tarr_c_nakhon_pathom } }
+	title:d_tun_sun ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tun_sun HIST = cn_tarr_d_tun_sun } }
+	title:c_THAI_phetchaburi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_THAI_phetchaburi HIST = cn_tarr_c_THAI_phetchaburi } }
+	title:c_THAI_tenasserim ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_THAI_tenasserim HIST = cn_tarr_c_THAI_tenasserim } }
+	title:c_thanbyuzayat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_thanbyuzayat HIST = cn_tarr_hist_c_thanbyuzayat } }
+	title:d_sipsongpanna ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_sipsongpanna HIST = cn_tarr_d_sipsongpanna } }
+	title:c_chiang_rung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chiang_rung HIST = cn_tarr_c_chiang_rung } }
+	title:c_moeng_long ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_moeng_long HIST = cn_tarr_c_moeng_long } }
+	title:d_gauda ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_gauda HIST = cn_tarr_d_gauda } }
+	title:c_gauda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gauda HIST = cn_tarr_c_gauda } }
+	title:c_kotivarsa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kotivarsa HIST = cn_tarr_c_kotivarsa } }
+	title:c_laksmanavati ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_laksmanavati HIST = cn_tarr_hist_c_laksmanavati } }
+	title:c_radha ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_radha HIST = cn_tarr_c_radha } }
+	title:d_tirabhukti ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tirabhukti HIST = cn_tarr_d_tirabhukti } }
+	title:c_bangaon ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bangaon HIST = cn_tarr_c_bangaon } }
+	title:c_mithila ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mithila HIST = cn_tarr_c_mithila } }
+	title:c_simaramapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_simaramapura HIST = cn_tarr_c_simaramapura } }
+	title:c_kusinagara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kusinagara HIST = cn_tarr_c_kusinagara } }
+	title:d_suhma ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_suhma HIST = cn_tarr_d_suhma } }
+	title:c_mallabhum ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mallabhum HIST = cn_tarr_c_mallabhum } }
+	title:c_midnapore ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_midnapore HIST = cn_tarr_hist_c_midnapore } }
+	title:c_tamralipti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tamralipti HIST = cn_tarr_c_tamralipti } }
+	title:d_varendra ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_varendra HIST = cn_tarr_d_varendra } }
+	title:c_madhupur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_madhupur HIST = cn_tarr_c_madhupur } }
+	title:c_pundravardhana ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pundravardhana HIST = cn_tarr_c_pundravardhana } }
+	title:c_suvarnagram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_suvarnagram HIST = cn_tarr_c_suvarnagram } }
+	title:d_magadha ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_magadha HIST = cn_tarr_d_magadha } }
+	title:c_magadha ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_magadha HIST = cn_tarr_c_magadha } }
+	title:c_mudgagiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mudgagiri HIST = cn_tarr_c_mudgagiri } }
+	title:c_gaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gaya HIST = cn_tarr_c_gaya } }
+	title:c_sasaram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sasaram HIST = cn_tarr_c_sasaram } }
+	title:d_jharkand ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_jharkand HIST = cn_tarr_d_jharkand } }
+	title:c_rajrappa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_rajrappa HIST = cn_tarr_c_rajrappa } }
+	title:c_damin_i_koh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_damin_i_koh HIST = cn_tarr_hist_c_damin_i_koh } }
+	title:c_jharkand ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_jharkand HIST = cn_tarr_c_jharkand } }
+	title:c_rothas ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_rothas HIST = cn_tarr_c_rothas } }
+	title:c_munda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_munda HIST = cn_tarr_c_munda } }
+	title:d_PHI_visayas ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_visayas HIST = cn_tarr_d_PHI_visayas } }
+	title:c_PHI_bool_and_cebu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_bool_and_cebu HIST = cn_tarr_c_PHI_bool_and_cebu } }
+	title:c_PHI_buglas ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_buglas HIST = cn_tarr_c_PHI_buglas } }
+	title:c_PHI_panay ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_panay HIST = cn_tarr_c_PHI_panay } }
+	title:c_PHI_samar ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_samar HIST = cn_tarr_c_PHI_samar } }
+	title:c_PHI_tandaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_tandaya HIST = cn_tarr_c_PHI_tandaya } }
+	title:d_PHI_butuan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_butuan HIST = cn_tarr_d_PHI_butuan } }
+	title:c_PHI_butuan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_butuan HIST = cn_tarr_c_PHI_butuan } }
+	title:c_PHI_calagan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_calagan HIST = cn_tarr_c_PHI_calagan } }
+	title:c_PHI_mandaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_mandaya HIST = cn_tarr_c_PHI_mandaya } }
+	title:c_PHI_sarangani ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_sarangani HIST = cn_tarr_c_PHI_sarangani } }
+	title:d_PHI_maguindanao ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_maguindanao HIST = cn_tarr_d_PHI_maguindanao } }
+	title:c_PHI_cotabato ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_cotabato HIST = cn_tarr_c_PHI_cotabato } }
+	title:c_PHI_lanao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_lanao HIST = cn_tarr_c_PHI_lanao } }
+	title:c_PHI_maguindanao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_maguindanao HIST = cn_tarr_c_PHI_maguindanao } }
+	title:c_PHI_sulu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_sulu HIST = cn_tarr_c_PHI_sulu } }
+	title:c_PHI_zamboanga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_zamboanga HIST = cn_tarr_c_PHI_zamboanga } }
+	title:d_SuMa_konawe ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_konawe HIST = cn_tarr_d_SuMa_konawe } }
+	title:c_SuMa_butun ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_butun HIST = cn_tarr_c_SuMa_butun } }
+	title:c_SuMa_konawe ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_konawe HIST = cn_tarr_c_SuMa_konawe } }
+	title:c_SuMa_moronene ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_moronene HIST = cn_tarr_c_SuMa_moronene } }
+	title:c_SuMa_tamboeko ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_tamboeko HIST = cn_tarr_c_SuMa_tamboeko } }
+	title:d_SuMa_luwu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_luwu HIST = cn_tarr_d_SuMa_luwu } }
+	title:c_SuMa_ajatappareng ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_ajatappareng HIST = cn_tarr_c_SuMa_ajatappareng } }
+	title:c_SuMa_sampaga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_sampaga HIST = cn_tarr_c_SuMa_sampaga } }
+	title:c_SuMa_siang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_siang HIST = cn_tarr_c_SuMa_siang } }
+	title:d_SuMa_minahasa ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_minahasa HIST = cn_tarr_d_SuMa_minahasa } }
+	title:c_SuMa_banawa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_banawa HIST = cn_tarr_c_SuMa_banawa } }
+	title:c_SuMa_gorontalo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_gorontalo HIST = cn_tarr_c_SuMa_gorontalo } }
+	title:c_SuMa_wenang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_wenang HIST = cn_tarr_c_SuMa_wenang } }
+	title:d_SuMa_tompotika ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_tompotika HIST = cn_tarr_d_SuMa_tompotika } }
+	title:c_SuMa_banggai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_banggai HIST = cn_tarr_c_SuMa_banggai } }
+	title:c_SuMa_banggai_utara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_banggai_utara HIST = cn_tarr_c_SuMa_banggai_utara } }
+	title:c_SuMa_mori ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_mori HIST = cn_tarr_c_SuMa_mori } }
+	title:c_SuMa_luwu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_luwu HIST = cn_tarr_c_SuMa_luwu } }
+	title:d_PHI_tondo ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_tondo HIST = cn_tarr_d_PHI_tondo } }
+	title:c_PHI_ibalong ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_ibalong HIST = cn_tarr_c_PHI_ibalong } }
+	title:c_PHI_kalilayan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_kalilayan HIST = cn_tarr_c_PHI_kalilayan } }
+	title:c_PHI_ma-i ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_ma-i HIST = cn_tarr_c_PHI_ma-i } }
+	title:c_PHI_masbate ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_masbate HIST = cn_tarr_c_PHI_masbate } }
+	title:c_PHI_tondo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_tondo HIST = cn_tarr_c_PHI_tondo } }
+	title:d_PHI_ilocana ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_ilocana HIST = cn_tarr_d_PHI_ilocana } }
+	title:c_PHI_igorot ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_igorot HIST = cn_tarr_c_PHI_igorot } }
+	title:c_PHI_ivatan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_ivatan HIST = cn_tarr_c_PHI_ivatan } }
+	title:c_PHI_pangasinan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_pangasinan HIST = cn_tarr_c_PHI_pangasinan } }
+	title:c_PHI_samtoy ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_samtoy HIST = cn_tarr_c_PHI_samtoy } }
+	title:d_PHI_cagayan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_cagayan HIST = cn_tarr_d_PHI_cagayan } }
+	title:c_PHI_cagayan_valley ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_cagayan_valley HIST = cn_tarr_c_PHI_cagayan_valley } }
+	title:c_PHI_kasiguranin ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_kasiguranin HIST = cn_tarr_c_PHI_kasiguranin } }
+	title:d_PHI_sandao ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_PHI_sandao HIST = cn_tarr_d_PHI_sandao } }
+	title:c_PHI_south_palawan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_south_palawan HIST = cn_tarr_c_PHI_south_palawan } }
+	title:c_PHI_taytay ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_PHI_taytay HIST = cn_tarr_c_PHI_taytay } }
+	title:d_MAL_pahang ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_MAL_pahang HIST = cn_tarr_d_MAL_pahang } }
+	title:c_MAL_gangganegara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_gangganegara HIST = cn_tarr_c_MAL_gangganegara } }
+	title:c_MAL_gelanggi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_gelanggi HIST = cn_tarr_c_MAL_gelanggi } }
+	title:c_MAL_johor ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_johor HIST = cn_tarr_hist_c_MAL_johor } }
+	title:c_MAL_pahang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_pahang HIST = cn_tarr_c_MAL_pahang } }
+	title:c_riau ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_riau HIST = cn_tarr_c_riau } }
+	title:c_MAL_semantan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_semantan HIST = cn_tarr_c_MAL_semantan } }
+	title:d_MAL_langkasuka ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_MAL_langkasuka HIST = cn_tarr_d_MAL_langkasuka } }
+	title:c_MAL_kedah ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_kedah HIST = cn_tarr_c_MAL_kedah } }
+	title:c_MAL_kelantan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_kelantan HIST = cn_tarr_c_MAL_kelantan } }
+	title:c_MAL_patani ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_MAL_patani HIST = cn_tarr_c_MAL_patani } }
+	title:c_THAI_takua_pa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_THAI_takua_pa HIST = cn_tarr_c_THAI_takua_pa } }
+	title:c_THAI_tambralinga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_THAI_tambralinga HIST = cn_tarr_c_THAI_tambralinga } }
+	title:d_JAV_mataram ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_JAV_mataram HIST = cn_tarr_d_JAV_mataram } }
+	title:c_JAV_janggala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_janggala HIST = cn_tarr_c_JAV_janggala } }
+	title:c_JAV_kalingga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_kalingga HIST = cn_tarr_c_JAV_kalingga } }
+	title:c_JAV_lumajang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_lumajang HIST = cn_tarr_c_JAV_lumajang } }
+	title:c_JAV_mataram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_mataram HIST = cn_tarr_c_JAV_mataram } }
+	title:d_IDO_bali ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_IDO_bali HIST = cn_tarr_d_IDO_bali } }
+	title:c_IDO_bali ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_bali HIST = cn_tarr_c_IDO_bali } }
+	title:c_IDO_lombok_and_sumbawa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_lombok_and_sumbawa HIST = cn_tarr_c_IDO_lombok_and_sumbawa } }
+	title:c_JAV_madura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_madura HIST = cn_tarr_c_JAV_madura } }
+	title:d_JAV_taruma ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_JAV_taruma HIST = cn_tarr_d_JAV_taruma } }
+	title:c_JAV_cimanuk ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_cimanuk HIST = cn_tarr_c_JAV_cimanuk } }
+	title:c_JAV_galuh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_galuh HIST = cn_tarr_c_JAV_galuh } }
+	title:c_JAV_sunda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_JAV_sunda HIST = cn_tarr_c_JAV_sunda } }
+	title:d_IDO_lesser_sunda ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_IDO_lesser_sunda HIST = cn_tarr_d_IDO_lesser_sunda } }
+	title:c_IDO_galiyao ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_galiyao HIST = cn_tarr_c_IDO_galiyao } }
+	title:c_IDO_humba ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_humba HIST = cn_tarr_c_IDO_humba } }
+	title:c_IDO_nusa_nipa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_nusa_nipa HIST = cn_tarr_c_IDO_nusa_nipa } }
+	title:d_SuMa_maluku ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_maluku HIST = cn_tarr_d_SuMa_maluku } }
+	title:c_SuMa_buru-sula ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_buru-sula HIST = cn_tarr_c_SuMa_buru-sula } }
+	title:c_SuMa_raja_ampat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_raja_ampat HIST = cn_tarr_c_SuMa_raja_ampat } }
+	title:c_SuMa_seram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_seram HIST = cn_tarr_c_SuMa_seram } }
+	title:d_IDO_timor ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_IDO_timor HIST = cn_tarr_d_IDO_timor } }
+	title:c_IDO_barat_daya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_barat_daya HIST = cn_tarr_hist_c_IDO_barat_daya } }
+	title:c_IDO_sonba_i ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_sonba_i HIST = cn_tarr_c_IDO_sonba_i } }
+	title:c_IDO_wehale ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_IDO_wehale HIST = cn_tarr_c_IDO_wehale } }
+	title:d_SuMa_halmahera ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_SuMa_halmahera HIST = cn_tarr_d_SuMa_halmahera } }
+	title:c_SuMa_bacan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_bacan HIST = cn_tarr_c_SuMa_bacan } }
+	title:c_SuMa_ternate ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_ternate HIST = cn_tarr_c_SuMa_ternate } }
+	title:c_SuMa_tidore ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_SuMa_tidore HIST = cn_tarr_c_SuMa_tidore } }
+	title:c_kepala_burung ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kepala_burung HIST = cn_tarr_hist_c_kepala_burung } }
+	title:d_papua ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_papua HIST = cn_tarr_d_papua } }
+	title:c_aru ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_aru HIST = cn_tarr_c_aru } }
+	title:c_papua_selatan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_papua_selatan HIST = cn_tarr_hist_c_papua_selatan } }
+	title:c_sran ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sran HIST = cn_tarr_c_sran } }
+	title:d_tondai_nadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tondai_nadu HIST = cn_tarr_d_tondai_nadu } }
+	title:c_candragiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_candragiri HIST = cn_tarr_c_candragiri } }
+	title:c_muluvagil ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_muluvagil HIST = cn_tarr_c_muluvagil } }
+	title:c_nellore ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nellore HIST = cn_tarr_c_nellore } }
+	title:c_penugonda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_penugonda HIST = cn_tarr_c_penugonda } }
+	title:c_renandu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_renandu HIST = cn_tarr_c_renandu } }
+	title:d_chola_nadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_chola_nadu HIST = cn_tarr_d_chola_nadu } }
+	title:c_tiruvannamalai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tiruvannamalai HIST = cn_tarr_c_tiruvannamalai } }
+	title:c_cholamandalam ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_cholamandalam HIST = cn_tarr_c_cholamandalam } }
+	title:c_tagadur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tagadur HIST = cn_tarr_c_tagadur } }
+	title:d_pandya_nadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_pandya_nadu HIST = cn_tarr_d_pandya_nadu } }
+	title:c_madurai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_madurai HIST = cn_tarr_c_madurai } }
+	title:c_kongu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kongu HIST = cn_tarr_c_kongu } }
+	title:c_uraiyur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_uraiyur HIST = cn_tarr_c_uraiyur } }
+	title:c_kanchipuram ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kanchipuram HIST = cn_tarr_c_kanchipuram } }
+	title:d_chera_nadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_chera_nadu HIST = cn_tarr_d_chera_nadu } }
+	title:c_eranad ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_eranad HIST = cn_tarr_c_eranad } }
+	title:c_alupa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_alupa HIST = cn_tarr_c_alupa } }
+	title:c_maldives ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_maldives HIST = cn_tarr_c_maldives } }
+	title:c_kerala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kerala HIST = cn_tarr_c_kerala } }
+	title:c_venadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_venadu HIST = cn_tarr_c_venadu } }
+	title:d_vanga ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_vanga HIST = cn_tarr_d_vanga } }
+	title:c_bikrampur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bikrampur HIST = cn_tarr_c_bikrampur } }
+	title:c_candradvipa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_candradvipa HIST = cn_tarr_c_candradvipa } }
+	title:c_harikela ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_harikela HIST = cn_tarr_c_harikela } }
+	title:c_karmanta ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_karmanta HIST = cn_tarr_c_karmanta } }
+	title:c_samatata ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_samatata HIST = cn_tarr_c_samatata } }
+	title:d_nadia ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_nadia HIST = cn_tarr_d_nadia } }
+	title:c_nabadwipa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nabadwipa HIST = cn_tarr_c_nabadwipa } }
+	title:c_saptagrama ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_saptagrama HIST = cn_tarr_c_saptagrama } }
+	title:c_vijayapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vijayapura HIST = cn_tarr_hist_c_vijayapura } }
+	title:d_sinhala ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_sinhala HIST = cn_tarr_d_sinhala } }
+	title:c_trincomalee ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_trincomalee HIST = cn_tarr_c_trincomalee } }
+	title:c_jaffna ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_jaffna HIST = cn_tarr_c_jaffna } }
+	title:c_kotte ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kotte HIST = cn_tarr_c_kotte } }
+	title:c_phiti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_phiti HIST = cn_tarr_c_phiti } }
+	title:d_dakhina_desa ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_dakhina_desa HIST = cn_tarr_d_dakhina_desa } }
+	title:c_dakhina_desa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dakhina_desa HIST = cn_tarr_c_dakhina_desa } }
+	title:c_kandy ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kandy HIST = cn_tarr_c_kandy } }
+	title:d_ruhunu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ruhunu HIST = cn_tarr_d_ruhunu } }
+	title:c_batticaloa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_batticaloa HIST = cn_tarr_c_batticaloa } }
+	title:c_rohana ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_rohana HIST = cn_tarr_c_rohana } }
+	title:d_para_lauhitya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_para_lauhitya HIST = cn_tarr_d_para_lauhitya } }
+	title:c_dimapur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dimapur HIST = cn_tarr_c_dimapur } }
+	title:c_goalpara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_goalpara HIST = cn_tarr_c_goalpara } }
+	title:c_manipur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_manipur HIST = cn_tarr_c_manipur } }
+	title:c_srihatta ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_srihatta HIST = cn_tarr_c_srihatta } }
+	title:d_sutiya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_sutiya HIST = cn_tarr_d_sutiya } }
+	title:c_charaideo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_charaideo HIST = cn_tarr_c_charaideo } }
+	title:c_kundina ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kundina HIST = cn_tarr_c_kundina } }
+	title:d_kamarupanagara ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_kamarupanagara HIST = cn_tarr_d_kamarupanagara } }
+	title:c_kamatapur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kamatapur HIST = cn_tarr_c_kamatapur } }
+	title:c_haruppeswara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_haruppeswara HIST = cn_tarr_c_haruppeswara } }
+	title:c_kamarupanagara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kamarupanagara HIST = cn_tarr_c_kamarupanagara } }
+	title:d_monyul ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_monyul HIST = cn_tarr_d_monyul } }
+	title:c_cona ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_cona HIST = cn_tarr_c_cona } }
+	title:c_lhunze ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_lhunze HIST = cn_tarr_c_lhunze } }
+	title:c_tawang ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tawang HIST = cn_tarr_c_tawang } }
+	title:d_nulambavadi ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_nulambavadi HIST = cn_tarr_d_nulambavadi } }
+	title:c_banavasi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_banavasi HIST = cn_tarr_c_banavasi } }
+	title:c_gutti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_gutti HIST = cn_tarr_c_gutti } }
+	title:c_adoni ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_adoni HIST = cn_tarr_c_adoni } }
+	title:c_parivi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_parivi HIST = cn_tarr_c_parivi } }
+	title:c_uchangidurga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_uchangidurga HIST = cn_tarr_c_uchangidurga } }
+	title:d_raichur_doab ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_raichur_doab HIST = cn_tarr_d_raichur_doab } }
+	title:c_idatarainadu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_idatarainadu HIST = cn_tarr_c_idatarainadu } }
+	title:c_koppam ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_koppam HIST = cn_tarr_c_koppam } }
+	title:c_vaijayanti ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vaijayanti HIST = cn_tarr_c_vaijayanti } }
+	title:c_vatapi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vatapi HIST = cn_tarr_c_vatapi } }
+	title:d_gangavadi ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_gangavadi HIST = cn_tarr_d_gangavadi } }
+	title:c_mahishaka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mahishaka HIST = cn_tarr_c_mahishaka } }
+	title:c_srirangapatna ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_srirangapatna HIST = cn_tarr_c_srirangapatna } }
+	title:c_talakad ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_talakad HIST = cn_tarr_c_talakad } }
+	title:d_kalyani ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_kalyani HIST = cn_tarr_d_kalyani } }
+	title:c_kalyani ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kalyani HIST = cn_tarr_c_kalyani } }
+	title:c_sagar ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sagar HIST = cn_tarr_c_sagar } }
+	title:d_mukdahan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_mukdahan HIST = cn_tarr_d_mukdahan } }
+	title:c_canasha ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_canasha HIST = cn_tarr_c_canasha } }
+	title:c_ku_kaeo ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ku_kaeo HIST = cn_tarr_c_ku_kaeo } }
+	title:c_mukdahan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mukdahan HIST = cn_tarr_c_mukdahan } }
+	title:c_muang_fa_daet ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_muang_fa_daet HIST = cn_tarr_c_muang_fa_daet } }
+	title:c_ubon_ratchathani ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ubon_ratchathani HIST = cn_tarr_hist_c_ubon_ratchathani } }
+	title:d_phonsavan ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_phonsavan HIST = cn_tarr_d_phonsavan } }
+	title:c_salo_tai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_salo_tai HIST = cn_tarr_c_salo_tai } }
+	title:c_sanasomboon ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sanasomboon HIST = cn_tarr_c_sanasomboon } }
+	title:c_vien_chan ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vien_chan HIST = cn_tarr_c_vien_chan } }
+	title:d_racakonda ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_racakonda HIST = cn_tarr_d_racakonda } }
+	title:c_pannagallu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pannagallu HIST = cn_tarr_c_pannagallu } }
+	title:c_racakonda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_racakonda HIST = cn_tarr_c_racakonda } }
+	title:d_warangal ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_warangal HIST = cn_tarr_d_warangal } }
+	title:c_kambampet ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kambampet HIST = cn_tarr_c_kambampet } }
+	title:c_katukuru ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_katukuru HIST = cn_tarr_c_katukuru } }
+	title:c_orangallu ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_orangallu HIST = cn_tarr_c_orangallu } }
+	title:c_mahur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mahur HIST = cn_tarr_c_mahur } }
+	title:c_balkonda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_balkonda HIST = cn_tarr_c_balkonda } }
+	title:d_liuqiu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_liuqiu HIST = cn_tarr_d_liuqiu } }
+	title:c_hoanya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_hoanya HIST = cn_tarr_c_hoanya } }
+	title:c_amis ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_amis HIST = cn_tarr_c_amis } }
+	title:c_siraya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_siraya HIST = cn_tarr_c_siraya } }
+	title:d_tosali ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_tosali HIST = cn_tarr_d_tosali } }
+	title:c_viraja ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_viraja HIST = cn_tarr_c_viraja } }
+	title:c_kataka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kataka HIST = cn_tarr_c_kataka } }
+	title:c_khijjingakota ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_khijjingakota HIST = cn_tarr_c_khijjingakota } }
+	title:c_khinjali_mandala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_khinjali_mandala HIST = cn_tarr_c_khinjali_mandala } }
+	title:c_kodalaka_mandala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kodalaka_mandala HIST = cn_tarr_c_kodalaka_mandala } }
+	title:d_daksina_kosala ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_daksina_kosala HIST = cn_tarr_d_daksina_kosala } }
+	title:c_kiranapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kiranapura HIST = cn_tarr_c_kiranapura } }
+	title:c_sambalpur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sambalpur HIST = cn_tarr_c_sambalpur } }
+	title:c_sripuri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sripuri HIST = cn_tarr_c_sripuri } }
+	title:c_suvarnapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_suvarnapura HIST = cn_tarr_c_suvarnapura } }
+	title:d_kalinga ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_kalinga HIST = cn_tarr_d_kalinga } }
+	title:c_kalinganagar ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kalinganagar HIST = cn_tarr_c_kalinganagar } }
+	title:c_swetaka_mandala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_swetaka_mandala HIST = cn_tarr_c_swetaka_mandala } }
+	title:c_vizagipatam ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vizagipatam HIST = cn_tarr_c_vizagipatam } }
+	title:d_dandakaranya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_dandakaranya HIST = cn_tarr_d_dandakaranya } }
+	title:c_barasuru ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_barasuru HIST = cn_tarr_c_barasuru } }
+	title:c_cakrakuta ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_cakrakuta HIST = cn_tarr_c_cakrakuta } }
+	title:c_puri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_puri HIST = cn_tarr_c_puri } }
+	title:c_rayapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_rayapura HIST = cn_tarr_c_rayapura } }
+	title:d_udayagiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_udayagiri HIST = cn_tarr_d_udayagiri } }
+	title:c_nallamala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_nallamala HIST = cn_tarr_c_nallamala } }
+	title:c_cumbum ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_cumbum HIST = cn_tarr_c_cumbum } }
+	title:c_palakka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_palakka HIST = cn_tarr_c_palakka } }
+	title:d_vengi ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_vengi HIST = cn_tarr_d_vengi } }
+	title:c_mosala ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mosala HIST = cn_tarr_c_mosala } }
+	title:c_vengipura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vengipura HIST = cn_tarr_c_vengipura } }
+	title:d_angkor ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_angkor HIST = cn_tarr_d_angkor } }
+	title:c_angkor ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_angkor HIST = cn_tarr_c_angkor } }
+	title:c_dong_si_mahosot ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_dong_si_mahosot HIST = cn_tarr_c_dong_si_mahosot } }
+	title:c_prea_vihear ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_prea_vihear HIST = cn_tarr_c_prea_vihear } }
+	title:c_sambhupura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_sambhupura HIST = cn_tarr_c_sambhupura } }
+	title:d_angkor_borey ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_angkor_borey HIST = cn_tarr_d_angkor_borey } }
+	title:c_angkor_borey ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_angkor_borey HIST = cn_tarr_c_angkor_borey } }
+	title:c_botum_sakor ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_botum_sakor HIST = cn_tarr_c_botum_sakor } }
+	title:c_mueang_phra_rot ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mueang_phra_rot HIST = cn_tarr_c_mueang_phra_rot } }
+	title:c_pursat ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pursat HIST = cn_tarr_c_pursat } }
+	title:d_baigaur ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_baigaur HIST = cn_tarr_d_baigaur } }
+	title:c_baigaur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_baigaur HIST = cn_tarr_c_baigaur } }
+	title:c_binh_dai ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_binh_dai HIST = cn_tarr_c_binh_dai } }
+	title:c_ca_mau ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ca_mau HIST = cn_tarr_c_ca_mau } }
+	title:d_ratanakiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ratanakiri HIST = cn_tarr_d_ratanakiri } }
+	title:c_pleiku ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_pleiku HIST = cn_tarr_c_pleiku } }
+	title:c_ratanakiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ratanakiri HIST = cn_tarr_c_ratanakiri } }
+	title:c_stung_treng ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_stung_treng HIST = cn_tarr_c_stung_treng } }
+	title:d_vyadhapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_vyadhapura HIST = cn_tarr_d_vyadhapura } }
+	title:c_kracheh_nokor ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kracheh_nokor HIST = cn_tarr_c_kracheh_nokor } }
+	title:c_vyadhapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vyadhapura HIST = cn_tarr_c_vyadhapura } }
+	title:c_binh_long ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_binh_long HIST = cn_tarr_c_binh_long } }
+	title:c_koh_ker ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_koh_ker HIST = cn_tarr_c_koh_ker } }
+	title:d_rattapadi ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_rattapadi HIST = cn_tarr_d_rattapadi } }
+	title:c_ashmaka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ashmaka HIST = cn_tarr_c_ashmaka } }
+	title:c_karahataka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_karahataka HIST = cn_tarr_c_karahataka } }
+	title:c_kolhapur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kolhapur HIST = cn_tarr_c_kolhapur } }
+	title:c_naldurg ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_naldurg HIST = cn_tarr_c_naldurg } }
+	title:c_taradavadi ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_taradavadi HIST = cn_tarr_c_taradavadi } }
+	title:d_vidharba ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_vidharba HIST = cn_tarr_d_vidharba } }
+	title:c_acalapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_acalapura HIST = cn_tarr_c_acalapura } }
+	title:c_canda ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_canda HIST = cn_tarr_c_canda } }
+	title:c_ramagiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ramagiri HIST = cn_tarr_c_ramagiri } }
+	title:c_vairagara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vairagara HIST = cn_tarr_c_vairagara } }
+	title:d_devagiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_devagiri HIST = cn_tarr_d_devagiri } }
+	title:c_devagiri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_devagiri HIST = cn_tarr_c_devagiri } }
+	title:c_mulaka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_mulaka HIST = cn_tarr_c_mulaka } }
+	title:c_vatsagulma ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vatsagulma HIST = cn_tarr_c_vatsagulma } }
+	title:d_konkana ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_konkana HIST = cn_tarr_d_konkana } }
+	title:c_kanara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kanara HIST = cn_tarr_c_kanara } }
+	title:c_surparaka ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_surparaka HIST = cn_tarr_c_surparaka } }
+	title:d_nasikya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_nasikya HIST = cn_tarr_d_nasikya } }
+	title:c_kondana ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kondana HIST = cn_tarr_c_kondana } }
+	title:c_trikuta ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_trikuta HIST = cn_tarr_c_trikuta } }
+	title:c_panaji ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_panaji HIST = cn_tarr_c_panaji } }
+	title:d_indrapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_indrapura HIST = cn_tarr_d_indrapura } }
+	title:c_indrapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_indrapura HIST = cn_tarr_c_indrapura } }
+	title:c_ma_linh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ma_linh HIST = cn_tarr_c_ma_linh } }
+	title:c_simhapura ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_simhapura HIST = cn_tarr_c_simhapura } }
+	title:d_vijaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_vijaya HIST = cn_tarr_d_vijaya } }
+	title:c_kauthara ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_kauthara HIST = cn_tarr_c_kauthara } }
+	title:c_panduranga ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_panduranga HIST = cn_tarr_c_panduranga } }
+	title:c_vijaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_vijaya HIST = cn_tarr_c_vijaya } }
+	title:d_ratanpur ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ratanpur HIST = cn_tarr_d_ratanpur } }
+	title:c_bandhugadha ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_bandhugadha HIST = cn_tarr_c_bandhugadha } }
+	title:c_ratanpur ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ratanpur HIST = cn_tarr_c_ratanpur } }
+	title:c_tummana ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tummana HIST = cn_tarr_c_tummana } }
+	title:d_dahala ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_dahala HIST = cn_tarr_d_dahala } }
+	title:c_chauragarh ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_chauragarh HIST = cn_tarr_c_chauragarh } }
+	title:c_tripuri ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_tripuri HIST = cn_tarr_c_tripuri } }
+	title:d_ruucuu ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_ruucuu HIST = cn_tarr_d_ruucuu } }
+	title:c_amami ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_amami HIST = cn_tarr_c_amami } }
+	title:c_ucinaa ?= { tarr_rename_title_effect = { NAME = cn_tarr_c_ucinaa HIST = cn_tarr_c_ucinaa } }
 	title:k_papal_state ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_papal_state HIST = cn_tarr_k_papal_state } }
 	title:k_orthodox ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_orthodox HIST = cn_tarr_k_orthodox } }
 	title:d_coptic_papacy ?= { tarr_rename_title_effect = { NAME = cn_tarr_d_coptic_papacy HIST = cn_tarr_d_coptic_papacy } }
@@ -3730,6 +4203,25 @@ tarr_apply_dynamic_titles_effect = {
 	title:c_ujjayini.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3406 HIST = cn_tarr_x_script_3406 } }
 	title:c_dasapura.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3434 HIST = cn_tarr_x_script_3434 } }
 	title:c_biun.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2703 HIST = cn_tarr_x_script_2703 } }
+	title:c_munda.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1218 HIST = cn_tarr_x_script_1218 } }
+	title:c_pegu.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1264 HIST = cn_tarr_x_script_1264 } }
+	title:c_SUM_barus.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1641 HIST = cn_tarr_x_script_1641 } }
+	title:c_mentawai.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2260 HIST = cn_tarr_x_script_2260 } }
+	title:c_PHI_zamboanga.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2623 HIST = cn_tarr_x_script_2623 } }
+	title:c_kodalaka_mandala.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2626 HIST = cn_tarr_x_script_2626 } }
+	title:c_kyaukse.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2637 HIST = cn_tarr_x_script_2637 } }
+	title:c_puri.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2975 HIST = cn_tarr_x_script_2975 } }
+	title:c_nakkavaram.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3253 HIST = cn_tarr_x_script_3253 } }
+	title:c_SuMa_luwu.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3987 HIST = cn_tarr_x_script_3987 } }
+	title:c_binh_long.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5215 HIST = cn_tarr_x_script_5215 } }
+	title:c_koh_ker.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5703 HIST = cn_tarr_x_script_5703 } }
+	title:c_rayapura.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5729 HIST = cn_tarr_x_script_5729 } }
+	title:c_sran.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_6299 HIST = cn_tarr_x_script_6299 } }
+	title:c_kanchipuram.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7177 HIST = cn_tarr_x_script_7177 } }
+	title:c_panaji.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7430 HIST = cn_tarr_x_script_7430 } }
+	title:c_papua_selatan.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7455 HIST = cn_tarr_x_script_7455 } }
+	title:c_kepala_burung.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7781 HIST = cn_tarr_x_script_7781 } }
+	title:c_east_darfur.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_8252 HIST = cn_tarr_x_script_8252 } }
 
 	# Dynamic Kingdoms (resolved via their de jure duchies)
 	title:d_sicily.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4328 HIST = cn_tarr_x_script_4328 } }

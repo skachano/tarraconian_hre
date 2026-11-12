@@ -123,6 +123,32 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Egitânje': 'Egitânjisch',
         'Finnmarch': 'Finnmarchisch',
         'Grôzwazzer': 'Grôzwazzerisch',
+        'Bengâlen': 'Bengâlisch',
+        'Bihâr': 'Bihârisch',
+        'Gondwâne': 'Gondwânisch',
+        'Kâmarûpe': 'Kâmarûpisch',
+        'Orisse': 'Orissisch',
+        'Andhre': 'Andhrisch',
+        'Karnâte': 'Karnâtisch',
+        'Lanke': 'Lankisch',
+        'Mahâraschtre': 'Mahâraschtrisch',
+        'Tamilakam': 'Tamilakamisch',
+        'Telingâne': 'Telingânisch',
+        'Tschampe': 'Tschampisch',
+        'Tschenle': 'Tschenlisch',
+        'Angkôr': 'Angkôrisch',
+        'Kabisajân': 'Kabisajânisch',
+        'Ljûkjû': 'Ljûkjûisch',
+        'Lusung': 'Lusungisch',
+        'Maluku': 'Malukuisch',
+        'Rûtschû': 'Rûtschûisch',
+        'Sulawêsi': 'Sulawêsisch',
+        'Hudschung Medîni': 'Hudschung-Medînisch',
+        'Malajadwîpe': 'Malajadwîpisch',
+        'Tandschungnagare': 'Tandschungnagarisch',
+        'Jawakadwîpe': 'Jawakadwîpisch',
+        'Dwârawatî': 'Dwârawatîisch',
+        'Pagân': 'Pagânisch',
     }
     if name in explicit_adjs:
         return explicit_adjs[name]
@@ -225,7 +251,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142|1154)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
@@ -240,7 +266,7 @@ def parse_gazetteer(md_path: Path):
         if m:
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             all_keys = re.findall(r'`([dx]_[a-zA-Z0-9_\-]+)`', line)
@@ -258,7 +284,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
@@ -332,6 +358,25 @@ def build_scripted_effects(entries):
         "\ttitle:c_ujjayini.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3406 HIST = cn_tarr_x_script_3406 } }",
         "\ttitle:c_dasapura.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3434 HIST = cn_tarr_x_script_3434 } }",
         "\ttitle:c_biun.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2703 HIST = cn_tarr_x_script_2703 } }",
+        "\ttitle:c_munda.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1218 HIST = cn_tarr_x_script_1218 } }",
+        "\ttitle:c_pegu.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1264 HIST = cn_tarr_x_script_1264 } }",
+        "\ttitle:c_SUM_barus.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_1641 HIST = cn_tarr_x_script_1641 } }",
+        "\ttitle:c_mentawai.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2260 HIST = cn_tarr_x_script_2260 } }",
+        "\ttitle:c_PHI_zamboanga.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2623 HIST = cn_tarr_x_script_2623 } }",
+        "\ttitle:c_kodalaka_mandala.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2626 HIST = cn_tarr_x_script_2626 } }",
+        "\ttitle:c_kyaukse.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2637 HIST = cn_tarr_x_script_2637 } }",
+        "\ttitle:c_puri.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_2975 HIST = cn_tarr_x_script_2975 } }",
+        "\ttitle:c_nakkavaram.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3253 HIST = cn_tarr_x_script_3253 } }",
+        "\ttitle:c_SuMa_luwu.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_3987 HIST = cn_tarr_x_script_3987 } }",
+        "\ttitle:c_binh_long.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5215 HIST = cn_tarr_x_script_5215 } }",
+        "\ttitle:c_koh_ker.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5703 HIST = cn_tarr_x_script_5703 } }",
+        "\ttitle:c_rayapura.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_5729 HIST = cn_tarr_x_script_5729 } }",
+        "\ttitle:c_sran.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_6299 HIST = cn_tarr_x_script_6299 } }",
+        "\ttitle:c_kanchipuram.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7177 HIST = cn_tarr_x_script_7177 } }",
+        "\ttitle:c_panaji.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7430 HIST = cn_tarr_x_script_7430 } }",
+        "\ttitle:c_papua_selatan.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7455 HIST = cn_tarr_x_script_7455 } }",
+        "\ttitle:c_kepala_burung.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_7781 HIST = cn_tarr_x_script_7781 } }",
+        "\ttitle:c_east_darfur.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_8252 HIST = cn_tarr_x_script_8252 } }",
         "",
         "\t# Dynamic Kingdoms (resolved via their de jure duchies)",
         "\ttitle:d_sicily.de_jure_liege ?= { tarr_rename_title_effect = { NAME = cn_tarr_x_script_4328 HIST = cn_tarr_x_script_4328 } }",
@@ -893,14 +938,14 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         ' tarr_chancellery_ordinance_decision_tooltip:0 "Standardize the names of Imperial and Tarraconian Kingdoms, Governorships, Magistracies, Prince-Bishoprics, and Archdioceses in the Tarraconian court tongue."',
         ' tarr_chancellery_ordinance_decision_desc:0 "Since the union of Lothringian High Franconian and Catalan courtly administration in 989, the scribes of the Imperial Chancellery have rendered the realms, governorships, magistracies, and ecclesiastical sees of the Roman Empire in the Tarraconian tongue. By imperial ordinance, we may codify these official registers across the Empire."',
         ' tarr_chancellery_ordinance_decision_confirm:0 "Summon the Imperial Chancellery"',
-        ' tarr_chancellery_ordinance_decision_effect_tt:0 "Applies #V Tarraconian#! chancellery toponymy (using #V 1059–1142 Historical Resolutions#! by default, including #V Lûnstat#! for Nancy and #V Swenigorot#! for Lemberg) and opens the Chancellery configuration register."',
+        ' tarr_chancellery_ordinance_decision_effect_tt:0 "Applies #V Tarraconian#! chancellery toponymy (using #V 1059–1171 Historical Resolutions#! by default, including #V Lûnstat#! for Nancy and #V Swenigorot#! for Lemberg) and opens the Chancellery configuration register."',
         "",
         ' tarr_chancellery.0001.t:0 "The Imperial Tarraconian Register"',
-        r' tarr_chancellery.0001.desc:0 "The Protonotaries of the Imperial Chancellery present the great register of [ROOT.Char.GetCulture.GetNameNoTooltip] toponymy for the Roman Empire.\n\nUnder the #bold Historical Resolution#! standard, anachronistic castles and colonial towns are replaced by their authentic pre-1059/1122/1142 provincial centres and sub-baronies (such as #italic Lûnstat#! for Nancy, #italic Vrîsing#! for München, #italic Wilten#! for Innsbruck, #italic Swenigorot#! for Lemberg, #italic Skône#! for Gowrie, #italic Sôsôpel#! for Burgas, #italic Olbîe#! for Kara-Kerman, #italic Rêwale#! for Reval, #italic Atîl-Chasarân#! for Astrakhan, and #italic Rôhe#! for Lasta), while all titles are updated automatically on the 1st of January each year."',
+        r' tarr_chancellery.0001.desc:0 "The Protonotaries of the Imperial Chancellery present the great register of [ROOT.Char.GetCulture.GetNameNoTooltip] toponymy for the Roman Empire.\n\nUnder the #bold Historical Resolution#! standard, anachronistic castles and colonial towns are replaced by their authentic pre-1059/1122/1142/1154/1171 provincial centres and sub-baronies (such as #italic Lûnstat#! for Nancy, #italic Vrîsing#! for München, #italic Wilten#! for Innsbruck, #italic Swenigorot#! for Lemberg, #italic Skône#! for Gowrie, #italic Sôsôpel#! for Burgas, #italic Olbîe#! for Kara-Kerman, #italic Rêwale#! for Reval, #italic Atîl-Chasarân#! for Astrakhan, and #italic Rôhe#! for Lasta), while all titles are updated automatically on the 1st of January each year."',
         ' tarr_chancellery.0001.a:0 "Enforce the Historical Register across the Empire (Default)"',
-        ' tarr_chancellery.0001.a.tt:0 "Renames all titles in the #V Roman Empire / HRE#! and any #V Tarraconian#! (or daughter-culture) provinces using #V 1059–1142 Historical Resolutions#!."',
-        ' tarr_chancellery.0001.b:0 "Extend the Historical Register to all 160 De Jure Kingdoms"',
-        ' tarr_chancellery.0001.b.tt:0 "Renames all 160 De Jure Kingdoms, 752 Duchies, 2,732 Counties, and 78 Archdioceses (including non-Imperial provinces) using #V 1059–1154 Historical Resolutions#!."',
+        ' tarr_chancellery.0001.a.tt:0 "Renames all titles in the #V Roman Empire / HRE#! and any #V Tarraconian#! (or daughter-culture) provinces using #V 1059–1171 Historical Resolutions#!."',
+        ' tarr_chancellery.0001.b:0 "Extend the Historical Register to all 186 De Jure Kingdoms"',
+        ' tarr_chancellery.0001.b.tt:0 "Renames all 186 De Jure Kingdoms, 868 Duchies, 3,082 Counties, and 78 Archdioceses (including non-Imperial provinces) using #V 1059–1171 Historical Resolutions#!."',
         ' tarr_chancellery.0001.c:0 "Use Direct Toponymic Adaptations in the Empire"',
         ' tarr_chancellery.0001.c.tt:0 "Renames Imperial and Tarraconian titles using direct phonological adaptations of their vanilla/save names rather than historical resolutions."',
         ' tarr_chancellery.0001.d:0 "Repeal the Ordinance and restore original title names"',

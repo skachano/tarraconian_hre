@@ -1,6 +1,6 @@
-# Tarraconian Translations of De Jure Titles & Archdioceses (1059–1142)
+# Tarraconian Translations of De Jure Titles & Archdioceses (1059–1171)
 
-* **Campaign Save:** `chatenois_867_01_01.ck3` (**20 August 1142**, updated from 13 May 1059 & 20 September 1122)
+* **Campaign Save:** `chatenois_867_01_01.ck3` (**18 June 1171**, updated from 13 May 1059, 20 September 1122, 20 August 1142 & 27 December 1154)
 * **Culture:** **Tarraconian** (*Tarracono-Lothringian*, `ID 316`) & daughter dialects **Alpine-Tarraconian** (`ID 337`), **Croato-Tarraconian** (`ID 345`), and **Ungwârer** (`ID 367`)
 * **Companion References:**
   * [tarraconian_linguistics_guide.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_linguistics_guide.md) (Phonology, Orthography & IPA Index)
@@ -32,7 +32,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-## 2. Summary Table: The 160 De Jure Kingdoms in Tarraconian (27 December 1154)
+## 2. Summary Table: The 186 De Jure Kingdoms in Tarraconian (18 June 1171)
 
 | # | In-Game Kingdom | Title Key | Tarraconian Name (`Kûnincrich / Regenat van ...`) | IPA / Adjective | RE / Total Counties & Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -41,7 +41,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 3 | **England** | `k_england` | **Kûnincrich van Engellant** | `[ˈɛŋ.əl.lant]` | **53/53 RE** — MHG *Engellant*. |
 | 4 | **Arabia** | `k_arabia` | **Kûnincrich van Arâbjen** | *Arâbisch* | **43/43 RE** — Added in 1142 Imperial Chancellery update. |
 | 5 | **Bavaria** | `k_bavaria` | **Kûnincrich van Beiern** | `[ˈbɛɪ.ərn]` | **42/42 RE** — Standard MHG *Beiern*. |
-| 6 | **Pontic Steppe / Zaporizhia** | `k_pontic_steppe` | **Kûnincrich van der Pontischen Steppe** *(1122 Hist: **Kûnincrich van Kumânjen**)* | *Pontisch-Steppisch* | **40/44 RE** — Added in 1122 Imperial Chancellery update. |
+| 6 | **Pontic Steppe / Zaporizhia** | `k_pontic_steppe` | **Kûnincrich van der Pontischen Steppe** *(1122 Hist: **Kûnincrich van Kumânjen**)* | *Pontisch-Steppisch* | **43/44 RE** — Added in 1122 Imperial Chancellery update. |
 | 7 | **Persia** | `k_persia` | **Kûnincrich van Persjen** | *Persisch* | **38/38 RE** — Added in 1142 Imperial Chancellery update. |
 | 8 | **Poland** | `k_poland` | **Kûnincrich van Pôlen** | `[ˈpoː.lən]` | **36/36 RE** — MHG *Pôlen*. |
 | 9 | **Hungary** | `k_hungary` | **Kûnincrich van Ungern** | `[ˈʊŋ.ɡərn]` | **34/34 RE** — MHG *Ungern*. |
@@ -55,24 +55,24 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 17 | **Maghreb** | `k_maghreb` | **Kûnincrich van Magrep** *(or **Mauretanjen**)* | `[ma.ˈɣrɛp]` | **24/24 RE** — Arabic *al-Maghrib* via Catalan *Magrep*. |
 | 18 | **Abyssinia** | `k_abyssinia` | **Kûnincrich van Abessînjen** *(1142 Hist: **Kûnincrich van Aksûm**)* | *Abessînisch* | **24/24 RE** — Added in 1142 Imperial Chancellery update. |
 | 19 | **Lotharingia** | `k_lotharingia` | **Kûnincrich van Lôthringen** | `[ˈloː.trɪŋ.ən]` | **23/23 RE** — Native ancestral homeland (*Lothringian* `ID 218`). |
-| 20 | **Ruthenia** | `k_ruthenia` | **Kûnincrich van Rûssen** *(or **Rûthenjen**)* | `[ˈruː.sən]` | **23/23 RE** — MHG *Rûzen* ("Rus' / Ruthenia"). |
+| 20 | **Ruthenia** | `k_ruthenia` | **Kûnincrich van Rûssen** *(or **Rûthenjen**)* | `[ˈruː.sən]` | **19/19 RE** — MHG *Rûzen* ("Rus' / Ruthenia"). |
 | 21 | **Burgundy** | `k_burgundy` | **Kûnincrich van Burgundjen** *(or **Burgunt**)* | `[bʊr.ˈɡʊn.djən]` | **23/23 RE** — MHG *Burgunden* + Catalan *Borgonya* (`-nj-/-dj-`). |
 | 22 | **Italy** | `k_italy` | **Kûnincrich van Italjen** *(or **Welschlant**)* | `[i.ˈta.ljən]` | **22/22 RE** — Catalan *Itàlia* + MHG *Italjen / Walhen*. |
 | 23 | **Syria** | `k_syria` | **Kûnincrich van Sîrjen** | *Sîrisch* | **22/22 RE** — Added in 1122 Imperial Chancellery update. |
 | 24 | **Pomerania** | `k_pomerania` | **Kûnincrich van Pomern** | `[ˈpɔ.mərn]` | **20/20 RE** — MHG *Pomern* (Slavic *Po-morze*). |
 | 25 | **Mesopotamia** | `k_mesopotamia` | **Kûnincrich van Mesopotâmjen** | *Mesopotâmisch* | **20/20 RE** — Added in 1142 Imperial Chancellery update. |
 | 26 | **Jazira** | `k_jazira` | **Kûnincrich van Dschasîre** | *Dschasîrisch* | **20/20 RE** — Added in 1142 Imperial Chancellery update. |
-| 27 | **Khorasan** | `k_khorasan` | **Kûnincrich van Chorasân** | *Chorasânisch* | **19/26 RE** — Added in 1142 Imperial Chancellery update. |
+| 27 | **Khorasan** | `k_khorasan` | **Kûnincrich van Chorasân** | *Chorasânisch* | **23/26 RE** — Added in 1142 Imperial Chancellery update. |
 | 28 | **Finland** | `k_finland` | **Kûnincrich van Finlant** *(1142 Hist: **Kûnincrich van Suômi**)* | *Finnisch* | **19/19 RE** — Added in 1142 Imperial Chancellery update. |
 | 29 | **Andalusia** | `k_andalusia` | **Kûnincrich van Andalusîe** *(or **Bêtisch-Spanjen**)* | `[an.da.lu.ˈziː.ə]` | **19/19 RE** — Catalan/Arabic *Andalusia* (`-îe`). |
 | 30 | **Valencia** | `k_valencia` | **Kûnincrich van Valentz** *(or **Valentzîe**)* | `[va.ˈlɛnts]` | **19/19 RE** — Old Catalan *València* with apocope (`Valentz`). |
 | 31 | **Tahert** | `k_tahert` | **Kûnincrich van Tâhert** | `[ˈtaː.hɛrt]` | **19/19 RE** — Berber/Arabic *Tāhart* (`Tâhert`). |
-| 32 | **Anatolia** | `k_anatolia` | **Kûnincrich van Anatôljen** | *Anatôlisch* | **18/19 RE** — Added in 1122 Imperial Chancellery update. |
+| 32 | **Anatolia** | `k_anatolia` | **Kûnincrich van Anatôljen** | *Anatôlisch* | **19/19 RE** — Added in 1122 Imperial Chancellery update. |
 | 33 | **Daylam** | `k_daylam` | **Kûnincrich van Deilâm** | *Deilâmisch* | **18/18 RE** — Added in 1142 Imperial Chancellery update. |
-| 34 | **Polotia** | `k_white_rus` | **Kûnincrich van Wîtzrûssen** *(or **Polôtzich**)* | `[ˈpɔ.lɔtsk]` | **17/17 RE** — Calque *Wîtzrûssen* (\"White Rus'\") / Rus' *Polotsk*. |
-| 35 | **Africa** | `k_africa` | **Kûnincrich van Affrîke** *(or **Ifrîkje**)* | `[a.ˈfriː.kə]` | **16/21 RE** — Latin *Africa* / Arabic *Ifrīqiya*. |
+| 34 | **Polotia** | `k_white_rus` | **Kûnincrich van Wîtzrûssen** *(or **Polôtzich**)* | `[ˈpɔ.lɔtsk]` | **21/21 RE** — Calque *Wîtzrûssen* (\"White Rus'\") / Rus' *Polotsk*. |
+| 35 | **Africa** | `k_africa` | **Kûnincrich van Affrîke** *(or **Ifrîkje**)* | `[a.ˈfriː.kə]` | **21/21 RE** — Latin *Africa* / Arabic *Ifrīqiya*. |
 | 36 | **Yemen** | `k_yemen` | **Kûnincrich van Jêmen** | *Jêmenisch* | **16/16 RE** — Added in 1142 Imperial Chancellery update. |
-| 37 | **Adal** | `k_adal` | **Kûnincrich van Adâl** *(1142 Hist: **Kûnincrich van Seîle**)* | *Adâlisch* | **15/18 RE** — Added in 1142 Imperial Chancellery update. |
+| 37 | **Adal** | `k_adal` | **Kûnincrich van Adâl** *(1142 Hist: **Kûnincrich van Seîle**)* | *Adâlisch* | **18/18 RE** — Added in 1142 Imperial Chancellery update. |
 | 38 | **Romagna** | `k_romagna` | **Kûnincrich van Romanje** | `[ro.ˈma.ɲə]` | **15/15 RE** — Italian/Catalan *Romagna / Romanya* (`nj` `[ɲ]`). |
 | 39 | **Great Moravia** | `k_moravia` | **Kûnincrich van Mêren** *(or **Grôtzmêren**)* | `[ˈmeː.rən]` | **15/15 RE** — MHG *Mêren / Marheren* ("Moravia"). |
 | 40 | **Bjarmaland** | `k_bjarmaland` | **Kûnincrich van Bjarmelant** | *Bjarmisch* | **15/15 RE** — Added in 1142 Imperial Chancellery update. |
@@ -80,7 +80,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 42 | **Ireland** | `k_ireland` | **Kûnincrich van Îrlant** | *Îrisch* | **14/14 RE** — Added in 1122 Imperial Chancellery update. |
 | 43 | **Hellas** | `k_hellas` | **Kûnincrich van Hellas** | *Hellênisch* | **14/14 RE** — Added in 1122 Imperial Chancellery update. |
 | 44 | **Denmark** | `k_denmark` | **Kûnincrich van Denemarch** | `[ˈdɛ.nə.marx]` | **14/14 RE** — MHG *Tenemarke* with Franconian `D-` and `-march`. |
-| 45 | **Wallachia (Dacia)** | `k_dacia` | **Kûnincrich van Walachîe** *(1122 Hist: **Kûnincrich van Dâzjen**)* | *Walachisch* | **13/14 RE** — Added in 1122 Imperial Chancellery update. |
+| 45 | **Wallachia (Dacia)** | `k_dacia` | **Kûnincrich van Walachîe** *(1122 Hist: **Kûnincrich van Dâzjen**)* | *Walachisch* | **14/14 RE** — Added in 1122 Imperial Chancellery update. |
 | 46 | **Sorbia** | `k_sorbia` | **Kûnincrich van Sorbjen** *(or **Wendenlant**)* | `[ˈzɔr.bjən]` | **13/13 RE** — Slavic *Srbi* + MHG *Sorbjen / Wenden*. |
 | 47 | **Makran** | `k_makran` | **Kûnincrich van Makrân** | *Makrânisch* | **13/13 RE** — Added in 1142 Imperial Chancellery update. |
 | 48 | **Frisia** | `k_frisia` | **Kûnincrich van Vrîslant** | `[ˈvriːs.lant]` | **12/12 RE** — MHG/Franconian *Vrîslant*. |
@@ -91,14 +91,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 53 | **Novgorod** | `k_novgorod` | **Kûnincrich van Nîenburch** | `[ˈniːn.bʊrx]` | **11/11 RE** — Calque of Old East Slavic *Novgorod* ("New Castle/City"). |
 | 54 | **Badajoz** | `k_badajoz` | **Kûnincrich van Badallôz** *(or **Lusitanjen**)* | `[ba.da.ˈʎoːts]` | **11/11 RE** — Old Catalan/Aragonese *Badalloz* (`ll` `[ʎ]`). |
 | 55 | **Galicia** | `k_spanish_galicia` | **Kûnincrich van Galitzjen** | `[ɡa.ˈlɪ.tsjən]` | **11/11 RE** — Old Catalan *Galícia* + MHG `-tzen/-tzjen`. |
-| 56 | **Nubia** | `k_nubia` | **Kûnincrich van Nûbjen** | *Nûbisch* | **10/14 RE** — Added in 1122 Imperial Chancellery update. |
+| 56 | **Nubia** | `k_nubia` | **Kûnincrich van Nûbjen** | *Nûbisch* | **14/14 RE** — Added in 1122 Imperial Chancellery update. |
 | 57 | **Anbiya** | `k_anbiya` | **Kûnincrich van Anbîe** *(or **Sanhadsche**)* | `[an.ˈbiː.ə]` | **10/10 RE** — Arabic *Anbiyā'* / Berber *Ṣanhāja*. |
 | 58 | **Blemmyia** | `k_blemmyia` | **Kûnincrich van Blemîen** *(or **Bedschalant**)* | `[blɛ.ˈmiː.ən]` | **10/10 RE** — Classical *Blemmyia* / Beja *Bedscha*. |
-| 59 | **Georgia** | `k_georgia` | **Kûnincrich van Georgjen** *(1122 Hist: **Kûnincrich van Kartlî**)* | *Georgisch* | **9/12 RE** — Added in 1122 Imperial Chancellery update. |
-| 60 | **Vladimir (Opolye)** | `k_opolye` | **Kûnincrich van Opôlje** *(1122 Hist: **Kûnincrich van Opôlje**)* | *Wladimîrisch* | **9/11 RE** — Added in 1122 Imperial Chancellery update. |
+| 59 | **Georgia** | `k_georgia` | **Kûnincrich van Georgjen** *(1122 Hist: **Kûnincrich van Kartlî**)* | *Georgisch* | **12/12 RE** — Added in 1122 Imperial Chancellery update. |
+| 60 | **Vladimir (Opolye)** | `k_opolye` | **Kûnincrich van Opôlje** *(1122 Hist: **Kûnincrich van Opôlje**)* | *Wladimîrisch* | **10/11 RE** — Added in 1122 Imperial Chancellery update. |
 | 61 | **Sicily (Mainland)** | `k_sicily` | **Kûnincrich van Neâpel** *(or Sitziljen)* | `[nɛ.ˈaː.pəl]` | **9/9 RE** — Peninsular Sicily (*Apuljen und Capûe*). |
 | 62 | **Alodia** | `x_script_2942` | **Kûnincrich van Alôdje** *(1122 Hist: **Kûnincrich van Sôbe**)* | *Alôdisch* | **9/9 RE** — Added in 1122 Imperial Chancellery update. |
-| 63 | **Bulgaria** | `k_bulgaria` | **Kûnincrich van Bulgârjen** | *Bulgârisch* | **8/21 RE** — Added in 1122 Imperial Chancellery update. |
+| 63 | **Bulgaria** | `k_bulgaria` | **Kûnincrich van Bulgârjen** | *Bulgârisch* | **21/21 RE** — Added in 1122 Imperial Chancellery update. |
 | 64 | **Sardinia** | `k_sardinia` | **Kûnincrich van Sardenje** | `[zar.ˈdɛ.ɲə]` | **8/8 RE** — Direct from Old Catalan *Sardenya* (`nj` `[ɲ]`). |
 | 65 | **Bohemia** | `k_bohemia` | **Kûnincrich van Bêheim** *(or **Böhmen**)* | `[ˈbeː.hɛɪm]` | **8/8 RE** — MHG *Bêheim* (attested *Böhmisch* in save). |
 | 66 | **Jerusalem** | `k_jerusalem` | **Kûnincrich van Jerûsalem** | *Jerûsalemisch* | **8/8 RE** — Added in 1122 Imperial Chancellery update. |
@@ -107,35 +107,35 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 69 | **Castile** | `k_castille` | **Kûnincrich van Castêlje** | `[kas.ˈteː.ʎə]` | **7/7 RE** — Old Catalan *Castella* + MHG long `ê`. |
 | 70 | **León** | `k_leon` | **Kûnincrich van Lejôn** *(or **Lewen**)* | `[lɛ.ˈjoːn]` | **7/7 RE** — Romance *León* (`Lejôn`) or calqued *Lewen*. |
 | 71 | **Damot** | `k_damot` | **Kûnincrich van Damôt** | *Damôtisch* | **7/7 RE** — Added in 1142 Imperial Chancellery update. |
-| 72 | **Moldavia** | `k_moldavia` | **Kûnincrich van Moldouwe** | `[ˈmɔl.dɔʊ.wə]` | **6/21 RE** — Historical MHG *Moldouwe* (from the Moldova River). |
+| 72 | **Moldavia** | `k_moldavia` | **Kûnincrich van Moldouwe** | `[ˈmɔl.dɔʊ.wə]` | **18/21 RE** — Historical MHG *Moldouwe* (from the Moldova River). |
 | 73 | **Venice** | `k_venice` | **Kûnincrich van Venedîch** | `[və.ˈnɛ.diːç]` | **6/6 RE** — MHG *Venedîe / Venedig* with final `-ch`. |
 | 74 | **Brittany** | `k_brittany` | **Kûnincrich van Bretanje** | `[brə.ˈta.ɲə]` | **6/6 RE** — Old Catalan *Bretanya* / OFr *Bretaigne* (`nj` `[ɲ]`). |
 | 75 | **Kanem** | `k_kanem` | **Kûnincrich van Kânem** | *Kânemisch* | **6/6 RE** — Added in 1122 Imperial Chancellery update. |
 | 76 | **Armeniac** | `x_script_4774` | **Kûnincrich van Armenjach** | *Armenjachisch* | **6/6 RE** — Added in 1122 Imperial Chancellery update. |
 | 77 | **Navarra** | `k_navarra` | **Kûnincrich van Navarre** | `[na.ˈva.rə]` | **5/5 RE** — Old Catalan *Navarra* with weak final `-e`. |
 | 78 | **Sicily (Island)** | `x_script_4328` | **Kûnincrich van Sitziljen** | `[zɪ.ˈtsɪ.ljən]` | **5/5 RE** — MHG *Siciljen* + Catalan *Sicília*. |
-| 79 | **Transoxiana** | `k_transoxiana` | **Kûnincrich van Transoxânjen** *(1142 Hist: **Kûnincrich van Sogdjen**)* | *Transoxânisch* | **4/35 RE** — Added in 1142 Imperial Chancellery update. |
-| 80 | **Nikaea** | `k_nikaea` | **Kûnincrich van Nîkêe** | *Nîkêisch* | **4/13 RE** — Added in 1122 Imperial Chancellery update. |
-| 81 | **Takrūr** | `k_takrur` | **Kûnincrich van Takrûr** | *Takrûrisch* | **4/10 RE** — Added in 1142 Imperial Chancellery update. |
+| 79 | **Transoxiana** | `k_transoxiana` | **Kûnincrich van Transoxânjen** *(1142 Hist: **Kûnincrich van Sogdjen**)* | *Transoxânisch* | **35/35 RE** — Added in 1142 Imperial Chancellery update. |
+| 80 | **Nikaea** | `k_nikaea` | **Kûnincrich van Nîkêe** | *Nîkêisch* | **13/13 RE** — Added in 1122 Imperial Chancellery update. |
+| 81 | **Takrūr** | `k_takrur` | **Kûnincrich van Takrûr** | *Takrûrisch* | **9/10 RE** — Added in 1142 Imperial Chancellery update. |
 | 82 | **Caucasus** | `k_caucasus` | **Kûnincrich van Kaukâsjen** *(1142 Hist: **Kûnincrich van Sarîr**)* | *Kaukâsisch* | **4/4 RE** — Added in 1142 Imperial Chancellery update. |
 | 83 | **Thessaly (Thessali)** | `x_script_4359` | **Kûnincrich van Thessâljen** | *Thessâlisch* | **4/4 RE** — Added in 1142 Imperial Chancellery update. |
 | 84 | **Chaldia (Khaldia)** | `x_script_6373` | **Kûnincrich van Chaldîe** | *Chaldîisch* | **4/4 RE** — Added in 1142 Imperial Chancellery update. |
 | 85 | **Brabant** | `x_script_3965` | **Kûnincrich van Brâbant** | `[ˈbraː.bant]` | **4/4 RE** — Native Franconian *Brâbant* (`[1059: Lôven]`). |
-| 86 | **Darfur** | `k_darfur` | **Kûnincrich van Dârfûr** *(1122 Hist: **Kûnincrich van Dâdschû**)* | *Dârfûrisch* | **3/16 RE** — Added in 1122 Imperial Chancellery update. |
-| 87 | **Bale** | `k_bale` | **Kûnincrich van Bâli** | *Bâlisch* | **3/9 RE** — Added in 1142 Imperial Chancellery update. |
-| 88 | **Caspian Steppe** | `k_caspian_steppe` | **Kûnincrich van der Kaspischen Steppe** *(1122 Hist: **Kûnincrich van Saksîn**)* | *Kaspisch-Steppisch* | **3/7 RE** — Added in 1122 Imperial Chancellery update. |
-| 89 | **Strymon** | `x_script_7238` | **Kûnincrich van Strîmôn** | *Strîmônisch* | **3/5 RE** — Added in 1122 Imperial Chancellery update. |
+| 86 | **Darfur** | `k_darfur` | **Kûnincrich van Dârfûr** *(1122 Hist: **Kûnincrich van Dâdschû**)* | *Dârfûrisch* | **10/16 RE** — Added in 1122 Imperial Chancellery update. |
+| 87 | **Bale** | `k_bale` | **Kûnincrich van Bâli** | *Bâlisch* | **9/9 RE** — Added in 1142 Imperial Chancellery update. |
+| 88 | **Caspian Steppe** | `k_caspian_steppe` | **Kûnincrich van der Kaspischen Steppe** *(1122 Hist: **Kûnincrich van Saksîn**)* | *Kaspisch-Steppisch* | **7/7 RE** — Added in 1122 Imperial Chancellery update. |
+| 89 | **Strymon** | `x_script_7238` | **Kûnincrich van Strîmôn** | *Strîmônisch* | **5/5 RE** — Added in 1122 Imperial Chancellery update. |
 | 90 | **Thessalonika** | `k_thessalonika` | **Kûnincrich van Thessalonîke** | *Thessalonîkisch* | **3/3 RE** — Added in 1122 Imperial Chancellery update. |
 | 91 | **Pontus** | `k_pontus` | **Kûnincrich van Pont** | *Pontisch* | **3/3 RE** — Added in 1122 Imperial Chancellery update. |
 | 92 | **Khazaria** | `x_script_5503` | **Kûnincrich van Chasârjen** *(1142 Hist: **Kûnincrich van Atîl**)* | *Chasârisch* | **3/3 RE** — Added in 1142 Imperial Chancellery update. |
 | 93 | **Apuljen (Apulia)** | `x_script_6717` | **Kûnincrich van Apuljen** | *Apulisch* | **3/3 RE** — Added in 1122 Imperial Chancellery update. |
 | 94 | **Krete** | `k_krete` | **Kûnincrich van Krête** | *Krêtisch* | **2/2 RE** — Added in 1142 Imperial Chancellery update. |
 | 95 | **Cyprus** | `k_cyprus` | **Kûnincrich van Tzipern** | *Tziprisch* | **2/2 RE** — Added in 1142 Imperial Chancellery update. |
-| 96 | **Bashkiria** | `k_bashkiria` | **Kûnincrich van Baschkîrjen** | *Baschkîrisch* | **1/24 RE** — Added in 1142 Imperial Chancellery update. |
-| 97 | **Volga Bulgaria** | `k_volga_bulgaria` | **Kûnincrich van Wolge-Bulgârjen** | *Wolge-Bulgârisch* | **1/15 RE** — Added in 1122 Imperial Chancellery update. |
-| 98 | **Sindh** | `k_sindh` | **Kûnincrich van Sînt** | *Sîndisch* | **1/12 RE** — Added in 1142 Imperial Chancellery update. |
+| 96 | **Bashkiria** | `k_bashkiria` | **Kûnincrich van Baschkîrjen** | *Baschkîrisch* | **5/30 RE** — Added in 1142 Imperial Chancellery update. |
+| 97 | **Volga Bulgaria** | `k_volga_bulgaria` | **Kûnincrich van Wolge-Bulgârjen** | *Wolge-Bulgârisch* | **1/12 RE** — Added in 1122 Imperial Chancellery update. |
+| 98 | **Sindh** | `k_sindh` | **Kûnincrich van Sînt** | *Sîndisch* | **10/12 RE** — Added in 1142 Imperial Chancellery update. |
 | 99 | **Songhay** | `k_songhay` | **Kûnincrich van Songâi** *(1142 Hist: **Kûnincrich van Kaukau**)* | *Songâisch* | **1/8 RE** — Added in 1142 Imperial Chancellery update. |
-| 100 | **Permia** | `k_permia` | **Kûnincrich van Permjen** *(1122 Hist: **Kûnincrich van Grôzperm**)* | *Permisch* | **1/7 RE** — Added in 1122 Imperial Chancellery update. |
+| 100 | **Permia** | `k_permia` | **Kûnincrich van Permjen** *(1122 Hist: **Kûnincrich van Grôzperm**)* | *Permisch* | **0/4 RE** — Added in 1122 Imperial Chancellery update. |
 | 101 | **Amdo** | `k_amdo` | **Kûnincrich van Amdô** | *Amdôisch* | **27/27 RE** — Added in 1154 Imperial Chancellery update. |
 | 102 | **Xia** | `k_xia` | **Kûnincrich van dem Sommerlant** *(or **Hîa**)* | *Sommerlantisch* | **27/27 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Xià* (夏). |
 | 103 | **Khitan** | `k_khitan` | **Kûnincrich van Chitân** *(or **Chitan**)* | *Chitânisch* | **26/26 RE** — Added in 1154 Imperial Chancellery update. |
@@ -144,48 +144,48 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 106 | **Hexi** | `k_hexi` | **Kûnincrich van dem Westflôze** *(or **Heschi**)* | *Westflôzisch* | **23/23 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Héxī* (河西). |
 | 107 | **Silla** | `k_silla` | **Kûnincrich van Schilla** *(or **Sille**)* | *Schillaer* | **21/21 RE** — Added in 1154 Imperial Chancellery update. |
 | 108 | **Punjab** | `k_punjab` | **Kûnincrich van Punjap** | *Punjapisch* | **19/19 RE** — Added in 1154 Imperial Chancellery update. |
-| 109 | **Bóhai** | `k_balhae` | **Kûnincrich van dem Bôchmêre** *(or **Bôhai**)* | *Bôchmêrer* | **18/29 RE** — Added in 1154 Imperial Chancellery update. |
-| 110 | **Khotan** | `k_khotan` | **Kûnincrich van Chotan** | *Chotanisch* | **18/20 RE** — Added in 1154 Imperial Chancellery update. |
+| 109 | **Bóhai** | `k_balhae` | **Kûnincrich van dem Bôchmêre** *(or **Bôhai**)* | *Bôchmêrer* | **24/29 RE** — Added in 1154 Imperial Chancellery update. |
+| 110 | **Khotan** | `k_khotan` | **Kûnincrich van Chotan** | *Chotanisch* | **19/20 RE** — Added in 1154 Imperial Chancellery update. |
 | 111 | **Goguryeo** | `k_goguryeo` | **Kûnincrich van Gogurjô** | *Gogurjôisch* | **16/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 112 | **Hedong** | `k_hedong` | **Kûnincrich van dem Ôstflôze** *(or **Hedong**)* | *Ôstflôzisch* | **15/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Hédōng* (河东). |
 | 113 | **Daibei** | `k_daibei` | **Kûnincrich van Dênordlant** *(or **Daibei**)* | *Dênordlantisch* | **14/14 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Dàiběi* (代北). |
-| 114 | **Oghuz il** | `k_oghuz_il` | **Kûnincrich van Oghuz Il** | *Oghuz Ilisch* | **11/30 RE** — Added in 1154 Imperial Chancellery update. |
-| 115 | **Luzhen** | `k_luzhen` | **Kûnincrich van Sinswâr** *(or **Ludschen**)* | *Sinswârisch* | **11/19 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Lùzhèn* (漉珍). |
+| 114 | **Oghuz il** | `k_oghuz_il` | **Kûnincrich van Oghuz Il** | *Oghuz Ilisch* | **25/30 RE** — Added in 1154 Imperial Chancellery update. |
+| 115 | **Luzhen** | `k_luzhen` | **Kûnincrich van Sinswâr** *(or **Ludschen**)* | *Sinswârisch* | **19/19 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Lùzhèn* (漉珍). |
 | 116 | **Baekje** | `k_baekje` | **Kûnincrich van Bêkdsche** *(or **Baekdsche**)* | *Bêkdscher* | **11/11 RE** — Added in 1154 Imperial Chancellery update. |
 | 117 | **Tsukushi** | `k_tsukushi` | **Kûnincrich van Zukuschi** | *Zukuschiisch* | **10/10 RE** — Added in 1154 Imperial Chancellery update. |
 | 118 | **Youji** | `k_youji` | **Kûnincrich van Düsterdistel** *(or **Jouji**)* | *Düsterdistelisch* | **10/10 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Yōujì* (幽蓟). |
-| 119 | **Amur** | `k_amur` | **Kûnincrich van Amûrlant** *(or **Amur**)* | *Amûrlantisch* | **8/18 RE** — Added in 1154 Imperial Chancellery update.; calque of Amur River / *Heilongjiang*. |
-| 120 | **Raole** | `k_raole` | **Kûnincrich van Rîchvro** *(or **Raole**)* | *Rîchvroisch* | **7/8 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Ráolè* (饶乐). |
+| 119 | **Amur** | `k_amur` | **Kûnincrich van Amûrlant** *(or **Amur**)* | *Amûrlantisch* | **18/18 RE** — Added in 1154 Imperial Chancellery update.; calque of Amur River / *Heilongjiang*. |
+| 120 | **Raole** | `k_raole` | **Kûnincrich van Rîchvro** *(or **Raole**)* | *Rîchvroisch* | **8/8 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Ráolè* (饶乐). |
 | 121 | **Hitakami** | `k_hitakami` | **Kûnincrich van Hîtakamî** *(or **Hitakami**)* | *Hîtakamîisch* | **7/7 RE** — Added in 1154 Imperial Chancellery update. |
-| 122 | **Syr Darya** | `k_syr_darya` | **Kûnincrich van Syr Darye** | *Syr Daryeer* | **6/10 RE** — Added in 1154 Imperial Chancellery update. |
+| 122 | **Syr Darya** | `k_syr_darya` | **Kûnincrich van Syr Darye** | *Syr Daryeer* | **10/10 RE** — Added in 1154 Imperial Chancellery update. |
 | 123 | **Kashmir** | `k_kashmir` | **Kûnincrich van Kaschmir** | *Kaschmirisch* | **5/6 RE** — Added in 1154 Imperial Chancellery update. |
-| 124 | **Ötüken** | `k_otuken` | **Kûnincrich van Ötüken** | *Ötükenisch* | **4/25 RE** — Added in 1154 Imperial Chancellery update. |
+| 124 | **Ötüken** | `k_otuken` | **Kûnincrich van Ötüken** | *Ötükenisch* | **6/25 RE** — Added in 1154 Imperial Chancellery update. |
 | 125 | **Kaabu** | `k_kaabu` | **Kûnincrich van Kâbu** | *Kâbuisch* | **4/8 RE** — Added in 1154 Imperial Chancellery update. |
 | 126 | **Himalaya** | `k_himalaya` | **Kûnincrich van Himalaye** | *Himalayeer* | **3/16 RE** — Added in 1154 Imperial Chancellery update. |
-| 127 | **Aynumosir** | `k_aynumosir` | **Kûnincrich van Ajnulant** *(or **Aynumosir**)* | *Ajnulantisch* | **2/14 RE** — Added in 1154 Imperial Chancellery update.; calque of Ainu *Aynu-mosir* ("Land of the Humans"). |
+| 127 | **Aynumosir** | `k_aynumosir` | **Kûnincrich van Ajnulant** *(or **Aynumosir**)* | *Ajnulantisch* | **14/14 RE** — Added in 1154 Imperial Chancellery update.; calque of Ainu *Aynu-mosir* ("Land of the Humans"). |
 | 128 | **Delhi** | `k_delhi` | **Kûnincrich van Delhi** | *Delhiisch* | **2/12 RE** — Added in 1154 Imperial Chancellery update. |
-| 129 | **Gobi** | `k_gobi` | **Kûnincrich van Gobi** | *Gobiisch* | **2/9 RE** — Added in 1154 Imperial Chancellery update. |
-| 130 | **Dzungaria** | `k_dzungaria` | **Kûnincrich van Dzungarje** | *Dzungarjeer* | **1/25 RE** — Added in 1154 Imperial Chancellery update. |
-| 131 | **Kabulistan** | `k_kabulistan` | **Kûnincrich van Kabulistan** | *Kabulistanisch* | **1/7 RE** — Added in 1154 Imperial Chancellery update. |
-| 132 | **Buryatia** | `k_buryatia` | **Kûnincrich van Buryatje** | *Buryatjeer* | **0/57 RE** — Added in 1154 Imperial Chancellery update. |
+| 129 | **Gobi** | `k_gobi` | **Kûnincrich van Gobi** | *Gobiisch* | **5/9 RE** — Added in 1154 Imperial Chancellery update. |
+| 130 | **Dzungaria** | `k_dzungaria` | **Kûnincrich van Dzungarje** | *Dzungarjeer* | **4/25 RE** — Added in 1154 Imperial Chancellery update. |
+| 131 | **Kabulistan** | `k_kabulistan` | **Kûnincrich van Kabulistan** | *Kabulistanisch* | **7/7 RE** — Added in 1154 Imperial Chancellery update. |
+| 132 | **Buryatia** | `k_buryatia` | **Kûnincrich van Buryatje** | *Buryatjeer* | **0/60 RE** — Added in 1154 Imperial Chancellery update. |
 | 133 | **Saryarka** | `k_saryarka` | **Kûnincrich van Saryarke** | *Saryarkeer* | **0/28 RE** — Added in 1154 Imperial Chancellery update. |
 | 134 | **Kham** | `k_kham` | **Kûnincrich van Cham** | *Chamisch* | **0/27 RE** — Added in 1154 Imperial Chancellery update. |
-| 135 | **Zhetysu** | `k_zhetysu` | **Kûnincrich van Dschetysu** | *Dschetysuisch* | **0/26 RE** — Added in 1154 Imperial Chancellery update. |
+| 135 | **Zhetysu** | `k_zhetysu` | **Kûnincrich van Dschetysu** | *Dschetysuisch* | **4/26 RE** — Added in 1154 Imperial Chancellery update. |
 | 136 | **Guannei** | `k_guannei` | **Kûnincrich van der Binnenklûse** *(or **Binnenklûsen**)* | *Binnenklûser* | **0/23 RE** — Added in 1154 Imperial Chancellery update; calque of Chinese *Guānnèi*. |
 | 137 | **Gugé** | `k_guge` | **Kûnincrich van Gugê** | *Gugêisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
 | 138 | **Gyalrong** | `k_gyalrong` | **Kûnincrich van Gyalrong** | *Gyalrongisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
-| 139 | **Zanj** | `k_zanj` | **Kûnincrich van Zantsch** | *Zantschisch* | **0/19 RE** — Added in 1154 Imperial Chancellery update. |
+| 139 | **Zanj** | `k_zanj` | **Kûnincrich van Zantsch** | *Zantschisch* | **19/19 RE** — Added in 1154 Imperial Chancellery update. |
 | 140 | **Hausaland** | `k_hausaland` | **Kûnincrich van Hausalant** | *Hausalantisch* | **0/17 RE** — Added in 1154 Imperial Chancellery update. |
 | 141 | **Qingxu** | `k_qingxu` | **Kûnincrich van Blousacht** *(or **Tschingschu**)* | *Blousachtisch* | **0/17 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Qīngxú* (青徐). |
 | 142 | **Ghana** | `k_ghana` | **Kûnincrich van Ghane** | *Ghaneer* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 143 | **Kosala** | `k_kosala` | **Kûnincrich van Kosale** | *Kosaleer* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 144 | **Mali** | `k_mali` | **Kûnincrich van Mali** | *Maliisch* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
-| 145 | **Maryül** | `k_maryul` | **Kûnincrich van Niderlant** *(or **Maryül**)* | *Niderlantisch* | **0/16 RE** — Added in 1154 Imperial Chancellery update; calque of Tibetan *Mar-yul*. |
-| 146 | **Uly Dala** | `k_cuman` | **Kûnincrich van Uly Dale** | *Uly Daleer* | **0/16 RE** — Added in 1154 Imperial Chancellery update. |
+| 145 | **Maryül** | `k_maryul` | **Kûnincrich van Niderlant** *(or **Maryül**)* | *Niderlantisch* | **16/16 RE** — Added in 1154 Imperial Chancellery update; calque of Tibetan *Mar-yul*. |
+| 146 | **Uly Dala** | `k_cuman` | **Kûnincrich van Uly Dale** | *Uly Daleer* | **8/16 RE** — Added in 1154 Imperial Chancellery update. |
 | 147 | **Hebei** | `k_hebei` | **Kûnincrich van dem Nordflôze** *(or **Hebei**)* | *Nordflôzisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Héběi* (河北). |
 | 148 | **Henan** | `k_henan` | **Kûnincrich van dem Sûtflôze** *(or **Henan**)* | *Sûtflôzisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update.; calque of Chinese *Hénán* (河南). |
-| 149 | **Lhomon** | `k_lhomon` | **Kûnincrich van Sût-Monenlant** *(or **Lômon**)* | *Sût-Monenlantisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update; calque of Tibetan *Lho-mon*. |
-| 150 | **Qara Dala** | `k_qara_dala` | **Kûnincrich van Chara Dale** | *Chara Daleer* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
+| 149 | **Lhomon** | `k_lhomon` | **Kûnincrich van Sût-Monenlant** *(or **Lômon**)* | *Sût-Monenlantisch* | **9/15 RE** — Added in 1154 Imperial Chancellery update; calque of Tibetan *Lho-mon*. |
+| 150 | **Qara Dala** | `k_qara_dala` | **Kûnincrich van Chara Dale** | *Chara Daleer* | **1/15 RE** — Added in 1154 Imperial Chancellery update. |
 | 151 | **Rajputana** | `k_rajputana` | **Kûnincrich van Râdschputâne** | *Râdschputânisch* | **0/15 RE** — Added in 1154 Imperial Chancellery update. |
 | 152 | **Gujarat** | `k_gujarat` | **Kûnincrich van Gudscharât** | *Gudscharâtisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
 | 153 | **Sao** | `k_sao` | **Kûnincrich van Saô** | *Saôisch* | **0/13 RE** — Added in 1154 Imperial Chancellery update. |
@@ -193,9 +193,35 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 155 | **Malwa** | `k_malwa` | **Kûnincrich van Malwe** | *Malweer* | **0/12 RE** — Added in 1154 Imperial Chancellery update. |
 | 156 | **Gurma** | `k_gurma` | **Kûnincrich van Gurme** | *Gurmeer* | **0/11 RE** — Added in 1154 Imperial Chancellery update. |
 | 157 | **Kipchak** | `k_kipchak` | **Kûnincrich van Kiptschach** | *Kiptschachisch* | **0/10 RE** — Added in 1154 Imperial Chancellery update. |
-| 158 | **Tsang** | `k_tsang` | **Kûnincrich van Zang** | *Zangisch* | **0/10 RE** — Added in 1154 Imperial Chancellery update. |
+| 158 | **Tsang** | `k_tsang` | **Kûnincrich van Zang** | *Zangisch* | **4/10 RE** — Added in 1154 Imperial Chancellery update. |
 | 159 | **Jenne** | `k_jenne` | **Kûnincrich van Dschenne** | *Dschenneer* | **0/6 RE** — Added in 1154 Imperial Chancellery update. |
 | 160 | **Shiwei** | `k_shiwei` | **Kûnincrich van Schîwêj** *(or **Schiwei**)* | *Schîwêjisch* | **0/3 RE** — Added in 1154 Imperial Chancellery update. |
+| 161 | **Pagan** | `k_pagan` | **Kûnincrich van Pagân** | *Pagânisch* | **34/34 RE** — Added in 1171 Imperial Chancellery update. |
+| 162 | **Malayadvipa** | `k_malayadvipa` | **Kûnincrich van Malajadwîpe** | *Malajadwîpisch* | **23/26 RE** — Added in 1171 Imperial Chancellery update. |
+| 163 | **Tanjungnagara** | `k_tanjungnagara` | **Kûnincrich van Tandschungnagare** | *Tandschungnagarisch* | **21/21 RE** — Added in 1171 Imperial Chancellery update. |
+| 164 | **Dvaravati** | `k_dvaravati` | **Kûnincrich van Dwârawatî** | *Dwârawatîisch* | **19/19 RE** — Added in 1171 Imperial Chancellery update. |
+| 165 | **Bihar** | `k_bihar` | **Kûnincrich van Bihâr** | *Bihârisch* | **16/23 RE** — Added in 1171 Imperial Chancellery update. |
+| 166 | **Kabisay-An** | `k_kabisay-an` | **Kûnincrich van Kabisajân** | *Kabisajânisch* | **14/14 RE** — Added in 1171 Imperial Chancellery update. |
+| 167 | **Sulawesi** | `k_sulawesi` | **Kûnincrich van Sulawêsi** | *Sulawêsisch* | **14/14 RE** — Added in 1171 Imperial Chancellery update. |
+| 168 | **Lusung** | `k_lusung` | **Kûnincrich van Lusung** | *Lusungisch* | **13/13 RE** — Added in 1171 Imperial Chancellery update. |
+| 169 | **Hujung Medini** | `k_hujung_medini` | **Kûnincrich van Hudschung Medîni** | *Hudschung-Medînisch* | **11/11 RE** — Added in 1171 Imperial Chancellery update. |
+| 170 | **Yavakadvipa** | `k_yavakadvipa` | **Kûnincrich van Jawakadwîpe** | *Jawakadwîpisch* | **10/10 RE** — Added in 1171 Imperial Chancellery update. |
+| 171 | **Maluku** | `k_maluku` | **Kûnincrich van Maluku** | *Malukuisch* | **9/16 RE** — Added in 1171 Imperial Chancellery update. |
+| 172 | **Tamilakam** | `k_tamilakam` | **Kûnincrich van Tamilakam** | *Tamilakamisch* | **8/17 RE** — Added in 1171 Imperial Chancellery update. |
+| 173 | **Bengal** | `k_bengal` | **Kûnincrich van Bengâlen** | *Bengâlisch* | **8/8 RE** — Added in 1171 Imperial Chancellery update. |
+| 174 | **Lanka** | `k_lanka` | **Kûnincrich van Lanke** | *Lankisch* | **8/8 RE** — Added in 1171 Imperial Chancellery update. |
+| 175 | **Kamarupa** | `k_kamarupa` | **Kûnincrich van Kâmarûpe** | *Kâmarûpisch* | **7/12 RE** — Added in 1171 Imperial Chancellery update. |
+| 176 | **Karnata** | `k_karnata` | **Kûnincrich van Karnâte** | *Karnâtisch* | **5/14 RE** — Added in 1171 Imperial Chancellery update. |
+| 177 | **Chenla** | `k_chenla` | **Kûnincrich van Tschenle** | *Tschenlisch* | **3/8 RE** — Added in 1171 Imperial Chancellery update. |
+| 178 | **Telingana** | `k_telingana` | **Kûnincrich van Telingâne** | *Telingânisch* | **3/7 RE** — Added in 1171 Imperial Chancellery update. |
+| 179 | **Liuqiu** | `k_liuqiu` | **Kûnincrich van Ljûkjû** | *Ljûkjûisch* | **3/3 RE** — Added in 1171 Imperial Chancellery update. |
+| 180 | **Orissa** | `k_orissa` | **Kûnincrich van Orisse** | *Orissisch* | **2/16 RE** — Added in 1171 Imperial Chancellery update. |
+| 181 | **Andhra** | `k_andhra` | **Kûnincrich van Andhre** | *Andhrisch* | **1/5 RE** — Added in 1171 Imperial Chancellery update. |
+| 182 | **Angkor** | `k_funan` | **Kûnincrich van Angkôr** | *Angkôrisch* | **0/18 RE** — Added in 1171 Imperial Chancellery update. |
+| 183 | **Maharastra** | `k_maharastra` | **Kûnincrich van Mahâraschtre** | *Mahâraschtrisch* | **0/17 RE** — Added in 1171 Imperial Chancellery update. |
+| 184 | **Champa** | `k_champa` | **Kûnincrich van Tschampe** | *Tschampisch* | **0/6 RE** — Added in 1171 Imperial Chancellery update. |
+| 185 | **Gondwana** | `k_gondwana` | **Kûnincrich van Gondwâne** | *Gondwânisch* | **0/5 RE** — Added in 1171 Imperial Chancellery update. |
+| 186 | **Ruucuu** | `k_ruucuu` | **Kûnincrich van Rûtschû** | *Rûtschûisch* | **0/2 RE** — Added in 1171 Imperial Chancellery update. |
 
 ---
 
@@ -875,10 +901,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_chornobyl` (**[HRE]** Chornobyl) $\rightarrow$ **Magistrat van Tschornobîl** *(Botanical hydronym/meadow name, or **Owrutsch**)*
   * `c_ushytsia` (**[HRE]** Ushytsia) $\rightarrow$ **Magistrat van Uschitz** *(Hydronym of the Ushytsia River, or `[1059 Sub-Barony: Magistrat van Bakôte]`)*
   * `c_korsun` (**[HRE]** Korsuń) $\rightarrow$ **Magistrat van Korsûn**
-* **Duchy of Turov** (`d_turov`) $\rightarrow$ **Gubernat van Tûrouwe**
-  * `c_turov` (**[HRE]** Turov) $\rightarrow$ **Magistrat van Tûrouwe**
-  * `c_korosten` (**[HRE]** Korosten) $\rightarrow$ **Magistrat van Korostên** *(or **Iskorostên**)*
-  * `c_dubrovytsia` (**[HRE]** Dubrovytsia) $\rightarrow$ **Magistrat van Dubrowitz**
 * **Duchy of Pereyaslavl** (`d_pereyaslavl`) $\rightarrow$ **Gubernat van Perejaslouwe**
   * `c_pereyaslavl` (**[HRE]** Pereyaslavl) $\rightarrow$ **Magistrat van Rûmfurt** *(calque of Slavic *Pereyaslav* \"Seize/Cross Glory\", or **Perejaslouwe**)*
   * `c_hradyzk` (Hradyzk) $\rightarrow$ **Magistrat van Gradîtzich** (`[1059 Sub-Barony: Magistrat van Altâwe / Poltâwe]`)
@@ -895,8 +917,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sevsk` (Sevsk) $\rightarrow$ **Magistrat van Sêwtzich**
 * **Duchy of Mtsensk (Novosil)** (`d_novosil`) $\rightarrow$ **Gubernat van Metzêntzich** *(direct vanilla: **Nowosîl**)*
   * `c_novosil` (Novosil) $\rightarrow$ **Magistrat van Nowosîl**
-* **Duchy of Chernigov** (`x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
-  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
 * **Duchy of Upadal (Odoyev)** (`x_script_4712`) $\rightarrow$ **Gubernat van Upâdal** *(or **Odojouwe**)*
   * `c_odoyev` (Odoyev) $\rightarrow$ **Magistrat van Odojouwe** *(Topographic valley name on the Upa, or **Upâdal**)*
 
@@ -945,6 +965,12 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_roslavl` (Roslavl) $\rightarrow$ **Magistrat van Roslouwe** (`[1059 Geographic/Sub-Barony: Magistrat van Ôsterdal (Oster River) / Tscherîkouwe]`)
   * `c_mozhaysk` (Mozhaysk) $\rightarrow$ **Magistrat van Moschaitzich** *(Hydronym of the Mozhayka River; matches Merya culture)*
   * `c_toropets` (Toropets) $\rightarrow$ **Magistrat van Toropêtz**
+* **Duchy of Turov** (`d_turov`) $\rightarrow$ **Gubernat van Tûrouwe**
+  * `c_turov` (**[HRE]** Turov) $\rightarrow$ **Magistrat van Tûrouwe**
+  * `c_korosten` (**[HRE]** Korosten) $\rightarrow$ **Magistrat van Korostên** *(or **Iskorostên**)*
+  * `c_dubrovytsia` (**[HRE]** Dubrovytsia) $\rightarrow$ **Magistrat van Dubrowitz**
+* **Duchy of Chernigov** (`x_script_4589`) $\rightarrow$ **Gubernat van Tschernigouwe**
+  * `c_chernigov` (**[HRE]** Chernigov) $\rightarrow$ **Magistrat van Tschernigouwe**
 
 ---
 
@@ -1909,10 +1935,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_yoshkar-ola` (Charla (Yoshkar-Ola)) $\rightarrow$ **Magistrat van Tschârle**
   * `c_mari-turek` (Mari-Turek) $\rightarrow$ **Magistrat van Mâri-Turêch**
   * `c_elabuga` (Elabuga) $\rightarrow$ **Magistrat van Jelabûge**
-* **Duchy of Jalmat** (`d_jalmat`) $\rightarrow$ **Gubernat van Dschalmât**
-  * `c_jalmat` (Jalmat) $\rightarrow$ **Magistrat van Dschalmât**
-  * `c_belebey` (Belebey) $\rightarrow$ **Magistrat van Belebêi**
-  * `c_siun` (Siun) $\rightarrow$ **Magistrat van Sjûn**
 * **Duchy of Martyuba** (`d_martyuba`) $\rightarrow$ **Gubernat van Martjûbe**
   * `c_martyuba` (Martyuba) $\rightarrow$ **Magistrat van Martjûbe**
   * `c_cykma` (**[HRE]** Cykma) $\rightarrow$ **Magistrat van Zîkme**
@@ -1921,10 +1943,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ### 3.60 Kingdom of Permia (`k_permia`) $\rightarrow$ **Kûnincrich van Permjen** (`[1122 Historical: Kûnincrich van Grôzperm]`)
 
-* **Duchy of Ural** (`d_ural`) $\rightarrow$ **Gubernat van Urâl**
-  * `c_ural` (Ural) $\rightarrow$ **Magistrat van Urâl**
-  * `c_votkinsk` (Votkinsk) $\rightarrow$ **Magistrat van Wotkîn** (`[1122 Historical: Magistrat van Obwe]`)
-  * `c_kerken` (Kerken) $\rightarrow$ **Magistrat van Kêrken**
 * **Duchy of Udmurtia** (`d_udmurtia`) $\rightarrow$ **Gubernat van Udmurtjen**
   * `c_kargadan` (Kargadan) $\rightarrow$ **Magistrat van Kargadân**
   * `c_palniki` (Palniki) $\rightarrow$ **Magistrat van Palnîki**
@@ -2046,7 +2064,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_el_fasher` (El-Fasher) $\rightarrow$ **Magistrat van El-Fâscher** (`[1122 Historical: Magistrat van Tûrre]`)
   * `c_dar_al-said` (Dár al-Saíd) $\rightarrow$ **Magistrat van Dâr-es-Saît**
   * `c_dar-al-rih` (Dár al-Ríh) $\rightarrow$ **Magistrat van Dâr-er-Rîch**
-  * `c_east_darfur` (East Darfur) $\rightarrow$ **Magistrat van Ôst-Dârfûr**
 * **Duchy of West Dárfúr** (`d_west_darfur`) $\rightarrow$ **Gubernat van West-Dârfûr**
   * `c_ayn_farah` (Ayn Farah) $\rightarrow$ **Magistrat van Aîn-Farâch**
   * `c_qimr` (Qimr) $\rightarrow$ **Magistrat van Kîmer**
@@ -2062,6 +2079,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_kordofan` (**[HRE]** Kordofan) $\rightarrow$ **Magistrat van Kordofân**
   * `c_west_kordofan` (**[HRE]** West Kordofan) $\rightarrow$ **Magistrat van West-Kordofân**
   * `c_south_kordofan` (**[HRE]** South Kordofan) $\rightarrow$ **Magistrat van Sût-Kordofân**
+* **Duchy of East Darfur** (`x_script_8252`) $\rightarrow$ **Gubernat van Ôst-Dârfûr**
+  * `c_east_darfur` (East Darfur) $\rightarrow$ **Magistrat van Ôst-Dârfûr**
 
 ---
 
@@ -2294,6 +2313,14 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_yekaterinburg` (Yekaterinburg) $\rightarrow$ **Magistrat van Katherînenburch** (`[1142 Historical: Magistrat van Tschussowe]`)
   * `c_chadrinsk` (Chadrinsk) $\rightarrow$ **Magistrat van Schadrîntzich** (`[1142 Historical: Magistrat van Isêt]`)
   * `c_chelabinsk` (Chelabinsk) $\rightarrow$ **Magistrat van Tscheljabîntzich** (`[1142 Historical: Magistrat van Silatsch]`)
+* **Duchy of Jalmat** (`d_jalmat`) $\rightarrow$ **Gubernat van Dschalmât**
+  * `c_jalmat` (Jalmat) $\rightarrow$ **Magistrat van Dschalmât**
+  * `c_belebey` (Belebey) $\rightarrow$ **Magistrat van Belebêi**
+  * `c_siun` (Siun) $\rightarrow$ **Magistrat van Sjûn**
+* **Duchy of Ural** (`d_ural`) $\rightarrow$ **Gubernat van Urâl**
+  * `c_ural` (Ural) $\rightarrow$ **Magistrat van Urâl**
+  * `c_votkinsk` (Votkinsk) $\rightarrow$ **Magistrat van Wotkîn** (`[1122 Historical: Magistrat van Obwe]`)
+  * `c_kerken` (Kerken) $\rightarrow$ **Magistrat van Kêrken**
 
 ---
 
@@ -3147,7 +3174,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_LIAO_shenyang` (**[HRE]** Shenyang) $\rightarrow$ **Magistrat van Dêpsunne** *(or **Schenjang**)*
   * `c_LIAO_yinzhou` (**[HRE]** Yínzhōu) $\rightarrow$ **Magistrat van Silbergouwe-in-dem-Bôchmêre** *(or **Jîndschôu**)*
   * `c_LIAO_zhenzhou` (**[HRE]** Zhenzhou) $\rightarrow$ **Magistrat van Wartgouwe** *(or **Dschendschou**)*
-  * `c_LIAO_diezhou` ([Non-HRE] Diezhou) $\rightarrow$ **Magistrat van Schichtgouwe** *(or **Diedschou**)*
+  * `c_LIAO_diezhou` (**[HRE]** Diezhou) $\rightarrow$ **Magistrat van Schichtgouwe** *(or **Diedschou**)*
 * **Duchy of Fúyú** (`d_BAL_buyeo`) $\rightarrow$ **Gubernat van Stüttefûrjô** *(or **Fûjû**)*
   * `c_BAL_changchun` (**[HRE]** Changchun) $\rightarrow$ **Magistrat van Langlentz-am-Bôchmêre** *(or **Tschangtschun**)*
   * `c_BAL_fuzhou` (**[HRE]** Fuzhou) $\rightarrow$ **Magistrat van Weêrstichtgouwe** *(or **Fudschou**)*
@@ -3160,18 +3187,18 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Yālü-Zhangling** (`d_BAL_amnok_jangryeong`) $\rightarrow$ **Gubernat van dem Antflôze ende Langrücke** *(or **Jâlü-Dschangling**)*
   * `c_BAL_east_jangryeong` (**[HRE]** East Zhangling) $\rightarrow$ **Magistrat van Ôstlangrücke** *(or **Ôst-Dschangling**)*
   * `c_BAL_west_jangryeong` (**[HRE]** West Zhangling) $\rightarrow$ **Magistrat van Westlangrücke** *(or **West-Dschangling**)*
-  * `c_BAL_east_amnok` ([Non-HRE] East Yālü) $\rightarrow$ **Magistrat van Ôstantflôzgrûnewazzer** *(or **Ôst-Jâlü**)*
-  * `c_BAL_west_amnok` ([Non-HRE] West Yālü) $\rightarrow$ **Magistrat van Westantflôz** *(or **West-Jâlü**)*
+  * `c_BAL_east_amnok` (**[HRE]** East Yālü) $\rightarrow$ **Magistrat van Ôstantflôzgrûnewazzer** *(or **Ôst-Jâlü**)*
+  * `c_BAL_west_amnok` (**[HRE]** West Yālü) $\rightarrow$ **Magistrat van Westantflôz** *(or **West-Jâlü**)*
 * **Duchy of Sushenguo** (`d_SW_sushenguo`) $\rightarrow$ **Gubernat van Strêngevromlant** *(or **Suschenguô**)*
-  * `c_SW_fancao` ([Non-HRE] Fancao) $\rightarrow$ **Magistrat van Postwêde** *(or **Fantzaô**)*
+  * `c_SW_fancao` (**[HRE]** Fancao) $\rightarrow$ **Magistrat van Postwêde** *(or **Fantzaô**)*
   * `c_SW_gonghejiang` ([Non-HRE] Gonghejiang) $\rightarrow$ **Magistrat van Gemênjamatoflôz** *(or **Gonghe-Dschiang**)*
   * `c_SW_heilonglin` ([Non-HRE] Heilonglin) $\rightarrow$ **Magistrat van Swartzdrachenwalt** *(or **Heilonglin**)*
   * `c_SW_lupingyuan` ([Non-HRE] Lupingyuan) $\rightarrow$ **Magistrat van Hirschebeneleemhôch** *(or **Lupingjuan**)*
-  * `c_SW_suihua` ([Non-HRE] Suihua) $\rightarrow$ **Magistrat van Stillkeêre** *(or **Suihue**)*
+  * `c_SW_suihua` (**[HRE]** Suihua) $\rightarrow$ **Magistrat van Stillkeêre** *(or **Suihue**)*
 * **Duchy of Ruzheguo** (`d_SW_ruzheguo`) $\rightarrow$ **Gubernat van dem Rechtliutelant** *(or **Rudscheguô**)*
   * `c_SW_dongruzhe` ([Non-HRE] Dongruzhe) $\rightarrow$ **Magistrat van Ôstrechtliute** *(or **Dongrudsche**)*
   * `c_SW_jiqin_hari` ([Non-HRE] Jiqin Hari) $\rightarrow$ **Magistrat van Dschîkîn-Harî (or Vurt-Zînflôz)** *(or **Dschitschin-Hari**)*
-  * `c_SW_ruzhejiang` ([Non-HRE] Ruzhejiang) $\rightarrow$ **Magistrat van Rechtliuteflôz** *(or **Rudsche-Dschiang**)*
+  * `c_SW_ruzhejiang` (**[HRE]** Ruzhejiang) $\rightarrow$ **Magistrat van Rechtliuteflôz** *(or **Rudsche-Dschiang**)*
 
 ---
 
@@ -3192,7 +3219,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_kashgar` (**[HRE]** Kashgar) $\rightarrow$ **Magistrat van Kaschgar**
   * `c_maralbeshi` (**[HRE]** Maralbeshi) $\rightarrow$ **Magistrat van Maralbeschi**
   * `c_terek_pass` (**[HRE]** Terek Pass) $\rightarrow$ **Magistrat van Terechpass**
-  * `c_yarkand` ([Non-HRE] Yarkand) $\rightarrow$ **Magistrat van Jarkant**
+  * `c_yarkand` (**[HRE]** Yarkand) $\rightarrow$ **Magistrat van Jarkant**
 * **Duchy of Charkliq** (`d_charkliq`) $\rightarrow$ **Gubernat van Tscharklitsch**
   * `c_charkliq` (**[HRE]** Charkliq) $\rightarrow$ **Magistrat van Tscharklitsch**
   * `c_luobupo` (**[HRE]** Lop Nur) $\rightarrow$ **Magistrat van Lop Nur**
@@ -3294,29 +3321,29 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mangyshlak** (`d_transcaspiana`) $\rightarrow$ **Gubernat van Mangyschlach**
   * `c_buzachi` (**[HRE]** Buzachi) $\rightarrow$ **Magistrat van Buzatschi**
   * `c_mangyshlak` (**[HRE]** Mangyshlak) $\rightarrow$ **Magistrat van Mangyschlach**
-  * `c_qaraustyurt` ([Non-HRE] Qaraustyurt) $\rightarrow$ **Magistrat van Charaustyurt**
-  * `c_qyzylustyurt` ([Non-HRE] Qyzylustyurt) $\rightarrow$ **Magistrat van Chyzylustyurt**
+  * `c_qaraustyurt` (**[HRE]** Qaraustyurt) $\rightarrow$ **Magistrat van Charaustyurt**
+  * `c_qyzylustyurt` (**[HRE]** Qyzylustyurt) $\rightarrow$ **Magistrat van Chyzylustyurt**
 * **Duchy of Garabogazkol** (`d_garabogazkol`) $\rightarrow$ **Gubernat van Garabogazkol**
   * `c_bekdas` (**[HRE]** Bekdas) $\rightarrow$ **Magistrat van Bekdas**
   * `c_garabogazkol` (**[HRE]** Garabogazkol) $\rightarrow$ **Magistrat van Garabogazkol**
-  * `c_oglamych` ([Non-HRE] Oglamych) $\rightarrow$ **Magistrat van Oglamytsch**
+  * `c_oglamych` (**[HRE]** Oglamych) $\rightarrow$ **Magistrat van Oglamytsch**
 * **Duchy of Jemba** (`d_jemba`) $\rightarrow$ **Gubernat van Jembe**
-  * `c_akkityk` ([Non-HRE] Akkityk) $\rightarrow$ **Magistrat van Akkitîch**
-  * `c_churuk` ([Non-HRE] Churuk) $\rightarrow$ **Magistrat van Tschuruch**
-  * `c_kos-buwak` ([Non-HRE] Kos-Buwak) $\rightarrow$ **Magistrat van Kos-Buwach**
-  * `c_namastau` ([Non-HRE] Namastau) $\rightarrow$ **Magistrat van Namastau**
-  * `c_qoshagyl` ([Non-HRE] Qoshagyl) $\rightarrow$ **Magistrat van Tschoschagyl**
-  * `c_tengiz` ([Non-HRE] Tengiz) $\rightarrow$ **Magistrat van Tengiz**
+  * `c_akkityk` (**[HRE]** Akkityk) $\rightarrow$ **Magistrat van Akkitîch**
+  * `c_churuk` (**[HRE]** Churuk) $\rightarrow$ **Magistrat van Tschuruch**
+  * `c_kos-buwak` (**[HRE]** Kos-Buwak) $\rightarrow$ **Magistrat van Kos-Buwach**
+  * `c_namastau` (**[HRE]** Namastau) $\rightarrow$ **Magistrat van Namastau**
+  * `c_qoshagyl` (**[HRE]** Qoshagyl) $\rightarrow$ **Magistrat van Tschoschagyl**
+  * `c_tengiz` (**[HRE]** Tengiz) $\rightarrow$ **Magistrat van Tengiz**
 * **Duchy of Alania** (`d_alania`) $\rightarrow$ **Gubernat van Alanje**
   * `c_besinada` ([Non-HRE] Besinda) $\rightarrow$ **Magistrat van Besinde**
   * `c_cabardinia` ([Non-HRE] Cabardinia) $\rightarrow$ **Magistrat van Zabardinje**
   * `c_maghas` ([Non-HRE] Maghas) $\rightarrow$ **Magistrat van Maghas**
-  * `c_zichia` ([Non-HRE] Zichia) $\rightarrow$ **Magistrat van Sitschje**
+  * `c_zichia` (**[HRE]** Zichia) $\rightarrow$ **Magistrat van Sitschje**
 * **Duchy of Atyrau** (`d_atyrau`) $\rightarrow$ **Gubernat van Atyrau**
-  * `c_atyrau` ([Non-HRE] Atyrau) $\rightarrow$ **Magistrat van Atyrau**
-  * `c_baisary` ([Non-HRE] Baisary) $\rightarrow$ **Magistrat van Baisary**
-  * `c_kainar` ([Non-HRE] Kainar) $\rightarrow$ **Magistrat van Kainar**
-  * `c_sagiz` ([Non-HRE] Sagiz) $\rightarrow$ **Magistrat van Sagiz**
+  * `c_atyrau` (**[HRE]** Atyrau) $\rightarrow$ **Magistrat van Atyrau**
+  * `c_baisary` (**[HRE]** Baisary) $\rightarrow$ **Magistrat van Baisary**
+  * `c_kainar` (**[HRE]** Kainar) $\rightarrow$ **Magistrat van Kainar**
+  * `c_sagiz` (**[HRE]** Sagiz) $\rightarrow$ **Magistrat van Sagiz**
 
 ---
 
@@ -3337,16 +3364,16 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_BAL_huligai` (**[HRE]** Huligai) $\rightarrow$ **Magistrat van Hûligâibache** *(or **Huligai**)*
   * `c_BAL_west_cheolli` (**[HRE]** West Tielì) $\rightarrow$ **Magistrat van Westîsenlant** *(or **West-Tieli**)*
 * **Duchy of Huáiyuan** (`d_BAL_hoewon`) $\rightarrow$ **Gubernat van Koesterferne** *(or **Huâijuan**)*
-  * `c_BAL_central_hoewon` ([Non-HRE] Central Huáiyuǎn) $\rightarrow$ **Magistrat van Middenkoesterferne** *(or **Middel-Huâijuan**)*
-  * `c_BAL_dazhou` ([Non-HRE] Dazhou) $\rightarrow$ **Magistrat van Rêkgouwe** *(or **Dadschou**)*
-  * `c_BAL_east_hoewon` ([Non-HRE] East Huáiyuǎn) $\rightarrow$ **Magistrat van Ôstkoesterferne** *(or **Ôst-Huâijuan**)*
-  * `c_BAL_ilanshan` ([Non-HRE] Ilanshan) $\rightarrow$ **Magistrat van Trûweblômenberch** *(or **Ilanschan**)*
-  * `c_BAL_south_hoewon` ([Non-HRE] South Huáiyuǎn) $\rightarrow$ **Magistrat van Sûtkoesterferne** *(or **Sût-Huâijuan**)*
+  * `c_BAL_central_hoewon` (**[HRE]** Central Huáiyuǎn) $\rightarrow$ **Magistrat van Middenkoesterferne** *(or **Middel-Huâijuan**)*
+  * `c_BAL_dazhou` (**[HRE]** Dazhou) $\rightarrow$ **Magistrat van Rêkgouwe** *(or **Dadschou**)*
+  * `c_BAL_east_hoewon` (**[HRE]** East Huáiyuǎn) $\rightarrow$ **Magistrat van Ôstkoesterferne** *(or **Ôst-Huâijuan**)*
+  * `c_BAL_ilanshan` (**[HRE]** Ilanshan) $\rightarrow$ **Magistrat van Trûweblômenberch** *(or **Ilanschan**)*
+  * `c_BAL_south_hoewon` (**[HRE]** South Huáiyuǎn) $\rightarrow$ **Magistrat van Sûtkoesterferne** *(or **Sût-Huâijuan**)*
 * **Duchy of Dōngpíng** (`d_BAL_dongpyeong`) $\rightarrow$ **Gubernat van Ôst-Ebene** *(or **Dôngpîng**)*
-  * `c_BAL_jixi` ([Non-HRE] Jixi) $\rightarrow$ **Magistrat van Hânwest** *(or **Dschischi**)*
-  * `c_BAL_dongpyeong_yizhou` ([Non-HRE] Yizhou) $\rightarrow$ **Magistrat van Ôstfrid-Îgouwe** *(or **Jidschou**)*
+  * `c_BAL_jixi` (**[HRE]** Jixi) $\rightarrow$ **Magistrat van Hânwest** *(or **Dschischi**)*
+  * `c_BAL_dongpyeong_yizhou` (**[HRE]** Yizhou) $\rightarrow$ **Magistrat van Ôstfrid-Îgouwe** *(or **Jidschou**)*
 * **Duchy of Vanda** (`x_script_1250`) $\rightarrow$ **Gubernat van Vollrêk** *(or **Wande**)*
-  * `c_eman_vanda` ([Non-HRE] Vanda) $\rightarrow$ **Magistrat van Vollrêk** *(or **Wande**)*
+  * `c_eman_vanda` (**[HRE]** Vanda) $\rightarrow$ **Magistrat van Vollrêk** *(or **Wande**)*
 
 ---
 
@@ -3413,7 +3440,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_eman_tugur` (**[HRE]** Tugur) $\rightarrow$ **Magistrat van Tôgûrbucht** *(or **Tugur**)*
 * **Duchy of Choripi** (`x_script_1439`) $\rightarrow$ **Gubernat van Tschoripîflôz** *(or **Tschoripi**)*
   * `c_eman_choripi` (**[HRE]** Choripi) $\rightarrow$ **Magistrat van Jêmanswazzer** *(or **Tschoripi**)*
-  * `c_eman_murkonno` ([Non-HRE] Murkonno) $\rightarrow$ **Magistrat van Stilêrerkôngtrûwe** *(or **Murkonnô**)*
+  * `c_eman_murkonno` (**[HRE]** Murkonno) $\rightarrow$ **Magistrat van Stilêrerkôngtrûwe** *(or **Murkonnô**)*
 * **Duchy of Molihewen** (`x_script_2047`) $\rightarrow$ **Gubernat van Môlîhêwên** *(or **Molihewen**)*
   * `c_eman_molihewen` (**[HRE]** Molihewen) $\rightarrow$ **Magistrat van Môlihbache** *(or **Molihewen**)*
 * **Duchy of Boli** (`x_script_2533`) $\rightarrow$ **Gubernat van Bôli** *(or **Boli**)*
@@ -3423,19 +3450,19 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Yerenhe** (`x_script_2924`) $\rightarrow$ **Gubernat van dem Wiltmansflôze** *(or **Jerenhe**)*
   * `c_eman_yerenhe` (**[HRE]** Yerenhe) $\rightarrow$ **Magistrat van Wiltmansflôz** *(or **Jerenhe**)*
 * **Duchy of Samagero** (`d_eman_samagero`) $\rightarrow$ **Gubernat van Samagêro** *(or **Samagerô**)*
-  * `c_eman_kerin` ([Non-HRE] Kerin) $\rightarrow$ **Magistrat van Snîdwalt** *(or **Kerin**)*
-  * `c_eman_khadul` ([Non-HRE] Khadul) $\rightarrow$ **Magistrat van Kaschmênicher** *(or **Chadul**)*
-  * `c_eman_tudali` ([Non-HRE] Tudali) $\rightarrow$ **Magistrat van Tôrêkdorp** *(or **Tudali**)*
-  * `c_eman_yam_alin` ([Non-HRE] Yam Alin) $\rightarrow$ **Magistrat van Abeêlberch** *(or **Jam Alin**)*
+  * `c_eman_kerin` (**[HRE]** Kerin) $\rightarrow$ **Magistrat van Snîdwalt** *(or **Kerin**)*
+  * `c_eman_khadul` (**[HRE]** Khadul) $\rightarrow$ **Magistrat van Kaschmênicher** *(or **Chadul**)*
+  * `c_eman_tudali` (**[HRE]** Tudali) $\rightarrow$ **Magistrat van Tôrêkdorp** *(or **Tudali**)*
+  * `c_eman_yam_alin` (**[HRE]** Yam Alin) $\rightarrow$ **Magistrat van Abeêlberch** *(or **Jam Alin**)*
 * **Duchy of Bureya** (`d_eman_bureya`) $\rightarrow$ **Gubernat van Lînwandrîgenider** *(or **Bureye**)*
-  * `c_eman_birija` ([Non-HRE] Birija) $\rightarrow$ **Magistrat van Vastelâhôfwart** *(or **Birije**)*
-  * `c_eman_turma` ([Non-HRE] Turma) $\rightarrow$ **Magistrat van Bêsterros** *(or **Turme**)*
+  * `c_eman_birija` (**[HRE]** Birija) $\rightarrow$ **Magistrat van Vastelâhôfwart** *(or **Birije**)*
+  * `c_eman_turma` (**[HRE]** Turma) $\rightarrow$ **Magistrat van Bêsterros** *(or **Turme**)*
 * **Duchy of Amar** (`d_eman_amar`) $\rightarrow$ **Gubernat van Bochtagâter** *(or **Amar**)*
-  * `c_eman_nimen` ([Non-HRE] Nimen) $\rightarrow$ **Magistrat van Nîtôr** *(or **Nimen**)*
+  * `c_eman_nimen` (**[HRE]** Nimen) $\rightarrow$ **Magistrat van Nîtôr** *(or **Nimen**)*
 * **Duchy of Urehokto** (`x_script_1737`) $\rightarrow$ **Gubernat van Swartzlêjamatozêgetô** *(or **Urehoktô**)*
-  * `c_eman_urehokto` ([Non-HRE] Urehokto) $\rightarrow$ **Magistrat van Swartzlêjamatozêgetô** *(or **Urehoktô**)*
+  * `c_eman_urehokto` (**[HRE]** Urehokto) $\rightarrow$ **Magistrat van Swartzlêjamatozêgetô** *(or **Urehoktô**)*
 * **Duchy of Urmi** (`x_script_2388`) $\rightarrow$ **Gubernat van Swartzerrîs** *(or **Urmi**)*
-  * `c_eman_urmi` ([Non-HRE] Urmi) $\rightarrow$ **Magistrat van Swartzerrîs** *(or **Urmi**)*
+  * `c_eman_urmi` (**[HRE]** Urmi) $\rightarrow$ **Magistrat van Swartzerrîs** *(or **Urmi**)*
 
 ---
 
@@ -3447,7 +3474,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_lnj_liaoxi` (**[HRE]** Liaoxi) $\rightarrow$ **Magistrat van Ljôwest** *(or **Liaoschi**)*
   * `c_lnj_liaoxibei` (**[HRE]** Liaoxibei) $\rightarrow$ **Magistrat van Ljôwestnord** *(or **Liaoschibei**)*
   * `c_LIAO_xianzhou` (**[HRE]** Xianzhou) $\rightarrow$ **Magistrat van Vermaertgouwe** *(or **Schiandschou**)*
-  * `c_LIAO_liaozhou` ([Non-HRE] Liaozhou) $\rightarrow$ **Magistrat van Ljôgouwe** *(or **Liaodschou**)*
+  * `c_LIAO_liaozhou` (**[HRE]** Liaozhou) $\rightarrow$ **Magistrat van Ljôgouwe** *(or **Liaodschou**)*
 * **Duchy of Yuyi** (`d_yanyun_yuyi`) $\rightarrow$ **Gubernat van Keisersebis** *(or **Juji**)*
   * `c_lxj_huanzhou` (**[HRE]** Huanzhou) $\rightarrow$ **Magistrat van Stamgouwe** *(or **Huandschou**)*
   * `c_lxj_yangchengzhou` (**[HRE]** Yangchengzhou) $\rightarrow$ **Magistrat van Schâpburchgouwe** *(or **Jangtschengdschou**)*
@@ -3475,15 +3502,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_chah` (**[HRE]** Chah) $\rightarrow$ **Magistrat van Tschah**
   * `c_shavgar` (**[HRE]** Shavgar) $\rightarrow$ **Magistrat van Schawgar**
   * `c_sutkend` (**[HRE]** Sütkend) $\rightarrow$ **Magistrat van Sütkent**
-  * `c_otrar` ([Non-HRE] Otrar) $\rightarrow$ **Magistrat van dem Rôtsant** *(calque of Turkic *Kyzylkum* \"Red Sand\", or **Otrar**)*
+  * `c_otrar` (**[HRE]** Otrar) $\rightarrow$ **Magistrat van dem Rôtsant** *(calque of Turkic *Kyzylkum* \"Red Sand\", or **Otrar**)*
 * **Duchy of Syr Darya** (`d_syr_darya`) $\rightarrow$ **Gubernat van Syr Darye**
   * `c_jend` (**[HRE]** Jend) $\rightarrow$ **Magistrat van Dschent**
   * `c_sighnaq` (**[HRE]** Sighnaq) $\rightarrow$ **Magistrat van Sighnatsch**
   * `c_uzgend_KARA` (**[HRE]** Uzgend) $\rightarrow$ **Magistrat van Uzgent**
 * **Duchy of Muyunkum** (`d_muyunkum`) $\rightarrow$ **Gubernat van Muyunkum**
-  * `c_mushun` ([Non-HRE] Mushun) $\rightarrow$ **Magistrat van Muschun**
-  * `c_quriltay` ([Non-HRE] Quriltay) $\rightarrow$ **Magistrat van Tschuriltay**
-  * `c_shelji` ([Non-HRE] Shelji) $\rightarrow$ **Magistrat van Schelji**
+  * `c_mushun` (**[HRE]** Mushun) $\rightarrow$ **Magistrat van Muschun**
+  * `c_quriltay` (**[HRE]** Quriltay) $\rightarrow$ **Magistrat van Tschuriltay**
+  * `c_shelji` (**[HRE]** Shelji) $\rightarrow$ **Magistrat van Schelji**
 
 ---
 
@@ -3532,8 +3559,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_EM_urtolgod` ([Non-HRE] Urtolgod) $\rightarrow$ **Magistrat van Urtolgot**
   * `c_EM_yujuelu` ([Non-HRE] Yujuelu) $\rightarrow$ **Magistrat van Jujuelu**
 * **Duchy of Dadaels** (`d_gobi_dadaels`) $\rightarrow$ **Gubernat van Dadaels**
-  * `c_em_dadaels` ([Non-HRE] Dadaels) $\rightarrow$ **Magistrat van Dadaels**
-  * `c_gobi_ulaantatar` ([Non-HRE] Ulaantatar) $\rightarrow$ **Magistrat van Ulântatar**
+  * `c_em_dadaels` (**[HRE]** Dadaels) $\rightarrow$ **Magistrat van Dadaels**
+  * `c_gobi_ulaantatar` (**[HRE]** Ulaantatar) $\rightarrow$ **Magistrat van Ulântatar**
 
 ---
 
@@ -3583,22 +3610,22 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Sahaliyan** (`d_sahaliyan`) $\rightarrow$ **Gubernat van Zâezâmenkeiserwagen** *(or **Sahaliyan**)*
   * `c_kusunkotan` (**[HRE]** Kusunkotan) $\rightarrow$ **Magistrat van Tegenstrantdorp** *(or **Kusunkotan**)*
-  * `c_pogibi` ([Non-HRE] Pogibi) $\rightarrow$ **Magistrat van Wîtfaste** *(or **Pogibi**)*
-  * `c_tarayka` ([Non-HRE] Tarayka) $\rightarrow$ **Magistrat van Mênichkomkâ** *(or **Tarayke**)*
+  * `c_pogibi` (**[HRE]** Pogibi) $\rightarrow$ **Magistrat van Wîtfaste** *(or **Pogibi**)*
+  * `c_tarayka` (**[HRE]** Tarayka) $\rightarrow$ **Magistrat van Mênichkomkâ** *(or **Tarayke**)*
 * **Duchy of Sikhotebei** (`d_eman_sikhotebei`) $\rightarrow$ **Gubernat van dem Nord-Sichoteberch** *(or **Sikhotebei**)*
   * `c_eman_beihean` (**[HRE]** Beihean) $\rightarrow$ **Magistrat van Nordflôzouwe** *(or **Beihean**)*
-  * `c_eman_heishuiyang` ([Non-HRE] Heishuiyang) $\rightarrow$ **Magistrat van Swartzwazzermêr** *(or **Heischuijang**)*
-  * `c_eman_wuguihai` ([Non-HRE] Wuguihai) $\rightarrow$ **Magistrat van Swartzschildpadmêr** *(or **Wuguihai**)*
+  * `c_eman_heishuiyang` (**[HRE]** Heishuiyang) $\rightarrow$ **Magistrat van Swartzwazzermêr** *(or **Heischuijang**)*
+  * `c_eman_wuguihai` (**[HRE]** Wuguihai) $\rightarrow$ **Magistrat van Swartzschildpadmêr** *(or **Wuguihai**)*
 * **Duchy of Menas** (`d_menas`) $\rightarrow$ **Gubernat van Schouwepêren** *(or **Menas**)*
-  * `c_chupka` ([Non-HRE] Chupka) $\rightarrow$ **Magistrat van Sunnenôstschouwe** *(or **Tschupke**)*
-  * `c_menas` ([Non-HRE] Menas) $\rightarrow$ **Magistrat van Schouwepêren** *(or **Menas**)*
-  * `c_simenas` ([Non-HRE] Simenas) $\rightarrow$ **Magistrat van Grôzôstwint** *(or **Simenas**)*
-  * `c_soya` ([Non-HRE] Soya) $\rightarrow$ **Magistrat van Stamdal** *(or **Soye**)*
+  * `c_chupka` (**[HRE]** Chupka) $\rightarrow$ **Magistrat van Sunnenôstschouwe** *(or **Tschupke**)*
+  * `c_menas` (**[HRE]** Menas) $\rightarrow$ **Magistrat van Schouwepêren** *(or **Menas**)*
+  * `c_simenas` (**[HRE]** Simenas) $\rightarrow$ **Magistrat van Grôzôstwint** *(or **Simenas**)*
+  * `c_soya` (**[HRE]** Soya) $\rightarrow$ **Magistrat van Stamdal** *(or **Soye**)*
 * **Duchy of Sum** (`d_sum`) $\rightarrow$ **Gubernat van Neckehorn** *(or **Sum**)*
-  * `c_ioci` ([Non-HRE] Ioci) $\rightarrow$ **Magistrat van Komrastlêch** *(or **Iotzi**)*
-  * `c_iskar` ([Non-HRE] Iskar) $\rightarrow$ **Magistrat van Krûmmebache** *(or **Iskar**)*
-  * `c_sum` ([Non-HRE] Sum) $\rightarrow$ **Magistrat van Neckehorn** *(or **Sum**)*
-  * `c_uskes` ([Non-HRE] Uskes) $\rightarrow$ **Magistrat van Buchtrechtstûr** *(or **Uskes**)*
+  * `c_ioci` (**[HRE]** Ioci) $\rightarrow$ **Magistrat van Komrastlêch** *(or **Iotzi**)*
+  * `c_iskar` (**[HRE]** Iskar) $\rightarrow$ **Magistrat van Krûmmebache** *(or **Iskar**)*
+  * `c_sum` (**[HRE]** Sum) $\rightarrow$ **Magistrat van Neckehorn** *(or **Sum**)*
+  * `c_uskes` (**[HRE]** Uskes) $\rightarrow$ **Magistrat van Buchtrechtstûr** *(or **Uskes**)*
 
 ---
 
@@ -3628,9 +3655,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Shatuoguo** (`d_gobi_shatuoguo`) $\rightarrow$ **Gubernat van Schatuoguô**
   * `c_gobi_dorngovi` (**[HRE]** Dorngovi) $\rightarrow$ **Magistrat van Dorngowi**
   * `c_gobi_maominggan` (**[HRE]** Maominggan) $\rightarrow$ **Magistrat van Maominggan**
-  * `c_gobi_abakhai` ([Non-HRE] Abakhai) $\rightarrow$ **Magistrat van Abakhai**
-  * `c_gobi_abga` ([Non-HRE] Abga) $\rightarrow$ **Magistrat van Abge**
-  * `c_gobi_sonkhot` ([Non-HRE] Sonkhot) $\rightarrow$ **Magistrat van Sonkhot**
+  * `c_gobi_abakhai` (**[HRE]** Abakhai) $\rightarrow$ **Magistrat van Abakhai**
+  * `c_gobi_abga` (**[HRE]** Abga) $\rightarrow$ **Magistrat van Abge**
+  * `c_gobi_sonkhot` (**[HRE]** Sonkhot) $\rightarrow$ **Magistrat van Sonkhot**
 * **Duchy of Wuguguo** (`d_em_wuguguo`) $\rightarrow$ **Gubernat van Wuguguô**
   * `c_em_akhulun` ([Non-HRE] Akhulun) $\rightarrow$ **Magistrat van Akhulun**
   * `c_em_hepung` ([Non-HRE] Hepung) $\rightarrow$ **Magistrat van Hepung**
@@ -3644,10 +3671,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Kara Khoja** (`d_kara_khoja`) $\rightarrow$ **Gubernat van Karachoje**
   * `c_kara_khoja` (**[HRE]** Kara Khoja) $\rightarrow$ **Magistrat van Karachoje**
   * `c_barkul` ([Non-HRE] Barkul) $\rightarrow$ **Magistrat van Barkul**
-  * `c_burgasutai` ([Non-HRE] Burgasutai) $\rightarrow$ **Magistrat van Burgasutai**
-  * `c_chamil` ([Non-HRE] Chamil) $\rightarrow$ **Magistrat van Tschamil**
+  * `c_burgasutai` (**[HRE]** Burgasutai) $\rightarrow$ **Magistrat van Burgasutai**
+  * `c_chamil` (**[HRE]** Chamil) $\rightarrow$ **Magistrat van Tschamil**
 * **Duchy of Beshbalik** (`d_beshbalik`) $\rightarrow$ **Gubernat van Beschbalich**
-  * `c_beshbalik` ([Non-HRE] Beshbalik) $\rightarrow$ **Magistrat van Beschbalich**
+  * `c_beshbalik` (**[HRE]** Beshbalik) $\rightarrow$ **Magistrat van Beschbalich**
   * `c_bugur` ([Non-HRE] Bugur) $\rightarrow$ **Magistrat van Bugur**
   * `c_jimsar` ([Non-HRE] Jimsar) $\rightarrow$ **Magistrat van Dschimsar**
   * `c_yangjibaliq` ([Non-HRE] Yangjibaliq) $\rightarrow$ **Magistrat van Jangdschibalitsch**
@@ -3680,13 +3707,13 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Zabulistan** (`d_zabulistan`) $\rightarrow$ **Gubernat van Sabulistan**
   * `c_ghazna` (**[HRE]** Ghazna) $\rightarrow$ **Magistrat van Gasne**
-  * `c_rukhaj` ([Non-HRE] Rukhaj) $\rightarrow$ **Magistrat van Ruchatsch**
-  * `c_zabulistan` ([Non-HRE] Zabulistan) $\rightarrow$ **Magistrat van Sabulistan**
-  * `c_zamindawar` ([Non-HRE] Zamindawar) $\rightarrow$ **Magistrat van Samindawar**
+  * `c_rukhaj` (**[HRE]** Rukhaj) $\rightarrow$ **Magistrat van Ruchatsch**
+  * `c_zabulistan` (**[HRE]** Zabulistan) $\rightarrow$ **Magistrat van Sabulistan**
+  * `c_zamindawar` (**[HRE]** Zamindawar) $\rightarrow$ **Magistrat van Samindawar**
 * **Duchy of Kabulistan** (`d_kabul`) $\rightarrow$ **Gubernat van Kabulistan**
-  * `c_bamian` ([Non-HRE] Bamian) $\rightarrow$ **Magistrat van Bamian**
-  * `c_chitral` ([Non-HRE] Chitral) $\rightarrow$ **Magistrat van Tschitral**
-  * `c_kabul` ([Non-HRE] Kabul) $\rightarrow$ **Magistrat van Kabul**
+  * `c_bamian` (**[HRE]** Bamian) $\rightarrow$ **Magistrat van Bamian**
+  * `c_chitral` (**[HRE]** Chitral) $\rightarrow$ **Magistrat van Tschitral**
+  * `c_kabul` (**[HRE]** Kabul) $\rightarrow$ **Magistrat van Kabul**
 
 ---
 
@@ -3765,6 +3792,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Uda Valley** (`d_uda_valley`) $\rightarrow$ **Gubernat van Uda-Tal**
   * `c_chikoy` ([Non-HRE] Chikoy) $\rightarrow$ **Magistrat van Tschikoy**
   * `c_ulan_ude` ([Non-HRE] Uda) $\rightarrow$ **Magistrat van Ude**
+* **Duchy of Üd Valley** (`d_chuna_valley`) $\rightarrow$ **Gubernat van Üde-Tal**
+  * `c_bratsk` ([Non-HRE] Bura) $\rightarrow$ **Magistrat van Bûra-in-Buryatje**
+  * `c_tulun` ([Non-HRE] Tulun) $\rightarrow$ **Magistrat van Tulun**
+  * `c_chuna` ([Non-HRE] Üd) $\rightarrow$ **Magistrat van Üt**
 
 ---
 
@@ -3870,10 +3901,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_sasyk_kul` ([Non-HRE] Sasyk Kul) $\rightarrow$ **Magistrat van Sasîchkul**
   * `c_semey` ([Non-HRE] Semey) $\rightarrow$ **Magistrat van Semey**
 * **Duchy of Talas Alatau** (`d_talas_alatau`) $\rightarrow$ **Gubernat van Talas Alatau**
-  * `c_balashagun` ([Non-HRE] Balashagun) $\rightarrow$ **Magistrat van Balaschagun**
-  * `c_cherik` ([Non-HRE] Cherik) $\rightarrow$ **Magistrat van Tscherich**
-  * `c_suyab` ([Non-HRE] Suyab) $\rightarrow$ **Magistrat van Suyap**
-  * `c_taraz` ([Non-HRE] Taraz) $\rightarrow$ **Magistrat van Taraz**
+  * `c_balashagun` (**[HRE]** Balashagun) $\rightarrow$ **Magistrat van Balaschagun**
+  * `c_cherik` (**[HRE]** Cherik) $\rightarrow$ **Magistrat van Tscherich**
+  * `c_suyab` (**[HRE]** Suyab) $\rightarrow$ **Magistrat van Suyap**
+  * `c_taraz` (**[HRE]** Taraz) $\rightarrow$ **Magistrat van Taraz**
 * **Duchy of Tarbagatai** (`d_tarbagatai`) $\rightarrow$ **Gubernat van Tarbagatai**
   * `c_ebi-nor` ([Non-HRE] Ebi-Nor) $\rightarrow$ **Magistrat van Ebi-Nor**
   * `c_emil` ([Non-HRE] Emil) $\rightarrow$ **Magistrat van Emil**
@@ -3983,34 +4014,34 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.139 Kingdom of Zanj (`k_zanj`) $\rightarrow$ **Kûnincrich van Zantsch**
 
 * **Duchy of West Ajuraan** (`d_west_ajuraan`) $\rightarrow$ **Gubernat van West-Adschurân**
-  * `c_jubba` ([Non-HRE] Bardhere) $\rightarrow$ **Magistrat van Bardhere**
-  * `c_baydhabo` ([Non-HRE] Baydhabo) $\rightarrow$ **Magistrat van Baydhabô**
-  * `c_luuq` ([Non-HRE] Luuq) $\rightarrow$ **Magistrat van Lûtsch**
-  * `c_qalaafe` ([Non-HRE] Qalaafe) $\rightarrow$ **Magistrat van Tschalâfe**
-  * `c_jilib` ([Non-HRE] Qoryooley) $\rightarrow$ **Magistrat van Tschoryôley**
+  * `c_jubba` (**[HRE]** Bardhere) $\rightarrow$ **Magistrat van Bardhere**
+  * `c_baydhabo` (**[HRE]** Baydhabo) $\rightarrow$ **Magistrat van Baydhabô**
+  * `c_luuq` (**[HRE]** Luuq) $\rightarrow$ **Magistrat van Lûtsch**
+  * `c_qalaafe` (**[HRE]** Qalaafe) $\rightarrow$ **Magistrat van Tschalâfe**
+  * `c_jilib` (**[HRE]** Qoryooley) $\rightarrow$ **Magistrat van Tschoryôley**
 * **Duchy of Pate** (`d_pate`) $\rightarrow$ **Gubernat van Pate**
-  * `c_ewaso_ngiro` ([Non-HRE] Ewaso Ng'iro) $\rightarrow$ **Magistrat van Ewaso-Ingirô**
-  * `c_lamu` ([Non-HRE] Lamu) $\rightarrow$ **Magistrat van Lamu**
-  * `c_malindi` ([Non-HRE] Malindi) $\rightarrow$ **Magistrat van Malindi**
-  * `c_pate` ([Non-HRE] Pate) $\rightarrow$ **Magistrat van Pate**
+  * `c_ewaso_ngiro` (**[HRE]** Ewaso Ng'iro) $\rightarrow$ **Magistrat van Ewaso-Ingirô**
+  * `c_lamu` (**[HRE]** Lamu) $\rightarrow$ **Magistrat van Lamu**
+  * `c_malindi` (**[HRE]** Malindi) $\rightarrow$ **Magistrat van Malindi**
+  * `c_pate` (**[HRE]** Pate) $\rightarrow$ **Magistrat van Pate**
 * **Duchy of Bonde la Ufa** (`d_bonde_la_ufa`) $\rightarrow$ **Gubernat van Bonde La Ufe**
-  * `c_mto_tana` ([Non-HRE] Mto Tana) $\rightarrow$ **Magistrat van Tane**
-  * `c_taveta` ([Non-HRE] Taveta) $\rightarrow$ **Magistrat van Tawete**
+  * `c_mto_tana` (**[HRE]** Mto Tana) $\rightarrow$ **Magistrat van Tane**
+  * `c_taveta` (**[HRE]** Taveta) $\rightarrow$ **Magistrat van Tawete**
 * **Duchy of Zanzibar** (`d_zanzibar`) $\rightarrow$ **Gubernat van Sanzibar**
-  * `c_mrima` ([Non-HRE] Mrima) $\rightarrow$ **Magistrat van Mrime**
-  * `c_zanzibar` ([Non-HRE] Zanzibar) $\rightarrow$ **Magistrat van Sanzibar**
+  * `c_mrima` (**[HRE]** Mrima) $\rightarrow$ **Magistrat van Mrime**
+  * `c_zanzibar` (**[HRE]** Zanzibar) $\rightarrow$ **Magistrat van Sanzibar**
 * **Duchy of Mombasa** (`d_mombasa`) $\rightarrow$ **Gubernat van Mombase**
-  * `c_mombasa` ([Non-HRE] Mombasa) $\rightarrow$ **Magistrat van Mombase**
+  * `c_mombasa` (**[HRE]** Mombasa) $\rightarrow$ **Magistrat van Mombase**
 * **Duchy of Kilimanjaro** (`x_script_1506`) $\rightarrow$ **Gubernat van Kilimandscharô**
-  * `c_kilimanjaro` ([Non-HRE] Kilimanjaro) $\rightarrow$ **Magistrat van Kilimandscharô**
+  * `c_kilimanjaro` (**[HRE]** Kilimanjaro) $\rightarrow$ **Magistrat van Kilimandscharô**
 * **Duchy of Tanga** (`x_script_1816`) $\rightarrow$ **Gubernat van Tange**
-  * `c_tanga` ([Non-HRE] Tanga) $\rightarrow$ **Magistrat van Tange**
+  * `c_tanga` (**[HRE]** Tanga) $\rightarrow$ **Magistrat van Tange**
 * **Duchy of Kirinyaga** (`x_script_1894`) $\rightarrow$ **Gubernat van Kirinyage**
-  * `c_kirinyaga` ([Non-HRE] Kirinyaga) $\rightarrow$ **Magistrat van Kirinyage**
+  * `c_kirinyaga` (**[HRE]** Kirinyaga) $\rightarrow$ **Magistrat van Kirinyage**
 * **Duchy of Galana** (`x_script_2263`) $\rightarrow$ **Gubernat van Galane**
-  * `c_mto_galana` ([Non-HRE] Mto Galana) $\rightarrow$ **Magistrat van Galane**
+  * `c_mto_galana` (**[HRE]** Mto Galana) $\rightarrow$ **Magistrat van Galane**
 * **Duchy of Pemba** (`x_script_3608`) $\rightarrow$ **Gubernat van Pembe**
-  * `c_pemba` ([Non-HRE] Pemba) $\rightarrow$ **Magistrat van Pembe**
+  * `c_pemba` (**[HRE]** Pemba) $\rightarrow$ **Magistrat van Pembe**
 
 ---
 
@@ -4148,45 +4179,45 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.145 Kingdom of Maryül (`k_maryul`) $\rightarrow$ **Kûnincrich van Niderlant** *(or **Maryül**)*
 
 * **Duchy of Ladakh** (`d_ladakh`) $\rightarrow$ **Gubernat van Ladach**
-  * `c_demchok` ([Non-HRE] Demchok) $\rightarrow$ **Magistrat van Demtschoch**
-  * `c_diskit` ([Non-HRE] Diskit) $\rightarrow$ **Magistrat van Diskit**
-  * `c_khurnak` ([Non-HRE] Khurnak) $\rightarrow$ **Magistrat van Churnach**
-  * `c_leh` ([Non-HRE] Leh) $\rightarrow$ **Magistrat van Leh**
+  * `c_demchok` (**[HRE]** Demchok) $\rightarrow$ **Magistrat van Demtschoch**
+  * `c_diskit` (**[HRE]** Diskit) $\rightarrow$ **Magistrat van Diskit**
+  * `c_khurnak` (**[HRE]** Khurnak) $\rightarrow$ **Magistrat van Churnach**
+  * `c_leh` (**[HRE]** Leh) $\rightarrow$ **Magistrat van Leh**
 * **Duchy of Baltiyül** (`d_baltiyul`) $\rightarrow$ **Gubernat van Baltilant** *(or **Balti-Jül**)*
-  * `c_khaplu` ([Non-HRE] Khaplu) $\rightarrow$ **Magistrat van Chaplu**
-  * `c_shigar` ([Non-HRE] Shigar) $\rightarrow$ **Magistrat van Schigar**
-  * `c_skardu` ([Non-HRE] Skardu) $\rightarrow$ **Magistrat van Skardu**
+  * `c_khaplu` (**[HRE]** Khaplu) $\rightarrow$ **Magistrat van Chaplu**
+  * `c_shigar` (**[HRE]** Shigar) $\rightarrow$ **Magistrat van Schigar**
+  * `c_skardu` (**[HRE]** Skardu) $\rightarrow$ **Magistrat van Skardu**
 * **Duchy of Zanskar** (`d_zanskar`) $\rightarrow$ **Gubernat van Sanskar**
-  * `c_darcha` ([Non-HRE] Darcha) $\rightarrow$ **Magistrat van Dartsche**
-  * `c_padum` ([Non-HRE] Padum) $\rightarrow$ **Magistrat van Padum**
-  * `c_purig` ([Non-HRE] Purig) $\rightarrow$ **Magistrat van Purich**
+  * `c_darcha` (**[HRE]** Darcha) $\rightarrow$ **Magistrat van Dartsche**
+  * `c_padum` (**[HRE]** Padum) $\rightarrow$ **Magistrat van Padum**
+  * `c_purig` (**[HRE]** Purig) $\rightarrow$ **Magistrat van Purich**
 * **Duchy of Aksai Chin** (`d_aksai_chin`) $\rightarrow$ **Gubernat van Aksai Tschin**
-  * `c_sumdo` ([Non-HRE] Sumdo) $\rightarrow$ **Magistrat van Sumdô**
-  * `c_thaldat` ([Non-HRE] Thaldat) $\rightarrow$ **Magistrat van Taldat**
+  * `c_sumdo` (**[HRE]** Sumdo) $\rightarrow$ **Magistrat van Sumdô**
+  * `c_thaldat` (**[HRE]** Thaldat) $\rightarrow$ **Magistrat van Taldat**
 * **Duchy of Kinnaur** (`d_kinnaur`) $\rightarrow$ **Gubernat van Kinnaur**
-  * `c_dhankar` ([Non-HRE] Dhankar) $\rightarrow$ **Magistrat van Dankar**
-  * `c_kamru` ([Non-HRE] Kamru) $\rightarrow$ **Magistrat van Kamru**
+  * `c_dhankar` (**[HRE]** Dhankar) $\rightarrow$ **Magistrat van Dankar**
+  * `c_kamru` (**[HRE]** Kamru) $\rightarrow$ **Magistrat van Kamru**
 * **Duchy of Rutog** (`d_rutog`) $\rightarrow$ **Gubernat van Rutoch**
-  * `c_memar` ([Non-HRE] Memar) $\rightarrow$ **Magistrat van Memar**
-  * `c_rutog` ([Non-HRE] Rutog) $\rightarrow$ **Magistrat van Rutoch**
+  * `c_memar` (**[HRE]** Memar) $\rightarrow$ **Magistrat van Memar**
+  * `c_rutog` (**[HRE]** Rutog) $\rightarrow$ **Magistrat van Rutoch**
 
 ---
 
 ### 3.146 Kingdom of Uly Dala (`k_cuman`) $\rightarrow$ **Kûnincrich van Uly Dale**
 
 * **Duchy of Aqturgay** (`d_turgay`) $\rightarrow$ **Gubernat van Atschturgay**
-  * `c_chumkar_kia` ([Non-HRE] Chumkar Kia) $\rightarrow$ **Magistrat van Tschumkar-Kîe**
+  * `c_chumkar_kia` (**[HRE]** Chumkar Kia) $\rightarrow$ **Magistrat van Tschumkar-Kîe**
   * `c_murun_tomis` ([Non-HRE] Murun Tomis) $\rightarrow$ **Magistrat van Murun Tomis**
-  * `c_tumar` ([Non-HRE] Tumar) $\rightarrow$ **Magistrat van Tumar**
+  * `c_tumar` (**[HRE]** Tumar) $\rightarrow$ **Magistrat van Tumar**
   * `c_turgay` ([Non-HRE] Turgay) $\rightarrow$ **Magistrat van Turgay**
 * **Duchy of Aral Karakum** (`d_aral_karakum`) $\rightarrow$ **Gubernat van Aral Karakum**
-  * `c_aral_karakum` ([Non-HRE] Aral Karakum) $\rightarrow$ **Magistrat van Aral Karakum**
-  * `c_chalkar` ([Non-HRE] Chalkar) $\rightarrow$ **Magistrat van Tschalkar**
-  * `c_terekli` ([Non-HRE] Terekli) $\rightarrow$ **Magistrat van Terekli**
+  * `c_aral_karakum` (**[HRE]** Aral Karakum) $\rightarrow$ **Magistrat van Aral Karakum**
+  * `c_chalkar` (**[HRE]** Chalkar) $\rightarrow$ **Magistrat van Tschalkar**
+  * `c_terekli` (**[HRE]** Terekli) $\rightarrow$ **Magistrat van Terekli**
 * **Duchy of Barsuki** (`d_barsuki`) $\rightarrow$ **Gubernat van Barsuki**
-  * `c_airyuk` ([Non-HRE] Airyuk) $\rightarrow$ **Magistrat van Airyuch**
-  * `c_barsuki` ([Non-HRE] Barsuki) $\rightarrow$ **Magistrat van Barsuki**
-  * `c_jamantau` ([Non-HRE] Jamantau) $\rightarrow$ **Magistrat van Jamantau**
+  * `c_airyuk` (**[HRE]** Airyuk) $\rightarrow$ **Magistrat van Airyuch**
+  * `c_barsuki` (**[HRE]** Barsuki) $\rightarrow$ **Magistrat van Barsuki**
+  * `c_jamantau` (**[HRE]** Jamantau) $\rightarrow$ **Magistrat van Jamantau**
 * **Duchy of Kökturgay** (`d_kokturgay`) $\rightarrow$ **Gubernat van Kökturgay**
   * `c_achu` ([Non-HRE] Achu) $\rightarrow$ **Magistrat van Atschu**
   * `c_jilali` ([Non-HRE] Jilali) $\rightarrow$ **Magistrat van Jilali**
@@ -4253,29 +4284,29 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Dzayül** (`d_dzayul`) $\rightarrow$ **Gubernat van Dzalant** *(or **Dza-Jül**)*
   * `c_golag` ([Non-HRE] Golag) $\rightarrow$ **Magistrat van Golach**
   * `c_rima` ([Non-HRE] Rima) $\rightarrow$ **Magistrat van Rime**
-  * `c_roing` ([Non-HRE] Roing) $\rightarrow$ **Magistrat van Roing**
-  * `c_tezu` ([Non-HRE] Tezu) $\rightarrow$ **Magistrat van Tezu**
+  * `c_roing` (**[HRE]** Roing) $\rightarrow$ **Magistrat van Roing**
+  * `c_tezu` (**[HRE]** Tezu) $\rightarrow$ **Magistrat van Tezu**
 * **Duchy of Lhoyul** (`d_lhoyul`) $\rightarrow$ **Gubernat van Sûtlant** *(or **Lô-Jül**)*
   * `c_along` ([Non-HRE] Along) $\rightarrow$ **Magistrat van Along**
   * `c_itanagar` ([Non-HRE] Itanagar) $\rightarrow$ **Magistrat van Itanagar**
   * `c_mainling` ([Non-HRE] Mainling) $\rightarrow$ **Magistrat van Mainling**
   * `c_pemako` ([Non-HRE] Pemako) $\rightarrow$ **Magistrat van Pemakô**
 * **Duchy of Paro** (`d_paro`) $\rightarrow$ **Gubernat van Parô**
-  * `c_chungthang` ([Non-HRE] Chungthang) $\rightarrow$ **Magistrat van Tschungthang**
-  * `c_daramdin` ([Non-HRE] Daramdin) $\rightarrow$ **Magistrat van Daramdin**
-  * `c_paro` ([Non-HRE] Paro) $\rightarrow$ **Magistrat van Parô**
-  * `c_punakha` ([Non-HRE] Punakha) $\rightarrow$ **Magistrat van Punakhe**
+  * `c_chungthang` (**[HRE]** Chungthang) $\rightarrow$ **Magistrat van Tschungthang**
+  * `c_daramdin` (**[HRE]** Daramdin) $\rightarrow$ **Magistrat van Daramdin**
+  * `c_paro` (**[HRE]** Paro) $\rightarrow$ **Magistrat van Parô**
+  * `c_punakha` (**[HRE]** Punakha) $\rightarrow$ **Magistrat van Punakhe**
 * **Duchy of Bumthang** (`d_bumthang`) $\rightarrow$ **Gubernat van Bumthang**
-  * `c_bumthang` ([Non-HRE] Bumthang) $\rightarrow$ **Magistrat van Bumthang**
-  * `c_kurmaed` ([Non-HRE] Kurmaed) $\rightarrow$ **Magistrat van Kurmaet**
-  * `c_trongsa` ([Non-HRE] Trongsa) $\rightarrow$ **Magistrat van Trongse**
+  * `c_bumthang` (**[HRE]** Bumthang) $\rightarrow$ **Magistrat van Bumthang**
+  * `c_kurmaed` (**[HRE]** Kurmaed) $\rightarrow$ **Magistrat van Kurmaet**
+  * `c_trongsa` (**[HRE]** Trongsa) $\rightarrow$ **Magistrat van Trongse**
 
 ---
 
 ### 3.150 Kingdom of Qara Dala (`k_qara_dala`) $\rightarrow$ **Kûnincrich van Chara Dale**
 
 * **Duchy of Mugodzhar Hills** (`d_mugodzhar_hills`) $\rightarrow$ **Gubernat van Mugodschar Hills**
-  * `c_jitikul` ([Non-HRE] Jitikul) $\rightarrow$ **Magistrat van Dschetiköl**
+  * `c_jitikul` (**[HRE]** Jitikul) $\rightarrow$ **Magistrat van Dschetiköl**
   * `c_kos_uba` ([Non-HRE] Kos Uba) $\rightarrow$ **Magistrat van Kos Ube**
   * `c_kosh_kurbay` ([Non-HRE] Kosh Kurbay) $\rightarrow$ **Magistrat van Kosch Kurbay**
   * `c_mugodzhar_hills` ([Non-HRE] Mugodzhar Hills) $\rightarrow$ **Magistrat van Mugodschar Hills**
@@ -4450,10 +4481,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.158 Kingdom of Tsang (`k_tsang`) $\rightarrow$ **Kûnincrich van Zang**
 
 * **Duchy of Sa'gya** (`d_sagya`) $\rightarrow$ **Gubernat van Sagye**
-  * `c_gyirong` ([Non-HRE] Gyirong) $\rightarrow$ **Magistrat van Gyirong**
-  * `c_kyakyaru` ([Non-HRE] Kyakyaru) $\rightarrow$ **Magistrat van Kyakyaru**
-  * `c_nyalam` ([Non-HRE] Nyalam) $\rightarrow$ **Magistrat van Nyalam**
-  * `c_sagya` ([Non-HRE] Sa'gya) $\rightarrow$ **Magistrat van Sagye**
+  * `c_gyirong` (**[HRE]** Gyirong) $\rightarrow$ **Magistrat van Gyirong**
+  * `c_kyakyaru` (**[HRE]** Kyakyaru) $\rightarrow$ **Magistrat van Kyakyaru**
+  * `c_nyalam` (**[HRE]** Nyalam) $\rightarrow$ **Magistrat van Nyalam**
+  * `c_sagya` (**[HRE]** Sa'gya) $\rightarrow$ **Magistrat van Sagye**
 * **Duchy of Ngamring** (`d_ngamring`) $\rightarrow$ **Gubernat van Ingamring**
   * `c_caze` ([Non-HRE] Cazê) $\rightarrow$ **Magistrat van Zazê**
   * `c_kagar` ([Non-HRE] Kagar) $\rightarrow$ **Magistrat van Kagar**
@@ -4487,7 +4518,598 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-## 4. Archdioceses & Ecclesiastical Sees in Tarraconian (1059–1142)
+### 3.161 Kingdom of Pagan (`k_pagan`) $\rightarrow$ **Kûnincrich van Pagân**
+
+* **Duchy of Lishui** (`d_tengchong`) $\rightarrow$ **Gubernat van Lîschui**
+  * `c_momauk` (**[HRE]** Momauk) $\rightarrow$ **Magistrat van Momauch**
+  * `c_monyin` (**[HRE]** Monyin) $\rightarrow$ **Magistrat van Monjin**
+  * `c_myitkyina` (**[HRE]** Myitkyina) $\rightarrow$ **Magistrat van Mjitkjînâ**
+  * `c_nandian` (**[HRE]** Nandian) $\rightarrow$ **Magistrat van Nandjan**
+  * `c_putao` (**[HRE]** Putao) $\rightarrow$ **Magistrat van Putau**
+* **Duchy of Pagan** (`d_pagan`) $\rightarrow$ **Gubernat van Pagân**
+  * `c_ava` (**[HRE]** Ava) $\rightarrow$ **Magistrat van Awe** (`[1171 Historical: Magistrat van Toungbjôn]`) *(Ava founded 1364; resolves to ancient Irrawaddy shrine-town Taungbyon (`b_taungbyon`))*
+  * `c_minbu` (**[HRE]** Minbu) $\rightarrow$ **Magistrat van Minbu**
+  * `c_pagan` (**[HRE]** Pagan) $\rightarrow$ **Magistrat van Pagân**
+  * `c_sagaing` (**[HRE]** Sagaing) $\rightarrow$ **Magistrat van Sagaing**
+  * `c_yamethin` (**[HRE]** Yamethin) $\rightarrow$ **Magistrat van Jamêtîn**
+* **Duchy of Arakan** (`d_arakan`) $\rightarrow$ **Gubernat van Arakân**
+  * `c_ramu` (**[HRE]** Ramu) $\rightarrow$ **Magistrat van Ramu**
+  * `c_sandoway` (**[HRE]** Sandoway) $\rightarrow$ **Magistrat van Sandôwei**
+  * `c_thabeik_taung` (**[HRE]** Thabeik Taung) $\rightarrow$ **Magistrat van Tabêik Taung**
+  * `c_vaisali` (**[HRE]** Vaiśālĩ) $\rightarrow$ **Magistrat van Waisâli**
+* **Duchy of Rāmaññadeśa** (`d_ramannadesa`) $\rightarrow$ **Gubernat van Râmanyadêsch**
+  * `c_dagon` (**[HRE]** Dagon) $\rightarrow$ **Magistrat van Dagôn**
+  * `c_kusumi` (**[HRE]** Kusumi) $\rightarrow$ **Magistrat van Kusumi**
+  * `c_sittaung` (**[HRE]** Sittaung) $\rightarrow$ **Magistrat van Sittaung**
+  * `c_thaton` (**[HRE]** Thaton) $\rightarrow$ **Magistrat van Tatôn**
+* **Duchy of Tagaung** (`d_tagaung`) $\rightarrow$ **Gubernat van Tagaung**
+  * `c_hanlan` (**[HRE]** Hanlan) $\rightarrow$ **Magistrat van Hanlan**
+  * `c_kale` (**[HRE]** Kale) $\rightarrow$ **Magistrat van Kalê**
+  * `c_madaya` (**[HRE]** Madaya) $\rightarrow$ **Magistrat van Madâje**
+  * `c_takon` (**[HRE]** Takon) $\rightarrow$ **Magistrat van Takôn**
+* **Duchy of Śrīksetra** (`d_sriksetra`) $\rightarrow$ **Gubernat van Srîkschetre**
+  * `c_hinthada` (**[HRE]** Hinthada) $\rightarrow$ **Magistrat van Hintade**
+  * `c_magwe` (**[HRE]** Magwe) $\rightarrow$ **Magistrat van Magwê**
+  * `c_toungoo` (**[HRE]** Toungoo) $\rightarrow$ **Magistrat van Tôngû** (`[1171 Historical: Magistrat van Swâ]`) *(Toungoo founded 1279/1510; resolves to ancient Sittaung valley settlement Swa (`b_swa`))*
+  * `c_sriksetra` (**[HRE]** Śrīksetra) $\rightarrow$ **Magistrat van Srîkschetre**
+* **Duchy of Mongnai** (`d_mongnai`) $\rightarrow$ **Gubernat van Möngnai**
+  * `c_hsenwi` (**[HRE]** Hsenwi) $\rightarrow$ **Magistrat van Senwî**
+  * `c_mongnai` (**[HRE]** Mongnai) $\rightarrow$ **Magistrat van Möngnai**
+  * `c_nyaungshwe` (**[HRE]** Nyaungshwe) $\rightarrow$ **Magistrat van Njaungschwe**
+* **Duchy of Yongchang** (`d_yongchang`) $\rightarrow$ **Gubernat van Jongtschang**
+  * `c_yongchang_jingmadian` (**[HRE]** Jingmadian) $\rightarrow$ **Magistrat van Dschingmadjan**
+  * `c_moeng_laem` (**[HRE]** Moeng Laem) $\rightarrow$ **Magistrat van Möng Lâm**
+  * `c_yongchang_yongchang` (**[HRE]** Yongchang) $\rightarrow$ **Magistrat van Jongtschang**
+* **Duchy of Kyaukse** (`x_script_2637`) $\rightarrow$ **Gubernat van Kjauksê**
+  * `c_kyaukse` (**[HRE]** Kyaukse) $\rightarrow$ **Magistrat van Kjauksê**
+* **Duchy of Pegu** (`x_script_1264`) $\rightarrow$ **Gubernat van Pegu**
+  * `c_pegu` (**[HRE]** Pegu) $\rightarrow$ **Magistrat van Pegu**
+
+---
+
+### 3.162 Kingdom of Malayadvipa (`k_malayadvipa`) $\rightarrow$ **Kûnincrich van Malajadwîpe**
+
+* **Duchy of Jambi** (`d_SUM_jambi`) $\rightarrow$ **Gubernat van Dschambi**
+  * `c_SUM_dharmasraya` (**[HRE]** Dharmasraya) $\rightarrow$ **Magistrat van Darmasrâje**
+  * `c_SUM_indragiri` (**[HRE]** Indragiri) $\rightarrow$ **Magistrat van Indragiri**
+  * `c_SUM_jambi` (**[HRE]** Jambi) $\rightarrow$ **Magistrat van Dschambi**
+  * `c_SUM_karang_brahi` (**[HRE]** Karang Brahi) $\rightarrow$ **Magistrat van Karang Brâhi**
+  * `c_SUM_lingga` (**[HRE]** Lingga) $\rightarrow$ **Magistrat van Lingge**
+* **Duchy of Palembang** (`d_SUM_palembang`) $\rightarrow$ **Gubernat van Palembâng**
+  * `c_SUM_bangka-belitung` (**[HRE]** Bangka-Belitung) $\rightarrow$ **Magistrat van Bangka-Belitung**
+  * `c_SUM_east_sumatra` (**[HRE]** East Sumatra) $\rightarrow$ **Magistrat van Ôst-Sumatre** (`[1171 Historical: Magistrat van Mesûdschi]`) *(Modern English geographic label; pre-867 river basin Mesuji (`b_SUM_Mesuji`))*
+  * `c_SUM_lampung` (**[HRE]** Lampung) $\rightarrow$ **Magistrat van Lampung**
+  * `c_SUM_palembang` (**[HRE]** Palembang) $\rightarrow$ **Magistrat van Palembâng**
+  * `c_SUM_pasemah` (**[HRE]** Pasemah) $\rightarrow$ **Magistrat van Pasêmah**
+* **Duchy of Riau** (`d_SUM_riau`) $\rightarrow$ **Gubernat van Riau**
+  * `c_SUM_kampar` (**[HRE]** Kampar) $\rightarrow$ **Magistrat van Kampar**
+  * `c_SUM_meranti` (**[HRE]** Meranti) $\rightarrow$ **Magistrat van Meranti**
+  * `c_SUM_muara_takus` (**[HRE]** Muara Takus) $\rightarrow$ **Magistrat van Muâra Takus**
+  * `c_SUM_pekanbaru` (**[HRE]** Pekanbaru) $\rightarrow$ **Magistrat van Pekanbaru** (`[1171 Historical: Magistrat van Nider-Rôkan]`) *(Founded 1784 ("New Market"); resolves to pre-1784 river district Rokan Hilir (`b_SUM_Rokan_Hilir`))*
+  * `c_SUM_rokan` (**[HRE]** Rokan) $\rightarrow$ **Magistrat van Rôkan**
+* **Duchy of Aceh** (`d_SUM_aceh`) $\rightarrow$ **Gubernat van Atscheh**
+  * `c_SUM_lambri` (**[HRE]** Lambri) $\rightarrow$ **Magistrat van Lambrî**
+  * `c_SUM_panai` (**[HRE]** Panai) $\rightarrow$ **Magistrat van Panai**
+  * `c_SUM_perlak` (**[HRE]** Perlak) $\rightarrow$ **Magistrat van Perlach**
+* **Duchy of Minangkabau** (`d_SUM_minangkabau`) $\rightarrow$ **Gubernat van Minangkabau**
+  * `c_SUM_bengkulu` (**[HRE]** Bengkulu) $\rightarrow$ **Magistrat van Bengkulu**
+  * `c_SUM_minangkabau` (**[HRE]** Minangkabau) $\rightarrow$ **Magistrat van Minangkabau**
+  * `c_SUM_riak_nan_berbedur` (**[HRE]** Riak nan Berbedur) $\rightarrow$ **Magistrat van Rîach nan Berbedur**
+* **Duchy of Barus** (`x_script_1641`) $\rightarrow$ **Gubernat van Bârus**
+  * `c_SUM_barus` (**[HRE]** Barus) $\rightarrow$ **Magistrat van Bârus**
+* **Duchy of Handumans** (`d_handumans`) $\rightarrow$ **Gubernat van Handumân**
+  * `c_andamans` (**[HRE]** Handumans) $\rightarrow$ **Magistrat van Handumân**
+* **Duchy of Mentawai** (`x_script_2260`) $\rightarrow$ **Gubernat van Mentawai**
+  * `c_mentawai` ([Non-HRE] Mentawai) $\rightarrow$ **Magistrat van Mentawai**
+* **Duchy of Nakkavaram** (`x_script_3253`) $\rightarrow$ **Gubernat van Nakkawaram**
+  * `c_nakkavaram` ([Non-HRE] Nakkavaram) $\rightarrow$ **Magistrat van Nakkawaram**
+* **Duchy of Nias** (`d_nias`) $\rightarrow$ **Gubernat van Nîas**
+  * `c_nias` ([Non-HRE] Nias) $\rightarrow$ **Magistrat van Nîas**
+
+---
+
+### 3.163 Kingdom of Tanjungnagara (`k_tanjungnagara`) $\rightarrow$ **Kûnincrich van Tandschungnagare**
+
+* **Duchy of Barune** (`d_BOR_barune`) $\rightarrow$ **Gubernat van Barûne**
+  * `c_BOR_brunei` (**[HRE]** Brunei) $\rightarrow$ **Magistrat van Brunei**
+  * `c_BOR_kudat` (**[HRE]** Kudat) $\rightarrow$ **Magistrat van Kudat** (`[1171 Historical: Magistrat van Marûdu]`) *(Founded 1881 by British North Borneo Co.; resolves to ancient bay Marudu (`b_BOR_Marudu`))*
+  * `c_BOR_lahad_datu` (**[HRE]** Lahad Datu) $\rightarrow$ **Magistrat van Lahat Datu** (`[1171 Historical: Magistrat van Sibûtu]`) *(19th-c. town; resolves to ancient Sulu-Borneo island/strait Sibutu (`b_BOR_Sibutu`))*
+  * `c_BOR_menjelutung` (**[HRE]** Menjelutung) $\rightarrow$ **Magistrat van Mendschelutung**
+  * `c_BOR_nabawan` (**[HRE]** Nabawan) $\rightarrow$ **Magistrat van Nabâwan**
+* **Duchy of Kutai** (`d_BOR_kutai`) $\rightarrow$ **Gubernat van Kutai**
+  * `c_BOR_berau` (**[HRE]** Berau) $\rightarrow$ **Magistrat van Berau**
+  * `c_BOR_kutai_jauh` (**[HRE]** Kutai Jauh) $\rightarrow$ **Magistrat van Kutai Dschâu**
+  * `c_BOR_kutai_utara` (**[HRE]** Kutai Utara) $\rightarrow$ **Magistrat van Nord-Kutai**
+  * `c_BOR_martapura` (**[HRE]** Martapura) $\rightarrow$ **Magistrat van Martapure**
+* **Duchy of Nan Sarunai** (`d_BOR_nan_sarunai`) $\rightarrow$ **Gubernat van Nan Sarunai**
+  * `c_BOR_banjar` (**[HRE]** Banjar) $\rightarrow$ **Magistrat van Bandschar**
+  * `c_BOR_sampit` (**[HRE]** Sampit) $\rightarrow$ **Magistrat van Sampit**
+  * `c_BOR_tabalung` (**[HRE]** Tabalung) $\rightarrow$ **Magistrat van Tabalung**
+  * `c_BOR_taiao` (**[HRE]** Taiao) $\rightarrow$ **Magistrat van Taiau**
+* **Duchy of Santubong** (`d_BOR_santubong`) $\rightarrow$ **Gubernat van Santubong**
+  * `c_BOR_iban` (**[HRE]** Iban) $\rightarrow$ **Magistrat van Iban**
+  * `c_BOR_rajang` (**[HRE]** Rajang) $\rightarrow$ **Magistrat van Radschang**
+  * `c_BOR_santubong` (**[HRE]** Santubong) $\rightarrow$ **Magistrat van Santubong**
+  * `c_BOR_tanah_taman` (**[HRE]** Tanah Taman) $\rightarrow$ **Magistrat van Tanah Taman**
+* **Duchy of Tanjungpura** (`d_BOR_tanjungpura`) $\rightarrow$ **Gubernat van Tandschungpure**
+  * `c_BOR_sambas` (**[HRE]** Sambas) $\rightarrow$ **Magistrat van Sambas**
+  * `c_BOR_sintang` (**[HRE]** Sintang) $\rightarrow$ **Magistrat van Sintang**
+  * `c_BOR_sukadana` (**[HRE]** Sukadana) $\rightarrow$ **Magistrat van Sukadâne**
+  * `c_BOR_waringin` (**[HRE]** Waringin) $\rightarrow$ **Magistrat van Waringin**
+
+---
+
+### 3.164 Kingdom of Dvaravati (`k_dvaravati`) $\rightarrow$ **Kûnincrich van Dwârawatî**
+
+* **Duchy of Muang Sua** (`d_muang_sua`) $\rightarrow$ **Gubernat van Muang Sue**
+  * `c_chiang_khaeng` (**[HRE]** Chiang Khaeng) $\rightarrow$ **Magistrat van Tschjang Chêng**
+  * `c_luang_prabang` (**[HRE]** Muang Sua) $\rightarrow$ **Magistrat van Muang Sue**
+  * `c_nan_asia` (**[HRE]** Nan) $\rightarrow$ **Magistrat van Nan**
+  * `c_ngoenyang` (**[HRE]** Ngoenyang) $\rightarrow$ **Magistrat van Ngönjang**
+* **Duchy of Sukhothai** (`d_sukhothai`) $\rightarrow$ **Gubernat van Suchôtai**
+  * `c_chakangrao` (**[HRE]** Chakangrao) $\rightarrow$ **Magistrat van Tschakangrau**
+  * `c_lampang` (**[HRE]** Lampang) $\rightarrow$ **Magistrat van Lampang**
+  * `c_phetchabun` (**[HRE]** Phetchabun) $\rightarrow$ **Magistrat van Petschabûn**
+  * `c_sukhothai` (**[HRE]** Sukhothai) $\rightarrow$ **Magistrat van Suchôtai**
+* **Duchy of Haripuñjaya** (`d_haripunjaya`) $\rightarrow$ **Gubernat van Haripundschaje**
+  * `c_haripunjaya` (**[HRE]** Haripuñjaya) $\rightarrow$ **Magistrat van Haripundschaje**
+  * `c_hlaingbwe` (**[HRE]** Hlaingbwe) $\rightarrow$ **Magistrat van Laingbwe**
+  * `c_mae_hong_son` (**[HRE]** Mae Hong Son) $\rightarrow$ **Magistrat van Mê Hông Sôn**
+* **Duchy of Lop Buri** (`d_lop_buri`) $\rightarrow$ **Gubernat van Lopburi**
+  * `c_khu_bua` (**[HRE]** Khu Bua) $\rightarrow$ **Magistrat van Chu Bue**
+  * `c_lop_buri` (**[HRE]** Lop Buri) $\rightarrow$ **Magistrat van Lopburi**
+  * `c_nakhon_pathom` (**[HRE]** Nakhon Pathom) $\rightarrow$ **Magistrat van Nachôn Patôm**
+* **Duchy of Tun Sun** (`d_tun_sun`) $\rightarrow$ **Gubernat van Tun Sun**
+  * `c_THAI_phetchaburi` (**[HRE]** Phetchaburi) $\rightarrow$ **Magistrat van Petschaburi**
+  * `c_THAI_tenasserim` (**[HRE]** Tenasserim) $\rightarrow$ **Magistrat van Tenasserim**
+  * `c_thanbyuzayat` (**[HRE]** Thanbyuzayat) $\rightarrow$ **Magistrat van Tanbjûsajat** (`[1171 Historical: Magistrat van Dawêi]`) *(Modern town; resolves to ancient Mon/Dvaravati port Dawei (`b_dawei`))*
+* **Duchy of Sipsongpanna** (`d_sipsongpanna`) $\rightarrow$ **Gubernat van Sipsongpanne**
+  * `c_chiang_rung` (**[HRE]** Chiang Rung) $\rightarrow$ **Magistrat van Tschjang Rung**
+  * `c_moeng_long` (**[HRE]** Moeng Long) $\rightarrow$ **Magistrat van Möng Lông**
+
+---
+
+### 3.165 Kingdom of Bihar (`k_bihar`) $\rightarrow$ **Kûnincrich van Bihâr**
+
+* **Duchy of Gauda** (`d_gauda`) $\rightarrow$ **Gubernat van Gaude**
+  * `c_gauda` (**[HRE]** Gauda) $\rightarrow$ **Magistrat van Gaude**
+  * `c_kotivarsa` (**[HRE]** Kotivarsa) $\rightarrow$ **Magistrat van Kotiwarse**
+  * `c_laksmanavati` (**[HRE]** Laksmanāvati) $\rightarrow$ **Magistrat van Laksmanâwatî** (`[1171 Historical: Magistrat van Râmâwatî]`) *(Pre-1178 Pala imperial capital Ramavati (`b_ramavati`); Laksmanavati named after Laksmana Sena)*
+  * `c_radha` (**[HRE]** Radha) $\rightarrow$ **Magistrat van Râde**
+* **Duchy of Tirabhukti** (`d_tirabhukti`) $\rightarrow$ **Gubernat van Tirabhukti**
+  * `c_bangaon` (**[HRE]** Bangaon) $\rightarrow$ **Magistrat van Bangaon**
+  * `c_mithila` (**[HRE]** Mithila) $\rightarrow$ **Magistrat van Mitîle**
+  * `c_simaramapura` (**[HRE]** Simaramapura) $\rightarrow$ **Magistrat van Simaramapure**
+  * `c_kusinagara` ([Non-HRE] Kusinagara) $\rightarrow$ **Magistrat van Kusinagare**
+* **Duchy of Suhma** (`d_suhma`) $\rightarrow$ **Gubernat van Suhme**
+  * `c_mallabhum` (**[HRE]** Mallabhum) $\rightarrow$ **Magistrat van Mallabûm**
+  * `c_midnapore` (**[HRE]** Midnapore) $\rightarrow$ **Magistrat van Medînîpur** (`[1171 Historical: Magistrat van Dandabukti]`) *(Colonial spelling; resolves to ancient Dandabhukti (`b_dantan`))*
+  * `c_tamralipti` (**[HRE]** Tamralipti) $\rightarrow$ **Magistrat van Tâmralipti**
+* **Duchy of Varendra** (`d_varendra`) $\rightarrow$ **Gubernat van Warendre**
+  * `c_madhupur` (**[HRE]** Madhupur) $\rightarrow$ **Magistrat van Madupur**
+  * `c_pundravardhana` (**[HRE]** Pundravardhana) $\rightarrow$ **Magistrat van Pundrawardane**
+  * `c_suvarnagram` (**[HRE]** Suvarnagram) $\rightarrow$ **Magistrat van Suwarnagrâm**
+* **Duchy of Magadha** (`d_magadha`) $\rightarrow$ **Gubernat van Magadhe**
+  * `c_magadha` (**[HRE]** Magadha) $\rightarrow$ **Magistrat van Magadhe**
+  * `c_mudgagiri` (**[HRE]** Mudgagiri) $\rightarrow$ **Magistrat van Mudgagiri**
+  * `c_gaya` ([Non-HRE] Gaya) $\rightarrow$ **Magistrat van Gâje**
+  * `c_sasaram` ([Non-HRE] Sasaram) $\rightarrow$ **Magistrat van Sasarâm**
+* **Duchy of Jharkand** (`d_jharkand`) $\rightarrow$ **Gubernat van Dschârkant**
+  * `c_rajrappa` (**[HRE]** Rajrappa) $\rightarrow$ **Magistrat van Radschrappe**
+  * `c_damin_i_koh` ([Non-HRE] Damin-i-Koh) $\rightarrow$ **Magistrat van Dâmîn-i-Kôh** (`[1171 Historical: Magistrat van Kadschangale]`) *(1832 colonial term; resolves to ancient Kajangala / Vaidyanath (`b_deogarh2`))*
+  * `c_jharkand` ([Non-HRE] Jharkand) $\rightarrow$ **Magistrat van Dschârkant**
+  * `c_rothas` ([Non-HRE] Rothas) $\rightarrow$ **Magistrat van Rôtas**
+* **Duchy of Munda** (`x_script_1218`) $\rightarrow$ **Gubernat van Munde**
+  * `c_munda` ([Non-HRE] Munda) $\rightarrow$ **Magistrat van Munde**
+
+---
+
+### 3.166 Kingdom of Kabisay-An (`k_kabisay-an`) $\rightarrow$ **Kûnincrich van Kabisajân**
+
+* **Duchy of Visayas** (`d_PHI_visayas`) $\rightarrow$ **Gubernat van Wisâjas**
+  * `c_PHI_bool_and_cebu` (**[HRE]** Bool and Cebu) $\rightarrow$ **Magistrat van Boôl-Sebu**
+  * `c_PHI_buglas` (**[HRE]** Buglas) $\rightarrow$ **Magistrat van Buglas**
+  * `c_PHI_panay` (**[HRE]** Panay) $\rightarrow$ **Magistrat van Panâi**
+  * `c_PHI_samar` (**[HRE]** Samar) $\rightarrow$ **Magistrat van Sâmar**
+  * `c_PHI_tandaya` (**[HRE]** Tandaya) $\rightarrow$ **Magistrat van Tandâje**
+* **Duchy of Butuan** (`d_PHI_butuan`) $\rightarrow$ **Gubernat van Butuân**
+  * `c_PHI_butuan` (**[HRE]** Butuan) $\rightarrow$ **Magistrat van Butuân**
+  * `c_PHI_calagan` (**[HRE]** Calagan) $\rightarrow$ **Magistrat van Kalagân**
+  * `c_PHI_mandaya` (**[HRE]** Mandaya) $\rightarrow$ **Magistrat van Mandâje**
+  * `c_PHI_sarangani` (**[HRE]** Sarangani) $\rightarrow$ **Magistrat van Sarangani**
+* **Duchy of Maguindanao** (`d_PHI_maguindanao`) $\rightarrow$ **Gubernat van Maguindanâu**
+  * `c_PHI_cotabato` (**[HRE]** Cotabato) $\rightarrow$ **Magistrat van Kotabâtô**
+  * `c_PHI_lanao` (**[HRE]** Lanao) $\rightarrow$ **Magistrat van Lanâu**
+  * `c_PHI_maguindanao` (**[HRE]** Maguindanao) $\rightarrow$ **Magistrat van Maguindanâu**
+  * `c_PHI_sulu` (**[HRE]** Sulu) $\rightarrow$ **Magistrat van Sulu**
+* **Duchy of Zamboanga** (`x_script_2623`) $\rightarrow$ **Gubernat van Zamboange**
+  * `c_PHI_zamboanga` (**[HRE]** Zamboanga) $\rightarrow$ **Magistrat van Zamboange**
+
+---
+
+### 3.167 Kingdom of Sulawesi (`k_sulawesi`) $\rightarrow$ **Kûnincrich van Sulawêsi**
+
+* **Duchy of Konawe** (`d_SuMa_konawe`) $\rightarrow$ **Gubernat van Konâwe**
+  * `c_SuMa_butun` (**[HRE]** Butun) $\rightarrow$ **Magistrat van Butun**
+  * `c_SuMa_konawe` (**[HRE]** Konawe) $\rightarrow$ **Magistrat van Konâwe**
+  * `c_SuMa_moronene` (**[HRE]** Moronene) $\rightarrow$ **Magistrat van Moronêne**
+  * `c_SuMa_tamboeko` (**[HRE]** Tamboeko) $\rightarrow$ **Magistrat van Tambûku**
+* **Duchy of Luwu** (`d_SuMa_luwu`) $\rightarrow$ **Gubernat van Sût-Luwu**
+  * `c_SuMa_ajatappareng` (**[HRE]** Ajatappareng) $\rightarrow$ **Magistrat van Adschatappareng**
+  * `c_SuMa_sampaga` (**[HRE]** Sampaga) $\rightarrow$ **Magistrat van Sampâge**
+  * `c_SuMa_siang` (**[HRE]** Siang) $\rightarrow$ **Magistrat van Sîang**
+* **Duchy of Minahasa** (`d_SuMa_minahasa`) $\rightarrow$ **Gubernat van Minahâse**
+  * `c_SuMa_banawa` (**[HRE]** Banawa) $\rightarrow$ **Magistrat van Banawe**
+  * `c_SuMa_gorontalo` (**[HRE]** Gorontalo) $\rightarrow$ **Magistrat van Gorontâlô**
+  * `c_SuMa_wenang` (**[HRE]** Wenang) $\rightarrow$ **Magistrat van Wenang**
+* **Duchy of Tompotika** (`d_SuMa_tompotika`) $\rightarrow$ **Gubernat van Tompotîke**
+  * `c_SuMa_banggai` (**[HRE]** Banggai) $\rightarrow$ **Magistrat van Banggai**
+  * `c_SuMa_banggai_utara` (**[HRE]** Banggai Utara) $\rightarrow$ **Magistrat van Nord-Banggai**
+  * `c_SuMa_mori` (**[HRE]** Mori) $\rightarrow$ **Magistrat van Mori**
+* **Duchy of Luwu** (`x_script_3987`) $\rightarrow$ **Gubernat van Luwu**
+  * `c_SuMa_luwu` (**[HRE]** Luwu) $\rightarrow$ **Magistrat van Luwu**
+
+---
+
+### 3.168 Kingdom of Lusung (`k_lusung`) $\rightarrow$ **Kûnincrich van Lusung**
+
+* **Duchy of Tondo** (`d_PHI_tondo`) $\rightarrow$ **Gubernat van Tondô**
+  * `c_PHI_ibalong` (**[HRE]** Ibalong) $\rightarrow$ **Magistrat van Ibalong**
+  * `c_PHI_kalilayan` (**[HRE]** Kalilayan) $\rightarrow$ **Magistrat van Kalilâjan**
+  * `c_PHI_ma-i` (**[HRE]** Ma-i) $\rightarrow$ **Magistrat van Mâ-Î**
+  * `c_PHI_masbate` (**[HRE]** Masbate) $\rightarrow$ **Magistrat van Masbâte**
+  * `c_PHI_tondo` (**[HRE]** Tondo) $\rightarrow$ **Magistrat van Tondô**
+* **Duchy of Ilocana** (`d_PHI_ilocana`) $\rightarrow$ **Gubernat van Ilokâne**
+  * `c_PHI_igorot` (**[HRE]** Igorot) $\rightarrow$ **Magistrat van Igorôt**
+  * `c_PHI_ivatan` (**[HRE]** Ivatan) $\rightarrow$ **Magistrat van Iwatan**
+  * `c_PHI_pangasinan` (**[HRE]** Pangasinan) $\rightarrow$ **Magistrat van Pangasînan**
+  * `c_PHI_samtoy` (**[HRE]** Samtoy) $\rightarrow$ **Magistrat van Samtôi**
+* **Duchy of Cagayan** (`d_PHI_cagayan`) $\rightarrow$ **Gubernat van Kagajân**
+  * `c_PHI_cagayan_valley` (**[HRE]** Cagayan Valley) $\rightarrow$ **Magistrat van Kagajândal**
+  * `c_PHI_kasiguranin` (**[HRE]** Kasiguranin) $\rightarrow$ **Magistrat van Kasigurânin**
+* **Duchy of Sandao** (`d_PHI_sandao`) $\rightarrow$ **Gubernat van Sandaô**
+  * `c_PHI_south_palawan` (**[HRE]** South Palawan) $\rightarrow$ **Magistrat van Sût-Palâwan**
+  * `c_PHI_taytay` (**[HRE]** Taytay) $\rightarrow$ **Magistrat van Taytay**
+
+---
+
+### 3.169 Kingdom of Hujung Medini (`k_hujung_medini`) $\rightarrow$ **Kûnincrich van Hudschung Medîni**
+
+* **Duchy of Pahang** (`d_MAL_pahang`) $\rightarrow$ **Gubernat van Pahang**
+  * `c_MAL_gangganegara` (**[HRE]** Gangganegara) $\rightarrow$ **Magistrat van Gangganegare**
+  * `c_MAL_gelanggi` (**[HRE]** Gelanggi) $\rightarrow$ **Magistrat van Gelanggi**
+  * `c_MAL_johor` (**[HRE]** Johor) $\rightarrow$ **Magistrat van Dschohôr** (`[1171 Historical: Magistrat van Tumâsich]`) *(Johor founded 1528; resolves to pre-867 maritime emporium Temasek / Tumasik (`b_MAL_Tumasik`))*
+  * `c_MAL_pahang` (**[HRE]** Pahang) $\rightarrow$ **Magistrat van Pahang**
+  * `c_riau` (**[HRE]** Riau) $\rightarrow$ **Magistrat van Riau**
+  * `c_MAL_semantan` (**[HRE]** Semantan) $\rightarrow$ **Magistrat van Semantan**
+* **Duchy of Langkasuka** (`d_MAL_langkasuka`) $\rightarrow$ **Gubernat van Langkasûke**
+  * `c_MAL_kedah` (**[HRE]** Kedah) $\rightarrow$ **Magistrat van Kedâh**
+  * `c_MAL_kelantan` (**[HRE]** Kelantan) $\rightarrow$ **Magistrat van Kelantan**
+  * `c_MAL_patani` (**[HRE]** Patani) $\rightarrow$ **Magistrat van Patâni**
+  * `c_THAI_takua_pa` (**[HRE]** Takua Pa) $\rightarrow$ **Magistrat van Takuâ Pâ**
+  * `c_THAI_tambralinga` (**[HRE]** Tambralinga) $\rightarrow$ **Magistrat van Tambralinge**
+
+---
+
+### 3.170 Kingdom of Yavakadvipa (`k_yavakadvipa`) $\rightarrow$ **Kûnincrich van Jawakadwîpe**
+
+* **Duchy of Mataram** (`d_JAV_mataram`) $\rightarrow$ **Gubernat van Mataram**
+  * `c_JAV_janggala` (**[HRE]** Janggala) $\rightarrow$ **Magistrat van Dschanggale**
+  * `c_JAV_kalingga` (**[HRE]** Kalingga) $\rightarrow$ **Magistrat van Kalingge**
+  * `c_JAV_lumajang` (**[HRE]** Lumajang) $\rightarrow$ **Magistrat van Lumadschang**
+  * `c_JAV_mataram` (**[HRE]** Mataram) $\rightarrow$ **Magistrat van Mataram**
+* **Duchy of Bali** (`d_IDO_bali`) $\rightarrow$ **Gubernat van Bali**
+  * `c_IDO_bali` (**[HRE]** Bali) $\rightarrow$ **Magistrat van Bali**
+  * `c_IDO_lombok_and_sumbawa` (**[HRE]** Lombok and Sumbawa) $\rightarrow$ **Magistrat van Lombôk-Sumbâwe**
+  * `c_JAV_madura` (**[HRE]** Madura) $\rightarrow$ **Magistrat van Madûre**
+* **Duchy of Taruma** (`d_JAV_taruma`) $\rightarrow$ **Gubernat van Tarume**
+  * `c_JAV_cimanuk` (**[HRE]** Cimanuk) $\rightarrow$ **Magistrat van Tschîmanuch**
+  * `c_JAV_galuh` (**[HRE]** Galuh) $\rightarrow$ **Magistrat van Galûh**
+  * `c_JAV_sunda` (**[HRE]** Sunda) $\rightarrow$ **Magistrat van Sunde**
+
+---
+
+### 3.171 Kingdom of Maluku (`k_maluku`) $\rightarrow$ **Kûnincrich van Maluku**
+
+* **Duchy of Lesser Sunda** (`d_IDO_lesser_sunda`) $\rightarrow$ **Gubernat van Klein-Sunde**
+  * `c_IDO_galiyao` (**[HRE]** Galiyao) $\rightarrow$ **Magistrat van Galijâu**
+  * `c_IDO_humba` (**[HRE]** Humba) $\rightarrow$ **Magistrat van Humbe**
+  * `c_IDO_nusa_nipa` (**[HRE]** Nusa Nipa) $\rightarrow$ **Magistrat van Nûsa Nîpe**
+* **Duchy of Maluku** (`d_SuMa_maluku`) $\rightarrow$ **Gubernat van Maluku**
+  * `c_SuMa_buru-sula` (**[HRE]** Buru-Sula) $\rightarrow$ **Magistrat van Buru-Sule**
+  * `c_SuMa_raja_ampat` (**[HRE]** Raja Ampat) $\rightarrow$ **Magistrat van Râdschâ Ampât**
+  * `c_SuMa_seram` (**[HRE]** Seram) $\rightarrow$ **Magistrat van Sêram**
+* **Duchy of Timor** (`d_IDO_timor`) $\rightarrow$ **Gubernat van Timôr**
+  * `c_IDO_barat_daya` (**[HRE]** Barat Daya) $\rightarrow$ **Magistrat van Bârat Dâje** (`[1171 Historical: Magistrat van Wêtar]`) *(Modern Indonesian directional term ("Southwest"); resolves to ancient island Wetar (`b_IDO_Wetar`))*
+  * `c_IDO_sonba_i` (**[HRE]** Sonba'i) $\rightarrow$ **Magistrat van Sonbai**
+  * `c_IDO_wehale` (**[HRE]** Wehale) $\rightarrow$ **Magistrat van Wehâle**
+* **Duchy of Halmahera** (`d_SuMa_halmahera`) $\rightarrow$ **Gubernat van Halmahêre**
+  * `c_SuMa_bacan` ([Non-HRE] Bacan) $\rightarrow$ **Magistrat van Batschân**
+  * `c_SuMa_ternate` ([Non-HRE] Ternate) $\rightarrow$ **Magistrat van Ternâte**
+  * `c_SuMa_tidore` ([Non-HRE] Tidore) $\rightarrow$ **Magistrat van Tidôre**
+* **Duchy of Kepala Burung** (`x_script_7781`) $\rightarrow$ **Gubernat van Vogelkôp** *(calque of Kepala Burung ("Bird's Head Peninsula"))*
+  * `c_kepala_burung` ([Non-HRE] Kepala Burung) $\rightarrow$ **Magistrat van Vogelkôp** (`[1171 Historical: Magistrat van Bintûni]`) *(Calque of Kepala Burung ("Bird's Head"); indigenous gulf Bintuni (`b_bintuni`))*
+* **Duchy of Papua** (`d_papua`) $\rightarrow$ **Gubernat van Papuwe**
+  * `c_aru` ([Non-HRE] Aru) $\rightarrow$ **Magistrat van Aru**
+* **Duchy of Papua Selatan** (`x_script_7455`) $\rightarrow$ **Gubernat van Sût-Papuwe** *(calque of Papua Selatan ("South Papua"))*
+  * `c_papua_selatan` ([Non-HRE] Papua Selatan) $\rightarrow$ **Magistrat van Sût-Papuwe** (`[1171 Historical: Magistrat van Asmât]`) *(Calque of Papua Selatan; historical region Asmat (`b_asmat`))*
+* **Duchy of Sran** (`x_script_6299`) $\rightarrow$ **Gubernat van Srân**
+  * `c_sran` ([Non-HRE] Sran) $\rightarrow$ **Magistrat van Srân**
+
+---
+
+### 3.172 Kingdom of Tamilakam (`k_tamilakam`) $\rightarrow$ **Kûnincrich van Tamilakam**
+
+* **Duchy of Tondai Nadu** (`d_tondai_nadu`) $\rightarrow$ **Gubernat van Tondai-Nâdu**
+  * `c_candragiri` (**[HRE]** Candragiri) $\rightarrow$ **Magistrat van Tschandragiri**
+  * `c_muluvagil` (**[HRE]** Muluvagil) $\rightarrow$ **Magistrat van Muluwagil**
+  * `c_nellore` (**[HRE]** Nellore) $\rightarrow$ **Magistrat van Nellôr**
+  * `c_penugonda` (**[HRE]** Penugonda) $\rightarrow$ **Magistrat van Penugonde**
+  * `c_renandu` (**[HRE]** Renandu) $\rightarrow$ **Magistrat van Renandu**
+* **Duchy of Chola Nadu** (`d_chola_nadu`) $\rightarrow$ **Gubernat van Tschôla-Nâdu**
+  * `c_tiruvannamalai` (**[HRE]** Tiruvannamalai) $\rightarrow$ **Magistrat van Tiruwannamalai**
+  * `c_cholamandalam` ([Non-HRE] Cholamandalam) $\rightarrow$ **Magistrat van Tschôlamandalam**
+  * `c_tagadur` ([Non-HRE] Tagadur) $\rightarrow$ **Magistrat van Tagadûr**
+* **Duchy of Pandya Nadu** (`d_pandya_nadu`) $\rightarrow$ **Gubernat van Pandja-Nâdu**
+  * `c_madurai` (**[HRE]** Madurai) $\rightarrow$ **Magistrat van Madurai**
+  * `c_kongu` ([Non-HRE] Kongu) $\rightarrow$ **Magistrat van Kongu**
+  * `c_uraiyur` ([Non-HRE] Uraiyur) $\rightarrow$ **Magistrat van Uraijûr**
+* **Duchy of Kanchipuram** (`x_script_7177`) $\rightarrow$ **Gubernat van Kantschipuram**
+  * `c_kanchipuram` (**[HRE]** Kanchipuram) $\rightarrow$ **Magistrat van Kantschipuram**
+* **Duchy of Chera Nadu** (`d_chera_nadu`) $\rightarrow$ **Gubernat van Tschêra-Nâdu**
+  * `c_eranad` ([Non-HRE] Eranad) $\rightarrow$ **Magistrat van Eranât**
+  * `c_alupa` ([Non-HRE] Kolathunad) $\rightarrow$ **Magistrat van Kolatunât**
+  * `c_maldives` ([Non-HRE] Maldives) $\rightarrow$ **Magistrat van Mâledîwen**
+  * `c_kerala` ([Non-HRE] Vembanad) $\rightarrow$ **Magistrat van Wembanât**
+  * `c_venadu` ([Non-HRE] Venadu) $\rightarrow$ **Magistrat van Wenâdu**
+
+---
+
+### 3.173 Kingdom of Bengal (`k_bengal`) $\rightarrow$ **Kûnincrich van Bengâlen**
+
+* **Duchy of Vanga** (`d_vanga`) $\rightarrow$ **Gubernat van Wange**
+  * `c_bikrampur` (**[HRE]** Bikrampur) $\rightarrow$ **Magistrat van Bikrampur**
+  * `c_candradvipa` (**[HRE]** Candradvipa) $\rightarrow$ **Magistrat van Tschandradwîpe**
+  * `c_harikela` (**[HRE]** Harikela) $\rightarrow$ **Magistrat van Harikele**
+  * `c_karmanta` (**[HRE]** Karmāntā) $\rightarrow$ **Magistrat van Karmânte**
+  * `c_samatata` (**[HRE]** Samatata) $\rightarrow$ **Magistrat van Samatate**
+* **Duchy of Nadia** (`d_nadia`) $\rightarrow$ **Gubernat van Nadîje**
+  * `c_nabadwipa` (**[HRE]** Nabadwipa) $\rightarrow$ **Magistrat van Nabadwîpe**
+  * `c_saptagrama` (**[HRE]** Saptagrama) $\rightarrow$ **Magistrat van Saptagrâme**
+  * `c_vijayapura` (**[HRE]** Vijayapura) $\rightarrow$ **Magistrat van Widschajapure** (`[1171 Historical: Magistrat van Wischnupur]`) *(Pre-1095 Sena seat; ancient Bishnupur / Mallabhum (`b_visnupura`))*
+
+---
+
+### 3.174 Kingdom of Lanka (`k_lanka`) $\rightarrow$ **Kûnincrich van Lanke**
+
+* **Duchy of Rajarata** (`d_sinhala`) $\rightarrow$ **Gubernat van Râdscharate**
+  * `c_trincomalee` (**[HRE]** Kotthasara) $\rightarrow$ **Magistrat van Kottasâre**
+  * `c_jaffna` (**[HRE]** Nagadipa) $\rightarrow$ **Magistrat van Nâgadîpe**
+  * `c_kotte` (**[HRE]** Pacinadesa) $\rightarrow$ **Magistrat van Pâtschînadese**
+  * `c_phiti` (**[HRE]** Pihiti) $\rightarrow$ **Magistrat van Pihîti**
+* **Duchy of Maya** (`d_dakhina_desa`) $\rightarrow$ **Gubernat van Mâje**
+  * `c_dakhina_desa` (**[HRE]** Dakhina Desa) $\rightarrow$ **Magistrat van Dakkînadese**
+  * `c_kandy` (**[HRE]** Malaya) $\rightarrow$ **Magistrat van Malâje**
+* **Duchy of Ruhunu** (`d_ruhunu`) $\rightarrow$ **Gubernat van Ruhunu**
+  * `c_batticaloa` (**[HRE]** Batticaloa) $\rightarrow$ **Magistrat van Battikaloa**
+  * `c_rohana` (**[HRE]** Rohana) $\rightarrow$ **Magistrat van Rohane**
+
+---
+
+### 3.175 Kingdom of Kamarupa (`k_kamarupa`) $\rightarrow$ **Kûnincrich van Kâmarûpe**
+
+* **Duchy of Para-Lauhitya** (`d_para_lauhitya`) $\rightarrow$ **Gubernat van Para-Lauhîtye**
+  * `c_dimapur` (**[HRE]** Dimapur) $\rightarrow$ **Magistrat van Dimapur**
+  * `c_goalpara` (**[HRE]** Goalpara) $\rightarrow$ **Magistrat van Goâlpare**
+  * `c_manipur` (**[HRE]** Manipur) $\rightarrow$ **Magistrat van Manipur**
+  * `c_srihatta` (**[HRE]** Srihatta) $\rightarrow$ **Magistrat van Srîhatte**
+* **Duchy of Sutiya** (`d_sutiya`) $\rightarrow$ **Gubernat van Sutîje**
+  * `c_charaideo` (**[HRE]** Charaideo) $\rightarrow$ **Magistrat van Tscharaideô**
+  * `c_kundina` (**[HRE]** Kundina) $\rightarrow$ **Magistrat van Kundine**
+* **Duchy of Kamarupanagara** (`d_kamarupanagara`) $\rightarrow$ **Gubernat van Kâmarûpanagare**
+  * `c_kamatapur` (**[HRE]** Kamatapur) $\rightarrow$ **Magistrat van Kamatapur**
+  * `c_haruppeswara` ([Non-HRE] Haruppeswara) $\rightarrow$ **Magistrat van Haruppesware**
+  * `c_kamarupanagara` ([Non-HRE] Kamarupanagara) $\rightarrow$ **Magistrat van Kâmarûpanagare**
+* **Duchy of Monyul** (`d_monyul`) $\rightarrow$ **Gubernat van Monenlant** *(calque of Tibetan Mon-yul ("Land of the Mon"))*
+  * `c_cona` ([Non-HRE] Cona) $\rightarrow$ **Magistrat van Zône**
+  * `c_lhunze` ([Non-HRE] Lhünzê) $\rightarrow$ **Magistrat van Lünzê**
+  * `c_tawang` ([Non-HRE] Tawang) $\rightarrow$ **Magistrat van Tawang**
+
+---
+
+### 3.176 Kingdom of Karnata (`k_karnata`) $\rightarrow$ **Kûnincrich van Karnâte**
+
+* **Duchy of Nulambavadi** (`d_nulambavadi`) $\rightarrow$ **Gubernat van Nulambawâdi**
+  * `c_banavasi` (**[HRE]** Banavasi) $\rightarrow$ **Magistrat van Banawâsi**
+  * `c_gutti` (**[HRE]** Gutti) $\rightarrow$ **Magistrat van Gutti**
+  * `c_adoni` (**[HRE]** Kampili) $\rightarrow$ **Magistrat van Kampili**
+  * `c_parivi` (**[HRE]** Parivi) $\rightarrow$ **Magistrat van Pariwi**
+  * `c_uchangidurga` (**[HRE]** Uchangidurga) $\rightarrow$ **Magistrat van Utschangidurge**
+* **Duchy of Raichur Doab** (`d_raichur_doab`) $\rightarrow$ **Gubernat van Raitschur-Doap**
+  * `c_idatarainadu` ([Non-HRE] Idatarainadu) $\rightarrow$ **Magistrat van Idatarainâdu**
+  * `c_koppam` ([Non-HRE] Koppam) $\rightarrow$ **Magistrat van Koppam**
+  * `c_vaijayanti` ([Non-HRE] Vaijayanti) $\rightarrow$ **Magistrat van Waidschajanti**
+  * `c_vatapi` ([Non-HRE] Vatapi) $\rightarrow$ **Magistrat van Watâpi**
+* **Duchy of Gangavadi** (`d_gangavadi`) $\rightarrow$ **Gubernat van Gangawâdi**
+  * `c_mahishaka` ([Non-HRE] Mahishaka) $\rightarrow$ **Magistrat van Mahischake**
+  * `c_srirangapatna` ([Non-HRE] Manyapura) $\rightarrow$ **Magistrat van Manjapure**
+  * `c_talakad` ([Non-HRE] Talakad) $\rightarrow$ **Magistrat van Talakat**
+* **Duchy of Kalyani** (`d_kalyani`) $\rightarrow$ **Gubernat van Kaljâni**
+  * `c_kalyani` ([Non-HRE] Kalyani) $\rightarrow$ **Magistrat van Kaljâni**
+  * `c_sagar` ([Non-HRE] Sagar) $\rightarrow$ **Magistrat van Sâgar**
+
+---
+
+### 3.177 Kingdom of Chenla (`k_chenla`) $\rightarrow$ **Kûnincrich van Tschenle**
+
+* **Duchy of Mukdahan** (`d_mukdahan`) $\rightarrow$ **Gubernat van Mukdahân**
+  * `c_canasha` (**[HRE]** Canasha) $\rightarrow$ **Magistrat van Tschanasche**
+  * `c_ku_kaeo` (**[HRE]** Ku Kaeo) $\rightarrow$ **Magistrat van Ku Kêo**
+  * `c_mukdahan` (**[HRE]** Mukdahan) $\rightarrow$ **Magistrat van Mukdahân**
+  * `c_muang_fa_daet` ([Non-HRE] Muang Fa Daet) $\rightarrow$ **Magistrat van Muang Fa Dêt**
+  * `c_ubon_ratchathani` ([Non-HRE] Ubon Ratchathani) $\rightarrow$ **Magistrat van Ubon Râdschatanî** (`[1171 Historical: Magistrat van Mûndal]`) *(1786 Thai foundation; resolves to pre-867 Mun river basin)*
+* **Duchy of Phonsavan** (`d_phonsavan`) $\rightarrow$ **Gubernat van Ponsawân**
+  * `c_salo_tai` ([Non-HRE] Salo Tai) $\rightarrow$ **Magistrat van Salo Tai**
+  * `c_sanasomboon` ([Non-HRE] Sanasomboon) $\rightarrow$ **Magistrat van Sanasombûn**
+  * `c_vien_chan` ([Non-HRE] Vien Chan) $\rightarrow$ **Magistrat van Wieng Tschan**
+
+---
+
+### 3.178 Kingdom of Telingana (`k_telingana`) $\rightarrow$ **Kûnincrich van Telingâne**
+
+* **Duchy of Racakonda** (`d_racakonda`) $\rightarrow$ **Gubernat van Ratschakonde**
+  * `c_pannagallu` (**[HRE]** Pannagallu) $\rightarrow$ **Magistrat van Pannagallu**
+  * `c_racakonda` (**[HRE]** Racakonda) $\rightarrow$ **Magistrat van Ratschakonde**
+* **Duchy of Warangal** (`d_warangal`) $\rightarrow$ **Gubernat van Warangal**
+  * `c_kambampet` (**[HRE]** Mudigonda) $\rightarrow$ **Magistrat van Mudigonde**
+  * `c_katukuru` ([Non-HRE] Katukuru) $\rightarrow$ **Magistrat van Katukuru**
+  * `c_orangallu` ([Non-HRE] Orangallu) $\rightarrow$ **Magistrat van Orangallu**
+  * `c_mahur` ([Non-HRE] Sirpur) $\rightarrow$ **Magistrat van Sirpur**
+  * `c_balkonda` ([Non-HRE] Vemulavada) $\rightarrow$ **Magistrat van Wemulawâde**
+
+---
+
+### 3.179 Kingdom of Liuqiu (`k_liuqiu`) $\rightarrow$ **Kûnincrich van Ljûkjû**
+
+* **Duchy of Liuqiu** (`d_liuqiu`) $\rightarrow$ **Gubernat van Ljûkjû**
+  * `c_hoanya` (**[HRE]** Hoanya) $\rightarrow$ **Magistrat van Hoânje**
+  * `c_amis` (**[HRE]** Pangcah) $\rightarrow$ **Magistrat van Pangtzach**
+  * `c_siraya` (**[HRE]** Siraya) $\rightarrow$ **Magistrat van Sirâje**
+
+---
+
+### 3.180 Kingdom of Orissa (`k_orissa`) $\rightarrow$ **Kûnincrich van Orisse**
+
+* **Duchy of Tosali** (`d_tosali`) $\rightarrow$ **Gubernat van Tosali**
+  * `c_viraja` (**[HRE]** Viraja) $\rightarrow$ **Magistrat van Wiradsche**
+  * `c_kataka` ([Non-HRE] Kataka) $\rightarrow$ **Magistrat van Katake**
+  * `c_khijjingakota` ([Non-HRE] Khijjingakota) $\rightarrow$ **Magistrat van Chidschingakote**
+  * `c_khinjali_mandala` ([Non-HRE] Khinjali Mandala) $\rightarrow$ **Magistrat van Chindschali-Mandale**
+* **Duchy of Kodalaka Mandala** (`x_script_2626`) $\rightarrow$ **Gubernat van Kodalaka-Mandale**
+  * `c_kodalaka_mandala` (**[HRE]** Kodalaka Mandala) $\rightarrow$ **Magistrat van Kodalaka-Mandale**
+* **Duchy of Daksina Kosala** (`d_daksina_kosala`) $\rightarrow$ **Gubernat van Sût-Kosale** *(calque of Sanskrit Dakṣiṇa Kosala ("South Kosala"))*
+  * `c_kiranapura` ([Non-HRE] Kiranapura) $\rightarrow$ **Magistrat van Kiranapure**
+  * `c_sambalpur` ([Non-HRE] Sambalpur) $\rightarrow$ **Magistrat van Sambalpur**
+  * `c_sripuri` ([Non-HRE] Sripuri) $\rightarrow$ **Magistrat van Srîpuri**
+  * `c_suvarnapura` ([Non-HRE] Suvarnapura) $\rightarrow$ **Magistrat van Suwarnapure**
+* **Duchy of Kalinga** (`d_kalinga`) $\rightarrow$ **Gubernat van Kalinge**
+  * `c_kalinganagar` ([Non-HRE] Kalinganagar) $\rightarrow$ **Magistrat van Kalinganagar**
+  * `c_swetaka_mandala` ([Non-HRE] Swetaka Mandala) $\rightarrow$ **Magistrat van Swetaka-Mandale**
+  * `c_vizagipatam` ([Non-HRE] Vizagipatam) $\rightarrow$ **Magistrat van Wischâkapatanam**
+* **Duchy of Dandakaranya** (`d_dandakaranya`) $\rightarrow$ **Gubernat van Dandakâranje**
+  * `c_barasuru` ([Non-HRE] Barasuru) $\rightarrow$ **Magistrat van Barasuru**
+  * `c_cakrakuta` ([Non-HRE] Cakrakuta) $\rightarrow$ **Magistrat van Tschakrakûte**
+* **Duchy of Puri** (`x_script_2975`) $\rightarrow$ **Gubernat van Puri**
+  * `c_puri` ([Non-HRE] Puri) $\rightarrow$ **Magistrat van Puri**
+* **Duchy of Rayapura** (`x_script_5729`) $\rightarrow$ **Gubernat van Rajapure**
+  * `c_rayapura` ([Non-HRE] Rayapura) $\rightarrow$ **Magistrat van Rajapure**
+
+---
+
+### 3.181 Kingdom of Andhra (`k_andhra`) $\rightarrow$ **Kûnincrich van Andhre**
+
+* **Duchy of Pakanadu** (`d_udayagiri`) $\rightarrow$ **Gubernat van Pâkanâdu**
+  * `c_nallamala` (**[HRE]** Nallamala) $\rightarrow$ **Magistrat van Nallamale**
+  * `c_cumbum` ([Non-HRE] Cumbum) $\rightarrow$ **Magistrat van Kambam**
+  * `c_palakka` ([Non-HRE] Kammanadu) $\rightarrow$ **Magistrat van Kammanâdu**
+* **Duchy of Vengi** (`d_vengi`) $\rightarrow$ **Gubernat van Wengi**
+  * `c_mosala` ([Non-HRE] Mosala) $\rightarrow$ **Magistrat van Mosale**
+  * `c_vengipura` ([Non-HRE] Vengipura) $\rightarrow$ **Magistrat van Wengipure**
+
+---
+
+### 3.182 Kingdom of Angkor (`k_funan`) $\rightarrow$ **Kûnincrich van Angkôr**
+
+* **Duchy of Angkor** (`d_angkor`) $\rightarrow$ **Gubernat van Angkôr**
+  * `c_angkor` ([Non-HRE] Angkor) $\rightarrow$ **Magistrat van Angkôr**
+  * `c_dong_si_mahosot` ([Non-HRE] Dong Si Mahosot) $\rightarrow$ **Magistrat van Dong Si Mahosot**
+  * `c_prea_vihear` ([Non-HRE] Prea Vihear) $\rightarrow$ **Magistrat van Prêa Wihâr**
+  * `c_sambhupura` ([Non-HRE] Sambhupura) $\rightarrow$ **Magistrat van Sambupure**
+* **Duchy of Angkor Borey** (`d_angkor_borey`) $\rightarrow$ **Gubernat van Angkôr Borêi**
+  * `c_angkor_borey` ([Non-HRE] Angkor Borey) $\rightarrow$ **Magistrat van Angkôr Borêi**
+  * `c_botum_sakor` ([Non-HRE] Botum Sakor) $\rightarrow$ **Magistrat van Botum Sakôr**
+  * `c_mueang_phra_rot` ([Non-HRE] Mueang Phra Rot) $\rightarrow$ **Magistrat van Muang Pra Rôt**
+  * `c_pursat` ([Non-HRE] Pursat) $\rightarrow$ **Magistrat van Pursât**
+* **Duchy of Baigaur** (`d_baigaur`) $\rightarrow$ **Gubernat van Baigaur**
+  * `c_baigaur` ([Non-HRE] Baigaur) $\rightarrow$ **Magistrat van Baigaur**
+  * `c_binh_dai` ([Non-HRE] Binh Dai) $\rightarrow$ **Magistrat van Bîndai**
+  * `c_ca_mau` ([Non-HRE] Ca Mau) $\rightarrow$ **Magistrat van Kamou**
+* **Duchy of Ratanakiri** (`d_ratanakiri`) $\rightarrow$ **Gubernat van Ratanakiri**
+  * `c_pleiku` ([Non-HRE] Pleiku) $\rightarrow$ **Magistrat van Plêiku**
+  * `c_ratanakiri` ([Non-HRE] Ratanakiri) $\rightarrow$ **Magistrat van Ratanakiri**
+  * `c_stung_treng` ([Non-HRE] Stung Treng) $\rightarrow$ **Magistrat van Stung Treng**
+* **Duchy of Vyadhapura** (`d_vyadhapura`) $\rightarrow$ **Gubernat van Wjâdapure**
+  * `c_kracheh_nokor` ([Non-HRE] Kracheh Nokor) $\rightarrow$ **Magistrat van Kratscheh Nokôr**
+  * `c_vyadhapura` ([Non-HRE] Vyadhapura) $\rightarrow$ **Magistrat van Wjâdapure**
+* **Duchy of Binh Long** (`x_script_5215`) $\rightarrow$ **Gubernat van Bînlông**
+  * `c_binh_long` ([Non-HRE] Binh Long) $\rightarrow$ **Magistrat van Bînlông**
+* **Duchy of Koh Ker** (`x_script_5703`) $\rightarrow$ **Gubernat van Koh Kêr**
+  * `c_koh_ker` ([Non-HRE] Koh Ker) $\rightarrow$ **Magistrat van Koh Kêr**
+
+---
+
+### 3.183 Kingdom of Maharastra (`k_maharastra`) $\rightarrow$ **Kûnincrich van Mahâraschtre**
+
+* **Duchy of Rattapadi** (`d_rattapadi`) $\rightarrow$ **Gubernat van Rattapadi**
+  * `c_ashmaka` ([Non-HRE] Ashmaka) $\rightarrow$ **Magistrat van Aschmake**
+  * `c_karahataka` ([Non-HRE] Karahataka) $\rightarrow$ **Magistrat van Karahatake**
+  * `c_kolhapur` ([Non-HRE] Kolhapur) $\rightarrow$ **Magistrat van Kolhapur**
+  * `c_naldurg` ([Non-HRE] Naldurg) $\rightarrow$ **Magistrat van Naldurch**
+  * `c_taradavadi` ([Non-HRE] Taradavadi) $\rightarrow$ **Magistrat van Taradawâdi**
+* **Duchy of Vidharba** (`d_vidharba`) $\rightarrow$ **Gubernat van Widarbe**
+  * `c_acalapura` ([Non-HRE] Acalapura) $\rightarrow$ **Magistrat van Atschalapure**
+  * `c_canda` ([Non-HRE] Canda) $\rightarrow$ **Magistrat van Tschande**
+  * `c_ramagiri` ([Non-HRE] Ramagiri) $\rightarrow$ **Magistrat van Râmagiri**
+  * `c_vairagara` ([Non-HRE] Vairagara) $\rightarrow$ **Magistrat van Wairagare**
+* **Duchy of Devagiri** (`d_devagiri`) $\rightarrow$ **Gubernat van Dewagiri**
+  * `c_devagiri` ([Non-HRE] Devagiri) $\rightarrow$ **Magistrat van Dewagiri**
+  * `c_mulaka` ([Non-HRE] Mulaka) $\rightarrow$ **Magistrat van Mulake**
+  * `c_vatsagulma` ([Non-HRE] Vatsagulma) $\rightarrow$ **Magistrat van Watzagulme**
+* **Duchy of Konkana** (`d_konkana`) $\rightarrow$ **Gubernat van Nord-Konkane**
+  * `c_kanara` ([Non-HRE] Kanara) $\rightarrow$ **Magistrat van Kanare**
+  * `c_surparaka` ([Non-HRE] Surparaka) $\rightarrow$ **Magistrat van Surparake**
+* **Duchy of Nasikya** (`d_nasikya`) $\rightarrow$ **Gubernat van Nâsikje**
+  * `c_kondana` ([Non-HRE] Kondana) $\rightarrow$ **Magistrat van Kondane**
+  * `c_trikuta` ([Non-HRE] Trikuta) $\rightarrow$ **Magistrat van Trikûte**
+* **Duchy of Konkan** (`x_script_7430`) $\rightarrow$ **Gubernat van Konkan**
+  * `c_panaji` ([Non-HRE] Konkan) $\rightarrow$ **Magistrat van Konkan**
+
+---
+
+### 3.184 Kingdom of Champa (`k_champa`) $\rightarrow$ **Kûnincrich van Tschampe**
+
+* **Duchy of Indrapura** (`d_indrapura`) $\rightarrow$ **Gubernat van Indrapure**
+  * `c_indrapura` ([Non-HRE] Indrapura) $\rightarrow$ **Magistrat van Indrapure**
+  * `c_ma_linh` ([Non-HRE] Ma Linh) $\rightarrow$ **Magistrat van Mâ Lîn**
+  * `c_simhapura` ([Non-HRE] Simhapura) $\rightarrow$ **Magistrat van Simhapure**
+* **Duchy of Vijaya** (`d_vijaya`) $\rightarrow$ **Gubernat van Widschaje**
+  * `c_kauthara` ([Non-HRE] Kauthara) $\rightarrow$ **Magistrat van Kautâre**
+  * `c_panduranga` ([Non-HRE] Panduranga) $\rightarrow$ **Magistrat van Pandurange**
+  * `c_vijaya` ([Non-HRE] Vijaya) $\rightarrow$ **Magistrat van Widschaje**
+
+---
+
+### 3.185 Kingdom of Gondwana (`k_gondwana`) $\rightarrow$ **Kûnincrich van Gondwâne**
+
+* **Duchy of Ratanpur** (`d_ratanpur`) $\rightarrow$ **Gubernat van Ratanpur**
+  * `c_bandhugadha` ([Non-HRE] Bāndhūgadha) $\rightarrow$ **Magistrat van Bândûgade**
+  * `c_ratanpur` ([Non-HRE] Ratanpur) $\rightarrow$ **Magistrat van Ratanpur**
+  * `c_tummana` ([Non-HRE] Tummana) $\rightarrow$ **Magistrat van Tummane**
+* **Duchy of Dahala** (`d_dahala`) $\rightarrow$ **Gubernat van Dahale**
+  * `c_chauragarh` ([Non-HRE] Chauragarh) $\rightarrow$ **Magistrat van Tschauragar**
+  * `c_tripuri` ([Non-HRE] Tripurī) $\rightarrow$ **Magistrat van Tripurî**
+
+---
+
+### 3.186 Kingdom of Ruucuu (`k_ruucuu`) $\rightarrow$ **Kûnincrich van Rûtschû**
+
+* **Duchy of Ruucuu** (`d_ruucuu`) $\rightarrow$ **Gubernat van Rûtschû**
+  * `c_amami` ([Non-HRE] Amami) $\rightarrow$ **Magistrat van Amami**
+  * `c_ucinaa` ([Non-HRE] Ucinaa) $\rightarrow$ **Magistrat van Utschinâ**
+
+---
+
+## 4. Archdioceses & Ecclesiastical Sees in Tarraconian (1059–1171)
 
 ### 4.1 Papal & Patriarchal Heads of Faith
 

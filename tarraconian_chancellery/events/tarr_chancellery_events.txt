@@ -27,7 +27,7 @@ tarr_chancellery.0001 = {
 		}
 	}
 
-	# Option B: 1059-1154 Historical Resolutions (All 160 De Jure Kingdoms Globally)
+	# Option B: 1059-1171 Historical Resolutions (All 186 De Jure Kingdoms Globally)
 	option = {
 		name = tarr_chancellery.0001.b
 		custom_tooltip = tarr_chancellery.0001.b.tt

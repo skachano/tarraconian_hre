@@ -89,16 +89,21 @@ def parse_melted_save(melted_path: Path):
     titles_by_key = {}
     cur_tid = None
     in_titles = False
+    in_name_data = False
     meta_date = "1154.12.27"
     emperor_name = "Augustus Wernhard"
 
     with open(melted_path, 'r', encoding='utf-8', errors='replace') as f:
         for line in f:
-            if not in_titles and line.startswith('meta_date='):
-                meta_date = line.strip().split('=')[1].strip('\"')
-            elif line.startswith('landed_titles={'):
-                in_titles = True
-                continue
+            if not in_titles:
+                stripped = line.strip()
+                if stripped.startswith('meta_date='):
+                    meta_date = stripped.split('=', 1)[1].strip('\"')
+                elif stripped.startswith('meta_player_name='):
+                    emperor_name = stripped.split('=', 1)[1].strip('\"')
+                elif line.startswith('landed_titles={'):
+                    in_titles = True
+                    continue
             elif in_titles:
                 if line.startswith('}'):
                     break
@@ -106,11 +111,24 @@ def parse_melted_save(melted_path: Path):
                     try:
                         cur_tid = int(line.strip().split('=')[0].strip())
                         titles_by_id[cur_tid] = {'id': cur_tid}
+                        in_name_data = False
                     except:
                         cur_tid = None
                 elif cur_tid is not None:
                     if line.startswith('\t\t}'):
                         cur_tid = None
+                        in_name_data = False
+                        continue
+                    if line.startswith('\t\t\ttitle_name_data={'):
+                        in_name_data = True
+                        continue
+                    elif in_name_data:
+                        if line.startswith('\t\t\t}'):
+                            in_name_data = False
+                        elif line.startswith('\t\t\t\t') and not line.startswith('\t\t\t\t\t'):
+                            p = line.strip().split('=', 1)
+                            if len(p) == 2 and p[0].strip() == 'name':
+                                titles_by_id[cur_tid]['save_name'] = p[1].strip().strip('\"')
                         continue
                     if line.startswith('\t\t\t') and not line.startswith('\t\t\t\t'):
                         p = line.strip().split('=', 1)
@@ -277,17 +295,34 @@ def update_gazetteer(save_file: Path,
                 'empire': m.group(3).strip()
             }
 
+    def resolve_name(key, prefix=''):
+        val = loc_cache.get(key)
+        if val == '$k_anatolia$':
+            return 'Anatolia'
+        if val:
+            return val
+        save_nm = titles_by_key.get(key, {}).get('save_name')
+        if save_nm and not save_nm.startswith('dynn_'):
+            return save_nm
+        if prefix and key.startswith(prefix):
+            return key[len(prefix):].replace('_', ' ').title()
+        return key.replace('_', ' ').title()
+
     kingdom_summary_rows = []
     for kk, q in qualifying_k.items():
         if kk in old_k_info:
             k_name = old_k_info[kk]['name']
-            e_str = old_k_info[kk]['empire']
-        else:
-            k_name = loc_cache.get(kk, kk.replace('k_', '').replace('_', ' ').title())
             ek = q['empire']
-            en = loc_cache.get(ek, ek.replace('e_', '').replace('_', ' ').title())
-            if en == '$k_anatolia$':
-                en = 'Anatolia'
+            en = resolve_name(ek, 'e_')
+            # Preserve bracket style if matching same empire, otherwise update to current de jure empire
+            if f'`{ek}`' in old_k_info[kk]['empire'] or f'[{ek}]' in old_k_info[kk]['empire']:
+                e_str = old_k_info[kk]['empire']
+            else:
+                e_str = f'{en} [`{ek}`]'
+        else:
+            k_name = resolve_name(kk, 'k_')
+            ek = q['empire']
+            en = resolve_name(ek, 'e_')
             e_str = f'{en} [`{ek}`]'
         
         kingdom_summary_rows.append({
@@ -305,9 +340,7 @@ def update_gazetteer(save_file: Path,
 
     empire_summary_rows = []
     for ek in qualifying_empires:
-        en = loc_cache.get(ek, ek.replace('e_', '').replace('_', ' ').title())
-        if en == '$k_anatolia$':
-            en = 'Anatolia'
+        en = resolve_name(ek, 'e_')
         re_cnt = emp_re_counties[ek]
         tot_cnt = emp_tot_counties[ek]
         pct = (re_cnt / tot_cnt * 100.0) if tot_cnt > 0 else 0.0
@@ -336,8 +369,8 @@ def update_gazetteer(save_file: Path,
     # Construct Document
     header_text = f"""# De Jure Empires, Kingdoms, Duchies & Counties of the Roman Empire (`h_roman_empire` / `e_hre`, 1059–{year_str})
 
-**Campaign Save:** `chatenois_867_01_01.ck3` (**{date_str}**, updated from 13 May 1059, 20 September 1122 & 20 August 1142)  
-**Ruler:** Augustus Wernhard of the **Roman Empire** (`h_roman_empire`, *Dat Rômische Keiserrîch*, formed over `e_hre` and `e_byzantium`)  
+**Campaign Save:** `chatenois_867_01_01.ck3` (**{date_str}**, updated from 13 May 1059, 20 September 1122, 20 August 1142 & 27 December 1154)  
+**Ruler:** {emperor_name} of the **Roman Empire** (`h_roman_empire`, *Dat Rômische Keiserrîch*, formed over `e_hre` and `e_byzantium`)  
 **Scope:** All **{tot_emp_count} De Jure Empires** containing at least 1 county belonging de facto to the **Roman Empire** (`h_roman_empire`), encompassing all **{tot_k_count} De Jure Kingdoms**, all **{tot_duchies} De Jure Duchies** and **{tot_counties:,} De Jure Counties** within those Empires (**{tot_re:,} Roman Empire counties** and **{tot_non_re:,} non-RE counties**, **{tot_pct:.1f}% control**), followed by the **78 Archdioceses, 10 Papal/Patriarchal Sees & 26 Prince-Bishoprics** as of {year_str}.
 
 ---
@@ -379,61 +412,103 @@ def update_gazetteer(save_file: Path,
                 k_name, k_key = m_k.group(1).strip(), m_k.group(2).strip()
                 existing_subsections.append((k_key, k_name, chunk))
 
-    # Known historical attachments for Serbia and Moldavia:
-    d_vidin_text = """* **Duchy of Bononia (Vidin)** (`d_vidin`) — *2/2 in HRE* — *(Historically **Bononia**; Slavic **Bdin / Vidin**)*
-  * **[HRE]** **Vidin** (`c_vidin`) — *Tarraconian: **Magistrat van Widîn**** — *(Historically **Bononia**; Slavic **Bdin / Vidin**)*
-  * **[HRE]** **Braničevo** (`c_branicevo`) — *Tarraconian: **Magistrat van Branitschêwe****"""
+    # Pass 1: Harvest existing duchy headers, county lines (updated for RE status), and ordering
+    existing_duchy_headers = {}
+    existing_county_lines = {}
+    existing_k_duchy_order = defaultdict(list)
+    existing_d_county_order = defaultdict(list)
+    existing_k_empire_line = {}
 
-    d_dobrudja_text = """* **Duchy of Scythia Minor (Dobrudja)** (`d_dobrudja`) — *2/2 in HRE* — *(Historically **Scythia Minor / Karvuna**; Dobrudja 14th c.)*
-  * **[HRE]** **Constanta** (`c_constanta`) — *Tarraconian: **Magistrat van Konstantze**** — *(Historically **Tomis**; Constanța attested Byzantine era)*
-  * **[HRE]** **Mesembria** (`c_mesembria`) — *Tarraconian: **Magistrat van Mesembrîe****"""
-
-    updated_subsections = []
-    for idx, (k_key, k_name, chunk) in enumerate(existing_subsections, 1):
-        if k_key not in qualifying_k:
-            continue
-        q_data = qualifying_k[k_key]
-        k_re = q_data['re']
-        k_total = q_data['total']
-        
-        if k_key == 'k_sicily':
-            chunk = re.sub(r'\*\s*\*\*Duchy of Apulia\*\*.*?(?=\*\s*\*\*Duchy of Salerno\*\*)', '', chunk, flags=re.DOTALL)
-        if k_key == 'k_serbia' and 'd_vidin' not in chunk:
-            chunk = chunk.rstrip() + '\n' + d_vidin_text + '\n'
-        if k_key == 'k_moldavia' and 'd_dobrudja' not in chunk:
-            chunk = chunk.rstrip() + '\n' + d_dobrudja_text + '\n'
-
+    for k_key, k_name, chunk in existing_subsections:
         lines = chunk.strip().split('\n')
-        updated_lines = []
-        updated_lines.append(f'### 2.{idx} Kingdom of {k_name} (`{k_key}`) — {k_re}/{k_total} Counties in HRE/RE')
-        
-        cur_duchy_key = None
+        cur_dk = None
         for line in lines[1:]:
-            m_d = re.search(r'^\*\s*\*\*([^*]+)\*\*\s*\(`([^`]+)`\)', line)
-            if m_d and m_d.group(2) in q_data['duchies']:
-                cur_duchy_key = m_d.group(2).strip()
-                c_list = q_data['duchies'].get(cur_duchy_key, [])
-                d_re = sum(1 for ck in c_list if ck in re_counties)
-                d_tot = len(c_list)
-                new_line = re.sub(r'—\s*\*\d+/\d+\s+in HRE\*', f'— *{d_re}/{d_tot} in HRE*', line, count=1)
-                updated_lines.append(new_line)
+            s = line.strip()
+            if s.startswith('* **De Jure Empire:**'):
+                existing_k_empire_line[k_key] = line
                 continue
-            
-            m_c = re.search(r'^\s*\*\s*(\*\*\[HRE\]\*\*|\[Non-HRE\])\s*(.*?\(`([A-Za-z0-9_\-]+)`\).*)', line)
+            m_d = re.search(r'^\*\s*\*\*([^*]+)\*\*\s*\(`((?:d|x)_[a-zA-Z0-9_\-]+)`\)', line)
+            if m_d:
+                cur_dk = m_d.group(2).strip()
+                existing_duchy_headers[cur_dk] = line
+                if cur_dk not in existing_k_duchy_order[k_key]:
+                    existing_k_duchy_order[k_key].append(cur_dk)
+                continue
+            m_c = re.search(r'^\s*\*\s*(?:\*\*\[HRE\]\*\*|\[Non-HRE\])\s*(.*?\(`(c_[a-zA-Z0-9_\-]+)`\).*)', line)
             if m_c:
-                prefix = m_c.group(1)
-                rest = m_c.group(2)
-                c_key = m_c.group(3)
+                rest = m_c.group(1)
+                c_key = m_c.group(2)
                 is_in_re = (c_key in re_counties)
                 expected_prefix = '**[HRE]**' if is_in_re else '[Non-HRE]'
                 indent = line[:line.find('*')]
-                updated_lines.append(f'{indent}* {expected_prefix} {rest}')
-                continue
-            
-            updated_lines.append(line)
-        
-        while updated_lines and updated_lines[-1].strip() in ('', '---'):
-            updated_lines.pop()
+                existing_county_lines[c_key] = f'{indent}* {expected_prefix} {rest}'
+                if cur_dk and c_key not in existing_d_county_order[cur_dk]:
+                    existing_d_county_order[cur_dk].append(c_key)
+
+    updated_subsections = []
+    out_idx = 0
+    for k_key, k_name, chunk in existing_subsections:
+        if k_key not in qualifying_k:
+            continue
+        out_idx += 1
+        q_data = qualifying_k[k_key]
+        k_re = q_data['re']
+        k_total = q_data['total']
+        ek = q_data['empire']
+        en = resolve_name(ek, 'e_')
+
+        updated_lines = []
+        updated_lines.append(f'### 2.{out_idx} Kingdom of {k_name} (`{k_key}`) — {k_re}/{k_total} Counties in HRE/RE')
+        if k_key in existing_k_empire_line:
+            emp_line = existing_k_empire_line[k_key]
+            if f'`{ek}`' not in emp_line and f'[{ek}]' not in emp_line:
+                emp_line = f'* **De Jure Empire:** {en} [`{ek}`]'
+            updated_lines.append(emp_line)
+        else:
+            updated_lines.append(f'* **De Jure Empire:** {en} [`{ek}`]')
+        updated_lines.append('')
+
+        # Order duchies: preserve existing order for duchies still in k_key, then append drifted/new duchies
+        ordered_duchies = [dk for dk in existing_k_duchy_order.get(k_key, []) if dk in q_data['duchies']]
+        extra_duchies = []
+        for dk, c_list in q_data['duchies'].items():
+            if dk not in ordered_duchies:
+                d_re = sum(1 for ck in c_list if ck in re_counties)
+                d_tot = len(c_list)
+                d_name = resolve_name(dk, 'd_')
+                extra_duchies.append((dk, d_name, d_re, d_tot))
+        extra_duchies.sort(key=lambda x: (-x[2], -x[3], x[1]))
+        ordered_duchies.extend(x[0] for x in extra_duchies)
+
+        for dk in ordered_duchies:
+            c_list = q_data['duchies'][dk]
+            d_re = sum(1 for ck in c_list if ck in re_counties)
+            d_tot = len(c_list)
+            if dk in existing_duchy_headers:
+                d_line = re.sub(r'—\s*\*\d+/\d+\s+in HRE\*', f'— *{d_re}/{d_tot} in HRE*', existing_duchy_headers[dk], count=1)
+                updated_lines.append(d_line)
+            else:
+                d_name = resolve_name(dk, 'd_')
+                updated_lines.append(f'* **Duchy of {d_name}** (`{dk}`) — *{d_re}/{d_tot} in HRE*')
+
+            ordered_counties = [ck for ck in existing_d_county_order.get(dk, []) if ck in c_list]
+            extra_counties = []
+            for ck in c_list:
+                if ck not in ordered_counties:
+                    c_name = resolve_name(ck, 'c_')
+                    in_re = (ck in re_counties)
+                    extra_counties.append((ck, c_name, in_re))
+            extra_counties.sort(key=lambda x: (not x[2], x[1]))
+            ordered_counties.extend(x[0] for x in extra_counties)
+
+            for ck in ordered_counties:
+                if ck in existing_county_lines:
+                    updated_lines.append(existing_county_lines[ck])
+                else:
+                    c_name = resolve_name(ck, 'c_')
+                    marker = '**[HRE]**' if (ck in re_counties) else '[Non-HRE]'
+                    updated_lines.append(f'  * {marker} **{c_name}** (`{ck}`)')
+
         updated_subsections.append('\n'.join(updated_lines))
 
     # Add new kingdoms
@@ -451,9 +526,7 @@ def update_gazetteer(save_file: Path,
         k_re = r['re']
         k_tot = r['total']
         ek = r['empire_key']
-        en = loc_cache.get(ek, ek.replace('e_', '').replace('_', ' ').title())
-        if en == '$k_anatolia$':
-            en = 'Anatolia'
+        en = resolve_name(ek, 'e_')
         
         k_lines = []
         k_lines.append(f'### 2.{idx} Kingdom of {k_name} (`{kk}`) — {k_re}/{k_tot} Counties in HRE/RE')
@@ -464,7 +537,7 @@ def update_gazetteer(save_file: Path,
         for dk, c_list in r['duchies'].items():
             d_re = sum(1 for ck in c_list if ck in re_counties)
             d_tot = len(c_list)
-            d_name = loc_cache.get(dk, dk.replace('d_', '').replace('_', ' ').title())
+            d_name = resolve_name(dk, 'd_')
             d_items.append((dk, d_name, d_re, d_tot, c_list))
         d_items.sort(key=lambda x: (-x[2], -x[3], x[1]))
         
@@ -472,7 +545,7 @@ def update_gazetteer(save_file: Path,
             k_lines.append(f'* **Duchy of {d_name}** (`{dk}`) — *{d_re}/{d_tot} in HRE*')
             c_items = []
             for ck in c_list:
-                c_name = loc_cache.get(ck, ck.replace('c_', '').replace('_', ' ').title())
+                c_name = resolve_name(ck, 'c_')
                 in_re = (ck in re_counties)
                 c_items.append((ck, c_name, in_re))
             c_items.sort(key=lambda x: (not x[2], x[1]))
@@ -489,7 +562,7 @@ def update_gazetteer(save_file: Path,
     sec3_text = sec3_match.group(1)
     sec3_text = re.sub(r'## 3\. Archdioceses & Ecclesiastical Sees \(1059–\d+\)', f'## 3. Archdioceses & Ecclesiastical Sees (1059–{year_str})', sec3_text)
     sec3_text = re.sub(
-        r'> \*\*20 August 1142 Update:\*\*.*?(?=\n\nIn this campaign\'s)',
+        r'> \*\*\d+ [A-Za-z]+ \d+ Update:\*\*.*?(?=\n\nIn this campaign\'s)',
         f'> **{date_str} Update:** By {year_str}, the Roman Empire has expanded its sphere of control across **{tot_emp_count} De Jure Empires** and **{tot_k_count} De Jure Kingdoms** in Europe, North Africa, the Near East, Central Asia, and East Asia, encompassing **{tot_re:,} Roman Empire counties** ({tot_pct:.1f}% control across the imperial sphere of **{tot_counties:,} counties**). All 78 Metropolitan Archdioceses and Holy Sees remain anchored within the imperial jurisdiction.',
         sec3_text,
         flags=re.DOTALL
