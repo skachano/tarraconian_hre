@@ -268,6 +268,36 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
     with open(Path(phase1_dir) / "titles_data.json", "r", encoding="utf-8") as f:
         titles_data = json.load(f)
 
+    # Load optional English title lookup & Sinosphere Section 5 DB so save names and calques never regress
+    eng_cache = {}
+    eng_cache_path = Path("/var/tmp/ck3_audit/english_titles_cache.json")
+    if eng_cache_path.is_file():
+        with open(eng_cache_path, "r", encoding="utf-8") as f:
+            eng_cache = json.load(f)
+
+    sino_names = {}
+    sino_gaz_path = Path(repo_dir) / "sinosphere_titles_and_characters_1154.md"
+    if sino_gaz_path.is_file():
+        with open(sino_gaz_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("|") and "`c_" in line:
+                    parts = line.split("|")
+                    if len(parts) >= 6:
+                        km = re.search(r"`(c_[^`]+)`", parts[2])
+                        if km:
+                            sino_names[km.group(1)] = (parts[3].replace("**", "").strip(), parts[4].replace("**", "").strip())
+
+    try:
+        from prepare_section5_update import section5_db
+    except Exception:
+        section5_db = {}
+
+    def _sino_adj(tarr_str: str) -> str:
+        stem = tarr_str.replace("Magistrat van ", "").strip()
+        if stem.startswith("dem "):
+            stem = stem[4:]
+        return f"{stem[:-1]}er" if stem.endswith("e") else f"{stem}er"
+
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
@@ -281,22 +311,47 @@ def run_phase4(phase1_dir, phase3_dir, output_dir, repo_dir):
         opt_c = item["option_c"]
         coupling = item["cadet_branch_coupling"]
 
+        save_name = item["save_name"]
+        if not save_name or save_name == ck:
+            save_name = eng_cache.get(ck, save_name or ck)
+
+        sel_opt = rec["selected_option"]
+        res_name = opt_a["candidate_name"] if sel_opt == "Option A" else opt_b["toponymic_stem"]
+        res_key = opt_a["candidate_key"] if sel_opt == "Option A" else opt_b["hydronym"]
+        tarr_title = rec["tarraconian_chancellery_name"]
+        tarr_adj = rec["tarraconian_adjective"]
+        hist_just = rec["historical_justification"]
+
+        # Apply curated Harmonized Sinospheric Calque Paradigm (61 titles from Section 5)
+        if ck in section5_db:
+            opt_b_s5, tarr_s5, note_s5 = section5_db[ck]
+            basin_en, chars = opt_b_s5.rsplit(" (", 1)
+            eng_s5, ch_s5 = sino_names.get(ck, (save_name, ""))
+            save_name = f"{eng_s5} ({ch_s5})" if ch_s5 else eng_s5
+            sel_opt = "Option B"
+            res_key = basin_en
+            res_name = "(" + chars
+            tarr_title = tarr_s5
+            tarr_adj = _sino_adj(tarr_s5)
+            hist_just = note_s5
+
         res_entry = {
             "county_key": ck,
-            "save_name": item["save_name"],
+            "save_name": save_name,
             "kingdom": item["kingdom"],
             "duchy": item["duchy"],
             "tier": item["tier"],
             "tier_reason": item["tier_reason"],
-            "selected_option": rec["selected_option"],
-            "resolved_name": opt_a["candidate_name"] if rec["selected_option"] == "Option A" else opt_b["toponymic_stem"],
-            "resolved_key": opt_a["candidate_key"] if rec["selected_option"] == "Option A" else opt_b["hydronym"],
-            "tarraconian_title": rec["tarraconian_chancellery_name"],
-            "tarraconian_adjective": rec["tarraconian_adjective"],
-            "historical_justification": rec["historical_justification"],
+            "selected_option": sel_opt,
+            "resolved_name": res_name,
+            "resolved_key": res_key,
+            "tarraconian_title": tarr_title,
+            "tarraconian_adjective": tarr_adj,
+            "historical_justification": hist_just,
             "cadet_branch_coupled": coupling["coupled"],
             "cadet_house_id": coupling["cadet_house_id"],
-            "cadet_realigned_name": coupling["realigned_name"]
+            "cadet_realigned_name": coupling["realigned_name"],
+            "is_sinosphere_s5": ck in section5_db,
         }
         final_resolutions.append(res_entry)
 
@@ -442,16 +497,23 @@ def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
     opt_b_count = sum(1 for t in titles if t["selected_option"] == "Option B")
     coupled_houses = [h for h in houses if "Realigned" in h["status"]]
 
+    sino_count = sum(1 for t in titles if t.get("is_sinosphere_s5"))
     lines = [
         "# Audit Discrepancy Register: Historical Accuracy & Title Resolutions",
         "",
-        "* **Campaign Date:** 27 December 1154 (`chatenois_867_01_01.ck3`)",
+        "* **Campaign Date:** 18 June 1171 (`chatenois_867_01_01.ck3`)",
         f"* **Audit Scope:** **{total_titles} Flagged Imperial Counties** across **{len(set(t['kingdom'] for t in titles))} De Jure Kingdoms**",
         "* **Core Framework:** 867 Alternate-History Divergence Point → Colonizer Presence Audit → Toponym-First Principle → Sub-Barony / Hydronymic Hierarchy → Tarraconian Chancellery Sound Laws",
         "",
         "---",
         "",
         "## 1. Executive Summary & Resolution Metrics",
+        "",
+        "> [!NOTE]",
+        "> **Harmonized Calque Paradigm for Logographic Sinospheric Titles:**",
+        f"> For the {sino_count} flagged titles within the Sinosphere (East Asia / Mandate of Heaven perimeter), post-867 foundations are predominantly logographic Chinese character compositions (`汉字` / *Hànzì*) rather than feudal eponymous castles. Under this harmonized paradigm:",
+        "> 1. Each title's territorial jurisdiction is anchored to its authentic pre-867 physical river basin, mountain pass, or lacustrine catchment (Option B: e.g. *Yitong River / Songhua Basin*, *Daling River*, *Shira Muren*, *Mudan River*, *Xiao Pass*).",
+        "> 2. The official Tarraconian Chancellery title is formed by directly calquing the semantic ideographs into Tarraconian (e.g., `长春` \"Eternal Spring\" $\\rightarrow$ **`Magistrat van Langlenten`**; `大定` \"Great Settlement\" $\\rightarrow$ **`Magistrat van Grôzfest`**; `安边` \"Pacified Frontier\" $\\rightarrow$ **`Magistrat van Fridmarch`**), completely resolving the feudal causal paradox while preserving authentic Sinitic statecraft semantics.",
         "",
         "This register constitutes the definitive, finalized reconciliation of all landed titles inside the **Roman Empire** (`h_roman_empire`) evaluated under the **Three-Tier Classification System**: Tier 2 (Post-867 Hydronymic, Geographic, or Tribal Foundations audited for pre-HRE morphology) and Tier 3 (Other Post-867 Settlements resolved via Options A, B, or C). Every title is paired with its verified pre-867 settlement or hydronym, along with official Tarraconian Chancellery forms and adjectives.",
         "",
@@ -515,7 +577,11 @@ def generate_audit_discrepancy_register(titles, houses, cultures, report_file):
         k = t["kingdom"]
         tier = f"Tier {t['tier']}"
         reason = t["tier_reason"]
-        res_str = f"**{t['selected_option']}:** `{t['resolved_key']}` ({t['resolved_name']})"
+        res_str = (
+            f"**{t['selected_option']}:** `{t['resolved_key']}` {t['resolved_name']}"
+            if t.get("is_sinosphere_s5")
+            else f"**{t['selected_option']}:** `{t['resolved_key']}` ({t['resolved_name']})"
+        )
         tarr_title = t["tarraconian_title"]
         tarr_adj = t["tarraconian_adjective"]
         just = t["historical_justification"]

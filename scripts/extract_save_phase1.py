@@ -158,7 +158,6 @@ def ensure_melted_save(save_path: Path, melted_path: Path, rakaly_bin: Path) -> 
 
     log(f"Melt successful! File size: {melted_path.stat().st_size / 1024 / 1024:.1f} MB")
     return melted_path
-    return melted_path
 
 
 def parse_melted_save(melted_path: Path, landed_info: dict):
@@ -744,16 +743,16 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
             cur_id = liege_id
         return titles_by_id.get(cur_id)
 
-    # Detect baseline HRE counties prior to latest expansion (e.g. 1142 baseline)
+    # Detect baseline HRE counties prior to latest expansion (1154 baseline before 1171 update)
     baseline_hre_counties = set()
     repo_root = Path(__file__).resolve().parent.parent
     try:
         git_res = subprocess.run(
-            ["git", "-C", str(repo_root), "show", "bc67621048c85fa09ae707f97ef5fd5ea5b2524d~1:hre_de_jure_and_archdioceses_1059.md"],
+            ["git", "-C", str(repo_root), "show", "2ecf89ed844ca66635f6d1990334c2d20dd8f3ab~1:hre_de_jure_and_archdioceses_1059.md"],
             capture_output=True, text=True, check=True
         )
         baseline_hre_counties = set(re.findall(r'\*\s*\*\*\[HRE\]\*\*\s*.*?\(`(c_[a-zA-Z0-9_\-]+)`\)', git_res.stdout))
-        log(f"Detected {len(baseline_hre_counties)} baseline HRE counties prior to 1154 expansion from git.")
+        log(f"Detected {len(baseline_hre_counties)} baseline HRE counties prior to 1171 expansion from git.")
     except Exception as e:
         log(f"Warning: Git baseline lookup failed ({e}).")
 
@@ -1012,7 +1011,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         if hdata.get('found_date'):
             try:
                 found_yr = float(hdata['found_date'].split('.')[0])
-                if 1142.0 <= found_yr <= 1200.0:
+                if 1154.0 <= found_yr <= 1200.0:
                     found_recent = True
             except ValueError:
                 pass
@@ -1185,17 +1184,17 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
     with open(report_md_path, 'w', encoding='utf-8') as f:
         f.write("# Phase 1 Extraction Report: Landed Titles, Dynasties & Historical Canon\n\n")
         f.write(f"* **Extraction Date:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"* **Active Campaign Save:** `chatenois_867_01_01.ck3` (27 December 1154)\n")
+        f.write(f"* **Active Campaign Save:** `chatenois_867_01_01.ck3` (18 June 1171)\n")
         f.write(f"* **Output Directory:** `{output_dir}`\n\n")
         f.write("## 1. Executive Summary & Core Statistics\n\n")
         f.write(f"| Metric | Extracted Count | Description |\n")
         f.write(f"| :--- | :---: | :--- |\n")
         f.write(f"| **De Jure Counties Processed** | **{len(processed_counties)}** | Total counties mapped across base game & expansion regions |\n")
         f.write(f"| **Counties in Roman Empire** | **{total_roman_counties}** ({total_roman_counties / len(processed_counties) * 100:.1f}%) | Counties whose de facto top liege is `h_roman_empire` / `e_hre` |\n")
-        f.write(f"| **Newly Integrated Counties (1142 $\\rightarrow$ 1154)** | **{total_newly_integrated}** | Frontier expansion titles incorporated since baseline milestone |\n")
+        f.write(f"| **Newly Integrated Counties (1154 $\\rightarrow$ 1171)** | **{total_newly_integrated}** | Frontier expansion titles incorporated since baseline milestone |\n")
         f.write(f"| **Active Cultures** | **{len(cultures)}** | Extracted from `culture_manager` with ethos, language & heritage |\n")
         f.write(f"| **Dynasties & Cadet Houses** | **{len(dynasties)}** dynasties / **{len(houses)}** houses | Total noble lineages recorded in save gamestate |\n")
-        f.write(f"| **Chatenois Cadet Houses** | **{len(chatenois_houses)}** | Branches of Dynasty 1582 (including **{len(recent_chatenois)}** founded since 1142) |\n")
+        f.write(f"| **Chatenois Cadet Houses** | **{len(chatenois_houses)}** | Branches of Dynasty 1582 (including **{len(recent_chatenois)}** founded since 1154) |\n")
         f.write(f"| **Historical Characters Decoded** | **{len(characters)}** | Title holders, history conquerors, and house heads with personality traits |\n")
         f.write(f"| **Mapped Built Baronies** | **{sum(len(c['baronies']) for c in processed_counties.values())}** | Baronies with province holdings, buildings, and fort levels |\n\n")
 
@@ -1212,8 +1211,8 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         for c_name, count in sorted_cults:
             f.write(f"| **{c_name}** | {count} | {count / total_roman_counties * 100:.1f}% |\n")
 
-        f.write("\n## 3. Comprehensive Audit of Newly Integrated Frontiers (1142 $\\rightarrow$ 1154)\n\n")
-        f.write(f"Between 1142 and 1154, the Roman Empire under Augustus Wernhard expanded by **{total_newly_integrated} counties** across **{len(newly_by_k)} de jure kingdoms**.\n\n")
+        f.write("\n## 3. Comprehensive Audit of Newly Integrated Frontiers (1154 $\\rightarrow$ 1171)\n\n")
+        f.write(f"Between 1154 and 1171, the Roman Empire under Pope Gotzelo expanded by **{total_newly_integrated} counties** across **{len(newly_by_k)} de jure kingdoms**.\n\n")
         
         f.write("### 3.1 Kingdom-Level Frontier Breakdown\n\n")
         f.write("| De Jure Kingdom | De Jure Empire | Newly Integrated Counties | Sample County Keys |\n")
@@ -1237,7 +1236,7 @@ def synthesize_and_analyze(landed_info: dict, save_data: dict, output_dir: Path)
         f.write("As detailed in [chatenois_dynasty_analysis.md](chatenois_dynasty_analysis.md), the ruling dynasty **Chatenois** (ID `1582`) derives from Latin *Castinetum* ('chestnut grove'). In historical German / Lorraine tradition and Tarraconian sound laws, the name is **Kestenholz**.\n\n")
         
         if recent_chatenois:
-            f.write("### 4.1 Cadet Houses Formed During Recent Expansion (1142 $\\rightarrow$ 1154)\n\n")
+            f.write("### 4.1 Cadet Houses Formed During Recent Expansion (1154 $\\rightarrow$ 1171)\n\n")
             f.write("| House ID | Save Name | Proposed Tarraconian Name | Found Date | Head of House | Living Members |\n")
             f.write("| :---: | :--- | :--- | :---: | :--- | :---: |\n")
             for rh in recent_chatenois:

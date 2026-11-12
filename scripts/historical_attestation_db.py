@@ -257,6 +257,69 @@ ATTESTATION_REGISTRY = {
     'c_vecchio': (1539, 'high_medieval_foundation', 'Bank of Saint George Charter', False, 'Porto-Vecchio founded 1539 by Genoa; pre-867 Portus Syracusanus'),
     'c_kerak': (1142, 'high_medieval_foundation', 'Crusader Chronicle / William of Tyre', False, 'Crusader castle Kerak (1142) and Montréal (1115); resolves to classical Nabataean metropolis Petra (Pêtre)'),
     'c_negev': (-1200, 'classical_antiquity', 'Biblical Hebrew / Ptolemy Geography', True, 'Ancient rift valley depression between Dead Sea and Gulf of Aqaba (Ha-Aravah / Wadi Araba); resolves to Arabâ'),
+    'c_saratov': (1590, 'high_medieval_foundation', 'Tsarist Fortress Charter', True, 'Tsarist fortress founded 1590 over ancestral Turkic geographic feature Sary Tau (Yellow Mountain -> Goltberch)'),
+
+    # =========================================================================
+    # 1171 FRONTIER: INDIA, MAINLAND SEA & MARITIME SEA (TIER 1, 2 & 3)
+    # =========================================================================
+    # Attested Pre-867 Maritime SEA Entrepots (Tier 1 <= 867 AD)
+    'c_MAL_kedah': (400, 'epigraphy', 'Bujang Valley Sanskrit Inscriptions', False, '4th-5th c. AD Kataha / Kadaram entrepot in Bujang Valley'),
+    'c_MAL_gangganegara': (450, 'archaeology', 'Beruas / Perak Classical Annals', False, '5th-c. Hindu-Malay kingdom of Gangga Negara'),
+    'c_THAI_tambralinga': (150, 'classical_antiquity', 'Ptolemy / 775 AD Ligor Stele', False, 'Ancient Isthmian kingdom Tambralinga (775 AD Wat Sema Mueang stele)'),
+    'c_THAI_takua_pa': (200, 'classical_antiquity', 'Ptolemy / Tang / Takuapa Tamil Stele', False, 'Classical entrepot Takkola / Takuapa on Kra Isthmus'),
+    'c_MAL_patani': (200, 'early_chronicle', 'Liangshu / Chinese Annals', False, 'Ancient 2nd-c. Malayic kingdom of Langkasuka'),
+    'c_BOR_santubong': (650, 'archaeology', 'Sarawak River Delta Excavations', False, '7th-c. Tang-era iron smelting and trade port at Santubong'),
+    'c_BOR_brunei': (600, 'early_chronicle', 'Chinese Annals (Po-ni)', False, 'Early maritime polity of Po-ni / Poni in northwestern Borneo'),
+    'c_SUM_bangka-belitung': (686, 'epigraphy', 'Kota Kapur Inscription (686 AD)', False, 'Old Malay Srivijayan inscription of 686 AD at Kota Kapur, Bangka'),
+    'c_SUM_palembang': (682, 'epigraphy', 'Kedukan Bukit Inscription (682 AD)', False, 'Capital of Srivijaya attested in 682-686 AD Sabokingking & Kedukan Bukit stelae'),
+    'c_SUM_jambi': (644, 'early_chronicle', 'Yijing / Tang Huiyao', False, 'Kingdom of Malayu attested sending embassy to Tang China in 644 AD'),
+
+    # Tier 2 Post-867 Geographic / Topographic / Directional Frontier Titles
+    'c_sagya': (1073, 'monastic_chronicle', 'Sakya Chronicles', True, '1073 AD monastery named after indigenous Tibetan terrain Sa-skya (Pale/Grey Soil)'),
+    'c_BOR_kutai_utara': (1999, 'modern_geographic', 'Indonesian Administrative Geography', True, 'Directional subdivision ("North Kutai") over Mahakam-Sangkulirang coastal basin'),
+    'c_BOR_kutai_jauh': (1999, 'modern_geographic', 'Indonesian Administrative Geography', True, 'Directional subdivision ("Far Kutai") on the Upper Mahakam basin'),
+    'c_SuMa_banggai_utara': (1999, 'modern_geographic', 'Indonesian Administrative Geography', True, 'Directional subdivision ("North Banggai") over Tomini-Togian Gulf'),
+    'c_PHI_cagayan_valley': (1900, 'modern_geographic', 'Geographic Valley Descriptor', True, 'River valley descriptor named after the Cagayan River basin'),
+    'c_PHI_south_palawan': (1900, 'modern_geographic', 'Geographic Island Descriptor', True, 'Directional descriptor over ancestral Tagbanwa-Palawan island territory'),
+
+    # Tier 3 Post-867 / Colonial Anachronisms in 1171 Frontier (Resolved via Options A/B)
+    'c_vijayapura': (1095, 'high_medieval_foundation', 'Sena Dynastic Records', False, 'Post-1095 Sena seat; pre-867 center is ancient Bishnupur / Mallabhum (b_visnupura)'),
+    'c_laksmanavati': (1178, 'high_medieval_foundation', 'Sena Epigraphy', False, 'Named after Laksmana Sena (r. 1178-1206, post-1171); resolves to Ramavati (b_ramavati)'),
+    'c_damin_i_koh': (1832, 'colonial_survey', 'East India Company Survey', False, '1832 British colonial term; resolves to ancient Kajangala / Vaidyanath (b_deogarh2)'),
+    'c_midnapore': (1760, 'colonial_survey', 'Bengal Presidency Gazetteer', False, 'Colonial English spelling Midnapore; resolves to classical 6th-c. Dandabhukti (b_dantan)'),
+    'c_ubon_ratchathani': (1786, 'modern_foundation', 'Rattanakosin Chronicle', False, 'Founded 1786; resolves to ancient Mun River basin (Mûndal)'),
+    'c_IDO_barat_daya': (1945, 'modern_geographic', 'Indonesian Republic Administration', False, 'Modern Indonesian directional term ("Southwest"); resolves to ancient island Wetar (b_IDO_Wetar)'),
+    'c_papua_selatan': (2022, 'modern_geographic', 'Modern Provincial Act', False, 'Modern directional term ("South Papua"); resolves to indigenous Asmat territory'),
+    'c_kepala_burung': (1950, 'modern_geographic', 'Modern Dutch/Indonesian Toponym', False, 'Modern calque "Bird\'s Head"; resolves to indigenous gulf Bintuni'),
+    'c_MAL_johor': (1528, 'high_medieval_foundation', 'Malay Annals', False, 'Johor founded 1528; resolves to pre-867 maritime emporium Temasek / Tumasik (b_MAL_Tumasik)'),
+    'c_SUM_east_sumatra': (1948, 'modern_geographic', 'Modern English/Colonial Descriptor', False, 'Modern English geographic label; pre-867 river basin Mesuji (b_SUM_Mesuji)'),
+    'c_SUM_pekanbaru': (1784, 'modern_foundation', 'Siak Sultanate Record', False, 'Founded 1784 ("New Market"); resolves to river district Rokan Hilir (b_SUM_Rokan_Hilir)'),
+    'c_BOR_kudat': (1881, 'colonial_survey', 'British North Borneo Charter', False, 'Founded 1881 by British North Borneo Co.; resolves to ancient bay Marudu (b_BOR_Marudu)'),
+    'c_BOR_lahad_datu': (1879, 'colonial_survey', 'Sulu-Sabah Charter', False, '19th-c. colonial settlement; resolves to ancient Sulu-Borneo strait Sibutu (b_BOR_Sibutu)'),
+    'c_thanbyuzayat': (1942, 'modern_foundation', '20th-c. Railway Town', False, 'Modern railway town; resolves to ancient Mon port Dawei (b_dawei)'),
+    'c_ava': (1364, 'high_medieval_foundation', 'Burmese Royal Chronicles', False, 'Ava founded 1364 by Thado Minbya; resolves to ancient Irrawaddy shrine-town Taungbyon (b_taungbyon)'),
+    'c_toungoo': (1279, 'high_medieval_foundation', 'Toungoo Chronicle', False, 'Toungoo founded 1279/1510; resolves to ancient Sittaung valley settlement Swa (b_swa)'),
+    'c_charaideo': (1253, 'high_medieval_foundation', 'Ahom Buranjis', False, 'Ahom royal capital Che-Rai-Doi founded 1253 by Sukaphaa; pre-Ahom Patkai Range (b_patkai)'),
+    'c_dimapur': (1150, 'high_medieval_foundation', 'Dimasa Kachari Tradition', False, 'Dimasa capital founded 12th-13th c.; resolves to ancient Dhansiri River basin (Dansîri)'),
+    'c_goalpara': (1765, 'colonial_survey', 'Mughal-British Frontier Register', False, '17th-18th c. frontier outpost; resolves to classical Kamakhya / Pragjyotisha (b_kamakhya)'),
+    'c_kamatapur': (1250, 'high_medieval_foundation', 'Kamata Chronicle', False, 'Founded mid-13th c. by Sandhya of Kamata; resolves to 6th-c. fortified city Bhitagarh (b_bhitagarh)'),
+    'c_nabadwipa': (1063, 'high_medieval_foundation', 'Sena Gazetteer', False, 'Nabadwip founded c. 1063; resolves to ancient Shakta Pitha Attahasa (b_attahasa)'),
+    'c_bangaon': (990, 'high_medieval_foundation', 'Pala Copperplate', False, 'Late Pala/colonial name; resolves to pre-867 Burhi Gandak river basin'),
+    'c_saptagrama': (1100, 'high_medieval_foundation', 'Bengal Epigraphy', False, 'Emerged c. 11th-12th c. succeeding Tamralipti; resolves to classical Bhagirathi river basin'),
+    'c_racakonda': (1365, 'high_medieval_foundation', 'Recherla Nayaka Chronicle', False, 'Built 1360s; resolves to pre-867 Chalukya/Rashtrakuta hillfort Nalgonda (b_nalgonda)'),
+    'c_candragiri': (1000, 'high_medieval_foundation', 'Yadavaraya Record', False, 'Yadavaraya fort c. 1000 AD; resolves to 9th-c. Pallava/Chola seat Melpadi (b_melpadi)'),
+    'c_muluvagil': (1050, 'high_medieval_foundation', 'Hoysala Border Record', False, 'Hoysala-era frontier post; resolves to 4th-c. Western Ganga capital Kuvalala / Kolar (b_kuvalala)'),
+    'c_penugonda': (1350, 'high_medieval_foundation', 'Vijayanagara Chronicle', False, '14th-c. fort; resolves to 8th-c. Nolamba/Ganga hillfort Nandagiri (b_nandi)'),
+    'c_batticaloa': (1638, 'colonial_survey', 'Dutch East India Record', False, 'Colonial corruption of Mattakkalappu; resolves to 3rd-c. BC Mahavamsa city Dighavapi (b_dighavapi)'),
+    'c_yamethin': (1100, 'high_medieval_foundation', 'Bagan Inscriptions', False, 'Bagan/Pinya frontier town; resolves to 1st-5th c. AD Pyu capital Beikthano (b_peikthanomyo)'),
+    'c_sagaing': (1315, 'high_medieval_foundation', 'Sagaing Chronicle', False, 'Founded 1315 by Athinkhaya; resolves to ancient Mu River basin (Mû-Flutz)'),
+    'c_nyaungshwe': (1359, 'high_medieval_foundation', 'Shan Saopha Chronicle', False, 'Founded 1359 by Hso Hom Hpa; resolves to ancient Lake Inle basin (Inle-Sê)'),
+    'c_sukhothai': (1238, 'high_medieval_foundation', 'Wat Si Chum Inscription', False, 'Thai kingdom founded 1238; resolves to older Dvaravati/Khmer river city Chaliang (b_si_satchanalai)'),
+    'c_phetchabun': (1250, 'high_medieval_foundation', 'Sukhothai Frontier Charter', False, 'Late medieval town; resolves to 3rd-8th c. AD Dvaravati/pre-Angkorian city Sri Deva / Si Thep (b_srideb)'),
+    'c_mukdahan': (1770, 'modern_foundation', 'Thonburi Chronicle', False, 'Founded 1770 AD by Chao Kinnaree; resolves to ancient Chenla seat Nong Han Luang (b_sakhon_nakhon)'),
+    'c_SUM_dharmasraya': (1050, 'high_medieval_foundation', 'Melayu Grahi Stele', False, 'Post-1025 Melayu upstream seat; resolves to ancient Srivijayan Batanghari River basin'),
+    'c_BOR_sukadana': (1365, 'high_medieval_foundation', 'Nagarakretagama', False, 'Late medieval sultanate; resolves to classical Bornean coastal polity Tanjungpura'),
+    'c_BOR_martapura': (1630, 'high_medieval_foundation', 'Banjar Chronicle', False, 'Banjar Martapura dates to 1630; resolves to 400 AD Mulavarman Sanskrit Yupa site Muara Kaman (b_BOR_Muara_Kaman)'),
 }
 
 # Ancient Kingdoms where unflagged titles have classical Roman / Hellenistic / Carolingian continuity
@@ -274,8 +337,16 @@ CLASSICAL_OR_ANCIENT_KINGDOMS = {
     'k_east_francia', 'k_bavaria', 'k_saxony', 'k_frisia',
     'k_arabia', 'k_yemen', 'e_arabia', 'k_persia', 'k_khorasan', 'k_daylam', 'k_makran', 'k_transoxiana',
     'k_denmark', 'k_norway', 'k_sweden',
-    # Ancient Indian / Indus / Gandharan Civilizations
+    # Ancient Indian, Sri Lankan & Gandharan Civilizations
     'k_punjab', 'k_sindh', 'k_kashmir', 'k_delhi', 'k_kabulistan', 'k_himalaya',
+    'k_bengal', 'k_bihar', 'k_orissa', 'k_kamarupa', 'k_gondwana',
+    'k_andhra', 'k_karnata', 'k_lanka', 'k_maharastra', 'k_tamilakam', 'k_telingana',
+    # Classical Mainland Southeast Asia, Java & Sumatra Indic Civilizations
+    'k_pagan', 'k_dvaravati', 'k_funan', 'k_chenla', 'k_champa',
+    'k_yavakadvipa', 'k_malayadvipa',
+    # Dynamic Classical Mediterranean / Western / Sudanese Imperial Kingdoms
+    'x_script_4328', 'x_script_6717', 'x_script_3965', 'x_script_7238',
+    'x_script_4359', 'x_script_4774', 'x_script_6373', 'x_script_2942',
     # Ancient East Asian & Silk Road Civilizations (Tang / Han / Ritsuryo / Three Kingdoms)
     'k_yamato', 'k_azuma', 'k_tsukushi', 'k_hitakami',
     'k_silla', 'k_goguryeo', 'k_baekje', 'k_balhae',
@@ -716,6 +787,415 @@ def load_enriched_historical_db(repo_dir=None):
             "rec_option": "Option A",
             "tarr_name": "Gêrsike",
             "tarr_adjective": "Gêrsiker"
+        },
+        "c_saratov": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Sary Tau (Yellow Mountain / Volga Reach)",
+            "opt_b_lang": "Turkic Toponymic Substrate Calque",
+            "opt_b_name": "Goltberch",
+            "justification": "Tsarist fortress Saratov founded 1590 over ancestral Turkic geographic feature Sary Tau ('Yellow Mountain'); calqued as Goltberch.",
+            "rec_option": "Option B",
+            "tarr_name": "Goltberch",
+            "tarr_adjective": "Goltbercher"
+        },
+        # 1171 Frontier Additions: Bengal, Assam, Bihar, Deccan, Lanka, SEA & Nusantara
+        "c_vijayapura": {
+            "opt_a_key": "b_visnupura",
+            "opt_a_name": "Bishnupur (Visnupura)",
+            "opt_a_type": "Pre-1095 Sena / Malla Seat (b_visnupura)",
+            "opt_b_hydronym": "Damodar-Dwarakeswar Basin",
+            "opt_b_lang": "Sanskrit / Bengali",
+            "opt_b_name": "Wischnupur",
+            "justification": "Vijayapura was founded as a post-1095 Sena capital; resolves via Option A to ancient Mallabhum center Bishnupur (Wischnupur).",
+            "rec_option": "Option A",
+            "tarr_name": "Wischnupur",
+            "tarr_adjective": "Wischnupurer"
+        },
+        "c_laksmanavati": {
+            "opt_a_key": "b_ramavati",
+            "opt_a_name": "Ramavati",
+            "opt_a_type": "Pre-1178 Pala Imperial Seat (b_ramavati)",
+            "opt_b_hydronym": "Mahananda-Ganges Confluence",
+            "opt_b_lang": "Sanskrit / Prakrit",
+            "opt_b_name": "Râmâwatî",
+            "justification": "Laksmanavati was named after Laksmana Sena (r. 1178-1206, after 1171); resolves via Option A to Pala imperial seat Ramavati (Râmâwatî).",
+            "rec_option": "Option A",
+            "tarr_name": "Râmâwatî",
+            "tarr_adjective": "Râmâwatîer"
+        },
+        "c_midnapore": {
+            "opt_a_key": "b_dantan",
+            "opt_a_name": "Dandabhukti (Dantan)",
+            "opt_a_type": "6th-c. Gupta / Shashanka Provincial Capital (b_dantan)",
+            "opt_b_hydronym": "Subarnarekha-Kangsabati Basin",
+            "opt_b_lang": "Sanskrit Provincial Term",
+            "opt_b_name": "Dandabukti",
+            "justification": "Colonial English spelling Midnapore; resolves via Option A to ancient Gupta/Shashanka province Dandabhukti (b_dantan).",
+            "rec_option": "Option A",
+            "tarr_name": "Dandabukti",
+            "tarr_adjective": "Dandabuktier"
+        },
+        "c_charaideo": {
+            "opt_a_key": "b_patkai",
+            "opt_a_name": "Patkai Range",
+            "opt_a_type": "Pre-Ahom Oronymic Eastern March (b_patkai)",
+            "opt_b_hydronym": "Patkai Range / Dikhau River Basin",
+            "opt_b_lang": "Tibeto-Burman Oronym",
+            "opt_b_name": "Patkâi",
+            "justification": "Charaideo (Che-Rai-Doi) was founded in 1253 by Ahom king Sukaphaa; resolves via pre-Ahom oronym Patkai Range (Patkâi).",
+            "rec_option": "Option A",
+            "tarr_name": "Patkâi",
+            "tarr_adjective": "Patkâier"
+        },
+        "c_dimapur": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Dhansiri River Basin",
+            "opt_b_lang": "Indo-Aryan / Bodo-Kachari Hydronym",
+            "opt_b_name": "Dansîri",
+            "justification": "Dimasa capital Dimapur emerged in the 12th-13th c.; resolves via Option B to the ancient Dhansiri River basin (Dansîri).",
+            "rec_option": "Option B",
+            "tarr_name": "Dansîri",
+            "tarr_adjective": "Dansîrier"
+        },
+        "c_goalpara": {
+            "opt_a_key": "b_kamakhya",
+            "opt_a_name": "Kamakhya (Pragjyotisa)",
+            "opt_a_type": "4th-c. Allahabad Pillar / Xuanzang Sacred Metropolis (b_kamakhya)",
+            "opt_b_hydronym": "Brahmaputra (Lauhitya) Basin",
+            "opt_b_lang": "Classical Sanskrit",
+            "opt_b_name": "Kamâkje",
+            "justification": "Goalpara is an 18th-c. Mughal/British revenue outpost; resolves via Option A to ancient classical sacred center Kamakhya (Kamâkje).",
+            "rec_option": "Option A",
+            "tarr_name": "Kamâkje",
+            "tarr_adjective": "Kamâkjer"
+        },
+        "c_kamatapur": {
+            "opt_a_key": "b_bhitagarh",
+            "opt_a_name": "Bhitagarh",
+            "opt_a_type": "6th-7th c. Fortified Ancient Kamarupa Trade City (b_bhitagarh)",
+            "opt_b_hydronym": "Karatoya-Tista Basin",
+            "opt_b_lang": "Ancient Kamarupan",
+            "opt_b_name": "Bîtâgar",
+            "justification": "Kamatapur was founded in the mid-13th c. by Sandhya of Kamata; resolves via Option A to the 6th-c. fortified trade city Bhitagarh (Bîtâgar).",
+            "rec_option": "Option A",
+            "tarr_name": "Bîtâgar",
+            "tarr_adjective": "Bîtâgarer"
+        },
+        "c_nabadwipa": {
+            "opt_a_key": "b_attahasa",
+            "opt_a_name": "Attahasa",
+            "opt_a_type": "Ancient Shakta Pitha Centre (b_attahasa)",
+            "opt_b_hydronym": "Bhagirathi Delta",
+            "opt_b_lang": "Classical Sanskrit",
+            "opt_b_name": "Attahâse",
+            "justification": "Nabadwipa emerged after c. 1063 under the Senas; resolves via Option A to the ancient Shakta Pitha site Attahasa (Attahâse).",
+            "rec_option": "Option A",
+            "tarr_name": "Attahâse",
+            "tarr_adjective": "Attahâser"
+        },
+        "c_bangaon": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Burhi Gandak River Basin",
+            "opt_b_lang": "Indo-Aryan Hydronym",
+            "opt_b_name": "Bûri-Gandach",
+            "justification": "Bangaon is a post-867 Pala/colonial settlement; resolves via Option B to the ancient Burhi Gandak river basin (Bûri-Gandach).",
+            "rec_option": "Option B",
+            "tarr_name": "Bûri-Gandach",
+            "tarr_adjective": "Bûri-Gandacher"
+        },
+        "c_saptagrama": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Bhagirathi River Basin",
+            "opt_b_lang": "Classical Sanskrit Hydronym",
+            "opt_b_name": "Bagîratî",
+            "justification": "Saptagrama rose in the 11th-13th c. as Tamralipti silted up; resolves via Option B to the classical Bhagirathi River (Bagîratî).",
+            "rec_option": "Option B",
+            "tarr_name": "Bagîratî",
+            "tarr_adjective": "Bagîratîer"
+        },
+        "c_racakonda": {
+            "opt_a_key": "b_nalgonda",
+            "opt_a_name": "Nalgonda (Nallagonda)",
+            "opt_a_type": "Pre-867 Chalukya / Rashtrakuta Hillfort (b_nalgonda)",
+            "opt_b_hydronym": "Musi River Basin",
+            "opt_b_lang": "Telugu / Deccani",
+            "opt_b_name": "Nalgonde",
+            "justification": "Rachakonda was built in the 1360s by Recherla Nayakas; resolves via Option A to older Chalukya hillfort Nalgonda (Nalgonde).",
+            "rec_option": "Option A",
+            "tarr_name": "Nalgonde",
+            "tarr_adjective": "Nalgonder"
+        },
+        "c_candragiri": {
+            "opt_a_key": "b_melpadi",
+            "opt_a_name": "Melpadi (Merpadi)",
+            "opt_a_type": "9th-c. Pallava / Chola Temple Town (b_melpadi)",
+            "opt_b_hydronym": "Palar-Swarnamukhi Basin",
+            "opt_b_lang": "Tamil / Telugu",
+            "opt_b_name": "Melpâdi",
+            "justification": "Chandragiri fort dates to c. 1000 AD under Yadavarayas; resolves via Option A to ancient Pallava border city Melpadi (Melpâdi).",
+            "rec_option": "Option A",
+            "tarr_name": "Melpâdi",
+            "tarr_adjective": "Melpâdier"
+        },
+        "c_muluvagil": {
+            "opt_a_key": "b_kuvalala",
+            "opt_a_name": "Kuvalala (Kolar)",
+            "opt_a_type": "4th-c. Western Ganga Capital Kuvalalapura (b_kuvalala)",
+            "opt_b_hydronym": "Palar Upper Plateau",
+            "opt_b_lang": "Kannada / Sanskrit",
+            "opt_b_name": "Kuwalâle",
+            "justification": "Mulbagal is a post-1050 Hoysala/Vijayanagara frontier pass; resolves via Option A to the 350 AD Western Ganga capital Kuvalala (Kuwalâle).",
+            "rec_option": "Option A",
+            "tarr_name": "Kuwalâle",
+            "tarr_adjective": "Kuwalâler"
+        },
+        "c_penugonda": {
+            "opt_a_key": "b_nandi",
+            "opt_a_name": "Nandagiri (Nandi Hills)",
+            "opt_a_type": "8th-9th c. Nolamba / Ganga Hillfort (b_nandi)",
+            "opt_b_hydronym": "Penner Upper Basin",
+            "opt_b_lang": "Kannada / Sanskrit",
+            "opt_b_name": "Nandagiri",
+            "justification": "Penukonda is a 14th-c. Vijayanagara stronghold; resolves via Option A to the ancient 8th-c. Nolamba hillfort Nandagiri (b_nandi).",
+            "rec_option": "Option A",
+            "tarr_name": "Nandagiri",
+            "tarr_adjective": "Nandagirier"
+        },
+        "c_batticaloa": {
+            "opt_a_key": "b_dighavapi",
+            "opt_a_name": "Dighavapi",
+            "opt_a_type": "3rd-c. BC Sacred Mahavamsa City (b_dighavapi)",
+            "opt_b_hydronym": "Gal Oya Basin",
+            "opt_b_lang": "Pali / Sinhala",
+            "opt_b_name": "Dîgawâpi",
+            "justification": "Batticaloa is a colonial corruption of Mattakkalappu; resolves via Option A to ancient Mahavamsa city Dighavapi (Dîgawâpi).",
+            "rec_option": "Option A",
+            "tarr_name": "Dîgawâpi",
+            "tarr_adjective": "Dîgawâpier"
+        },
+        "c_yamethin": {
+            "opt_a_key": "b_peikthanomyo",
+            "opt_a_name": "Beikthano (Visnupura)",
+            "opt_a_type": "1st-5th c. AD Pyu Capital City (b_peikthanomyo)",
+            "opt_b_hydronym": "Yin Chaung Basin",
+            "opt_b_lang": "Pyu / Burmese",
+            "opt_b_name": "Beiktanô",
+            "justification": "Yamethin is a Bagan/Pinya frontier town; resolves via Option A to the 1st-5th c. AD Pyu metropolis Beikthano (Beiktanô).",
+            "rec_option": "Option A",
+            "tarr_name": "Beiktanô",
+            "tarr_adjective": "Beiktanôer"
+        },
+        "c_sagaing": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "Pre-867 Halin already mapped on c_hanlan; uses Mu River hydronym",
+            "opt_b_hydronym": "Mu River Basin",
+            "opt_b_lang": "Burmese Hydronym",
+            "opt_b_name": "Mû-Flutz",
+            "justification": "Sagaing was founded in 1315 AD by Athinkhaya; resolves via Option B to the ancient Mu River basin (Mû-Flutz).",
+            "rec_option": "Option B",
+            "tarr_name": "Mû-Flutz",
+            "tarr_adjective": "Mû-Flützer"
+        },
+        "c_nyaungshwe": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Lake Inle Basin",
+            "opt_b_lang": "Shan / Tibeto-Burman Hydronym",
+            "opt_b_name": "Inle-Sê",
+            "justification": "Nyaungshwe (Yawnghwe) was founded in 1359 AD by Shan Saopha Hso Hom Hpa; resolves via Option B to Lake Inle basin (Inle-Sê).",
+            "rec_option": "Option B",
+            "tarr_name": "Inle-Sê",
+            "tarr_adjective": "Inle-Sêer"
+        },
+        "c_thanbyuzayat": {
+            "opt_a_key": "b_dawei",
+            "opt_a_name": "Dawei",
+            "opt_a_type": "Ancient Mon / Dvaravati Coastal Port (b_dawei)",
+            "opt_b_hydronym": "Dawei Estuary",
+            "opt_b_lang": "Mon / Burmese",
+            "opt_b_name": "Dawêi",
+            "justification": "Thanbyuzayat is a modern railway settlement; resolves via Option A to ancient Mon port Dawei (Dawêi).",
+            "rec_option": "Option A",
+            "tarr_name": "Dawêi",
+            "tarr_adjective": "Dawêier"
+        },
+        "c_ava": {
+            "opt_a_key": "b_taungbyon",
+            "opt_a_name": "Taungbyon",
+            "opt_a_type": "Ancient Irrawaddy Shrine-Town (b_taungbyon)",
+            "opt_b_hydronym": "Myitnge-Irrawaddy Confluence",
+            "opt_b_lang": "Burmese",
+            "opt_b_name": "Toungbjôn",
+            "justification": "Ava (Inwa) was founded in 1364 AD; resolves via Option A to ancient Irrawaddy town Taungbyon (Toungbjôn).",
+            "rec_option": "Option A",
+            "tarr_name": "Toungbjôn",
+            "tarr_adjective": "Toungbjôner"
+        },
+        "c_toungoo": {
+            "opt_a_key": "b_swa",
+            "opt_a_name": "Swa",
+            "opt_a_type": "Ancient Sittaung Valley Town (b_swa)",
+            "opt_b_hydronym": "Sittaung Upper Basin",
+            "opt_b_lang": "Burmese",
+            "opt_b_name": "Swâ",
+            "justification": "Toungoo was founded 1279/1510 AD; resolves via Option A to ancient Sittaung valley town Swa (Swâ).",
+            "rec_option": "Option A",
+            "tarr_name": "Swâ",
+            "tarr_adjective": "Swâer"
+        },
+        "c_sukhothai": {
+            "opt_a_key": "b_si_satchanalai",
+            "opt_a_name": "Chaliang (Si Satchanalai)",
+            "opt_a_type": "Ancient Dvaravati / Pre-Khmer Yom River Seat (b_si_satchanalai)",
+            "opt_b_hydronym": "Yom River Basin",
+            "opt_b_lang": "Mon-Khmer / Tai",
+            "opt_b_name": "Tschaljâng",
+            "justification": "Sukhothai emerged c. 1238 AD; resolves via Option A to the older Dvaravati-Khmer settlement Chaliang (Tschaljâng) on the Yom river.",
+            "rec_option": "Option A",
+            "tarr_name": "Tschaljâng",
+            "tarr_adjective": "Tschaljânger"
+        },
+        "c_phetchabun": {
+            "opt_a_key": "b_srideb",
+            "opt_a_name": "Sri Deva (Si Thep)",
+            "opt_a_type": "3rd-8th c. AD Dvaravati / Pre-Angkorian Metropolis (b_srideb)",
+            "opt_b_hydronym": "Pa Sak River Basin",
+            "opt_b_lang": "Sanskrit / Mon",
+            "opt_b_name": "Srî Dêwa",
+            "justification": "Phetchabun is a late Sukhothai/Ayutthaya town; resolves via Option A to the 3rd-8th c. AD Dvaravati metropolis Sri Deva / Si Thep (Srî Dêwa).",
+            "rec_option": "Option A",
+            "tarr_name": "Srî Dêwa",
+            "tarr_adjective": "Srî-Dêwer"
+        },
+        "c_mukdahan": {
+            "opt_a_key": "b_sakhon_nakhon",
+            "opt_a_name": "Nong Han Luang (Sakon Nakhon)",
+            "opt_a_type": "Ancient Chenla / Pre-Angkorian City (b_sakhon_nakhon)",
+            "opt_b_hydronym": "Middle Mekong Basin",
+            "opt_b_lang": "Khmer / Lao",
+            "opt_b_name": "Nông Hân Lûang",
+            "justification": "Mukdahan was founded in 1770 AD by Chao Kinnaree; resolves via Option A to ancient Chenla seat Nong Han Luang (Nông Hân Lûang).",
+            "rec_option": "Option A",
+            "tarr_name": "Nông Hân Lûang",
+            "tarr_adjective": "Nông-Hân-Lûanger"
+        },
+        "c_MAL_johor": {
+            "opt_a_key": "b_MAL_Tumasik",
+            "opt_a_name": "Tumasik (Temasek)",
+            "opt_a_type": "Pre-867 Malay Maritime Emporium (b_MAL_Tumasik)",
+            "opt_b_hydronym": "Singapore-Johor Strait",
+            "opt_b_lang": "Old Malay",
+            "opt_b_name": "Tumâsich",
+            "justification": "Johor Sultanate was founded 1528 AD; resolves via Option A to ancestral maritime emporium Tumasik (Tumâsich).",
+            "rec_option": "Option A",
+            "tarr_name": "Tumâsich",
+            "tarr_adjective": "Tumâsicher"
+        },
+        "c_SUM_east_sumatra": {
+            "opt_a_key": "b_SUM_Mesuji",
+            "opt_a_name": "Mesuji",
+            "opt_a_type": "Pre-867 Sumatran River Basin (b_SUM_Mesuji)",
+            "opt_b_hydronym": "Mesuji River Basin",
+            "opt_b_lang": "Old Malay",
+            "opt_b_name": "Mesûdschi",
+            "justification": "East Sumatra is a modern English geographic descriptor; resolves via Option A to indigenous river district Mesuji (Mesûdschi).",
+            "rec_option": "Option A",
+            "tarr_name": "Mesûdschi",
+            "tarr_adjective": "Mesûdschier"
+        },
+        "c_SUM_pekanbaru": {
+            "opt_a_key": "b_SUM_Rokan_Hilir",
+            "opt_a_name": "Rokan Hilir",
+            "opt_a_type": "Pre-1784 River District (b_SUM_Rokan_Hilir)",
+            "opt_b_hydronym": "Lower Rokan Basin",
+            "opt_b_lang": "Malay",
+            "opt_b_name": "Nider-Rôkan",
+            "justification": "Pekanbaru ('New Market') was founded in 1784 AD; resolves via Option A to lower Rokan river district (Nider-Rôkan).",
+            "rec_option": "Option A",
+            "tarr_name": "Nider-Rôkan",
+            "tarr_adjective": "Nider-Rôkaner"
+        },
+        "c_SUM_dharmasraya": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Batanghari River Basin",
+            "opt_b_lang": "Old Malay Hydronym",
+            "opt_b_name": "Batangharî",
+            "justification": "Dharmasraya emerged as Melayu's upstream capital only after the 1025 Chola raid; resolves via Option B to the Batanghari River basin (Batangharî).",
+            "rec_option": "Option B",
+            "tarr_name": "Batangharî",
+            "tarr_adjective": "Batangharîer"
+        },
+        "c_BOR_kudat": {
+            "opt_a_key": "b_BOR_Marudu",
+            "opt_a_name": "Marudu",
+            "opt_a_type": "Ancient Sabah Bay Settlement (b_BOR_Marudu)",
+            "opt_b_hydronym": "Marudu Bay",
+            "opt_b_lang": "Sabah / Bajau",
+            "opt_b_name": "Marûdu",
+            "justification": "Kudat was founded in 1881 by the British North Borneo Company; resolves via Option A to ancient Marudu Bay (Marûdu).",
+            "rec_option": "Option A",
+            "tarr_name": "Marûdu",
+            "tarr_adjective": "Marûduer"
+        },
+        "c_BOR_lahad_datu": {
+            "opt_a_key": "b_BOR_Sibutu",
+            "opt_a_name": "Sibutu",
+            "opt_a_type": "Ancient Sulu-Borneo Island / Strait (b_BOR_Sibutu)",
+            "opt_b_hydronym": "Darvel-Sibutu Passage",
+            "opt_b_lang": "Sulu / Dayak",
+            "opt_b_name": "Sibûtu",
+            "justification": "Lahad Datu is a 19th-c. town; resolves via Option A to ancient maritime strait Sibutu (Sibûtu).",
+            "rec_option": "Option A",
+            "tarr_name": "Sibûtu",
+            "tarr_adjective": "Sibûtuer"
+        },
+        "c_BOR_sukadana": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Tanjungpura Coastal Reach",
+            "opt_b_lang": "Classical Old Malay",
+            "opt_b_name": "Tandschungpure",
+            "justification": "Sukadana dates to late Majapahit/sultanate records; resolves via Option B to classical West Borneo coastal polity Tanjungpura (Tandschungpure).",
+            "rec_option": "Option B",
+            "tarr_name": "Tandschungpure",
+            "tarr_adjective": "Tandschungpurer"
+        },
+        "c_BOR_martapura": {
+            "opt_a_key": "b_BOR_Muara_Kaman",
+            "opt_a_name": "Muara Kaman",
+            "opt_a_type": "400 AD Mulavarman Sanskrit Yupa Site (b_BOR_Muara_Kaman)",
+            "opt_b_hydronym": "Lower Mahakam Basin",
+            "opt_b_lang": "Sanskrit / Kutai Malay",
+            "opt_b_name": "Mûara Kaman",
+            "justification": "Banjar Martapura dates to 1630 AD; resolves unambiguously via Option A to the 400 AD Mulavarman Sanskrit Yupa site at Muara Kaman (Mûara Kaman).",
+            "rec_option": "Option A",
+            "tarr_name": "Mûara Kaman",
+            "tarr_adjective": "Mûara-Kamaner"
+        },
+        "c_IDO_barat_daya": {
+            "opt_a_key": "b_IDO_Wetar",
+            "opt_a_name": "Wetar",
+            "opt_a_type": "Ancient Maluku Island Seat (b_IDO_Wetar)",
+            "opt_b_hydronym": "Banda-Wetar Archipelago",
+            "opt_b_lang": "Maluku Indigenous",
+            "opt_b_name": "Wêtar",
+            "justification": "Barat Daya is a modern Indonesian directional term ('Southwest'); resolves via Option A to ancient island Wetar (Wêtar).",
+            "rec_option": "Option A",
+            "tarr_name": "Wêtar",
+            "tarr_adjective": "Wêtarer"
         }
     }
 
@@ -731,7 +1211,7 @@ def load_enriched_historical_db(repo_dir=None):
                 parts = [p.strip() for p in line.split("|")]
                 if len(parts) < 6:
                     continue
-                m = re.search(r"`([cd]_[a-zA-Z0-9_]+)`", parts[1])
+                m = re.search(r"`([cd]_[a-zA-Z0-9_\-]+)`", parts[1])
                 if not m:
                     continue
                 ck = m.group(1)
@@ -740,7 +1220,7 @@ def load_enriched_historical_db(repo_dir=None):
                 reason = parts[5] if len(parts) > 5 else ""
                 res = parts[6] if len(parts) > 6 else ""
 
-                m_b = re.search(r"`(b_[a-zA-Z0-9_]+)`", res)
+                m_b = re.search(r"`(b_[a-zA-Z0-9_\-]+)`", res)
                 b_key = m_b.group(1) if m_b else None
                 m_bold = re.findall(r"\*\*([^*]+)\*\*", res)
 
@@ -784,7 +1264,7 @@ def load_enriched_historical_db(repo_dir=None):
         with open(tarr_path, "r", encoding="utf-8", errors="replace") as f:
             for line in f:
                 line = line.strip()
-                m = re.search(r"`(c_[a-zA-Z0-9_]+)`", line)
+                m = re.search(r"`(c_[a-zA-Z0-9_\-]+)`", line)
                 if not m:
                     continue
                 ck = m.group(1)

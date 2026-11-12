@@ -459,22 +459,22 @@ def generate_phase2_report(trajectories: list, output_path: Path):
     newly_flagged = [t for t in newly_counties if t['classification']['is_flagged_for_phase4']]
     calendar_gap_titles = [
         t for t in roman_counties
-        if (t['attestation']['year'] is not None and 867 < t['attestation']['year'] <= 1154)
+        if (t['attestation']['year'] is not None and 867 < t['attestation']['year'] <= 1171)
         or t['markdown_audit_reference'].get('was_valid_previous')
     ]
     calendar_gap_titles.sort(key=lambda x: (x['attestation']['year'] if x['attestation']['year'] is not None else 9999, x['county_key']))
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("# Phase 2 Report: Title Lineage, Sovereign Trajectories & Historical Grounding\n\n")
-        f.write(f"* **Campaign Date:** 27 December 1154 (`chatenois_867_01_01.ck3`)\n")
+        f.write(f"* **Campaign Date:** 18 June 1171 (`chatenois_867_01_01.ck3`)\n")
         f.write(f"* **Audit Scope:** **{total_roman:,} Counties** in the Roman Empire (`h_roman_empire`) across **{len(set(t['de_jure_kingdom'] for t in roman_counties))} De Jure Kingdoms**\n")
-        f.write(f"* **Newly Integrated Frontier:** **{len(newly_counties)} Expansion Counties** (1142 $\\rightarrow$ 1154) across **{len(set(t['de_jure_kingdom'] for t in newly_counties))} Kingdoms**\n")
+        f.write(f"* **Newly Integrated Frontier:** **{len(newly_counties)} Expansion Counties** (1154 $\\rightarrow$ 1171) across **{len(set(t['de_jure_kingdom'] for t in newly_counties))} Kingdoms**\n")
         f.write(f"* **Analysis Pipeline:** Historical Sovereign Trajectory → Colonizer Presence Audit → Cultural Footprint Mapping → 3-Tier Classification\n\n")
         f.write("---\n\n")
 
         # 1. Executive Summary
         f.write("## 1. Executive Summary & 3-Tier Classification Breakdown\n\n")
-        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1154 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap under the **Three-Tier Classification System**.\n\n")
+        f.write("Phase 2 maps the sovereign lineage and cultural evolution of every county from the **867 AD alternate-history divergence point** to the **1171 AD save state**, dismantling the static vanilla CK3 map bias and the OTL calendar gap under the **Three-Tier Classification System**.\n\n")
         f.write("| Classification Tier | Imperial Counties | Percentage | Evaluation Rule & Action |\n")
         f.write("| :--- | :---: | :---: | :--- |\n")
         f.write(f"| **Tier 1: Pre-867 Historical / Antiquity** | **{tier_counts[1]}** | {tier_counts[1]/total_roman*100:.1f}% | **VALID**: Attested pre-867 Roman, Celtic, Greek, Slavic, or Germanic centre; trace chronological culture changes and adapt phonologically to Tarraconian. |\n")
@@ -504,21 +504,21 @@ def generate_phase2_report(trajectories: list, output_path: Path):
         f.write("---\n\n")
 
         # 3. Newly Integrated Frontiers Audit
-        f.write("## 3. Sovereign Trajectories & Historical Grounding of Newly Integrated Frontier Titles (1142 $\\rightarrow$ 1154)\n\n")
-        f.write(f"Between 1142 and 1154, the Roman Empire under Augustus Wernhard expanded across **{len(newly_counties)} newly integrated counties** in **{len(set(t['de_jure_kingdom'] for t in newly_counties))} de jure kingdoms**.\n\n")
+        f.write("## 3. Sovereign Trajectories & Historical Grounding of Newly Integrated Frontier Titles (1154 $\\rightarrow$ 1171)\n\n")
+        f.write(f"Between 1154 and 1171, the Roman Empire under Pope Gotzelo expanded across **{len(newly_counties)} newly integrated counties** in **{len(set(t['de_jure_kingdom'] for t in newly_counties))} de jure kingdoms**.\n\n")
         f.write("### 3.1 Frontier 3-Tier Classification Breakdown\n\n")
         f.write("| Frontier Classification Tier | Counties | Percentage of Frontier | Status |\n")
         f.write("| :--- | :---: | :---: | :--- |\n")
-        f.write(f"| **Tier 1: Pre-867 Antiquity / Classical Provincial Centers** | **{newly_tier_counts[1]}** | {newly_tier_counts[1]/len(newly_counties)*100:.1f}% | Valid ancient centres (Ritsuryō kuni, Han/Tang commanderies, Korean Three Kingdoms, Indus civitates) |\n")
-        f.write(f"| **Tier 2: Founded After 867 on Hydronymic/Geographic Stems** | **{newly_tier_counts[2]}** | {newly_tier_counts[2]/len(newly_counties)*100:.1f}% | Pre-HRE morphology restorations on ancient watercourses/mountains |\n")
+        f.write(f"| **Tier 1: Pre-867 Antiquity / Classical Provincial Centers** | **{newly_tier_counts[1]}** | {newly_tier_counts[1]/len(newly_counties)*100:.1f}% | Valid ancient centres (Indic mahajanapadas, Sri Lankan ratas, Dvaravati Mon cities, Pyu capitals, Tang/Ritsuryo sites) |\n")
+        f.write(f"| **Tier 2: Founded After 867 on Hydronymic/Geographic Stems** | **{newly_tier_counts[2]}** | {newly_tier_counts[2]/len(newly_counties)*100:.1f}% | Pre-HRE morphology restorations on ancient watercourses/mountains/tribal stems |\n")
         f.write(f"| **Tier 3: Other Post-867 Foundations / Unverified (Default)** | **{newly_tier_counts[3]}** | {newly_tier_counts[3]/len(newly_counties)*100:.1f}% | Flagged for Option A (Sub-Barony), B (Hydronym), or C (Founder) replacement |\n")
         f.write(f"| **TOTAL NEWLY INTEGRATED TITLES** | **{len(newly_counties)}** | **100.0%** | **{len(newly_flagged)} Flagged Frontier Titles ({len(newly_flagged)/len(newly_counties)*100:.1f}%)** |\n\n")
-        f.write("### 3.2 Regional Frontier Clusters & Sovereign Grounding\n\n")
-        f.write("* **Far East & East Asia (236 counties):** Ancient Yamato/Ritsuryō provinces (`k_yamato`, `k_azuma`, `k_tsukushi`, `k_hitakami`), Korean Three Kingdoms (`k_silla`, `k_goguryeo`, `k_baekje`, `k_balhae`), and Tang military commanderies (`k_hedong`, `k_daibei`, `k_youji`). Frontier Jurchen/Khitan steppe areas (`k_luzhen`, `k_khitan`, `k_shiwei`, `k_raole`) contain unverified late outposts flagged under Tier 3.\n")
-        f.write("* **Central Asia & Silk Road (136 counties):** Ancient Sogdian oases and Tang protectorates (`k_transoxiana`, `k_khotan`, `k_amdo`, `k_hexi`, `k_xia`, `k_syr_darya`). Nomadic corridors (`k_oghuz_il`, `k_dzungaria`, `k_gobi`, `k_otuken`) flagged for hydronymic restoration or seasonal yurt settlement replacement.\n")
-        f.write("* **Indus Valley & Himalayas (38 counties):** Ancient Vedic/Indus mahajanapadas (`k_punjab`, `k_sindh`, `k_kashmir`, `k_delhi`, `k_kabulistan`, `k_himalaya`) with deep antiquity continuity dating to Taxila, Multan, and Gandhara.\n")
-        f.write("* **Balkans, Pontic Steppe & Caucasus (40 counties):** Byzantine/Danubian themes (`k_bulgaria`, `k_nikaea`, `k_strymon`), Moldavian/Wallachian marches (`k_moldavia`, `k_wallachia`), and Georgian principalities (`k_georgia`).\n")
-        f.write("* **Sahel, Africa & Ural Steppe (15 counties):** Trans-Saharan trade termini (`k_takrur`, `k_kaabu`, `k_darfur`) and Permian river basins (`k_permia`, `k_bashkiria`).\n\n")
+        f.write("### 3.2 Regional Frontier Clusters & Sovereign Grounding (1154 $\\rightarrow$ 1171)\n\n")
+        f.write("* **South Asia — Bengal, Kamarupa, Bihar, Deccan & Lanka (59 counties):** Ancient Indian mahajanapadas and classical South Indian capitals (`k_bengal`, `k_bihar`, `k_orissa`, `k_kamarupa`, `k_karnata`, `k_tamilakam`, `k_telingana`, `k_andhra`, `k_lanka`, `k_sindh`). Post-867 foundations (`c_vijayapura`, `c_laksmanavati`, `c_charaideo`, `c_goalpara`, `c_kamatapur`, `c_racakonda`, `c_candragiri`, `c_muluvagil`, `c_penugonda`, `c_batticaloa`, `c_midnapore`) resolved to pre-867 classical seats.\n")
+        f.write("* **Mainland Southeast Asia — Burma, Dvaravati & Chenla (56 counties):** Ancient Pyu and Mon centres (`c_pagan`, `c_sriksetra`, `c_hanlan`, `c_thaton`, `c_pegu`, `c_nakhon_pathom`, `c_lop_buri`, `c_haripunjaya`, `c_canasha`). Post-867 capitals (`c_ava`, `c_toungoo`, `c_yamethin`, `c_sagaing`, `c_nyaungshwe`, `c_sukhothai`, `c_phetchabun`, `c_mukdahan`, `c_thanbyuzayat`) resolved via Options A/B.\n")
+        f.write("* **Maritime Southeast Asia & Taiwan (118 counties):** Ancient entrepôts (`k_malayadvipa`, `k_yavakadvipa`, `k_tanjungnagara`, `k_hujung_medini`, `k_lusung`, `k_kabisay-an`, `k_sulawesi`, `k_maluku`, `k_liuqiu`); modern/colonial and late sultanate ports (`c_MAL_johor`, `c_SUM_east_sumatra`, `c_SUM_pekanbaru`, `c_SUM_dharmasraya`, `c_BOR_kudat`, `c_BOR_lahad_datu`, `c_BOR_martapura`, `c_IDO_barat_daya`) resolved to pre-867 seats.\n")
+        f.write("* **Amur, Hokkaido, Tibet & Inner Asian Corridors (121 counties):** Calqued Sinosphere borderlands (`k_amur`, `k_aynumosir`, `k_luzhen`, `k_balhae`, `k_raole`), Tibetan marches (`k_maryul`, `k_lhomon`, `k_tsang`), and Steppe/Silk Road corridors (`k_oghuz_il`, `k_cuman`, `k_caspian_steppe`, `k_zhetysu`, `k_dzungaria`, `k_gobi`, `k_otuken`, `k_syr_darya`, `k_transoxiana`, `k_khotan`, `k_qara_dala`, `k_kabulistan`, `k_khorasan`).\n")
+        f.write("* **East Africa, Sudan, Balkans & Pontic/Bashkir Steppes (58 counties):** Swahili/East African coast (`k_zanj`, `k_bale`, `k_adal`, `k_darfur`, `k_nubia`, `k_africa`) plus `k_moldavia`, `k_pontic_steppe`, `k_bashkiria`, `x_script_6717`, and `k_georgia`.\n\n")
         f.write("---\n\n")
 
         # 4. Reconciliation of the "OTL Calendar Gap"
