@@ -18,12 +18,10 @@ tarr_in_hre_trigger = {
 	OR = {
 		has_title = title:h_roman_empire
 		has_title = title:e_hre
-		has_title = title:e_roman_empire
 		top_liege ?= {
 			OR = {
 				has_title = title:h_roman_empire
 				has_title = title:e_hre
-				has_title = title:e_roman_empire
 			}
 		}
 	}
