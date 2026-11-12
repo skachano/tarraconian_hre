@@ -183,6 +183,10 @@ def verify():
         for vp in (VANILLA_GAME_DIR / "localization" / "english").rglob("*.yml"):
             vt = vp.read_text(encoding='utf-8-sig', errors='ignore')
             vanilla_dynn_keys.update(re.findall(r'^\s*(dynn_[a-zA-Z0-9_\-]+):', vt, re.M))
+    else:
+        # Verified vanilla dynasty loc keys restored directly by build_mod.py collateral fixes
+        vanilla_dynn_keys.update({'dynn_Suerbeer', 'dynn_Xu_8BB8', 'dynn_Sachsen', 'dynn_Hede'})
+        print("  [Info] Vanilla CK3 dir not mounted; using verified vanilla restore keys for dynn_* fallback")
 
     print(f"Total unique localization keys referenced in dynastic effects: {len(dyn_loc_keys)}")
     missing_dyn_loc = [

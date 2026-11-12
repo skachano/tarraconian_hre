@@ -2528,7 +2528,7 @@
   * **[HRE]** **Saimara** (`c_saimara`) — *Tarraconian: **Magistrat van Saimâre***
 * **Duchy of Kohestan** (`d_kohestan`) — *2/2 in HRE*
   * **[HRE]** **Qain** (`c_qain`) — *Tarraconian: **Magistrat van Kaîn***
-  * **[HRE]** **Tun** (`c_tun`) — *Tarraconian: **Magistrat van dem Berchlant***
+  * **[HRE]** **Tun** (`c_tun`) — *Tarraconian: **Magistrat van Tûn***
 
 ---
 
@@ -4718,8 +4718,8 @@
   * **[HRE]** **Ava** (`c_ava`) — *Tarraconian: **Magistrat van Awe** (`[1171 Historical: Magistrat van Toungbjôn]`)*
   * **[HRE]** **Minbu** (`c_minbu`) — *Tarraconian: **Magistrat van Minbu***
   * **[HRE]** **Pagan** (`c_pagan`) — *Tarraconian: **Magistrat van Pagân***
-  * **[HRE]** **Sagaing** (`c_sagaing`) — *Tarraconian: **Magistrat van Sagaing***
-  * **[HRE]** **Yamethin** (`c_yamethin`) — *Tarraconian: **Magistrat van Jamêtîn***
+  * **[HRE]** **Sagaing** (`c_sagaing`) — *Tarraconian: **Magistrat van Sagaing** (`[1171 Historical: Magistrat van Mû-Flutz]`)*
+  * **[HRE]** **Yamethin** (`c_yamethin`) — *Tarraconian: **Magistrat van Jamêtîn** (`[1171 Historical: Magistrat van Beiktanô]`)*
 * **Duchy of Arakan** (`d_arakan`) — *4/4 in HRE*
   * **[HRE]** **Ramu** (`c_ramu`) — *Tarraconian: **Magistrat van Ramu***
   * **[HRE]** **Sandoway** (`c_sandoway`) — *Tarraconian: **Magistrat van Sandôwei***
@@ -4743,7 +4743,7 @@
 * **Duchy of Mongnai** (`d_mongnai`) — *3/3 in HRE*
   * **[HRE]** **Hsenwi** (`c_hsenwi`) — *Tarraconian: **Magistrat van Senwî***
   * **[HRE]** **Mongnai** (`c_mongnai`) — *Tarraconian: **Magistrat van Möngnai***
-  * **[HRE]** **Nyaungshwe** (`c_nyaungshwe`) — *Tarraconian: **Magistrat van Njaungschwe***
+  * **[HRE]** **Nyaungshwe** (`c_nyaungshwe`) — *Tarraconian: **Magistrat van Njaungschwe** (`[1171 Historical: Magistrat van Inle-Sê]`)*
 * **Duchy of Yongchang** (`d_yongchang`) — *3/3 in HRE*
   * **[HRE]** **Jingmadian** (`c_yongchang_jingmadian`) — *Tarraconian: **Magistrat van Dschingmadjan***
   * **[HRE]** **Moeng Laem** (`c_moeng_laem`) — *Tarraconian: **Magistrat van Möng Lâm***
@@ -4759,7 +4759,7 @@
 * **De Jure Empire:** Srivijaya (`e_srivijaya`)
 
 * **Duchy of Jambi** (`d_SUM_jambi`) — *5/5 in HRE*
-  * **[HRE]** **Dharmasraya** (`c_SUM_dharmasraya`) — *Tarraconian: **Magistrat van Darmasrâje***
+  * **[HRE]** **Dharmasraya** (`c_SUM_dharmasraya`) — *Tarraconian: **Magistrat van Darmasrâje** (`[1171 Historical: Magistrat van Batangharî]`)*
   * **[HRE]** **Indragiri** (`c_SUM_indragiri`) — *Tarraconian: **Magistrat van Indragiri***
   * **[HRE]** **Jambi** (`c_SUM_jambi`) — *Tarraconian: **Magistrat van Dschambi***
   * **[HRE]** **Karang Brahi** (`c_SUM_karang_brahi`) — *Tarraconian: **Magistrat van Karang Brâhi***
@@ -4808,9 +4808,9 @@
   * **[HRE]** **Nabawan** (`c_BOR_nabawan`) — *Tarraconian: **Magistrat van Nabâwan***
 * **Duchy of Kutai** (`d_BOR_kutai`) — *4/4 in HRE*
   * **[HRE]** **Berau** (`c_BOR_berau`) — *Tarraconian: **Magistrat van Berau***
-  * **[HRE]** **Kutai Jauh** (`c_BOR_kutai_jauh`) — *Tarraconian: **Magistrat van Kutai Dschâu***
+  * **[HRE]** **Kutai Jauh** (`c_BOR_kutai_jauh`) — *Tarraconian: **Magistrat van Ferne-Kutai** (`[1171 Historical: Magistrat van Ferne-Kutai]`)*
   * **[HRE]** **Kutai Utara** (`c_BOR_kutai_utara`) — *Tarraconian: **Magistrat van Nord-Kutai***
-  * **[HRE]** **Martapura** (`c_BOR_martapura`) — *Tarraconian: **Magistrat van Martapure***
+  * **[HRE]** **Martapura** (`c_BOR_martapura`) — *Tarraconian: **Magistrat van Martapure** (`[1171 Historical: Magistrat van Mûara Kaman]`)*
 * **Duchy of Nan Sarunai** (`d_BOR_nan_sarunai`) — *4/4 in HRE*
   * **[HRE]** **Banjar** (`c_BOR_banjar`) — *Tarraconian: **Magistrat van Bandschar***
   * **[HRE]** **Sampit** (`c_BOR_sampit`) — *Tarraconian: **Magistrat van Sampit***
@@ -4824,7 +4824,7 @@
 * **Duchy of Tanjungpura** (`d_BOR_tanjungpura`) — *4/4 in HRE*
   * **[HRE]** **Sambas** (`c_BOR_sambas`) — *Tarraconian: **Magistrat van Sambas***
   * **[HRE]** **Sintang** (`c_BOR_sintang`) — *Tarraconian: **Magistrat van Sintang***
-  * **[HRE]** **Sukadana** (`c_BOR_sukadana`) — *Tarraconian: **Magistrat van Sukadâne***
+  * **[HRE]** **Sukadana** (`c_BOR_sukadana`) — *Tarraconian: **Magistrat van Sukadâne** (`[1171 Historical: Magistrat van Tandschungpure]`)*
   * **[HRE]** **Waringin** (`c_BOR_waringin`) — *Tarraconian: **Magistrat van Waringin***
 
 ---
@@ -4840,8 +4840,8 @@
 * **Duchy of Sukhothai** (`d_sukhothai`) — *4/4 in HRE*
   * **[HRE]** **Chakangrao** (`c_chakangrao`) — *Tarraconian: **Magistrat van Tschakangrau***
   * **[HRE]** **Lampang** (`c_lampang`) — *Tarraconian: **Magistrat van Lampang***
-  * **[HRE]** **Phetchabun** (`c_phetchabun`) — *Tarraconian: **Magistrat van Petschabûn***
-  * **[HRE]** **Sukhothai** (`c_sukhothai`) — *Tarraconian: **Magistrat van Suchôtai***
+  * **[HRE]** **Phetchabun** (`c_phetchabun`) — *Tarraconian: **Magistrat van Petschabûn** (`[1171 Historical: Magistrat van Srî Dêwa]`)*
+  * **[HRE]** **Sukhothai** (`c_sukhothai`) — *Tarraconian: **Magistrat van Suchôtai** (`[1171 Historical: Magistrat van Tschaljâng]`)*
 * **Duchy of Haripuñjaya** (`d_haripunjaya`) — *3/3 in HRE*
   * **[HRE]** **Haripuñjaya** (`c_haripunjaya`) — *Tarraconian: **Magistrat van Haripundschaje***
   * **[HRE]** **Hlaingbwe** (`c_hlaingbwe`) — *Tarraconian: **Magistrat van Laingbwe***
@@ -4869,7 +4869,7 @@
   * **[HRE]** **Laksmanāvati** (`c_laksmanavati`) — *Tarraconian: **Magistrat van Laksmanâwatî** (`[1171 Historical: Magistrat van Râmâwatî]`)*
   * **[HRE]** **Radha** (`c_radha`) — *Tarraconian: **Magistrat van Râde***
 * **Duchy of Tirabhukti** (`d_tirabhukti`) — *3/4 in HRE*
-  * **[HRE]** **Bangaon** (`c_bangaon`) — *Tarraconian: **Magistrat van Bangaon***
+  * **[HRE]** **Bangaon** (`c_bangaon`) — *Tarraconian: **Magistrat van Bangaon** (`[1171 Historical: Magistrat van Bûri-Gandach]`)*
   * **[HRE]** **Mithila** (`c_mithila`) — *Tarraconian: **Magistrat van Mitîle***
   * **[HRE]** **Simaramapura** (`c_simaramapura`) — *Tarraconian: **Magistrat van Simaramapure***
   * [Non-HRE] **Kusinagara** (`c_kusinagara`) — *Tarraconian: **Magistrat van Kusinagare***
@@ -5040,10 +5040,10 @@
 * **De Jure Empire:** Deccan Empire (`e_deccan`)
 
 * **Duchy of Tondai Nadu** (`d_tondai_nadu`) — *5/5 in HRE*
-  * **[HRE]** **Candragiri** (`c_candragiri`) — *Tarraconian: **Magistrat van Tschandragiri***
-  * **[HRE]** **Muluvagil** (`c_muluvagil`) — *Tarraconian: **Magistrat van Muluwagil***
+  * **[HRE]** **Candragiri** (`c_candragiri`) — *Tarraconian: **Magistrat van Tschandragiri** (`[1171 Historical: Magistrat van Melpâdi]`)*
+  * **[HRE]** **Muluvagil** (`c_muluvagil`) — *Tarraconian: **Magistrat van Muluwagil** (`[1171 Historical: Magistrat van Kuwalâle]`)*
   * **[HRE]** **Nellore** (`c_nellore`) — *Tarraconian: **Magistrat van Nellôr***
-  * **[HRE]** **Penugonda** (`c_penugonda`) — *Tarraconian: **Magistrat van Penugonde***
+  * **[HRE]** **Penugonda** (`c_penugonda`) — *Tarraconian: **Magistrat van Penugonde** (`[1171 Historical: Magistrat van Nandagiri]`)*
   * **[HRE]** **Renandu** (`c_renandu`) — *Tarraconian: **Magistrat van Renandu***
 * **Duchy of Chola Nadu** (`d_chola_nadu`) — *1/3 in HRE*
   * **[HRE]** **Tiruvannamalai** (`c_tiruvannamalai`) — *Tarraconian: **Magistrat van Tiruwannamalai***
@@ -5074,8 +5074,8 @@
   * **[HRE]** **Karmāntā** (`c_karmanta`) — *Tarraconian: **Magistrat van Karmânte***
   * **[HRE]** **Samatata** (`c_samatata`) — *Tarraconian: **Magistrat van Samatate***
 * **Duchy of Nadia** (`d_nadia`) — *3/3 in HRE*
-  * **[HRE]** **Nabadwipa** (`c_nabadwipa`) — *Tarraconian: **Magistrat van Nabadwîpe***
-  * **[HRE]** **Saptagrama** (`c_saptagrama`) — *Tarraconian: **Magistrat van Saptagrâme***
+  * **[HRE]** **Nabadwipa** (`c_nabadwipa`) — *Tarraconian: **Magistrat van Nabadwîpe** (`[1171 Historical: Magistrat van Attahâse]`)*
+  * **[HRE]** **Saptagrama** (`c_saptagrama`) — *Tarraconian: **Magistrat van Saptagrâme** (`[1171 Historical: Magistrat van Bagîratî]`)*
   * **[HRE]** **Vijayapura** (`c_vijayapura`) — *Tarraconian: **Magistrat van Widschajapure** (`[1171 Historical: Magistrat van Wischnupur]`)*
 
 ---
@@ -5092,7 +5092,7 @@
   * **[HRE]** **Dakhina Desa** (`c_dakhina_desa`) — *Tarraconian: **Magistrat van Dakkînadese***
   * **[HRE]** **Malaya** (`c_kandy`) — *Tarraconian: **Magistrat van Malâje***
 * **Duchy of Ruhunu** (`d_ruhunu`) — *2/2 in HRE*
-  * **[HRE]** **Batticaloa** (`c_batticaloa`) — *Tarraconian: **Magistrat van Battikaloa***
+  * **[HRE]** **Batticaloa** (`c_batticaloa`) — *Tarraconian: **Magistrat van Battikaloa** (`[1171 Historical: Magistrat van Dîgawâpi]`)*
   * **[HRE]** **Rohana** (`c_rohana`) — *Tarraconian: **Magistrat van Rohane***
 
 ---
@@ -5101,15 +5101,15 @@
 * **De Jure Empire:** Pracya (`e_bengal`)
 
 * **Duchy of Para-Lauhitya** (`d_para_lauhitya`) — *4/4 in HRE*
-  * **[HRE]** **Dimapur** (`c_dimapur`) — *Tarraconian: **Magistrat van Dimapur***
-  * **[HRE]** **Goalpara** (`c_goalpara`) — *Tarraconian: **Magistrat van Goâlpare***
+  * **[HRE]** **Dimapur** (`c_dimapur`) — *Tarraconian: **Magistrat van Dimapur** (`[1171 Historical: Magistrat van Dansîri]`)*
+  * **[HRE]** **Goalpara** (`c_goalpara`) — *Tarraconian: **Magistrat van Goâlpare** (`[1171 Historical: Magistrat van Kamâkje]`)*
   * **[HRE]** **Manipur** (`c_manipur`) — *Tarraconian: **Magistrat van Manipur***
   * **[HRE]** **Srihatta** (`c_srihatta`) — *Tarraconian: **Magistrat van Srîhatte***
 * **Duchy of Sutiya** (`d_sutiya`) — *2/2 in HRE*
-  * **[HRE]** **Charaideo** (`c_charaideo`) — *Tarraconian: **Magistrat van Tscharaideô***
+  * **[HRE]** **Charaideo** (`c_charaideo`) — *Tarraconian: **Magistrat van Tscharaideô** (`[1171 Historical: Magistrat van Patkâi]`)*
   * **[HRE]** **Kundina** (`c_kundina`) — *Tarraconian: **Magistrat van Kundine***
 * **Duchy of Kamarupanagara** (`d_kamarupanagara`) — *1/3 in HRE*
-  * **[HRE]** **Kamatapur** (`c_kamatapur`) — *Tarraconian: **Magistrat van Kamatapur***
+  * **[HRE]** **Kamatapur** (`c_kamatapur`) — *Tarraconian: **Magistrat van Kamatapur** (`[1171 Historical: Magistrat van Bîtâgar]`)*
   * [Non-HRE] **Haruppeswara** (`c_haruppeswara`) — *Tarraconian: **Magistrat van Haruppesware***
   * [Non-HRE] **Kamarupanagara** (`c_kamarupanagara`) — *Tarraconian: **Magistrat van Kâmarûpanagare***
 * **Duchy of Monyul** (`d_monyul`) — *0/3 in HRE*
@@ -5149,7 +5149,7 @@
 * **Duchy of Mukdahan** (`d_mukdahan`) — *3/5 in HRE*
   * **[HRE]** **Canasha** (`c_canasha`) — *Tarraconian: **Magistrat van Tschanasche***
   * **[HRE]** **Ku Kaeo** (`c_ku_kaeo`) — *Tarraconian: **Magistrat van Ku Kêo***
-  * **[HRE]** **Mukdahan** (`c_mukdahan`) — *Tarraconian: **Magistrat van Mukdahân***
+  * **[HRE]** **Mukdahan** (`c_mukdahan`) — *Tarraconian: **Magistrat van Mukdahân** (`[1171 Historical: Magistrat van Nông Hân Lûang]`)*
   * [Non-HRE] **Muang Fa Daet** (`c_muang_fa_daet`) — *Tarraconian: **Magistrat van Muang Fa Dêt***
   * [Non-HRE] **Ubon Ratchathani** (`c_ubon_ratchathani`) — *Tarraconian: **Magistrat van Ubon Râdschatanî** (`[1171 Historical: Magistrat van Mûndal]`)*
 * **Duchy of Phonsavan** (`d_phonsavan`) — *0/3 in HRE*
@@ -5164,7 +5164,7 @@
 
 * **Duchy of Racakonda** (`d_racakonda`) — *2/2 in HRE*
   * **[HRE]** **Pannagallu** (`c_pannagallu`) — *Tarraconian: **Magistrat van Pannagallu***
-  * **[HRE]** **Racakonda** (`c_racakonda`) — *Tarraconian: **Magistrat van Ratschakonde***
+  * **[HRE]** **Racakonda** (`c_racakonda`) — *Tarraconian: **Magistrat van Ratschakonde** (`[1171 Historical: Magistrat van Nalgonde]`)*
 * **Duchy of Warangal** (`d_warangal`) — *1/5 in HRE*
   * **[HRE]** **Mudigonda** (`c_kambampet`) — *Tarraconian: **Magistrat van Mudigonde***
   * [Non-HRE] **Katukuru** (`c_katukuru`) — *Tarraconian: **Magistrat van Katukuru***

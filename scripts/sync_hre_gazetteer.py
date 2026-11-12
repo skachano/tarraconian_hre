@@ -115,6 +115,17 @@ def sync_hre_gazetteer(repo_dir=None):
                 new_line = new_line.replace(f"[{cur_h}]", f"[{expected_h}]", 1)
                 print(f"[Sync] Updated {key} historical note: '{cur_h}' -> '{expected_h}'")
                 changes += 1
+        elif m_c and m_c.group(2) in canonical_hists:
+            key = m_c.group(2)
+            m_tail = re.search(r'(\*Tarraconian:\s*\*\*[^*]+\*\*)(\*+)(\s*)$', new_line)
+            if m_tail:
+                expected_h = canonical_hists[key]
+                new_line = (
+                    new_line[:m_tail.start()]
+                    + f"{m_tail.group(1)} (`[{expected_h}]`){m_tail.group(2)}{m_tail.group(3)}"
+                )
+                print(f"[Sync] Added {key} historical note: '{expected_h}'")
+                changes += 1
 
         # 3. Match archdiocese table pattern:
         # | **Archdiocese of Bari** | `d_et_bari` | Bâr-in-Pûlje (`c_bari`) | ...

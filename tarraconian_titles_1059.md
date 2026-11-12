@@ -996,7 +996,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_stoenesti` (Stoenești) $\rightarrow$ **Magistrat van Stojenêscht** (`[1059 Geographic/Sub-Barony: Magistrat van Trotusch (Trotuș) / Bakouwe (Bacău)]`)
 * **Duchy of Ongal (Bugeac)** (`d_bugeac`) $\rightarrow$ **Gubernat van Ongel** *(or **Tîras**, direct vanilla: **Budschach**)*
   * `c_tigheci` (Tigheci) $\rightarrow$ **Magistrat van Tigêtsch** *(or **Tigêtschwalt** for the *Codrii Tigheciului*)*
-  * `c_cetatea_alba` (Cetatea Albă) $\rightarrow$ **Magistrat van Wîtzenburch-am-Nister** *(calque of *Cetatea Albă / Belgorod*, or **Moukaster**)*
+  * `c_cetatea_alba` (Cetatea Albă) $\rightarrow$ **Magistrat van Moukaster** *(or calqued **Wîtzenburch-am-Nister** from *Cetatea Albă / Belgorod*; Procedure 2 Pattern 3: 68 yrs alien Pontic rule prior to 1157 conquest)*
   * `c_chilia` (Chilia) $\rightarrow$ **Magistrat van Kilîe**
   * `c_lapusna` (Lăpușna) $\rightarrow$ **Magistrat van Lapuschne** *(Hydronym of the Lăpușna River)*
 
@@ -2420,7 +2420,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_saimara` (**[HRE]** Saimara) $\rightarrow$ **Magistrat van Saimâre**
 * **Duchy of Kohestan** (`d_kohestan`) $\rightarrow$ **Gubernat van Kûhistân**
   * `c_qain` (**[HRE]** Qain) $\rightarrow$ **Magistrat van Kaîn**
-  * `c_tun` (**[HRE]** Tun) $\rightarrow$ **Magistrat van dem Berchlant** *(calque of Persian *Kuhistan* \"Mountain Land\", or **Tûn**)*
+  * `c_tun` (**[HRE]** Tun) $\rightarrow$ **Magistrat van Tûn** *(or calqued **Berchlant** from Persian *Kuhistan* \"Mountain Land\"; Procedure 2 Pattern 2: 13 yrs Levantine rule before 1169 conquest)*
 
 ---
 
@@ -4530,8 +4530,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_ava` (**[HRE]** Ava) $\rightarrow$ **Magistrat van Awe** (`[1171 Historical: Magistrat van Toungbjôn]`) *(Ava founded 1364; resolves to ancient Irrawaddy shrine-town Taungbyon (`b_taungbyon`))*
   * `c_minbu` (**[HRE]** Minbu) $\rightarrow$ **Magistrat van Minbu**
   * `c_pagan` (**[HRE]** Pagan) $\rightarrow$ **Magistrat van Pagân**
-  * `c_sagaing` (**[HRE]** Sagaing) $\rightarrow$ **Magistrat van Sagaing**
-  * `c_yamethin` (**[HRE]** Yamethin) $\rightarrow$ **Magistrat van Jamêtîn**
+  * `c_sagaing` (**[HRE]** Sagaing) $\rightarrow$ **Magistrat van Sagaing** (`[1171 Historical: Magistrat van Mû-Flutz]`) *(Sagaing founded 1315; resolves to ancient Mu–Irrawaddy river basin)*
+  * `c_yamethin` (**[HRE]** Yamethin) $\rightarrow$ **Magistrat van Jamêtîn** (`[1171 Historical: Magistrat van Beiktanô]`) *(Post-867 Ava-era town; resolves to ancient 1st–5th c. Pyu capital Beikthano (`b_peikthanomyo`))*
 * **Duchy of Arakan** (`d_arakan`) $\rightarrow$ **Gubernat van Arakân**
   * `c_ramu` (**[HRE]** Ramu) $\rightarrow$ **Magistrat van Ramu**
   * `c_sandoway` (**[HRE]** Sandoway) $\rightarrow$ **Magistrat van Sandôwei**
@@ -4555,7 +4555,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mongnai** (`d_mongnai`) $\rightarrow$ **Gubernat van Möngnai**
   * `c_hsenwi` (**[HRE]** Hsenwi) $\rightarrow$ **Magistrat van Senwî**
   * `c_mongnai` (**[HRE]** Mongnai) $\rightarrow$ **Magistrat van Möngnai**
-  * `c_nyaungshwe` (**[HRE]** Nyaungshwe) $\rightarrow$ **Magistrat van Njaungschwe**
+  * `c_nyaungshwe` (**[HRE]** Nyaungshwe) $\rightarrow$ **Magistrat van Njaungschwe** (`[1171 Historical: Magistrat van Inle-Sê]`) *(Shan capital founded 1359; resolves to ancient Inle Lake basin)*
 * **Duchy of Yongchang** (`d_yongchang`) $\rightarrow$ **Gubernat van Jongtschang**
   * `c_yongchang_jingmadian` (**[HRE]** Jingmadian) $\rightarrow$ **Magistrat van Dschingmadjan**
   * `c_moeng_laem` (**[HRE]** Moeng Laem) $\rightarrow$ **Magistrat van Möng Lâm**
@@ -4570,7 +4570,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.162 Kingdom of Malayadvipa (`k_malayadvipa`) $\rightarrow$ **Kûnincrich van Malajadwîpe**
 
 * **Duchy of Jambi** (`d_SUM_jambi`) $\rightarrow$ **Gubernat van Dschambi**
-  * `c_SUM_dharmasraya` (**[HRE]** Dharmasraya) $\rightarrow$ **Magistrat van Darmasrâje**
+  * `c_SUM_dharmasraya` (**[HRE]** Dharmasraya) $\rightarrow$ **Magistrat van Darmasrâje** (`[1171 Historical: Magistrat van Batangharî]`) *(Post-1025 Melayu upstream seat; resolves to ancient Srivijayan Batanghari River basin)*
   * `c_SUM_indragiri` (**[HRE]** Indragiri) $\rightarrow$ **Magistrat van Indragiri**
   * `c_SUM_jambi` (**[HRE]** Jambi) $\rightarrow$ **Magistrat van Dschambi**
   * `c_SUM_karang_brahi` (**[HRE]** Karang Brahi) $\rightarrow$ **Magistrat van Karang Brâhi**
@@ -4618,9 +4618,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_BOR_nabawan` (**[HRE]** Nabawan) $\rightarrow$ **Magistrat van Nabâwan**
 * **Duchy of Kutai** (`d_BOR_kutai`) $\rightarrow$ **Gubernat van Kutai**
   * `c_BOR_berau` (**[HRE]** Berau) $\rightarrow$ **Magistrat van Berau**
-  * `c_BOR_kutai_jauh` (**[HRE]** Kutai Jauh) $\rightarrow$ **Magistrat van Kutai Dschâu**
+  * `c_BOR_kutai_jauh` (**[HRE]** Kutai Jauh) $\rightarrow$ **Magistrat van Ferne-Kutai** (`[1171 Historical: Magistrat van Ferne-Kutai]`) *(Procedure 2 Pattern 1 Dayak calque of Malay *jauh* \"distant\", parallel to **Nord-Kutai**, or phonetic **Kutai Dschâu**)*
   * `c_BOR_kutai_utara` (**[HRE]** Kutai Utara) $\rightarrow$ **Magistrat van Nord-Kutai**
-  * `c_BOR_martapura` (**[HRE]** Martapura) $\rightarrow$ **Magistrat van Martapure**
+  * `c_BOR_martapura` (**[HRE]** Martapura) $\rightarrow$ **Magistrat van Martapure** (`[1171 Historical: Magistrat van Mûara Kaman]`) *(Banjar Martapura founded 1630; resolves to 400 AD Mulavarman Sanskrit Yupa site Muara Kaman (`b_BOR_Muara_Kaman`))*
 * **Duchy of Nan Sarunai** (`d_BOR_nan_sarunai`) $\rightarrow$ **Gubernat van Nan Sarunai**
   * `c_BOR_banjar` (**[HRE]** Banjar) $\rightarrow$ **Magistrat van Bandschar**
   * `c_BOR_sampit` (**[HRE]** Sampit) $\rightarrow$ **Magistrat van Sampit**
@@ -4634,7 +4634,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Tanjungpura** (`d_BOR_tanjungpura`) $\rightarrow$ **Gubernat van Tandschungpure**
   * `c_BOR_sambas` (**[HRE]** Sambas) $\rightarrow$ **Magistrat van Sambas**
   * `c_BOR_sintang` (**[HRE]** Sintang) $\rightarrow$ **Magistrat van Sintang**
-  * `c_BOR_sukadana` (**[HRE]** Sukadana) $\rightarrow$ **Magistrat van Sukadâne**
+  * `c_BOR_sukadana` (**[HRE]** Sukadana) $\rightarrow$ **Magistrat van Sukadâne** (`[1171 Historical: Magistrat van Tandschungpure]`) *(Late medieval sultanate; resolves to classical Bornean coastal polity Tanjungpura)*
   * `c_BOR_waringin` (**[HRE]** Waringin) $\rightarrow$ **Magistrat van Waringin**
 
 ---
@@ -4649,8 +4649,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Sukhothai** (`d_sukhothai`) $\rightarrow$ **Gubernat van Suchôtai**
   * `c_chakangrao` (**[HRE]** Chakangrao) $\rightarrow$ **Magistrat van Tschakangrau**
   * `c_lampang` (**[HRE]** Lampang) $\rightarrow$ **Magistrat van Lampang**
-  * `c_phetchabun` (**[HRE]** Phetchabun) $\rightarrow$ **Magistrat van Petschabûn**
-  * `c_sukhothai` (**[HRE]** Sukhothai) $\rightarrow$ **Magistrat van Suchôtai**
+  * `c_phetchabun` (**[HRE]** Phetchabun) $\rightarrow$ **Magistrat van Petschabûn** (`[1171 Historical: Magistrat van Srî Dêwa]`) *(Resolves to 5th–7th c. Dvaravati Mon metropolis Si Thep / Sri Deva (`b_srideb`))*
+  * `c_sukhothai` (**[HRE]** Sukhothai) $\rightarrow$ **Magistrat van Suchôtai** (`[1171 Historical: Magistrat van Tschaljâng]`) *(Sukhothai kingdom founded 1238; resolves to pre-867 Khmer/Mon entrepôt Chaliang / Si Satchanalai (`b_si_satchanalai`))*
 * **Duchy of Haripuñjaya** (`d_haripunjaya`) $\rightarrow$ **Gubernat van Haripundschaje**
   * `c_haripunjaya` (**[HRE]** Haripuñjaya) $\rightarrow$ **Magistrat van Haripundschaje**
   * `c_hlaingbwe` (**[HRE]** Hlaingbwe) $\rightarrow$ **Magistrat van Laingbwe**
@@ -4677,7 +4677,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_laksmanavati` (**[HRE]** Laksmanāvati) $\rightarrow$ **Magistrat van Laksmanâwatî** (`[1171 Historical: Magistrat van Râmâwatî]`) *(Pre-1178 Pala imperial capital Ramavati (`b_ramavati`); Laksmanavati named after Laksmana Sena)*
   * `c_radha` (**[HRE]** Radha) $\rightarrow$ **Magistrat van Râde**
 * **Duchy of Tirabhukti** (`d_tirabhukti`) $\rightarrow$ **Gubernat van Tirabhukti**
-  * `c_bangaon` (**[HRE]** Bangaon) $\rightarrow$ **Magistrat van Bangaon**
+  * `c_bangaon` (**[HRE]** Bangaon) $\rightarrow$ **Magistrat van Bangaon** (`[1171 Historical: Magistrat van Bûri-Gandach]`) *(Colonial Bangaon sub-barony; resolves to ancient Burhi Gandak / Tirhut basin)*
   * `c_mithila` (**[HRE]** Mithila) $\rightarrow$ **Magistrat van Mitîle**
   * `c_simaramapura` (**[HRE]** Simaramapura) $\rightarrow$ **Magistrat van Simaramapure**
   * `c_kusinagara` ([Non-HRE] Kusinagara) $\rightarrow$ **Magistrat van Kusinagare**
@@ -4841,10 +4841,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.172 Kingdom of Tamilakam (`k_tamilakam`) $\rightarrow$ **Kûnincrich van Tamilakam**
 
 * **Duchy of Tondai Nadu** (`d_tondai_nadu`) $\rightarrow$ **Gubernat van Tondai-Nâdu**
-  * `c_candragiri` (**[HRE]** Candragiri) $\rightarrow$ **Magistrat van Tschandragiri**
-  * `c_muluvagil` (**[HRE]** Muluvagil) $\rightarrow$ **Magistrat van Muluwagil**
+  * `c_candragiri` (**[HRE]** Candragiri) $\rightarrow$ **Magistrat van Tschandragiri** (`[1171 Historical: Magistrat van Melpâdi]`) *(Yadava/Vijayanagara fort; resolves to classical Pallava/Chola shrine-center Melpadi (`b_melpadi`))*
+  * `c_muluvagil` (**[HRE]** Muluvagil) $\rightarrow$ **Magistrat van Muluwagil** (`[1171 Historical: Magistrat van Kuwalâle]`) *(Post-867 gateway town Mulbagal; resolves to ancient Western Ganga capital Kuvalala (`b_kuvalala`))*
   * `c_nellore` (**[HRE]** Nellore) $\rightarrow$ **Magistrat van Nellôr**
-  * `c_penugonda` (**[HRE]** Penugonda) $\rightarrow$ **Magistrat van Penugonde**
+  * `c_penugonda` (**[HRE]** Penugonda) $\rightarrow$ **Magistrat van Penugonde** (`[1171 Historical: Magistrat van Nandagiri]`) *(14th-c. Hoysala hillfort; resolves to ancient Western Ganga stronghold Nandagiri (`b_nandi`))*
   * `c_renandu` (**[HRE]** Renandu) $\rightarrow$ **Magistrat van Renandu**
 * **Duchy of Chola Nadu** (`d_chola_nadu`) $\rightarrow$ **Gubernat van Tschôla-Nâdu**
   * `c_tiruvannamalai` (**[HRE]** Tiruvannamalai) $\rightarrow$ **Magistrat van Tiruwannamalai**
@@ -4874,8 +4874,8 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_karmanta` (**[HRE]** Karmāntā) $\rightarrow$ **Magistrat van Karmânte**
   * `c_samatata` (**[HRE]** Samatata) $\rightarrow$ **Magistrat van Samatate**
 * **Duchy of Nadia** (`d_nadia`) $\rightarrow$ **Gubernat van Nadîje**
-  * `c_nabadwipa` (**[HRE]** Nabadwipa) $\rightarrow$ **Magistrat van Nabadwîpe**
-  * `c_saptagrama` (**[HRE]** Saptagrama) $\rightarrow$ **Magistrat van Saptagrâme**
+  * `c_nabadwipa` (**[HRE]** Nabadwipa) $\rightarrow$ **Magistrat van Nabadwîpe** (`[1171 Historical: Magistrat van Attahâse]`) *(12th-c. Sena seat; resolves to ancient Attahasa Shakti Peetha center)*
+  * `c_saptagrama` (**[HRE]** Saptagrama) $\rightarrow$ **Magistrat van Saptagrâme** (`[1171 Historical: Magistrat van Bagîratî]`) *(Late medieval delta port Satgaon; resolves to classical Bhagirathi river basin)*
   * `c_vijayapura` (**[HRE]** Vijayapura) $\rightarrow$ **Magistrat van Widschajapure** (`[1171 Historical: Magistrat van Wischnupur]`) *(Pre-1095 Sena seat; ancient Bishnupur / Mallabhum (`b_visnupura`))*
 
 ---
@@ -4891,7 +4891,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_dakhina_desa` (**[HRE]** Dakhina Desa) $\rightarrow$ **Magistrat van Dakkînadese**
   * `c_kandy` (**[HRE]** Malaya) $\rightarrow$ **Magistrat van Malâje**
 * **Duchy of Ruhunu** (`d_ruhunu`) $\rightarrow$ **Gubernat van Ruhunu**
-  * `c_batticaloa` (**[HRE]** Batticaloa) $\rightarrow$ **Magistrat van Battikaloa**
+  * `c_batticaloa` (**[HRE]** Batticaloa) $\rightarrow$ **Magistrat van Battikaloa** (`[1171 Historical: Magistrat van Dîgawâpi]`) *(Lacks pre-867 attestation; resolves to 3rd-c. BC Buddhist sanctuary Dighavapi (`b_dighavapi`))*
   * `c_rohana` (**[HRE]** Rohana) $\rightarrow$ **Magistrat van Rohane**
 
 ---
@@ -4899,15 +4899,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.175 Kingdom of Kamarupa (`k_kamarupa`) $\rightarrow$ **Kûnincrich van Kâmarûpe**
 
 * **Duchy of Para-Lauhitya** (`d_para_lauhitya`) $\rightarrow$ **Gubernat van Para-Lauhîtye**
-  * `c_dimapur` (**[HRE]** Dimapur) $\rightarrow$ **Magistrat van Dimapur**
-  * `c_goalpara` (**[HRE]** Goalpara) $\rightarrow$ **Magistrat van Goâlpare**
+  * `c_dimapur` (**[HRE]** Dimapur) $\rightarrow$ **Magistrat van Dimapur** (`[1171 Historical: Magistrat van Dansîri]`) *(13th-c. Kachari capital; resolves to pre-867 Dhansiri river basin)*
+  * `c_goalpara` (**[HRE]** Goalpara) $\rightarrow$ **Magistrat van Goâlpare** (`[1171 Historical: Magistrat van Kamâkje]`) *(Colonial Assam district; resolves to ancient Kamakhya/Pragjyotisha shrine complex (`b_kamakhya`))*
   * `c_manipur` (**[HRE]** Manipur) $\rightarrow$ **Magistrat van Manipur**
   * `c_srihatta` (**[HRE]** Srihatta) $\rightarrow$ **Magistrat van Srîhatte**
 * **Duchy of Sutiya** (`d_sutiya`) $\rightarrow$ **Gubernat van Sutîje**
-  * `c_charaideo` (**[HRE]** Charaideo) $\rightarrow$ **Magistrat van Tscharaideô**
+  * `c_charaideo` (**[HRE]** Charaideo) $\rightarrow$ **Magistrat van Tscharaideô** (`[1171 Historical: Magistrat van Patkâi]`) *(Ahom burial capital founded 1253; resolves to pre-867 Patkai pass corridor (`b_patkai`))*
   * `c_kundina` (**[HRE]** Kundina) $\rightarrow$ **Magistrat van Kundine**
 * **Duchy of Kamarupanagara** (`d_kamarupanagara`) $\rightarrow$ **Gubernat van Kâmarûpanagare**
-  * `c_kamatapur` (**[HRE]** Kamatapur) $\rightarrow$ **Magistrat van Kamatapur**
+  * `c_kamatapur` (**[HRE]** Kamatapur) $\rightarrow$ **Magistrat van Kamatapur** (`[1171 Historical: Magistrat van Bîtâgar]`) *(13th-c. Kamata capital; resolves to pre-867 earthwork fortress Bhitargarh (`b_bhitagarh`))*
   * `c_haruppeswara` ([Non-HRE] Haruppeswara) $\rightarrow$ **Magistrat van Haruppesware**
   * `c_kamarupanagara` ([Non-HRE] Kamarupanagara) $\rightarrow$ **Magistrat van Kâmarûpanagare**
 * **Duchy of Monyul** (`d_monyul`) $\rightarrow$ **Gubernat van Monenlant** *(calque of Tibetan Mon-yul ("Land of the Mon"))*
@@ -4945,7 +4945,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Mukdahan** (`d_mukdahan`) $\rightarrow$ **Gubernat van Mukdahân**
   * `c_canasha` (**[HRE]** Canasha) $\rightarrow$ **Magistrat van Tschanasche**
   * `c_ku_kaeo` (**[HRE]** Ku Kaeo) $\rightarrow$ **Magistrat van Ku Kêo**
-  * `c_mukdahan` (**[HRE]** Mukdahan) $\rightarrow$ **Magistrat van Mukdahân**
+  * `c_mukdahan` (**[HRE]** Mukdahan) $\rightarrow$ **Magistrat van Mukdahân** (`[1171 Historical: Magistrat van Nông Hân Lûang]`) *(Founded 1770; resolves to pre-867 That Phanom / Nong Han Luang basin (`b_sakhon_nakhon`))*
   * `c_muang_fa_daet` ([Non-HRE] Muang Fa Daet) $\rightarrow$ **Magistrat van Muang Fa Dêt**
   * `c_ubon_ratchathani` ([Non-HRE] Ubon Ratchathani) $\rightarrow$ **Magistrat van Ubon Râdschatanî** (`[1171 Historical: Magistrat van Mûndal]`) *(1786 Thai foundation; resolves to pre-867 Mun river basin)*
 * **Duchy of Phonsavan** (`d_phonsavan`) $\rightarrow$ **Gubernat van Ponsawân**
@@ -4959,7 +4959,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Racakonda** (`d_racakonda`) $\rightarrow$ **Gubernat van Ratschakonde**
   * `c_pannagallu` (**[HRE]** Pannagallu) $\rightarrow$ **Magistrat van Pannagallu**
-  * `c_racakonda` (**[HRE]** Racakonda) $\rightarrow$ **Magistrat van Ratschakonde**
+  * `c_racakonda` (**[HRE]** Racakonda) $\rightarrow$ **Magistrat van Ratschakonde** (`[1171 Historical: Magistrat van Nalgonde]`) *(14th-c. Recherla Nayaka fort; resolves to pre-867 Nallagonda (`b_nalgonda`))*
 * **Duchy of Warangal** (`d_warangal`) $\rightarrow$ **Gubernat van Warangal**
   * `c_kambampet` (**[HRE]** Mudigonda) $\rightarrow$ **Magistrat van Mudigonde**
   * `c_katukuru` ([Non-HRE] Katukuru) $\rightarrow$ **Magistrat van Katukuru**
