@@ -776,6 +776,18 @@ def load_enriched_historical_db(repo_dir=None):
             "tarr_name": "Jâsch",
             "tarr_adjective": "Jâscher"
         },
+        "c_barlad": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested (Burden of Proof on Antiquity)",
+            "opt_b_hydronym": "Bârlad River Basin (Berlat)",
+            "opt_b_lang": "Slavic / Vlach Hydronym",
+            "opt_b_name": "Berlat",
+            "justification": "Town first attested in 1159 Hypatian Chronicle; restores the pre-urban Bârlad river hydronym (Berlat).",
+            "rec_option": "Option B",
+            "tarr_name": "Berlat",
+            "tarr_adjective": "Berlater"
+        },
         "c_jersika": {
             "opt_a_key": "None",
             "opt_a_name": "Gersika / Gêrsike",
@@ -1196,6 +1208,18 @@ def load_enriched_historical_db(repo_dir=None):
             "rec_option": "Option A",
             "tarr_name": "Wêtar",
             "tarr_adjective": "Wêtarer"
+        },
+        "c_BOR_kutai_jauh": {
+            "opt_a_key": "None",
+            "opt_a_name": "None",
+            "opt_a_type": "No Verified Pre-867 Urban Centre Attested",
+            "opt_b_hydronym": "Upper Mahakam / Distant Kutai Basin",
+            "opt_b_lang": "Malay / Dayak Toponym",
+            "opt_b_name": "Ferne-Kutai",
+            "justification": "Post-867 Malay/Dayak directional subdivision ('Distant Kutai'); Procedure 2 confirms unbroken Dayak continuity, calquing jauh ('far') to Ferne-Kutai parallel to Nord-Kutai.",
+            "rec_option": "Option B",
+            "tarr_name": "Ferne-Kutai",
+            "tarr_adjective": "Ferne-Kutaier"
         }
     }
 

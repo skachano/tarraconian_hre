@@ -110,17 +110,37 @@ CULTURE_GROUP_SPECS = {
     "Tibetan": {
         "heritages": {"heritage_tibetan"},
         "languages": {"language_tibetan"},
-        "cultures": {"bodpa", "zhangzhung", "lhomon", "sumpa", "tsangpa"},
+        "cultures": {"bodpa", "zhangzhung", "lhomon", "sumpa", "tsangpa", "Zhangzhungo-Kashmiri-Baloch"},
     },
     "Ethiopic / Cushitic": {
         "heritages": {"heritage_east_african", "heritage_ethiopic", "heritage_cushitic", "heritage_somalian"},
         "languages": {"language_ethiopic", "language_cushitic", "language_somalian"},
         "cultures": {"amhara", "ethiopian", "geez", "nubian", "daju", "somali", "afar", "beja"},
     },
+    "Sudanic / East African": {
+        "heritages": {"heritage_east_african"},
+        "languages": {"language_sudanic"},
+        "cultures": {"daju", "nubian", "zaghawa", "beja"},
+    },
     "Indo-Aryan": {
         "heritages": {"heritage_indo_aryan"},
-        "languages": {"language_indo_aryan"},
-        "cultures": {"sindhi", "gujarati", "hindustani", "kashmiri", "punjabi", "bengali", "marathi"},
+        "languages": {"language_indo_aryan", "language_magadhan", "language_sinhalese"},
+        "cultures": {"sindhi", "gujarati", "hindustani", "kashmiri", "punjabi", "bengali", "assamese", "sinhala", "marathi", "oriya"},
+    },
+    "Dravidian": {
+        "heritages": {"heritage_dravidian"},
+        "languages": {"language_tamil", "language_telugu", "language_kannada"},
+        "cultures": {"tamil", "telugu", "kannada", "malayalam"},
+    },
+    "Malay / Austronesian": {
+        "heritages": {"heritage_austronesian"},
+        "languages": {"language_austronesian"},
+        "cultures": {"malay", "javanese", "sundanese", "dayak", "bisayan", "tagalog", "iloko", "bugis", "toraja", "maluku"},
+    },
+    "Tai / Mainland SEA": {
+        "heritages": {"heritage_tai", "heritage_mon_khmer", "heritage_burman"},
+        "languages": {"language_tai", "language_mon_khmer", "language_burmese"},
+        "cultures": {"tai", "mon", "Tai-Mon", "burmese", "khmer", "Moeng Long"},
     },
     "Baltic": {
         "heritages": {"heritage_baltic"},
@@ -1420,6 +1440,110 @@ CANDIDATE_TITLES = [
     },
 
     # --------------------------------------------------------------------------
+    # 4.15 Southeast Asia, Maritime Archipelago & Inner African/Silk Road Frontiers (1154 -> 1171)
+    # --------------------------------------------------------------------------
+    {
+        "canonical_key": "c_BOR_kutai_jauh",
+        "mapped_ck3_key": "c_BOR_kutai_jauh",
+        "name": "Kutai Jauh",
+        "proposed_calque": "Magistrat van Ferne-Kutai",
+        "etym_group": "Malay / Austronesian",
+        "etym_breakdown": "Malay/Dayak jauh ('far/distant') + classical Kutai hydronym -> 'Distant Kutai' (vs. provisional phonetic Kutai Dschâu)",
+        "region": "4.15 Southeast Asian Frontier",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_BOR_kutai_utara",
+        "mapped_ck3_key": "c_BOR_kutai_utara",
+        "name": "Kutai Utara",
+        "proposed_calque": "Magistrat van Nord-Kutai",
+        "etym_group": "Malay / Austronesian",
+        "etym_breakdown": "Malay utara ('north') + classical Kutai -> 'North Kutai'",
+        "region": "4.15 Southeast Asian Frontier",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_SuMa_banggai_utara",
+        "mapped_ck3_key": "c_SuMa_banggai_utara",
+        "name": "Banggai Utara",
+        "proposed_calque": "Magistrat van Nord-Banggai",
+        "etym_group": "Malay / Austronesian",
+        "etym_breakdown": "Malay utara ('north') + Banggai archipelago -> 'North Banggai'",
+        "region": "4.15 Southeast Asian Frontier",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_PHI_south_palawan",
+        "mapped_ck3_key": "c_PHI_south_palawan",
+        "name": "South Palawan",
+        "proposed_calque": "Magistrat van Sût-Palâwan",
+        "etym_group": "Malay / Austronesian",
+        "etym_breakdown": "Directional South + indigenous island toponym Palawan -> 'South Palawan'",
+        "region": "4.15 Southeast Asian Frontier",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_SUM_rokan_hilir",
+        "mapped_ck3_key": "c_SUM_pekanbaru",
+        "name": "Rokan Hilir (for Pekanbaru)",
+        "proposed_calque": "Magistrat van Nider-Rôkan",
+        "etym_group": "Malay / Austronesian",
+        "etym_breakdown": "Malay Rokan + Hilir ('downstream / lower') -> 'Lower Rokan' (Option A pre-867 replacement for 1784 Pekanbaru)",
+        "region": "4.15 Southeast Asian Frontier",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_east_darfur",
+        "mapped_ck3_key": "c_east_darfur",
+        "name": "East Darfur",
+        "proposed_calque": "Magistrat van Ôst-Dârfûr",
+        "etym_group": "Sudanic / East African",
+        "etym_breakdown": "Directional East + Daju/Fur toponym Dar-Fur -> 'East Darfur'",
+        "region": "4.13 Horn of Africa",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_east-tokharestan",
+        "mapped_ck3_key": "c_east-tokharestan",
+        "name": "East Tokharestan",
+        "proposed_calque": "Magistrat van Ôst-Tocharistân",
+        "etym_group": "Iranian / Persian",
+        "etym_breakdown": "Directional East + Iranian -stan ('land of') + Tokhara -> 'East Tokharistan'",
+        "region": "4.10 Steppe & Persia",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_west-tokharestan",
+        "mapped_ck3_key": "c_west-tokharestan",
+        "name": "West Tokharestan",
+        "proposed_calque": "Magistrat van West-Tocharistân",
+        "etym_group": "Iranian / Persian",
+        "etym_breakdown": "Directional West + Iranian -stan ('land of') + Tokhara -> 'West Tokharistan'",
+        "region": "4.10 Steppe & Persia",
+        "is_opaque_eponym": False,
+    },
+    {
+        "canonical_key": "c_vijayapura",
+        "mapped_ck3_key": "c_vijayapura",
+        "name": "Vijayapura -> Wischnupur",
+        "proposed_calque": "Magistrat van Wischnupur (Phonetic / Pre-867 Option A)",
+        "etym_group": "Indo-Aryan",
+        "etym_breakdown": "Post-867 Sena Vijayapura ('Victory City') replaced in Step 3 by ancient temple town b_visnupura (Vishnupura, opaque theonym)",
+        "region": "Control: Opaque Eponym",
+        "is_opaque_eponym": True,
+    },
+    {
+        "canonical_key": "c_sukhothai",
+        "mapped_ck3_key": "c_sukhothai",
+        "name": "Sukhothai -> Tschaljâng",
+        "proposed_calque": "Magistrat van Tschaljâng (Phonetic / Pre-867 Option A)",
+        "etym_group": "Tai / Mainland SEA",
+        "etym_breakdown": "Post-867 Sukhothai ('Dawn of Happiness', 1238 AD) replaced in Step 3 by pre-867 Chaliang (b_si_satchanalai), opaque toponym",
+        "region": "Control: Opaque Eponym",
+        "is_opaque_eponym": True,
+    },
+
+    # --------------------------------------------------------------------------
     # Control Group: Opaque Eponyms & Tribal Roots (Rule 3)
     # --------------------------------------------------------------------------
     {
@@ -1556,7 +1680,7 @@ def evaluate_procedure2(candidate: dict, titles_data: dict, trajs_map: dict, cul
             "tier_label": "Independent / Outside Roman Empire",
             "adoption_pattern": "Preferred Semantic Calque" if is_curr_match else "Strict Phonetic Nativization",
             "chancellery_action": "External Sovereign Assessment",
-            "justification": f"Outside Roman Empire in 1154; current sovereign culture is {curr_cult}.",
+            "justification": f"Outside Roman Empire in 1171; current sovereign culture is {curr_cult}.",
             "is_calquable": is_curr_match,
         }
 
@@ -1710,7 +1834,7 @@ def generate_markdown_report(results: list, output_path: Path):
     md.append("# Master Procedure 2 Audit Register: Title Calquability & Toponym Adoption Patterns")
     md.append("")
     md.append("> **Imperial Chancellery Toponymic Reference**  ")
-    md.append(f"> **Date of Audit:** {time.strftime('%Y-%m-%d')} | **Game Horizon:** 1154.12.27 | **Ruleset:** Procedure 2 (§ 3.2 README)  ")
+    md.append(f"> **Date of Audit:** {time.strftime('%Y-%m-%d')} | **Game Horizon:** 1171.6.18 | **Ruleset:** Procedure 2 (§ 3.2 README)  ")
     md.append("")
     md.append("---")
     md.append("")
