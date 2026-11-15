@@ -151,6 +151,23 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Jawakadwîpe': 'Jawakadwîpisch',
         'Dwârawatî': 'Dwârawatîisch',
         'Pagân': 'Pagânisch',
+        'Sûtrücke': 'Sûtrückisch',
+        'Westrücke': 'Westrückisch',
+        'Sûtberch': 'Sûtberchisch',
+        'Westflôze': 'Westflôzisch',
+        'Jorubalant': 'Jorubalantisch',
+        'Akân': 'Akânisch',
+        'Sûthuai': 'Sûthuaiesch',
+        'Jüetlant': 'Jüetlantisch',
+        'Borgû': 'Borgûisch',
+        'Sêlichbache': 'Sêlichbachisch',
+        'Sûtsê': 'Sûtsêisch',
+        'Gûr': 'Gûrisch',
+        'Ôstflôze': 'Ôstflôzisch',
+        'Igbô-Bênue': 'Igbô-Bênuesch',
+        'Naimanjen': 'Naimansch',
+        'Gînêe': 'Gînêisch',
+        'Kong': 'Kongisch',
     }
     if name in explicit_adjs:
         return explicit_adjs[name]
@@ -248,7 +265,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171|1194)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
@@ -263,7 +280,7 @@ def parse_gazetteer(md_path: Path):
         if m:
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171|1194)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             all_keys = re.findall(r'`([dx]_[a-zA-Z0-9_\-]+)`', line)
@@ -281,7 +298,7 @@ def parse_gazetteer(md_path: Path):
             key = m.group(1)
             direct = clean_toponym(m.group(2))
             hist = direct
-            m_hist = re.search(r'\[(1059|1122|1142|1154|1171)[^\]:]*?:\s*([^\]]+)\]', line)
+            m_hist = re.search(r'\[(1059|1122|1142|1154|1171|1194)[^\]:]*?:\s*([^\]]+)\]', line)
             if m_hist:
                 hist = extract_first_hist(m_hist.group(2))
             entries[key] = {
@@ -1291,29 +1308,41 @@ def main():
             f.write(norm_txt)
 
     # 4. Sync to Paradox Interactive CK3 mod directory if accessible
-    paradox_mod_root = Path.home() / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod"
-    try:
-        if paradox_mod_root.exists():
-            paradox_mod_dir = paradox_mod_root / "tarraconian_chancellery"
-            paradox_mod_dir.mkdir(parents=True, exist_ok=True)
-            for dest_item in list(paradox_mod_dir.glob("**/*")):
-                if dest_item.is_file():
-                    rel = dest_item.relative_to(paradox_mod_dir)
-                    if not (src_mod_dir / rel).exists():
-                        dest_item.unlink()
-            for item in src_mod_dir.glob("**/*"):
-                if item.is_file():
-                    rel = item.relative_to(src_mod_dir)
-                    dest = paradox_mod_dir / rel
-                    dest.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(item, dest)
-            mod_desc = (src_mod_dir / "descriptor.mod").read_text(encoding='utf-8')
-            posix_path = str(paradox_mod_dir).replace("\\", "/")
-            mod_file_content = f'{mod_desc.strip()}\npath="{posix_path}"\n'
-            (paradox_mod_root / "tarraconian_chancellery.mod").write_text(mod_file_content, encoding='utf-8')
-            print(f"Successfully synced mod assets to {paradox_mod_dir}")
-    except Exception as e:
-        print(f"Note: Could not sync to Paradox mod directory ({e})")
+    paradox_mod_candidates = [
+        Path.home() / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod",
+        Path("/mnt/windows/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/mod"),
+    ]
+    for paradox_mod_root in paradox_mod_candidates:
+        try:
+            if paradox_mod_root.exists():
+                if not os.access(paradox_mod_root, os.W_OK):
+                    print(f"[Info] Paradox mod directory {paradox_mod_root} is read-only; Windows build_mod.ps1 will synchronize on Windows.")
+                    continue
+                paradox_mod_dir = paradox_mod_root / "tarraconian_chancellery"
+                paradox_mod_dir.mkdir(parents=True, exist_ok=True)
+                for dest_item in list(paradox_mod_dir.glob("**/*")):
+                    if dest_item.is_file():
+                        rel = dest_item.relative_to(paradox_mod_dir)
+                        if not (src_mod_dir / rel).exists():
+                            dest_item.unlink()
+                for item in src_mod_dir.glob("**/*"):
+                    if item.is_file():
+                        rel = item.relative_to(src_mod_dir)
+                        dest = paradox_mod_dir / rel
+                        dest.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(item, dest)
+                mod_desc = (src_mod_dir / "descriptor.mod").read_text(encoding='utf-8')
+                posix_path = str(paradox_mod_dir).replace("\\", "/")
+                # For Windows paths mounted under /mnt/windows, keep Windows drive format if possible or posix
+                if posix_path.startswith("/mnt/windows/"):
+                    win_path = "C:/" + posix_path[len("/mnt/windows/"):]
+                    mod_file_content = f'{mod_desc.strip()}\npath="{win_path}"\n'
+                else:
+                    mod_file_content = f'{mod_desc.strip()}\npath="{posix_path}"\n'
+                (paradox_mod_root / "tarraconian_chancellery.mod").write_text(mod_file_content, encoding='utf-8')
+                print(f"Successfully synced mod assets to {paradox_mod_dir}")
+        except Exception as e:
+            print(f"Note: Could not sync to Paradox mod directory {paradox_mod_root} ({e})")
 
 if __name__ == '__main__':
     main()
