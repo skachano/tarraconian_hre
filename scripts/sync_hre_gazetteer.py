@@ -41,7 +41,7 @@ def parse_canonical_titles(tarr_md_path):
             if m_bold:
                 canonical_names[key] = m_bold.group(1).strip()
 
-            m_hist = re.search(r'\[((?:\d{4}\s+)?(?:Historical|Slavic-Root):[^\]]+)\]', after)
+            m_hist = re.search(r'\[((?:\d{4}[^\]:]*?|Slavic-Root):[^\]]+)\]', after)
             if m_hist:
                 canonical_hists[key] = m_hist.group(1).strip()
 
@@ -106,7 +106,7 @@ def sync_hre_gazetteer(repo_dir=None):
                     changes += 1
 
         # 2. Match historical note pattern in HRE gazetteer:
-        m_h = re.search(r'`([a-zA-Z0-9_\-]+)`.*?\[((?:\d{4}\s+)?(?:Historical|Slavic-Root):[^\]]+)\]', new_line)
+        m_h = re.search(r'`([a-zA-Z0-9_\-]+)`.*?\[((?:\d{4}[^\]:]*?|Slavic-Root):[^\]]+)\]', new_line)
         if m_h:
             key = m_h.group(1)
             cur_h = m_h.group(2).strip()

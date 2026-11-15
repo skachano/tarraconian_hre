@@ -3129,7 +3129,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_wonju` (**[HRE]** Wonju) $\rightarrow$ **Magistrat van Veltgouwe-in-Schilla** *(or **Wondschu**)*
 * **Duchy of Gyeongju** (`d_gyeongju`) $\rightarrow$ **Gubernat van Fröudegouwe** *(or **Gjongdschu**)*
   * `c_andong` (**[HRE]** Andong) $\rightarrow$ **Magistrat van Fridôst** *(or **Andong**)*
-  * `c_gyeongju` (**[HRE]** Gyeongju) $\rightarrow$ **Magistrat van Fröudengouwe** *(calque of Sino-Korean *Gyeongju* \"Joy District\", or **Gyeongdschu**)*
+  * `c_gyeongju` (**[HRE]** Gyeongju) $\rightarrow$ **Magistrat van Fröudengouwe** *(calque of Sino-Korean *Gyeongju* \"Joy District\", or **Gjongdschu**)*
   * `c_ilseon` (**[HRE]** Ilseon) $\rightarrow$ **Magistrat van Eênbêst** *(or **Ilson**)*
   * `c_sangju` (**[HRE]** Sangju) $\rightarrow$ **Magistrat van Hôchgouwe** *(or **Sangdschu**)*
 * **Duchy of Gyoju** (`d_gyoju`) $\rightarrow$ **Gubernat van Krûzgouwe** *(or **Gyodschu**)*

@@ -1341,7 +1341,7 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         ' dynn_tarr_karling_litovel:0 "Karling-Litovel"',
         ' dynn_tarr_karling_hirsau:0 "Karling-Hirsau"',
         ' dynn_tarr_karling_troppouwe:0 "Karling-Troppouwe"',
-        ' dynn_tarr_karling_ush:0 "Karling-Ush"',
+        ' dynn_tarr_karling_ush:0 "Karling-Usch"',
         ' dynn_tarr_palemonaitis_middel_don:0 "Palemonaitis-Middel-Dôn"',
         ' dynn_tarr_palemonaitis_lielupe:0 "Palemonaitis-Lielupe"',
         ' dynn_tarr_palemonaitis_schaulen:0 "Palemonaitis-Schaulen"',
@@ -1379,7 +1379,7 @@ def build_localization(entries, s2_entries, s3_entries, s4_entries):
         ' dynn_tarr_wurle:0 "Wurle"',
         ' dynn_tarr_brunnsholm_sebesch:0 "Brunnsholm-Sebêsch"',
         ' dynn_tarr_philippopolis_ulpiana:0 "Philippopolis-Ulpiana"',
-        ' dynn_tarr_sheksna_dwina:0 "Sheksna-Dwina"',
+        ' dynn_tarr_sheksna_dwina:0 "Scheksna-Dwîna"',
         ' dynn_tarr_soundavara_obnore:0 "Soundavara-Obnore"',
         ' dynn_tarr_soundavara_erkawika:0 "Soundavara-Erkawîka"',
     ])

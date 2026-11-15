@@ -1680,7 +1680,7 @@ def evaluate_procedure2(candidate: dict, titles_data: dict, trajs_map: dict, cul
             "tier_label": "Independent / Outside Roman Empire",
             "adoption_pattern": "Preferred Semantic Calque" if is_curr_match else "Strict Phonetic Nativization",
             "chancellery_action": "External Sovereign Assessment",
-            "justification": f"Outside Roman Empire in 1171; current sovereign culture is {curr_cult}.",
+            "justification": f"Outside Roman Empire in 1194; current sovereign culture is {curr_cult}.",
             "is_calquable": is_curr_match,
         }
 
@@ -1834,7 +1834,7 @@ def generate_markdown_report(results: list, output_path: Path):
     md.append("# Master Procedure 2 Audit Register: Title Calquability & Toponym Adoption Patterns")
     md.append("")
     md.append("> **Imperial Chancellery Toponymic Reference**  ")
-    md.append(f"> **Date of Audit:** {time.strftime('%Y-%m-%d')} | **Game Horizon:** 1171.6.18 | **Ruleset:** Procedure 2 (§ 3.2 README)  ")
+    md.append(f"> **Date of Audit:** {time.strftime('%Y-%m-%d')} | **Game Horizon:** 1194.7.28 | **Ruleset:** Procedure 2 (§ 3.2 README)  ")
     md.append("")
     md.append("---")
     md.append("")
