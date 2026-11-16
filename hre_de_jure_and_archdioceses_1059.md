@@ -2932,7 +2932,7 @@
   * **[HRE]** **Gidaya** (`c_gidaya`) — *Tarraconian: **Magistrat van Gidâje***
 * **Duchy of Bali** (`d_bali`) — *1/2 in HRE*
   * [Non-HRE] **Sidamo** (`c_sidamo`) — *Tarraconian: **Magistrat van Sidâme***
-  * **[HRE]** **Bali** (`c_bali`) — *Tarraconian: **Magistrat van Bâli***
+  * **[HRE]** **Bali** (`c_bali`) — *Tarraconian: **Magistrat van Bâle***
 * **Duchy of Samalo** (`d_samalo`) — *0/4 in HRE*
   * [Non-HRE] **Marsabit** (`c_marsabit`) — *Tarraconian: **Magistrat van Marsabît***
   * [Non-HRE] **Fudalhi** (`c_fudalhi`) — *Tarraconian: **Magistrat van Fudâlhi***
@@ -3122,7 +3122,7 @@
   * [Non-HRE] **Heicaoan** (`c_LIAO_heicaoan`) — *Tarraconian: **Magistrat van Swartzwêdouwe****
   * [Non-HRE] **Linhuang** (`c_LIAO_linhuang`) — *Tarraconian: **Magistrat van Bîdemhuangflôz****
   * [Non-HRE] **Longhuazhou** (`c_LIAO_longhuazhou`) — *Tarraconian: **Magistrat van Drachenkeêregouwe****
-  * [Non-HRE] **Raozhou** (`c_LIAO_raozhou`) — *Tarraconian: **Magistrat van Rîchdomgouwe****
+  * [Non-HRE] **Raozhou** (`c_LIAO_raozhou`) — *Tarraconian: **Magistrat van Rîchdomgouwe-in-Chitân****
   * [Non-HRE] **Ulagaian** (`c_LIAO_ulagaian`) — *Tarraconian: **Magistrat van Ôtlûhôeiouwe****
 * **Duchy of Raole** (`d_LIAO_zhongjing`) — *0/6 in HRE*
   * [Non-HRE] **Chengde** (`c_lzj_chengde`) — *Tarraconian: **Magistrat van Ontfangdôget****
@@ -3247,7 +3247,7 @@
   * **[HRE]** **Guangwu** (`c_guangwu`) — *Tarraconian: **Magistrat van Wîtwâpen****
   * **[HRE]** **Liangzhou** (`c_liangzhou`) — *Tarraconian: **Magistrat van Kôlgouwe****
 * **Duchy of Shanzhou** (`d_longyou`) — *4/4 in HRE*
-  * **[HRE]** **Hezhou** (`c_hezhou_2`) — *Tarraconian: **Magistrat van Flôzgouwe****
+  * **[HRE]** **Hezhou** (`c_hezhou_2`) — *Tarraconian: **Magistrat van Gelbflôzgouwe****
   * **[HRE]** **Kuozhou** (`c_kuozhou`) — *Tarraconian: **Magistrat van Weêrgouwe****
   * **[HRE]** **Lanzhou** (`c_lanzhou_1`) — *Tarraconian: **Magistrat van Blômengouwe****
   * **[HRE]** **Shanzhou** (`c_xiningzhou`) — *Tarraconian: **Magistrat van Schângouwe****
@@ -3269,9 +3269,9 @@
   * [Non-HRE] **Andong** (`c_andong`) — *Tarraconian: **Magistrat van Fridôst****
   * [Non-HRE] **Gyeongju** (`c_gyeongju`) — *Tarraconian: **Magistrat van Fröudengouwe****
   * [Non-HRE] **Ilseon** (`c_ilseon`) — *Tarraconian: **Magistrat van Eênbêst****
-  * [Non-HRE] **Sangju** (`c_sangju`) — *Tarraconian: **Magistrat van Hôchgouwe****
+  * [Non-HRE] **Sangju** (`c_sangju`) — *Tarraconian: **Magistrat van Êrgouwe****
 * **Duchy of Gyoju** (`d_gyoju`) — *4/4 in HRE*
-  * **[HRE]** **Chunju** (`c_chunju`) — *Tarraconian: **Magistrat van Lentzgouwe****
+  * **[HRE]** **Chunju** (`c_chunju`) — *Tarraconian: **Magistrat van Lentzgouwe-in-Schilla****
   * **[HRE]** **Dongju** (`c_dongju`) — *Tarraconian: **Magistrat van Ôstgouwe****
   * **[HRE]** **Gyoju** (`c_gyoju`) — *Tarraconian: **Magistrat van Krûzgouwe****
   * **[HRE]** **Inje** (`c_inje`) — *Tarraconian: **Magistrat van Eênhoornhôf****
@@ -3327,7 +3327,7 @@
   * **[HRE]** **Lóngquán** (`c_BAL_yongcheon`) — *Tarraconian: **Magistrat van Drachenbrunn****
   * **[HRE]** **Tóngzhōu** (`c_BAL_dongju`) — *Tarraconian: **Magistrat van Kopergouwe****
   * **[HRE]** **West Xiandé** (`c_BAL_west_hyeondeok`) — *Tarraconian: **Magistrat van Westvermaertdôget****
-  * **[HRE]** **Yingzhōu** (`c_BAL_yeongju`) — *Tarraconian: **Magistrat van Jînggouwe****
+  * **[HRE]** **Yingzhōu** (`c_BAL_yeongju`) — *Tarraconian: **Magistrat van Jînggouwe-in-Bâlhai****
 * **Duchy of Liaodong** (`d_LIAO_dongjing`) — *0/5 in HRE*
   * [Non-HRE] **Guidezhou** (`c_LIAO_guidezhou`) — *Tarraconian: **Magistrat van Edeldôgetgouwe****
   * [Non-HRE] **Shenyang** (`c_LIAO_shenyang`) — *Tarraconian: **Magistrat van Dêpsunne****
@@ -3337,7 +3337,7 @@
 * **Duchy of Fúyú** (`d_BAL_buyeo`) — *0/4 in HRE*
   * [Non-HRE] **Changchun** (`c_BAL_changchun`) — *Tarraconian: **Magistrat van Langlentz-am-Bôchmêre****
   * [Non-HRE] **Fuzhou** (`c_BAL_fuzhou`) — *Tarraconian: **Magistrat van Weêrstichtgouwe****
-  * [Non-HRE] **Xinzhou** (`c_BAL_xinzhou`) — *Tarraconian: **Magistrat van Nîegouwe****
+  * [Non-HRE] **Xinzhou** (`c_BAL_xinzhou`) — *Tarraconian: **Magistrat van Nîegouwe-in-Bâlhai****
   * [Non-HRE] **Yizhou** (`c_BAL_yizhou`) — *Tarraconian: **Magistrat van Îgouwe****
 * **Duchy of Moe-Su** (`d_BAL_moe_su`) — *3/3 in HRE*
   * **[HRE]** **Chénzhōu** (`c_BAL_sokju`) — *Tarraconian: **Magistrat van Draaksterngouwe****
@@ -3458,7 +3458,7 @@
   * **[HRE]** **Fuzhou** (`c_fuzhou`) — *Tarraconian: **Magistrat van Sêligouwe****
   * **[HRE]** **Linzhou** (`c_linzhou`) — *Tarraconian: **Magistrat van Eênhoorngouwe****
   * **[HRE]** **Qingshan** (`c_qingshan`) — *Tarraconian: **Magistrat van Blouberch****
-  * **[HRE]** **Shengzhou** (`c_shengzhou`) — *Tarraconian: **Magistrat van Lêvengouwe****
+  * **[HRE]** **Shengzhou** (`c_shengzhou`) — *Tarraconian: **Magistrat van Zêgegouwe****
   * **[HRE]** **Yunneizhou** (`c_lxj_yunneizhou`) — *Tarraconian: **Magistrat van Wolchenbinnengouwe****
 * **Duchy of Sanggan** (`d_sanggan`) — *4/4 in HRE*
   * **[HRE]** **Huai'an** (`c_huaian`) — *Tarraconian: **Magistrat van Koesterfrid****
@@ -3551,7 +3551,7 @@
   * **[HRE]** **Gongju** (`c_gongju`) — *Tarraconian: **Magistrat van Hertzogengouwe****
   * **[HRE]** **Hongju** (`c_hongju`) — *Tarraconian: **Magistrat van Grôzwazzergouwe****
 * **Duchy of Jeonju** (`d_jeonju`) — *3/3 in HRE*
-  * **[HRE]** **Jeonju** (`c_jeonju`) — *Tarraconian: **Magistrat van Vollgouwe****
+  * **[HRE]** **Jeonju** (`c_jeonju`) — *Tarraconian: **Magistrat van Vollgouwe-in-Bêkdsche****
   * **[HRE]** **Jillye** (`c_jillye`) — *Tarraconian: **Magistrat van Vödderesêde****
   * **[HRE]** **Namwon** (`c_namwon`) — *Tarraconian: **Magistrat van Sûtveit****
 * **Duchy of Naju** (`d_naju`) — *3/3 in HRE*
@@ -4271,7 +4271,7 @@
 * **De Jure Empire:** Zhongyuan (`e_zhongyuan`)
 
 * **Duchy of Ziqing** (`d_ziqing`) — *0/5 in HRE*
-  * [Non-HRE] **Dengzhou** (`c_dengzhou`) — *Tarraconian: **Magistrat van Denggouwe****
+  * [Non-HRE] **Dengzhou** (`c_dengzhou`) — *Tarraconian: **Magistrat van Mêrstîggouwe****
   * [Non-HRE] **Laizhou** (`c_laizhou`) — *Tarraconian: **Magistrat van Komgouwe****
   * [Non-HRE] **Qingzhou** (`c_qingzhou`) — *Tarraconian: **Magistrat van Blougouwe****
   * [Non-HRE] **Weizhou** (`c_weizhou_4`) — *Tarraconian: **Magistrat van Wêiflôzgouwe****
@@ -4435,7 +4435,7 @@
 * **Duchy of Chengde** (`d_chengde`) — *0/4 in HRE*
   * [Non-HRE] **Jizhou** (`c_jizhou`) — *Tarraconian: **Magistrat van Hiliggouwe****
   * [Non-HRE] **Shenzhou** (`c_shenzhou_1`) — *Tarraconian: **Magistrat van Dêpegouwe****
-  * [Non-HRE] **Zhaozhou** (`c_zhaozhou`) — *Tarraconian: **Magistrat van Klaargouwe****
+  * [Non-HRE] **Zhaozhou** (`c_zhaozhou`) — *Tarraconian: **Magistrat van Dschôgouwe****
   * [Non-HRE] **Zhenzhou** (`c_zhenzhou`) — *Tarraconian: **Magistrat van Wâkgouwe****
 * **Duchy of Cangjing** (`d_cangjing`) — *0/3 in HRE*
   * [Non-HRE] **Cangzhou** (`c_cangzhou`) — *Tarraconian: **Magistrat van Kôlblougouwe****
@@ -4446,7 +4446,7 @@
   * [Non-HRE] **Bozhou** (`c_bozhou_1`) — *Tarraconian: **Magistrat van Kuntstgouwe****
   * [Non-HRE] **Weizhou** (`c_weizhou`) — *Tarraconian: **Magistrat van Wêjgouwe****
 * **Duchy of Xingming** (`d_xingming`) — *0/3 in HRE*
-  * [Non-HRE] **Mingzhou** (`c_mingzhou`) — *Tarraconian: **Magistrat van Helgouwe****
+  * [Non-HRE] **Mingzhou** (`c_mingzhou`) — *Tarraconian: **Magistrat van Mîngflôzgouwe****
   * [Non-HRE] **Xiangzhou** (`c_xiangzhou`) — *Tarraconian: **Magistrat van Ambetgouwe****
   * [Non-HRE] **Xingzhou** (`c_xingzhou`) — *Tarraconian: **Magistrat van Schînggouwe****
 * **Duchy of Heyang** (`d_heyang`) — *0/2 in HRE*
@@ -4467,7 +4467,7 @@
 * **Duchy of Chenxu** (`d_chenxu`) — *0/4 in HRE*
   * [Non-HRE] **Caizhou** (`c_caizhou`) — *Tarraconian: **Magistrat van Zâigouwe****
   * [Non-HRE] **Chenzhou** (`c_huaining`) — *Tarraconian: **Magistrat van Tschêngouwe****
-  * [Non-HRE] **Shenzhou** (`c_shenzhou`) — *Tarraconian: **Magistrat van Vromgouwe****
+  * [Non-HRE] **Shenzhou** (`c_shenzhou`) — *Tarraconian: **Magistrat van Schîngouwe****
   * [Non-HRE] **Xuzhou** (`c_yingchuan`) — *Tarraconian: **Magistrat van Verlofgouwe****
 * **Duchy of Dongji** (`d_dongji`) — *0/2 in HRE*
   * [Non-HRE] **Henan** (`c_henan`) — *Tarraconian: **Magistrat van Flôzsût****
@@ -4974,7 +4974,7 @@
   * **[HRE]** **Banggai Utara** (`c_SuMa_banggai_utara`) — *Tarraconian: **Magistrat van Nord-Banggai***
   * **[HRE]** **Mori** (`c_SuMa_mori`) — *Tarraconian: **Magistrat van Mori***
 * **Duchy of Luwu** (`x_script_3987`) — *1/1 in HRE*
-  * **[HRE]** **Luwu** (`c_SuMa_luwu`) — *Tarraconian: **Magistrat van Luwu***
+  * **[HRE]** **Luwu** (`c_SuMa_luwu`) — *Tarraconian: **Magistrat van Lûwuch***
 
 ---
 
@@ -5029,7 +5029,7 @@
   * **[HRE]** **Lumajang** (`c_JAV_lumajang`) — *Tarraconian: **Magistrat van Lumadschang***
   * **[HRE]** **Mataram** (`c_JAV_mataram`) — *Tarraconian: **Magistrat van Mataram***
 * **Duchy of Bali** (`d_IDO_bali`) — *3/3 in HRE*
-  * **[HRE]** **Bali** (`c_IDO_bali`) — *Tarraconian: **Magistrat van Bali***
+  * **[HRE]** **Bali** (`c_IDO_bali`) — *Tarraconian: **Magistrat van Balidwîpe***
   * **[HRE]** **Lombok and Sumbawa** (`c_IDO_lombok_and_sumbawa`) — *Tarraconian: **Magistrat van Lombôch-Sumbâwe***
   * **[HRE]** **Madura** (`c_JAV_madura`) — *Tarraconian: **Magistrat van Madûre***
 * **Duchy of Taruma** (`d_JAV_taruma`) — *3/3 in HRE*
@@ -5366,7 +5366,7 @@
   * **[HRE]** **Kangzhou** (`c_kangzhou`) — *Tarraconian: **Magistrat van Gesontgouwe***
   * **[HRE]** **Shuangzhou** (`c_shuangzhou`) — *Tarraconian: **Magistrat van Valgouwe***
   * **[HRE]** **Xinzhou** (`c_xinzhou_1`) — *Tarraconian: **Magistrat van Nîegouwe***
-  * **[HRE]** **Yingzhou** (`c_yingde`) — *Tarraconian: **Magistrat van Heldgouwe***
+  * **[HRE]** **Yingzhou** (`c_yingde`) — *Tarraconian: **Magistrat van Kempegouwe***
 * **Duchy of Huixun** (`d_huixun`) — *6/6 in HRE*
   * **[HRE]** **Chaozhou** (`c_chaozhou`) — *Tarraconian: **Magistrat van Vlôtgouwe***
   * **[HRE]** **Dongguan** (`c_dongguan`) — *Tarraconian: **Magistrat van Ôstschilf***
@@ -5407,8 +5407,8 @@
   * **[HRE]** **Yizhou** (`c_qingyuan`) — *Tarraconian: **Magistrat van Rechtgouwe***
 * **Duchy of Rongguan** (`d_rongguan`) — *5/5 in HRE*
   * **[HRE]** **Baizhou** (`c_baizhou`) — *Tarraconian: **Magistrat van Wîzgouwe***
-  * **[HRE]** **Lianzhou** (`c_lianzhou_1`) — *Tarraconian: **Magistrat van Loutergouwe***
-  * **[HRE]** **Rongzhou** (`c_rongzhou_2`) — *Tarraconian: **Magistrat van Miltgouwe***
+  * **[HRE]** **Lianzhou** (`c_lianzhou_1`) — *Tarraconian: **Magistrat van Rêchtgouwe***
+  * **[HRE]** **Rongzhou** (`c_rongzhou_2`) — *Tarraconian: **Magistrat van Duldgouwe***
   * **[HRE]** **Tengzhou** (`c_tengzhou`) — *Tarraconian: **Magistrat van Wîstêriegouwe***
   * **[HRE]** **Yulin** (`c_yulin`) — *Tarraconian: **Magistrat van Wucherwalt***
 * **Duchy of Jingjiang** (`d_jingjiang`) — *3/3 in HRE*
@@ -5422,12 +5422,12 @@
 * **De Jure Empire:** Jingyang (`e_jingyang`)
 
 * **Duchy of Jingnan** (`d_jingnan`) — *7/7 in HRE*
-  * **[HRE]** **Fuzhou** (`c_fuzhou_3`) — *Tarraconian: **Magistrat van Weêrgouwe***
-  * **[HRE]** **Guizhou** (`c_guizhou`) — *Tarraconian: **Magistrat van Gwêigouwe***
+  * **[HRE]** **Fuzhou** (`c_fuzhou_3`) — *Tarraconian: **Magistrat van Herstelgouwe***
+  * **[HRE]** **Guizhou** (`c_guizhou`) — *Tarraconian: **Magistrat van Weêrkeêrgouwe***
   * **[HRE]** **Hanyang** (`c_hanyang`) — *Tarraconian: **Magistrat van Hânsunne***
   * **[HRE]** **Hezhou** (`c_liyang`) — *Tarraconian: **Magistrat van Jamatogouwe***
   * **[HRE]** **Jiangling** (`c_jiangling`) — *Tarraconian: **Magistrat van Flôz-hügel***
-  * **[HRE]** **Langzhou** (`c_langzhou`) — *Tarraconian: **Magistrat van Helgouwe***
+  * **[HRE]** **Langzhou** (`c_langzhou`) — *Tarraconian: **Magistrat van Heldergouwe***
   * **[HRE]** **Xiazhou** (`c_xiazhou_1`) — *Tarraconian: **Magistrat van Engegouwe***
 * **Duchy of Xiangdeng** (`d_xiangdeng`) — *7/7 in HRE*
   * **[HRE]** **Dengzhou** (`c_dengzhou_1`) — *Tarraconian: **Magistrat van Denggouwe***
@@ -5440,7 +5440,7 @@
 * **Duchy of Eyue** (`d_eyue`) — *5/5 in HRE*
   * **[HRE]** **Anzhou** (`c_anzhou`) — *Tarraconian: **Magistrat van Fridgouwe***
   * **[HRE]** **Ezhou** (`c_ezhou`) — *Tarraconian: **Magistrat van Êkgouwe***
-  * **[HRE]** **Huangzhou** (`c_huangzhou`) — *Tarraconian: **Magistrat van Glantzgouwe***
+  * **[HRE]** **Huangzhou** (`c_huangzhou`) — *Tarraconian: **Magistrat van Langflôz-Gelbgouwe***
   * **[HRE]** **Qizhou** (`c_qizhou_1`) — *Tarraconian: **Magistrat van Heêlkruytgouwe***
   * **[HRE]** **Yuezhou** (`c_yuezhou_1`) — *Tarraconian: **Magistrat van Hôchberchgouwe***
 
@@ -5450,18 +5450,18 @@
 * **De Jure Empire:** Jingyang (`e_jingyang`)
 
 * **Duchy of Jiangxi** (`d_jiangxi`) — *7/7 in HRE*
-  * **[HRE]** **Fuzhou** (`c_fuzhou_2`) — *Tarraconian: **Magistrat van Stillgouwe***
-  * **[HRE]** **Hongzhou** (`c_hongzhou`) — *Tarraconian: **Magistrat van Grôzmiltgouwe***
+  * **[HRE]** **Fuzhou** (`c_fuzhou_2`) — *Tarraconian: **Magistrat van Zachtgouwe***
+  * **[HRE]** **Hongzhou** (`c_hongzhou`) — *Tarraconian: **Magistrat van Pôjang-Grôzwazzergouwe***
   * **[HRE]** **Jianchang** (`c_jianchang`) — *Tarraconian: **Magistrat van Stichtglantz***
-  * **[HRE]** **Jizhou** (`c_jizhou_3`) — *Tarraconian: **Magistrat van Sêlichgouwe***
+  * **[HRE]** **Jizhou** (`c_jizhou_3`) — *Tarraconian: **Magistrat van Hêlgouwe***
   * **[HRE]** **Linjiang** (`c_linjiang`) — *Tarraconian: **Magistrat van BîdemFlôz***
   * **[HRE]** **Yuanzhou** (`c_yuanzhou`) — *Tarraconian: **Magistrat van Eêrstgouwe***
   * **[HRE]** **Yunzhou** (`c_yunzhou_2`) — *Tarraconian: **Magistrat van Grûnbambûsgouwe***
 * **Duchy of Dingjiang** (`d_dingjiang`) — *4/4 in HRE*
-  * **[HRE]** **Jiangzhou** (`c_yunyang`) — *Tarraconian: **Magistrat van Flôzgouwe***
+  * **[HRE]** **Jiangzhou** (`c_yunyang`) — *Tarraconian: **Magistrat van Langflôzgouwe***
   * **[HRE]** **Nankang** (`c_nankang`) — *Tarraconian: **Magistrat van Sûtgesont***
   * **[HRE]** **Raozhou** (`c_raozhou`) — *Tarraconian: **Magistrat van Rîchdomgouwe***
-  * **[HRE]** **Xinzhou** (`c_xinhzou`) — *Tarraconian: **Magistrat van Trûwegouwe***
+  * **[HRE]** **Xinzhou** (`c_xinhzou`) — *Tarraconian: **Magistrat van Geloufgouwe***
 * **Duchy of Zhaoxin** (`d_zhaoxin`) — *3/3 in HRE*
   * **[HRE]** **Nanan** (`c_nanan`) — *Tarraconian: **Magistrat van Sûtfrid***
   * **[HRE]** **Ningduzhou** (`c_ningduzhou`) — *Tarraconian: **Magistrat van RûweStatgouwe***
@@ -5531,8 +5531,8 @@
   * **[HRE]** **Quzhou** (`c_xin_an`) — *Tarraconian: **Magistrat van Krûzstrâtegouwe***
   * **[HRE]** **Taizhou** (`c_taizhou`) — *Tarraconian: **Magistrat van Torngouwe***
   * **[HRE]** **Wenzhou** (`c_wenzhou_2`) — *Tarraconian: **Magistrat van Wormgouwe***
-  * **[HRE]** **Wuzhou** (`c_wuzhou`) — *Tarraconian: **Magistrat van Swartzgouwe***
-  * **[HRE]** **Yuezhou** (`c_yuezhou`) — *Tarraconian: **Magistrat van Ôvergouwe***
+  * **[HRE]** **Wuzhou** (`c_wuzhou`) — *Tarraconian: **Magistrat van Wûstêrngouwe***
+  * **[HRE]** **Yuezhou** (`c_yuezhou`) — *Tarraconian: **Magistrat van Jüetgouwe***
 * **Duchy of Zhexi** (`d_zhexi`) — *4/4 in HRE*
   * **[HRE]** **Hangzhou** (`c_hangzhou`) — *Tarraconian: **Magistrat van Vêrgouwe***
   * **[HRE]** **Huzhou** (`c_huzhou`) — *Tarraconian: **Magistrat van Sêgouwe***
@@ -5549,7 +5549,7 @@
   * **[HRE]** **Haozhou** (`c_haozhou`) — *Tarraconian: **Magistrat van Grâchtgouwe***
   * **[HRE]** **Liyang** (`c_liyang_2`) — *Tarraconian: **Magistrat van Passsunne***
   * **[HRE]** **Luzhou** (`c_lujiang`) — *Tarraconian: **Magistrat van Hûsgouwe***
-  * **[HRE]** **Shouzhou** (`c_shouzhou`) — *Tarraconian: **Magistrat van Lêvengouwe***
+  * **[HRE]** **Shouzhou** (`c_shouzhou`) — *Tarraconian: **Magistrat van Langlêvinggouwe***
   * **[HRE]** **Shuzhou** (`c_shuzhou`) — *Tarraconian: **Magistrat van Rûstgouwe***
 * **Duchy of Huainan** (`d_huainan`) — *4/4 in HRE*
   * **[HRE]** **Chuzhou** (`c_chuzhou_1`) — *Tarraconian: **Magistrat van Tschûgouwe***
@@ -5602,9 +5602,9 @@
   * **[HRE]** **Jianzhou** (`c_jian_an`) — *Tarraconian: **Magistrat van Stichtgouwe***
   * **[HRE]** **Nanjian** (`c_nanjian`) — *Tarraconian: **Magistrat van Sûtswêrt***
   * **[HRE]** **Shaowu** (`c_shaowu`) — *Tarraconian: **Magistrat van Schôwâpen***
-  * **[HRE]** **Tingzhou** (`c_tingzhou`) — *Tarraconian: **Magistrat van Torngouwe***
+  * **[HRE]** **Tingzhou** (`c_tingzhou`) — *Tarraconian: **Magistrat van Santschotgouwe***
 * **Duchy of Pinghai** (`d_pinghai`) — *3/3 in HRE*
-  * **[HRE]** **Quanzhou** (`c_quanzhou`) — *Tarraconian: **Magistrat van Vollgouwe***
+  * **[HRE]** **Quanzhou** (`c_quanzhou`) — *Tarraconian: **Magistrat van Brunngouwe***
   * **[HRE]** **Xinghua** (`c_xinghua`) — *Tarraconian: **Magistrat van Upganckeêre***
   * **[HRE]** **Zhangzhou** (`c_zhangzhou`) — *Tarraconian: **Magistrat van Dschânggouwe***
 * **Duchy of Weiwu** (`d_weiwu`) — *2/2 in HRE*
@@ -5619,9 +5619,9 @@
 * **Duchy of Hunan** (`d_hunan`) — *5/5 in HRE*
   * **[HRE]** **Chenzhou** (`c_chenzhou_1`) — *Tarraconian: **Magistrat van Boschstatgouwe***
   * **[HRE]** **Guiyang** (`c_guiyang`) — *Tarraconian: **Magistrat van Edelsunne***
-  * **[HRE]** **Hengzhou** (`c_hengzhou`) — *Tarraconian: **Magistrat van Dwersgouwe***
+  * **[HRE]** **Hengzhou** (`c_hengzhou`) — *Tarraconian: **Magistrat van Wâgegouwe***
   * **[HRE]** **Lianzhou** (`c_lianzhou`) — *Tarraconian: **Magistrat van Schakelgouwe***
-  * **[HRE]** **Tanzhou** (`c_tanzhou`) — *Tarraconian: **Magistrat van Sandelgouwe***
+  * **[HRE]** **Tanzhou** (`c_tanzhou`) — *Tarraconian: **Magistrat van Pôelgouwe***
 * **Duchy of Lingling** (`d_lingling`) — *4/4 in HRE*
   * **[HRE]** **Daozhou** (`c_daozhou`) — *Tarraconian: **Magistrat van Strâtegouwe***
   * **[HRE]** **Quanzhou** (`c_quanzhou_2`) — *Tarraconian: **Magistrat van Vollgouwe***
