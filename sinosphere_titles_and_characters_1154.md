@@ -111,7 +111,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |10|`c_datong_2`|**Datong**|**大同**|—| **Magistrat van GrôzEendracht** |**Magistrat van Grôzeendracht**|✅ Pre-867 Classical|**[RE]**|shatuo|24|4|b_yunzhong [castle], b_huairen_2 [chu...|
 |11|`c_hongzhou_2`|**Hongzhou**|**弘州**|—| **Magistrat van Grôzmiltgouwe** |**Magistrat van Grôzmiltgouwe**|✅ Pre-867 Classical|**[RE]**|shatuo|25|2|b_yongning [castle], b_shunsheng [city]|
 |12|`c_shuozhou`|**Shuozhou**|**朔州**|—| **Magistrat van Nordwartgouwe** |**Magistrat van Nordwartgouwe**|✅ Pre-867 Classical|**[RE]**|shatuo|20|4|b_shanyang [castle], b_mayi [church],...|
-|13|`c_yingzhou_5`|**Yingzhou**|**应州**|—| **Magistrat van Antwurtgouwe** |**Magistrat van Antwurtgouwe**|✅ Pre-867 Classical|**[RE]**|shatuo|27|3|b_jincheng [castle], b_huanyuan [city...|
+|13|`c_yingzhou_5`|**Yingzhou**|**应州**|—| **Magistrat van Antwurtgouwe-in-dem-Norde** |**Magistrat van Antwurtgouwe-in-dem-Norde**|✅ Pre-867 Classical|**[RE]**|shatuo|27|3|b_jincheng [castle], b_huanyuan [city...|
 |14|`c_yuzhou`|**Yuzhou**|**蔚州**|—| **Magistrat van Keisersgouwe** |**Magistrat van Keisersgouwe**|✅ Pre-867 Classical|**[RE]**|shatuo|21|4|b_lingqiu [castle], b_feihu [castle],...|
 
 #### 2.1.2 Kingdom of Hebei (`k_hebei` / 河北) — **Kûnincrich van dem Nordflôze**
@@ -167,7 +167,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |30|`c_fenzhou`|**Fenzhou**|**汾州**|—| **Magistrat van Fêngouwe** |**Magistrat van Fêngouwe**|✅ Pre-867 Classical|**[RE]**|Zhenwu|45|3|b_xihe [castle], b_pingyao [city], b_...|
 |31|`c_lanzhou`|**Lanzhou**|**岚州**|—| **Magistrat van Nevelgouwe** |**Magistrat van Blômengouwe**|✅ Pre-867 Classical|**[RE]**|shatuo|26|4|b_yifang [castle], b_hehe_2 [city], b...|
 |32|`c_liaozhou`|**Yizhou**|**仪州**|—| **Magistrat van Pêpergouwe** |**Magistrat van Pêpergouwe**|✅ Pre-867 Classical|**[RE]**|Zhenwu|42|4|b_liaoshan [castle], b_yushe [city], ...|
-|33|`c_shizhou`|**Shizhou**|**石州**|—| **Magistrat van Gâvegouwe** |**Magistrat van Gâvegouwe**|✅ Pre-867 Classical|**[RE]**|sogdian|43|4|b_lishi [castle], b_fangshan [city], ...|
+|33|`c_shizhou`|**Shizhou**|**石州**|—| **Magistrat van Steingouwe** |**Magistrat van Steingouwe**|✅ Pre-867 Classical|**[RE]**|sogdian|43|4|b_lishi [castle], b_fangshan [city], ...|
 |34|`c_taiyuan`|**Taiyuan**|**太原**|—| **Magistrat van Grôzveit** |**Magistrat van Grôzveit**|✅ Pre-867 Classical|**[RE]**|Zhenwu|47|5|b_taiyuan [castle], b_shouyang [city]...|
 
 ##### Duchy of Hezhong (`d_hezhong` / 河中) — **Gubernat van dem Middenflôze** — **Gubernat van dem Middenflôze** — *5/5 in Roman Empire*
@@ -191,7 +191,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|42|`c_longde`|**Luzhou**|**潞州**|—| **Magistrat van Lûflôzgouwe** |**Magistrat van Lûflôzgouwe**|✅ Pre-867 Classical|**[RE]**|han|51|4|b_shangdang [castle], b_lucheng_1 [ci...|
+|42|`c_longde`|**Luzhou**|**潞州**|—| **Magistrat van Lûgouwe** |**Magistrat van Lûgouwe**|✅ Pre-867 Classical|**[RE]**|han|51|4|b_shangdang [castle], b_lucheng_1 [ci...|
 |43|`c_yangcheng`|**Qinzhou**|**沁州**|—| **Magistrat van Tsînflôzgouwe** |**Magistrat van Zînflôzgouwe**|✅ Pre-867 Classical|**[RE]**|han|53|3|b_qinyuan [castle], b_mianshang [city...|
 |44|`c_zezhou`|**Zezhou**|**泽州**|—| **Magistrat van Normengouwe** |**Magistrat van Normengouwe**|✅ Pre-867 Classical|**[RE]**|han|55|3|b_jincheng_2 [castle], b_gaoping [cit...|
 
@@ -228,7 +228,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|56|`c_guozhou`|**Guozhou**|**虢州**|—| **Magistrat van Fruchtgouwe** |**Magistrat van Fruchtgouwe**|✅ Pre-867 Classical|`k_qianzhong`|han|72|2|b_hongnong [castle], b_lushi [city]|
+|56|`c_guozhou`|**Guozhou**|**虢州**|—| **Magistrat van Gûôkgouwe** |**Magistrat van Gûôkgouwe**|✅ Pre-867 Classical|`k_qianzhong`|han|72|2|b_hongnong [castle], b_lushi [city]|
 |57|`c_shanzhou_2`|**Shanzhou**|**陕州**|—| **Magistrat van Klûsengouwe** |**Magistrat van Klûsengouwe**|✅ Pre-867 Classical|`k_qianzhong`|han|72|2|b_shan [castle], b_lingbao [city]|
 
 ##### Duchy of Zhenghua (`d_zhenghua` / 郑滑) — **Gubernat van Dschêngglitscher** — **Gubernat van Dschêngglitscher** — *0/2 in Roman Empire*
@@ -327,7 +327,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |90|`c_huichuan`|**Huichuan**|**会川**|—| **Magistrat van dem Samelingbache** |**Magistrat van dem Samelingbache**|✅ Pre-867 Classical|`k_qianzhong`|Huichuan|35|3|b_huichuan_1 [castle], b_nuodan [city...|
-|91|`c_jianchang_1`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz** |**Magistrat van Stichtglantz**|✅ Pre-867 Classical|`k_qianzhong`|Huichuan|25|2|b_yuexi [castle], b_taideng [city]|
+|91|`c_jianchang_1`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz-in-der-Klûse** |**Magistrat van Stichtglantz-in-der-Klûse**|✅ Pre-867 Classical|`k_qianzhong`|Huichuan|25|2|b_yuexi [castle], b_taideng [city]|
 
 ##### Duchy of Jianchuan (`d_jianchuan` / 剑川) — **Gubernat van dem Swertbache** — **Gubernat van dem Swertbache** — *0/3 in Roman Empire*
 
@@ -382,7 +382,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |110|`c_changzhou_1`|**Changzhou**|**昌州**|—| **Magistrat van Voorspôetgouwe** |**Magistrat van Voorspôetgouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|41|2|b_jingnan [castle], b_yongchuan [city]|
 |111|`c_luzhou_2`|**Luzhou**|**泸州**|—| **Magistrat van Lûflôzgouwe** |**Magistrat van Lûflôzgouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|41|3|b_luchuan [castle], b_mianshui [city]...|
 |112|`c_nanxi`|**Rongzhou**|**戎州**|—| **Magistrat van Wâpengouwe** |**Magistrat van Wâpengouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|38|2|b_bodao [castle], b_yibin [city]|
-|113|`c_rongzhou`|**Rongzhou**|**荣州**|—| **Magistrat van Miltgouwe** |**Magistrat van Miltgouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|40|2|b_xuchuan [castle], b_gongjing [city]|
+|113|`c_rongzhou`|**Rongzhou**|**荣州**|—| **Magistrat van Êregouwe** |**Magistrat van Êregouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|40|2|b_xuchuan [castle], b_gongjing [city]|
 |114|`c_suining`|**Suizhou**|**遂州**|—| **Magistrat van Vollbrengegouwe** |**Magistrat van Vollbrengegouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|41|3|b_fangyi [castle], b_suining_1 [city]...|
 |115|`c_yuzhou_2`|**Yuzhou**|**渝州**|—| **Magistrat van Jûflôzgouwe** |**Magistrat van Jûflôzgouwe**|✅ Pre-867 Classical|`k_xichuan`|Kuizhou|45|3|b_ba [castle], b_bishan [city], b_jia...|
 
@@ -396,7 +396,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |116|`c_fuzhou_4`|**Fuzhou**|**涪州**|—| **Magistrat van Fûflôzgouwe** |**Magistrat van Fûflôzgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|43|4|b_fuling [castle], b_lewen [city], b_...|
 |117|`c_kuizhou`|**Kuizhou**|**夔州**|—| **Magistrat van Kwêigouwe** |**Magistrat van Kwêigouwe**|✅ Pre-867 Classical|`k_qianzhong`|yi|46|4|b_fengjie [castle], b_dachang [city],...|
 |118|`c_wanzhou`|**Wanzhou**|**万州**|—| **Magistrat van Têndûsentgouwe** |**Magistrat van Têndûsentgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|47|4|b_nanpu [castle], b_wuning_1 [city], ...|
-|119|`c_zhongzhou`|**Zhongzhou**|**忠州**|—| **Magistrat van Trûwegouwe** |**Magistrat van Trûwegouwe**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|43|3|b_linjiang [castle], b_dianjiang [cit...|
+|119|`c_zhongzhou`|**Zhongzhou**|**忠州**|—| **Magistrat van Trûwegouwe-am-Flôze** |**Magistrat van Trûwegouwe-am-Flôze**|✅ Pre-867 Classical|`k_qianzhong`|Kuizhou|43|3|b_linjiang [castle], b_dianjiang [cit...|
 
 ##### Duchy of Qianzhong (`d_qianzhong` / 黔中) — **Gubernat van dem Swartzmidden** — **Gubernat van dem Swartzmidden** — *0/7 in Roman Empire*
 
@@ -415,8 +415,8 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |127|`c_lingxi`|**Xizhou**|**溪州**|—| **Magistrat van Snellbachgouwe** |**Magistrat van Snellbachgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|51|3|b_daxiang [castle], b_danting [church...|
-|128|`c_luxi`|**Chenzhou**|**辰州**|—| **Magistrat van Draaksterngouwe** |**Magistrat van Draaksterngouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|73|5|b_yuanling [castle], b_chenxi [city],...|
-|129|`c_luyang`|**Jinzhou**|**锦州**|—| **Magistrat van Sîdenziergouwe** |**Magistrat van Sîdenziergouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|51|3|b_luyang [castle], b_changfeng [city]...|
+|128|`c_luxi`|**Chenzhou**|**辰州**|—| **Magistrat van Draaksterngouwe-am-Flôze** |**Magistrat van Draaksterngouwe-am-Flôze**|✅ Pre-867 Classical|`k_qianzhong`|hmong|73|5|b_yuanling [castle], b_chenxi [city],...|
+|129|`c_luyang`|**Jinzhou**|**锦州**|—| **Magistrat van Sîdenziergouwe-am-Flôze** |**Magistrat van Sîdenziergouwe-am-Flôze**|✅ Pre-867 Classical|`k_qianzhong`|hmong|51|3|b_luyang [castle], b_changfeng [city]...|
 |130|`c_shangxi`|**Shangxi**|**上溪**|—| **Magistrat van Ôversnellbach** |**Magistrat van Ôversnellbach**|✅ Pre-867 Classical|`k_qianzhong`|hmong|58|3|b_shanxi [castle], b_anfu [city], b_b...|
 |131|`c_tanyang`|**Xuzhou**|**叙州**|—| **Magistrat van Ranggouwe** |**Magistrat van Ranggouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|55|4|b_longbiao [castle], b_tanyang [city]...|
 |132|`c_yezhou`|**Jiangzhou**|**奖州**|—| **Magistrat van Lôfgouwe** |**Magistrat van Lôfgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|40|3|b_eshan [castle], b_zijiang [city], b...|
@@ -439,7 +439,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 |136|`c_shaoqing`|**Xizhou**|**羲州**|—| **Magistrat van Sunneleidergouwe** |**Magistrat van Sunneleidergouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|35|4|b_xizhou [castle], b_haozhou [city], ...|
 |137|`c_shunzhou`|**Shunzhou**|**顺州**|—| **Magistrat van Willechgouwe** |**Magistrat van Willechgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|40|3|b_qushui_1 [castle], b_humao [city], ...|
 |138|`c_sie`|**Sie**|**思峨**|—| **Magistrat van Sînnesteil** |**Magistrat van Sînnesteil**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|42|4|b_sie [castle], b_yujing [city], b_fe...|
-|139|`c_zongzhou`|**Zongzhou**|**总州**|—| **Magistrat van Stamgouwe** |**Magistrat van Stamgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|33|3|b_songshui [castle], b_yanquan [churc...|
+|139|`c_zongzhou`|**Zongzhou**|**总州**|—| **Magistrat van Houbtgouwe** |**Magistrat van Houbtgouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|33|3|b_songshui [castle], b_yanquan [churc...|
 
 ##### Duchy of Shimen (`d_shimen` / 石门) — **Gubernat van dem Stêntôre** — **Gubernat van dem Stêntôre** — *0/3 in Roman Empire*
 
@@ -461,11 +461,11 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-|146|`c_guzhou`|**Guzhou**|**古州**|—| **Magistrat van Dalgouwe** |**Magistrat van Dalgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|39|3|b_leshan [castle], b_lexing [city], b...|
-|147|`c_huangzhou_1`|**Huangzhou**|**晃州**|—| **Magistrat van Glantzgouwe** |**Magistrat van Glantzgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|39|2|b_bianxi [castle], b_tonggu_1 [city]|
+|146|`c_guzhou`|**Guzhou**|**古州**|—| **Magistrat van Altgouwe** |**Magistrat van Altgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|39|3|b_leshan [castle], b_lexing [city], b...|
+|147|`c_huangzhou_1`|**Huangzhou**|**晃州**|—| **Magistrat van Blîkgouwe** |**Magistrat van Blîkgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|39|2|b_bianxi [castle], b_tonggu_1 [city]|
 |148|`c_juzhou`|**Juzhou**|**矩州**|—| **Magistrat van Sêtegouwe** |**Magistrat van Sêtegouwe**|✅ Pre-867 Classical|`k_qianzhong`|Yi-Bouxcuengh|32|4|b_pingan [castle], b_binhua_1 [city],...|
 |149|`c_nanping`|**Nanping**|**南平**|—| **Magistrat van Sûtebene** |**Magistrat van Sûtebene**|✅ Pre-867 Classical|`k_qianzhong`|hmong|31|4|b_nanping [castle], b_maolong [city],...|
-|150|`c_yingzhou_4`|**Yingzhou**|**应州**|—| **Magistrat van Antwurtgouwe** |**Magistrat van Antwurtgouwe**|✅ Pre-867 Classical|`k_qianzhong`|hmong|31|3|b_dushang [castle], b_tuolong [city],...|
+|150|`c_yingzhou_4`|**Yingzhou**|**应州**|—| **Magistrat van Antwurtgouwe-in-dem-Sûte** |**Magistrat van Antwurtgouwe-in-dem-Sûte**|✅ Pre-867 Classical|`k_qianzhong`|hmong|31|3|b_dushang [castle], b_tuolong [city],...|
 
 #### 2.2.5 Kingdom of Xichuan (`k_xichuan` / 西川) — **Kûnincrich van dem Westbache**
 *Extent: **12 Counties** | Development: **452** (avg 37.7) | Roman Control: **0/12** | Flagged Anachronisms: **0***
@@ -476,7 +476,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |151|`c_hanyuan`|**Lizhou**|**黎州**|—| **Magistrat van Lîgouwe** |**Magistrat van Lîgouwe**|✅ Pre-867 Classical|`k_xichuan`|han|34|2|b_hanyuan [castle], b_tongwang [city]|
 |152|`c_jiazhou`|**Jiazhou**|**嘉州**|—| **Magistrat van Prîsgouwe** |**Magistrat van Prîsgouwe**|✅ Pre-867 Classical|`k_xichuan`|han|37|4|b_longyou [castle], b_jiajiang [city]...|
-|153|`c_meizhou`|**Meizhou**|**眉州**|—| **Magistrat van Prûmengouwe** |**Magistrat van Prûmengouwe**|✅ Pre-867 Classical|`k_xichuan`|han|39|3|b_tongyi [castle], b_danling [city], ...|
+|153|`c_meizhou`|**Meizhou**|**眉州**|—| **Magistrat van Brâwengouwe** |**Magistrat van Brâwengouwe**|✅ Pre-867 Classical|`k_xichuan`|han|39|3|b_tongyi [castle], b_danling [city], ...|
 |154|`c_qiongbu`|**Qiongbu**|**邛部**|—| **Magistrat van Tschiôngambet** |**Magistrat van Tschiôngambet**|✅ Pre-867 Classical|`k_xichuan`|qiang|28|3|b_nuozuo [castle], b_beilu_2 [city], ...|
 |155|`c_qiongzhou`|**Qiongzhou**|**邛州**|—| **Magistrat van Jâdegouwe** |**Magistrat van Jâdegouwe**|✅ Pre-867 Classical|`k_xichuan`|han|44|3|b_linqiong [castle], b_pujiang [city]...|
 |156|`c_yazhou_2`|**Yazhou**|**雅州**|—| **Magistrat van Edelgouwe** |**Magistrat van Edelgouwe**|✅ Pre-867 Classical|`k_xichuan`|han|36|3|b_yandao [castle], b_rongjing [city],...|
@@ -639,7 +639,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |216|`c_fuzhou_2`|**Fuzhou**|**抚州**|—| **Magistrat van Zachtgouwe** |**Magistrat van Zachtgouwe**|✅ Pre-867 Classical|`k_jiangxi`|yao|70|5|b_linchuan [castle], b_jinxi [city], ...|
 |217|`c_hongzhou`|**Hongzhou**|**洪州**|—| **Magistrat van Pôjang-Grôzwazzergouwe** |**Magistrat van Pôjang-Grôzwazzergouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|80|5|b_nanchang [castle], b_wuning [city],...|
-|218|`c_jianchang`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz** |**Magistrat van Stichtglantz**|✅ Pre-867 Classical|`k_jiangxi`|yao|55|3|b_nancheng [castle], b_nanfeng [city]...|
+|218|`c_jianchang`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz-in-Jângsche** |**Magistrat van Stichtglantz-in-Jângsche**|✅ Pre-867 Classical|`k_jiangxi`|yao|55|3|b_nancheng [castle], b_nanfeng [city]...|
 |219|`c_jizhou_3`|**Jizhou**|**吉州**|—| **Magistrat van Hêlgouwe** |**Magistrat van Hêlgouwe**|✅ Pre-867 Classical|`k_jiangxi`|yao|57|5|b_luling [castle], b_anfu_2 [city], b...|
 |220|`c_linjiang`|**Linjiang**|**临江**|—| **Magistrat van BîdemFlôz** |**Magistrat van Bîdemflôz**|✅ Pre-867 Classical|`k_jiangxi`|han|61|3|b_qingjiang [castle], b_xingan [churc...|
 |221|`c_yuanzhou`|**Yuanzhou**|**袁州**|—| **Magistrat van Eêrstgouwe** |**Magistrat van Eêrstgouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|57|3|b_yichun [castle], b_fenyi [city], b_...|
@@ -1047,7 +1047,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |381|`c_cheongju`|**Cheongju**|**清州**|—| **Magistrat van Loutergouwe** |**Magistrat van Loutergouwe**|✅ Pre-867 Classical|**[RE]**|Samhan|27|3|b_Goryeo_Yanggwan_Cheongju [castle], ...|
-|382|`c_chungju`|**Chungju**|**忠州**|—| **Magistrat van Trûwegouwe** |**Magistrat van Trûwegouwe**|✅ Pre-867 Classical|**[RE]**|Samhan|27|4|b_Goryeo_Yanggwan_Chungju [castle], b...|
+|382|`c_chungju`|**Chungju**|**忠州**|—| **Magistrat van Trûwegouwe-in-Bêkdsche** |**Magistrat van Trûwegouwe-in-Bêkdsche**|✅ Pre-867 Classical|**[RE]**|Samhan|27|4|b_Goryeo_Yanggwan_Chungju [castle], b...|
 |383|`c_gongju`|**Gongju**|**公州**|—| **Magistrat van Hertzogengouwe** |**Magistrat van Hertzogengouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|27|4|b_Goryeo_Yanggwan_Gongju [castle], b_...|
 |384|`c_hongju`|**Hongju**|**洪州**|—| **Magistrat van Grôzwazzergouwe** |**Magistrat van Grôzwazzergouwe**|✅ Pre-867 Classical|**[RE]**|Yukju|22|2|b_Goryeo_Yanggwan_Hongju [castle], b_...|
 
@@ -1326,7 +1326,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |492|`c_BAL_makhil`|**Makhil**|**鄚颉**|—| **Magistrat van Mâkjêk** |**Magistrat van Mâkjêk**|✅ Pre-867 Classical|**[RE]**|balhae|29|4|b_Liao_Mozhou [castle], b_Liao_Gaozho...|
-|493|`c_BAL_sokju`|**Chénzhōu**|**辰州**|陳州| **Magistrat van Draaksterngouwe** |**Magistrat van Draaksterngouwe**|✅ Pre-867 Classical|**[RE]**|balhae|28|3|b_Liao_Suzhou2 [castle], b_FIC_Liao_S...|
+|493|`c_BAL_sokju`|**Chénzhōu**|**辰州**|陳州| **Magistrat van Draaksterngouwe-in-Bâlhai** |**Magistrat van Draaksterngouwe-in-Bâlhai**|✅ Pre-867 Classical|**[RE]**|balhae|28|3|b_Liao_Suzhou2 [castle], b_FIC_Liao_S...|
 |494|`c_BAL_west_makhil`|**West Makhil**|**西鄚颉**|—| **Magistrat van WestMâkJêk** |**Magistrat van Westmâkjêk**|✅ Pre-867 Classical|**[RE]**|balhae|22|3|b_Liao_Ningjiang [castle], b_FIC_Liao...|
 
 ##### Duchy of Bóhai (`d_BAL_parhae` / 渤海) — **Gubernat van Bôhaimêr** — **Gubernat van Bôhaimêr** — *5/5 in Roman Empire*
@@ -1493,7 +1493,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 | # | County Key | English Name | Chinese Characters (汉字) | Traditional / Variant | Tarraconian Chancellery Title | Historical Status & Resolution | 1154 Liege | 1154 Culture | Dev | Holdings | Built Holdings |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |544|`c_LIAO_chaoyang`|**Chaoyang**|**朝阳**|—| **Magistrat van Hôfsunne** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Daling River Basin (大凌河 / 白狼水)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Liao_chaoyang River / Regional Basin (Liao_chaoyang)*|**[RE]**|Chengde|16|4|b_Liao_Chaoyang [castle], b_Liao_Chua...|
-|545|`c_LIAO_jinzhou`|**Jinzhou**|**锦州**|—| **Magistrat van Sîdenziergouwe** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Xiaoling River / Liaodong Corridor (小凌河 / 锦川)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Liao_jinzhou River / Regional Basin (Liao_jinzhou)*|**[RE]**|Chengde|26|3|b_Liao_Yizhou3 [castle], b_Liao_Xizho...|
+|545|`c_LIAO_jinzhou`|**Jinzhou**|**锦州**|—| **Magistrat van Sîdenziergouwe-in-Chitân** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Xiaoling River / Liaodong Corridor (小凌河 / 锦川)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Liao_jinzhou River / Regional Basin (Liao_jinzhou)*|**[RE]**|Chengde|26|3|b_Liao_Yizhou3 [castle], b_Liao_Xizho...|
 |546|`c_LIAO_liaozhou`|**Liaozhou**|**辽州**|—| **Magistrat van Ljôgouwe** |**Magistrat van Ljôgouwe**|✅ Pre-867 Classical|`d_eman_sikhotebei`|shiwei|22|3|b_Liao_Liaozhou [castle], b_Liao_Suiz...|
 |547|`c_LIAO_xianzhou`|**Xianzhou**|**显州**|—| **Magistrat van Vermaertgouwe** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Yiwulü Mountain Basin (医巫闾山山麓)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Liao_xianzhou River / Regional Basin (Liao_xianzhou)*|**[RE]**|mongol|16|3|b_Liao_Xianzhou [castle], b_Liao_Haib...|
 |548|`c_lnj_liaoxi`|**Liaoxi**|**辽西**|—| **Magistrat van Ljôwest** |⚠️ **[Post-867 / Tier 3]** → *Opt B: Western Liao River Basin (西辽河)*|⚠️ **[Post-867 / Tier 3]** → *Opt B: Lnj_liaoxi River / Regional Basin (Lnj_liaoxi)*|**[RE]**|Chengde|21|3|b_cirlzj_qinhuangdao [castle], b_ping...|
@@ -1502,7 +1502,7 @@ Below are the 240 counties belonging to the broader Sinosphere (Korea/Samhan, Ja
 > [!NOTE]
 > **Historical Anachronism Resolutions in Duchy of Liaoxi:**
 > * **`c_LIAO_chaoyang` (Chaoyang / 朝阳):** Post-867 Khitan regional commandery in the Daling River valley. *Resolved via Option B: **Daling River Basin (大凌河 / 白狼水)**; Tarraconian Chancellery title: **Magistrat van Hôfsunne**.*
-> * **`c_LIAO_jinzhou` (Jinzhou / 锦州):** Established in 923 AD by Yelü Abaoji with captive Han artisans from Pingzhou. *Resolved via Option B: **Xiaoling River / Liaodong Corridor (小凌河 / 锦川)**; Tarraconian Chancellery title: **Magistrat van Sîdenziergouwe**.*
+> * **`c_LIAO_jinzhou` (Jinzhou / 锦州):** Established in 923 AD by Yelü Abaoji with captive Han artisans from Pingzhou. *Resolved via Option B: **Xiaoling River / Liaodong Corridor (小凌河 / 锦川)**; Tarraconian Chancellery title: **Magistrat van Sîdenziergouwe-in-Chitân**.*
 > * **`c_LIAO_xianzhou` (Xianzhou / 显州):** Established in 926 AD at the medical and ancestral tumulus of Prince Yelü Bei (Prince of Dongdan). *Resolved via Option B: **Yiwulü Mountain Basin (医巫闾山山麓)**; Tarraconian Chancellery title: **Magistrat van Vermaertgouwe**.*
 > * **`c_lnj_liaoxi` (Liaoxi / 辽西):** Descriptive post-867 frontier slice; lacks ancient urban center. *Resolved via Option B: **Western Liao River Basin (西辽河)**; Tarraconian Chancellery title: **Magistrat van Ljôwest**.*
 > * **`c_lnj_liaoxibei` (Liaoxibei / 辽西北):** Descriptive post-867 frontier slice; lacks ancient urban center. *Resolved via Option B: **Northern Laoha River Basin (老哈河北原)**; Tarraconian Chancellery title: **Magistrat van Ljôwestnord**.*
@@ -1810,7 +1810,7 @@ In the Sinosphere, however, administrative foundations were named logographicall
 |4|`c_LIAO_dalian`|**Dalian**|**达里岸**|Khitan (`k_khitan`)|Post-867 Khitan regional encampment; lacks pre-867 civil center.|**Option B:** `Dalai Nur / Hulun Lake Basin` (达赉湖 / 达里泊)| **Magistrat van Grôzgâvouwe** |Post-867 Khitan lakeside encampment on the eastern steppe; characters 达里岸 denote 'Great Meadow Strand / Coast'. Calqued to Grôzgâvouwe.|
 |5|`c_LIAO_heicaoan`|**Heicaoan**|**黑草岸**|Khitan (`k_khitan`)|Post-867 pastoral encampment on the eastern steppe frontier.|**Option B:** `Laoha River Basin` (老哈河 / 乌尔吉木伦)| **Magistrat van Swartzwêdouwe** |Post-867 pastoral encampment along the fertile riverbanks; characters 黑草岸 literally mean 'Black Grass Shore/Strand'. Calqued to Swartzwêdouwe.|
 |6|`c_LIAO_horqinan`|**Horqinan**|**火儿赤纳**|Khitan (`k_khitan`)|Post-867 Horqin steppe grazing division; unverified prior to 867 AD.|**Option B:** `Horqin Steppe / Nonni Basin` (科尔沁草原 / 嫩江)| **Magistrat van Korschînmarch** |Post-867 Horqin steppe grazing division; phonetic adaptation of Mongolic/Khitan Khorchin ('Quiver Bearer') to Tarraconian Korschînmarch.|
-|7|`c_LIAO_jinzhou`|**Jinzhou**|**锦州**|Raole (`k_raole`)|Established in 923 AD by Yelü Abaoji with captive Han artisans from Pingzhou.|**Option B:** `Xiaoling River / Liaodong Corridor` (小凌河 / 锦川)| **Magistrat van Sîdenziergouwe** |Established in 923 AD by Abaoji with captive Han silk weavers; named 'Brocade Prefecture' (锦州). Calqued to Sîdenziergouwe.|
+|7|`c_LIAO_jinzhou`|**Jinzhou**|**锦州**|Raole (`k_raole`)|Established in 923 AD by Yelü Abaoji with captive Han artisans from Pingzhou.|**Option B:** `Xiaoling River / Liaodong Corridor` (小凌河 / 锦川)| **Magistrat van Sîdenziergouwe-in-Chitân** |Established in 923 AD by Abaoji with captive Han silk weavers; named 'Brocade Prefecture' (锦州). Calqued to Sîdenziergouwe.|
 |8|`c_LIAO_linhuang`|**Linhuang**|**临潢**|Khitan (`k_khitan`)|Founded in 918 AD by Yelü Abaoji (Emperor Taizu of Liao) as the Supreme Capital (Liao Shangjing / 上京临潢府) on the Shira Muren river.|**Option B:** `Shira Muren / Huang River Basin` (潢水 / 临潢川)| **Magistrat van Bîdemhuangflôz** |Founded in 918 AD by Abaoji as the Supreme Capital (Liao Shangjing) on the ancient Huangshui (Shira Muren); characters 临潢 literally mean 'Overlooking the Huang River'. Calqued to Bîdemhuangflôz.|
 |9|`c_LIAO_longhuazhou`|**Longhuazhou**|**龙化州**|Khitan (`k_khitan`)|Founded in 902 AD by Yelü Abaoji as a fortified private encampment (dongzhai) prior to his imperial coronation.|**Option B:** `Xar Moron Confluence Basin` (西拉木伦河与老哈河汇流处)| **Magistrat van Drachenkeêregouwe** |Founded in 902 AD as Abaoji's fortified encampment; characters 龙化州 denote 'Dragon Transformation Prefecture'. Calqued to Drachenkeêregouwe.|
 |10|`c_LIAO_ningzhou`|**Ningzhou**|**宁州**|Khitan (`k_khitan`)|Post-867 Liao garrison prefecture established in former Bohai territory.|**Option B:** `Fuzhou River Basin` (复州河 / 宁州川)| **Magistrat van Rûwegouwe-in-Chitân** |Post-867 Liao garrison prefecture in southern Liaodong; characters 宁州 denote 'Tranquil Prefecture'. Calqued to Rûwegouwe-in-Chitân.|

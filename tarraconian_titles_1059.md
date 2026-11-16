@@ -3209,7 +3209,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_BAL_xinzhou` (**[HRE]** Xinzhou) $\rightarrow$ **Magistrat van Nîegouwe-in-Bâlhai** *(or **Schindschou**)*
   * `c_BAL_yizhou` (**[HRE]** Yizhou) $\rightarrow$ **Magistrat van Îgouwe** *(or **Jidschou**)*
 * **Duchy of Moe-Su** (`d_BAL_moe_su`) $\rightarrow$ **Gubernat van Mâksûkflôz** *(or **Moe-Sû**)*
-  * `c_BAL_sokju` (**[HRE]** Chénzhōu) $\rightarrow$ **Magistrat van Draaksterngouwe** *(or **Tschêndschôu**)*
+  * `c_BAL_sokju` (**[HRE]** Chénzhōu) $\rightarrow$ **Magistrat van Draaksterngouwe-in-Bâlhai** *(or **Tschêndschôu**)*
   * `c_BAL_makhil` (**[HRE]** Makhil) $\rightarrow$ **Magistrat van Mâkjêk** *(or **Makhil**)*
   * `c_BAL_west_makhil` (**[HRE]** West Makhil) $\rightarrow$ **Magistrat van Westmâkjêk** *(or **West-Makhil**)*
 * **Duchy of Yālü-Zhangling** (`d_BAL_amnok_jangryeong`) $\rightarrow$ **Gubernat van dem Antflôze ende Langrücke** *(or **Jâlü-Dschangling**)*
@@ -3292,7 +3292,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Hedong** (`d_hedong`) $\rightarrow$ **Gubernat van Ôstgelbflôze** *(or **Hedong**)*
   * `c_fenzhou` (**[HRE]** Fenzhou) $\rightarrow$ **Magistrat van Fêngouwe** *(or **Fendschou**)*
   * `c_lanzhou` (**[HRE]** Lanzhou) $\rightarrow$ **Magistrat van Nevelgouwe** *(or **Landschou**)*
-  * `c_shizhou` (**[HRE]** Shizhou) $\rightarrow$ **Magistrat van Gâvegouwe** *(or **Schidschou**)*
+  * `c_shizhou` (**[HRE]** Shizhou) $\rightarrow$ **Magistrat van Steingouwe** *(or **Schidschou**)*
   * `c_taiyuan` (**[HRE]** Taiyuan) $\rightarrow$ **Magistrat van Grôzveit** *(or **Taijuan**)*
   * `c_liaozhou` (**[HRE]** Yizhou) $\rightarrow$ **Magistrat van Pêpergouwe** *(or **Jidschou**)*
 * **Duchy of Hezhong** (`d_hezhong`) $\rightarrow$ **Gubernat van dem Middenflôze** *(or **Hedschong**)*
@@ -3302,7 +3302,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_pingyang` (**[HRE]** Jinzhou) $\rightarrow$ **Magistrat van Schîngouwe-am-Flôze** *(or **Dschindschou**)*
   * `c_xizhou` (**[HRE]** Xizhou) $\rightarrow$ **Magistrat van Rârgouwe** *(or **Schidschou**)*
 * **Duchy of Zelu** (`d_zelu`) $\rightarrow$ **Gubernat van Lûbrûch** *(or **Selu**)*
-  * `c_longde` (**[HRE]** Luzhou) $\rightarrow$ **Magistrat van Lûflôzgouwe** *(or **Ludschou**)*
+  * `c_longde` (**[HRE]** Luzhou) $\rightarrow$ **Magistrat van Lûgouwe** *(or **Ludschou**)*
   * `c_yangcheng` (**[HRE]** Qinzhou) $\rightarrow$ **Magistrat van Zînflôzgouwe** *(or **Tschindschou**)*
   * `c_zezhou` (**[HRE]** Zezhou) $\rightarrow$ **Magistrat van Normengouwe** *(or **Sedschou**)*
 * **Duchy of Yanmen** (`d_yanmen`) $\rightarrow$ **Gubernat van dem Ganstôre** *(or **Janmen**)*
@@ -3317,7 +3317,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_datong_2` (**[HRE]** Datong) $\rightarrow$ **Magistrat van Grôzeendracht** *(or **Grôzem-Vride**)*
   * `c_hongzhou_2` (**[HRE]** Hongzhou) $\rightarrow$ **Magistrat van Grôzmiltgouwe** *(or **Hongdschou**)*
   * `c_shuozhou` (**[HRE]** Shuozhou) $\rightarrow$ **Magistrat van Nordwartgouwe** *(or **Schuodschou**)*
-  * `c_yingzhou_5` (**[HRE]** Yingzhou) $\rightarrow$ **Magistrat van Antwurtgouwe** *(or **Jingdschou**)*
+  * `c_yingzhou_5` (**[HRE]** Yingzhou) $\rightarrow$ **Magistrat van Antwurtgouwe-in-dem-Norde** *(or **Jingdschou**)*
   * `c_yuzhou` (**[HRE]** Yuzhou) $\rightarrow$ **Magistrat van Keisersgouwe** *(or **Judschou**)*
 * **Duchy of Zhenwu** (`d_xinan`) $\rightarrow$ **Gubernat van Wâpenmacht** *(or **Dschenwu**)*
   * `c_fuzhou` (**[HRE]** Fuzhou) $\rightarrow$ **Magistrat van Sêligouwe** *(or **Fudschou**)*
@@ -3409,7 +3409,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Chungju** (`d_chungju`) $\rightarrow$ **Gubernat van Trûwegouwe** *(or **Tschungdschu**)*
   * `c_cheongju` (**[HRE]** Cheongju) $\rightarrow$ **Magistrat van Loutergouwe** *(or **Klârgouwe**)*
-  * `c_chungju` (**[HRE]** Chungju) $\rightarrow$ **Magistrat van Trûwegouwe** *(or **Tschungdschu**)*
+  * `c_chungju` (**[HRE]** Chungju) $\rightarrow$ **Magistrat van Trûwegouwe-in-Bêkdsche** *(or **Tschungdschu**)*
   * `c_gongju` (**[HRE]** Gongju) $\rightarrow$ **Magistrat van Hertzogengouwe** *(or **Gongdschu**)*
   * `c_hongju` (**[HRE]** Hongju) $\rightarrow$ **Magistrat van Grôzwazzergouwe** *(or **Hongdschu**)*
 * **Duchy of Jeonju** (`d_jeonju`) $\rightarrow$ **Gubernat van Vollgouwe** *(or **Dschondschu**)*
@@ -3498,7 +3498,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Liaoxi** (`d_liaoxi`) $\rightarrow$ **Gubernat van Ljôwest** *(or **Liaoschi**)*
   * `c_LIAO_chaoyang` (**[HRE]** Chaoyang) $\rightarrow$ **Magistrat van Hôfsunne** *(or **Tschaojang**)*
-  * `c_LIAO_jinzhou` (**[HRE]** Jinzhou) $\rightarrow$ **Magistrat van Sîdenziergouwe** *(or **Dschindschou**)*
+  * `c_LIAO_jinzhou` (**[HRE]** Jinzhou) $\rightarrow$ **Magistrat van Sîdenziergouwe-in-Chitân** *(or **Dschindschou**)*
   * `c_lnj_liaoxi` (**[HRE]** Liaoxi) $\rightarrow$ **Magistrat van Ljôwest** *(or **Liaoschi**)*
   * `c_lnj_liaoxibei` (**[HRE]** Liaoxibei) $\rightarrow$ **Magistrat van Ljôwestnord** *(or **Liaoschibei**)*
   * `c_LIAO_xianzhou` (**[HRE]** Xianzhou) $\rightarrow$ **Magistrat van Vermaertgouwe** *(or **Schiandschou**)*
@@ -3805,7 +3805,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Khakass Hollow** (`d_khakass_hollow`) $\rightarrow$ **Gubernat van Chakass Hollow**
   * `c_abakan` ([Non-HRE] Abakan) $\rightarrow$ **Magistrat van Abakan**
   * `c_jerjul` ([Non-HRE] Jerjul) $\rightarrow$ **Magistrat van Dscherdschul**
-  * `c_julym` ([Non-HRE] Julym) $\rightarrow$ **Magistrat van Tschulîm**
+  * `c_julym` ([Non-HRE] Julym) $\rightarrow$ **Magistrat van Ôver-Tschulîm**
 * **Duchy of Togina** (`d_togina`) $\rightarrow$ **Gubernat van Togine**
   * `c_arzhan` ([Non-HRE] Arzhan) $\rightarrow$ **Magistrat van Ardschan**
   * `c_azas` ([Non-HRE] Azas) $\rightarrow$ **Magistrat van Azas**
@@ -4318,7 +4318,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_henan` ([Non-HRE] Henan) $\rightarrow$ **Magistrat van Flôzsût** *(or **Henan**)*
   * `c_ruzhou` ([Non-HRE] Ruzhou) $\rightarrow$ **Magistrat van Rûgouwe** *(or **Rudschou**)*
 * **Duchy of Shanguo** (`d_shanguo`) $\rightarrow$ **Gubernat van Klûsengûôk** *(or **Schanguô**)*
-  * `c_guozhou` ([Non-HRE] Guozhou) $\rightarrow$ **Magistrat van Fruchtgouwe** *(or **Guodschou**)*
+  * `c_guozhou` ([Non-HRE] Guozhou) $\rightarrow$ **Magistrat van Gûôkgouwe** *(or **Guodschou**)*
   * `c_shanzhou_2` ([Non-HRE] Shanzhou) $\rightarrow$ **Magistrat van Klûsengouwe** *(or **Schandschou**)*
 * **Duchy of Zhenghua** (`d_zhenghua`) $\rightarrow$ **Gubernat van Dschêngglitscher** *(or **Dschenghue**)*
   * `c_huazhou` ([Non-HRE] Huazhou) $\rightarrow$ **Magistrat van Gletschgouwe** *(or **Huadschou**)*
@@ -4389,7 +4389,6 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_medantaka` ([Non-HRE] Medantaka) $\rightarrow$ **Magistrat van Medantake**
   * `c_naddula` ([Non-HRE] Naddūla) $\rightarrow$ **Magistrat van Naddûle**
 * **Duchy of Jangladesh** (`d_jangladesh`) $\rightarrow$ **Gubernat van Dschangladesch**
-  * `c_nagauda` ([Non-HRE] Nagauda) $\rightarrow$ **Magistrat van Nagaude**
   * `c_reni` ([Non-HRE] Reni) $\rightarrow$ **Magistrat van Reni**
   * `c_vikramapura` ([Non-HRE] Vikramapura) $\rightarrow$ **Magistrat van Wikramapure**
 * **Duchy of Medapata** (`d_medapata`) $\rightarrow$ **Gubernat van Medapate**
@@ -5259,7 +5258,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Jiangxi** (`d_jiangxi`) $\rightarrow$ **Gubernat van Westlangflôze**
   * `c_fuzhou_2` (**[HRE]** Fuzhou) $\rightarrow$ **Magistrat van Zachtgouwe**
   * `c_hongzhou` (**[HRE]** Hongzhou) $\rightarrow$ **Magistrat van Pôjang-Grôzwazzergouwe**
-  * `c_jianchang` (**[HRE]** Jianchang) $\rightarrow$ **Magistrat van Stichtglantz**
+  * `c_jianchang` (**[HRE]** Jianchang) $\rightarrow$ **Magistrat van Stichtglantz-in-Jângsche**
   * `c_jizhou_3` (**[HRE]** Jizhou) $\rightarrow$ **Magistrat van Hêlgouwe**
   * `c_linjiang` (**[HRE]** Linjiang) $\rightarrow$ **Magistrat van BîdemFlôz**
   * `c_yuanzhou` (**[HRE]** Yuanzhou) $\rightarrow$ **Magistrat van Eêrstgouwe**
@@ -5577,16 +5576,16 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.205 Kingdom of Qianzhong (`k_qianzhong`) $\rightarrow$ **Kûnincrich van dem Swartzmidden**
 
 * **Duchy of Zangke** (`d_zangke`) $\rightarrow$ **Gubernat van Zangkê**
-  * `c_guzhou` ([Non-HRE] Guzhou) $\rightarrow$ **Magistrat van Dalgouwe**
-  * `c_huangzhou_1` ([Non-HRE] Huangzhou) $\rightarrow$ **Magistrat van Glantzgouwe**
+  * `c_guzhou` ([Non-HRE] Guzhou) $\rightarrow$ **Magistrat van Altgouwe**
+  * `c_huangzhou_1` ([Non-HRE] Huangzhou) $\rightarrow$ **Magistrat van Blîkgouwe**
   * `c_juzhou` ([Non-HRE] Juzhou) $\rightarrow$ **Magistrat van Sêtegouwe**
   * `c_nanping` ([Non-HRE] Nanping) $\rightarrow$ **Magistrat van Sûtebene**
-  * `c_yingzhou_4` ([Non-HRE] Yingzhou) $\rightarrow$ **Magistrat van Antwurtgouwe**
+  * `c_yingzhou_4` ([Non-HRE] Yingzhou) $\rightarrow$ **Magistrat van Antwurtgouwe-in-dem-Sûte**
 * **Duchy of Luoshi** (`d_luoshi`) $\rightarrow$ **Gubernat van Lôgeslacht**
   * `c_shunzhou` ([Non-HRE] Shunzhou) $\rightarrow$ **Magistrat van Willechgouwe**
   * `c_sie` ([Non-HRE] Sie) $\rightarrow$ **Magistrat van Sînnesteil**
   * `c_shaoqing` ([Non-HRE] Xizhou) $\rightarrow$ **Magistrat van Sunneleidergouwe**
-  * `c_zongzhou` ([Non-HRE] Zongzhou) $\rightarrow$ **Magistrat van Stamgouwe**
+  * `c_zongzhou` ([Non-HRE] Zongzhou) $\rightarrow$ **Magistrat van Houbtgouwe**
 * **Duchy of Luodian** (`d_luodian`) $\rightarrow$ **Gubernat van Lôpalatz**
   * `c_luodian` ([Non-HRE] Luodian) $\rightarrow$ **Magistrat van Lôfelt**
   * `c_yanchuan` ([Non-HRE] Yanchuan) $\rightarrow$ **Magistrat van Edeljâdebache**
@@ -5623,7 +5622,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_yinsheng` ([Non-HRE] Yinsheng) $\rightarrow$ **Magistrat van Silberlêven**
 * **Duchy of Huichuan** (`d_huichuan`) $\rightarrow$ **Gubernat van dem Samelingbache**
   * `c_huichuan` ([Non-HRE] Huichuan) $\rightarrow$ **Magistrat van dem Samelingbache**
-  * `c_jianchang_1` ([Non-HRE] Jianchang) $\rightarrow$ **Magistrat van Stichtglantz**
+  * `c_jianchang_1` ([Non-HRE] Jianchang) $\rightarrow$ **Magistrat van Stichtglantz-in-der-Klûse**
 * **Duchy of Tuodong** (`d_tuodong`) $\rightarrow$ **Gubernat van Ontgont-Ôst**
   * `c_shanchan` ([Non-HRE] Shanchan) $\rightarrow$ **Magistrat van Gûteklaarsteld**
   * `c_shicheng` ([Non-HRE] Shicheng) $\rightarrow$ **Magistrat van Steinburch**
@@ -5641,9 +5640,9 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_yizhou_3` ([Non-HRE] Yizhou) $\rightarrow$ **Magistrat van Ebisgouwe**
   * `c_zhenxi` ([Non-HRE] Zhenzhou) $\rightarrow$ **Magistrat van Dschênflôzgouwe**
 * **Duchy of Wuxi** (`d_wuxi`) $\rightarrow$ **Gubernat van Vîevesnellbach**
-  * `c_luxi` ([Non-HRE] Chenzhou) $\rightarrow$ **Magistrat van Draaksterngouwe**
+  * `c_luxi` ([Non-HRE] Chenzhou) $\rightarrow$ **Magistrat van Draaksterngouwe-am-Flôze**
   * `c_yezhou` ([Non-HRE] Jiangzhou) $\rightarrow$ **Magistrat van Lôfgouwe**
-  * `c_luyang` ([Non-HRE] Jinzhou) $\rightarrow$ **Magistrat van Sîdenziergouwe**
+  * `c_luyang` ([Non-HRE] Jinzhou) $\rightarrow$ **Magistrat van Sîdenziergouwe-am-Flôze**
   * `c_shangxi` ([Non-HRE] Shangxi) $\rightarrow$ **Magistrat van Ôversnellbach**
   * `c_lingxi` ([Non-HRE] Xizhou) $\rightarrow$ **Magistrat van Snellbachgouwe**
   * `c_tanyang` ([Non-HRE] Xuzhou) $\rightarrow$ **Magistrat van Ranggouwe**
@@ -5651,7 +5650,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_fuzhou_4` ([Non-HRE] Fuzhou) $\rightarrow$ **Magistrat van Fûflôzgouwe**
   * `c_kuizhou` ([Non-HRE] Kuizhou) $\rightarrow$ **Magistrat van Kwêigouwe**
   * `c_wanzhou` ([Non-HRE] Wanzhou) $\rightarrow$ **Magistrat van Têndûsentgouwe**
-  * `c_zhongzhou` ([Non-HRE] Zhongzhou) $\rightarrow$ **Magistrat van Trûwegouwe**
+  * `c_zhongzhou` ([Non-HRE] Zhongzhou) $\rightarrow$ **Magistrat van Trûwegouwe-am-Flôze**
 
 ---
 
@@ -5685,7 +5684,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 ### 3.209 Kingdom of Ob (`k_ob`) $\rightarrow$ **Kûnincrich van dem Ôb**
 
 * **Duchy of Ala Tau** (`d_ala_tau`) $\rightarrow$ **Gubernat van dem Buntberch**
-  * `c_chulym` ([Non-HRE] Chulym) $\rightarrow$ **Magistrat van Tschulîm**
+  * `c_chulym` ([Non-HRE] Chulym) $\rightarrow$ **Magistrat van Nider-Tschulîm**
   * `c_tomsk` ([Non-HRE] Eushta) $\rightarrow$ **Magistrat van Eûschte**
   * `c_kiia` ([Non-HRE] Kiia) $\rightarrow$ **Magistrat van Kîe**
   * `c_kojuk` ([Non-HRE] Kojuk) $\rightarrow$ **Magistrat van Kojûk**
@@ -5739,7 +5738,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Wuxin** (`d_wuxin`) $\rightarrow$ **Gubernat van Wâpentrûwe**
   * `c_changzhou_1` ([Non-HRE] Changzhou) $\rightarrow$ **Magistrat van Voorspôetgouwe**
   * `c_luzhou_2` ([Non-HRE] Luzhou) $\rightarrow$ **Magistrat van Lûflôzgouwe**
-  * `c_rongzhou` ([Non-HRE] Rongzhou) $\rightarrow$ **Magistrat van Miltgouwe**
+  * `c_rongzhou` ([Non-HRE] Rongzhou) $\rightarrow$ **Magistrat van Êregouwe**
   * `c_nanxi` ([Non-HRE] Rongzhou) $\rightarrow$ **Magistrat van Wâpengouwe**
   * `c_suining` ([Non-HRE] Suizhou) $\rightarrow$ **Magistrat van Vollbrengegouwe**
   * `c_yuzhou_2` ([Non-HRE] Yuzhou) $\rightarrow$ **Magistrat van Jûflôzgouwe**
@@ -5751,7 +5750,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Qiongnan** (`d_qiongnan`) $\rightarrow$ **Gubernat van Tschiôngsût**
   * `c_jiazhou` ([Non-HRE] Jiazhou) $\rightarrow$ **Magistrat van Prîsgouwe**
   * `c_hanyuan` ([Non-HRE] Lizhou) $\rightarrow$ **Magistrat van Lîgouwe**
-  * `c_meizhou` ([Non-HRE] Meizhou) $\rightarrow$ **Magistrat van Prûmengouwe**
+  * `c_meizhou` ([Non-HRE] Meizhou) $\rightarrow$ **Magistrat van Brâwengouwe**
   * `c_qiongbu` ([Non-HRE] Qiongbu) $\rightarrow$ **Magistrat van Tschiôngambet**
   * `c_qiongzhou` ([Non-HRE] Qiongzhou) $\rightarrow$ **Magistrat van Jâdegouwe**
   * `c_yazhou_2` ([Non-HRE] Yazhou) $\rightarrow$ **Magistrat van Edelgouwe**
