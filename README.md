@@ -41,7 +41,7 @@ Tarraconian is linguistically structured like an alternate-history "reverse Midd
 
 | Master Document / Directory | Path | Purpose & Scope |
 | :--- | :--- | :--- |
-| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 35 empires, 160 kingdoms, 752 duchies, and 2,732 counties, tracking imperial control percentages and historical attestations. |
+| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 47 empires, 213 kingdoms, 970 duchies, and 3,476 counties worldwide, tracking imperial control percentages and historical attestations. |
 | **Tarraconian Titles Gazetteer** | [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) | Exhaustive register of official Tarraconian names, adjectives, and IPA transcriptions for all landed titles and archdioceses. |
 | **Linguistics & Sound-Shift Guide** | [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) | Complete reference for Tarraconian phonology, IPA values, vowel quantity laws, consonant shifts, and orthographic constraints. |
 | **Descriptive Title Calques Guide** | [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) | Master Morpheme Translation Matrix (forts, churches, waters, oronyms, colors, Sinosphere, Steppe, Boreal, Africa, India) across 14 audited culture groups. |

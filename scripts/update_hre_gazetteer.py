@@ -8,6 +8,7 @@ hre_de_jure_and_archdioceses_1059.md from a CK3 save game (e.g. chatenois_867_01
 Supported Scopes:
   - empire  (Default): All titles in de jure empires with >= 1 county in the Roman Empire.
   - kingdom:           All titles in de jure kingdoms with >= 1 county in the Roman Empire.
+  - all:               All titles globally across all 47 de jure empires and 213 kingdoms.
 
 Pipeline steps:
   1. Locates/melts CK3 save game using rakaly (if raw binary).
@@ -252,7 +253,22 @@ def update_gazetteer(save_file: Path,
     qualifying_empires = set(ek for ek in emp_hierarchy if emp_re_counties[ek] > 0)
     
     qualifying_k = {}
-    if scope == 'empire':
+    if scope == 'all':
+        qualifying_empires = set(emp_hierarchy.keys())
+        target_empires = qualifying_empires
+        for ek in target_empires:
+            for kk, d_dict in emp_hierarchy[ek].items():
+                re_cnt = sum(sum(1 for ck in c_list if ck in re_counties) for c_list in d_dict.values())
+                tot_cnt = sum(len(c_list) for c_list in d_dict.values())
+                qualifying_k[kk] = {
+                    'key': kk,
+                    'empire': ek,
+                    're': re_cnt,
+                    'total': tot_cnt,
+                    'pct': (re_cnt / tot_cnt * 100.0) if tot_cnt > 0 else 0.0,
+                    'duchies': d_dict
+                }
+    elif scope == 'empire':
         target_empires = qualifying_empires
         for ek in target_empires:
             for kk, d_dict in emp_hierarchy[ek].items():
@@ -367,11 +383,16 @@ def update_gazetteer(save_file: Path,
     log(f"Computed Totals -> Empires: {tot_emp_count}, Kingdoms: {tot_k_count}, Duchies: {tot_duchies}, Counties: {tot_counties} (RE: {tot_re}, Non-RE: {tot_non_re}, {tot_pct:.1f}%)")
 
     # Construct Document
+    if scope == 'all':
+        scope_desc = f"Global Coverage: All **{tot_emp_count} De Jure Empires**, encompassing all **{tot_k_count} De Jure Kingdoms**, all **{tot_duchies} De Jure Duchies** and **{tot_counties:,} De Jure Counties** worldwide (**{tot_re:,} Roman Empire counties** and **{tot_non_re:,} non-RE counties**, **{tot_pct:.1f}% control**)"
+    else:
+        scope_desc = f"All **{tot_emp_count} De Jure Empires** containing at least 1 county belonging de facto to the **Roman Empire** (`h_roman_empire`), encompassing all **{tot_k_count} De Jure Kingdoms**, all **{tot_duchies} De Jure Duchies** and **{tot_counties:,} De Jure Counties** within those Empires (**{tot_re:,} Roman Empire counties** and **{tot_non_re:,} non-RE counties**, **{tot_pct:.1f}% control**)"
+
     header_text = f"""# De Jure Empires, Kingdoms, Duchies & Counties of the Roman Empire (`h_roman_empire` / `e_hre`, 1059–{year_str})
 
 **Campaign Save:** `chatenois_867_01_01.ck3` (**{date_str}**, updated from 13 May 1059, 20 September 1122, 20 August 1142 & 27 December 1154)  
 **Ruler:** {emperor_name} of the **Roman Empire** (`h_roman_empire`, *Dat Rômische Keiserrîch*, formed over `e_hre` and `e_byzantium`)  
-**Scope:** All **{tot_emp_count} De Jure Empires** containing at least 1 county belonging de facto to the **Roman Empire** (`h_roman_empire`), encompassing all **{tot_k_count} De Jure Kingdoms**, all **{tot_duchies} De Jure Duchies** and **{tot_counties:,} De Jure Counties** within those Empires (**{tot_re:,} Roman Empire counties** and **{tot_non_re:,} non-RE counties**, **{tot_pct:.1f}% control**), followed by the **78 Archdioceses, 10 Papal/Patriarchal Sees & 26 Prince-Bishoprics** as of {year_str}.
+**Scope:** {scope_desc}, followed by the **78 Archdioceses, 10 Papal/Patriarchal Sees & 26 Prince-Bishoprics** as of {year_str}.
 
 ---
 
@@ -593,7 +614,7 @@ def main():
     parser.add_argument("--melted-save", default="/var/tmp/ck3_audit/melted_save.ck3", help="Path to melted plaintext save")
     parser.add_argument("--target-md", default="hre_de_jure_and_archdioceses_1059.md", help="Path to output markdown gazetteer")
     parser.add_argument("--loc-cache", default="/var/tmp/ck3_audit/english_titles_cache.json", help="Path to title localization JSON cache")
-    parser.add_argument("--scope", choices=["empire", "kingdom"], default="empire", help="Qualification scope filter (default: empire)")
+    parser.add_argument("--scope", choices=["empire", "kingdom", "all"], default="empire", help="Qualification scope filter (default: empire)")
     parser.add_argument("--rakaly-bin", default=None, help="Path to rakaly binary")
     parser.add_argument("--no-sync", action="store_true", help="Skip running synchronization and verification scripts")
 

@@ -32,7 +32,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-## 2. Summary Table: The 204 De Jure Kingdoms in Tarraconian (28 July 1194)
+## 2. Summary Table: The 213 De Jure Kingdoms in Tarraconian (28 July 1194)
 
 | # | In-Game Kingdom | Title Key | Tarraconian Name (`Kûnincrich / Regenat van ...`) | IPA / Adjective | RE / Total Counties & Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -240,6 +240,15 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 202 | **Naimania** | `k_naimania` | **Kûnincrich van Naimanjen** | *Naimansch* | **4/32 RE** — Added in 1194 Imperial Chancellery update. |
 | 203 | **Guinea** | `k_guinea` | **Kûnincrich van Gînêe** | *Gînêisch* | **0/21 RE** — Added in 1194 Imperial Chancellery update. |
 | 204 | **Kong** | `k_kong` | **Kûnincrich van Kong** | *Kongisch* | **0/11 RE** — Added in 1194 Imperial Chancellery update. |
+| 205 | **Qianzhong** | `k_qianzhong` | **Kûnincrich van dem Swartzmidden** | *Swartzmidsch* | **0/18 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Qiánzhōng* (黔中). |
+| 206 | **Dali** | `k_dali` | **Kûnincrich van Grôzrecht** | *Grôzrechtisch* | **0/17 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Dàlǐ* (大理). |
+| 207 | **Kuizhou** | `k_kuizhou` | **Kûnincrich van Kuîgouwe** | *Kuîgouwisch* | **0/17 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Kuízhōu* (夔州). |
+| 208 | **Sibir** | `k_sibir` | **Kûnincrich van Sibîr *(or **Sibirrîch**)*** | [zi.ˈbiːr] / *Sibirisch* | **0/17 RE** — Added in 1194 Global Chancellery update; Siberian Khanate & Irtysh basin (*Isker*). |
+| 209 | **Ob** | `k_ob` | **Kûnincrich van dem Ôb** | [oːp] / *Ôbisch* | **0/16 RE** — Added in 1194 Global Chancellery update; Great Ob hydronym (*As / Yag*). |
+| 210 | **Xingyuan** | `k_xingyuan` | **Kûnincrich van Bloyvürst** | *Bloyvürstisch* | **0/13 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Xīngyuán* (兴元). |
+| 211 | **Dongchuan** | `k_dongchuan` | **Kûnincrich van dem Ôstbache** | *Ôstbachisch* | **0/12 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Dōngchuān* (东川). |
+| 212 | **Xichuan** | `k_xichuan` | **Kûnincrich van dem Westbache** | *Westbachisch* | **0/12 RE** — Added in 1194 Global Chancellery update; calque of Chinese *Xīchuān* (西川). |
+| 213 | **Yugra** | `k_yugra` | **Kûnincrich van Jûgren *(or **Jûgrelant**)*** | [ˈjuː.ɡrən] / *Jûgrisch* | **0/12 RE** — Added in 1194 Global Chancellery update; Uralic Ugric heartland (*Iugria*). |
 
 ---
 
@@ -5562,6 +5571,218 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_nyene` ([Non-HRE] Nyene) $\rightarrow$ **Magistrat van Njene**
   * `c_tyendugu` ([Non-HRE] Tyendugu) $\rightarrow$ **Magistrat van Tjendugû**
   * `c_worodugu` ([Non-HRE] Worodugu) $\rightarrow$ **Magistrat van Worodugû**
+
+---
+
+### 3.205 Kingdom of Qianzhong (`k_qianzhong`) $\rightarrow$ **Kûnincrich van dem Swartzmidden**
+
+* **Duchy of Zangke** (`d_zangke`) $\rightarrow$ **Gubernat van Zangkê**
+  * `c_guzhou` ([Non-HRE] Guzhou) $\rightarrow$ **Magistrat van Dalgouwe**
+  * `c_huangzhou_1` ([Non-HRE] Huangzhou) $\rightarrow$ **Magistrat van Glantzgouwe**
+  * `c_juzhou` ([Non-HRE] Juzhou) $\rightarrow$ **Magistrat van Sêtegouwe**
+  * `c_nanping` ([Non-HRE] Nanping) $\rightarrow$ **Magistrat van Sûtebene**
+  * `c_yingzhou_4` ([Non-HRE] Yingzhou) $\rightarrow$ **Magistrat van Antwurtgouwe**
+* **Duchy of Luoshi** (`d_luoshi`) $\rightarrow$ **Gubernat van Lôgeslacht**
+  * `c_shunzhou` ([Non-HRE] Shunzhou) $\rightarrow$ **Magistrat van Willechgouwe**
+  * `c_sie` ([Non-HRE] Sie) $\rightarrow$ **Magistrat van Sînnesteil**
+  * `c_shaoqing` ([Non-HRE] Xizhou) $\rightarrow$ **Magistrat van Sunneleidergouwe**
+  * `c_zongzhou` ([Non-HRE] Zongzhou) $\rightarrow$ **Magistrat van Stamgouwe**
+* **Duchy of Luodian** (`d_luodian`) $\rightarrow$ **Gubernat van Lôpalatz**
+  * `c_luodian` ([Non-HRE] Luodian) $\rightarrow$ **Magistrat van Lôfelt**
+  * `c_yanchuan` ([Non-HRE] Yanchuan) $\rightarrow$ **Magistrat van Edeljâdebache**
+  * `c_yanzhou_3` ([Non-HRE] Yanzhou) $\rightarrow$ **Magistrat van Edeljâdegouwe**
+* **Duchy of Shimen** (`d_shimen`) $\rightarrow$ **Gubernat van Steintôr**
+  * `c_quzhou_1` ([Non-HRE] Quzhou) $\rightarrow$ **Magistrat van Krûmmegouwe**
+  * `c_jingzhou_2` ([Non-HRE] Xiezhou) $\rightarrow$ **Magistrat van Eendrachtgouwe**
+  * `c_yinzhou_1` ([Non-HRE] Yinzhou) $\rightarrow$ **Magistrat van Schânggouwe**
+* **Duchy of Xiyuan** (`d_xiyuan`) $\rightarrow$ **Gubernat van Westveit**
+  * `c_guile` ([Non-HRE] Guile) $\rightarrow$ **Magistrat van Weêrkeêrfröuden**
+  * `c_siyuan` ([Non-HRE] Siyuan) $\rightarrow$ **Magistrat van Sînnespring**
+  * `c_wulong` ([Non-HRE] Wulong) $\rightarrow$ **Magistrat van Krijchsdrache**
+
+---
+
+### 3.206 Kingdom of Dali (`k_dali`) $\rightarrow$ **Kûnincrich van Grôzrecht**
+
+* **Duchy of Dali** (`d_dali`) $\rightarrow$ **Gubernat van Grôzrecht**
+  * `c_dali` ([Non-HRE] Dali) $\rightarrow$ **Magistrat van Grôzrecht**
+  * `c_dongchuan` ([Non-HRE] Dongchuan) $\rightarrow$ **Magistrat van Ôstbache**
+  * `c_nongdong` ([Non-HRE] Nongdong) $\rightarrow$ **Magistrat van Padbalk**
+  * `c_weichu` ([Non-HRE] Weichu) $\rightarrow$ **Magistrat van Machttschû**
+* **Duchy of Jianchuan** (`d_jianchuan`) $\rightarrow$ **Gubernat van dem Swertbache**
+  * `c_chengji` ([Non-HRE] Chengji) $\rightarrow$ **Magistrat van Vollbrâchthilich**
+  * `c_jianchuan` ([Non-HRE] Jianchuan) $\rightarrow$ **Magistrat van dem Swertbache**
+  * `c_xiangcheng` ([Non-HRE] Xiangcheng) $\rightarrow$ **Magistrat van Sôtruchendburch**
+* **Duchy of Tonghai** (`d_tonghai`) $\rightarrow$ **Gubernat van Dörchgancmêr**
+  * `c_muze` ([Non-HRE] Muze) $\rightarrow$ **Magistrat van Schouwenorm**
+  * `c_tonghai` ([Non-HRE] Tonghai) $\rightarrow$ **Magistrat van Dörchgancmêr**
+  * `c_zuining` ([Non-HRE] Zuining) $\rightarrow$ **Magistrat van Vollrûwe**
+* **Duchy of Yinsheng** (`d_yinsheng`) $\rightarrow$ **Gubernat van Silberlêven**
+  * `c_buri` ([Non-HRE] Buri) $\rightarrow$ **Magistrat van Stêsunnen**
+  * `c_weiyuan` ([Non-HRE] Weiyuan) $\rightarrow$ **Magistrat van Machtferne**
+  * `c_yinsheng` ([Non-HRE] Yinsheng) $\rightarrow$ **Magistrat van Silberlêven**
+* **Duchy of Huichuan** (`d_huichuan`) $\rightarrow$ **Gubernat van dem Samelingbache**
+  * `c_huichuan` ([Non-HRE] Huichuan) $\rightarrow$ **Magistrat van dem Samelingbache**
+  * `c_jianchang_1` ([Non-HRE] Jianchang) $\rightarrow$ **Magistrat van Stichtglantz**
+* **Duchy of Tuodong** (`d_tuodong`) $\rightarrow$ **Gubernat van Ontgont-Ôst**
+  * `c_shanchan` ([Non-HRE] Shanchan) $\rightarrow$ **Magistrat van Gûteklaarsteld**
+  * `c_shicheng` ([Non-HRE] Shicheng) $\rightarrow$ **Magistrat van Steinburch**
+
+---
+
+### 3.207 Kingdom of Kuizhou (`k_kuizhou`) $\rightarrow$ **Kûnincrich van Kuîgouwe**
+
+* **Duchy of Qianzhong** (`d_qianzhong`) $\rightarrow$ **Gubernat van Schwartzgouwemidden**
+  * `c_bochuan` ([Non-HRE] Bozhou) $\rightarrow$ **Magistrat van Hârigouwe**
+  * `c_nanzhou` ([Non-HRE] Nanzhou) $\rightarrow$ **Magistrat van Sûtgouwe**
+  * `c_qianzhou_1` ([Non-HRE] Qianzhou) $\rightarrow$ **Magistrat van Schwartzgouwegouwe**
+  * `c_shizhou_1` ([Non-HRE] Shizhou) $\rightarrow$ **Magistrat van Gâvegouwe**
+  * `c_sizhou` ([Non-HRE] Sizhou) $\rightarrow$ **Magistrat van Sînnegouwe**
+  * `c_yizhou_3` ([Non-HRE] Yizhou) $\rightarrow$ **Magistrat van Ebisgouwe**
+  * `c_zhenxi` ([Non-HRE] Zhenzhou) $\rightarrow$ **Magistrat van Dschênflôzgouwe**
+* **Duchy of Wuxi** (`d_wuxi`) $\rightarrow$ **Gubernat van Vîevesnellbach**
+  * `c_luxi` ([Non-HRE] Chenzhou) $\rightarrow$ **Magistrat van Draaksterngouwe**
+  * `c_yezhou` ([Non-HRE] Jiangzhou) $\rightarrow$ **Magistrat van Lôfgouwe**
+  * `c_luyang` ([Non-HRE] Jinzhou) $\rightarrow$ **Magistrat van Sîdenziergouwe**
+  * `c_shangxi` ([Non-HRE] Shangxi) $\rightarrow$ **Magistrat van Ôversnellbach**
+  * `c_lingxi` ([Non-HRE] Xizhou) $\rightarrow$ **Magistrat van Snellbachgouwe**
+  * `c_tanyang` ([Non-HRE] Xuzhou) $\rightarrow$ **Magistrat van Ranggouwe**
+* **Duchy of Kuizhong** (`d_kuizhong`) $\rightarrow$ **Gubernat van Kwêitrûwe**
+  * `c_fuzhou_4` ([Non-HRE] Fuzhou) $\rightarrow$ **Magistrat van Fûflôzgouwe**
+  * `c_kuizhou` ([Non-HRE] Kuizhou) $\rightarrow$ **Magistrat van Kwêigouwe**
+  * `c_wanzhou` ([Non-HRE] Wanzhou) $\rightarrow$ **Magistrat van Têndûsentgouwe**
+  * `c_zhongzhou` ([Non-HRE] Zhongzhou) $\rightarrow$ **Magistrat van Trûwegouwe**
+
+---
+
+### 3.208 Kingdom of Sibir (`k_sibir`) $\rightarrow$ **Kûnincrich van Sibîr**
+
+* **Duchy of Kazakh** (`d_kazakh`) $\rightarrow$ **Gubernat van Kasâchen**
+  * `c_astana` ([Non-HRE] Akmola) $\rightarrow$ **Magistrat van Wîzengrâv**
+  * `c_astrakhanka` ([Non-HRE] Astrakhanka) $\rightarrow$ **Magistrat van Astrachanke**
+  * `c_shchuchinsk` ([Non-HRE] Burabay) $\rightarrow$ **Magistrat van Burabâi**
+  * `c_teke` ([Non-HRE] Teke) $\rightarrow$ **Magistrat van Têke**
+* **Duchy of Sibir** (`d_sibir`) $\rightarrow$ **Gubernat van Sibîr**
+  * `c_bardak` ([Non-HRE] Bardak) $\rightarrow$ **Magistrat van Bardach**
+  * `c_belogorje` ([Non-HRE] Belogorje) $\rightarrow$ **Magistrat van Wîzenberch**
+  * `c_sibir` ([Non-HRE] Sibir) $\rightarrow$ **Magistrat van Sibîr**
+  * `c_tobol` ([Non-HRE] Tobol) $\rightarrow$ **Magistrat van Tobôl**
+* **Duchy of Tara** (`d_tara`) $\rightarrow$ **Gubernat van Târe**
+  * `c_chich` ([Non-HRE] Chich) $\rightarrow$ **Magistrat van Tschîtsch**
+  * `c_petropavolsk` ([Non-HRE] Irtysh) $\rightarrow$ **Magistrat van Irtîsch**
+  * `c_kazanskoye` ([Non-HRE] Solenoye) $\rightarrow$ **Magistrat van Saltzwazzer**
+  * `c_tara` ([Non-HRE] Tara) $\rightarrow$ **Magistrat van Târe**
+* **Duchy of Lanikaz** (`d_lanikaz`) $\rightarrow$ **Gubernat van Lanikâz**
+  * `c_pavlodar` ([Non-HRE] Imekia) $\rightarrow$ **Magistrat van Imêkje**
+  * `c_kainsk` ([Non-HRE] Kainsk) $\rightarrow$ **Magistrat van Kaînsk**
+  * `c_omsk` ([Non-HRE] Om) $\rightarrow$ **Magistrat van Ôm**
+* **Duchy of Ishim** (`d_ishim`) $\rightarrow$ **Gubernat van Ischîm**
+  * `c_dolgujar` ([Non-HRE] Dolgujar) $\rightarrow$ **Magistrat van Dolgujâr**
+  * `c_ishim` ([Non-HRE] Ishim) $\rightarrow$ **Magistrat van Ischîm**
+
+---
+
+### 3.209 Kingdom of Ob (`k_ob`) $\rightarrow$ **Kûnincrich van dem Ôb**
+
+* **Duchy of Ala Tau** (`d_ala_tau`) $\rightarrow$ **Gubernat van dem Buntberch**
+  * `c_chulym` ([Non-HRE] Chulym) $\rightarrow$ **Magistrat van Tschulîm**
+  * `c_tomsk` ([Non-HRE] Eushta) $\rightarrow$ **Magistrat van Eûschte**
+  * `c_kiia` ([Non-HRE] Kiia) $\rightarrow$ **Magistrat van Kîe**
+  * `c_kojuk` ([Non-HRE] Kojuk) $\rightarrow$ **Magistrat van Kojûk**
+  * `c_narim` ([Non-HRE] Narim) $\rightarrow$ **Magistrat van Narîm**
+  * `c_sochur` ([Non-HRE] Sochur) $\rightarrow$ **Magistrat van Sotschûr**
+  * `c_taskyl` ([Non-HRE] Taskyl) $\rightarrow$ **Magistrat van Taskîl**
+  * `c_yenisei` ([Non-HRE] Yenisei) $\rightarrow$ **Magistrat van Jenissêi**
+* **Duchy of Baraba Steppe** (`d_baraba_steppe`) $\rightarrow$ **Gubernat van der Barâbaveit**
+  * `c_igaran` ([Non-HRE] Igaran) $\rightarrow$ **Magistrat van Igarân**
+  * `c_kolyvan` ([Non-HRE] Kolyvan) $\rightarrow$ **Magistrat van Kolywân**
+  * `c_konda_ob` ([Non-HRE] Konda) $\rightarrow$ **Magistrat van Ôbkônde**
+  * `c_sartlan` ([Non-HRE] Sartlan) $\rightarrow$ **Magistrat van Sartlân**
+  * `c_ubins` ([Non-HRE] Ubins) $\rightarrow$ **Magistrat van Ubînsk**
+* **Duchy of Vasyugan Mire** (`d_vasyugan_mire`) $\rightarrow$ **Gubernat van dem Wasjûganmôr**
+  * `c_tartas_SIB` ([Non-HRE] Tartas) $\rightarrow$ **Magistrat van Tartâs**
+  * `c_umiai` ([Non-HRE] Umiai) $\rightarrow$ **Magistrat van Umjâi**
+  * `c_vasyugan` ([Non-HRE] Vasyugan) $\rightarrow$ **Magistrat van Wasjûgan**
+
+---
+
+### 3.210 Kingdom of Xingyuan (`k_xingyuan`) $\rightarrow$ **Kûnincrich van Bloyvürst**
+
+* **Duchy of Lilang** (`d_lilang`) $\rightarrow$ **Gubernat van Wênhôchtorn**
+  * `c_guozhou_1` ([Non-HRE] Guozhou) $\rightarrow$ **Magistrat van Fruchtgouwe**
+  * `c_langzhou_1` ([Non-HRE] Langzhou) $\rightarrow$ **Magistrat van Hôchtorngouwe**
+  * `c_lizhou_2` ([Non-HRE] Lizhou) $\rightarrow$ **Magistrat van Wêngouwe**
+  * `c_pengzhou_2` ([Non-HRE] Pengzhou) $\rightarrow$ **Magistrat van Kruytgouwe**
+  * `c_wenzhou` ([Non-HRE] Wenzhou) $\rightarrow$ **Magistrat van Schriftgouwe**
+* **Duchy of Baqu** (`d_baqu`) $\rightarrow$ **Gubernat van Bâgrâben**
+  * `c_bazhou` ([Non-HRE] Bazhou) $\rightarrow$ **Magistrat van Bâgouwe**
+  * `c_kaizhou` ([Non-HRE] Kaizhou) $\rightarrow$ **Magistrat van Opengouwe**
+  * `c_quzhou` ([Non-HRE] Quzhou) $\rightarrow$ **Magistrat van Grâbengouwe**
+  * `c_tongzhou_1` ([Non-HRE] Tongzhou) $\rightarrow$ **Magistrat van Dôrgancgouwe**
+* **Duchy of Xingyuan** (`d_xingyuan`) $\rightarrow$ **Gubernat van Upganceêrst**
+  * `c_bizhou` ([Non-HRE] Bizhou) $\rightarrow$ **Magistrat van Vastegouwe**
+  * `c_jizhou_2` ([Non-HRE] Jizhou) $\rightarrow$ **Magistrat van Samelinggouwe**
+  * `c_xingyuan` ([Non-HRE] Xingyuan) $\rightarrow$ **Magistrat van Blûeiveit**
+  * `c_yangzhou_1` ([Non-HRE] Yangzhou) $\rightarrow$ **Magistrat van Mêrgouwe**
+
+---
+
+### 3.211 Kingdom of Dongchuan (`k_dongchuan`) $\rightarrow$ **Kûnincrich van dem Ôstbache**
+
+* **Duchy of Dongchuan** (`d_dongchuan`) $\rightarrow$ **Gubernat van Ôstbache**
+  * `c_jianzhou_1` ([Non-HRE] Jianzhou) $\rightarrow$ **Magistrat van Swêrtgouwe**
+  * `c_longzhou` ([Non-HRE] Longzhou) $\rightarrow$ **Magistrat van Drachengouwe**
+  * `c_mianzhou` ([Non-HRE] Mianzhou) $\rightarrow$ **Magistrat van Sîdengouwe**
+  * `c_puzhou` ([Non-HRE] Puzhou) $\rightarrow$ **Magistrat van Almêngouwe**
+  * `c_tongchuan` ([Non-HRE] Tongchuan) $\rightarrow$ **Magistrat van Tôngklûsebache**
+  * `c_zizhou_2` ([Non-HRE] Zizhou) $\rightarrow$ **Magistrat van Schatzgouwe**
+* **Duchy of Wuxin** (`d_wuxin`) $\rightarrow$ **Gubernat van Wâpentrûwe**
+  * `c_changzhou_1` ([Non-HRE] Changzhou) $\rightarrow$ **Magistrat van Voorspôetgouwe**
+  * `c_luzhou_2` ([Non-HRE] Luzhou) $\rightarrow$ **Magistrat van Lûflôzgouwe**
+  * `c_rongzhou` ([Non-HRE] Rongzhou) $\rightarrow$ **Magistrat van Miltgouwe**
+  * `c_nanxi` ([Non-HRE] Rongzhou) $\rightarrow$ **Magistrat van Wâpengouwe**
+  * `c_suining` ([Non-HRE] Suizhou) $\rightarrow$ **Magistrat van Vollbrengegouwe**
+  * `c_yuzhou_2` ([Non-HRE] Yuzhou) $\rightarrow$ **Magistrat van Jûflôzgouwe**
+
+---
+
+### 3.212 Kingdom of Xichuan (`k_xichuan`) $\rightarrow$ **Kûnincrich van dem Westbache**
+
+* **Duchy of Qiongnan** (`d_qiongnan`) $\rightarrow$ **Gubernat van Tschiôngsût**
+  * `c_jiazhou` ([Non-HRE] Jiazhou) $\rightarrow$ **Magistrat van Prîsgouwe**
+  * `c_hanyuan` ([Non-HRE] Lizhou) $\rightarrow$ **Magistrat van Lîgouwe**
+  * `c_meizhou` ([Non-HRE] Meizhou) $\rightarrow$ **Magistrat van Prûmengouwe**
+  * `c_qiongbu` ([Non-HRE] Qiongbu) $\rightarrow$ **Magistrat van Tschiôngambet**
+  * `c_qiongzhou` ([Non-HRE] Qiongzhou) $\rightarrow$ **Magistrat van Jâdegouwe**
+  * `c_yazhou_2` ([Non-HRE] Yazhou) $\rightarrow$ **Magistrat van Edelgouwe**
+* **Duchy of Xichuan** (`d_xichuan`) $\rightarrow$ **Gubernat van Westbache**
+  * `c_chengdu` ([Non-HRE] Chengdu) $\rightarrow$ **Magistrat van Vollbrâchtstat**
+  * `c_hanzhou` ([Non-HRE] Hanzhou) $\rightarrow$ **Magistrat van Hângouwe**
+  * `c_jianyang` ([Non-HRE] Jianzhou) $\rightarrow$ **Magistrat van Schriftbalkgouwe**
+  * `c_lingzhou_1` ([Non-HRE] Lingzhou) $\rightarrow$ **Magistrat van Hügilgouwe**
+  * `c_maozhou` ([Non-HRE] Maozhou) $\rightarrow$ **Magistrat van Wôkergouwe**
+  * `c_pengzhou` ([Non-HRE] Pengzhou) $\rightarrow$ **Magistrat van Penggouwe**
+
+---
+
+### 3.213 Kingdom of Yugra (`k_yugra`) $\rightarrow$ **Kûnincrich van Jûgren**
+
+* **Duchy of Ostyaki** (`d_ostyaki`) $\rightarrow$ **Gubernat van Ostjâken**
+  * `c_laia` ([Non-HRE] Laia) $\rightarrow$ **Magistrat van Lâje**
+  * `c_neramkary` ([Non-HRE] Neramkary) $\rightarrow$ **Magistrat van Nêramkare**
+  * `c_tabary` ([Non-HRE] Tabary) $\rightarrow$ **Magistrat van Tabâre**
+  * `c_tyumen` ([Non-HRE] Tyumen) $\rightarrow$ **Magistrat van Tjumên**
+* **Duchy of Kazym** (`d_kazym`) $\rightarrow$ **Gubernat van Kazîm**
+  * `c_kazym` ([Non-HRE] Kazym) $\rightarrow$ **Magistrat van Kazîm**
+  * `c_koda` ([Non-HRE] Koda) $\rightarrow$ **Magistrat van Kôde**
+  * `c_sosva` ([Non-HRE] Sosva) $\rightarrow$ **Magistrat van Sôswe**
+* **Duchy of Konda** (`d_konda`) $\rightarrow$ **Gubernat van Konde**
+  * `c_kartauzh` ([Non-HRE] Kartauzh) $\rightarrow$ **Magistrat van Kartaûsch**
+  * `c_kharam-vosh` ([Non-HRE] Kharam-Vosh) $\rightarrow$ **Magistrat van Charamwosch**
+  * `c_tselym_dalyn` ([Non-HRE] Tselym Dalyn) $\rightarrow$ **Magistrat van Zêlim-Dalîn**
+* **Duchy of Pelym** (`d_pelym`) $\rightarrow$ **Gubernat van Pelîm**
+  * `c_koshuki` ([Non-HRE] Koshuki) $\rightarrow$ **Magistrat van Koschûke**
+  * `c_pelym` ([Non-HRE] Pelym) $\rightarrow$ **Magistrat van Pelîm**
 
 ---
 

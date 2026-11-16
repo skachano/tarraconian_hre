@@ -2,13 +2,13 @@
 
 **Campaign Save:** `chatenois_867_01_01.ck3` (**28 July 1194**, updated from 13 May 1059, 20 September 1122, 20 August 1142 & 27 December 1154)  
 **Ruler:** Pope Lambert II of the **Roman Empire** (`h_roman_empire`, *Dat Rômische Keiserrîch*, formed over `e_hre` and `e_byzantium`)  
-**Scope:** All **45 De Jure Empires** containing at least 1 county belonging de facto to the **Roman Empire** (`h_roman_empire`), encompassing all **204 De Jure Kingdoms**, all **937 De Jure Duchies** and **3,342 De Jure Counties** within those Empires (**2,644 Roman Empire counties** and **698 non-RE counties**, **79.1% control**), followed by the **78 Archdioceses, 10 Papal/Patriarchal Sees & 26 Prince-Bishoprics** as of 1194.
+**Scope:** Global Coverage: All **47 De Jure Empires**, encompassing all **213 De Jure Kingdoms**, all **970 De Jure Duchies** and **3,476 De Jure Counties** worldwide (**2,644 Roman Empire counties** and **832 non-RE counties**, **76.1% control**), followed by the **78 Archdioceses, 10 Papal/Patriarchal Sees & 26 Prince-Bishoprics** as of 1194.
 
 ---
 
 ## 1. Summary Tables of De Jure Empires & Kingdoms (28 July 1194)
 
-### 1.1 Summary Table of De Jure Empires (45 Empires)
+### 1.1 Summary Table of De Jure Empires (47 Empires)
 
 | # | De Jure Empire | Title Key | RE Counties | Total De Jure Counties | Control % | Kingdoms Count |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -57,8 +57,10 @@
 | 43 | **Volga-Ural** | `e_volga-ural` | **11** | 46 | 23.9% | 3 |
 | 44 | **Mongolia** | `e_mongolia` | **7** | 100 | 7.0% | 4 |
 | 45 | **Kirghiz Khanate** | `e_kirghiz_khanate` | **4** | 32 | 12.5% | 1 |
+| 46 | **Liangyi** | `e_liangyi` | **0** | 89 | 0.0% | 6 |
+| 47 | **Siberia** | `e_siberia` | **0** | 45 | 0.0% | 3 |
 
-### 1.2 Summary Table of De Jure Kingdoms (204 Kingdoms)
+### 1.2 Summary Table of De Jure Kingdoms (213 Kingdoms)
 
 | # | De Jure Kingdom | Title Key | De Jure Empire | RE Counties | Total De Jure Counties | Control % |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -257,15 +259,24 @@
 | 193 | **Guinea** | `k_guinea` | Guinea [`e_guinea`] | **0** | 21 | 0.0% |
 | 194 | **Pomerania** | `k_pomerania` | Germania [e_germany] | **0** | 20 | 0.0% |
 | 195 | **Gyalrong** | `k_gyalrong` | Tibet [`e_tibet`] | **0** | 19 | 0.0% |
-| 196 | **Qingxu** | `k_qingxu` | Zhongyuan [`e_zhongyuan`] | **0** | 17 | 0.0% |
-| 197 | **Hebei** | `k_hebei` | Zhongyuan [`e_zhongyuan`] | **0** | 15 | 0.0% |
-| 198 | **Henan** | `k_henan` | Zhongyuan [`e_zhongyuan`] | **0** | 15 | 0.0% |
-| 199 | **Sao** | `k_sao` | Kanem-Bornu [`e_kanem_bornu`] | **0** | 13 | 0.0% |
-| 200 | **Kong** | `k_kong` | Guinea [`e_guinea`] | **0** | 11 | 0.0% |
-| 201 | **Kipchak** | `k_kipchak` | Tartaria [`e_tartaria`] | **0** | 10 | 0.0% |
-| 202 | **Raole** | `k_raole` | Andong [`e_andong`] | **0** | 8 | 0.0% |
-| 203 | **Shiwei** | `k_shiwei` | Mongolia [`e_mongolia`] | **0** | 3 | 0.0% |
-| 204 | **Ruucuu** | `k_ruucuu` | Nusantara [`e_nusantara`] | **0** | 2 | 0.0% |
+| 196 | **Qianzhong** | `k_qianzhong` | Liangyi [`e_liangyi`] | **0** | 18 | 0.0% |
+| 197 | **Dali** | `k_dali` | Liangyi [`e_liangyi`] | **0** | 17 | 0.0% |
+| 198 | **Kuizhou** | `k_kuizhou` | Liangyi [`e_liangyi`] | **0** | 17 | 0.0% |
+| 199 | **Qingxu** | `k_qingxu` | Zhongyuan [`e_zhongyuan`] | **0** | 17 | 0.0% |
+| 200 | **Sibir** | `k_sibir` | Siberia [`e_siberia`] | **0** | 17 | 0.0% |
+| 201 | **Ob** | `k_ob` | Siberia [`e_siberia`] | **0** | 16 | 0.0% |
+| 202 | **Hebei** | `k_hebei` | Zhongyuan [`e_zhongyuan`] | **0** | 15 | 0.0% |
+| 203 | **Henan** | `k_henan` | Zhongyuan [`e_zhongyuan`] | **0** | 15 | 0.0% |
+| 204 | **Sao** | `k_sao` | Kanem-Bornu [`e_kanem_bornu`] | **0** | 13 | 0.0% |
+| 205 | **Xingyuan** | `k_xingyuan` | Liangyi [`e_liangyi`] | **0** | 13 | 0.0% |
+| 206 | **Dongchuan** | `k_dongchuan` | Liangyi [`e_liangyi`] | **0** | 12 | 0.0% |
+| 207 | **Xichuan** | `k_xichuan` | Liangyi [`e_liangyi`] | **0** | 12 | 0.0% |
+| 208 | **Yugra** | `k_yugra` | Siberia [`e_siberia`] | **0** | 12 | 0.0% |
+| 209 | **Kong** | `k_kong` | Guinea [`e_guinea`] | **0** | 11 | 0.0% |
+| 210 | **Kipchak** | `k_kipchak` | Tartaria [`e_tartaria`] | **0** | 10 | 0.0% |
+| 211 | **Raole** | `k_raole` | Andong [`e_andong`] | **0** | 8 | 0.0% |
+| 212 | **Shiwei** | `k_shiwei` | Mongolia [`e_mongolia`] | **0** | 3 | 0.0% |
+| 213 | **Ruucuu** | `k_ruucuu` | Nusantara [`e_nusantara`] | **0** | 2 | 0.0% |
 
 ---
 
@@ -5781,6 +5792,227 @@
 
 ---
 
+### 2.205 Kingdom of Qianzhong (`k_qianzhong`) — 0/18 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Zangke** (`d_zangke`) — *0/5 in HRE*
+  * [Non-HRE] **Guzhou** (`c_guzhou`) — *Tarraconian: **Magistrat van Dalgouwe***
+  * [Non-HRE] **Huangzhou** (`c_huangzhou_1`) — *Tarraconian: **Magistrat van Glantzgouwe***
+  * [Non-HRE] **Juzhou** (`c_juzhou`) — *Tarraconian: **Magistrat van Sêtegouwe***
+  * [Non-HRE] **Nanping** (`c_nanping`) — *Tarraconian: **Magistrat van Sûtebene***
+  * [Non-HRE] **Yingzhou** (`c_yingzhou_4`) — *Tarraconian: **Magistrat van Antwurtgouwe***
+* **Duchy of Luoshi** (`d_luoshi`) — *0/4 in HRE*
+  * [Non-HRE] **Shunzhou** (`c_shunzhou`) — *Tarraconian: **Magistrat van Willechgouwe***
+  * [Non-HRE] **Sie** (`c_sie`) — *Tarraconian: **Magistrat van Sînnesteil***
+  * [Non-HRE] **Xizhou** (`c_shaoqing`) — *Tarraconian: **Magistrat van Sunneleidergouwe***
+  * [Non-HRE] **Zongzhou** (`c_zongzhou`) — *Tarraconian: **Magistrat van Stamgouwe***
+* **Duchy of Luodian** (`d_luodian`) — *0/3 in HRE*
+  * [Non-HRE] **Luodian** (`c_luodian`) — *Tarraconian: **Magistrat van Lôfelt***
+  * [Non-HRE] **Yanchuan** (`c_yanchuan`) — *Tarraconian: **Magistrat van Edeljâdebache***
+  * [Non-HRE] **Yanzhou** (`c_yanzhou_3`) — *Tarraconian: **Magistrat van Edeljâdegouwe***
+* **Duchy of Shimen** (`d_shimen`) — *0/3 in HRE*
+  * [Non-HRE] **Quzhou** (`c_quzhou_1`) — *Tarraconian: **Magistrat van Krûmmegouwe***
+  * [Non-HRE] **Xiezhou** (`c_jingzhou_2`) — *Tarraconian: **Magistrat van Eendrachtgouwe***
+  * [Non-HRE] **Yinzhou** (`c_yinzhou_1`) — *Tarraconian: **Magistrat van Schânggouwe***
+* **Duchy of Xiyuan** (`d_xiyuan`) — *0/3 in HRE*
+  * [Non-HRE] **Guile** (`c_guile`) — *Tarraconian: **Magistrat van Weêrkeêrfröuden***
+  * [Non-HRE] **Siyuan** (`c_siyuan`) — *Tarraconian: **Magistrat van Sînnespring***
+  * [Non-HRE] **Wulong** (`c_wulong`) — *Tarraconian: **Magistrat van Krijchsdrache***
+
+---
+
+### 2.206 Kingdom of Dali (`k_dali`) — 0/17 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Dali** (`d_dali`) — *0/4 in HRE*
+  * [Non-HRE] **Dali** (`c_dali`) — *Tarraconian: **Magistrat van Grôzrecht***
+  * [Non-HRE] **Dongchuan** (`c_dongchuan`) — *Tarraconian: **Magistrat van Ôstbache***
+  * [Non-HRE] **Nongdong** (`c_nongdong`) — *Tarraconian: **Magistrat van Padbalk***
+  * [Non-HRE] **Weichu** (`c_weichu`) — *Tarraconian: **Magistrat van Machttschû***
+* **Duchy of Jianchuan** (`d_jianchuan`) — *0/3 in HRE*
+  * [Non-HRE] **Chengji** (`c_chengji`) — *Tarraconian: **Magistrat van Vollbrâchthilich***
+  * [Non-HRE] **Jianchuan** (`c_jianchuan`) — *Tarraconian: **Magistrat van dem Swertbache***
+  * [Non-HRE] **Xiangcheng** (`c_xiangcheng`) — *Tarraconian: **Magistrat van Sôtruchendburch***
+* **Duchy of Tonghai** (`d_tonghai`) — *0/3 in HRE*
+  * [Non-HRE] **Muze** (`c_muze`) — *Tarraconian: **Magistrat van Schouwenorm***
+  * [Non-HRE] **Tonghai** (`c_tonghai`) — *Tarraconian: **Magistrat van Dörchgancmêr***
+  * [Non-HRE] **Zuining** (`c_zuining`) — *Tarraconian: **Magistrat van Vollrûwe***
+* **Duchy of Yinsheng** (`d_yinsheng`) — *0/3 in HRE*
+  * [Non-HRE] **Buri** (`c_buri`) — *Tarraconian: **Magistrat van Stêsunnen***
+  * [Non-HRE] **Weiyuan** (`c_weiyuan`) — *Tarraconian: **Magistrat van Machtferne***
+  * [Non-HRE] **Yinsheng** (`c_yinsheng`) — *Tarraconian: **Magistrat van Silberlêven***
+* **Duchy of Huichuan** (`d_huichuan`) — *0/2 in HRE*
+  * [Non-HRE] **Huichuan** (`c_huichuan`) — *Tarraconian: **Magistrat van dem Samelingbache***
+  * [Non-HRE] **Jianchang** (`c_jianchang_1`) — *Tarraconian: **Magistrat van Stichtglantz***
+* **Duchy of Tuodong** (`d_tuodong`) — *0/2 in HRE*
+  * [Non-HRE] **Shanchan** (`c_shanchan`) — *Tarraconian: **Magistrat van Gûteklaarsteld***
+  * [Non-HRE] **Shicheng** (`c_shicheng`) — *Tarraconian: **Magistrat van Steinburch***
+
+---
+
+### 2.207 Kingdom of Kuizhou (`k_kuizhou`) — 0/17 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Qianzhong** (`d_qianzhong`) — *0/7 in HRE*
+  * [Non-HRE] **Bozhou** (`c_bochuan`) — *Tarraconian: **Magistrat van Hârigouwe***
+  * [Non-HRE] **Nanzhou** (`c_nanzhou`) — *Tarraconian: **Magistrat van Sûtgouwe***
+  * [Non-HRE] **Qianzhou** (`c_qianzhou_1`) — *Tarraconian: **Magistrat van Schwartzgouwegouwe***
+  * [Non-HRE] **Shizhou** (`c_shizhou_1`) — *Tarraconian: **Magistrat van Gâvegouwe***
+  * [Non-HRE] **Sizhou** (`c_sizhou`) — *Tarraconian: **Magistrat van Sînnegouwe***
+  * [Non-HRE] **Yizhou** (`c_yizhou_3`) — *Tarraconian: **Magistrat van Ebisgouwe***
+  * [Non-HRE] **Zhenzhou** (`c_zhenxi`) — *Tarraconian: **Magistrat van Dschênflôzgouwe***
+* **Duchy of Wuxi** (`d_wuxi`) — *0/6 in HRE*
+  * [Non-HRE] **Chenzhou** (`c_luxi`) — *Tarraconian: **Magistrat van Draaksterngouwe***
+  * [Non-HRE] **Jiangzhou** (`c_yezhou`) — *Tarraconian: **Magistrat van Lôfgouwe***
+  * [Non-HRE] **Jinzhou** (`c_luyang`) — *Tarraconian: **Magistrat van Sîdenziergouwe***
+  * [Non-HRE] **Shangxi** (`c_shangxi`) — *Tarraconian: **Magistrat van Ôversnellbach***
+  * [Non-HRE] **Xizhou** (`c_lingxi`) — *Tarraconian: **Magistrat van Snellbachgouwe***
+  * [Non-HRE] **Xuzhou** (`c_tanyang`) — *Tarraconian: **Magistrat van Ranggouwe***
+* **Duchy of Kuizhong** (`d_kuizhong`) — *0/4 in HRE*
+  * [Non-HRE] **Fuzhou** (`c_fuzhou_4`) — *Tarraconian: **Magistrat van Fûflôzgouwe***
+  * [Non-HRE] **Kuizhou** (`c_kuizhou`) — *Tarraconian: **Magistrat van Kwêigouwe***
+  * [Non-HRE] **Wanzhou** (`c_wanzhou`) — *Tarraconian: **Magistrat van Têndûsentgouwe***
+  * [Non-HRE] **Zhongzhou** (`c_zhongzhou`) — *Tarraconian: **Magistrat van Trûwegouwe***
+
+---
+
+### 2.208 Kingdom of Sibir (`k_sibir`) — 0/17 Counties in HRE/RE
+* **De Jure Empire:** Siberia (`e_siberia`)
+
+* **Duchy of Kazakh** (`d_kazakh`) — *0/4 in HRE*
+  * [Non-HRE] **Akmola** (`c_astana`) — *Tarraconian: **Magistrat van Wîzengrâv***
+  * [Non-HRE] **Astrakhanka** (`c_astrakhanka`) — *Tarraconian: **Magistrat van Astrachanke***
+  * [Non-HRE] **Burabay** (`c_shchuchinsk`) — *Tarraconian: **Magistrat van Burabâi***
+  * [Non-HRE] **Teke** (`c_teke`) — *Tarraconian: **Magistrat van Têke***
+* **Duchy of Sibir** (`d_sibir`) — *0/4 in HRE*
+  * [Non-HRE] **Bardak** (`c_bardak`) — *Tarraconian: **Magistrat van Bardach***
+  * [Non-HRE] **Belogorje** (`c_belogorje`) — *Tarraconian: **Magistrat van Wîzenberch***
+  * [Non-HRE] **Sibir** (`c_sibir`) — *Tarraconian: **Magistrat van Sibîr***
+  * [Non-HRE] **Tobol** (`c_tobol`) — *Tarraconian: **Magistrat van Tobôl***
+* **Duchy of Tara** (`d_tara`) — *0/4 in HRE*
+  * [Non-HRE] **Chich** (`c_chich`) — *Tarraconian: **Magistrat van Tschîtsch***
+  * [Non-HRE] **Irtysh** (`c_petropavolsk`) — *Tarraconian: **Magistrat van Irtîsch***
+  * [Non-HRE] **Solenoye** (`c_kazanskoye`) — *Tarraconian: **Magistrat van Saltzwazzer***
+  * [Non-HRE] **Tara** (`c_tara`) — *Tarraconian: **Magistrat van Târe***
+* **Duchy of Lanikaz** (`d_lanikaz`) — *0/3 in HRE*
+  * [Non-HRE] **Imekia** (`c_pavlodar`) — *Tarraconian: **Magistrat van Imêkje***
+  * [Non-HRE] **Kainsk** (`c_kainsk`) — *Tarraconian: **Magistrat van Kaînsk***
+  * [Non-HRE] **Om** (`c_omsk`) — *Tarraconian: **Magistrat van Ôm***
+* **Duchy of Ishim** (`d_ishim`) — *0/2 in HRE*
+  * [Non-HRE] **Dolgujar** (`c_dolgujar`) — *Tarraconian: **Magistrat van Dolgujâr***
+  * [Non-HRE] **Ishim** (`c_ishim`) — *Tarraconian: **Magistrat van Ischîm***
+
+---
+
+### 2.209 Kingdom of Ob (`k_ob`) — 0/16 Counties in HRE/RE
+* **De Jure Empire:** Siberia (`e_siberia`)
+
+* **Duchy of Ala Tau** (`d_ala_tau`) — *0/8 in HRE*
+  * [Non-HRE] **Chulym** (`c_chulym`) — *Tarraconian: **Magistrat van Tschulîm***
+  * [Non-HRE] **Eushta** (`c_tomsk`) — *Tarraconian: **Magistrat van Eûschte***
+  * [Non-HRE] **Kiia** (`c_kiia`) — *Tarraconian: **Magistrat van Kîe***
+  * [Non-HRE] **Kojuk** (`c_kojuk`) — *Tarraconian: **Magistrat van Kojûk***
+  * [Non-HRE] **Narim** (`c_narim`) — *Tarraconian: **Magistrat van Narîm***
+  * [Non-HRE] **Sochur** (`c_sochur`) — *Tarraconian: **Magistrat van Sotschûr***
+  * [Non-HRE] **Taskyl** (`c_taskyl`) — *Tarraconian: **Magistrat van Taskîl***
+  * [Non-HRE] **Yenisei** (`c_yenisei`) — *Tarraconian: **Magistrat van Jenissêi***
+* **Duchy of Baraba Steppe** (`d_baraba_steppe`) — *0/5 in HRE*
+  * [Non-HRE] **Igaran** (`c_igaran`) — *Tarraconian: **Magistrat van Igarân***
+  * [Non-HRE] **Kolyvan** (`c_kolyvan`) — *Tarraconian: **Magistrat van Kolywân***
+  * [Non-HRE] **Konda** (`c_konda_ob`) — *Tarraconian: **Magistrat van Ôbkônde***
+  * [Non-HRE] **Sartlan** (`c_sartlan`) — *Tarraconian: **Magistrat van Sartlân***
+  * [Non-HRE] **Ubins** (`c_ubins`) — *Tarraconian: **Magistrat van Ubînsk***
+* **Duchy of Vasyugan Mire** (`d_vasyugan_mire`) — *0/3 in HRE*
+  * [Non-HRE] **Tartas** (`c_tartas_SIB`) — *Tarraconian: **Magistrat van Tartâs***
+  * [Non-HRE] **Umiai** (`c_umiai`) — *Tarraconian: **Magistrat van Umjâi***
+  * [Non-HRE] **Vasyugan** (`c_vasyugan`) — *Tarraconian: **Magistrat van Wasjûgan***
+
+---
+
+### 2.210 Kingdom of Xingyuan (`k_xingyuan`) — 0/13 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Lilang** (`d_lilang`) — *0/5 in HRE*
+  * [Non-HRE] **Guozhou** (`c_guozhou_1`) — *Tarraconian: **Magistrat van Fruchtgouwe***
+  * [Non-HRE] **Langzhou** (`c_langzhou_1`) — *Tarraconian: **Magistrat van Hôchtorngouwe***
+  * [Non-HRE] **Lizhou** (`c_lizhou_2`) — *Tarraconian: **Magistrat van Wêngouwe***
+  * [Non-HRE] **Pengzhou** (`c_pengzhou_2`) — *Tarraconian: **Magistrat van Kruytgouwe***
+  * [Non-HRE] **Wenzhou** (`c_wenzhou`) — *Tarraconian: **Magistrat van Schriftgouwe***
+* **Duchy of Baqu** (`d_baqu`) — *0/4 in HRE*
+  * [Non-HRE] **Bazhou** (`c_bazhou`) — *Tarraconian: **Magistrat van Bâgouwe***
+  * [Non-HRE] **Kaizhou** (`c_kaizhou`) — *Tarraconian: **Magistrat van Opengouwe***
+  * [Non-HRE] **Quzhou** (`c_quzhou`) — *Tarraconian: **Magistrat van Grâbengouwe***
+  * [Non-HRE] **Tongzhou** (`c_tongzhou_1`) — *Tarraconian: **Magistrat van Dôrgancgouwe***
+* **Duchy of Xingyuan** (`d_xingyuan`) — *0/4 in HRE*
+  * [Non-HRE] **Bizhou** (`c_bizhou`) — *Tarraconian: **Magistrat van Vastegouwe***
+  * [Non-HRE] **Jizhou** (`c_jizhou_2`) — *Tarraconian: **Magistrat van Samelinggouwe***
+  * [Non-HRE] **Xingyuan** (`c_xingyuan`) — *Tarraconian: **Magistrat van Blûeiveit***
+  * [Non-HRE] **Yangzhou** (`c_yangzhou_1`) — *Tarraconian: **Magistrat van Mêrgouwe***
+
+---
+
+### 2.211 Kingdom of Dongchuan (`k_dongchuan`) — 0/12 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Dongchuan** (`d_dongchuan`) — *0/6 in HRE*
+  * [Non-HRE] **Jianzhou** (`c_jianzhou_1`) — *Tarraconian: **Magistrat van Swêrtgouwe***
+  * [Non-HRE] **Longzhou** (`c_longzhou`) — *Tarraconian: **Magistrat van Drachengouwe***
+  * [Non-HRE] **Mianzhou** (`c_mianzhou`) — *Tarraconian: **Magistrat van Sîdengouwe***
+  * [Non-HRE] **Puzhou** (`c_puzhou`) — *Tarraconian: **Magistrat van Almêngouwe***
+  * [Non-HRE] **Tongchuan** (`c_tongchuan`) — *Tarraconian: **Magistrat van Tôngklûsebache***
+  * [Non-HRE] **Zizhou** (`c_zizhou_2`) — *Tarraconian: **Magistrat van Schatzgouwe***
+* **Duchy of Wuxin** (`d_wuxin`) — *0/6 in HRE*
+  * [Non-HRE] **Changzhou** (`c_changzhou_1`) — *Tarraconian: **Magistrat van Voorspôetgouwe***
+  * [Non-HRE] **Luzhou** (`c_luzhou_2`) — *Tarraconian: **Magistrat van Lûflôzgouwe***
+  * [Non-HRE] **Rongzhou** (`c_rongzhou`) — *Tarraconian: **Magistrat van Miltgouwe***
+  * [Non-HRE] **Rongzhou** (`c_nanxi`) — *Tarraconian: **Magistrat van Wâpengouwe***
+  * [Non-HRE] **Suizhou** (`c_suining`) — *Tarraconian: **Magistrat van Vollbrengegouwe***
+  * [Non-HRE] **Yuzhou** (`c_yuzhou_2`) — *Tarraconian: **Magistrat van Jûflôzgouwe***
+
+---
+
+### 2.212 Kingdom of Xichuan (`k_xichuan`) — 0/12 Counties in HRE/RE
+* **De Jure Empire:** Liangyi (`e_liangyi`)
+
+* **Duchy of Qiongnan** (`d_qiongnan`) — *0/6 in HRE*
+  * [Non-HRE] **Jiazhou** (`c_jiazhou`) — *Tarraconian: **Magistrat van Prîsgouwe***
+  * [Non-HRE] **Lizhou** (`c_hanyuan`) — *Tarraconian: **Magistrat van Lîgouwe***
+  * [Non-HRE] **Meizhou** (`c_meizhou`) — *Tarraconian: **Magistrat van Prûmengouwe***
+  * [Non-HRE] **Qiongbu** (`c_qiongbu`) — *Tarraconian: **Magistrat van Tschiôngambet***
+  * [Non-HRE] **Qiongzhou** (`c_qiongzhou`) — *Tarraconian: **Magistrat van Jâdegouwe***
+  * [Non-HRE] **Yazhou** (`c_yazhou_2`) — *Tarraconian: **Magistrat van Edelgouwe***
+* **Duchy of Xichuan** (`d_xichuan`) — *0/6 in HRE*
+  * [Non-HRE] **Chengdu** (`c_chengdu`) — *Tarraconian: **Magistrat van Vollbrâchtstat***
+  * [Non-HRE] **Hanzhou** (`c_hanzhou`) — *Tarraconian: **Magistrat van Hângouwe***
+  * [Non-HRE] **Jianzhou** (`c_jianyang`) — *Tarraconian: **Magistrat van Schriftbalkgouwe***
+  * [Non-HRE] **Lingzhou** (`c_lingzhou_1`) — *Tarraconian: **Magistrat van Hügilgouwe***
+  * [Non-HRE] **Maozhou** (`c_maozhou`) — *Tarraconian: **Magistrat van Wôkergouwe***
+  * [Non-HRE] **Pengzhou** (`c_pengzhou`) — *Tarraconian: **Magistrat van Penggouwe***
+
+---
+
+### 2.213 Kingdom of Yugra (`k_yugra`) — 0/12 Counties in HRE/RE
+* **De Jure Empire:** Siberia (`e_siberia`)
+
+* **Duchy of Ostyaki** (`d_ostyaki`) — *0/4 in HRE*
+  * [Non-HRE] **Laia** (`c_laia`) — *Tarraconian: **Magistrat van Lâje***
+  * [Non-HRE] **Neramkary** (`c_neramkary`) — *Tarraconian: **Magistrat van Nêramkare***
+  * [Non-HRE] **Tabary** (`c_tabary`) — *Tarraconian: **Magistrat van Tabâre***
+  * [Non-HRE] **Tyumen** (`c_tyumen`) — *Tarraconian: **Magistrat van Tjumên***
+* **Duchy of Kazym** (`d_kazym`) — *0/3 in HRE*
+  * [Non-HRE] **Kazym** (`c_kazym`) — *Tarraconian: **Magistrat van Kazîm***
+  * [Non-HRE] **Koda** (`c_koda`) — *Tarraconian: **Magistrat van Kôde***
+  * [Non-HRE] **Sosva** (`c_sosva`) — *Tarraconian: **Magistrat van Sôswe***
+* **Duchy of Konda** (`d_konda`) — *0/3 in HRE*
+  * [Non-HRE] **Kartauzh** (`c_kartauzh`) — *Tarraconian: **Magistrat van Kartaûsch***
+  * [Non-HRE] **Kharam-Vosh** (`c_kharam-vosh`) — *Tarraconian: **Magistrat van Charamwosch***
+  * [Non-HRE] **Tselym Dalyn** (`c_tselym_dalyn`) — *Tarraconian: **Magistrat van Zêlim-Dalîn***
+* **Duchy of Pelym** (`d_pelym`) — *0/2 in HRE*
+  * [Non-HRE] **Koshuki** (`c_koshuki`) — *Tarraconian: **Magistrat van Koschûke***
+  * [Non-HRE] **Pelym** (`c_pelym`) — *Tarraconian: **Magistrat van Pelîm***
+
+---
+
 ## 3. Archdioceses & Ecclesiastical Sees (1059–1194)
 
 ### 3.1 Papal & Patriarchal Heads of Faith
@@ -5801,7 +6033,7 @@
 
 ### 3.2 Metropolitan Archdioceses (`d_et_*`)
 
-> **28 July 1194 Update:** By 1194, the Roman Empire has expanded its sphere of control across **45 De Jure Empires** and **204 De Jure Kingdoms** in Europe, North Africa, the Near East, Central Asia, and East Asia, encompassing **2,644 Roman Empire counties** (79.1% control across the imperial sphere of **3,342 counties**). All 78 Metropolitan Archdioceses and Holy Sees remain anchored within the imperial jurisdiction.
+> **28 July 1194 Update:** By 1194, the Roman Empire has expanded its sphere of control across **47 De Jure Empires** and **213 De Jure Kingdoms** in Europe, North Africa, the Near East, Central Asia, and East Asia, encompassing **2,644 Roman Empire counties** (76.1% control across the imperial sphere of **3,476 counties**). All 78 Metropolitan Archdioceses and Holy Sees remain anchored within the imperial jurisdiction.
 
 In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Archdioceses), there are **78 Metropolitan Archdiocese titles** (`d_et_*`). As of **13 May 1059**, **33 Archdioceses** are either active vassals of the **Holy Roman Empire** (32) or have their metropolitan seat in an HRE county (1 — Tarragona), **13** are active under non-HRE realms, and **32** are currently vacant/unheld (16 of which have their metropolitan seats inside the HRE):
 
