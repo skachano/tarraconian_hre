@@ -5258,7 +5258,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Jiangxi** (`d_jiangxi`) $\rightarrow$ **Gubernat van Westlangflôze**
   * `c_fuzhou_2` (**[HRE]** Fuzhou) $\rightarrow$ **Magistrat van Zachtgouwe**
   * `c_hongzhou` (**[HRE]** Hongzhou) $\rightarrow$ **Magistrat van Pôjang-Grôzwazzergouwe**
-  * `c_jianchang` (**[HRE]** Jianchang) $\rightarrow$ **Magistrat van Stichtglantz-in-Jângsche**
+  * `c_jianchang` (**[HRE]** Jianchang) $\rightarrow$ **Magistrat van Stichtglantz-in-Westlangflôze**
   * `c_jizhou_3` (**[HRE]** Jizhou) $\rightarrow$ **Magistrat van Hêlgouwe**
   * `c_linjiang` (**[HRE]** Linjiang) $\rightarrow$ **Magistrat van BîdemFlôz**
   * `c_yuanzhou` (**[HRE]** Yuanzhou) $\rightarrow$ **Magistrat van Eêrstgouwe**

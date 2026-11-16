@@ -639,7 +639,7 @@ The 380 counties of China Proper are organized below hierarchically by **De Jure
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 |216|`c_fuzhou_2`|**Fuzhou**|**抚州**|—| **Magistrat van Zachtgouwe** |**Magistrat van Zachtgouwe**|✅ Pre-867 Classical|`k_jiangxi`|yao|70|5|b_linchuan [castle], b_jinxi [city], ...|
 |217|`c_hongzhou`|**Hongzhou**|**洪州**|—| **Magistrat van Pôjang-Grôzwazzergouwe** |**Magistrat van Pôjang-Grôzwazzergouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|80|5|b_nanchang [castle], b_wuning [city],...|
-|218|`c_jianchang`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz-in-Jângsche** |**Magistrat van Stichtglantz-in-Jângsche**|✅ Pre-867 Classical|`k_jiangxi`|yao|55|3|b_nancheng [castle], b_nanfeng [city]...|
+|218|`c_jianchang`|**Jianchang**|**建昌**|—| **Magistrat van Stichtglantz-in-Westlangflôze** |**Magistrat van Stichtglantz-in-Westlangflôze**|✅ Pre-867 Classical|`k_jiangxi`|yao|55|3|b_nancheng [castle], b_nanfeng [city]...|
 |219|`c_jizhou_3`|**Jizhou**|**吉州**|—| **Magistrat van Hêlgouwe** |**Magistrat van Hêlgouwe**|✅ Pre-867 Classical|`k_jiangxi`|yao|57|5|b_luling [castle], b_anfu_2 [city], b...|
 |220|`c_linjiang`|**Linjiang**|**临江**|—| **Magistrat van BîdemFlôz** |**Magistrat van Bîdemflôz**|✅ Pre-867 Classical|`k_jiangxi`|han|61|3|b_qingjiang [castle], b_xingan [churc...|
 |221|`c_yuanzhou`|**Yuanzhou**|**袁州**|—| **Magistrat van Eêrstgouwe** |**Magistrat van Eêrstgouwe**|✅ Pre-867 Classical|`k_jiangxi`|han|57|3|b_yichun [castle], b_fenyi [city], b_...|

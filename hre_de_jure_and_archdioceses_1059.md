@@ -5463,7 +5463,7 @@
 * **Duchy of Jiangxi** (`d_jiangxi`) — *7/7 in HRE*
   * **[HRE]** **Fuzhou** (`c_fuzhou_2`) — *Tarraconian: **Magistrat van Zachtgouwe***
   * **[HRE]** **Hongzhou** (`c_hongzhou`) — *Tarraconian: **Magistrat van Pôjang-Grôzwazzergouwe***
-  * **[HRE]** **Jianchang** (`c_jianchang`) — *Tarraconian: **Magistrat van Stichtglantz-in-Jângsche***
+  * **[HRE]** **Jianchang** (`c_jianchang`) — *Tarraconian: **Magistrat van Stichtglantz-in-Westlangflôze***
   * **[HRE]** **Jizhou** (`c_jizhou_3`) — *Tarraconian: **Magistrat van Hêlgouwe***
   * **[HRE]** **Linjiang** (`c_linjiang`) — *Tarraconian: **Magistrat van BîdemFlôz***
   * **[HRE]** **Yuanzhou** (`c_yuanzhou`) — *Tarraconian: **Magistrat van Eêrstgouwe***
