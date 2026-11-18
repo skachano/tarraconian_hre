@@ -27,6 +27,11 @@ def main():
     (DOCS_DIR / "js").mkdir(parents=True, exist_ok=True)
     shutil.copy2(WEB_DIR / "js" / "app.js", DOCS_DIR / "js" / "app.js")
 
+    if (WEB_DIR / "vendor").exists():
+        if (DOCS_DIR / "vendor").exists():
+            shutil.rmtree(DOCS_DIR / "vendor")
+        shutil.copytree(WEB_DIR / "vendor", DOCS_DIR / "vendor")
+
     # 2. Copy production datasets
     docs_data = DOCS_DIR / "data"
     docs_data.mkdir(parents=True, exist_ok=True)

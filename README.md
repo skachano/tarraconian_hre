@@ -204,7 +204,29 @@ git commit -m "Imperial expansion: Incorporate newly annexed territories into ma
 
 ---
 
-## 6. Legal & Fan-Content Notice
+## 6. Cartographic Atlas (Web Application)
+
+An interactive, high-resolution vector cartographic atlas of the Tarraconian world conquest is hosted on GitHub Pages (under `docs/`). It features:
+* Vector rendering of all **3,476 counties** and **11,297 barony holdings** directly extracted from CK3 map data.
+* Instant autocomplete search across Tarraconian Chancellery toponyms, canonical names, and title keys.
+* Full hierarchical breadcrumb lineage (Empire $\rightarrow$ Kingdom $\rightarrow$ Duchy $\rightarrow$ County $\rightarrow$ Baronies).
+* De Jure rank filtering and slide-out Inspector Drawer with historical 1059 resolution notes.
+
+### Running the Web Atlas in Docker
+```bash
+./scripts/run_webapp_docker.sh
+# Open http://localhost:8080 in your browser
+```
+
+### Running the Test Suite in Docker
+The test suite includes asset & data integrity tests (`pytest`) and end-to-end headless browser interaction tests (`Playwright`):
+```bash
+./scripts/run_tests_docker.sh
+```
+
+---
+
+## 7. Legal & Fan-Content Notice
 
 * **Game IP:** Crusader Kings III is a registered trademark of Paradox Interactive AB.
 * **Disclaimer:** This project is an unofficial fan-made alternate-history mod and onomastic atlas. It is non-commercial and is neither affiliated with nor endorsed by Paradox Interactive AB.
