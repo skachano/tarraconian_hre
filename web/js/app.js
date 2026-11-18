@@ -90,6 +90,12 @@ function initMap() {
       clearHover();
     }
   });
+  map.on('click', () => {
+    const searchDropdown = document.getElementById('search-results');
+    if (searchDropdown && !searchDropdown.classList.contains('hidden')) {
+      searchDropdown.classList.add('hidden');
+    }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -121,6 +127,12 @@ async function loadData() {
     // Render primary layer
     renderActiveLayer();
     buildSearchIndex();
+
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const hoverBadge = document.getElementById('hover-info');
+    if (hoverBadge && isTouch) {
+      hoverBadge.textContent = 'Tap a territory to inspect';
+    }
 
     overlay.classList.add('fade-out');
     setTimeout(() => overlay.remove(), 400);
@@ -355,7 +367,8 @@ function clearHover() {
   hoveredTitleKey = null;
   const hoverBadge = document.getElementById('hover-info');
   if (hoverBadge) {
-    hoverBadge.innerHTML = 'Hover over a territory to inspect';
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    hoverBadge.innerHTML = isTouch ? 'Tap a territory to inspect' : 'Hover over a territory to inspect';
   }
 }
 
@@ -1066,6 +1079,10 @@ function setupEventListeners() {
 
   // Drawer close & zoom
   document.getElementById('drawer-close').addEventListener('click', closeInspector);
+  const dragHandle = document.querySelector('.drawer-drag-handle');
+  if (dragHandle) {
+    dragHandle.addEventListener('click', closeInspector);
+  }
   document.getElementById('drawer-zoom-btn').addEventListener('click', () => {
     if (selectedLayers.length > 0) {
       const group = L.featureGroup(selectedLayers);

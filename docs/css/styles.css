@@ -328,6 +328,10 @@ body {
   transform: translateX(0);
 }
 
+.drawer-drag-handle {
+  display: none;
+}
+
 .drawer-header {
   padding: 1.25rem 1.25rem 1rem;
   border-bottom: 1px solid var(--border-subtle);
@@ -683,13 +687,6 @@ body {
 
 .footer-disclaimer {
   color: #7a7366;
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .brand-subtitle { display: none; }
-  .search-container { max-width: 240px; }
-  .inspector-drawer { width: calc(100vw - 32px); }
 }
 
 /* --------------------------------------------------------------------------
@@ -1281,5 +1278,435 @@ body {
 .lexicon-table td.lexicon-ipa-cell {
   font-family: var(--font-mono);
   color: #e5b869;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive & Mobile Design System
+   -------------------------------------------------------------------------- */
+
+/* Medium Screens & Small Desktops / Tablets Landscape */
+@media (max-width: 1024px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .search-container {
+    max-width: 320px;
+  }
+  .tier-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* Tablet Portrait & Mobile Screens (<= 768px) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Header Reorganization: 3-row compact grid */
+  .app-header {
+    height: auto;
+    min-height: auto;
+    padding: 0.6rem 0.85rem 0.65rem 0.85rem;
+    padding-top: max(0.6rem, env(safe-area-inset-top, 0.6rem));
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand actions"
+      "search search"
+      "tiers tiers";
+    gap: 0.55rem;
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  }
+
+  .header-brand {
+    grid-area: brand;
+    min-width: 0;
+    gap: 0.65rem;
+  }
+
+  .brand-crest {
+    font-size: 1.4rem;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .header-actions {
+    grid-area: actions;
+    justify-self: end;
+  }
+
+  .btn-linguistics-guide {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.76rem;
+    gap: 0.35rem;
+    border-radius: 6px;
+    touch-action: manipulation;
+  }
+
+  /* Search Container: Full Width */
+  .search-container {
+    grid-area: search;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-input-wrapper input {
+    font-size: 0.88rem;
+    padding: 0.55rem 2.2rem 0.55rem 2.4rem;
+    border-radius: 12px;
+    background: #0d0b09;
+    -webkit-appearance: none;
+  }
+
+  .search-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 52vh;
+    border-radius: 8px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
+    z-index: 1060;
+  }
+
+  .search-item {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .search-item-primary {
+    font-size: 0.95rem;
+  }
+
+  /* Tier Selector: Full Width Segmented Control */
+  .tier-selector {
+    grid-area: tiers;
+    width: 100%;
+    margin: 0;
+    gap: 0;
+  }
+
+  .tier-label {
+    display: none;
+  }
+
+  .tier-pills {
+    width: 100%;
+    display: flex;
+    background: #0d0b09;
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .tier-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.48rem 0.15rem;
+    font-size: 0.76rem;
+    text-align: center;
+    border-radius: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+  }
+
+  /* Inspector Drawer: Mobile Bottom Sheet */
+  .drawer-drag-handle {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: rgba(212, 175, 55, 0.4);
+    border-radius: 2px;
+    margin: 8px auto 0 auto;
+    flex-shrink: 0;
+  }
+
+  .inspector-drawer {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 78vh;
+    border-radius: 18px 18px 0 0;
+    border: none;
+    border-top: 1px solid var(--border-gold);
+    box-shadow: 0 -8px 36px rgba(0, 0, 0, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1050;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0.75rem));
+  }
+
+  .inspector-drawer.open {
+    transform: translateY(0);
+  }
+
+  .drawer-header {
+    padding: 0.75rem 1rem 0.5rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .drawer-title {
+    font-size: 1.15rem;
+  }
+
+  .drawer-close-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    touch-action: manipulation;
+  }
+
+  .drawer-body {
+    padding: 0.75rem 1rem;
+    max-height: calc(78vh - 125px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .drawer-footer {
+    padding: 0.65rem 1rem;
+  }
+
+  .drawer-footer .btn-primary {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    touch-action: manipulation;
+  }
+
+  /* Sinosphere Card Mobile Enhancements */
+  .sinosphere-card {
+    padding: 0.75rem;
+  }
+
+  .sinosphere-header-row {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .sinosphere-hanzi {
+    font-size: 1.4rem;
+  }
+
+  .sinosphere-char-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .sinosphere-char-right {
+    align-self: flex-start;
+  }
+
+  /* Floating Territory Badge & Legend */
+  .map-stats-badge {
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    max-width: calc(100vw - 80px);
+    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem;
+    background: rgba(18, 16, 14, 0.92);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  .inspector-drawer.open ~ .map-stats-badge {
+    display: none;
+  }
+
+  .barony-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 4px;
+  }
+
+  .legend-item {
+    font-size: 0.68rem;
+  }
+
+  /* Leaflet Controls Mobile */
+  .leaflet-top.leaflet-left {
+    top: 10px;
+    left: 10px;
+  }
+
+  .leaflet-bar a {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 16px !important;
+  }
+
+  /* Linguistics Guide Modal Full-Height Bottom Sheet */
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .linguistics-modal-dialog {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 94vh;
+    max-height: 94vh;
+    border-radius: 18px 18px 0 0;
+    border: none;
+    border-top: 1px solid var(--border-gold);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-header {
+    padding: 0.75rem 1rem 0.5rem 1rem;
+  }
+
+  .modal-brand-crest {
+    font-size: 1.3rem;
+  }
+
+  .modal-title {
+    font-size: 1.05rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-close-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    touch-action: manipulation;
+  }
+
+  .modal-nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.4rem 0.75rem;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--border-subtle);
+    background: #0d0c0a;
+    flex-wrap: nowrap;
+  }
+
+  .modal-nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-tab-btn {
+    flex-shrink: 0;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    border-radius: 4px;
+    touch-action: manipulation;
+  }
+
+  .modal-body {
+    padding: 0.85rem 1rem;
+    max-height: calc(94vh - 120px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lexicon-filter-categories {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.35rem;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .lexicon-filter-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lexicon-cat-btn {
+    flex-shrink: 0;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+  }
+
+  .lexicon-table-wrapper {
+    max-height: calc(94vh - 230px);
+  }
+
+  /* Footer Mobile */
+  .app-footer {
+    height: auto;
+    padding: 0.45rem 0.85rem;
+    padding-bottom: max(0.45rem, env(safe-area-inset-bottom, 0.45rem));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2rem;
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+}
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .tier-btn {
+    font-size: 0.72rem;
+    padding: 0.42rem 0.1rem;
+  }
+
+  .drawer-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-title {
+    font-size: 0.95rem;
+  }
+
+  .btn-linguistics-guide {
+    padding: 0.4rem 0.6rem;
+  }
 }
 

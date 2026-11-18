@@ -102,6 +102,10 @@ class TestWebAssets:
         for tab_name in ["tarraconian", "sinosphere", "lexicon"]:
             assert f'data-tab="{tab_name}"' in content, f"Missing tab button data-tab={tab_name} in index.html"
 
+        # Mobile viewport & bottom sheet drag handle
+        assert "viewport-fit=cover" in content
+        assert "drawer-drag-handle" in content
+
         # Paradox Interactive Fan Disclaimer
         assert "Crusader Kings III is a registered trademark of Paradox Interactive AB" in content
         assert "non-commercial" in content
@@ -113,6 +117,8 @@ class TestWebAssets:
         assert ".app-header" in content
         assert ".inspector-drawer" in content
         assert "--gold-primary" in content
+        assert "@media (max-width: 768px)" in content
+        assert "drawer-drag-handle" in content
 
     def test_js_app_exists(self):
         js_path = DOCS_DIR / "js" / "app.js"

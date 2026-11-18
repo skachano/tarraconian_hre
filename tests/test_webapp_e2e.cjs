@@ -774,6 +774,91 @@ async function runE2ETests() {
     await page.waitForSelector('#map', { timeout: 5000 });
     console.log('  404 return navigation verified.');
 
+    // 8. Test Mobile Viewport Layout & Touch Interactions (390x844 iPhone)
+    console.log('[9/9] Testing Mobile Viewport (iPhone 14 / 390x844)...');
+    const mobileContext = await browser.newContext({
+      viewport: { width: 390, height: 844 },
+      isMobile: true,
+      hasTouch: true
+    });
+    const mobilePage = await mobileContext.newPage();
+    await mobilePage.goto(`${baseUrl}/index.html`, { waitUntil: 'domcontentloaded' });
+    await mobilePage.waitForSelector('#loading-overlay', { state: 'detached', timeout: 20000 });
+
+    // Verify zero horizontal overflow on mobile body
+    const mobileScrollWidth = await mobilePage.evaluate(() => document.body.scrollWidth);
+    console.log(`  Mobile body scrollWidth: ${mobileScrollWidth}px (viewport: 390px)`);
+    if (mobileScrollWidth > 390) {
+      throw new Error(`Mobile horizontal overflow detected: scrollWidth is ${mobileScrollWidth}px > 390px`);
+    }
+
+    // Verify header elements fit neatly in mobile viewport
+    const headerFit = await mobilePage.evaluate(() => {
+      const search = document.querySelector('.search-container').getBoundingClientRect();
+      const tiers = document.querySelector('.tier-selector').getBoundingClientRect();
+      const actions = document.querySelector('.header-actions').getBoundingClientRect();
+      return {
+        searchFits: search.right <= 390 && search.width >= 280,
+        tiersFit: tiers.right <= 390,
+        actionsFit: actions.right <= 390
+      };
+    });
+    if (!headerFit.searchFits || !headerFit.tiersFit || !headerFit.actionsFit) {
+      throw new Error(`Header layout overflowed mobile screen: ${JSON.stringify(headerFit)}`);
+    }
+    console.log('  Mobile header layout verified (zero overflow, full-width search & tier pills).');
+
+    // Test Search & Bottom-Sheet Drawer on Mobile
+    console.log('  Testing mobile search selection & bottom sheet drawer...');
+    const mobileSearch = mobilePage.locator('#title-search');
+    await mobileSearch.fill('Stûlwîtzenburch');
+    await mobilePage.waitForSelector('#search-results .search-item', { timeout: 5000 });
+    const mobileFirstResult = mobilePage.locator('#search-results .search-item').first();
+    await mobileFirstResult.click();
+
+    await mobilePage.waitForSelector('#inspector-drawer.open', { timeout: 5000 });
+    await mobilePage.waitForTimeout(400); // Allow bottom-sheet CSS transition
+    const mobileDrawerRect = await mobilePage.locator('#inspector-drawer').boundingBox();
+    console.log(`  Mobile drawer bottom sheet: width=${mobileDrawerRect.width}px, y=${mobileDrawerRect.y}px`);
+    if (mobileDrawerRect.width !== 390) {
+      throw new Error(`Expected mobile drawer width 390px, got ${mobileDrawerRect.width}px`);
+    }
+    if (mobileDrawerRect.y < 100) {
+      throw new Error(`Expected bottom-sheet drawer to leave top map visible, got y=${mobileDrawerRect.y}`);
+    }
+
+    // Close mobile drawer via close button
+    const mobileDrawerClose = mobilePage.locator('#drawer-close');
+    await mobileDrawerClose.click();
+    await mobilePage.waitForSelector('#inspector-drawer:not(.open)', { timeout: 5000 });
+    console.log('  Mobile drawer closed successfully.');
+
+    // Test Mobile Linguistics Modal
+    console.log('  Testing mobile Linguistics Guide modal...');
+    const mobileOpenGuide = mobilePage.locator('#btn-open-linguistics');
+    await mobileOpenGuide.click();
+    await mobilePage.waitForSelector('#linguistics-modal:not(.hidden)', { timeout: 5000 });
+    const mobileModalDialog = mobilePage.locator('.linguistics-modal-dialog');
+    const mobileModalRect = await mobileModalDialog.boundingBox();
+    console.log(`  Mobile modal dialog: width=${mobileModalRect.width}px, height=${mobileModalRect.height}px`);
+    if (mobileModalRect.width > 390) {
+      throw new Error(`Mobile modal width overflow: ${mobileModalRect.width}px > 390px`);
+    }
+
+    // Switch to Lexicon tab on mobile
+    const mobileLexiconTab = mobilePage.locator('.modal-tab-btn[data-tab="lexicon"]');
+    await mobileLexiconTab.click();
+    await mobilePage.waitForSelector('#tab-pane-lexicon.active:not(.hidden)', { timeout: 5000 });
+    await mobilePage.waitForSelector('#lexicon-table-body tr td.lexicon-hanzi-cell', { timeout: 10000 });
+
+    const mobileCloseGuide = mobilePage.locator('#btn-close-linguistics');
+    await mobileCloseGuide.click();
+    await mobilePage.waitForSelector('#linguistics-modal', { state: 'hidden', timeout: 5000 });
+    console.log('  Mobile modal closed successfully.');
+
+    await mobilePage.close();
+    await mobileContext.close();
+
     console.log('\n========================================');
     console.log('✅ ALL E2E WEB APPLICATION TESTS PASSED!');
     console.log('========================================');
