@@ -505,6 +505,23 @@ async function runE2ETests() {
     }, { timeout: 10000 });
     console.log('  Barony tier active: 11,297 holding polygons loaded.');
 
+    const legendVisibleInBarony = await page.locator('#barony-legend').evaluate(el => !el.classList.contains('hidden'));
+    if (!legendVisibleInBarony) {
+      throw new Error('Expected #barony-legend to be visible in Barony tier');
+    }
+
+    const baronyFills = await page.evaluate(() => {
+      const paths = Array.from(document.querySelectorAll('#map svg path'));
+      const fills = new Set(paths.slice(0, 100).map(p => p.getAttribute('fill')));
+      return Array.from(fills);
+    });
+    console.log(`  Sample barony holding fill colors: ${baronyFills.join(', ')}`);
+    const expectedBaronyColors = ['#ab3348', '#3069a8', '#3b824a', '#424242'];
+    const matchedColors = expectedBaronyColors.filter(c => baronyFills.includes(c));
+    if (matchedColors.length < 2) {
+      throw new Error(`Expected barony holding colors among sample, found only: ${matchedColors.join(', ')}`);
+    }
+
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');
     await countyBtn.click();
@@ -512,6 +529,11 @@ async function runE2ETests() {
       return document.querySelectorAll('#map svg path').length === 3476;
     }, { timeout: 5000 });
     console.log('  Restored County tier: 3,476 county polygons loaded.');
+
+    const legendHiddenInCounty = await page.locator('#barony-legend').evaluate(el => el.classList.contains('hidden'));
+    if (!legendHiddenInCounty) {
+      throw new Error('Expected #barony-legend to be hidden in County tier');
+    }
 
     // Verify non-empty hex fill colors from map coloring
     const sampleFills = await page.evaluate(() => {

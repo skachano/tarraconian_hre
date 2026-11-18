@@ -187,6 +187,10 @@ function baronyStyle(feature) {
 
 function renderActiveLayer() {
   clearHover();
+  const legend = document.getElementById('barony-legend');
+  if (legend) {
+    legend.classList.toggle('hidden', currentTier !== 'barony');
+  }
   if (currentTier === 'barony') {
     if (countiesLayer) map.removeLayer(countiesLayer);
     renderBaronies();
@@ -364,7 +368,8 @@ function onHover(layer, feature, tier = currentTier) {
     let rankLabel = '';
 
     if (tier === 'barony') {
-      rankLabel = 'Holding';
+      const htName = p.holding_type_name || (p.holding_type ? p.holding_type.charAt(0).toUpperCase() + p.holding_type.slice(1) : '');
+      rankLabel = htName ? `Holding (${htName})` : 'Holding';
       titleName = p.name || formatKey(p.barony);
     } else if (tier === 'county') {
       rankLabel = 'County';
@@ -452,7 +457,12 @@ function openInspector(props, tier) {
   const bcCounty = document.getElementById('bc-county');
 
   // Tier info & Title Key
-  badge.textContent = tier.toUpperCase();
+  if (tier === 'barony') {
+    const htName = props.holding_type_name || (props.holding_type ? props.holding_type.charAt(0).toUpperCase() + props.holding_type.slice(1) : '');
+    badge.textContent = htName ? `HOLDING · ${htName.toUpperCase()}` : 'HOLDING';
+  } else {
+    badge.textContent = tier.toUpperCase();
+  }
   const currentKey = getTitleKeyForTier(props, tier);
   titleKeyElem.textContent = currentKey;
 

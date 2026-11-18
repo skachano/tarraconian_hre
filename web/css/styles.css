@@ -586,6 +586,53 @@ body {
   backdrop-filter: blur(6px);
   z-index: 1000;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.barony-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.barony-legend.hidden {
+  display: none;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.legend-dot.dot-castle {
+  background-color: #ab3348;
+}
+
+.legend-dot.dot-church {
+  background-color: #3069a8;
+}
+
+.legend-dot.dot-city {
+  background-color: #3b824a;
+}
+
+.legend-dot.dot-unoccupied {
+  background-color: #424242;
 }
 
 .custom-tooltip {

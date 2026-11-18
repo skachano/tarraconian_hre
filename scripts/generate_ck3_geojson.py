@@ -68,6 +68,68 @@ def hex_to_rgb(hex_str: str):
 
 MAP_PALETTE_RGB = [hex_to_rgb(h) for h in MAP_PALETTE]
 
+# ---------------------------------------------------------------------------
+# Barony Holding Colors (4 Semantic Categories)
+# - castles in reddish colour
+# - bishopries in bluish colour
+# - cities in greenish colour
+# - unoccupied in dark grey colour
+# ---------------------------------------------------------------------------
+BARONY_HOLDING_COLORS = {
+    "castle": "#ab3348",      # Reddish (Crimson Wine)
+    "church": "#3069a8",      # Bluish (Royal Blue)
+    "city": "#3b824a",        # Greenish (Forest Green)
+    "unoccupied": "#424242",  # Dark grey
+}
+
+BARONY_HOLDING_NAMES = {
+    "castle": "Castle",
+    "church": "Bishopric",
+    "city": "City",
+    "unoccupied": "Unoccupied",
+}
+
+
+def load_barony_holdings_map(repo_dir: Path = None) -> dict:
+    """Loads barony holdings mapping from data/barony_holdings.json or titles_data.json."""
+    if repo_dir is None:
+        repo_dir = Path(__file__).resolve().parent.parent
+
+    data_file = repo_dir / "data" / "barony_holdings.json"
+    audit_file = Path("/var/tmp/ck3_audit/phase1/titles_data.json")
+
+    def map_raw_holding_type(raw_type):
+        if not raw_type:
+            return "unoccupied"
+        raw = raw_type.lower()
+        if "church" in raw or "temple" in raw:
+            return "church"
+        elif "city" in raw:
+            return "city"
+        elif "castle" in raw or "tribal" in raw or "nomad" in raw or "herder" in raw:
+            return "castle"
+        return "unoccupied"
+
+    holdings = {}
+    if data_file.exists():
+        try:
+            with open(data_file, "r", encoding="utf-8") as f:
+                holdings = json.load(f)
+        except Exception:
+            pass
+
+    if not holdings and audit_file.exists():
+        try:
+            with open(audit_file, "r", encoding="utf-8") as f:
+                titles_data = json.load(f)
+            for c_data in titles_data.values():
+                for b in c_data.get("baronies", []):
+                    holdings[b["key"]] = map_raw_holding_type(b.get("holding_type"))
+        except Exception as e:
+            print(f"Warning: could not parse titles_data.json: {e}")
+
+    return holdings
+
 
 def format_title_key(key: str) -> str:
     """Fallback formatting: e.g. c_middlesex -> Middlesex, d_york -> York"""
@@ -138,10 +200,15 @@ def color_graph_dsatur(nodes, edges, palette=MAP_PALETTE, palette_rgb=MAP_PALETT
     return result
 
 
-def compute_all_tier_colors(county_features, barony_features):
+def compute_all_tier_colors(county_features, barony_features, repo_dir: Path = None):
     """
     Computes spatial adjacency graphs and assigns collision-free colors
-    for all 5 tiers: empires, kingdoms, duchies, counties, and baronies.
+    for empires, kingdoms, duchies, counties (7-color DSATUR),
+    and assigns 4 holding-type colors for baronies:
+    - castles: reddish (#ab3348)
+    - bishoprics: bluish (#3069a8)
+    - cities: greenish (#3b824a)
+    - unoccupied: dark grey (#424242)
     """
     print("Computing spatial adjacencies for map coloring...")
     t0 = time.time()
@@ -220,15 +287,20 @@ def compute_all_tier_colors(county_features, barony_features):
 
     print(f"-> Barony adjacency: {len(b_nodes)} baronies, {len(barony_edges)} border edges in {time.time() - t0:.2f}s")
 
-    # 4. Color all 5 tiers with DSATUR
-    print("Coloring territory graphs (Four-Color DSATUR)...")
+    # 4. Color all tiers: Counties/Duchies/Kingdoms/Empires with 7-color DSATUR, Baronies with 4 holding colors
+    print("Coloring territory graphs (Counties/Duchies/Kingdoms/Empires DSATUR, Baronies holding types)...")
     t0 = time.time()
     county_colors = color_graph_dsatur(c_nodes, county_adj_edges)
     duchy_colors = color_graph_dsatur(d_nodes, d_edges)
     kingdom_colors = color_graph_dsatur(k_nodes, k_edges)
     empire_colors = color_graph_dsatur(e_nodes, e_edges)
-    barony_colors = color_graph_dsatur(b_nodes, barony_edges)
-    print(f"-> All 5 tiers colored with 0 adjacent collisions in {time.time() - t0:.2f}s")
+
+    barony_holdings = load_barony_holdings_map(repo_dir)
+    barony_colors = {
+        bk: BARONY_HOLDING_COLORS.get(barony_holdings.get(bk, "unoccupied"), "#424242")
+        for bk in b_nodes
+    }
+    print(f"-> All tiers colored: Counties/Duchies/Kingdoms/Empires (DSATUR 7-color), Baronies (4-color holdings) in {time.time() - t0:.2f}s")
 
     adjacencies = {
         "empires": sorted(list(e_edges)),
@@ -1058,7 +1130,7 @@ def realign_existing_datasets(
 
     # Compute collision-free map colors
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
-        counties_fc["features"], baronies_fc["features"]
+        counties_fc["features"], baronies_fc["features"], repo_dir=out_dir.parent
     )
 
     # Apply colors to county features
@@ -1077,7 +1149,8 @@ def realign_existing_datasets(
     with open(counties_path, "w", encoding="utf-8") as f:
         json.dump(counties_fc, f, separators=(",", ":"))
 
-    # Apply colors to barony features
+    # Apply colors and holding types to barony features
+    barony_holdings = load_barony_holdings_map(out_dir.parent)
     for feat in baronies_fc["features"]:
         p = feat["properties"]
         bk = p["barony"]
@@ -1085,7 +1158,10 @@ def realign_existing_datasets(
         dk = p.get("duchy")
         kk = p.get("kingdom")
         ek = p.get("empire")
-        p["b_color"] = b_colors.get(bk, "#2a7d76")
+        ht = barony_holdings.get(bk, "unoccupied")
+        p["holding_type"] = ht
+        p["holding_type_name"] = BARONY_HOLDING_NAMES.get(ht, "Unoccupied")
+        p["b_color"] = BARONY_HOLDING_COLORS.get(ht, "#424242")
         p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
         p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
         p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
@@ -1529,9 +1605,9 @@ def main():
 
     print(f"-> Dissolved {len(county_features)} county features in {time.time() - t0:.2f}s")
 
-    # 9. Compute Four-Color Map Coloring for all 5 tiers
+    # 9. Compute Map Colors for all tiers
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
-        county_features, barony_features
+        county_features, barony_features, repo_dir=out_dir.parent
     )
 
     # 10. Apply colors to county features
@@ -1546,7 +1622,8 @@ def main():
         p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
         p["e_color"] = e_colors.get(ek, "#a64b38") if ek else "#3d3832"
 
-    # 11. Apply colors to barony features
+    # 11. Apply colors and holding types to barony features
+    barony_holdings = load_barony_holdings_map(out_dir.parent)
     for feat in barony_features:
         p = feat["properties"]
         bk = p["barony"]
@@ -1554,7 +1631,10 @@ def main():
         dk = p.get("duchy")
         kk = p.get("kingdom")
         ek = p.get("empire")
-        p["b_color"] = b_colors.get(bk, "#2a7d76")
+        ht = barony_holdings.get(bk, "unoccupied")
+        p["holding_type"] = ht
+        p["holding_type_name"] = BARONY_HOLDING_NAMES.get(ht, "Unoccupied")
+        p["b_color"] = BARONY_HOLDING_COLORS.get(ht, "#424242")
         p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
         p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
         p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"

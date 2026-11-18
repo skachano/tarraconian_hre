@@ -368,22 +368,33 @@ class TestMapColoring:
                 collisions.append((c1, c2, by_key[c1]))
         assert not collisions, f"Detected adjacent county color collisions: {collisions}"
 
-    def test_no_adjacent_barony_color_collisions(self, baronies_data, adjacencies_data):
-        by_key = {f["properties"]["barony"]: f["properties"]["b_color"] for f in baronies_data["features"]}
-        collisions = []
-        for b1, b2 in adjacencies_data["baronies"]:
-            if b1 in by_key and b2 in by_key and by_key[b1] == by_key[b2]:
-                collisions.append((b1, b2, by_key[b1]))
-        assert not collisions, f"Detected adjacent barony color collisions: {collisions}"
-
-    def test_seven_color_palette_uniformity(self, counties_data, baronies_data):
-        """Validates that all 7 palette colors are used across all tiers without monopoly."""
+    def test_seven_color_palette_uniformity(self, counties_data):
+        """Validates that all 7 palette colors are used across all de jure title tiers without monopoly."""
         for key in ["c_color", "d_color", "k_color", "e_color"]:
             colors = {f["properties"][key] for f in counties_data["features"]}
             assert len(colors) == 7, f"Expected exactly 7 colors in {key}, found {len(colors)}: {colors}"
 
+    def test_barony_holding_type_four_colors(self, baronies_data):
+        """Validates that baronies are colored by holding type across exactly the 4 requested colors:
+        - Castles: reddish (#ab3348)
+        - Bishoprics: bluish (#3069a8)
+        - Cities: greenish (#3b824a)
+        - Unoccupied: dark grey (#424242)
+        """
+        holding_colors = {"#ab3348", "#3069a8", "#3b824a", "#424242"}
         b_colors = {f["properties"]["b_color"] for f in baronies_data["features"]}
-        assert len(b_colors) == 7, f"Expected exactly 7 colors in b_color, found {len(b_colors)}: {b_colors}"
+        assert b_colors == holding_colors, f"Expected baronies to have colors {holding_colors}, got {b_colors}"
+
+        by_key = {f["properties"]["barony"]: f["properties"] for f in baronies_data["features"]}
+        # London is a castle holding
+        assert by_key["b_london"]["b_color"] == "#ab3348"
+        assert by_key["b_london"]["holding_type"] == "castle"
+        # Southwark is a city holding
+        assert by_key["b_southwark"]["b_color"] == "#3b824a"
+        assert by_key["b_southwark"]["holding_type"] == "city"
+        # Brentford is a church holding
+        assert by_key["b_brentford"]["b_color"] == "#3069a8"
+        assert by_key["b_brentford"]["holding_type"] == "church"
 
     def test_navigable_river_and_strait_adjacencies(self, counties_data, adjacencies_data):
         """Validates that titles across navigable rivers (e.g. Po river: Venice & Romagna) are adjacent with distinct colors."""
