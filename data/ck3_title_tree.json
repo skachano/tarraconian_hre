@@ -1,10 +1,10 @@
 {
   "e_abyssinia": {
     "key": "e_abyssinia",
-    "tarr": "Dat Abessînische Imperi",
-    "ipa": "[dat a.bɛ.ˈsiː.nɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Ethjôpische Imperi",
+    "ipa": "[dat ɛt.ˈjoː.pɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Abyssinia",
-    "anachronism": "⚠️ Arabic al-Habasha / Abyssinia applied over ancient classical empire of Aksum.",
+    "anachronism": "Classical and medieval Greek/Latin and Ge'ez imperial designation Ethiopia / Aksum, held in save by Getachew (ethiopian culture).",
     "color": "#b84f18",
     "kingdoms": {
       "k_abyssinia": {
@@ -4262,10 +4262,10 @@
   },
   "e_andong": {
     "key": "e_andong",
-    "tarr": "Dat Imperi van dem Ôstfrid",
-    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈoːst.friːt]",
+    "tarr": "Dat Chitaische Imperi",
+    "ipa": "[dat çi.ˈtaː.ɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Andong",
-    "anachronism": "Pre-867 Tang Dynasty Protectorate General to Pacify the East (Andong Duhufu 668 AD).",
+    "anachronism": "Conquered in 999 AD by Yelü Xiuge (House Yelü, Khitan culture), representing the Liao/Khitan imperial domain encompassing k_khitan.",
     "color": "#783884",
     "kingdoms": {
       "k_balhae": {
@@ -9587,8 +9587,8 @@
   },
   "e_bengal": {
     "key": "e_bengal",
-    "tarr": "Dat Ôstindische Imperi",
-    "ipa": "[dat ˈoːst.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Bengalische Imperi",
+    "ipa": "[dat bɛŋ.ˈgaː.lɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Pracya",
     "anachronism": "Pre-867 Sanskrit Prācya / Pala Empire 750 AD. Destroyed historically in 550 AD.",
     "color": "#b84f18",
@@ -13133,10 +13133,10 @@
   },
   "e_carpathia": {
     "key": "e_carpathia",
-    "tarr": "Dat Imperi van Datzjen",
-    "ipa": "[dat ɪm.ˈpɛ.ri van ˈda.tsjən]",
+    "tarr": "Dat Arpâdische Imperi",
+    "ipa": "[dat ar.ˈpaː.dɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Carpathia",
-    "anachronism": "Pre-867 Roman Dacia Traiana (106 AD). Hungary drifted to e_germany, leaving Wallachia and Moldavia.",
+    "anachronism": "Created 885 AD by Árpád (House Árpád) and ruled continuously as the dynastic imperial seat until 958 AD.",
     "color": "#ab3348",
     "kingdoms": {
       "k_dacia": {
@@ -13775,10 +13775,10 @@
   },
   "e_caspian-pontic_steppe": {
     "key": "e_caspian-pontic_steppe",
-    "tarr": "Dat Imperi van Chasârjen",
-    "ipa": "[dat ɪm.ˈpɛ.ri van xa.ˈzaː.rjən]",
+    "tarr": "Dat Chasârische Imperi",
+    "ipa": "[dat xa.ˈzaː.rɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Khazaria",
-    "anachronism": "Pre-867 Khazar Khaganate (7th-10th c. AD, fortress Sarkel built 838 AD).",
+    "anachronism": "Pre-867 Khazar Khaganate (7th-10th c. AD, fortress Sarkel built 838 AD), held in save by Zebulun (House 1902, Khazar culture).",
     "color": "#783884",
     "kingdoms": {
       "k_caspian_steppe": {
@@ -32980,10 +32980,10 @@
   },
   "e_kanem_bornu": {
     "key": "e_kanem_bornu",
-    "tarr": "Dat Kanêm-Bornûische Imperi",
-    "ipa": "[dat ka.ˈneːm.bɔr.ˈnuː.ɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Kanêmische Imperi",
+    "ipa": "[dat ka.ˈneː.mɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Kanem-Bornu",
-    "anachronism": "Pre-867 Kanem Empire (Sayfawa dynasty c. 700 AD). Bornu dual name is 14th-century capital shift.",
+    "anachronism": "In 1059 under the Sayfawa dynasty (held in save by Sharaf), the realm was centered solely on Kanem (capital Njimi); Bornu was a late 14th-century addition.",
     "color": "#3069a8",
     "kingdoms": {
       "k_darfur": {
@@ -34586,10 +34586,10 @@
   },
   "e_liangyi": {
     "key": "e_liangyi",
-    "tarr": "Dat Imperi van Lîangjî",
-    "ipa": "[dat ɪm.ˈpɛ.ri van ˈliː.aŋ.jiː]",
+    "tarr": "Dat Imperi van den Vîr-Strômen",
+    "ipa": "[dat ɪm.ˈpɛ.ri van dɛn ˈfiːr.stroː.mən]",
     "origin": "Liangyi",
-    "anachronism": "Pre-867 Nine Provinces: Liangzhou and Yizhou (Sichuan basin & Yunnan). Independent in save.",
+    "anachronism": "Pre-867 Nine Provinces: Liangzhou and Yizhou (Sichuan basin & Yunnan).",
     "color": "#c28b23",
     "kingdoms": {
       "k_dali": {
@@ -37620,8 +37620,8 @@
         "key": "k_thessalonika",
         "tarr": "Bizantjen",
         "ipa": "",
-        "origin": "Byzantion",
-        "anachronism": "",
+        "origin": "Byzantion (in-game: Thessalonika)",
+        "anachronism": "Renamed from Thessalonika: kingdom consists solely of Thrace and the imperial city of Byzantion (Constantinople).",
         "color": "#c28b23",
         "duchies": {
           "d_thrace": {
@@ -40101,9 +40101,9 @@
   "e_mongolia": {
     "key": "e_mongolia",
     "tarr": "Dat Mongolische Imperi",
-    "ipa": "[dat mɔn.ˈɡoː.lɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Mongolia",
-    "anachronism": "⚠️ Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.",
+    "anachronism": "Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.",
     "color": "#16717a",
     "kingdoms": {
       "k_buryatia": {
@@ -43624,8 +43624,8 @@
   },
   "e_persia": {
     "key": "e_persia",
-    "tarr": "Dat Persische Imperi",
-    "ipa": "[dat ˈpɛr.zɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Imperi van Êrânschahr",
+    "ipa": "[dat ɪm.ˈpɛ.ri van eː.ˈraːn.ʃaːr]",
     "origin": "Persian Empire",
     "anachronism": "Pre-867 Sasanian Empire (Ērānshahr, fell 651 AD). Destroyed historically in 651 AD.",
     "color": "#3b824a",
@@ -44865,8 +44865,8 @@
   },
   "e_rajastan": {
     "key": "e_rajastan",
-    "tarr": "Dat Nordindische Imperi",
-    "ipa": "[dat ˈnɔrd.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Ârjavartische Imperi",
+    "ipa": "[dat aːr.ja.ˈvar.tɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Rajasthan",
     "anachronism": "⚠️ Early modern regional name applied to the ancient Indo-Gangetic Plain (Aryavarta / Harsha).",
     "color": "#3069a8",
@@ -53865,8 +53865,8 @@
   },
   "e_tartaria": {
     "key": "e_tartaria",
-    "tarr": "Dat Tartarische Imperi",
-    "ipa": "[dat tar.ˈtaː.rɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Kiptschachische Imperi",
+    "ipa": "[dat kɪp.ˈtʃaː.xɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Tartaria",
     "anachronism": "⚠️ Late medieval Western umbrella term Tartaria for the Cuman-Kipchak steppe.",
     "color": "#16717a",
@@ -55843,8 +55843,8 @@
   },
   "e_tibet": {
     "key": "e_tibet",
-    "tarr": "Dat Tibêtische Imperi",
-    "ipa": "[dat tɪ.ˈbeː.tɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Imperi van Bôtlant",
+    "ipa": "[dat ɪm.ˈpɛ.ri van ˈboːt.lant]",
     "origin": "Tibet",
     "anachronism": "Pre-867 Yarlung dynasty Tibetan Empire (Songtsen Gampo). Destroyed historically in 842 AD.",
     "color": "#3b824a",
@@ -61096,10 +61096,10 @@
   },
   "e_wendish_empire": {
     "key": "e_wendish_empire",
-    "tarr": "Dat Baltische Imperi",
-    "ipa": "[dat ˈbal.tɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Imperi van Bêlingen",
+    "ipa": "[dat ɪm.ˈpɛ.ri van ˈbeː.lɪŋ.ən]",
     "origin": "Baltic Empire",
-    "anachronism": "⚠️ Paradox misnomer e_wendish_empire. Holds Lithuania and Estonia, no Wends.",
+    "anachronism": "⚠️ Paradox misnomer e_wendish_empire. Held in 952 AD by Béla of House Árpád upon partition of Árpád II's realm.",
     "color": "#ab3348",
     "kingdoms": {
       "k_esthonia": {
@@ -61706,10 +61706,10 @@
   },
   "e_west_slavia": {
     "key": "e_west_slavia",
-    "tarr": "Dat Westslavische Imperi",
-    "ipa": "[dat ˈwɛst.slaː.vɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Imperi van dem Tôtlant",
+    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈtoːt.lant]",
     "origin": "West-Slavia",
-    "anachronism": "⚠️ Modern 19th/20th-century historiographical coinage. Pre-867/1194 Germans called West Slavs Wenden.",
+    "anachronism": "⚠️ Modern 19th/20th-century historiographical coinage. Held in 952 AD by Boris of House Árpád upon partition of Árpád II's realm.",
     "color": "#c28b23",
     "kingdoms": {
       "k_bohemia": {
@@ -62978,8 +62978,8 @@
   },
   "e_yongliang": {
     "key": "e_yongliang",
-    "tarr": "Dat Imperi van dem Kôlen-Vredelant",
-    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈkoː.lən.ˈvreː.də.lant]",
+    "tarr": "Dat Imperi van dem Kôlvredelant",
+    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈkoːl.vreː.də.lant]",
     "origin": "Yongliang",
     "anachronism": "Pre-867 Nine Provinces: Yongzhou and Liangzhou (Hexi Corridor / Silk Road gateway).",
     "color": "#783884",

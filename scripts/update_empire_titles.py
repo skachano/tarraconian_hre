@@ -156,14 +156,14 @@ EMPIRES_MASTER = {
     },
     'e_west_slavia': {
         'in_game': 'West-Slavia',
-        'tarr': 'Dat Westslavische Imperi',
-        'alt': 'Dat Imperi van den West-Wenden',
-        'ipa': '[dat ˈwɛst.slaː.vɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Imperi van dem Tôtlant',
+        'alt': 'Dat Tôtische Imperi / Dat West-Wendische Imperi',
+        'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈtoːt.lant]',
         'tier': 'Tier 3',
         'origin': 'West-Slavia',
-        'anachronism': '⚠️ Modern 19th/20th-century historiographical coinage. Pre-867/1194 Germans called West Slavs Wenden.',
-        'adj': 'Westslavisch',
-        'justification': 'Authentic medieval German chancellery designation is West-Wenden [ˈwɛst.vɛn.dən]. Scholarly Latinate form is Westslavisch.'
+        'anachronism': '⚠️ Modern 19th/20th-century historiographical coinage. Held in 952 AD by Boris of House Árpád upon partition of Árpád II\'s realm.',
+        'adj': 'Tôtisch',
+        'justification': 'Calqued on Old Hungarian Tótország / Tótföld (Land of the West Slavs: Czechs, Slovaks, Poles), created on Árpád II\'s death in 952 AD for his son Boris. Tôtlant [ˈtoːt.lant] with circumflex vowel ô.'
     },
     'e_russia': {
         'in_game': 'Russia',
@@ -178,36 +178,36 @@ EMPIRES_MASTER = {
     },
     'e_wendish_empire': {
         'in_game': 'Baltic Empire',
-        'tarr': 'Dat Baltische Imperi',
-        'alt': 'Dat Imperi van Litouwen-ende-Êstlant',
-        'ipa': '[dat ˈbal.tɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Imperi van Bêlingen',
+        'alt': 'Dat Bêlingische Imperi / Dat Baltische Imperi',
+        'ipa': '[dat ɪm.ˈpɛ.ri van ˈbeː.lɪŋ.ən]',
         'tier': 'Tier 2',
         'origin': 'Baltic Empire',
-        'anachronism': '⚠️ Paradox misnomer e_wendish_empire. Holds Lithuania and Estonia, no Wends.',
-        'adj': 'Baltisch',
-        'justification': 'Named after Mare Balticum (Adam of Bremen c. 1075) -> Dat Baltische Imperi. Dual-crown designation Litouwen-ende-Êstlant.'
+        'anachronism': '⚠️ Paradox misnomer e_wendish_empire. Held in 952 AD by Béla of House Árpád upon partition of Árpád II\'s realm.',
+        'adj': 'Bêlingisch',
+        'justification': 'Formed after King Béla of House Árpád (who received the Baltic tier in the 952 succession) using the authentic Franconian territorial patronymic suffix -ingen (exactly mirroring Lothair -> Lotharingen / Lôthringen). Bêlingen [ˈbeː.lɪŋ.ən] with regular adjective Bêlingisch.'
     },
     'e_carpathia': {
         'in_game': 'Carpathia',
-        'tarr': 'Dat Imperi van Datzjen',
-        'alt': 'Dat Karpatische Imperi',
-        'ipa': '[dat ɪm.ˈpɛ.ri van ˈda.tsjən]',
+        'tarr': 'Dat Arpâdische Imperi',
+        'alt': 'Dat Imperi van dem Tôtlant-ende-Ungarn / Dat Karpatische Imperi',
+        'ipa': '[dat ar.ˈpaː.dɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Carpathia',
-        'anachronism': 'Pre-867 Roman Dacia Traiana (106 AD). Hungary drifted to e_germany, leaving Wallachia and Moldavia.',
-        'adj': 'Datzjisch',
-        'justification': 'Classical Dacia shifts in High German to Datzjen [ˈda.tsjən] (c -> tz). Oronymic calque is Dat Karpatische Imperi.'
+        'anachronism': 'Created 885 AD by Árpád (House Árpád) and ruled continuously as the dynastic imperial seat until 958 AD.',
+        'adj': 'Arpâdisch',
+        'justification': 'Dynastic imperial seat founded by Árpád in 885 AD. Middle Franconian Arpâdisch [ar.ˈpaː.dɪʃ] with circumflex long â.'
     },
     'e_caspian-pontic_steppe': {
         'in_game': 'Khazaria',
-        'tarr': 'Dat Imperi van Chasârjen',
-        'alt': 'Dat Pontisch-Kaspische Imperi',
-        'ipa': '[dat ɪm.ˈpɛ.ri van xa.ˈzaː.rjən]',
+        'tarr': 'Dat Chasârische Imperi',
+        'alt': 'Dat Imperi van Chasârjen / Dat Pontisch-Kaspische Imperi',
+        'ipa': '[dat xa.ˈzaː.rɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Khazaria',
-        'anachronism': 'Pre-867 Khazar Khaganate (7th-10th c. AD, fortress Sarkel built 838 AD).',
-        'adj': 'Chasârjisch',
-        'justification': 'Ethnonym Khazar adapts as Chasârjen [xa.ˈzaː.rjən] with velar fricative ch- [x], voiced medial -s- [z], and long -â-.'
+        'anachronism': 'Pre-867 Khazar Khaganate (7th-10th c. AD, fortress Sarkel built 838 AD), held in save by Zebulun (House 1902, Khazar culture).',
+        'adj': 'Chasârisch',
+        'justification': 'Held in save by Zebulun of House 1902 (Khazar culture), representing the Khazar Khaganate. Ethnonym Khazar -> Chasârjen, regular adjective Chasârisch [xa.ˈzaː.rɪʃ].'
     },
     'e_volga-ural': {
         'in_game': 'Volga-Ural',
@@ -222,14 +222,14 @@ EMPIRES_MASTER = {
     },
     'e_tartaria': {
         'in_game': 'Tartaria',
-        'tarr': 'Dat Tartarische Imperi',
+        'tarr': 'Dat Kiptschachische Imperi',
         'alt': 'Dat Imperi van Kiptschâk',
-        'ipa': '[dat tar.ˈtaː.rɪ.ʃə ɪm.ˈpɛ.ri]',
+        'ipa': '[dat kɪp.ˈtʃaː.xɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 2',
         'origin': 'Tartaria',
         'anachronism': '⚠️ Late medieval Western umbrella term Tartaria for the Cuman-Kipchak steppe.',
-        'adj': 'Tartarisch',
-        'justification': 'Chancellery exonym Tartaria -> Tartarisch. Authentic indigenous steppe endonym is Kiptschâk [kɪp.ˈtʃaːk] with affricate -tsch-.'
+        'adj': 'Kiptschachisch',
+        'justification': 'Disambiguated from Khitans and Mongols; indigenous endonym of the Cuman-Kipchak steppe confederation Kiptschâk -> Kiptschachisch [kɪp.ˈtʃaː.xɪ.ʃə] with affricate tsch and spirantization k -> ch.'
     },
     'e_turan': {
         'in_game': 'Turan',
@@ -257,12 +257,12 @@ EMPIRES_MASTER = {
         'in_game': 'Mongolia',
         'tarr': 'Dat Mongolische Imperi',
         'alt': 'Dat Imperi van dem Hilligen Ôtüken',
-        'ipa': '[dat mɔn.ˈɡoː.lɪ.ʃə ɪm.ˈpɛ.ri]',
+        'ipa': '[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 2',
         'origin': 'Mongolia',
-        'anachronism': '⚠️ Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.',
+        'anachronism': 'Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.',
         'adj': 'Mongolisch',
-        'justification': 'Ethnonym Mongol -> Mongolisch. Pre-867 sacred Göktürk imperial mountain seat is Ötüken -> Hilligen Ôtüken [ˈhɪ.lɪ.ɣən ˈøː.tyː.kən].'
+        'justification': 'Ethnonym Mongol -> Mongolisch [mɔŋ.ˈgoː.lɪʃ] with regular adjectival ending.'
     },
     'e_siberia': {
         'in_game': 'Siberia',
@@ -288,36 +288,36 @@ EMPIRES_MASTER = {
     },
     'e_persia': {
         'in_game': 'Persian Empire',
-        'tarr': 'Dat Persische Imperi',
-        'alt': 'Dat Imperi van Êrânschahr / Irân',
-        'ipa': '[dat ˈpɛr.zɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Imperi van Êrânschahr',
+        'alt': 'Dat Persische Imperi',
+        'ipa': '[dat ɪm.ˈpɛ.ri van eː.ˈraːn.ʃaːr]',
         'tier': 'Tier 1',
         'origin': 'Persian Empire',
         'anachronism': 'Pre-867 Sasanian Empire (Ērānshahr, fell 651 AD). Destroyed historically in 651 AD.',
-        'adj': 'Persisch',
-        'justification': 'Classical Persia -> Persisch [ˈpɛr.zɪ.ʃə]. Sasanian endonym Ērānshahr -> Êrânschahr [eː.raːn.ˈʃaːr] or Irân [i.ˈraːn].'
+        'adj': 'Êrânisch',
+        'justification': 'Authentic classical Sasanian/Iranian imperial endonym Ērānshahr ("Empire of the Iranians") -> Êrânschahr [eː.ˈraːn.ʃaːr].'
     },
     'e_rajastan': {
         'in_game': 'Rajasthan',
-        'tarr': 'Dat Nordindische Imperi',
-        'alt': 'Dat Imperi van Râdschastân',
-        'ipa': '[dat ˈnɔrd.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Ârjavartische Imperi',
+        'alt': 'Dat Radschastânische Imperi / Dat Pratihâra-Imperi',
+        'ipa': '[dat aːr.ja.ˈvar.tɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Rajasthan',
         'anachronism': '⚠️ Early modern regional name applied to the ancient Indo-Gangetic Plain (Aryavarta / Harsha).',
-        'adj': 'Nordindisch',
-        'justification': 'Encompasses northern Gangetic plain -> Dat Nordindische Imperi. Phonetic adaptation strictly uses affricate dsch [dʒ]: Râdschastân.'
+        'adj': 'Ârjavartisch',
+        'justification': 'Classical Sanskrit Āryāvarta ("Abode of the Nobles"), the imperial northern Indian realm of Harsha and the Gurjara-Pratihāras. Āryāvarta -> Ârjavartisch [aːr.ja.ˈvar.tɪʃ].'
     },
     'e_bengal': {
         'in_game': 'Pracya',
-        'tarr': 'Dat Ôstindische Imperi',
-        'alt': 'Dat Imperi van Bengâlen / Prâtschtschje',
-        'ipa': '[dat ˈoːst.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Bengalische Imperi',
+        'alt': 'Dat Pâla-Imperi / Dat Ôstindische Imperi',
+        'ipa': '[dat bɛŋ.ˈgaː.lɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Pracya',
         'anachronism': 'Pre-867 Sanskrit Prācya / Pala Empire 750 AD. Destroyed historically in 550 AD.',
-        'adj': 'Ôstindisch',
-        'justification': 'Sanskrit Prācya ("Eastern Realm") matches chancellery Ôst-Indjen -> Dat Ôstindische Imperi. Regional Bangala -> Bengâlen [bɛŋ.ˈɡaː.lən].'
+        'adj': 'Bengalisch',
+        'justification': 'Replaces generic East India with Bengal, imperial seat of the Buddhist Pāla Empire (dynn_pala). Bengâlen -> Bengalisch [bɛŋ.ˈgaː.lɪʃ].'
     },
     'e_deccan': {
         'in_game': 'Deccan Empire',
@@ -332,80 +332,80 @@ EMPIRES_MASTER = {
     },
     'e_tibet': {
         'in_game': 'Tibet',
-        'tarr': 'Dat Tibêtische Imperi',
-        'alt': 'Dat Imperi van dem Hôgen Bôtlant',
-        'ipa': '[dat tɪ.ˈbeː.tɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Imperi van Bôtlant',
+        'alt': 'Dat Tibêtische Imperi / Dat Imperi van dem Hôgen Bôtlant',
+        'ipa': '[dat ɪm.ˈpɛ.ri van ˈboːt.lant]',
         'tier': 'Tier 1',
         'origin': 'Tibet',
         'anachronism': 'Pre-867 Yarlung dynasty Tibetan Empire (Songtsen Gampo). Destroyed historically in 842 AD.',
-        'adj': 'Tibêtisch',
-        'justification': 'Tibet -> Tibêt [tɪ.ˈbeːt]. Native Tibetan endonym Bod (བོད) undergoes Auslautverhärtung -> Bôt -> Bôtlant [ˈboːt.lant].'
+        'adj': 'Bôtisch',
+        'justification': 'Tibetan imperial endonym Bod Chenpo ("Greater Bod") -> Bôtlant [ˈboːt.lant] with regular adjective Bôtisch.'
     },
     'e_zhongyuan': {
         'in_game': 'Zhongyuan',
         'tarr': 'Dat Imperi van dem Middenvelt',
-        'alt': 'Dat Imperi van Dschôngjüan',
+        'alt': 'Dat Middenveltsche Imperi / Dat Imperi van Dschôngjüan',
         'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈmɪ.dən.vɛlt]',
         'tier': 'Tier 1',
         'origin': 'Zhongyuan',
         'anachronism': 'Pre-867 Classical Zhōngyuán (Central Plains of China / Han and Tang dynasties).',
-        'adj': 'Middenveldsk',
-        'justification': 'Chinese Zhōngyuán (中原, 中 = middle -> Midden-; 原 = plain/field -> -velt). Pinyin zh- strictly maps to dsch [dʒ]: Dschôngjüan.'
+        'adj': 'Middenveltsch',
+        'justification': 'Chinese Zhōngyuán (中原, 中 = middle -> Midden-; 原 = plain/field -> -velt): Middenvelt [ˈmɪ.dən.vɛlt].'
     },
     'e_jingyang': {
         'in_game': 'Jingyang',
         'tarr': 'Dat Imperi van Dôrnflôz',
-        'alt': 'Dat Imperi van Dschingjâng',
+        'alt': 'Dat Dôrnflôzische Imperi / Dat Imperi van Dschingjâng',
         'ipa': '[dat ɪm.ˈpɛ.ri van ˈdoːrn.floːts]',
         'tier': 'Tier 1',
         'origin': 'Jingyang',
         'anachronism': 'Pre-867 Nine Provinces: Jingzhou and Yangzhou along the Yangtze River.',
         'adj': 'Dôrnflôzisch',
-        'justification': 'Calqued from Jing (荆 = thorn -> Dôrn) and Yang (扬 = lift up / Yangtze River -> Flôz): Dôrnflôz [ˈdoːrn.floːts]. Pinyin j- maps to dsch.'
+        'justification': 'Calqued from Jing (荆 = thorn -> Dôrn) and Yang (扬 = lift up / Yangtze River -> Flôz): Dôrnflôz [ˈdoːrn.floːts].'
     },
     'e_liangyi': {
         'in_game': 'Liangyi',
-        'tarr': 'Dat Imperi van Lîangjî',
-        'alt': 'Dat Sîtschuânsche Imperi',
-        'ipa': '[dat ɪm.ˈpɛ.ri van ˈliː.aŋ.jiː]',
+        'tarr': 'Dat Imperi van den Vîr-Strômen',
+        'alt': 'Dat Vîrstrômische Imperi / Dat Sîtschuânsche Imperi',
+        'ipa': '[dat ɪm.ˈpɛ.ri van dɛn ˈfiːr.stroː.mən]',
         'tier': 'Tier 1',
         'origin': 'Liangyi',
-        'anachronism': 'Pre-867 Nine Provinces: Liangzhou and Yizhou (Sichuan basin & Yunnan). Independent in save.',
-        'adj': 'Lîangjîsch',
-        'justification': 'Direct adaptation of Liang (梁 -> Lîang) and Yi (益 -> Jî): Lîangjî [ˈliː.aŋ.jiː]. Synonymous with Sichuan -> Sîtschuân.'
+        'anachronism': 'Pre-867 Nine Provinces: Liangzhou and Yizhou (Sichuan basin & Yunnan).',
+        'adj': 'Vîrstrômisch',
+        'justification': 'Calqued from Chinese Sìchuān (四川, Four Rivers/Circuits, the historical geographical reality of Liang-Yi / 梁益): Vîr (four) + Strôme (rivers) -> Vîr-Strômen [ˈfiːr.stroː.mən].'
     },
     'e_yongliang': {
         'in_game': 'Yongliang',
-        'tarr': 'Dat Imperi van dem Kôlen-Vredelant',
-        'alt': 'Dat Imperi van Jônglîang',
-        'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈkoː.lən.ˈvreː.də.lant]',
+        'tarr': 'Dat Imperi van dem Kôlvredelant',
+        'alt': 'Dat Kôlvredische Imperi / Dat Imperi van Jônglîang',
+        'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈkoːl.vreː.də.lant]',
         'tier': 'Tier 1',
         'origin': 'Yongliang',
         'anachronism': 'Pre-867 Nine Provinces: Yongzhou and Liangzhou (Hexi Corridor / Silk Road gateway).',
-        'adj': 'Kôlvredisk',
-        'justification': 'Calqued from Liang (凉 = cool -> Kôl) and Yong (雍 = peace -> Vrede): Kôlen-Vredelant. Semivowel glide y- -> J-: Jônglîang.'
+        'adj': 'Kôlvredisch',
+        'justification': 'Calqued from Liang (凉 = cool -> Kôl) and Yong (雍 = peace/harmony -> Vrede): Kôlvredelant [ˈkoːl.vreː.də.lant].'
     },
     'e_lingnan': {
         'in_game': 'Lingnan',
         'tarr': 'Dat Imperi van dem Sûtrücke',
-        'alt': 'Dat Imperi van Lingnân',
+        'alt': 'Dat Sûtrückische Imperi / Dat Imperi van Lingnân',
         'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈzyːt.rʏ.kə]',
         'tier': 'Tier 1',
         'origin': 'Lingnan',
         'anachronism': 'Pre-867 Nanyue / Nanling mountains / Tang Circuit of Lingnan and Annan.',
-        'adj': 'Sûtrückisk',
-        'justification': 'Chinese Lǐngnán (岭南) translates root-for-root to "South of the Mountain Ridges" (岭 = ridge -> Rücke; 南 = south -> Sût-): Sûtrücke.'
+        'adj': 'Sûtrückisch',
+        'justification': 'Chinese Lǐngnán (岭南) translates root-for-root to "South of the Mountain Ridges" (岭 = ridge -> Rücke; 南 = south -> Sût-): Sûtrücke [ˈzyːt.rʏ.kə].'
     },
     'e_andong': {
         'in_game': 'Andong',
-        'tarr': 'Dat Imperi van dem Ôstfrid',
-        'alt': 'Dat Imperi van Andong',
-        'ipa': '[dat ɪm.ˈpɛ.ri van dɛm ˈoːst.friːt]',
+        'tarr': 'Dat Chitaische Imperi',
+        'alt': 'Dat Ljâo-Imperi / Dat Imperi van dem Ôstfrid',
+        'ipa': '[dat çi.ˈtaː.ɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Andong',
-        'anachronism': 'Pre-867 Tang Dynasty Protectorate General to Pacify the East (Andong Duhufu 668 AD).',
-        'adj': 'Ôstfridisch',
-        'justification': 'Andong (安东) translates to "Peace in the East" (安 = peace -> Frid; 东 = east -> Ôst): Ôstfrid [ˈoːst.friːt] with Auslautverhärtung -t.'
+        'anachronism': 'Conquered in 999 AD by Yelü Xiuge (House Yelü, Khitan culture), representing the Liao/Khitan imperial domain encompassing k_khitan.',
+        'adj': 'Chitaisch',
+        'justification': 'Reflects the Khitan conquest under Yelü Xiuge in 999 AD. Middle Franconian Chitaisch [çi.ˈtaː.ɪʃ] derived from Khitai/Cathay.'
     },
     'e_amur': {
         'in_game': 'Amur',
@@ -508,25 +508,25 @@ EMPIRES_MASTER = {
     },
     'e_kanem_bornu': {
         'in_game': 'Kanem-Bornu',
-        'tarr': 'Dat Kanêm-Bornûische Imperi',
-        'alt': 'Dat Imperi van dem Tsad-Sê',
-        'ipa': '[dat ka.ˈneːm.bɔr.ˈnuː.ɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Kanêmische Imperi',
+        'alt': 'Dat Imperi van Kanêm / Dat Kanêm-Bornûische Imperi',
+        'ipa': '[dat ka.ˈneː.mɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Kanem-Bornu',
-        'anachronism': 'Pre-867 Kanem Empire (Sayfawa dynasty c. 700 AD). Bornu dual name is 14th-century capital shift.',
-        'adj': 'Kanêm-Bornûisch',
-        'justification': 'Sayfawa kingdom adapts as Kanêm-Bornû (long -ê- and -û-). Hydronymic resolution anchors to Lake Chad -> Dat Imperi van dem Tsad-Sê [tsat.zeː].'
+        'anachronism': 'In 1059 under the Sayfawa dynasty (held in save by Sharaf), the realm was centered solely on Kanem (capital Njimi); Bornu was a late 14th-century addition.',
+        'adj': 'Kanêmisch',
+        'justification': 'Historical Sayfawa kingdom of Kanem -> Kanêmisch [ka.ˈneː.mɪʃ] with regular adjectival ending.'
     },
     'e_abyssinia': {
         'in_game': 'Abyssinia',
-        'tarr': 'Dat Abessînische Imperi',
-        'alt': 'Dat Imperi van Axûm / Ethjôpjen',
-        'ipa': '[dat a.bɛ.ˈsiː.nɪ.ʃə ɪm.ˈpɛ.ri]',
+        'tarr': 'Dat Ethjôpische Imperi',
+        'alt': 'Dat Imperi van Axûm / Dat Abessînische Imperi',
+        'ipa': '[dat ɛt.ˈjoː.pɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Abyssinia',
-        'anachronism': '⚠️ Arabic al-Habasha / Abyssinia applied over ancient classical empire of Aksum.',
-        'adj': 'Abessînisch',
-        'justification': 'Classical Abassia -> Abessînjen [a.bɛ.ˈsiː.njən] with long -î-. Classical Late Antique name is Imperium Axumitarum -> Axûm [ak.ˈsuːm] or Ethjôpjen.'
+        'anachronism': 'Classical and medieval Greek/Latin and Ge\'ez imperial designation Ethiopia / Aksum, held in save by Getachew (ethiopian culture).',
+        'adj': 'Ethjôpisch',
+        'justification': 'Classical and medieval imperial designation Ethiopia / Aksum -> Ethjôpisch [ɛt.ˈjoː.pɪʃ].'
     },
     'e_azania': {
         'in_game': 'Azania',

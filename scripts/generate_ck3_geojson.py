@@ -1032,6 +1032,15 @@ def realign_existing_datasets(
         except Exception:
             pass
 
+    barony_res_path = out_dir / "barony_resolutions.json"
+    barony_res = {}
+    if barony_res_path.exists():
+        try:
+            with open(barony_res_path, "r", encoding="utf-8") as f:
+                barony_res = json.load(f)
+        except Exception:
+            pass
+
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
 
@@ -1148,13 +1157,25 @@ def realign_existing_datasets(
                 props["e_tarr_hist"] = gaz[e_k].get("hist", "")
 
         # Historical Title Name Origins & Anachronisms from Markdown Files
-        ht_pre = barony_holdings.get(props.get("barony", ""), "unoccupied")
-        if ht_pre == "unoccupied":
-            props["name"] = ""
-            props["b_origin"] = ""
+        bk = props.get("barony", "")
+        ht_pre = barony_holdings.get(bk, "unoccupied")
+        if bk in barony_res:
+            bres = barony_res[bk]
+            props["name"] = bres.get("name", "")
+            props["b_tarr"] = bres.get("b_tarr", "")
+            props["b_tarr_direct"] = bres.get("b_tarr_direct", "")
+            props["b_tarr_hist"] = bres.get("b_tarr_hist", "")
+            props["b_origin"] = bres.get("b_origin", "")
+            props["b_anachronism"] = bres.get("b_anachronism", "")
+            props["b_ipa"] = bres.get("b_ipa", "")
         else:
-            props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
-        props["b_anachronism"] = ""
+            if ht_pre == "unoccupied":
+                props["name"] = ""
+                props["b_origin"] = ""
+            else:
+                props["b_origin"] = props.get("name") or format_title_key(bk)
+            props["b_anachronism"] = ""
+            props["b_ipa"] = ""
         if c_k:
             props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
             props["c_anachronism"] = c_anachronisms.get(c_k, "")
@@ -1167,9 +1188,6 @@ def realign_existing_datasets(
         if e_k:
             props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
             props["e_anachronism"] = e_anachronisms.get(e_k, "")
-
-        # IPA pronunciations
-        props["b_ipa"] = ""
         if c_k: props["c_ipa"] = c_ipa.get(c_k, "")
         if d_k: props["d_ipa"] = d_ipa.get(d_k, "")
         if k_k: props["k_ipa"] = k_ipa.get(k_k, "")
@@ -1493,6 +1511,15 @@ def main():
         try:
             with open(sino_path, "r", encoding="utf-8") as f:
                 sino_db = json.load(f)
+        except Exception:
+            pass
+
+    barony_res_path = out_dir / "barony_resolutions.json"
+    barony_res = {}
+    if barony_res_path.exists():
+        try:
+            with open(barony_res_path, "r", encoding="utf-8") as f:
+                barony_res = json.load(f)
         except Exception:
             pass
     barony_features = []

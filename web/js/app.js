@@ -27,6 +27,7 @@ const duchyLayersMap = new Map();
 const kingdomLayersMap = new Map();
 const empireLayersMap = new Map();
 const baronyLayerMap = new Map();
+const baronyPropsMap = new Map();
 
 // Sinosphere Hanzi & Calque datasets
 let sinosphereCalques = null;
@@ -140,6 +141,14 @@ async function ensureBaroniesLoaded() {
   try {
     const res = await fetch('data/ck3_baronies.geojson');
     baroniesGeojson = await res.json();
+    if (baroniesGeojson && baroniesGeojson.features) {
+      for (const feat of baroniesGeojson.features) {
+        if (feat.properties && feat.properties.barony) {
+          baronyPropsMap.set(feat.properties.barony, feat.properties);
+        }
+      }
+      indexBaroniesForSearch();
+    }
   } catch (err) {
     console.error('Failed to load baronies:', err);
   } finally {
@@ -571,6 +580,10 @@ function openInspector(props, tier) {
     if (props.tarr_hist && props.tarr_direct && props.tarr_hist !== props.tarr_direct) {
       histRes = props.tarr_hist;
     }
+  } else if (tier === 'barony') {
+    if (props.b_tarr_hist && props.b_tarr_direct && props.b_tarr_hist !== props.b_tarr_direct) {
+      histRes = props.b_tarr_hist;
+    }
   } else if (tier === 'duchy') {
     if (props.d_tarr_hist && props.d_tarr_direct && props.d_tarr_hist !== props.d_tarr_direct) {
       histRes = props.d_tarr_hist;
@@ -752,7 +765,18 @@ function renderConstituentTitles(props, tier, section, label, listElem) {
     if (props.baronies && props.baronies.length > 0) {
       section.classList.remove('hidden');
       label.textContent = `Constituent Holdings (Baronies)`;
-      listElem.innerHTML = props.baronies.map(b => `<li class="barony-pill" data-key="${b}" data-tier="barony" style="cursor:pointer">${b}</li>`).join('');
+      listElem.innerHTML = props.baronies.map(b => {
+        let bName = formatKey(b);
+        const bp = baronyPropsMap.get(b);
+        if (bp) {
+          if (bp.holding_type === 'unoccupied') {
+            bName = `${formatKey(b)} [Unoccupied]`;
+          } else if (bp.b_tarr || bp.name) {
+            bName = bp.b_tarr || bp.name;
+          }
+        }
+        return `<li class="barony-pill" data-key="${b}" data-tier="barony" style="cursor:pointer" title="Click to inspect ${bName}">${bName} <small style="opacity:0.6;font-family:var(--font-mono)">(${b})</small></li>`;
+      }).join('');
       attachPillHandlers(listElem);
     } else {
       section.classList.add('hidden');
@@ -907,6 +931,32 @@ function buildSearchIndex() {
           });
         }
       }
+    }
+  }
+
+  // 3. Index baronies if already loaded
+  indexBaroniesForSearch();
+}
+
+function indexBaroniesForSearch() {
+  if (!baroniesGeojson || !baroniesGeojson.features) return;
+  // Prevent duplicate barony indexation
+  if (searchIndex.some(item => item.tier === 'barony')) return;
+  for (const feat of baroniesGeojson.features) {
+    const p = feat.properties;
+    if (p.holding_type !== 'unoccupied' && (p.b_tarr || p.name)) {
+      searchIndex.push({
+        key: p.barony,
+        tarr: p.b_tarr || p.name,
+        origin: p.b_origin || p.name,
+        hanzi: '',
+        tier: 'barony',
+        county: p.c_tarr || formatKey(p.county),
+        duchy: p.d_tarr || formatKey(p.duchy),
+        kingdom: p.k_tarr || formatKey(p.kingdom),
+        empire: p.e_tarr || formatKey(p.empire),
+        feature: feat
+      });
     }
   }
 }

@@ -293,6 +293,21 @@ class TestBaroniesGeoJSON:
         assert by_key["b_london"]["county"] == "c_middlesex"
         assert by_key["b_london"]["empire"] == "e_germany"
         assert by_key["b_london"]["e_tarr"] == "Dat Frankische Imperi"
+        assert by_key["b_london"]["name"] == "Lunden"
+        assert by_key["b_london"]["b_tarr"] == "Lunden"
+        assert by_key["b_london"]["b_ipa"] == "[ˈlʊn.dən]"
+
+        # Verify Option A collision disambiguation
+        assert by_key["b_zvenyhorod"]["name"] == "Swenigorot"
+        assert by_key["b_lviv"]["name"] == "Lemberch"
+
+        # Verify Baltic pre-867 restitution
+        assert by_key["b_konigsberg"]["name"] == "Twangste"
+
+        # Verify unoccupied holding
+        assert by_key["b_tulcha"]["name"] == ""
+        assert by_key["b_tulcha"]["b_origin"] == ""
+        assert by_key["b_tulcha"]["b_ipa"] == ""
 
         assert "b_roma" in by_key
         assert by_key["b_roma"]["county"] == "c_roma"
