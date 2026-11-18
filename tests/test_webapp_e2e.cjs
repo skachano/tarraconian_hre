@@ -218,6 +218,18 @@ async function runE2ETests() {
     await countyBtn.click();
     console.log('  Full tier switching (Kingdom -> Empire -> Barony -> County -> Duchy -> County) validated.');
 
+    // Verify non-empty hex fill colors from map coloring
+    const sampleFills = await page.evaluate(() => {
+      const paths = Array.from(document.querySelectorAll('#map svg path'));
+      return paths.slice(0, 10).map(p => p.getAttribute('fill'));
+    });
+    console.log(`  Sample territory fill colors: ${sampleFills.slice(0, 5).join(', ')}`);
+    for (const f of sampleFills) {
+      if (!f || !f.startsWith('#')) {
+        throw new Error(`Expected valid hex fill color, got "${f}"`);
+      }
+    }
+
     // 5. Test Mouse Movement & Zero Residual Highlighting
     console.log('[6/7] Testing mouse hover sweep across territories (verifying zero residual highlights)...');
     // Close drawer to test clean canvas sweep

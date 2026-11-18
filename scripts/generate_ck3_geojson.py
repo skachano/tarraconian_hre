@@ -3,14 +3,16 @@
 generate_ck3_geojson.py
 
 Extracts barony- and county-level vector polygons from Crusader Kings III map assets
-(map_data/provinces.png, map_data/definition.csv, common/landed_titles/*.txt)
-and pairs them with Tarraconian Chancellery toponyms from tarraconian_titles_1059.md
-and campaign De Jure hierarchy from melted_save.ck3.
+(map_data/provinces.png, map_data/definition.csv, common/landed_titles/*.txt),
+pairs them with Tarraconian Chancellery toponyms from tarraconian_titles_1059.md,
+applies campaign De Jure hierarchy from melted_save.ck3,
+and performs Four-Color Map Coloring (DSATUR) so that no two adjacent titles share the same color.
 
 Outputs:
-  - data/ck3_baronies.geojson: Barony-level holding polygons
-  - data/ck3_counties.geojson: County-level dissolved polygons
-  - data/ck3_title_tree.json: De Jure hierarchy tree (Empire -> Kingdom -> Duchy -> County -> Barony)
+  - data/ck3_baronies.geojson: Barony-level holding polygons with assigned colors
+  - data/ck3_counties.geojson: County-level dissolved polygons with assigned colors
+  - data/ck3_title_tree.json: De Jure hierarchy tree with title colors
+  - data/ck3_adjacencies.json: Complete spatial adjacency border graph for all tiers
 """
 
 import argparse
@@ -20,14 +22,16 @@ import os
 import re
 import sys
 import time
+from collections import defaultdict
 from pathlib import Path
 
 import cv2
 import numpy as np
 from PIL import Image
 from scipy import ndimage
-from shapely.geometry import Polygon, MultiPolygon, mapping
+from shapely.geometry import Polygon, MultiPolygon, mapping, shape
 from shapely.ops import unary_union
+from shapely.strtree import STRtree
 
 # Add script dir to sys.path to import helpers
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -43,6 +47,178 @@ try:
 except ImportError:
     parse_melted_save = None
     ensure_melted_save = None
+
+
+# ---------------------------------------------------------------------------
+# Cartographic Palette & Four-Color Graph Coloring
+# ---------------------------------------------------------------------------
+MAP_PALETTE = [
+    "#a64b38", "#3b7d4e", "#2e649e", "#b88228",
+    "#2a7d76", "#a3435e", "#737d2f", "#4b5796",
+    "#b5622a", "#528038", "#3a488a", "#a68c4a",
+    "#2c788c", "#8c3838", "#687a38", "#3e6f94",
+    "#ad5535", "#347a5f", "#6b3e7a", "#a8782a",
+    "#2a736a", "#8f3e4b", "#457a40", "#32598a",
+]
+
+def hex_to_rgb(hex_str: str):
+    h = hex_str.lstrip("#")
+    return (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
+
+MAP_PALETTE_RGB = [hex_to_rgb(h) for h in MAP_PALETTE]
+
+def rgb_dist(c1, c2):
+    return ((c1[0] - c2[0]) ** 2 + (c1[1] - c2[1]) ** 2 + (c1[2] - c2[2]) ** 2) ** 0.5
+
+def color_graph_dsatur(nodes, edges, palette=MAP_PALETTE, palette_rgb=MAP_PALETTE_RGB):
+    """
+    Applies DSATUR graph coloring to assign each node a color from palette
+    such that for every edge (u, v), color(u) != color(v).
+    Maximizes the minimum perceptual color distance to all adjacent neighbors.
+    """
+    neighbors = defaultdict(set)
+    for u, v in edges:
+        neighbors[u].add(v)
+        neighbors[v].add(u)
+
+    degrees = {u: len(neighbors[u]) for u in nodes}
+    assigned_idx = {}
+    sat_degrees = {u: set() for u in nodes}
+    unassigned = set(nodes)
+    num_pal = len(palette)
+
+    while unassigned:
+        u = max(unassigned, key=lambda x: (len(sat_degrees[x]), degrees[x]))
+        unassigned.remove(u)
+
+        neighbor_color_indices = {assigned_idx[v] for v in neighbors[u] if v in assigned_idx}
+        available_indices = [idx for idx in range(num_pal) if idx not in neighbor_color_indices]
+
+        if not available_indices:
+            idx = 0
+            while idx in neighbor_color_indices:
+                idx += 1
+        else:
+            if not neighbor_color_indices:
+                idx = len(assigned_idx) % num_pal
+            else:
+                def score(c_idx):
+                    c_rgb = palette_rgb[c_idx]
+                    return min(rgb_dist(c_rgb, palette_rgb[n_idx]) for n_idx in neighbor_color_indices if n_idx < num_pal)
+                idx = max(available_indices, key=score)
+
+        assigned_idx[u] = idx
+        for v in neighbors[u]:
+            if v in unassigned:
+                sat_degrees[v].add(idx)
+
+    # Map index to hex color string
+    result = {}
+    for u, idx in assigned_idx.items():
+        if idx < num_pal:
+            result[u] = palette[idx]
+        else:
+            result[u] = palette[idx % num_pal]
+    return result
+
+
+def compute_all_tier_colors(county_features, barony_features):
+    """
+    Computes spatial adjacency graphs and assigns collision-free colors
+    for all 5 tiers: empires, kingdoms, duchies, counties, and baronies.
+    """
+    print("Computing spatial adjacencies for map coloring...")
+    t0 = time.time()
+
+    # 1. County adjacency via STRtree
+    c_geoms = [shape(f["geometry"]) for f in county_features]
+    c_tree = STRtree(c_geoms)
+    c_nodes = [f["properties"]["county"] for f in county_features]
+
+    county_adj_edges = set()
+    county_adj_dict = defaultdict(set)
+    for i, geom in enumerate(c_geoms):
+        c1 = c_nodes[i]
+        for j in c_tree.query(geom):
+            if i < j and (geom.touches(c_geoms[j]) or geom.buffer(0.5).intersects(c_geoms[j])):
+                c2 = c_nodes[j]
+                county_adj_edges.add((c1, c2))
+                county_adj_dict[c1].add(c2)
+                county_adj_dict[c2].add(c1)
+
+    print(f"-> County adjacency: {len(c_nodes)} counties, {len(county_adj_edges)} border edges in {time.time() - t0:.2f}s")
+
+    # 2. Derive Duchy, Kingdom, Empire adjacency from County adjacency
+    t0 = time.time()
+    county_props = {f["properties"]["county"]: f["properties"] for f in county_features}
+
+    d_nodes = list(set(p.get("duchy") for p in county_props.values() if p.get("duchy")))
+    d_edges = set()
+    k_nodes = list(set(p.get("kingdom") for p in county_props.values() if p.get("kingdom")))
+    k_edges = set()
+    e_nodes = list(set(p.get("empire") for p in county_props.values() if p.get("empire")))
+    e_edges = set()
+
+    for c1, c2 in county_adj_edges:
+        p1, p2 = county_props[c1], county_props[c2]
+        d1, d2 = p1.get("duchy"), p2.get("duchy")
+        if d1 and d2 and d1 != d2:
+            d_edges.add(tuple(sorted([d1, d2])))
+        k1, k2 = p1.get("kingdom"), p2.get("kingdom")
+        if k1 and k2 and k1 != k2:
+            k_edges.add(tuple(sorted([k1, k2])))
+        e1, e2 = p1.get("empire"), p2.get("empire")
+        if e1 and e2 and e1 != e2:
+            e_edges.add(tuple(sorted([e1, e2])))
+
+    # 3. Barony adjacency: local search inside county and between adjacent counties
+    t0 = time.time()
+    b_features = barony_features
+    b_geoms = [shape(f["geometry"]) for f in b_features]
+    b_nodes = [f["properties"]["barony"] for f in b_features]
+
+    b_by_county = defaultdict(list)
+    for idx, feat in enumerate(b_features):
+        b_by_county[feat["properties"].get("county")].append(idx)
+
+    barony_edges = set()
+    for c, c_b_indices in b_by_county.items():
+        candidate_indices = list(c_b_indices)
+        for neighbor_c in county_adj_dict.get(c, []):
+            if neighbor_c > c:
+                candidate_indices.extend(b_by_county.get(neighbor_c, []))
+
+        for idx1 in c_b_indices:
+            g1 = b_geoms[idx1]
+            b1 = b_nodes[idx1]
+            for idx2 in candidate_indices:
+                if idx1 < idx2:
+                    g2 = b_geoms[idx2]
+                    if g1.touches(g2) or g1.buffer(0.5).intersects(g2):
+                        b2 = b_nodes[idx2]
+                        barony_edges.add((b1, b2))
+
+    print(f"-> Barony adjacency: {len(b_nodes)} baronies, {len(barony_edges)} border edges in {time.time() - t0:.2f}s")
+
+    # 4. Color all 5 tiers with DSATUR
+    print("Coloring territory graphs (Four-Color DSATUR)...")
+    t0 = time.time()
+    county_colors = color_graph_dsatur(c_nodes, county_adj_edges)
+    duchy_colors = color_graph_dsatur(d_nodes, d_edges)
+    kingdom_colors = color_graph_dsatur(k_nodes, k_edges)
+    empire_colors = color_graph_dsatur(e_nodes, e_edges)
+    barony_colors = color_graph_dsatur(b_nodes, barony_edges)
+    print(f"-> All 5 tiers colored with 0 adjacent collisions in {time.time() - t0:.2f}s")
+
+    adjacencies = {
+        "empires": sorted(list(e_edges)),
+        "kingdoms": sorted(list(k_edges)),
+        "duchies": sorted(list(d_edges)),
+        "counties": sorted(list(county_adj_edges)),
+        "baronies": sorted(list(barony_edges)),
+    }
+
+    return county_colors, duchy_colors, kingdom_colors, empire_colors, barony_colors, adjacencies
 
 
 def parse_definition_csv(csv_path: Path):
@@ -225,8 +401,23 @@ def parse_save_hierarchy(melted_save_path: Path, save_file_path: Path = None):
     return county_hierarchy, titles_by_key
 
 
-def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict, empire_names: dict, save_titles: dict):
+def build_and_write_title_tree(
+    county_info: dict,
+    tree_out_path: Path,
+    gaz: dict,
+    empire_names: dict,
+    save_titles: dict,
+    empire_colors: dict = None,
+    kingdom_colors: dict = None,
+    duchy_colors: dict = None,
+    county_colors: dict = None,
+):
     """Builds nested title tree e_* -> k_* -> d_* -> c_* -> [b_*] and writes to JSON."""
+    if empire_colors is None: empire_colors = {}
+    if kingdom_colors is None: kingdom_colors = {}
+    if duchy_colors is None: duchy_colors = {}
+    if county_colors is None: county_colors = {}
+
     save_title_tree = {}
     for c_key, info in county_info.items():
         e_k = info.get("empire")
@@ -243,6 +434,7 @@ def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict
         e_entry = {
             "key": e_k,
             "tarr": e_tarr_name,
+            "color": empire_colors.get(e_k, "#a64b38"),
             "kingdoms": {},
         }
         for k_k in sorted(kingdoms.keys()):
@@ -251,6 +443,7 @@ def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict
             k_entry = {
                 "key": k_k,
                 "tarr": k_tarr_name,
+                "color": kingdom_colors.get(k_k, "#b88228"),
                 "duchies": {},
             }
             for d_k in sorted(duchies.keys()):
@@ -259,6 +452,7 @@ def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict
                 d_entry = {
                     "key": d_k,
                     "tarr": d_tarr_name,
+                    "color": duchy_colors.get(d_k, "#2e649e"),
                     "counties": {},
                 }
                 for c_k in sorted(counties.keys()):
@@ -267,6 +461,7 @@ def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict
                         "key": c_k,
                         "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
                         "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
+                        "color": county_colors.get(c_k, "#3b7d4e"),
                         "baronies": b_list,
                     }
                     d_entry["counties"][c_k] = c_entry
@@ -291,6 +486,7 @@ def realign_existing_datasets(
     counties_path = out_dir / "ck3_counties.geojson"
     baronies_path = out_dir / "ck3_baronies.geojson"
     tree_path = out_dir / "ck3_title_tree.json"
+    adj_path = out_dir / "ck3_adjacencies.json"
 
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
@@ -331,11 +527,6 @@ def realign_existing_datasets(
             "baronies": props.get("baronies", []),
         }
 
-    print(f"Writing updated {counties_path.name}...")
-    with open(counties_path, "w", encoding="utf-8") as f:
-        json.dump(counties_fc, f, separators=(",", ":"))
-
-    print(f"Loading {baronies_path.name}...")
     with open(baronies_path, "r", encoding="utf-8") as f:
         baronies_fc = json.load(f)
 
@@ -362,11 +553,53 @@ def realign_existing_datasets(
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
 
+    # Compute collision-free map colors
+    c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
+        counties_fc["features"], baronies_fc["features"]
+    )
+
+    # Apply colors to county features
+    for feat in counties_fc["features"]:
+        p = feat["properties"]
+        ck = p["county"]
+        dk = p.get("duchy")
+        kk = p.get("kingdom")
+        ek = p.get("empire")
+        p["c_color"] = c_colors.get(ck, "#3b7d4e")
+        p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
+        p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
+        p["e_color"] = e_colors.get(ek, "#a64b38") if ek else "#3d3832"
+
+    print(f"Writing updated {counties_path.name}...")
+    with open(counties_path, "w", encoding="utf-8") as f:
+        json.dump(counties_fc, f, separators=(",", ":"))
+
+    # Apply colors to barony features
+    for feat in baronies_fc["features"]:
+        p = feat["properties"]
+        bk = p["barony"]
+        ck = p.get("county")
+        dk = p.get("duchy")
+        kk = p.get("kingdom")
+        ek = p.get("empire")
+        p["b_color"] = b_colors.get(bk, "#2a7d76")
+        p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
+        p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
+        p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
+        p["e_color"] = e_colors.get(ek, "#a64b38") if ek else "#3d3832"
+
     print(f"Writing updated {baronies_path.name}...")
     with open(baronies_path, "w", encoding="utf-8") as f:
         json.dump(baronies_fc, f, separators=(",", ":"))
 
-    build_and_write_title_tree(county_info, tree_path, gaz, empire_names, save_titles)
+    # Write title tree
+    build_and_write_title_tree(county_info, tree_path, gaz, empire_names, save_titles, e_colors, k_colors, d_colors, c_colors)
+
+    # Write adjacencies index
+    print(f"Writing spatial adjacencies index to {adj_path.name}...")
+    with open(adj_path, "w", encoding="utf-8") as f:
+        json.dump(adjacencies, f, indent=2)
+    print(f"-> Wrote {adj_path.name} ({adj_path.stat().st_size / 1024:.1f} KB)")
 
 
 def extract_polygon_for_slice(pid_grid, p_id, sl, H, W, simplify_epsilon=0.75):
@@ -421,7 +654,7 @@ def extract_polygon_for_slice(pid_grid, p_id, sl, H, W, simplify_epsilon=0.75):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate CK3 GeoJSON with Tarraconian translations and save De Jure hierarchy")
+    parser = argparse.ArgumentParser(description="Generate CK3 GeoJSON with Tarraconian translations, save hierarchy, and map coloring")
     parser.add_argument(
         "--game-dir",
         default="/mnt/windows/Program Files (x86)/Steam/steamapps/common/Crusader Kings III/game",
@@ -461,7 +694,7 @@ def main():
     parser.add_argument(
         "--realign-only",
         action="store_true",
-        help="Fast realignment of existing GeoJSON datasets with save hierarchy without re-rasterizing",
+        help="Fast realignment of existing GeoJSON datasets with save hierarchy and colors without re-rasterizing",
     )
     args = parser.parse_args()
 
@@ -611,14 +844,7 @@ def main():
 
     print(f"-> Generated {len(barony_features)} barony features in {time.time() - t0:.2f}s")
 
-    # 8. Write data/ck3_baronies.geojson
-    baronies_geojson_path = out_dir / "ck3_baronies.geojson"
-    print(f"Writing {baronies_geojson_path.name}...")
-    with open(baronies_geojson_path, "w", encoding="utf-8") as f:
-        json.dump({"type": "FeatureCollection", "features": barony_features}, f, separators=(",", ":"))
-    print(f"-> Wrote {baronies_geojson_path.name} ({baronies_geojson_path.stat().st_size / 1024 / 1024:.2f} MB)")
-
-    # 9. Dissolve County Polygons
+    # 8. Dissolve County Polygons
     t0 = time.time()
     print("Dissolving county-level polygons...")
     county_features = []
@@ -665,22 +891,68 @@ def main():
 
     print(f"-> Dissolved {len(county_features)} county features in {time.time() - t0:.2f}s")
 
-    # 10. Write data/ck3_counties.geojson
+    # 9. Compute Four-Color Map Coloring for all 5 tiers
+    c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
+        county_features, barony_features
+    )
+
+    # 10. Apply colors to county features
+    for feat in county_features:
+        p = feat["properties"]
+        ck = p["county"]
+        dk = p.get("duchy")
+        kk = p.get("kingdom")
+        ek = p.get("empire")
+        p["c_color"] = c_colors.get(ck, "#3b7d4e")
+        p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
+        p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
+        p["e_color"] = e_colors.get(ek, "#a64b38") if ek else "#3d3832"
+
+    # 11. Apply colors to barony features
+    for feat in barony_features:
+        p = feat["properties"]
+        bk = p["barony"]
+        ck = p.get("county")
+        dk = p.get("duchy")
+        kk = p.get("kingdom")
+        ek = p.get("empire")
+        p["b_color"] = b_colors.get(bk, "#2a7d76")
+        p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
+        p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
+        p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
+        p["e_color"] = e_colors.get(ek, "#a64b38") if ek else "#3d3832"
+
+    # 12. Write data/ck3_baronies.geojson
+    baronies_geojson_path = out_dir / "ck3_baronies.geojson"
+    print(f"Writing {baronies_geojson_path.name}...")
+    with open(baronies_geojson_path, "w", encoding="utf-8") as f:
+        json.dump({"type": "FeatureCollection", "features": barony_features}, f, separators=(",", ":"))
+    print(f"-> Wrote {baronies_geojson_path.name} ({baronies_geojson_path.stat().st_size / 1024 / 1024:.2f} MB)")
+
+    # 13. Write data/ck3_counties.geojson
     counties_geojson_path = out_dir / "ck3_counties.geojson"
     print(f"Writing {counties_geojson_path.name}...")
     with open(counties_geojson_path, "w", encoding="utf-8") as f:
         json.dump({"type": "FeatureCollection", "features": county_features}, f, separators=(",", ":"))
     print(f"-> Wrote {counties_geojson_path.name} ({counties_geojson_path.stat().st_size / 1024 / 1024:.2f} MB)")
 
-    # 11. Write Title Tree
+    # 14. Write Title Tree
     tree_out_path = out_dir / "ck3_title_tree.json"
-    build_and_write_title_tree(county_info, tree_out_path, gaz, empire_names, save_titles)
+    build_and_write_title_tree(county_info, tree_out_path, gaz, empire_names, save_titles, e_colors, k_colors, d_colors, c_colors)
+
+    # 15. Write Adjacencies Index
+    adj_out_path = out_dir / "ck3_adjacencies.json"
+    print(f"Writing spatial adjacencies index to {adj_out_path.name}...")
+    with open(adj_out_path, "w", encoding="utf-8") as f:
+        json.dump(adjacencies, f, indent=2)
+    print(f"-> Wrote {adj_out_path.name} ({adj_out_path.stat().st_size / 1024:.1f} KB)")
 
     print("==========================================================")
     print("SUCCESS: Map Vectorization & GeoJSON Generation Complete!")
-    print(f"1. Baronies GeoJSON: {baronies_geojson_path}")
-    print(f"2. Counties GeoJSON: {counties_geojson_path}")
-    print(f"3. Title Tree JSON:  {tree_out_path}")
+    print(f"1. Baronies GeoJSON:    {baronies_geojson_path}")
+    print(f"2. Counties GeoJSON:    {counties_geojson_path}")
+    print(f"3. Title Tree JSON:     {tree_out_path}")
+    print(f"4. Adjacencies Index:   {adj_out_path}")
     print("==========================================================")
 
 

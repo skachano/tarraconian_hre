@@ -40,6 +40,7 @@ def main():
         "ck3_counties.geojson",
         "ck3_baronies.geojson",
         "ck3_title_tree.json",
+        "ck3_adjacencies.json",
     ]
     for dset in required_datasets:
         src = DATA_DIR / dset

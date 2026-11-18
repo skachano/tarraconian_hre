@@ -38,6 +38,14 @@ def tree_data():
         return json.load(f)
 
 
+@pytest.fixture(scope="module")
+def adjacencies_data():
+    path = DATA_DIR / "ck3_adjacencies.json"
+    assert path.exists(), "docs/data/ck3_adjacencies.json is missing"
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 class TestWebAssets:
     """Verifies that all required web assets exist and adhere to standards."""
 
@@ -239,3 +247,63 @@ class TestTitleTree:
         mac = tree_data["e_macedonia"]
         assert mac["tarr"] == "Macedonia"
         assert "k_thessalonika" in mac["kingdoms"]
+
+
+class TestMapColoring:
+    """Validates that adjacent titles never share the same color across all 5 tiers."""
+
+    def test_county_color_properties_exist(self, counties_data):
+        for feat in counties_data["features"]:
+            props = feat["properties"]
+            for key in ["c_color", "d_color", "k_color", "e_color"]:
+                assert key in props and props[key].startswith("#") and len(props[key]) == 7, (
+                    f"Invalid or missing {key} in county {props.get('county')}"
+                )
+
+    def test_barony_color_properties_exist(self, baronies_data):
+        for feat in baronies_data["features"]:
+            props = feat["properties"]
+            for key in ["b_color", "c_color", "d_color", "k_color", "e_color"]:
+                assert key in props and props[key].startswith("#") and len(props[key]) == 7, (
+                    f"Invalid or missing {key} in barony {props.get('barony')}"
+                )
+
+    def test_no_adjacent_empire_color_collisions(self, counties_data, adjacencies_data):
+        by_key = {f["properties"]["empire"]: f["properties"]["e_color"] for f in counties_data["features"]}
+        collisions = []
+        for e1, e2 in adjacencies_data["empires"]:
+            if e1 in by_key and e2 in by_key and by_key[e1] == by_key[e2]:
+                collisions.append((e1, e2, by_key[e1]))
+        assert not collisions, f"Detected adjacent empire color collisions: {collisions}"
+
+    def test_no_adjacent_kingdom_color_collisions(self, counties_data, adjacencies_data):
+        by_key = {f["properties"]["kingdom"]: f["properties"]["k_color"] for f in counties_data["features"]}
+        collisions = []
+        for k1, k2 in adjacencies_data["kingdoms"]:
+            if k1 in by_key and k2 in by_key and by_key[k1] == by_key[k2]:
+                collisions.append((k1, k2, by_key[k1]))
+        assert not collisions, f"Detected adjacent kingdom color collisions: {collisions}"
+
+    def test_no_adjacent_duchy_color_collisions(self, counties_data, adjacencies_data):
+        by_key = {f["properties"]["duchy"]: f["properties"]["d_color"] for f in counties_data["features"]}
+        collisions = []
+        for d1, d2 in adjacencies_data["duchies"]:
+            if d1 in by_key and d2 in by_key and by_key[d1] == by_key[d2]:
+                collisions.append((d1, d2, by_key[d1]))
+        assert not collisions, f"Detected adjacent duchy color collisions: {collisions}"
+
+    def test_no_adjacent_county_color_collisions(self, counties_data, adjacencies_data):
+        by_key = {f["properties"]["county"]: f["properties"]["c_color"] for f in counties_data["features"]}
+        collisions = []
+        for c1, c2 in adjacencies_data["counties"]:
+            if c1 in by_key and c2 in by_key and by_key[c1] == by_key[c2]:
+                collisions.append((c1, c2, by_key[c1]))
+        assert not collisions, f"Detected adjacent county color collisions: {collisions}"
+
+    def test_no_adjacent_barony_color_collisions(self, baronies_data, adjacencies_data):
+        by_key = {f["properties"]["barony"]: f["properties"]["b_color"] for f in baronies_data["features"]}
+        collisions = []
+        for b1, b2 in adjacencies_data["baronies"]:
+            if b1 in by_key and b2 in by_key and by_key[b1] == by_key[b2]:
+                collisions.append((b1, b2, by_key[b1]))
+        assert not collisions, f"Detected adjacent barony color collisions: {collisions}"

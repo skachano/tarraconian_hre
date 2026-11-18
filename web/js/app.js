@@ -136,15 +136,15 @@ function createMiniOverlay() {
 function getFeatureColor(props, tier) {
   switch (tier) {
     case 'empire':
-      return stringToColor(props.empire, 60, 38);
+      return props.e_color || stringToColor(props.empire, 60, 38);
     case 'kingdom':
-      return stringToColor(props.kingdom, 55, 42);
+      return props.k_color || stringToColor(props.kingdom, 55, 42);
     case 'duchy':
-      return stringToColor(props.duchy, 50, 45);
+      return props.d_color || stringToColor(props.duchy, 50, 45);
     case 'county':
-      return stringToColor(props.county, 45, 40);
+      return props.c_color || stringToColor(props.county, 45, 40);
     case 'barony':
-      return stringToColor(props.barony, 40, 42);
+      return props.b_color || stringToColor(props.barony, 40, 42);
     default:
       return '#3d3832';
   }
