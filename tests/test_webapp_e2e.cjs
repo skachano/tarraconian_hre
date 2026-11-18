@@ -125,11 +125,45 @@ async function runE2ETests() {
       throw new Error(`Expected tier badge "COUNTY", got "${tierBadge}"`);
     }
 
-    // Check breadcrumbs
+    // Check breadcrumbs for first title (Stûlwîtzenburch)
     const bcKingdom = await page.locator('#bc-kingdom').innerText();
     console.log(`  Lineage Kingdom: ${bcKingdom}`);
     if (!bcKingdom.includes('Ungern') && !bcKingdom.includes('Hungary')) {
       throw new Error(`Expected Hungarian kingdom breadcrumb, got "${bcKingdom}"`);
+    }
+
+    // Verify exactly 1 title is selected
+    const initialSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    if (initialSelectedCount !== 1) {
+      throw new Error(`Expected exactly 1 selected territory, found ${initialSelectedCount}`);
+    }
+
+    // Now select a SECOND title (Middelsachsen / c_middlesex) and verify previous selection is reset
+    console.log('  Testing sequential selection: selecting second title "Middelsachsen"...');
+    await searchInput.fill('Middelsachsen');
+    await page.waitForSelector('#search-results .search-item[data-key]', { timeout: 5000 });
+    const middlesexResult = page.locator('#search-results .search-item[data-key]').first();
+    await middlesexResult.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_middlesex';
+    }, { timeout: 5000 });
+
+    const secondSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected territories count after second click: ${secondSelectedCount}`);
+    if (secondSelectedCount !== 1) {
+      throw new Error(`Residual selection detected! Expected exactly 1 selected territory, got ${secondSelectedCount}`);
+    }
+
+    const secondKingdom = await page.locator('#bc-kingdom').innerText();
+    if (!secondKingdom.includes('Engellant') && !secondKingdom.includes('England')) {
+      throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
     }
 
     // 4. Test De Jure Tier Switching
@@ -159,6 +193,14 @@ async function runE2ETests() {
     const closeBtn = page.locator('#drawer-close');
     if (await closeBtn.isVisible()) {
       await closeBtn.click();
+    }
+
+    const closedSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    if (closedSelectedCount !== 0) {
+      throw new Error(`Expected 0 selected territories after drawer close, found ${closedSelectedCount}`);
     }
 
     // Sweep across map coordinates

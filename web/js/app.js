@@ -186,6 +186,14 @@ function renderCounties() {
   clearHover();
   if (countiesLayer) {
     countiesLayer.setStyle(countyStyle);
+    if (selectedLayer) {
+      selectedLayer.setStyle({
+        weight: 3,
+        color: '#ffffff',
+        fillColor: '#993284',
+        fillOpacity: 0.9
+      });
+    }
     return;
   }
 
@@ -226,7 +234,7 @@ async function renderBaronies() {
 // Interaction Handlers (Hover, Click, Inspect)
 // ---------------------------------------------------------------------------
 function resetLayerStyle(layer) {
-  if (!layer || layer === selectedLayer) return;
+  if (!layer) return;
   if (currentTier === 'barony' && baroniesLayer) {
     baroniesLayer.resetStyle(layer);
   } else if (countiesLayer) {
@@ -236,7 +244,9 @@ function resetLayerStyle(layer) {
 
 function clearHover() {
   if (hoveredLayer) {
-    resetLayerStyle(hoveredLayer);
+    if (hoveredLayer !== selectedLayer) {
+      resetLayerStyle(hoveredLayer);
+    }
     hoveredLayer = null;
   }
   const hoverBadge = document.getElementById('hover-info');
@@ -250,7 +260,9 @@ function onHover(layer, feature, tier = currentTier) {
 
   // Immediately clear previous hover if moving between adjacent territories
   if (hoveredLayer && hoveredLayer !== layer) {
-    resetLayerStyle(hoveredLayer);
+    if (hoveredLayer !== selectedLayer) {
+      resetLayerStyle(hoveredLayer);
+    }
   }
   hoveredLayer = layer;
 
@@ -294,7 +306,7 @@ function onHover(layer, feature, tier = currentTier) {
 function onHoverOut(layer, feature) {
   if (layer === hoveredLayer) {
     clearHover();
-  } else {
+  } else if (layer !== selectedLayer) {
     resetLayerStyle(layer);
   }
 }
@@ -302,11 +314,13 @@ function onHoverOut(layer, feature) {
 function onSelect(layer, feature, tier = currentTier) {
   if (!layer) return;
 
+  // If a different layer was previously selected, restore its default style
   if (selectedLayer && selectedLayer !== layer) {
     resetLayerStyle(selectedLayer);
   }
 
-  if (hoveredLayer && hoveredLayer !== layer) {
+  // Clear hover state
+  if (hoveredLayer && hoveredLayer !== layer && hoveredLayer !== selectedLayer) {
     resetLayerStyle(hoveredLayer);
   }
   hoveredLayer = null;
@@ -396,9 +410,10 @@ function openInspector(props, tier) {
 function closeInspector() {
   document.getElementById('inspector-drawer').classList.remove('open');
   if (selectedLayer) {
-    resetLayerStyle(selectedLayer);
+    const prev = selectedLayer;
     selectedLayer = null;
     selectedFeature = null;
+    resetLayerStyle(prev);
   }
   clearHover();
 }
