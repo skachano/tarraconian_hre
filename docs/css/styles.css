@@ -445,17 +445,27 @@ body {
   padding: 2px 6px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
 }
 
 .bc-item:hover {
   background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.bc-item.active {
+  background: rgba(212, 175, 55, 0.25);
+  color: #ffffff;
+  font-weight: 600;
+  border-color: var(--gold-bright);
 }
 
 .bc-sep {
   color: var(--text-dim);
 }
 
-/* Baronies list pills */
+/* Baronies / Constituent Titles list pills */
 .baronies-pill-list {
   list-style: none;
   display: flex;
@@ -471,6 +481,13 @@ body {
   padding: 3px 8px;
   border-radius: 12px;
   color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.barony-pill:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
 }
 
 .drawer-footer {

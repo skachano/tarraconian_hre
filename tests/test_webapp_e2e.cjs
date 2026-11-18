@@ -175,23 +175,141 @@ async function runE2ETests() {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
     }
 
-    // 4. Test De Jure Tier Switching & Barony Roundtrip
-    console.log('[5/7] Testing De Jure tier switching & Barony roundtrip...');
+    // 4. Test De Jure Tier Switching & High-Tier Title Selection
+    console.log('[5/7] Testing De Jure tier title selection (Kingdom, Duchy, Empire) & constituent navigation...');
     const kingdomBtn = page.locator('.tier-btn[data-tier="kingdom"]');
+    const duchyBtn = page.locator('.tier-btn[data-tier="duchy"]');
+    const empireBtn = page.locator('.tier-btn[data-tier="empire"]');
+    const countyBtn = page.locator('.tier-btn[data-tier="county"]');
+    const baronyBtn = page.locator('.tier-btn[data-tier="barony"]');
+
+    // Currently Middlesex (c_middlesex) is selected. Switch to Kingdom mode:
+    console.log('  Switching to Kingdom tier while Middlesex is selected...');
     await kingdomBtn.click();
     if (!(await kingdomBtn.evaluate(el => el.classList.contains('active')))) {
       throw new Error('Kingdom tier button failed to activate');
     }
 
-    const empireBtn = page.locator('.tier-btn[data-tier="empire"]');
-    await empireBtn.click();
+    // Verify Kingdom title selection: entire Kingdom of England selected
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'KINGDOM' &&
+             document.getElementById('drawer-title-key').innerText === 'k_england';
+    }, { timeout: 5000 });
+
+    const kingdomSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected counties for Kingdom of England: ${kingdomSelectedCount}`);
+    if (kingdomSelectedCount <= 1) {
+      throw new Error(`Expected whole kingdom selection (>1 counties), got ${kingdomSelectedCount}`);
+    }
+
+    // Verify constituent duchies list in drawer
+    const constituentLabel = await page.locator('#drawer-baronies-label').innerText();
+    console.log(`  Drawer constituent label: "${constituentLabel}"`);
+    if (!constituentLabel.toUpperCase().includes('CONSTITUENT DUCHIES')) {
+      throw new Error(`Expected "Constituent Duchies" label, got "${constituentLabel}"`);
+    }
+
+    // Click constituent duchy pill (e.g. Bedford / Ôstsachsen: d_bedford)
+    console.log('  Clicking constituent duchy pill "d_bedford"...');
+    const bedfordPill = page.locator('.barony-pill[data-key="d_bedford"]');
+    await bedfordPill.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'DUCHY' &&
+             document.getElementById('drawer-title-key').innerText === 'd_bedford';
+    }, { timeout: 5000 });
+
+    if (!(await duchyBtn.evaluate(el => el.classList.contains('active')))) {
+      throw new Error('Duchy tier button failed to activate on duchy pill click');
+    }
+
+    const duchySelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected counties for Duchy of Bedford: ${duchySelectedCount}`);
+    if (duchySelectedCount <= 1 || duchySelectedCount >= kingdomSelectedCount) {
+      throw new Error(`Expected duchy county count between 2 and ${kingdomSelectedCount}, got ${duchySelectedCount}`);
+    }
+
+    // Click constituent county pill (c_middlesex)
+    console.log('  Clicking constituent county pill "c_middlesex"...');
+    const middlesexPill = page.locator('.barony-pill[data-key="c_middlesex"]');
+    await middlesexPill.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'COUNTY' &&
+             document.getElementById('drawer-title-key').innerText === 'c_middlesex';
+    }, { timeout: 5000 });
+
+    if (!(await countyBtn.evaluate(el => el.classList.contains('active')))) {
+      throw new Error('County tier button failed to activate on county pill click');
+    }
+
+    const countySelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected counties for County of Middlesex: ${countySelectedCount}`);
+    if (countySelectedCount !== 1) {
+      throw new Error(`Expected exactly 1 selected county, got ${countySelectedCount}`);
+    }
+
+    // Test Empire breadcrumb navigation
+    console.log('  Clicking Empire breadcrumb (Germania)...');
+    const empireBc = page.locator('#bc-empire');
+    await empireBc.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'EMPIRE' &&
+             document.getElementById('drawer-title-key').innerText === 'e_germany';
+    }, { timeout: 5000 });
+
     if (!(await empireBtn.evaluate(el => el.classList.contains('active')))) {
-      throw new Error('Empire tier button failed to activate');
+      throw new Error('Empire tier button failed to activate on empire breadcrumb click');
+    }
+
+    const empireSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected counties for Empire of Germania: ${empireSelectedCount}`);
+    if (empireSelectedCount <= kingdomSelectedCount) {
+      throw new Error(`Expected empire county count > ${kingdomSelectedCount}, got ${empireSelectedCount}`);
+    }
+
+    // Test Zoom button
+    const zoomBtn = page.locator('#drawer-zoom-btn');
+    await zoomBtn.click();
+    console.log('  Drawer zoom button clicked successfully.');
+
+    // Test sequential selection in Kingdom tier: search for Kingdom of France
+    console.log('  Testing sequential title selection in Kingdom tier (searching k_france)...');
+    await kingdomBtn.click();
+    await searchInput.fill('k_france');
+    await page.waitForSelector('#search-results .search-item[data-key="k_france"]', { timeout: 5000 });
+    const franceItem = page.locator('#search-results .search-item[data-key="k_france"]');
+    await franceItem.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'KINGDOM' &&
+             document.getElementById('drawer-title-key').innerText === 'k_france';
+    }, { timeout: 5000 });
+
+    const franceSelectedCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('fill') === '#993284').length;
+    });
+    console.log(`  Selected counties for Kingdom of France: ${franceSelectedCount}`);
+    if (franceSelectedCount <= 1 || franceSelectedCount === empireSelectedCount) {
+      throw new Error(`Unexpected selection count for France: ${franceSelectedCount}`);
     }
 
     // Switch to Barony (lazy-loads 11,297 baronies)
     console.log('  Switching to Barony tier...');
-    const baronyBtn = page.locator('.tier-btn[data-tier="barony"]');
     await baronyBtn.click();
     await page.waitForFunction(() => {
       return document.querySelectorAll('#map svg path').length === 11297;
@@ -200,23 +318,11 @@ async function runE2ETests() {
 
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');
-    const countyBtn = page.locator('.tier-btn[data-tier="county"]');
     await countyBtn.click();
     await page.waitForFunction(() => {
       return document.querySelectorAll('#map svg path').length === 3476;
     }, { timeout: 5000 });
     console.log('  Restored County tier: 3,476 county polygons loaded.');
-
-    // Switch to Duchy tier
-    const duchyBtn = page.locator('.tier-btn[data-tier="duchy"]');
-    await duchyBtn.click();
-    await page.waitForFunction(() => {
-      return document.querySelectorAll('#map svg path').length === 3476;
-    }, { timeout: 5000 });
-
-    // Return to County tier
-    await countyBtn.click();
-    console.log('  Full tier switching (Kingdom -> Empire -> Barony -> County -> Duchy -> County) validated.');
 
     // Verify non-empty hex fill colors from map coloring
     const sampleFills = await page.evaluate(() => {

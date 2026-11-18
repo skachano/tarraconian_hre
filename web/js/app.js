@@ -11,14 +11,27 @@ let baroniesGeojson = null;
 let titleTree = null;
 let countiesLayer = null;
 let baroniesLayer = null;
-let selectedFeature = null;
-let selectedLayer = null;
-let hoveredLayer = null;
 
-// Search index: array of { key, name, tarr, tier, bounds, layer }
+// Multi-feature selection and hover state
+let selectedFeature = null;
+let selectedLayers = [];
+let selectedTitleKey = null;
+let selectedTitleTier = null;
+
+let hoveredLayers = [];
+let hoveredTitleKey = null;
+
+// Title to Leaflet layer lookup maps
+const countyLayerMap = new Map();
+const duchyLayersMap = new Map();
+const kingdomLayersMap = new Map();
+const empireLayersMap = new Map();
+const baronyLayerMap = new Map();
+
+// Search index: array of { key, name, tarr, tier, canonical, empire, kingdom, duchy, feature }
 let searchIndex = [];
 
-// Deterministic color generator using a hash of string keys
+// Fallback deterministic color generator
 function stringToColor(str, saturation = 55, lightness = 42) {
   if (!str) return '#333333';
   let hash = 0;
@@ -68,7 +81,7 @@ function initMap() {
   map.on('mouseout', clearHover);
   map.getContainer().addEventListener('mouseleave', clearHover);
   map.on('mousemove', (e) => {
-    if (hoveredLayer && e.originalEvent && e.originalEvent.target && e.originalEvent.target.tagName !== 'path') {
+    if (hoveredLayers.length > 0 && e.originalEvent && e.originalEvent.target && e.originalEvent.target.tagName !== 'path') {
       clearHover();
     }
   });
@@ -183,6 +196,38 @@ function renderActiveLayer() {
   }
 }
 
+function getLayersForTitle(tier, props) {
+  if (!props) return [];
+  if (tier === 'barony') {
+    const l = baronyLayerMap.get(props.barony);
+    return l ? [l] : [];
+  }
+  if (tier === 'county') {
+    const l = countyLayerMap.get(props.county);
+    return l ? [l] : [];
+  }
+  if (tier === 'duchy') {
+    return duchyLayersMap.get(props.duchy) || [];
+  }
+  if (tier === 'kingdom') {
+    return kingdomLayersMap.get(props.kingdom) || [];
+  }
+  if (tier === 'empire') {
+    return empireLayersMap.get(props.empire) || [];
+  }
+  return [];
+}
+
+function getTitleKeyForTier(props, tier) {
+  if (!props) return '';
+  if (tier === 'barony') return props.barony || '';
+  if (tier === 'county') return props.county || '';
+  if (tier === 'duchy') return props.duchy || '';
+  if (tier === 'kingdom') return props.kingdom || '';
+  if (tier === 'empire') return props.empire || '';
+  return props.county || '';
+}
+
 function renderCounties() {
   clearHover();
   if (countiesLayer) {
@@ -190,14 +235,6 @@ function renderCounties() {
       countiesLayer.addTo(map);
     }
     countiesLayer.setStyle(countyStyle);
-    if (selectedLayer && map.hasLayer(selectedLayer)) {
-      selectedLayer.setStyle({
-        weight: 3,
-        color: '#ffffff',
-        fillColor: '#993284',
-        fillOpacity: 0.9
-      });
-    }
     return;
   }
 
@@ -211,6 +248,29 @@ function renderCounties() {
       });
     }
   }).addTo(map);
+
+  // Build title maps for instant O(1) title lookup
+  countyLayerMap.clear();
+  duchyLayersMap.clear();
+  kingdomLayersMap.clear();
+  empireLayersMap.clear();
+
+  countiesLayer.eachLayer(layer => {
+    const p = layer.feature.properties;
+    if (p.county) countyLayerMap.set(p.county, layer);
+    if (p.duchy) {
+      if (!duchyLayersMap.has(p.duchy)) duchyLayersMap.set(p.duchy, []);
+      duchyLayersMap.get(p.duchy).push(layer);
+    }
+    if (p.kingdom) {
+      if (!kingdomLayersMap.has(p.kingdom)) kingdomLayersMap.set(p.kingdom, []);
+      kingdomLayersMap.get(p.kingdom).push(layer);
+    }
+    if (p.empire) {
+      if (!empireLayersMap.has(p.empire)) empireLayersMap.set(p.empire, []);
+      empireLayersMap.get(p.empire).push(layer);
+    }
+  });
 }
 
 async function renderBaronies() {
@@ -229,20 +289,18 @@ async function renderBaronies() {
         });
       }
     });
+
+    baronyLayerMap.clear();
+    baroniesLayer.eachLayer(layer => {
+      const p = layer.feature.properties;
+      if (p.barony) baronyLayerMap.set(p.barony, layer);
+    });
   }
 
   if (!map.hasLayer(baroniesLayer)) {
     baroniesLayer.addTo(map);
   }
   baroniesLayer.setStyle(baronyStyle);
-  if (selectedLayer && map.hasLayer(selectedLayer)) {
-    selectedLayer.setStyle({
-      weight: 3,
-      color: '#ffffff',
-      fillColor: '#993284',
-      fillOpacity: 0.9
-    });
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -258,12 +316,16 @@ function resetLayerStyle(layer) {
 }
 
 function clearHover() {
-  if (hoveredLayer) {
-    if (hoveredLayer !== selectedLayer) {
-      resetLayerStyle(hoveredLayer);
+  if (hoveredLayers.length > 0) {
+    const selectedSet = new Set(selectedLayers);
+    for (const l of hoveredLayers) {
+      if (!selectedSet.has(l)) {
+        resetLayerStyle(l);
+      }
     }
-    hoveredLayer = null;
+    hoveredLayers = [];
   }
+  hoveredTitleKey = null;
   const hoverBadge = document.getElementById('hover-info');
   if (hoverBadge) {
     hoverBadge.innerHTML = 'Hover over a territory to inspect';
@@ -271,84 +333,97 @@ function clearHover() {
 }
 
 function onHover(layer, feature, tier = currentTier) {
-  if (!layer) return;
+  if (!layer || !feature) return;
 
-  // Immediately clear previous hover if moving between adjacent territories
-  if (hoveredLayer && hoveredLayer !== layer) {
-    if (hoveredLayer !== selectedLayer) {
-      resetLayerStyle(hoveredLayer);
+  const titleKey = getTitleKeyForTier(feature.properties, tier);
+  if (hoveredTitleKey === titleKey) return;
+
+  clearHover();
+  hoveredTitleKey = titleKey;
+
+  const targetLayers = getLayersForTitle(tier, feature.properties);
+  hoveredLayers = targetLayers;
+
+  const selectedSet = new Set(selectedLayers);
+  const isMulti = tier === 'empire' || tier === 'kingdom' || tier === 'duchy';
+  for (const l of targetLayers) {
+    if (!selectedSet.has(l)) {
+      l.setStyle({
+        weight: isMulti ? 2.0 : 2.5,
+        color: '#f5d77f',
+        fillOpacity: 0.85
+      });
     }
   }
-  hoveredLayer = layer;
-
-  // Highlight only if this is not the actively selected inspection target
-  if (layer !== selectedLayer) {
-    layer.setStyle({
-      weight: 2.5,
-      color: '#f5d77f',
-      fillOpacity: 0.85
-    });
-  }
-  // Note: We intentionally avoid layer.bringToFront() here because DOM re-ordering
-  // drops mouseout events and creates residual highlighting across SVG vector geometries.
 
   // Update floating status badge
   const hoverBadge = document.getElementById('hover-info');
-  const p = feature.properties;
-  let titleName = '';
-  let rankLabel = '';
+  if (hoverBadge) {
+    const p = feature.properties;
+    let titleName = '';
+    let rankLabel = '';
 
-  if (tier === 'barony') {
-    rankLabel = 'Holding';
-    titleName = p.name || formatKey(p.barony);
-  } else if (tier === 'county') {
-    rankLabel = 'County';
-    titleName = p.tarr_hist || p.tarr_direct || formatKey(p.county);
-  } else if (tier === 'duchy') {
-    rankLabel = 'Duchy';
-    titleName = p.d_tarr || formatKey(p.duchy);
-  } else if (tier === 'kingdom') {
-    rankLabel = 'Kingdom';
-    titleName = p.k_tarr || formatKey(p.kingdom);
-  } else if (tier === 'empire') {
-    rankLabel = 'Empire';
-    titleName = p.e_tarr || formatKey(p.empire);
+    if (tier === 'barony') {
+      rankLabel = 'Holding';
+      titleName = p.name || formatKey(p.barony);
+    } else if (tier === 'county') {
+      rankLabel = 'County';
+      titleName = p.tarr_hist || p.tarr_direct || formatKey(p.county);
+    } else if (tier === 'duchy') {
+      rankLabel = 'Duchy';
+      titleName = p.d_tarr || formatKey(p.duchy);
+    } else if (tier === 'kingdom') {
+      rankLabel = 'Kingdom';
+      titleName = p.k_tarr || formatKey(p.kingdom);
+    } else if (tier === 'empire') {
+      rankLabel = 'Empire';
+      titleName = p.e_tarr || formatKey(p.empire);
+    }
+
+    hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
   }
-
-  hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${p[tier] || p.county || ''})</span>`;
 }
 
 function onHoverOut(layer, feature) {
-  if (layer === hoveredLayer) {
+  if (hoveredLayers.includes(layer)) {
     clearHover();
-  } else if (layer !== selectedLayer) {
+  } else if (!selectedLayers.includes(layer)) {
     resetLayerStyle(layer);
   }
 }
 
 function onSelect(layer, feature, tier = currentTier) {
-  if (!layer) return;
+  if (!feature) return;
 
-  // If a different layer was previously selected, restore its default style
-  if (selectedLayer && selectedLayer !== layer) {
-    resetLayerStyle(selectedLayer);
+  const titleKey = getTitleKeyForTier(feature.properties, tier);
+
+  // If previous selection exists, reset all previous layers
+  if (selectedLayers.length > 0) {
+    for (const l of selectedLayers) {
+      resetLayerStyle(l);
+    }
+    selectedLayers = [];
   }
 
-  // Clear hover state
-  if (hoveredLayer && hoveredLayer !== layer && hoveredLayer !== selectedLayer) {
-    resetLayerStyle(hoveredLayer);
-  }
-  hoveredLayer = null;
+  clearHover();
 
   selectedFeature = feature;
-  selectedLayer = layer;
+  selectedTitleKey = titleKey;
+  selectedTitleTier = tier;
 
-  layer.setStyle({
-    weight: 3,
-    color: '#ffffff',
-    fillColor: '#993284',
-    fillOpacity: 0.9
-  });
+  // Retrieve all layers corresponding to this title tier
+  const targetLayers = getLayersForTitle(tier, feature.properties);
+  selectedLayers = targetLayers;
+
+  const isMulti = tier === 'empire' || tier === 'kingdom' || tier === 'duchy';
+  for (const l of targetLayers) {
+    l.setStyle({
+      weight: isMulti ? 2.0 : 3.0,
+      color: '#ffffff',
+      fillColor: '#993284',
+      fillOpacity: 0.9
+    });
+  }
 
   openInspector(feature.properties, tier);
 }
@@ -361,10 +436,11 @@ function openInspector(props, tier) {
   const badge = document.getElementById('drawer-tier-badge');
   const tarrName = document.getElementById('drawer-tarr-name');
   const canonicalName = document.getElementById('drawer-canonical-name');
-  const titleKey = document.getElementById('drawer-title-key');
+  const titleKeyElem = document.getElementById('drawer-title-key');
   const histGroup = document.getElementById('drawer-hist-group');
   const histName = document.getElementById('drawer-hist-name');
   const baroniesSection = document.getElementById('drawer-baronies-section');
+  const baroniesLabel = document.getElementById('drawer-baronies-label');
   const baroniesList = document.getElementById('drawer-baronies-list');
 
   // Breadcrumbs elements
@@ -373,11 +449,12 @@ function openInspector(props, tier) {
   const bcDuchy = document.getElementById('bc-duchy');
   const bcCounty = document.getElementById('bc-county');
 
-  // Tier info
+  // Tier info & Title Key
   badge.textContent = tier.toUpperCase();
-  titleKey.textContent = props[tier] || props.county || props.barony || '';
+  const currentKey = getTitleKeyForTier(props, tier);
+  titleKeyElem.textContent = currentKey;
 
-  // Names
+  // Title Names for active tier
   const countyTarr = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || '';
   if (tier === 'county') {
     tarrName.textContent = countyTarr || formatKey(props.county);
@@ -396,8 +473,8 @@ function openInspector(props, tier) {
     canonicalName.textContent = formatKey(props.empire);
   }
 
-  // Historical resolution (if applicable and distinct)
-  if (props.tarr_hist && props.tarr_direct && props.tarr_hist !== props.tarr_direct) {
+  // Historical resolution (if applicable and distinct for county)
+  if (tier === 'county' && props.tarr_hist && props.tarr_direct && props.tarr_hist !== props.tarr_direct) {
     histGroup.classList.remove('hidden');
     histName.textContent = `${props.tarr_hist} (Direct: ${props.tarr_direct})`;
   } else {
@@ -410,26 +487,158 @@ function openInspector(props, tier) {
   bcDuchy.textContent = props.d_tarr || formatKey(props.duchy);
   bcCounty.textContent = countyTarr || formatKey(props.county);
 
-  // Baronies list
-  if (props.baronies && props.baronies.length > 0) {
-    baroniesSection.classList.remove('hidden');
-    baroniesList.innerHTML = props.baronies.map(b => `<li class="barony-pill">${b}</li>`).join('');
-  } else {
-    baroniesSection.classList.add('hidden');
-    baroniesList.innerHTML = '';
-  }
+  // Active breadcrumb style
+  document.querySelectorAll('.bc-item').forEach(el => el.classList.remove('active'));
+  const activeBc = document.getElementById(`bc-${tier}`);
+  if (activeBc) activeBc.classList.add('active');
+
+  // Breadcrumb interactive click-to-select
+  bcEmpire.onclick = () => selectTitleByKey(props.empire, 'empire');
+  bcKingdom.onclick = () => selectTitleByKey(props.kingdom, 'kingdom');
+  bcDuchy.onclick = () => selectTitleByKey(props.duchy, 'duchy');
+  bcCounty.onclick = () => selectTitleByKey(props.county, 'county');
+
+  // Constituent Titles list in drawer
+  renderConstituentTitles(props, tier, baroniesSection, baroniesLabel, baroniesList);
 
   drawer.classList.add('open');
 }
 
+function renderConstituentTitles(props, tier, section, label, listElem) {
+  if (tier === 'empire') {
+    const empData = titleTree ? titleTree[props.empire] : null;
+    const kingdoms = empData ? Object.entries(empData.kingdoms || {}) : [];
+    if (kingdoms.length > 0) {
+      section.classList.remove('hidden');
+      label.textContent = `Constituent Kingdoms (${kingdoms.length})`;
+      listElem.innerHTML = kingdoms.map(([k_k, k_data]) => {
+        const name = k_data.tarr || formatKey(k_k);
+        return `<li class="barony-pill" data-key="${k_k}" data-tier="kingdom" style="cursor:pointer" title="Click to inspect ${name}">${name} <small style="opacity:0.6;font-family:var(--font-mono)">(${k_k})</small></li>`;
+      }).join('');
+      attachPillHandlers(listElem);
+    } else {
+      section.classList.add('hidden');
+      listElem.innerHTML = '';
+    }
+  } else if (tier === 'kingdom') {
+    const empData = titleTree ? titleTree[props.empire] : null;
+    const kData = empData && empData.kingdoms ? empData.kingdoms[props.kingdom] : null;
+    const duchies = kData ? Object.entries(kData.duchies || {}) : [];
+    if (duchies.length > 0) {
+      section.classList.remove('hidden');
+      label.textContent = `Constituent Duchies (${duchies.length})`;
+      listElem.innerHTML = duchies.map(([d_k, d_data]) => {
+        const name = d_data.tarr || formatKey(d_k);
+        return `<li class="barony-pill" data-key="${d_k}" data-tier="duchy" style="cursor:pointer" title="Click to inspect ${name}">${name} <small style="opacity:0.6;font-family:var(--font-mono)">(${d_k})</small></li>`;
+      }).join('');
+      attachPillHandlers(listElem);
+    } else {
+      section.classList.add('hidden');
+      listElem.innerHTML = '';
+    }
+  } else if (tier === 'duchy') {
+    const empData = titleTree ? titleTree[props.empire] : null;
+    const kData = empData && empData.kingdoms ? empData.kingdoms[props.kingdom] : null;
+    const dData = kData && kData.duchies ? kData.duchies[props.duchy] : null;
+    const counties = dData ? Object.entries(dData.counties || {}) : [];
+    if (counties.length > 0) {
+      section.classList.remove('hidden');
+      label.textContent = `Constituent Counties (${counties.length})`;
+      listElem.innerHTML = counties.map(([c_k, c_data]) => {
+        const name = c_data.tarr_hist || c_data.tarr_direct || formatKey(c_k);
+        return `<li class="barony-pill" data-key="${c_k}" data-tier="county" style="cursor:pointer" title="Click to inspect ${name}">${name} <small style="opacity:0.6;font-family:var(--font-mono)">(${c_k})</small></li>`;
+      }).join('');
+      attachPillHandlers(listElem);
+    } else {
+      section.classList.add('hidden');
+      listElem.innerHTML = '';
+    }
+  } else if (tier === 'county') {
+    if (props.baronies && props.baronies.length > 0) {
+      section.classList.remove('hidden');
+      label.textContent = `Constituent Holdings (Baronies)`;
+      listElem.innerHTML = props.baronies.map(b => `<li class="barony-pill" data-key="${b}" data-tier="barony" style="cursor:pointer">${b}</li>`).join('');
+      attachPillHandlers(listElem);
+    } else {
+      section.classList.add('hidden');
+      listElem.innerHTML = '';
+    }
+  } else {
+    section.classList.add('hidden');
+    listElem.innerHTML = '';
+  }
+}
+
+function attachPillHandlers(listElem) {
+  listElem.querySelectorAll('.barony-pill[data-key]').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const key = pill.getAttribute('data-key');
+      const targetTier = pill.getAttribute('data-tier');
+      selectTitleByKey(key, targetTier);
+    });
+  });
+}
+
+async function selectTitleByKey(titleKey, tier) {
+  if (!titleKey) return;
+
+  if (tier === 'barony') {
+    document.querySelectorAll('.tier-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-tier') === 'barony');
+    });
+    currentTier = 'barony';
+    renderActiveLayer();
+    await ensureBaroniesLoaded();
+    const bLayer = baronyLayerMap.get(titleKey);
+    if (bLayer) {
+      onSelect(bLayer, bLayer.feature, 'barony');
+      map.fitBounds(bLayer.getBounds(), { padding: [60, 60] });
+    }
+    return;
+  }
+
+  if (!countiesLayer) return;
+
+  // Find a representative county feature carrying this title key
+  const matchLayer = countiesLayer.getLayers().find(l => {
+    const p = l.feature.properties;
+    return (tier === 'empire' && p.empire === titleKey) ||
+           (tier === 'kingdom' && p.kingdom === titleKey) ||
+           (tier === 'duchy' && p.duchy === titleKey) ||
+           (tier === 'county' && p.county === titleKey);
+  });
+
+  if (matchLayer) {
+    // If target tier is different from current, switch tier
+    if (tier !== currentTier) {
+      document.querySelectorAll('.tier-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tier') === tier);
+      });
+      currentTier = tier;
+      renderActiveLayer();
+    }
+
+    onSelect(matchLayer, matchLayer.feature, tier);
+
+    // Zoom to title bounds
+    if (selectedLayers.length > 0) {
+      const group = L.featureGroup(selectedLayers);
+      map.fitBounds(group.getBounds(), { padding: [60, 60] });
+    }
+  }
+}
+
 function closeInspector() {
   document.getElementById('inspector-drawer').classList.remove('open');
-  if (selectedLayer) {
-    const prev = selectedLayer;
-    selectedLayer = null;
-    selectedFeature = null;
-    resetLayerStyle(prev);
+  if (selectedLayers.length > 0) {
+    for (const l of selectedLayers) {
+      resetLayerStyle(l);
+    }
+    selectedLayers = [];
   }
+  selectedFeature = null;
+  selectedTitleKey = null;
+  selectedTitleTier = null;
   clearHover();
 }
 
@@ -440,18 +649,58 @@ function buildSearchIndex() {
   searchIndex = [];
   if (!countiesGeojson) return;
 
+  // 1. Index all counties
   for (const feat of countiesGeojson.features) {
     const p = feat.properties;
-    const entry = {
+    searchIndex.push({
       key: p.county,
       tarr: p.tarr_hist || p.tarr_direct || '',
       canonical: formatKey(p.county),
+      tier: 'county',
       duchy: p.d_tarr || formatKey(p.duchy),
       kingdom: p.k_tarr || formatKey(p.kingdom),
       empire: p.e_tarr || formatKey(p.empire),
       feature: feat
-    };
-    searchIndex.push(entry);
+    });
+  }
+
+  // 2. Index higher-tier titles from titleTree for search
+  if (titleTree) {
+    for (const [e_k, e_data] of Object.entries(titleTree)) {
+      searchIndex.push({
+        key: e_k,
+        tarr: e_data.tarr || formatKey(e_k),
+        canonical: formatKey(e_k),
+        tier: 'empire',
+        empire: e_data.tarr || formatKey(e_k),
+        feature: null
+      });
+
+      for (const [k_k, k_data] of Object.entries(e_data.kingdoms || {})) {
+        searchIndex.push({
+          key: k_k,
+          tarr: k_data.tarr || formatKey(k_k),
+          canonical: formatKey(k_k),
+          tier: 'kingdom',
+          kingdom: k_data.tarr || formatKey(k_k),
+          empire: e_data.tarr || formatKey(e_k),
+          feature: null
+        });
+
+        for (const [d_k, d_data] of Object.entries(k_data.duchies || {})) {
+          searchIndex.push({
+            key: d_k,
+            tarr: d_data.tarr || formatKey(d_k),
+            canonical: formatKey(d_k),
+            tier: 'duchy',
+            duchy: d_data.tarr || formatKey(d_k),
+            kingdom: k_data.tarr || formatKey(k_k),
+            empire: e_data.tarr || formatKey(e_k),
+            feature: null
+          });
+        }
+      }
+    }
   }
 }
 
@@ -484,34 +733,37 @@ function handleSearch(query) {
     return;
   }
 
-  dropdown.innerHTML = matches.map(m => `
-    <div class="search-item" data-key="${m.key}">
-      <div class="search-item-primary">${m.tarr || m.canonical}</div>
-      <div class="search-item-secondary">
-        <code>${m.key}</code> &bull; <span>${m.kingdom} (${m.empire})</span>
+  dropdown.innerHTML = matches.map(m => {
+    let subline = '';
+    if (m.tier === 'empire') {
+      subline = `Empire`;
+    } else if (m.tier === 'kingdom') {
+      subline = `Kingdom &bull; ${m.empire}`;
+    } else if (m.tier === 'duchy') {
+      subline = `Duchy &bull; ${m.kingdom} (${m.empire})`;
+    } else {
+      subline = `${m.kingdom} (${m.empire})`;
+    }
+    return `
+      <div class="search-item" data-key="${m.key}" data-tier="${m.tier}">
+        <div class="search-item-primary">${m.tarr || m.canonical} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
+        <div class="search-item-secondary">
+          <code>${m.key}</code> &bull; <span>${subline}</span>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   dropdown.classList.remove('hidden');
 
   dropdown.querySelectorAll('.search-item').forEach(el => {
     el.addEventListener('click', () => {
       const key = el.getAttribute('data-key');
-      jumpToTitle(key);
+      const tier = el.getAttribute('data-tier') || 'county';
+      selectTitleByKey(key, tier);
       dropdown.classList.add('hidden');
     });
   });
-}
-
-function jumpToTitle(countyKey) {
-  if (!countiesLayer) return;
-  const targetLayer = countiesLayer.getLayers().find(l => l.feature && l.feature.properties.county === countyKey);
-  if (targetLayer) {
-    const bounds = targetLayer.getBounds();
-    map.fitBounds(bounds, { maxZoom: 0, padding: [60, 60] });
-    onSelect(targetLayer, targetLayer.feature, 'county');
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -520,13 +772,33 @@ function jumpToTitle(countyKey) {
 function setupEventListeners() {
   // Tier pills
   document.querySelectorAll('.tier-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentTier = btn.getAttribute('data-tier');
       renderActiveLayer();
+
       if (selectedFeature) {
-        openInspector(selectedFeature.properties, currentTier);
+        if (currentTier === 'barony') {
+          await ensureBaroniesLoaded();
+          let baronyKey = selectedFeature.properties.barony;
+          if (!baronyKey && selectedFeature.properties.baronies && selectedFeature.properties.baronies.length > 0) {
+            baronyKey = selectedFeature.properties.baronies[0];
+          }
+          if (baronyKey && baronyLayerMap.has(baronyKey)) {
+            const bLayer = baronyLayerMap.get(baronyKey);
+            onSelect(bLayer, bLayer.feature, 'barony');
+          } else {
+            closeInspector();
+          }
+        } else {
+          // If previous selection was a barony, retrieve its county feature
+          let feat = selectedFeature;
+          if (feat.properties.barony && feat.properties.county && countyLayerMap.has(feat.properties.county)) {
+            feat = countyLayerMap.get(feat.properties.county).feature;
+          }
+          onSelect(null, feat, currentTier);
+        }
       }
     });
   });
@@ -534,8 +806,9 @@ function setupEventListeners() {
   // Drawer close & zoom
   document.getElementById('drawer-close').addEventListener('click', closeInspector);
   document.getElementById('drawer-zoom-btn').addEventListener('click', () => {
-    if (selectedLayer) {
-      map.fitBounds(selectedLayer.getBounds(), { padding: [80, 80] });
+    if (selectedLayers.length > 0) {
+      const group = L.featureGroup(selectedLayers);
+      map.fitBounds(group.getBounds(), { padding: [60, 60] });
     }
   });
 
@@ -549,12 +822,12 @@ function setupEventListeners() {
   document.getElementById('search-clear').addEventListener('click', () => {
     searchInput.value = '';
     handleSearch('');
-    searchInput.focus();
   });
 
-  // Close search dropdown on click outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.search-container')) {
+  // Keyboard escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeInspector();
       document.getElementById('search-results').classList.add('hidden');
     }
   });
