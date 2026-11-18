@@ -68,6 +68,19 @@ def hex_to_rgb(hex_str: str):
 
 MAP_PALETTE_RGB = [hex_to_rgb(h) for h in MAP_PALETTE]
 
+
+def format_title_key(key: str) -> str:
+    """Fallback formatting: e.g. c_middlesex -> Middlesex, d_york -> York"""
+    if not key:
+        return ""
+    parts = key.split("_", 1)
+    if len(parts) == 2 and len(parts[0]) <= 2:
+        base = parts[1]
+    else:
+        base = key
+    return " ".join(word.capitalize() for word in base.split("_"))
+
+
 def rgb_dist(c1, c2):
     return ((c1[0] - c2[0]) ** 2 + (c1[1] - c2[1]) ** 2 + (c1[2] - c2[2]) ** 2) ** 0.5
 
@@ -408,6 +421,71 @@ def parse_save_hierarchy(melted_save_path: Path, save_file_path: Path = None):
     return county_hierarchy, titles_by_key
 
 
+def parse_title_origins(titles_md_path: Path, hre_md_path: Path):
+    """
+    Extracts historical title name origins for all tiers from the markdown files:
+    - Counties: from tarraconian_titles_1059.md Section 3 (`c_key` (Origin) $\\rightarrow$)
+    - Duchies: from tarraconian_titles_1059.md Section 3 (**Duchy of Origin** (`d_key`))
+    - Kingdoms: from tarraconian_titles_1059.md Section 3 (### 3.X Kingdom of Origin (`k_key`)) & Section 2
+    - Empires: from hre_de_jure_and_archdioceses_1059.md Table 1.1
+    """
+    c_origins = {}
+    d_origins = {}
+    k_origins = {}
+    e_origins = {}
+
+    if titles_md_path.exists():
+        with open(titles_md_path, "r", encoding="utf-8") as f:
+            t_text = f.read()
+
+        # Counties: `c_key` (Origin) $\rightarrow$
+        for m in re.finditer(r"^\s*\*\s*`(c_[a-zA-Z0-9_\-]+)`\s*(.*?)\s*\$\\rightarrow\$", t_text, re.MULTILINE):
+            ck = m.group(1)
+            raw = m.group(2).strip()
+            clean = raw.strip("()")
+            clean = re.sub(r"\[\s*\**[a-zA-Z0-9_\-\s]+\**\s*\]", "", clean)
+            clean = clean.replace("**", "").strip()
+            if clean:
+                c_origins[ck] = clean
+
+        # Duchies: * **Duchy of Origin** (`d_key`) or * **March of Origin** (`d_key`)
+        for m in re.finditer(r"^\*\s+\*\*(?:Duchy|March)\s+of\s+([^*`]+)\*\*\s+.*?\(`([dx]_[a-zA-Z0-9_\-]+)`\)", t_text, re.MULTILINE):
+            origin = m.group(1).strip()
+            dk = m.group(2)
+            d_origins[dk] = origin
+
+        # Kingdoms: ### 3.X Kingdom of Origin (`k_key`)
+        for m in re.finditer(r"^###\s+3\.\d+\s+Kingdom\s+of\s+([^`]+)\s+\(`([a-zA-Z0-9_\-]+)`\)", t_text, re.MULTILINE):
+            origin = m.group(1).strip()
+            kk = m.group(2)
+            k_origins[kk] = origin
+
+        # Kingdoms Section 2 table fallback
+        for m in re.finditer(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|", t_text, re.MULTILINE):
+            origin = m.group(1).strip()
+            kk = m.group(2)
+            if kk.startswith("k_") and kk not in k_origins:
+                k_origins[kk] = origin
+
+    if hre_md_path.exists():
+        with open(hre_md_path, "r", encoding="utf-8") as f:
+            h_text = f.read()
+
+        for m in re.finditer(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|", h_text, re.MULTILINE):
+            origin = m.group(1).strip()
+            ek = m.group(2)
+            if ek.startswith("e_"):
+                e_origins[ek] = origin
+
+        for m in re.finditer(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|", h_text, re.MULTILINE):
+            origin = m.group(1).strip()
+            k = m.group(2)
+            if k.startswith("k_") and k not in k_origins:
+                k_origins[k] = origin
+
+    return c_origins, d_origins, k_origins, e_origins
+
+
 def build_and_write_title_tree(
     county_info: dict,
     tree_out_path: Path,
@@ -418,12 +496,20 @@ def build_and_write_title_tree(
     kingdom_colors: dict = None,
     duchy_colors: dict = None,
     county_colors: dict = None,
+    c_origins: dict = None,
+    d_origins: dict = None,
+    k_origins: dict = None,
+    e_origins: dict = None,
 ):
     """Builds nested title tree e_* -> k_* -> d_* -> c_* -> [b_*] and writes to JSON."""
     if empire_colors is None: empire_colors = {}
     if kingdom_colors is None: kingdom_colors = {}
     if duchy_colors is None: duchy_colors = {}
     if county_colors is None: county_colors = {}
+    if c_origins is None: c_origins = {}
+    if d_origins is None: d_origins = {}
+    if k_origins is None: k_origins = {}
+    if e_origins is None: e_origins = {}
 
     save_title_tree = {}
     for c_key, info in county_info.items():
@@ -438,36 +524,44 @@ def build_and_write_title_tree(
     for e_k in sorted(save_title_tree.keys()):
         kingdoms = save_title_tree[e_k]
         e_tarr_name = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, e_k)))
+        e_origin = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
         e_entry = {
             "key": e_k,
             "tarr": e_tarr_name,
+            "origin": e_origin,
             "color": empire_colors.get(e_k, "#a64b38"),
             "kingdoms": {},
         }
         for k_k in sorted(kingdoms.keys()):
             duchies = kingdoms[k_k]
             k_tarr_name = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", k_k)))
+            k_origin = k_origins.get(k_k, format_title_key(k_k))
             k_entry = {
                 "key": k_k,
                 "tarr": k_tarr_name,
+                "origin": k_origin,
                 "color": kingdom_colors.get(k_k, "#b88228"),
                 "duchies": {},
             }
             for d_k in sorted(duchies.keys()):
                 counties = duchies[d_k]
                 d_tarr_name = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", d_k)))
+                d_origin = d_origins.get(d_k, format_title_key(d_k))
                 d_entry = {
                     "key": d_k,
                     "tarr": d_tarr_name,
+                    "origin": d_origin,
                     "color": duchy_colors.get(d_k, "#2e649e"),
                     "counties": {},
                 }
                 for c_k in sorted(counties.keys()):
                     b_list = counties[c_k]
+                    c_origin = c_origins.get(c_k, format_title_key(c_k))
                     c_entry = {
                         "key": c_k,
                         "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
                         "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
+                        "origin": c_origin,
                         "color": county_colors.get(c_k, "#3b7d4e"),
                         "baronies": b_list,
                     }
@@ -488,12 +582,21 @@ def realign_existing_datasets(
     save_titles: dict,
     gaz: dict,
     empire_names: dict,
+    c_origins: dict = None,
+    d_origins: dict = None,
+    k_origins: dict = None,
+    e_origins: dict = None,
 ):
     """Realigns existing GeoJSON and title tree datasets without re-rasterizing."""
     counties_path = out_dir / "ck3_counties.geojson"
     baronies_path = out_dir / "ck3_baronies.geojson"
     tree_path = out_dir / "ck3_title_tree.json"
     adj_path = out_dir / "ck3_adjacencies.json"
+
+    if c_origins is None: c_origins = {}
+    if d_origins is None: d_origins = {}
+    if k_origins is None: k_origins = {}
+    if e_origins is None: e_origins = {}
 
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
@@ -525,6 +628,12 @@ def realign_existing_datasets(
             props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+
+        # Historical Title Name Origins from Markdown Files
+        props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
+        if d_k: props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
+        if k_k: props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
+        if e_k: props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
 
         county_info[c_k] = {
             "county": c_k,
@@ -559,6 +668,13 @@ def realign_existing_datasets(
             props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+
+        # Historical Title Name Origins from Markdown Files
+        props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
+        if c_k: props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
+        if d_k: props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
+        if k_k: props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
+        if e_k: props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
 
     # Compute collision-free map colors
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
@@ -600,7 +716,21 @@ def realign_existing_datasets(
         json.dump(baronies_fc, f, separators=(",", ":"))
 
     # Write title tree
-    build_and_write_title_tree(county_info, tree_path, gaz, empire_names, save_titles, e_colors, k_colors, d_colors, c_colors)
+    build_and_write_title_tree(
+        county_info,
+        tree_path,
+        gaz,
+        empire_names,
+        save_titles,
+        e_colors,
+        k_colors,
+        d_colors,
+        c_colors,
+        c_origins,
+        d_origins,
+        k_origins,
+        e_origins,
+    )
 
     # Write adjacencies index
     print(f"Writing spatial adjacencies index to {adj_path.name}...")
@@ -735,10 +865,27 @@ def main():
         gaz = parse_gazetteer(gaz_path)
         print(f"-> Loaded {len(gaz)} Tarraconian title records")
 
+    # 3. Parse Historical Title Name Origins from Markdown Files
+    c_origins, d_origins, k_origins, e_origins = parse_title_origins(gaz_path, empires_md)
+    print(
+        f"-> Loaded title name origins from markdown: {len(c_origins)} counties, "
+        f"{len(d_origins)} duchies, {len(k_origins)} kingdoms, {len(e_origins)} empires"
+    )
+
     # If --realign-only is requested OR if game files are missing while existing GeoJSONs exist
     prov_png = map_data_dir / "provinces.png"
     if args.realign_only or (not prov_png.exists() and (out_dir / "ck3_counties.geojson").exists()):
-        realign_existing_datasets(out_dir, county_save_hierarchy, save_titles, gaz, empire_names)
+        realign_existing_datasets(
+            out_dir,
+            county_save_hierarchy,
+            save_titles,
+            gaz,
+            empire_names,
+            c_origins,
+            d_origins,
+            k_origins,
+            e_origins,
+        )
         print("==========================================================")
         print("SUCCESS: Existing Datasets Successfully Realigned!")
         print("==========================================================")
@@ -842,6 +989,13 @@ def main():
         if e_key:
             props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
 
+        # Historical Title Name Origins from Markdown Files
+        props["b_origin"] = props.get("name") or format_title_key(b_key)
+        if c_key: props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
+        if d_key: props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
+        if k_key: props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
+        if e_key: props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
+
         barony_features.append({
             "type": "Feature",
             "id": b_key,
@@ -886,6 +1040,12 @@ def main():
                 props["k_tarr"] = gaz.get(k_key, {}).get("hist", gaz.get(k_key, {}).get("direct", save_titles.get(k_key, {}).get("save_name", "")))
             if e_key:
                 props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
+
+            # Historical Title Name Origins from Markdown Files
+            props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
+            if d_key: props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
+            if k_key: props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
+            if e_key: props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
 
             county_features.append({
                 "type": "Feature",
@@ -945,7 +1105,21 @@ def main():
 
     # 14. Write Title Tree
     tree_out_path = out_dir / "ck3_title_tree.json"
-    build_and_write_title_tree(county_info, tree_out_path, gaz, empire_names, save_titles, e_colors, k_colors, d_colors, c_colors)
+    build_and_write_title_tree(
+        county_info,
+        tree_out_path,
+        gaz,
+        empire_names,
+        save_titles,
+        e_colors,
+        k_colors,
+        d_colors,
+        c_colors,
+        c_origins,
+        d_origins,
+        k_origins,
+        e_origins,
+    )
 
     # 15. Write Adjacencies Index
     adj_out_path = out_dir / "ck3_adjacencies.json"

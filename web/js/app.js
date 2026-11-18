@@ -28,7 +28,7 @@ const kingdomLayersMap = new Map();
 const empireLayersMap = new Map();
 const baronyLayerMap = new Map();
 
-// Search index: array of { key, name, tarr, tier, canonical, empire, kingdom, duchy, feature }
+// Search index: array of { key, name, tarr, tier, origin, empire, kingdom, duchy, feature }
 let searchIndex = [];
 
 // Fallback deterministic color generator
@@ -435,7 +435,7 @@ function openInspector(props, tier) {
   const drawer = document.getElementById('inspector-drawer');
   const badge = document.getElementById('drawer-tier-badge');
   const tarrName = document.getElementById('drawer-tarr-name');
-  const canonicalName = document.getElementById('drawer-canonical-name');
+  const originName = document.getElementById('drawer-origin-name');
   const titleKeyElem = document.getElementById('drawer-title-key');
   const histGroup = document.getElementById('drawer-hist-group');
   const histName = document.getElementById('drawer-hist-name');
@@ -458,19 +458,19 @@ function openInspector(props, tier) {
   const countyTarr = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || '';
   if (tier === 'county') {
     tarrName.textContent = countyTarr || formatKey(props.county);
-    canonicalName.textContent = formatKey(props.county);
+    originName.textContent = props.c_origin || formatKey(props.county);
   } else if (tier === 'barony') {
     tarrName.textContent = props.name || formatKey(props.barony);
-    canonicalName.textContent = props.name || formatKey(props.barony);
+    originName.textContent = props.b_origin || props.name || formatKey(props.barony);
   } else if (tier === 'duchy') {
     tarrName.textContent = props.d_tarr || formatKey(props.duchy);
-    canonicalName.textContent = formatKey(props.duchy);
+    originName.textContent = props.d_origin || formatKey(props.duchy);
   } else if (tier === 'kingdom') {
     tarrName.textContent = props.k_tarr || formatKey(props.kingdom);
-    canonicalName.textContent = formatKey(props.kingdom);
+    originName.textContent = props.k_origin || formatKey(props.kingdom);
   } else if (tier === 'empire') {
     tarrName.textContent = props.e_tarr || formatKey(props.empire);
-    canonicalName.textContent = formatKey(props.empire);
+    originName.textContent = props.e_origin || formatKey(props.empire);
   }
 
   // Historical resolution (if applicable and distinct for county)
@@ -655,7 +655,7 @@ function buildSearchIndex() {
     searchIndex.push({
       key: p.county,
       tarr: p.tarr_hist || p.tarr_direct || '',
-      canonical: formatKey(p.county),
+      origin: p.c_origin || formatKey(p.county),
       tier: 'county',
       duchy: p.d_tarr || formatKey(p.duchy),
       kingdom: p.k_tarr || formatKey(p.kingdom),
@@ -670,7 +670,7 @@ function buildSearchIndex() {
       searchIndex.push({
         key: e_k,
         tarr: e_data.tarr || formatKey(e_k),
-        canonical: formatKey(e_k),
+        origin: e_data.origin || formatKey(e_k),
         tier: 'empire',
         empire: e_data.tarr || formatKey(e_k),
         feature: null
@@ -680,7 +680,7 @@ function buildSearchIndex() {
         searchIndex.push({
           key: k_k,
           tarr: k_data.tarr || formatKey(k_k),
-          canonical: formatKey(k_k),
+          origin: k_data.origin || formatKey(k_k),
           tier: 'kingdom',
           kingdom: k_data.tarr || formatKey(k_k),
           empire: e_data.tarr || formatKey(e_k),
@@ -691,7 +691,7 @@ function buildSearchIndex() {
           searchIndex.push({
             key: d_k,
             tarr: d_data.tarr || formatKey(d_k),
-            canonical: formatKey(d_k),
+            origin: d_data.origin || formatKey(d_k),
             tier: 'duchy',
             duchy: d_data.tarr || formatKey(d_k),
             kingdom: k_data.tarr || formatKey(k_k),
@@ -723,7 +723,7 @@ function handleSearch(query) {
     return (
       item.key.toLowerCase().includes(query) ||
       item.tarr.toLowerCase().includes(query) ||
-      item.canonical.toLowerCase().includes(query)
+      (item.origin && item.origin.toLowerCase().includes(query))
     );
   }).slice(0, 10);
 
@@ -744,11 +744,12 @@ function handleSearch(query) {
     } else {
       subline = `${m.kingdom} (${m.empire})`;
     }
+    const originLabel = m.origin && m.origin !== m.tarr ? ` &bull; <em>${m.origin}</em>` : '';
     return `
       <div class="search-item" data-key="${m.key}" data-tier="${m.tier}">
-        <div class="search-item-primary">${m.tarr || m.canonical} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
+        <div class="search-item-primary">${m.tarr || m.origin} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
         <div class="search-item-secondary">
-          <code>${m.key}</code> &bull; <span>${subline}</span>
+          <code>${m.key}</code>${originLabel} &bull; <span>${subline}</span>
         </div>
       </div>
     `;

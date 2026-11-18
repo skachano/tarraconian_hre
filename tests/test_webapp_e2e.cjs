@@ -113,8 +113,9 @@ async function runE2ETests() {
     const tarrName = await page.locator('#drawer-tarr-name').innerText();
     const titleKey = await page.locator('#drawer-title-key').innerText();
     const tierBadge = await page.locator('#drawer-tier-badge').innerText();
+    const originName = await page.locator('#drawer-origin-name').innerText();
 
-    console.log(`  Drawer inspected: [${tierBadge}] ${tarrName} (${titleKey})`);
+    console.log(`  Drawer inspected: [${tierBadge}] ${tarrName} (${titleKey}) -> Origin: "${originName}"`);
     if (tarrName !== 'Stûlwîtzenburch') {
       throw new Error(`Expected drawer tarr name "Stûlwîtzenburch", got "${tarrName}"`);
     }
@@ -123,6 +124,9 @@ async function runE2ETests() {
     }
     if (tierBadge.toUpperCase() !== 'COUNTY') {
       throw new Error(`Expected tier badge "COUNTY", got "${tierBadge}"`);
+    }
+    if (originName !== 'Székesfehérvár') {
+      throw new Error(`Expected drawer origin name "Székesfehérvár", got "${originName}"`);
     }
 
     // Check breadcrumbs for first title (Stûlwîtzenburch)
@@ -167,7 +171,11 @@ async function runE2ETests() {
 
     const secondKingdom = await page.locator('#bc-kingdom').innerText();
     const secondEmpire = await page.locator('#bc-empire').innerText();
-    console.log(`  Middelsachsen Lineage: Empire="${secondEmpire}", Kingdom="${secondKingdom}"`);
+    const secondOrigin = await page.locator('#drawer-origin-name').innerText();
+    console.log(`  Middelsachsen Lineage: Empire="${secondEmpire}", Kingdom="${secondKingdom}", Origin="${secondOrigin}"`);
+    if (secondOrigin !== 'Middle Seaxe') {
+      throw new Error(`Expected drawer origin name "Middle Seaxe", got "${secondOrigin}"`);
+    }
     if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany')) {
       throw new Error(`Expected Germania empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
     }
@@ -196,6 +204,12 @@ async function runE2ETests() {
              document.getElementById('drawer-title-key').innerText === 'k_england';
     }, { timeout: 5000 });
 
+    const kingdomOrigin = await page.locator('#drawer-origin-name').innerText();
+    console.log(`  Kingdom of England origin: "${kingdomOrigin}"`);
+    if (kingdomOrigin !== 'England') {
+      throw new Error(`Expected drawer origin name "England" for k_england, got "${kingdomOrigin}"`);
+    }
+
     const kingdomSelectedCount = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('#map svg path'))
         .filter(p => p.getAttribute('fill') === '#993284').length;
@@ -221,6 +235,12 @@ async function runE2ETests() {
       return document.getElementById('drawer-tier-badge').innerText === 'DUCHY' &&
              document.getElementById('drawer-title-key').innerText === 'd_bedford';
     }, { timeout: 5000 });
+
+    const duchyOrigin = await page.locator('#drawer-origin-name').innerText();
+    console.log(`  Duchy of Bedford origin: "${duchyOrigin}"`);
+    if (duchyOrigin !== 'East Seaxe') {
+      throw new Error(`Expected drawer origin name "East Seaxe" for d_bedford, got "${duchyOrigin}"`);
+    }
 
     if (!(await duchyBtn.evaluate(el => el.classList.contains('active')))) {
       throw new Error('Duchy tier button failed to activate on duchy pill click');
@@ -268,6 +288,12 @@ async function runE2ETests() {
              document.getElementById('drawer-title-key').innerText === 'e_germany';
     }, { timeout: 5000 });
 
+    const empireOrigin = await page.locator('#drawer-origin-name').innerText();
+    console.log(`  Empire of Germania origin: "${empireOrigin}"`);
+    if (empireOrigin !== 'Germania') {
+      throw new Error(`Expected drawer origin name "Germania" for e_germany, got "${empireOrigin}"`);
+    }
+
     if (!(await empireBtn.evaluate(el => el.classList.contains('active')))) {
       throw new Error('Empire tier button failed to activate on empire breadcrumb click');
     }
@@ -307,6 +333,20 @@ async function runE2ETests() {
     if (franceSelectedCount <= 1 || franceSelectedCount === empireSelectedCount) {
       throw new Error(`Unexpected selection count for France: ${franceSelectedCount}`);
     }
+
+    // Test search autocomplete by historical origin name ("Bernicia" -> c_northumberland)
+    console.log('  Testing search autocomplete by title name origin ("Bernicia")...');
+    await countyBtn.click();
+    await searchInput.fill('Bernicia');
+    await page.waitForSelector('#search-results .search-item[data-key="c_northumberland"]', { timeout: 5000 });
+    const berniciaItem = page.locator('#search-results .search-item[data-key="c_northumberland"]');
+    await berniciaItem.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_northumberland' &&
+             document.getElementById('drawer-origin-name').innerText === 'Bernicia';
+    }, { timeout: 5000 });
+    console.log('  Search by origin name ("Bernicia") matched c_northumberland successfully.');
 
     // Switch to Barony (lazy-loads 11,297 baronies)
     console.log('  Switching to Barony tier...');

@@ -67,7 +67,7 @@ class TestWebAssets:
             "inspector-drawer",
             "drawer-tier-badge",
             "drawer-tarr-name",
-            "drawer-canonical-name",
+            "drawer-origin-name",
             "drawer-title-key",
             "drawer-breadcrumbs",
             "hover-info",
@@ -125,6 +125,15 @@ class TestCountiesGeoJSON:
             assert "barony_count" in props and props["barony_count"] >= 1
             assert "baronies" in props and len(props["baronies"]) == props["barony_count"]
 
+            # Origin properties from markdown
+            assert "c_origin" in props and props["c_origin"]
+            if props.get("duchy"):
+                assert "d_origin" in props and props["d_origin"]
+            if props.get("kingdom"):
+                assert "k_origin" in props and props["k_origin"]
+            if props.get("empire"):
+                assert "e_origin" in props and props["e_origin"]
+
             # Geometry checks
             geom = feat["geometry"]
             assert geom["type"] in ("Polygon", "MultiPolygon")
@@ -146,14 +155,22 @@ class TestCountiesGeoJSON:
         assert "c_szekesfehervar" in by_key
         sz = by_key["c_szekesfehervar"]
         assert sz["tarr_hist"] == "Stûlwîtzenburch" or sz["tarr_direct"] == "Stûlwîtzenburch"
+        assert sz["c_origin"] == "Székesfehérvár"
+        assert sz["d_origin"] == "Visegrad"
+        assert sz["k_origin"] == "Hungary"
+        assert sz["e_origin"] == "Germania"
 
         assert "c_middlesex" in by_key
         mid = by_key["c_middlesex"]
         assert mid["tarr_direct"] == "Middelsachsen"
+        assert mid["c_origin"] == "Middle Seaxe"
+        assert mid["d_origin"] == "East Seaxe"
         assert mid["empire"] == "e_germany"
         assert mid["e_tarr"] == "Germania"
+        assert mid["e_origin"] == "Germania"
         assert mid["kingdom"] == "k_england"
         assert mid["k_tarr"] == "Engellant"
+        assert mid["k_origin"] == "England"
 
         assert "c_roma" in by_key
         roma = by_key["c_roma"]
@@ -193,6 +210,7 @@ class TestBaroniesGeoJSON:
             props = feat["properties"]
             assert "barony" in props and props["barony"].startswith("b_")
             assert "county" in props and props["county"].startswith("c_")
+            assert "b_origin" in props and props["b_origin"]
             assert "id" in props and isinstance(props["id"], int)
             by_key[props["barony"]] = props
 
@@ -219,6 +237,7 @@ class TestTitleTree:
         assert "e_germany" in tree_data
         germany = tree_data["e_germany"]
         assert germany["tarr"] == "Germania"
+        assert germany["origin"] == "Germania"
         assert "kingdoms" in germany
 
         # Drifted kingdoms in Germania
@@ -227,13 +246,16 @@ class TestTitleTree:
 
         eng = germany["kingdoms"]["k_england"]
         assert "duchies" in eng
+        assert eng["origin"] == "England"
         assert "d_bedford" in eng["duchies"]
 
         bedford = eng["duchies"]["d_bedford"]
         assert "counties" in bedford
+        assert bedford["origin"] == "East Seaxe"
         assert "c_middlesex" in bedford["counties"]
 
         mid = bedford["counties"]["c_middlesex"]
+        assert mid["origin"] == "Middle Seaxe"
         assert "b_london" in mid["baronies"]
 
         # Check Britannia
