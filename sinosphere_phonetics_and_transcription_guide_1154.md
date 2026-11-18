@@ -5,7 +5,7 @@
 > **Imperial Realm:** The Roman Empire (*Dat Rômische Keiserrîch*)  
 > **Target Languages:** Late Middle Chinese (Song/Jin), Early Middle Korean (Goryeo), Early Middle Japanese (Late Heian), Lý Sino-Vietnamese (Đại Việt), Khitan (Liao), Jurchen (Jin), and Amur Indigenous Tongues  
 > **Chancellery Target:** Tarraconian High German (*Tarracono-Lothringian*, `ID 316`)  
-> **Companion References:** [Tarraconian Linguistics Guide](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) | [Sinosphere Title Gazetteer](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_titles_and_characters_1154.md) | [Kanji Toponymic Index](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_kanji_tarraconian_toponyms.md)
+> **Companion References:** [Tarraconian Linguistics Guide](tarraconian_linguistics_guide.md) | [Sinosphere Title Gazetteer](sinosphere_titles_and_characters_1154.md) | [Kanji Toponymic Index](sinosphere_kanji_tarraconian_toponyms.md)
 
 ---
 
@@ -16,7 +16,7 @@ In the administration of Far Eastern marches, tributary kingdoms, and commanderi
 2. **Dynastic Stems, Ancient Ethnonyms, and Opaque Toponyms:** Transliterated phonetically (*Lautangleichung*) and adapted to **Tarraconian phonotactics and Auslautverhärtung** (e.g. *Chitan*, *Schiwei*, *Jamatô*, *Zukuschi*, *Gogurjô*, *Baekdsche*, *Sille*, *Jüet*, *Dschürdsch*, *Bôhai*).
 
 ### The Historical Antiquity Principle (Rejecting Modern Anachronisms)
-Under the project's historical canon ([`title_historical_accuracy_audit_plan.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/title_historical_accuracy_audit_plan.md)), phonetic transliterations must **strictly reflect the phonological systems active in the 12th century (ca. 1154 AD)**, rather than modern standard national languages (Modern Standard Mandarin / Pinyin, Modern Tokyo Japanese, Modern Seoul Korean).
+Under the project's historical canon ([`title_historical_accuracy_audit_plan.md`](title_historical_accuracy_audit_plan.md)), phonetic transliterations must **strictly reflect the phonological systems active in the 12th century (ca. 1154 AD)**, rather than modern standard national languages (Modern Standard Mandarin / Pinyin, Modern Tokyo Japanese, Modern Seoul Korean).
 
 | Language Sphere | 12th-Century Historical Language Stage (1154 AD) | Illicit Modern Anachronism to Avoid | Key 12th-Century Phonological Landmarks |
 | :--- | :--- | :--- | :--- |
@@ -156,7 +156,7 @@ The following concordance defines the authoritative sound-change mapping from 12
 
 ## 7. Exhaustive Audit Register of All Sinosphere Titles with Phonetic Transliterations
 
-The following register audits every title across the Sinosphere gazetteer ([`sinosphere_titles_and_characters_1154.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_titles_and_characters_1154.md)) that incorporates phonetic transliterations. Each entry verifies its 12th-century etymological origin and its phonotactic compliance in Tarraconian:
+The following register audits every title across the Sinosphere gazetteer ([`sinosphere_titles_and_characters_1154.md`](sinosphere_titles_and_characters_1154.md)) that incorporates phonetic transliterations. Each entry verifies its 12th-century etymological origin and its phonotactic compliance in Tarraconian:
 
 ### 7.1 Imperial & Sovereign Titles
 | Title Key | In-Game Name | Chinese Characters | 12th-Century Historical Phonology | Official Tarraconian Chancellery Title | Phonotactic & Historical Validation |

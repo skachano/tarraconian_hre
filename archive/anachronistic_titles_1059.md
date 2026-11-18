@@ -2,7 +2,7 @@
 
 * **Campaign Date:** 20 August 1142 *(Updated from the 13 May 1059 & 20 September 1122 Imperial Chancellery Audits)*
 * **Scope:** All post-1059, post-1122, and post-1142 urban/castle foundations and anachronistic *Ostsiedlung* or colonial exonyms among the **100 De Jure Kingdoms** (**451 Duchies**, **1,703 Counties**, of which **1,513** are de facto in the **Roman Empire** `h_roman_empire`) that contain at least one county in the Empire.
-* **Companion References:** [hre_de_jure_and_archdioceses_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/hre_de_jure_and_archdioceses_1059.md) | [tarraconian_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_titles_1059.md)
+* **Companion References:** [hre_de_jure_and_archdioceses_1059.md](../hre_de_jure_and_archdioceses_1059.md) | [tarraconian_titles_1059.md](../tarraconian_titles_1059.md)
 
 ---
 

@@ -99,7 +99,7 @@ def generate_markdown(db):
     md.append("> **Campaign Date:** 27 December 1154 (`1154.12.27`)  ")
     md.append("> **Campaign Save Game:** `chatenois_867_01_01.ck3` | **Imperial Realm:** The Roman Empire (*Dat Rômische Keiserrîch*)  ")
     md.append("> **Total Attested Sinosphere Kanji:** **641 Distinct Characters** (100% Comprehensive Coverage)  ")
-    md.append("> **Governing Principles:** [Tarraconian Linguistics Guide](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) | [Semantic Calque Matrix](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) | [Sinosphere Title Gazetteer](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_titles_and_characters_1154.md)\n")
+    md.append("> **Governing Principles:** [Tarraconian Linguistics Guide](tarraconian_linguistics_guide.md) | [Semantic Calque Matrix](tarraconian_descriptive_title_calques.md) | [Sinosphere Title Gazetteer](sinosphere_titles_and_characters_1154.md)\n")
     md.append("---\n")
     
     md.append("## 1. Executive Summary & Chancellery Calquing Doctrine\n")

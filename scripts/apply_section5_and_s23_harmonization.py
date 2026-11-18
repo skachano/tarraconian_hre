@@ -12,14 +12,14 @@ with open("sinosphere_titles_and_characters_1154.md", "r", encoding="utf-8") as 
 # 1. Update Section 1.4
 s14_old = """### 1.4 Historical Anachronism Audit & Resolution Synthesis
 
-Under the project's historical title audit framework ([`title_historical_accuracy_audit_plan.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/title_historical_accuracy_audit_plan.md) and [`audit_discrepancy_register.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md)), all titles within the Imperial sphere are rigorously screened against the **867 AD campaign divergence milestone**:
+Under the project's historical title audit framework ([`title_historical_accuracy_audit_plan.md`](title_historical_accuracy_audit_plan.md) and [`audit_discrepancy_register.md`](audit_discrepancy_register.md)), all titles within the Imperial sphere are rigorously screened against the **867 AD campaign divergence milestone**:
 - **90.2% (559 of 620 counties)** are **Tier 1 (Authentic Pre-867 Classical Antiquity Foundations)**. The commanderies, prefectures, and provinces of the Central Plains, Ba-Shu, Jiangnan, Lingnan, Korea (Three Kingdoms/Silla), and Japan (Ritsuryō) date back centuries before 867 AD.
 - **9.8% (61 of 620 counties)** were flagged under **Tier 3 (Post-867 Settlements & Unverified Titles)** due to post-867 Khitan Liao dynasty foundations (918–1007 AD), Jurchen frontier outposts, and nomadic clan divisions in the northern marches.
 - **100% of the 61 Flagged Titles** have been reconciled under **Option B (Ancient Hydronymic & Natural Regional Basin Hierarchy)**, anchoring them to their underlying river basins and mountain horizons. The complete register is documented in **Section 5**."""
 
 s14_new = """### 1.4 Historical Anachronism Audit & Resolution Synthesis
 
-Under the project's historical title audit framework ([`title_historical_accuracy_audit_plan.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/title_historical_accuracy_audit_plan.md) and [`audit_discrepancy_register.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md)), all titles within the Imperial sphere are rigorously screened against the **867 AD campaign divergence milestone**:
+Under the project's historical title audit framework ([`title_historical_accuracy_audit_plan.md`](title_historical_accuracy_audit_plan.md) and [`audit_discrepancy_register.md`](audit_discrepancy_register.md)), all titles within the Imperial sphere are rigorously screened against the **867 AD campaign divergence milestone**:
 - **90.2% (559 of 620 counties)** are **Tier 1 (Authentic Pre-867 Classical Antiquity Foundations)**. The commanderies, prefectures, and provinces of the Central Plains, Ba-Shu, Jiangnan, Lingnan, Korea (Three Kingdoms/Silla), and Japan (Ritsuryō) date back centuries before 867 AD.
 - **9.8% (61 of 620 counties)** were flagged under **Tier 3 (Post-867 Settlements & Unverified Titles)** due to post-867 Khitan Liao dynasty foundations (918–1007 AD), Jurchen frontier outposts, and nomadic clan divisions in the northern marches.
 - **100% of the 61 Flagged Titles** have been reconciled under the **Harmonized Calque Paradigm for Logographic Sinospheric Toponyms**:
@@ -48,7 +48,7 @@ In Western feudal Europe, post-867 high medieval titles frequently derive from d
 In the Sinosphere, however, administrative foundations were named logographically with Chinese characters (`汉字`) expressing descriptive, physical, or moral-philosophical concepts:
 - **Ideographic Foundations:** Toponyms like `长春` (*Chángchūn*, "Eternal Spring"), `大定` (*Dàdìng*, "Great Settlement / Firm Peace"), `安边` (*Ānbiān*, "Pacified Frontier March"), and `黑草岸` (*Hēicǎo'àn*, "Black Grass Shore") reflect imperial statecraft and natural geography rather than personal lord names.
 - **Harmonized Calque & Physical Substrate:** Translating these logographic titles into Tarraconian chancellery calques (**`Magistrat van Langlenten`**, **`Magistrat van Grôzfest`**, **`Magistrat van Fridmarch`**, **`Magistrat van Swartzwêdouwe`**) directly eliminates the causal paradox while preserving authentic Sinitic semantics. Simultaneously, each title's territorial jurisdiction is anchored to its verified pre-867 physical river basin, mountain pass, or lake catchment (Option B: e.g., *Yitong River / Songhua Basin*, *Daling River*, *Shira Muren*, *Xiao Pass*).
-- **Phonotactic Rigor:** Non-Han indigenous stems (Mongolic, Tungusic, Evenk, Ainu) are adapted in accordance with 12th-century historical phonology and Tarraconian phonotactics ([`sinosphere_phonetics_and_transcription_guide_1154.md`](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_phonetics_and_transcription_guide_1154.md))."""
+- **Phonotactic Rigor:** Non-Han indigenous stems (Mongolic, Tungusic, Evenk, Ainu) are adapted in accordance with 12th-century historical phonology and Tarraconian phonotactics ([`sinosphere_phonetics_and_transcription_guide_1154.md`](sinosphere_phonetics_and_transcription_guide_1154.md))."""
 
 if s5_intro_old in text:
     text = text.replace(s5_intro_old, s5_intro_new)

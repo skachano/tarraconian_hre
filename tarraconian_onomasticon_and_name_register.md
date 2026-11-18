@@ -723,11 +723,11 @@ All localization `.yml` files in the Tarraconian mod must strictly adhere to the
 To synchronize the updated personal name localization into the active Paradox Interactive mod folder:
 
 ```powershell
-Set-Location "C:\Users\siarg\Documents\Projects\Tarraconian"
+Set-Location "<repository-root>"
 powershell -ExecutionPolicy Bypass -File .\scripts\build_mod.ps1
 ```
 
 To verify all mod assets and ensure zero orphan triggers, execute:
 ```powershell
-& 'C:\msys64\mingw64\bin\python.exe' 'scripts\verify_mod_assets.py'
+python scripts\verify_mod_assets.py
 ```

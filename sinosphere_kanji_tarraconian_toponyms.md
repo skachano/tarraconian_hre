@@ -4,7 +4,7 @@
 > **Campaign Date:** 27 December 1154 (`1154.12.27`)  
 > **Campaign Save Game:** `chatenois_867_01_01.ck3` | **Imperial Realm:** The Roman Empire (*Dat Rômische Keiserrîch*)  
 > **Total Attested Sinosphere Kanji:** **641 Distinct Characters** (100% Comprehensive Coverage)  
-> **Governing Principles:** [Tarraconian Linguistics Guide](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) | [Semantic Calque Matrix](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) | [Sinosphere Title Gazetteer](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_titles_and_characters_1154.md)
+> **Governing Principles:** [Tarraconian Linguistics Guide](tarraconian_linguistics_guide.md) | [Semantic Calque Matrix](tarraconian_descriptive_title_calques.md) | [Sinosphere Title Gazetteer](sinosphere_titles_and_characters_1154.md)
 
 ---
 

@@ -5,14 +5,14 @@
 * **Active Campaign Save:** Parameterized (`<active_save_game>.ck3` — e.g. `chatenois_867_01_01.ck3` or `/var/tmp/ck3_audit/melted_save.ck3`)
 * **Campaign Timeline:** 867 AD $\rightarrow$ Active Save Milestone (e.g. 1142, 1160, 1180, 1200+)
 * **Master Documentation & Registers:**
-  * [README.md](file:///home/siarzhuk/code/personal/tarraconian_hre/README.md) — Central Repository Documentation & Expansion Playbook
-  * [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) — Imperial De Jure Hierarchy & Provincial Register
-  * [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) — Master Tarraconian Toponym Register
-  * [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) — Semantic Calque Dictionary & Appropriateness Protocols
-  * [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md) — Historical Discrepancy & Title Resolution Register
-  * [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) — Master Dynastic & Cadet Branch Realignment Register
-  * [mod_synchronization_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/mod_synchronization_guide.md) — Mod Build & In-Game Integration Guide
-  * [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) — Phonology, Orthography & Sound Laws
+  * [README.md](README.md) — Central Repository Documentation & Expansion Playbook
+  * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) — Imperial De Jure Hierarchy & Provincial Register
+  * [tarraconian_titles_1059.md](tarraconian_titles_1059.md) — Master Tarraconian Toponym Register
+  * [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) — Semantic Calque Dictionary & Appropriateness Protocols
+  * [audit_discrepancy_register.md](audit_discrepancy_register.md) — Historical Discrepancy & Title Resolution Register
+  * [dynastic_realignment_register.md](dynastic_realignment_register.md) — Master Dynastic & Cadet Branch Realignment Register
+  * [mod_synchronization_guide.md](mod_synchronization_guide.md) — Mod Build & In-Game Integration Guide
+  * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) — Phonology, Orthography & Sound Laws
   * `archive/anachronistic_titles_1059.md` — Legacy Pre-Audit Anachronism Notes (Archived & Superseded)
 
 ---
@@ -41,12 +41,12 @@ The landed title registers and linguistic adaptations in Crusader Kings III suff
 This master audit plan provides an enduring, automated, and repeatable methodology designed to govern both the **existing imperial core** and **all future territorial expansions**:
 
 1. **Dynamic Expansion Scope:**
-   * **Baseline Imperial Core:** All existing de jure kingdoms, duchies, and counties registered in [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md).
+   * **Baseline Imperial Core:** All existing de jure kingdoms, duchies, and counties registered in [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md).
    * **Expansion Frontier (Incremental Mode):** Whenever new kingdoms or duchies are annexed, vassalized, or de jure drifted into the Roman Empire (`h_roman_empire` / `e_hre`), the pipeline audits the newly annexed provinces without disturbing previously stabilized core titles.
    * **Full Recalibration Mode:** When advancing major campaign eras (e.g. 1142 $\rightarrow$ 1180 $\rightarrow$ 1220), the entire imperial perimeter can be re-evaluated against the latest save state.
 2. **Save Game Lineage Reconciliation:** Trace the actual in-game conquest timeline, holder dynasties, cultural shifts, and religious conversions from 867 to the active save date using the automated extraction tools.
 3. **Establish Toponym-First Primacy for Landed Titles:** Enforce the principle that landed titles represent historical physical geography, antiquity centres, and Roman administrative divisions. Anachronistic titles cannot be justified, grandfathered, or canonized by in-game cadet houses or dynamic emergent cultures.
-4. **Dynastic Causality Inversion:** Revise cadet house names *from* the resolved historical titles of their seats (`House Kestenholz-<ResolvedSeat>` for the ruling dynasty, and `House <Founder>-<ResolvedSeat>` for vassal houses), systematically maintaining [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md).
+4. **Dynastic Causality Inversion:** Revise cadet house names *from* the resolved historical titles of their seats (`House Kestenholz-<ResolvedSeat>` for the ruling dynasty, and `House <Founder>-<ResolvedSeat>` for vassal houses), systematically maintaining [dynastic_realignment_register.md](dynastic_realignment_register.md).
 5. **Harmonize Emergent Dynamic Cultures:** Re-anchor emergent dynamic cultures (hybrid and divergent cultures) *from* the historically resolved toponym of their ethnogenesis seat (`<ResolvedStem>-Vlachs`, `<ResolvedStem>-Mogyër`, etc.).
 6. **Automated Synchronization & Verification:** Maintain continuous synchrony between markdown registers and mod files, verifying 100% key and adjective parity with zero orphan triggers.
 
@@ -207,12 +207,12 @@ flowchart TD
 #### Step 5: Phase 4 Title Resolution & Downstream Realignment (`scripts/resolve_phase4_titles.py`)
 * Resolves Tier 2 titles by restoring pre-HRE native morphology (stripping colonial suffixes) and applying Tarraconian sound laws.
 * Resolves Tier 3 titles by evaluating sub-baronies (Option A), pre-867 hydronyms (Option B), or founder personality archetypes (Option C).
-* Inverts causality for cadet houses: couples `dynasty_house` entries to resolved historical seats and writes [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md).
+* Inverts causality for cadet houses: couples `dynasty_house` entries to resolved historical seats and writes [dynastic_realignment_register.md](dynastic_realignment_register.md).
 * Inverts causality for dynamic emergent cultures: realigns ethnonyms and records them in the realignment register.
-* Updates [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md).
+* Updates [audit_discrepancy_register.md](audit_discrepancy_register.md).
 
 #### Step 6: Master Gazetteer Synchronization (`scripts/sync_hre_gazetteer.py`)
-* Transcribes verified resolutions into [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md).
+* Transcribes verified resolutions into [tarraconian_titles_1059.md](tarraconian_titles_1059.md).
 * Runs `sync_hre_gazetteer.py` to ensure complete bilateral consistency between `hre_de_jure_and_archdioceses_1059.md` and `tarraconian_titles_1059.md`.
 
 #### Step 7: Mod Recompilation & Asset Verification (`scripts/build_mod.py` & `scripts/verify_mod_assets.py`)
@@ -229,11 +229,11 @@ The audit infrastructure resides in `scripts/` and can be executed natively in L
 
 | Script | Docker Runner | Primary Function & Outputs |
 | :--- | :--- | :--- |
-| **`update_hre_gazetteer.py`** | `run_update_gazetteer_docker.sh` | Updates [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) from the save, computing HRE control ratios and integrating newly annexed kingdoms. |
+| **`update_hre_gazetteer.py`** | `run_update_gazetteer_docker.sh` | Updates [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) from the save, computing HRE control ratios and integrating newly annexed kingdoms. |
 | **`extract_save_phase1.py`** | `run_extraction_docker.sh` | Extracts county holders, cultures, baronies, dynasty houses, and characters from melted save to `/var/tmp/ck3_audit/phase1/`. |
 | **`extract_phase2_lineage.py`** | `run_phase2_docker.sh` | Analyzes 867–save date sovereign timelines and colonizer presence, outputting to `/var/tmp/ck3_audit/phase2/`. |
 | **`screen_phase3_titles.py`** | `run_phase3_docker.sh` | Screens titles against antiquity database; classifies titles into Tiers 1, 2, and 3; outputs to `/var/tmp/ck3_audit/phase3/`. |
-| **`resolve_phase4_titles.py`** | `run_phase4_docker.sh` | Generates historical resolutions (Options A/B/C), updates [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md), and realigns cadet houses / cultures in [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md). |
+| **`resolve_phase4_titles.py`** | `run_phase4_docker.sh` | Generates historical resolutions (Options A/B/C), updates [audit_discrepancy_register.md](audit_discrepancy_register.md), and realigns cadet houses / cultures in [dynastic_realignment_register.md](dynastic_realignment_register.md). |
 | **`sync_hre_gazetteer.py`** | Direct Python | Validates that all canonical toponyms in `hre_de_jure_and_archdioceses_1059.md` match `tarraconian_titles_1059.md`. |
 | **`build_mod.py`** / **`.ps1`** | Direct Python / PowerShell | Compiles `tarr_chancellery_title_list_effects.txt` and `tarraconian_titles_l_english.yml` directly from `tarraconian_titles_1059.md`. |
 | **`verify_mod_assets.py`** | Direct Python | Rigorous validator ensuring 100% key parity, complete adjective generation, and zero orphan triggers. |
@@ -244,10 +244,10 @@ The audit infrastructure resides in `scripts/` and can be executed natively in L
 
 Every expansion cycle or major campaign milestone must satisfy these acceptance criteria before being marked complete:
 
-1. **Updated Imperial De Jure Gazetteer:** [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) reflects the active borders, control ratios, and newly annexed territories.
-2. **Updated Audit Discrepancy Register:** [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md) contains all newly flagged imperial titles categorized by Tier 2 and Tier 3, each paired with verified pre-867 historical justification.
-3. **Updated Dynastic Realignment Register:** [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) accounts for all newly formed cadet houses and emergent cultures, mapping them to historically resolved toponyms under the Toponym-First Principle.
-4. **Master Toponym Register Synchrony:** [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) includes all newly incorporated titles with canonical Tarraconian Chancellery forms and adjectives.
+1. **Updated Imperial De Jure Gazetteer:** [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) reflects the active borders, control ratios, and newly annexed territories.
+2. **Updated Audit Discrepancy Register:** [audit_discrepancy_register.md](audit_discrepancy_register.md) contains all newly flagged imperial titles categorized by Tier 2 and Tier 3, each paired with verified pre-867 historical justification.
+3. **Updated Dynastic Realignment Register:** [dynastic_realignment_register.md](dynastic_realignment_register.md) accounts for all newly formed cadet houses and emergent cultures, mapping them to historically resolved toponyms under the Toponym-First Principle.
+4. **Master Toponym Register Synchrony:** [tarraconian_titles_1059.md](tarraconian_titles_1059.md) includes all newly incorporated titles with canonical Tarraconian Chancellery forms and adjectives.
 5. **Zero Mod Defect Verification:** Running `scripts/verify_mod_assets.py` returns `0` errors with:
    * 100% localization key coverage for all effects triggers.
    * 100% title adjective coverage.
@@ -259,7 +259,7 @@ Every expansion cycle or major campaign milestone must satisfy these acceptance 
 ## 7. Future Expansion Operational Playbook (Quick Reference)
 
 > [!NOTE]
-> The primary, centralized operational playbook is maintained in **[README.md § 4](file:///home/siarzhuk/code/personal/tarraconian_hre/README.md#4-expansion-operational-playbook-step-by-step-guide)** alongside the project's master architecture and continuity protocols. The quick reference below is preserved for pipeline audit reference.
+> The primary, centralized operational playbook is maintained in **[README.md § 4](README.md#4-expansion-operational-playbook-step-by-step-guide)** alongside the project's master architecture and continuity protocols. The quick reference below is preserved for pipeline audit reference.
 
 Follow this step-by-step checklist whenever the campaign timeline advances or the Roman Empire annexes new lands:
 
@@ -267,7 +267,7 @@ Follow this step-by-step checklist whenever the campaign timeline advances or th
 Ensure the new `.ck3` save file is accessible:
 ```bash
 # Example save path in WSL / Linux host:
-export ACTIVE_SAVE="/mnt/windows/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/save games/chatenois_867_01_01.ck3"
+export ACTIVE_SAVE="$HOME/Documents/Paradox Interactive/Crusader Kings III/save games/chatenois_867_01_01.ck3"  # or Windows WSL path
 ```
 
 ### Step 2: Refresh the Imperial De Jure Gazetteer
@@ -295,13 +295,13 @@ python3 scripts/resolve_phase4_titles.py
 ```
 
 ### Step 4: Review Resolutions & Apply Toponym-First Realignment
-1. Review newly flagged titles in [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md).
+1. Review newly flagged titles in [audit_discrepancy_register.md](audit_discrepancy_register.md).
 2. Validate that Tier 2 titles have pre-HRE native morphology restored.
 3. Validate that Tier 3 titles have authentic pre-867 sub-baronies (Option A), ancient hydronyms (Option B), or founder personality foundations (Option C).
-4. Review newly generated cadet houses and dynamic cultures in [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md).
+4. Review newly generated cadet houses and dynamic cultures in [dynastic_realignment_register.md](dynastic_realignment_register.md).
 
 ### Step 5: Update Master Gazetteers & Harmonize
-1. Update [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) with newly resolved titles and adjectives.
+1. Update [tarraconian_titles_1059.md](tarraconian_titles_1059.md) with newly resolved titles and adjectives.
 2. Synchronize gazetteers:
    ```bash
    python3 scripts/sync_hre_gazetteer.py

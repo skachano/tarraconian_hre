@@ -1478,8 +1478,23 @@ def main():
     # 4. Sync to Paradox Interactive CK3 mod directory if accessible
     paradox_mod_candidates = [
         Path.home() / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod",
-        Path("/mnt/windows/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/mod"),
     ]
+    if "PARADOX_MOD_DIR" in os.environ:
+        paradox_mod_candidates.insert(0, Path(os.environ["PARADOX_MOD_DIR"]))
+    if "USERPROFILE" in os.environ:
+        paradox_mod_candidates.append(Path(os.environ["USERPROFILE"]) / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod")
+
+    # Dynamic check for Windows mount points on Linux/WSL (/mnt/windows, /mnt/c)
+    for mnt_base in [Path("/mnt/windows/Users"), Path("/mnt/c/Users")]:
+        if mnt_base.exists():
+            try:
+                for user_dir in mnt_base.iterdir():
+                    cand = user_dir / "Documents" / "Paradox Interactive" / "Crusader Kings III" / "mod"
+                    if cand.exists() and cand not in paradox_mod_candidates:
+                        paradox_mod_candidates.append(cand)
+            except Exception:
+                pass
+
     for paradox_mod_root in paradox_mod_candidates:
         try:
             if paradox_mod_root.exists():
@@ -1501,9 +1516,12 @@ def main():
                         shutil.copy2(item, dest)
                 mod_desc = (src_mod_dir / "descriptor.mod").read_text(encoding='utf-8')
                 posix_path = str(paradox_mod_dir).replace("\\", "/")
-                # For Windows paths mounted under /mnt/windows, keep Windows drive format if possible or posix
+                # For Windows paths mounted under /mnt/windows or /mnt/c, keep Windows drive format if possible
                 if posix_path.startswith("/mnt/windows/"):
                     win_path = "C:/" + posix_path[len("/mnt/windows/"):]
+                    mod_file_content = f'{mod_desc.strip()}\npath="{win_path}"\n'
+                elif posix_path.startswith("/mnt/c/"):
+                    win_path = "C:/" + posix_path[len("/mnt/c/"):]
                     mod_file_content = f'{mod_desc.strip()}\npath="{win_path}"\n'
                 else:
                     mod_file_content = f'{mod_desc.strip()}\npath="{posix_path}"\n'

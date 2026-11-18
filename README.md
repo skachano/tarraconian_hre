@@ -1,7 +1,7 @@
 # The Tarraconian Roman Empire: Imperial Chancellery & Toponymic System
 
 [![CK3 Version](https://img.shields.io/badge/CK3-1.14+-blue.svg)](https://www.crusaderkings.com/)
-[![Active Campaign Save](https://img.shields.io/badge/Save-chatenois__867__01__01.ck3-orange.svg)](file:///mnt/windows/Users/siarg/Documents/Paradox%20Interactive/Crusader%20Kings%20III/save%20games/chatenois_867_01_01.ck3)
+[![Active Campaign Save](https://img.shields.io/badge/Save-chatenois__867__01__01.ck3-orange.svg)]()
 [![Imperial Date](https://img.shields.io/badge/Campaign%20Date-1154.12.27-purple.svg)]()
 [![Culture](https://img.shields.io/badge/Culture-Tarraconian%20%5BID%20316%5D-green.svg)]()
 
@@ -41,17 +41,17 @@ Tarraconian is linguistically structured like an alternate-history "reverse Midd
 
 | Master Document / Directory | Path | Purpose & Scope |
 | :--- | :--- | :--- |
-| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 47 empires, 213 kingdoms, 970 duchies, and 3,476 counties worldwide, tracking imperial control percentages and historical attestations. |
-| **Tarraconian Titles Gazetteer** | [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) | Exhaustive register of official Tarraconian names, adjectives, and IPA transcriptions for all landed titles and archdioceses. |
-| **Linguistics & Sound-Shift Guide** | [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) | Complete reference for Tarraconian phonology, IPA values, vowel quantity laws, consonant shifts, and orthographic constraints. |
-| **Descriptive Title Calques Guide** | [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) | Master Morpheme Translation Matrix (forts, churches, waters, oronyms, colors, Sinosphere, Steppe, Boreal, Africa, India) across 14 audited culture groups. |
-| **Sinosphere 1154 Audit** | [sinosphere_titles_and_characters_1154.md](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_titles_and_characters_1154.md) | Comprehensive audit of all 39 kingdoms and 620 counties in the East Asian Sinosphere (279 in Roman Empire in 1154), mapping Chinese characters (汉字), development, and sovereign status. |
-| **Sinosphere Phonetics Guide** | [sinosphere_phonetics_and_transcription_guide_1154.md](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_phonetics_and_transcription_guide_1154.md) | Authoritative reference for 12th-century Late Middle Chinese, Goryeo Early Middle Korean, Late Heian Japanese, Lý Sino-Vietnamese, Khitan, and Jurchen phonology, with Tarraconian adaptation rules and audited phonetic transliteration registers. |
-| **Sinosphere Kanji Matrix** | [sinosphere_kanji_tarraconian_toponyms.md](file:///home/siarzhuk/code/personal/tarraconian_hre/sinosphere_kanji_tarraconian_toponyms.md) | Exhaustive 641-kanji toponymic lexicon mapping Sinitic, Japanese, and Korean characters to Tarraconian morphemes across 10 thematic categories. |
-| **Master Audit & Screening Plan** | [title_historical_accuracy_audit_plan.md](file:///home/siarzhuk/code/personal/tarraconian_hre/title_historical_accuracy_audit_plan.md) | 3-tier classification system for screening out modern/colonial vanilla anachronisms (e.g. *Ostsiedlung*, Soviet names, 12th-c. Crusader castles). |
-| **Procedure 2 Calque Register** | [tarraconian_procedure2_title_audit.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_procedure2_title_audit.md) | Master audit register implementing Procedure 2, classifying titles by Toponym Adoption Pattern (Preferred Calque, Hybrid, Phonetic). |
-| **Audit Discrepancy Register** | [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md) | Exhaustive log of all 209+ flagged anachronistic titles, resolving them to pre-867 antiquity seats or ancient hydronyms. |
-| **Dynastic Realignment Register** | [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) | Enforces the Toponym-First Principle, realigning cadet branches and dynamic hybrid cultures to resolved historical seats. |
+| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 47 empires, 213 kingdoms, 970 duchies, and 3,476 counties worldwide, tracking imperial control percentages and historical attestations. |
+| **Tarraconian Titles Gazetteer** | [tarraconian_titles_1059.md](tarraconian_titles_1059.md) | Exhaustive register of official Tarraconian names, adjectives, and IPA transcriptions for all landed titles and archdioceses. |
+| **Linguistics & Sound-Shift Guide** | [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) | Complete reference for Tarraconian phonology, IPA values, vowel quantity laws, consonant shifts, and orthographic constraints. |
+| **Descriptive Title Calques Guide** | [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) | Master Morpheme Translation Matrix (forts, churches, waters, oronyms, colors, Sinosphere, Steppe, Boreal, Africa, India) across 14 audited culture groups. |
+| **Sinosphere 1154 Audit** | [sinosphere_titles_and_characters_1154.md](sinosphere_titles_and_characters_1154.md) | Comprehensive audit of all 39 kingdoms and 620 counties in the East Asian Sinosphere (279 in Roman Empire in 1154), mapping Chinese characters (汉字), development, and sovereign status. |
+| **Sinosphere Phonetics Guide** | [sinosphere_phonetics_and_transcription_guide_1154.md](sinosphere_phonetics_and_transcription_guide_1154.md) | Authoritative reference for 12th-century Late Middle Chinese, Goryeo Early Middle Korean, Late Heian Japanese, Lý Sino-Vietnamese, Khitan, and Jurchen phonology, with Tarraconian adaptation rules and audited phonetic transliteration registers. |
+| **Sinosphere Kanji Matrix** | [sinosphere_kanji_tarraconian_toponyms.md](sinosphere_kanji_tarraconian_toponyms.md) | Exhaustive 641-kanji toponymic lexicon mapping Sinitic, Japanese, and Korean characters to Tarraconian morphemes across 10 thematic categories. |
+| **Master Audit & Screening Plan** | [title_historical_accuracy_audit_plan.md](title_historical_accuracy_audit_plan.md) | 3-tier classification system for screening out modern/colonial vanilla anachronisms (e.g. *Ostsiedlung*, Soviet names, 12th-c. Crusader castles). |
+| **Procedure 2 Calque Register** | [tarraconian_procedure2_title_audit.md](tarraconian_procedure2_title_audit.md) | Master audit register implementing Procedure 2, classifying titles by Toponym Adoption Pattern (Preferred Calque, Hybrid, Phonetic). |
+| **Audit Discrepancy Register** | [audit_discrepancy_register.md](audit_discrepancy_register.md) | Exhaustive log of all 209+ flagged anachronistic titles, resolving them to pre-867 antiquity seats or ancient hydronyms. |
+| **Dynastic Realignment Register** | [dynastic_realignment_register.md](dynastic_realignment_register.md) | Enforces the Toponym-First Principle, realigning cadet branches and dynamic hybrid cultures to resolved historical seats. |
 | **Mod In-Game Files** | `tarraconian_chancellery/` | The active CK3 mod: scripted effects (`common/scripted_effects/`) and localization files (`localization/english/`). |
 | **Pipeline Scripts** | `scripts/` | Python and shell automation toolchain for save extraction, lineage tracing, gazetteer synchronization, and mod building. |
 
@@ -62,7 +62,7 @@ Tarraconian is linguistically structured like an alternate-history "reverse Midd
 To prevent anachronistic "armchair etymology" and ensure that toponymic translations reflect authentic medieval chancellery practices (modeled after the historical German-Hungarian onomastic framework in Pannonia, the Zips, and Transylvania), the Chancellery enforces two mandatory screening procedures before approving a semantic calque.
 
 ### 3.1 Procedure 1: Sinospheric Administrative & Script Continuity Protocol
-The logographic semantic calques defined in [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) rely entirely on the fact that imperial scribes received cadastres, tax registers, and land rolls written in **Chinese characters** (*Hánzì / Hanja / Kanji / Chữ Hán*).
+The logographic semantic calques defined in [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) rely entirely on the fact that imperial scribes received cadastres, tax registers, and land rolls written in **Chinese characters** (*Hánzì / Hanja / Kanji / Chữ Hán*).
 
 * **The Core Rule:** Only apply Sinospheric logographic calques to titles in provinces that maintained **unbroken, continuous administrative usage of Chinese characters** up to the moment of Tarraconian annexation.
 * **The Southeast Asian / Peripheral Failure Case:**
@@ -120,7 +120,7 @@ flowchart LR
 Ensure the new `.ck3` save file is accessible:
 ```bash
 # Example save path in WSL / Linux host:
-export ACTIVE_SAVE="/mnt/windows/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/save games/chatenois_867_01_01.ck3"
+export ACTIVE_SAVE="$HOME/Documents/Paradox Interactive/Crusader Kings III/save games/chatenois_867_01_01.ck3"  # or Windows / WSL path
 ```
 
 ### Step 2: Refresh the Imperial De Jure Gazetteer
@@ -148,18 +148,18 @@ python3 scripts/resolve_phase4_titles.py
 ```
 
 ### Step 4: Toponym Resolution & Calquing Appropriateness Screening
-1. Review newly flagged titles in [audit_discrepancy_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/audit_discrepancy_register.md).
+1. Review newly flagged titles in [audit_discrepancy_register.md](audit_discrepancy_register.md).
 2. **Apply Continuity Protocols (§ 3.1 & § 3.2):**
    * If the title is in the Sinosphere, verify unbroken Han character administration (**Procedure 1**).
    * For descriptive compounds, run the automated Procedure 2 pipeline to evaluate sovereign culture duration and population continuity (**Procedure 2**):
      ```bash
      python3 scripts/audit_procedure2_calques.py
      ```
-   * If living continuity is established (Tier 1/2), consult [tarraconian_descriptive_title_calques.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_descriptive_title_calques.md) and review the compiled register [tarraconian_procedure2_title_audit.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_procedure2_title_audit.md).
-3. Review newly generated cadet houses and dynamic cultures in [dynastic_realignment_register.md](file:///home/siarzhuk/code/personal/tarraconian_hre/dynastic_realignment_register.md) to ensure strict adherence to the Toponym-First Principle.
+   * If living continuity is established (Tier 1/2), consult [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) and review the compiled register [tarraconian_procedure2_title_audit.md](tarraconian_procedure2_title_audit.md).
+3. Review newly generated cadet houses and dynamic cultures in [dynastic_realignment_register.md](dynastic_realignment_register.md) to ensure strict adherence to the Toponym-First Principle.
 
 ### Step 5: Update Master Gazetteers & Synchronize
-1. Update [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) with newly resolved titles, calques, adjectives, and IPA transcriptions (or apply audited Procedure 2 updates with `python3 scripts/apply_procedure2_title_updates.py`).
+1. Update [tarraconian_titles_1059.md](tarraconian_titles_1059.md) with newly resolved titles, calques, adjectives, and IPA transcriptions (or apply audited Procedure 2 updates with `python3 scripts/apply_procedure2_title_updates.py`).
 2. Synchronize all title entries between the HRE gazetteer and Tarraconian titles:
    ```bash
    python3 scripts/sync_hre_gazetteer.py
@@ -178,7 +178,7 @@ python3 scripts/verify_mod_assets.py
 * 100% localization key coverage for all scripted effects triggers.
 * 100% title adjective coverage.
 * Zero orphan effects triggers.
-* 100% synchrony between [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) and [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md).
+* 100% synchrony between [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) and [tarraconian_titles_1059.md](tarraconian_titles_1059.md).
 
 ### Step 7: Commit & Deploy
 Stage all modified registers, databases, and mod files, review diffs, and commit:

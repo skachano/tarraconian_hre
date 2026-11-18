@@ -2,12 +2,12 @@
 
 * **Project:** Tarraconian Imperial Chancellery (`tarraconian_chancellery`)
 * **Target Game:** Crusader Kings III (v1.20.*)
-* **Primary Script:** [scripts/build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.ps1) (or [scripts/build_mod.py](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.py))
-* **Source Register:** [tarraconian_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_titles_1059.md)
+* **Primary Script:** [scripts/build_mod.ps1](scripts/build_mod.ps1) (or [scripts/build_mod.py](scripts/build_mod.py))
+* **Source Register:** [tarraconian_titles_1059.md](tarraconian_titles_1059.md)
 * **Companion References:**
-  * [anachronistic_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/anachronistic_titles_1059.md) (Pre-1059 Historical Toponymic Resolutions)
-  * [hre_de_jure_and_archdioceses_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & Provincial Register)
-  * [tarraconian_linguistics_guide.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_linguistics_guide.md) (Phonology, Orthography & Sound Laws)
+  * [anachronistic_titles_1059.md](archive/anachronistic_titles_1059.md) (Pre-1059 Historical Toponymic Resolutions)
+  * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & Provincial Register)
+  * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) (Phonology, Orthography & Sound Laws)
 
 ---
 
@@ -51,11 +51,11 @@ flowchart TD
 
 | Role | Path | Description |
 | :--- | :--- | :--- |
-| **Workspace Repo** | `C:\Users\siarg\Documents\Projects\Tarraconian\` | Source markdown files, scripts, and master mod repository. |
-| **Workspace Mod** | `C:\Users\siarg\Documents\Projects\Tarraconian\tarraconian_chancellery\` | Git-tracked mod files. |
-| **Paradox Mod Dir** | `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery\` | Active mod directory read by the CK3 game engine. |
-| **Launcher Descriptor** | `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery.mod` | Tells the Paradox Launcher where to find the mod folder. |
-| **Playset Config** | `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\dlc_load.json` | Stores enabled mod list for the current playset. |
+| **Workspace Repo** | `<repo-root>\` | Source markdown files, scripts, and master mod repository. |
+| **Workspace Mod** | `<repo-root>\tarraconian_chancellery\` | Git-tracked mod files. |
+| **Paradox Mod Dir** | `$HOME\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery\` | Active mod directory read by the CK3 game engine. |
+| **Launcher Descriptor** | `$HOME\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery.mod` | Tells the Paradox Launcher where to find the mod folder. |
+| **Playset Config** | `$HOME\Documents\Paradox Interactive\Crusader Kings III\dlc_load.json` | Stores enabled mod list for the current playset. |
 | **Campaign Save** | `C:\Program Files (x86)\Steam\userdata\204281054\1158310\remote\save games\chatenois_867_01_01.ck3` | Save game containing baked title strings. |
 
 ---
@@ -63,7 +63,7 @@ flowchart TD
 ## 2. Step-by-Step Synchronization Instructions
 
 ### Step 1: Update Toponyms in Documentation
-When adding new titles or adjusting phonology/historical resolutions, edit [tarraconian_titles_1059.md](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_titles_1059.md):
+When adding new titles or adjusting phonology/historical resolutions, edit [tarraconian_titles_1059.md](tarraconian_titles_1059.md):
 * **Format:**
   * Section 2 table row: `| <#\> | **<Vanilla Name\>** | \`<title_key\>\` | **<Tarraconian Name\>** | ... |`
   * Section 3 kingdom header: `### 3.X Kingdom of <Name> (`k_<key>`) $\rightarrow$ **<Tarraconian Name>** [1059 Historical: <Hist Name>]`
@@ -74,26 +74,26 @@ When adding new titles or adjusting phonology/historical resolutions, edit [tarr
 Open a PowerShell prompt and execute:
 
 ```powershell
-Set-Location "C:\Users\siarg\Documents\Projects\Tarraconian"
+Set-Location "<repo-root>"
 powershell -ExecutionPolicy Bypass -File .\scripts\build_mod.ps1
 ```
 
 > [!IMPORTANT]
 > **What `build_mod.ps1` does automatically:**
-> 1. Parses all 2,346+ titles, generating [tarr_chancellery_title_list_effects.txt](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_chancellery/common/scripted_effects/tarr_chancellery_title_list_effects.txt) and [tarraconian_titles_l_english.yml](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_chancellery/localization/english/tarraconian_titles_l_english.yml) using UTF-8 with BOM.
-> 2. Automatically copies all mod files (`common/`, `events/`, `localization/`, `descriptor.mod`) to `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery`.
+> 1. Parses all 2,346+ titles, generating [tarr_chancellery_title_list_effects.txt](tarraconian_chancellery/common/scripted_effects/tarr_chancellery_title_list_effects.txt) and [tarraconian_titles_l_english.yml](tarraconian_chancellery/localization/english/tarraconian_titles_l_english.yml) using UTF-8 with BOM.
+> 2. Automatically copies all mod files (`common/`, `events/`, `localization/`, `descriptor.mod`) to `$HOME\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery`.
 > 3. Creates/updates `tarraconian_chancellery.mod` in the Paradox mod root with the absolute path definition.
 
 ### Step 3: Verify the File Synchronization
 Confirm the files in both locations match:
 
 ```powershell
-Get-FileHash .\tarraconian_chancellery\localization\english\tarraconian_titles_l_english.yml, "C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery\localization\english\tarraconian_titles_l_english.yml"
+Get-FileHash .\tarraconian_chancellery\localization\english\tarraconian_titles_l_english.yml, "$HOME\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery\localization\english\tarraconian_titles_l_english.yml"
 ```
 Both hashes must be identical.
 
 ### Step 4: Ensure Mod is Enabled in Paradox Launcher / Playset
-Check `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\dlc_load.json`:
+Check `$HOME\Documents\Paradox Interactive\Crusader Kings III\dlc_load.json`:
 ```json
 {"enabled_mods":["mod/tarraconian_chancellery.mod"],"disabled_dlcs":[]}
 ```
@@ -119,14 +119,14 @@ Because Crusader Kings III caches localization and bakes renamed title strings d
 > [!WARNING]
 > **Why BOM matters on Japanese / CJK Windows systems:**
 > * On Windows installations with a Japanese system locale (CP932 / Windows-31J), Windows PowerShell 5.1 (`powershell.exe`) defaults to **CP932** when reading any `.ps1` script that lacks a **UTF-8 Byte Order Mark (BOM)** (`EF BB BF`).
-> * If [build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/build_mod.ps1) is saved without a BOM, all multi-byte accented Latin characters in the script (`ô`, `î`, `û`, `ü`, `ö`, `ê`, `â`) are decoded as CP932 bytes and become **halfwidth katakana characters** (`ﾃｴ`, `ﾃｮ`, `ﾃｻ`, `ﾃｼ`, `ﾃｶ`, `ﾃｪ`, `ﾃﾂ`).
+> * If [build_mod.ps1](scripts/build_mod.ps1) is saved without a BOM, all multi-byte accented Latin characters in the script (`ô`, `î`, `û`, `ü`, `ö`, `ê`, `â`) are decoded as CP932 bytes and become **halfwidth katakana characters** (`ﾃｴ`, `ﾃｮ`, `ﾃｻ`, `ﾃｼ`, `ﾃｶ`, `ﾃｪ`, `ﾃﾂ`).
 > * The mangled strings then get baked into the save file (e.g. `Dat Rﾃｴmische Keiserrﾃｮch`).
 
 #### How to Ensure `build_mod.ps1` Retains its UTF-8 BOM
-Whenever modifying [scripts/build_mod.ps1](file:///C:/Users/siarg/Documents/Projects/Tarraconian/scripts/build_mod.ps1), ensure it is saved with a UTF-8 BOM:
+Whenever modifying [scripts/build_mod.ps1](scripts/build_mod.ps1), ensure it is saved with a UTF-8 BOM:
 
 ```powershell
-$path = "C:\Users\siarg\Documents\Projects\Tarraconian\scripts\build_mod.ps1"
+$path = ".\scripts\build_mod.ps1"
 $content = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
 $utf8Bom = [System.Text.UTF8Encoding]::new($true)
 [System.IO.File]::WriteAllText($path, $content, $utf8Bom)
@@ -134,7 +134,7 @@ $utf8Bom = [System.Text.UTF8Encoding]::new($true)
 
 You can check whether the script has a BOM with:
 ```powershell
-$bytes = [System.IO.File]::ReadAllBytes("C:\Users\siarg\Documents\Projects\Tarraconian\scripts\build_mod.ps1")
+$bytes = [System.IO.File]::ReadAllBytes(".\scripts\build_mod.ps1")
 [BitConverter]::ToString($bytes[0..2])
 # Expected Output: EF-BB-BF
 ```
@@ -147,7 +147,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Users\siarg\Documents\Projects\Tarra
 ### Save Game String Baking & `reset_title_name`
 When CK3 executes `set_title_name = <loc_key>`, it evaluates the localization key at that exact moment and saves the resulting string into `gamestate` inside your `.ck3` save file.
 
-If a title already has a custom name stored in the save file (such as a previous version or a mangled encoding), simply calling `set_title_name` again might fail to overwrite the custom save state. Therefore, [tarr_rename_title_effect](file:///C:/Users/siarg/Documents/Projects/Tarraconian/tarraconian_chancellery/common/scripted_effects/tarr_chancellery_core_effects.txt#L13-L36) is structured as:
+If a title already has a custom name stored in the save file (such as a previous version or a mangled encoding), simply calling `set_title_name` again might fail to overwrite the custom save state. Therefore, [tarr_rename_title_effect](tarraconian_chancellery/common/scripted_effects/tarr_chancellery_core_effects.txt#L13-L36) is structured as:
 
 ```pdx
 reset_title_name = yes
@@ -165,5 +165,5 @@ This forces CK3 to clear the previous save-baked string before applying the fres
 | **Halfwidth katakana (`ﾃｴ`, `ﾃｮ`, `ﾃｻ`) in titles** | `build_mod.ps1` ran without a UTF-8 BOM under CP932 PowerShell. | 1. Prepend UTF-8 BOM to `build_mod.ps1`.<br>2. Re-run `build_mod.ps1`.<br>3. Restart CK3 and take the **Chancellery Ordinance** decision in-game to re-bake titles. |
 | **New titles in markdown not showing in game** | CK3 was not restarted, or ordinance was not refreshed. | 1. Completely exit and restart CK3.<br>2. Load save and take **"Issue the Tarraconian Chancellery Ordinance"** decision or advance to **Jan 1**. |
 | **Titles outside HRE/Empire not renamed** | Default Option A only covers the Roman Empire / HRE and Tarraconian cultures. | Take the decision in-game and choose **Option B** (*"Extend the Historical Register to all 100 De Jure Kingdoms"*). |
-| **Mod missing in Paradox Launcher** | `tarraconian_chancellery.mod` missing or bad path. | Verify `C:\Users\siarg\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery.mod` exists and contains `path="C:/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/mod/tarraconian_chancellery"`. |
+| **Mod missing in Paradox Launcher** | `tarraconian_chancellery.mod` missing or bad path. | Verify `$HOME\Documents\Paradox Interactive\Crusader Kings III\mod\tarraconian_chancellery.mod` exists and contains `path="$HOME/Documents/Paradox Interactive/Crusader Kings III/mod/tarraconian_chancellery"`. |
 | **`dlc_load.json` resets on launch** | Launcher overwritten playset. | In Paradox Launcher, go to **Playsets**, ensure **Tarraconian Imperial Chancellery (1059)** is checked, and select that playset before clicking Play. |

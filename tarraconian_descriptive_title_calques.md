@@ -1,10 +1,10 @@
 # Tarraconian Chancellery Guide to Semantic Calques for Descriptive Titles
 
 * **Companion References:**
-  * [README.md](file:///home/siarzhuk/code/personal/tarraconian_hre/README.md) (Master Project Overview, Protocols & Expansion Playbook)
-  * [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) (Phonology, Sound Laws, Orthography & IPA)
-  * [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) (Comprehensive Empire Gazetteer)
-  * [hre_de_jure_and_archdioceses_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & Historical Attestation)
+  * [README.md](README.md) (Master Project Overview, Protocols & Expansion Playbook)
+  * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) (Phonology, Sound Laws, Orthography & IPA)
+  * [tarraconian_titles_1059.md](tarraconian_titles_1059.md) (Comprehensive Empire Gazetteer)
+  * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & Historical Attestation)
 
 ---
 
@@ -16,13 +16,13 @@ Historically, the Holy Roman Empire, the Kingdom of Hungary, and later the Habsb
 1. **Descriptive, topographic, and functional toponyms** (fortresses, church dedications, river crossings, market days, mineral deposits, and colors) were **translated root-for-root** into High German (*Székesfehérvár* $\rightarrow$ *Stuhlweißenburg*; *Csütörtökhely* $\rightarrow$ *Donnersmarkt*; *Felsőőr* $\rightarrow$ *Oberwart*; *Novgorod* $\rightarrow$ *Neugard / Nîenstat*; *Belgorod* $\rightarrow$ *Weißenburg*).
 2. **Opaque eponyms and ancient tribal centres** (personal names, tribal founders, or pre-Indo-European stems like *Bács*, *Bodrog*, *Arad*, *Paris*, *Toledo*, *Damaskos*) were **preserved phonetically** and adapted to imperial phonotactics.
 
-This document establishes the **Tarraconian Master Morpheme Matrix** and provides a comprehensive regional gazetteer of potential semantic calques that can be applied to titles in [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md).
+This document establishes the **Tarraconian Master Morpheme Matrix** and provides a comprehensive regional gazetteer of potential semantic calques that can be applied to titles in [tarraconian_titles_1059.md](tarraconian_titles_1059.md).
 
 ---
 
 ## 2. Phonological Rules for Tarraconian Calques
 
-All calqued elements must strictly adhere to the phonology and orthography defined in [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md):
+All calqued elements must strictly adhere to the phonology and orthography defined in [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md):
 
 1. **West Central German (Moselle/Rhine Franconian) Base:**
    * **Shifted *t* $\rightarrow$ *z/tz/ss*:** Initial `z-` `[ts]` (*Zant-*, *Zips*), medial/final `-tz-` / `-tz` (*Lîgnitz*, *Wîtzen-*).
@@ -269,7 +269,7 @@ Along the eastern marches of Khorasan and Turan, where the Roman Empire borders 
 
 ## 4. Regional Title Calquing Gazetteer
 
-The following tables demonstrate how specific titles across the Empire in [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) can incorporate semantic calques alongside (or as primary replacements for) purely phonetic adaptations.
+The following tables demonstrate how specific titles across the Empire in [tarraconian_titles_1059.md](tarraconian_titles_1059.md) can incorporate semantic calques alongside (or as primary replacements for) purely phonetic adaptations.
 
 ### 4.1 Carpathian Basin, Upper Hungary & Banat (`k_hungary`)
 
@@ -455,7 +455,7 @@ The following tables demonstrate how specific titles across the Empire in [tarra
 
 ## 5. Administrative Continuity & Calquing Appropriateness Protocols
 
-To prevent anachronistic "armchair etymology" and ensure that toponymic decisions reflect realistic medieval chancellery practices, the Chancellery applies two screening procedures before approving a semantic calque for [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md):
+To prevent anachronistic "armchair etymology" and ensure that toponymic decisions reflect realistic medieval chancellery practices, the Chancellery applies two screening procedures before approving a semantic calque for [tarraconian_titles_1059.md](tarraconian_titles_1059.md):
 
 ### 5.1 Procedure 1: Sinospheric Administrative & Script Continuity Protocol
 The logographic semantic calques defined in **§ 3.8** rely entirely on the premise that the imperial scribes received cadastres, tax registers, and administrative records written in **Chinese characters** (*Hánzì / Hanja / Kanji / Chữ Hán*).
@@ -500,7 +500,7 @@ flowchart TD
 
 ## 6. Implementation Guidelines for `tarraconian_titles_1059.md`
 
-When modifying or expanding titles in [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md), follow this standard notation:
+When modifying or expanding titles in [tarraconian_titles_1059.md](tarraconian_titles_1059.md), follow this standard notation:
 
 1. **Established Imperial Exonyms Stay Primary:**
    * Where a German/Tarraconian calque has deep medieval attestation, it remains the **primary name**:
