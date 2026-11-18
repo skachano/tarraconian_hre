@@ -49,6 +49,14 @@
         <button class="tier-btn" data-tier="barony" title="Barony Holding Level (Holdings / Castles)">Barony</button>
       </div>
     </div>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button id="btn-open-linguistics" class="btn-linguistics-guide" title="Imperial Chancellery Linguistics & Toponymic Guide">
+        <span class="guide-icon">📜</span>
+        <span class="guide-text">Linguistics Guide</span>
+      </button>
+    </div>
   </header>
 
   <!-- Main Container -->
@@ -94,6 +102,26 @@
         <div id="drawer-hist-group" class="info-group hidden">
           <label>Historical Resolution</label>
           <div id="drawer-hist-name" class="info-value-highlight">—</div>
+        </div>
+
+        <!-- Sinosphere Hanzi & Calque Analysis (for East Asian Titles) -->
+        <div id="drawer-sinosphere-group" class="info-group info-sinosphere-group hidden">
+          <label class="sinosphere-label">
+            <span class="sinosphere-badge-icon">☯</span> Sinosphere Hanzi &amp; Calque Analysis
+          </label>
+          <div class="sinosphere-card">
+            <div class="sinosphere-header-row">
+              <span id="drawer-sinosphere-hanzi" class="sinosphere-hanzi">—</span>
+              <span id="drawer-sinosphere-reading" class="sinosphere-reading">—</span>
+              <span id="drawer-sinosphere-status" class="sinosphere-status-pill">Classical</span>
+            </div>
+            <div class="sinosphere-breakdown-wrapper">
+              <div class="sinosphere-section-caption">Morpheme-by-Morpheme Calque Breakdown:</div>
+              <div id="drawer-sinosphere-breakdown" class="sinosphere-breakdown-list"></div>
+            </div>
+            <div id="drawer-sinosphere-synthesis" class="sinosphere-synthesis"></div>
+            <div id="drawer-sinosphere-substrate" class="sinosphere-substrate hidden"></div>
+          </div>
         </div>
 
         <!-- Full Lineage Breadcrumb -->
@@ -143,6 +171,277 @@
       </span>
     </div>
   </footer>
+
+  <!-- Imperial Linguistics & Toponymic Guide Modal -->
+  <div id="linguistics-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-guide-title">
+    <div class="modal-dialog linguistics-modal-dialog">
+      <header class="modal-header">
+        <div class="modal-header-brand">
+          <span class="modal-brand-crest">⚜</span>
+          <div>
+            <h2 id="modal-guide-title" class="modal-title">Imperial Chancellery Linguistics &amp; Toponymic Guide</h2>
+            <p class="modal-subtitle">Dat Rômische Keiserrîch — Language Background, Phonotactics &amp; Sinospheric Hanzi Calque Doctrine</p>
+          </div>
+        </div>
+        <button id="btn-close-linguistics" class="modal-close-btn" title="Close Guide" aria-label="Close">&times;</button>
+      </header>
+
+      <!-- Modal Tabs -->
+      <nav class="modal-nav-tabs" role="tablist">
+        <button class="modal-tab-btn active" data-tab="tarraconian" role="tab" aria-selected="true">
+          Tarraconian Language &amp; Phonotactics
+        </button>
+        <button class="modal-tab-btn" data-tab="sinosphere" role="tab" aria-selected="false">
+          Sinosphere Titles &amp; Hanzi Calques
+        </button>
+        <button class="modal-tab-btn" data-tab="lexicon" role="tab" aria-selected="false">
+          Hanzi Calque Lexicon (641 Characters)
+        </button>
+      </nav>
+
+      <div class="modal-body">
+        <!-- Tab 1: Tarraconian Language & Phonotactics -->
+        <section id="tab-pane-tarraconian" class="modal-tab-pane active" role="tabpanel">
+          <div class="guide-prose">
+            <h3>1. Sociolinguistic Overview: A Romano-Germanic Imperial Tongue</h3>
+            <p>
+              Formed on <strong>31 August 989</strong> from the hybridization of <strong>Lothringian</strong> (a bureaucratic Franconian culture speaking High German) and <strong>Catalan</strong> (a courtly, maritime Occitano-Romance culture of the Spanish March / <em>Hispania Tarraconensis</em>), <strong>Tarraconian</strong> (<em>Tarracono-Lothringian</em>, <code>ID 316</code>) represents a historical &ldquo;reverse Frankish&rdquo; linguistic genesis.
+            </p>
+            <p>
+              Rather than abandoning their Germanic tongue for Romance, the Lothringian imperial elite of House <em>Chatenois-Metz</em> retained <strong>11th/12th-century High German</strong> (<code>language_high_german</code>) and <strong>Franconian personal names</strong> (<code>name_list_franconian</code>), while absorbing <strong>Catalan courtly culture</strong> (<code>ethos_courtly</code>), Mediterranean maritime mercantilism, Iberian architecture, and an <strong>Imperial Magistracy</strong> system of governance.
+            </p>
+            <p>
+              The result is a language structurally parallel to Middle English (Germanic grammar + Anglo-Norman vocabulary), but with roles and geographies reversed:
+            </p>
+            <ul>
+              <li><strong>Core Grammar, Morphology &amp; Phonology:</strong> Early Middle High German (Moselle/Rhine Franconian dialect of Metz, Trier, and Mainz).</li>
+              <li><strong>Administrative, Courtly &amp; Nautical Lexicon:</strong> Old Catalan, Occitan, and Medieval Hispano-Latin, supplemented after the Imperial Restoration by Byzantine Greek administrative borrowings.</li>
+              <li><strong>Chancellery Orthography:</strong> High German phonemes written through the scribal conventions of Catalan-Aragonese and Imperial chancelleries.</li>
+            </ul>
+
+            <h3>2. Orthography &amp; IPA Pronunciation Guide</h3>
+            <p>
+              Tarraconian scribes write their Moselle-Franconian High German using a blend of <strong>Middle High German</strong> and <strong>Old Catalan</strong> spelling conventions. Circumflexes (<code>â, ê, î, ô, û</code> / <code>Â, Ê, Î, Ô, Û</code>) systematically indicate long vowels. Capitalization does not alter vowel quantity: capital letters systematically retain their circumflexes (e.g. <strong>Ôsterrîch</strong>, <strong>Îslant</strong>, <strong>Âchen</strong>, <strong>Ûtrecht</strong>, <strong>Êvore</strong>).
+            </p>
+
+            <div class="table-responsive">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    <th>Grapheme</th>
+                    <th>IPA Value</th>
+                    <th>Phonological Rule &amp; Description</th>
+                    <th>Chancellery Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>â</strong></td><td><code>[aː]</code></td><td>Long open central vowel (German <em>Vater</em>)</td><td><strong>Prâge</strong> <code>[ˈpraː.ɣə]</code>, <strong>Ungwâr</strong> <code>[ˈʊŋ.waːr]</code></td></tr>
+                  <tr><td><strong>ê</strong></td><td><code>[eː]</code></td><td>Long close-mid front vowel (from Romance or monophthongized <em>ei</em>)</td><td><strong>Mênz</strong> <code>[meːnts]</code>, <strong>Tudêl</strong> <code>[tu.ˈdeːl]</code></td></tr>
+                  <tr><td><strong>î</strong></td><td><code>[iː]</code></td><td>Long close front vowel (undiphthongized; not Modern German <em>ei</em>)</td><td><strong>Rîch</strong> <code>[riːç]</code>, <strong>Lîgnitz</strong> <code>[ˈliːɡ.nɪts]</code></td></tr>
+                  <tr><td><strong>ô</strong></td><td><code>[oː]</code></td><td>Long close-mid back vowel</td><td><strong>Tarracôn</strong> <code>[ta.ra.ˈkoːn]</code>, <strong>Rômisch</strong> <code>[ˈroː.mɪʃ]</code></td></tr>
+                  <tr><td><strong>û</strong></td><td><code>[uː]</code></td><td>Long close back vowel (undiphthongized; not Modern German <em>au</em>)</td><td><strong>Lûke</strong> <code>[ˈluː.kə]</code>, <strong>Lûnstat</strong> <code>[ˈluːn.stat]</code></td></tr>
+                  <tr><td><strong>ch</strong></td><td><code>[x] / [ç]</code></td><td>Velar <code>[x]</code> after back vowels; palatal <code>[ç]</code> after front vowels</td><td><strong>Burch</strong> <code>[bʊrx]</code>, <strong>Chalkidîch</strong> <code>[xal.ki.ˈdiːç]</code></td></tr>
+                  <tr><td><strong>dsch</strong></td><td><code>[dʒ]</code></td><td>Voiced postalveolar affricate initially/medially (Catalan <em>tg/j</em>, Arabic <em>jīm</em>)</td><td><strong>Dscharîn</strong>, <strong>Dschounpur</strong>, <strong>Dschenne</strong></td></tr>
+                  <tr><td><strong>tsch</strong></td><td><code>[tʃ]</code></td><td>Voiceless postalveolar affricate; mandatory coda devoicing of <code>-dsch</code></td><td><strong>Batsch</strong> <code>[batʃ]</code>, <strong>Petschênêch</strong> <code>[pɛ.tʃeː.ˈneːx]</code></td></tr>
+                  <tr><td><strong>z / tz</strong></td><td><code>[ts]</code></td><td>Alveolar affricate: strictly initial <code>z-</code> and medial/coda <code>-tz-</code> / <code>-tz</code></td><td><strong>Zips</strong> <code>[tsɪps]</code>, <strong>Lîgnitz</strong> <code>[ˈliːɡ.nɪts]</code>, <strong>Ützang</strong> <code>[yː.ˈtsaŋ]</code></td></tr>
+                  <tr><td><strong>nj / ny</strong></td><td><code>[ɲ]</code></td><td>Palatal nasal (Old Catalan <em>ny</em>, Occitan <em>nh</em>)</td><td><strong>Armanjach</strong> <code>[ar.ma.ˈɲax]</code>, <strong>ikonjen</strong> <code>[i.ˈkoː.njən]</code></td></tr>
+                  <tr><td><strong>g / gu</strong></td><td><code>[ɡ] / [ɣ]</code></td><td>Voiced velar stop initially; lenited to spirant <code>[ɣ]</code> intervocalically</td><td><strong>Gubernat</strong> <code>[ɡu.bər.ˈnat]</code>, <strong>Prâge</strong> <code>[ˈpraː.ɣə]</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>3. Core Phonological &amp; Phonotactic Rules</h3>
+            
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Rule 1</span> Rhine-Moselle Franconian Consonant Profile</div>
+              <p>Because Tarraconian descends from Lothringian (West Central German), post-vocalic <em>*k</em> shifted to <code>-ch</code> (<em>Rîch</em>) and <em>*t</em> shifted to <code>z- / tz</code> (<em>Zips</em>, <em>Mênz</em>). However, unlike Upper German (Bavarian/Alemannic), Tarraconian preserves initial unshifted <code>p-</code> (<strong>Palz</strong>, <strong>Port</strong>), unshifted <code>d-</code> (<strong>Dat</strong>, <strong>Dorf</strong>, <strong>Nider-</strong>), and preserves Middle High German <code>sw-, sl-, sm-</code> (<strong>Swâben</strong>, <strong>Slêswîch</strong>, <strong>Smalkalden</strong>) without New High German <em>schw-/schl-/schm-</em> spellings.</p>
+            </div>
+
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Rule 2</span> Universal Auslautverhärtung (Final Devoicing)</div>
+              <p>Middle High German and Old Catalan systematically devoice word-final obstruents across all etymological strata:</p>
+              <ul>
+                <li>Word-final <code>-g</code> and <code>-k</code> merge into <strong><code>-ch</code></strong> (<code>[x ~ ç]</code>): <em>Burg</em> &rarr; <strong>Burch</strong>, <em>Berg</em> &rarr; <strong>Berch</strong>, <em>Mark</em> &rarr; <strong>March</strong>, <em>Baalbek</em> &rarr; <strong>Bâlbech</strong>.</li>
+                <li>Word-final <code>-d</code> and <code>-b</code> devoice to <strong><code>-t</code></strong> and <strong><code>-p</code></strong>: <em>Land</em> &rarr; <strong>Lant</strong> (<strong>Dütschlant</strong>, <strong>Engellant</strong>), <em>Baghdad</em> &rarr; <strong>Bagdât</strong>, <em>Ḥalab</em> &rarr; <strong>Halep</strong>.</li>
+                <li>Word-final affricate <code>*-dsch</code> is strictly illicit; it devoices to <strong><code>-tsch</code></strong>: <em>Najd</em> &rarr; <strong>Netsch</strong>, <em>Aflaj</em> &rarr; <strong>Falâtsch</strong>.</li>
+                <li>Foreign word-final <code>-ov / -ev / -av</code> vocalizes to the MHG diphthongal suffix <strong><code>-ouwe</code></strong> (<code>[ɔʊ.wə]</code>): <em>Opava</em> &rarr; <strong>Troppouwe</strong>, <em>Moskva</em> &rarr; <strong>Moskouwe</strong>, <em>Rostov</em> &rarr; <strong>Rostouwe</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Rule 3</span> Dual-Substrate Apocope &amp; Vowel Reduction</div>
+              <p>Catalan apocope drops unstressed final <code>-o, -e</code> after liquids and nasals (<em>Tarracona</em> &rarr; <strong>Tarracôn</strong>, <em>Tudela</em> &rarr; <strong>Tudêl</strong>), while High German reduces unstressed final vowels to schwa <strong><code>-e</code></strong> <code>[ə]</code> (<em>Praga</em> &rarr; <strong>Prâge</strong>, <em>Lucca</em> &rarr; <strong>Lûke</strong>, <em>Huesca</em> &rarr; <strong>Oske</strong>). Greek <code>-ion</code> yields <strong><code>-jen</code></strong> (<strong>Ikônjen</strong>), while <code>-ea / -eia</code> yields <strong><code>-êe</code></strong> (<strong>Kaisarêe</strong>, <strong>Nîkêe</strong>).</p>
+            </div>
+
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Rule 4</span> Illicit Cluster Repair &amp; Slavic -sk Adaptation</div>
+              <p>Foreign onset clusters that violate sonority sequencing insert a short vowel epenthesis or prosthesis (<em>Wschowa</em> &rarr; <strong>Wischouwe</strong>, <em>Trnovo</em> &rarr; <strong>Ternouwe</strong>, <em>Mtskheta</em> &rarr; <strong>Metzchête</strong>, <em>Pset</em> &rarr; <strong>Pesêt</strong>). Bare word-final Slavic <code>-sk</code> is resolved to Franconian <strong><code>-tzich</code></strong> <code>[tsɪç]</code> (<em>Połock</em> &rarr; <strong>Polôtzich</strong>, <em>Płock</em> &rarr; <strong>Plôtzich</strong>, <em>Słupsk</em> &rarr; <strong>Slûptzich</strong>, <em>Smoleńsk</em> &rarr; <strong>Smolêntzich</strong>) or labial <strong><code>-bsch</code></strong> (<em>Vitebsk</em> &rarr; <strong>Wîtebsch</strong>).</p>
+            </div>
+
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Rule 5</span> Word Stress &amp; Bimoraic Weight Condition</div>
+              <p>Stressed syllables in Tarraconian must be bimoraic (&sigma;<sub>stressed</sub> &ge; &mu;&mu;): open stressed syllables require a long circumflex vowel or diphthong (<strong>Prâge</strong> <code>[ˈpraː.ɣə]</code>, <strong>Spîre</strong> <code>[ˈʃpiː.rə]</code>), while short vowels must be closed by a coda consonant (<strong>March</strong> <code>[ˈmarx]</code>, <strong>Batsch</strong> <code>[ˈbatʃ]</code>). Heavy syllables attract primary stress (<strong>Tarracôn</strong>, <strong>Adrianôpel</strong>, <strong>Lantschân</strong>).</p>
+            </div>
+
+            <h3>4. Imperial Administrative Titles &amp; Nomenclature</h3>
+            <div class="table-responsive">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    <th>Imperial Tier</th>
+                    <th>Tarraconian Title</th>
+                    <th>IPA Value</th>
+                    <th>Institutional Origin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Roman Empire</strong></td><td><strong>Dat Rômische Keiserrîch</strong></td><td><code>[dat ˈroː.mɪ.ʃə ˈkɛɪ.zər.riːç]</code></td><td>Restored Roman Hegemony under House Chatenois-Metz</td></tr>
+                  <tr><td><strong>Emperor / Augustus</strong></td><td><strong>Keiser / Augustus</strong></td><td><code>[ˈkɛɪ.zər] / [ɔʊ.ˈɡʊs.tʊs]</code></td><td>Supreme Roman Autocrat</td></tr>
+                  <tr><td><strong>Kingdom (Province)</strong></td><td><strong>Regenat / Kûnincrich</strong></td><td><code>[rɛ.ɣə.ˈnat] / [ˈkyː.nɪŋk.riːç]</code></td><td>Catalan <em>Regnat</em> (administrative) / Frankish <em>Kûnincrich</em> (crowns)</td></tr>
+                  <tr><td><strong>Duchy (Governorship)</strong></td><td><strong>Gubernat / March</strong></td><td><code>[ɡu.bər.ˈnat] / [marx]</code></td><td>Imperial Magistracy provincial governate / Frontier march</td></tr>
+                  <tr><td><strong>County (Magistracy)</strong></td><td><strong>Magistrat / Veguerîe</strong></td><td><code>[ma.ɡɪs.ˈtraːt] / [vɛ.ɣə.ˈriː.ə]</code></td><td>Imperial civil jurisdiction / Catalan <em>Vegueria</em></td></tr>
+                  <tr><td><strong>Prince-Bishopric</strong></td><td><strong>Fürstbisdom / Bisbalîe</strong></td><td><code>[ˈfʏrst.bɪs.doːm] / [bɪz.ba.ˈliː.ə]</code></td><td>Imperial ecclesiastical prelate jurisdiction</td></tr>
+                  <tr><td><strong>Metropolitan Archdiocese</strong></td><td><strong>Erzbisdom / Arzebisbalîe</strong></td><td><code>[ˈɛrts.bɪs.doːm] / [ar.tsə.bɪz.ba.ˈliː.ə]</code></td><td>Metropolitan archiepiscopal see</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>5. Daughter Dialects of Tarraconian</h3>
+            <ul>
+              <li><strong>Alpine-Tarraconian (<em>Alpîn-Tarraconisch</em>, 1042 AD):</strong> Spoken in Cisalpine Italy; fronts long <code>û</code> &rarr; <code>[yː]</code>, nasalizes vowels before coda <code>-n</code> (<em>Meilân</em> <code>[mɛɪ.ˈlaːŋ]</code>), and softens affricates.</li>
+              <li><strong>Croato-Tarraconian (<em>Kroatisch-Tarraconisch</em>, 1057 AD):</strong> Spoken in Dalmatia and Dinaric marches; distinguishes alveolo-palatal <code>[tɕ]</code> from postalveolar <code>[tʃ]</code> and retains trilled syllabic <code>[r̩]</code>.</li>
+              <li><strong>Ungwârer (<em>Ungwârerisch / Ungwâri</em>, 1094 AD):</strong> Germano-Magyar mixed daughter language (Central Germanic heritage + Magyar tongue) formed when Tarraconian castle-wardens intermarried with Hungarian horse-archers in Upper Hungary (<em>Ungwâr</em> / Užhorod).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Tab 2: Sinosphere Titles & Hanzi Calques -->
+        <section id="tab-pane-sinosphere" class="modal-tab-pane hidden" role="tabpanel">
+          <div class="guide-prose">
+            <h3>1. The 12th-Century Historical Phonology Canon (1154 AD)</h3>
+            <p>
+              In the administration of Far Eastern marches, tributary kingdoms, and commanderies across the <strong>Restored Roman Empire</strong> in 1154 AD, the Imperial Chancellery at Metz, Aachen, and Constantinople operates under the <strong>Dual Toponymic Adoption Protocol</strong>:
+            </p>
+            <ol>
+              <li>
+                <strong>Descriptive, Topographic, and Civic Toponyms:</strong> Translated root-for-root into Tarraconian High German via <strong>semantic calquing</strong> (<em>Lehnübersetzung</em>). For example:
+                <ul>
+                  <li><em>Kaifeng</em> (开封府) &rarr; <strong>Magistrat van Openambet</strong> (开 <em>Open-</em> + 封/府 <em>-ambet</em>)</li>
+                  <li><em>Yamashiro</em> (山城) &rarr; <strong>Magistrat van Berchburch</strong> (山 <em>Berch-</em> + 城 <em>-burch</em>)</li>
+                  <li><em>Gaesong</em> (开城) &rarr; <strong>Magistrat van Openburch</strong> (开 <em>Open-</em> + 城 <em>-burch</em>)</li>
+                  <li><em>Sanggan</em> (桑干) &rarr; <strong>Gubernat van dem Mûlberienbache</strong> (桑 <em>Mûlberie-</em> + 干 <em>-bache</em>)</li>
+                  <li><em>Zhongyuan</em> (中原) &rarr; <strong>Keiserrîch van dem Middenvelt</strong> (中 <em>Midden-</em> + 原 <em>-velt</em>)</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Dynastic Stems, Ancient Ethnonyms, and Opaque Toponyms:</strong> Transliterated phonetically (<em>Lautangleichung</em>) and adapted to <strong>Tarraconian phonotactics and Auslautverhärtung</strong> (e.g. <strong>Gogurjô</strong>, <strong>Baekdsche</strong>, <strong>Sille</strong>, <strong>Jüet</strong>, <strong>Chitân</strong>, <strong>Dschürdsch</strong>, <strong>Bôhai</strong>).
+              </li>
+            </ol>
+
+            <div class="rule-card">
+              <div class="rule-header"><span class="rule-badge">Historical Principle</span> Rejection of Modern Anachronisms</div>
+              <p>
+                Phonetic transliterations strictly reflect the phonological systems active in the <strong>12th century (ca. 1154 AD)</strong>, rather than modern national languages (Modern Standard Mandarin / Pinyin, Modern Tokyo Japanese, Modern Seoul Korean):
+              </p>
+              <ul>
+                <li><strong>Late Middle Chinese (Song/Jin):</strong> Full retention of entering tone stops (<code>-p, -t, -k</code>) and 36 initials; unmerged retroflex vs dental sibilants.</li>
+                <li><strong>Early Middle Korean (Goryeo Gaesong):</strong> Sino-Korean entering tone preserved as dental stop <code>-t</code> (not modern <code>-l</code>); unmerged plain vs aspirated stops.</li>
+                <li><strong>Early Middle Japanese (Late Heian):</strong> Initial <em>ha-gyō</em> pronounced as bilabial fricative <code>[ɸ]</code>; voiced stops/affricates prenasalized (<code>[ᵐb], [ⁿd], [ᵑɡ], [ⁿz]</code>).</li>
+              </ul>
+            </div>
+
+            <h3>2. The 10 Thematic Categories of the 641 Attested Hanzi</h3>
+            <p>
+              Across the 620 counties and 201 higher-tier titles of the Sinosphere in 1154, imperial scribes cataloged <strong>641 distinct Chinese characters (汉字 / 漢字 / CJK)</strong>. Each character has a verified semantic mapping and Tarraconian morpheme formant:
+            </p>
+
+            <div class="table-responsive">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    <th>Cat</th>
+                    <th>Thematic Domain</th>
+                    <th>Count</th>
+                    <th>Representative Kanji</th>
+                    <th>Primary Tarraconian Formants</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>1</strong></td><td>Administrative Classifiers &amp; Citadels</td><td>66</td><td>步 部 朝 车 城 处 村 道 府 关 京</td><td>州 <code>-gouwe</code>, 城 <code>-burch</code>, 关 <code>-klûse</code>, 京 <code>-hôfstat</code>, 府 <code>-ambet</code></td></tr>
+                  <tr><td><strong>2</strong></td><td>Hydrography, Waterways &amp; Springs</td><td>69</td><td>汴 波 渤 沧 潮 池 滁 川 江 河 泉</td><td>河/江 <code>-flôz</code>, 川 <code>-bache</code>, 泉 <code>-brunn</code>, 湖 <code>-sê</code>, 海 <code>-mêr</code></td></tr>
+                  <tr><td><strong>3</strong></td><td>Orography, Landforms &amp; Relief</td><td>45</td><td>阿 岸 坂 壁 叠 峒 峨 肥 阜 峰 岗 山</td><td>山 <code>-berch</code>, 岭 <code>-rücke</code>, 原 <code>-veit</code>, 谷 <code>-dal</code>, 崖 <code>-krenge</code></td></tr>
+                  <tr><td><strong>4</strong></td><td>Cardinal Directions &amp; Spatial Geometry</td><td>38</td><td>北 背 边 边 东 对 间 内 南 上 下 西 中</td><td>东 <code>Ôst-</code>, 西 <code>West-</code>, 南 <code>Sût-</code>, 北 <code>Nord-</code>, 中 <code>Midden-</code></td></tr>
+                  <tr><td><strong>5</strong></td><td>Flora, Trees, Vegetation &amp; Agriculture</td><td>40</td><td>播 布 草 郴 棣 瓜 莞 桂 荆 林 柳 桑</td><td>林 <code>-walt</code>, 桑 <code>Mûlberie-</code>, 松 <code>Pîn-</code>, 柳 <code>Wîden-</code>, 田 <code>-acker</code></td></tr>
+                  <tr><td><strong>6</strong></td><td>Fauna, Animals &amp; Mythological Creatures</td><td>24</td><td>凤 龟 鸡 骏 麟 龙 鹿 鸟 熊 鹰 鱼 鹤</td><td>龙 <code>Drachen-</code>, 凤 <code>Fênix-</code>, 马 <code>Ros-</code>, 鹿 <code>Hirsch-</code>, 鱼 <code>Fisch-</code></td></tr>
+                  <tr><td><strong>7</strong></td><td>Minerals, Metals, Colors &amp; Meteorology</td><td>46</td><td>白 宝 贝 赤 春 丹 风 光 黑 金 银 铁 青</td><td>金 <code>Golt-</code>, 银 <code>Silber-</code>, 铁 <code>Îsen-</code>, 白 <code>Wîz-</code>, 黑 <code>Swartz-</code>, 青 <code>Blou-</code></td></tr>
+                  <tr><td><strong>8</strong></td><td>Auspicious Qualities &amp; Imperial Virtues</td><td>152</td><td>安 被 本 宾 伯 博 德 昌 宁 平 泰 福 庆</td><td>安 <code>Frid-</code>, 宁 <code>Rûwe-</code>, 定 <code>Fest-</code>, 平 <code>Ebene-</code>, 德 <code>Dôget-</code></td></tr>
+                  <tr><td><strong>9</strong></td><td>Toponymic Verbs, Modifiers &amp; Quantifiers</td><td>47</td><td>百 备 必 捕 长 出 大 开 三 新 古 万</td><td>大 <code>Grôz-</code>, 小 <code>Klein-</code>, 开 <code>Open-</code>, 新 <code>Nîe-</code>, 古 <code>Alt-</code>, 三 <code>Drî-</code></td></tr>
+                  <tr><td><strong>10</strong></td><td>Dynastic Stems, Ethnonyms &amp; Transcriptions</td><td>114</td><td>巴 邠 亳 勃 蔡 曹 辰 陈 汉 唐 宋 辽 越</td><td>汉 <code>Hân-</code>, 唐 <code>Tâng-</code>, 宋 <code>Sông-</code>, 契丹 <code>Chitân-</code>, 辽 <code>Ljô-</code>, 越 <code>Jüet-</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>3. Harmonized Calque Paradigm for 61 Anachronism Resolutions (Option B)</h3>
+            <p>
+              In Western feudal Europe, post-867 titles frequently derive from dynastic eponymous castles (<em>Albrechtsburg</em>, <em>Habsburg</em>), which create an alternate-history causal paradox when an 867 divergence timeline continues to use names of non-existent feudal lords.
+            </p>
+            <p>
+              In the Sinosphere, however, administrative foundations were named logographically with Chinese characters (<code>汉字</code>) expressing descriptive, physical, or moral-philosophical concepts:
+            </p>
+            <ul>
+              <li><strong>Ideographic Foundations:</strong> Toponyms like <code>长春</code> (<em>Chángchūn</em>, &ldquo;Eternal Spring&rdquo;), <code>大定</code> (<em>Dàdìng</em>, &ldquo;Great Settlement / Firm Peace&rdquo;), <code>安边</code> (<em>Ānbiān</em>, &ldquo;Pacified Frontier March&rdquo;), and <code>黑草岸</code> (<em>Hēicǎo'àn</em>, &ldquo;Black Grass Shore&rdquo;) reflect imperial statecraft and natural geography rather than personal lord names.</li>
+              <li><strong>Harmonized Calque &amp; Physical Substrate:</strong> Translating these logographic titles into Tarraconian chancellery calques (<strong>Magistrat van Langlenten</strong>, <strong>Magistrat van Grôzfest</strong>, <strong>Magistrat van Fridmarch</strong>, <strong>Magistrat van Swartzwêdouwe</strong>) directly eliminates the causal paradox while preserving authentic Sinitic semantics. Simultaneously, each title's territorial jurisdiction is anchored to its verified pre-867 physical river basin, mountain pass, or lake catchment (Option B: e.g., <em>Yitong River / Songhua Basin</em>, <em>Daling River</em>, <em>Shira Muren</em>, <em>Xiao Pass</em>).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Tab 3: Hanzi Calque Lexicon (641 Characters) -->
+        <section id="tab-pane-lexicon" class="modal-tab-pane hidden" role="tabpanel">
+          <div class="lexicon-controls">
+            <div class="lexicon-search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="lexicon-search-input" placeholder="Search Hanzi, e.g. 城, 安, 山, pinyin, meaning, or morpheme..." autocomplete="off">
+              <button id="lexicon-search-clear" class="search-clear-btn" title="Clear">&times;</button>
+            </div>
+            <div class="lexicon-filter-categories" id="lexicon-category-filters">
+              <button class="lexicon-cat-btn active" data-cat="all">All (641)</button>
+              <button class="lexicon-cat-btn" data-cat="1">Admin (66)</button>
+              <button class="lexicon-cat-btn" data-cat="2">Water (69)</button>
+              <button class="lexicon-cat-btn" data-cat="3">Mountains (45)</button>
+              <button class="lexicon-cat-btn" data-cat="4">Directions (38)</button>
+              <button class="lexicon-cat-btn" data-cat="5">Flora (40)</button>
+              <button class="lexicon-cat-btn" data-cat="6">Fauna (24)</button>
+              <button class="lexicon-cat-btn" data-cat="7">Colors/Metals (46)</button>
+              <button class="lexicon-cat-btn" data-cat="8">Virtues (152)</button>
+              <button class="lexicon-cat-btn" data-cat="9">Verbs (47)</button>
+              <button class="lexicon-cat-btn" data-cat="10">Dynastic (114)</button>
+            </div>
+          </div>
+          <div class="lexicon-stats-bar">
+            <span id="lexicon-match-count">Showing 641 characters</span>
+          </div>
+          <div class="table-responsive lexicon-table-wrapper">
+            <table class="guide-table lexicon-table">
+              <thead>
+                <tr>
+                  <th style="width: 60px;">Hanzi</th>
+                  <th style="width: 140px;">Readings (PY / JP / KR)</th>
+                  <th>Primary Meaning</th>
+                  <th style="width: 130px;">Tarraconian Calque</th>
+                  <th style="width: 100px;">IPA</th>
+                  <th style="width: 130px;">Chancellery Role</th>
+                  <th>Attested Title Examples</th>
+                </tr>
+              </thead>
+              <tbody id="lexicon-table-body">
+                <!-- Dynamically populated from sinosphere_kanji_tarraconian.json -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <!-- Leaflet JS (Local Vendor) -->
   <script src="vendor/leaflet/leaflet.js"></script>

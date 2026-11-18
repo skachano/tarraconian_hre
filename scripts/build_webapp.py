@@ -41,6 +41,9 @@ def main():
         "ck3_baronies.geojson",
         "ck3_title_tree.json",
         "ck3_adjacencies.json",
+        "sinosphere_hanzi_calques.json",
+        "sinosphere_kanji_tarraconian.json",
+        "sinosphere_title_calques.json",
     ]
     for dset in required_datasets:
         src = DATA_DIR / dset

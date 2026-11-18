@@ -28,7 +28,11 @@ const kingdomLayersMap = new Map();
 const empireLayersMap = new Map();
 const baronyLayerMap = new Map();
 
-// Search index: array of { key, name, tarr, tier, origin, empire, kingdom, duchy, feature }
+// Sinosphere Hanzi & Calque datasets
+let sinosphereCalques = null;
+let sinosphereKanjiList = null;
+
+// Search index: array of { key, name, tarr, tier, origin, empire, kingdom, duchy, feature, hanzi }
 let searchIndex = [];
 
 // Fallback deterministic color generator
@@ -102,6 +106,16 @@ async function loadData() {
     loadingText.textContent = 'Loading county geography (3,476 territories)...';
     const countiesRes = await fetch('data/ck3_counties.geojson');
     countiesGeojson = await countiesRes.json();
+
+    // Load Sinosphere Hanzi & Calque metadata
+    try {
+      const sinoRes = await fetch('data/sinosphere_hanzi_calques.json');
+      if (sinoRes.ok) {
+        sinosphereCalques = await sinoRes.json();
+      }
+    } catch (e) {
+      console.warn('Could not load sinosphere_hanzi_calques.json:', e);
+    }
 
     // Render primary layer
     renderActiveLayer();
@@ -579,6 +593,89 @@ function openInspector(props, tier) {
     histName.textContent = '—';
   }
 
+  // Sinosphere Hanzi & Calque Analysis
+  const sinoGroup = document.getElementById('drawer-sinosphere-group');
+  const sinoHanziElem = document.getElementById('drawer-sinosphere-hanzi');
+  const sinoReadingElem = document.getElementById('drawer-sinosphere-reading');
+  const sinoStatusElem = document.getElementById('drawer-sinosphere-status');
+  const sinoBreakdownElem = document.getElementById('drawer-sinosphere-breakdown');
+  const sinoSynthesisElem = document.getElementById('drawer-sinosphere-synthesis');
+  const sinoSubstrateElem = document.getElementById('drawer-sinosphere-substrate');
+
+  let sinoEntry = sinosphereCalques ? sinosphereCalques[currentKey] : null;
+  if (!sinoEntry) {
+    const propHanzi = (tier === 'county' ? props.c_hanzi :
+                       tier === 'duchy' ? (props.d_hanzi || props.hanzi) :
+                       tier === 'kingdom' ? (props.k_hanzi || props.hanzi) :
+                       tier === 'empire' ? (props.e_hanzi || props.hanzi) :
+                       tier === 'barony' ? (props.b_hanzi || props.c_hanzi) : '');
+    if (propHanzi) {
+      sinoEntry = {
+        hanzi: propHanzi,
+        name: originName.textContent,
+        tarr: tarrName.textContent,
+        status: 'Sinosphere Title',
+        characters: [],
+        synthesis: props.c_calque || `Calqued root-for-root from CJK ${propHanzi} into Tarraconian High German.`
+      };
+    }
+  }
+
+  if (sinoGroup) {
+    if (sinoEntry && sinoEntry.hanzi && !isUnoccupiedBarony) {
+      sinoGroup.classList.remove('hidden');
+      if (sinoHanziElem) sinoHanziElem.textContent = sinoEntry.hanzi;
+      if (sinoReadingElem) sinoReadingElem.textContent = sinoEntry.name ? `(${sinoEntry.name})` : '';
+      if (sinoStatusElem) {
+        sinoStatusElem.textContent = sinoEntry.status.includes('Anachronism') ? 'Tier 3 Resolved' : 'Classical';
+        sinoStatusElem.style.borderColor = sinoEntry.status.includes('Anachronism') ? 'rgba(184, 79, 24, 0.6)' : 'rgba(48, 105, 168, 0.5)';
+        sinoStatusElem.style.color = sinoEntry.status.includes('Anachronism') ? '#f7a372' : '#8bbbee';
+      }
+
+      if (sinoBreakdownElem) {
+        sinoBreakdownElem.innerHTML = '';
+        if (sinoEntry.characters && sinoEntry.characters.length > 0) {
+          for (const c of sinoEntry.characters) {
+            const pill = document.createElement('div');
+            pill.className = 'sinosphere-char-pill';
+            const readings = c.pinyin ? `[${c.pinyin}]` : '';
+            const mShort = (c.meaning || '').split('/')[0].trim();
+            pill.innerHTML = `
+              <div class="sinosphere-char-left">
+                <span class="sinosphere-char-symbol">${c.char}</span>
+                <span class="sinosphere-char-readings">${readings}</span>
+                <span class="sinosphere-char-meaning">&ldquo;${mShort}&rdquo;</span>
+              </div>
+              <div class="sinosphere-char-right">&rarr; <strong>${c.morpheme || c.tarr_morpheme || '—'}</strong></div>
+            `;
+            sinoBreakdownElem.appendChild(pill);
+          }
+          sinoBreakdownElem.parentElement.classList.remove('hidden');
+        } else {
+          sinoBreakdownElem.parentElement.classList.add('hidden');
+        }
+      }
+
+      if (sinoSynthesisElem) {
+        sinoSynthesisElem.innerHTML = `<strong>Calque Synthesis:</strong> ${sinoEntry.synthesis || 'Calqued from Chinese logographic toponym.'}`;
+      }
+
+      if (sinoSubstrateElem) {
+        if (sinoEntry.substrate || sinoEntry.justification) {
+          sinoSubstrateElem.classList.remove('hidden');
+          const subText = sinoEntry.substrate ? `<div><strong>Physical Substrate:</strong> ${sinoEntry.substrate}</div>` : '';
+          const justText = sinoEntry.justification ? `<div><strong>Historical Resolution:</strong> ${sinoEntry.justification}</div>` : '';
+          sinoSubstrateElem.innerHTML = subText + justText;
+        } else {
+          sinoSubstrateElem.classList.add('hidden');
+          sinoSubstrateElem.innerHTML = '';
+        }
+      }
+    } else {
+      sinoGroup.classList.add('hidden');
+    }
+  }
+
   // Breadcrumbs
   bcEmpire.textContent = props.e_tarr || formatKey(props.empire);
   bcKingdom.textContent = props.k_tarr || formatKey(props.kingdom);
@@ -750,10 +847,13 @@ function buildSearchIndex() {
   // 1. Index all counties
   for (const feat of countiesGeojson.features) {
     const p = feat.properties;
+    const sino = sinosphereCalques ? sinosphereCalques[p.county] : null;
+    const hanzi = (sino && sino.hanzi) ? sino.hanzi : (p.c_hanzi || '');
     searchIndex.push({
       key: p.county,
       tarr: p.tarr_hist || p.tarr_direct || p.tarr || '',
       origin: p.c_origin || formatKey(p.county),
+      hanzi: hanzi,
       tier: 'county',
       duchy: p.d_tarr || formatKey(p.duchy),
       kingdom: p.k_tarr || formatKey(p.kingdom),
@@ -765,20 +865,26 @@ function buildSearchIndex() {
   // 2. Index higher-tier titles from titleTree for search
   if (titleTree) {
     for (const [e_k, e_data] of Object.entries(titleTree)) {
+      const e_sino = sinosphereCalques ? sinosphereCalques[e_k] : null;
+      const e_hanzi = (e_sino && e_sino.hanzi) ? e_sino.hanzi : (e_data.hanzi || '');
       searchIndex.push({
         key: e_k,
         tarr: e_data.tarr || formatKey(e_k),
         origin: e_data.origin || formatKey(e_k),
+        hanzi: e_hanzi,
         tier: 'empire',
         empire: e_data.tarr || formatKey(e_k),
         feature: null
       });
 
       for (const [k_k, k_data] of Object.entries(e_data.kingdoms || {})) {
+        const k_sino = sinosphereCalques ? sinosphereCalques[k_k] : null;
+        const k_hanzi = (k_sino && k_sino.hanzi) ? k_sino.hanzi : (k_data.hanzi || '');
         searchIndex.push({
           key: k_k,
           tarr: k_data.tarr || formatKey(k_k),
           origin: k_data.origin || formatKey(k_k),
+          hanzi: k_hanzi,
           tier: 'kingdom',
           kingdom: k_data.tarr || formatKey(k_k),
           empire: e_data.tarr || formatKey(e_k),
@@ -786,10 +892,13 @@ function buildSearchIndex() {
         });
 
         for (const [d_k, d_data] of Object.entries(k_data.duchies || {})) {
+          const d_sino = sinosphereCalques ? sinosphereCalques[d_k] : null;
+          const d_hanzi = (d_sino && d_sino.hanzi) ? d_sino.hanzi : (d_data.hanzi || '');
           searchIndex.push({
             key: d_k,
             tarr: d_data.tarr || formatKey(d_k),
             origin: d_data.origin || formatKey(d_k),
+            hanzi: d_hanzi,
             tier: 'duchy',
             duchy: d_data.tarr || formatKey(d_k),
             kingdom: k_data.tarr || formatKey(k_k),
@@ -805,9 +914,10 @@ function buildSearchIndex() {
 function handleSearch(query) {
   const dropdown = document.getElementById('search-results');
   const clearBtn = document.getElementById('search-clear');
-  query = query.trim().toLowerCase();
+  const queryRaw = query.trim();
+  const queryLower = queryRaw.toLowerCase();
 
-  if (!query) {
+  if (!queryRaw) {
     dropdown.classList.add('hidden');
     dropdown.innerHTML = '';
     clearBtn.style.display = 'none';
@@ -819,9 +929,10 @@ function handleSearch(query) {
   // Filter top matches
   const matches = searchIndex.filter(item => {
     return (
-      item.key.toLowerCase().includes(query) ||
-      item.tarr.toLowerCase().includes(query) ||
-      (item.origin && item.origin.toLowerCase().includes(query))
+      item.key.toLowerCase().includes(queryLower) ||
+      item.tarr.toLowerCase().includes(queryLower) ||
+      (item.origin && item.origin.toLowerCase().includes(queryLower)) ||
+      (item.hanzi && item.hanzi.includes(queryRaw))
     );
   }).slice(0, 10);
 
@@ -843,9 +954,10 @@ function handleSearch(query) {
       subline = `${m.kingdom} (${m.empire})`;
     }
     const originLabel = m.origin && m.origin !== m.tarr ? ` &bull; <em>${m.origin}</em>` : '';
+    const hanziBadge = m.hanzi ? `<span class="result-hanzi">${m.hanzi}</span>` : '';
     return `
       <div class="search-item" data-key="${m.key}" data-tier="${m.tier}">
-        <div class="search-item-primary">${m.tarr || m.origin} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
+        <div class="search-item-primary">${m.tarr || m.origin} ${hanziBadge} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
         <div class="search-item-secondary">
           <code>${m.key}</code>${originLabel} &bull; <span>${subline}</span>
         </div>
@@ -930,4 +1042,189 @@ function setupEventListeners() {
       document.getElementById('search-results').classList.add('hidden');
     }
   });
+
+  // Initialize Linguistics & Toponymic Guide Modal
+  initLinguisticsModal();
+}
+
+// ---------------------------------------------------------------------------
+// Linguistics & Toponymic Guide Modal
+// ---------------------------------------------------------------------------
+let activeLexiconCategory = 'all';
+let lexiconSearchQuery = '';
+
+function initLinguisticsModal() {
+  const modal = document.getElementById('linguistics-modal');
+  const openBtn = document.getElementById('btn-open-linguistics');
+  const closeBtn = document.getElementById('btn-close-linguistics');
+  if (!modal || !openBtn) return;
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  // Tab switching
+  const tabBtns = modal.querySelectorAll('.modal-tab-btn');
+  const tabPanes = {
+    tarraconian: document.getElementById('tab-pane-tarraconian'),
+    sinosphere: document.getElementById('tab-pane-sinosphere'),
+    lexicon: document.getElementById('tab-pane-lexicon')
+  };
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const targetTab = btn.getAttribute('data-tab');
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      Object.entries(tabPanes).forEach(([tabName, pane]) => {
+        if (!pane) return;
+        if (tabName === targetTab) {
+          pane.classList.remove('hidden');
+          pane.classList.add('active');
+        } else {
+          pane.classList.add('hidden');
+          pane.classList.remove('active');
+        }
+      });
+
+      if (targetTab === 'lexicon') {
+        await ensureKanjiLexiconLoaded();
+      }
+    });
+  });
+
+  // Setup Lexicon Controls
+  const searchInput = document.getElementById('lexicon-search-input');
+  const clearBtn = document.getElementById('lexicon-search-clear');
+  const catFilterContainer = document.getElementById('lexicon-category-filters');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      lexiconSearchQuery = e.target.value.trim().toLowerCase();
+      if (clearBtn) clearBtn.style.display = lexiconSearchQuery ? 'block' : 'none';
+      renderKanjiLexiconTable();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      lexiconSearchQuery = '';
+      clearBtn.style.display = 'none';
+      renderKanjiLexiconTable();
+    });
+  }
+
+  if (catFilterContainer) {
+    catFilterContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.lexicon-cat-btn');
+      if (!btn) return;
+      catFilterContainer.querySelectorAll('.lexicon-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeLexiconCategory = btn.getAttribute('data-cat');
+      renderKanjiLexiconTable();
+    });
+  }
+}
+
+async function ensureKanjiLexiconLoaded() {
+  if (sinosphereKanjiList) {
+    renderKanjiLexiconTable();
+    return;
+  }
+  const tbody = document.getElementById('lexicon-table-body');
+  if (tbody) tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--text-dim)">Loading 641 Sinosphere characters...</td></tr>';
+
+  try {
+    const res = await fetch('data/sinosphere_kanji_tarraconian.json');
+    if (res.ok) {
+      sinosphereKanjiList = await res.json();
+    }
+  } catch (err) {
+    console.error('Failed to load sinosphere_kanji_tarraconian.json:', err);
+    if (tbody) tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:2rem;color:#ff6b6b">Failed to load lexicon dataset.</td></tr>';
+    return;
+  }
+  renderKanjiLexiconTable();
+}
+
+function renderKanjiLexiconTable() {
+  if (!sinosphereKanjiList) return;
+  const tbody = document.getElementById('lexicon-table-body');
+  const countElem = document.getElementById('lexicon-match-count');
+  if (!tbody) return;
+
+  const q = lexiconSearchQuery;
+  const cat = activeLexiconCategory;
+
+  const filtered = sinosphereKanjiList.filter(item => {
+    if (cat !== 'all' && String(item.cat_id) !== cat) {
+      return false;
+    }
+    if (!q) return true;
+    return (
+      item.char.includes(q) ||
+      (item.pinyin && item.pinyin.toLowerCase().includes(q)) ||
+      (item.meaning && item.meaning.toLowerCase().includes(q)) ||
+      (item.tarr_morpheme && item.tarr_morpheme.toLowerCase().includes(q)) ||
+      (item.cat_name && item.cat_name.toLowerCase().includes(q)) ||
+      (item.tarr_role && item.tarr_role.toLowerCase().includes(q)) ||
+      (item.tarr_example && item.tarr_example.toLowerCase().includes(q))
+    );
+  });
+
+  if (countElem) {
+    countElem.textContent = `Showing ${filtered.length} of ${sinosphereKanjiList.length} characters`;
+  }
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--text-dim)">No characters match your search criteria.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(item => {
+    const readings = [
+      item.pinyin ? `PY: ${item.pinyin}` : '',
+      item.jp ? `JP: ${item.jp}` : '',
+      item.kr ? `KR: ${item.kr}` : ''
+    ].filter(Boolean).join('<br>');
+
+    const exampleStr = item.tarr_example ? `<small style="opacity:0.8">${item.tarr_example}</small>` : (item.titles ? item.titles.slice(0, 2).join(', ') : '—');
+
+    return `
+      <tr>
+        <td class="lexicon-hanzi-cell">${item.char}</td>
+        <td><small style="font-family:var(--font-mono)">${readings}</small></td>
+        <td><strong>${item.meaning}</strong><br><small style="color:var(--text-dim)">${item.cat_name}</small></td>
+        <td class="lexicon-morpheme-cell">${item.tarr_morpheme || '—'}</td>
+        <td class="lexicon-ipa-cell">${item.tarr_ipa || '—'}</td>
+        <td><span style="font-size:0.75rem">${item.tarr_role || '—'}</span></td>
+        <td>${exampleStr}</td>
+      </tr>
+    `;
+  }).join('');
 }

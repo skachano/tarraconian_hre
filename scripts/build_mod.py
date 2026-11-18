@@ -30,12 +30,12 @@ def clean_toponym(raw: str) -> str:
     s = re.sub(r'\s*\([^)]*\)', '', s)
     # Strip any rank prefix + optional van (with or without space)
     s = re.sub(
-        r'^(Keiserrîch|Keiserrich|Kûnincrich|Kunincrich|Regenat|Gubernat|March|Erzbisdom|Fürstbisdom|Furstbisdom|Magistrat)\s*(van\s*|van)?(der\s+|den\s+|dem\s+|dat\s+|des\s+)?',
+        r'^(Dat\s+)?(Imperi|Limperi|Keiserrîch|Keiserrich|Kûnincrich|Kunincrich|Regenat|Gubernat|March|Erzbisdom|Fürstbisdom|Furstbisdom|Magistrat)\s*(van\s*|van)?(der\s+|den\s+|dem\s+|dat\s+|des\s+)?',
         '',
         s,
         flags=re.IGNORECASE
     )
-    s = re.sub(r'^[^\s]+\s+van\s+(der\s+|den\s+|dem\s+|dat\s+|des\s+)?', '', s)
+    s = re.sub(r'^(Dat\s+)?[^\s]+\s+van\s+(der\s+|den\s+|dem\s+|dat\s+|des\s+)?', '', s)
     # Strip trailing asterisks or quotes
     s = s.strip('* "\'')
     return s.strip()
@@ -51,6 +51,13 @@ def get_tarr_adj(name: str, key: str) -> str:
         return name
     if key in ('e_hre', 'h_roman_empire'):
         return 'Rômisch-Keiserlich'
+    if key.startswith('e_'):
+        try:
+            from update_empire_titles import EMPIRES_MASTER
+            if key in EMPIRES_MASTER:
+                return EMPIRES_MASTER[key].get('adj', name)
+        except Exception:
+            pass
     if key == 'k_papal_state':
         return 'Rômisch-Pâbestlich'
     if key == 'k_orthodox':
@@ -80,6 +87,14 @@ def get_tarr_adj(name: str, key: str) -> str:
     # Explicit historical/chancellery stem adjectives & compounds
     explicit_adjs = {
         'Beiern': 'Beierisch',
+        'Norderwech': 'Norderwêgisch',
+        'Swêarîch': 'Swêarîchisch',
+        'Norderlant': 'Norderlantsch',
+        'Glantz-Zêch': 'Glantz-Zêchisch',
+        'Sunnenufganch': 'Sunnenufganchisch',
+        'Kalifât': 'Kalifisch',
+        'Hôchpracht': 'Hôchprachtig',
+        'Swartzenlant': 'Swartzenlantsch',
         'Sâpmi': 'Sâmisch',
         'Finlant': 'Finnisch',
         'Suômi': 'Suômisch',
@@ -108,6 +123,7 @@ def get_tarr_adj(name: str, key: str) -> str:
         'Hellas': 'Hellênisch',
         'Îrlant': 'Îrisch',
         'Schotlant': 'Schottisch',
+        'Bizantjen': 'Bizantinisch',
         'Brîe': 'Brîisch',
         'Trîer': 'Trîerisch',
         'Bâr-in-Pûlje': 'Bâr-Pûljer',

@@ -6,6 +6,53 @@
 tarr_apply_static_titles_effect = {
 	title:h_roman_empire ?= { tarr_rename_title_effect = { NAME = cn_tarr_h_roman_empire HIST = cn_tarr_h_roman_empire } }
 	title:e_hre ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_hre HIST = cn_tarr_e_hre } }
+	title:e_germany ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_germany HIST = cn_tarr_e_germany } }
+	title:e_arabia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_arabia HIST = cn_tarr_e_arabia } }
+	title:e_rajastan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_rajastan HIST = cn_tarr_e_rajastan } }
+	title:e_france ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_france HIST = cn_tarr_e_france } }
+	title:e_tibet ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_tibet HIST = cn_tarr_e_tibet } }
+	title:e_scandinavia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_scandinavia HIST = cn_tarr_e_scandinavia } }
+	title:e_jingyang ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_jingyang HIST = cn_tarr_e_jingyang } }
+	title:e_russia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_russia HIST = cn_tarr_e_russia } }
+	title:e_mali ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_mali HIST = cn_tarr_e_mali } }
+	title:e_turan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_turan HIST = cn_tarr_e_turan } }
+	title:e_abyssinia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_abyssinia HIST = cn_tarr_e_abyssinia } }
+	title:e_byzantium ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_byzantium HIST = cn_tarr_e_byzantium } }
+	title:e_deccan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_deccan HIST = cn_tarr_e_deccan } }
+	title:e_srivijaya ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_srivijaya HIST = cn_tarr_e_srivijaya } }
+	title:e_japan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_japan HIST = cn_tarr_e_japan } }
+	title:e_bengal ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_bengal HIST = cn_tarr_e_bengal } }
+	title:e_nusantara ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_nusantara HIST = cn_tarr_e_nusantara } }
+	title:e_suvarnabhumi ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_suvarnabhumi HIST = cn_tarr_e_suvarnabhumi } }
+	title:e_lingnan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_lingnan HIST = cn_tarr_e_lingnan } }
+	title:e_yongliang ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_yongliang HIST = cn_tarr_e_yongliang } }
+	title:e_illyria ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_illyria HIST = cn_tarr_e_illyria } }
+	title:e_guinea ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_guinea HIST = cn_tarr_e_guinea } }
+	title:e_persia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_persia HIST = cn_tarr_e_persia } }
+	title:e_west_slavia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_west_slavia HIST = cn_tarr_e_west_slavia } }
+	title:e_maghreb ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_maghreb HIST = cn_tarr_e_maghreb } }
+	title:e_africa ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_africa HIST = cn_tarr_e_africa } }
+	title:e_andong ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_andong HIST = cn_tarr_e_andong } }
+	title:e_britannia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_britannia HIST = cn_tarr_e_britannia } }
+	title:e_zhongyuan ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_zhongyuan HIST = cn_tarr_e_zhongyuan } }
+	title:e_aegyptus ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_aegyptus HIST = cn_tarr_e_aegyptus } }
+	title:e_goryeo ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_goryeo HIST = cn_tarr_e_goryeo } }
+	title:e_carpathia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_carpathia HIST = cn_tarr_e_carpathia } }
+	title:e_caspian-pontic_steppe ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_caspian-pontic_steppe HIST = cn_tarr_e_caspian-pontic_steppe } }
+	title:e_kanem_bornu ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_kanem_bornu HIST = cn_tarr_e_kanem_bornu } }
+	title:e_amur ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_amur HIST = cn_tarr_e_amur } }
+	title:e_kambuja ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_kambuja HIST = cn_tarr_e_kambuja } }
+	title:e_azania ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_azania HIST = cn_tarr_e_azania } }
+	title:e_wendish_empire ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_wendish_empire HIST = cn_tarr_e_wendish_empire } }
+	title:e_tartaria ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_tartaria HIST = cn_tarr_e_tartaria } }
+	title:e_anatolia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_anatolia HIST = cn_tarr_e_anatolia } }
+	title:e_oriens ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_oriens HIST = cn_tarr_e_oriens } }
+	title:e_macedonia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_macedonia HIST = cn_tarr_e_macedonia } }
+	title:e_volga-ural ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_volga-ural HIST = cn_tarr_e_volga-ural } }
+	title:e_mongolia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_mongolia HIST = cn_tarr_e_mongolia } }
+	title:e_kirghiz_khanate ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_kirghiz_khanate HIST = cn_tarr_e_kirghiz_khanate } }
+	title:e_liangyi ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_liangyi HIST = cn_tarr_e_liangyi } }
+	title:e_siberia ?= { tarr_rename_title_effect = { NAME = cn_tarr_e_siberia HIST = cn_tarr_e_siberia } }
 	title:k_france ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_france HIST = cn_tarr_k_france } }
 	title:k_east_francia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_east_francia HIST = cn_tarr_k_east_francia } }
 	title:k_england ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_england HIST = cn_tarr_k_england } }

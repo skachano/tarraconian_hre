@@ -46,6 +46,14 @@ def adjacencies_data():
         return json.load(f)
 
 
+@pytest.fixture(scope="module")
+def sinosphere_calques():
+    path = DATA_DIR / "sinosphere_hanzi_calques.json"
+    assert path.exists(), "docs/data/sinosphere_hanzi_calques.json is missing"
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 class TestWebAssets:
     """Verifies that all required web assets exist and adhere to standards."""
 
@@ -71,8 +79,28 @@ class TestWebAssets:
             "drawer-title-key",
             "drawer-breadcrumbs",
             "hover-info",
+            "btn-open-linguistics",
+            "btn-close-linguistics",
+            "linguistics-modal",
+            "tab-pane-tarraconian",
+            "tab-pane-sinosphere",
+            "tab-pane-lexicon",
+            "drawer-sinosphere-group",
+            "drawer-sinosphere-hanzi",
+            "drawer-sinosphere-reading",
+            "drawer-sinosphere-status",
+            "drawer-sinosphere-breakdown",
+            "drawer-sinosphere-synthesis",
+            "drawer-sinosphere-substrate",
+            "lexicon-search-input",
+            "lexicon-category-filters",
+            "lexicon-match-count",
+            "lexicon-table-body",
         ]:
             assert f'id="{elem_id}"' in content, f"Missing element #{elem_id} in index.html"
+
+        for tab_name in ["tarraconian", "sinosphere", "lexicon"]:
+            assert f'data-tab="{tab_name}"' in content, f"Missing tab button data-tab={tab_name} in index.html"
 
         # Paradox Interactive Fan Disclaimer
         assert "Crusader Kings III is a registered trademark of Paradox Interactive AB" in content
@@ -102,6 +130,14 @@ class TestWebAssets:
 
     def test_nojekyll_exists(self):
         assert (DOCS_DIR / ".nojekyll").exists(), "docs/.nojekyll is missing (required for GitHub Pages)"
+
+    def test_sinosphere_assets_exist(self):
+        calques_path = DATA_DIR / "sinosphere_hanzi_calques.json"
+        assert calques_path.exists(), "docs/data/sinosphere_hanzi_calques.json is missing"
+        kanji_path = DATA_DIR / "sinosphere_kanji_tarraconian.json"
+        assert kanji_path.exists(), "docs/data/sinosphere_kanji_tarraconian.json is missing"
+        title_calques_path = DATA_DIR / "sinosphere_title_calques.json"
+        assert title_calques_path.exists(), "docs/data/sinosphere_title_calques.json is missing"
 
 
 class TestCountiesGeoJSON:
@@ -172,7 +208,7 @@ class TestCountiesGeoJSON:
         assert mid["c_anachronism"] == ""
         assert mid["d_origin"] == "East Seaxe"
         assert mid["empire"] == "e_germany"
-        assert mid["e_tarr"] == "Germania"
+        assert mid["e_tarr"] == "Dat Frankische Imperi"
         assert mid["e_origin"] == "Germania"
         assert mid["kingdom"] == "k_england"
         assert mid["k_tarr"] == "Engellant"
@@ -208,7 +244,7 @@ class TestCountiesGeoJSON:
         roma = by_key["c_roma"]
         assert roma.get("tarr_direct") in ("Rôm", "Rôme") or roma.get("tarr_hist") in ("Rôm", "Rôme")
         assert roma["empire"] == "e_germany"
-        assert roma["e_tarr"] == "Germania"
+        assert roma["e_tarr"] == "Dat Frankische Imperi"
         assert roma["kingdom"] == "k_romagna"
         assert roma["k_tarr"] == "Romanje"
 
@@ -216,9 +252,9 @@ class TestCountiesGeoJSON:
         byz = by_key["c_byzantion"]
         assert byz.get("tarr_direct") in ("Konstantinôpel", "Konstantinopel") or byz.get("tarr_hist") in ("Bîsantz", "Konstantinôpel", "Konstantinopel")
         assert byz["empire"] == "e_macedonia"
-        assert byz["e_tarr"] == "Macedonia"
+        assert byz["e_tarr"] == "Dat Imperi van Bizantjen"
         assert byz["kingdom"] == "k_thessalonika"
-        assert byz["k_tarr"] == "Thessalonîke"
+        assert byz["k_tarr"] == "Bizantjen"
 
         assert "c_jerusalem" in by_key
         assert by_key["c_jerusalem"]["tarr_direct"] == "Hiligstat"
@@ -256,12 +292,12 @@ class TestBaroniesGeoJSON:
         assert by_key["b_london"]["id"] == 1527
         assert by_key["b_london"]["county"] == "c_middlesex"
         assert by_key["b_london"]["empire"] == "e_germany"
-        assert by_key["b_london"]["e_tarr"] == "Germania"
+        assert by_key["b_london"]["e_tarr"] == "Dat Frankische Imperi"
 
         assert "b_roma" in by_key
         assert by_key["b_roma"]["county"] == "c_roma"
         assert by_key["b_roma"]["empire"] == "e_germany"
-        assert by_key["b_roma"]["e_tarr"] == "Germania"
+        assert by_key["b_roma"]["e_tarr"] == "Dat Frankische Imperi"
 
 
 class TestTitleTree:
@@ -273,9 +309,9 @@ class TestTitleTree:
         # Check Germania (campaign hegemon harboring drifted kingdoms)
         assert "e_germany" in tree_data
         germany = tree_data["e_germany"]
-        assert germany["tarr"] == "Germania"
+        assert germany["tarr"] == "Dat Frankische Imperi"
         assert germany["origin"] == "Germania"
-        assert germany["anachronism"] == ""
+        assert "Carolingian" in germany["anachronism"]
         assert "kingdoms" in germany
 
         # Drifted kingdoms in Germania
@@ -312,13 +348,13 @@ class TestTitleTree:
         # Check Britannia
         assert "e_britannia" in tree_data
         brit = tree_data["e_britannia"]
-        assert brit["tarr"] == "Britannia"
+        assert brit["tarr"] == "Dat Imperi van dem Wâllant"
         assert "k_scotland" in brit["kingdoms"]
 
         # Check Macedonia
         assert "e_macedonia" in tree_data
         mac = tree_data["e_macedonia"]
-        assert mac["tarr"] == "Macedonia"
+        assert mac["tarr"] == "Dat Imperi van Bizantjen"
         assert "k_thessalonika" in mac["kingdoms"]
 
 
@@ -483,3 +519,60 @@ class TestTitleInfoAndIpa:
         assert white_rus["tarr"] == "Polôtzich"
         assert "Polôtzich" in white_rus["origin"]
         assert white_rus["ipa"] == "[ˈpɔ.lɔtsk]"
+
+
+class TestSinosphereLinguistics:
+    """Validates the Sinosphere Hanzi calque database and GeoJSON embedding."""
+
+    def test_sinosphere_calques_coverage(self, sinosphere_calques):
+        assert len(sinosphere_calques) == 821, f"Expected 821 titles, got {len(sinosphere_calques)}"
+        empires = [k for k in sinosphere_calques if k.startswith("e_")]
+        kingdoms = [k for k in sinosphere_calques if k.startswith("k_")]
+        duchies = [k for k in sinosphere_calques if k.startswith("d_")]
+        counties = [k for k in sinosphere_calques if k.startswith("c_")]
+
+        assert len(empires) == 9
+        assert len(kingdoms) == 39
+        assert len(duchies) == 153
+        assert len(counties) == 620
+
+    def test_sinosphere_calque_details(self, sinosphere_calques):
+        # Changchun (Liao)
+        assert "c_LIAO_changchun" in sinosphere_calques
+        cc = sinosphere_calques["c_LIAO_changchun"]
+        assert cc["hanzi"] == "长春"
+        assert len(cc["characters"]) == 2
+        assert cc["characters"][0]["char"] == "长"
+        assert cc["characters"][0]["pinyin"] == "cháng"
+        assert cc["characters"][1]["char"] == "春"
+        assert cc["characters"][1]["pinyin"] == "chūn"
+        assert "Songhua" in cc["substrate"] or "Yitong" in cc["substrate"]
+        assert "Langlentz-in-Chitân" in cc["synthesis"]
+
+        # Yamashiro (Japan)
+        assert "c_yamashiro" in sinosphere_calques
+        ys = sinosphere_calques["c_yamashiro"]
+        assert ys["hanzi"] == "山城"
+        assert ys["characters"][0]["char"] == "山"
+        assert "yama" in ys["characters"][0]["jp"]
+        assert ys["characters"][1]["char"] == "城"
+        assert "shiro" in ys["characters"][1]["jp"]
+
+        # Samhan / Goryeo (Korea)
+        assert "e_goryeo" in sinosphere_calques
+        eg = sinosphere_calques["e_goryeo"]
+        assert eg["hanzi"] == "三韩"
+        assert eg["characters"][0]["char"] == "三"
+        assert eg["characters"][0]["kr"] == "sam"
+        assert eg["characters"][1]["char"] == "韩"
+        assert eg["characters"][1]["kr"] == "han"
+
+    def test_geojson_and_tree_hanzi_integration(self, counties_data, tree_data):
+        yamashiro = next(f["properties"] for f in counties_data["features"] if f["properties"]["county"] == "c_yamashiro")
+        assert yamashiro.get("c_hanzi") == "山城"
+        assert yamashiro.get("k_hanzi") == "大和"
+        assert yamashiro.get("e_hanzi") == "日本"
+
+        assert tree_data["e_japan"]["hanzi"] == "日本"
+        assert tree_data["e_goryeo"]["hanzi"] == "三韩"
+        assert tree_data["e_zhongyuan"]["hanzi"] == "中原"

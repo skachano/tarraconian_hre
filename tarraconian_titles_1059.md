@@ -16,6 +16,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | CK3 Tier / Government | Primary Tarraconian Chancellery Title | Courtly / Romance-Substrate Variant | Prepositional Formula ("of ...") |
 | :--- | :--- | :--- | :--- |
 | **Roman Empire (`h_roman_empire`) / HRE (`e_hre`)** | **Dat Rômische Keiserrîch** / **Dat Hilige Rômische Keiserrîch** | **L'Imperi Rômisch** | — |
+| **Empire (`e_*`)** | **Dat Imperi** `[dat ɪm.ˈpɛ.ri]` | **Imperi** | **Dat Imperi van ...** / **Dat [Adjective] Imperi** |
 | **Kingdom (`k_*`)** | **Kûnincrich** `[ˈkyː.nɪŋk.riːç]` | **Regenat** `[rɛ.ɣə.ˈnat]` | **Kûnincrich van ...** / **Regenat van ...** |
 | **Duchy / Governorship (`d_*`)** | **Gubernat** `[ɡu.bər.ˈnat]` | **Herzogamt** `[ˈhɛr.tsɔx.amt]` | **Gubernat van ...** |
 | **Frontier Duchy / March (`d_*`)** | **March** `[marx]` | **Marchgrâfschaft** `[ˈmarx.ɡraːf.ʃaft]` | **March van ...** |
@@ -29,6 +30,60 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 > Whenever a Duchy or County was flagged in [anachronistic_titles_1059.md](archive/anachronistic_titles_1059.md), **both** Tarraconian translations are given:
 > 1. **Direct Tarraconian adaptation** of the in-game title, followed by
 > 2. **`[1059 Historical: ...]`** giving the Tarraconian translation of its resolved pre-1059 provincial centre, sub-barony (`b_*`), or geographic/in-game toponym!
+
+---
+
+## 2.0 Summary Table: The 47 De Jure Empires in Tarraconian (28 July 1194)
+
+| # | In-Game Empire | Title Key | Tarraconian Title (`Dat Imperi`) | IPA | Adjective | RE / Total Counties & Historical Rationale |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Germania** | `e_germany` | **Dat Frankische Imperi** *(or **Dat Imperi van Germânjen**)* | `[dat ˈfraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]` | *Frankisch* | **384/419 RE** — Carolingian/Frankish Western imperial sphere encompassing East Francia, Bavaria, Lotharingia, Italy, Burgundy, England, and Spain. |
+| 2 | **Arabian Empire** | `e_arabia` | **Dat Kalifische Imperi** *(or **Dat Imperi van dem Kalifât / Dat Arâbische Imperi**)* | `[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]` | *Kalifisch* | **134/157 RE** — Conquered 1136 from Hashimid Caliphs. Native institutional endonym al-Khilāfah ("The Stewardship/Caliphate"). |
+| 3 | **Rajasthan** | `e_rajastan` | **Dat Nordindische Imperi** *(or **Dat Imperi van Râdschastân**)* | `[dat ˈnɔrd.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]` | *Nordindisch* | **103/121 RE** — ⚠️ Early modern regional name applied to the ancient Indo-Gangetic Plain (Aryavarta / Harsha). |
+| 4 | **Francia** | `e_france` | **Dat Imperi van Vrancrîch** *(or **Dat Westvrankische Imperi**)* | `[dat ɪm.ˈpɛ.ri van ˈvraŋk.riːç]` | *Vrankisch* | **98/98 RE** — Pre-867 West Francia (Verdun 843 AD). Subdued by Chatenois in 920 AD. |
+| 5 | **Tibet** | `e_tibet` | **Dat Tibêtische Imperi** *(or **Dat Imperi van dem Hôgen Bôtlant**)* | `[dat tɪ.ˈbeː.tɪ.ʃə ɪm.ˈpɛ.ri]` | *Tibêtisch* | **93/146 RE** — Pre-867 Yarlung dynasty Tibetan Empire (Songtsen Gampo). Destroyed historically in 842 AD. |
+| 6 | **Scandinavia** | `e_scandinavia` | **Dat Imperi van dem Norderlant** *(or **Dat Norderlantsche Imperi / Dat Skandinavische Imperi**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈnɔr.dər.lant]` | *Norderlantsch* | **93/112 RE** — Conquered 1142 from House Hede (Norwegian). Native endonym Norðrlönd ("The Northlands"). |
+| 7 | **Jingyang** | `e_jingyang` | **Dat Imperi van Dôrnflôz** *(or **Dat Imperi van Dschingjâng**)* | `[dat ɪm.ˈpɛ.ri van ˈdoːrn.floːts]` | *Dôrnflôzisch* | **80/80 RE** — Pre-867 Nine Provinces: Jingzhou and Yangzhou along the Yangtze River. |
+| 8 | **Russia** | `e_russia` | **Dat Kîewsche Imperi** *(or **Dat Imperi van den Rûssen / Dat Imperi van dem Gârderîch**)* | `[dat ˈkiː.ɛf.ʃə ɪm.ˈpɛ.ri]` | *Kîewsch* | **77/77 RE** — Historical sovereign grand-princely realm of Kievan Rus', replacing anachronistic modern 'Russian Empire'. |
+| 9 | **Mali** | `e_mali` | **Dat Imperi van Gâna** *(or **Dat Gânasche Imperi / Dat Imperi van Wagadû**)* | `[dat ɪm.ˈpɛ.ri van ˈgaː.na]` | *Gânasch* | **75/75 RE** — Historical medieval imperial hegemon of the Western Sahel (Ghana / Wagadu); Mali Empire did not exist until 1235. |
+| 10 | **Turan** | `e_turan` | **Dat Sogdische Imperi** *(or **Dat Imperi van Sogdjên / Chwâresm**)* | `[dat ˈzɔg.dɪ.ʃə ɪm.ˈpɛ.ri]` | *Sogdisch* | **72/95 RE** — Sedentary cultural core and Samanid imperial seat of Sogdiana, replacing Persian epic mythological Turan. |
+| 11 | **Abyssinia** | `e_abyssinia` | **Dat Abessînische Imperi** *(or **Dat Imperi van Axûm / Ethjôpjen**)* | `[dat a.bɛ.ˈsiː.nɪ.ʃə ɪm.ˈpɛ.ri]` | *Abessînisch* | **72/72 RE** — ⚠️ Arabic al-Habasha / Abyssinia applied over ancient classical empire of Aksum. |
+| 12 | **Byzantine Empire** | `e_byzantium` | **Dat Grikische Imperi** *(or **Dat Imperi van Bisantz / Dat Ôstrômische Imperi**)* | `[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]` | *Grikisch* | **68/75 RE** — 18th-century exonym. Historical Frankish style Imperium Graecorum / Rhōmania. Subsumed into h_roman_empire. |
+| 13 | **Deccan Empire** | `e_deccan` | **Dat Karnâtische Imperi** *(or **Dat Tschôla-Imperi / Dat Sûtindische Imperi**)* | `[dat kar.ˈnaː.tɪ.ʃə ɪm.ˈpɛ.ri]` | *Karnâtisch* | **68/68 RE** — Authentic medieval imperial endonym used by Deccan emperors (Karnata Samrajya), replacing modern geographic construct South India. |
+| 14 | **Srivijaya** | `e_srivijaya` | **Dat Imperi van Glantz-Zêch** *(or **Dat Sêchhafte Imperi / Dat Srîwidschajische Imperi**)* | `[dat ɪm.ˈpɛ.ri van ˈɡlants.tseːç]` | *Glantz-Zêchisch* | **68/68 RE** — Conquered 1165 from House Śailēndra. Sanskrit Śrī-vijaya ("Radiant/Glorious Victory"). |
+| 15 | **Japan** | `e_japan` | **Dat Imperi van dem Sunnenufganch** *(or **Dat Sunnenlant / Dat Imperi van der Sunnenorigin**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋç]` | *Sunnenufganchisch* | **63/66 RE** — Conquered 1154 from Minabuchi dynasty. Native endonym Hinamoto / Nihon ("Origin of the Sun / Sunrise"). |
+| 16 | **Pracya** | `e_bengal` | **Dat Ôstindische Imperi** *(or **Dat Imperi van Bengâlen / Prâtschtschje**)* | `[dat ˈoːst.ɪn.dɪ.ʃə ɪm.ˈpɛ.ri]` | *Ôstindisch* | **63/64 RE** — Pre-867 Sanskrit Prācya / Pala Empire 750 AD. Destroyed historically in 550 AD. |
+| 17 | **Nusantara** | `e_nusantara` | **Dat Malukische Imperi** *(or **Dat Krûdinsels-Imperi**)* | `[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]` | *Malukisch* | **59/62 RE** — Representative kingdom of the Spice Islands; Nusantara is a late 14th-century Javanese concept and modern political term. |
+| 18 | **Suvarnabhumi** | `e_suvarnabhumi` | **Dat Pagânsche Imperi** *(or **Dat Imperi van dem Guldenlant**)* | `[dat pa.ˈgaːn.ʃə ɪm.ˈpɛ.ri]` | *Pagânsch* | **53/53 RE** — Historical sovereign medieval empire uniting Burma and Dvaravati (849–1287), replacing mythical Sanskrit Suvarnabhumi. |
+| 19 | **Lingnan** | `e_lingnan` | **Dat Imperi van dem Sûtrücke** *(or **Dat Imperi van Lingnân**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈzyːt.rʏ.kə]` | *Sûtrückisk* | **52/52 RE** — Pre-867 Nanyue / Nanling mountains / Tang Circuit of Lingnan and Annan. |
+| 20 | **Yongliang** | `e_yongliang` | **Dat Imperi van dem Kôlen-Vredelant** *(or **Dat Imperi van Jônglîang**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈkoː.lən.ˈvreː.də.lant]` | *Kôlvredisk* | **50/73 RE** — Pre-867 Nine Provinces: Yongzhou and Liangzhou (Hexi Corridor / Silk Road gateway). |
+| 21 | **Illyria** | `e_illyria` | **Dat Illîrische Imperi** *(or **Dat Adriatische Imperi / Dat Imperi van Illîrjen**)* | `[dat ɪl.ˈliː.rɪ.ʃə ɪm.ˈpɛ.ri]` | *Illîrisch* | **50/50 RE** — Classical Roman Praetorian Prefecture of Illyricum and the Adriatic maritime sphere. |
+| 22 | **Guinea** | `e_guinea` | **Dat Imperi van dem Swartzenlant** *(or **Dat Swartzenlantsche Imperi / Dat Guinêische Imperi**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈswar.tsən.lant]` | *Swartzenlantsch* | **49/89 RE** — Conquered 1187 from House Nyū. Berber Akal n-Iguinawen ("Land of the Black Peoples"). |
+| 23 | **Persian Empire** | `e_persia` | **Dat Persische Imperi** *(or **Dat Imperi van Êrânschahr / Irân**)* | `[dat ˈpɛr.zɪ.ʃə ɪm.ˈpɛ.ri]` | *Persisch* | **48/64 RE** — Pre-867 Sasanian Empire (Ērānshahr, fell 651 AD). Destroyed historically in 651 AD. |
+| 24 | **West-Slavia** | `e_west_slavia` | **Dat Westslavische Imperi** *(or **Dat Imperi van den West-Wenden**)* | `[dat ˈwɛst.slaː.vɪ.ʃə ɪm.ˈpɛ.ri]` | *Westslavisch* | **47/70 RE** — ⚠️ Modern 19th/20th-century historiographical coinage. Pre-867/1194 Germans called West Slavs Wenden. |
+| 25 | **Maghreb** | `e_maghreb` | **Dat Âfrikânsche Imperi** *(or **Dat Imperi van Affrîke / Kairouân**)* | `[dat aː.frɪ.ˈkaːn.ʃə ɪm.ˈpɛ.ri]` | *Âfrikânsch* | **45/46 RE** — Correcting vanilla inversion: this title holds Tunisia (Ifriqiya / ancient Africa Proconsularis) and the Sahara. |
+| 26 | **Africa** | `e_africa` | **Dat Mouritânische Imperi** *(or **Dat Imperi van dem Westmôrenlant / Fâs**)* | `[dat muː.rɪ.ˈtaː.nɪ.ʃə ɪm.ˈpɛ.ri]` | *Mouritânisch* | **43/43 RE** — Correcting vanilla inversion: this title holds Morocco and Tahert, which is historically Roman and Berber Mauretania. |
+| 27 | **Andong** | `e_andong` | **Dat Imperi van dem Ôstfrid** *(or **Dat Imperi van Andong**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈoːst.friːt]` | *Ôstfridisch* | **41/82 RE** — Pre-867 Tang Dynasty Protectorate General to Pacify the East (Andong Duhufu 668 AD). |
+| 28 | **Britannia** | `e_britannia` | **Dat Imperi van dem Wâllant** *(or **Dat Welsche Imperi / Dat Schottische Imperi**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈvaːl.lant]` | *Wâllendisch* | **40/40 RE** — Pre-867 Germanic/Old English exonym for the Insular Celtic realm (Wēalland / Valland). In 1059, England drifted to e_germany, leaving Gaelic Scotland and Ireland. |
+| 29 | **Zhongyuan** | `e_zhongyuan` | **Dat Imperi van dem Middenvelt** *(or **Dat Imperi van Dschôngjüan**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈmɪ.dən.vɛlt]` | *Middenveldsk* | **39/86 RE** — Pre-867 Classical Zhōngyuán (Central Plains of China / Han and Tang dynasties). |
+| 30 | **Aegyptus** | `e_aegyptus` | **Dat Êgyptische Imperi** *(or **Dat Imperi van Êgypten**)* | `[dat eː.ˈɡʏp.tɪ.ʃə ɪm.ˈpɛ.ri]` | *Êgyptisch* | **39/41 RE** — Pre-867 Roman Dioecesis Aegypti (Theodosius 381 AD). |
+| 31 | **Samhan** | `e_goryeo` | **Dat Hôchprachtige Imperi** *(or **Dat Imperi van den Drî-Hânen / Dat Imperi van Goryeo**)* | `[dat ˈhoːx.pɾax.tɪ.ʃə ɪm.ˈpɛ.ri]` | *Hôchprachtig* | **36/48 RE** — Conquered 1153 from House Aliyid. Native endonyms Goryeo (高麗 = "Lofty Splendor") and Samhan (三韓 = "Three Hans"). |
+| 32 | **Carpathia** | `e_carpathia` | **Dat Imperi van Datzjen** *(or **Dat Karpatische Imperi**)* | `[dat ɪm.ˈpɛ.ri van ˈda.tsjən]` | *Datzjisch* | **35/35 RE** — Pre-867 Roman Dacia Traiana (106 AD). Hungary drifted to e_germany, leaving Wallachia and Moldavia. |
+| 33 | **Khazaria** | `e_caspian-pontic_steppe` | **Dat Imperi van Chasârjen** *(or **Dat Pontisch-Kaspische Imperi**)* | `[dat ɪm.ˈpɛ.ri van xa.ˈzaː.rjən]` | *Chasârjisch* | **34/73 RE** — Pre-867 Khazar Khaganate (7th-10th c. AD, fortress Sarkel built 838 AD). |
+| 34 | **Kanem-Bornu** | `e_kanem_bornu` | **Dat Kanêm-Bornûische Imperi** *(or **Dat Imperi van dem Tsad-Sê**)* | `[dat ka.ˈneːm.bɔr.ˈnuː.ɪ.ʃə ɪm.ˈpɛ.ri]` | *Kanêm-Bornûisch* | **33/52 RE** — Pre-867 Kanem Empire (Sayfawa dynasty c. 700 AD). Bornu dual name is 14th-century capital shift. |
+| 35 | **Amur** | `e_amur` | **Dat Bohâi-Imperi** *(or **Dat Dschürtschen-Imperi**)* | `[dat boː.ˈhaːi ɪm.ˈpɛ.ri]` | *Bohâisch* | **32/32 RE** — Pre-867 historical sovereign empire of the Amur and Manchuria (Balhae/Bohai), replacing modern Russian/Tungusic river name Amur. |
+| 36 | **Kambuja** | `e_kambuja` | **Dat Angkôrsche Imperi** *(or **Dat Chmêrische Imperi**)* | `[dat aŋ.ˈkoːr.ʃə ɪm.ˈpɛ.ri]` | *Angkôrsch* | **32/32 RE** — Historical imperial capital and representative kingdom of Angkor (802–1431), replacing modern political Kampuchea. |
+| 37 | **Azania** | `e_azania` | **Dat Zandsch-Imperi** *(or **Dat Imperi van dem Zandsch / Dat Imperi van Azânjen**)* | `[dat ˈzandʒ ɪm.ˈpɛ.ri]` | *Zandschisch* | **31/36 RE** — Medieval Indian Ocean endonym for the Swahili coast (Zanj), replacing 1st-century Greco-Roman maritime label Azania. |
+| 38 | **Baltic Empire** | `e_wendish_empire` | **Dat Baltische Imperi** *(or **Dat Imperi van Litouwen-ende-Êstlant**)* | `[dat ˈbal.tɪ.ʃə ɪm.ˈpɛ.ri]` | *Baltisch* | **29/33 RE** — ⚠️ Paradox misnomer e_wendish_empire. Holds Lithuania and Estonia, no Wends. |
+| 39 | **Tartaria** | `e_tartaria` | **Dat Tartarische Imperi** *(or **Dat Imperi van Kiptschâk**)* | `[dat tar.ˈtaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | *Tartarisch* | **28/109 RE** — ⚠️ Late medieval Western umbrella term Tartaria for the Cuman-Kipchak steppe. |
+| 40 | **Anatolia** | `e_anatolia` | **Dat Anatôlische Imperi** *(or **Dat Imperi van Anatôljen**)* | `[dat a.na.ˈtoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | *Anatôlisch* | **27/31 RE** — Pre-867 Byzantine Anatolic Theme / Classical Asia Minor. |
+| 41 | **Oriens** | `e_oriens` | **Dat Imperi van dem Môrghenlant** *(or **Dat Sîrische Imperi / Dat Imperi van Ôrjent**)* | `[dat ɪm.ˈpɛ.ri van dɛm ˈmoːr.ɡən.lant]` | *Môrghenlendisch* | **22/22 RE** — Pre-867 Roman Dioecesis Orientis (Diocletian 297 AD, capital Antioch). |
+| 42 | **Macedonia** | `e_macedonia` | **Dat Imperi van Bizantjen** *(or **Dat Bizantinische Imperi / Dat Hellênische Imperi**)* | `[dat ɪm.ˈpɛ.ri van bɪ.ˈtsan.tjən]` | *Bizantinisch* | **17/17 RE** — Renamed from Macedonia: consists of Classical Hellas (Athens, Peloponnese, Aegean) and Thrace with the imperial city of Byzantion (Constantinople). Historical Macedonia is in e_byzantium. |
+| 43 | **Volga-Ural** | `e_volga-ural` | **Dat Bulgârische Imperi** *(or **Dat Wolga-Bulgârische Imperi / Dat Imperi van Bolgâr**)* | `[dat bʊl.ˈgaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | *Bulgârisch* | **11/46 RE** — Replaced Soviet-era geographic neologism Volga-Ural with the historical sovereign medieval empire of Volga Bulgaria. |
+| 44 | **Mongolia** | `e_mongolia` | **Dat Mongolische Imperi** *(or **Dat Imperi van dem Hilligen Ôtüken**)* | `[dat mɔn.ˈɡoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | *Mongolisch* | **7/100 RE** — ⚠️ Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken. |
+| 45 | **Kirghiz Khanate** | `e_kirghiz_khanate` | **Dat Kirgîsische Imperi** *(or **Dat Imperi van den Kirgîsen / Naimânen**)* | `[dat kɪr.ˈɡiː.zɪ.ʃə ɪm.ˈpɛ.ri]` | *Kirgîsisch* | **4/32 RE** — Pre-867 Yenisei Kirghiz Khaganate (840 AD). Holds only Naimania in save. |
+| 46 | **Liangyi** | `e_liangyi` | **Dat Imperi van Lîangjî** *(or **Dat Sîtschuânsche Imperi**)* | `[dat ɪm.ˈpɛ.ri van ˈliː.aŋ.jiː]` | *Lîangjîsch* | **0/89 RE** — Pre-867 Nine Provinces: Liangzhou and Yizhou (Sichuan basin & Yunnan). Independent in save. |
+| 47 | **Siberia** | `e_siberia` | **Dat Jûgrische Imperi** *(or **Dat Imperi van Jûgren / Dat Imperi van dem Ôb**)* | `[dat ˈjuː.grɪ.ʃə ɪm.ˈpɛ.ri]` | *Jûgrisch* | **0/45 RE** — Medieval Uralic endonym and Novgorodian designation Yugra, replacing post-1400 Tatar/Russian Sibir. |
 
 ---
 
@@ -46,10 +101,10 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 8 | **Poland** | `k_poland` | **Kûnincrich van Pôlen** | `[ˈpoː.lən]` | **13/36 RE** — MHG *Pôlen*. |
 | 9 | **Hungary** | `k_hungary` | **Kûnincrich van Ungern** | `[ˈʊŋ.ɡərn]` | **34/34 RE** — MHG *Ungern*. |
 | 10 | **Egypt** | `k_egypt` | **Kûnincrich van Egipten** | `[ɛ.ˈɡɪp.tən]` | **30/31 RE** — MHG *Egipten* / Catalan *Egipte*. |
-| 11 | **Norway** | `k_norway` | **Kûnincrich van Norwêgen** | `[ˈnɔr.weː.ɣən]` | **30/30 RE** — MHG *Norwêgen*. |
+| 11 | **Norway** | `k_norway` | **Kûnincrich van Norderwech** | `[ˈnɔr.dər.wɛç]` | *Norderwêgisch* | **30/30 RE** — Calque of Old Norse *Norðrvegr* ("North Way"); native realm conquered in 1142. |
 | 12 | **Scotland** | `k_scotland` | **Kûnincrich van Schotlant** | *Schottisch* | **26/26 RE** — Added in 1122 Imperial Chancellery update. |
 | 13 | **Lithuania** | `k_lithuania` | **Kûnincrich van Littouwen** | *Littouwisch* | **22/26 RE** — Added in 1122 Imperial Chancellery update. |
-| 14 | **Sweden** | `k_sweden` | **Kûnincrich van Swêden** | *Swêdisch* | **25/25 RE** — Added in 1122 Imperial Chancellery update. |
+| 14 | **Sweden** | `k_sweden` | **Kûnincrich van Swêarîch** | `[ˈsweː.a.riːç]` | *Swêarîchisch* | **25/25 RE** — Calque of Old Norse *Svíaríki* ("Realm of the Swedes"); native realm conquered in 1142. |
 | 15 | **Croatia** | `k_croatia` | **Kûnincrich van Croatjen** *(or **Kroatîe**)* | `[kro.ˈa.tjən]` | **24/24 RE** — Latin/Catalan *Croàcia* + MHG *-jen*. |
 | 16 | **Sápmi** | `k_sapmi` | **Kûnincrich van Sâpmi** *(1142 Hist: **Kûnincrich van Finnmarch**)* | *Sâmisch* | **24/24 RE** — Added in 1142 Imperial Chancellery update. |
 | 17 | **Maghreb** | `k_maghreb` | **Kûnincrich van Magrep** *(or **Mauretanjen**)* | `[ma.ˈɣrɛp]` | **24/24 RE** — Arabic *al-Maghrib* via Catalan *Magrep*. |
@@ -722,7 +777,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.15 Kingdom of Norway (`k_norway`) $\rightarrow$ **Kûnincrich van Norwêgen**
+### 3.15 Kingdom of Norway (`k_norway`) $\rightarrow$ **Kûnincrich van Norderwech**
 
 * **Duchy of Víkin** (`d_viken`) $\rightarrow$ **Gubernat van Wîken**
   * `c_vingulmork` (Vingulmörk) $\rightarrow$ **Magistrat van Wingulmarch** *(or **Ôslô**)*
@@ -1636,7 +1691,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.47 Kingdom of Thessalonika (`k_thessalonika`) $\rightarrow$ **Kûnincrich van Thessalonîke**
+### 3.47 Kingdom of Byzantion (`k_thessalonika`) $\rightarrow$ **Kûnincrich van Bizantjen**
 
 * **Duchy of Thrace** (`d_thrace`) $\rightarrow$ **Gubernat van Thrâkjen**
   * `c_byzantion` (**[HRE]** Byzantion) $\rightarrow$ **Magistrat van Konstantinôpel** (`[1122 Historical: Magistrat van Bîsantz]`)
@@ -1778,7 +1833,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.54 Kingdom of Sweden (`k_sweden`) $\rightarrow$ **Kûnincrich van Swêden**
+### 3.54 Kingdom of Sweden (`k_sweden`) $\rightarrow$ **Kûnincrich van Swêarîch**
 
 * **Duchy of Uppland (Svealand)** (`d_svealand`) $\rightarrow$ **Gubernat van Swêalant**
   * `c_upland` (**[HRE]** Uppland) $\rightarrow$ **Magistrat van Oplant** (`[1122 Historical: Magistrat van Sigtûne]`)

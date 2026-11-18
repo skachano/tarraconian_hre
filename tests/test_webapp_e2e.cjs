@@ -139,8 +139,8 @@ async function runE2ETests() {
     const bcEmpire = await page.locator('#bc-empire').innerText();
     const bcKingdom = await page.locator('#bc-kingdom').innerText();
     console.log(`  Lineage: Empire="${bcEmpire}", Kingdom="${bcKingdom}"`);
-    if (!bcEmpire.includes('Germania') && !bcEmpire.includes('Germany')) {
-      throw new Error(`Expected Germania empire breadcrumb, got "${bcEmpire}"`);
+    if (!bcEmpire.includes('Germania') && !bcEmpire.includes('Germany') && !bcEmpire.includes('Dütsch') && !bcEmpire.includes('Frankisch')) {
+      throw new Error(`Expected Germania / Dat Frankische Imperi empire breadcrumb, got "${bcEmpire}"`);
     }
     if (!bcKingdom.includes('Ungern') && !bcKingdom.includes('Hungary')) {
       throw new Error(`Expected Hungarian kingdom breadcrumb, got "${bcKingdom}"`);
@@ -191,8 +191,8 @@ async function runE2ETests() {
     if (secondOrigin !== 'Middle Seaxe') {
       throw new Error(`Expected drawer origin name "Middle Seaxe", got "${secondOrigin}"`);
     }
-    if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany')) {
-      throw new Error(`Expected Germania empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
+    if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany') && !secondEmpire.includes('Dütsch') && !secondEmpire.includes('Frankisch')) {
+      throw new Error(`Expected Germania / Dat Frankische Imperi empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
     }
     if (!secondKingdom.includes('Engellant') && !secondKingdom.includes('England')) {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
@@ -579,8 +579,136 @@ async function runE2ETests() {
       }
     }
 
-    // 5. Test Mouse Movement & Zero Residual Highlighting
-    console.log('[6/7] Testing mouse hover sweep across territories (verifying zero residual highlights)...');
+    // 5.5 Test Imperial Linguistics Guide Modal & Hanzi Lexicon
+    console.log('[6/8] Testing Imperial Linguistics & Toponymic Guide Modal...');
+    const openGuideBtn = page.locator('#btn-open-linguistics');
+    if (!(await openGuideBtn.isVisible())) {
+      throw new Error('#btn-open-linguistics button is not visible');
+    }
+    await openGuideBtn.click();
+    await page.waitForSelector('#linguistics-modal:not(.hidden)', { timeout: 3000 });
+    console.log('  Linguistics modal opened successfully.');
+
+    // Tab 1: Tarraconian Language & Phonotactics
+    const tarrPaneActive = await page.locator('#tab-pane-tarraconian').evaluate(el => !el.classList.contains('hidden') && el.classList.contains('active'));
+    if (!tarrPaneActive) {
+      throw new Error('Expected #tab-pane-tarraconian to be active by default');
+    }
+    const tarrPaneText = await page.locator('#tab-pane-tarraconian').innerText();
+    if (!tarrPaneText.includes('Sociolinguistic Overview') || !tarrPaneText.includes('reverse Frankish')) {
+      throw new Error('Missing expected content in Tarraconian linguistics tab');
+    }
+
+    // Switch to Tab 2: Sinosphere Titles & Hanzi Calques
+    console.log('  Testing tab switch to Sinosphere Titles & Hanzi Calques...');
+    const sinoTabBtn = page.locator('.modal-tab-btn[data-tab="sinosphere"]');
+    await sinoTabBtn.click();
+    await page.waitForSelector('#tab-pane-sinosphere.active:not(.hidden)', { timeout: 3000 });
+    const sinoPaneText = await page.locator('#tab-pane-sinosphere').innerText();
+    if (!sinoPaneText.includes('Dual Toponymic Adoption Protocol') || !sinoPaneText.includes('1154 AD')) {
+      throw new Error('Missing expected content in Sinosphere calque doctrine tab');
+    }
+
+    // Switch to Tab 3: Hanzi Calque Lexicon
+    console.log('  Testing tab switch to Hanzi Calque Lexicon (641 Characters)...');
+    const lexiconTabBtn = page.locator('.modal-tab-btn[data-tab="lexicon"]');
+    await lexiconTabBtn.click();
+    await page.waitForSelector('#tab-pane-lexicon.active:not(.hidden)', { timeout: 3000 });
+    await page.waitForSelector('#lexicon-table-body tr td.lexicon-hanzi-cell', { timeout: 10000 });
+    const initialKanjiCount = await page.locator('#lexicon-table-body tr').count();
+    console.log(`  Initial Hanzi Lexicon rendered rows: ${initialKanjiCount}`);
+    if (initialKanjiCount !== 641) {
+      throw new Error(`Expected 641 Hanzi rows, found ${initialKanjiCount}`);
+    }
+
+    // Test Lexicon Search Filter
+    console.log('  Testing Hanzi Lexicon search filter for "城"...');
+    const lexiconSearch = page.locator('#lexicon-search-input');
+    await lexiconSearch.fill('城');
+    await page.waitForTimeout(300);
+    const filteredKanjiCount = await page.locator('#lexicon-table-body tr').count();
+    console.log(`  Filtered Hanzi rows for "城": ${filteredKanjiCount}`);
+    if (filteredKanjiCount === 0 || filteredKanjiCount >= 641) {
+      throw new Error(`Expected filtered count for "城" between 1 and 640, got ${filteredKanjiCount}`);
+    }
+
+    // Clear Lexicon Search
+    const clearLexiconBtn = page.locator('#lexicon-search-clear');
+    await clearLexiconBtn.click();
+    await page.waitForTimeout(300);
+    const restoredKanjiCount = await page.locator('#lexicon-table-body tr').count();
+    if (restoredKanjiCount !== 641) {
+      throw new Error(`Expected restored count 641 after clearing filter, got ${restoredKanjiCount}`);
+    }
+
+    // Close Modal
+    console.log('  Closing Linguistics modal...');
+    const closeGuideBtn = page.locator('#btn-close-linguistics');
+    await closeGuideBtn.click();
+    await page.waitForSelector('#linguistics-modal', { state: 'hidden', timeout: 3000 });
+    console.log('  Linguistics modal closed successfully.');
+
+    // 5.6 Test Sinosphere Hanzi Search & Drawer Card Integration
+    console.log('  Testing Sinosphere title search by Hanzi "山城" (Yamashiro)...');
+    await searchInput.fill('山城');
+    await page.waitForSelector('#search-results .search-item[data-key="c_yamashiro"]', { timeout: 5000 });
+    const yamashiroResult = page.locator('#search-results .search-item[data-key="c_yamashiro"]');
+    const hanziBadgeText = await yamashiroResult.locator('.result-hanzi').innerText();
+    console.log(`  Autocomplete Hanzi badge found: "${hanziBadgeText}"`);
+    if (hanziBadgeText !== '山城') {
+      throw new Error(`Expected .result-hanzi badge "山城", got "${hanziBadgeText}"`);
+    }
+
+    await yamashiroResult.click();
+    await page.waitForSelector('#inspector-drawer.open', { timeout: 5000 });
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_yamashiro';
+    }, { timeout: 5000 });
+
+    const sinoGroupVisible = await page.locator('#drawer-sinosphere-group').evaluate(el => !el.classList.contains('hidden'));
+    if (!sinoGroupVisible) {
+      throw new Error('Expected #drawer-sinosphere-group to be visible for c_yamashiro');
+    }
+
+    const drawerHanzi = await page.locator('#drawer-sinosphere-hanzi').innerText();
+    const drawerReading = await page.locator('#drawer-sinosphere-reading').innerText();
+    const drawerSynthesis = await page.locator('#drawer-sinosphere-synthesis').innerText();
+    console.log(`  Yamashiro Sinosphere Card: Hanzi="${drawerHanzi}", Reading="${drawerReading}", Synthesis="${drawerSynthesis}"`);
+    if (drawerHanzi !== '山城') {
+      throw new Error(`Expected drawer Hanzi "山城", got "${drawerHanzi}"`);
+    }
+    if (!drawerReading.includes('Yamashiro')) {
+      throw new Error(`Expected reading to include "Yamashiro", got "${drawerReading}"`);
+    }
+    if (!drawerSynthesis.includes('Berchburch')) {
+      throw new Error(`Expected synthesis to include "Berchburch", got "${drawerSynthesis}"`);
+    }
+
+    // Verify character breakdown pills
+    const pillCount = await page.locator('#drawer-sinosphere-breakdown .sinosphere-char-pill').count();
+    console.log(`  Yamashiro character pill count: ${pillCount}`);
+    if (pillCount !== 2) {
+      throw new Error(`Expected 2 character pills for 山城, got ${pillCount}`);
+    }
+
+    // Test that selecting a non-Sinosphere title hides the Sinosphere card
+    console.log('  Testing that non-Sinosphere selection hides #drawer-sinosphere-group...');
+    await searchInput.fill('c_middlesex');
+    await page.waitForSelector('#search-results .search-item[data-key="c_middlesex"]', { timeout: 5000 });
+    const midItem = page.locator('#search-results .search-item[data-key="c_middlesex"]');
+    await midItem.click();
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_middlesex';
+    }, { timeout: 5000 });
+
+    const sinoGroupHiddenForMid = await page.locator('#drawer-sinosphere-group').evaluate(el => el.classList.contains('hidden'));
+    if (!sinoGroupHiddenForMid) {
+      throw new Error('Expected #drawer-sinosphere-group to be hidden for non-Sinosphere title c_middlesex');
+    }
+    console.log('  Non-Sinosphere reset verified: #drawer-sinosphere-group is hidden.');
+
+    // 6. Test Mouse Movement & Zero Residual Highlighting
+    console.log('[7/8] Testing mouse hover sweep across territories (verifying zero residual highlights)...');
     // Close drawer to test clean canvas sweep
     const closeBtn = page.locator('#drawer-close');
     if (await closeBtn.isVisible()) {
@@ -620,8 +748,8 @@ async function runE2ETests() {
     }
     console.log('  Mouse movement sweep verified: exactly 0 residual highlights.');
 
-    // 6. Test Paradox Disclaimer & Take Preview Screenshot
-    console.log('[7/7] Verifying Paradox interactive fan notice and capturing preview...');
+    // 7. Test Paradox Disclaimer & Take Preview Screenshot
+    console.log('[8/8] Verifying Paradox interactive fan notice and capturing preview...');
     const footerText = await page.locator('.footer-disclaimer').innerText();
     if (!footerText.includes('Paradox Interactive AB') || !footerText.includes('non-commercial')) {
       throw new Error(`Missing Paradox disclaimer in footer: "${footerText}"`);

@@ -422,11 +422,11 @@ def parse_empire_names(md_path: Path):
         return empires
     with open(md_path, "r", encoding="utf-8") as f:
         for line in f:
-            m = re.match(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([^`]+)`", line)
+            m = re.match(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([^`]+)`(?:\s*\|\s*\*\*([^*]+)\*\*)?", line)
             if m:
-                name, key = m.group(1).strip(), m.group(2).strip()
+                origin, key, tarr = m.group(1).strip(), m.group(2).strip(), m.group(3)
                 if key.startswith("e_") or key.startswith("h_"):
-                    empires[key] = name
+                    empires[key] = tarr.strip() if tarr else origin
     return empires
 
 
@@ -590,18 +590,24 @@ def parse_title_origins(
     if audit_md_path and audit_md_path.exists():
         text = audit_md_path.read_text(encoding="utf-8")
         p_audit = re.compile(
-            r"^\|\s*`([cdk]_[a-zA-Z0-9_\-]+)`\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|",
+            r"^\|\s*`([cdkeh]_[a-zA-Z0-9_\-]+)`\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|",
             re.MULTILINE,
         )
         for m in p_audit.finditer(text):
             k = m.group(1).strip()
+            col4 = clean_md(m.group(4))
             reason = clean_md(m.group(5))
             res = clean_md(m.group(6))
             just = clean_md(m.group(9))
             if k not in anach_reasons:
                 m_c = re.search(r"\(([^)]+)\)", res)
                 centre = m_c.group(1).strip() if m_c else res
-                clean_reason = just if just else reason
+                if "Pre-867" in col4:
+                    clean_reason = col4
+                elif k.startswith("e_"):
+                    clean_reason = col4 if col4 else (just if just else reason)
+                else:
+                    clean_reason = just if just else reason
                 anach_reasons[k] = {"reason": clean_reason, "centre": centre}
 
     # 3. Parse tarraconian_titles_1059.md
@@ -736,14 +742,10 @@ def parse_title_origins(
             origin = m.group(1).strip()
             ek = m.group(2)
             if ek.startswith("e_"):
+                e_origins[ek] = origin
                 if ek in anach_reasons:
-                    info = anach_reasons[ek]
-                    c_txt = info["centre"]
-                    r_txt = info["reason"]
-                    e_origins[ek] = f"{c_txt} (in-game: {origin})"
-                    e_anachronisms[ek] = r_txt
+                    e_anachronisms[ek] = anach_reasons[ek]["reason"]
                 else:
-                    e_origins[ek] = origin
                     e_anachronisms[ek] = ""
             elif ek.startswith("k_") and ek not in k_origins:
                 if ek in anach_reasons:
@@ -796,7 +798,10 @@ def parse_title_ipa(md_path: Path):
             for b in m_brackets:
                 b_clean = b.strip("`")
                 if any(c in b_clean for c in "ˈˌːɛɔʊɪʏøœ̃ŋʃʒθðçɣχʁʔɲʎ") or ("." in b_clean and len(b_clean.split()) == 1):
-                    k_ipa[kk] = f"[{b_clean}]"
+                    if kk.startswith("e_") or kk.startswith("h_"):
+                        e_ipa[kk] = f"[{b_clean}]"
+                    else:
+                        k_ipa[kk] = f"[{b_clean}]"
                     break
             continue
 
@@ -887,6 +892,15 @@ def build_and_write_title_tree(
     if k_ipa is None: k_ipa = {}
     if e_ipa is None: e_ipa = {}
 
+    sino_path = tree_out_path.parent / "sinosphere_hanzi_calques.json"
+    sino_db = {}
+    if sino_path.exists():
+        try:
+            with open(sino_path, "r", encoding="utf-8") as f:
+                sino_db = json.load(f)
+        except Exception:
+            pass
+
     save_title_tree = {}
     for c_key, info in county_info.items():
         e_k = info.get("empire")
@@ -899,7 +913,7 @@ def build_and_write_title_tree(
     enriched_tree = {}
     for e_k in sorted(save_title_tree.keys()):
         kingdoms = save_title_tree[e_k]
-        e_tarr_name = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, e_k)))
+        e_tarr_name = empire_names.get(e_k, gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", e_k)))
         e_origin = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
         e_entry = {
             "key": e_k,
@@ -910,6 +924,8 @@ def build_and_write_title_tree(
             "color": empire_colors.get(e_k, "#a64b38"),
             "kingdoms": {},
         }
+        if e_k in sino_db and sino_db[e_k].get("hanzi"):
+            e_entry["hanzi"] = sino_db[e_k]["hanzi"]
         for k_k in sorted(kingdoms.keys()):
             duchies = kingdoms[k_k]
             k_tarr_name = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", k_k)))
@@ -923,6 +939,8 @@ def build_and_write_title_tree(
                 "color": kingdom_colors.get(k_k, "#b88228"),
                 "duchies": {},
             }
+            if k_k in sino_db and sino_db[k_k].get("hanzi"):
+                k_entry["hanzi"] = sino_db[k_k]["hanzi"]
             for d_k in sorted(duchies.keys()):
                 counties = duchies[d_k]
                 d_tarr_name = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", d_k)))
@@ -936,6 +954,8 @@ def build_and_write_title_tree(
                     "color": duchy_colors.get(d_k, "#2e649e"),
                     "counties": {},
                 }
+                if d_k in sino_db and sino_db[d_k].get("hanzi"):
+                    d_entry["hanzi"] = sino_db[d_k]["hanzi"]
                 for c_k in sorted(counties.keys()):
                     b_list = counties[c_k]
                     c_origin = c_origins.get(c_k, format_title_key(c_k))
@@ -952,6 +972,8 @@ def build_and_write_title_tree(
                         "color": county_colors.get(c_k, "#3b7d4e"),
                         "baronies": b_list,
                     }
+                    if c_k in sino_db and sino_db[c_k].get("hanzi"):
+                        c_entry["hanzi"] = sino_db[c_k]["hanzi"]
                     d_entry["counties"][c_k] = c_entry
                 k_entry["duchies"][d_k] = d_entry
             e_entry["kingdoms"][k_k] = k_entry
@@ -1001,6 +1023,15 @@ def realign_existing_datasets(
     if k_ipa is None: k_ipa = {}
     if e_ipa is None: e_ipa = {}
 
+    sino_path = out_dir / "sinosphere_hanzi_calques.json"
+    sino_db = {}
+    if sino_path.exists():
+        try:
+            with open(sino_path, "r", encoding="utf-8") as f:
+                sino_db = json.load(f)
+        except Exception:
+            pass
+
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
 
@@ -1037,7 +1068,7 @@ def realign_existing_datasets(
                 props["k_tarr_direct"] = gaz[k_k].get("direct", "")
                 props["k_tarr_hist"] = gaz[k_k].get("hist", "")
         if e_k:
-            props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+            props["e_tarr"] = empire_names.get(e_k, gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", "")))
             if e_k in gaz:
                 props["e_tarr_direct"] = gaz[e_k].get("direct", "")
                 props["e_tarr_hist"] = gaz[e_k].get("hist", "")
@@ -1060,6 +1091,15 @@ def realign_existing_datasets(
         if d_k: props["d_ipa"] = d_ipa.get(d_k, "")
         if k_k: props["k_ipa"] = k_ipa.get(k_k, "")
         if e_k: props["e_ipa"] = e_ipa.get(e_k, "")
+
+        # Sinosphere Hanzi & Calques
+        s_c = sino_db.get(c_k, {})
+        props["c_hanzi"] = s_c.get("hanzi", "")
+        if s_c.get("synthesis"):
+            props["c_calque"] = s_c.get("synthesis", "")
+        if d_k: props["d_hanzi"] = sino_db.get(d_k, {}).get("hanzi", "")
+        if k_k: props["k_hanzi"] = sino_db.get(k_k, {}).get("hanzi", "")
+        if e_k: props["e_hanzi"] = sino_db.get(e_k, {}).get("hanzi", "")
 
         county_info[c_k] = {
             "county": c_k,
@@ -1102,7 +1142,7 @@ def realign_existing_datasets(
                 props["k_tarr_direct"] = gaz[k_k].get("direct", "")
                 props["k_tarr_hist"] = gaz[k_k].get("hist", "")
         if e_k:
-            props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+            props["e_tarr"] = empire_names.get(e_k, gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", "")))
             if e_k in gaz:
                 props["e_tarr_direct"] = gaz[e_k].get("direct", "")
                 props["e_tarr_hist"] = gaz[e_k].get("hist", "")
@@ -1134,6 +1174,10 @@ def realign_existing_datasets(
         if d_k: props["d_ipa"] = d_ipa.get(d_k, "")
         if k_k: props["k_ipa"] = k_ipa.get(k_k, "")
         if e_k: props["e_ipa"] = e_ipa.get(e_k, "")
+        if c_k and c_k in sino_db and sino_db[c_k].get("hanzi"):
+            props["c_hanzi"] = sino_db[c_k]["hanzi"]
+        else:
+            props["c_hanzi"] = ""
 
     # Compute collision-free map colors
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
@@ -1443,6 +1487,14 @@ def main():
     # 7. Extract Barony Polygons
     t0 = time.time()
     print("Extracting vector polygons for baronies...")
+    sino_path = out_dir / "sinosphere_hanzi_calques.json"
+    sino_db = {}
+    if sino_path.exists():
+        try:
+            with open(sino_path, "r", encoding="utf-8") as f:
+                sino_db = json.load(f)
+        except Exception:
+            pass
     barony_features = []
     county_polygons = {}  # c_key -> list of Shapely geoms
     county_info = {}  # c_key -> dict
@@ -1502,7 +1554,7 @@ def main():
                 props["k_tarr_direct"] = gaz[k_key].get("direct", "")
                 props["k_tarr_hist"] = gaz[k_key].get("hist", "")
         if e_key:
-            props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
+            props["e_tarr"] = empire_names.get(e_key, gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", "")))
             if e_key in gaz:
                 props["e_tarr_direct"] = gaz[e_key].get("direct", "")
                 props["e_tarr_hist"] = gaz[e_key].get("hist", "")
@@ -1580,7 +1632,7 @@ def main():
                     props["k_tarr_direct"] = gaz[k_key].get("direct", "")
                     props["k_tarr_hist"] = gaz[k_key].get("hist", "")
             if e_key:
-                props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
+                props["e_tarr"] = empire_names.get(e_key, gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", "")))
                 if e_key in gaz:
                     props["e_tarr_direct"] = gaz[e_key].get("direct", "")
                     props["e_tarr_hist"] = gaz[e_key].get("hist", "")
@@ -1603,6 +1655,15 @@ def main():
             if d_key: props["d_ipa"] = d_ipa.get(d_key, "")
             if k_key: props["k_ipa"] = k_ipa.get(k_key, "")
             if e_key: props["e_ipa"] = e_ipa.get(e_key, "")
+
+            # Sinosphere Hanzi & Calques
+            s_c = sino_db.get(c_key, {})
+            props["c_hanzi"] = s_c.get("hanzi", "")
+            if s_c.get("synthesis"):
+                props["c_calque"] = s_c.get("synthesis", "")
+            if d_key: props["d_hanzi"] = sino_db.get(d_key, {}).get("hanzi", "")
+            if k_key: props["k_hanzi"] = sino_db.get(k_key, {}).get("hanzi", "")
+            if e_key: props["e_hanzi"] = sino_db.get(e_key, {}).get("hanzi", "")
 
             county_features.append({
                 "type": "Feature",
