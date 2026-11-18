@@ -522,6 +522,38 @@ async function runE2ETests() {
       throw new Error(`Expected barony holding colors among sample, found only: ${matchedColors.join(', ')}`);
     }
 
+    // Test inspecting an unoccupied barony: name is blank, origin group hidden, only title key and hierarchy visible
+    console.log('  Testing unoccupied barony inspection...');
+    const hasUnoccupied = await page.evaluate(() => {
+      const p = Array.from(document.querySelectorAll('#map svg path'))
+        .find(el => el.getAttribute('fill') === '#424242');
+      if (p) {
+        p.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        return true;
+      }
+      return false;
+    });
+    if (hasUnoccupied) {
+      await page.waitForTimeout(200);
+      const drawerTitle = await page.locator('#drawer-tarr-name').innerText();
+      if (drawerTitle.trim() !== '') {
+        throw new Error(`Expected blank title name for unoccupied barony, got "${drawerTitle}"`);
+      }
+      const originHidden = await page.locator('#drawer-origin-group').evaluate(el => el.classList.contains('hidden'));
+      if (!originHidden) {
+        throw new Error('Expected #drawer-origin-group to be hidden for unoccupied barony');
+      }
+      const titleKey = await page.locator('#drawer-title-key').innerText();
+      if (!titleKey || !titleKey.startsWith('b_')) {
+        throw new Error(`Expected valid barony title key, got "${titleKey}"`);
+      }
+      const tierBadge = await page.locator('#drawer-tier-badge').innerText();
+      if (!tierBadge.includes('UNOCCUPIED')) {
+        throw new Error(`Expected UNOCCUPIED tier badge, got "${tierBadge}"`);
+      }
+      console.log(`  Unoccupied barony verified: key="${titleKey}", title name is blank, origin group hidden.`);
+    }
+
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');
     await countyBtn.click();

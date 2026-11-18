@@ -1072,6 +1072,8 @@ def realign_existing_datasets(
     with open(baronies_path, "r", encoding="utf-8") as f:
         baronies_fc = json.load(f)
 
+    barony_holdings = load_barony_holdings_map(out_dir.parent)
+
     for feat in baronies_fc["features"]:
         props = feat["properties"]
         c_k = props.get("county")
@@ -1106,7 +1108,12 @@ def realign_existing_datasets(
                 props["e_tarr_hist"] = gaz[e_k].get("hist", "")
 
         # Historical Title Name Origins & Anachronisms from Markdown Files
-        props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
+        ht_pre = barony_holdings.get(props.get("barony", ""), "unoccupied")
+        if ht_pre == "unoccupied":
+            props["name"] = ""
+            props["b_origin"] = ""
+        else:
+            props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
         props["b_anachronism"] = ""
         if c_k:
             props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
@@ -1162,6 +1169,9 @@ def realign_existing_datasets(
         p["holding_type"] = ht
         p["holding_type_name"] = BARONY_HOLDING_NAMES.get(ht, "Unoccupied")
         p["b_color"] = BARONY_HOLDING_COLORS.get(ht, "#424242")
+        if ht == "unoccupied":
+            p["name"] = ""
+            p["b_origin"] = ""
         p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
         p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
         p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"
@@ -1635,6 +1645,9 @@ def main():
         p["holding_type"] = ht
         p["holding_type_name"] = BARONY_HOLDING_NAMES.get(ht, "Unoccupied")
         p["b_color"] = BARONY_HOLDING_COLORS.get(ht, "#424242")
+        if ht == "unoccupied":
+            p["name"] = ""
+            p["b_origin"] = ""
         p["c_color"] = c_colors.get(ck, "#3b7d4e") if ck else "#3d3832"
         p["d_color"] = d_colors.get(dk, "#2e649e") if dk else "#3d3832"
         p["k_color"] = k_colors.get(kk, "#b88228") if kk else "#3d3832"

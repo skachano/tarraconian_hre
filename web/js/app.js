@@ -368,9 +368,15 @@ function onHover(layer, feature, tier = currentTier) {
     let rankLabel = '';
 
     if (tier === 'barony') {
-      const htName = p.holding_type_name || (p.holding_type ? p.holding_type.charAt(0).toUpperCase() + p.holding_type.slice(1) : '');
-      rankLabel = htName ? `Holding (${htName})` : 'Holding';
-      titleName = p.name || formatKey(p.barony);
+      const isUnoccupied = p.holding_type === 'unoccupied';
+      if (isUnoccupied) {
+        rankLabel = 'Holding (Unoccupied)';
+        titleName = '';
+      } else {
+        const htName = p.holding_type_name || (p.holding_type ? p.holding_type.charAt(0).toUpperCase() + p.holding_type.slice(1) : '');
+        rankLabel = htName ? `Holding (${htName})` : 'Holding';
+        titleName = p.name || formatKey(p.barony);
+      }
     } else if (tier === 'county') {
       rankLabel = 'County';
       titleName = p.tarr_hist || p.tarr_direct || p.tarr || formatKey(p.county);
@@ -385,7 +391,11 @@ function onHover(layer, feature, tier = currentTier) {
       titleName = p.e_tarr || formatKey(p.empire);
     }
 
-    hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
+    if (tier === 'barony' && p.holding_type === 'unoccupied') {
+      hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
+    } else {
+      hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
+    }
   }
 }
 
@@ -456,10 +466,17 @@ function openInspector(props, tier) {
   const bcDuchy = document.getElementById('bc-duchy');
   const bcCounty = document.getElementById('bc-county');
 
+  const originGroup = document.getElementById('drawer-origin-group');
+  const isUnoccupiedBarony = tier === 'barony' && props.holding_type === 'unoccupied';
+
   // Tier info & Title Key
   if (tier === 'barony') {
-    const htName = props.holding_type_name || (props.holding_type ? props.holding_type.charAt(0).toUpperCase() + props.holding_type.slice(1) : '');
-    badge.textContent = htName ? `HOLDING · ${htName.toUpperCase()}` : 'HOLDING';
+    if (isUnoccupiedBarony) {
+      badge.textContent = 'HOLDING · UNOCCUPIED';
+    } else {
+      const htName = props.holding_type_name || (props.holding_type ? props.holding_type.charAt(0).toUpperCase() + props.holding_type.slice(1) : '');
+      badge.textContent = htName ? `HOLDING · ${htName.toUpperCase()}` : 'HOLDING';
+    }
   } else {
     badge.textContent = tier.toUpperCase();
   }
@@ -477,10 +494,15 @@ function openInspector(props, tier) {
     currentAnachronism = props.c_anachronism || '';
     currentIpa = props.c_ipa || props.ipa || '';
   } else if (tier === 'barony') {
-    tarrName.textContent = props.name || formatKey(props.barony);
-    originName.textContent = props.b_origin || props.name || formatKey(props.barony);
-    currentAnachronism = props.b_anachronism || props.c_anachronism || '';
-    currentIpa = props.b_ipa || props.ipa || '';
+    if (isUnoccupiedBarony) {
+      tarrName.textContent = '';
+      originName.textContent = '';
+    } else {
+      tarrName.textContent = props.name || formatKey(props.barony);
+      originName.textContent = props.b_origin || props.name || formatKey(props.barony);
+    }
+    currentAnachronism = isUnoccupiedBarony ? '' : (props.b_anachronism || props.c_anachronism || '');
+    currentIpa = isUnoccupiedBarony ? '' : (props.b_ipa || props.ipa || '');
   } else if (tier === 'duchy') {
     tarrName.textContent = props.d_tarr || formatKey(props.duchy);
     originName.textContent = props.d_origin || formatKey(props.duchy);
@@ -496,6 +518,14 @@ function openInspector(props, tier) {
     originName.textContent = props.e_origin || formatKey(props.empire);
     currentAnachronism = props.e_anachronism || '';
     currentIpa = props.e_ipa || props.ipa || '';
+  }
+
+  if (originGroup) {
+    if (isUnoccupiedBarony) {
+      originGroup.classList.add('hidden');
+    } else {
+      originGroup.classList.remove('hidden');
+    }
   }
 
   const anachNote = document.getElementById('drawer-anachronism-note');

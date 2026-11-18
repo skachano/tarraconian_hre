@@ -242,7 +242,12 @@ class TestBaroniesGeoJSON:
             props = feat["properties"]
             assert "barony" in props and props["barony"].startswith("b_")
             assert "county" in props and props["county"].startswith("c_")
-            assert "b_origin" in props and props["b_origin"]
+            assert "b_origin" in props
+            if props.get("holding_type") == "unoccupied":
+                assert props["name"] == ""
+                assert props["b_origin"] == ""
+            else:
+                assert props["b_origin"]
             assert "id" in props and isinstance(props["id"], int)
             by_key[props["barony"]] = props
 
@@ -416,6 +421,7 @@ class TestTitleInfoAndIpa:
         assert "1059 Historical Resolution" not in index_html
         assert 'id="drawer-ipa"' in index_html
         assert 'id="drawer-ipa-group"' in index_html
+        assert 'id="drawer-origin-group"' in index_html
         # IPA group is placed right below the title name in the drawer header
         tarr_name_idx = index_html.find('id="drawer-tarr-name"')
         ipa_group_idx = index_html.find('id="drawer-ipa-group"')
