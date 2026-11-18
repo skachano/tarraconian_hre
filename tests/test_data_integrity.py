@@ -316,3 +316,13 @@ class TestMapColoring:
 
         b_colors = {f["properties"]["b_color"] for f in baronies_data["features"]}
         assert len(b_colors) == 7, f"Expected exactly 7 colors in b_color, found {len(b_colors)}: {b_colors}"
+
+    def test_navigable_river_and_strait_adjacencies(self, counties_data, adjacencies_data):
+        """Validates that titles across navigable rivers (e.g. Po river: Venice & Romagna) are adjacent with distinct colors."""
+        k_edges = set(tuple(sorted(e)) for e in adjacencies_data["kingdoms"])
+        assert ("k_romagna", "k_venice") in k_edges, "k_venice and k_romagna must be registered as adjacent across the Po River"
+
+        by_key = {f["properties"]["kingdom"]: f["properties"]["k_color"] for f in counties_data["features"]}
+        assert by_key["k_venice"] != by_key["k_romagna"], (
+            f"k_venice and k_romagna must have distinct colors, got {by_key['k_venice']} vs {by_key['k_romagna']}"
+        )

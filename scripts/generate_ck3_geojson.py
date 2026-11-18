@@ -134,6 +134,8 @@ def compute_all_tier_colors(county_features, barony_features):
     t0 = time.time()
 
     # 1. County adjacency via STRtree
+    # Buffer by 5.0 pixels to bridge navigable river provinces (Po, Rhine, Danube, Nile, etc.) and narrow straits
+    RIVER_BUFFER = 5.0
     c_geoms = [shape(f["geometry"]) for f in county_features]
     c_tree = STRtree(c_geoms)
     c_nodes = [f["properties"]["county"] for f in county_features]
@@ -142,8 +144,9 @@ def compute_all_tier_colors(county_features, barony_features):
     county_adj_dict = defaultdict(set)
     for i, geom in enumerate(c_geoms):
         c1 = c_nodes[i]
-        for j in c_tree.query(geom):
-            if i < j and (geom.touches(c_geoms[j]) or geom.buffer(0.5).intersects(c_geoms[j])):
+        gb = geom.buffer(RIVER_BUFFER)
+        for j in c_tree.query(gb):
+            if i < j and (geom.touches(c_geoms[j]) or gb.intersects(c_geoms[j])):
                 c2 = c_nodes[j]
                 county_adj_edges.add((c1, c2))
                 county_adj_dict[c1].add(c2)
@@ -194,10 +197,11 @@ def compute_all_tier_colors(county_features, barony_features):
         for idx1 in c_b_indices:
             g1 = b_geoms[idx1]
             b1 = b_nodes[idx1]
+            g1_buf = g1.buffer(RIVER_BUFFER)
             for idx2 in candidate_indices:
                 if idx1 < idx2:
                     g2 = b_geoms[idx2]
-                    if g1.touches(g2) or g1.buffer(0.5).intersects(g2):
+                    if g1.touches(g2) or g1_buf.intersects(g2):
                         b2 = b_nodes[idx2]
                         barony_edges.add((b1, b2))
 
