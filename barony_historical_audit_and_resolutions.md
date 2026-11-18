@@ -39,12 +39,15 @@ Every single occupied holding has been resolved according to:
 pie title Occupied Barony Resolutions (10,237 Titles)
     "Category 1: Sinosphere Logographic Calques" : 1982
     "Category 2: Capital / Eponymous Holdings" : 2723
-    "Category 3: Sub-Baronies & Attestations" : 5532
+    "Category 3a: Ancient Sub-Baronies & Attestations" : 3769
+    "Category 3b: Option C Founder Foundations" : 1763
 ```
 
 1. **Category 1 (Sinosphere Logographic Calques — 1,982 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,235-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
-2. **Category 2 (Capital / Eponymous Holdings — 2,723 titles):** The primary or capital seat of its parent county. Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
-3. **Category 3 (Sub-Baronies & Historical Attestations — 5,532 titles):** Secondary settlements, collegiate foundations, and rural boroughs within counties. Includes the 442 secondary variants from `tarraconian_titles_1059.md`, pre-867 classical centers from archaeological records, and Option C founder resolutions.
+2. **Category 2 (Capital / Eponymous Holdings — 2,723 titles):** The primary or capital seat of its parent county (including 28 disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
+3. **Category 3 (Sub-Baronies & Historical Attestations — 5,532 titles):**
+   - **Ancient Sub-Baronies & Attestations (3,769 titles):** Includes 3,481 classical/ancient civitates and toponymic stems, 158 Option A archaeological seats, 114 paired secondary variants from `tarraconian_titles_1059.md`, and 16 indigenous restitutions.
+   - **Option C Campaign Foundations (1,763 titles):** Titles lacking documented pre-867 historical proof under the *Burden of Proof on Antiquity* (including post-867 colonial castles, high-medieval ostrogs, and modern Paradox settlements like `b_baranovichi`). Automatically attributed to the actual rulers and cadet houses who founded or held them in `melted_save.ck3`.
 
 ---
 
@@ -54,6 +57,11 @@ pie title Occupied Barony Resolutions (10,237 Titles)
 Titles are anchored strictly in physical substrates, verified classical settlements, and pre-867 historical records. Where an in-game barony bears a modern, colonial, or post-867 name (e.g., German Teutonic Order castles in the Baltic, Swedish crusade forts in Finland, Russian late-medieval ostrogs, or modern British borough names), the Chancellery enforces the **Burden of Proof on Antiquity**:
 - **Positive Pre-867 Proof Required:** If an authentic pre-867 Roman, Celtic, Germanic, Slavic, Greek, Baltic, Finnic, Arabic, or Sanskrit settlement existed at the site, its native toponym is restored (e.g. *Twangste* for Königsberg, *Lindanisa* for Reval, *Tarvanpää* for Wesenburg, *Abô* for Turku, *Malbork* for Marienburg, *Mangystau* for Fort Novoaleksandrovskiy).
 - **Default to Option C Founder Attribution:** In the absence of positive pre-867 proof for a late fortress or colonial settlement, the title is evaluated through **Option C** based on the ruler who founded, built, or held the title in the CK3 save universe.
+
+#### Case Study: Resolution of `b_baranovichi` (`c_kletsk`)
+* **Paradox Default:** Baranovichi (founded November 17, 1871 around a railway station on the Brest-Moscow line). Lacked any medieval or pre-867 attestation.
+* **Save Universe Reality:** Church holding in `c_kletsk` enfeoffed on April 9, 1187 to Character `269993` (**Ehrenfried** of House **Suerbeer** / `dynn_Suerbeer`, head of house, ambitious churchman).
+* **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via Option C for church holdings $\rightarrow$ Resolved to **`Suerbeermunster`** (*Monastic collegiate foundation of House Suerbeer*). Populates `b_anachronism` with explicit railway-era historical provenance.
 
 ### 2.2 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:

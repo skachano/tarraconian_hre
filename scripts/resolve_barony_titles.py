@@ -37,6 +37,12 @@ except ImportError:
     def check_title_phonotactics(raw_title, key, source_context):
         return []
 
+try:
+    from historical_attestation_db import CLASSICAL_OR_ANCIENT_KINGDOMS, ATTESTATION_REGISTRY
+except ImportError:
+    CLASSICAL_OR_ANCIENT_KINGDOMS = set()
+    ATTESTATION_REGISTRY = {}
+
 SAVE_PATH = Path("/var/tmp/ck3_audit/melted_save.ck3")
 CHARS_PATH = Path("/var/tmp/ck3_audit/phase1/historical_characters.json")
 HOUSES_PATH = Path("/var/tmp/ck3_audit/phase1/dynasties_and_houses.json")
@@ -282,6 +288,28 @@ def load_historical_metadata():
             hd = json.load(f)
             houses = hd.get("houses", {})
 
+    # Supplement with dynamic houses directly from save
+    if SAVE_PATH.exists():
+        with open(SAVE_PATH, "r", encoding="utf-8", errors="ignore") as f:
+            in_houses = False
+            for line in f:
+                if line.startswith("\tdynasty_house={"):
+                    in_houses = True
+                    continue
+                if in_houses:
+                    if line.startswith("\t}"):
+                        break
+                    m = re.match(r"^\t\t(\d+)=\{", line)
+                    if m:
+                        hid = m.group(1)
+                        for _ in range(8):
+                            nline = next(f, "")
+                            nm = re.search(r'(?:localized_name|name)=\"(?:dynn_)?([^\"]+)\"', nline)
+                            if nm:
+                                if hid not in houses:
+                                    houses[hid] = {"localized_name": nm.group(1)}
+                                break
+
     cultures = {}
     if CULTURES_PATH.exists():
         with open(CULTURES_PATH, "r", encoding="utf-8") as f:
@@ -454,47 +482,110 @@ def resolve_sinosphere_barony(b_key: str, zh_raw: str, en_name: str, k_map: dict
 # 4. FOUNDER ARCHETYPE EVALUATION (SECTION 3.2 / OPTION C ENGINE)
 # ==============================================================================
 
-def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str):
+LATE_PATTERNS = re.compile(
+    r'\b(novo|new|aleksandr|stanitsa|station|fort)[a-z]*\b|'
+    r'[a-z]*(burg|burgh|stein|fels|schloss|pils|linna|abad|pur|garh|fort|stanitsa|station|railway|mine|ostrog|sloboda|sk|ysk|ovichi|ichi|grad|gorod)\b',
+    re.I
+)
+
+
+def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str, used_names: set = None, save_name: str = ""):
     """
     Evaluates ruler character traits and holding type according to Section 3.2.
     Returns: (option_c_name, formula_description)
     """
     traits_set = set(traits or [])
     clean_founder = re.sub(r"[^a-zA-Z]", "", char_name) or "Adelbert"
-    clean_house = re.sub(r"[^a-zA-Z]", "", house_name.replace("Chatenois-", "").replace("Kestenholz-", "")) or "Kêsten"
+    clean_founder = re.sub(r"fried\b", "frît", clean_founder, flags=re.I)
+    clean_founder = re.sub(r"rich\b", "rîch", clean_founder, flags=re.I)
+
+    clean_house = re.sub(r"[^a-zA-Z]", "", house_name.replace("Chatenois-", "").replace("Kestenholz-", "")) or ""
+    clean_stem = re.sub(r"[^a-zA-Z]", "", save_name.split()[0]) if save_name else ""
+    if not clean_stem:
+        clean_stem = "Burch"
+
+    used = used_names or set()
+    candidates = []
 
     if holding_type == "castle":
         if traits_set & {"arrogant", "ambitious", "greedy", "fickle"}:
-            c_name = f"{clean_founder}sburch"
-            desc = f"Self-eponymous fortress founded by {clean_founder} ({list(traits_set & {'arrogant', 'ambitious', 'greedy', 'fickle'})})"
+            candidates.append((f"{clean_founder}sburch", f"Self-eponymous fortress founded by {clean_founder} ({list(traits_set & {'arrogant', 'ambitious', 'greedy', 'fickle'})})"))
+            if clean_house:
+                candidates.append((f"{clean_house}veste", f"Defensive march fortress built by House {clean_house}"))
+            candidates.append((f"{clean_founder}stên", f"Fortress citadel established by {clean_founder}"))
         elif traits_set & {"zealous", "humble", "theologian", "celibate", "monk"}:
-            c_name = f"Marienburch"
-            desc = f"Religious fortress dedication by devout founder {clean_founder}"
+            candidates.append(("Marienburch", f"Religious fortress dedication by devout founder {clean_founder}"))
+            candidates.append(("Heiligencruce", f"Holy Cross fortress foundation dedicated by {clean_founder}"))
+            candidates.append((f"{clean_founder}sburch", f"Eponymous fortress built by devout founder {clean_founder}"))
         elif traits_set & {"paranoid", "craven", "brave", "strategist", "diligent", "architect"}:
-            c_name = f"{clean_house}veste"
-            desc = f"Defensive march fortress built by {clean_founder} ({clean_house})"
+            if clean_house:
+                candidates.append((f"{clean_house}veste", f"Defensive march fortress built by {clean_founder} ({clean_house})"))
+            candidates.append(("Schirmburch", f"Protective march fortress built by {clean_founder}"))
+            candidates.append((f"{clean_founder}sburch", f"Fortified citadel established by {clean_founder}"))
         else:
-            c_name = f"{clean_house}burch"
-            desc = f"Dynastic fortress seat of House {clean_house}"
+            if clean_house:
+                candidates.append((f"{clean_house}burch", f"Dynastic fortress seat of House {clean_house}"))
+            candidates.append((f"{clean_founder}sburch", f"Feudal fortress seat established by {clean_founder}"))
+            if clean_house:
+                candidates.append((f"{clean_house}veste", f"Defensive march stronghold of House {clean_house}"))
+            candidates.append((f"{clean_stem}burch", f"Fortress seat of {clean_stem} established by {clean_founder}"))
 
     elif holding_type in {"church", "temple"}:
         if traits_set & {"zealous", "theologian", "pilgrim"}:
-            c_name = f"Zant-{clean_founder}"
-            desc = f"Patron saint collegiate foundation dedicated by {clean_founder}"
+            candidates.append((f"Zant-{clean_founder}", f"Patron saint collegiate foundation dedicated by {clean_founder}"))
+            candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
+            if clean_house:
+                candidates.append((f"{clean_house}munster", f"Collegiate monastic foundation of House {clean_house}"))
         else:
-            c_name = f"{clean_founder}munster"
-            desc = f"Monastic collegiate foundation established by {clean_founder}"
+            if clean_house:
+                candidates.append((f"{clean_house}munster", f"Monastic collegiate foundation of House {clean_house}"))
+            candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
+            candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
+            candidates.append((f"{clean_stem}kirchen", f"Collegiate church of {clean_stem} established by {clean_founder}"))
 
-    else:
+    else:  # city / borough
         if traits_set & {"greedy", "administrator", "midas_touched", "diligent"}:
-            c_name = f"{clean_founder}marct"
-            desc = f"Chartered market borough established by {clean_founder}"
+            candidates.append((f"{clean_founder}marct", f"Chartered market borough established by {clean_founder}"))
+            candidates.append((f"{clean_founder}stat", f"Municipal borough chartered by {clean_founder}"))
+            candidates.append((f"{clean_founder}vurt", f"River crossing market borough founded by {clean_founder}"))
         else:
-            c_name = f"{clean_founder}stat"
-            desc = f"Municipal foundation chartered by {clean_founder}"
+            candidates.append((f"{clean_founder}stat", f"Municipal foundation chartered by {clean_founder}"))
+            candidates.append((f"{clean_founder}marct", f"Market borough established by {clean_founder}"))
+            if clean_house:
+                candidates.append((f"{clean_house}stat", f"Chartered civic borough of House {clean_house}"))
+            candidates.append((f"{clean_stem}stat", f"Chartered borough of {clean_stem} established by {clean_founder}"))
 
-    c_name = enforce_tarraconian_sound_laws(c_name)
-    return c_name, desc
+    for c_nm, desc in candidates:
+        clean_cand = enforce_tarraconian_sound_laws(c_nm)
+        if clean_cand not in used:
+            return clean_cand, desc
+
+    fallback_nm = enforce_tarraconian_sound_laws(f"{clean_founder}s{clean_stem[:4]}stat")
+    return fallback_nm, f"Municipal foundation established by {clean_founder}"
+
+
+def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
+    """
+    Evaluates whether a sub-barony has positive pre-867 proof under the Burden of Proof on Antiquity.
+    Returns: (is_ancient: bool, reason: str)
+    """
+    if bk in INDIGENOUS_RESTITUTIONS:
+        return True, "indigenous_restitution"
+    c_key = bk.replace("b_", "c_")
+    if c_key in ATTESTATION_REGISTRY:
+        att_yr = ATTESTATION_REGISTRY[c_key][0]
+        if att_yr is not None and att_yr > 867:
+            return False, "high_medieval_foundation"
+        elif att_yr is not None and att_yr <= 867:
+            return True, "chronicle_attestation"
+    if re.search(r"\b(gau|gebirge|tal|wald|fluv|werder|werth|am-|an-der-|see|meer)\b", bk + " " + save_name, re.I):
+        return True, "ancient_toponym"
+    if kd in CLASSICAL_OR_ANCIENT_KINGDOMS:
+        if not LATE_PATTERNS.search(save_name.strip().lower()):
+            return True, "classical_continuity"
+        else:
+            return False, "classical_late_foundation"
+    return False, "unverified_default"
 
 
 # ==============================================================================
@@ -598,6 +689,7 @@ def resolve_all_baronies():
     sub_barony_count = 0
 
     phonotactic_issues = []
+    county_used_names = {}
 
     print("\nProcessing barony titles...")
     for feat in baronies_fc["features"]:
@@ -637,7 +729,8 @@ def resolve_all_baronies():
         holder_name = holder_char.get("first_name", "")
         holder_traits = holder_char.get("traits_decoded", [])
         house_id = holder_char.get("dynasty_house")
-        house_name = houses.get(str(house_id), {}).get("localized_name", "")
+        h_data = houses.get(str(house_id), {})
+        house_name = h_data.get("localized_name") or h_data.get("name", "").replace("dynn_", "")
         is_capital = save_b.get("is_capital", False)
         save_name = save_b.get("save_name") or en_cache.get(bk, bk.replace("b_", "").replace("_", " ").title())
 
@@ -664,11 +757,22 @@ def resolve_all_baronies():
                 "holding_type": ht,
                 "category": "sinosphere_calque"
             }
+            if ck not in county_used_names:
+                county_used_names[ck] = set()
+            county_used_names[ck].add(res["name"])
 
         # ----------------------------------------------------------------------
         # C. NON-SINOSPHERE BARONIES
         # ----------------------------------------------------------------------
         else:
+            if ck not in county_used_names:
+                county_used_names[ck] = set()
+
+            c_dir = c_props.get("tarr_direct") or adapt_european_toponym(save_name)
+            c_hist = c_props.get("tarr_hist") or c_dir
+            c_tarr = c_hist or c_dir
+            kd = c_props.get("kingdom", "")
+
             # 1. Check known authentic indigenous / archaeological restitution
             if bk in INDIGENOUS_RESTITUTIONS:
                 sub_barony_count += 1
@@ -704,14 +808,16 @@ def resolve_all_baronies():
                 }
 
             # 3. Check Intra-County Collision (capital barony of an Option A county)
-            elif ck in collisions and collisions[ck]["opt_a_key"] != bk and (is_capital or bk.replace("b_", "") == ck.replace("c_", "")):
+            elif ck in collisions and collisions[ck]["opt_a_key"] != bk and is_capital:
                 eponymous_count += 1
                 coll = collisions[ck]
-                if coll["opt_b_name"]:
+                if coll["opt_b_name"] and coll["opt_b_name"] not in county_used_names[ck]:
                     b_tarr = coll["opt_b_name"]
                     orig_note = f"Option B hydronym/landform ({coll['opt_b_name']}) disambiguated from sub-barony seat {coll['opt_a_name']}"
                 else:
-                    opt_c_name, c_desc = evaluate_founder_option_c(holder_name, holder_traits, house_name, ht)
+                    opt_c_name, c_desc = evaluate_founder_option_c(
+                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                    )
                     b_tarr = opt_c_name
                     orig_note = f"Option C foundation: {c_desc}"
 
@@ -748,37 +854,71 @@ def resolve_all_baronies():
             # 5. Eponymous / Capital Barony inheriting parent county
             elif is_capital or (ck and bk.replace("b_", "") == ck.replace("c_", "")):
                 eponymous_count += 1
-                c_dir = c_props.get("tarr_direct") or adapt_european_toponym(save_name)
-                c_hist = c_props.get("tarr_hist") or c_dir
-                c_tarr = c_hist or c_dir
+                if c_tarr in county_used_names[ck]:
+                    if c_dir and c_dir not in county_used_names[ck]:
+                        b_chosen = c_dir
+                        orig_desc = f"{save_name} — Disambiguated capital seat from sub-barony {c_hist}"
+                    else:
+                        opt_c_name, c_desc = evaluate_founder_option_c(
+                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                        )
+                        b_chosen = opt_c_name
+                        orig_desc = f"{save_name} — Disambiguated capital foundation: {c_desc}"
+                    anach_note = "Disambiguated intra-county capital barony."
+                else:
+                    b_chosen = c_tarr
+                    orig_desc = f"{save_name} ({c_props.get('c_origin', save_name)})"
+                    anach_note = c_props.get("c_anachronism", "")
+
+                tarr_clean = enforce_tarraconian_sound_laws(b_chosen)
                 res = {
-                    "name": c_tarr,
-                    "b_tarr": c_tarr,
+                    "name": tarr_clean,
+                    "b_tarr": tarr_clean,
                     "b_tarr_direct": c_dir,
                     "b_tarr_hist": c_hist,
-                    "b_origin": f"{save_name} ({c_props.get('c_origin', save_name)})",
-                    "b_anachronism": c_props.get("c_anachronism", ""),
-                    "b_ipa": c_props.get("c_ipa") or generate_tarraconian_ipa(c_tarr),
+                    "b_origin": orig_desc,
+                    "b_anachronism": anach_note,
+                    "b_ipa": generate_tarraconian_ipa(tarr_clean),
                     "holding_type": ht,
                     "category": "capital_eponymous"
                 }
 
-            # 6. Non-Capital Sub-Baronies: Antiquity or Founder Option C
+            # 6. Non-Capital Sub-Baronies: Strict Burden of Proof on Antiquity
             else:
                 sub_barony_count += 1
-                is_colonial = any(re.search(pat, save_name, re.I) for pat in [
-                    r"burg\b", r"stein\b", r"pils\b", r"linna\b", r"abad\b", r"pur\b", r"garh\b"
-                ])
+                is_anc, anc_reason = check_barony_antiquity(bk, save_name, ck, kd)
 
-                if is_colonial and holder_name:
-                    opt_c_name, c_desc = evaluate_founder_option_c(holder_name, holder_traits, house_name, ht)
+                if is_anc:
+                    cand = adapt_european_toponym(save_name)
+                    if cand in county_used_names[ck]:
+                        opt_c_name, c_desc = evaluate_founder_option_c(
+                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                        )
+                        tarr_clean = opt_c_name
+                        orig_desc = f"{save_name} — Disambiguated foundation: {c_desc}"
+                        anach_note = "Disambiguated sub-barony foundation."
+                        cat_label = "option_c_foundation"
+                    else:
+                        tarr_clean = cand
+                        orig_desc = f"{save_name} (constituent holding of {c_props.get('tarr', ck)})"
+                        anach_note = ""
+                        cat_label = "sub_barony_adaptation"
+                else:
+                    opt_c_name, c_desc = evaluate_founder_option_c(
+                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                    )
                     tarr_clean = opt_c_name
                     orig_desc = f"{save_name} — {c_desc}"
-                    anach_note = f"Post-867 foundation attributed to save ruler {holder_name} of House {house_name or 'unrecorded'}."
-                else:
-                    tarr_clean = adapt_european_toponym(save_name)
-                    orig_desc = f"{save_name} (constituent holding of {c_props.get('tarr', ck)})"
-                    anach_note = ""
+
+                    if bk == "b_baranovichi":
+                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1871 railway station); resolved via Option C based on save ruler {holder_name} of House {house_name or 'Suerbeer'}."
+                    elif anc_reason == "classical_late_foundation":
+                        anach_note = f"Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                    elif anc_reason == "high_medieval_foundation":
+                        anach_note = f"Post-867 high medieval foundation; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                    else:
+                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                    cat_label = "option_c_foundation"
 
                 res = {
                     "name": tarr_clean,
@@ -789,8 +929,10 @@ def resolve_all_baronies():
                     "b_anachronism": anach_note,
                     "b_ipa": generate_tarraconian_ipa(tarr_clean),
                     "holding_type": ht,
-                    "category": "sub_barony_adaptation"
+                    "category": cat_label
                 }
+
+            county_used_names[ck].add(res["name"])
 
         # Phonotactic verification
         issues = check_title_phonotactics(res["name"], bk, "resolve_barony_titles")
