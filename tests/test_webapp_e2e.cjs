@@ -133,7 +133,7 @@ async function runE2ETests() {
     }
 
     // 4. Test De Jure Tier Switching
-    console.log('[5/6] Testing De Jure tier switching...');
+    console.log('[5/7] Testing De Jure tier switching...');
     const kingdomBtn = page.locator('.tier-btn[data-tier="kingdom"]');
     await kingdomBtn.click();
     if (!(await kingdomBtn.evaluate(el => el.classList.contains('active')))) {
@@ -153,8 +153,40 @@ async function runE2ETests() {
     }
     console.log('  Tier switching (Kingdom -> Empire -> County) validated.');
 
-    // 5. Test Paradox Disclaimer & Take Preview Screenshot
-    console.log('[6/6] Verifying Paradox interactive fan notice and capturing preview...');
+    // 5. Test Mouse Movement & Zero Residual Highlighting
+    console.log('[6/7] Testing mouse hover sweep across territories (verifying zero residual highlights)...');
+    // Close drawer to test clean canvas sweep
+    const closeBtn = page.locator('#drawer-close');
+    if (await closeBtn.isVisible()) {
+      await closeBtn.click();
+    }
+
+    // Sweep across map coordinates
+    for (let x = 300; x <= 800; x += 25) {
+      const y = 400 + Math.sin(x / 40) * 80;
+      await page.mouse.move(x, y);
+      const highlightedCount = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll('#map svg path'))
+          .filter(p => p.getAttribute('stroke') === '#f5d77f').length;
+      });
+      if (highlightedCount > 1) {
+        throw new Error(`Residual highlight detected! ${highlightedCount} paths highlighted simultaneously at (${x}, ${y})`);
+      }
+    }
+
+    // Move cursor away to ocean / corner
+    await page.mouse.move(20, 100);
+    const residualCount = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .filter(p => p.getAttribute('stroke') === '#f5d77f').length;
+    });
+    if (residualCount > 0) {
+      throw new Error(`Residual highlight remained after moving off territory: ${residualCount} paths`);
+    }
+    console.log('  Mouse movement sweep verified: exactly 0 residual highlights.');
+
+    // 6. Test Paradox Disclaimer & Take Preview Screenshot
+    console.log('[7/7] Verifying Paradox interactive fan notice and capturing preview...');
     const footerText = await page.locator('.footer-disclaimer').innerText();
     if (!footerText.includes('Paradox Interactive AB') || !footerText.includes('non-commercial')) {
       throw new Error(`Missing Paradox disclaimer in footer: "${footerText}"`);

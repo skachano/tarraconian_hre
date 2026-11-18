@@ -13,6 +13,7 @@ let countiesLayer = null;
 let baroniesLayer = null;
 let selectedFeature = null;
 let selectedLayer = null;
+let hoveredLayer = null;
 
 // Search index: array of { key, name, tarr, tier, bounds, layer }
 let searchIndex = [];
@@ -62,6 +63,15 @@ function initMap() {
 
   // Zoom to Europe/Mediterranean by default
   map.setView([2304, 4608], -2);
+
+  // Clear any residual hover when leaving the canvas or moving over background ocean
+  map.on('mouseout', clearHover);
+  map.getContainer().addEventListener('mouseleave', clearHover);
+  map.on('mousemove', (e) => {
+    if (hoveredLayer && e.originalEvent && e.originalEvent.target && e.originalEvent.target.tagName !== 'path') {
+      clearHover();
+    }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -162,6 +172,7 @@ function baronyStyle(feature) {
 }
 
 function renderActiveLayer() {
+  clearHover();
   if (currentTier === 'barony') {
     if (countiesLayer) map.removeLayer(countiesLayer);
     renderBaronies();
@@ -172,6 +183,7 @@ function renderActiveLayer() {
 }
 
 function renderCounties() {
+  clearHover();
   if (countiesLayer) {
     countiesLayer.setStyle(countyStyle);
     return;
@@ -181,15 +193,16 @@ function renderCounties() {
     style: countyStyle,
     onEachFeature: (feature, layer) => {
       layer.on({
-        mouseover: (e) => onHover(e, feature),
-        mouseout: (e) => onHoverOut(e, feature),
-        click: (e) => onSelect(e, feature, layer)
+        mouseover: () => onHover(layer, feature),
+        mouseout: () => onHoverOut(layer, feature),
+        click: () => onSelect(layer, feature, currentTier)
       });
     }
   }).addTo(map);
 }
 
 async function renderBaronies() {
+  clearHover();
   await ensureBaroniesLoaded();
   if (!baroniesGeojson) return;
 
@@ -198,9 +211,9 @@ async function renderBaronies() {
       style: baronyStyle,
       onEachFeature: (feature, layer) => {
         layer.on({
-          mouseover: (e) => onHover(e, feature, 'barony'),
-          mouseout: (e) => onHoverOut(e, feature),
-          click: (e) => onSelect(e, feature, layer, 'barony')
+          mouseover: () => onHover(layer, feature, 'barony'),
+          mouseout: () => onHoverOut(layer, feature),
+          click: () => onSelect(layer, feature, 'barony')
         });
       }
     });
@@ -212,21 +225,49 @@ async function renderBaronies() {
 // ---------------------------------------------------------------------------
 // Interaction Handlers (Hover, Click, Inspect)
 // ---------------------------------------------------------------------------
-function onHover(e, feature, tier = currentTier) {
-  const layer = e.target;
-  const p = feature.properties;
-
-  layer.setStyle({
-    weight: 2.5,
-    color: '#f5d77f',
-    fillOpacity: 0.85
-  });
-  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-    layer.bringToFront();
+function resetLayerStyle(layer) {
+  if (!layer || layer === selectedLayer) return;
+  if (currentTier === 'barony' && baroniesLayer) {
+    baroniesLayer.resetStyle(layer);
+  } else if (countiesLayer) {
+    countiesLayer.resetStyle(layer);
   }
+}
+
+function clearHover() {
+  if (hoveredLayer) {
+    resetLayerStyle(hoveredLayer);
+    hoveredLayer = null;
+  }
+  const hoverBadge = document.getElementById('hover-info');
+  if (hoverBadge) {
+    hoverBadge.innerHTML = 'Hover over a territory to inspect';
+  }
+}
+
+function onHover(layer, feature, tier = currentTier) {
+  if (!layer) return;
+
+  // Immediately clear previous hover if moving between adjacent territories
+  if (hoveredLayer && hoveredLayer !== layer) {
+    resetLayerStyle(hoveredLayer);
+  }
+  hoveredLayer = layer;
+
+  // Highlight only if this is not the actively selected inspection target
+  if (layer !== selectedLayer) {
+    layer.setStyle({
+      weight: 2.5,
+      color: '#f5d77f',
+      fillOpacity: 0.85
+    });
+  }
+  // Note: We intentionally avoid layer.bringToFront() here because DOM re-ordering
+  // drops mouseout events and creates residual highlighting across SVG vector geometries.
 
   // Update floating status badge
   const hoverBadge = document.getElementById('hover-info');
+  const p = feature.properties;
   let titleName = '';
   let rankLabel = '';
 
@@ -250,22 +291,25 @@ function onHover(e, feature, tier = currentTier) {
   hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${p[tier] || p.county || ''})</span>`;
 }
 
-function onHoverOut(e, feature) {
-  const layer = e.target;
-  if (layer !== selectedLayer) {
-    if (currentTier === 'barony' && baroniesLayer) {
-      baroniesLayer.resetStyle(layer);
-    } else if (countiesLayer) {
-      countiesLayer.resetStyle(layer);
-    }
+function onHoverOut(layer, feature) {
+  if (layer === hoveredLayer) {
+    clearHover();
+  } else {
+    resetLayerStyle(layer);
   }
 }
 
-function onSelect(e, feature, layer, tier = currentTier) {
+function onSelect(layer, feature, tier = currentTier) {
+  if (!layer) return;
+
   if (selectedLayer && selectedLayer !== layer) {
-    if (countiesLayer) countiesLayer.resetStyle(selectedLayer);
-    if (baroniesLayer) baroniesLayer.resetStyle(selectedLayer);
+    resetLayerStyle(selectedLayer);
   }
+
+  if (hoveredLayer && hoveredLayer !== layer) {
+    resetLayerStyle(hoveredLayer);
+  }
+  hoveredLayer = null;
 
   selectedFeature = feature;
   selectedLayer = layer;
@@ -352,11 +396,11 @@ function openInspector(props, tier) {
 function closeInspector() {
   document.getElementById('inspector-drawer').classList.remove('open');
   if (selectedLayer) {
-    if (countiesLayer) countiesLayer.resetStyle(selectedLayer);
-    if (baroniesLayer) baroniesLayer.resetStyle(selectedLayer);
+    resetLayerStyle(selectedLayer);
     selectedLayer = null;
     selectedFeature = null;
   }
+  clearHover();
 }
 
 // ---------------------------------------------------------------------------
@@ -436,7 +480,7 @@ function jumpToTitle(countyKey) {
   if (targetLayer) {
     const bounds = targetLayer.getBounds();
     map.fitBounds(bounds, { maxZoom: 0, padding: [60, 60] });
-    onSelect({ target: targetLayer }, targetLayer.feature, targetLayer, 'county');
+    onSelect(targetLayer, targetLayer.feature, 'county');
   }
 }
 
