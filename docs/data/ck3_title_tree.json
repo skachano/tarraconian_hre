@@ -2949,7 +2949,7 @@
   "e_amur": {
     "key": "e_amur",
     "tarr": "Dat Bohâi-Imperi",
-    "ipa": "[dat boː.ˈhaːi ɪm.ˈpɛ.ri]",
+    "ipa": "[dat bɔ.ˈhaːi ɪm.ˈpɛ.ri]",
     "origin": "Amur",
     "anachronism": "Pre-867 historical sovereign empire of the Amur and Manchuria (Balhae/Bohai), replacing modern Russian/Tungusic river name Amur.",
     "color": "#16717a",
@@ -5873,7 +5873,7 @@
   },
   "e_arabia": {
     "key": "e_arabia",
-    "tarr": "Dat Kalifische Imperi",
+    "tarr": "Dat Kalîfische Imperi",
     "ipa": "[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Arabian Empire",
     "anachronism": "Conquered 1136 from Hashimid Caliphs. Native institutional endonym al-Khilāfah (\"The Stewardship/Caliphate\").",
@@ -8850,7 +8850,7 @@
   "e_azania": {
     "key": "e_azania",
     "tarr": "Dat Zandsch-Imperi",
-    "ipa": "[dat ˈzandʒ ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈzandʒ.ɪm.ˌpɛ.ri]",
     "origin": "Azania",
     "anachronism": "Medieval Indian Ocean endonym for the Swahili coast (Zanj), replacing 1st-century Greco-Roman maritime label Azania.",
     "color": "#3069a8",
@@ -11592,8 +11592,8 @@
   },
   "e_byzantium": {
     "key": "e_byzantium",
-    "tarr": "Dat Grikische Imperi",
-    "ipa": "[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Grîkische Imperi",
+    "ipa": "[dat ˈgʀiː.kɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Byzantine Empire",
     "anachronism": "18th-century exonym. Historical Frankish style Imperium Graecorum / Rhōmania. Subsumed into h_roman_empire.",
     "color": "#c28b23",
@@ -18177,8 +18177,8 @@
   },
   "e_germany": {
     "key": "e_germany",
-    "tarr": "Dat Frankische Imperi",
-    "ipa": "[dat ˈfraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]",
+    "tarr": "Dat Vrankische Imperi",
+    "ipa": "[dat ˈvraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Germania",
     "anachronism": "Carolingian/Frankish Western imperial sphere encompassing East Francia, Bavaria, Lotharingia, Italy, Burgundy, England, and Spain.",
     "color": "#3069a8",
@@ -25732,7 +25732,7 @@
   "e_goryeo": {
     "key": "e_goryeo",
     "tarr": "Dat Hôchprachtige Imperi",
-    "ipa": "[dat ˈhoːx.pɾax.tɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈhoːx.pʀax.tɪ.ɣə ɪm.ˈpɛ.ri]",
     "origin": "Samhan",
     "anachronism": "Conquered 1153 from House Aliyid. Native endonyms Goryeo (高麗 = \"Lofty Splendor\") and Samhan (三韓 = \"Three Hans\").",
     "color": "#c28b23",
@@ -40100,7 +40100,7 @@
   },
   "e_mongolia": {
     "key": "e_mongolia",
-    "tarr": "Dat Mongolische Imperi",
+    "tarr": "Dat Mongôlische Imperi",
     "ipa": "[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Mongolia",
     "anachronism": "Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.",
@@ -41961,7 +41961,7 @@
   },
   "e_nusantara": {
     "key": "e_nusantara",
-    "tarr": "Dat Malukische Imperi",
+    "tarr": "Dat Malûkische Imperi",
     "ipa": "[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Nusantara",
     "anachronism": "Representative kingdom of the Spice Islands; Nusantara is a late 14th-century Javanese concept and modern political term.",

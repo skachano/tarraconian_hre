@@ -208,7 +208,7 @@ class TestCountiesGeoJSON:
         assert mid["c_anachronism"] == ""
         assert mid["d_origin"] == "East Seaxe"
         assert mid["empire"] == "e_germany"
-        assert mid["e_tarr"] == "Dat Frankische Imperi"
+        assert mid["e_tarr"] == "Dat Vrankische Imperi"
         assert mid["e_origin"] == "Germania"
         assert mid["kingdom"] == "k_england"
         assert mid["k_tarr"] == "Engellant"
@@ -244,7 +244,7 @@ class TestCountiesGeoJSON:
         roma = by_key["c_roma"]
         assert roma.get("tarr_direct") in ("Rôm", "Rôme") or roma.get("tarr_hist") in ("Rôm", "Rôme")
         assert roma["empire"] == "e_germany"
-        assert roma["e_tarr"] == "Dat Frankische Imperi"
+        assert roma["e_tarr"] == "Dat Vrankische Imperi"
         assert roma["kingdom"] == "k_romagna"
         assert roma["k_tarr"] == "Romanje"
 
@@ -292,7 +292,7 @@ class TestBaroniesGeoJSON:
         assert by_key["b_london"]["id"] == 1527
         assert by_key["b_london"]["county"] == "c_middlesex"
         assert by_key["b_london"]["empire"] == "e_germany"
-        assert by_key["b_london"]["e_tarr"] == "Dat Frankische Imperi"
+        assert by_key["b_london"]["e_tarr"] == "Dat Vrankische Imperi"
         assert by_key["b_london"]["name"] == "Lunden"
         assert by_key["b_london"]["b_tarr"] == "Lunden"
         assert by_key["b_london"]["b_ipa"] == "[ˈlʊn.dən]"
@@ -312,7 +312,7 @@ class TestBaroniesGeoJSON:
         assert "b_roma" in by_key
         assert by_key["b_roma"]["county"] == "c_roma"
         assert by_key["b_roma"]["empire"] == "e_germany"
-        assert by_key["b_roma"]["e_tarr"] == "Dat Frankische Imperi"
+        assert by_key["b_roma"]["e_tarr"] == "Dat Vrankische Imperi"
 
 
 class TestTitleTree:
@@ -324,7 +324,7 @@ class TestTitleTree:
         # Check Germania (campaign hegemon harboring drifted kingdoms)
         assert "e_germany" in tree_data
         germany = tree_data["e_germany"]
-        assert germany["tarr"] == "Dat Frankische Imperi"
+        assert germany["tarr"] == "Dat Vrankische Imperi"
         assert germany["origin"] == "Germania"
         assert "Carolingian" in germany["anachronism"]
         assert "kingdoms" in germany

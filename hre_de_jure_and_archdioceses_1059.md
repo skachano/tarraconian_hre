@@ -12,8 +12,8 @@
 
 | # | De Jure Empire | Title Key | Tarraconian Chancellery Title (`Dat Imperi`) | IPA | RE Counties | Total De Jure Counties | Control % | Kingdoms Count |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Germania** | `e_germany` | **Dat Frankische Imperi** | `[dat ˈfraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]` | **384** | 419 | 91.6% | 21 |
-| 2 | **Arabian Empire** | `e_arabia` | **Dat Kalifische Imperi** | `[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]` | **134** | 157 | 85.4% | 7 |
+| 1 | **Germania** | `e_germany` | **Dat Vrankische Imperi** | `[dat ˈvraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]` | **384** | 419 | 91.6% | 21 |
+| 2 | **Arabian Empire** | `e_arabia` | **Dat Kalîfische Imperi** | `[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]` | **134** | 157 | 85.4% | 7 |
 | 3 | **Rajasthan** | `e_rajastan` | **Dat Ârjavartische Imperi** | `[dat aːr.ja.ˈvar.tɪ.ʃə ɪm.ˈpɛ.ri]` | **103** | 121 | 85.1% | 9 |
 | 4 | **Francia** | `e_france` | **Dat Imperi van Vrancrîch** | `[dat ɪm.ˈpɛ.ri van ˈvraŋk.riːç]` | **98** | 98 | 100.0% | 2 |
 | 5 | **Tibet** | `e_tibet` | **Dat Imperi van Bôtlant** | `[dat ɪm.ˈpɛ.ri van ˈboːt.lant]` | **93** | 146 | 63.7% | 8 |
@@ -23,12 +23,12 @@
 | 9 | **Mali** | `e_mali` | **Dat Imperi van Gâna** | `[dat ɪm.ˈpɛ.ri van ˈgaː.na]` | **75** | 75 | 100.0% | 7 |
 | 10 | **Turan** | `e_turan` | **Dat Sogdische Imperi** | `[dat ˈzɔg.dɪ.ʃə ɪm.ˈpɛ.ri]` | **72** | 95 | 75.8% | 4 |
 | 11 | **Abyssinia** | `e_abyssinia` | **Dat Ethjôpische Imperi** | `[dat ɛt.ˈjoː.pɪ.ʃə ɪm.ˈpɛ.ri]` | **72** | 72 | 100.0% | 5 |
-| 12 | **Byzantine Empire** | `e_byzantium` | **Dat Grikische Imperi** | `[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 75 | 90.7% | 11 |
+| 12 | **Byzantine Empire** | `e_byzantium` | **Dat Grîkische Imperi** | `[dat ˈgʀiː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 75 | 90.7% | 11 |
 | 13 | **Deccan Empire** | `e_deccan` | **Dat Karnâtische Imperi** | `[dat kar.ˈnaː.tɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 68 | 100.0% | 6 |
 | 14 | **Srivijaya** | `e_srivijaya` | **Dat Imperi van Glantz-Zêch** | `[dat ɪm.ˈpɛ.ri van ˈɡlants.tseːç]` | **68** | 68 | 100.0% | 4 |
 | 15 | **Japan** | `e_japan` | **Dat Imperi van dem Sunnenufganch** | `[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋç]` | **63** | 66 | 95.5% | 4 |
 | 16 | **Pracya** | `e_bengal` | **Dat Bengalische Imperi** | `[dat bɛŋ.ˈgaː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **63** | 64 | 98.4% | 5 |
-| 17 | **Nusantara** | `e_nusantara` | **Dat Malukische Imperi** | `[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **59** | 62 | 95.2% | 6 |
+| 17 | **Nusantara** | `e_nusantara` | **Dat Malûkische Imperi** | `[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **59** | 62 | 95.2% | 6 |
 | 18 | **Suvarnabhumi** | `e_suvarnabhumi` | **Dat Pagânsche Imperi** | `[dat pa.ˈgaːn.ʃə ɪm.ˈpɛ.ri]` | **53** | 53 | 100.0% | 2 |
 | 19 | **Lingnan** | `e_lingnan` | **Dat Imperi van dem Sûtrücke** | `[dat ɪm.ˈpɛ.ri van dɛm ˈzyːt.rʏ.kə]` | **52** | 52 | 100.0% | 3 |
 | 20 | **Yongliang** | `e_yongliang` | **Dat Imperi van dem Kôlvredelant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈkoːl.vreː.də.lant]` | **50** | 73 | 68.5% | 3 |
@@ -42,20 +42,20 @@
 | 28 | **Britannia** | `e_britannia` | **Dat Imperi van dem Wâllant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈvaːl.lant]` | **40** | 40 | 100.0% | 2 |
 | 29 | **Zhongyuan** | `e_zhongyuan` | **Dat Imperi van dem Middenvelt** | `[dat ɪm.ˈpɛ.ri van dɛm ˈmɪ.dən.vɛlt]` | **39** | 86 | 45.3% | 6 |
 | 30 | **Aegyptus** | `e_aegyptus` | **Dat Êgyptische Imperi** | `[dat eː.ˈɡʏp.tɪ.ʃə ɪm.ˈpɛ.ri]` | **39** | 41 | 95.1% | 2 |
-| 31 | **Samhan** | `e_goryeo` | **Dat Hôchprachtige Imperi** | `[dat ˈhoːx.pɾax.tɪ.ʃə ɪm.ˈpɛ.ri]` | **36** | 48 | 75.0% | 3 |
+| 31 | **Samhan** | `e_goryeo` | **Dat Hôchprachtige Imperi** | `[dat ˈhoːx.pʀax.tɪ.ɣə ɪm.ˈpɛ.ri]` | **36** | 48 | 75.0% | 3 |
 | 32 | **Carpathia** | `e_carpathia` | **Dat Arpâdische Imperi** | `[dat ar.ˈpaː.dɪ.ʃə ɪm.ˈpɛ.ri]` | **35** | 35 | 100.0% | 2 |
 | 33 | **Khazaria** | `e_caspian-pontic_steppe` | **Dat Chasârische Imperi** | `[dat xa.ˈzaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **34** | 73 | 46.6% | 5 |
 | 34 | **Kanem-Bornu** | `e_kanem_bornu` | **Dat Kanêmische Imperi** | `[dat ka.ˈneː.mɪ.ʃə ɪm.ˈpɛ.ri]` | **33** | 52 | 63.5% | 4 |
-| 35 | **Amur** | `e_amur` | **Dat Bohâi-Imperi** | `[dat boː.ˈhaːi ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 2 |
+| 35 | **Amur** | `e_amur` | **Dat Bohâi-Imperi** | `[dat bɔ.ˈhaːi ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 2 |
 | 36 | **Kambuja** | `e_kambuja` | **Dat Angkôrsche Imperi** | `[dat aŋ.ˈkoːr.ʃə ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 3 |
-| 37 | **Azania** | `e_azania` | **Dat Zandsch-Imperi** | `[dat ˈzandʒ ɪm.ˈpɛ.ri]` | **31** | 36 | 86.1% | 3 |
+| 37 | **Azania** | `e_azania` | **Dat Zandsch-Imperi** | `[dat ˈzandʒ.ɪm.ˌpɛ.ri]` | **31** | 36 | 86.1% | 3 |
 | 38 | **Baltic Empire** | `e_wendish_empire` | **Dat Imperi van Bêlingen** | `[dat ɪm.ˈpɛ.ri van ˈbeː.lɪŋ.ən]` | **29** | 33 | 87.9% | 2 |
 | 39 | **Tartaria** | `e_tartaria` | **Dat Kiptschachische Imperi** | `[dat kɪp.ˈtʃaː.xɪ.ʃə ɪm.ˈpɛ.ri]` | **28** | 109 | 25.7% | 5 |
 | 40 | **Anatolia** | `e_anatolia` | **Dat Anatôlische Imperi** | `[dat a.na.ˈtoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **27** | 31 | 87.1% | 2 |
 | 41 | **Oriens** | `e_oriens` | **Dat Imperi van dem Môrghenlant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈmoːr.ɡən.lant]` | **22** | 22 | 100.0% | 1 |
 | 42 | **Macedonia** | `e_macedonia` | **Dat Imperi van Bizantjen** | `[dat ɪm.ˈpɛ.ri van bɪ.ˈtsan.tjən]` | **17** | 17 | 100.0% | 2 |
 | 43 | **Volga-Ural** | `e_volga-ural` | **Dat Bulgârische Imperi** | `[dat bʊl.ˈgaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **11** | 46 | 23.9% | 3 |
-| 44 | **Mongolia** | `e_mongolia` | **Dat Mongolische Imperi** | `[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **7** | 100 | 7.0% | 4 |
+| 44 | **Mongolia** | `e_mongolia` | **Dat Mongôlische Imperi** | `[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **7** | 100 | 7.0% | 4 |
 | 45 | **Kirghiz Khanate** | `e_kirghiz_khanate` | **Dat Kirgîsische Imperi** | `[dat kɪr.ˈɡiː.zɪ.ʃə ɪm.ˈpɛ.ri]` | **4** | 32 | 12.5% | 1 |
 | 46 | **Liangyi** | `e_liangyi` | **Dat Imperi van den Vîr-Strômen** | `[dat ɪm.ˈpɛ.ri van dɛn ˈfiːr.stroː.mən]` | **0** | 89 | 0.0% | 6 |
 | 47 | **Siberia** | `e_siberia` | **Dat Jûgrische Imperi** | `[dat ˈjuː.grɪ.ʃə ɪm.ˈpɛ.ri]` | **0** | 45 | 0.0% | 3 |
@@ -290,7 +290,7 @@
 >   * ⚠️ **[Ostsiedlung Anachronism]**: 12th–14th+ century German *Ostsiedlung* exonym or colonial town charter applied prematurely to a Slavic/Baltic province in 1059, with its **pre-1059 Slavic/indigenous centre(s)** noted.
 
 ### 2.1 Kingdom of England (`k_england`) — 53/53 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of East Seaxe** (`d_bedford`) — *5/5 in HRE*
   * **[HRE]** **Middle Seaxe** (`c_middlesex`) — *Tarraconian: **Magistrat van Middelsachsen***
@@ -362,7 +362,7 @@
 ---
 
 ### 2.2 Kingdom of Frisia (`k_frisia`) — 12/12 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Holland** (`d_holland`) — *3/3 in HRE*
   * **[HRE]** **Holland** (`c_holland`) — *Tarraconian: **Magistrat van Hollant***
@@ -384,7 +384,7 @@
 ---
 
 ### 2.3 Kingdom of Lotharingia (`k_lotharingia`) — 23/23 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Ardennes (Luxembourg)** (`d_luxembourg`) — *4/4 in HRE*
   * **[HRE]** **Luxembourg** (`c_luxembourg`) — *Tarraconian: **Magistrat van Lützelburch** (`[1059 Historical: Magistrat van Echternach / Arlôn]`)*
@@ -418,7 +418,7 @@
 ---
 
 ### 2.4 Kingdom of Bavaria (`k_bavaria`) — 29/42 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Bavaria** (`d_bavaria`) — *9/9 in HRE*
   * **[HRE]** **Regensburg** (`c_regensburg`) — *Tarraconian: **Magistrat van Rêgensburch***
@@ -475,7 +475,7 @@
 ---
 
 ### 2.5 Kingdom of Germany (`k_east_francia`) — 64/66 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Angria** (`d_angria`) — *7/7 in HRE*
   * **[HRE]** **Minden** (`c_minden`) — *Tarraconian: **Magistrat van Minden***
@@ -671,7 +671,7 @@
 ---
 
 ### 2.11 Kingdom of Italy (`k_italy`) — 22/22 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Friuli** (`d_friuli`) — *3/3 in HRE*
   * **[HRE]** **Aquileia** (`c_aquileia`) *(Prince-Bishopric / Ecclesiastical)*
@@ -706,7 +706,7 @@
 ---
 
 ### 2.12 Kingdom of Sardinia (`k_sardinia`) — 8/8 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Corsica** (`d_corsica`) — *3/3 in HRE*
   * **[HRE]** **Ajaccio** (`c_ajaccio`) — *Tarraconian: **Magistrat van Adschatz***
@@ -722,7 +722,7 @@
 ---
 
 ### 2.13 Kingdom of Romagna (`k_romagna`) — 15/15 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Romagna** (`d_romagna`) — *4/4 in HRE*
   * **[HRE]** **Ravenna** (`c_ravenna`) *(Prince-Bishopric / Ecclesiastical)*
@@ -816,7 +816,7 @@
 ---
 
 ### 2.16 Kingdom of Pomerania (`k_pomerania`) — 0/20 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Pomerania** (`d_pommerania`) — *0/6 in HRE*
   * [Non-HRE] **Stettin** (`c_stettin`) — ⚠️ **[Ostsiedlung Anachronism]** *(Germanized form of pre-1059 Pomeranian Slavic stronghold **Szczecin**)*
@@ -954,7 +954,7 @@
 ---
 
 ### 2.21 Kingdom of Sorbia (`k_sorbia`) — 13/13 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Meissen** (`d_meissen`) — *8/8 in HRE*
   * **[HRE]** **Meissen** (`c_meissen`) — *Tarraconian: **Magistrat van Mîssen***
@@ -1092,7 +1092,7 @@
 ---
 
 ### 2.26 Kingdom of Hungary (`k_hungary`) — 34/34 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Visegrad** (`d_visegrad`) — *5/5 in HRE*
   * **[HRE]** **Visegrad** (`c_visegrad`) — *Tarraconian: **Magistrat van Plintenburch***
@@ -1268,7 +1268,7 @@
 ---
 
 ### 2.29 Kingdom of Burgundy (`k_burgundy`) — 23/23 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **March of Turin-Ivrea (Piedmont)** (`d_piedmonte`) — *4/4 in HRE* — *(Historically **March of Turin / Ivrea**; Piemonte late 12th c.)*
   * **[HRE]** **Monferrato** (`c_monferrato`) — *Tarraconian: **Magistrat van Muntferrât** (`[1059 Historical: Magistrat van Akwi (Acqui)]`)*
@@ -1303,7 +1303,7 @@
 ---
 
 ### 2.30 Kingdom of Andalusia (`k_andalusia`) — 19/19 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Cordoba** (`d_cordoba`) — *4/4 in HRE*
   * **[HRE]** **Cordoba** (`c_cordoba`) — *Tarraconian: **Magistrat van Kôrdove***
@@ -1332,7 +1332,7 @@
 ---
 
 ### 2.31 Kingdom of Badajoz (`k_badajoz`) — 11/11 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Beja** (`d_beja`) — *4/4 in HRE*
   * **[HRE]** **al-Ishbuna** (`c_lisboa`) — *Tarraconian: **Magistrat van Lisbôn***
@@ -1352,7 +1352,7 @@
 ---
 
 ### 2.32 Kingdom of Valencia (`k_valencia`) — 19/19 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of València** (`d_valencia`) — *5/5 in HRE*
   * **[HRE]** **Valencia** (`c_valencia`) — *Tarraconian: **Magistrat van Valentz***
@@ -1381,7 +1381,7 @@
 ---
 
 ### 2.33 Kingdom of Castile (`k_castille`) — 7/7 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Castile** (`d_castilla`) — *5/5 in HRE*
   * **[HRE]** **Burgos** (`c_burgos`) — *Tarraconian: **Magistrat van Amâje-in-Kastîljen****
@@ -1396,7 +1396,7 @@
 ---
 
 ### 2.34 Kingdom of Navarra (`k_navarra`) — 5/5 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Navarra** (`d_navarra`) — *3/3 in HRE*
   * **[HRE]** **Navarra** (`c_navarra`) — *Tarraconian: **Magistrat van Pamplône***
@@ -1409,7 +1409,7 @@
 ---
 
 ### 2.35 Kingdom of León (`k_leon`) — 7/7 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of León** (`d_leon`) — *5/5 in HRE*
   * **[HRE]** **Leon** (`c_leon`) — *Tarraconian: **Magistrat van Lejôn***
@@ -1424,7 +1424,7 @@
 ---
 
 ### 2.36 Kingdom of Galicia (`k_spanish_galicia`) — 11/11 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Galicia** (`d_galicia`) — *5/5 in HRE*
   * **[HRE]** **Coruna** (`c_coruna`) — *Tarraconian: **Magistrat van Korûnje** (`[1059 Historical: Magistrat van Fâr-Brigantz (Burgo de Faro)]`)*
@@ -1630,7 +1630,7 @@
 ---
 
 ### 2.43 Kingdom of Sicily (`x_script_4328`) — 5/5 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Sicily** (`d_sicily`) — *5/5 in HRE*
   * **[HRE]** **Palermo** (`c_palermo`) — *Tarraconian: **Magistrat van Palêrm***
@@ -1642,7 +1642,7 @@
 ---
 
 ### 2.44 Kingdom of Brabant (`x_script_3965`) — 4/4 Counties in HRE/RE
-* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Frankische Imperi***
+* **De Jure Empire:** Germania [`e_germany`] — *Tarraconian: **Dat Vrankische Imperi***
 
 * **Duchy of Leuven (Brabant)** (`d_brabant`) — *4/4 in HRE*
   * **[HRE]** **Brabant** (`c_brabant`) — *Tarraconian: **Magistrat van Lôven***
@@ -4740,7 +4740,7 @@
 ---
 
 ### 2.160 Kingdom of Shiwei (`k_shiwei`) — 0/3 Counties in HRE/RE
-* **De Jure Empire:** Mongolia [`e_mongolia`] — *Tarraconian: **Dat Mongolische Imperi***
+* **De Jure Empire:** Mongolia [`e_mongolia`] — *Tarraconian: **Dat Mongôlische Imperi***
 
 * **Duchy of Lingxiguo** (`d_SW_lingxiguo`) — *0/3 in HRE*
   * [Non-HRE] **Heiheguo** (`c_SW_heiheguo`) — *Tarraconian: **Magistrat van Swartzflôzlant****

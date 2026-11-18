@@ -24,14 +24,14 @@ REPO_DIR = Path(__file__).resolve().parent.parent
 EMPIRES_MASTER = {
     'e_germany': {
         'in_game': 'Germania',
-        'tarr': 'Dat Frankische Imperi',
+        'tarr': 'Dat Vrankische Imperi',
         'alt': 'Dat Imperi van Germânjen',
-        'ipa': '[dat ˈfraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]',
+        'ipa': '[dat ˈvraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Germania',
         'anachronism': 'Carolingian/Frankish Western imperial sphere encompassing East Francia, Bavaria, Lotharingia, Italy, Burgundy, England, and Spain.',
-        'adj': 'Frankisch',
-        'justification': 'Represents the vast Carolingian Western imperial sphere. MHG Frankisch [ˈfraŋ.kɪʃ] with velar nasal [ŋ].'
+        'adj': 'Vrankisch',
+        'justification': 'Represents the vast Carolingian Western imperial sphere. MHG Vrankisch [ˈvraŋ.kɪʃ] with voiced initial v- and velar nasal [ŋ].'
     },
     'e_france': {
         'in_game': 'Francia',
@@ -57,14 +57,14 @@ EMPIRES_MASTER = {
     },
     'e_byzantium': {
         'in_game': 'Byzantine Empire',
-        'tarr': 'Dat Grikische Imperi',
+        'tarr': 'Dat Grîkische Imperi',
         'alt': 'Dat Imperi van Bisantz / Dat Ôstrômische Imperi',
-        'ipa': '[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]',
+        'ipa': '[dat ˈgʀiː.kɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Byzantine Empire',
         'anachronism': '18th-century exonym. Historical Frankish style Imperium Graecorum / Rhōmania. Subsumed into h_roman_empire.',
-        'adj': 'Grikisch',
-        'justification': 'Authentic Frankish/German diplomatic style Imperium Graecorum -> Dat Grikische Imperi, or Bisantz [bi.ˈzants] after Byzantion.'
+        'adj': 'Grîkisch',
+        'justification': 'Authentic Frankish/German diplomatic style Imperium Graecorum -> Dat Grîkische Imperi [ˈgʀiː.kɪ.ʃə] with circumflexed long î in bimoraic open root, or Bisantz [bi.ˈzants] after Byzantion.'
     },
     'e_illyria': {
         'in_game': 'Illyria',
@@ -255,14 +255,14 @@ EMPIRES_MASTER = {
     },
     'e_mongolia': {
         'in_game': 'Mongolia',
-        'tarr': 'Dat Mongolische Imperi',
+        'tarr': 'Dat Mongôlische Imperi',
         'alt': 'Dat Imperi van dem Hilligen Ôtüken',
         'ipa': '[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 2',
         'origin': 'Mongolia',
         'anachronism': 'Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.',
-        'adj': 'Mongolisch',
-        'justification': 'Ethnonym Mongol -> Mongolisch [mɔŋ.ˈgoː.lɪʃ] with regular adjectival ending.'
+        'adj': 'Mongôlisch',
+        'justification': 'Ethnonym Mongol -> Mongôlisch [mɔŋ.ˈgoː.lɪʃ] with regular adjectival ending and circumflexed long ô.'
     },
     'e_siberia': {
         'in_game': 'Siberia',
@@ -277,14 +277,14 @@ EMPIRES_MASTER = {
     },
     'e_arabia': {
         'in_game': 'Arabian Empire',
-        'tarr': 'Dat Kalifische Imperi',
+        'tarr': 'Dat Kalîfische Imperi',
         'alt': 'Dat Imperi van dem Kalifât / Dat Arâbische Imperi',
         'ipa': '[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Arabian Empire',
         'anachronism': 'Conquered 1136 from Hashimid Caliphs. Native institutional endonym al-Khilāfah ("The Stewardship/Caliphate").',
-        'adj': 'Kalifisch',
-        'justification': 'Calque of the institutional Islamic sovereign title al-Khilāfah (الخلافة) -> Dat Kalifische Imperi [dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri].'
+        'adj': 'Kalîfisch',
+        'justification': 'Calque of the institutional Islamic sovereign title al-Khilāfah (الخلافة) -> Dat Kalîfische Imperi [dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri] with circumflexed long î.'
     },
     'e_persia': {
         'in_game': 'Persian Empire',
@@ -411,23 +411,23 @@ EMPIRES_MASTER = {
         'in_game': 'Amur',
         'tarr': 'Dat Bohâi-Imperi',
         'alt': 'Dat Dschürtschen-Imperi',
-        'ipa': '[dat boː.ˈhaːi ɪm.ˈpɛ.ri]',
+        'ipa': '[dat bɔ.ˈhaːi ɪm.ˈpɛ.ri]',
         'tier': 'Tier 2',
         'origin': 'Amur',
         'anachronism': 'Pre-867 historical sovereign empire of the Amur and Manchuria (Balhae/Bohai), replacing modern Russian/Tungusic river name Amur.',
         'adj': 'Bohâisch',
-        'justification': 'Historical Mohe/Tungusic kingdom of Balhae (Bohai) -> Bohâi [boː.ˈhaːi] with circumflexed long â.'
+        'justification': 'Historical Mohe/Tungusic kingdom of Balhae (Bohai) -> Bohâi [bɔ.ˈhaːi] with circumflexed long â.'
     },
     'e_goryeo': {
         'in_game': 'Samhan',
         'tarr': 'Dat Hôchprachtige Imperi',
         'alt': 'Dat Imperi van den Drî-Hânen / Dat Imperi van Goryeo',
-        'ipa': '[dat ˈhoːx.pɾax.tɪ.ʃə ɪm.ˈpɛ.ri]',
+        'ipa': '[dat ˈhoːx.pʀax.tɪ.ɣə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Samhan',
         'anachronism': 'Conquered 1153 from House Aliyid. Native endonyms Goryeo (高麗 = "Lofty Splendor") and Samhan (三韓 = "Three Hans").',
         'adj': 'Hôchprachtig',
-        'justification': 'Semantic calque of Goryeo (高麗: gāo = high/lofty, lì = magnificent/splendid) -> Hôchpracht with weak adjective Hôchprachtig [ˈhoːx.pɾax.tɪ.ʃə]. Alt Drî-Hânen (Samhan).'
+        'justification': 'Semantic calque of Goryeo (高麗: gāo = high/lofty, lì = magnificent/splendid) -> Hôchpracht with weak adjective Hôchprachtige [ˈhoːx.pʀax.tɪ.ɣə]. Alt Drî-Hânen (Samhan).'
     },
     'e_japan': {
         'in_game': 'Japan',
@@ -453,14 +453,14 @@ EMPIRES_MASTER = {
     },
     'e_nusantara': {
         'in_game': 'Nusantara',
-        'tarr': 'Dat Malukische Imperi',
+        'tarr': 'Dat Malûkische Imperi',
         'alt': 'Dat Krûdinsels-Imperi',
         'ipa': '[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]',
         'tier': 'Tier 2',
         'origin': 'Nusantara',
         'anachronism': 'Representative kingdom of the Spice Islands; Nusantara is a late 14th-century Javanese concept and modern political term.',
-        'adj': 'Malukisch',
-        'justification': 'Representative kingdom of Maluku (Spice Islands) -> Malukisch [ma.ˈluː.kɪʃ] with long û.'
+        'adj': 'Malûkisch',
+        'justification': 'Representative kingdom of Maluku (Spice Islands) -> Malûkisch [ma.ˈluː.kɪʃ] with circumflexed long û.'
     },
     'e_suvarnabhumi': {
         'in_game': 'Suvarnabhumi',
@@ -532,7 +532,7 @@ EMPIRES_MASTER = {
         'in_game': 'Azania',
         'tarr': 'Dat Zandsch-Imperi',
         'alt': 'Dat Imperi van dem Zandsch / Dat Imperi van Azânjen',
-        'ipa': '[dat ˈzandʒ ɪm.ˈpɛ.ri]',
+        'ipa': '[dat ˈzandʒ.ɪm.ˌpɛ.ri]',
         'tier': 'Tier 1',
         'origin': 'Azania',
         'anachronism': 'Medieval Indian Ocean endonym for the Swahili coast (Zanj), replacing 1st-century Greco-Roman maritime label Azania.',
