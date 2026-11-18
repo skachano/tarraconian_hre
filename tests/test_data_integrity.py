@@ -394,3 +394,44 @@ class TestMapColoring:
         assert by_key["k_venice"] != by_key["k_romagna"], (
             f"k_venice and k_romagna must have distinct colors, got {by_key['k_venice']} vs {by_key['k_romagna']}"
         )
+
+
+class TestTitleInfoAndIpa:
+    """Validates the UI drawer elements, IPA pronunciations, and historical naming."""
+
+    def test_html_drawer_sections(self):
+        index_html = (REPO_DIR / "web" / "index.html").read_text(encoding="utf-8")
+        assert "Historical Resolution" in index_html
+        assert "1059 Historical Resolution" not in index_html
+        assert 'id="drawer-ipa"' in index_html
+        assert 'id="drawer-ipa-group"' in index_html
+
+    def test_css_anachronism_info_styling(self):
+        css = (REPO_DIR / "web" / "css" / "styles.css").read_text(encoding="utf-8")
+        assert "#3069a8" in css
+        assert "info-ipa" in css
+
+    def test_counties_geojson_ipa_and_tarr(self, counties_data):
+        cleves = next(f["properties"] for f in counties_data["features"] if f["properties"]["county"] == "c_cleves")
+        assert cleves["tarr"] == "Xanten"
+        assert cleves["tarr_hist"] == "Xanten"
+        assert cleves["tarr_direct"] == "Clêve"
+        assert cleves["c_ipa"] == "[ˈkleː.və]"
+        assert cleves["k_ipa"] == "[ˈloː.trɪŋ.ən]"
+        assert "d_ipa" in cleves
+        assert "e_ipa" in cleves
+
+    def test_title_tree_ipa_and_tarr(self, tree_data):
+        germany = tree_data["e_germany"]
+        loth = germany["kingdoms"]["k_lotharingia"]
+        assert loth["ipa"] == "[ˈloː.trɪŋ.ən]"
+        cleves = loth["duchies"]["d_julich"]["counties"]["c_cleves"]
+        assert cleves["tarr"] == "Xanten"
+        assert cleves["tarr_hist"] == "Xanten"
+        assert cleves["tarr_direct"] == "Clêve"
+        assert cleves["ipa"] == "[ˈkleː.və]"
+
+        for emp in tree_data.values():
+            if "k_france" in emp.get("kingdoms", {}):
+                assert emp["kingdoms"]["k_france"]["ipa"] == "[ˈvraŋk.riːç]"
+                break

@@ -422,21 +422,27 @@ body {
 .info-anachronism-note {
   font-size: 0.85rem;
   line-height: 1.4;
-  color: #f7d794;
-  background: rgba(184, 79, 24, 0.12);
-  border-left: 3px solid #b84f18;
+  color: #d1e2f2;
+  background: rgba(48, 105, 168, 0.14);
+  border-left: 3px solid #3069a8;
   border-radius: 0 4px 4px 0;
   padding: 0.45rem 0.65rem;
   margin-top: 0.4rem;
 }
 
 .info-anachronism-note strong {
-  color: #ff9f43;
+  color: #7ab2e8;
   font-size: 0.8rem;
   display: block;
   margin-bottom: 0.2rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.info-ipa {
+  color: var(--gold-light);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
 }
 
 .info-code {

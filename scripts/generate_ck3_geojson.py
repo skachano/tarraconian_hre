@@ -696,6 +696,84 @@ def parse_title_origins(
     )
 
 
+def parse_title_ipa(md_path: Path):
+    """
+    Extracts IPA phonetic pronunciations from tarraconian_titles_1059.md
+    for kingdoms, duchies, counties, and empires.
+    """
+    c_ipa = {}
+    d_ipa = {}
+    k_ipa = {}
+    e_ipa = {}
+
+    if not md_path or not md_path.exists():
+        return c_ipa, d_ipa, k_ipa, e_ipa
+
+    text = md_path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+
+    for line in lines:
+        line_s = line.strip()
+
+        # 1. Section 2 Kingdom table
+        m_k = re.match(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|\s*([^|]+)\|\s*([^|]+)\|", line_s)
+        if m_k:
+            kk = m_k.group(2).strip()
+            col4 = m_k.group(4).strip()
+            m_brackets = re.findall(r"\[([^\]]+)\]", col4)
+            for b in m_brackets:
+                b_clean = b.strip("`")
+                if any(c in b_clean for c in "ˈˌːɛɔʊɪʏøœ̃ŋʃʒθðçɣχʁʔɲʎ") or ("." in b_clean and len(b_clean.split()) == 1):
+                    k_ipa[kk] = f"[{b_clean}]"
+                    break
+            continue
+
+        # 2. Section 3 Kingdom headers
+        if line_s.startswith("### 3."):
+            m_kh = re.match(r"^###\s+3\.\d+\s+Kingdom.*?\(`([a-zA-Z0-9_\-]+)`\)", line_s)
+            if m_kh:
+                kk = m_kh.group(1).strip()
+                if kk not in k_ipa:
+                    m_brackets = re.findall(r"\[([^\]]+)\]", line_s)
+                    for b in m_brackets:
+                        b_clean = b.strip("`")
+                        if any(c in b_clean for c in "ˈˌːɛɔʊɪʏøœ̃ŋʃʒθðçɣχʁʔɲʎ") or ("." in b_clean and len(b_clean.split()) == 1):
+                            k_ipa[kk] = f"[{b_clean}]"
+                            break
+            continue
+
+        # 3. Section 3 Duchy bullets
+        if any(line_s.startswith(x) for x in ["* **Duchy", "* **Frontier Duchy", "* **March", "* **Metropolitan"]):
+            all_keys = re.findall(r"`([dx]_[a-zA-Z0-9_\-]+)`", line_s)
+            m_brackets = re.findall(r"\[([^\]]+)\]", line_s)
+            for b in m_brackets:
+                b_clean = b.strip("`")
+                if any(b_clean.startswith(x) for x in ["1059", "1122", "1142", "1154", "1171", "1194", "HRE", "d_", "c_", "k_", "e_", "b_"]):
+                    continue
+                if any(c in b_clean for c in "ˈˌːɛɔʊɪʏøœ̃ŋʃʒθðçɣχʁʔɲʎ") or ("." in b_clean and len(b_clean.split()) == 1):
+                    for dk in all_keys:
+                        d_ipa[dk] = f"[{b_clean}]"
+                    break
+            continue
+
+        # 4. Section 3 County bullets
+        m_c = re.match(r"^\s*\*\s*`(c_[a-zA-Z0-9_\-]+)`\s*(.*?)\s*\$\\rightarrow\$\s*(.*?)$", line_s)
+        if m_c:
+            ck = m_c.group(1).strip()
+            rest = m_c.group(3)
+            m_brackets = re.findall(r"\[([^\]]+)\]", rest)
+            for b in m_brackets:
+                b_clean = b.strip("`")
+                if any(b_clean.startswith(x) for x in ["1059", "1122", "1142", "1154", "1171", "1194", "HRE", "d_", "c_", "k_", "e_", "b_"]):
+                    continue
+                if any(c in b_clean for c in "ˈˌːɛɔʊɪʏøœ̃ŋʃʒθðçɣχʁʔɲʎ") or ("." in b_clean and len(b_clean.split()) == 1):
+                    c_ipa[ck] = f"[{b_clean}]"
+                    break
+            continue
+
+    return c_ipa, d_ipa, k_ipa, e_ipa
+
+
 def build_and_write_title_tree(
     county_info: dict,
     tree_out_path: Path,
@@ -714,6 +792,10 @@ def build_and_write_title_tree(
     d_anachronisms: dict = None,
     k_anachronisms: dict = None,
     e_anachronisms: dict = None,
+    c_ipa: dict = None,
+    d_ipa: dict = None,
+    k_ipa: dict = None,
+    e_ipa: dict = None,
 ):
     """Builds nested title tree e_* -> k_* -> d_* -> c_* -> [b_*] and writes to JSON."""
     if empire_colors is None: empire_colors = {}
@@ -728,6 +810,10 @@ def build_and_write_title_tree(
     if d_anachronisms is None: d_anachronisms = {}
     if k_anachronisms is None: k_anachronisms = {}
     if e_anachronisms is None: e_anachronisms = {}
+    if c_ipa is None: c_ipa = {}
+    if d_ipa is None: d_ipa = {}
+    if k_ipa is None: k_ipa = {}
+    if e_ipa is None: e_ipa = {}
 
     save_title_tree = {}
     for c_key, info in county_info.items():
@@ -746,6 +832,7 @@ def build_and_write_title_tree(
         e_entry = {
             "key": e_k,
             "tarr": e_tarr_name,
+            "ipa": e_ipa.get(e_k, ""),
             "origin": e_origin,
             "anachronism": e_anachronisms.get(e_k, ""),
             "color": empire_colors.get(e_k, "#a64b38"),
@@ -758,6 +845,7 @@ def build_and_write_title_tree(
             k_entry = {
                 "key": k_k,
                 "tarr": k_tarr_name,
+                "ipa": k_ipa.get(k_k, ""),
                 "origin": k_origin,
                 "anachronism": k_anachronisms.get(k_k, ""),
                 "color": kingdom_colors.get(k_k, "#b88228"),
@@ -770,6 +858,7 @@ def build_and_write_title_tree(
                 d_entry = {
                     "key": d_k,
                     "tarr": d_tarr_name,
+                    "ipa": d_ipa.get(d_k, ""),
                     "origin": d_origin,
                     "anachronism": d_anachronisms.get(d_k, ""),
                     "color": duchy_colors.get(d_k, "#2e649e"),
@@ -778,10 +867,14 @@ def build_and_write_title_tree(
                 for c_k in sorted(counties.keys()):
                     b_list = counties[c_k]
                     c_origin = c_origins.get(c_k, format_title_key(c_k))
+                    c_hist = gaz.get(c_k, {}).get("hist", c_k)
+                    c_direct = gaz.get(c_k, {}).get("direct", c_k)
                     c_entry = {
                         "key": c_k,
-                        "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
-                        "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
+                        "tarr": c_hist or c_direct,
+                        "tarr_direct": c_direct,
+                        "tarr_hist": c_hist,
+                        "ipa": c_ipa.get(c_k, ""),
                         "origin": c_origin,
                         "anachronism": c_anachronisms.get(c_k, ""),
                         "color": county_colors.get(c_k, "#3b7d4e"),
@@ -812,6 +905,10 @@ def realign_existing_datasets(
     d_anachronisms: dict = None,
     k_anachronisms: dict = None,
     e_anachronisms: dict = None,
+    c_ipa: dict = None,
+    d_ipa: dict = None,
+    k_ipa: dict = None,
+    e_ipa: dict = None,
 ):
     """Realigns existing GeoJSON and title tree datasets without re-rasterizing."""
     counties_path = out_dir / "ck3_counties.geojson"
@@ -827,6 +924,10 @@ def realign_existing_datasets(
     if d_anachronisms is None: d_anachronisms = {}
     if k_anachronisms is None: k_anachronisms = {}
     if e_anachronisms is None: e_anachronisms = {}
+    if c_ipa is None: c_ipa = {}
+    if d_ipa is None: d_ipa = {}
+    if k_ipa is None: k_ipa = {}
+    if e_ipa is None: e_ipa = {}
 
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
@@ -852,12 +953,22 @@ def realign_existing_datasets(
         if c_k in gaz:
             props["tarr_direct"] = gaz[c_k].get("direct", "")
             props["tarr_hist"] = gaz[c_k].get("hist", "")
+            props["tarr"] = props["tarr_hist"] or props["tarr_direct"]
         if d_k:
             props["d_tarr"] = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", "")))
+            if d_k in gaz:
+                props["d_tarr_direct"] = gaz[d_k].get("direct", "")
+                props["d_tarr_hist"] = gaz[d_k].get("hist", "")
         if k_k:
             props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
+            if k_k in gaz:
+                props["k_tarr_direct"] = gaz[k_k].get("direct", "")
+                props["k_tarr_hist"] = gaz[k_k].get("hist", "")
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+            if e_k in gaz:
+                props["e_tarr_direct"] = gaz[e_k].get("direct", "")
+                props["e_tarr_hist"] = gaz[e_k].get("hist", "")
 
         # Historical Title Name Origins & Anachronisms from Markdown Files
         props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
@@ -871,6 +982,12 @@ def realign_existing_datasets(
         if e_k:
             props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
             props["e_anachronism"] = e_anachronisms.get(e_k, "")
+
+        # IPA pronunciations
+        props["c_ipa"] = c_ipa.get(c_k, "")
+        if d_k: props["d_ipa"] = d_ipa.get(d_k, "")
+        if k_k: props["k_ipa"] = k_ipa.get(k_k, "")
+        if e_k: props["e_ipa"] = e_ipa.get(e_k, "")
 
         county_info[c_k] = {
             "county": c_k,
@@ -899,12 +1016,22 @@ def realign_existing_datasets(
         if c_k and c_k in gaz:
             props["c_tarr_direct"] = gaz[c_k].get("direct", "")
             props["c_tarr_hist"] = gaz[c_k].get("hist", "")
+            props["c_tarr"] = props["c_tarr_hist"] or props["c_tarr_direct"]
         if d_k:
             props["d_tarr"] = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", "")))
+            if d_k in gaz:
+                props["d_tarr_direct"] = gaz[d_k].get("direct", "")
+                props["d_tarr_hist"] = gaz[d_k].get("hist", "")
         if k_k:
             props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
+            if k_k in gaz:
+                props["k_tarr_direct"] = gaz[k_k].get("direct", "")
+                props["k_tarr_hist"] = gaz[k_k].get("hist", "")
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+            if e_k in gaz:
+                props["e_tarr_direct"] = gaz[e_k].get("direct", "")
+                props["e_tarr_hist"] = gaz[e_k].get("hist", "")
 
         # Historical Title Name Origins & Anachronisms from Markdown Files
         props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
@@ -921,6 +1048,13 @@ def realign_existing_datasets(
         if e_k:
             props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
             props["e_anachronism"] = e_anachronisms.get(e_k, "")
+
+        # IPA pronunciations
+        props["b_ipa"] = ""
+        if c_k: props["c_ipa"] = c_ipa.get(c_k, "")
+        if d_k: props["d_ipa"] = d_ipa.get(d_k, "")
+        if k_k: props["k_ipa"] = k_ipa.get(k_k, "")
+        if e_k: props["e_ipa"] = e_ipa.get(e_k, "")
 
     # Compute collision-free map colors
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
@@ -980,6 +1114,10 @@ def realign_existing_datasets(
         d_anachronisms,
         k_anachronisms,
         e_anachronisms,
+        c_ipa,
+        d_ipa,
+        k_ipa,
+        e_ipa,
     )
 
     # Write adjacencies index
@@ -1138,9 +1276,14 @@ def main():
         k_anachronisms,
         e_anachronisms,
     ) = parse_title_origins(gaz_path, empires_md, anach_path, audit_path)
+    c_ipa, d_ipa, k_ipa, e_ipa = parse_title_ipa(gaz_path)
     print(
         f"-> Loaded title name origins from markdown: {len(c_origins)} counties, "
         f"{len(d_origins)} duchies, {len(k_origins)} kingdoms, {len(e_origins)} empires"
+    )
+    print(
+        f"-> Loaded IPA pronunciations from markdown: {len(c_ipa)} counties, "
+        f"{len(d_ipa)} duchies, {len(k_ipa)} kingdoms, {len(e_ipa)} empires"
     )
 
     # If --realign-only is requested OR if game files are missing while existing GeoJSONs exist
@@ -1160,6 +1303,10 @@ def main():
             d_anachronisms,
             k_anachronisms,
             e_anachronisms,
+            c_ipa,
+            d_ipa,
+            k_ipa,
+            e_ipa,
         )
         print("==========================================================")
         print("SUCCESS: Existing Datasets Successfully Realigned!")
@@ -1257,12 +1404,22 @@ def main():
         if c_key and c_key in gaz:
             props["c_tarr_direct"] = gaz[c_key].get("direct", "")
             props["c_tarr_hist"] = gaz[c_key].get("hist", "")
+            props["c_tarr"] = props["c_tarr_hist"] or props["c_tarr_direct"]
         if d_key:
             props["d_tarr"] = gaz.get(d_key, {}).get("hist", gaz.get(d_key, {}).get("direct", save_titles.get(d_key, {}).get("save_name", "")))
+            if d_key in gaz:
+                props["d_tarr_direct"] = gaz[d_key].get("direct", "")
+                props["d_tarr_hist"] = gaz[d_key].get("hist", "")
         if k_key:
             props["k_tarr"] = gaz.get(k_key, {}).get("hist", gaz.get(k_key, {}).get("direct", save_titles.get(k_key, {}).get("save_name", "")))
+            if k_key in gaz:
+                props["k_tarr_direct"] = gaz[k_key].get("direct", "")
+                props["k_tarr_hist"] = gaz[k_key].get("hist", "")
         if e_key:
             props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
+            if e_key in gaz:
+                props["e_tarr_direct"] = gaz[e_key].get("direct", "")
+                props["e_tarr_hist"] = gaz[e_key].get("hist", "")
 
         # Historical Title Name Origins & Anachronisms from Markdown Files
         props["b_origin"] = props.get("name") or format_title_key(b_key)
@@ -1279,6 +1436,13 @@ def main():
         if e_key:
             props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
             props["e_anachronism"] = e_anachronisms.get(e_key, "")
+
+        # IPA pronunciations
+        props["b_ipa"] = ""
+        if c_key: props["c_ipa"] = c_ipa.get(c_key, "")
+        if d_key: props["d_ipa"] = d_ipa.get(d_key, "")
+        if k_key: props["k_ipa"] = k_ipa.get(k_key, "")
+        if e_key: props["e_ipa"] = e_ipa.get(e_key, "")
 
         barony_features.append({
             "type": "Feature",
@@ -1318,12 +1482,22 @@ def main():
             if c_key in gaz:
                 props["tarr_direct"] = gaz[c_key].get("direct", "")
                 props["tarr_hist"] = gaz[c_key].get("hist", "")
+                props["tarr"] = props["tarr_hist"] or props["tarr_direct"]
             if d_key:
                 props["d_tarr"] = gaz.get(d_key, {}).get("hist", gaz.get(d_key, {}).get("direct", save_titles.get(d_key, {}).get("save_name", "")))
+                if d_key in gaz:
+                    props["d_tarr_direct"] = gaz[d_key].get("direct", "")
+                    props["d_tarr_hist"] = gaz[d_key].get("hist", "")
             if k_key:
                 props["k_tarr"] = gaz.get(k_key, {}).get("hist", gaz.get(k_key, {}).get("direct", save_titles.get(k_key, {}).get("save_name", "")))
+                if k_key in gaz:
+                    props["k_tarr_direct"] = gaz[k_key].get("direct", "")
+                    props["k_tarr_hist"] = gaz[k_key].get("hist", "")
             if e_key:
                 props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
+                if e_key in gaz:
+                    props["e_tarr_direct"] = gaz[e_key].get("direct", "")
+                    props["e_tarr_hist"] = gaz[e_key].get("hist", "")
 
             # Historical Title Name Origins & Anachronisms from Markdown Files
             props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
@@ -1337,6 +1511,12 @@ def main():
             if e_key:
                 props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
                 props["e_anachronism"] = e_anachronisms.get(e_key, "")
+
+            # IPA pronunciations
+            props["c_ipa"] = c_ipa.get(c_key, "")
+            if d_key: props["d_ipa"] = d_ipa.get(d_key, "")
+            if k_key: props["k_ipa"] = k_ipa.get(k_key, "")
+            if e_key: props["e_ipa"] = e_ipa.get(e_key, "")
 
             county_features.append({
                 "type": "Feature",
@@ -1414,6 +1594,10 @@ def main():
         d_anachronisms,
         k_anachronisms,
         e_anachronisms,
+        c_ipa,
+        d_ipa,
+        k_ipa,
+        e_ipa,
     )
 
     # 15. Write Adjacencies Index

@@ -368,7 +368,7 @@ function onHover(layer, feature, tier = currentTier) {
       titleName = p.name || formatKey(p.barony);
     } else if (tier === 'county') {
       rankLabel = 'County';
-      titleName = p.tarr_hist || p.tarr_direct || formatKey(p.county);
+      titleName = p.tarr_hist || p.tarr_direct || p.tarr || formatKey(p.county);
     } else if (tier === 'duchy') {
       rankLabel = 'Duchy';
       titleName = p.d_tarr || formatKey(p.duchy);
@@ -455,34 +455,41 @@ function openInspector(props, tier) {
   titleKeyElem.textContent = currentKey;
 
   // Title Names & Anachronism Analysis for active tier
-  const countyTarr = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || '';
+  const countyTarr = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || props.tarr || props.c_tarr || '';
   let currentAnachronism = '';
+  let currentIpa = '';
+
   if (tier === 'county') {
     tarrName.textContent = countyTarr || formatKey(props.county);
     originName.textContent = props.c_origin || formatKey(props.county);
     currentAnachronism = props.c_anachronism || '';
+    currentIpa = props.c_ipa || props.ipa || '';
   } else if (tier === 'barony') {
     tarrName.textContent = props.name || formatKey(props.barony);
     originName.textContent = props.b_origin || props.name || formatKey(props.barony);
     currentAnachronism = props.b_anachronism || props.c_anachronism || '';
+    currentIpa = props.b_ipa || props.ipa || '';
   } else if (tier === 'duchy') {
     tarrName.textContent = props.d_tarr || formatKey(props.duchy);
     originName.textContent = props.d_origin || formatKey(props.duchy);
     currentAnachronism = props.d_anachronism || '';
+    currentIpa = props.d_ipa || props.ipa || '';
   } else if (tier === 'kingdom') {
     tarrName.textContent = props.k_tarr || formatKey(props.kingdom);
     originName.textContent = props.k_origin || formatKey(props.kingdom);
     currentAnachronism = props.k_anachronism || '';
+    currentIpa = props.k_ipa || props.ipa || '';
   } else if (tier === 'empire') {
     tarrName.textContent = props.e_tarr || formatKey(props.empire);
     originName.textContent = props.e_origin || formatKey(props.empire);
     currentAnachronism = props.e_anachronism || '';
+    currentIpa = props.e_ipa || props.ipa || '';
   }
 
   const anachNote = document.getElementById('drawer-anachronism-note');
   if (anachNote) {
     if (currentAnachronism) {
-      anachNote.innerHTML = `<strong>⚠️ Anachronistic Title Analysis:</strong> ${currentAnachronism}`;
+      anachNote.innerHTML = `<strong>ℹ️ Anachronistic Title Analysis:</strong> ${currentAnachronism}`;
       anachNote.classList.remove('hidden');
     } else {
       anachNote.classList.add('hidden');
@@ -490,12 +497,44 @@ function openInspector(props, tier) {
     }
   }
 
-  // Historical resolution (if applicable and distinct for county)
-  if (tier === 'county' && props.tarr_hist && props.tarr_direct && props.tarr_hist !== props.tarr_direct) {
+  const ipaGroup = document.getElementById('drawer-ipa-group');
+  const ipaVal = document.getElementById('drawer-ipa');
+  if (ipaGroup && ipaVal) {
+    if (currentIpa) {
+      ipaVal.textContent = currentIpa;
+      ipaGroup.classList.remove('hidden');
+    } else {
+      ipaGroup.classList.add('hidden');
+      ipaVal.textContent = '—';
+    }
+  }
+
+  // Historical resolution (if applicable)
+  let histRes = '';
+  if (tier === 'county') {
+    if (props.tarr_hist && props.tarr_direct && props.tarr_hist !== props.tarr_direct) {
+      histRes = props.tarr_hist;
+    }
+  } else if (tier === 'duchy') {
+    if (props.d_tarr_hist && props.d_tarr_direct && props.d_tarr_hist !== props.d_tarr_direct) {
+      histRes = props.d_tarr_hist;
+    }
+  } else if (tier === 'kingdom') {
+    if (props.k_tarr_hist && props.k_tarr_direct && props.k_tarr_hist !== props.k_tarr_direct) {
+      histRes = props.k_tarr_hist;
+    }
+  } else if (tier === 'empire') {
+    if (props.e_tarr_hist && props.e_tarr_direct && props.e_tarr_hist !== props.e_tarr_direct) {
+      histRes = props.e_tarr_hist;
+    }
+  }
+
+  if (histRes) {
     histGroup.classList.remove('hidden');
-    histName.textContent = `${props.tarr_hist} (Direct: ${props.tarr_direct})`;
+    histName.textContent = histRes;
   } else {
     histGroup.classList.add('hidden');
+    histName.textContent = '—';
   }
 
   // Breadcrumbs
@@ -562,7 +601,7 @@ function renderConstituentTitles(props, tier, section, label, listElem) {
       section.classList.remove('hidden');
       label.textContent = `Constituent Counties (${counties.length})`;
       listElem.innerHTML = counties.map(([c_k, c_data]) => {
-        const name = c_data.tarr_hist || c_data.tarr_direct || formatKey(c_k);
+        const name = c_data.tarr || c_data.tarr_hist || c_data.tarr_direct || formatKey(c_k);
         return `<li class="barony-pill" data-key="${c_k}" data-tier="county" style="cursor:pointer" title="Click to inspect ${name}">${name} <small style="opacity:0.6;font-family:var(--font-mono)">(${c_k})</small></li>`;
       }).join('');
       attachPillHandlers(listElem);
@@ -671,7 +710,7 @@ function buildSearchIndex() {
     const p = feat.properties;
     searchIndex.push({
       key: p.county,
-      tarr: p.tarr_hist || p.tarr_direct || '',
+      tarr: p.tarr_hist || p.tarr_direct || p.tarr || '',
       origin: p.c_origin || formatKey(p.county),
       tier: 'county',
       duchy: p.d_tarr || formatKey(p.duchy),

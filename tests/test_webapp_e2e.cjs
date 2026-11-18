@@ -210,6 +210,12 @@ async function runE2ETests() {
       throw new Error(`Expected München origin to include "Freising" and "München", got "${munchenOrigin}"`);
     }
 
+    const munchenTitle = await page.locator('#drawer-tarr-name').innerText();
+    console.log(`  München Drawer title name: "${munchenTitle}"`);
+    if (munchenTitle !== 'Vrîsing') {
+      throw new Error(`Expected drawer title name to be historical name "Vrîsing", got "${munchenTitle}"`);
+    }
+
     const munchenAnachVisible = await page.locator('#drawer-anachronism-note').evaluate(el => !el.classList.contains('hidden'));
     if (!munchenAnachVisible) {
       throw new Error('Expected #drawer-anachronism-note to be visible for anachronistic title c_munchen');
@@ -219,6 +225,51 @@ async function runE2ETests() {
     console.log(`  München Anachronism note: "${anachText}"`);
     if (!anachText.includes('1158') || !anachText.includes('Henry the Lion')) {
       throw new Error(`Expected anachronism analysis to mention 1158 foundation and Henry the Lion, got "${anachText}"`);
+    }
+    if (!anachText.includes('ℹ️') || anachText.includes('⚠️')) {
+      throw new Error(`Expected anachronism note to have info icon ℹ️ instead of ⚠️, got "${anachText}"`);
+    }
+
+    const histGroupVisible = await page.locator('#drawer-hist-group').evaluate(el => !el.classList.contains('hidden'));
+    if (!histGroupVisible) {
+      throw new Error('Expected #drawer-hist-group to be visible for c_munchen');
+    }
+    const histLabel = await page.locator('#drawer-hist-group label').innerText();
+    if (!histLabel.toUpperCase().includes('HISTORICAL RESOLUTION') || histLabel.includes('1059')) {
+      throw new Error(`Expected label "Historical Resolution" without "1059", got "${histLabel}"`);
+    }
+    const histText = await page.locator('#drawer-hist-name').innerText();
+    if (histText.includes('(Direct:') || !histText.includes('Vrîsing')) {
+      throw new Error(`Expected historical resolution to be "Vrîsing" without (Direct: ...), got "${histText}"`);
+    }
+
+    // Test c_cleves for IPA pronunciation and historical resolution
+    console.log('  Testing IPA pronunciation and historical naming on c_cleves...');
+    await searchInput.fill('c_cleves');
+    await page.waitForSelector('#search-results .search-item[data-key="c_cleves"]', { timeout: 5000 });
+    const clevesResult = page.locator('#search-results .search-item[data-key="c_cleves"]').first();
+    await clevesResult.click();
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_cleves';
+    }, { timeout: 5000 });
+
+    const clevesTitle = await page.locator('#drawer-tarr-name').innerText();
+    if (clevesTitle !== 'Xanten') {
+      throw new Error(`Expected c_cleves title name to be "Xanten", got "${clevesTitle}"`);
+    }
+
+    const ipaVisible = await page.locator('#drawer-ipa-group').evaluate(el => !el.classList.contains('hidden'));
+    if (!ipaVisible) {
+      throw new Error('Expected #drawer-ipa-group to be visible for c_cleves');
+    }
+    const ipaText = await page.locator('#drawer-ipa').innerText();
+    if (!ipaText.includes('[ˈkleː.və]')) {
+      throw new Error(`Expected IPA "[ˈkleː.və]", got "${ipaText}"`);
+    }
+
+    const clevesHistText = await page.locator('#drawer-hist-name').innerText();
+    if (clevesHistText.includes('(Direct:') || !clevesHistText.includes('Xanten')) {
+      throw new Error(`Expected historical resolution "Xanten" without "(Direct: ...)", got "${clevesHistText}"`);
     }
 
     // Re-select Middlesex so that switching to Kingdom tier tests k_england
@@ -373,6 +424,12 @@ async function runE2ETests() {
              document.getElementById('drawer-title-key').innerText === 'k_france';
     }, { timeout: 5000 });
 
+    const franceIpa = await page.locator('#drawer-ipa').innerText();
+    console.log(`  Kingdom of France IPA: "${franceIpa}"`);
+    if (!franceIpa.includes('[ˈvraŋk.riːç]')) {
+      throw new Error(`Expected Kingdom of France IPA "[ˈvraŋk.riːç]", got "${franceIpa}"`);
+    }
+
     const franceSelectedCount = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('#map svg path'))
         .filter(p => p.getAttribute('fill') === '#993284').length;
@@ -455,6 +512,7 @@ async function runE2ETests() {
 
     // Move cursor away to ocean / corner
     await page.mouse.move(20, 100);
+    await page.waitForTimeout(100);
     const residualCount = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('#map svg path'))
         .filter(p => p.getAttribute('stroke') === '#f5d77f').length;
