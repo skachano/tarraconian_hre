@@ -135,11 +135,59 @@ def generate_tarraconian_ipa(name: str) -> str:
     if not name:
         return ""
     s = name.strip()
-    s = re.sub(r"^(Magistrat|Gubernat|Kûnincrich|Keiserrîch|Erzbisdom|Fürstbisdom)\s+van\s+(dem\s+|der\s+|den\s+)?", "", s)
+    
+    # Remove title / administrative prefixes
+    s = re.sub(r"^(Magistrat|Gubernat|Kûnincrich|Keiserrîch|Erzbisdom|Fürstbisdom)\s+van\s+(dem\s+|der\s+|den\s+)?", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"^van\s+(dem\s+|der\s+|den\s+)?", "", s, flags=re.IGNORECASE)
+    
+    # If there is an alternative separated by slash, take the primary (first)
+    if "/" in s:
+        s = s.split("/")[0].strip()
+        
+    # Expand Saint abbreviations
+    s = re.sub(r"\bSt\.?\s*", "Zant-", s)
+    
+    # Store original stripped name to detect Romance/Germanic patterns for stress
+    raw_stem = s
     
     res = s.lower()
     
-    # Long vowels
+    # Clean apostrophes
+    res = res.replace("'", "")
+    
+    # Convert foreign diacritics / non-Tarraconian orthography
+    res = res.replace("š", "sch").replace("ž", "dsch").replace("č", "tsch")
+    res = res.replace("ð", "d").replace("þ", "t")
+    res = res.replace("æ", "e").replace("ä", "e").replace("å", "o").replace("ë", "e").replace("ï", "i")
+    res = res.replace("ñ", "nj").replace("ý", "î")
+    res = res.replace("qu", "kw").replace("q", "k")
+    res = res.replace("x", "ks")
+    res = res.replace("ā", "aː").replace("ī", "iː").replace("ū", "uː")
+    res = res.replace("ă", "ə").replace("ș", "ʃ").replace("ț", "ts")
+    res = res.replace("ő", "øː").replace("ű", "yː")
+    res = res.replace("ã", "a")
+    
+    # Hiatus with circumflex in loanwords (aî -> a.iː, aû -> a.uː, eî -> e.iː)
+    res = res.replace("aî", "a.iː").replace("aû", "a.uː").replace("eî", "e.iː")
+    
+    # Chancellery consonants & clusters (FIRST, before c -> k)
+    res = re.sub(r"dsch", "dʒ", res)
+    res = re.sub(r"tsch", "tʃ", res)
+    res = re.sub(r"sch", "ʃ", res)
+    
+    # ch after front vowels / diphthongs -> ç, after back vowels -> x
+    res = re.sub(r"([iîeêyüö]|eː|iː|yː|øː|ɛɪ|ɔʏ)ch", r"\1ç", res)
+    res = res.replace("ch", "x")
+    
+    # Catalan/Latin c -> ts before e/i/ê/î/y, k elsewhere
+    res = re.sub(r"c(?=[eiêîy])", "ts", res)
+    res = res.replace("c", "k")
+    
+    # Palatal nj / ny / ll (Catalan/Romance)
+    res = re.sub(r"nj|ny", "ɲ", res)
+    res = re.sub(r"ll", "ʎ", res)
+    
+    # Long vowels (from circumflexes)
     res = res.replace("â", "aː").replace("ê", "eː").replace("î", "iː").replace("ô", "oː").replace("û", "uː")
     res = res.replace("ö", "øː").replace("ü", "yː")
     
@@ -148,74 +196,172 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = re.sub(r"ou|au", "ɔʊ", res)
     res = re.sub(r"eu", "ɔʏ", res)
     
-    # Consonants
-    res = re.sub(r"dsch", "dʒ", res)
-    res = re.sub(r"tsch", "tʃ", res)
-    res = re.sub(r"sch", "ʃ", res)
-    
-    # ch after front vowels -> ç, after back vowels -> x
-    res = re.sub(r"([iːeːyːøːɛɪɪʏœ])ch", r"\1ç", res)
-    res = re.sub(r"ch", "x", res)
-    
-    # z / tz
+    # z / tz -> ts
     res = re.sub(r"\bz", "ts", res)
     res = res.replace("tz", "ts")
+    res = res.replace("z", "ts")
     
     # ng / nk
     res = re.sub(r"ng", "ŋ", res)
     res = re.sub(r"nk", "ŋk", res)
     
-    # Short vowels
-    res = res.replace("a", "a").replace("e", "ɛ").replace("i", "ɪ").replace("o", "ɔ").replace("u", "ʊ")
+    # Short vowels: protect long vowels (followed by ː) and diphthongs
+    res = re.sub(r"a(?!ː)", "a", res)
+    res = re.sub(r"e(?!ː)", "ɛ", res)
+    res = re.sub(r"i(?!ː)", "ɪ", res)
+    res = re.sub(r"o(?!ː)", "ɔ", res)
+    res = re.sub(r"u(?!ː)", "ʊ", res)
     
-    # Reduced vowel in unstressed endings -en, -er, -el
-    res = re.sub(r"ɛn\b", "ən", res)
-    res = re.sub(r"ɛr\b", "ər", res)
-    res = re.sub(r"ɛl\b", "əl", res)
-    res = re.sub(r"ɛ\b", "ə", res)
+    # g: [ɡ]
+    res = res.replace("g", "ɡ")
     
-    # Syllabification
-    vowel_phones = ["aː", "eː", "iː", "oː", "uː", "ɛɪ", "ɔʊ", "ɔʏ", "øː", "yː", "a", "ɛ", "ɪ", "ɔ", "ʊ", "y", "ø", "ə"]
-    consonant_phones = ["dʒ", "tʃ", "ts", "st", "sp", "sk", "ʃ", "ç", "x", "ŋk", "ŋ", "b", "d", "g", "p", "t", "k", "f", "v", "s", "z", "h", "m", "n", "l", "r", "j", "w"]
+    # Reduced vowel [ə] in unstressed Germanic inflectional endings (-en, -er, -el, -e)
+    # But preserve stressed Romance -el, -et, -at, -on, -an
+    C_SET = r"[bdfɡɣkmnprstvwxzʒʃçʎɲ]"
+    res = re.sub(f"({C_SET})ɛn\\b", r"\1ən", res)
+    res = re.sub(f"({C_SET})ɛr\\b", r"\1ər", res)
+    res = re.sub(f"({C_SET})ɛl\\b", r"\1əl", res)
+    # Medial -en- in compounds (e.g. Plintenburch)
+    res = re.sub(f"({C_SET})ɛn({C_SET})", r"\1ən\2", res)
     
-    phones = []
-    i = 0
-    while i < len(res):
-        matched = False
-        for v in vowel_phones + consonant_phones:
-            if res.startswith(v, i):
-                phones.append((v, "V" if v in vowel_phones else "C"))
-                i += len(v)
-                matched = True
-                break
-        if not matched:
-            phones.append((res[i], "C"))
-            i += 1
+    # Romance words ending in -tel, -del, -pel with oxytone stress keep [ɛl] if root is Romance
+    if re.search(r"(castel|montpel|bordel)\b", raw_stem, re.IGNORECASE):
+        res = re.sub(r"əl\b", "ɛl", res)
+        
+    res = re.sub(f"({C_SET})ɛ\\b", r"\1ə", res)
+    
+    # Intervocalic lenition of [ɡ] -> [ɣ] between vowels
+    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|ɛɪ|ɔʊ|ɔʏ)"
+    res = re.sub(f"({v_regex})ɡ({v_regex})", r"\1ɣ\2", res)
+    
+    # Double consonants reduction in IPA
+    res = re.sub(r"([bdfkmnprst])\1+", r"\1", res)
+    
+    # Clean hyphens to spaces
+    res = res.replace("-", " ")
+    
+    # Helper to process single word syllabification & stress
+    def process_word(w: str, raw_w: str) -> str:
+        if not w:
+            return ""
+        
+        vowel_phones = ["aː", "eː", "iː", "oː", "uː", "øː", "yː", "ɛɪ", "ɔʊ", "ɔʏ", "a", "ɛ", "ɪ", "ɔ", "ʊ", "ʏ", "œ", "ə"]
+        consonant_phones = [
+            "dʒ", "tʃ", "ts", "ʃ", "ç", "x", "ŋk", "ŋ",
+            "b", "d", "ɡ", "ɣ", "p", "t", "k", "f", "v", "s", "z", "h",
+            "m", "n", "l", "r", "j", "w", "ʎ", "ɲ"
+        ]
+        
+        # If w already contains explicit hiatus dots from aî / aû / eî, split by dot first
+        subparts = w.split(".")
+        syllables = []
+        for sp in subparts:
+            phones = []
+            i = 0
+            while i < len(sp):
+                matched = False
+                for v in vowel_phones + consonant_phones:
+                    if sp.startswith(v, i):
+                        phones.append((v, "V" if v in vowel_phones else "C"))
+                        i += len(v)
+                        matched = True
+                        break
+                if not matched:
+                    if sp[i].isalpha():
+                        phones.append((sp[i], "C"))
+                    i += 1
+                    
+            v_indices = [idx for idx, (p, typ) in enumerate(phones) if typ == "V"]
+            num_sylls = len(v_indices)
             
-    v_indices = [idx for idx, (p, typ) in enumerate(phones) if typ == "V"]
-    if len(v_indices) > 1:
-        breaks = set()
-        for v_idx_i in range(len(v_indices) - 1):
-            v1 = v_indices[v_idx_i]
-            v2 = v_indices[v_idx_i + 1]
-            inter = phones[v1+1 : v2]
-            n_c = len(inter)
-            if n_c == 0:
-                breaks.add(v1 + 1)
-            elif n_c == 1:
-                breaks.add(v1 + 1)
-            else:
-                breaks.add(v1 + 1 + 1)
+            if num_sylls <= 1:
+                if phones:
+                    syllables.append("".join(p for p, typ in phones))
+                continue
                 
-        syll_res = []
-        for idx, (p, typ) in enumerate(phones):
-            if idx in breaks:
-                syll_res.append(".")
-            syll_res.append(p)
-        res = "".join(syll_res)
+            muta_liquida = {
+                ("b", "r"), ("p", "r"), ("d", "r"), ("t", "r"), ("ɡ", "r"), ("k", "r"),
+                ("b", "l"), ("p", "l"), ("ɡ", "l"), ("k", "l"), ("f", "r"), ("f", "l"),
+                ("v", "r"), ("v", "l")
+            }
+            
+            breaks = set()
+            for v_idx_i in range(num_sylls - 1):
+                v1 = v_indices[v_idx_i]
+                v2 = v_indices[v_idx_i + 1]
+                inter = phones[v1+1 : v2]
+                n_c = len(inter)
+                if n_c == 0:
+                    breaks.add(v1 + 1)
+                elif n_c == 1:
+                    breaks.add(v1 + 1)
+                elif n_c == 2:
+                    c1, c2 = inter[0][0], inter[1][0]
+                    if (c1, c2) in muta_liquida:
+                        breaks.add(v1 + 1)
+                    else:
+                        breaks.add(v1 + 1 + 1)
+                else:
+                    c_penult, c_last = inter[-2][0], inter[-1][0]
+                    if (c_penult, c_last) in muta_liquida or (c_penult, c_last) in {("s", "t"), ("s", "p"), ("s", "k"), ("ʃ", "t"), ("ʃ", "p"), ("ʃ", "k")}:
+                        breaks.add(v2 - 2)
+                    else:
+                        breaks.add(v2 - 1)
+                        
+            cur_syl = []
+            for idx, (p, typ) in enumerate(phones):
+                if idx in breaks:
+                    syllables.append("".join(cur_syl))
+                    cur_syl = []
+                cur_syl.append(p)
+            if cur_syl:
+                syllables.append("".join(cur_syl))
+                
+        if len(syllables) <= 1:
+            return "".join(syllables)
+            
+        # Determine Stress Position
+        germanic_suffixes = (
+            "burch", "stat", "lant", "munster", "dorp", "gouwe", "gou",
+            "velt", "veit", "berch", "vurt", "furt", "haven", "bach", "bache",
+            "flôz", "wazzer", "sticht", "ward", "wald", "walt", "eck", "berg"
+        )
+        is_germanic_compound = any(raw_w.lower().endswith(sfx) for sfx in germanic_suffixes)
+        
+        romance_oxytone = (
+            "el", "êl", "at", "et", "it", "ot", "ut",
+            "on", "ôn", "an", "ân", "in", "în", "ier", "êr", "ur", "or"
+        )
+        ends_oxytone = (not is_germanic_compound) and any(raw_w.lower().endswith(sfx) for sfx in romance_oxytone)
+        
+        final_syl = syllables[-1]
+        has_final_long = any(lv in final_syl for lv in ["aː", "eː", "iː", "oː", "uː", "ɛɪ", "ɔʊ", "ɔʏ"])
+        
+        ends_schwa = syllables[-1].endswith("ə") or raw_w.lower().endswith("e")
+        
+        if is_germanic_compound:
+            stress_idx = 0
+        elif ends_schwa:
+            stress_idx = max(0, len(syllables) - 2)
+        elif ends_oxytone or has_final_long:
+            stress_idx = len(syllables) - 1
+        else:
+            stress_idx = 0
+            
+        syllables[stress_idx] = "ˈ" + syllables[stress_idx]
+        return ".".join(syllables)
 
-    res = "ˈ" + res
-    return f"[{res}]"
+    # Process all words
+    words = res.split()
+    raw_words = raw_stem.replace("-", " ").split()
+    
+    out_words = []
+    for i, w in enumerate(words):
+        rw = raw_words[i] if i < len(raw_words) else w
+        out_words.append(process_word(w, rw))
+        
+    final_ipa = " ".join(out_words)
+    return f"[{final_ipa}]"
 
 
 # ==============================================================================
@@ -489,9 +635,27 @@ LATE_PATTERNS = re.compile(
 )
 
 
-def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str, used_names: set = None, save_name: str = ""):
+def is_circular_house(house_str: str, stem_str: str, barony_key: str = "", county_key: str = "") -> bool:
+    """
+    Enforces the Toponym-First Principle & Downstream Causality Inversion Rule:
+    Detects whether an in-game dynasty/house was auto-generated from the holding title itself.
+    """
+    if not house_str:
+        return False
+    h = re.sub(r"[^a-zA-Z]", "", house_str).lower()
+    h = re.sub(r"^(chatenois|kestenholz|dynn)", "", h)
+    if not h:
+        return False
+    s = re.sub(r"[^a-zA-Z]", "", stem_str).lower()
+    b = re.sub(r"[^a-zA-Z]", "", barony_key.replace("b_", "")).lower() if barony_key else ""
+    c = re.sub(r"[^a-zA-Z]", "", county_key.replace("c_", "")).lower() if county_key else ""
+    return (h in s or s in h or (b and (h in b or b in h)) or (c and (h in c or c in h)))
+
+
+def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str, used_names: set = None, save_name: str = "", bk: str = "", ck: str = ""):
     """
     Evaluates ruler character traits and holding type according to Section 3.2.
+    Strictly disqualifies circular in-game auto-generated houses under the Toponym-First Principle.
     Returns: (option_c_name, formula_description)
     """
     traits_set = set(traits or [])
@@ -499,10 +663,15 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
     clean_founder = re.sub(r"fried\b", "frît", clean_founder, flags=re.I)
     clean_founder = re.sub(r"rich\b", "rîch", clean_founder, flags=re.I)
 
-    clean_house = re.sub(r"[^a-zA-Z]", "", house_name.replace("Chatenois-", "").replace("Kestenholz-", "")) or ""
+    raw_house = house_name.replace("Chatenois-", "").replace("Kestenholz-", "").replace("dynn_", "")
+    clean_house = re.sub(r"[^a-zA-Z]", "", raw_house) or ""
     clean_stem = re.sub(r"[^a-zA-Z]", "", save_name.split()[0]) if save_name else ""
     if not clean_stem:
         clean_stem = "Burch"
+
+    # Toponym-First Principle: Disqualify circular pseudo-dynasties derived from the holding
+    if clean_house and is_circular_house(clean_house, clean_stem, bk, ck):
+        clean_house = ""
 
     used = used_names or set()
     candidates = []
@@ -523,10 +692,9 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
             candidates.append(("Schirmburch", f"Protective march fortress built by {clean_founder}"))
             candidates.append((f"{clean_founder}sburch", f"Fortified citadel established by {clean_founder}"))
         else:
-            if clean_house:
-                candidates.append((f"{clean_house}burch", f"Dynastic fortress seat of House {clean_house}"))
             candidates.append((f"{clean_founder}sburch", f"Feudal fortress seat established by {clean_founder}"))
             if clean_house:
+                candidates.append((f"{clean_house}burch", f"Dynastic fortress seat of House {clean_house}"))
                 candidates.append((f"{clean_house}veste", f"Defensive march stronghold of House {clean_house}"))
             candidates.append((f"{clean_stem}burch", f"Fortress seat of {clean_stem} established by {clean_founder}"))
 
@@ -534,14 +702,18 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
         if traits_set & {"zealous", "theologian", "pilgrim"}:
             candidates.append((f"Zant-{clean_founder}", f"Patron saint collegiate foundation dedicated by {clean_founder}"))
             candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
+            candidates.append(("Marienmunster", f"Collegiate foundation dedicated to the Virgin Mary by {clean_founder}"))
+            candidates.append(("Heiligencruce", f"Holy Cross collegiate foundation dedicated by {clean_founder}"))
             if clean_house:
                 candidates.append((f"{clean_house}munster", f"Collegiate monastic foundation of House {clean_house}"))
         else:
-            if clean_house:
-                candidates.append((f"{clean_house}munster", f"Monastic collegiate foundation of House {clean_house}"))
             candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
             candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
-            candidates.append((f"{clean_stem}kirchen", f"Collegiate church of {clean_stem} established by {clean_founder}"))
+            candidates.append(("Marienmunster", f"Collegiate monastic foundation dedicated by {clean_founder}"))
+            if clean_house:
+                candidates.append((f"{clean_house}munster", f"Monastic collegiate foundation of House {clean_house}"))
+            if clean_stem and not is_circular_house(clean_stem, save_name, bk, ck):
+                candidates.append((f"{clean_stem}kirchen", f"Collegiate church of {clean_stem} established by {clean_founder}"))
 
     else:  # city / borough
         if traits_set & {"greedy", "administrator", "midas_touched", "diligent"}:
@@ -578,7 +750,7 @@ def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
             return False, "high_medieval_foundation"
         elif att_yr is not None and att_yr <= 867:
             return True, "chronicle_attestation"
-    if re.search(r"\b(gau|gebirge|tal|wald|fluv|werder|werth|am-|an-der-|see|meer)\b", bk + " " + save_name, re.I):
+    if re.search(r"\b(gau|gebirge|tal|wald|fluv|werder|werth|am-|an-der-|see|meer|joki|järvi|jarvi|vesi|salmi|saari|niemi|lahti|koski|suo|vuori|harju|selkä|selka|ostrov|gora|blato|jazero)\b", bk + " " + save_name, re.I):
         return True, "ancient_toponym"
     if kd in CLASSICAL_OR_ANCIENT_KINGDOMS:
         if not LATE_PATTERNS.search(save_name.strip().lower()):
@@ -646,6 +818,9 @@ INDIGENOUS_RESTITUTIONS = {
     "b_telja": ("Teljê", "Iron Age trading center Teljä of Satakunta"),
     "b_warszawa": ("Warschauwe", "Ancient Mazovian crossing settlement on the Vistula (Warszewa)"),
     "b_czersk": ("Tschêrtzich", "Ancient 11th-century capital gord of the Duchy of Czersk"),
+    "b_gdov": ("Gdouwe", "Pre-867 hydronym of the Gdovka River (Slavic Gda/Gdova / Finnic Oudova; attested as settlement 1322, fortress 1431)"),
+    "b_ostrov": ("Ostrouwe", "Ancient hydronym/toponym of the river island on the Velikaya River (Slavic Ostrov; fortress attested 1341)"),
+    "b_ostrov_BJA": ("Ostrouwe", "Ancient hydronym/toponym of the river island (Slavic Ostrov)"),
 }
 
 
@@ -816,7 +991,7 @@ def resolve_all_baronies():
                     orig_note = f"Option B hydronym/landform ({coll['opt_b_name']}) disambiguated from sub-barony seat {coll['opt_a_name']}"
                 else:
                     opt_c_name, c_desc = evaluate_founder_option_c(
-                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
                     )
                     b_tarr = opt_c_name
                     orig_note = f"Option C foundation: {c_desc}"
@@ -860,7 +1035,7 @@ def resolve_all_baronies():
                         orig_desc = f"{save_name} — Disambiguated capital seat from sub-barony {c_hist}"
                     else:
                         opt_c_name, c_desc = evaluate_founder_option_c(
-                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
                         )
                         b_chosen = opt_c_name
                         orig_desc = f"{save_name} — Disambiguated capital foundation: {c_desc}"
@@ -892,7 +1067,7 @@ def resolve_all_baronies():
                     cand = adapt_european_toponym(save_name)
                     if cand in county_used_names[ck]:
                         opt_c_name, c_desc = evaluate_founder_option_c(
-                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
                         )
                         tarr_clean = opt_c_name
                         orig_desc = f"{save_name} — Disambiguated foundation: {c_desc}"
@@ -905,19 +1080,21 @@ def resolve_all_baronies():
                         cat_label = "sub_barony_adaptation"
                 else:
                     opt_c_name, c_desc = evaluate_founder_option_c(
-                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name
+                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
                     )
                     tarr_clean = opt_c_name
                     orig_desc = f"{save_name} — {c_desc}"
 
+                    circ = is_circular_house(house_name, save_name, bk, ck)
+                    house_desc = f"of House {house_name}" if (house_name and not circ) else "under Toponym-First foundation (disqualifying circular in-game house)"
                     if bk == "b_baranovichi":
-                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1871 railway station); resolved via Option C based on save ruler {holder_name} of House {house_name or 'Suerbeer'}."
+                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1871 railway station); resolved via Option C based on save ruler {holder_name}."
                     elif anc_reason == "classical_late_foundation":
-                        anach_note = f"Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                        anach_note = f"Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     elif anc_reason == "high_medieval_foundation":
-                        anach_note = f"Post-867 high medieval foundation; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                        anach_note = f"Post-867 high medieval foundation; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     else:
-                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} of House {house_name or 'unrecorded'}."
+                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     cat_label = "option_c_foundation"
 
                 res = {

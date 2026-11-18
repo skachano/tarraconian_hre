@@ -9,7 +9,7 @@
     "kingdoms": {
       "k_abyssinia": {
         "key": "k_abyssinia",
-        "tarr": "Aksûm",
+        "tarr": "Abessînjen",
         "ipa": "",
         "origin": "Aksûm (in-game: Abyssinia)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -459,7 +459,7 @@
       },
       "k_adal": {
         "key": "k_adal",
-        "tarr": "Seîle",
+        "tarr": "Adâl",
         "ipa": "",
         "origin": "Seîle (in-game: Adal)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -1208,7 +1208,7 @@
       },
       "x_script_2942": {
         "key": "x_script_2942",
-        "tarr": "Sôbe",
+        "tarr": "Alôdje",
         "ipa": "",
         "origin": "Sôbe (in-game: Alodia)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -2949,7 +2949,7 @@
   "e_amur": {
     "key": "e_amur",
     "tarr": "Dat Bohâi-Imperi",
-    "ipa": "[dat bɔ.ˈhaːi ɪm.ˈpɛ.ri]",
+    "ipa": "[dat bɔ.ˈhaːɪ ɪm.ˈpɛ.ri]",
     "origin": "Amur",
     "anachronism": "Pre-867 historical sovereign empire of the Amur and Manchuria (Balhae/Bohai), replacing modern Russian/Tungusic river name Amur.",
     "color": "#16717a",
@@ -4032,7 +4032,7 @@
       },
       "k_georgia": {
         "key": "k_georgia",
-        "tarr": "Kartlî",
+        "tarr": "Georgjen",
         "ipa": "",
         "origin": "Kartlî (in-game: Georgia)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -4270,7 +4270,7 @@
     "kingdoms": {
       "k_balhae": {
         "key": "k_balhae",
-        "tarr": "Bôchmêre",
+        "tarr": "dem Bôchmêre",
         "ipa": "",
         "origin": "Bóhai",
         "anachronism": "",
@@ -8850,14 +8850,14 @@
   "e_azania": {
     "key": "e_azania",
     "tarr": "Dat Zandsch-Imperi",
-    "ipa": "[dat ˈzandʒ.ɪm.ˌpɛ.ri]",
+    "ipa": "[dat ˈzandʒ ɪm.ˈpɛ.ri]",
     "origin": "Azania",
     "anachronism": "Medieval Indian Ocean endonym for the Swahili coast (Zanj), replacing 1st-century Greco-Roman maritime label Azania.",
     "color": "#3069a8",
     "kingdoms": {
       "k_ajuraan": {
         "key": "k_ajuraan",
-        "tarr": "Benâdir",
+        "tarr": "Adschurân",
         "ipa": "",
         "origin": "Benâdir (in-game: Ajuraan)",
         "anachronism": "The Ajuran Sultanate (House of Gareen) rose to rule the Horn of Africa in the 13th c.",
@@ -9588,7 +9588,7 @@
   "e_bengal": {
     "key": "e_bengal",
     "tarr": "Dat Bengalische Imperi",
-    "ipa": "[dat bɛŋ.ˈgaː.lɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat bɛŋ.ˈɡaː.lɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Pracya",
     "anachronism": "Pre-867 Sanskrit Prācya / Pala Empire 750 AD. Destroyed historically in 550 AD.",
     "color": "#b84f18",
@@ -10841,7 +10841,7 @@
   "e_britannia": {
     "key": "e_britannia",
     "tarr": "Dat Imperi van dem Wâllant",
-    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈvaːl.lant]",
+    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈwaːl.lant]",
     "origin": "Britannia",
     "anachronism": "Pre-867 Germanic/Old English exonym for the Insular Celtic realm (Wēalland / Valland). In 1059, England drifted to e_germany, leaving Gaelic Scotland and Ireland.",
     "color": "#b84f18",
@@ -11593,7 +11593,7 @@
   "e_byzantium": {
     "key": "e_byzantium",
     "tarr": "Dat Grîkische Imperi",
-    "ipa": "[dat ˈgʀiː.kɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Byzantine Empire",
     "anachronism": "18th-century exonym. Historical Frankish style Imperium Graecorum / Rhōmania. Subsumed into h_roman_empire.",
     "color": "#c28b23",
@@ -13141,7 +13141,7 @@
     "kingdoms": {
       "k_dacia": {
         "key": "k_dacia",
-        "tarr": "Dâzjen",
+        "tarr": "Walachîe",
         "ipa": "",
         "origin": "Dâzjen (in-game: Wallachia (Dacia))",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -13783,7 +13783,7 @@
     "kingdoms": {
       "k_caspian_steppe": {
         "key": "k_caspian_steppe",
-        "tarr": "Saksîn",
+        "tarr": "der Kaspischen Steppe",
         "ipa": "",
         "origin": "Saksîn (in-game: Caspian Steppe)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -13915,7 +13915,7 @@
       },
       "k_caucasus": {
         "key": "k_caucasus",
-        "tarr": "Sarîr",
+        "tarr": "Kaukâsjen",
         "ipa": "",
         "origin": "Sarîr (in-game: Caucasus)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -13995,7 +13995,7 @@
       },
       "k_pontic_steppe": {
         "key": "k_pontic_steppe",
-        "tarr": "Kumânjen",
+        "tarr": "der Pontischen Steppe",
         "ipa": "",
         "origin": "Kumânjen (in-game: Pontic Steppe / Zaporizhia)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -15077,7 +15077,7 @@
       },
       "x_script_5503": {
         "key": "x_script_5503",
-        "tarr": "Atîl",
+        "tarr": "Chasârjen",
         "ipa": "",
         "origin": "Atîl (in-game: Khazaria)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -19236,7 +19236,7 @@
                 "tarr": "Wîen",
                 "tarr_direct": "Wîen",
                 "tarr_hist": "Wîen",
-                "ipa": "[viːən]",
+                "ipa": "[ˈwiː.ən]",
                 "origin": "Wien",
                 "anachronism": "",
                 "color": "#16717a",
@@ -20034,7 +20034,7 @@
           "d_alsace": {
             "key": "d_alsace",
             "tarr": "Elsâtz",
-            "ipa": "[ˈɛl.zaːts]",
+            "ipa": "[ɛl.ˈzaːts]",
             "origin": "Alsace",
             "anachronism": "",
             "color": "#783884",
@@ -20318,7 +20318,7 @@
           "d_currezia": {
             "key": "d_currezia",
             "tarr": "Kûrrêtjen",
-            "ipa": "[ˈkuːr.reː.tjən]",
+            "ipa": "[kuː.ˈreː.tjən]",
             "origin": "Currezia",
             "anachronism": "",
             "color": "#3069a8",
@@ -23177,7 +23177,7 @@
                 "tarr": "Meilân",
                 "tarr_direct": "Meilân",
                 "tarr_hist": "Meilân",
-                "ipa": "[ˈmɛɪ.laːn]",
+                "ipa": "[mɛɪ.ˈlaːn]",
                 "origin": "Lombardia",
                 "anachronism": "",
                 "color": "#ab3348",
@@ -25316,7 +25316,7 @@
                 "tarr": "Oske",
                 "tarr_direct": "Oske",
                 "tarr_hist": "Oske",
-                "ipa": "[ˈɔs.ka]",
+                "ipa": "[ˈɔs.kə]",
                 "origin": "Huesca",
                 "anachronism": "",
                 "color": "#c28b23",
@@ -25361,7 +25361,7 @@
           "d_mallorca": {
             "key": "d_mallorca",
             "tarr": "Maljôrke",
-            "ipa": "[ma.ˈʎɔr.kə]",
+            "ipa": "[ma.ˈʎoːr.kə]",
             "origin": "Mallorca",
             "anachronism": "",
             "color": "#3069a8",
@@ -25732,7 +25732,7 @@
   "e_goryeo": {
     "key": "e_goryeo",
     "tarr": "Dat Hôchprachtige Imperi",
-    "ipa": "[dat ˈhoːx.pʀax.tɪ.ɣə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈhoːx.prax.tɪ.ɣə ɪm.ˈpɛ.ri]",
     "origin": "Samhan",
     "anachronism": "Conquered 1153 from House Aliyid. Native endonyms Goryeo (高麗 = \"Lofty Splendor\") and Samhan (三韓 = \"Three Hans\").",
     "color": "#c28b23",
@@ -29160,7 +29160,7 @@
                 "tarr": "Retsch",
                 "tarr_direct": "Retsch",
                 "tarr_hist": "Retsch",
-                "ipa": "[rɛdʒ]",
+                "ipa": "[rɛtʃ]",
                 "origin": "Reggio Calabria",
                 "anachronism": "",
                 "color": "#16717a",
@@ -29392,7 +29392,7 @@
   "e_japan": {
     "key": "e_japan",
     "tarr": "Dat Imperi van dem Sunnenufganch",
-    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋç]",
+    "ipa": "[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋx]",
     "origin": "Japan",
     "anachronism": "Conquered 1154 from Minabuchi dynasty. Native endonym Hinamoto / Nihon (\"Origin of the Sun / Sunrise\").",
     "color": "#783884",
@@ -30921,7 +30921,7 @@
       },
       "k_huainan": {
         "key": "k_huainan",
-        "tarr": "Sûthuai",
+        "tarr": "dem Sûthuai",
         "ipa": "",
         "origin": "Huainan",
         "anachronism": "",
@@ -31122,7 +31122,7 @@
       },
       "k_hunan": {
         "key": "k_hunan",
-        "tarr": "Sûtsê",
+        "tarr": "dem Sûtsê",
         "ipa": "",
         "origin": "Hunan",
         "anachronism": "",
@@ -31971,7 +31971,7 @@
       },
       "k_shannan": {
         "key": "k_shannan",
-        "tarr": "Sûtberch",
+        "tarr": "dem Sûtberch",
         "ipa": "",
         "origin": "Shannan",
         "anachronism": "",
@@ -32988,7 +32988,7 @@
     "kingdoms": {
       "k_darfur": {
         "key": "k_darfur",
-        "tarr": "Dâdschû",
+        "tarr": "Dârfûr",
         "ipa": "",
         "origin": "Dâdschû (in-game: Darfur)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -34940,7 +34940,7 @@
       },
       "k_dongchuan": {
         "key": "k_dongchuan",
-        "tarr": "Ôstbache",
+        "tarr": "dem Ôstbache",
         "ipa": "",
         "origin": "Dongchuan",
         "anachronism": "",
@@ -35482,7 +35482,7 @@
       },
       "k_qianzhong": {
         "key": "k_qianzhong",
-        "tarr": "Swartzmidden",
+        "tarr": "dem Swartzmidden",
         "ipa": "",
         "origin": "Qianzhong",
         "anachronism": "",
@@ -35836,7 +35836,7 @@
       },
       "k_xichuan": {
         "key": "k_xichuan",
-        "tarr": "Westbache",
+        "tarr": "dem Westbache",
         "ipa": "",
         "origin": "Xichuan",
         "anachronism": "",
@@ -36320,7 +36320,7 @@
     "kingdoms": {
       "k_lingnan": {
         "key": "k_lingnan",
-        "tarr": "Sûtrücke",
+        "tarr": "dem Sûtrücke",
         "ipa": "",
         "origin": "Lingnan",
         "anachronism": "",
@@ -36741,7 +36741,7 @@
       },
       "k_lingxi": {
         "key": "k_lingxi",
-        "tarr": "Westrücke",
+        "tarr": "dem Westrücke",
         "ipa": "",
         "origin": "Lingxi",
         "anachronism": "",
@@ -37618,7 +37618,7 @@
       },
       "k_thessalonika": {
         "key": "k_thessalonika",
-        "tarr": "Bizantjen",
+        "tarr": "Thessalonîke",
         "ipa": "",
         "origin": "Byzantion (in-game: Thessalonika)",
         "anachronism": "Renamed from Thessalonika: kingdom consists solely of Thrace and the imperial city of Byzantion (Constantinople).",
@@ -38308,7 +38308,7 @@
       },
       "k_sahara": {
         "key": "k_sahara",
-        "tarr": "Fessân-Tuwârech",
+        "tarr": "der Sahâre",
         "ipa": "",
         "origin": "Fessân-Tuwârech (in-game: Sahara)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -38610,7 +38610,7 @@
   "e_mali": {
     "key": "e_mali",
     "tarr": "Dat Imperi van Gâna",
-    "ipa": "[dat ɪm.ˈpɛ.ri van ˈgaː.na]",
+    "ipa": "[dat ɪm.ˈpɛ.ri van ˈɡaː.na]",
     "origin": "Mali",
     "anachronism": "Historical medieval imperial hegemon of the Western Sahel (Ghana / Wagadu); Mali Empire did not exist until 1235.",
     "color": "#ab3348",
@@ -39738,7 +39738,7 @@
       },
       "k_songhay": {
         "key": "k_songhay",
-        "tarr": "Kaukau",
+        "tarr": "Songâi",
         "ipa": "",
         "origin": "Kaukau (in-game: Songhay)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -40101,7 +40101,7 @@
   "e_mongolia": {
     "key": "e_mongolia",
     "tarr": "Dat Mongôlische Imperi",
-    "ipa": "[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat mɔŋ.ˈɡoː.lɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Mongolia",
     "anachronism": "Pre-Genghisid umbrella name applied to Göktürk/Uyghur sacred seat Ötüken.",
     "color": "#16717a",
@@ -44866,7 +44866,7 @@
   "e_rajastan": {
     "key": "e_rajastan",
     "tarr": "Dat Ârjavartische Imperi",
-    "ipa": "[dat aːr.ja.ˈvar.tɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈaːr.ja.ˌvar.tɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Rajasthan",
     "anachronism": "⚠️ Early modern regional name applied to the ancient Indo-Gangetic Plain (Aryavarta / Harsha).",
     "color": "#3069a8",
@@ -48279,7 +48279,7 @@
       "k_white_rus": {
         "key": "k_white_rus",
         "tarr": "Polôtzich",
-        "ipa": "[ˈpɔ.lɔtsk]",
+        "ipa": "[pɔ.ˈloː.tsɪç]",
         "origin": "Polôtzich (in-game: Polotia)",
         "anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
         "color": "#b84f18",
@@ -48949,7 +48949,7 @@
       },
       "k_finland": {
         "key": "k_finland",
-        "tarr": "Suômi",
+        "tarr": "Finlant",
         "ipa": "",
         "origin": "Suômi (in-game: Finland)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -49838,7 +49838,7 @@
       },
       "k_sapmi": {
         "key": "k_sapmi",
-        "tarr": "Finnmarch",
+        "tarr": "Sâpmi",
         "ipa": "",
         "origin": "Finnmarch (in-game: Sápmi)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -50729,14 +50729,14 @@
   "e_siberia": {
     "key": "e_siberia",
     "tarr": "Dat Jûgrische Imperi",
-    "ipa": "[dat ˈjuː.grɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈjuː.ɡrɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Siberia",
     "anachronism": "Medieval Uralic endonym and Novgorodian designation Yugra, replacing post-1400 Tatar/Russian Sibir.",
     "color": "#c28b23",
     "kingdoms": {
       "k_ob": {
         "key": "k_ob",
-        "tarr": "Ôb",
+        "tarr": "dem Ôb",
         "ipa": "[oːp]",
         "origin": "Ob",
         "anachronism": "",
@@ -51017,7 +51017,7 @@
       },
       "k_sibir": {
         "key": "k_sibir",
-        "tarr": "Sibîr",
+        "tarr": "Sibirrîch",
         "ipa": "[zi.ˈbiːr]",
         "origin": "Sibir",
         "anachronism": "",
@@ -51337,7 +51337,7 @@
       },
       "k_yugra": {
         "key": "k_yugra",
-        "tarr": "Jûgren",
+        "tarr": "Jûgrelant",
         "ipa": "[ˈjuː.ɡrən]",
         "origin": "Yugra",
         "anachronism": "",
@@ -52860,7 +52860,7 @@
   "e_suvarnabhumi": {
     "key": "e_suvarnabhumi",
     "tarr": "Dat Pagânsche Imperi",
-    "ipa": "[dat pa.ˈgaːn.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat pa.ˈɡaːn.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Suvarnabhumi",
     "anachronism": "Historical sovereign medieval empire uniting Burma and Dvaravati (849–1287), replacing mythical Sanskrit Suvarnabhumi.",
     "color": "#3069a8",
@@ -58504,7 +58504,7 @@
   "e_turan": {
     "key": "e_turan",
     "tarr": "Dat Sogdische Imperi",
-    "ipa": "[dat ˈzɔg.dɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat ˈzɔɡ.dɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Turan",
     "anachronism": "Sedentary cultural core and Samanid imperial seat of Sogdiana, replacing Persian epic mythological Turan.",
     "color": "#b84f18",
@@ -59601,7 +59601,7 @@
       },
       "k_transoxiana": {
         "key": "k_transoxiana",
-        "tarr": "Sogdjen",
+        "tarr": "Transoxânjen",
         "ipa": "",
         "origin": "Sogdjen (in-game: Transoxiana)",
         "anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
@@ -60236,7 +60236,7 @@
   "e_volga-ural": {
     "key": "e_volga-ural",
     "tarr": "Dat Bulgârische Imperi",
-    "ipa": "[dat bʊl.ˈgaː.rɪ.ʃə ɪm.ˈpɛ.ri]",
+    "ipa": "[dat bʊl.ˈɡaː.rɪ.ʃə ɪm.ˈpɛ.ri]",
     "origin": "Volga-Ural",
     "anachronism": "Replaced Soviet-era geographic neologism Volga-Ural with the historical sovereign medieval empire of Volga Bulgaria.",
     "color": "#ab3348",
@@ -60791,7 +60791,7 @@
       },
       "k_permia": {
         "key": "k_permia",
-        "tarr": "Grôzperm",
+        "tarr": "Permjen",
         "ipa": "",
         "origin": "Grôzperm (in-game: Permia)",
         "anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
@@ -61876,7 +61876,7 @@
       "k_galicia-volhynia": {
         "key": "k_galicia-volhynia",
         "tarr": "Wolînjen",
-        "ipa": "[vo.ˈliː.njən]",
+        "ipa": "[wo.ˈliː.njən]",
         "origin": "Volynia",
         "anachronism": "",
         "color": "#3b824a",
@@ -62986,7 +62986,7 @@
     "kingdoms": {
       "k_guannei": {
         "key": "k_guannei",
-        "tarr": "Binnenklûse",
+        "tarr": "der Binnenklûse",
         "ipa": "",
         "origin": "Guannei",
         "anachronism": "",
@@ -63868,7 +63868,7 @@
       },
       "k_xia": {
         "key": "k_xia",
-        "tarr": "Sommerlant",
+        "tarr": "dem Sommerlant",
         "ipa": "",
         "origin": "Xia",
         "anachronism": "",
@@ -64664,7 +64664,7 @@
       },
       "k_hebei": {
         "key": "k_hebei",
-        "tarr": "Nordflôze",
+        "tarr": "dem Nordflôze",
         "ipa": "",
         "origin": "Hebei",
         "anachronism": "",
@@ -65270,7 +65270,7 @@
       },
       "k_henan": {
         "key": "k_henan",
-        "tarr": "Sûtflôze",
+        "tarr": "dem Sûtflôze",
         "ipa": "",
         "origin": "Henan",
         "anachronism": "",

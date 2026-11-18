@@ -474,8 +474,8 @@ async function runE2ETests() {
     }
 
     const polotskIpa = await page.locator('#drawer-ipa').innerText();
-    if (!polotskIpa.includes('[ˈpɔ.lɔtsk]')) {
-      throw new Error(`Expected k_white_rus IPA "[ˈpɔ.lɔtsk]", got "${polotskIpa}"`);
+    if (!polotskIpa.includes('[pɔ.ˈloː.tsɪç]')) {
+      throw new Error(`Expected k_white_rus IPA "[pɔ.ˈloː.tsɪç]", got "${polotskIpa}"`);
     }
 
     const polotskHist = await page.locator('#drawer-hist-name').innerText();

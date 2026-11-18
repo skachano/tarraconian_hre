@@ -63,7 +63,7 @@
     "titles": [
       "Dalian (`c_LIAO_dalian`)",
       "Heicaoan (`c_LIAO_heicaoan`)",
-      "Ulagaijan (`c_LIAO_ulagaian`)",
+      "Ulagaian (`c_LIAO_ulagaian`)",
       "Heilonghean (`c_SW_heilonghean`)"
     ],
     "id": 3
@@ -106,7 +106,7 @@
     "title_count": 3,
     "titles": [
       "Baishan (`c_baishan`)",
-      "Baijin (`c_zhanyin`)",
+      "Baiyin (`c_zhanyin`)",
       "Baizhou (`c_baizhou`)"
     ],
     "id": 5
@@ -127,7 +127,7 @@
     "tarr_example": "c_baekje 百济 -> Bêkdschelant",
     "title_count": 1,
     "titles": [
-      "Baekdsche (`k_baekje`)"
+      "Baekje (`k_baekje`)"
     ],
     "id": 6
   },
@@ -250,7 +250,7 @@
     "cat_name": "Cardinal Directions, Spatial Geometry & Relative Orientations",
     "meaning": "North-facing hill flank / Mountain ridge reverse",
     "tarr_morpheme": "Rüch-",
-    "tarr_ipa": "[rʏx]",
+    "tarr_ipa": "[rʏç]",
     "tarr_role": "Topographic Prefix",
     "tarr_example": "c_beizhou 背州 -> Magistrat van Rüchgouwe",
     "title_count": 1,
@@ -371,7 +371,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Bian River canal waterway / Bianzhou Kaifeng",
     "tarr_morpheme": "Bîen-",
-    "tarr_ipa": "[biː.ən]",
+    "tarr_ipa": "[ˈbiː.ən]",
     "tarr_role": "Canal/City Root",
     "tarr_example": "c_bianzhou 汴州 -> Magistrat van Bîengouwe / d_biansong 汴宋 -> Bîen-Sôngmarch",
     "title_count": 2,
@@ -748,7 +748,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Cold azure waters / Vast sea gulf / Cangzhou",
     "tarr_morpheme": "Kôlblou-",
-    "tarr_ipa": "[koːl.blɔʊ]",
+    "tarr_ipa": "[ˈkoːl.blɔʊ]",
     "tarr_role": "Hydronymic Prefix",
     "tarr_example": "c_cangzhou 沧州 -> Magistrat van Kôlblougouwe",
     "title_count": 2,
@@ -1240,7 +1240,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Chu River Anhui waterway / Chuzhou gateway",
     "tarr_morpheme": "Tschûflôz-",
-    "tarr_ipa": "[tʃuː.floːts]",
+    "tarr_ipa": "[ˈtʃuː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_chuzhou_ah 滁州 -> Magistrat van Tschûflôzgouwe",
     "title_count": 1,
@@ -1608,7 +1608,7 @@
     "cat_name": "Toponymic Verbs, Modifiers, Dynamics & Quantifiers",
     "meaning": "Ascend mountain heights / Dengzhou promontory",
     "tarr_morpheme": "Stîg-",
-    "tarr_ipa": "[stiːx]",
+    "tarr_ipa": "[stiːç]",
     "tarr_role": "Action Prefix",
     "tarr_example": "c_dengzhou_2 登州 -> Magistrat van Stîggouwe",
     "title_count": 3,
@@ -2198,7 +2198,7 @@
     "cat_name": "Auspicious Qualities, Imperial Virtues & Cosmic Mandate",
     "meaning": "Flying / Soaring flight / Hida Japanese alpine province (Trad)",
     "tarr_morpheme": "Vlîg-",
-    "tarr_ipa": "[fliːx]",
+    "tarr_ipa": "[fliːç]",
     "tarr_role": "Action/Provincial Root",
     "tarr_example": "c_hida 飛驒 -> Magistrat van Vlîgend-Roslant",
     "title_count": 1,
@@ -2218,7 +2218,7 @@
     "cat_name": "Auspicious Qualities, Imperial Virtues & Cosmic Mandate",
     "meaning": "Flying / Soaring flight / Hida Japanese province",
     "tarr_morpheme": "Vlîg-",
-    "tarr_ipa": "[fliːx]",
+    "tarr_ipa": "[fliːç]",
     "tarr_role": "Action/Provincial Root",
     "tarr_example": "c_hida 飞驒 -> Magistrat van Vlîgend-Roslant",
     "title_count": 1,
@@ -2467,7 +2467,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Fu River Sichuan waterway / Rushing gorge stream",
     "tarr_morpheme": "Fûflôz-",
-    "tarr_ipa": "[fuː.floːts]",
+    "tarr_ipa": "[ˈfuː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_fuzhou_cq 涪州 -> Magistrat van Fûflôzgouwe",
     "title_count": 1,
@@ -2662,7 +2662,7 @@
     "tarr_example": "c_gongcheng 共城 -> Magistrat van Gemênburch",
     "title_count": 1,
     "titles": [
-      "Gonghe-Dschiang (`c_SW_gonghejiang`)"
+      "Gonghejiang (`c_SW_gonghejiang`)"
     ],
     "id": 126
   },
@@ -3147,7 +3147,7 @@
     "tarr_example": "c_hanzhou_sc 含州 -> Magistrat van Kûmpegouwe",
     "title_count": 1,
     "titles": [
-      "Hamjang (`c_hamyang`)"
+      "Hamyang (`c_hamyang`)"
     ],
     "id": 149
   },
@@ -3315,7 +3315,7 @@
       "Hezhou (`c_liyang`)",
       "Yamato (`k_yamato`)",
       "Yamato (`c_yamato`)",
-      "Gonghe-Dschiang (`c_SW_gonghejiang`)"
+      "Gonghejiang (`c_SW_gonghejiang`)"
     ],
     "id": 157
   },
@@ -3336,7 +3336,7 @@
     "title_count": 27,
     "titles": [
       "Hebei (`k_hebei`)",
-      "Hejang (`d_heyang`)",
+      "Heyang (`d_heyang`)",
       "Hedong (`k_hedong`)",
       "Hedong (`d_hedong`)"
     ],
@@ -3440,7 +3440,7 @@
     "titles": [
       "Heihe (`c_heihe`)",
       "Heicaoan (`c_LIAO_heicaoan`)",
-      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)",
+      "Heuksu Anwon (`c_BAL_heuksu_anwon`)",
       "Heiergun (`c_SW_heiergun`)"
     ],
     "id": 163
@@ -3933,8 +3933,8 @@
     "tarr_example": "c_huizhou 回州 -> Magistrat van Hôeigouwe",
     "title_count": 2,
     "titles": [
-      "Ulagaijan (`c_LIAO_ulagaian`)",
-      "Ulagaijan (`c_LIAO_ulagaian`)"
+      "Ulagaian (`c_LIAO_ulagaian`)",
+      "Ulagaian (`c_LIAO_ulagaian`)"
     ],
     "id": 186
   },
@@ -4056,7 +4056,7 @@
     "tarr_example": "c_jinan 济南 -> Magistrat van Sûtvurt / c_jeju 济州 -> Övergouwe",
     "title_count": 2,
     "titles": [
-      "Baekdsche (`k_baekje`)",
+      "Baekje (`k_baekje`)",
       "Jiqin Hari (`c_SW_jiqin_hari`)"
     ],
     "id": 192
@@ -4624,7 +4624,7 @@
     "tarr_example": "c_jinzhou_sc 进州 -> Magistrat van Vödderegouwe",
     "title_count": 1,
     "titles": [
-      "Dschillje (`c_jillye`)"
+      "Jillye (`c_jillye`)"
     ],
     "id": 219
   },
@@ -4955,8 +4955,8 @@
     "title_count": 3,
     "titles": [
       "Kaizhou (`c_kaizhou`)",
-      "Gaesong (`d_gaeseong`)",
-      "Gaesong (`c_gaeseong`)"
+      "Gaeseong (`d_gaeseong`)",
+      "Gaeseong (`c_gaeseong`)"
     ],
     "id": 235
   },
@@ -5477,7 +5477,7 @@
     "tarr_example": "c_lizhou_sc 礼州 -> Magistrat van Sêdengouwe / c_delizhen 德理镇 -> Dôgetmarct",
     "title_count": 1,
     "titles": [
-      "Dschillje (`c_jillye`)"
+      "Jillye (`c_jillye`)"
     ],
     "id": 260
   },
@@ -5704,7 +5704,7 @@
     "cat_name": "Cardinal Directions, Spatial Geometry & Relative Orientations",
     "meaning": "Overlooking / Facing water / Adjacent to",
     "tarr_morpheme": "Bî-dem-",
-    "tarr_ipa": "[biː.dɛm]",
+    "tarr_ipa": "[ˈbiː.dɛm]",
     "tarr_role": "Topographic Prefix",
     "tarr_example": "c_linjiang 临江 -> Magistrat van Bî-dem-Flôz / c_BAL_linhuang 临潢 -> Magistrat van Bî-der-Huang",
     "title_count": 4,
@@ -5756,7 +5756,7 @@
     "title_count": 2,
     "titles": [
       "Linzhou (`c_linzhou`)",
-      "Indsche (`c_inje`)"
+      "Inje (`c_inje`)"
     ],
     "id": 273
   },
@@ -5844,7 +5844,7 @@
       "Lingzhou (`c_lingzhou_1`)",
       "Lingling (`d_lingling`)",
       "Jiangling (`c_jiangling`)",
-      "Ullong (`c_ulleong`)"
+      "Ulleong (`c_ulleong`)"
     ],
     "id": 277
   },
@@ -6045,7 +6045,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Lu River gorge basin / Upper Yangtze Luzhou",
     "tarr_morpheme": "Lûflôz-",
-    "tarr_ipa": "[luː.floːts]",
+    "tarr_ipa": "[ˈluː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_luzhou_sc 泸州 -> Magistrat van Lûflôzgouwe",
     "title_count": 1,
@@ -6087,7 +6087,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Lu River Shanxi waterway / Luzhou Shangdang",
     "tarr_morpheme": "Lûflôz-",
-    "tarr_ipa": "[luː.floːts]",
+    "tarr_ipa": "[ˈluː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_luzhou_sx 潞州 -> Magistrat van Lûgouwe",
     "title_count": 2,
@@ -6215,9 +6215,9 @@
     "tarr_example": "c_luzhou_sd 鲁州 -> Magistrat van Lûgouwe",
     "title_count": 3,
     "titles": [
-      "Ulagaijan (`c_LIAO_ulagaian`)",
+      "Ulagaian (`c_LIAO_ulagaian`)",
       "Talu (`d_LIAO_shangjing`)",
-      "Ulagaijan (`c_LIAO_ulagaian`)"
+      "Ulagaian (`c_LIAO_ulagaian`)"
     ],
     "id": 295
   },
@@ -6237,7 +6237,7 @@
     "tarr_example": "c_luzhou_sx 鹿州 -> Magistrat van Hirschgouwe",
     "title_count": 1,
     "titles": [
-      "Lupingjuan (`c_SW_lupingyuan`)"
+      "Lupingyuan (`c_SW_lupingyuan`)"
     ],
     "id": 296
   },
@@ -6467,7 +6467,7 @@
     "tarr_example": "c_maozhou_hb 鄚州 -> Magistrat van Mâkgouwe",
     "title_count": 3,
     "titles": [
-      "Moe-Sû (`d_BAL_moe_su`)",
+      "Moe-Su (`d_BAL_moe_su`)",
       "Makhil (`c_BAL_makhil`)",
       "West Makhil (`c_BAL_west_makhil`)"
     ],
@@ -6709,7 +6709,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Ming River Hebei waterway / Clear northern flow",
     "tarr_morpheme": "Mîngflôz-",
-    "tarr_ipa": "[miːŋ.floːts]",
+    "tarr_ipa": "[ˈmiːŋ.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_mingzhou_hb 洺州 -> Magistrat van Mîngflôzgouwe",
     "title_count": 2,
@@ -7325,7 +7325,7 @@
     "tarr_example": "c_pingzhou 坪州 -> Magistrat van Ebenegouwe",
     "title_count": 1,
     "titles": [
-      "Lupingjuan (`c_SW_lupingyuan`)"
+      "Lupingyuan (`c_SW_lupingyuan`)"
     ],
     "id": 348
   },
@@ -7653,10 +7653,10 @@
     "cat_id": 2,
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Qin River Shanxi waterway / Clear soak stream",
-    "tarr_morpheme": "Tsînflôz-",
-    "tarr_ipa": "[tsiːn.floːts]",
+    "tarr_morpheme": "Zînflôz-",
+    "tarr_ipa": "[ˈziːn.floːts]",
     "tarr_role": "Hydronymic Root",
-    "tarr_example": "c_qinzhou_sx 沁州 -> Magistrat van Tsîngouwe",
+    "tarr_example": "c_qinzhou_sx 沁州 -> Magistrat van Zîngouwe",
     "title_count": 2,
     "titles": [
       "Qinzhou (`c_yangcheng`)",
@@ -7953,8 +7953,8 @@
     "title_count": 3,
     "titles": [
       "Quanzhou (`c_quanzhou_2`)",
-      "Dschondschu (`d_jeonju`)",
-      "Dschondschu (`c_jeonju`)"
+      "Jeonju (`d_jeonju`)",
+      "Jeonju (`c_jeonju`)"
     ],
     "id": 378
   },
@@ -8165,7 +8165,7 @@
     "tarr_example": "c_rouyuan 柔远 -> Magistrat van Zachtferne",
     "title_count": 1,
     "titles": [
-      "Roujuan (`c_rouyuan`)"
+      "Rouyuan (`c_rouyuan`)"
     ],
     "id": 388
   },
@@ -8242,7 +8242,7 @@
     "cat_name": "Dynastic Stems, Ethnonyms, Transcriptions & Regional Stems",
     "meaning": "Scatter / Steppe river transcription",
     "tarr_morpheme": "Zâe-",
-    "tarr_ipa": "[zaː.ə]",
+    "tarr_ipa": "[ˈzaː.ə]",
     "tarr_role": "Steppe Formant",
     "tarr_example": "c_sazhou 撒州 -> Magistrat van Zâegouwe",
     "title_count": 1,
@@ -8395,7 +8395,7 @@
     "title_count": 2,
     "titles": [
       "Shanchan (`c_shanchan`)",
-      "Ilson (`c_ilseon`)"
+      "Ilseon (`c_ilseon`)"
     ],
     "id": 399
   },
@@ -8721,7 +8721,7 @@
     "cat_name": "Auspicious Qualities, Imperial Virtues & Cosmic Mandate",
     "meaning": "Ascend high / Rising dragon glory",
     "tarr_morpheme": "Stîg-",
-    "tarr_ipa": "[stiːx]",
+    "tarr_ipa": "[stiːç]",
     "tarr_role": "Auspicious Prefix",
     "tarr_example": "c_thang_long 升龙 -> Magistrat van Stîgdrache",
     "title_count": 2,
@@ -9036,10 +9036,10 @@
     "tarr_example": "c_suwon 水原 -> Magistrat van Wazzerbrunn / c_heishui 黑水 -> Swartzwazzer",
     "title_count": 5,
     "titles": [
-      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)",
+      "Heuksu Anwon (`c_BAL_heuksu_anwon`)",
       "Choripi (`c_eman_choripi`)",
       "Heishuiyang (`c_eman_heishuiyang`)",
-      "Huksu-Ânjuan (`c_BAL_heuksu_anwon`)"
+      "Heuksu Anwon (`c_BAL_heuksu_anwon`)"
     ],
     "id": 430
   },
@@ -9118,7 +9118,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Si River waterway / Classical Shandong river",
     "tarr_morpheme": "Sîflôz-",
-    "tarr_ipa": "[ziː.floːts]",
+    "tarr_ipa": "[ˈziː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_sizhou 泗州 -> Magistrat van Sîflôzgouwe",
     "title_count": 2,
@@ -9180,12 +9180,12 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Su River Shanxi waterway / Rapid cleansing flow",
     "tarr_morpheme": "Sûkflôz-",
-    "tarr_ipa": "[suːk.floːts]",
+    "tarr_ipa": "[ˈsuːk.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_suzhou_sx 涑州 -> Magistrat van Sûkgouwe",
     "title_count": 1,
     "titles": [
-      "Moe-Sû (`d_BAL_moe_su`)"
+      "Moe-Su (`d_BAL_moe_su`)"
     ],
     "id": 437
   },
@@ -9370,7 +9370,7 @@
     "tarr_example": "c_taiyuan 太原 -> Magistrat van Grôzveit",
     "title_count": 2,
     "titles": [
-      "Taijuan (`c_taiyuan`)",
+      "Taiyuan (`c_taiyuan`)",
       "Dazaifu (`d_north_saikaido`)"
     ],
     "id": 446
@@ -9455,7 +9455,7 @@
     "title_count": 2,
     "titles": [
       "Tangzhou (`c_tangzhou`)",
-      "Dangsong (`c_dangseong`)"
+      "Dangseong (`c_dangseong`)"
     ],
     "id": 450
   },
@@ -9490,7 +9490,7 @@
     "cat_name": "Auspicious Qualities, Imperial Virtues & Cosmic Mandate",
     "meaning": "Leaping ascent / Steppe Tengger celestial vault",
     "tarr_morpheme": "Stîg-",
-    "tarr_ipa": "[stiːx]",
+    "tarr_ipa": "[stiːç]",
     "tarr_role": "Steppe/Ascent Prefix",
     "tarr_example": "c_tengger 腾格里 -> Magistrat van Tengêrlant",
     "title_count": 1,
@@ -9535,7 +9535,7 @@
     "tarr_example": "c_tizhou 蹄州 -> Magistrat van Hôfgouwe",
     "title_count": 1,
     "titles": [
-      "Indsche (`c_inje`)"
+      "Inje (`c_inje`)"
     ],
     "id": 454
   },
@@ -10129,7 +10129,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Wei River Shandong waterway / Weifang",
     "tarr_morpheme": "Wêiflôz-",
-    "tarr_ipa": "[weːɪ.floːts]",
+    "tarr_ipa": "[ˈweːɪ.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_weizhou_sd 潍州 -> Magistrat van Wêigouwe",
     "title_count": 1,
@@ -10149,7 +10149,7 @@
     "cat_name": "Dynastic Stems, Ethnonyms, Transcriptions & Regional Stems",
     "meaning": "Tanned soft leather / Shiwei Proto-Mongolic clans",
     "tarr_morpheme": "Schîwei-",
-    "tarr_ipa": "[ʃiː.weːɪ]",
+    "tarr_ipa": "[ˈʃiː.weːɪ]",
     "tarr_role": "Ethnonymic Root",
     "tarr_example": "d_SW_dashiweiguo 大室韦国 -> Grôz-Schîweilant",
     "title_count": 2,
@@ -10234,7 +10234,7 @@
     "cat_name": "Orography, Landforms, Relief & Geomorphology",
     "meaning": "Recumbent / Lounging dragon peak",
     "tarr_morpheme": "Lêg-",
-    "tarr_ipa": "[leːx]",
+    "tarr_ipa": "[leːç]",
     "tarr_role": "Topographic Prefix",
     "tarr_example": "c_wolong 卧龙 -> Magistrat van Lêgendrache",
     "title_count": 1,
@@ -10260,8 +10260,8 @@
     "title_count": 3,
     "titles": [
       "Wòju (`d_BAL_southern_balhae`)",
-      "Woje (`c_woye`)",
-      "Woje (`c_woye`)"
+      "Woye (`c_woye`)",
+      "Woye (`c_woye`)"
     ],
     "id": 489
   },
@@ -10346,7 +10346,7 @@
     "titles": [
       "Wuluhai (`d_langshan`)",
       "Wuluhai (`c_langshan`)",
-      "Ulagaijan (`c_LIAO_ulagaian`)",
+      "Ulagaian (`c_LIAO_ulagaian`)",
       "Mengwuo (`c_SW_mengwuo`)"
     ],
     "id": 493
@@ -10572,7 +10572,7 @@
     "cat_name": "Dynastic Stems, Ethnonyms, Transcriptions & Regional Stems",
     "meaning": "Xia Dynasty / Western Xia Tangut Empire",
     "tarr_morpheme": "Hîa-",
-    "tarr_ipa": "[hiː.a]",
+    "tarr_ipa": "[ˈhiː.a]",
     "tarr_role": "Dynastic Root",
     "tarr_example": "c_xiazhou 夏州 -> Magistrat van Hîagouwe",
     "title_count": 3,
@@ -11435,7 +11435,7 @@
     "tarr_example": "c_luoyang 洛阳 -> Magistrat van Lôchsunne / c_hanyang 汉阳 -> Hânsunne / c_BAL_liaoyang 辽阳 -> Ljôsunne",
     "title_count": 12,
     "titles": [
-      "Hejang (`d_heyang`)",
+      "Heyang (`d_heyang`)",
       "Huaiyang (`c_huaiyang`)",
       "Liyang (`c_liyang_2`)",
       "Guiyang (`c_guiyang`)"
@@ -11503,7 +11503,7 @@
       "Quye (`c_quye`)",
       "Shimotsuke (`c_shimotsuke`)",
       "Kōzuke (`c_kozuke`)",
-      "Woje (`c_woye`)"
+      "Woye (`c_woye`)"
     ],
     "id": 548
   },
@@ -11523,7 +11523,7 @@
     "tarr_example": "c_ilseon 一善 -> Magistrat van Eênbêst",
     "title_count": 1,
     "titles": [
-      "Ilson (`c_ilseon`)"
+      "Ilseon (`c_ilseon`)"
     ],
     "id": 549
   },
@@ -11686,7 +11686,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Yi River Shandong waterway / Flowing stream",
     "tarr_morpheme": "Îflôz-",
-    "tarr_ipa": "[iː.floːts]",
+    "tarr_ipa": "[ˈiː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_yizhou_sd 沂州 -> Magistrat van Îflôzgouwe",
     "title_count": 1,
@@ -11793,7 +11793,7 @@
     "titles": [
       "Yinsheng (`d_yinsheng`)",
       "Yinsheng (`c_yinsheng`)",
-      "Baijin (`c_zhanyin`)",
+      "Baiyin (`c_zhanyin`)",
       "Yinzhou (`c_yinzhou`)"
     ],
     "id": 562
@@ -11953,7 +11953,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Ying River Henan waterway / Limpid flowing stream",
     "tarr_morpheme": "Jîngflôz-",
-    "tarr_ipa": "[jiːŋ.floːts]",
+    "tarr_ipa": "[ˈjiːŋ.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_yingzhou_ah 颍州 -> Magistrat van Jîngflôzgouwe",
     "title_count": 1,
@@ -12162,7 +12162,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Yu River Sichuan waterway / Chongqing metropolis",
     "tarr_morpheme": "Jûflôz-",
-    "tarr_ipa": "[jyː.floːts]",
+    "tarr_ipa": "[ˈjyː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_chongqing 渝州 -> Magistrat van Jûgouwe",
     "title_count": 1,
@@ -12229,7 +12229,7 @@
     "title_count": 2,
     "titles": [
       "Yulin (`c_yulin`)",
-      "Ullong (`c_ulleong`)"
+      "Ulleong (`c_ulleong`)"
     ],
     "id": 583
   },
@@ -12313,7 +12313,7 @@
     "title_count": 13,
     "titles": [
       "Zhongyuan (`e_zhongyuan`)",
-      "Taijuan (`c_taiyuan`)",
+      "Taiyuan (`c_taiyuan`)",
       "Xiyuan (`d_xiyuan`)",
       "Jingyuan (`d_jingyuan`)"
     ],
@@ -12335,7 +12335,7 @@
     "tarr_example": "c_dongyuan 东塬 -> Magistrat van Ôst-Leemhôch",
     "title_count": 1,
     "titles": [
-      "Lupingjuan (`c_SW_lupingyuan`)"
+      "Lupingyuan (`c_SW_lupingyuan`)"
     ],
     "id": 588
   },
@@ -12370,7 +12370,7 @@
     "cat_name": "Dynastic Stems, Ethnonyms, Transcriptions & Regional Stems",
     "meaning": "Ancient aristocratic robe / Yuanzhou Jiangxi",
     "tarr_morpheme": "Jûân-",
-    "tarr_ipa": "[jyː.aːn]",
+    "tarr_ipa": "[ˈjyː.aːn]",
     "tarr_role": "Toponymic Root",
     "tarr_example": "c_yuanzhou_jx 袁州 -> Magistrat van Jûângouwe",
     "title_count": 1,
@@ -12395,7 +12395,7 @@
     "tarr_example": "c_weiyuan 威远 -> Magistrat van Machtferne / c_huaiyuan 怀远 -> Koesterferne / c_totomi 远江 -> Ferneflôz",
     "title_count": 14,
     "titles": [
-      "Roujuan (`c_rouyuan`)",
+      "Rouyuan (`c_rouyuan`)",
       "Weiyuan (`c_weiyuan`)",
       "Huaiyuan (`c_huaiyuan`)",
       "Yeongwon (`c_yeongwon`)"
@@ -12723,7 +12723,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Marshland marsh / Wetland pool (Japanese Kanji)",
     "tarr_morpheme": "-brûch",
-    "tarr_ipa": "[bryːx]",
+    "tarr_ipa": "[bruːx]",
     "tarr_role": "Wetland Suffix Generic",
     "tarr_example": "c_kanazawa 金沢 -> Goltbrûch",
     "title_count": 1,
@@ -12743,7 +12743,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Fertile marshland / Riparian wetland / Zeze",
     "tarr_morpheme": "-brûch",
-    "tarr_ipa": "[bryːx]",
+    "tarr_ipa": "[bruːx]",
     "tarr_role": "Wetland Suffix Generic",
     "tarr_example": "c_zezhou 泽州 -> Magistrat van Brûchgouwe",
     "title_count": 3,
@@ -12805,7 +12805,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Zhang River Fujian & Hebei waterway / Zhangzhou",
     "tarr_morpheme": "Dschângflôz-",
-    "tarr_ipa": "[dʒaːŋ.floːts]",
+    "tarr_ipa": "[ˈdʒaːŋ.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_zhangzhou 漳州 -> Magistrat van Dschânggouwe",
     "title_count": 1,
@@ -12951,7 +12951,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Zhen River Henan waterway / Abundant waters",
     "tarr_morpheme": "Dschênflôz-",
-    "tarr_ipa": "[dʒeːn.floːts]",
+    "tarr_ipa": "[ˈdʒeːn.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_zhenzhou_hn 溱州 -> Magistrat van Dschêngouwe",
     "title_count": 1,
@@ -13250,7 +13250,7 @@
     "cat_name": "Hydrography, Waterways, Coasts & Springs",
     "meaning": "Zi River Shandong waterway / Black alluvial stream",
     "tarr_morpheme": "Zîflôz-",
-    "tarr_ipa": "[tsiː.floːts]",
+    "tarr_ipa": "[ˈziː.floːts]",
     "tarr_role": "Hydronymic Root",
     "tarr_example": "c_zizhou_sd 淄州 -> Magistrat van Zîflôzgouwe",
     "title_count": 2,

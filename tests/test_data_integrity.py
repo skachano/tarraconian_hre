@@ -558,7 +558,7 @@ class TestTitleInfoAndIpa:
         assert white_rus is not None
         assert white_rus["tarr"] == "Polôtzich"
         assert "Polôtzich" in white_rus["origin"]
-        assert white_rus["ipa"] == "[ˈpɔ.lɔtsk]"
+        assert white_rus["ipa"] == "[pɔ.ˈloː.tsɪç]"
 
 
 class TestSinosphereLinguistics:

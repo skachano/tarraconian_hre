@@ -14,22 +14,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Germania** | `e_germany` | **Dat Vrankische Imperi** | `[dat ˈvraŋ.kɪ.ʃə ɪm.ˈpɛ.ri]` | **384** | 419 | 91.6% | 21 |
 | 2 | **Arabian Empire** | `e_arabia` | **Dat Kalîfische Imperi** | `[dat ka.ˈliː.fɪ.ʃə ɪm.ˈpɛ.ri]` | **134** | 157 | 85.4% | 7 |
-| 3 | **Rajasthan** | `e_rajastan` | **Dat Ârjavartische Imperi** | `[dat aːr.ja.ˈvar.tɪ.ʃə ɪm.ˈpɛ.ri]` | **103** | 121 | 85.1% | 9 |
+| 3 | **Rajasthan** | `e_rajastan` | **Dat Ârjavartische Imperi** | `[dat ˈaːr.ja.ˌvar.tɪ.ʃə ɪm.ˈpɛ.ri]` | **103** | 121 | 85.1% | 9 |
 | 4 | **Francia** | `e_france` | **Dat Imperi van Vrancrîch** | `[dat ɪm.ˈpɛ.ri van ˈvraŋk.riːç]` | **98** | 98 | 100.0% | 2 |
 | 5 | **Tibet** | `e_tibet` | **Dat Imperi van Bôtlant** | `[dat ɪm.ˈpɛ.ri van ˈboːt.lant]` | **93** | 146 | 63.7% | 8 |
 | 6 | **Scandinavia** | `e_scandinavia` | **Dat Imperi van dem Norderlant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈnɔr.dər.lant]` | **93** | 112 | 83.0% | 5 |
 | 7 | **Jingyang** | `e_jingyang` | **Dat Imperi van Dôrnflôz** | `[dat ɪm.ˈpɛ.ri van ˈdoːrn.floːts]` | **80** | 80 | 100.0% | 7 |
 | 8 | **Russia** | `e_russia` | **Dat Kîewsche Imperi** | `[dat ˈkiː.ɛf.ʃə ɪm.ˈpɛ.ri]` | **77** | 77 | 100.0% | 5 |
-| 9 | **Mali** | `e_mali` | **Dat Imperi van Gâna** | `[dat ɪm.ˈpɛ.ri van ˈgaː.na]` | **75** | 75 | 100.0% | 7 |
-| 10 | **Turan** | `e_turan` | **Dat Sogdische Imperi** | `[dat ˈzɔg.dɪ.ʃə ɪm.ˈpɛ.ri]` | **72** | 95 | 75.8% | 4 |
+| 9 | **Mali** | `e_mali` | **Dat Imperi van Gâna** | `[dat ɪm.ˈpɛ.ri van ˈɡaː.na]` | **75** | 75 | 100.0% | 7 |
+| 10 | **Turan** | `e_turan` | **Dat Sogdische Imperi** | `[dat ˈzɔɡ.dɪ.ʃə ɪm.ˈpɛ.ri]` | **72** | 95 | 75.8% | 4 |
 | 11 | **Abyssinia** | `e_abyssinia` | **Dat Ethjôpische Imperi** | `[dat ɛt.ˈjoː.pɪ.ʃə ɪm.ˈpɛ.ri]` | **72** | 72 | 100.0% | 5 |
-| 12 | **Byzantine Empire** | `e_byzantium` | **Dat Grîkische Imperi** | `[dat ˈgʀiː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 75 | 90.7% | 11 |
+| 12 | **Byzantine Empire** | `e_byzantium` | **Dat Grîkische Imperi** | `[dat ˈɡriː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 75 | 90.7% | 11 |
 | 13 | **Deccan Empire** | `e_deccan` | **Dat Karnâtische Imperi** | `[dat kar.ˈnaː.tɪ.ʃə ɪm.ˈpɛ.ri]` | **68** | 68 | 100.0% | 6 |
 | 14 | **Srivijaya** | `e_srivijaya` | **Dat Imperi van Glantz-Zêch** | `[dat ɪm.ˈpɛ.ri van ˈɡlants.tseːç]` | **68** | 68 | 100.0% | 4 |
-| 15 | **Japan** | `e_japan` | **Dat Imperi van dem Sunnenufganch** | `[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋç]` | **63** | 66 | 95.5% | 4 |
-| 16 | **Pracya** | `e_bengal` | **Dat Bengalische Imperi** | `[dat bɛŋ.ˈgaː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **63** | 64 | 98.4% | 5 |
+| 15 | **Japan** | `e_japan` | **Dat Imperi van dem Sunnenufganch** | `[dat ɪm.ˈpɛ.ri van dɛm ˈzʊ.nən.ʊf.ɡaŋx]` | **63** | 66 | 95.5% | 4 |
+| 16 | **Pracya** | `e_bengal` | **Dat Bengalische Imperi** | `[dat bɛŋ.ˈɡaː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **63** | 64 | 98.4% | 5 |
 | 17 | **Nusantara** | `e_nusantara` | **Dat Malûkische Imperi** | `[dat ma.ˈluː.kɪ.ʃə ɪm.ˈpɛ.ri]` | **59** | 62 | 95.2% | 6 |
-| 18 | **Suvarnabhumi** | `e_suvarnabhumi` | **Dat Pagânsche Imperi** | `[dat pa.ˈgaːn.ʃə ɪm.ˈpɛ.ri]` | **53** | 53 | 100.0% | 2 |
+| 18 | **Suvarnabhumi** | `e_suvarnabhumi` | **Dat Pagânsche Imperi** | `[dat pa.ˈɡaːn.ʃə ɪm.ˈpɛ.ri]` | **53** | 53 | 100.0% | 2 |
 | 19 | **Lingnan** | `e_lingnan` | **Dat Imperi van dem Sûtrücke** | `[dat ɪm.ˈpɛ.ri van dɛm ˈzyːt.rʏ.kə]` | **52** | 52 | 100.0% | 3 |
 | 20 | **Yongliang** | `e_yongliang` | **Dat Imperi van dem Kôlvredelant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈkoːl.vreː.də.lant]` | **50** | 73 | 68.5% | 3 |
 | 21 | **Illyria** | `e_illyria` | **Dat Illîrische Imperi** | `[dat ɪl.ˈliː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **50** | 50 | 100.0% | 4 |
@@ -39,26 +39,26 @@
 | 25 | **Maghreb** | `e_maghreb` | **Dat Âfrikânsche Imperi** | `[dat aː.frɪ.ˈkaːn.ʃə ɪm.ˈpɛ.ri]` | **45** | 46 | 97.8% | 3 |
 | 26 | **Africa** | `e_africa` | **Dat Mouritânische Imperi** | `[dat muː.rɪ.ˈtaː.nɪ.ʃə ɪm.ˈpɛ.ri]` | **43** | 43 | 100.0% | 2 |
 | 27 | **Andong** | `e_andong` | **Dat Chitaische Imperi** | `[dat çi.ˈtaː.ɪ.ʃə ɪm.ˈpɛ.ri]` | **41** | 82 | 50.0% | 4 |
-| 28 | **Britannia** | `e_britannia` | **Dat Imperi van dem Wâllant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈvaːl.lant]` | **40** | 40 | 100.0% | 2 |
+| 28 | **Britannia** | `e_britannia` | **Dat Imperi van dem Wâllant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈwaːl.lant]` | **40** | 40 | 100.0% | 2 |
 | 29 | **Zhongyuan** | `e_zhongyuan` | **Dat Imperi van dem Middenvelt** | `[dat ɪm.ˈpɛ.ri van dɛm ˈmɪ.dən.vɛlt]` | **39** | 86 | 45.3% | 6 |
 | 30 | **Aegyptus** | `e_aegyptus` | **Dat Êgyptische Imperi** | `[dat eː.ˈɡʏp.tɪ.ʃə ɪm.ˈpɛ.ri]` | **39** | 41 | 95.1% | 2 |
-| 31 | **Samhan** | `e_goryeo` | **Dat Hôchprachtige Imperi** | `[dat ˈhoːx.pʀax.tɪ.ɣə ɪm.ˈpɛ.ri]` | **36** | 48 | 75.0% | 3 |
+| 31 | **Samhan** | `e_goryeo` | **Dat Hôchprachtige Imperi** | `[dat ˈhoːx.prax.tɪ.ɣə ɪm.ˈpɛ.ri]` | **36** | 48 | 75.0% | 3 |
 | 32 | **Carpathia** | `e_carpathia` | **Dat Arpâdische Imperi** | `[dat ar.ˈpaː.dɪ.ʃə ɪm.ˈpɛ.ri]` | **35** | 35 | 100.0% | 2 |
 | 33 | **Khazaria** | `e_caspian-pontic_steppe` | **Dat Chasârische Imperi** | `[dat xa.ˈzaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **34** | 73 | 46.6% | 5 |
 | 34 | **Kanem-Bornu** | `e_kanem_bornu` | **Dat Kanêmische Imperi** | `[dat ka.ˈneː.mɪ.ʃə ɪm.ˈpɛ.ri]` | **33** | 52 | 63.5% | 4 |
-| 35 | **Amur** | `e_amur` | **Dat Bohâi-Imperi** | `[dat bɔ.ˈhaːi ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 2 |
+| 35 | **Amur** | `e_amur` | **Dat Bohâi-Imperi** | `[dat bɔ.ˈhaːɪ ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 2 |
 | 36 | **Kambuja** | `e_kambuja` | **Dat Angkôrsche Imperi** | `[dat aŋ.ˈkoːr.ʃə ɪm.ˈpɛ.ri]` | **32** | 32 | 100.0% | 3 |
-| 37 | **Azania** | `e_azania` | **Dat Zandsch-Imperi** | `[dat ˈzandʒ.ɪm.ˌpɛ.ri]` | **31** | 36 | 86.1% | 3 |
+| 37 | **Azania** | `e_azania` | **Dat Zandsch-Imperi** | `[dat ˈzandʒ ɪm.ˈpɛ.ri]` | **31** | 36 | 86.1% | 3 |
 | 38 | **Baltic Empire** | `e_wendish_empire` | **Dat Imperi van Bêlingen** | `[dat ɪm.ˈpɛ.ri van ˈbeː.lɪŋ.ən]` | **29** | 33 | 87.9% | 2 |
 | 39 | **Tartaria** | `e_tartaria` | **Dat Kiptschachische Imperi** | `[dat kɪp.ˈtʃaː.xɪ.ʃə ɪm.ˈpɛ.ri]` | **28** | 109 | 25.7% | 5 |
 | 40 | **Anatolia** | `e_anatolia` | **Dat Anatôlische Imperi** | `[dat a.na.ˈtoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **27** | 31 | 87.1% | 2 |
 | 41 | **Oriens** | `e_oriens` | **Dat Imperi van dem Môrghenlant** | `[dat ɪm.ˈpɛ.ri van dɛm ˈmoːr.ɡən.lant]` | **22** | 22 | 100.0% | 1 |
 | 42 | **Macedonia** | `e_macedonia` | **Dat Imperi van Bizantjen** | `[dat ɪm.ˈpɛ.ri van bɪ.ˈtsan.tjən]` | **17** | 17 | 100.0% | 2 |
-| 43 | **Volga-Ural** | `e_volga-ural` | **Dat Bulgârische Imperi** | `[dat bʊl.ˈgaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **11** | 46 | 23.9% | 3 |
-| 44 | **Mongolia** | `e_mongolia` | **Dat Mongôlische Imperi** | `[dat mɔŋ.ˈgoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **7** | 100 | 7.0% | 4 |
+| 43 | **Volga-Ural** | `e_volga-ural` | **Dat Bulgârische Imperi** | `[dat bʊl.ˈɡaː.rɪ.ʃə ɪm.ˈpɛ.ri]` | **11** | 46 | 23.9% | 3 |
+| 44 | **Mongolia** | `e_mongolia` | **Dat Mongôlische Imperi** | `[dat mɔŋ.ˈɡoː.lɪ.ʃə ɪm.ˈpɛ.ri]` | **7** | 100 | 7.0% | 4 |
 | 45 | **Kirghiz Khanate** | `e_kirghiz_khanate` | **Dat Kirgîsische Imperi** | `[dat kɪr.ˈɡiː.zɪ.ʃə ɪm.ˈpɛ.ri]` | **4** | 32 | 12.5% | 1 |
 | 46 | **Liangyi** | `e_liangyi` | **Dat Imperi van den Vîr-Strômen** | `[dat ɪm.ˈpɛ.ri van dɛn ˈfiːr.stroː.mən]` | **0** | 89 | 0.0% | 6 |
-| 47 | **Siberia** | `e_siberia` | **Dat Jûgrische Imperi** | `[dat ˈjuː.grɪ.ʃə ɪm.ˈpɛ.ri]` | **0** | 45 | 0.0% | 3 |
+| 47 | **Siberia** | `e_siberia` | **Dat Jûgrische Imperi** | `[dat ˈjuː.ɡrɪ.ʃə ɪm.ˈpɛ.ri]` | **0** | 45 | 0.0% | 3 |
 
 ### 1.2 Summary Table of De Jure Kingdoms (213 Kingdoms)
 
