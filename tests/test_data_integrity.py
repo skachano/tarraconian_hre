@@ -307,3 +307,12 @@ class TestMapColoring:
             if b1 in by_key and b2 in by_key and by_key[b1] == by_key[b2]:
                 collisions.append((b1, b2, by_key[b1]))
         assert not collisions, f"Detected adjacent barony color collisions: {collisions}"
+
+    def test_seven_color_palette_uniformity(self, counties_data, baronies_data):
+        """Validates that all 7 palette colors are used across all tiers without monopoly."""
+        for key in ["c_color", "d_color", "k_color", "e_color"]:
+            colors = {f["properties"][key] for f in counties_data["features"]}
+            assert len(colors) == 7, f"Expected exactly 7 colors in {key}, found {len(colors)}: {colors}"
+
+        b_colors = {f["properties"]["b_color"] for f in baronies_data["features"]}
+        assert len(b_colors) == 7, f"Expected exactly 7 colors in b_color, found {len(b_colors)}: {b_colors}"

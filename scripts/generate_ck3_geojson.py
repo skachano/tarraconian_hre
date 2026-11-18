@@ -22,7 +22,7 @@ import os
 import re
 import sys
 import time
-from collections import defaultdict
+from collections import defaultdict, Counter
 from pathlib import Path
 
 import cv2
@@ -50,15 +50,16 @@ except ImportError:
 
 
 # ---------------------------------------------------------------------------
-# Cartographic Palette & Four-Color Graph Coloring
+# Cartographic 7-Color Palette & Graph Coloring
 # ---------------------------------------------------------------------------
 MAP_PALETTE = [
-    "#a64b38", "#3b7d4e", "#2e649e", "#b88228",
-    "#2a7d76", "#a3435e", "#737d2f", "#4b5796",
-    "#b5622a", "#528038", "#3a488a", "#a68c4a",
-    "#2c788c", "#8c3838", "#687a38", "#3e6f94",
-    "#ad5535", "#347a5f", "#6b3e7a", "#a8782a",
-    "#2a736a", "#8f3e4b", "#457a40", "#32598a",
+    "#3069a8",  # Royal Blue
+    "#3b824a",  # Forest Green
+    "#ab3348",  # Crimson Wine
+    "#c28b23",  # Ochre Gold
+    "#783884",  # Imperial Purple
+    "#b84f18",  # Terracotta Orange
+    "#16717a",  # Viridian Teal
 ]
 
 def hex_to_rgb(hex_str: str):
@@ -72,9 +73,9 @@ def rgb_dist(c1, c2):
 
 def color_graph_dsatur(nodes, edges, palette=MAP_PALETTE, palette_rgb=MAP_PALETTE_RGB):
     """
-    Applies DSATUR graph coloring to assign each node a color from palette
+    Applies frequency-balanced DSATUR graph coloring using a 7-color cartographic palette
     such that for every edge (u, v), color(u) != color(v).
-    Maximizes the minimum perceptual color distance to all adjacent neighbors.
+    Ensures balanced distribution across all 7 colors while maximizing perceptual distance to adjacent neighbors.
     """
     neighbors = defaultdict(set)
     for u, v in edges:
@@ -86,6 +87,7 @@ def color_graph_dsatur(nodes, edges, palette=MAP_PALETTE, palette_rgb=MAP_PALETT
     sat_degrees = {u: set() for u in nodes}
     unassigned = set(nodes)
     num_pal = len(palette)
+    color_counts = Counter()
 
     while unassigned:
         u = max(unassigned, key=lambda x: (len(sat_degrees[x]), degrees[x]))
@@ -99,15 +101,16 @@ def color_graph_dsatur(nodes, edges, palette=MAP_PALETTE, palette_rgb=MAP_PALETT
             while idx in neighbor_color_indices:
                 idx += 1
         else:
-            if not neighbor_color_indices:
-                idx = len(assigned_idx) % num_pal
+            # Prioritize least-used colors to maintain even distribution across all 7 colors
+            min_c = min(color_counts[i] for i in available_indices)
+            least_used = [i for i in available_indices if color_counts[i] <= min_c + 1]
+            if neighbor_color_indices:
+                idx = max(least_used, key=lambda i: min(rgb_dist(palette_rgb[i], palette_rgb[n]) for n in neighbor_color_indices if n < num_pal))
             else:
-                def score(c_idx):
-                    c_rgb = palette_rgb[c_idx]
-                    return min(rgb_dist(c_rgb, palette_rgb[n_idx]) for n_idx in neighbor_color_indices if n_idx < num_pal)
-                idx = max(available_indices, key=score)
+                idx = min(least_used, key=lambda i: color_counts[i])
 
         assigned_idx[u] = idx
+        color_counts[idx] += 1
         for v in neighbors[u]:
             if v in unassigned:
                 sat_degrees[v].add(idx)
