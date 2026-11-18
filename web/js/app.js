@@ -454,23 +454,40 @@ function openInspector(props, tier) {
   const currentKey = getTitleKeyForTier(props, tier);
   titleKeyElem.textContent = currentKey;
 
-  // Title Names for active tier
+  // Title Names & Anachronism Analysis for active tier
   const countyTarr = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || '';
+  let currentAnachronism = '';
   if (tier === 'county') {
     tarrName.textContent = countyTarr || formatKey(props.county);
     originName.textContent = props.c_origin || formatKey(props.county);
+    currentAnachronism = props.c_anachronism || '';
   } else if (tier === 'barony') {
     tarrName.textContent = props.name || formatKey(props.barony);
     originName.textContent = props.b_origin || props.name || formatKey(props.barony);
+    currentAnachronism = props.b_anachronism || props.c_anachronism || '';
   } else if (tier === 'duchy') {
     tarrName.textContent = props.d_tarr || formatKey(props.duchy);
     originName.textContent = props.d_origin || formatKey(props.duchy);
+    currentAnachronism = props.d_anachronism || '';
   } else if (tier === 'kingdom') {
     tarrName.textContent = props.k_tarr || formatKey(props.kingdom);
     originName.textContent = props.k_origin || formatKey(props.kingdom);
+    currentAnachronism = props.k_anachronism || '';
   } else if (tier === 'empire') {
     tarrName.textContent = props.e_tarr || formatKey(props.empire);
     originName.textContent = props.e_origin || formatKey(props.empire);
+    currentAnachronism = props.e_anachronism || '';
+  }
+
+  const anachNote = document.getElementById('drawer-anachronism-note');
+  if (anachNote) {
+    if (currentAnachronism) {
+      anachNote.innerHTML = `<strong>⚠️ Anachronistic Title Analysis:</strong> ${currentAnachronism}`;
+      anachNote.classList.remove('hidden');
+    } else {
+      anachNote.classList.add('hidden');
+      anachNote.innerHTML = '';
+    }
   }
 
   // Historical resolution (if applicable and distinct for county)

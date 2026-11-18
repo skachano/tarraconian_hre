@@ -421,52 +421,241 @@ def parse_save_hierarchy(melted_save_path: Path, save_file_path: Path = None):
     return county_hierarchy, titles_by_key
 
 
-def parse_title_origins(titles_md_path: Path, hre_md_path: Path):
+def parse_title_origins(
+    titles_md_path: Path,
+    hre_md_path: Path,
+    anachronisms_md_path: Path = None,
+    audit_md_path: Path = None,
+):
     """
-    Extracts historical title name origins for all tiers from the markdown files:
-    - Counties: from tarraconian_titles_1059.md Section 3 (`c_key` (Origin) $\\rightarrow$)
-    - Duchies: from tarraconian_titles_1059.md Section 3 (**Duchy of Origin** (`d_key`))
-    - Kingdoms: from tarraconian_titles_1059.md Section 3 (### 3.X Kingdom of Origin (`k_key`)) & Section 2
-    - Empires: from hre_de_jure_and_archdioceses_1059.md Table 1.1
+    Extracts historical title name origins and anachronistic title analyses for all tiers
+    from the markdown files:
+    - archive/anachronistic_titles_1059.md: Pre-1059 centres and foundation reasons
+    - audit_discrepancy_register.md: Historical justifications and resolved centers
+    - tarraconian_titles_1059.md: Section 3 origins and [YEAR Historical: ...] annotations
+    - hre_de_jure_and_archdioceses_1059.md: Table 1.1 empire and kingdom origins
     """
     c_origins = {}
     d_origins = {}
     k_origins = {}
     e_origins = {}
 
+    c_anachronisms = {}
+    d_anachronisms = {}
+    k_anachronisms = {}
+    e_anachronisms = {}
+
+    def clean_md(text: str) -> str:
+        if not text:
+            return ""
+        text = re.sub(r"\[\s*\**[a-zA-Z0-9_\-\s]+\**\s*\]", "", text)
+        text = text.replace("**", "").replace("*", "").strip()
+        return text
+
+    def parse_hist_tag(h_str: str) -> str:
+        h = re.sub(r"^(?:Magistrat|Fürstbisdom|Gubernat|Kûnincrich|March)\s+van\s+(?:der\s+|den\s+|dem\s+)?", "", h_str).strip()
+        parts = [p.strip() for p in h.split(" / ")]
+        res_parts = []
+        for p in parts:
+            m = re.match(r"^([^(]+)\s*\(([^)]+)\)$", p)
+            if m:
+                tarr_name, alt_name = m.group(1).strip(), m.group(2).strip()
+                if tarr_name.lower() == "wilten" and "veldidena" in alt_name.lower():
+                    res_parts.append("Wilten / Veldidena")
+                elif alt_name:
+                    res_parts.append(alt_name)
+                else:
+                    res_parts.append(tarr_name)
+            else:
+                res_parts.append(p)
+        return " / ".join(res_parts)
+
+    anach_reasons = {}
+
+    # 1. Parse archive/anachronistic_titles_1059.md
+    if anachronisms_md_path and anachronisms_md_path.exists():
+        text = anachronisms_md_path.read_text(encoding="utf-8")
+        p1 = re.compile(
+            r"^\|\s*`([cdk]_[a-zA-Z0-9_\-]+)`(?:\s*/\s*`([cdk]_[a-zA-Z0-9_\-]+)`)?\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|",
+            re.MULTILINE,
+        )
+        for m in p1.finditer(text):
+            k1 = m.group(1).strip()
+            k2 = m.group(2).strip() if m.group(2) else None
+            reason = clean_md(m.group(6))
+            centre_raw = m.group(7).strip()
+            bolds = re.findall(r"\*\*([^*]+)\*\*", centre_raw)
+            bolds = [b for b in bolds if not b.startswith("House ") and not b.startswith("Valid ")]
+            if bolds:
+                centre = bolds[0].split("(")[0].strip()
+            else:
+                centre = clean_md(centre_raw).split(" or ")[0].split("(")[0].strip()
+            for k in ([k1, k2] if k2 else [k1]):
+                anach_reasons[k] = {"reason": reason, "centre": centre}
+
+        p2 = re.compile(
+            r"^\|\s*`([cdk]_[a-zA-Z0-9_\-]+)`\s*\(\*\*([^*]+)\*\*\)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|",
+            re.MULTILINE,
+        )
+        for m in p2.finditer(text):
+            k = m.group(1).strip()
+            centre = clean_md(m.group(7)).split(" or ")[0].split("(")[0].strip()
+            if k not in anach_reasons:
+                anach_reasons[k] = {"reason": "Anachronistic title evaluated in 1059 Chancellery audit", "centre": centre}
+
+    aliases = {
+        "c_munich": "c_munchen",
+        "c_berg": "c_bergh",
+        "c_tirol": "c_tyrol",
+        "c_wurtemberg": "c_wurttemberg",
+        "c_brussels": "c_brabant",
+    }
+    for old_k, new_k in aliases.items():
+        if old_k in anach_reasons and new_k not in anach_reasons:
+            anach_reasons[new_k] = anach_reasons[old_k]
+
+    # 2. Parse audit_discrepancy_register.md
+    if audit_md_path and audit_md_path.exists():
+        text = audit_md_path.read_text(encoding="utf-8")
+        p_audit = re.compile(
+            r"^\|\s*`([cdk]_[a-zA-Z0-9_\-]+)`\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|",
+            re.MULTILINE,
+        )
+        for m in p_audit.finditer(text):
+            k = m.group(1).strip()
+            reason = clean_md(m.group(5))
+            res = clean_md(m.group(6))
+            just = clean_md(m.group(9))
+            if k not in anach_reasons:
+                m_c = re.search(r"\(([^)]+)\)", res)
+                centre = m_c.group(1).strip() if m_c else res
+                clean_reason = just if just else reason
+                anach_reasons[k] = {"reason": clean_reason, "centre": centre}
+
+    # 3. Parse tarraconian_titles_1059.md
     if titles_md_path.exists():
         with open(titles_md_path, "r", encoding="utf-8") as f:
             t_text = f.read()
 
-        # Counties: `c_key` (Origin) $\rightarrow$
-        for m in re.finditer(r"^\s*\*\s*`(c_[a-zA-Z0-9_\-]+)`\s*(.*?)\s*\$\\rightarrow\$", t_text, re.MULTILINE):
+        # Counties: `c_key` (Origin) $\rightarrow$ ... [YEAR Historical: ...]
+        for m in re.finditer(r"^\s*\*\s*`(c_[a-zA-Z0-9_\-]+)`\s*(.*?)\s*\$\\rightarrow\$\s*(.*?)$", t_text, re.MULTILINE):
             ck = m.group(1)
             raw = m.group(2).strip()
-            clean = raw.strip("()")
-            clean = re.sub(r"\[\s*\**[a-zA-Z0-9_\-\s]+\**\s*\]", "", clean)
-            clean = clean.replace("**", "").strip()
-            if clean:
-                c_origins[ck] = clean
+            base_orig = raw.strip("()")
+            base_orig = clean_md(base_orig)
+            rest = m.group(3)
 
-        # Duchies: * **Duchy of Origin** (`d_key`) or * **March of Origin** (`d_key`)
-        for m in re.finditer(r"^\*\s+\*\*(?:Duchy|March)\s+of\s+([^*`]+)\*\*\s+.*?\(`([dx]_[a-zA-Z0-9_\-]+)`\)", t_text, re.MULTILINE):
-            origin = m.group(1).strip()
+            m_h = re.search(r"\[(1059|1122|1142|1154|1171|1194)\s+Historical:\s*([^\]]+)\]", rest)
+            if m_h:
+                h_str = m_h.group(2).strip()
+                hist_centre = parse_hist_tag(h_str)
+                reason_info = anach_reasons.get(ck, {})
+                reason = reason_info.get("reason", f"Anachronistic foundation evaluated in {m_h.group(1)} Imperial Chancellery audit.")
+                c_origins[ck] = f"{hist_centre} (in-game: {base_orig})"
+                c_anachronisms[ck] = reason
+            elif ck in anach_reasons:
+                info = anach_reasons[ck]
+                centre = info["centre"]
+                c_origins[ck] = f"{centre} (in-game: {base_orig})"
+                c_anachronisms[ck] = info["reason"]
+            else:
+                c_origins[ck] = base_orig
+                c_anachronisms[ck] = ""
+
+        # Duchies: * **Duchy of Origin** (`d_key`)
+        for m in re.finditer(r"^\*\s+\*\*(?:Duchy|March)\s+of\s+([^*`]+)\*\*\s+.*?\(`([dx]_[a-zA-Z0-9_\-]+)`\)(.*?)$", t_text, re.MULTILINE):
+            base_orig = m.group(1).strip()
             dk = m.group(2)
-            d_origins[dk] = origin
+            rest = m.group(3)
+
+            m_paren = re.match(r"^([^(]+)\s*\(([^)]+)\)$", base_orig)
+            if m_paren:
+                hist_part, in_game_part = m_paren.group(1).strip(), m_paren.group(2).strip()
+            else:
+                hist_part, in_game_part = base_orig, base_orig
+
+            m_h = re.search(r"\[(1059|1122|1142|1154|1171|1194)\s+Historical:\s*([^\]]+)\]", rest)
+            if m_h:
+                h_str = m_h.group(2).strip()
+                hist_centre = parse_hist_tag(h_str)
+                reason_info = anach_reasons.get(dk, {})
+                reason = reason_info.get("reason", f"Anachronistic foundation evaluated in {m_h.group(1)} Imperial Chancellery audit.")
+                d_origins[dk] = f"{hist_centre} (in-game: {in_game_part})"
+                d_anachronisms[dk] = reason
+            elif dk in anach_reasons:
+                info = anach_reasons[dk]
+                centre = info["centre"]
+                if hist_part != in_game_part:
+                    if centre and hist_part not in centre and centre not in hist_part:
+                        hist_name = f"{hist_part} / {centre}"
+                    else:
+                        hist_name = centre if centre else hist_part
+                else:
+                    hist_name = centre if centre else hist_part
+                d_origins[dk] = f"{hist_name} (in-game: {in_game_part})"
+                d_anachronisms[dk] = info["reason"]
+            elif hist_part != in_game_part:
+                d_origins[dk] = f"{hist_part} (in-game: {in_game_part})"
+                d_anachronisms[dk] = ""
+            else:
+                d_origins[dk] = base_orig
+                d_anachronisms[dk] = ""
 
         # Kingdoms: ### 3.X Kingdom of Origin (`k_key`)
-        for m in re.finditer(r"^###\s+3\.\d+\s+Kingdom\s+of\s+([^`]+)\s+\(`([a-zA-Z0-9_\-]+)`\)", t_text, re.MULTILINE):
-            origin = m.group(1).strip()
+        for m in re.finditer(r"^###\s+3\.\d+\s+Kingdom\s+of\s+([^`]+)\s+\(`([a-zA-Z0-9_\-]+)`\)(.*?)$", t_text, re.MULTILINE):
+            base_orig = m.group(1).strip()
             kk = m.group(2)
-            k_origins[kk] = origin
+            rest = m.group(3)
+
+            m_paren = re.match(r"^([^(]+)\s*\(([^)]+)\)$", base_orig)
+            if m_paren:
+                hist_part, in_game_part = m_paren.group(1).strip(), m_paren.group(2).strip()
+            else:
+                hist_part, in_game_part = base_orig, base_orig
+
+            m_h = re.search(r"\[(1059|1122|1142|1154|1171|1194)\s+Historical:\s*([^\]]+)\]", rest)
+            if m_h:
+                h_str = m_h.group(2).strip()
+                hist_centre = parse_hist_tag(h_str)
+                reason_info = anach_reasons.get(kk, {})
+                reason = reason_info.get("reason", f"Anachronistic foundation evaluated in {m_h.group(1)} Imperial Chancellery audit.")
+                k_origins[kk] = f"{hist_centre} (in-game: {base_orig})"
+                k_anachronisms[kk] = reason
+            elif kk in anach_reasons:
+                info = anach_reasons[kk]
+                centre = info["centre"]
+                if hist_part != in_game_part:
+                    if centre and hist_part not in centre and centre not in hist_part:
+                        hist_name = f"{hist_part} / {centre}"
+                    else:
+                        hist_name = centre if centre else hist_part
+                else:
+                    hist_name = centre if centre else hist_part
+                k_origins[kk] = f"{hist_name} (in-game: {in_game_part})"
+                k_anachronisms[kk] = info["reason"]
+            elif hist_part != in_game_part:
+                k_origins[kk] = f"{hist_part} (in-game: {in_game_part})"
+                k_anachronisms[kk] = ""
+            else:
+                k_origins[kk] = base_orig
+                k_anachronisms[kk] = ""
 
         # Kingdoms Section 2 table fallback
         for m in re.finditer(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|", t_text, re.MULTILINE):
             origin = m.group(1).strip()
             kk = m.group(2)
             if kk.startswith("k_") and kk not in k_origins:
-                k_origins[kk] = origin
+                if kk in anach_reasons:
+                    info = anach_reasons[kk]
+                    c_txt = info["centre"]
+                    r_txt = info["reason"]
+                    k_origins[kk] = f"{c_txt} (in-game: {origin})"
+                    k_anachronisms[kk] = r_txt
+                else:
+                    k_origins[kk] = origin
+                    k_anachronisms[kk] = ""
 
+    # 4. Empires from hre_de_jure_and_archdioceses_1059.md Table 1.1
     if hre_md_path.exists():
         with open(hre_md_path, "r", encoding="utf-8") as f:
             h_text = f.read()
@@ -475,15 +664,36 @@ def parse_title_origins(titles_md_path: Path, hre_md_path: Path):
             origin = m.group(1).strip()
             ek = m.group(2)
             if ek.startswith("e_"):
-                e_origins[ek] = origin
+                if ek in anach_reasons:
+                    info = anach_reasons[ek]
+                    c_txt = info["centre"]
+                    r_txt = info["reason"]
+                    e_origins[ek] = f"{c_txt} (in-game: {origin})"
+                    e_anachronisms[ek] = r_txt
+                else:
+                    e_origins[ek] = origin
+                    e_anachronisms[ek] = ""
+            elif ek.startswith("k_") and ek not in k_origins:
+                if ek in anach_reasons:
+                    info = anach_reasons[ek]
+                    c_txt = info["centre"]
+                    r_txt = info["reason"]
+                    k_origins[ek] = f"{c_txt} (in-game: {origin})"
+                    k_anachronisms[ek] = r_txt
+                else:
+                    k_origins[ek] = origin
+                    k_anachronisms[ek] = ""
 
-        for m in re.finditer(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([a-zA-Z0-9_\-]+)`\s*\|", h_text, re.MULTILINE):
-            origin = m.group(1).strip()
-            k = m.group(2)
-            if k.startswith("k_") and k not in k_origins:
-                k_origins[k] = origin
-
-    return c_origins, d_origins, k_origins, e_origins
+    return (
+        c_origins,
+        d_origins,
+        k_origins,
+        e_origins,
+        c_anachronisms,
+        d_anachronisms,
+        k_anachronisms,
+        e_anachronisms,
+    )
 
 
 def build_and_write_title_tree(
@@ -500,6 +710,10 @@ def build_and_write_title_tree(
     d_origins: dict = None,
     k_origins: dict = None,
     e_origins: dict = None,
+    c_anachronisms: dict = None,
+    d_anachronisms: dict = None,
+    k_anachronisms: dict = None,
+    e_anachronisms: dict = None,
 ):
     """Builds nested title tree e_* -> k_* -> d_* -> c_* -> [b_*] and writes to JSON."""
     if empire_colors is None: empire_colors = {}
@@ -510,6 +724,10 @@ def build_and_write_title_tree(
     if d_origins is None: d_origins = {}
     if k_origins is None: k_origins = {}
     if e_origins is None: e_origins = {}
+    if c_anachronisms is None: c_anachronisms = {}
+    if d_anachronisms is None: d_anachronisms = {}
+    if k_anachronisms is None: k_anachronisms = {}
+    if e_anachronisms is None: e_anachronisms = {}
 
     save_title_tree = {}
     for c_key, info in county_info.items():
@@ -529,6 +747,7 @@ def build_and_write_title_tree(
             "key": e_k,
             "tarr": e_tarr_name,
             "origin": e_origin,
+            "anachronism": e_anachronisms.get(e_k, ""),
             "color": empire_colors.get(e_k, "#a64b38"),
             "kingdoms": {},
         }
@@ -540,6 +759,7 @@ def build_and_write_title_tree(
                 "key": k_k,
                 "tarr": k_tarr_name,
                 "origin": k_origin,
+                "anachronism": k_anachronisms.get(k_k, ""),
                 "color": kingdom_colors.get(k_k, "#b88228"),
                 "duchies": {},
             }
@@ -551,6 +771,7 @@ def build_and_write_title_tree(
                     "key": d_k,
                     "tarr": d_tarr_name,
                     "origin": d_origin,
+                    "anachronism": d_anachronisms.get(d_k, ""),
                     "color": duchy_colors.get(d_k, "#2e649e"),
                     "counties": {},
                 }
@@ -562,6 +783,7 @@ def build_and_write_title_tree(
                         "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
                         "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
                         "origin": c_origin,
+                        "anachronism": c_anachronisms.get(c_k, ""),
                         "color": county_colors.get(c_k, "#3b7d4e"),
                         "baronies": b_list,
                     }
@@ -586,6 +808,10 @@ def realign_existing_datasets(
     d_origins: dict = None,
     k_origins: dict = None,
     e_origins: dict = None,
+    c_anachronisms: dict = None,
+    d_anachronisms: dict = None,
+    k_anachronisms: dict = None,
+    e_anachronisms: dict = None,
 ):
     """Realigns existing GeoJSON and title tree datasets without re-rasterizing."""
     counties_path = out_dir / "ck3_counties.geojson"
@@ -597,6 +823,10 @@ def realign_existing_datasets(
     if d_origins is None: d_origins = {}
     if k_origins is None: k_origins = {}
     if e_origins is None: e_origins = {}
+    if c_anachronisms is None: c_anachronisms = {}
+    if d_anachronisms is None: d_anachronisms = {}
+    if k_anachronisms is None: k_anachronisms = {}
+    if e_anachronisms is None: e_anachronisms = {}
 
     if not counties_path.exists() or not baronies_path.exists():
         raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
@@ -629,11 +859,18 @@ def realign_existing_datasets(
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
 
-        # Historical Title Name Origins from Markdown Files
+        # Historical Title Name Origins & Anachronisms from Markdown Files
         props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
-        if d_k: props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
-        if k_k: props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
-        if e_k: props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
+        props["c_anachronism"] = c_anachronisms.get(c_k, "")
+        if d_k:
+            props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
+            props["d_anachronism"] = d_anachronisms.get(d_k, "")
+        if k_k:
+            props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
+            props["k_anachronism"] = k_anachronisms.get(k_k, "")
+        if e_k:
+            props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
+            props["e_anachronism"] = e_anachronisms.get(e_k, "")
 
         county_info[c_k] = {
             "county": c_k,
@@ -669,12 +906,21 @@ def realign_existing_datasets(
         if e_k:
             props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
 
-        # Historical Title Name Origins from Markdown Files
+        # Historical Title Name Origins & Anachronisms from Markdown Files
         props["b_origin"] = props.get("name") or format_title_key(props.get("barony", ""))
-        if c_k: props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
-        if d_k: props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
-        if k_k: props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
-        if e_k: props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
+        props["b_anachronism"] = ""
+        if c_k:
+            props["c_origin"] = c_origins.get(c_k, format_title_key(c_k))
+            props["c_anachronism"] = c_anachronisms.get(c_k, "")
+        if d_k:
+            props["d_origin"] = d_origins.get(d_k, format_title_key(d_k))
+            props["d_anachronism"] = d_anachronisms.get(d_k, "")
+        if k_k:
+            props["k_origin"] = k_origins.get(k_k, format_title_key(k_k))
+            props["k_anachronism"] = k_anachronisms.get(k_k, "")
+        if e_k:
+            props["e_origin"] = e_origins.get(e_k, empire_names.get(e_k, format_title_key(e_k)))
+            props["e_anachronism"] = e_anachronisms.get(e_k, "")
 
     # Compute collision-free map colors
     c_colors, d_colors, k_colors, e_colors, b_colors, adjacencies = compute_all_tier_colors(
@@ -730,6 +976,10 @@ def realign_existing_datasets(
         d_origins,
         k_origins,
         e_origins,
+        c_anachronisms,
+        d_anachronisms,
+        k_anachronisms,
+        e_anachronisms,
     )
 
     # Write adjacencies index
@@ -808,6 +1058,16 @@ def main():
         help="Path to hre_de_jure_and_archdioceses_1059.md",
     )
     parser.add_argument(
+        "--anachronisms",
+        default=str(REPO_DIR / "archive" / "anachronistic_titles_1059.md"),
+        help="Path to archive/anachronistic_titles_1059.md",
+    )
+    parser.add_argument(
+        "--audit-register",
+        default=str(REPO_DIR / "audit_discrepancy_register.md"),
+        help="Path to audit_discrepancy_register.md",
+    )
+    parser.add_argument(
         "--melted-save",
         default="/var/tmp/ck3_audit/melted_save.ck3",
         help="Path to melted plaintext CK3 save",
@@ -843,6 +1103,8 @@ def main():
     melted_save_path = Path(args.melted_save)
     save_file_path = Path(args.save_file)
     empires_md = Path(args.empires_gazetteer)
+    anach_path = Path(args.anachronisms)
+    audit_path = Path(args.audit_register)
 
     print("==========================================================")
     print("CK3 Map to GeoJSON Generation & Realignment Pipeline")
@@ -865,8 +1127,17 @@ def main():
         gaz = parse_gazetteer(gaz_path)
         print(f"-> Loaded {len(gaz)} Tarraconian title records")
 
-    # 3. Parse Historical Title Name Origins from Markdown Files
-    c_origins, d_origins, k_origins, e_origins = parse_title_origins(gaz_path, empires_md)
+    # 3. Parse Historical Title Name Origins & Anachronisms from Markdown Files
+    (
+        c_origins,
+        d_origins,
+        k_origins,
+        e_origins,
+        c_anachronisms,
+        d_anachronisms,
+        k_anachronisms,
+        e_anachronisms,
+    ) = parse_title_origins(gaz_path, empires_md, anach_path, audit_path)
     print(
         f"-> Loaded title name origins from markdown: {len(c_origins)} counties, "
         f"{len(d_origins)} duchies, {len(k_origins)} kingdoms, {len(e_origins)} empires"
@@ -885,6 +1156,10 @@ def main():
             d_origins,
             k_origins,
             e_origins,
+            c_anachronisms,
+            d_anachronisms,
+            k_anachronisms,
+            e_anachronisms,
         )
         print("==========================================================")
         print("SUCCESS: Existing Datasets Successfully Realigned!")
@@ -989,12 +1264,21 @@ def main():
         if e_key:
             props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
 
-        # Historical Title Name Origins from Markdown Files
+        # Historical Title Name Origins & Anachronisms from Markdown Files
         props["b_origin"] = props.get("name") or format_title_key(b_key)
-        if c_key: props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
-        if d_key: props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
-        if k_key: props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
-        if e_key: props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
+        props["b_anachronism"] = ""
+        if c_key:
+            props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
+            props["c_anachronism"] = c_anachronisms.get(c_key, "")
+        if d_key:
+            props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
+            props["d_anachronism"] = d_anachronisms.get(d_key, "")
+        if k_key:
+            props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
+            props["k_anachronism"] = k_anachronisms.get(k_key, "")
+        if e_key:
+            props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
+            props["e_anachronism"] = e_anachronisms.get(e_key, "")
 
         barony_features.append({
             "type": "Feature",
@@ -1041,11 +1325,18 @@ def main():
             if e_key:
                 props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
 
-            # Historical Title Name Origins from Markdown Files
+            # Historical Title Name Origins & Anachronisms from Markdown Files
             props["c_origin"] = c_origins.get(c_key, format_title_key(c_key))
-            if d_key: props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
-            if k_key: props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
-            if e_key: props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
+            props["c_anachronism"] = c_anachronisms.get(c_key, "")
+            if d_key:
+                props["d_origin"] = d_origins.get(d_key, format_title_key(d_key))
+                props["d_anachronism"] = d_anachronisms.get(d_key, "")
+            if k_key:
+                props["k_origin"] = k_origins.get(k_key, format_title_key(k_key))
+                props["k_anachronism"] = k_anachronisms.get(k_key, "")
+            if e_key:
+                props["e_origin"] = e_origins.get(e_key, empire_names.get(e_key, format_title_key(e_key)))
+                props["e_anachronism"] = e_anachronisms.get(e_key, "")
 
             county_features.append({
                 "type": "Feature",
@@ -1119,6 +1410,10 @@ def main():
         d_origins,
         k_origins,
         e_origins,
+        c_anachronisms,
+        d_anachronisms,
+        k_anachronisms,
+        e_anachronisms,
     )
 
     # 15. Write Adjacencies Index

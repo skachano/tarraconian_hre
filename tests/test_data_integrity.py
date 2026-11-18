@@ -125,14 +125,18 @@ class TestCountiesGeoJSON:
             assert "barony_count" in props and props["barony_count"] >= 1
             assert "baronies" in props and len(props["baronies"]) == props["barony_count"]
 
-            # Origin properties from markdown
+            # Origin and Anachronism properties from markdown
             assert "c_origin" in props and props["c_origin"]
+            assert "c_anachronism" in props
             if props.get("duchy"):
                 assert "d_origin" in props and props["d_origin"]
+                assert "d_anachronism" in props
             if props.get("kingdom"):
                 assert "k_origin" in props and props["k_origin"]
+                assert "k_anachronism" in props
             if props.get("empire"):
                 assert "e_origin" in props and props["e_origin"]
+                assert "e_anachronism" in props
 
             # Geometry checks
             geom = feat["geometry"]
@@ -151,11 +155,12 @@ class TestCountiesGeoJSON:
     def test_chancellery_translations(self, counties_data):
         by_key = {f["properties"]["county"]: f["properties"] for f in counties_data["features"]}
 
-        # Test classical / landmark historical counties
+        # Test classical / landmark historical counties (authentic pre-1059)
         assert "c_szekesfehervar" in by_key
         sz = by_key["c_szekesfehervar"]
         assert sz["tarr_hist"] == "Stûlwîtzenburch" or sz["tarr_direct"] == "Stûlwîtzenburch"
         assert sz["c_origin"] == "Székesfehérvár"
+        assert sz["c_anachronism"] == ""
         assert sz["d_origin"] == "Visegrad"
         assert sz["k_origin"] == "Hungary"
         assert sz["e_origin"] == "Germania"
@@ -164,6 +169,7 @@ class TestCountiesGeoJSON:
         mid = by_key["c_middlesex"]
         assert mid["tarr_direct"] == "Middelsachsen"
         assert mid["c_origin"] == "Middle Seaxe"
+        assert mid["c_anachronism"] == ""
         assert mid["d_origin"] == "East Seaxe"
         assert mid["empire"] == "e_germany"
         assert mid["e_tarr"] == "Germania"
@@ -171,6 +177,32 @@ class TestCountiesGeoJSON:
         assert mid["kingdom"] == "k_england"
         assert mid["k_tarr"] == "Engellant"
         assert mid["k_origin"] == "England"
+
+        # Test anachronistic titles incorporating historical centres and reasons
+        assert "c_munchen" in by_key
+        mun = by_key["c_munchen"]
+        assert "Freising" in mun["c_origin"]
+        assert "München" in mun["c_origin"]
+        assert "1158" in mun["c_anachronism"]
+        assert "Henry the Lion" in mun["c_anachronism"]
+
+        assert "c_innsbruck" in by_key
+        inns = by_key["c_innsbruck"]
+        assert "Wilten" in inns["c_origin"]
+        assert "Innsbruck" in inns["c_origin"]
+        assert "1180" in inns["c_anachronism"]
+
+        assert "c_cleves" in by_key
+        cleves = by_key["c_cleves"]
+        assert "Xanten" in cleves["c_origin"]
+        assert "Cleves" in cleves["c_origin"]
+        assert "1020" in cleves["c_anachronism"] or "Schwanenburg" in cleves["c_anachronism"]
+
+        assert "c_nancy" in by_key
+        nancy = by_key["c_nancy"]
+        assert ("Lunéville" in nancy["c_origin"] or "Épinal" in nancy["c_origin"])
+        assert "Nancy" in nancy["c_origin"]
+        assert "1070" in nancy["c_anachronism"]
 
         assert "c_roma" in by_key
         roma = by_key["c_roma"]
@@ -238,6 +270,7 @@ class TestTitleTree:
         germany = tree_data["e_germany"]
         assert germany["tarr"] == "Germania"
         assert germany["origin"] == "Germania"
+        assert germany["anachronism"] == ""
         assert "kingdoms" in germany
 
         # Drifted kingdoms in Germania
@@ -247,16 +280,29 @@ class TestTitleTree:
         eng = germany["kingdoms"]["k_england"]
         assert "duchies" in eng
         assert eng["origin"] == "England"
+        assert eng["anachronism"] == ""
         assert "d_bedford" in eng["duchies"]
 
         bedford = eng["duchies"]["d_bedford"]
         assert "counties" in bedford
         assert bedford["origin"] == "East Seaxe"
+        assert bedford["anachronism"] == ""
         assert "c_middlesex" in bedford["counties"]
 
         mid = bedford["counties"]["c_middlesex"]
         assert mid["origin"] == "Middle Seaxe"
+        assert mid["anachronism"] == ""
         assert "b_london" in mid["baronies"]
+
+        # Check anachronistic county in Bavaria/Tyrol
+        assert "k_bavaria" in germany["kingdoms"]
+        bav = germany["kingdoms"]["k_bavaria"]
+        assert "d_tyrol" in bav["duchies"]
+        tyr = bav["duchies"]["d_tyrol"]
+        assert "c_innsbruck" in tyr["counties"]
+        inns = tyr["counties"]["c_innsbruck"]
+        assert "Wilten" in inns["origin"] and "Innsbruck" in inns["origin"]
+        assert "1180" in inns["anachronism"]
 
         # Check Britannia
         assert "e_britannia" in tree_data

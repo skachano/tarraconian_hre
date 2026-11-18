@@ -129,6 +129,11 @@ async function runE2ETests() {
       throw new Error(`Expected drawer origin name "Székesfehérvár", got "${originName}"`);
     }
 
+    const szAnachHidden = await page.locator('#drawer-anachronism-note').evaluate(el => el.classList.contains('hidden'));
+    if (!szAnachHidden) {
+      throw new Error('Expected #drawer-anachronism-note to be hidden for authentic pre-1059 title Székesfehérvár');
+    }
+
     // Check breadcrumbs for first title (Stûlwîtzenburch)
     const bcEmpire = await page.locator('#bc-empire').innerText();
     const bcKingdom = await page.locator('#bc-kingdom').innerText();
@@ -182,6 +187,49 @@ async function runE2ETests() {
     if (!secondKingdom.includes('Engellant') && !secondKingdom.includes('England')) {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
     }
+
+    const midAnachHidden = await page.locator('#drawer-anachronism-note').evaluate(el => el.classList.contains('hidden'));
+    if (!midAnachHidden) {
+      throw new Error('Expected #drawer-anachronism-note to be hidden for authentic pre-1059 title Middle Seaxe');
+    }
+
+    // Now select an ANACHRONISTIC title (München / c_munchen) and verify historical analysis block
+    console.log('  Testing anachronistic title inspection: selecting "München" / "c_munchen"...');
+    await searchInput.fill('c_munchen');
+    await page.waitForSelector('#search-results .search-item[data-key]', { timeout: 5000 });
+    const munchenResult = page.locator('#search-results .search-item[data-key="c_munchen"]').first();
+    await munchenResult.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_munchen';
+    }, { timeout: 5000 });
+
+    const munchenOrigin = await page.locator('#drawer-origin-name').innerText();
+    console.log(`  München Origin displayed: "${munchenOrigin}"`);
+    if (!munchenOrigin.includes('Freising') || !munchenOrigin.includes('München')) {
+      throw new Error(`Expected München origin to include "Freising" and "München", got "${munchenOrigin}"`);
+    }
+
+    const munchenAnachVisible = await page.locator('#drawer-anachronism-note').evaluate(el => !el.classList.contains('hidden'));
+    if (!munchenAnachVisible) {
+      throw new Error('Expected #drawer-anachronism-note to be visible for anachronistic title c_munchen');
+    }
+
+    const anachText = await page.locator('#drawer-anachronism-note').innerText();
+    console.log(`  München Anachronism note: "${anachText}"`);
+    if (!anachText.includes('1158') || !anachText.includes('Henry the Lion')) {
+      throw new Error(`Expected anachronism analysis to mention 1158 foundation and Henry the Lion, got "${anachText}"`);
+    }
+
+    // Re-select Middlesex so that switching to Kingdom tier tests k_england
+    console.log('  Re-selecting Middlesex for De Jure tier tests...');
+    await searchInput.fill('c_middlesex');
+    await page.waitForSelector('#search-results .search-item[data-key="c_middlesex"]', { timeout: 5000 });
+    const midRes = page.locator('#search-results .search-item[data-key="c_middlesex"]').first();
+    await midRes.click();
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'c_middlesex';
+    }, { timeout: 5000 });
 
     // 4. Test De Jure Tier Switching & High-Tier Title Selection
     console.log('[5/7] Testing De Jure tier title selection (Kingdom, Duchy, Empire) & constituent navigation...');
