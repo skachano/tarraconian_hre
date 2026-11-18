@@ -420,7 +420,7 @@ function onSelect(layer, feature, tier = currentTier) {
     l.setStyle({
       weight: isMulti ? 2.0 : 3.0,
       color: '#ffffff',
-      fillColor: '#993284',
+      fillColor: '#d3d3d3',
       fillOpacity: 0.9
     });
   }

@@ -12,6 +12,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const DOCS_DIR = path.resolve(__dirname, '..', 'docs');
+const SELECTED_FILL_COLOR = '#d3d3d3';
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -146,10 +147,10 @@ async function runE2ETests() {
     }
 
     // Verify exactly 1 title is selected
-    const initialSelectedCount = await page.evaluate(() => {
+    const initialSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     if (initialSelectedCount !== 1) {
       throw new Error(`Expected exactly 1 selected territory, found ${initialSelectedCount}`);
     }
@@ -165,10 +166,10 @@ async function runE2ETests() {
       return document.getElementById('drawer-title-key').innerText === 'c_middlesex';
     }, { timeout: 5000 });
 
-    const secondSelectedCount = await page.evaluate(() => {
+    const secondSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected territories count after second click: ${secondSelectedCount}`);
     if (secondSelectedCount !== 1) {
       throw new Error(`Residual selection detected! Expected exactly 1 selected territory, got ${secondSelectedCount}`);
@@ -315,10 +316,10 @@ async function runE2ETests() {
       throw new Error(`Expected drawer origin name "England" for k_england, got "${kingdomOrigin}"`);
     }
 
-    const kingdomSelectedCount = await page.evaluate(() => {
+    const kingdomSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected counties for Kingdom of England: ${kingdomSelectedCount}`);
     if (kingdomSelectedCount <= 1) {
       throw new Error(`Expected whole kingdom selection (>1 counties), got ${kingdomSelectedCount}`);
@@ -351,10 +352,10 @@ async function runE2ETests() {
       throw new Error('Duchy tier button failed to activate on duchy pill click');
     }
 
-    const duchySelectedCount = await page.evaluate(() => {
+    const duchySelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected counties for Duchy of Bedford: ${duchySelectedCount}`);
     if (duchySelectedCount <= 1 || duchySelectedCount >= kingdomSelectedCount) {
       throw new Error(`Expected duchy county count between 2 and ${kingdomSelectedCount}, got ${duchySelectedCount}`);
@@ -374,10 +375,10 @@ async function runE2ETests() {
       throw new Error('County tier button failed to activate on county pill click');
     }
 
-    const countySelectedCount = await page.evaluate(() => {
+    const countySelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected counties for County of Middlesex: ${countySelectedCount}`);
     if (countySelectedCount !== 1) {
       throw new Error(`Expected exactly 1 selected county, got ${countySelectedCount}`);
@@ -403,10 +404,10 @@ async function runE2ETests() {
       throw new Error('Empire tier button failed to activate on empire breadcrumb click');
     }
 
-    const empireSelectedCount = await page.evaluate(() => {
+    const empireSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected counties for Empire of Germania: ${empireSelectedCount}`);
     if (empireSelectedCount <= kingdomSelectedCount) {
       throw new Error(`Expected empire county count > ${kingdomSelectedCount}, got ${empireSelectedCount}`);
@@ -436,10 +437,10 @@ async function runE2ETests() {
       throw new Error(`Expected Kingdom of France IPA "[ˈvraŋk.riːç]", got "${franceIpa}"`);
     }
 
-    const franceSelectedCount = await page.evaluate(() => {
+    const franceSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     console.log(`  Selected counties for Kingdom of France: ${franceSelectedCount}`);
     if (franceSelectedCount <= 1 || franceSelectedCount === empireSelectedCount) {
       throw new Error(`Unexpected selection count for France: ${franceSelectedCount}`);
@@ -523,10 +524,10 @@ async function runE2ETests() {
       await closeBtn.click();
     }
 
-    const closedSelectedCount = await page.evaluate(() => {
+    const closedSelectedCount = await page.evaluate((selColor) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === '#993284').length;
-    });
+        .filter(p => p.getAttribute('fill') === selColor).length;
+    }, SELECTED_FILL_COLOR);
     if (closedSelectedCount !== 0) {
       throw new Error(`Expected 0 selected territories after drawer close, found ${closedSelectedCount}`);
     }
