@@ -418,11 +418,13 @@ function onSelect(layer, feature, tier = currentTier) {
   const isMulti = tier === 'empire' || tier === 'kingdom' || tier === 'duchy';
   for (const l of targetLayers) {
     l.setStyle({
-      weight: isMulti ? 2.0 : 3.0,
+      weight: isMulti ? 2.5 : 3.0,
       color: '#ffffff',
-      fillColor: '#d3d3d3',
-      fillOpacity: 0.9
+      opacity: 1.0
     });
+    if (l.bringToFront) {
+      l.bringToFront();
+    }
   }
 
   openInspector(feature.properties, tier);

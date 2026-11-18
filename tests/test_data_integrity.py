@@ -419,11 +419,12 @@ class TestTitleInfoAndIpa:
 
     def test_selection_highlight_styling(self):
         js = (REPO_DIR / "web" / "js" / "app.js").read_text(encoding="utf-8")
-        assert "fillColor: '#d3d3d3'" in js
+        assert "color: '#ffffff'" in js
+        assert "fillColor: '#d3d3d3'" not in js
         assert "#993284" not in js
 
         css = (REPO_DIR / "web" / "css" / "styles.css").read_text(encoding="utf-8")
-        assert "--highlight-selected: #d3d3d3;" in css
+        assert "--highlight-boundary: #ffffff;" in css
         assert "#993284" not in css
 
     def test_counties_geojson_ipa_and_tarr(self, counties_data):

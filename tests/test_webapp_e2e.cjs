@@ -12,7 +12,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const DOCS_DIR = path.resolve(__dirname, '..', 'docs');
-const SELECTED_FILL_COLOR = '#d3d3d3';
+const SELECTED_STROKE_COLOR = '#ffffff';
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -146,13 +146,22 @@ async function runE2ETests() {
       throw new Error(`Expected Hungarian kingdom breadcrumb, got "${bcKingdom}"`);
     }
 
-    // Verify exactly 1 title is selected
-    const initialSelectedCount = await page.evaluate((selColor) => {
+    // Verify exactly 1 title boundary is highlighted
+    const initialSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     if (initialSelectedCount !== 1) {
-      throw new Error(`Expected exactly 1 selected territory, found ${initialSelectedCount}`);
+      throw new Error(`Expected exactly 1 selected territory boundary, found ${initialSelectedCount}`);
+    }
+
+    // Verify that NO paths have a highlight fill color (fill highlight removed altogether)
+    const hasHighlightFill = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('#map svg path'))
+        .some(p => p.getAttribute('fill') === '#ffffff' || p.getAttribute('fill') === '#d3d3d3' || p.getAttribute('fill') === '#993284');
+    });
+    if (hasHighlightFill) {
+      throw new Error('Detected unexpected highlight fill; fill highlight should be removed altogether');
     }
 
     // Now select a SECOND title (Middelsachsen / c_middlesex) and verify previous selection is reset
@@ -166,10 +175,10 @@ async function runE2ETests() {
       return document.getElementById('drawer-title-key').innerText === 'c_middlesex';
     }, { timeout: 5000 });
 
-    const secondSelectedCount = await page.evaluate((selColor) => {
+    const secondSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected territories count after second click: ${secondSelectedCount}`);
     if (secondSelectedCount !== 1) {
       throw new Error(`Residual selection detected! Expected exactly 1 selected territory, got ${secondSelectedCount}`);
@@ -316,10 +325,10 @@ async function runE2ETests() {
       throw new Error(`Expected drawer origin name "England" for k_england, got "${kingdomOrigin}"`);
     }
 
-    const kingdomSelectedCount = await page.evaluate((selColor) => {
+    const kingdomSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected counties for Kingdom of England: ${kingdomSelectedCount}`);
     if (kingdomSelectedCount <= 1) {
       throw new Error(`Expected whole kingdom selection (>1 counties), got ${kingdomSelectedCount}`);
@@ -352,10 +361,10 @@ async function runE2ETests() {
       throw new Error('Duchy tier button failed to activate on duchy pill click');
     }
 
-    const duchySelectedCount = await page.evaluate((selColor) => {
+    const duchySelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected counties for Duchy of Bedford: ${duchySelectedCount}`);
     if (duchySelectedCount <= 1 || duchySelectedCount >= kingdomSelectedCount) {
       throw new Error(`Expected duchy county count between 2 and ${kingdomSelectedCount}, got ${duchySelectedCount}`);
@@ -375,10 +384,10 @@ async function runE2ETests() {
       throw new Error('County tier button failed to activate on county pill click');
     }
 
-    const countySelectedCount = await page.evaluate((selColor) => {
+    const countySelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected counties for County of Middlesex: ${countySelectedCount}`);
     if (countySelectedCount !== 1) {
       throw new Error(`Expected exactly 1 selected county, got ${countySelectedCount}`);
@@ -404,10 +413,10 @@ async function runE2ETests() {
       throw new Error('Empire tier button failed to activate on empire breadcrumb click');
     }
 
-    const empireSelectedCount = await page.evaluate((selColor) => {
+    const empireSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected counties for Empire of Germania: ${empireSelectedCount}`);
     if (empireSelectedCount <= kingdomSelectedCount) {
       throw new Error(`Expected empire county count > ${kingdomSelectedCount}, got ${empireSelectedCount}`);
@@ -437,10 +446,10 @@ async function runE2ETests() {
       throw new Error(`Expected Kingdom of France IPA "[ˈvraŋk.riːç]", got "${franceIpa}"`);
     }
 
-    const franceSelectedCount = await page.evaluate((selColor) => {
+    const franceSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     console.log(`  Selected counties for Kingdom of France: ${franceSelectedCount}`);
     if (franceSelectedCount <= 1 || franceSelectedCount === empireSelectedCount) {
       throw new Error(`Unexpected selection count for France: ${franceSelectedCount}`);
@@ -524,10 +533,10 @@ async function runE2ETests() {
       await closeBtn.click();
     }
 
-    const closedSelectedCount = await page.evaluate((selColor) => {
+    const closedSelectedCount = await page.evaluate((selStroke) => {
       return Array.from(document.querySelectorAll('#map svg path'))
-        .filter(p => p.getAttribute('fill') === selColor).length;
-    }, SELECTED_FILL_COLOR);
+        .filter(p => p.getAttribute('stroke') === selStroke).length;
+    }, SELECTED_STROKE_COLOR);
     if (closedSelectedCount !== 0) {
       throw new Error(`Expected 0 selected territories after drawer close, found ${closedSelectedCount}`);
     }
@@ -545,9 +554,9 @@ async function runE2ETests() {
       }
     }
 
-    // Move cursor away to ocean / corner
-    await page.mouse.move(20, 100);
-    await page.waitForTimeout(100);
+    // Move cursor away off map to header
+    await page.mouse.move(200, 20);
+    await page.waitForTimeout(200);
     const residualCount = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('#map svg path'))
         .filter(p => p.getAttribute('stroke') === '#f5d77f').length;
