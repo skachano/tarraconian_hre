@@ -1367,7 +1367,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_albarracin` (al-Banu Razin) $\rightarrow$ **Magistrat van Râsinburch** *(calque of Arabic *Hisn Ibn Razin*, or **Albarrazîn**)*
   * `c_alto_aragon` (Alto Aragon) $\rightarrow$ **Magistrat van Oberaragôn** *(or **Dschâke** for Jaca)*
   * `c_sobrarbe` (Sobrarbe) $\rightarrow$ **Magistrat van Sobrârbe**
-  * `c_huesca` (Huesca) $\rightarrow$ **Magistrat van Oske** `[ˈɔs.ka]` *(Attested Tarraconian county, promoted 1054)*
+  * `c_huesca` (Huesca) $\rightarrow$ **Magistrat van Oske** `[ˈɔs.kə]` *(Attested Tarraconian county, promoted 1054)*
   * `c_calatayud` (Calatayud) $\rightarrow$ **Magistrat van Calatajût** `[ka.la.ta.ˈjuːt]` *(or calqued **Eijûbsburch** from Arabic *Qal'at Ayyub* \"Job's Castle\"; attested Tarraconian county, promoted 1054)*
   * `c_fraga` (Fraga) $\rightarrow$ **Magistrat van Frâge**
   * `c_alcaniz` (Alcaniz) $\rightarrow$ **Magistrat van Alkanjîtz** *(Old Catalan *Alcanyís*; `[1059 Historical: Magistrat van Morêlje (Morella)]`)*
@@ -5914,11 +5914,11 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | :--- | :--- | :--- | :--- | :--- |
 | 34 | **Archdiocese of York** | `d_et_york` | **Erzbisdom van Everwîch** *(or **Jorch**)* | `[ˈɛ.vər.wiːç]` |
 | 35 | **Archdiocese of Canterbury** | `d_et_canterbury` | **Erzbisdom van Kantelberch** | `[ˈkan.təl.bɛrç]` |
-| 36 | **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | **Erzbisdom van Retsch-in-Kalâbrjen** | `[rɛdʒ]` |
+| 36 | **Archdiocese of Reggio Calabria** | `d_et_reggio_calabria` | **Erzbisdom van Retsch-in-Kalâbrjen** | `[rɛtʃ]` |
 | 37 | **Archdiocese of Constantinople** | `d_et_constantinople` | **Erzbisdom van Konstantînôpel** | `[kɔn.stan.tiː.ˈnoː.pəl]` |
 | 38 | **Archdiocese of Jerusalem** | `d_et_jerusalem` | **Erzbisdom van Jerûsalêm** | `[jɛ.ˈruː.za.leːm]` |
 | 39 | **Archdiocese of Antioch** | `d_et_antioch` | **Erzbisdom van Antjôchje** | `[an.ˈtjoː.xjə]` |
-| 40 | **Archdiocese of Church of Cyprus** | `d_et_cyprus` | **Erzbisdom van Tzîpern** *(or **Nikôsje**)* | `[ˈtsiː.pərn]` |
+| 40 | **Archdiocese of Church of Cyprus** | `d_et_cyprus` | **Erzbisdom van Zîpern** *(or **Nikôsje**)* | `[ˈtsiː.pərn]` |
 | 41 | **Archdiocese of Kartli** | `d_et_kartli` | **Erzbisdom van Kartlî** *(or **Metzchête**)* | `[ˈkart.liː]` |
 | 42 | **Archdiocese of Armenia** | `d_et_armenia` | **Erzbisdom van Armênjen** | `[ar.ˈmeː.njən]` |
 | 43 | **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | **Erzbisdom van Selêutzje-Tesiphôn** *(or **Bagdât**)* | `[zɛ.ˈleːʊ.tsjə]` |
