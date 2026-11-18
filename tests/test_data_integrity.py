@@ -111,9 +111,9 @@ class TestCountiesGeoJSON:
 
             # Required property keys
             assert "county" in props and props["county"].startswith("c_")
-            assert "duchy" in props and (props["duchy"] is None or props["duchy"].startswith("d_"))
-            assert "kingdom" in props and (props["kingdom"] is None or props["kingdom"].startswith("k_"))
-            assert "empire" in props and (props["empire"] is None or props["empire"].startswith("e_") or props["empire"].startswith("h_"))
+            assert "duchy" in props and (props["duchy"] is None or props["duchy"].startswith("d_") or props["duchy"].startswith("x_"))
+            assert "kingdom" in props and (props["kingdom"] is None or props["kingdom"].startswith("k_") or props["kingdom"].startswith("x_"))
+            assert "empire" in props and (props["empire"] is None or props["empire"].startswith("e_") or props["empire"].startswith("h_") or props["empire"].startswith("x_"))
             assert "barony_count" in props and props["barony_count"] >= 1
             assert "baronies" in props and len(props["baronies"]) == props["barony_count"]
 
@@ -140,13 +140,28 @@ class TestCountiesGeoJSON:
         assert sz["tarr_hist"] == "Stûlwîtzenburch" or sz["tarr_direct"] == "Stûlwîtzenburch"
 
         assert "c_middlesex" in by_key
-        assert by_key["c_middlesex"]["tarr_direct"] == "Middelsachsen"
+        mid = by_key["c_middlesex"]
+        assert mid["tarr_direct"] == "Middelsachsen"
+        assert mid["empire"] == "e_germany"
+        assert mid["e_tarr"] == "Germania"
+        assert mid["kingdom"] == "k_england"
+        assert mid["k_tarr"] == "Engellant"
 
         assert "c_roma" in by_key
-        assert by_key["c_roma"].get("tarr_direct") in ("Rôm", "Rôme") or by_key["c_roma"].get("tarr_hist") in ("Rôm", "Rôme")
+        roma = by_key["c_roma"]
+        assert roma.get("tarr_direct") in ("Rôm", "Rôme") or roma.get("tarr_hist") in ("Rôm", "Rôme")
+        assert roma["empire"] == "e_germany"
+        assert roma["e_tarr"] == "Germania"
+        assert roma["kingdom"] == "k_romagna"
+        assert roma["k_tarr"] == "Romanje"
 
         assert "c_byzantion" in by_key
-        assert by_key["c_byzantion"].get("tarr_direct") in ("Konstantinôpel", "Konstantinopel") or by_key["c_byzantion"].get("tarr_hist") in ("Bîsantz", "Konstantinôpel", "Konstantinopel")
+        byz = by_key["c_byzantion"]
+        assert byz.get("tarr_direct") in ("Konstantinôpel", "Konstantinopel") or byz.get("tarr_hist") in ("Bîsantz", "Konstantinôpel", "Konstantinopel")
+        assert byz["empire"] == "e_macedonia"
+        assert byz["e_tarr"] == "Macedonia"
+        assert byz["kingdom"] == "k_thessalonika"
+        assert byz["k_tarr"] == "Thessalonîke"
 
         assert "c_jerusalem" in by_key
         assert by_key["c_jerusalem"]["tarr_direct"] == "Hiligstat"
@@ -173,28 +188,36 @@ class TestBaroniesGeoJSON:
             assert "id" in props and isinstance(props["id"], int)
             by_key[props["barony"]] = props
 
-        # Verify key historical holdings
+        # Verify key historical holdings and save de jure hierarchy
         assert "b_london" in by_key
         assert by_key["b_london"]["id"] == 1527
         assert by_key["b_london"]["county"] == "c_middlesex"
+        assert by_key["b_london"]["empire"] == "e_germany"
+        assert by_key["b_london"]["e_tarr"] == "Germania"
 
         assert "b_roma" in by_key
         assert by_key["b_roma"]["county"] == "c_roma"
+        assert by_key["b_roma"]["empire"] == "e_germany"
+        assert by_key["b_roma"]["e_tarr"] == "Germania"
 
 
 class TestTitleTree:
-    """Validates the hierarchical tree metadata index."""
+    """Validates the hierarchical tree metadata index aligned with save game."""
 
     def test_tree_hierarchy(self, tree_data):
-        assert len(tree_data) >= 35, f"Expected at least 35 empires, got {len(tree_data)}"
+        assert len(tree_data) == 47, f"Expected exactly 47 de jure empires, got {len(tree_data)}"
 
-        # Check Britannia
-        assert "e_britannia" in tree_data
-        brit = tree_data["e_britannia"]
-        assert "kingdoms" in brit
-        assert "k_england" in brit["kingdoms"]
+        # Check Germania (campaign hegemon harboring drifted kingdoms)
+        assert "e_germany" in tree_data
+        germany = tree_data["e_germany"]
+        assert germany["tarr"] == "Germania"
+        assert "kingdoms" in germany
 
-        eng = brit["kingdoms"]["k_england"]
+        # Drifted kingdoms in Germania
+        for kd in ["k_england", "k_hungary", "k_romagna", "k_valencia", "k_sorbia", "k_lotharingia", "k_frisia"]:
+            assert kd in germany["kingdoms"], f"Expected {kd} to be drifted into e_germany"
+
+        eng = germany["kingdoms"]["k_england"]
         assert "duchies" in eng
         assert "d_bedford" in eng["duchies"]
 
@@ -204,3 +227,15 @@ class TestTitleTree:
 
         mid = bedford["counties"]["c_middlesex"]
         assert "b_london" in mid["baronies"]
+
+        # Check Britannia
+        assert "e_britannia" in tree_data
+        brit = tree_data["e_britannia"]
+        assert brit["tarr"] == "Britannia"
+        assert "k_scotland" in brit["kingdoms"]
+
+        # Check Macedonia
+        assert "e_macedonia" in tree_data
+        mac = tree_data["e_macedonia"]
+        assert mac["tarr"] == "Macedonia"
+        assert "k_thessalonika" in mac["kingdoms"]

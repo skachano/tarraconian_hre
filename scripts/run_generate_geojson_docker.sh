@@ -16,6 +16,7 @@ echo "=========================================================="
 docker run --rm \
     --name ck3_geojson_generator \
     -v "/mnt/windows:/mnt/windows:ro" \
+    -v "/var/tmp:/var/tmp:ro" \
     -v "${REPO_DIR}:/workspace" \
     -w /workspace \
     ghcr.io/astral-sh/uv:0.9.9-python3.12-bookworm-slim \

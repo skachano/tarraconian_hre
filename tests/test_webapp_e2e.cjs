@@ -126,8 +126,12 @@ async function runE2ETests() {
     }
 
     // Check breadcrumbs for first title (Stûlwîtzenburch)
+    const bcEmpire = await page.locator('#bc-empire').innerText();
     const bcKingdom = await page.locator('#bc-kingdom').innerText();
-    console.log(`  Lineage Kingdom: ${bcKingdom}`);
+    console.log(`  Lineage: Empire="${bcEmpire}", Kingdom="${bcKingdom}"`);
+    if (!bcEmpire.includes('Germania') && !bcEmpire.includes('Germany')) {
+      throw new Error(`Expected Germania empire breadcrumb, got "${bcEmpire}"`);
+    }
     if (!bcKingdom.includes('Ungern') && !bcKingdom.includes('Hungary')) {
       throw new Error(`Expected Hungarian kingdom breadcrumb, got "${bcKingdom}"`);
     }
@@ -162,6 +166,11 @@ async function runE2ETests() {
     }
 
     const secondKingdom = await page.locator('#bc-kingdom').innerText();
+    const secondEmpire = await page.locator('#bc-empire').innerText();
+    console.log(`  Middelsachsen Lineage: Empire="${secondEmpire}", Kingdom="${secondKingdom}"`);
+    if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany')) {
+      throw new Error(`Expected Germania empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
+    }
     if (!secondKingdom.includes('Engellant') && !secondKingdom.includes('England')) {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
     }

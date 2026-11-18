@@ -4,7 +4,8 @@ generate_ck3_geojson.py
 
 Extracts barony- and county-level vector polygons from Crusader Kings III map assets
 (map_data/provinces.png, map_data/definition.csv, common/landed_titles/*.txt)
-and pairs them with Tarraconian Chancellery toponyms from tarraconian_titles_1059.md.
+and pairs them with Tarraconian Chancellery toponyms from tarraconian_titles_1059.md
+and campaign De Jure hierarchy from melted_save.ck3.
 
 Outputs:
   - data/ck3_baronies.geojson: Barony-level holding polygons
@@ -28,7 +29,7 @@ from scipy import ndimage
 from shapely.geometry import Polygon, MultiPolygon, mapping
 from shapely.ops import unary_union
 
-# Add script dir to sys.path to import parse_gazetteer from build_mod
+# Add script dir to sys.path to import helpers
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_DIR = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -36,6 +37,12 @@ try:
     from build_mod import parse_gazetteer
 except ImportError:
     parse_gazetteer = None
+
+try:
+    from update_hre_gazetteer import parse_melted_save, ensure_melted_save
+except ImportError:
+    parse_melted_save = None
+    ensure_melted_save = None
 
 
 def parse_definition_csv(csv_path: Path):
@@ -79,9 +86,8 @@ def parse_default_map(map_path: Path):
 
 def parse_landed_titles(titles_dir: Path):
     """
-    Parses all landed_titles text files to map province_id to its full de jure hierarchy:
-    (b_*, c_*, d_*, k_*, e_*).
-    Also constructs the complete nested de jure hierarchy dictionary.
+    Parses all landed_titles text files to map province_id to its barony and county keys,
+    along with the default vanilla hierarchy.
     """
     title_files = sorted(titles_dir.glob("*.txt"))
     baronies = {}  # p_id -> dict
@@ -141,6 +147,228 @@ def parse_landed_titles(titles_dir: Path):
     return baronies, title_tree
 
 
+def parse_empire_names(md_path: Path):
+    """Parses Table 1.1 in hre_de_jure_and_archdioceses_1059.md to map empire keys to canonical names."""
+    empires = {}
+    if not md_path or not md_path.exists():
+        return empires
+    with open(md_path, "r", encoding="utf-8") as f:
+        for line in f:
+            m = re.match(r"^\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*`([^`]+)`", line)
+            if m:
+                name, key = m.group(1).strip(), m.group(2).strip()
+                if key.startswith("e_") or key.startswith("h_"):
+                    empires[key] = name
+    return empires
+
+
+def parse_save_hierarchy(melted_save_path: Path, save_file_path: Path = None):
+    """
+    Parses landed_titles from melted save to map every county c_* to its
+    de jure (d_key, k_key, e_key) tuple accounting for title drifts.
+    """
+    if parse_melted_save is None:
+        print("Warning: parse_melted_save unavailable. Skipping save hierarchy resolution.")
+        return {}, {}
+
+    target_melted = melted_save_path
+    if (not target_melted or not target_melted.exists()) and save_file_path and save_file_path.exists():
+        if ensure_melted_save is not None:
+            try:
+                target_melted = ensure_melted_save(save_file_path, melted_save_path)
+            except Exception as e:
+                print(f"Warning: Could not melt save {save_file_path}: {e}")
+
+    if not target_melted or not target_melted.exists():
+        print(f"Notice: Melted save not found at {target_melted}. Using vanilla title hierarchy.")
+        return {}, {}
+
+    print(f"Parsing save De Jure hierarchy from {target_melted}...")
+    t0 = time.time()
+    titles_by_id, titles_by_key, meta_date, emperor_name = parse_melted_save(target_melted)
+
+    all_counties = [
+        t for t in titles_by_id.values()
+        if t.get("key", "").startswith("c_") and not t.get("key", "").startswith("c_nf_")
+    ]
+
+    county_hierarchy = {}
+    for c in all_counties:
+        ck = c["key"]
+        d_id = c.get("de_jure_liege")
+        d_obj = titles_by_id.get(d_id) if d_id is not None else None
+        if not d_obj:
+            continue
+        dk = d_obj.get("key")
+
+        k_id = d_obj.get("de_jure_liege")
+        k_obj = titles_by_id.get(k_id) if k_id is not None else None
+        if not k_obj:
+            continue
+        kk = k_obj.get("key")
+
+        e_id = k_obj.get("de_jure_liege")
+        e_obj = titles_by_id.get(e_id) if e_id is not None else None
+        if not e_obj:
+            continue
+        ek = e_obj.get("key")
+
+        county_hierarchy[ck] = (dk, kk, ek)
+
+    empires_count = len(set(ek for dk, kk, ek in county_hierarchy.values()))
+    kingdoms_count = len(set(kk for dk, kk, ek in county_hierarchy.values()))
+    duchies_count = len(set(dk for dk, kk, ek in county_hierarchy.values()))
+    print(
+        f"-> Resolved save hierarchy for {len(county_hierarchy)} counties across "
+        f"{empires_count} empires, {kingdoms_count} kingdoms, {duchies_count} duchies in {time.time() - t0:.2f}s"
+    )
+    return county_hierarchy, titles_by_key
+
+
+def build_and_write_title_tree(county_info: dict, tree_out_path: Path, gaz: dict, empire_names: dict, save_titles: dict):
+    """Builds nested title tree e_* -> k_* -> d_* -> c_* -> [b_*] and writes to JSON."""
+    save_title_tree = {}
+    for c_key, info in county_info.items():
+        e_k = info.get("empire")
+        k_k = info.get("kingdom")
+        d_k = info.get("duchy")
+        b_list = info.get("baronies", [])
+        if e_k and k_k and d_k:
+            save_title_tree.setdefault(e_k, {}).setdefault(k_k, {}).setdefault(d_k, {})[c_key] = b_list
+
+    enriched_tree = {}
+    for e_k in sorted(save_title_tree.keys()):
+        kingdoms = save_title_tree[e_k]
+        e_tarr_name = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, e_k)))
+        e_entry = {
+            "key": e_k,
+            "tarr": e_tarr_name,
+            "kingdoms": {},
+        }
+        for k_k in sorted(kingdoms.keys()):
+            duchies = kingdoms[k_k]
+            k_tarr_name = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", k_k)))
+            k_entry = {
+                "key": k_k,
+                "tarr": k_tarr_name,
+                "duchies": {},
+            }
+            for d_k in sorted(duchies.keys()):
+                counties = duchies[d_k]
+                d_tarr_name = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", d_k)))
+                d_entry = {
+                    "key": d_k,
+                    "tarr": d_tarr_name,
+                    "counties": {},
+                }
+                for c_k in sorted(counties.keys()):
+                    b_list = counties[c_k]
+                    c_entry = {
+                        "key": c_k,
+                        "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
+                        "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
+                        "baronies": b_list,
+                    }
+                    d_entry["counties"][c_k] = c_entry
+                k_entry["duchies"][d_k] = d_entry
+            e_entry["kingdoms"][k_k] = k_entry
+        enriched_tree[e_k] = e_entry
+
+    print(f"Writing title tree metadata to {tree_out_path.name}...")
+    with open(tree_out_path, "w", encoding="utf-8") as f:
+        json.dump(enriched_tree, f, indent=2, ensure_ascii=False)
+    print(f"-> Wrote {tree_out_path.name} ({tree_out_path.stat().st_size / 1024:.1f} KB, {len(enriched_tree)} empires)")
+
+
+def realign_existing_datasets(
+    out_dir: Path,
+    county_hierarchy: dict,
+    save_titles: dict,
+    gaz: dict,
+    empire_names: dict,
+):
+    """Realigns existing GeoJSON and title tree datasets without re-rasterizing."""
+    counties_path = out_dir / "ck3_counties.geojson"
+    baronies_path = out_dir / "ck3_baronies.geojson"
+    tree_path = out_dir / "ck3_title_tree.json"
+
+    if not counties_path.exists() or not baronies_path.exists():
+        raise FileNotFoundError(f"Cannot realign: {counties_path} or {baronies_path} missing.")
+
+    print(f"Realigning existing datasets in {out_dir} with save de jure hierarchy...")
+    with open(counties_path, "r", encoding="utf-8") as f:
+        counties_fc = json.load(f)
+
+    county_info = {}
+    for feat in counties_fc["features"]:
+        props = feat["properties"]
+        c_k = props["county"]
+        if c_k in county_hierarchy:
+            d_k, k_k, e_k = county_hierarchy[c_k]
+            props["duchy"] = d_k
+            props["kingdom"] = k_k
+            props["empire"] = e_k
+
+        d_k = props.get("duchy")
+        k_k = props.get("kingdom")
+        e_k = props.get("empire")
+
+        if c_k in gaz:
+            props["tarr_direct"] = gaz[c_k].get("direct", "")
+            props["tarr_hist"] = gaz[c_k].get("hist", "")
+        if d_k:
+            props["d_tarr"] = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", "")))
+        if k_k:
+            props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
+        if e_k:
+            props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+
+        county_info[c_k] = {
+            "county": c_k,
+            "duchy": d_k,
+            "kingdom": k_k,
+            "empire": e_k,
+            "baronies": props.get("baronies", []),
+        }
+
+    print(f"Writing updated {counties_path.name}...")
+    with open(counties_path, "w", encoding="utf-8") as f:
+        json.dump(counties_fc, f, separators=(",", ":"))
+
+    print(f"Loading {baronies_path.name}...")
+    with open(baronies_path, "r", encoding="utf-8") as f:
+        baronies_fc = json.load(f)
+
+    for feat in baronies_fc["features"]:
+        props = feat["properties"]
+        c_k = props.get("county")
+        if c_k in county_hierarchy:
+            d_k, k_k, e_k = county_hierarchy[c_k]
+            props["duchy"] = d_k
+            props["kingdom"] = k_k
+            props["empire"] = e_k
+        else:
+            d_k = props.get("duchy")
+            k_k = props.get("kingdom")
+            e_k = props.get("empire")
+
+        if c_k and c_k in gaz:
+            props["c_tarr_direct"] = gaz[c_k].get("direct", "")
+            props["c_tarr_hist"] = gaz[c_k].get("hist", "")
+        if d_k:
+            props["d_tarr"] = gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", save_titles.get(d_k, {}).get("save_name", "")))
+        if k_k:
+            props["k_tarr"] = gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", save_titles.get(k_k, {}).get("save_name", "")))
+        if e_k:
+            props["e_tarr"] = gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", empire_names.get(e_k, "")))
+
+    print(f"Writing updated {baronies_path.name}...")
+    with open(baronies_path, "w", encoding="utf-8") as f:
+        json.dump(baronies_fc, f, separators=(",", ":"))
+
+    build_and_write_title_tree(county_info, tree_path, gaz, empire_names, save_titles)
+
+
 def extract_polygon_for_slice(pid_grid, p_id, sl, H, W, simplify_epsilon=0.75):
     """Extracts a valid Shapely Polygon or MultiPolygon from the slice."""
     y_min, y_max = max(0, sl[0].start - 1), min(H, sl[0].stop + 1)
@@ -193,7 +421,7 @@ def extract_polygon_for_slice(pid_grid, p_id, sl, H, W, simplify_epsilon=0.75):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate CK3 GeoJSON with Tarraconian translations")
+    parser = argparse.ArgumentParser(description="Generate CK3 GeoJSON with Tarraconian translations and save De Jure hierarchy")
     parser.add_argument(
         "--game-dir",
         default="/mnt/windows/Program Files (x86)/Steam/steamapps/common/Crusader Kings III/game",
@@ -203,6 +431,21 @@ def main():
         "--gazetteer",
         default=str(REPO_DIR / "tarraconian_titles_1059.md"),
         help="Path to tarraconian_titles_1059.md",
+    )
+    parser.add_argument(
+        "--empires-gazetteer",
+        default=str(REPO_DIR / "hre_de_jure_and_archdioceses_1059.md"),
+        help="Path to hre_de_jure_and_archdioceses_1059.md",
+    )
+    parser.add_argument(
+        "--melted-save",
+        default="/var/tmp/ck3_audit/melted_save.ck3",
+        help="Path to melted plaintext CK3 save",
+    )
+    parser.add_argument(
+        "--save-file",
+        default="/mnt/windows/Users/siarg/Documents/Paradox Interactive/Crusader Kings III/save games/Chatenois_867_01_01.ck3",
+        help="Path to active binary CK3 save file",
     )
     parser.add_argument(
         "--output-dir",
@@ -215,6 +458,11 @@ def main():
         default=0.75,
         help="Douglas-Peucker simplification epsilon in pixels",
     )
+    parser.add_argument(
+        "--realign-only",
+        action="store_true",
+        help="Fast realignment of existing GeoJSON datasets with save hierarchy without re-rasterizing",
+    )
     args = parser.parse_args()
 
     game_dir = Path(args.game_dir)
@@ -222,18 +470,22 @@ def main():
     titles_dir = game_dir / "common" / "landed_titles"
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+    melted_save_path = Path(args.melted_save)
+    save_file_path = Path(args.save_file)
+    empires_md = Path(args.empires_gazetteer)
 
     print("==========================================================")
-    print("CK3 Map to GeoJSON Generation Pipeline")
-    print(f"Game Directory: {game_dir}")
-    print(f"Output Directory: {out_dir}")
+    print("CK3 Map to GeoJSON Generation & Realignment Pipeline")
+    print(f"Game Directory:       {game_dir}")
+    print(f"Output Directory:     {out_dir}")
+    print(f"Melted Save:          {melted_save_path}")
+    print(f"Empires Gazetteer:    {empires_md.name}")
     print("==========================================================")
 
-    # 1. Parse Landed Titles
-    t0 = time.time()
-    print("Parsing landed titles...")
-    baronies, title_tree = parse_landed_titles(titles_dir)
-    print(f"-> Parsed {len(baronies)} baronies across {len(title_tree)} de jure empires in {time.time() - t0:.2f}s")
+    # 1. Parse Save Hierarchy & Empire Gazetteer
+    county_save_hierarchy, save_titles = parse_save_hierarchy(melted_save_path, save_file_path)
+    empire_names = parse_empire_names(empires_md)
+    print(f"-> Loaded {len(empire_names)} empire canonical names from {empires_md.name}")
 
     # 2. Parse Gazetteer
     gaz = {}
@@ -243,15 +495,42 @@ def main():
         gaz = parse_gazetteer(gaz_path)
         print(f"-> Loaded {len(gaz)} Tarraconian title records")
 
-    # 3. Parse Definitions & Map Files
+    # If --realign-only is requested OR if game files are missing while existing GeoJSONs exist
+    prov_png = map_data_dir / "provinces.png"
+    if args.realign_only or (not prov_png.exists() and (out_dir / "ck3_counties.geojson").exists()):
+        realign_existing_datasets(out_dir, county_save_hierarchy, save_titles, gaz, empire_names)
+        print("==========================================================")
+        print("SUCCESS: Existing Datasets Successfully Realigned!")
+        print("==========================================================")
+        return
+
+    # 3. Parse Landed Titles (for barony -> county & PID linkage)
+    t0 = time.time()
+    print("Parsing landed titles...")
+    baronies, vanilla_tree = parse_landed_titles(titles_dir)
+    print(f"-> Parsed {len(baronies)} baronies across {len(vanilla_tree)} vanilla empires in {time.time() - t0:.2f}s")
+
+    # Apply save hierarchy to baronies
+    if county_save_hierarchy:
+        realigned_b = 0
+        for b_data in baronies.values():
+            c_k = b_data.get("county")
+            if c_k in county_save_hierarchy:
+                d_k, k_k, e_k = county_save_hierarchy[c_k]
+                b_data["duchy"] = d_k
+                b_data["kingdom"] = k_k
+                b_data["empire"] = e_k
+                realigned_b += 1
+        print(f"-> Realigned {realigned_b} baronies with campaign de jure hierarchy")
+
+    # 4. Parse Definitions & Map Files
     print("Parsing definition.csv & default.map...")
     lut, names = parse_definition_csv(map_data_dir / "definition.csv")
     sea_zones = parse_default_map(map_data_dir / "default.map")
     print(f"-> Found {len(names)} province definitions, {len(sea_zones)} sea zones")
 
-    # 4. Load provinces.png & Build PID Grid
+    # 5. Load provinces.png & Build PID Grid
     t0 = time.time()
-    prov_png = map_data_dir / "provinces.png"
     print(f"Loading {prov_png.name}...")
     img = Image.open(prov_png)
     arr = np.array(img, dtype=np.uint32)
@@ -260,13 +539,13 @@ def main():
     pid_grid = lut[color_int]
     print(f"-> Processed {W}x{H} grid in {time.time() - t0:.2f}s")
 
-    # 5. Extract Bounding Boxes
+    # 6. Extract Bounding Boxes
     t0 = time.time()
     print("Extracting province bounding boxes...")
     slices = ndimage.find_objects(pid_grid)
     print(f"-> Sliced {len(slices)} provinces in {time.time() - t0:.2f}s")
 
-    # 6. Extract Barony Polygons
+    # 7. Extract Barony Polygons
     t0 = time.time()
     print("Extracting vector polygons for baronies...")
     barony_features = []
@@ -312,16 +591,16 @@ def main():
             "empire": e_key,
         }
 
-        # Enrich with county/duchy/kingdom Tarraconian translations
+        # Enrich with county/duchy/kingdom/empire translations
         if c_key and c_key in gaz:
             props["c_tarr_direct"] = gaz[c_key].get("direct", "")
             props["c_tarr_hist"] = gaz[c_key].get("hist", "")
-        if d_key and d_key in gaz:
-            props["d_tarr"] = gaz[d_key].get("hist", gaz[d_key].get("direct", ""))
-        if k_key and k_key in gaz:
-            props["k_tarr"] = gaz[k_key].get("hist", gaz[k_key].get("direct", ""))
-        if e_key and e_key in gaz:
-            props["e_tarr"] = gaz[e_key].get("hist", gaz[e_key].get("direct", ""))
+        if d_key:
+            props["d_tarr"] = gaz.get(d_key, {}).get("hist", gaz.get(d_key, {}).get("direct", save_titles.get(d_key, {}).get("save_name", "")))
+        if k_key:
+            props["k_tarr"] = gaz.get(k_key, {}).get("hist", gaz.get(k_key, {}).get("direct", save_titles.get(k_key, {}).get("save_name", "")))
+        if e_key:
+            props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
 
         barony_features.append({
             "type": "Feature",
@@ -332,14 +611,14 @@ def main():
 
     print(f"-> Generated {len(barony_features)} barony features in {time.time() - t0:.2f}s")
 
-    # 7. Write data/ck3_baronies.geojson
+    # 8. Write data/ck3_baronies.geojson
     baronies_geojson_path = out_dir / "ck3_baronies.geojson"
     print(f"Writing {baronies_geojson_path.name}...")
     with open(baronies_geojson_path, "w", encoding="utf-8") as f:
         json.dump({"type": "FeatureCollection", "features": barony_features}, f, separators=(",", ":"))
     print(f"-> Wrote {baronies_geojson_path.name} ({baronies_geojson_path.stat().st_size / 1024 / 1024:.2f} MB)")
 
-    # 8. Dissolve County Polygons
+    # 9. Dissolve County Polygons
     t0 = time.time()
     print("Dissolving county-level polygons...")
     county_features = []
@@ -368,12 +647,12 @@ def main():
             if c_key in gaz:
                 props["tarr_direct"] = gaz[c_key].get("direct", "")
                 props["tarr_hist"] = gaz[c_key].get("hist", "")
-            if d_key and d_key in gaz:
-                props["d_tarr"] = gaz[d_key].get("hist", gaz[d_key].get("direct", ""))
-            if k_key and k_key in gaz:
-                props["k_tarr"] = gaz[k_key].get("hist", gaz[k_key].get("direct", ""))
-            if e_key and e_key in gaz:
-                props["e_tarr"] = gaz[e_key].get("hist", gaz[e_key].get("direct", ""))
+            if d_key:
+                props["d_tarr"] = gaz.get(d_key, {}).get("hist", gaz.get(d_key, {}).get("direct", save_titles.get(d_key, {}).get("save_name", "")))
+            if k_key:
+                props["k_tarr"] = gaz.get(k_key, {}).get("hist", gaz.get(k_key, {}).get("direct", save_titles.get(k_key, {}).get("save_name", "")))
+            if e_key:
+                props["e_tarr"] = gaz.get(e_key, {}).get("hist", gaz.get(e_key, {}).get("direct", empire_names.get(e_key, "")))
 
             county_features.append({
                 "type": "Feature",
@@ -386,51 +665,16 @@ def main():
 
     print(f"-> Dissolved {len(county_features)} county features in {time.time() - t0:.2f}s")
 
-    # 9. Write data/ck3_counties.geojson
+    # 10. Write data/ck3_counties.geojson
     counties_geojson_path = out_dir / "ck3_counties.geojson"
     print(f"Writing {counties_geojson_path.name}...")
     with open(counties_geojson_path, "w", encoding="utf-8") as f:
         json.dump({"type": "FeatureCollection", "features": county_features}, f, separators=(",", ":"))
     print(f"-> Wrote {counties_geojson_path.name} ({counties_geojson_path.stat().st_size / 1024 / 1024:.2f} MB)")
 
-    # 10. Enrich and Write Title Hierarchy Tree
+    # 11. Write Title Tree
     tree_out_path = out_dir / "ck3_title_tree.json"
-    print(f"Writing title tree metadata to {tree_out_path.name}...")
-    # Build enriched hierarchy tree
-    enriched_tree = {}
-    for e_k, kingdoms in title_tree.items():
-        e_entry = {
-            "key": e_k,
-            "tarr": gaz.get(e_k, {}).get("hist", gaz.get(e_k, {}).get("direct", e_k)),
-            "kingdoms": {},
-        }
-        for k_k, duchies in kingdoms.items():
-            k_entry = {
-                "key": k_k,
-                "tarr": gaz.get(k_k, {}).get("hist", gaz.get(k_k, {}).get("direct", k_k)),
-                "duchies": {},
-            }
-            for d_k, counties in duchies.items():
-                d_entry = {
-                    "key": d_k,
-                    "tarr": gaz.get(d_k, {}).get("hist", gaz.get(d_k, {}).get("direct", d_k)),
-                    "counties": {},
-                }
-                for c_k, b_list in counties.items():
-                    c_entry = {
-                        "key": c_k,
-                        "tarr_direct": gaz.get(c_k, {}).get("direct", c_k),
-                        "tarr_hist": gaz.get(c_k, {}).get("hist", c_k),
-                        "baronies": b_list,
-                    }
-                    d_entry["counties"][c_k] = c_entry
-                k_entry["duchies"][d_k] = d_entry
-            e_entry["kingdoms"][k_k] = k_entry
-        enriched_tree[e_k] = e_entry
-
-    with open(tree_out_path, "w", encoding="utf-8") as f:
-        json.dump(enriched_tree, f, indent=2, ensure_ascii=False)
-    print(f"-> Wrote {tree_out_path.name} ({tree_out_path.stat().st_size / 1024:.1f} KB)")
+    build_and_write_title_tree(county_info, tree_out_path, gaz, empire_names, save_titles)
 
     print("==========================================================")
     print("SUCCESS: Map Vectorization & GeoJSON Generation Complete!")
