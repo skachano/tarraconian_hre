@@ -666,7 +666,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_salerno` (Salerno) $\rightarrow$ **Magistrat van Salern**
   * `c_camarda` (Camarda) $\rightarrow$ **Magistrat van Kamarde** *(or **Policastro**)*
 * **Duchy of Calabria** (`d_calabria`) $\rightarrow$ **Gubernat van Kalâbrjen**
-  * `c_reggio_calabria` (Reggio Calabria) $\rightarrow$ **Magistrat van Retsch** `[rɛdʒ]`
+  * `c_reggio_calabria` (Reggio Calabria) $\rightarrow$ **Magistrat van Retsch** `[rɛtʃ]`
   * `c_cosenza` (Cosenza) $\rightarrow$ **Magistrat van Kosentz**
   * `c_rossano` (**[HRE]** Rossano) $\rightarrow$ **Magistrat van Rossân**
 
@@ -692,7 +692,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_friuli` (Friuli) $\rightarrow$ **Magistrat van Vrîûl** *(or **Tzividâl**)*
   * `c_gorz` (Goriza) $\rightarrow$ **Magistrat van Görtz** `[ɡœrts]`
 * **Duchy of Lombardy** (`d_lombardia`) $\rightarrow$ **Gubernat van Lamparten** *(or **Lombardîe**)*
-  * `c_lombardia` (Lombardia) $\rightarrow$ **Magistrat van Meilân** `[ˈmɛɪ.laːn]` *(MHG *Meilân* + Catalan *Milà* for Milan)*
+  * `c_lombardia` (Lombardia) $\rightarrow$ **Magistrat van Meilân** `[mɛɪ.ˈlaːn]` *(MHG *Meilân* + Catalan *Milà* for Milan)*
   * `c_brescia` (Brescia) $\rightarrow$ **Magistrat van Bresche** *(or MHG **Brixen-in-Lamparten**)*
   * `c_como` (Como) $\rightarrow$ **Magistrat van Kôme** `[ˈkoː.mə]`
   * `c_trent` (Trent) $\rightarrow$ **Magistrat van Trîent** `[ˈtriː.ɛnt]`
@@ -1245,7 +1245,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_barcelona` (Barshiluna) $\rightarrow$ **Magistrat van Bartzelôn** `[bar.tsə.ˈloːn]`
   * `c_urgell` (Urgell) $\rightarrow$ **Magistrat van Urgêl** `[ʊr.ˈɡeːɫ]` *(or **Seu d'Urgêl**)*
   * `c_pallas` (Pallas) $\rightarrow$ **Magistrat van Paljârs** `[pa.ˈʎaːrs]`
-  * `c_puigcerda` (Cerdaña) $\rightarrow$ **Magistrat van Tzerdanje** `[tsər.ˈda.ɲə]` *(Old Catalan *Cerdanya*; `[1059 Capital: Lîvje (Llívia)]`)*
+  * `c_puigcerda` (Cerdaña) $\rightarrow$ **Magistrat van Zerdanje** `[tsər.ˈda.ɲə]` *(Old Catalan *Cerdanya*; `[1059 Capital: Lîvje (Llívia)]`)*
   * `c_girona` (Girona) $\rightarrow$ **Magistrat van Dschirôn** `[dʒi.ˈroːn]` *(Old Catalan *Girona*)*
   * `c_rossello` (Rosselló) $\rightarrow$ **Magistrat van Rosseljôn** `[ro.sə.ˈʎoːn]`
   * `c_lleida` (Lleida) $\rightarrow$ **Magistrat van Lleide** `[ˈʎɛɪ.də]`
@@ -1354,7 +1354,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_teruel` (Teruel) $\rightarrow$ **Magistrat van Terôl** *(Old Catalan *Terol*; `[1059 Historical: Magistrat van Tzêlje (Cella)]`)*
   * `c_denia` (Denia) $\rightarrow$ **Magistrat van Dênje** `[ˈdeː.njə]`
   * `c_alicante` (al-Laqant) $\rightarrow$ **Magistrat van Alakant** `[a.la.ˈkant]` *(Old Catalan *Alacant*)*
-* **Duchy of Mallorca** (`d_mallorca`) $\rightarrow$ **Gubernat van Maljôrke** `[ma.ˈʎɔr.kə]`
+* **Duchy of Mallorca** (`d_mallorca`) $\rightarrow$ **Gubernat van Maljôrke** `[ma.ˈʎoːr.kə]`
   * `c_mallorca` (Mallorca) $\rightarrow$ **Magistrat van Maljôrke**
   * `c_menorca` (Menorca) $\rightarrow$ **Magistrat van Menôrke**
   * `c_iviza` (Ibiza) $\rightarrow$ **Magistrat van Eivîsse** `[ɛɪ.ˈviː.sə]` *(Old Catalan *Eivissa*)*
