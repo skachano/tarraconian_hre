@@ -166,8 +166,8 @@ async function runE2ETests() {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
     }
 
-    // 4. Test De Jure Tier Switching
-    console.log('[5/7] Testing De Jure tier switching...');
+    // 4. Test De Jure Tier Switching & Barony Roundtrip
+    console.log('[5/7] Testing De Jure tier switching & Barony roundtrip...');
     const kingdomBtn = page.locator('.tier-btn[data-tier="kingdom"]');
     await kingdomBtn.click();
     if (!(await kingdomBtn.evaluate(el => el.classList.contains('active')))) {
@@ -180,12 +180,34 @@ async function runE2ETests() {
       throw new Error('Empire tier button failed to activate');
     }
 
+    // Switch to Barony (lazy-loads 11,297 baronies)
+    console.log('  Switching to Barony tier...');
+    const baronyBtn = page.locator('.tier-btn[data-tier="barony"]');
+    await baronyBtn.click();
+    await page.waitForFunction(() => {
+      return document.querySelectorAll('#map svg path').length === 11297;
+    }, { timeout: 10000 });
+    console.log('  Barony tier active: 11,297 holding polygons loaded.');
+
+    // Switch back to County tier (must restore 3,476 county polygons)
+    console.log('  Switching from Barony back to County tier...');
     const countyBtn = page.locator('.tier-btn[data-tier="county"]');
     await countyBtn.click();
-    if (!(await countyBtn.evaluate(el => el.classList.contains('active')))) {
-      throw new Error('County tier button failed to re-activate');
-    }
-    console.log('  Tier switching (Kingdom -> Empire -> County) validated.');
+    await page.waitForFunction(() => {
+      return document.querySelectorAll('#map svg path').length === 3476;
+    }, { timeout: 5000 });
+    console.log('  Restored County tier: 3,476 county polygons loaded.');
+
+    // Switch to Duchy tier
+    const duchyBtn = page.locator('.tier-btn[data-tier="duchy"]');
+    await duchyBtn.click();
+    await page.waitForFunction(() => {
+      return document.querySelectorAll('#map svg path').length === 3476;
+    }, { timeout: 5000 });
+
+    // Return to County tier
+    await countyBtn.click();
+    console.log('  Full tier switching (Kingdom -> Empire -> Barony -> County -> Duchy -> County) validated.');
 
     // 5. Test Mouse Movement & Zero Residual Highlighting
     console.log('[6/7] Testing mouse hover sweep across territories (verifying zero residual highlights)...');

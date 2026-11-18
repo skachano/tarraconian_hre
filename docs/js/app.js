@@ -117,6 +117,7 @@ async function ensureBaroniesLoaded() {
     console.error('Failed to load baronies:', err);
   } finally {
     overlay.classList.add('fade-out');
+    setTimeout(() => overlay.remove(), 400);
   }
 }
 
@@ -185,8 +186,11 @@ function renderActiveLayer() {
 function renderCounties() {
   clearHover();
   if (countiesLayer) {
+    if (!map.hasLayer(countiesLayer)) {
+      countiesLayer.addTo(map);
+    }
     countiesLayer.setStyle(countyStyle);
-    if (selectedLayer) {
+    if (selectedLayer && map.hasLayer(selectedLayer)) {
       selectedLayer.setStyle({
         weight: 3,
         color: '#ffffff',
@@ -227,7 +231,18 @@ async function renderBaronies() {
     });
   }
 
-  baroniesLayer.addTo(map);
+  if (!map.hasLayer(baroniesLayer)) {
+    baroniesLayer.addTo(map);
+  }
+  baroniesLayer.setStyle(baronyStyle);
+  if (selectedLayer && map.hasLayer(selectedLayer)) {
+    selectedLayer.setStyle({
+      weight: 3,
+      color: '#ffffff',
+      fillColor: '#993284',
+      fillOpacity: 0.9
+    });
+  }
 }
 
 // ---------------------------------------------------------------------------
