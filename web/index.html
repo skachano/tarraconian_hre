@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarraconian Atlas | Dat Rômische Keiserrîch</title>
+  
+  <!-- Google Fonts: Medieval & Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-crest">⚜</div>
+      <div class="brand-text">
+        <h1 class="brand-title">Tarraconian Atlas</h1>
+        <p class="brand-subtitle">Dat Rômische Keiserrîch — Imperial Chancellery Gazetteer & Cartography</p>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="title-search" placeholder="Search title, e.g. Stûlwîtzenburch, London, c_middlesex..." autocomplete="off">
+        <button id="search-clear" class="search-clear-btn" title="Clear search">&times;</button>
+      </div>
+      <div id="search-results" class="search-dropdown hidden"></div>
+    </div>
+
+    <!-- De Jure Tier Selector -->
+    <div class="tier-selector">
+      <span class="tier-label">De Jure Level:</span>
+      <div class="tier-pills" role="radiogroup">
+        <button class="tier-btn" data-tier="empire" title="Empire Level (Keiserrîch / Imperi)">Empire</button>
+        <button class="tier-btn" data-tier="kingdom" title="Kingdom Level (Kûnincrich / Regenat)">Kingdom</button>
+        <button class="tier-btn" data-tier="duchy" title="Duchy Level (Gubernat / March)">Duchy</button>
+        <button class="tier-btn active" data-tier="county" title="County Level (Magistrat / Veguerîe)">County</button>
+        <button class="tier-btn" data-tier="barony" title="Barony Holding Level (Holdings / Castles)">Barony</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-main">
+    <!-- Map Canvas -->
+    <div id="map" class="map-container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+      <p id="loading-text">Loading Imperial Cartography...</p>
+    </div>
+
+    <!-- Info / Inspector Sidebar Drawer -->
+    <aside id="inspector-drawer" class="inspector-drawer">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span id="drawer-tier-badge" class="tier-badge">County</span>
+          <h2 id="drawer-tarr-name" class="drawer-title">Select a title</h2>
+        </div>
+        <button id="drawer-close" class="drawer-close-btn" title="Close Panel">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <!-- Canonical / Subtitle -->
+        <div class="info-group">
+          <label>Canonical Game Name</label>
+          <div id="drawer-canonical-name" class="info-value">—</div>
+        </div>
+
+        <div class="info-group">
+          <label>Title Key</label>
+          <code id="drawer-title-key" class="info-code">—</code>
+        </div>
+
+        <!-- Historical Resolution Note (if applicable) -->
+        <div id="drawer-hist-group" class="info-group hidden">
+          <label>1059 Historical Resolution</label>
+          <div id="drawer-hist-name" class="info-value-highlight">—</div>
+        </div>
+
+        <!-- Full Lineage Breadcrumb -->
+        <div class="info-group">
+          <label>De Jure Hierarchy</label>
+          <nav id="drawer-breadcrumbs" class="breadcrumbs-list">
+            <span class="bc-item" data-tier="empire" id="bc-empire">—</span>
+            <span class="bc-sep">›</span>
+            <span class="bc-item" data-tier="kingdom" id="bc-kingdom">—</span>
+            <span class="bc-sep">›</span>
+            <span class="bc-item" data-tier="duchy" id="bc-duchy">—</span>
+            <span class="bc-sep">›</span>
+            <span class="bc-item" data-tier="county" id="bc-county">—</span>
+          </nav>
+        </div>
+
+        <!-- Constituent Holdings (for counties) -->
+        <div id="drawer-baronies-section" class="info-group hidden">
+          <label id="drawer-baronies-label">Constituent Holdings (Baronies)</label>
+          <ul id="drawer-baronies-list" class="baronies-pill-list"></ul>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <button id="drawer-zoom-btn" class="btn-primary">Zoom to Title</button>
+      </div>
+    </aside>
+
+    <!-- Map Floating Stats / Coordinates Badge -->
+    <div class="map-stats-badge">
+      <span id="hover-info">Hover over a territory to inspect</span>
+    </div>
+  </main>
+
+  <!-- Footer Disclaimer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <span><strong>Dat Rômische Keiserrîch</strong> | Alternate History Toponymic Atlas</span>
+      <span class="footer-disclaimer">
+        Crusader Kings III is a registered trademark of Paradox Interactive AB. This project is an unofficial, non-commercial fan-made atlas.
+      </span>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- App JS -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
