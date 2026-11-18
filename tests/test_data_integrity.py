@@ -405,11 +405,17 @@ class TestTitleInfoAndIpa:
         assert "1059 Historical Resolution" not in index_html
         assert 'id="drawer-ipa"' in index_html
         assert 'id="drawer-ipa-group"' in index_html
+        # IPA group is placed right below the title name in the drawer header
+        tarr_name_idx = index_html.find('id="drawer-tarr-name"')
+        ipa_group_idx = index_html.find('id="drawer-ipa-group"')
+        body_idx = index_html.find('class="drawer-body"')
+        assert -1 < tarr_name_idx < ipa_group_idx < body_idx
 
     def test_css_anachronism_info_styling(self):
         css = (REPO_DIR / "web" / "css" / "styles.css").read_text(encoding="utf-8")
         assert "#3069a8" in css
         assert "info-ipa" in css
+        assert "drawer-ipa-group" in css
 
     def test_counties_geojson_ipa_and_tarr(self, counties_data):
         cleves = next(f["properties"] for f in counties_data["features"] if f["properties"]["county"] == "c_cleves")

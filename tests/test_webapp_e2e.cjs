@@ -267,6 +267,12 @@ async function runE2ETests() {
       throw new Error(`Expected IPA "[ˈkleː.və]", got "${ipaText}"`);
     }
 
+    const titleBox = await page.locator('#drawer-tarr-name').boundingBox();
+    const ipaBox = await page.locator('#drawer-ipa-group').boundingBox();
+    if (titleBox && ipaBox && ipaBox.y <= titleBox.y) {
+      throw new Error(`Expected #drawer-ipa-group to be below #drawer-tarr-name: titleY=${titleBox.y}, ipaY=${ipaBox.y}`);
+    }
+
     const clevesHistText = await page.locator('#drawer-hist-name').innerText();
     if (clevesHistText.includes('(Direct:') || !clevesHistText.includes('Xanten')) {
       throw new Error(`Expected historical resolution "Xanten" without "(Direct: ...)", got "${clevesHistText}"`);

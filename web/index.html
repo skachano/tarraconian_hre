@@ -68,6 +68,11 @@
         <div class="drawer-title-group">
           <span id="drawer-tier-badge" class="tier-badge">County</span>
           <h2 id="drawer-tarr-name" class="drawer-title">Select a title</h2>
+          <!-- IPA Pronunciation (if available) -->
+          <div id="drawer-ipa-group" class="drawer-ipa-group hidden">
+            <span class="drawer-ipa-label">IPA</span>
+            <code id="drawer-ipa" class="info-code info-ipa">—</code>
+          </div>
         </div>
         <button id="drawer-close" class="drawer-close-btn" title="Close Panel">&times;</button>
       </div>
@@ -83,12 +88,6 @@
         <div class="info-group">
           <label>Title Key</label>
           <code id="drawer-title-key" class="info-code">—</code>
-        </div>
-
-        <!-- IPA Pronunciation (if available) -->
-        <div id="drawer-ipa-group" class="info-group hidden">
-          <label>IPA Pronunciation</label>
-          <code id="drawer-ipa" class="info-code info-ipa">—</code>
         </div>
 
         <!-- Historical Resolution Note (if applicable) -->
