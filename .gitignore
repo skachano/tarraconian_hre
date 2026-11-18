@@ -1,3 +1,27 @@
+# Bytecode and cache
 __pycache__/
 *.pyc
 *.pyo
+
+# CK3 Save Games & Extraction temp files
+*.ck3
+*.ck3.tmp
+/var/tmp/ck3_audit/
+tmp/
+*.tmp
+
+# Web app dependencies & build outputs
+node_modules/
+dist/
+build/
+.parcel-cache/
+.env*
+!.env.example
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

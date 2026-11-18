@@ -201,3 +201,11 @@ git commit -m "Imperial expansion: Incorporate newly annexed territories into ma
 * **Scripted Effects Trigger:** `tarraconian_chancellery/common/scripted_effects/tarr_chancellery_title_list_effects.txt` (dynamically renames provinces when held by Tarraconian culture rulers).
 * **Localization File:** `tarraconian_chancellery/localization/english/tarraconian_titles_l_english.yml` (UTF-8 with BOM).
 * **Automated Mod Synchronization:** Always use `scripts/build_mod.py` to regenerate mod files from the master markdown files; never edit `tarr_chancellery_title_list_effects.txt` or `tarraconian_titles_l_english.yml` manually.
+
+---
+
+## 6. Legal & Fan-Content Notice
+
+* **Game IP:** Crusader Kings III is a registered trademark of Paradox Interactive AB.
+* **Disclaimer:** This project is an unofficial fan-made alternate-history mod and onomastic atlas. It is non-commercial and is neither affiliated with nor endorsed by Paradox Interactive AB.
+* **License:** Code and documentation in this repository are distributed under the [MIT License](LICENSE).
