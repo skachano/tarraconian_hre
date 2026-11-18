@@ -206,11 +206,22 @@ git commit -m "Imperial expansion: Incorporate newly annexed territories into ma
 
 ## 6. Cartographic Atlas (Web Application)
 
-An interactive, high-resolution vector cartographic atlas of the Tarraconian world conquest is hosted on GitHub Pages (under `docs/`). It features:
+An interactive, high-resolution vector cartographic atlas of the Tarraconian world conquest is hosted on GitHub Pages:
+* **Live Deployment:** [https://skachano.github.io/tarraconian_hre/](https://skachano.github.io/tarraconian_hre/)
+
+### Features
 * Vector rendering of all **3,476 counties** and **11,297 barony holdings** directly extracted from CK3 map data.
-* Instant autocomplete search across Tarraconian Chancellery toponyms, canonical names, and title keys.
+* Instant autocomplete search across Tarraconian Chancellery toponyms, canonical names, Hanzi glyphs, and title keys.
 * Full hierarchical breadcrumb lineage (Empire $\rightarrow$ Kingdom $\rightarrow$ Duchy $\rightarrow$ County $\rightarrow$ Baronies).
-* De Jure rank filtering and slide-out Inspector Drawer with historical 1059 resolution notes.
+* De Jure rank filtering and slide-out Inspector Drawer with historical 1059 resolution notes and Sinosphere Hanzi calque analysis.
+* Dedicated **Imperial Linguistics & Toponymic Guide** modal with phonotactics and an interactive 641-character Hanzi lexicon.
+
+### Automated GitHub Pages Deployment
+Continuous deployment is managed through GitHub Actions (`.github/workflows/deploy-pages.yml`):
+* **Automatic Triggers:** Every push to `main` and on-demand manual runs via `workflow_dispatch`.
+* **CI Validation:** Validates schema and data integrity with `pytest` prior to deployment.
+* **Packaging:** Automatically generates production bundles into `docs/` with `.nojekyll` and `404.html` routing fallback.
+* **Hosting:** Deployed via official `actions/deploy-pages`.
 
 ### Running the Web Atlas in Docker
 ```bash

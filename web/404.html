@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Province Not Found | Tarraconian Atlas</title>
+  <meta name="description" content="The requested title or imperial territory does not exist in the Tarraconian Chancellery archives.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .not-found-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 40%, #1e1e24 0%, #121216 100%);
+      color: #e8e6e3;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .not-found-crest {
+      font-size: 3.5rem;
+      color: #c28b23;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 12px rgba(194, 139, 35, 0.4));
+    }
+    .not-found-code {
+      font-size: 5rem;
+      font-weight: 800;
+      color: #c28b23;
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 0.5rem;
+    }
+    .not-found-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #f5f3ef;
+    }
+    .not-found-subtitle {
+      max-width: 520px;
+      margin-bottom: 2rem;
+      color: #9c9a96;
+      line-height: 1.6;
+    }
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      background: linear-gradient(135deg, #a64b38 0%, #873626 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-return:hover {
+      background: linear-gradient(135deg, #b8543f 0%, #993e2d 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(166, 75, 56, 0.4);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found-container">
+    <div class="not-found-crest">⚜</div>
+    <div class="not-found-code">404</div>
+    <h1 class="not-found-title">Province Not Attested in Imperial Chancellery</h1>
+    <p class="not-found-subtitle">
+      The requested chart or diplomatic archive could not be located in the imperial register of <em>Dat Rômische Keiserrîch</em> (1059 AD).
+    </p>
+    <a href="index.html" class="btn-return">
+      &larr; Return to Cartographic Atlas
+    </a>
+  </div>
+</body>
+</html>

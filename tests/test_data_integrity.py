@@ -131,6 +131,25 @@ class TestWebAssets:
     def test_nojekyll_exists(self):
         assert (DOCS_DIR / ".nojekyll").exists(), "docs/.nojekyll is missing (required for GitHub Pages)"
 
+    def test_github_pages_integration(self):
+        # 404 page for fallback routing
+        not_found_path = DOCS_DIR / "404.html"
+        assert not_found_path.exists(), "docs/404.html is missing for GitHub Pages routing"
+        not_found_content = not_found_path.read_text(encoding="utf-8")
+        assert "404" in not_found_content
+        assert "index.html" in not_found_content
+
+        # GitHub Actions automated deployment workflow
+        workflow_path = REPO_DIR / ".github" / "workflows" / "deploy-pages.yml"
+        assert workflow_path.exists(), ".github/workflows/deploy-pages.yml is missing"
+        wf_content = workflow_path.read_text(encoding="utf-8")
+        assert "actions/deploy-pages" in wf_content
+        assert "actions/upload-pages-artifact" in wf_content
+        assert "actions/configure-pages" in wf_content
+        assert "pages: write" in wf_content
+        assert "id-token: write" in wf_content
+        assert "'./docs'" in wf_content or '"./docs"' in wf_content
+
     def test_sinosphere_assets_exist(self):
         calques_path = DATA_DIR / "sinosphere_hanzi_calques.json"
         assert calques_path.exists(), "docs/data/sinosphere_hanzi_calques.json is missing"

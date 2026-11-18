@@ -20,6 +20,8 @@ def main():
 
     # 1. Copy web assets (HTML, CSS, JS)
     shutil.copy2(WEB_DIR / "index.html", DOCS_DIR / "index.html")
+    if (WEB_DIR / "404.html").exists():
+        shutil.copy2(WEB_DIR / "404.html", DOCS_DIR / "404.html")
 
     (DOCS_DIR / "css").mkdir(parents=True, exist_ok=True)
     shutil.copy2(WEB_DIR / "css" / "styles.css", DOCS_DIR / "css" / "styles.css")

@@ -139,8 +139,8 @@ async function runE2ETests() {
     const bcEmpire = await page.locator('#bc-empire').innerText();
     const bcKingdom = await page.locator('#bc-kingdom').innerText();
     console.log(`  Lineage: Empire="${bcEmpire}", Kingdom="${bcKingdom}"`);
-    if (!bcEmpire.includes('Germania') && !bcEmpire.includes('Germany') && !bcEmpire.includes('Dütsch') && !bcEmpire.includes('Frankisch')) {
-      throw new Error(`Expected Germania / Dat Frankische Imperi empire breadcrumb, got "${bcEmpire}"`);
+    if (!bcEmpire.includes('Germania') && !bcEmpire.includes('Germany') && !bcEmpire.includes('Dütsch') && !bcEmpire.includes('Frankisch') && !bcEmpire.includes('Vrankisch')) {
+      throw new Error(`Expected Germania / Dat Vrankische Imperi empire breadcrumb, got "${bcEmpire}"`);
     }
     if (!bcKingdom.includes('Ungern') && !bcKingdom.includes('Hungary')) {
       throw new Error(`Expected Hungarian kingdom breadcrumb, got "${bcKingdom}"`);
@@ -191,8 +191,8 @@ async function runE2ETests() {
     if (secondOrigin !== 'Middle Seaxe') {
       throw new Error(`Expected drawer origin name "Middle Seaxe", got "${secondOrigin}"`);
     }
-    if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany') && !secondEmpire.includes('Dütsch') && !secondEmpire.includes('Frankisch')) {
-      throw new Error(`Expected Germania / Dat Frankische Imperi empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
+    if (!secondEmpire.includes('Germania') && !secondEmpire.includes('Germany') && !secondEmpire.includes('Dütsch') && !secondEmpire.includes('Frankisch') && !secondEmpire.includes('Vrankisch')) {
+      throw new Error(`Expected Germania / Dat Vrankische Imperi empire breadcrumb for Middelsachsen, got "${secondEmpire}"`);
     }
     if (!secondKingdom.includes('Engellant') && !secondKingdom.includes('England')) {
       throw new Error(`Expected English kingdom breadcrumb, got "${secondKingdom}"`);
@@ -758,6 +758,21 @@ async function runE2ETests() {
     const previewPath = path.join(DOCS_DIR, 'preview.png');
     await page.screenshot({ path: previewPath });
     console.log(`  Captured preview screenshot: ${previewPath}`);
+
+    // Test GitHub Pages 404 Fallback Page
+    console.log('  Testing GitHub Pages 404 page navigation...');
+    await page.goto(`${baseUrl}/404.html`, { waitUntil: 'domcontentloaded' });
+    const notFoundTitle = await page.title();
+    if (!notFoundTitle.includes('404')) {
+      throw new Error(`Expected 404 page title, got "${notFoundTitle}"`);
+    }
+    const returnLink = page.locator('a.btn-return');
+    if (!(await returnLink.isVisible())) {
+      throw new Error('Expected .btn-return link on 404 page');
+    }
+    await returnLink.click();
+    await page.waitForSelector('#map', { timeout: 5000 });
+    console.log('  404 return navigation verified.');
 
     console.log('\n========================================');
     console.log('✅ ALL E2E WEB APPLICATION TESTS PASSED!');
