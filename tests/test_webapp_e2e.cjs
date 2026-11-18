@@ -439,6 +439,34 @@ async function runE2ETests() {
       throw new Error(`Unexpected selection count for France: ${franceSelectedCount}`);
     }
 
+    // Test Kingdom of Polotia (k_white_rus) resolved to historical name Polôtzich
+    console.log('  Testing Kingdom of Polotia (k_white_rus) resolved to historical name "Polôtzich"...');
+    await searchInput.fill('k_white_rus');
+    await page.waitForSelector('#search-results .search-item[data-key="k_white_rus"]', { timeout: 5000 });
+    const polotskItem = page.locator('#search-results .search-item[data-key="k_white_rus"]');
+    await polotskItem.click();
+
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-tier-badge').innerText === 'KINGDOM' &&
+             document.getElementById('drawer-title-key').innerText === 'k_white_rus';
+    }, { timeout: 5000 });
+
+    const polotskTitle = await page.locator('#drawer-tarr-name').innerText();
+    console.log(`  k_white_rus title displayed: "${polotskTitle}"`);
+    if (polotskTitle !== 'Polôtzich') {
+      throw new Error(`Expected k_white_rus title to be "Polôtzich", got "${polotskTitle}"`);
+    }
+
+    const polotskIpa = await page.locator('#drawer-ipa').innerText();
+    if (!polotskIpa.includes('[ˈpɔ.lɔtsk]')) {
+      throw new Error(`Expected k_white_rus IPA "[ˈpɔ.lɔtsk]", got "${polotskIpa}"`);
+    }
+
+    const polotskHist = await page.locator('#drawer-hist-name').innerText();
+    if (polotskHist !== 'Polôtzich') {
+      throw new Error(`Expected historical resolution "Polôtzich", got "${polotskHist}"`);
+    }
+
     // Test search autocomplete by historical origin name ("Bernicia" -> c_northumberland)
     console.log('  Testing search autocomplete by title name origin ("Bernicia")...');
     await countyBtn.click();

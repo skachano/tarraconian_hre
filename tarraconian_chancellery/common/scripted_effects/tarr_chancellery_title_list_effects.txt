@@ -39,7 +39,7 @@ tarr_apply_static_titles_effect = {
 	title:k_tahert ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_tahert HIST = cn_tarr_k_tahert } }
 	title:k_anatolia ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_anatolia HIST = cn_tarr_k_anatolia } }
 	title:k_daylam ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_daylam HIST = cn_tarr_k_daylam } }
-	title:k_white_rus ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_white_rus HIST = cn_tarr_k_white_rus } }
+	title:k_white_rus ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_white_rus HIST = cn_tarr_hist_k_white_rus } }
 	title:k_africa ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_africa HIST = cn_tarr_k_africa } }
 	title:k_yemen ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_yemen HIST = cn_tarr_k_yemen } }
 	title:k_adal ?= { tarr_rename_title_effect = { NAME = cn_tarr_k_adal HIST = cn_tarr_hist_k_adal } }

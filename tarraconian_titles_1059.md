@@ -69,7 +69,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 | 31 | **Tahert** | `k_tahert` | **Kûnincrich van Tâhert** | `[ˈtaː.hɛrt]` | **19/19 RE** — Berber/Arabic *Tāhart* (`Tâhert`). |
 | 32 | **Anatolia** | `k_anatolia` | **Kûnincrich van Anatôljen** | *Anatôlisch* | **19/19 RE** — Added in 1122 Imperial Chancellery update. |
 | 33 | **Daylam** | `k_daylam` | **Kûnincrich van Deilâm** | *Deilâmisch* | **3/18 RE** — Added in 1142 Imperial Chancellery update. |
-| 34 | **Polotia** | `k_white_rus` | **Kûnincrich van Wîtzrûssen** *(or **Polôtzich**)* | `[ˈpɔ.lɔtsk]` | **21/21 RE** — Calque *Wîtzrûssen* (\"White Rus'\") / Rus' *Polotsk*. |
+| 34 | **Polotia** | `k_white_rus` | **Kûnincrich van Wîtzrûssen** *(1059 Hist: **Kûnincrich van Polôtzich**)* | `[ˈpɔ.lɔtsk]` | **21/21 RE** — Calque *Wîtzrûssen* (\"White Rus'\") / 1059 historical resolution *Polôtzich* (Rus' *Polotsk*). |
 | 35 | **Africa** | `k_africa` | **Kûnincrich van Affrîke** *(or **Ifrîkje**)* | `[a.ˈfriː.kə]` | **21/21 RE** — Latin *Africa* / Arabic *Ifrīqiya*. |
 | 36 | **Yemen** | `k_yemen` | **Kûnincrich van Jêmen** | *Jêmenisch* | **16/16 RE** — Added in 1142 Imperial Chancellery update. |
 | 37 | **Adal** | `k_adal` | **Kûnincrich van Adâl** *(1142 Hist: **Kûnincrich van Seîle**)* | *Adâlisch* | **18/18 RE** — Added in 1142 Imperial Chancellery update. |
@@ -968,7 +968,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 ---
 
-### 3.24 Kingdom of Polotia (`k_white_rus`) $\rightarrow$ **Kûnincrich van Wîtzrûssen** *(or **Polôtzich**)*
+### 3.24 Kingdom of Polotia (`k_white_rus`) $\rightarrow$ **Kûnincrich van Wîtzrûssen** (`[1059 Historical: Kûnincrich van Polôtzich]`)
 
 * **Duchy of Grodno** (`d_grodno`) $\rightarrow$ **Gubernat van Garten** *(Historical MHG/Teutonic *Garten* for Grodno!)*
   * `c_grodno` (Gardinas) $\rightarrow$ **Magistrat van Garten** *(or **Grodno**)*

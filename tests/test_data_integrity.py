@@ -421,6 +421,11 @@ class TestTitleInfoAndIpa:
         assert "d_ipa" in cleves
         assert "e_ipa" in cleves
 
+        polotsk = next(f["properties"] for f in counties_data["features"] if f["properties"]["county"] == "c_polotsk")
+        assert polotsk["k_tarr"] == "Polôtzich"
+        assert polotsk["k_tarr_hist"] == "Polôtzich"
+        assert polotsk["k_tarr_direct"] == "Wîtzrûssen"
+
     def test_title_tree_ipa_and_tarr(self, tree_data):
         germany = tree_data["e_germany"]
         loth = germany["kingdoms"]["k_lotharingia"]
@@ -435,3 +440,13 @@ class TestTitleInfoAndIpa:
             if "k_france" in emp.get("kingdoms", {}):
                 assert emp["kingdoms"]["k_france"]["ipa"] == "[ˈvraŋk.riːç]"
                 break
+
+        white_rus = None
+        for emp in tree_data.values():
+            if "k_white_rus" in emp.get("kingdoms", {}):
+                white_rus = emp["kingdoms"]["k_white_rus"]
+                break
+        assert white_rus is not None
+        assert white_rus["tarr"] == "Polôtzich"
+        assert "Polôtzich" in white_rus["origin"]
+        assert white_rus["ipa"] == "[ˈpɔ.lɔtsk]"

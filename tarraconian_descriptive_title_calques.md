@@ -304,7 +304,7 @@ The following tables demonstrate how specific titles across the Empire in [tarra
 
 | In-Game Key | Current / Vanilla Title | Proposed Semantic Calque | Etymological Breakdown & Historical Justification |
 | :--- | :--- | :--- | :--- |
-| `k_white_rus` | Kingdom of Polotia | **Kûnincrich van Wîtzrûssen** *(or **Polôtzich**)* | Established alternate kingdom title calquing *Belaya Rus'* ("White Russia"). |
+| `k_white_rus` | Kingdom of Polotia | **Kûnincrich van Wîtzrûssen** *(1059 Hist: **Polôtzich**)* | Established alternate kingdom title calquing *Belaya Rus'* ("White Russia"), with historical resolution **Polôtzich** (Principality of Polotsk). |
 | `c_lviv` | Lemberg / Zvenyhorod | **Magistrat van Klingeburch** *(or **Lüwenburch**)* | Pre-1256 seat *Zvenyhorod* derives from Slavic *zveneti* ("to ring/resound/chime"), calquing to *Klingeburch*. |
 | `c_babruysk` | Babruysk | **Magistrat van Bîverbach** *(or **Babrûitzich**)* | Hydronym of the *Babruyka* ("Beaver Brook") from Slavic *bobr* ("beaver"). |
 | `c_volodymyr` | Volodymyr (Volhynia) | **Magistrat van Simne-an-der-Lûge** *(or **Lûge**)* | Pre-867 Dulebe earthwork fortress *Zimne* ("winter quarter") on the Luga River. |
