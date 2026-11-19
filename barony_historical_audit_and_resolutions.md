@@ -28,7 +28,7 @@ Every single occupied holding has been resolved according to:
 | Holding Classification | Total Titles | Percentage | Color Code | Chancellery Toponymic Status |
 | :--- | :---: | :---: | :---: | :--- |
 | **Castle Holdings (`holding_type: castle`)** | **4,360** | 38.59% | `#ab3348` | Fortresses, citadels, and feudal seats resolved via antiquity or founder attribution (`-burch`, `-veste`, `Schirmburch`). |
-| **Bishoprics & Temples (`holding_type: church`)** | **2,978** | 26.36% | `#3069a8` | Cathedrals, abbeys, and monastic collegiate churches resolved via patron saints (`Zant-...`) or collegiate suffix (`-munster`, `-kirchen`). |
+| **Bishoprics & Temples (`holding_type: church`)** | **2,978** | 26.36% | `#3069a8` | Cathedrals, abbeys, and monastic collegiate churches resolved via patron saints (`Zant-...`), church settlements (`-kirchen`), monastic cells (`-zelle`), endowed canonries (`-stifft`), devotional abbeys (`-tâl`), and minsters (`-munster`). |
 | **Cities & Boroughs (`holding_type: city`)** | **2,899** | 25.66% | `#3b824a` | Chartered municipalities, trading emporia, and guild burgs resolved via civic formants (`-stat`, `-marct`, `-vurt`). |
 | **Unoccupied Baronies (`holding_type: unoccupied`)** | **1,060** | 9.38% | `#424242` | **Strictly blank:** Uncolonized territorial reserves retain empty strings (`name: ""`, `b_origin: ""`, `b_ipa: ""`, `b_anachronism: ""`). |
 | **TOTAL HOLDINGS AUDITED** | **11,297** | **100.0%** | — | **Complete Map Coverage (47 Empires, 3,476 Counties)** |
@@ -61,7 +61,7 @@ Titles are anchored strictly in physical substrates, verified classical settleme
 #### Case Study: Resolution of `b_baranovichi` (`c_kletsk`)
 * **Paradox Default:** Baranovichi (founded November 17, 1871 around a railway station on the Brest-Moscow line). Lacked any medieval or pre-867 attestation.
 * **Save Universe Reality:** Church holding in `c_kletsk` enfeoffed on April 9, 1187 to Character `269993` (**Ehrenfried** of House **Suerbeer** / `dynn_Suerbeer`, head of house, ambitious churchman).
-* **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via Option C for church holdings $\rightarrow$ Resolved to **`Suerbeermunster`** (*Monastic collegiate foundation of House Suerbeer*). Populates `b_anachronism` with explicit railway-era historical provenance.
+* **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via diversified Option C for church holdings $\rightarrow$ Resolved to **`Ehrenfrîtszelle`** (*Monastic cell endowed by Ehrenfrît of House Suerbeer*). Populates `b_anachronism` with explicit railway-era historical provenance.
 
 ### 2.2 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:
@@ -73,11 +73,16 @@ Every occupied barony in `melted_save.ck3` records:
 #### Option C Formulae by Holding Type and Ruler Profile:
 - **Castle Holdings:**
   - *Vanity / Ambitious Archetype* (`arrogant`, `ambitious`, `greedy`, `fickle`): Follows the eponymous fortress formula `<Founder>sburch` (e.g., *Adelbertsburch*, *Lambertsburch*).
-  - *Devout / Ascetic Archetype* (`zealous`, `humble`, `theologian`, `pilgrim`): Follows religious dedication formulae (*Marienburch*, *Heiligencruce*).
+  - *Devout / Ascetic Archetype* (`zealous`, `humble`, `theologian`, `pilgrim`): Follows religious dedication formulae (*Marienburch*, *Heiligencrûce*).
   - *Tactical / Defensive Archetype* (`paranoid`, `strategist`, `diligent`, `architect`): Follows functional march-warden formulae (*<House>veste*, *Schirmburch*).
   - *Dynastic Patriarch Archetype* (Default): Follows dynastic seat continuity `<House>burch` (e.g., *Kêstenburch*, *Lukiburch*).
-- **Church / Temple Holdings:**
-  - Dedicated as patron saint collegiate foundations (`Zant-<Saint>`) or monastic establishments (`<Founder>munster`, `<Founder>kirchen`).
+- **Church / Temple Holdings (Diversified Germanic Ecclesiastical Taxonomy):**
+  - *Patron Saint Chapter:* Dedicated to patron saints (`Zant-<Saint>`, e.g., *Zant-Peter*, *Zant-Marten*, *Zant-Ehrenfrît*).
+  - *Parish & Collegiate Church:* Follows the universal Germanic church formant `<Founder>kirchen` or `<House>kirchen` (e.g., *Marienkirchen*, *Gotfrîtskirchen*).
+  - *Monastic Cell / Hermitage:* Follows monastic cell foundations `<Founder>szelle` or `Mariezelle` (e.g., *Ehrenfrîtszelle*, *Dietwinszelle*).
+  - *Endowed Canonry:* Follows noble collegiate endowments `<House>stifft` or `<Founder>stifft` (e.g., *Metzstifft*, *Trierstifft*).
+  - *Devotional Reform Abbey:* Follows Cistercian/Premonstratensian devotional valley foundations (*Marientâl*, *Lilientâl*, *Heiligencrûce*).
+  - *Collegiate Mother Minster:* Reserved for prestigious major minsters and cathedral chapters `<Founder>munster` or `<House>munster` (e.g., *Westmunster*, *Metzmunster*).
 - **City / Borough Holdings:**
   - Chartered as municipal borough seats (`<Founder>stat`) or market settlements (`<Founder>marct`, `<Founder>vurt`).
 

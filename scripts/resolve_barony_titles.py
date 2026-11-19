@@ -15,6 +15,7 @@ Adheres strictly to:
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -699,21 +700,76 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
             candidates.append((f"{clean_stem}burch", f"Fortress seat of {clean_stem} established by {clean_founder}"))
 
     elif holding_type in {"church", "temple"}:
+        seed = int(hashlib.md5(bk.encode("utf-8")).hexdigest()[:8], 16) % 10 if bk else 0
+
         if traits_set & {"zealous", "theologian", "pilgrim"}:
             candidates.append((f"Zant-{clean_founder}", f"Patron saint collegiate foundation dedicated by {clean_founder}"))
-            candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
-            candidates.append(("Marienmunster", f"Collegiate foundation dedicated to the Virgin Mary by {clean_founder}"))
-            candidates.append(("Heiligencruce", f"Holy Cross collegiate foundation dedicated by {clean_founder}"))
+            candidates.append(("Heiligencrûce", f"Holy Cross collegiate foundation dedicated by {clean_founder}"))
+            candidates.append((f"{clean_founder}kirchen", f"Collegiate church established by devout founder {clean_founder}"))
+            candidates.append(("Marienkirchen", f"Collegiate church of St. Mary dedicated by devout founder {clean_founder}"))
+            candidates.append(("Marientâl", f"Monastic valley abbey dedicated to St. Mary by {clean_founder}"))
+            candidates.append((f"{clean_founder}szelle", f"Monastic cell and hermitage established by {clean_founder}"))
             if clean_house:
-                candidates.append((f"{clean_house}munster", f"Collegiate monastic foundation of House {clean_house}"))
-        else:
-            candidates.append((f"{clean_founder}munster", f"Monastic collegiate foundation established by {clean_founder}"))
+                candidates.append((f"{clean_house}stifft", f"Collegiate canonry endowed by House {clean_house}"))
+            candidates.append((f"{clean_founder}munster", f"Collegiate minster founded by {clean_founder}"))
+
+        elif traits_set & {"humble", "content", "temperate", "celibate", "monk", "shy"}:
+            candidates.append((f"{clean_founder}szelle", f"Monastic cell and hermitage established by {clean_founder}"))
+            candidates.append(("Mariezelle", f"Marian hermitage and priory founded by {clean_founder}"))
+            candidates.append(("Marientâl", f"Monastic valley sanctuary founded by {clean_founder}"))
+            candidates.append((f"{clean_founder}kirchen", f"Parish church foundation established by {clean_founder}"))
+            candidates.append(("Nîenclôster", f"New monastic cloister founded by {clean_founder}"))
             candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
-            candidates.append(("Marienmunster", f"Collegiate monastic foundation dedicated by {clean_founder}"))
-            if clean_house:
-                candidates.append((f"{clean_house}munster", f"Monastic collegiate foundation of House {clean_house}"))
-            if clean_stem and not is_circular_house(clean_stem, save_name, bk, ck):
-                candidates.append((f"{clean_stem}kirchen", f"Collegiate church of {clean_stem} established by {clean_founder}"))
+
+        elif clean_house:
+            if seed in (0, 1, 2):
+                candidates.append((f"{clean_house}kirchen", f"Proprietary collegiate church of House {clean_house}"))
+                candidates.append((f"{clean_house}stifft", f"Endowed collegiate canonry of House {clean_house}"))
+                candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder} of House {clean_house}"))
+            elif seed in (3, 4, 5):
+                candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder} of House {clean_house}"))
+                candidates.append((f"{clean_house}kirchen", f"Proprietary collegiate church of House {clean_house}"))
+                candidates.append((f"{clean_house}stifft", f"Endowed collegiate canonry of House {clean_house}"))
+            elif seed in (6, 7):
+                candidates.append((f"{clean_house}stifft", f"Endowed collegiate canonry of House {clean_house}"))
+                candidates.append((f"{clean_house}kirchen", f"Proprietary collegiate church of House {clean_house}"))
+                candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
+            elif seed == 8:
+                candidates.append((f"{clean_founder}szelle", f"Monastic cell endowed by {clean_founder} of House {clean_house}"))
+                candidates.append(("Marientâl", f"Devotional valley abbey endowed by House {clean_house}"))
+            else:
+                candidates.append((f"{clean_house}munster", f"Collegiate minster church of House {clean_house}"))
+                candidates.append((f"{clean_house}stifft", f"Collegiate canonry of House {clean_house}"))
+
+        else:
+            if seed in (0, 1, 2):
+                candidates.append((f"{clean_founder}kirchen", f"Parish collegiate church founded by {clean_founder}"))
+                candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
+                candidates.append(("Marienkirchen", f"Collegiate church of St. Mary dedicated by {clean_founder}"))
+            elif seed in (3, 4, 5):
+                candidates.append((f"Zant-{clean_founder}", f"Patron saint church dedicated by {clean_founder}"))
+                candidates.append((f"{clean_founder}kirchen", f"Collegiate church founded by {clean_founder}"))
+                candidates.append(("Marienkirchen", f"Collegiate church of St. Mary dedicated by {clean_founder}"))
+            elif seed in (6, 7):
+                candidates.append((f"{clean_founder}szelle", f"Monastic cell and hermitage founded by {clean_founder}"))
+                candidates.append((f"{clean_founder}kirchen", f"Parish church founded by {clean_founder}"))
+            elif seed == 8:
+                candidates.append(("Marientâl", f"Monastic valley abbey dedicated by {clean_founder}"))
+                candidates.append(("Heiligencrûce", f"Holy Cross church dedicated by {clean_founder}"))
+            else:
+                candidates.append((f"{clean_founder}munster", f"Collegiate minster church established by {clean_founder}"))
+                candidates.append((f"{clean_founder}kirchen", f"Collegiate church founded by {clean_founder}"))
+
+        # Universal fallback candidate pool
+        candidates.append((f"{clean_founder}kirchen", f"Collegiate church established by {clean_founder}"))
+        candidates.append((f"Zant-{clean_founder}", f"Collegiate church dedicated by {clean_founder}"))
+        candidates.append(("Marienkirchen", f"Collegiate church of St. Mary dedicated by {clean_founder}"))
+        candidates.append((f"{clean_founder}szelle", f"Monastic cell founded by {clean_founder}"))
+        if clean_house:
+            candidates.append((f"{clean_house}stifft", f"Collegiate canonry of House {clean_house}"))
+        candidates.append((f"{clean_founder}stifft", f"Collegiate canonry endowed by {clean_founder}"))
+        candidates.append(("Nîenclôster", f"New monastic cloister foundation"))
+        candidates.append((f"{clean_founder}munster", f"Collegiate minster endowed by {clean_founder}"))
 
     else:  # city / borough
         if traits_set & {"greedy", "administrator", "midas_touched", "diligent"}:
