@@ -32,12 +32,12 @@
     "argent"
   ],
   "k_danelaw": [
-    "gules",
+    "argent",
     "solid",
-    "castrum",
-    "or",
+    "falcon_perched",
+    "sable",
     1,
-    "argent"
+    "sable"
   ],
   "k_daneland": [
     "gules",
@@ -824,7 +824,7 @@
     "or"
   ],
   "c_wiltshire": [
-    "azure",
+    "gules",
     "solid",
     "dragon",
     "or",
@@ -858,8 +858,8 @@
   "c_kent": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "horse_courant",
+    "argent",
     1,
     "argent"
   ],
@@ -3600,12 +3600,12 @@
     "argent"
   ],
   "d_thessalonika": [
-    "or",
+    "gules",
     "solid",
-    "castrum",
-    "sable",
+    "sword_crossed",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "d_thessaly": [
     "argent",
@@ -3664,12 +3664,12 @@
     "gules"
   ],
   "d_athens": [
-    "argent",
-    "solid",
-    "castrum",
     "azure",
+    "solid",
+    "column_roman",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "d_achaia": [
     "or",
@@ -4352,12 +4352,12 @@
     "or"
   ],
   "c_venezia": [
-    "argent",
+    "azure",
     "solid",
     "lion_rampant",
-    "gules",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "c_veneto": [
     "argent",
@@ -4866,7 +4866,7 @@
   "c_ravenna": [
     "or",
     "solid",
-    "alerion",
+    "eagle_double",
     "gules",
     1,
     "gules"
@@ -9138,7 +9138,7 @@
   "d_alexandria": [
     "azure",
     "solid",
-    "ship",
+    "lion_rampant",
     "or",
     1,
     "or"
@@ -9248,12 +9248,12 @@
     "sable"
   ],
   "d_antioch": [
-    "or",
+    "azure",
     "solid",
-    "cross",
-    "gules",
+    "cross_patriarchal",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "c_alexandretta": [
     "argent",
@@ -13915,6 +13915,94 @@
     "vert",
     "solid",
     "bow_and_arrow",
+    "or",
+    1,
+    "or"
+  ],
+  "c_paris": [
+    "gules",
+    "solid",
+    "ship",
+    "argent",
+    1,
+    "argent"
+  ],
+  "c_milano": [
+    "gules",
+    "solid",
+    "crown",
+    "or",
+    1,
+    "or"
+  ],
+  "d_lombardy": [
+    "gules",
+    "solid",
+    "crown",
+    "or",
+    1,
+    "or"
+  ],
+  "d_ravenna": [
+    "or",
+    "solid",
+    "eagle_double",
+    "gules",
+    1,
+    "gules"
+  ],
+  "c_antioch": [
+    "azure",
+    "solid",
+    "cross_patriarchal",
+    "or",
+    1,
+    "or"
+  ],
+  "c_jerusalem": [
+    "gules",
+    "solid",
+    "cross_patriarchal",
+    "or",
+    1,
+    "or"
+  ],
+  "d_wessex": [
+    "gules",
+    "solid",
+    "dragon",
+    "or",
+    1,
+    "or"
+  ],
+  "c_york": [
+    "argent",
+    "solid",
+    "falcon_perched",
+    "sable",
+    1,
+    "sable"
+  ],
+  "c_kyiv": [
+    "azure",
+    "solid",
+    "falcon_perched",
+    "or",
+    1,
+    "or"
+  ],
+  "c_athens": [
+    "azure",
+    "solid",
+    "column_roman",
+    "or",
+    1,
+    "or"
+  ],
+  "c_thessaloniki": [
+    "gules",
+    "solid",
+    "sword_crossed",
     "or",
     1,
     "or"
