@@ -847,3 +847,70 @@ class TestSymbolGenerator:
         # Dynamic clip-path usage
         assert 'clip-path="url(#${uid}_clip)"' in content
 
+    def test_hanzi_display_on_all_media(self):
+        """Verify Hanzi logographs are rendered properly across all media frames."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. Canonical Sinosphere Empires mapping
+        canonical_empires = {
+            "e_zhongyuan": "中原",
+            "e_liangyi": "梁益",
+            "e_jingyang": "荆扬",
+            "e_yongliang": "雍凉",
+            "e_lingnan": "岭南",
+            "e_goryeo": "三韩",
+            "e_japan": "日本",
+            "e_andong": "安东",
+            "e_amur": "阿穆尔"
+        }
+        assert "CANONICAL_SINOSPHERE_HANZI" in content
+        for emp, hanzi in canonical_empires.items():
+            assert f"{emp}: '{hanzi}'" in content, f"Missing canonical empire mapping for {emp}"
+
+        # 2. Exported in module return object
+        assert "CANONICAL_SINOSPHERE_HANZI," in content
+
+        # 3. Barony tier county-hanzi inheritance and 2-character preservation
+        assert "hanzi = props.b_hanzi || props.c_hanzi || '';" in content
+        assert "hanzi.length <= 2 ? hanzi : hanzi.substring(0, 2)" in content
+
+        # 4. Font stack containing standard CJK serif families
+        cjk_font_family = "'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif"
+        assert cjk_font_family in content
+
+        # 5. Media renderers Hanzi integration
+        # A. Vexillum (Empire)
+        assert '<!-- Classical Sinitic Hanzi Logograph on Imperial Vexillum -->' in content
+        assert 'y="${def.charges.length > 0 ? 102 : 135}"' in content
+        assert 'CHARGES[c](def.chargeColor, 0.55, 110, 166)' in content
+
+        # B. Gonfanon (Kingdom)
+        assert '<!-- Sinitic Hanzi Logograph on Kingdom Gonfanon -->' in content
+        assert 'y="${def.charges.length > 0 ? 86 : 105}"' in content
+        assert 'CHARGES[c](def.chargeColor, 0.46, 110, 134)' in content
+
+        # C. Notitia Scutum (Duchy)
+        assert '<!-- Sinitic Hanzi Logograph on Notitia Scutum above Boss -->' in content
+        assert 'y="${def.charges.length > 0 ? 75 : 82}"' in content
+        assert 'CHARGES[c](def.chargeColor, 0.45, cx, cy + 50)' in content
+
+        # D. Bulla Seal (County standard)
+        assert '<!-- Sinitic Hanzi Logograph on Bulla Seal -->' in content
+        assert 'y="${def.charges.length > 0 ? 98 : 120}"' in content
+        assert 'CHARGES[c](def.chargeColor, 0.42, cx, cy + 24)' in content
+
+        # E. Sinosphere Chop (Procedure 1 County)
+        assert '<!-- Seal Script / Classical Hanzi Logograph (Carved in Relief) -->' in content
+        assert 'font-size="${hanziText.length > 1 ? 46 : 68}"' in content
+
+        # F. Vesica Seal (Ecclesiastical)
+        assert 'y="${def.charges.length > 0 ? 105 : 140}"' in content
+        assert 'CHARGES[c](def.chargeColor || PALETTE.or, 0.50, 110, 168)' in content
+
+        # G. Civic Badge (Barony)
+        assert '<!-- Sinitic Hanzi Logograph on Civic Badge -->' in content
+        assert 'y="${def.charges.length > 0 ? 70 : 95}"' in content
+        assert 'CHARGES[c](def.chargeColor, 0.44, 90, 118)' in content
+
+

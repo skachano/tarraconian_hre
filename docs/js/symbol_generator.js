@@ -355,6 +355,18 @@
     dragon: { tarrNoun: 'Drache', enNoun: 'dragon', enArticle: 'a' }
   };
 
+  const CANONICAL_SINOSPHERE_HANZI = {
+    e_zhongyuan: '中原',
+    e_liangyi: '梁益',
+    e_jingyang: '荆扬',
+    e_yongliang: '雍凉',
+    e_lingnan: '岭南',
+    e_goryeo: '三韩',
+    e_japan: '日本',
+    e_andong: '安东',
+    e_amur: '阿穆尔'
+  };
+
   function formatBlazon(fieldKey, chargeKey, chargeColorHex) {
     const fieldTinc = TINCTURES[fieldKey] || TINCTURES.gules;
     let chargeTincKey = 'argent';
@@ -475,7 +487,7 @@
       origName = props.b_origin || props.origin || props.name || '';
       anachNote = props.b_anachronism || props.anachronism || '';
       calque = props.b_calque || props.calque || '';
-      hanzi = props.b_hanzi || '';
+      hanzi = props.b_hanzi || props.c_hanzi || '';
     } else {
       // County tier (default)
       tarrName = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || props.tarr || props.c_tarr || '';
@@ -483,6 +495,10 @@
       anachNote = props.c_anachronism || props.anachronism || '';
       calque = props.c_calque || props.calque || '';
       hanzi = props.c_hanzi || props.hanzi || '';
+    }
+
+    if (!hanzi && CANONICAL_SINOSPHERE_HANZI[key]) {
+      hanzi = CANONICAL_SINOSPHERE_HANZI[key];
     }
 
     tarrName = (tarrName || key).toLowerCase();
@@ -601,8 +617,11 @@
     }
 
     // 2. Procedure 1: Sinospheric Titles (Hanzi Preserved)
-    if (hanzi || key.startsWith('c_chi_') || key.startsWith('c_jap_') || props.c_hanzi) {
-      const charStr = hanzi ? hanzi.charAt(0) : '城';
+    if (hanzi || key.startsWith('c_chi_') || key.startsWith('c_jap_') || props.c_hanzi || CANONICAL_SINOSPHERE_HANZI[key]) {
+      if (!hanzi && CANONICAL_SINOSPHERE_HANZI[key]) {
+        hanzi = CANONICAL_SINOSPHERE_HANZI[key];
+      }
+      const charStr = hanzi ? (hanzi.length <= 2 ? hanzi : hanzi.substring(0, 2)) : '城';
       let calqueCharge = 'mount_triple';
       let fieldColor = 'vermilion';
 
@@ -637,10 +656,11 @@
         ordinary: 'solid',
         charges: [calqueCharge],
         hanzi: hanzi || '州',
+        hanziChar: charStr,
         chargeColor: PALETTE.or,
         blazonTarr: `In ${fieldTinc.tarr} das Siegel-Schriftzeichen ${charStr} begleitet van einem goldenen ${chargeMeta.tarrNoun}`,
         blazonEn: `${fieldTinc.en}, the seal-script glyph ${charStr} accompanied by ${chargeMeta.enArticle ? chargeMeta.enArticle + ' ' : ''}${chargeMeta.enNoun} Or`,
-        legend: `${(props.tarr_hist || props.tarr || key).toUpperCase()} • ${charStr}之印`,
+        legend: `${(props.tarr_hist || props.tarr || tarrName || key).toUpperCase()} • ${charStr}之印`,
         source: 'Procedure 1 Sinosphere Continuity Protocol'
       };
     }
@@ -783,6 +803,9 @@
     const bannerX = 35, bannerY = 42, bannerW = 150, bannerH = 185;
     const uid = getUniqueId('vex');
     const fColor = PALETTE[def.field] || PALETTE.gules;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
+    const hanziColor = (def.field === 'or' || def.field === 'argent') ? PALETTE.sable : (def.chargeColor || PALETTE.or);
+    const hanziStroke = hanziColor === PALETTE.sable ? 'none' : PALETTE.sable;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -808,13 +831,22 @@
           <!-- Base Field Color Rect -->
           <rect x="${bannerX}" y="${bannerY}" width="${bannerW}" height="${bannerH}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="1.5" rx="2" />
 
-          <!-- Clipped Field Ordinaries & Charges -->
+          <!-- Clipped Field Ordinaries & Charges / Hanzi -->
           <g clip-path="url(#${uid}_clip)">
             ${renderField(def, W, H)}
             <!-- Inner Gold Border -->
             <rect x="${bannerX + 5}" y="${bannerY + 5}" width="${bannerW - 10}" height="${bannerH - 10}" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" />
-            <!-- Charges -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.82, 110, 135) : '').join('')}
+            <!-- Charges / Hanzi -->
+            ${hanziText ? `
+              <!-- Classical Sinitic Hanzi Logograph on Imperial Vexillum -->
+              <text x="110" y="${def.charges.length > 0 ? 102 : 135}" text-anchor="middle" dominant-baseline="central" fill="${hanziColor}" stroke="${hanziStroke}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? (def.charges.length > 0 ? 36 : 46) : (def.charges.length > 0 ? 50 : 64)}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '4' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.55, 110, 166) : '').join('')}
+            ` : `
+              <!-- Standard Charges -->
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.82, 110, 135) : '').join('')}
+            `}
           </g>
 
           <!-- Bottom Gold Fringe -->
@@ -840,6 +872,9 @@
     const gonfanonPath = "M 35 45 L 185 45 L 185 165 L 155 165 L 135 240 L 115 165 L 85 240 L 65 165 L 35 165 Z";
     const uid = getUniqueId('gonf');
     const fColor = PALETTE[def.field] || PALETTE.gules;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
+    const hanziColor = (def.field === 'or' || def.field === 'argent') ? PALETTE.sable : (def.chargeColor || PALETTE.or);
+    const hanziStroke = hanziColor === PALETTE.sable ? 'none' : PALETTE.sable;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -865,8 +900,17 @@
             ${renderField(def, W, H)}
             <!-- Decorative Border Piping -->
             <path d="M 40 50 L 180 50 L 180 160 L 152 160 L 135 228 L 118 160 L 82 228 L 65 160 L 40 160 Z" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" opacity="0.9" />
-            <!-- Charges placed in the upper square -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.72, 110, 105) : '').join('')}
+            <!-- Charges / Hanzi placed in the upper square -->
+            ${hanziText ? `
+              <!-- Sinitic Hanzi Logograph on Kingdom Gonfanon -->
+              <text x="110" y="${def.charges.length > 0 ? 86 : 105}" text-anchor="middle" dominant-baseline="central" fill="${hanziColor}" stroke="${hanziStroke}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? (def.charges.length > 0 ? 30 : 40) : (def.charges.length > 0 ? 42 : 54)}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '3' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.46, 110, 134) : '').join('')}
+            ` : `
+              <!-- Standard Charges -->
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.72, 110, 105) : '').join('')}
+            `}
           </g>
         </g>
       </svg>
@@ -879,6 +923,9 @@
     const cx = 110, cy = 125, rx = 82, ry = 104;
     const uid = getUniqueId('scut');
     const fColor = PALETTE[def.field] || PALETTE.gules;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
+    const hanziColor = (def.field === 'or' || def.field === 'argent') ? PALETTE.sable : (def.chargeColor || PALETTE.or);
+    const hanziStroke = hanziColor === PALETTE.sable ? 'none' : PALETTE.sable;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -901,13 +948,22 @@
           <ellipse cx="${cx}" cy="${cy}" rx="${rx + 6}" ry="${ry + 6}" fill="${PALETTE.brass}" stroke="${PALETTE.sable}" stroke-width="2" />
           <!-- Shield Base Face -->
           <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fColor}" />
-          <!-- Shield Face Clipped Ordinaries & Charges -->
+          <!-- Shield Face Clipped Ordinaries & Charges / Hanzi -->
           <g clip-path="url(#${uid}_clip)">
             ${renderField(def, W, H)}
             <!-- Radiating / Concentric Notitia Ring -->
             <ellipse cx="${cx}" cy="${cy}" rx="${rx - 12}" ry="${ry - 12}" fill="none" stroke="${PALETTE.or}" stroke-width="3" stroke-dasharray="10 6" opacity="0.8" />
-            <!-- Charges around Boss -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, cx, cy - 25) : '').join('')}
+            <!-- Charges / Hanzi around Boss -->
+            ${hanziText ? `
+              <!-- Sinitic Hanzi Logograph on Notitia Scutum above Boss -->
+              <text x="${cx}" y="${def.charges.length > 0 ? 75 : 82}" text-anchor="middle" dominant-baseline="central" fill="${hanziColor}" stroke="${hanziStroke}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? 26 : 36}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '2' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.45, cx, cy + 50) : '').join('')}
+            ` : `
+              <!-- Standard Charges -->
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, cx, cy - 25) : '').join('')}
+            `}
           </g>
           <!-- Inner Rim Stitching -->
           <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="${PALETTE.sable}" stroke-width="2" />
@@ -933,6 +989,7 @@
     const legendText = def.legend || '+ S. MAGISTRATVS • IMPERII •';
     const uid = getUniqueId('bulla');
     const fColor = PALETTE[def.field] || PALETTE.gules;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -970,8 +1027,17 @@
             ${renderField(def, W, H)}
             <!-- Inner Beaded Ring -->
             <circle cx="${cx}" cy="${cy}" r="${rInner - 2}" fill="none" stroke="${PALETTE.or}" stroke-width="1.5" />
-            <!-- Central Civic / Canting Charge -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.62, cx, cy) : '').join('')}
+            <!-- Central Civic / Canting Charge / Hanzi -->
+            ${hanziText ? `
+              <!-- Sinitic Hanzi Logograph on Bulla Seal -->
+              <text x="${cx}" y="${def.charges.length > 0 ? 98 : 120}" text-anchor="middle" dominant-baseline="central" fill="${PALETTE.or_bright}" stroke="${PALETTE.sable}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? (def.charges.length > 0 ? 24 : 32) : (def.charges.length > 0 ? 32 : 44)}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '2' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.42, cx, cy + 24) : '').join('')}
+            ` : `
+              <!-- Standard Charges -->
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.62, cx, cy) : '').join('')}
+            `}
           </g>
         </g>
       </svg>
@@ -982,7 +1048,7 @@
   function renderSinosphereChop(def) {
     const W = 220, H = 220;
     const boxSize = 170, boxX = 25, boxY = 25;
-    const hanziChar = def.hanzi ? def.hanzi.charAt(0) : '州';
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '州');
     const ink = PALETTE[def.field] || PALETTE.vermilion;
     const inkDark = def.field === 'azure' ? PALETTE.azure : (def.field === 'vert' ? PALETTE.vert : PALETTE.vermilion_dark);
     const uid = getUniqueId('chop');
@@ -1019,8 +1085,8 @@
           </g>
 
           <!-- Seal Script / Classical Hanzi Logograph (Carved in Relief) -->
-          <text x="110" y="125" text-anchor="middle" dominant-baseline="central" fill="${ink}" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="68" font-weight="900" letter-spacing="2">
-            ${hanziChar}
+          <text x="110" y="120" text-anchor="middle" dominant-baseline="central" fill="${ink}" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? 46 : 68}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '4' : '0'}">
+            ${hanziText}
           </text>
 
           <!-- Bottom Seal Legend -->
@@ -1038,6 +1104,9 @@
     const vesicaPath = "M 110 25 C 185 85, 185 185, 110 245 C 35 185, 35 85, 110 25 Z";
     const uid = getUniqueId('vesica');
     const fColor = PALETTE[def.field] || PALETTE.purpure;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
+    const hanziColor = (def.field === 'or' || def.field === 'argent') ? PALETTE.sable : (def.chargeColor || PALETTE.or);
+    const hanziStroke = hanziColor === PALETTE.sable ? 'none' : PALETTE.sable;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -1057,8 +1126,15 @@
             <path d="${vesicaPath}" fill="none" stroke="${PALETTE.or}" stroke-width="4" stroke-dasharray="8 4" opacity="0.85" />
             <!-- Gothic Canopy Arch at Top -->
             <path d="M 65 75 Q 110 40 155 75 Q 110 65 65 75 Z" fill="${PALETTE.or}" stroke="${PALETTE.sable}" stroke-width="1.2" />
-            <!-- Religious / Patriarchal Charges -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.72, 110, 140) : '').join('')}
+            <!-- Religious / Patriarchal Charges / Hanzi -->
+            ${hanziText ? `
+              <text x="110" y="${def.charges.length > 0 ? 105 : 140}" text-anchor="middle" dominant-baseline="central" fill="${hanziColor}" stroke="${hanziStroke}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? (def.charges.length > 0 ? 28 : 38) : (def.charges.length > 0 ? 38 : 50)}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '2' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.50, 110, 168) : '').join('')}
+            ` : `
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.72, 110, 140) : '').join('')}
+            `}
           </g>
           <!-- Border Trim -->
           <path d="${vesicaPath}" fill="none" stroke="${PALETTE.or}" stroke-width="1.5" />
@@ -1073,6 +1149,9 @@
     const badgePath = "M 30 25 L 150 25 L 150 110 C 150 155, 90 180, 90 180 C 90 180, 30 155, 30 110 Z";
     const uid = getUniqueId('badge');
     const fColor = PALETTE[def.field] || PALETTE.azure;
+    const hanziText = def.hanziChar || (def.hanzi ? (def.hanzi.length <= 2 ? def.hanzi : def.hanzi.substring(0, 2)) : '');
+    const hanziColor = (def.field === 'or' || def.field === 'argent') ? PALETTE.sable : (def.chargeColor || PALETTE.or);
+    const hanziStroke = hanziColor === PALETTE.sable ? 'none' : PALETTE.sable;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -1090,8 +1169,17 @@
           <g clip-path="url(#${uid}_clip)">
             <rect x="30" y="25" width="120" height="155" fill="${fColor}" />
             <path d="${badgePath}" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" />
-            <!-- Holding Charge -->
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, 90, 95) : '').join('')}
+            <!-- Holding Charge / Hanzi -->
+            ${hanziText ? `
+              <!-- Sinitic Hanzi Logograph on Civic Badge -->
+              <text x="90" y="${def.charges.length > 0 ? 70 : 95}" text-anchor="middle" dominant-baseline="central" fill="${hanziColor}" stroke="${hanziStroke}" stroke-width="1.2" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="${hanziText.length > 1 ? (def.charges.length > 0 ? 24 : 34) : (def.charges.length > 0 ? 32 : 46)}" font-weight="900" letter-spacing="${hanziText.length > 1 ? '2' : '0'}">
+                ${hanziText}
+              </text>
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.44, 90, 118) : '').join('')}
+            ` : `
+              <!-- Standard Charges -->
+              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, 90, 95) : '').join('')}
+            `}
           </g>
         </g>
       </svg>
@@ -1187,6 +1275,7 @@
     TINCTURES,
     CHARGE_BLAZONS,
     TINCTURE_PATTERNS,
+    CANONICAL_SINOSPHERE_HANZI,
     formatBlazon,
     analyzeTitle
   };
