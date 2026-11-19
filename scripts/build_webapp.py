@@ -27,7 +27,8 @@ def main():
     shutil.copy2(WEB_DIR / "css" / "styles.css", DOCS_DIR / "css" / "styles.css")
 
     (DOCS_DIR / "js").mkdir(parents=True, exist_ok=True)
-    shutil.copy2(WEB_DIR / "js" / "app.js", DOCS_DIR / "js" / "app.js")
+    for js_file in (WEB_DIR / "js").glob("*.js"):
+        shutil.copy2(js_file, DOCS_DIR / "js" / js_file.name)
 
     if (WEB_DIR / "vendor").exists():
         if (DOCS_DIR / "vendor").exists():

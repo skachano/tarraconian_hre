@@ -719,6 +719,20 @@ function openInspector(props, tier) {
   bcDuchy.onclick = () => selectTitleByKey(props.duchy, 'duchy');
   bcCounty.onclick = () => selectTitleByKey(props.county, 'county');
 
+  // Render Procedural Title Symbol (Signa Imperii)
+  const symbolCard = document.getElementById('drawer-symbol-card');
+  if (symbolCard && window.TarraconianSymbols && !isUnoccupiedBarony) {
+    window.TarraconianSymbols.renderSymbolToElement(
+      symbolCard,
+      currentKey,
+      props,
+      tier
+    );
+  } else if (symbolCard) {
+    symbolCard.classList.add('hidden');
+    symbolCard.innerHTML = '';
+  }
+
   // Constituent Titles list in drawer
   renderConstituentTitles(props, tier, baroniesSection, baroniesLabel, baroniesList);
 
@@ -862,6 +876,11 @@ async function selectTitleByKey(titleKey, tier) {
 
 function closeInspector() {
   document.getElementById('inspector-drawer').classList.remove('open');
+  const symbolCard = document.getElementById('drawer-symbol-card');
+  if (symbolCard) {
+    symbolCard.classList.add('hidden');
+    symbolCard.innerHTML = '';
+  }
   if (selectedLayers.length > 0) {
     for (const l of selectedLayers) {
       resetLayerStyle(l);
@@ -1154,7 +1173,8 @@ function initLinguisticsModal() {
   const tabPanes = {
     tarraconian: document.getElementById('tab-pane-tarraconian'),
     sinosphere: document.getElementById('tab-pane-sinosphere'),
-    lexicon: document.getElementById('tab-pane-lexicon')
+    lexicon: document.getElementById('tab-pane-lexicon'),
+    insignia: document.getElementById('tab-pane-insignia')
   };
 
   tabBtns.forEach(btn => {
@@ -1180,6 +1200,8 @@ function initLinguisticsModal() {
 
       if (targetTab === 'lexicon') {
         await ensureKanjiLexiconLoaded();
+      } else if (targetTab === 'insignia') {
+        renderInsigniaGallery();
       }
     });
   });
@@ -1294,4 +1316,60 @@ function renderKanjiLexiconTable() {
       </tr>
     `;
   }).join('');
+}
+
+// ---------------------------------------------------------------------------
+// Signa Imperii (Insignia & Title Symbol Gallery)
+// ---------------------------------------------------------------------------
+function renderInsigniaGallery() {
+  const container = document.getElementById('insignia-gallery-grid');
+  if (!container || container.children.length > 0) return;
+  if (!window.TarraconianSymbols) return;
+
+  const showcaseTitles = [
+    { key: 'h_roman_empire', tier: 'empire', label: 'Dat Rômische Keiserrîch', subtitle: 'Restored Hegemony' },
+    { key: 'k_france', tier: 'kingdom', label: 'Vrancrîch', subtitle: 'Regenat van Vrancrîch' },
+    { key: 'k_east_francia', tier: 'kingdom', label: 'Dütschlant', subtitle: 'Regenat van Dütschlant' },
+    { key: 'd_upper_lorraine', tier: 'duchy', label: 'Ober-Lôthringen', subtitle: 'Gubernat (Dynastic Cradle)' },
+    { key: 'd_barcelona', tier: 'duchy', label: 'Barcelona', subtitle: 'Gubernat van Barcelona' },
+    { key: 'c_tarragona', tier: 'county', label: 'Tarragôn', subtitle: 'Magistrat (Cultural Homeland)' },
+    { key: 'c_roma', tier: 'county', label: 'Rôm (Roma)', subtitle: 'Imperial & Apostolic Capital' },
+    { key: 'c_metz', tier: 'county', label: 'Metz', subtitle: 'Imperial Chancellery City' },
+    { key: 'c_lviv', tier: 'county', label: 'Swenigorot (Lemberg)', subtitle: 'Resolved 10th-c. Gord' },
+    { key: 'c_szekesfehervar', tier: 'county', label: 'Stûlwîtzenburch', subtitle: 'Coronation Seat of Hungary' },
+    { key: 'c_nancy', tier: 'county', label: 'Lûnstat (Nancy)', subtitle: 'Resolved Antiquity Seat' },
+    { key: 'c_byzantion', tier: 'county', label: 'Konstantinôpel (Bîsantz)', subtitle: 'Eastern Imperial Capital' },
+    { key: 'c_jinzhou', tier: 'county', label: 'Goltberch (金州)', subtitle: 'Procedure 1 Sinitic Prefect' },
+    { key: 'c_dongguan', tier: 'county', label: 'Ôsttor (東莞)', subtitle: 'Procedure 1 Maritime Gate' },
+    { key: 'k_papal_state', tier: 'kingdom', label: 'Patrimonium Petri', subtitle: 'Papal Caesaropapist See' }
+  ];
+
+  container.innerHTML = showcaseTitles.map(s => {
+    const sym = window.TarraconianSymbols.generateSymbol(s.key, { tarr: s.label }, s.tier);
+    return `
+      <div class="insignia-gallery-card" data-key="${s.key}" data-tier="${s.tier}" title="Click to inspect ${s.label} on map">
+        <div class="insignia-card-graphic">
+          ${sym.svgHtml}
+        </div>
+        <div class="insignia-card-title">${s.label}</div>
+        <div class="insignia-card-meta">
+          <span class="symbol-medium-badge">${sym.mediumLabel.split('(')[0].trim()}</span>
+          <span class="tier-badge" style="font-size:0.6rem;padding:1px 6px;">${s.tier.toUpperCase()}</span>
+        </div>
+        <div class="insignia-card-blazon">&ldquo;${sym.blazonTarr}&rdquo;</div>
+        <div class="insignia-card-legend"><code>${sym.legend}</code></div>
+      </div>
+    `;
+  }).join('');
+
+  container.querySelectorAll('.insignia-gallery-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.getAttribute('data-key');
+      const tier = card.getAttribute('data-tier');
+      const modal = document.getElementById('linguistics-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      selectTitleByKey(key, tier);
+    });
+  });
 }

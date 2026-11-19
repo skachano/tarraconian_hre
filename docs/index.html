@@ -87,6 +87,11 @@
       </div>
 
       <div class="drawer-body">
+        <!-- Title Insignia & Symbol Card (Signa Imperii) -->
+        <div id="drawer-symbol-card" class="drawer-symbol-card hidden">
+          <!-- Procedural SVG Symbol rendered by TarraconianSymbols -->
+        </div>
+
         <!-- Title Name Origin -->
         <div id="drawer-origin-group" class="info-group">
           <label>Title Name Origin</label>
@@ -197,6 +202,9 @@
         </button>
         <button class="modal-tab-btn" data-tab="lexicon" role="tab" aria-selected="false">
           Hanzi Calque Lexicon (641 Characters)
+        </button>
+        <button class="modal-tab-btn" data-tab="insignia" role="tab" aria-selected="false">
+          Signa Imperii (Insignia Gallery)
         </button>
       </nav>
 
@@ -440,12 +448,45 @@
             </table>
           </div>
         </section>
+
+        <!-- Tab 4: Signa Imperii (Insignia & Title Symbols Gallery) -->
+        <section id="tab-pane-insignia" class="modal-tab-pane hidden" role="tabpanel">
+          <div class="guide-prose">
+            <h3>1. The Doctrine of Imperial Title Symbols (Signa Imperii)</h3>
+            <p>
+              Unlike feudal Western Europe&mdash;where personal triangular heater shields and dynastic quarterings emerged from multinational Crusades and the hereditary patrimonialization of fiefs&mdash;the restored <strong>Roman Empire (1059&ndash;1194)</strong> is an <strong>Administrative Realm</strong> governing <strong>2,644 counties</strong> across 47 empires and 213 kingdoms.
+            </p>
+            <p>
+              Because provincial governorships (<em>Regenate</em>, <em>Gubernate</em>, <em>Magistrate</em>) are <strong>appointed administrative offices</strong> (<code>appointment_succession</code>) rather than private hereditary property, the symbol belongs to the <strong>office and jurisdiction (Amtszeichen)</strong>, not the temporary governor's lineage.
+            </p>
+
+            <h3>2. The Five Physical Media by De Jure Rank</h3>
+            <ul>
+              <li><strong>Imperial Vexillum (Empire):</strong> Fringed silk square standard mounted on a golden crossbar with cords, tassels, and imperial finials, derived from the Late Roman <em>vexillum</em> and the 69 in-save warbanners.</li>
+              <li><strong>Three-Tailed Gonfanon (Kingdom / Regenat):</strong> Carolingian and Catalan investiture warbanner (<em>Amtsvanen</em>) with three swallow-tailed streamers.</li>
+              <li><strong>Notitia Command Shield (Duchy / Gubernat):</strong> Oval or round Late-Roman command shield with metallic umbo (boss) and radiating provincial border rim, directly evoking the <em>Notitia Dignitatum</em>.</li>
+              <li><strong>Circular Chancellery Bulla (County / Magistrat):</strong> Red wax or cast lead bulla with an outer Latin/Tarraconian epigraphic ring (<code>+ SIGILLVM MAGISTRATVS ...</code>) enclosing the municipal/civic canting charge.</li>
+              <li><strong>Sinosphere Vermilion Chop (Procedure 1 Counties):</strong> Square carved jade/ivory seal impression (<em>Gu&oacute;xī</em>) stamped in vermilion cinnabar ink, bearing classical Hanzi logographs and corner meander ornaments.</li>
+              <li><strong>Pointed Mandorla / Vesica Piscis (Ecclesiastical):</strong> Archiepiscopal and patriarchal ecclesiastical seal under the Caesaropapist authority of the Pope-Emperor.</li>
+            </ul>
+
+            <h3>3. Interactive Insignia Armorial Gallery</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem">
+              Click any emblem card below to automatically select, inspect, and zoom to that jurisdiction on the imperial map canvas:
+            </p>
+            <div id="insignia-gallery-grid" class="insignia-gallery-grid">
+              <!-- Dynamically populated by renderInsigniaGallery() -->
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 
   <!-- Leaflet JS (Local Vendor) -->
   <script src="vendor/leaflet/leaflet.js"></script>
+  <!-- Procedural Symbol Generator JS -->
+  <script src="js/symbol_generator.js"></script>
   <!-- App JS -->
   <script type="module" src="js/app.js"></script>
 </body>

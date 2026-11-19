@@ -616,3 +616,77 @@ class TestSinosphereLinguistics:
         assert tree_data["e_japan"]["hanzi"] == "日本"
         assert tree_data["e_goryeo"]["hanzi"] == "三韩"
         assert tree_data["e_zhongyuan"]["hanzi"] == "中原"
+
+
+class TestSymbolGenerator:
+    """Validates the procedural SVG symbol generator (Signa Imperii)."""
+
+    def test_symbol_generator_files_exist(self):
+        web_js = REPO_DIR / "web" / "js" / "symbol_generator.js"
+        docs_js = DOCS_DIR / "js" / "symbol_generator.js"
+        assert web_js.exists(), "web/js/symbol_generator.js is missing"
+        assert docs_js.exists(), "docs/js/symbol_generator.js is missing"
+        assert web_js.stat().st_size > 5000, "symbol_generator.js seems too short"
+        assert docs_js.stat().st_size == web_js.stat().st_size, "docs/js/symbol_generator.js is out of sync"
+
+    def test_index_html_symbol_integration(self):
+        index_path = DOCS_DIR / "index.html"
+        content = index_path.read_text(encoding="utf-8")
+        assert 'id="drawer-symbol-card"' in content
+        assert 'id="insignia-gallery-grid"' in content
+        assert 'id="tab-pane-insignia"' in content
+        assert 'data-tab="insignia"' in content
+        assert 'src="js/symbol_generator.js"' in content
+
+    def test_symbol_generator_content(self):
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # Tinctures & Palette
+        for tincture in ["or", "argent", "gules", "sable", "azure", "vert", "vermilion", "purpure"]:
+            assert f"{tincture}:" in content, f"Missing tincture {tincture} in PALETTE"
+
+        # Key Vector Charges
+        for charge in [
+            "eagle_double",
+            "alerion",
+            "castrum",
+            "roman_gate",
+            "mount_triple",
+            "bridge",
+            "waves",
+            "bell",
+            "keys_st_peter",
+            "crozier",
+            "cross_patriarchal",
+            "cross_byzantine",
+            "tree_chestnut",
+            "lion_rampant",
+            "ship",
+            "crown",
+            "dragon",
+        ]:
+            assert f"{charge}:" in content, f"Missing charge builder {charge}"
+
+        # Media Renderers
+        for medium in [
+            "renderVexillum",
+            "renderGonfanon",
+            "renderNotitiaScutum",
+            "renderBullaSeal",
+            "renderSinosphereChop",
+            "renderVesicaSeal",
+            "renderCivicBadge",
+        ]:
+            assert medium in content, f"Missing medium renderer {medium}"
+
+        # Canonical Historical & Calqued Titles
+        for key in ["h_roman_empire", "c_roma", "c_tarragona", "c_barcelona", "c_metz", "c_lviv", "c_szekesfehervar", "c_byzantion"]:
+            assert key in content, f"Missing canonical handler for {key}"
+
+    def test_app_js_symbol_integration(self):
+        app_js_path = DOCS_DIR / "js" / "app.js"
+        content = app_js_path.read_text(encoding="utf-8")
+        assert "drawer-symbol-card" in content
+        assert "TarraconianSymbols.renderSymbolToElement" in content
+        assert "renderInsigniaGallery" in content
