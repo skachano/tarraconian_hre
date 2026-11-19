@@ -77,13 +77,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chelmsford": {
-    "name": "Chelmsvurt",
-    "b_tarr": "Chelmsvurt",
-    "b_tarr_direct": "Chelmsvurt",
-    "b_tarr_hist": "Chelmsvurt",
+    "name": "Tschelmsvurt",
+    "b_tarr": "Tschelmsvurt",
+    "b_tarr_direct": "Tschelmsvurt",
+    "b_tarr_hist": "Tschelmsvurt",
     "b_origin": "Chelmsford (constituent holding of Ôstsachsen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɛlms.vʊrt]",
+    "b_ipa": "[ˈtʃɛlms.vʊrt]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -396,13 +396,13 @@
     "category": "capital_eponymous"
   },
   "b_northwich": {
-    "name": "Northwich",
-    "b_tarr": "Northwich",
-    "b_tarr_direct": "Northwich",
-    "b_tarr_hist": "Northwich",
+    "name": "Nordwîch",
+    "b_tarr": "Nordwîch",
+    "b_tarr_direct": "Nordwîch",
+    "b_tarr_hist": "Nordwîch",
     "b_origin": "Northwich (constituent holding of Tschesterschîr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɔrth.wɪç]",
+    "b_ipa": "[nɔrd.ˈwiːç]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -429,13 +429,13 @@
     "category": "capital_eponymous"
   },
   "b_chesterfield": {
-    "name": "Chesterfield",
-    "b_tarr": "Chesterfield",
-    "b_tarr_direct": "Chesterfield",
-    "b_tarr_hist": "Chesterfield",
+    "name": "Tschesterfild",
+    "b_tarr": "Tschesterfild",
+    "b_tarr_direct": "Tschesterfild",
+    "b_tarr_hist": "Tschesterfild",
     "b_origin": "Chesterfield (constituent holding of Derbî)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɛs.tɛr.fɪ.ɛld]",
+    "b_ipa": "[ˈtʃɛs.tɛr.fɪld]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -1320,13 +1320,13 @@
     "category": "capital_eponymous"
   },
   "b_chichester": {
-    "name": "Chizester",
-    "b_tarr": "Chizester",
-    "b_tarr_direct": "Chizester",
-    "b_tarr_hist": "Chizester",
+    "name": "Tschitschester",
+    "b_tarr": "Tschitschester",
+    "b_tarr_direct": "Tschitschester",
+    "b_tarr_hist": "Tschitschester",
     "b_origin": "Chichester (constituent holding of Sûtsachsen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.tsɛs.tər]",
+    "b_ipa": "[ˈtʃɪ.tʃɛs.tər]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -1397,13 +1397,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_christchurch": {
-    "name": "Christchurch",
-    "b_tarr": "Christchurch",
-    "b_tarr_direct": "Christchurch",
-    "b_tarr_hist": "Christchurch",
+    "name": "Kristkirchen",
+    "b_tarr": "Kristkirchen",
+    "b_tarr_direct": "Kristkirchen",
+    "b_tarr_hist": "Kristkirchen",
     "b_origin": "Christchurch (constituent holding of Hamptûnschîr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxrɪst.xʊrx]",
+    "b_ipa": "[ˈkrɪst.kɪr.xən]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -4609,13 +4609,13 @@
     "category": "capital_eponymous"
   },
   "b_chiny": {
-    "name": "Chiny",
-    "b_tarr": "Chiny",
-    "b_tarr_direct": "Chiny",
-    "b_tarr_hist": "Chiny",
+    "name": "Schinî",
+    "b_tarr": "Schinî",
+    "b_tarr_direct": "Schinî",
+    "b_tarr_hist": "Schinî",
     "b_origin": "Chiny (constituent holding of Buljûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.nɪ]",
+    "b_ipa": "[ʃɪ.ˈniː]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -4653,13 +4653,13 @@
     "category": "capital_eponymous"
   },
   "b_la_roche": {
-    "name": "La Roche",
-    "b_tarr": "La Roche",
-    "b_tarr_direct": "La Roche",
-    "b_tarr_hist": "La Roche",
+    "name": "La Rosche",
+    "b_tarr": "La Rosche",
+    "b_tarr_direct": "La Rosche",
+    "b_tarr_hist": "La Rosche",
     "b_origin": "La Roche (constituent holding of Lüttich)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈrɔ.xə]",
+    "b_ipa": "[la ˈrɔ.ʃə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -11451,13 +11451,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_belogradchik": {
-    "name": "Belogradchik",
-    "b_tarr": "Belogradchik",
-    "b_tarr_direct": "Belogradchik",
-    "b_tarr_hist": "Belogradchik",
+    "name": "Belogradtschik",
+    "b_tarr": "Belogradtschik",
+    "b_tarr_direct": "Belogradtschik",
+    "b_tarr_hist": "Belogradtschik",
     "b_origin": "Belogradchik (constituent holding of Bonônje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛ.lɔ.ɡrad.xɪk]",
+    "b_ipa": "[ˈbɛ.lɔ.ɡrad.tʃɪk]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -11506,13 +11506,13 @@
     "category": "capital_eponymous"
   },
   "b_cherven": {
-    "name": "Cherven",
-    "b_tarr": "Cherven",
-    "b_tarr_direct": "Cherven",
-    "b_tarr_hist": "Cherven",
+    "name": "Tscherwen",
+    "b_tarr": "Tscherwen",
+    "b_tarr_direct": "Tscherwen",
+    "b_tarr_hist": "Tscherwen",
     "b_origin": "Cherven (constituent holding of Tscherwen-in-Mösjen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɛr.vən]",
+    "b_ipa": "[ˈtʃɛr.wən]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -11616,13 +11616,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_lovech": {
-    "name": "Lovech",
-    "b_tarr": "Lovech",
-    "b_tarr_direct": "Lovech",
-    "b_tarr_hist": "Lovech",
+    "name": "Lowetsch",
+    "b_tarr": "Lowetsch",
+    "b_tarr_direct": "Lowetsch",
+    "b_tarr_hist": "Lowetsch",
     "b_origin": "Lovech (constituent holding of Nikôpel-an-der-Tuonouwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɔ.vɛç]",
+    "b_ipa": "[ˈlɔ.wɛtʃ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -12199,13 +12199,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_krichim": {
-    "name": "Krichim",
-    "b_tarr": "Krichim",
-    "b_tarr_direct": "Krichim",
-    "b_tarr_hist": "Krichim",
+    "name": "Kritschim",
+    "b_tarr": "Kritschim",
+    "b_tarr_direct": "Kritschim",
+    "b_tarr_hist": "Kritschim",
     "b_origin": "Krichim (constituent holding of Filippôpel)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkrɪ.çɪm]",
+    "b_ipa": "[ˈkrɪ.tʃɪm]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -16324,13 +16324,13 @@
     "category": "capital_eponymous"
   },
   "b_chioggia": {
-    "name": "Chioggia",
-    "b_tarr": "Chioggia",
-    "b_tarr_direct": "Chioggia",
-    "b_tarr_hist": "Chioggia",
+    "name": "Kjôdscha",
+    "b_tarr": "Kjôdscha",
+    "b_tarr_direct": "Kjôdscha",
+    "b_tarr_hist": "Kjôdscha",
     "b_origin": "Chioggia (constituent holding of Venêtjen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.ɔɡ.ɡɪ.a]",
+    "b_ipa": "[ˈkjoː.dʒa]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -16621,13 +16621,13 @@
     "category": "capital_eponymous"
   },
   "b_chieri": {
-    "name": "Chieri",
-    "b_tarr": "Chieri",
-    "b_tarr_direct": "Chieri",
-    "b_tarr_hist": "Chieri",
+    "name": "Kjêri",
+    "b_tarr": "Kjêri",
+    "b_tarr_direct": "Kjêri",
+    "b_tarr_hist": "Kjêri",
     "b_origin": "Chieri (constituent holding of Turîn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.ɛ.rɪ]",
+    "b_ipa": "[ˈkjeː.rɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -16775,13 +16775,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chiari": {
-    "name": "Chiari",
-    "b_tarr": "Chiari",
-    "b_tarr_direct": "Chiari",
-    "b_tarr_hist": "Chiari",
+    "name": "Kjâri",
+    "b_tarr": "Kjâri",
+    "b_tarr_direct": "Kjâri",
+    "b_tarr_hist": "Kjâri",
     "b_origin": "Chiari (constituent holding of Bresche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.a.rɪ]",
+    "b_ipa": "[ˈkjaː.rɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -17028,13 +17028,13 @@
     "category": "capital_eponymous"
   },
   "b_chiavari": {
-    "name": "Chiavari",
-    "b_tarr": "Chiavari",
-    "b_tarr_direct": "Chiavari",
-    "b_tarr_hist": "Chiavari",
+    "name": "Kjâvari",
+    "b_tarr": "Kjâvari",
+    "b_tarr_direct": "Kjâvari",
+    "b_tarr_hist": "Kjâvari",
     "b_origin": "Chiavari (constituent holding of Lûni)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.a.va.rɪ]",
+    "b_ipa": "[ˈkjaː.va.rɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -17281,13 +17281,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chiusi": {
-    "name": "Chiusi",
-    "b_tarr": "Chiusi",
-    "b_tarr_direct": "Chiusi",
-    "b_tarr_hist": "Chiusi",
+    "name": "Kjûsi",
+    "b_tarr": "Kjûsi",
+    "b_tarr_direct": "Kjûsi",
+    "b_tarr_hist": "Kjûsi",
     "b_origin": "Chiusi (constituent holding of Sêne)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.ʊ.zɪ]",
+    "b_ipa": "[ˈkjuː.zɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -17688,13 +17688,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_comacchio": {
-    "name": "Comacchio",
-    "b_tarr": "Comacchio",
-    "b_tarr_direct": "Comacchio",
-    "b_tarr_hist": "Comacchio",
+    "name": "Komakkjô",
+    "b_tarr": "Komakkjô",
+    "b_tarr_direct": "Komakkjô",
+    "b_tarr_hist": "Komakkjô",
     "b_origin": "Comacchio (constituent holding of Ferrâr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɔ.mak.xɪ.ɔ]",
+    "b_ipa": "[kɔ.mak.ˈjoː]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -17930,13 +17930,13 @@
     "category": "capital_eponymous"
   },
   "b_cluieli": {
-    "name": "Chieti",
-    "b_tarr": "Chieti",
-    "b_tarr_direct": "Chieti",
-    "b_tarr_hist": "Chieti",
+    "name": "Kjêti",
+    "b_tarr": "Kjêti",
+    "b_tarr_direct": "Kjêti",
+    "b_tarr_hist": "Kjêti",
     "b_origin": "Chieti (constituent holding of Lantschân)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.ɛ.tɪ]",
+    "b_ipa": "[ˈkjeː.tɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -18062,13 +18062,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_civitavecchia": {
-    "name": "Civitavecchia",
-    "b_tarr": "Civitavecchia",
-    "b_tarr_direct": "Civitavecchia",
-    "b_tarr_hist": "Civitavecchia",
+    "name": "Zivitavekkje",
+    "b_tarr": "Zivitavekkje",
+    "b_tarr_direct": "Zivitavekkje",
+    "b_tarr_hist": "Zivitavekkje",
     "b_origin": "Civitavecchia (constituent holding of Viterp)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsɪ.vɪ.ta.vɛk.xɪ.a]",
+    "b_ipa": "[tsɪ.vɪ.ta.ˈvɛk.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -54296,13 +54296,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_montereau": {
-    "name": "Montereau",
-    "b_tarr": "Montereau",
-    "b_tarr_direct": "Montereau",
-    "b_tarr_hist": "Montereau",
+    "name": "Monterô",
+    "b_tarr": "Monterô",
+    "b_tarr_direct": "Monterô",
+    "b_tarr_hist": "Monterô",
     "b_origin": "Montereau (constituent holding of Melûn)",
     "b_anachronism": "",
-    "b_ipa": "[mɔn.tɛ.rɛ.ˈɔʊ]",
+    "b_ipa": "[mɔn.tɛ.ˈroː]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -54538,13 +54538,13 @@
     "category": "capital_eponymous"
   },
   "b_loches": {
-    "name": "Loches",
-    "b_tarr": "Loches",
-    "b_tarr_direct": "Loches",
-    "b_tarr_hist": "Loches",
+    "name": "Lôsches",
+    "b_tarr": "Lôsches",
+    "b_tarr_direct": "Lôsches",
+    "b_tarr_hist": "Lôsches",
     "b_origin": "Loches (constituent holding of Turêne)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɔ.xɛs]",
+    "b_ipa": "[ˈloː.ʃɛs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -54637,13 +54637,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_la_fleche": {
-    "name": "La Flêche",
-    "b_tarr": "La Flêche",
-    "b_tarr_direct": "La Flêche",
-    "b_tarr_hist": "La Flêche",
+    "name": "La Flêsche",
+    "b_tarr": "La Flêsche",
+    "b_tarr_direct": "La Flêsche",
+    "b_tarr_hist": "La Flêsche",
     "b_origin": "La Flèche (constituent holding of Anschou)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈfleː.çə]",
+    "b_ipa": "[la ˈfleː.ʃə]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -55187,13 +55187,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chatillon": {
-    "name": "Châtillon",
-    "b_tarr": "Châtillon",
-    "b_tarr_direct": "Châtillon",
-    "b_tarr_hist": "Châtillon",
+    "name": "Schâtillôn",
+    "b_tarr": "Schâtillôn",
+    "b_tarr_direct": "Schâtillôn",
+    "b_tarr_hist": "Schâtillôn",
     "b_origin": "Châtillon (constituent holding of Rêms)",
     "b_anachronism": "",
-    "b_ipa": "[xaː.tɪ.ˈʎɔn]",
+    "b_ipa": "[ʃaː.tɪ.ˈʎoːn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55451,13 +55451,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chaumont": {
-    "name": "Chaumunt",
-    "b_tarr": "Chaumunt",
-    "b_tarr_direct": "Chaumunt",
-    "b_tarr_hist": "Chaumunt",
+    "name": "Schaumunt",
+    "b_tarr": "Schaumunt",
+    "b_tarr_direct": "Schaumunt",
+    "b_tarr_hist": "Schaumunt",
     "b_origin": "Chaumont (constituent holding of Dischûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɔʊ.mʊnt]",
+    "b_ipa": "[ˈʃɔʊ.mʊnt]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55528,13 +55528,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chablis": {
-    "name": "Chablis",
-    "b_tarr": "Chablis",
-    "b_tarr_direct": "Chablis",
-    "b_tarr_hist": "Chablis",
+    "name": "Schablîs",
+    "b_tarr": "Schablîs",
+    "b_tarr_direct": "Schablîs",
+    "b_tarr_hist": "Schablîs",
     "b_origin": "Chablis (constituent holding of Oussêr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxa.blɪs]",
+    "b_ipa": "[ʃa.ˈbliːs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55671,13 +55671,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_champs": {
-    "name": "Champs",
-    "b_tarr": "Champs",
-    "b_tarr_direct": "Champs",
-    "b_tarr_hist": "Champs",
+    "name": "Schamps",
+    "b_tarr": "Schamps",
+    "b_tarr_direct": "Schamps",
+    "b_tarr_hist": "Schamps",
     "b_origin": "Champs (constituent holding of Langres)",
     "b_anachronism": "",
-    "b_ipa": "[xamps]",
+    "b_ipa": "[ʃamps]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55957,13 +55957,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_la_teste_de_buch": {
-    "name": "La Teste-De-Buch",
-    "b_tarr": "La Teste-De-Buch",
-    "b_tarr_direct": "La Teste-De-Buch",
-    "b_tarr_hist": "La Teste-De-Buch",
+    "name": "La Teste-De-Büsch",
+    "b_tarr": "La Teste-De-Büsch",
+    "b_tarr_direct": "La Teste-De-Büsch",
+    "b_tarr_hist": "La Teste-De-Büsch",
     "b_origin": "La Teste-de-Buch (constituent holding of Basâs)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈtɛs.tə dɛ bʊx]",
+    "b_ipa": "[la ˈtɛs.tə dɛ byːʃ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -56122,13 +56122,13 @@
     "category": "capital_eponymous"
   },
   "b_chalus": {
-    "name": "Châlus",
-    "b_tarr": "Châlus",
-    "b_tarr_direct": "Châlus",
-    "b_tarr_hist": "Châlus",
+    "name": "Schâlus",
+    "b_tarr": "Schâlus",
+    "b_tarr_direct": "Schâlus",
+    "b_tarr_hist": "Schâlus",
     "b_origin": "Châlus (constituent holding of Lemosîn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxaː.lʊs]",
+    "b_ipa": "[ˈʃaː.lʊs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57860,13 +57860,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_morteau": {
-    "name": "Morteau",
-    "b_tarr": "Morteau",
-    "b_tarr_direct": "Morteau",
-    "b_tarr_hist": "Morteau",
+    "name": "Môrtô",
+    "b_tarr": "Môrtô",
+    "b_tarr_direct": "Môrtô",
+    "b_tarr_hist": "Môrtô",
     "b_origin": "Morteau (constituent holding of Bisantz)",
     "b_anachronism": "",
-    "b_ipa": "[mɔr.tɛ.ˈɔʊ]",
+    "b_ipa": "[moːr.ˈtoː]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57904,13 +57904,13 @@
     "category": "capital_eponymous"
   },
   "b_champagnole": {
-    "name": "Champagnole",
-    "b_tarr": "Champagnole",
-    "b_tarr_direct": "Champagnole",
-    "b_tarr_hist": "Champagnole",
+    "name": "Schampanjôle",
+    "b_tarr": "Schampanjôle",
+    "b_tarr_direct": "Schampanjôle",
+    "b_tarr_hist": "Schampanjôle",
     "b_origin": "Champagnole (constituent holding of Bresse)",
     "b_anachronism": "",
-    "b_ipa": "[xam.paɡ.ˈnɔ.lɛ]",
+    "b_ipa": "[ʃam.pa.ˈɲoː.lɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -58069,13 +58069,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_pedroche": {
-    "name": "Pedroche",
-    "b_tarr": "Pedroche",
-    "b_tarr_direct": "Pedroche",
-    "b_tarr_hist": "Pedroche",
+    "name": "Pêdrôtsche",
+    "b_tarr": "Pêdrôtsche",
+    "b_tarr_direct": "Pêdrôtsche",
+    "b_tarr_hist": "Pêdrôtsche",
     "b_origin": "Pedroche (constituent holding of Kôrdove)",
     "b_anachronism": "",
-    "b_ipa": "[pɛ.ˈdrɔ.xə]",
+    "b_ipa": "[peː.ˈdroː.tʃə]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -59004,13 +59004,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_hornachos": {
-    "name": "Hornachos",
-    "b_tarr": "Hornachos",
-    "b_tarr_direct": "Hornachos",
-    "b_tarr_hist": "Hornachos",
+    "name": "Fornatschos",
+    "b_tarr": "Fornatschos",
+    "b_tarr_direct": "Fornatschos",
+    "b_tarr_hist": "Fornatschos",
     "b_origin": "Hornachos (constituent holding of Medeljîn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɔr.na.xɔs]",
+    "b_ipa": "[ˈfɔr.na.tʃɔs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -59730,13 +59730,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_belchite": {
-    "name": "Belchite",
-    "b_tarr": "Belchite",
-    "b_tarr_direct": "Belchite",
-    "b_tarr_hist": "Belchite",
+    "name": "Beltschîte",
+    "b_tarr": "Beltschîte",
+    "b_tarr_direct": "Beltschîte",
+    "b_tarr_hist": "Beltschîte",
     "b_origin": "Belchite (constituent holding of Râsinburch)",
     "b_anachronism": "",
-    "b_ipa": "[bɛl.ˈxɪ.tə]",
+    "b_ipa": "[bɛl.ˈtʃiː.tə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -60819,13 +60819,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chavez": {
-    "name": "Chaves",
-    "b_tarr": "Chaves",
-    "b_tarr_direct": "Chaves",
-    "b_tarr_hist": "Chaves",
+    "name": "Schâves",
+    "b_tarr": "Schâves",
+    "b_tarr_direct": "Schâves",
+    "b_tarr_hist": "Schâves",
     "b_origin": "Chaves (constituent holding of Port)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxa.vɛs]",
+    "b_ipa": "[ˈʃaː.vɛs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -80817,13 +80817,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chachran": {
-    "name": "Chachran",
-    "b_tarr": "Chachran",
-    "b_tarr_direct": "Chachran",
-    "b_tarr_hist": "Chachran",
+    "name": "Tschachran",
+    "b_tarr": "Tschachran",
+    "b_tarr_direct": "Tschachran",
+    "b_tarr_hist": "Tschachran",
     "b_origin": "Chachran (constituent holding of Utsch)",
     "b_anachronism": "",
-    "b_ipa": "[xax.ˈran]",
+    "b_ipa": "[tʃax.ˈran]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -80971,13 +80971,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chunian": {
-    "name": "Chunian",
-    "b_tarr": "Chunian",
-    "b_tarr_direct": "Chunian",
-    "b_tarr_hist": "Chunian",
+    "name": "Tschunian",
+    "b_tarr": "Tschunian",
+    "b_tarr_direct": "Tschunian",
+    "b_tarr_hist": "Tschunian",
     "b_origin": "Chunian (constituent holding of Lahur)",
     "b_anachronism": "",
-    "b_ipa": "[xʊ.nɪ.ˈan]",
+    "b_ipa": "[tʃʊ.nɪ.ˈan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -84502,13 +84502,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chilas": {
-    "name": "Chilas",
-    "b_tarr": "Chilas",
-    "b_tarr_direct": "Chilas",
-    "b_tarr_hist": "Chilas",
+    "name": "Tschilas",
+    "b_tarr": "Tschilas",
+    "b_tarr_direct": "Tschilas",
+    "b_tarr_hist": "Tschilas",
     "b_origin": "Chilas (constituent holding of Allai)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.las]",
+    "b_ipa": "[ˈtʃɪ.las]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -85019,13 +85019,13 @@
     "category": "capital_eponymous"
   },
   "b_chatigama": {
-    "name": "Chātigāma",
-    "b_tarr": "Chātigāma",
-    "b_tarr_direct": "Chātigāma",
-    "b_tarr_hist": "Chātigāma",
+    "name": "Tschatigama",
+    "b_tarr": "Tschatigama",
+    "b_tarr_direct": "Tschatigama",
+    "b_tarr_hist": "Tschatigama",
     "b_origin": "Chātigāma (constituent holding of Samatate)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxaː.tɪ.ɣaː.ma]",
+    "b_ipa": "[ˈtʃa.tɪ.ɣa.ma]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -85833,13 +85833,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chapra": {
-    "name": "Chapra",
-    "b_tarr": "Chapra",
-    "b_tarr_direct": "Chapra",
-    "b_tarr_hist": "Chapra",
+    "name": "Tschapra",
+    "b_tarr": "Tschapra",
+    "b_tarr_direct": "Tschapra",
+    "b_tarr_hist": "Tschapra",
     "b_origin": "Chapra (constituent holding of Kusinagare)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxa.pra]",
+    "b_ipa": "[ˈtʃa.pra]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -86867,13 +86867,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chutur": {
-    "name": "Chutur",
-    "b_tarr": "Chutur",
-    "b_tarr_direct": "Chutur",
-    "b_tarr_hist": "Chutur",
+    "name": "Tschutur",
+    "b_tarr": "Tschutur",
+    "b_tarr_direct": "Tschutur",
+    "b_tarr_hist": "Tschutur",
     "b_origin": "Chutur (constituent holding of Barasuru)",
     "b_anachronism": "",
-    "b_ipa": "[xʊ.ˈtʊr]",
+    "b_ipa": "[tʃʊ.ˈtʊr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -87175,13 +87175,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chaul": {
-    "name": "Chaul",
-    "b_tarr": "Chaul",
-    "b_tarr_direct": "Chaul",
-    "b_tarr_hist": "Chaul",
+    "name": "Tschaul",
+    "b_tarr": "Tschaul",
+    "b_tarr_direct": "Tschaul",
+    "b_tarr_hist": "Tschaul",
     "b_origin": "Chaul (constituent holding of Surparake)",
     "b_anachronism": "",
-    "b_ipa": "[xɔʊl]",
+    "b_ipa": "[tʃɔʊl]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -87208,13 +87208,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chiplun": {
-    "name": "Chiprarulana",
-    "b_tarr": "Chiprarulana",
-    "b_tarr_direct": "Chiprarulana",
-    "b_tarr_hist": "Chiprarulana",
+    "name": "Tschiprarulana",
+    "b_tarr": "Tschiprarulana",
+    "b_tarr_direct": "Tschiprarulana",
+    "b_tarr_hist": "Tschiprarulana",
     "b_origin": "Chiprarulana (constituent holding of Konkan)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.pra.rʊ.la.na]",
+    "b_ipa": "[ˈtʃɪ.pra.rʊ.la.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -93042,7 +93042,7 @@
     "b_tarr": "Geirrsburch",
     "b_tarr_direct": "Khalatze",
     "b_tarr_hist": "Geirrsburch",
-    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['greedy', 'ambitious'])",
+    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['ambitious', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Geirr of House Njudunge-Örebro.",
     "b_ipa": "[ˈɡɛɪrs.bʊrx]",
     "holding_type": "castle",
@@ -118096,13 +118096,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chiang_klang": {
-    "name": "Chiang Klang",
-    "b_tarr": "Chiang Klang",
-    "b_tarr_direct": "Chiang Klang",
-    "b_tarr_hist": "Chiang Klang",
+    "name": "Tschjang Klang",
+    "b_tarr": "Tschjang Klang",
+    "b_tarr_direct": "Tschjang Klang",
+    "b_tarr_hist": "Tschjang Klang",
     "b_origin": "Chiang Klang (constituent holding of Nan)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.aŋ klaŋ]",
+    "b_ipa": "[tʃjaŋ klaŋ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118129,13 +118129,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chiang_rai": {
-    "name": "Chiang Rai",
-    "b_tarr": "Chiang Rai",
-    "b_tarr_direct": "Chiang Rai",
-    "b_tarr_hist": "Chiang Rai",
+    "name": "Tschjang Rai",
+    "b_tarr": "Tschjang Rai",
+    "b_tarr_direct": "Tschjang Rai",
+    "b_tarr_hist": "Tschjang Rai",
     "b_origin": "Chiang Rai (constituent holding of Ingönjang)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.aŋ rɛɪ]",
+    "b_ipa": "[tʃjaŋ rɛɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -118162,13 +118162,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_thap_chumphon": {
-    "name": "Thap Chumphon",
-    "b_tarr": "Thap Chumphon",
-    "b_tarr_direct": "Thap Chumphon",
-    "b_tarr_hist": "Thap Chumphon",
+    "name": "Thap Tschumphon",
+    "b_tarr": "Thap Tschumphon",
+    "b_tarr_direct": "Thap Tschumphon",
+    "b_tarr_hist": "Thap Tschumphon",
     "b_origin": "Thap Chumphon (constituent holding of Tschakangrau)",
     "b_anachronism": "",
-    "b_ipa": "[thap xʊmp.ˈhɔn]",
+    "b_ipa": "[thap tʃʊmp.ˈhɔn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118305,13 +118305,13 @@
     "category": "capital_eponymous"
   },
   "b_THAI_Chumpon": {
-    "name": "Chumpon",
-    "b_tarr": "Chumpon",
-    "b_tarr_direct": "Chumpon",
-    "b_tarr_hist": "Chumpon",
+    "name": "Tschumpon",
+    "b_tarr": "Tschumpon",
+    "b_tarr_direct": "Tschumpon",
+    "b_tarr_hist": "Tschumpon",
     "b_origin": "Chumpon (constituent holding of Petschaburi)",
     "b_anachronism": "",
-    "b_ipa": "[xʊm.ˈpɔn]",
+    "b_ipa": "[tʃʊm.ˈpɔn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118459,24 +118459,24 @@
     "category": "capital_eponymous"
   },
   "b_chiang_mai": {
-    "name": "Chiang Mai",
-    "b_tarr": "Chiang Mai",
-    "b_tarr_direct": "Chiang Mai",
-    "b_tarr_hist": "Chiang Mai",
+    "name": "Tschjang Mai",
+    "b_tarr": "Tschjang Mai",
+    "b_tarr_direct": "Tschjang Mai",
+    "b_tarr_hist": "Tschjang Mai",
     "b_origin": "Chiang Mai (constituent holding of Haripundschaje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɪ.aŋ mɛɪ]",
+    "b_ipa": "[tʃjaŋ mɛɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
   "b_chom_thong": {
-    "name": "Chom Thong",
-    "b_tarr": "Chom Thong",
-    "b_tarr_direct": "Chom Thong",
-    "b_tarr_hist": "Chom Thong",
+    "name": "Tschom Thong",
+    "b_tarr": "Tschom Thong",
+    "b_tarr_direct": "Tschom Thong",
+    "b_tarr_hist": "Tschom Thong",
     "b_origin": "Chom Thong (constituent holding of Haripundschaje)",
     "b_anachronism": "",
-    "b_ipa": "[xɔm thɔŋ]",
+    "b_ipa": "[tʃɔm thɔŋ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118965,13 +118965,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_choam_khsant": {
-    "name": "Choam Khsant",
-    "b_tarr": "Choam Khsant",
-    "b_tarr_direct": "Choam Khsant",
-    "b_tarr_hist": "Choam Khsant",
+    "name": "Tschoam Khsant",
+    "b_tarr": "Tschoam Khsant",
+    "b_tarr_direct": "Tschoam Khsant",
+    "b_tarr_hist": "Tschoam Khsant",
     "b_origin": "Choam Khsant (constituent holding of Prêa Wihâr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɔ.am khsant]",
+    "b_ipa": "[ˈtʃɔ.am khsant]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -119141,13 +119141,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_phnom_penh": {
-    "name": "Chaturmukha",
-    "b_tarr": "Chaturmukha",
-    "b_tarr_direct": "Chaturmukha",
-    "b_tarr_hist": "Chaturmukha",
+    "name": "Tschaturmukha",
+    "b_tarr": "Tschaturmukha",
+    "b_tarr_direct": "Tschaturmukha",
+    "b_tarr_hist": "Tschaturmukha",
     "b_origin": "Chaturmukha (constituent holding of Angkôr Borêi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxa.tʊr.mʊk.ha]",
+    "b_ipa": "[ˈtʃa.tʊr.mʊk.ha]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -119251,13 +119251,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chachoengsoo": {
-    "name": "Chachoengsoo",
-    "b_tarr": "Chachoengsoo",
-    "b_tarr_direct": "Chachoengsoo",
-    "b_tarr_hist": "Chachoengsoo",
+    "name": "Tschachoengsoo",
+    "b_tarr": "Tschachoengsoo",
+    "b_tarr_direct": "Tschachoengsoo",
+    "b_tarr_hist": "Tschachoengsoo",
     "b_origin": "Chachoengsoo (constituent holding of Muang Pra Rôt)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxa.xɔ.ɛŋ.sɔ.ɔ]",
+    "b_ipa": "[ˈtʃa.xɔ.ɛŋ.sɔ.ɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119438,13 +119438,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_chaiyaphum": {
-    "name": "Chaiyaphum",
-    "b_tarr": "Chaiyaphum",
-    "b_tarr_direct": "Chaiyaphum",
-    "b_tarr_hist": "Chaiyaphum",
+    "name": "Tschaiyaphum",
+    "b_tarr": "Tschaiyaphum",
+    "b_tarr_direct": "Tschaiyaphum",
+    "b_tarr_hist": "Tschaiyaphum",
     "b_origin": "Chaiyaphum (constituent holding of Tschanasche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈxɛɪ.jap.hʊm]",
+    "b_ipa": "[ˈtʃɛɪ.jap.hʊm]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },

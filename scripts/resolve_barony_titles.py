@@ -1018,6 +1018,122 @@ def adapt_european_toponym(name: str) -> str:
         return "Dontzy"
     if re.match(r"^(?:Chambéry|Chambêry)\b", s, re.I):
         return "Schambêrî"
+    if re.match(r"^Ch[aâ]tillon\b", s, re.I):
+        return "Schâtillôn"
+    if re.match(r"^Chaumont\b", s, re.I):
+        return "Schaumunt"
+    if re.match(r"^Chablis\b", s, re.I):
+        return "Schablîs"
+    if re.match(r"^Champs\b", s, re.I):
+        return "Schamps"
+    if re.match(r"^Ch[aâ]lus\b", s, re.I):
+        return "Schâlus"
+    if re.match(r"^Champagnole\b", s, re.I):
+        return "Schampanjôle"
+    if re.match(r"^Chiny\b", s, re.I):
+        return "Schinî"
+    if re.match(r"^(?:La\s+)?Fl[eêè]che\b", s, re.I):
+        return "La Flêsche"
+    if re.match(r"^Loches\b", s, re.I):
+        return "Lôsches"
+    if re.match(r"^(?:La\s+)?Roche\b", s, re.I):
+        return "La Rosche"
+    if re.match(r"^(?:La\s+)?Teste[-\s]+De[-\s]+Buch\b", s, re.I):
+        return "La Teste-De-Büsch"
+    if re.match(r"^Montereau\b", s, re.I):
+        return "Monterô"
+    if re.match(r"^Morteau\b", s, re.I):
+        return "Môrtô"
+
+    # Italian Ch- -> Kj- (velar plosive /k/ before front vowels)
+    if re.match(r"^Chieri\b", s, re.I):
+        return "Kjêri"
+    if re.match(r"^Chiari\b", s, re.I):
+        return "Kjâri"
+    if re.match(r"^Chiavari\b", s, re.I):
+        return "Kjâvari"
+    if re.match(r"^Chiusi\b", s, re.I):
+        return "Kjûsi"
+    if re.match(r"^Chieti\b", s, re.I):
+        return "Kjêti"
+    if re.match(r"^Chioggia\b", s, re.I):
+        return "Kjôdscha"
+    if re.match(r"^Comacchio\b", s, re.I):
+        return "Komakkjô"
+    if re.match(r"^Civitavecchia\b", s, re.I):
+        return "Zivitavekkje"
+
+    # English Ch- -> Tsch-
+    if re.match(r"^Chelmsford\b", s, re.I):
+        return "Tschelmsvurt"
+    if re.match(r"^Chesterfield\b", s, re.I):
+        return "Tschesterfild"
+    if re.match(r"^Chichester\b", s, re.I):
+        return "Tschitschester"
+    if re.match(r"^Christchurch\b", s, re.I):
+        return "Kristkirchen"
+    if re.match(r"^Northwich\b", s, re.I):
+        return "Nordwîch"
+
+    # Iberian Ch- / -ch- -> Sch- / -tsch-
+    if re.match(r"^Chaves\b", s, re.I):
+        return "Schâves"
+    if re.match(r"^Belchite\b", s, re.I):
+        return "Beltschîte"
+    if re.match(r"^Pedroche\b", s, re.I):
+        return "Pêdrôtsche"
+    if re.match(r"^Hornachos\b", s, re.I):
+        return "Fornatschos"
+
+    # Slavic /tʃ/ -> Tsch- / -tsch-
+    if re.match(r"^Cherven\b", s, re.I):
+        return "Tscherwen"
+    if re.match(r"^Belogradchik\b", s, re.I):
+        return "Belogradtschik"
+    if re.match(r"^Lovech\b", s, re.I):
+        return "Lowetsch"
+    if re.match(r"^Krichim\b", s, re.I):
+        return "Kritschim"
+
+    # Indic / Asian / Southeast Asian /tʃ/ -> Tsch-
+    if re.match(r"^Chachran\b", s, re.I):
+        return "Tschachran"
+    if re.match(r"^Chunian\b", s, re.I):
+        return "Tschunian"
+    if re.match(r"^Chilas\b", s, re.I):
+        return "Tschilas"
+    if re.match(r"^Ch[āa]tig[āa]ma\b", s, re.I):
+        return "Tschatigama"
+    if re.match(r"^Chapra\b", s, re.I):
+        return "Tschapra"
+    if re.match(r"^Chutur\b", s, re.I):
+        return "Tschutur"
+    if re.match(r"^Chaul\b", s, re.I):
+        return "Tschaul"
+    if re.match(r"^Chiprarulana\b", s, re.I):
+        return "Tschiprarulana"
+    if re.match(r"^Chiang\s+Klang\b", s, re.I):
+        return "Tschjang Klang"
+    if re.match(r"^Chiang\s+Rai\b", s, re.I):
+        return "Tschjang Rai"
+    if re.match(r"^Chiang\s+Mai\b", s, re.I):
+        return "Tschjang Mai"
+    if re.match(r"^Thap\s+Chumphon\b", s, re.I):
+        return "Thap Tschumphon"
+    if re.match(r"^Chumpon\b", s, re.I):
+        return "Tschumpon"
+    if re.match(r"^Chom\s+Thong\b", s, re.I):
+        return "Tschom Thong"
+    if re.match(r"^Choam\s+Khsant\b", s, re.I):
+        return "Tschoam Khsant"
+    if re.match(r"^Chaturmukha\b", s, re.I):
+        return "Tschaturmukha"
+    if re.match(r"^Chachoengsoo\b", s, re.I):
+        return "Tschachoengsoo"
+    if re.match(r"^Chaiyaphum\b", s, re.I):
+        return "Tschaiyaphum"
+    if re.match(r"^Changdschi\b", s, re.I):
+        return "Tschangdschi"
     if re.match(r"^(?:Montlhéry|Montlhêry)\b", s, re.I):
         return "Muntlêrî"
     if re.match(r"^Castelnaudary\b", s, re.I):

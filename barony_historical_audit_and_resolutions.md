@@ -163,6 +163,76 @@ In [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_
 
 ---
 
+## 4.1 Orthographic & Phonotactic Regularization of `Ch-` Toponyms
+
+In Tarraconian High German orthography, `ch` strictly and exclusively represents the voiceless velar/palatal fricative `[x ~ ç]` (as in *Burch*, *Ach*, *Rîch*, *Everwîch*). Non-Germanic foreign names retaining raw `ch` were previously misparsed by the automated transcription pipeline, generating invalid velar fricatives `[x]` (e.g. `b_chatillon` Châtillon being erroneously transcribed as `[xaː.tɪ.ˈʎɔn]`).
+
+In accordance with [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) and the established precedents in [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) (such as `Schartres`, `Schalûn`, `Schampanje`, `Schambêrî`, and `Tschesterschîr`), all occurrences of foreign `ch` have been regularized across five linguistic domains:
+
+1. **French & Occitan Romance (`/ʃ/` $\rightarrow$ `Sch-` / `-sche`, `-on` $\rightarrow$ `-ôn`):**
+   * `b_chatillon` $\rightarrow$ **`Schâtillôn`** `[ʃaː.tɪ.ˈʎoːn]` (Gallo-Roman *Castellio* / Latin *Castellio ad Matronam*)
+   * `b_chaumont` $\rightarrow$ **`Schaumunt`** `[ˈʃɔʊ.mʊnt]`
+   * `b_chablis` $\rightarrow$ **`Schablîs`** `[ʃa.ˈbliːs]`
+   * `b_champs` $\rightarrow$ **`Schamps`** `[ʃamps]`
+   * `b_chalus` $\rightarrow$ **`Schâlus`** `[ˈʃaː.lʊs]`
+   * `b_champagnole` $\rightarrow$ **`Schampanjôle`** `[ʃam.pa.ˈɲoː.lɛ]`
+   * `b_chiny` $\rightarrow$ **`Schinî`** `[ʃɪ.ˈniː]`
+   * `b_la_fleche` $\rightarrow$ **`La Flêsche`** `[la ˈfleː.ʃə]`
+   * `b_loches` $\rightarrow$ **`Lôsches`** `[ˈloː.ʃɛs]`
+   * `b_la_roche` $\rightarrow$ **`La Rosche`** `[la ˈrɔ.ʃə]`
+   * `b_la_teste_de_buch` $\rightarrow$ **`La Teste-De-Büsch`** `[la ˈtɛs.tə dɛ byːʃ]`
+
+2. **Italian Plosives (`ch` before e/i represents `/k/` $\rightarrow$ `K-` / `Kj-` / `Kk-`):**
+   * `b_chieri` $\rightarrow$ **`Kjêri`** `[ˈkjeː.rɪ]` (Latin *Carreum Potentia* / *Cherium*)
+   * `b_chiari` $\rightarrow$ **`Kjâri`** `[ˈkjaː.rɪ]`
+   * `b_chiavari` $\rightarrow$ **`Kjâvari`** `[ˈkjaː.va.rɪ]`
+   * `b_chiusi` $\rightarrow$ **`Kjûsi`** `[ˈkjuː.zɪ]` (Latin *Clusium*)
+   * `b_cluieli` $\rightarrow$ **`Kjêti`** `[ˈkjeː.tɪ]` (Latin *Teate* / *Chieti*)
+   * `b_chioggia` $\rightarrow$ **`Kjôdscha`** `[ˈkjoː.dʒa]` (Latin *Clodia*)
+   * `b_comacchio` $\rightarrow$ **`Komakkjô`** `[kɔ.mak.ˈjoː]`
+   * `b_civitavecchia` $\rightarrow$ **`Zivitavekkje`** `[tsɪ.vɪ.ta.ˈvɛk.jɛ]`
+
+3. **English Affricates (`/tʃ/` $\rightarrow$ `Tsch-`, `-wich` $\rightarrow$ `-wîch`):**
+   * `b_chelmsford` $\rightarrow$ **`Tschelmsvurt`** `[ˈtʃɛlms.vʊrt]`
+   * `b_chesterfield` $\rightarrow$ **`Tschesterfild`** `[ˈtʃɛs.tər.fɪld]`
+   * `b_chichester` $\rightarrow$ **`Tschitschester`** `[ˈtʃɪ.tʃɛs.tər]`
+   * `b_christchurch` $\rightarrow$ **`Kristkirchen`** `[ˈkrɪst.kɪr.xən]`
+   * `b_northwich` $\rightarrow$ **`Nordwîch`** `[nɔrd.ˈwiːç]`
+
+4. **Iberian & Slavic Affricates (`/tʃ/` / `/ʃ/` $\rightarrow$ `Sch-` / `Tsch-`):**
+   * `b_chaves` $\rightarrow$ **`Schâves`** `[ˈʃaː.vɛs]` (Portuguese /ʃ/)
+   * `b_belchite` $\rightarrow$ **`Beltschîte`** `[bɛl.ˈtʃiː.tə]`
+   * `b_pedroche` $\rightarrow$ **`Pêdrôtsche`** `[peː.ˈdroː.tʃə]`
+   * `b_hornachos` $\rightarrow$ **`Fornatschos`** `[ˈfɔr.na.tʃɔs]`
+   * `b_cherven` $\rightarrow$ **`Tscherwen`** `[ˈtʃɛr.wən]` (Slavic Червен)
+   * `b_belogradchik` $\rightarrow$ **`Belogradtschik`** `[ˈbɛ.lɔ.ɡrad.tʃɪk]` (Bulgarian Белоградчик)
+   * `b_lovech` $\rightarrow$ **`Lowetsch`** `[ˈlɔ.wɛtʃ]` (Bulgarian Ловеч)
+   * `b_krichim` $\rightarrow$ **`Kritschim`** `[ˈkrɪ.tʃɪm]` (Bulgarian Кричим)
+
+5. **Indic, Thai & Southeast Asian Toponyms (`/tʃ/` $\rightarrow$ `Tsch-`):**
+   * `b_chachran` $\rightarrow$ **`Tschachran`** `[tʃax.ˈran]`
+   * `b_chunian` $\rightarrow$ **`Tschunian`** `[tʃʊ.nɪ.ˈan]`
+   * `b_chilas` $\rightarrow$ **`Tschilas`** `[ˈtʃɪ.las]`
+   * `b_chatigama` $\rightarrow$ **`Tschatigama`** `[ˈtʃa.tɪ.ɣa.ma]`
+   * `b_chapra` $\rightarrow$ **`Tschapra`** `[ˈtʃa.pra]`
+   * `b_chutur` $\rightarrow$ **`Tschutur`** `[tʃʊ.ˈtʊr]`
+   * `b_chaul` $\rightarrow$ **`Tschaul`** `[tʃɔʊl]`
+   * `b_chiplun` $\rightarrow$ **`Tschiprarulana`** `[ˈtʃɪ.pra.rʊ.la.na]`
+   * `b_chiang_klang` $\rightarrow$ **`Tschjang Klang`** `[tʃjaŋ klaŋ]`
+   * `b_chiang_rai` $\rightarrow$ **`Tschjang Rai`** `[tʃjaŋ rɛɪ]`
+   * `b_chiang_mai` $\rightarrow$ **`Tschjang Mai`** `[tʃjaŋ mɛɪ]`
+   * `b_thap_chumphon` $\rightarrow$ **`Thap Tschumphon`** `[thap tʃʊmp.ˈhɔn]`
+   * `b_THAI_Chumpon` $\rightarrow$ **`Tschumpon`** `[tʃʊm.ˈpɔn]`
+   * `b_chom_thong` $\rightarrow$ **`Tschom Thong`** `[tʃɔm thɔŋ]`
+   * `b_choam_khsant` $\rightarrow$ **`Tschoam Khsant`** `[ˈtʃɔ.am khsant]`
+   * `b_phnom_penh` $\rightarrow$ **`Tschaturmukha`** `[ˈtʃa.tʊr.mʊk.ha]`
+   * `b_chachoengsoo` $\rightarrow$ **`Tschachoengsoo`** `[ˈtʃa.xɔ.ɛŋ.sɔ.ɔ]`
+   * `b_chaiyaphum` $\rightarrow$ **`Tschaiyaphum`** `[ˈtʃɛɪ.jap.hʊm]`
+
+Authentic velar fricative `/x/` toponyms of Greek (Χ: `Chîos`, `Chalkidîke`, `Charsjanôn`, `Chaldîe`), Slavic (Х: `Chulm`, `Chwosne`, `Chotîn`, `Chopjôr`), and Semitic/Turkic/Mongolic origin (خ / Х: `Chîwe`, `Chotan`, `Chaibâr`, `Chitân`) legitimately retain Tarraconian scribal `Ch-` and phonetic `[x]`.
+
+---
+
 ## 5. Representative Master Register across the 47 Empires
 
 ### 5.1 Western & Central Europe (`e_germany`, `e_france`, `e_britannia`, `e_italia`, `e_spain`)
