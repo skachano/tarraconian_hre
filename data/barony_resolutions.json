@@ -50,7 +50,7 @@
     "b_tarr_hist": "Brentvurt",
     "b_origin": "Brentford (constituent holding of Middelsachsen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbrənt.vʊrt]",
+    "b_ipa": "[ˈbrɛnt.vʊrt]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -1227,7 +1227,7 @@
     "b_tarr_hist": "Kent",
     "b_origin": "Dover (Kent)",
     "b_anachronism": "",
-    "b_ipa": "[kənt]",
+    "b_ipa": "[kɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -1282,7 +1282,7 @@
     "b_tarr_hist": "Guildvurt",
     "b_origin": "Guildford (constituent holding of Sûtrîe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡʊ.ɪld.vʊrt]",
+    "b_ipa": "[ˈɡɪld.vʊrt]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -1887,7 +1887,7 @@
     "b_tarr_hist": "Guent",
     "b_origin": "Caerllion (Gwent)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡʊ.ɛnt]",
+    "b_ipa": "[ɡɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -2591,7 +2591,7 @@
     "b_tarr_hist": "Ros-in-Albe",
     "b_origin": "Dingwall (Ross)",
     "b_anachronism": "",
-    "b_ipa": "[rɔs ɪn ˈal.bə]",
+    "b_ipa": "[rɔs ɪn ˈal.bɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -3207,7 +3207,7 @@
     "b_tarr_hist": "Kilkenny",
     "b_origin": "Kilkenny (constituent holding of Ossorîe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɪl.kə.nɪ]",
+    "b_ipa": "[ˈkɪl.kɛ.nɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -3493,7 +3493,7 @@
     "b_tarr_hist": "Nîenburch-an-der-Wêser",
     "b_origin": "Wölpe (Nîenburch-an-der-Wêser (in-game: Wölpe))",
     "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-    "b_ipa": "[ˈniː.ɛn.bʊrx an dər ˈweː.zər]",
+    "b_ipa": "[ˈniː.ɛn.bʊrx an dɛr ˈweː.zər]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -3548,7 +3548,7 @@
     "b_tarr_hist": "Woldenberch",
     "b_origin": "Woldenberg (constituent holding of Wunstorf)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.dən.bɛrx]",
+    "b_ipa": "[ˈwɔl.dɛn.bɛrx]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -3592,7 +3592,7 @@
     "b_tarr_hist": "Aldenburch",
     "b_origin": "Medieval comital fortress Oldenburg on the Hunte (attested 1108 AD) (in-game: Oldenburg)",
     "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[ˈal.dən.bʊrx]",
+    "b_ipa": "[ˈal.dɛn.bʊrx]",
     "holding_type": "castle",
     "category": "indigenous_restitution"
   },
@@ -3702,7 +3702,7 @@
     "b_tarr_hist": "Bentheim",
     "b_origin": "Bentheim (constituent holding of Îburch)",
     "b_anachronism": "",
-    "b_ipa": "[bənt.ˈhɛɪm]",
+    "b_ipa": "[bɛnt.ˈhɛɪm]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -3845,7 +3845,7 @@
     "b_tarr_hist": "Uelzen",
     "b_origin": "Uelzen (constituent holding of Lûneburch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʊ.ɛl.tsən]",
+    "b_ipa": "[ˈʊ.ɛl.tsɛn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -3889,7 +3889,7 @@
     "b_tarr_hist": "Wolfenbüttel",
     "b_origin": "Wolfenbüttel (constituent holding of Brûnswîch)",
     "b_anachronism": "",
-    "b_ipa": "[wɔl.fən.byː.ˈtəl]",
+    "b_ipa": "[wɔl.fɛn.byː.ˈtəl]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -5198,7 +5198,7 @@
     "b_tarr_hist": "Kölne",
     "b_origin": "Cologne (Cologne)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkøːl.nə]",
+    "b_ipa": "[ˈkøːl.nɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -5715,7 +5715,7 @@
     "b_tarr_hist": "Waldensteinkirchen",
     "b_origin": "Marquardstein — Proprietary collegiate church of House Waldenstein",
     "b_anachronism": "Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler Meginhard of House Waldenstein.",
-    "b_ipa": "[ˈwal.dən.stɛɪ.ŋkɪr.xən]",
+    "b_ipa": "[ˈwal.dɛn.stɛɪ.ŋkɪr.xən]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -5935,7 +5935,7 @@
     "b_tarr_hist": "Wenzenbach",
     "b_origin": "Wenzenbach (constituent holding of Hôhenburch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwən.tsən.bax]",
+    "b_ipa": "[ˈwɛn.tsən.bax]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -6089,7 +6089,7 @@
     "b_tarr_hist": "Lônfelden",
     "b_origin": "Leonfelden (constituent holding of Lintz)",
     "b_anachronism": "",
-    "b_ipa": "[ˈloːn.fɛl.dən]",
+    "b_ipa": "[ˈloːn.fɛl.dɛn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -6111,7 +6111,7 @@
     "b_tarr_hist": "Strasswalchen",
     "b_origin": "Strasswalchen (constituent holding of Wels)",
     "b_anachronism": "",
-    "b_ipa": "[tsant ˈras.wal.xən]",
+    "b_ipa": "[tsant ˈras.wal.xɛn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -6507,7 +6507,7 @@
     "b_tarr_hist": "Zant-Pölten",
     "b_origin": "Sankt Pölten (Sankt Pölten)",
     "b_anachronism": "",
-    "b_ipa": "[tsant ˈpøːl.tən]",
+    "b_ipa": "[tsant ˈpøːl.tɛn]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -6650,7 +6650,7 @@
     "b_tarr_hist": "Wilten",
     "b_origin": "Innsbruck — Historical Option A seat of c_innsbruck",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɪl.tən]",
+    "b_ipa": "[ˈwɪl.tɛn]",
     "holding_type": "castle",
     "category": "option_a_seat"
   },
@@ -6815,7 +6815,7 @@
     "b_tarr_hist": "Kobentz",
     "b_origin": "Knittelfeld (Kobentz / Undrîme (in-game: Knittelfeld))",
     "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-    "b_ipa": "[ˈkɔ.bənts]",
+    "b_ipa": "[ˈkɔ.bɛnts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -6958,7 +6958,7 @@
     "b_tarr_hist": "Vrankenvurt",
     "b_origin": "Frankfurt (Frankfurt)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvra.ŋkən.vʊrt]",
+    "b_ipa": "[ˈvra.ŋkɛn.vʊrt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -7189,7 +7189,7 @@
     "b_tarr_hist": "Pirmasens",
     "b_origin": "Pirmasens (constituent holding of Spîre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpɪr.ma.zəns]",
+    "b_ipa": "[ˈpɪr.ma.zɛns]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -7310,7 +7310,7 @@
     "b_tarr_hist": "Veldenz",
     "b_origin": "Veldenz (constituent holding of Lûtern)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɛl.dənts]",
+    "b_ipa": "[ˈvɛl.dɛnts]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -7486,7 +7486,7 @@
     "b_tarr_hist": "Greiffenst",
     "b_origin": "Greiffenst (constituent holding of Bâbenberch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡrɛɪ.fənst]",
+    "b_ipa": "[ˈɡrɛɪ.fɛnst]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -7629,7 +7629,7 @@
     "b_tarr_hist": "Vulde",
     "b_origin": "Fulda (Fulda)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvʊl.də]",
+    "b_ipa": "[ˈvʊl.dɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -7992,7 +7992,7 @@
     "b_tarr_hist": "Ulme",
     "b_origin": "Ulm (Ulm)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʊl.mə]",
+    "b_ipa": "[ˈʊl.mɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -9059,7 +9059,7 @@
     "b_tarr_hist": "Rendina",
     "b_origin": "Rendina (constituent holding of Chalkidîke)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrən.dɪ.na]",
+    "b_ipa": "[ˈrɛn.dɪ.na]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -11600,7 +11600,7 @@
     "b_tarr_hist": "Nikôpel-an-der-Tuonouwe",
     "b_origin": "Nikopolis (Nikopolis)",
     "b_anachronism": "",
-    "b_ipa": "[nɪ.koː.ˈpəl an dər tʊ.ɔ.ˈnɔʊ.wə]",
+    "b_ipa": "[nɪ.koː.ˈpəl an dɛr tʊ.ɔ.ˈnɔʊ.wə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -12623,7 +12623,7 @@
     "b_tarr_hist": "Helge",
     "b_origin": "Helge (constituent holding of Prûse)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛl.ɡə]",
+    "b_ipa": "[ˈhɛl.ɡɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -13745,7 +13745,7 @@
     "b_tarr_hist": "Sêlge",
     "b_origin": "Selge (Selge)",
     "b_anachronism": "",
-    "b_ipa": "[ˈseːl.ɡə]",
+    "b_ipa": "[ˈseːl.ɡɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -15835,7 +15835,7 @@
     "b_tarr_hist": "Dschirgent",
     "b_origin": "Castrogiovanni (Castrogiovanni)",
     "b_anachronism": "",
-    "b_ipa": "[ˈdʒɪr.ɡənt]",
+    "b_ipa": "[ˈdʒɪr.ɡɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -15868,7 +15868,7 @@
     "b_tarr_hist": "Malte",
     "b_origin": "Malta (Malta)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmal.tə]",
+    "b_ipa": "[ˈmal.tɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -15879,7 +15879,7 @@
     "b_tarr_hist": "Benevent",
     "b_origin": "Benevento (Benevento)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛ.nɛ.vənt]",
+    "b_ipa": "[ˈbɛ.nɛ.vɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -16242,7 +16242,7 @@
     "b_tarr_hist": "Kosentz",
     "b_origin": "Cosenza (Cosenza)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɔ.zənts]",
+    "b_ipa": "[ˈkɔ.zɛnts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -17155,7 +17155,7 @@
     "b_tarr_hist": "Vlorentz",
     "b_origin": "Florence (Firenze)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvlɔ.rənts]",
+    "b_ipa": "[ˈvlɔ.rɛnts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -18640,7 +18640,7 @@
     "b_tarr_hist": "Skänninge",
     "b_origin": "Linuga (Skänninge (in-game: Kinda))",
     "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-    "b_ipa": "[skə.ˈnɪ.ŋɛ]",
+    "b_ipa": "[skɛ.ˈnɪ.ŋɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -19641,7 +19641,7 @@
     "b_tarr_hist": "Suo 'nnjel",
     "b_origin": "Suo 'nnjel (constituent holding of Sômbje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsʊ.ɔ nɲəl]",
+    "b_ipa": "[ˈsʊ.ɔ nɲɛl]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -19883,7 +19883,7 @@
     "b_tarr_hist": "Roskilde",
     "b_origin": "Roskilde — Historical Option A seat of c_sjaelland",
     "b_anachronism": "",
-    "b_ipa": "[rɔs.ˈkɪl.də]",
+    "b_ipa": "[rɔs.ˈkɪl.dɛ]",
     "holding_type": "castle",
     "category": "option_a_seat"
   },
@@ -19927,7 +19927,7 @@
     "b_tarr_hist": "Slagelse",
     "b_origin": "Slagelse (constituent holding of Rôskilde)",
     "b_anachronism": "",
-    "b_ipa": "[sla.ˈɣɛl.sə]",
+    "b_ipa": "[sla.ˈɣɛl.sɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -19949,7 +19949,7 @@
     "b_tarr_hist": "Svendborg",
     "b_origin": "Svendborg (constituent holding of Vûnen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsvənd.bɔrɡ]",
+    "b_ipa": "[ˈsvɛnd.bɔrɡ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -19971,7 +19971,7 @@
     "b_tarr_hist": "Lâlant-Valster",
     "b_origin": "Nykøbing (Lolland-Falster)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlaː.lant ˈval.stər]",
+    "b_ipa": "[ˈlaː.lant ˈval.stɛr]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -20917,7 +20917,7 @@
     "b_tarr_hist": "Ôsterdal-an-der-Glomme",
     "b_origin": "Norðr Eystridalr (Eystridalir)",
     "b_anachronism": "",
-    "b_ipa": "[ˈoːs.tɛr.dal an dər ˈɡlɔ.mə]",
+    "b_ipa": "[ˈoːs.tɛr.dal an dɛr ˈɡlɔ.mə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -22226,7 +22226,7 @@
     "b_tarr_hist": "Stolzenbergveste",
     "b_origin": "Arnswalde — Defensive march fortress built by Konrad (Stolzenberg)",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Konrad of House Stolzenberg.",
-    "b_ipa": "[tsant ɔl.tsən.bɛrɡ.ˈvɛs.tə]",
+    "b_ipa": "[tsant ɔl.tsɛn.bɛrɡ.ˈvɛs.tə]",
     "holding_type": "castle",
     "category": "option_c_foundation"
   },
@@ -22534,7 +22534,7 @@
     "b_tarr_hist": "Brennabor",
     "b_origin": "Ancient princely fortress Brennabor of the Slavic Hevelli on the Havel (in-game: Brandenburg)",
     "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[brə.na.ˈbɔr]",
+    "b_ipa": "[brɛ.na.ˈbɔr]",
     "holding_type": "castle",
     "category": "indigenous_restitution"
   },
@@ -22732,7 +22732,7 @@
     "b_tarr_hist": "Wenzelszelle",
     "b_origin": "Vilkmerge — Monastic cell and hermitage founded by Wenzel",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wenzel under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[wən.tsɛls.ˈtsɛ.ʎə]",
+    "b_ipa": "[wɛn.tsɛls.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -22985,7 +22985,7 @@
     "b_tarr_hist": "Twangste",
     "b_origin": "Old Prussian sacred grove and hillfort Twangste (attested before 1255 Teutonic Order castle) (in-game: Königsberg)",
     "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[ˈtwaŋ.stə]",
+    "b_ipa": "[ˈtwaŋ.stɛ]",
     "holding_type": "castle",
     "category": "indigenous_restitution"
   },
@@ -23766,7 +23766,7 @@
     "b_tarr_hist": "Zant-Walter",
     "b_origin": "Lemsal — Patron saint collegiate foundation dedicated by Walter",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Walter of House Kestenholz-Bluome.",
-    "b_ipa": "[tsant ˈwal.tər]",
+    "b_ipa": "[tsant ˈwal.tɛr]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -23832,7 +23832,7 @@
     "b_tarr_hist": "Zant-Walter",
     "b_origin": "Vastseliina — Patron saint collegiate foundation dedicated by Walter",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Walter of House Kestenholz-Bluome.",
-    "b_ipa": "[tsant ˈwal.tər]",
+    "b_ipa": "[tsant ˈwal.tɛr]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -24283,7 +24283,7 @@
     "b_tarr_hist": "Wenzelkirchen",
     "b_origin": "Koschmin — Parish collegiate church founded by Wenzel",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wenzel under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈwən.tsɛl.kɪr.xən]",
+    "b_ipa": "[ˈwɛn.tsɛl.kɪr.xən]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -24679,7 +24679,7 @@
     "b_tarr_hist": "Zant-Guillemecte",
     "b_origin": "Ohlau — Collegiate church dedicated by Guillemecte of House Annonay",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Guillemecte of House Kestenholz-Annonay.",
-    "b_ipa": "[tsant ɡʊ.ɪ.ʎɛ.ˈmɛk.tə]",
+    "b_ipa": "[tsant ɡɪ.ʎɛ.ˈmɛk.tə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -24690,7 +24690,7 @@
     "b_tarr_hist": "Guillemectestat",
     "b_origin": "Ottmachau — Municipal foundation chartered by Guillemecte",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Guillemecte of House Kestenholz-Annonay.",
-    "b_ipa": "[ˈɡʊ.ɪ.ʎɛ.mɛk.tɛs.tat]",
+    "b_ipa": "[ˈɡɪ.ʎɛ.mɛk.tɛs.tat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -25603,7 +25603,7 @@
     "b_tarr_hist": "Grêtz-an-der-Morâwe",
     "b_origin": "Opava (Hydronym: Named after the Opava River (in-game: Opava))",
     "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-    "b_ipa": "[ɡreːts an dər mɔ.ˈraː.wə]",
+    "b_ipa": "[ɡreːts an dɛr mɔ.ˈraː.wə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -26098,7 +26098,7 @@
     "b_tarr_hist": "Rôtenburch-an-der-Hûtzwe",
     "b_origin": "Cherven (Rôtenburch-an-der-Hûtzwe (in-game: Cherven))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Rôtenburch-an-der-Hûtzwe under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈroː.tən.bʊrx an dər ˈhuːts.wə]",
+    "b_ipa": "[ˈroː.tən.bʊrx an dɛr ˈhuːts.wə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -27462,7 +27462,7 @@
     "b_tarr_hist": "Guincumstat",
     "b_origin": "Suvorov — Municipal foundation chartered by Guincum",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Guincum of House Karling.",
-    "b_ipa": "[ˈɡʊ.ɪ.ŋkʊm.stat]",
+    "b_ipa": "[ˈɡɪ.ŋkʊm.stat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -27493,7 +27493,7 @@
     "b_tarr": "Wulfhildesburch",
     "b_tarr_direct": "Lyuban",
     "b_tarr_hist": "Wulfhildesburch",
-    "b_origin": "Lyuban — Self-eponymous fortress founded by Wulfhilde (['greedy', 'fickle'])",
+    "b_origin": "Lyuban — Self-eponymous fortress founded by Wulfhilde (['fickle', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wulfhilde under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈwʊlf.hɪl.dɛs.bʊrx]",
     "holding_type": "castle",
@@ -27814,7 +27814,7 @@
     "b_tarr_hist": "Lûki-An-Der-Lowat",
     "b_origin": "Luki (attested secondary seat in tarraconian_titles_1059.md)",
     "b_anachronism": "",
-    "b_ipa": "[ˈluː.kɪ an dər lɔ.ˈwat]",
+    "b_ipa": "[ˈluː.kɪ an dɛr lɔ.ˈwat]",
     "holding_type": "castle",
     "category": "secondary_variant"
   },
@@ -28067,7 +28067,7 @@
     "b_tarr_hist": "Ehrenfrîtszelle",
     "b_origin": "Baranovichi — Monastic cell endowed by Ehrenfrît of House Suerbeer",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1871 railway station); resolved via Option C based on save ruler Ehrenfried.",
-    "b_ipa": "[ɛh.rən.friːts.ˈtsɛ.ʎə]",
+    "b_ipa": "[ɛh.rɛn.friːts.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -28109,7 +28109,7 @@
     "b_tarr": "Ekkehardsburch",
     "b_tarr_direct": "Rechtytza",
     "b_tarr_hist": "Ekkehardsburch",
-    "b_origin": "Rechtytsa — Self-eponymous fortress founded by Ekkehard (['greedy', 'fickle'])",
+    "b_origin": "Rechtytsa — Self-eponymous fortress founded by Ekkehard (['fickle', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Ekkehard of House Kleve.",
     "b_ipa": "[ˈɛ.kɛ.hards.bʊrx]",
     "holding_type": "castle",
@@ -29167,7 +29167,7 @@
     "b_tarr_hist": "Wenzelmarct",
     "b_origin": "Vitzgora — Chartered market borough established by Wenzel",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wenzel under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈwən.tsɛl.markt]",
+    "b_ipa": "[ˈwɛn.tsɛl.markt]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -29189,7 +29189,7 @@
     "b_tarr_hist": "Pelschme",
     "b_origin": "Kirillov (Pelschme (in-game: Kirillov))",
     "b_anachronism": "Named after the Kirillo-Belozersky Monastery founded in 1397 by St. Kirill of Beloozero.",
-    "b_ipa": "[ˈpɛlʃ.mə]",
+    "b_ipa": "[ˈpɛlʃ.mɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -30025,7 +30025,7 @@
     "b_tarr_hist": "Gûldenberch-am-Dôn",
     "b_origin": "Golden Hills (Golden Hills)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡuːl.dən.bɛrx am doːn]",
+    "b_ipa": "[ˈɡuːl.dɛn.bɛrx am doːn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -30586,7 +30586,7 @@
     "b_tarr_hist": "Derbent",
     "b_origin": "Derbent (Derbent)",
     "b_anachronism": "",
-    "b_ipa": "[ˈdɛr.bənt]",
+    "b_ipa": "[ˈdɛr.bɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -31576,7 +31576,7 @@
     "b_tarr_hist": "Wolge-Samâr",
     "b_origin": "Samar (Samar (Volga)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.ɡə sa.ˈmaːr]",
+    "b_ipa": "[ˈwɔl.ɡɛ sa.ˈmaːr]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -32016,7 +32016,7 @@
     "b_tarr_hist": "Ziwîl-Wolge",
     "b_origin": "Cheboksary (Ziwîl-Wolge (in-game: Cheboksary))",
     "b_anachronism": "Cheboksary first attested in written Russian chronicles in 1469 (though a Volga Bulgarian-Chuvash settlement Šupaškar existed from the late 13th c.).",
-    "b_ipa": "[tsɪ.ˈwiːl ˈwɔl.ɡə]",
+    "b_ipa": "[tsɪ.ˈwiːl ˈwɔl.ɡɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -32324,7 +32324,7 @@
     "b_tarr_hist": "Pense",
     "b_origin": "Penza (Penza)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpən.sə]",
+    "b_ipa": "[ˈpɛn.sə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -35591,7 +35591,7 @@
     "b_tarr_hist": "Chentî",
     "b_origin": "Khentii (Khentii)",
     "b_anachronism": "",
-    "b_ipa": "[xən.ˈtiː]",
+    "b_ipa": "[xɛn.ˈtiː]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -35855,7 +35855,7 @@
     "b_tarr_hist": "Tunke",
     "b_origin": "Arshan (Tunka)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʊ.ŋkə]",
+    "b_ipa": "[ˈtʊ.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -35976,7 +35976,7 @@
     "b_tarr_hist": "Chisilchentî",
     "b_origin": "Paljigol (Kizilkhentii)",
     "b_anachronism": "",
-    "b_ipa": "[xɪ.zɪl.xən.ˈtiː]",
+    "b_ipa": "[xɪ.zɪl.xɛn.ˈtiː]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -36152,7 +36152,7 @@
     "b_tarr_hist": "Schilke",
     "b_origin": "Arguntokhoi (Shilka)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃɪl.kə]",
+    "b_ipa": "[ˈʃɪl.kɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -37219,7 +37219,7 @@
     "b_tarr_hist": "Stojanke",
     "b_origin": "Stoyanka (Stoyanka)",
     "b_anachronism": "",
-    "b_ipa": "[tsant ɔ.ˈja.ŋkə]",
+    "b_ipa": "[tsant ɔ.ˈja.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38638,7 +38638,7 @@
     "b_tarr_hist": "Eülge",
     "b_origin": "Lena (Eülge)",
     "b_anachronism": "",
-    "b_ipa": "[ɛ.ˈyːl.ɡə]",
+    "b_ipa": "[ɛ.ˈyːl.ɡɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38671,7 +38671,7 @@
     "b_tarr_hist": "Ilge",
     "b_origin": "Ilim (Ilga)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɪl.ɡə]",
+    "b_ipa": "[ˈɪl.ɡɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38858,7 +38858,7 @@
     "b_tarr_hist": "Dschen",
     "b_origin": "Zhen (Zhen)",
     "b_anachronism": "",
-    "b_ipa": "[dʒən]",
+    "b_ipa": "[dʒɛn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -39947,7 +39947,7 @@
     "b_tarr_hist": "Guldsche",
     "b_origin": "Ghulja (Ghulja)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡʊl.dʒə]",
+    "b_ipa": "[ˈɡʊl.dʒɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40431,7 +40431,7 @@
     "b_tarr_hist": "Astrachanke",
     "b_origin": "Astrakhanka (Astrakhanka)",
     "b_anachronism": "",
-    "b_ipa": "[as.tra.ˈxa.ŋkə]",
+    "b_ipa": "[as.tra.ˈxa.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41597,7 +41597,7 @@
     "b_tarr_hist": "Zant-Danismend",
     "b_origin": "Liaotun — Collegiate church dedicated by Danismend of House Togayid",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Danismend of House Togayid.",
-    "b_ipa": "[tsant ˈda.nɪs.mənd]",
+    "b_ipa": "[tsant ˈda.nɪs.mɛnd]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -42532,7 +42532,7 @@
     "b_tarr_hist": "Wîzenflôz",
     "b_origin": "Aksu (Aksu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwiː.tsən.floːts]",
+    "b_ipa": "[ˈwiː.tsɛn.floːts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -42664,7 +42664,7 @@
     "b_tarr_hist": "Kongque",
     "b_origin": "Kongque (constituent holding of Karaschar)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɔŋk.wə]",
+    "b_ipa": "[ˈkɔŋk.wɛ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -43610,7 +43610,7 @@
     "b_tarr_hist": "Dschent",
     "b_origin": "Jend (Jend)",
     "b_anachronism": "",
-    "b_ipa": "[dʒənt]",
+    "b_ipa": "[dʒɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -43698,7 +43698,7 @@
     "b_tarr_hist": "Uzgent",
     "b_origin": "Uzgend (Uzgend)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʊts.ɡənt]",
+    "b_ipa": "[ˈʊts.ɡɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -43863,7 +43863,7 @@
     "b_tarr_hist": "Sütkent",
     "b_origin": "Sütkend (Sütkend)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsyːt.kənt]",
+    "b_ipa": "[ˈsyːt.kɛnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -44952,7 +44952,7 @@
     "b_tarr_hist": "Kend-I-Badam",
     "b_origin": "Kend-i-badam (constituent holding of Chodschânt)",
     "b_anachronism": "",
-    "b_ipa": "[kənd ɪ ˈba.dam]",
+    "b_ipa": "[kɛnd ɪ ˈba.dam]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -45007,7 +45007,7 @@
     "b_tarr_hist": "Isfâre",
     "b_origin": "Isfara — Disambiguated capital foundation: Proprietary collegiate church of House Sennar",
     "b_anachronism": "Disambiguated intra-county capital barony.",
-    "b_ipa": "[ˈsə.nar.kɪr.xən]",
+    "b_ipa": "[ˈsɛ.nar.kɪr.xən]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -45260,7 +45260,7 @@
     "b_tarr_hist": "Jigirbend",
     "b_origin": "Jigirbend (constituent holding of Dargân)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɪ.ɣɪr.bənd]",
+    "b_ipa": "[ˈjɪ.ɣɪr.bɛnd]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -45480,7 +45480,7 @@
     "b_tarr_hist": "Gelwen Riete",
     "b_origin": "Sarykamysh (Sarykamysh)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɛl.wən rɪ.ˈɛ.tə]",
+    "b_ipa": "[ˈɡɛl.wɛn rɪ.ˈɛ.tə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -47042,7 +47042,7 @@
     "b_tarr_hist": "Kerend-Kermanschah",
     "b_origin": "Kerend-Kermanshah (constituent holding of Kermânschâch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɛ.rənd ˈkɛr.man.ʃah]",
+    "b_ipa": "[ˈkɛ.rɛnd ˈkɛr.man.ʃah]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -51607,7 +51607,7 @@
     "b_tarr_hist": "Dafne-an-der-Tuonouwe",
     "b_origin": "Giurgiu (Dafne-an-der-Tuonouwe (in-game: Giurgiu))",
     "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-    "b_ipa": "[ˈdaf.nə an dər tʊ.ɔ.ˈnɔʊ.wə]",
+    "b_ipa": "[ˈdaf.nə an dɛr tʊ.ɔ.ˈnɔʊ.wə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -51794,7 +51794,7 @@
     "b_tarr_hist": "Baia de Aramă",
     "b_origin": "Baia de Aramă (constituent holding of Schîu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.a də a.ˈra.mə]",
+    "b_ipa": "[ˈbɛɪ.a dɛ a.ˈra.mə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -52762,7 +52762,7 @@
     "b_tarr_hist": "Trentschîn",
     "b_origin": "Trenčín (Trenčín)",
     "b_anachronism": "",
-    "b_ipa": "[trən.ˈtʃiːn]",
+    "b_ipa": "[trɛn.ˈtʃiːn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -52925,7 +52925,7 @@
     "b_tarr": "Bertasburch",
     "b_tarr_direct": "Selmecbânya",
     "b_tarr_hist": "Bertasburch",
-    "b_origin": "Selmecbánya — Self-eponymous fortress founded by Berta (['greedy', 'arrogant', 'fickle'])",
+    "b_origin": "Selmecbánya — Self-eponymous fortress founded by Berta (['fickle', 'greedy', 'arrogant'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Berta of House Hohenlohe.",
     "b_ipa": "[ˈbɛr.tas.bʊrx]",
     "holding_type": "castle",
@@ -53070,7 +53070,7 @@
     "b_tarr_hist": "Szendrő",
     "b_origin": "Szendrő (constituent holding of Borschot)",
     "b_anachronism": "",
-    "b_ipa": "[ˈstsən.drøː]",
+    "b_ipa": "[ˈstsɛn.drøː]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -53400,7 +53400,7 @@
     "b_tarr_hist": "Sepsiszentgyörgy",
     "b_origin": "Sepsiszentgyörgy (constituent holding of Balwanjosch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛp.sɪs.tsəntɡ.jøːr.ɡɪ]",
+    "b_ipa": "[ˈsɛp.sɪs.tsɛntɡ.jøːr.ɡɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -53422,7 +53422,7 @@
     "b_tarr_hist": "Belgrâd-Albe",
     "b_origin": "Fogaras — Historical Option A seat of c_fogaras",
     "b_anachronism": "",
-    "b_ipa": "[bɛl.ˈɡraːd ˈal.bə]",
+    "b_ipa": "[bɛl.ˈɡraːd ˈal.bɛ]",
     "holding_type": "castle",
     "category": "option_a_seat"
   },
@@ -54016,7 +54016,7 @@
     "b_tarr_hist": "Zenta",
     "b_origin": "Zenta (constituent holding of Bodroch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsən.ta]",
+    "b_ipa": "[ˈtsɛn.ta]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -54115,7 +54115,7 @@
     "b_tarr_hist": "Körmend",
     "b_origin": "Körmend (constituent holding of Teindorf)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkøːr.mənd]",
+    "b_ipa": "[ˈkøːr.mɛnd]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -54126,7 +54126,7 @@
     "b_tarr_hist": "Szentgotthârd",
     "b_origin": "Szentgotthárd (constituent holding of Teindorf)",
     "b_anachronism": "",
-    "b_ipa": "[stsənt.ɡɔt.ˈhaːrd]",
+    "b_ipa": "[stsɛnt.ɡɔt.ˈhaːrd]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -54478,7 +54478,7 @@
     "b_tarr_hist": "Zant-Quentîn",
     "b_origin": "Saint-Quentin (constituent holding of Belvês)",
     "b_anachronism": "",
-    "b_ipa": "[tsant kwən.ˈtiːn]",
+    "b_ipa": "[tsant kwɛn.ˈtiːn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55006,7 +55006,7 @@
     "b_tarr_hist": "Belgentzî",
     "b_origin": "Beaugency (constituent holding of Orljâns)",
     "b_anachronism": "",
-    "b_ipa": "[bɛl.ɡən.ˈtsiː]",
+    "b_ipa": "[bɛl.ɡɛn.ˈtsiː]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55072,7 +55072,7 @@
     "b_tarr_hist": "Vendosme",
     "b_origin": "Vendôme (Vendôme)",
     "b_anachronism": "",
-    "b_ipa": "[vən.ˈdɔs.mə]",
+    "b_ipa": "[vɛn.ˈdɔs.mə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -55127,7 +55127,7 @@
     "b_tarr_hist": "Nogent-Le-Rotrou",
     "b_origin": "Nogent-le-Rotrou (constituent holding of Schartres)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɔ.ɣənt lɛ rɔ.ˈtrɔʊ]",
+    "b_ipa": "[ˈnɔ.ɣɛnt lɛ rɔ.ˈtrɔʊ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55149,7 +55149,7 @@
     "b_tarr_hist": "Sullî-an-der-Loire",
     "b_origin": "Sully-sur-Loire (constituent holding of Kastel-Gordûn)",
     "b_anachronism": "",
-    "b_ipa": "[sʊ.ˈʎiː an dər lɔ.ˈɪ.rə]",
+    "b_ipa": "[sʊ.ˈʎiː an dɛr lɔ.ˈɪ.rə]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55391,7 +55391,7 @@
     "b_tarr_hist": "Sens",
     "b_origin": "Sens (Sens)",
     "b_anachronism": "",
-    "b_ipa": "[səns]",
+    "b_ipa": "[sɛns]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -55402,7 +55402,7 @@
     "b_tarr_hist": "Nogent",
     "b_origin": "Nogent (constituent holding of Sens)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɔ.ɣənt]",
+    "b_ipa": "[ˈnɔ.ɣɛnt]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -55490,7 +55490,7 @@
     "b_tarr_hist": "Belne",
     "b_origin": "Beaune (constituent holding of Schalûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛl.nə]",
+    "b_ipa": "[ˈbɛl.nɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55644,7 +55644,7 @@
     "b_tarr_hist": "Pougues-Les-Eaux",
     "b_origin": "Pougues-les-Eaux (constituent holding of Nevers)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpɔʊ.ɣʊ.ɛs lɛs ɛ.ˈɔʊks]",
+    "b_ipa": "[ˈpɔʊ.ɣɛs lɛs ɛ.ˈɔʊks]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55699,7 +55699,7 @@
     "b_tarr_hist": "Gent",
     "b_origin": "Gent (constituent holding of Brügge)",
     "b_anachronism": "",
-    "b_ipa": "[ɡənt]",
+    "b_ipa": "[ɡɛnt]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55831,7 +55831,7 @@
     "b_tarr_hist": "Montreuil-Sur-Mer",
     "b_origin": "Montreuil-sur-Mer (constituent holding of Bulônje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɔn.trɔʏ.ɪl sʊr mər]",
+    "b_ipa": "[ˈmɔn.trɔʏ.ɪl sʊr mɛr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55963,7 +55963,7 @@
     "b_tarr_hist": "La Teste-De-Buch",
     "b_origin": "La Teste-de-Buch (constituent holding of Basâs)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈtɛs.tə də bʊx]",
+    "b_ipa": "[la ˈtɛs.tə dɛ bʊx]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -56139,7 +56139,7 @@
     "b_tarr_hist": "Ventadour",
     "b_origin": "Ventadour (constituent holding of Lemosîn)",
     "b_anachronism": "",
-    "b_ipa": "[vən.ta.ˈdɔʊr]",
+    "b_ipa": "[vɛn.ta.ˈdɔʊr]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -56260,7 +56260,7 @@
     "b_tarr_hist": "Belmunt-an-der-Lêze",
     "b_origin": "Beaumont-sur-Lèze (constituent holding of Tolôse)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛl.mʊnt an dər ˈleː.tsə]",
+    "b_ipa": "[ˈbɛl.mʊnt an dɛr ˈleː.tsə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -56326,7 +56326,7 @@
     "b_tarr_hist": "Mende",
     "b_origin": "Mende (constituent holding of Gavaudân)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmən.də]",
+    "b_ipa": "[ˈmɛn.də]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -57107,18 +57107,18 @@
     "b_tarr_hist": "Welschen March",
     "b_origin": "Grandmont (La Marche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛl.ʃən marx]",
+    "b_ipa": "[ˈwɛl.ʃɛn marx]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
   "b_gueret": {
-    "name": "Guêret",
-    "b_tarr": "Guêret",
-    "b_tarr_direct": "Guêret",
-    "b_tarr_hist": "Guêret",
+    "name": "Garait",
+    "b_tarr": "Garait",
+    "b_tarr_direct": "Garait",
+    "b_tarr_hist": "Garait",
     "b_origin": "Guéret (constituent holding of Welschen March)",
     "b_anachronism": "",
-    "b_ipa": "[ɡʊ.eː.ˈrɛt]",
+    "b_ipa": "[ɡa.ˈrɛɪt]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57189,13 +57189,13 @@
     "category": "sub_barony_adaptation"
   },
   "b_guerande": {
-    "name": "Guêrande",
-    "b_tarr": "Guêrande",
-    "b_tarr_direct": "Guêrande",
-    "b_tarr_hist": "Guêrande",
+    "name": "Guerande",
+    "b_tarr": "Guerande",
+    "b_tarr_direct": "Guerande",
+    "b_tarr_hist": "Guerande",
     "b_origin": "Guérande (constituent holding of Nantes)",
     "b_anachronism": "",
-    "b_ipa": "[ɡʊ.eː.ˈran.də]",
+    "b_ipa": "[ɡɛ.ˈran.də]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57261,7 +57261,7 @@
     "b_tarr_hist": "Zant-Pol de Lôn",
     "b_origin": "St Pol de Leon (constituent holding of Zant-Pôl-van-Lejôn)",
     "b_anachronism": "",
-    "b_ipa": "[tsant pɔl də loːn]",
+    "b_ipa": "[tsant pɔl dɛ loːn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57272,7 +57272,7 @@
     "b_tarr_hist": "Pentjêver",
     "b_origin": "Saint-Brieuc (Penthièvre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpənt.jeː.vər]",
+    "b_ipa": "[ˈpɛnt.jeː.vər]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -57283,7 +57283,7 @@
     "b_tarr_hist": "Trêguier",
     "b_origin": "Tréguier (constituent holding of Pentjêver)",
     "b_anachronism": "",
-    "b_ipa": "[treː.ɣʊ.ɪ.ˈɛr]",
+    "b_ipa": "[treː.ɣɪ.ˈɛr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57305,7 +57305,7 @@
     "b_tarr_hist": "Rennes",
     "b_origin": "Rennes (Rennes)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrə.nɛs]",
+    "b_ipa": "[ˈrɛ.nɛs]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -57371,7 +57371,7 @@
     "b_tarr_hist": "Proventz",
     "b_origin": "Toulon (Provence)",
     "b_anachronism": "",
-    "b_ipa": "[ˈprɔ.vənts]",
+    "b_ipa": "[ˈprɔ.vɛnts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -57481,7 +57481,7 @@
     "b_tarr_hist": "Kalkovens",
     "b_origin": "Forcalquier (Forcalquier)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkal.kɔ.vəns]",
+    "b_ipa": "[ˈkal.kɔ.vɛns]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -58108,7 +58108,7 @@
     "b_tarr_hist": "Mentesa",
     "b_origin": "Mentesa (constituent holding of Kalatrâve)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmən.tɛ.za]",
+    "b_ipa": "[ˈmɛn.tɛ.za]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -58526,7 +58526,7 @@
     "b_tarr_hist": "Villarejo de Salvanes",
     "b_origin": "Villarejo de Salvanes (constituent holding of Madrît)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎa.rɛ.jɔ də ˈsal.va.nɛs]",
+    "b_ipa": "[ˈvɪ.ʎa.rɛ.jɔ dɛ ˈsal.va.nɛs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -58592,7 +58592,7 @@
     "b_tarr_hist": "Kônke",
     "b_origin": "Cuenca (Qunkah)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkoː.ŋkə]",
+    "b_ipa": "[ˈkoː.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -58669,7 +58669,7 @@
     "b_tarr_hist": "La Puebla de Montalban",
     "b_origin": "La Puebla de Montalban (constituent holding of Malagôn)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈpʊ.ɛ.bla də mɔn.tal.ˈban]",
+    "b_ipa": "[la ˈpʊ.ɛ.bla dɛ mɔn.tal.ˈban]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -59296,7 +59296,7 @@
     "b_tarr_hist": "Aguilas",
     "b_origin": "Aguilas (constituent holding of Mûrtzje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.ɣʊ.ɪ.las]",
+    "b_ipa": "[ˈa.ɣɪ.las]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -59307,7 +59307,7 @@
     "b_tarr_hist": "Caravaca de la Cruz",
     "b_origin": "Caravaca de la Cruz (constituent holding of Mûrtzje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ra.va.ka də la krʊts]",
+    "b_ipa": "[ˈka.ra.va.ka dɛ la krʊts]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -59483,7 +59483,7 @@
     "b_tarr_hist": "Aranda de Duero",
     "b_origin": "Aranda de Duero (constituent holding of Simankes)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.ran.da də ˈdʊ.ɛ.rɔ]",
+    "b_ipa": "[ˈa.ran.da dɛ ˈdʊ.ɛ.rɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -59626,7 +59626,7 @@
     "b_tarr_hist": "Medina de Pomar",
     "b_origin": "Medina de Pomar (constituent holding of Zant-Iljâne)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛ.dɪ.na də ˈpɔ.mar]",
+    "b_ipa": "[ˈmɛ.dɪ.na dɛ ˈpɔ.mar]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -59648,7 +59648,7 @@
     "b_tarr_hist": "Miranda de Ebro",
     "b_origin": "Miranda de Ebro (constituent holding of Amâje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɪ.ran.da də ˈɛ.brɔ]",
+    "b_ipa": "[ˈmɪ.ran.da dɛ ˈɛ.brɔ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -60374,7 +60374,7 @@
     "b_tarr_hist": "Valencia de Campos",
     "b_origin": "Valencia de Campos (constituent holding of Lejôn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈva.lɛn.tsɪ.a də ˈkam.pɔs]",
+    "b_ipa": "[ˈva.lɛn.tsɪ.a dɛ ˈkam.pɔs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -60440,7 +60440,7 @@
     "b_tarr_hist": "Salamanke",
     "b_origin": "Bejar (Salamanca)",
     "b_anachronism": "",
-    "b_ipa": "[sa.la.ˈma.ŋkə]",
+    "b_ipa": "[sa.la.ˈma.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -60484,7 +60484,7 @@
     "b_tarr_hist": "Medina del Campo",
     "b_origin": "Medina del Campo (constituent holding of Âvile)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛ.dɪ.na dəl ˈkam.pɔ]",
+    "b_ipa": "[ˈmɛ.dɪ.na dɛl ˈkam.pɔ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -60583,7 +60583,7 @@
     "b_tarr_hist": "Cangas del Narcea",
     "b_origin": "Cangas del Narcea (constituent holding of Prâvje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ŋas dəl ˈnar.tsɛ.a]",
+    "b_ipa": "[ˈka.ŋas dɛl ˈnar.tsɛ.a]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -60704,7 +60704,7 @@
     "b_tarr_hist": "Tûi",
     "b_origin": "Tui — Disambiguated capital foundation: Patron saint church dedicated by Brunhilde",
     "b_anachronism": "Disambiguated intra-county capital barony.",
-    "b_ipa": "[tsant brʊn.ˈhɪl.də]",
+    "b_ipa": "[tsant brʊn.ˈhɪl.dɛ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -60759,7 +60759,7 @@
     "b_tarr_hist": "Monforte de Lemos",
     "b_origin": "Monforte de Lemos (constituent holding of Astôrge)",
     "b_anachronism": "",
-    "b_ipa": "[mɔn.ˈfɔr.tə də ˈlɛ.mɔs]",
+    "b_ipa": "[mɔn.ˈfɔr.tə dɛ ˈlɛ.mɔs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -60836,7 +60836,7 @@
     "b_tarr_hist": "Guimarães",
     "b_origin": "Guimarães (constituent holding of Port)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡʊ.ɪ.ma.ra.ɛs]",
+    "b_ipa": "[ˈɡɪ.ma.ra.ɛs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -61560,7 +61560,7 @@
     "b_tarr": "Stefansburch",
     "b_tarr_direct": "Warzigh",
     "b_tarr_hist": "Stefansburch",
-    "b_origin": "Warzigh — Disambiguated foundation: Self-eponymous fortress founded by Stefan (['greedy', 'fickle'])",
+    "b_origin": "Warzigh — Disambiguated foundation: Self-eponymous fortress founded by Stefan (['fickle', 'greedy'])",
     "b_anachronism": "Disambiguated sub-barony foundation.",
     "b_ipa": "[tsant ˈɛ.fans.bʊrx]",
     "holding_type": "castle",
@@ -62310,7 +62310,7 @@
     "b_tarr_hist": "Sâlde",
     "b_origin": "Bejaia — Historical Option A seat of c_bejaia",
     "b_anachronism": "",
-    "b_ipa": "[ˈsaːl.də]",
+    "b_ipa": "[ˈsaːl.dɛ]",
     "holding_type": "castle",
     "category": "option_a_seat"
   },
@@ -63949,7 +63949,7 @@
     "b_tarr_hist": "Bîlme",
     "b_origin": "Bilma (Bilma)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbiːl.mə]",
+    "b_ipa": "[ˈbiːl.mɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -64125,7 +64125,7 @@
     "b_tarr_hist": "Central Tibesti",
     "b_origin": "Central Tibesti (constituent holding of Tibêsti)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsən.tral ˈtɪ.bɛs.tɪ]",
+    "b_ipa": "[ˈtsɛn.tral ˈtɪ.bɛs.tɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -67249,7 +67249,7 @@
     "b_tarr_hist": "Central Jabal Quzlum",
     "b_origin": "Central Jabal Quzlum (constituent holding of Kolsûmberch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsən.tral ˈja.bal kwtslʊm]",
+    "b_ipa": "[ˈtsɛn.tral ˈja.bal kwtslʊm]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -69383,7 +69383,7 @@
     "b_tarr_hist": "Schendi",
     "b_origin": "Shendi (constituent holding of Al-Abwâp)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃən.dɪ]",
+    "b_ipa": "[ˈʃɛn.dɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -70846,7 +70846,7 @@
     "b_tarr_hist": "Vencelstat",
     "b_origin": "West Adal — Municipal foundation chartered by Vencel",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Vencel under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈvən.tsɛl.stat]",
+    "b_ipa": "[ˈvɛn.tsɛl.stat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -71088,7 +71088,7 @@
     "b_tarr_hist": "Seîle",
     "b_origin": "Zaila (Seîle (in-game: Zaila))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Seîle under Burden of Proof on Antiquity.",
-    "b_ipa": "[sə.ˈiː.lɛ]",
+    "b_ipa": "[sɛ.ˈiː.lɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -71548,7 +71548,7 @@
     "b_tarr": "Adelasburch",
     "b_tarr_direct": "Hudur",
     "b_tarr_hist": "Adelasburch",
-    "b_origin": "Hudur — Self-eponymous fortress founded by Adela (['greedy', 'fickle'])",
+    "b_origin": "Hudur — Self-eponymous fortress founded by Adela (['fickle', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Adela under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈa.dɛ.las.bʊrx]",
     "holding_type": "castle",
@@ -71825,7 +71825,7 @@
     "b_tarr_hist": "Zant-Walter",
     "b_origin": "Gidaya-north — Collegiate church dedicated by Walter of House Winch",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Walter of House Winch.",
-    "b_ipa": "[tsant ˈwal.tər]",
+    "b_ipa": "[tsant ˈwal.tɛr]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -72848,7 +72848,7 @@
     "b_tarr_hist": "Baguirmi",
     "b_origin": "Massenya (Baguirmi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈba.ɣʊ.ɪr.mɪ]",
+    "b_ipa": "[ˈba.ɣɪr.mɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -72925,7 +72925,7 @@
     "b_tarr_hist": "Tendukhede",
     "b_origin": "Barma (Tendukheda)",
     "b_anachronism": "",
-    "b_ipa": "[tən.dʊk.ˈhɛ.də]",
+    "b_ipa": "[tɛn.dʊk.ˈhɛ.də]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -75213,7 +75213,7 @@
     "b_tarr_hist": "Guidimake",
     "b_origin": "Guidimaka (Guidimake (in-game: Guidimaka))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Guidimake under Burden of Proof on Antiquity.",
-    "b_ipa": "[ɡʊ.ɪ.dɪ.ˈma.kə]",
+    "b_ipa": "[ɡɪ.dɪ.ˈma.kə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -75279,7 +75279,7 @@
     "b_tarr_hist": "Kingui",
     "b_origin": "Nioro (Kingui (in-game: Kingui))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Kingui under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈkɪ.ŋʊ.ɪ]",
+    "b_ipa": "[ˈkɪn.ɡɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -75345,7 +75345,7 @@
     "b_tarr_hist": "Altenburgmunster",
     "b_origin": "Gemukura — Collegiate minster church of House Altenburg",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Gottfried of House Altenburg.",
-    "b_ipa": "[ˈal.tən.bʊrɡ.mʊn.stər]",
+    "b_ipa": "[ˈal.tɛn.bʊrɡ.mʊn.stər]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -75794,7 +75794,7 @@
     "b_tarr": "Benedictasburch",
     "b_tarr_direct": "Woora Saabe",
     "b_tarr_hist": "Benedictasburch",
-    "b_origin": "Woora Saabe — Self-eponymous fortress founded by Benedicta (['ambitious', 'fickle'])",
+    "b_origin": "Woora Saabe — Self-eponymous fortress founded by Benedicta (['fickle', 'ambitious'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Benedicta of House Kestenholz-Metz.",
     "b_ipa": "[ˈbɛ.nɛ.dɪk.tas.bʊrx]",
     "holding_type": "castle",
@@ -76445,7 +76445,7 @@
     "b_tarr_hist": "Dschenne",
     "b_origin": "Jenne-Jeno (Dschenne (in-game: Jenne))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Dschenne under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈdʒə.nə]",
+    "b_ipa": "[ˈdʒɛ.nə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -78577,7 +78577,7 @@
     "b_tarr": "Philotheossburch",
     "b_tarr_direct": "Banda",
     "b_tarr_hist": "Philotheossburch",
-    "b_origin": "Banda — Self-eponymous fortress founded by Philotheos (['greedy', 'fickle'])",
+    "b_origin": "Banda — Self-eponymous fortress founded by Philotheos (['fickle', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Philotheos under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈphɪ.lɔt.hɛ.ɔs.bʊrx]",
     "holding_type": "castle",
@@ -79052,7 +79052,7 @@
     "b_tarr_hist": "Pendscharî",
     "b_origin": "Mekrou (Pendscharî (in-game: Pendjari))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Pendscharî under Burden of Proof on Antiquity.",
-    "b_ipa": "[pən.dʒa.ˈriː]",
+    "b_ipa": "[pɛn.dʒa.ˈriː]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -79646,7 +79646,7 @@
     "b_tarr_hist": "Falkensteinstifft",
     "b_origin": "Idofian — Endowed collegiate canonry of House Falkenstein",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Berchte of House Falkenstein.",
-    "b_ipa": "[ˈfal.kən.stɛɪn.stɪft]",
+    "b_ipa": "[ˈfal.kɛn.stɛɪn.stɪft]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -81186,7 +81186,7 @@
     "b_tarr_hist": "Kangre",
     "b_origin": "Kangra (Kangra)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkaŋ.rə]",
+    "b_ipa": "[ˈkaŋ.rɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -82121,7 +82121,7 @@
     "b_tarr_hist": "Bumilke",
     "b_origin": "Vamanasthali (Bumilke (in-game: Bhumilka))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Bumilke under Burden of Proof on Antiquity.",
-    "b_ipa": "[bʊ.ˈmɪl.kə]",
+    "b_ipa": "[bʊ.ˈmɪl.kɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -82660,7 +82660,7 @@
     "b_tarr_hist": "Jaisalmer",
     "b_origin": "Jaisalmer (constituent holding of Ludrâwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɛɪ.zal.mər]",
+    "b_ipa": "[ˈjɛɪ.zal.mɛr]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -83496,7 +83496,7 @@
     "b_tarr_hist": "Talner",
     "b_origin": "Thalner (Talner (in-game: Thalner))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Talner under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈtal.nər]",
+    "b_ipa": "[ˈtal.nɛr]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -85399,7 +85399,7 @@
     "b_tarr_hist": "Carguya",
     "b_origin": "Carguya (constituent holding of Patkâi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkar.ɡʊ.ɪ.a]",
+    "b_ipa": "[ˈkar.ɡɪ.a]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86158,7 +86158,7 @@
     "b_tarr_hist": "Tendukheda",
     "b_origin": "Tendukheda (constituent holding of Tschauragar)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtən.dʊk.hɛ.da]",
+    "b_ipa": "[ˈtɛn.dʊk.hɛ.da]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86840,7 +86840,7 @@
     "b_tarr_hist": "Kanker",
     "b_origin": "Kanker (constituent holding of Tschakrakûte)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ŋkər]",
+    "b_ipa": "[ˈka.ŋkɛr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86961,7 +86961,7 @@
     "b_tarr_hist": "Watzagulme",
     "b_origin": "Vatsagulma (Vatsagulma)",
     "b_anachronism": "",
-    "b_ipa": "[wa.tsa.ˈɣʊl.mə]",
+    "b_ipa": "[wa.tsa.ˈɣʊl.mɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91042,7 +91042,7 @@
     "b_tarr_hist": "Pel-Jül",
     "b_origin": "Pelyül (Pelyül)",
     "b_anachronism": "",
-    "b_ipa": "[pəl jyːl]",
+    "b_ipa": "[pɛl jyːl]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91218,7 +91218,7 @@
     "b_tarr_hist": "GuEstat",
     "b_origin": "Nyagqu — Municipal foundation chartered by GuE",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Gu_53E4 under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈɡʊ.ɛs.tat]",
+    "b_ipa": "[ˈɡɛs.tat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -91438,7 +91438,7 @@
     "b_tarr_hist": "Dêrlênke",
     "b_origin": "Dêrlênka (Dêrlênka)",
     "b_anachronism": "",
-    "b_ipa": "[deːr.ˈleː.ŋkə]",
+    "b_ipa": "[deːr.ˈleː.ŋkɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91680,7 +91680,7 @@
     "b_tarr_hist": "Sibnak Chenchungo",
     "b_origin": "Sibnak Chenchungo (constituent holding of Amdô)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɪb.nak ˈxən.xʊ.ŋɔ]",
+    "b_ipa": "[ˈsɪb.nak ˈxɛn.xʊ.ŋɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -92318,7 +92318,7 @@
     "b_tarr_hist": "WendschiCEAszelle",
     "b_origin": "Gande — Monastic cell and hermitage established by WenzhiCEA",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wenzhi_6587_8CEA of House Dajianlu Dong.",
-    "b_ipa": "[wən.dʒɪ.tsɛ.as.ˈtsɛ.ʎə]",
+    "b_ipa": "[wɛn.dʒɪ.tsɛ.as.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -92428,7 +92428,7 @@
     "b_tarr_hist": "Mangre",
     "b_origin": "Guinan (Mangra)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmaŋ.rə]",
+    "b_ipa": "[ˈmaŋ.rɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -92483,7 +92483,7 @@
     "b_tarr_hist": "Gonguistat",
     "b_origin": "Lintan — Municipal foundation chartered by Gongui",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Gong_ui of House Myeoncheon Bok.",
-    "b_ipa": "[ˈɡɔ.ŋʊ.ɪs.tat]",
+    "b_ipa": "[ˈɡɔn.ɡɪs.tat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -92494,7 +92494,7 @@
     "b_tarr_hist": "Zant-Gongui",
     "b_origin": "Hezuo — Patron saint collegiate foundation dedicated by Gongui",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Gong_ui of House Myeoncheon Bok.",
-    "b_ipa": "[tsant ˈɡɔ.ŋʊ.ɪ]",
+    "b_ipa": "[tsant ˈɡɔn.ɡɪ]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -92560,7 +92560,7 @@
     "b_tarr_hist": "Zant-Gongui",
     "b_origin": "Muxihe — Patron saint collegiate foundation dedicated by Gongui",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Gong_ui of House Myeoncheon Bok.",
-    "b_ipa": "[tsant ˈɡɔ.ŋʊ.ɪ]",
+    "b_ipa": "[tsant ˈɡɔn.ɡɪ]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -92912,7 +92912,7 @@
     "b_tarr_hist": "Drongpe",
     "b_origin": "Labrang (Drongpe (in-game: Drongpa))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Drongpe under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈdrɔŋ.pə]",
+    "b_ipa": "[ˈdrɔŋ.pɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -93042,7 +93042,7 @@
     "b_tarr": "Geirrsburch",
     "b_tarr_direct": "Khalatze",
     "b_tarr_hist": "Geirrsburch",
-    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['greedy', 'ambitious'])",
+    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['ambitious', 'greedy'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Geirr of House Njudunge-Örebro.",
     "b_ipa": "[ˈɡɛɪrs.bʊrx]",
     "holding_type": "castle",
@@ -93231,7 +93231,7 @@
     "b_tarr_hist": "Pendenmunster",
     "b_origin": "Roundu — Collegiate minster church of House Penden",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Penden of House Penden.",
-    "b_ipa": "[ˈpən.dɛn.mʊn.stər]",
+    "b_ipa": "[ˈpɛn.dən.mʊn.stər]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -93242,7 +93242,7 @@
     "b_tarr_hist": "Pendenstat",
     "b_origin": "Tolti — Municipal foundation chartered by Penden",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Penden of House Penden.",
-    "b_ipa": "[ˈpən.dɛn.stat]",
+    "b_ipa": "[ˈpɛn.dən.stat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -93253,7 +93253,7 @@
     "b_tarr_hist": "Pendensburch",
     "b_origin": "Gultari — Self-eponymous fortress founded by Penden (['ambitious'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Penden of House Penden.",
-    "b_ipa": "[ˈpən.dɛns.bʊrx]",
+    "b_ipa": "[ˈpɛn.dəns.bʊrx]",
     "holding_type": "castle",
     "category": "option_c_foundation"
   },
@@ -93528,7 +93528,7 @@
     "b_tarr_hist": "Trongse",
     "b_origin": "Trongsa (Trongse (in-game: Trongsa))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Trongse under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈtrɔŋ.sə]",
+    "b_ipa": "[ˈtrɔŋ.sɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -93627,7 +93627,7 @@
     "b_tarr_hist": "Ehrenfrîtmarct",
     "b_origin": "Darjeeling — Chartered market borough established by Ehrenfrît",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Ehrenfried of House Daga.",
-    "b_ipa": "[ˈɛh.rən.friːt.markt]",
+    "b_ipa": "[ˈɛh.rɛn.friːt.markt]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -93770,7 +93770,7 @@
     "b_tarr_hist": "WenduEAszelle",
     "b_origin": "Daporijo — Monastic cell and hermitage established by WenduEA",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wendu_6587_5EA6 of House Charkliq Li.",
-    "b_ipa": "[wən.dʊ.ɛ.as.ˈtsɛ.ʎə]",
+    "b_ipa": "[wɛn.dʊ.ɛ.as.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -93792,7 +93792,7 @@
     "b_tarr_hist": "WenduEAszelle",
     "b_origin": "Mechuka — Monastic cell and hermitage established by WenduEA",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wendu_6587_5EA6 of House Charkliq Li.",
-    "b_ipa": "[wən.dʊ.ɛ.as.ˈtsɛ.ʎə]",
+    "b_ipa": "[wɛn.dʊ.ɛ.as.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -93825,7 +93825,7 @@
     "b_tarr_hist": "YuanguiEAstat",
     "b_origin": "Wolong — Municipal foundation chartered by YuanguiEA",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Yuangui_5143_73EA under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈjʊ.a.ŋʊ.ɪ.ɛ.as.tat]",
+    "b_ipa": "[ˈjʊ.an.ɡɪ.ɛ.as.tat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -93847,7 +93847,7 @@
     "b_tarr_hist": "WenduEAszelle",
     "b_origin": "Bokthang — Monastic cell and hermitage established by WenduEA",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wendu_6587_5EA6 of House Charkliq Li.",
-    "b_ipa": "[wən.dʊ.ɛ.as.ˈtsɛ.ʎə]",
+    "b_ipa": "[wɛn.dʊ.ɛ.as.ˈtsɛ.ʎə]",
     "holding_type": "church",
     "category": "option_c_foundation"
   },
@@ -95387,7 +95387,7 @@
     "b_tarr_hist": "Rêkendlant",
     "b_origin": "篾儿干 [Mergen] — Calque: Bamboo strip + Child + Riverbank",
     "b_anachronism": "",
-    "b_ipa": "[ˈreː.kənd.lant]",
+    "b_ipa": "[ˈreː.kɛnd.lant]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -95398,7 +95398,7 @@
     "b_tarr_hist": "WestLêhenRêkEnd",
     "b_origin": "西假达末 [Xijiadamo] — Calque: West + Provisional + Reach destination + Farthest terminus",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛst.leː.hɛn.reː.kənd]",
+    "b_ipa": "[ˈwɛst.leː.hɛn.reː.kɛnd]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -95475,7 +95475,7 @@
     "b_tarr_hist": "Swartzdrachenflôzouwe",
     "b_origin": "黑森林 [Heisenlin] — Calque: Jet black + Dense forest + Forest woodland",
     "b_anachronism": "",
-    "b_ipa": "[swarts.dra.xən.floː.ˈtsɔʊ.wə]",
+    "b_ipa": "[swarts.dra.xɛn.floː.ˈtsɔʊ.wə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -96663,7 +96663,7 @@
     "b_tarr_hist": "PînBlômenflôz",
     "b_origin": "松花江 [Songhuajiang] — Calque: Pine tree + Flower + Major southern river",
     "b_anachronism": "",
-    "b_ipa": "[ˈpiːn.bloː.mən.floːts]",
+    "b_ipa": "[ˈpiːn.bloː.mɛn.floːts]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -97147,7 +97147,7 @@
     "b_tarr_hist": "BlouDrachenflôz",
     "b_origin": "青龙河 [Qinglonghe] — Calque: Azure blue + Imperial dragon + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ˈblɔʊ.dra.xən.floːts]",
+    "b_ipa": "[ˈblɔʊ.dra.xɛn.floːts]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -97499,7 +97499,7 @@
     "b_tarr_hist": "WolchenRêgenlant",
     "b_origin": "云雨地 [Yunyudi] — Calque: Cloud mountain mist (Traditional) + Rain + Land",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.reː.ɣɛn.lant]",
+    "b_ipa": "[ˈwɔl.xɛn.reː.ɣɛn.lant]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -98676,7 +98676,7 @@
     "b_tarr_hist": "GeistElven",
     "b_origin": "气仙 (気仙) [Kesen] — Calque: Vital breath + Immortal",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɛɪs.tɛl.vən]",
+    "b_ipa": "[ˈɡɛɪs.tɛl.vɛn]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -99017,7 +99017,7 @@
     "b_tarr_hist": "Kalingge",
     "b_origin": "Dieng (Kalingga)",
     "b_anachronism": "",
-    "b_ipa": "[ka.ˈlɪŋ.ɡə]",
+    "b_ipa": "[ka.ˈlɪŋ.ɡɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -99754,7 +99754,7 @@
     "b_tarr_hist": "Lingge",
     "b_origin": "Lingga (Lingga)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɪŋ.ɡə]",
+    "b_ipa": "[ˈlɪŋ.ɡɛ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -100249,7 +100249,7 @@
     "b_tarr_hist": "Mentawai",
     "b_origin": "Siberut (Mentawai)",
     "b_anachronism": "",
-    "b_ipa": "[mən.ta.ˈwɛɪ]",
+    "b_ipa": "[mɛn.ta.ˈwɛɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -100832,7 +100832,7 @@
     "b_tarr_hist": "Binnenflôz",
     "b_origin": "河内 [Kawachi] — Calque: Great Northern River + Inner",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɪ.nən.floːts]",
+    "b_ipa": "[ˈbɪ.nɛn.floːts]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -101239,7 +101239,7 @@
     "b_tarr_hist": "Ûzwolchen",
     "b_origin": "意宇 [Ou] — Calque: Mind + Canopy",
     "b_anachronism": "",
-    "b_ipa": "[ˈuːts.wɔl.xən]",
+    "b_ipa": "[ˈuːts.wɔl.xɛn]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -101712,7 +101712,7 @@
     "b_tarr_hist": "DûsentBlat",
     "b_origin": "千叶 (千葉) [Chiba] — Calque: Thousand + Leaf",
     "b_anachronism": "",
-    "b_ipa": "[duː.zənt.ˈblat]",
+    "b_ipa": "[duː.zɛnt.ˈblat]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -102394,7 +102394,7 @@
     "b_tarr_hist": "FridWolchen",
     "b_origin": "安昙 (安曇) [Azumi] — Calque: Pacified peace + Cloud",
     "b_anachronism": "",
-    "b_ipa": "[ˈfrɪd.wɔl.xən]",
+    "b_ipa": "[ˈfrɪd.wɔl.xɛn]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -102647,7 +102647,7 @@
     "b_tarr_hist": "StamBilde",
     "b_origin": "宗像 [Munakata] — Calque: Ancestral temple + Image",
     "b_anachronism": "",
-    "b_ipa": "[tsant am.ˈbɪl.də]",
+    "b_ipa": "[tsant am.ˈbɪl.dɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -102999,7 +102999,7 @@
     "b_tarr_hist": "Grôzwinkel",
     "b_origin": "曾於 (曽於) [Soo] — Calque: Layered + Classical particle",
     "b_anachronism": "",
-    "b_ipa": "[ɡroːts.wɪ.ˈŋkəl]",
+    "b_ipa": "[ɡroːts.wɪ.ˈŋkɛl]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -103032,7 +103032,7 @@
     "b_tarr_hist": "MênichAhnen",
     "b_origin": "多祢 (多禰) [Tane] — Calque: Abundant + Ancestral shrine",
     "b_anachronism": "",
-    "b_ipa": "[ˈmeː.nɪ.çah.nən]",
+    "b_ipa": "[ˈmeː.nɪ.çah.nɛn]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -103109,7 +103109,7 @@
     "b_tarr_hist": "Helpenburch",
     "b_origin": "襄城 [Xiangcheng] — Calque: Aid the throne + Walled citadel",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛl.pən.bʊrx]",
+    "b_ipa": "[ˈhɛl.pɛn.bʊrx]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -103208,7 +103208,7 @@
     "b_tarr_hist": "Helpenstat",
     "b_origin": "襄邑 [Xiangyi] — Calque: Aid the throne + Walled town",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛl.pən.stat]",
+    "b_ipa": "[ˈhɛl.pɛn.stat]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -103956,7 +103956,7 @@
     "b_tarr_hist": "KoesterMilde",
     "b_origin": "怀仁 [Huairen] — Calque: Cherish border marches + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[kɔ.ɛs.tɛr.ˈmɪl.də]",
+    "b_ipa": "[kɔ.ɛs.tɛr.ˈmɪl.dɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -104275,7 +104275,7 @@
     "b_tarr_hist": "WendeGô",
     "b_origin": "宛句 [Yuanju] — Calque: Winding valley + Ancient Buyeo",
     "b_anachronism": "",
-    "b_ipa": "[wən.dɛ.ˈɣoː]",
+    "b_ipa": "[wɛn.dɛ.ˈɣoː]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -104858,7 +104858,7 @@
     "b_tarr_hist": "Zâmenflôz",
     "b_origin": "合河 [Hehe] — Calque: Confluence + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsaː.mən.floːts]",
+    "b_ipa": "[ˈtsaː.mɛn.floːts]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -105034,7 +105034,7 @@
     "b_tarr_hist": "FestHelpen",
     "b_origin": "定襄 [Dingxiang] — Calque: Established permanence + Aid the throne",
     "b_anachronism": "",
-    "b_ipa": "[ˈfɛst.hɛl.pən]",
+    "b_ipa": "[ˈfɛst.hɛl.pɛn]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -105045,7 +105045,7 @@
     "b_tarr_hist": "Middenflôze",
     "b_origin": "河东 [Hedong] — Calque: Great Northern River + East",
     "b_anachronism": "",
-    "b_ipa": "[mɪ.dən.ˈfloː.tsə]",
+    "b_ipa": "[mɪ.dɛn.ˈfloː.tsə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -105254,7 +105254,7 @@
     "b_tarr_hist": "Helpenwal",
     "b_origin": "襄垣 [Xiangyuan] — Calque: Aid the throne + Rampart wall",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛl.pən.wal]",
+    "b_ipa": "[ˈhɛl.pɛn.wal]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -105474,7 +105474,7 @@
     "b_tarr_hist": "SwalwenFröuden",
     "b_origin": "燕乐 [Yanle] — Calque: Swallow bird + Joyful",
     "b_anachronism": "",
-    "b_ipa": "[ˈswal.wən.frøː.ʊ.dən]",
+    "b_ipa": "[ˈswal.wɛn.frøː.ʊ.dən]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -105705,7 +105705,7 @@
     "b_tarr_hist": "KoesterMilde",
     "b_origin": "怀仁 [Huairen] — Calque: Cherish border marches + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[kɔ.ɛs.tɛr.ˈmɪl.də]",
+    "b_ipa": "[kɔ.ɛs.tɛr.ˈmɪl.dɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -105804,7 +105804,7 @@
     "b_tarr_hist": "GeistElven",
     "b_origin": "灵仙 [Lingxian] — Calque: Numinous spirit + Immortal",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɛɪs.tɛl.vən]",
+    "b_ipa": "[ˈɡɛɪs.tɛl.vɛn]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -106002,7 +106002,7 @@
     "b_tarr_hist": "Wolchenbinnengouwe",
     "b_origin": "振武 [Zhenwu] — Calque: Vigorously reform + Martial valor",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.bɪ.nɛ.ŋɔʊ.wə]",
+    "b_ipa": "[ˈwɔl.xɛn.bɪ.nɛ.ŋɔʊ.wə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -106189,7 +106189,7 @@
     "b_tarr_hist": "BochtWinkel",
     "b_origin": "盩厔 [Zhouzhi] — Calque: Mountain bend (Zhouzhi) + River bend",
     "b_anachronism": "",
-    "b_ipa": "[bɔxt.wɪ.ˈŋkəl]",
+    "b_ipa": "[bɔxt.wɪ.ˈŋkɛl]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -106299,7 +106299,7 @@
     "b_tarr_hist": "WolchenSunnen",
     "b_origin": "云阳 [Yunyang] — Calque: Cloud mountain mist (Traditional) + Sunny south slope",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.sʊ.nən]",
+    "b_ipa": "[ˈwɔl.xɛn.sʊ.nən]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -106497,7 +106497,7 @@
     "b_tarr_hist": "Schîngouwe-in-der-Klûse",
     "b_origin": "定安 [Ding'an] — Calque: Established permanence + Pacified peace",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃiː.ŋɔʊ.wə ɪn dər ˈkluː.zə]",
+    "b_ipa": "[ˈʃiː.ŋɔʊ.wə ɪn dɛr ˈkluː.zə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -106519,7 +106519,7 @@
     "b_tarr_hist": "HelpenFröuden",
     "b_origin": "襄乐 [Xiangle] — Calque: Aid the throne + Joyful",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛl.pən.frøː.ʊ.dən]",
+    "b_ipa": "[ˈhɛl.pɛn.frøː.ʊ.dən]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -106695,7 +106695,7 @@
     "b_tarr_hist": "WolchenFels",
     "b_origin": "云岩 [Yunyan] — Calque: Cloud mountain mist (Traditional) + Crag",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.fɛls]",
+    "b_ipa": "[ˈwɔl.xɛn.fɛls]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -106893,7 +106893,7 @@
     "b_tarr_hist": "Vollbrâchtgouwe-in-der-Klûse",
     "b_origin": "同谷 [Tonggu] — Calque: Harmonious fellowship + Mountain valley",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɔʎ.braːxt.ɡɔʊ.wə ɪn dər ˈkluː.zə]",
+    "b_ipa": "[ˈvɔʎ.braːxt.ɡɔʊ.wə ɪn dɛr ˈkluː.zə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -107102,7 +107102,7 @@
     "b_tarr_hist": "Wîzsilber",
     "b_origin": "鹯阴 [Zhanyin] — Calque: Falcon + Shady north slope",
     "b_anachronism": "",
-    "b_ipa": "[ˈwiː.tsɪl.bər]",
+    "b_ipa": "[ˈwiː.tsɪl.bɛr]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -107179,7 +107179,7 @@
     "b_tarr_hist": "DrachenZelge",
     "b_origin": "龙支 [Longzhi] — Calque: Imperial dragon + Branch",
     "b_anachronism": "",
-    "b_ipa": "[dra.xən.ˈtsɛl.ɡə]",
+    "b_ipa": "[dra.xən.ˈtsɛl.ɡɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -107300,7 +107300,7 @@
     "b_tarr_hist": "ElvenRîs",
     "b_origin": "仙米 [Semnyi] — Calque: Immortal + Polished grain rice",
     "b_anachronism": "",
-    "b_ipa": "[ɛl.vən.ˈriːs]",
+    "b_ipa": "[ɛl.vɛn.ˈriːs]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -107355,7 +107355,7 @@
     "b_tarr_hist": "JânZelge",
     "b_origin": "焉支 [Yanzhi] — Calque: Mount Yanzhi in Hexi + Branch",
     "b_anachronism": "",
-    "b_ipa": "[jaːn.ˈtsɛl.ɡə]",
+    "b_ipa": "[jaːn.ˈtsɛl.ɡɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -107586,7 +107586,7 @@
     "b_tarr_hist": "Zâmenflôz",
     "b_origin": "合河 [Hehe] — Calque: Confluence + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsaː.mən.floːts]",
+    "b_ipa": "[ˈtsaː.mɛn.floːts]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -107993,7 +107993,7 @@
     "b_tarr_hist": "Dschendorp",
     "b_origin": "真乡 [Zhenxiang] — Calque: Authentic truth + Rural township",
     "b_anachronism": "",
-    "b_ipa": "[ˈdʒən.dɔrp]",
+    "b_ipa": "[ˈdʒɛn.dɔrp]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -108081,7 +108081,7 @@
     "b_tarr_hist": "WeêrkeêrMilde",
     "b_origin": "归仁 [Guiren] — Calque: Return to allegiance + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[wɛ.eːr.kɛ.eːr.ˈmɪl.də]",
+    "b_ipa": "[wɛ.eːr.kɛ.eːr.ˈmɪl.dɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -108136,7 +108136,7 @@
     "b_tarr_hist": "Hêmeltugent",
     "b_origin": "天德 [Tiande] — Calque: Heaven + Virtue",
     "b_anachronism": "",
-    "b_ipa": "[ˈheː.mɛl.tʊ.ɣənt]",
+    "b_ipa": "[ˈheː.mɛl.tʊ.ɣɛnt]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -108147,7 +108147,7 @@
     "b_tarr_hist": "MiddenOntfangHulde",
     "b_origin": "中受降 [Zhongshouxiang] — Calque: Middle + Receive + Pacify",
     "b_anachronism": "",
-    "b_ipa": "[mɪ.dɛ.nɔnt.faŋ.ˈhʊl.də]",
+    "b_ipa": "[mɪ.dɛ.nɔnt.faŋ.ˈhʊl.dɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -108180,7 +108180,7 @@
     "b_tarr_hist": "WestOntfangHulde",
     "b_origin": "西受降 [Xishouxiang] — Calque: West + Receive + Pacify",
     "b_anachronism": "",
-    "b_ipa": "[wɛs.tɔnt.faŋ.ˈhʊl.də]",
+    "b_ipa": "[wɛs.tɔnt.faŋ.ˈhʊl.dɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -108257,7 +108257,7 @@
     "b_tarr_hist": "UlmenMênichLê",
     "b_origin": "榆多勒 [Yuduole] — Calque: Elm tree (northern frontier defense) + Abundant + Bridle",
     "b_anachronism": "",
-    "b_ipa": "[ʊl.mən.meː.nɪç.ˈleː]",
+    "b_ipa": "[ʊl.mɛn.meː.nɪç.ˈleː]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -109148,7 +109148,7 @@
     "b_tarr_hist": "RôtsîdeWolchen",
     "b_origin": "缙云 [Jinyun] — Calque: Crimson silk + Cloud mountain mist (Traditional)",
     "b_anachronism": "",
-    "b_ipa": "[ˈroː.tsiː.dɛ.wɔl.xən]",
+    "b_ipa": "[ˈroː.tsiː.dɛ.wɔl.xɛn]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -109423,7 +109423,7 @@
     "b_tarr_hist": "ElvenStrome",
     "b_origin": "仙游 [Xianyou] — Calque: Immortal + Swimming",
     "b_anachronism": "",
-    "b_ipa": "[ɛl.vəns.ˈtrɔ.mə]",
+    "b_ipa": "[ɛl.vɛns.ˈtrɔ.mə]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -110204,7 +110204,7 @@
     "b_tarr_hist": "HôchMilde",
     "b_origin": "崇仁 [Chongren] — Calque: Exalted + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[hoːx.ˈmɪl.də]",
+    "b_ipa": "[hoːx.ˈmɪl.dɛ]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -110622,7 +110622,7 @@
     "b_tarr_hist": "Helpensunne",
     "b_origin": "襄阳 [Xiangyang] — Calque: Aid the throne + Sunny south slope",
     "b_anachronism": "",
-    "b_ipa": "[hɛl.pən.ˈsʊ.nə]",
+    "b_ipa": "[hɛl.pɛn.ˈsʊ.nə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -111293,7 +111293,7 @@
     "b_tarr_hist": "WolchenTroum",
     "b_origin": "云梦 [Yunmeng] — Calque: Cloud mountain mist (Traditional) + Dream",
     "b_anachronism": "",
-    "b_ipa": "[wɔl.xən.ˈtrɔʊm]",
+    "b_ipa": "[wɔl.xɛn.ˈtrɔʊm]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -112261,7 +112261,7 @@
     "b_tarr_hist": "DschenZêchen",
     "b_origin": "真符 [Zhenfu] — Calque: Authentic truth + Imperial tally",
     "b_anachronism": "",
-    "b_ipa": "[ˈdʒən.tseː.çən]",
+    "b_ipa": "[ˈdʒɛn.tseː.çən]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -112503,7 +112503,7 @@
     "b_tarr_hist": "WeêrkeêrMilde",
     "b_origin": "归仁 [Guiren] — Calque: Return to allegiance + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[wɛ.eːr.kɛ.eːr.ˈmɪl.də]",
+    "b_ipa": "[wɛ.eːr.kɛ.eːr.ˈmɪl.dɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -112536,7 +112536,7 @@
     "b_tarr_hist": "Grâbenflôz",
     "b_origin": "渠江 [Qujiang] — Calque: Irrigation canal + Major southern river",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡraː.bən.floːts]",
+    "b_ipa": "[ˈɡraː.bɛn.floːts]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -112910,7 +112910,7 @@
     "b_tarr_hist": "Zâmenflôz",
     "b_origin": "合江 [Hejiang] — Calque: Confluence + Major southern river",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsaː.mən.floːts]",
+    "b_ipa": "[ˈtsaː.mɛn.floːts]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -112976,7 +112976,7 @@
     "b_tarr_hist": "WolchenFrid",
     "b_origin": "云安 [Yunan] — Calque: Cloud mountain mist (Traditional) + Pacified peace",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.frɪd]",
+    "b_ipa": "[ˈwɔl.xɛn.frɪd]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -114197,7 +114197,7 @@
     "b_tarr_hist": "WolchenSût",
     "b_origin": "云南 [Yunnan] — Calque: Cloud mountain mist (Traditional) + South",
     "b_anachronism": "",
-    "b_ipa": "[wɔl.xən.ˈsuːt]",
+    "b_ipa": "[wɔl.xɛn.ˈsuːt]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -114274,7 +114274,7 @@
     "b_tarr_hist": "WolchenDrachen",
     "b_origin": "云龙 [Yunlong] — Calque: Cloud mountain mist (Traditional) + Imperial dragon",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɔl.xən.dra.xən]",
+    "b_ipa": "[ˈwɔl.xɛn.dra.xən]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -114384,7 +114384,7 @@
     "b_tarr_hist": "Stichtglantz-in-der-Klûse",
     "b_origin": "越嶲 [Yuexi] — Calque: Cross over + Ancient雋",
     "b_anachronism": "",
-    "b_ipa": "[tsant ˈɪçt.ɡlants ɪn dər ˈkluː.zə]",
+    "b_ipa": "[tsant ˈɪçt.ɡlants ɪn dɛr ˈkluː.zə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -114989,7 +114989,7 @@
     "b_tarr_hist": "Sunnenflôz",
     "b_origin": "阳江 [Yangjiang] — Calque: Sunny south slope + Major southern river",
     "b_anachronism": "",
-    "b_ipa": "[ˈsʊ.nən.floːts]",
+    "b_ipa": "[ˈsʊ.nɛn.floːts]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -115671,7 +115671,7 @@
     "b_tarr_hist": "Zâmenvlôzgouwe",
     "b_origin": "融水 [Rongshui] — Calque: Harmonious blending + Freshwater",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsaː.mən.vloːts.ɡɔʊ.wə]",
+    "b_ipa": "[ˈtsaː.mɛn.vloːts.ɡɔʊ.wə]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -115715,7 +115715,7 @@
     "b_tarr_hist": "WâpenElven",
     "b_origin": "武仙 [Wuxian] — Calque: Martial valor + Immortal",
     "b_anachronism": "",
-    "b_ipa": "[ˈwaː.pɛ.nɛl.vən]",
+    "b_ipa": "[ˈwaː.pɛ.nɛl.vɛn]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -116188,7 +116188,7 @@
     "b_tarr_hist": "WâpenVlîz",
     "b_origin": "武勤 [Wule] — Calque: Martial valor + Diligent",
     "b_anachronism": "",
-    "b_ipa": "[waː.pən.ˈvliːts]",
+    "b_ipa": "[waː.pɛn.ˈvliːts]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -116562,7 +116562,7 @@
     "b_tarr_hist": "BerchRanke",
     "b_origin": "山萝 [Son La] — Calque: Mountain + Climbing vine",
     "b_anachronism": "",
-    "b_ipa": "[bɛrx.ˈra.ŋkə]",
+    "b_ipa": "[bɛrx.ˈra.ŋkɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -116782,7 +116782,7 @@
     "b_tarr_hist": "Yawnghwe",
     "b_origin": "Yawnghwe (constituent holding of Kjauksê)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjawŋh.wə]",
+    "b_ipa": "[ˈjawŋh.wɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117508,7 +117508,7 @@
     "b_tarr_hist": "Senwî",
     "b_origin": "Hsenwi (Hsenwi)",
     "b_anachronism": "",
-    "b_ipa": "[sən.ˈwiː]",
+    "b_ipa": "[sɛn.ˈwiː]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -117904,7 +117904,7 @@
     "b_tarr_hist": "Chan Sen",
     "b_origin": "Chan Sen (constituent holding of Lopburi)",
     "b_anachronism": "",
-    "b_ipa": "[xan sən]",
+    "b_ipa": "[xan sɛn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118355,7 +118355,7 @@
     "b_tarr_hist": "Mergui",
     "b_origin": "Mergui (constituent holding of Tenasserim)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛr.ɡʊ.ɪ]",
+    "b_ipa": "[ˈmɛr.ɡɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118410,7 +118410,7 @@
     "b_tarr_hist": "Laingbwe",
     "b_origin": "Hlaingbwe (Hlaingbwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɛɪŋb.wə]",
+    "b_ipa": "[ˈlɛɪŋb.wɛ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -119664,7 +119664,7 @@
     "b_tarr_hist": "Hve",
     "b_origin": "Hve (constituent holding of Simhapure)",
     "b_anachronism": "",
-    "b_ipa": "[hvə]",
+    "b_ipa": "[hvɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -120577,7 +120577,7 @@
     "b_tarr_hist": "MênichMilde",
     "b_origin": "多仁 (多仁 (다인)) [Dain] — Calque: Abundant + Benevolence",
     "b_anachronism": "",
-    "b_ipa": "[meː.nɪç.ˈmɪl.də]",
+    "b_ipa": "[meː.nɪç.ˈmɪl.dɛ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -121083,7 +121083,7 @@
     "b_tarr_hist": "Swalwenberch",
     "b_origin": "燕山 [Yeonsan] — Calque: Swallow bird + Mountain",
     "b_anachronism": "",
-    "b_ipa": "[ˈswal.wən.bɛrx]",
+    "b_ipa": "[ˈswal.wɛn.bɛrx]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -122051,7 +122051,7 @@
     "b_tarr_hist": "Inaguinidstat",
     "b_origin": "Masiu — Municipal foundation chartered by Inaguinid",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Inaguinid under Toponym-First foundation (disqualifying circular in-game house).",
-    "b_ipa": "[ˈɪ.na.ɣʊ.ɪ.nɪd.stat]",
+    "b_ipa": "[ˈɪ.na.ɣɪ.nɪd.stat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -122150,7 +122150,7 @@
     "b_tarr_hist": "Maguindanâu",
     "b_origin": "Tamontaka (Maguindanâu (in-game: Maguindanao))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Maguindanâu under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈma.ɣʊ.ɪn.da.naː.ʊ]",
+    "b_ipa": "[ˈma.ɣɪn.da.naː.ʊ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -122755,7 +122755,7 @@
     "b_tarr_hist": "Mendschelutung",
     "b_origin": "Tarakan (Mendschelutung (in-game: Menjelutung))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Mendschelutung under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈmən.dʒɛ.lʊ.tʊŋ]",
+    "b_ipa": "[ˈmɛn.dʒɛ.lʊ.tʊŋ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123820,7 +123820,7 @@
     "b_tarr": "Arnoldsburch",
     "b_tarr_direct": "Waru",
     "b_tarr_hist": "Arnoldsburch",
-    "b_origin": "Waru — Self-eponymous fortress founded by Arnold (['arrogant', 'fickle'])",
+    "b_origin": "Waru — Self-eponymous fortress founded by Arnold (['fickle', 'arrogant'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Arnold of House Kestenholz-Metz.",
     "b_ipa": "[ˈar.nɔlds.bʊrx]",
     "holding_type": "castle",

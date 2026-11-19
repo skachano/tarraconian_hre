@@ -15,6 +15,7 @@ Adheres strictly to:
 """
 
 import argparse
+import difflib
 import hashlib
 import json
 import os
@@ -173,6 +174,8 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = res.replace("æ", "e").replace("ä", "e").replace("å", "o").replace("ë", "e").replace("ï", "i")
     res = res.replace("ñ", "nj").replace("ý", "î")
     res = res.replace("qu", "kw").replace("q", "k")
+    # Catalan/Romance gu before front vowels -> ɡ (velar stop digraph)
+    res = re.sub(r"gu(?=[eiêîy])", "ɡ", res)
     res = res.replace("x", "ks")
     res = res.replace("ā", "aː").replace("ī", "iː").replace("ū", "uː")
     res = res.replace("ă", "ə").replace("ș", "ʃ").replace("ț", "ts")
@@ -228,22 +231,23 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = res.replace("g", "ɡ")
     
     # Reduced vowel [ə] in unstressed Germanic inflectional endings (-en, -er, -el, -e)
+    # Only in multisyllabic words (must be preceded by a vowel in the stem)
     # But preserve stressed Romance -el, -et, -at, -on, -an
+    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|ɛɪ|ɔʊ|ɔʏ)"
     C_SET = r"[bdfɡɣkmnprstvwxzʒʃçʎɲ]"
-    res = re.sub(f"({C_SET})ɛn\\b", r"\1ən", res)
-    res = re.sub(f"({C_SET})ɛr\\b", r"\1ər", res)
-    res = re.sub(f"({C_SET})ɛl\\b", r"\1əl", res)
-    # Medial -en- in compounds (e.g. Plintenburch)
-    res = re.sub(f"({C_SET})ɛn({C_SET})", r"\1ən\2", res)
+    res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛn\\b", r"\1\2ən", res)
+    res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛr\\b", r"\1\2ər", res)
+    res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛl\\b", r"\1\2əl", res)
+    # Medial -en- in compounds (e.g. Plintenburch) - must be between syllables
+    res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛn({C_SET}+?{v_regex})", r"\1\2ən\3", res)
     
     # Romance words ending in -tel, -del, -pel with oxytone stress keep [ɛl] if root is Romance
     if re.search(r"(castel|kastel|montpel|bordel)", raw_stem, re.IGNORECASE):
         res = re.sub(r"əl\b|əl(?=\s|-)", "ɛl", res)
         
-    res = re.sub(f"({C_SET})ɛ\\b", r"\1ə", res)
+    res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛ\\b", r"\1\2ə", res)
     
     # Intervocalic s -> z (single s only between vowels)
-    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|ɛɪ|ɔʊ|ɔʏ)"
     res = re.sub(f"(?<![s])({v_regex})s({v_regex})(?![s])", r"\1z\2", res)
     
     # Intervocalic lenition of [ɡ] -> [ɣ] between vowels
@@ -934,6 +938,10 @@ def adapt_european_toponym(name: str) -> str:
         return "Briantzôn"
     if re.match(r"^(?:La\s+)?Peyrade\b", s, re.I):
         return "La Peirâde"
+    if re.match(r"^(?:Gu[éêe]ret|Garait)\b", s, re.I):
+        return "Garait"
+    if re.match(r"^Gu[éêe]rande\b", s, re.I):
+        return "Guerande"
     if re.match(r"^(?:La\s+)?Haye\b", s, re.I):
         return "La Haie"
     if re.match(r"^Bray\b", s, re.I):

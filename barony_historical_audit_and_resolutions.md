@@ -37,17 +37,17 @@ Every single occupied holding has been resolved according to:
 
 ```mermaid
 pie title Occupied Barony Resolutions (10,237 Titles)
-    "Category 1: Sinosphere Logographic Calques" : 1982
-    "Category 2: Capital / Eponymous Holdings" : 2723
-    "Category 3a: Ancient Sub-Baronies & Attestations" : 3769
-    "Category 3b: Option C Founder Foundations" : 1763
+    "Category 1: Sinosphere Logographic Calques" : 1979
+    "Category 2: Capital / Eponymous Holdings" : 2753
+    "Category 3a: Ancient Sub-Baronies & Attestations" : 3699
+    "Category 3b: Option C Founder Foundations" : 1806
 ```
 
-1. **Category 1 (Sinosphere Logographic Calques — 1,982 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,235-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
-2. **Category 2 (Capital / Eponymous Holdings — 2,723 titles):** The primary or capital seat of its parent county (including 28 disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
-3. **Category 3 (Sub-Baronies & Historical Attestations — 5,532 titles):**
-   - **Ancient Sub-Baronies & Attestations (3,769 titles):** Includes 3,481 classical/ancient civitates and toponymic stems, 158 Option A archaeological seats, 114 paired secondary variants from `tarraconian_titles_1059.md`, and 16 indigenous restitutions.
-   - **Option C Campaign Foundations (1,763 titles):** Titles lacking documented pre-867 historical proof under the *Burden of Proof on Antiquity* (including post-867 colonial castles, high-medieval ostrogs, and modern Paradox settlements like `b_baranovichi`). Automatically attributed to the actual rulers and cadet houses who founded or held them in `melted_save.ck3`.
+1. **Category 1 (Sinosphere Logographic Calques — 1,979 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,235-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
+2. **Category 2 (Capital / Eponymous Holdings — 2,753 titles):** The primary or capital seat of its parent county (including disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
+3. **Category 3 (Sub-Baronies & Historical Attestations — 5,505 titles):**
+   - **Ancient Sub-Baronies & Attestations (3,699 titles):** Includes classical/ancient civitates and toponymic stems, Option A archaeological seats, paired secondary variants from `tarraconian_titles_1059.md`, and 100 authentic indigenous restitutions.
+   - **Option C Campaign Foundations (1,806 titles):** Titles lacking documented pre-867 historical proof under the *Burden of Proof on Antiquity* (including post-867 colonial castles, high-medieval ostrogs, and modern Paradox settlements like `b_baranovichi`). Automatically attributed to the actual rulers and cadet houses who founded or held them in `melted_save.ck3`.
 
 ---
 
@@ -118,6 +118,18 @@ The Chancellery enforces the **Disambiguation Rule**:
 | `c_linlithgowshire` | `b_linlithgow` | `b_falkirk` | **Fawkirk** | **Aberkôrn** | Falkirk (Egglesbreth) was the ancient Celtic site; Abercorn (Linlithgow) the Northumbrian see. |
 | `c_oldenburg` | `b_oldenburg` | `b_leer` | **Lêre** | **Aldenburch** | Leer was the ancient 8th-century Liudger missionary center; Oldenburg founded c. 1108. |
 | `c_brandenburg` | `b_brandenburg` | `b_potsdam` | **Pôtzupimi** | **Brennabor** | Poztupimi was the Hevelli Slavic settlement; Brennabor was the princely fortress on the Havel. |
+| `c_avalois` | `b_morvan` | `b_vezelay` | **Wêzelê** | **Avalûn** | Avallon (*Aballo*) was the fortified caput of the Avalois; Vézelay (*Vizeliacum*) the 858 AD Benedictine pilgrimage abbey. |
+| `c_wiltshire` | `b_wilton` | `b_salisbury` | **Sâlesburch** | **Wiltûn** | Wilton was the ancient burh of the Wilsæte; Old Sarum/Salisbury (*Sorviodunum*) the hilltop cathedral fortress. |
+| `c_minden` | `b_minden` | `b_diepholz` | **Dêpholtz** | **Minden** | Minden was the ancient 798 AD Charlemagne episcopal see; Diepholz the comital water castle on the Hunte. |
+| `c_chartres` | `b_chartres` | `b_dreux` | **Drôchs** | **Schartres** | Chartres (*Autricum*) was the ancient Carnutes civitas and cathedral; Dreux the Gaulish Durocasses capital. |
+| `c_sankt_gallen` | `b_konstanz` | `b_sankt_gallen` | **Zant-Gallen** | **Konstantz** | Constance (*Constantia*) was the Roman episcopal see; Saint Gall the 612 AD Benedictine monastic republic. |
+| `c_beja` | `b_evora` | `b_beja` | **Bêdsche** | **Êvore** | Évora (*Ebora*) was the ancient Roman civitas see; Beja (*Pax Julia / Bājah*) the southern fortress city. |
+| `c_lanarkshire` | `b_lanark` | `b_cadyou` | **Kadjo** | **Lânark** | Cadzow was the ancient Strathclyde comital center; Lanark the chartered royal burgh. |
+| `c_athlone` | `b_athlone` | `b_uisneach` | **Uisnech** | **Âth-Lôen** | Uisneach was the sacred royal hill and navel of Ireland; Athlone the 1120 Shannon bridge castle. |
+| `c_ravensburg` | `b_ravensburg` | `b_bregenz` | **Briganz** | **Râvensburch** | Bregenz was the ancient Roman *Brigantium*; Ravensburg the 1088 Welf ancestral fortress. |
+| `c_coburg` | `b_coburg` | `b_lichtenfels` | **Liechtenfels** | **Kôburch** | Lichtenfels was the ancient Radenzgau Main fortress; Coburg the 1056 comital stronghold. |
+| `c_slupsk` | `b_slupsk` | `b_koszalin` | **Cöslîn** | **Slûptzich** | Koszalin was the coastal Pomeranian center; Słupsk the inland ducal gord. |
+| `c_perekop` | `b_aqmescit` | `b_perekop` | **Tâfros** | **Akmesdschît** | Taphros was the ancient Greek isthmus fort; Aqmescit the Crimean Tatar fortress. |
 
 ---
 
@@ -159,6 +171,9 @@ In [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_
 | `b_roma` | `c_roma` | Castle | **Rôme** | Rôme | `[ˈroː.mə]` | Classical Caput Mundi; Apostolic See. |
 | `b_toledo` | `c_toledo` | Castle | **Tolêt** | Tolêt | `[ˈtɔ.leːt]` | Roman Toletum; Visigothic royal capital. |
 | `b_barcelona` | `c_barcelona` | Castle | **Barselône** | Barselône | `[bar.sə.ˈloː.nə]` | Roman Barcino; Catalan comital seat. |
+| `b_morvan` | `c_avalois` | Church | **Avalûn** | Avallon | `[a.va.ˈluːn]` | Ancient Gallo-Roman Aballo / fortified caput of the Avalois on the Cousin (843 AD). |
+| `b_vezelay` | `c_avalois` | Church | **Wêzelê** | Vézelay | `[weː.tsɛ.ˈleː]` | Ancient Vizeliacum / Benedictine Abbey of Sainte-Marie-Madeleine at Vézelay (858 AD). |
+| `b_autun` | `c_chalon` | Castle | **Ostûn** | Autun | `[ɔs.ˈtuːn]` | Ancient Augustodunum / Episcopal See of Autun (secondary variant of the Bishopric of Avalois). |
 
 ### 5.2 Baltic, Nordic & Eastern Europe (`e_wendish_empire`, `e_russia`, `e_scandinavia`, `e_carpathia`)
 
