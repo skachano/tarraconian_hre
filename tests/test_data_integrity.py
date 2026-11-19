@@ -975,4 +975,109 @@ class TestSymbolGenerator:
         # 3. Blazon generation includes count and ordinary
         assert "function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null)" in content
 
+    def test_canonical_heraldry_coverage_and_rule_of_tincture(self):
+        """Verify canonical save heraldry dataset, c_porto arms, and strict Rule of Tincture compliance."""
+        canon_path = REPO_DIR / "data" / "canonical_title_heraldry.json"
+        docs_canon = DOCS_DIR / "data" / "canonical_title_heraldry.json"
+        assert canon_path.exists(), "data/canonical_title_heraldry.json is missing"
+        assert docs_canon.exists(), "docs/data/canonical_title_heraldry.json is missing"
+
+        with open(canon_path, "r", encoding="utf-8") as f:
+            canon = json.load(f)
+
+        assert len(canon) >= 1700, f"Expected >= 1700 canonical titles, found {len(canon)}"
+
+        # 1. c_porto validation: authentic arms of Portucale / Count Henry of Burgundy
+        assert "c_porto" in canon, "c_porto must be present in canonical heraldry"
+        porto_entry = canon["c_porto"]
+        field, ord_key, charge, charge_col, count, ord_col = porto_entry
+        assert field == "argent", f"c_porto field must be Argent, got {field}"
+        assert charge == "cross", f"c_porto charge must be cross, got {charge}"
+        assert charge_col == "azure", f"c_porto charge color must be Azure, got {charge_col}"
+        assert ord_key == "solid", f"c_porto ordinary must be solid, got {ord_key}"
+
+        # 2. Complete Rule of Tincture audit: zero metal-on-metal or colour-on-colour violations
+        metals = {"or", "argent"}
+        colours = {"gules", "azure", "vert", "sable", "purpure"}
+
+        violations = []
+        for title, data in canon.items():
+            f_col, o_key, chg, chg_col, cnt, o_col = data
+            field_is_metal = f_col in metals
+            charge_is_metal = chg_col in metals
+
+            if field_is_metal and charge_is_metal:
+                violations.append((title, "charge metal-on-metal", f_col, chg_col))
+            elif (not field_is_metal) and (not charge_is_metal):
+                violations.append((title, "charge colour-on-colour", f_col, chg_col))
+
+            if o_key != "solid":
+                ord_is_metal = o_col in metals
+                if field_is_metal and ord_is_metal:
+                    violations.append((title, "ordinary metal-on-metal", f_col, o_col))
+                elif (not field_is_metal) and (not ord_is_metal):
+                    violations.append((title, "ordinary colour-on-colour", f_col, o_col))
+
+        assert len(violations) == 0, f"Found {len(violations)} Rule of Tincture violations in canonical heraldry: {violations[:5]}"
+
+    def test_realm_heraldic_uniqueness(self, counties_data):
+        """Verify 100% heraldic uniqueness across all 47 empires and 213 kingdoms."""
+        canon_path = REPO_DIR / "data" / "canonical_title_heraldry.json"
+        with open(canon_path, "r", encoding="utf-8") as f:
+            canon = json.load(f)
+
+        features = counties_data.get("features", [])
+        empires = sorted(list(set(f["properties"].get("empire") for f in features if f["properties"].get("empire"))))
+        kingdoms = sorted(list(set(f["properties"].get("kingdom") for f in features if f["properties"].get("kingdom"))))
+
+        assert len(empires) == 47, f"Expected 47 empires, got {len(empires)}"
+        assert len(kingdoms) == 213, f"Expected 213 kingdoms, got {len(kingdoms)}"
+
+        # A. Empires Uniqueness (47 / 47)
+        emp_blazons = {}
+        for e in empires:
+            assert e in canon, f"Empire {e} missing from canonical heraldry"
+            emp_blazons.setdefault(tuple(canon[e]), []).append(e)
+
+        emp_dups = {b: elist for b, elist in emp_blazons.items() if len(elist) > 1}
+        assert len(emp_dups) == 0, f"Duplicate empire blazons detected: {emp_dups}"
+
+        # B. Kingdoms Uniqueness (213 / 213)
+        kng_blazons = {}
+        for k in kingdoms:
+            assert k in canon, f"Kingdom {k} missing from canonical heraldry"
+            kng_blazons.setdefault(tuple(canon[k]), []).append(k)
+
+        kng_dups = {b: klist for b, klist in kng_blazons.items() if len(klist) > 1}
+        assert len(kng_dups) == 0, f"Duplicate kingdom blazons detected: {kng_dups}"
+
+    def test_charge_builders_tincture_adaptation(self):
+        """Verify dynamic contrast immunity for multi-element charges in symbol_generator.js."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. CANONICAL_HERALDRY embedded and referenced in analyzeTitle
+        assert "const CANONICAL_HERALDRY = {" in content, "CANONICAL_HERALDRY must be embedded in symbol_generator.js"
+        assert "if (typeof CANONICAL_HERALDRY !== 'undefined' && CANONICAL_HERALDRY[key])" in content
+        assert "CANONICAL_HERALDRY\n  };" in content or "CANONICAL_HERALDRY" in content
+
+        # 2. Ship charge contrast adaptation (sail is never argent on metal field)
+        assert "ship:" in content
+        assert "isMetal" in content or "isMetalField" in content
+        assert "sailColor" in content
+        assert "waveColor" in content
+
+        # 3. Waves charge contrast adaptation
+        assert "waves:" in content
+        assert "waveColor" in content
+
+        # 4. Chestnut tree contrast adaptation (crown is never vert on vert field)
+        assert "tree_chestnut:" in content
+        assert "crownColor" in content
+
+        # 5. St. Peter keys contrast adaptation
+        assert "keys_st_peter:" in content
+        assert "k1" in content and "k2" in content
+
+
 

@@ -47,6 +47,7 @@ def main():
         "sinosphere_hanzi_calques.json",
         "sinosphere_kanji_tarraconian.json",
         "sinosphere_title_calques.json",
+        "canonical_title_heraldry.json",
     ]
     for dset in required_datasets:
         src = DATA_DIR / dset
