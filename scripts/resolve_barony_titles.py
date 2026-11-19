@@ -89,6 +89,71 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     """
     s = name.strip()
     
+    # 0. Foreign grapheme regularization to Tarraconian Chancellery orthography
+    # German Eszett
+    s = s.replace("ß", "ss")
+
+    # Polish / Slavic nasals & digraphs
+    s = s.replace("ą", "on").replace("ę", "en").replace("Ą", "On").replace("Ę", "En")
+    s = re.sub(r"cz", "tsch", s, flags=re.I)
+    s = re.sub(r"sz", "sch", s, flags=re.I)
+    s = re.sub(r"rz", "rsch", s, flags=re.I)
+    s = s.replace("ł", "l").replace("Ł", "L")
+    s = s.replace("ń", "nj").replace("Ń", "Nj")
+    s = s.replace("ś", "sch").replace("Ś", "Sch")
+    s = s.replace("ć", "tsch").replace("Ć", "Tsch")
+    s = s.replace("ź", "sch").replace("Ź", "Sch")
+    s = s.replace("ż", "sch").replace("Ż", "Sch")
+    s = s.replace("ř", "rsch").replace("Ř", "Rsch")
+    s = s.replace("ě", "e").replace("Ě", "E")
+    s = s.replace("ė", "e").replace("Ė", "E")
+    
+    # Czech / Slovak
+    s = s.replace("ň", "n").replace("Ň", "N")
+    s = s.replace("ů", "û").replace("Ů", "Û")
+    s = s.replace("ď", "d").replace("Ď", "D")
+    s = s.replace("ť", "t").replace("Ť", "T")
+    s = s.replace("ĺ", "l").replace("Ĺ", "L")
+    s = s.replace("ľ", "l").replace("Ľ", "L")
+    s = s.replace("ŕ", "r").replace("Ŕ", "R")
+
+    # Slavic háčeks
+    s = s.replace("š", "sch").replace("Š", "Sch")
+    s = s.replace("ž", "sch").replace("Ž", "Sch")
+    s = s.replace("č", "tsch").replace("Č", "Tsch")
+    s = s.replace("đ", "dsch").replace("Đ", "Dsch")
+    
+    # Scandinavian
+    s = s.replace("å", "ô").replace("Å", "Ô")
+    s = s.replace("æ", "ê").replace("Æ", "Ê")
+    s = s.replace("ø", "ö").replace("Ø", "Ö")
+    s = s.replace("ð", "d").replace("Ð", "D")
+    s = s.replace("þ", "t").replace("Þ", "T")
+    s = s.replace("ý", "î").replace("Ý", "Î")
+    
+    # Romanian, Turkish, Azeri, IPA
+    s = s.replace("ș", "sch").replace("Ș", "Sch")
+    s = s.replace("ț", "tz").replace("Ț", "Tz")
+    s = s.replace("ă", "e").replace("Ă", "E")
+    s = s.replace("ə", "e").replace("Ə", "E")
+    s = s.replace("ı", "i").replace("İ", "I")
+    s = s.replace("ğ", "g").replace("Ğ", "G")
+    
+    # Iberian
+    s = s.replace("ñ", "nj").replace("Ñ", "Nj")
+    s = s.replace("ã", "â").replace("Ã", "Â")
+    
+    # Macrons
+    s = s.replace("ā", "â").replace("Ā", "Â")
+    s = s.replace("ī", "î").replace("Ī", "Î")
+    s = s.replace("ū", "û").replace("Ū", "Û")
+    
+    # Diaereses & Hungarian
+    s = s.replace("ë", "e").replace("Ë", "E")
+    s = s.replace("ï", "î").replace("Ï", "Î")
+    s = s.replace("ő", "ö").replace("Ő", "Ö")
+    s = s.replace("ű", "ü").replace("Ű", "Ü")
+
     # 1. Normalize accents: acutes to circumflexes, cedillas to affricates
     s = s.replace("á", "â").replace("é", "ê").replace("í", "î").replace("ó", "ô").replace("ú", "û")
     s = s.replace("Á", "Â").replace("É", "Ê").replace("Í", "Î").replace("Ó", "Ô").replace("Ú", "Û")
@@ -683,7 +748,7 @@ def resolve_sinosphere_barony(b_key: str, zh_raw: str, en_name: str, k_map: dict
     calque = enforce_tarraconian_sound_laws(calque)
     
     if is_capital and county_tarr:
-        tarr_name = county_tarr
+        tarr_name = enforce_tarraconian_sound_laws(county_tarr)
     else:
         tarr_name = calque
 
@@ -708,13 +773,6 @@ def resolve_sinosphere_barony(b_key: str, zh_raw: str, en_name: str, k_map: dict
 # ==============================================================================
 # 4. FOUNDER ARCHETYPE EVALUATION (SECTION 3.2 / OPTION C ENGINE)
 # ==============================================================================
-
-LATE_PATTERNS = re.compile(
-    r'\b(novo|new|aleksandr|stanitsa|station|fort)[a-z]*\b|'
-    r'[a-z]*(burg|burgh|stein|fels|schloss|pils|linna|abad|pur|garh|fort|stanitsa|station|railway|mine|ostrog|sloboda|sk|ysk|ovichi|ichi|grad|gorod)\b',
-    re.I
-)
-
 
 def is_circular_house(house_str: str, stem_str: str, barony_key: str = "", county_key: str = "") -> bool:
     """
@@ -914,28 +972,36 @@ def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
         return True, "indigenous_restitution"
     if bk in POST_867_ANACHRONISMS:
         return False, "classical_late_foundation"
+    if bk == "b_baranovichi":
+        return False, "modern_railway_foundation"
+
+    # Specific late industrial/railway markers (excluding native language morphology)
+    if re.search(r"\b(railway|station)\b", save_name, re.I):
+        return False, "modern_railway_foundation"
+
     c_key = bk.replace("b_", "c_")
     if c_key in ATTESTATION_REGISTRY:
-        att_yr = ATTESTATION_REGISTRY[c_key][0]
-        if att_yr is not None and att_yr > 867:
+        att_data = ATTESTATION_REGISTRY[c_key]
+        att_yr = att_data[0]
+        is_geo_stem = att_data[3] if len(att_data) > 3 else False
+        if att_yr is not None and att_yr > 867 and not is_geo_stem:
             return False, "high_medieval_foundation"
-        elif att_yr is not None and att_yr <= 867:
+        elif att_yr is not None and (att_yr <= 867 or is_geo_stem):
             return True, "chronicle_attestation"
+
     if re.search(r"\b(gau|gebirge|tal|wald|fluv|werder|werth|am-|an-der-|see|meer|joki|järvi|jarvi|vesi|salmi|saari|niemi|lahti|koski|suo|vuori|harju|selkä|selka|ostrov|gora|blato|jazero)\b", bk + " " + save_name, re.I):
         return True, "ancient_toponym"
-    if kd in CLASSICAL_OR_ANCIENT_KINGDOMS:
-        if not LATE_PATTERNS.search(save_name.strip().lower()):
-            return True, "classical_continuity"
-        else:
-            return False, "classical_late_foundation"
-    return False, "unverified_default"
+
+    # Cultural & historical settlement continuity across all realms
+    # (Removes destructive LATE_PATTERNS regex and classical-only whitelist gate)
+    return True, "cultural_continuity"
 
 
 # ==============================================================================
 # 5. EUROPEAN / NON-SINOSPHERE TOPONYMIC ADAPTATION
 # ==============================================================================
 
-def adapt_european_toponym(name: str) -> str:
+def _adapt_european_toponym_raw(name: str) -> str:
     """Adapts a standard historical European settlement name into Rhine-Moselle Franconian phonology."""
     s = name.strip()
     
@@ -1134,6 +1200,196 @@ def adapt_european_toponym(name: str) -> str:
         return "Tschaiyaphum"
     if re.match(r"^Changdschi\b", s, re.I):
         return "Tschangdschi"
+
+    # Slavic & Baltic historical exonyms and standard adaptations
+    if re.match(r"^Vy[sš]ehrad\b", s, re.I):
+        return "Wischegrat"
+    if re.match(r"^M[eě]ln[ií]k\b", s, re.I):
+        return "Melnîch"
+    if re.match(r"^Loket\b", s, re.I):
+        return "Ellebôgen"
+    if re.match(r"^P[rř]imda\b", s, re.I):
+        return "Pfrîmde"
+    if re.match(r"^Beroun\b", s, re.I):
+        return "Berûn"
+    if re.match(r"^Vilnius\b", s, re.I):
+        return "Wilne"
+    if re.match(r"^Trakai\b", s, re.I):
+        return "Tracken"
+    if re.match(r"^Kernav[eė]\b", s, re.I):
+        return "Kernouwe"
+    if re.match(r"^Lutsk\b", s, re.I):
+        return "Lûtzich"
+    if re.match(r"^Vyshgorod\b", s, re.I):
+        return "Wischgort"
+    if re.match(r"^Olsztyn\b", s, re.I):
+        return "Olschtîn"
+    if re.match(r"^Cz[eę]stochowa\b", s, re.I):
+        return "Tschestochouwe"
+    if re.match(r"^Wi[sś]lica\b", s, re.I):
+        return "Wislîtze"
+    if re.match(r"^Wieliczka\b", s, re.I):
+        return "Wjelitschke"
+    if re.match(r"^D[aą]browa\s+G[oó]rnicza\b", s, re.I):
+        return "Dombrôwa-Gôrnitza"
+    if re.match(r"^J[eę]drzej[oó]w\b", s, re.I):
+        return "Jendrschêjôw"
+    if re.match(r"^Radomsko\b", s, re.I):
+        return "Radomskô"
+    if re.match(r"^Ciechan[oó]w\b", s, re.I):
+        return "Tschechanôw"
+    if re.match(r"^P[ií]sek\b", s, re.I):
+        return "Pîsek"
+    if re.match(r"^Krumlov\b", s, re.I):
+        return "Krummouwe"
+    if re.match(r"^Prachatice\b", s, re.I):
+        return "Prachatitz"
+    if re.match(r"^Bechyn[eě]\b", s, re.I):
+        return "Bechîn"
+    if re.match(r"^B[ií]lina\b", s, re.I):
+        return "Bîline"
+    if re.match(r"^Slan[yý]\b", s, re.I):
+        return "Slânî"
+
+    # South Slavic & Balkan adaptations
+    if re.match(r"^[SŠ]ibenik\b", s, re.I):
+        return "Schibenîk"
+    if re.match(r"^Dre[zž]nik\b", s, re.I):
+        return "Dreschnîch"
+    if re.match(r"^Klju[cč]\s+na\s+Sani\b", s, re.I):
+        return "Kljutsch-an-der-Sâne"
+    if re.match(r"^Kotor\s+Varo[sš]\b", s, re.I):
+        return "Kotor-Wârosch"
+    if re.match(r"^Gradi[sš]ka\b", s, re.I):
+        return "Gradischke"
+    if re.match(r"^Gla[zž]\b", s, re.I):
+        return "Glasch"
+    if re.match(r"^Glamo[cč]\b", s, re.I):
+        return "Glamotsch"
+    if re.match(r"^Omi[sš]\b", s, re.I):
+        return "Omîsch"
+    if re.match(r"^[ZŽ]ica\b", s, re.I):
+        return "Schitze"
+    if re.match(r"^Bre[zž]nica\b", s, re.I):
+        return "Breschnitze"
+    if re.match(r"^Gora[zž]de\b", s, re.I):
+        return "Goraschde"
+    if re.match(r"^U[zž]i[cč]e?\b|^U[zž]itz\b", s, re.I):
+        return "Uschitze"
+    if re.match(r"^Onogo[sš]t\b", s, re.I):
+        return "Onogoscht"
+    if re.match(r"^Ke[zž]marok\b", s, re.I):
+        return "Keschmarck"
+    if re.match(r"^Szendr[oő]\b", s, re.I):
+        return "Sendrô"
+
+    # Scandinavian adaptations
+    if re.match(r"^Tors[aå]s\b", s, re.I):
+        return "Torsôs"
+    if re.match(r"^N[aæ]stved\b", s, re.I):
+        return "Nestwêt"
+    if re.match(r"^Randr[oø]s\b", s, re.I):
+        return "Randers"
+    if re.match(r"^L[iî][dð]andisnes\b", s, re.I):
+        return "Lîdandisnes"
+    if re.match(r"^R[yý]gjarfylki\b", s, re.I):
+        return "Rîgjarfîlki"
+    if re.match(r"^Har[dð]angr\b", s, re.I):
+        return "Hardanger"
+    if re.match(r"^Nor[dð]rm[aæ]rr\b", s, re.I):
+        return "Nordmer"
+    if re.match(r"^Sto[dð]reimr\b", s, re.I):
+        return "Stodrem"
+    if re.match(r"^Su[dð]r\s+Eystridalr\b", s, re.I):
+        return "Suder-Estridal"
+    if re.match(r"^Rau[dð]ey\b", s, re.I):
+        return "Roudei"
+    if re.match(r"^Ra[dð]und\b", s, re.I):
+        return "Radunt"
+    if re.match(r"^Vestfir[dð]ir\b", s, re.I):
+        return "Westfirder"
+    if re.match(r"^Borg\s+[aâ]\s+M[yý]rum\b", s, re.I):
+        return "Burch-an-den-Mîren"
+    if re.match(r"^Vopnafj[oö]r[dð]r\b", s, re.I):
+        return "Wopnafierd"
+    if re.match(r"^[AÂ]r[dð]ardalr\b", s, re.I):
+        return "Ârdartâl"
+    if re.match(r"^St[oô]rs[aæ]r\b", s, re.I):
+        return "Stôrsê"
+    if re.match(r"^Hei[dð]v[iî]k\b", s, re.I):
+        return "Heidwîch"
+
+    # Romanian adaptations
+    if re.match(r"^Arge[sș]\b", s, re.I):
+        return "Argesch"
+    if re.match(r"^Filia[sș]i\b", s, re.I):
+        return "Filjasch"
+    if re.match(r"^Zore[sș]ti\b", s, re.I):
+        return "Zorescht"
+    if re.match(r"^Dumbr[aă]veni\b", s, re.I):
+        return "Dumbrawên"
+    if re.match(r"^Baia\s+de\s+Aram[aă]\b", s, re.I):
+        return "Baia-de-Arama"
+    if re.match(r"^Or[sș]ova\b", s, re.I):
+        return "Orschowe"
+    if re.match(r"^Dr[aă]g[aă][sș]ani\b", s, re.I):
+        return "Dragaschân"
+
+    # Iberian adaptations
+    if re.match(r"^Oca[nñ]a\b", s, re.I):
+        return "Okanje"
+    if re.match(r"^Valdepe[nñ]as\b", s, re.I):
+        return "Valdepenjas"
+    if re.match(r"^Sari[nñ]ena\b", s, re.I):
+        return "Sarinjene"
+    if re.match(r"^Mondo[nñ]edo\b", s, re.I):
+        return "Mondonjêdo"
+    if re.match(r"^Guimar[aã]es\b", s, re.I):
+        return "Gimarês"
+
+    # Indic, Semitic, Tibetan & Asian adaptations
+    if re.match(r"^W[aä]rj[iī]h\b", s, re.I):
+        return "Werdschîh"
+    if re.match(r"^N[iī]r[uū]n\b", s, re.I):
+        return "Nîrûn"
+    if re.match(r"^P[aā]ndu[aā]\b", s, re.I):
+        return "Pândûe"
+    if re.match(r"^Raktamrittik[aā]\b", s, re.I):
+        return "Raktamrittike"
+    if re.match(r"^Candranath[aā]\b", s, re.I):
+        return "Kandranathe"
+    if re.match(r"^S[aā]ntipura\b", s, re.I):
+        return "Sântipur"
+    if re.match(r"^P[aā]v[aā]\b", s, re.I):
+        return "Pâve"
+    if re.match(r"^B[oô]h[aā]ri\b", s, re.I):
+        return "Bôhâri"
+    if re.match(r"^Handi[aā]\b", s, re.I):
+        return "Handje"
+    if re.match(r"^Camp[aā]ranya\b", s, re.I):
+        return "Kampâranje"
+    if re.match(r"^M[uū][oö]t\b", s, re.I):
+        return "Mûet"
+    if re.match(r"^Champaner\b", s, re.I):
+        return "Tschampanêr"
+    if re.match(r"^Vadnagar\b", s, re.I):
+        return "Wadnâgar"
+    if re.match(r"^Modhera\b", s, re.I):
+        return "Modhêra"
+    if re.match(r"^Khambhat\b", s, re.I):
+        return "Chambhât"
+    if re.match(r"^Ashaval\b", s, re.I):
+        return "Aschawâl"
+    if re.match(r"^Agar\b", s, re.I):
+        return "Âgar"
+    if re.match(r"^Osian\b", s, re.I):
+        return "Osjân"
+    if re.match(r"^Karub\b", s, re.I):
+        return "Karûb"
+    if re.match(r"^Takts[eéè]\b", s, re.I):
+        return "Taktzê"
+    if re.match(r"^Porho[eë]t\b", s, re.I):
+        return "Porhoet"
     if re.match(r"^(?:Montlhéry|Montlhêry)\b", s, re.I):
         return "Muntlêrî"
     if re.match(r"^Castelnaudary\b", s, re.I):
@@ -1220,7 +1476,13 @@ def adapt_european_toponym(name: str) -> str:
     # Cedilla
     s = s.replace("ç", "tz").replace("Ç", "Tz")
     
-    return enforce_tarraconian_sound_laws(s)
+    return s
+
+
+def adapt_european_toponym(name: str) -> str:
+    """Adapts a standard historical European settlement name into Rhine-Moselle Franconian phonology."""
+    raw = _adapt_european_toponym_raw(name)
+    return enforce_tarraconian_sound_laws(raw)
 
 
 INDIGENOUS_RESTITUTIONS = {

@@ -39,15 +39,15 @@ Every single occupied holding has been resolved according to:
 pie title Occupied Barony Resolutions (10,237 Titles)
     "Category 1: Sinosphere Logographic Calques" : 1979
     "Category 2: Capital / Eponymous Holdings" : 2747
-    "Category 3a: Ancient Sub-Baronies & Attestations" : 3676
-    "Category 3b: Option C Founder Foundations" : 1835
+    "Category 3a: Cultural Sub-Baronies & Attestations" : 5387
+    "Category 3b: Option C Foundations & Post-867 Stems" : 124
 ```
 
-1. **Category 1 (Sinosphere Logographic Calques — 1,979 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,235-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
-2. **Category 2 (Capital / Eponymous Holdings — 2,753 titles):** The primary or capital seat of its parent county (including disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
-3. **Category 3 (Sub-Baronies & Historical Attestations — 5,505 titles):**
-   - **Ancient Sub-Baronies & Attestations (3,699 titles):** Includes classical/ancient civitates and toponymic stems, Option A archaeological seats, paired secondary variants from `tarraconian_titles_1059.md`, and 100 authentic indigenous restitutions.
-   - **Option C Campaign Foundations (1,806 titles):** Titles lacking documented pre-867 historical proof under the *Burden of Proof on Antiquity* (including post-867 colonial castles, high-medieval ostrogs, and modern Paradox settlements like `b_baranovichi`). Automatically attributed to the actual rulers and cadet houses who founded or held them in `melted_save.ck3`.
+1. **Category 1 (Sinosphere Logographic Calques — 1,979 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,384-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
+2. **Category 2 (Capital / Eponymous Holdings — 2,747 titles):** The primary or capital seat of its parent county (including disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
+3. **Category 3 (Sub-Baronies & Historical Attestations — 5,511 titles):**
+   - **Cultural Sub-Baronies & Attestations (5,387 titles):** Includes 5,081 indigenous cultural adaptations adhering to county cultural substrata, classical/ancient civitates and toponymic stems (87), Option A archaeological seats (142), paired secondary variants from `tarraconian_titles_1059.md` (39), secondary holding/collision disambiguations (21), and authentic indigenous restitutions (17).
+   - **Option C Campaign Foundations (124 titles):** Reserved strictly for verified post-867 historical foundations (such as `b_lorient`, `b_portsmouth`, `b_versailles`, `b_dunkirk`, `b_floridsdorf`, `b_baranovichi`) and severe intra-county stem collisions (>75% similarity with parent county capital). Formatted according to save ruler character traits and holding taxonomy.
 
 ---
 
