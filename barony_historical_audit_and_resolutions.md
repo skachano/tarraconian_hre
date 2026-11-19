@@ -68,6 +68,14 @@ Titles are anchored strictly in physical substrates, verified classical settleme
 * **Save Universe Reality:** City holding in `c_cornouaille` enfeoffed on August 11, 1191 to Character `17039416` (**Archembald** of House **Kestenholz-Sitzichow**, master steward/financier with trait `education_stewardship_4` / Midas Touched).
 * **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via Option C for city holdings $\rightarrow$ Resolved to **`Archembaldstat`** `[ˈar.xɛm.bald.stat]` (*Municipal foundation chartered by Archembald*). Populates `b_anachronism` with explicit 1666 East India Company foundation note.
 
+#### Case Study: Intra-County Capital/Constituent Disambiguation of `b_tralee` & `b_cork` (`c_desmond`)
+* **Paradox Setup:** In vanilla CK3, `c_desmond` contains both `b_tralee` (designated as the feudal capital castle) and `b_cork` (designated as the urban civic borough).
+* **The Collision:** In the 1122 imperial gazetteer reform, `c_desmond` received the historical regional name `Korch` (after the ancient monastic see of Cork, founded c. 606 AD by St. Finbarr). Under naive capital inheritance, `b_tralee` inherited `Korch`, while `b_cork` was also adapted to `Cork`, creating an intra-county collision.
+* **The Chancellery Disambiguation:** 
+  - `b_cork` is the authentic site of the 7th-century monastic city $\rightarrow$ resolved to **`Korch`** `[kɔrx]`.
+  - `b_tralee` is the distinct Tralee seat (*Trá Lí*) $\rightarrow$ resolved to **`Tralî`** `[tra.ˈliː]`.
+  - Zero duplicate collision; both holdings preserve their authentic historical identity.
+
 ### 2.2 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:
 - The active holder (`holder = <character_id>`) in 1194 AD.

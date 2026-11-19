@@ -198,6 +198,22 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     return s
 
 
+def normalize_phonetic_stem(s: str) -> str:
+    """Normalizes toponym stems to detect homophonic and near-duplicate collisions."""
+    if not s:
+        return ""
+    s = s.lower().replace("â", "a").replace("ê", "e").replace("î", "i").replace("ô", "o").replace("û", "u").replace("ä", "e").replace("ö", "e").replace("ü", "i")
+    s = s.replace("-", "").replace(" ", "")
+    s = s.replace("ck", "k").replace("ch", "k").replace("c", "k")
+    s = s.replace("tz", "z").replace("ts", "z").replace("sch", "sh").replace("z", "s")
+    s = s.replace("v", "w").replace("f", "w").replace("ph", "w")
+    s = s.replace("dt", "t").replace("th", "t").replace("d", "t")
+    s = s.replace("y", "i").replace("j", "i")
+    s = re.sub(r"[^a-z]", "", s)
+    s = re.sub(r"(.)\1+", r"\1", s)
+    return s
+
+
 def generate_tarraconian_ipa(name: str) -> str:
     """Generates phonetic transcription in IPA according to tarraconian_linguistics_guide.md."""
     if not name:
@@ -575,6 +591,7 @@ def load_secondary_variants_and_collisions(counties_lookup, en_cache):
         )
         def norm_s(s):
             s = s.lower().replace("â", "a").replace("ê", "e").replace("î", "i").replace("ô", "o").replace("û", "u").replace("ö", "o").replace("ü", "u")
+            s = s.replace("ž", "sh").replace("š", "sh").replace("č", "ch").replace("ř", "r").replace("ď", "d").replace("ť", "t").replace("ň", "n").replace("á", "a").replace("é", "e").replace("í", "i").replace("ý", "i")
             s = re.sub(r"^(zant|saint|sankt|st|san|santa)[^a-z]*", "", s)
             s = re.sub(r"[^a-z]", "", s)
             s = s.replace("tz", "z").replace("tsch", "ch").replace("sch", "sh").replace("v", "f").replace("w", "v").replace("j", "dsh")
@@ -616,9 +633,11 @@ def load_secondary_variants_and_collisions(counties_lookup, en_cache):
                 score = 0
                 if norm_b == norm_sec or norm_en == norm_sec:
                     score = 100
-                elif norm_b in norm_sec or norm_sec in norm_b or norm_en in norm_sec or norm_sec in norm_en:
+                elif (len(norm_b) >= 4 and len(norm_sec) >= 4 and (norm_b in norm_sec or norm_sec in norm_b)) or \
+                     (len(norm_en) >= 4 and len(norm_sec) >= 4 and (norm_en in norm_sec or norm_sec in norm_en)):
                     score = 80
-                elif norm_b[:4] == norm_sec[:4] or norm_en[:4] == norm_sec[:4]:
+                elif (len(norm_b) >= 4 and len(norm_sec) >= 4 and norm_b[:4] == norm_sec[:4]) or \
+                     (len(norm_en) >= 4 and len(norm_sec) >= 4 and norm_en[:4] == norm_sec[:4]):
                     score = 60
                 else:
                     for k1, k2 in KNOWN_EQUIVS:
@@ -747,7 +766,7 @@ def resolve_sinosphere_barony(b_key: str, zh_raw: str, en_name: str, k_map: dict
     calque = "".join(parts) if parts else en_name
     calque = enforce_tarraconian_sound_laws(calque)
     
-    if is_capital and county_tarr:
+    if not parts and is_capital and county_tarr:
         tarr_name = enforce_tarraconian_sound_laws(county_tarr)
     else:
         tarr_name = calque
@@ -1629,6 +1648,61 @@ INDIGENOUS_RESTITUTIONS = {
     "b_warszawa": ("Warschauwe", "Ancient Mazovian crossing settlement on the Vistula (Warszewa) (in-game: Warsaw)", "secondary_holding_disambiguation", "Medieval Vistula crossing settlement Warszewa (developed 13th c.); secondary holding disambiguated from Option A seat Tschêrtzich."),
     "b_lviv": ("Lemberch", "Ruthenian princely stronghold founded c. 1256 on the Poltva; held in save by House Luki (in-game: Lviv)", "secondary_holding_disambiguation", "Post-867 princely stronghold (founded 1256 AD by Daniel of Galicia on the Poltva); secondary holding disambiguated from Option A seat Swenigorot."),
     "b_st_johnston": ("Zant-Jônstat", "Historic royal burgh St Johnston / Perth on the Tay (chartered 1124 AD) (in-game: Perth)", "secondary_holding_disambiguation", "Post-867 royal burgh (chartered 1124 AD by David I); secondary holding disambiguated from Option A seat Skône."),
+
+    # Disambiguated Capital and Constituent Holdings (resolving intra-county collisions)
+    "b_tralee": ("Tralî", "Tralee / Trá Lí (constituent capital seat of Desmond)", "capital_disambiguation", "Constituent capital seat of Desmond disambiguated from historical city seat Korch."),
+    "b_cork": ("Korch", "Cork / Corcach Mór na Mumhan (ancient monastic city founded c. 606 AD by St Finbarr)", "classical_antiquity", "Ancient monastic episcopal city Corcach Mór na Mumhan (attested 606 AD)."),
+    "b_vranje": ("Wranje", "Vranje (ancient South Slavic settlement in the South Morava valley)", "capital_disambiguation", "Constituent capital seat disambiguated from Morâwe."),
+    "b_morava": ("Morâwe", "Morava (ancient Great Morava settlement / Braničevo)", "classical_antiquity", "Ancient Slavic regional centre on the Great Morava."),
+    "b_burgas": ("Burchas", "Burgas / Pyrgos (ancient Greek watchtower fortress)", "capital_disambiguation", "Constituent capital seat of Burgas disambiguated from ancient Apollonia Pontica / Sozopol."),
+    "b_sozopol": ("Sôsôpel", "Ancient Apollonia Pontica / Sozopolis (founded 610 BC on the Black Sea)", "classical_antiquity", "Ancient 7th-century BC Milesian colony Apollonia Pontica."),
+    "b_aezani": ("Aisanoî", "Aizanoi (ancient Phrygian sanctuary city with Temple of Zeus)", "classical_antiquity", "Ancient Greco-Roman civitas Aizanoi."),
+    "b_synnada": ("Sînnade", "Synnada (metropolis of Phrygia Pacatiana)", "classical_antiquity", "Ancient Hellenistic and Roman provincial metropolis Synnada."),
+    "b_philomelium": ("Philomêljon", "Philomelion (classical civitas in Phrygia Paroreios)", "classical_antiquity", "Ancient Hellenistic/Roman civitas Philomelion."),
+    "b_amorion": ("Amôrjen", "Amorion (major Byzantine fortress and theme capital)", "classical_antiquity", "Ancient Byzantine thematic capital Amorion."),
+    "b_bagahus": ("Kuninghalle", "Kungahälla / Bohus (ancient Norwegian royal assembly and assembly seat)", "classical_antiquity", "Ancient Norwegian royal seat Kungahälla."),
+    "b_ranariki": ("Rânrîch", "Ranariki (ancient district center of Ranrike)", "classical_antiquity", "Ancient Iron Age district center of Ranrike."),
+    "b_narva": ("Narwe", "Narva (ancient river crossing settlement on the Narva River)", "capital_disambiguation", "Constituent capital seat disambiguated from ancient Estonian stronghold Tarvanpää."),
+    "b_rozan": ("Rôschân", "Różan (ancient Mazovian ducal gord on the Narew)", "capital_disambiguation", "Constituent capital seat disambiguated from castellany Sakrotschîm."),
+    "b_zakroczym": ("Zakrotschîm", "Zakroczym (ancient Mazovian castellany on the Vistula)", "classical_antiquity", "Ancient 11th-century Mazovian castellany seat."),
+    "b_tver": ("Twer", "Tver (ancient Tvertsa river crossing settlement)", "capital_disambiguation", "Constituent capital seat disambiguated from Volok Lamsky."),
+    "b_volok_lamsky": ("Woloch-Lâmtzich", "Volok Lamsky (ancient Novgorodian portage on the Lama)", "classical_antiquity", "Ancient Novgorodian portage town Volok Lamsky."),
+    "b_manturovo": ("Manturôwe", "Manturovo (constituent capital seat on the Unzha River)", "capital_disambiguation", "Constituent capital seat disambiguated from Galich Mersky."),
+    "b_galich_mersky": ("Galitsch-Mêrje", "Galich Mersky (ancient Meryan and princely seat on Lake Galichskoye)", "classical_antiquity", "Ancient Meryan lake settlement and princely seat."),
+    "b_saburkhawasht": ("Saburchawascht", "Saburkhawasht / Dez-e Sīāh (ancient highland fortress)", "capital_disambiguation", "Constituent capital seat disambiguated from Saimara."),
+    "b_as-saimara": ("Saimâre", "as-Saimara (ancient historical capital of the Saimara district)", "classical_antiquity", "Historical regional capital of Saimara."),
+    "b_khulm": ("Chulm", "Khulm (ancient Bactrian city on the Silk Road)", "capital_disambiguation", "Constituent capital seat disambiguated from Valvalij."),
+    "b_valvalij": ("Walwalîtsch", "Valvalij (ancient Tokharestan winter capital)", "classical_antiquity", "Ancient Tokharestan capital Valvalij."),
+    "b_as-salman": ("As-Salmân", "As-Salman (desert oasis settlement)", "capital_disambiguation", "Constituent capital seat disambiguated from Al-Akhadid."),
+    "b_al-akhadid": ("Al-Achadît", "Al-Akhadid (ancient South Arabian city of Najran)", "classical_antiquity", "Ancient pre-Islamic South Arabian city Al-Ukhdud."),
+    "b_tall_basma": ("Tâl-Bâsme", "Tall Basma (constituent capital seat)", "capital_disambiguation", "Constituent capital seat disambiguated from Hisn Kaifa."),
+    "b_hisn_kaifa": ("Hîssen-Kaîfe", "Hisn Kaifa / Hasankeyf (ancient rock citadel on the Tigris, Castrum Cepha)", "classical_antiquity", "Ancient Roman rock fortress Castrum Cepha / Hisn Kaifa."),
+    "b_brasso": ("Brâschow", "Brașov / Corona (ancient Dacian and medieval citadel)", "capital_disambiguation", "Constituent capital seat disambiguated from Bálványos."),
+    "b_balvanyos": ("Balwanjosch", "Bálványos (ancient pagan fortress in the Harghita mountains)", "classical_antiquity", "Ancient Hungarian pagan fortress Bálványos."),
+    "b_hervas": ("Hêrwas", "Hervás (constituent capital seat in the Ambroz valley)", "capital_disambiguation", "Constituent capital seat disambiguated from Coria."),
+    "b_coira": ("Kôrje", "Coria / Caurium (ancient Vettonian oppidum and Roman episcopal see)", "classical_antiquity", "Ancient Roman civitas Caurium / Coria."),
+    "b_alarcon": ("Alarkôn", "Alarcón (ancient Júcar promontory fortress)", "capital_disambiguation", "Constituent capital seat disambiguated from Valeria."),
+    "b_valeria": ("Valêrje", "Valeria (ancient Roman civitas and Visigothic episcopal see)", "classical_antiquity", "Ancient Roman civitas Valeria."),
+    "b_cuellar": ("Kwêljar", "Cuéllar (ancient castellany seat in Segovia)", "capital_disambiguation", "Constituent capital seat disambiguated from Sepúlveda."),
+    "b_segovia": ("Sepulwêde", "Sepúlveda / Septempublica (ancient Celtiberian oppidum)", "classical_antiquity", "Ancient Celtiberian oppidum Septempublica / Sepúlveda."),
+    "b_puigcerda": ("Pûigserdâ", "Puigcerdà (ancient hillfort of the Cerretani)", "capital_disambiguation", "Constituent capital seat disambiguated from Llívia."),
+    "b_llivia": ("Llîwje", "Llívia / Iulia Libica (ancient Roman municipal capital of Cerretania)", "classical_antiquity", "Ancient Roman capital Iulia Libica / Llívia."),
+    "b_hail": ("Haîl", "Ha'il (oasis capital of Jabal Shammar)", "capital_disambiguation", "Constituent capital seat disambiguated from Fayd."),
+    "b_fayd": ("Faît", "Fayd (ancient fortified station on the Darb Zubaydah pilgrimage route)", "classical_antiquity", "Ancient Darb Zubaydah fortified oasis Fayd."),
+    "b_muscat": ("Maskât", "Muscat (ancient natural harbour of Oman)", "capital_disambiguation", "Constituent capital seat disambiguated from Qalhat."),
+    "b_qalhat": ("Kalhât", "Qalhat (ancient coastal trading city of Oman)", "classical_antiquity", "Ancient coastal trading emporium Qalhat."),
+    "b_taizz": ("Taîtz", "Ta'izz (highland mountain fortress seat)", "capital_disambiguation", "Constituent capital seat disambiguated from Al-Janad."),
+    "b_al-janad": ("Al-Dschanât", "Al-Janad (ancient Yemeni city with Great Mosque founded by Muadh ibn Jabal)", "classical_antiquity", "Ancient 7th-century Islamic city and cathedral mosque Al-Janad."),
+    "b_acre": ("Akkôn", "Acre / Ptolemais (ancient Canaanite and Hellenistic port)", "capital_disambiguation", "Constituent capital port disambiguated from Tyre."),
+    "b_tyre": ("Tîr", "Tyre / Sur (ancient Phoenician island metropolis)", "classical_antiquity", "Ancient Phoenician island metropolis Tyre."),
+    "b_kosti": ("Kôstî", "Kosti (Nile river crossing seat)", "capital_disambiguation", "Constituent capital seat disambiguated from Tagali."),
+    "b_tagali_south": ("Suder-Tagâli", "South Tagali (southern sector of the Kingdom of Taqali)", "classical_antiquity", "Historical southern district of the Kingdom of Taqali."),
+    "b_vijayapura": ("Wîdschajapura", "Vijayapura / Bijapur (historical Chalukyan city)", "capital_disambiguation", "Constituent capital seat disambiguated from Visnupura."),
+    "b_visnupura": ("Wischnupur", "Visnupura (sacred Vaishnava temple centre)", "classical_antiquity", "Sacred Vaishnava temple centre Visnupura."),
+    "b_goalpara": ("Gôalpâra", "Goalpara (Brahmaputra river port)", "capital_disambiguation", "Constituent capital seat disambiguated from Kamakhya."),
+    "b_kamakhya": ("Kamâkje", "Kamakhya (ancient sacred Kamarupa hill shrine of Kamakhya)", "classical_antiquity", "Ancient sacred Kamarupa temple shrine Kamakhya."),
+    "b_brno": ("Brünn", "Brno (Moravian capital city)", "classical_antiquity", "Historical capital city of Moravia Brno / Brünn."),
+    "b_zdar": ("Schdâr", "Žďár nad Sázavou (Cistercian monastic foundation 1252)", "sub_barony_adaptation", "Constituent holding of Brno."),
 }
 
 
@@ -1881,12 +1955,12 @@ def resolve_all_baronies():
 
                 if is_anc:
                     cand = adapt_european_toponym(save_name)
+                    cand_phon = normalize_phonetic_stem(cand)
                     has_stem_collision = any(
-                        difflib.SequenceMatcher(
-                            None,
-                            cand.lower().replace("â","a").replace("ê","e").replace("î","i").replace("ô","o").replace("û","u"),
-                            un.lower().replace("â","a").replace("ê","e").replace("î","i").replace("ô","o").replace("û","u")
-                        ).ratio() >= 0.75
+                        cand == un or
+                        cand_phon == normalize_phonetic_stem(un) or
+                        (len(cand_phon) >= 3 and len(normalize_phonetic_stem(un)) >= 3 and
+                         difflib.SequenceMatcher(None, cand_phon, normalize_phonetic_stem(un)).ratio() >= 0.75)
                         for un in county_used_names[ck]
                     )
                     if cand in county_used_names[ck] or has_stem_collision:
