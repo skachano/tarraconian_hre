@@ -779,3 +779,71 @@ class TestSymbolGenerator:
         assert "const ink = PALETTE[def.field] || PALETTE.vermilion;" in content
         assert 'stroke="${ink}"' in content
         assert 'fill="${ink}"' in content
+
+    def test_charge_builders_uniform_signature(self):
+        """All 17 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
+        import re
+
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        charges = [
+            "eagle_double", "alerion", "castrum", "roman_gate", "mount_triple",
+            "bridge", "waves", "bell", "keys_st_peter", "crozier",
+            "cross_patriarchal", "cross_byzantine", "tree_chestnut",
+            "lion_rampant", "ship", "crown", "dragon"
+        ]
+
+        for charge in charges:
+            # Match charge declaration: charge: (arg1, arg2, arg3, arg4...) =>
+            pattern = re.compile(rf"{charge}\s*:\s*\(([^)]+)\)\s*=>")
+            match = pattern.search(content)
+            assert match, f"Charge builder {charge} definition not found"
+            params = [p.split("=")[0].strip() for p in match.group(1).split(",")]
+
+            # First param is color (or colorOr)
+            assert params[0] in ("color", "colorOr"), f"{charge} first param must be color, got {params[0]}"
+            # Second param must be scale
+            assert params[1] == "scale", f"{charge} second param must be scale, got {params[1]} (accent/trunk/sail/jewels must be after cy)"
+            # Third and fourth must be cx and cy
+            assert params[2] == "cx", f"{charge} third param must be cx, got {params[2]}"
+            assert params[3] == "cy", f"{charge} fourth param must be cy, got {params[3]}"
+
+    def test_unique_id_generation_and_no_static_id_collisions(self):
+        """All 7 renderers must generate per-instance unique IDs to prevent SVG filter/clipPath collisions."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        assert "getUniqueId" in content, "Missing getUniqueId function"
+
+        # Static IDs that caused document-wide collision bugs with hidden modals must not exist
+        static_ids = [
+            'id="vexillum-shadow"',
+            'id="vexillum-clip"',
+            'id="gonfanon-shadow"',
+            'id="gonfanon-clip"',
+            'id="scutum-shadow"',
+            'id="scutum-clip"',
+            'id="seal-shadow"',
+            'id="chop-shadow"',
+            'id="chop-clip"',
+            'id="vesica-shadow"',
+            'id="vesica-clip"',
+            'id="badge-shadow"',
+            'id="badge-clip"'
+        ]
+        for sid in static_ids:
+            assert sid not in content, f"Found fragile static ID {sid} in symbol_generator.js"
+
+    def test_vexillum_field_and_charge_rendering(self):
+        """Verify vexillum renders explicit base field rect and charge with correct transform."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # Explicit base field rect with fColor
+        assert '<rect x="${bannerX}" y="${bannerY}" width="${bannerW}" height="${bannerH}" fill="${fColor}"' in content
+        # Charges called with (def.chargeColor, 0.82, 110, 135)
+        assert "CHARGES[c](def.chargeColor, 0.82, 110, 135)" in content
+        # Dynamic clip-path usage
+        assert 'clip-path="url(#${uid}_clip)"' in content
+

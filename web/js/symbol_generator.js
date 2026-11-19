@@ -99,7 +99,7 @@
     `,
 
     // Triple-towered Crenellated Castrum / Fortress
-    castrum: (color = PALETTE.argent, accent = PALETTE.sable, scale = 1, cx = 110, cy = 115) => `
+    castrum: (color = PALETTE.argent, scale = 1, cx = 110, cy = 115, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-60, -55)" fill="${color}" stroke="${accent}" stroke-width="2" stroke-linejoin="round">
         <!-- Main Wall Base -->
         <rect x="15" y="45" width="90" height="50" rx="1" />
@@ -140,7 +140,7 @@
     `,
 
     // Classical Roman City Gate / Triumphal Arch
-    roman_gate: (color = PALETTE.argent, accent = PALETTE.sable, scale = 1, cx = 110, cy = 115) => `
+    roman_gate: (color = PALETTE.argent, scale = 1, cx = 110, cy = 115, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="2" stroke-linejoin="round">
         <!-- Entablature / Pediment -->
         <polygon points="0,22 50,2 100,22" />
@@ -158,7 +158,7 @@
     `,
 
     // Triple Mountain (Dreiberg)
-    mount_triple: (color = PALETTE.vert, accent = PALETTE.sable, scale = 1, cx = 110, cy = 135) => `
+    mount_triple: (color = PALETTE.vert, scale = 1, cx = 110, cy = 135, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-60, -35)" fill="${color}" stroke="${accent}" stroke-width="2">
         <path d="M 0 35 C 10 15 30 15 40 35 Z" />
         <path d="M 80 35 C 90 15 110 15 120 35 Z" />
@@ -167,7 +167,7 @@
     `,
 
     // Stone Arch Bridge
-    bridge: (color = PALETTE.argent, accent = PALETTE.sable, scale = 1, cx = 110, cy = 120) => `
+    bridge: (color = PALETTE.argent, scale = 1, cx = 110, cy = 120, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-60, -25)" fill="${color}" stroke="${accent}" stroke-width="2">
         <rect x="5" y="0" width="110" height="12" rx="2" />
         <path d="M 5 12 L 5 40 L 22 40 Q 38 18 54 40 L 66 40 Q 82 18 98 40 L 115 40 L 115 12 Z" />
@@ -186,7 +186,7 @@
     `,
 
     // Ringing Bell (Swenigorot canting charge)
-    bell: (color = PALETTE.or, accent = PALETTE.sable, scale = 1, cx = 110, cy = 80) => `
+    bell: (color = PALETTE.or, scale = 1, cx = 110, cy = 80, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-30, -35)" fill="${color}" stroke="${accent}" stroke-width="2" stroke-linejoin="round">
         <rect x="24" y="0" width="12" height="8" rx="2" fill="${accent}" />
         <path d="M 30 8 C 22 10 16 22 14 36 C 12 48 6 52 4 56 L 56 56 C 54 52 48 48 46 36 C 44 22 38 10 30 8 Z" />
@@ -195,7 +195,7 @@
     `,
 
     // St. Peter's Crossed Keys (Rome / Papal / Bishopric)
-    keys_st_peter: (colorOr = PALETTE.or, colorArg = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+    keys_st_peter: (colorOr = PALETTE.or, scale = 1, cx = 110, cy = 110, colorArg = PALETTE.argent) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-45, -45)" stroke="${PALETTE.sable}" stroke-width="1.5" stroke-linecap="round">
         <!-- Gold Key (Dexter) -->
         <g fill="${colorOr}">
@@ -219,7 +219,7 @@
     `,
 
     // Archiepiscopal / Metropolitan Crozier (Prince-Bishoprics)
-    crozier: (color = PALETTE.or, accent = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+    crozier: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-25, -60)" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round">
         <line x1="25" y1="35" x2="25" y2="115" stroke="${PALETTE.brass}" stroke-width="5" />
         <line x1="25" y1="35" x2="25" y2="115" stroke="${accent}" stroke-width="1.5" />
@@ -230,7 +230,7 @@
     `,
 
     // Patriarchal Cross (Two horizontal bars)
-    cross_patriarchal: (color = PALETTE.or, accent = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+    cross_patriarchal: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-30, -50)" fill="${color}" stroke="${accent}" stroke-width="2">
         <rect x="25" y="0" width="10" height="100" rx="1" />
         <rect x="10" y="20" width="40" height="9" rx="1" />
@@ -239,7 +239,7 @@
     `,
 
     // Byzantine Tetragrammatic Cross with 4 Firesteels (B)
-    cross_byzantine: (color = PALETTE.or, accent = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+    cross_byzantine: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5">
         <!-- Main Cross -->
         <rect x="44" y="5" width="12" height="90" rx="1" />
@@ -257,7 +257,7 @@
     `,
 
     // Chestnut Tree (Kestenholz / Châtenois canting)
-    tree_chestnut: (color = PALETTE.vert, trunk = PALETTE.wood, scale = 1, cx = 110, cy = 115) => `
+    tree_chestnut: (color = PALETTE.vert, scale = 1, cx = 110, cy = 115, trunk = PALETTE.wood) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-45, -55)" stroke="${PALETTE.sable}" stroke-width="1.8">
         <!-- Trunk & Roots -->
         <path d="M 40 50 L 38 85 L 20 98 M 42 85 L 45 98 M 52 85 L 70 98 L 50 50 Z" fill="${trunk}" />
@@ -267,7 +267,7 @@
     `,
 
     // Heraldic Lion Rampant
-    lion_rampant: (color = PALETTE.gules, accent = PALETTE.sable, scale = 1, cx = 110, cy = 115) => `
+    lion_rampant: (color = PALETTE.gules, scale = 1, cx = 110, cy = 115, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5">
         <path d="M 38 10 C 44 8 50 14 46 20 C 52 20 56 24 50 28 L 56 32 L 48 34 C 54 42 58 46 64 42 L 60 48 L 48 44 C 44 54 42 66 48 76 L 62 74 L 64 80 L 46 84 C 42 92 36 98 25 98 L 22 92 C 30 90 34 84 34 76 C 26 76 22 70 20 62 C 28 64 34 58 34 50 C 24 50 20 44 18 36 L 24 36 C 28 42 34 38 34 30 C 30 30 26 26 28 20 C 34 24 38 18 38 10 Z" />
         <!-- Claws & Tongue -->
@@ -278,7 +278,7 @@
     `,
 
     // Medieval Maritime Cog / Galley
-    ship: (color = PALETTE.wood, sail = PALETTE.argent, scale = 1, cx = 110, cy = 120) => `
+    ship: (color = PALETTE.wood, scale = 1, cx = 110, cy = 120, sail = PALETTE.argent) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -45)" stroke="${PALETTE.sable}" stroke-width="1.8" stroke-linejoin="round">
         <!-- Hull -->
         <path d="M 5 45 C 15 68 85 68 95 45 L 85 45 L 75 52 L 25 52 L 15 45 Z" fill="${color}" />
@@ -293,7 +293,7 @@
     `,
 
     // Imperial Crown
-    crown: (color = PALETTE.or, jewels = PALETTE.gules, scale = 1, cx = 110, cy = 60) => `
+    crown: (color = PALETTE.or, scale = 1, cx = 110, cy = 60, jewels = PALETTE.gules) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -25)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.5">
         <rect x="5" y="28" width="70" height="12" rx="2" />
         <circle cx="15" cy="34" r="2.5" fill="${jewels}" stroke="none" />
@@ -308,7 +308,7 @@
     `,
 
     // Sinosphere Dragon
-    dragon: (color = PALETTE.or, accent = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+    dragon: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="none" stroke="${color}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
         <!-- Serpentine S-Body -->
         <path d="M 20 30 Q 35 15 50 30 Q 65 45 80 30 Q 90 20 85 45 Q 80 65 55 60 Q 30 55 25 75 Q 20 90 40 90 Q 60 90 75 80" />
@@ -445,51 +445,56 @@
 
   function analyzeTitle(titleKey, props = {}, tier = 'county') {
     const key = (titleKey || '').toLowerCase();
-    const tarrName = (
-      props.tarr_hist ||
-      props.tarr_direct ||
-      props.tarr ||
-      (tier === 'barony' ? props.b_tarr : '') ||
-      (tier === 'county' ? (props.c_tarr || props.tarr_hist || props.tarr_direct) : '') ||
-      (tier === 'duchy' ? (props.d_tarr_hist || props.d_tarr_direct || props.d_tarr) : '') ||
-      (tier === 'kingdom' ? (props.k_tarr_hist || props.k_tarr_direct || props.k_tarr) : '') ||
-      (tier === 'empire' ? (props.e_tarr_hist || props.e_tarr_direct || props.e_tarr) : '') ||
-      props.name || ''
-    ).toLowerCase();
 
-    const origName = (
-      (tier === 'county' ? props.c_origin : '') ||
-      (tier === 'duchy' ? props.d_origin : '') ||
-      (tier === 'kingdom' ? props.k_origin : '') ||
-      (tier === 'empire' ? props.e_origin : '') ||
-      props.c_origin || props.d_origin || props.k_origin || props.e_origin ||
-      props.origin || props.name || ''
-    ).toLowerCase();
+    let tarrName = '';
+    let origName = '';
+    let anachNote = '';
+    let calque = '';
+    let hanzi = '';
 
-    const anachNote = (
-      props.c_anachronism ||
-      props.d_anachronism ||
-      props.k_anachronism ||
-      props.e_anachronism || ''
-    ).toLowerCase();
+    if (tier === 'empire') {
+      tarrName = props.e_tarr_hist || props.e_tarr_direct || props.e_tarr || props.tarr || '';
+      origName = props.e_origin || props.origin || '';
+      anachNote = props.e_anachronism || props.anachronism || '';
+      calque = props.e_calque || props.calque || '';
+      hanzi = props.e_hanzi || props.hanzi || '';
+    } else if (tier === 'kingdom') {
+      tarrName = props.k_tarr_hist || props.k_tarr_direct || props.k_tarr || props.tarr || '';
+      origName = props.k_origin || props.origin || '';
+      anachNote = props.k_anachronism || props.anachronism || '';
+      calque = props.k_calque || props.calque || '';
+      hanzi = props.k_hanzi || props.hanzi || '';
+    } else if (tier === 'duchy') {
+      tarrName = props.d_tarr_hist || props.d_tarr_direct || props.d_tarr || props.tarr || '';
+      origName = props.d_origin || props.origin || '';
+      anachNote = props.d_anachronism || props.anachronism || '';
+      calque = props.d_calque || props.calque || '';
+      hanzi = props.d_hanzi || props.hanzi || '';
+    } else if (tier === 'barony') {
+      tarrName = props.name || props.b_tarr || props.tarr || '';
+      origName = props.b_origin || props.origin || props.name || '';
+      anachNote = props.b_anachronism || props.anachronism || '';
+      calque = props.b_calque || props.calque || '';
+      hanzi = props.b_hanzi || '';
+    } else {
+      // County tier (default)
+      tarrName = props.tarr_hist || props.tarr_direct || props.c_tarr_hist || props.c_tarr_direct || props.tarr || props.c_tarr || '';
+      origName = props.c_origin || props.origin || '';
+      anachNote = props.c_anachronism || props.anachronism || '';
+      calque = props.c_calque || props.calque || '';
+      hanzi = props.c_hanzi || props.hanzi || '';
+    }
 
-    const hanzi = (
-      (tier === 'county' ? props.c_hanzi : '') ||
-      (tier === 'duchy' ? (props.d_hanzi || props.hanzi) : '') ||
-      (tier === 'kingdom' ? (props.k_hanzi || props.hanzi) : '') ||
-      (tier === 'empire' ? (props.e_hanzi || props.hanzi) : '') ||
-      (tier === 'barony' ? (props.b_hanzi || props.c_hanzi) : '') ||
-      props.c_hanzi || props.d_hanzi || props.k_hanzi || props.e_hanzi || props.hanzi || ''
-    );
+    tarrName = (tarrName || key).toLowerCase();
+    origName = (origName || '').toLowerCase();
+    anachNote = (anachNote || '').toLowerCase();
 
     const combinedText = [
       key,
       tarrName,
       origName,
       anachNote,
-      props.c_calque || props.d_calque || props.k_calque || props.calque || '',
-      props.c_origin || props.d_origin || props.k_origin || props.origin || '',
-      props.name || ''
+      calque
     ].join(' ');
 
     const h = hashString(key || tarrName);
@@ -721,8 +726,14 @@
   }
 
   // =========================================================================
-  // 4. SVG Medium Frame Renderers
+  // 4. SVG Medium Frame Renderers & Unique ID Generator
   // =========================================================================
+
+  let symbolUidCounter = 0;
+  function getUniqueId(prefix = 'sym') {
+    symbolUidCounter += 1;
+    return `${prefix}_${symbolUidCounter}_${Math.random().toString(36).substring(2, 7)}`;
+  }
 
   function renderField(def, width, height, clipId) {
     const fColor = PALETTE[def.field] || PALETTE.gules;
@@ -770,14 +781,13 @@
   function renderVexillum(def) {
     const W = 220, H = 270;
     const bannerX = 35, bannerY = 42, bannerW = 150, bannerH = 185;
+    const uid = getUniqueId('vex');
+    const fColor = PALETTE[def.field] || PALETTE.gules;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="vexillum-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity="0.6" />
-          </filter>
-          <clipPath id="vexillum-clip">
+          <clipPath id="${uid}_clip">
             <rect x="${bannerX}" y="${bannerY}" width="${bannerW}" height="${bannerH}" rx="2" />
           </clipPath>
         </defs>
@@ -790,15 +800,23 @@
         <line x1="190" y1="42" x2="195" y2="90" stroke="${PALETTE.brass}" stroke-width="2" />
         <circle cx="195" cy="93" r="4" fill="${PALETTE.or}" />
 
+        <!-- Banner Cloth Drop Shadow -->
+        <rect x="${bannerX + 2}" y="${bannerY + 4}" width="${bannerW}" height="${bannerH + 12}" rx="3" fill="rgba(0,0,0,0.3)" />
+
         <!-- Banner Cloth Body -->
-        <g filter="url(#vexillum-shadow)">
-          <g clip-path="url(#vexillum-clip)">
-            ${renderField(def, W, H, 'vexillum-clip')}
+        <g>
+          <!-- Base Field Color Rect -->
+          <rect x="${bannerX}" y="${bannerY}" width="${bannerW}" height="${bannerH}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="1.5" rx="2" />
+
+          <!-- Clipped Field Ordinaries & Charges -->
+          <g clip-path="url(#${uid}_clip)">
+            ${renderField(def, W, H)}
             <!-- Inner Gold Border -->
             <rect x="${bannerX + 5}" y="${bannerY + 5}" width="${bannerW - 10}" height="${bannerH - 10}" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" />
             <!-- Charges -->
             ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.82, 110, 135) : '').join('')}
           </g>
+
           <!-- Bottom Gold Fringe -->
           <g fill="${PALETTE.or}" stroke="${PALETTE.sable}" stroke-width="0.8">
             ${Array.from({ length: 15 }).map((_, i) => `
@@ -820,14 +838,13 @@
   function renderGonfanon(def) {
     const W = 220, H = 270;
     const gonfanonPath = "M 35 45 L 185 45 L 185 165 L 155 165 L 135 240 L 115 165 L 85 240 L 65 165 L 35 165 Z";
+    const uid = getUniqueId('gonf');
+    const fColor = PALETTE[def.field] || PALETTE.gules;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="gonfanon-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.55" />
-          </filter>
-          <clipPath id="gonfanon-clip">
+          <clipPath id="${uid}_clip">
             <path d="${gonfanonPath}" />
           </clipPath>
         </defs>
@@ -838,11 +855,14 @@
         <!-- Spearhead Finial Left -->
         <polygon points="12,40 2,34 6,40 2,46" fill="${PALETTE.argent}" stroke="${PALETTE.sable}" stroke-width="1.2" />
 
+        <!-- Banner Body Drop Shadow -->
+        <path d="${gonfanonPath}" transform="translate(0, 4)" fill="rgba(0,0,0,0.25)" />
+
         <!-- Banner Body with 3 Tongues -->
-        <g filter="url(#gonfanon-shadow)">
-          <path d="${gonfanonPath}" fill="${PALETTE[def.field] || PALETTE.gules}" stroke="${PALETTE.sable}" stroke-width="2" />
-          <g clip-path="url(#gonfanon-clip)">
-            ${renderField(def, W, H, 'gonfanon-clip')}
+        <g>
+          <path d="${gonfanonPath}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="2" />
+          <g clip-path="url(#${uid}_clip)">
+            ${renderField(def, W, H)}
             <!-- Decorative Border Piping -->
             <path d="M 40 50 L 180 50 L 180 160 L 152 160 L 135 228 L 118 160 L 82 228 L 65 160 L 40 160 Z" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" opacity="0.9" />
             <!-- Charges placed in the upper square -->
@@ -857,29 +877,33 @@
   function renderNotitiaScutum(def) {
     const W = 220, H = 250;
     const cx = 110, cy = 125, rx = 82, ry = 104;
+    const uid = getUniqueId('scut');
+    const fColor = PALETTE[def.field] || PALETTE.gules;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="scutum-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.65" />
-          </filter>
-          <clipPath id="scutum-clip">
+          <clipPath id="${uid}_clip">
             <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" />
           </clipPath>
-          <radialGradient id="umbo-grad" cx="40%" cy="40%" r="65%">
+          <radialGradient id="${uid}_umbo" cx="40%" cy="40%" r="65%">
             <stop offset="0%" stop-color="${PALETTE.argent}" />
             <stop offset="50%" stop-color="${PALETTE.brass}" />
             <stop offset="100%" stop-color="${PALETTE.sable}" />
           </radialGradient>
         </defs>
 
-        <g filter="url(#scutum-shadow)">
+        <!-- Drop Shadow -->
+        <ellipse cx="${cx}" cy="${cy + 5}" rx="${rx + 6}" ry="${ry + 6}" fill="rgba(0,0,0,0.3)" />
+
+        <g>
           <!-- Outer Metallic Rim -->
           <ellipse cx="${cx}" cy="${cy}" rx="${rx + 6}" ry="${ry + 6}" fill="${PALETTE.brass}" stroke="${PALETTE.sable}" stroke-width="2" />
-          <!-- Shield Face -->
-          <g clip-path="url(#scutum-clip)">
-            ${renderField(def, W, H, 'scutum-clip')}
+          <!-- Shield Base Face -->
+          <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fColor}" />
+          <!-- Shield Face Clipped Ordinaries & Charges -->
+          <g clip-path="url(#${uid}_clip)">
+            ${renderField(def, W, H)}
             <!-- Radiating / Concentric Notitia Ring -->
             <ellipse cx="${cx}" cy="${cy}" rx="${rx - 12}" ry="${ry - 12}" fill="none" stroke="${PALETTE.or}" stroke-width="3" stroke-dasharray="10 6" opacity="0.8" />
             <!-- Charges around Boss -->
@@ -888,7 +912,7 @@
           <!-- Inner Rim Stitching -->
           <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="${PALETTE.sable}" stroke-width="2" />
           <!-- Central Metal Umbo (Shield Boss) -->
-          <circle cx="${cx}" cy="${cy}" r="22" fill="url(#umbo-grad)" stroke="${PALETTE.sable}" stroke-width="2" />
+          <circle cx="${cx}" cy="${cy}" r="22" fill="url(#${uid}_umbo)" stroke="${PALETTE.sable}" stroke-width="2" />
           <circle cx="${cx}" cy="${cy}" r="14" fill="${PALETTE.or}" stroke="${PALETTE.sable}" stroke-width="1.2" />
           <!-- Rim Studs / Rivets -->
           ${[0, 45, 90, 135, 180, 225, 270, 315].map(deg => {
@@ -907,21 +931,23 @@
     const W = 240, H = 240;
     const cx = 120, cy = 120, rOuter = 104, rText = 88, rInner = 72;
     const legendText = def.legend || '+ S. MAGISTRATVS • IMPERII •';
+    const uid = getUniqueId('bulla');
+    const fColor = PALETTE[def.field] || PALETTE.gules;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="seal-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.6" />
-          </filter>
-          <clipPath id="seal-inner-clip">
+          <clipPath id="${uid}_inner_clip">
             <circle cx="${cx}" cy="${cy}" r="${rInner}" />
           </clipPath>
           <!-- Circular text path along circumference -->
-          <path id="seal-text-path-${hashString(legendText)}" d="M ${cx - rText} ${cy} A ${rText} ${rText} 0 1 1 ${cx + rText} ${cy} A ${rText} ${rText} 0 1 1 ${cx - rText} ${cy}" fill="none" />
+          <path id="${uid}_text_path" d="M ${cx - rText} ${cy} A ${rText} ${rText} 0 1 1 ${cx + rText} ${cy} A ${rText} ${rText} 0 1 1 ${cx - rText} ${cy}" fill="none" />
         </defs>
 
-        <g filter="url(#seal-shadow)">
+        <!-- Drop Shadow -->
+        <circle cx="${cx}" cy="${cy + 4}" r="${rOuter}" fill="rgba(0,0,0,0.25)" />
+
+        <g>
           <!-- Outer Wax / Lead Base Flange -->
           <circle cx="${cx}" cy="${cy}" r="${rOuter}" fill="${PALETTE.gules_dark}" stroke="${PALETTE.sable}" stroke-width="2.5" />
           <!-- Beaded Ring Outer -->
@@ -933,15 +959,15 @@
 
           <!-- Circular Inscription Text -->
           <text fill="${PALETTE.or_bright}" font-family="'Cinzel', 'Trajan Pro', serif" font-size="10" font-weight="700" letter-spacing="1.5">
-            <textPath href="#seal-text-path-${hashString(legendText)}" startOffset="50%" text-anchor="middle">
+            <textPath href="#${uid}_text_path" startOffset="50%" text-anchor="middle">
               ${legendText}
             </textPath>
           </text>
 
           <!-- Inner Shield / Field Area -->
-          <g clip-path="url(#seal-inner-clip)">
-            <rect x="${cx - rInner}" y="${cy - rInner}" width="${rInner * 2}" height="${rInner * 2}" fill="${PALETTE[def.field] || PALETTE.gules}" />
-            ${renderField(def, W, H, 'seal-inner-clip')}
+          <circle cx="${cx}" cy="${cy}" r="${rInner}" fill="${fColor}" />
+          <g clip-path="url(#${uid}_inner_clip)">
+            ${renderField(def, W, H)}
             <!-- Inner Beaded Ring -->
             <circle cx="${cx}" cy="${cy}" r="${rInner - 2}" fill="none" stroke="${PALETTE.or}" stroke-width="1.5" />
             <!-- Central Civic / Canting Charge -->
@@ -959,19 +985,20 @@
     const hanziChar = def.hanzi ? def.hanzi.charAt(0) : '州';
     const ink = PALETTE[def.field] || PALETTE.vermilion;
     const inkDark = def.field === 'azure' ? PALETTE.azure : (def.field === 'vert' ? PALETTE.vert : PALETTE.vermilion_dark);
+    const uid = getUniqueId('chop');
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="chop-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5" />
-          </filter>
-          <clipPath id="chop-clip">
+          <clipPath id="${uid}_clip">
             <rect x="${boxX + 10}" y="${boxY + 10}" width="${boxSize - 20}" height="${boxSize - 20}" rx="3" />
           </clipPath>
         </defs>
 
-        <g filter="url(#chop-shadow)">
+        <!-- Drop Shadow -->
+        <rect x="${boxX + 2}" y="${boxY + 4}" width="${boxSize}" height="${boxSize}" rx="8" fill="rgba(0,0,0,0.2)" />
+
+        <g>
           <!-- Parchment background under stamp -->
           <rect x="${boxX}" y="${boxY}" width="${boxSize}" height="${boxSize}" rx="8" fill="#f8f4e8" stroke="${PALETTE.sable}" stroke-width="1.5" />
           
@@ -987,7 +1014,7 @@
           <path d="M ${boxX + boxSize - 15} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 15}" fill="none" stroke="${ink}" stroke-width="1.5" />
 
           <!-- Sinitic Watermark Charge in Background -->
-          <g opacity="0.22" clip-path="url(#chop-clip)">
+          <g opacity="0.22" clip-path="url(#${uid}_clip)">
             ${def.charges.map(c => CHARGES[c] ? CHARGES[c](ink, 0.75, 110, 110) : '').join('')}
           </g>
 
@@ -1009,21 +1036,23 @@
   function renderVesicaSeal(def) {
     const W = 220, H = 270;
     const vesicaPath = "M 110 25 C 185 85, 185 185, 110 245 C 35 185, 35 85, 110 25 Z";
+    const uid = getUniqueId('vesica');
+    const fColor = PALETTE[def.field] || PALETTE.purpure;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="vesica-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.6" />
-          </filter>
-          <clipPath id="vesica-clip">
+          <clipPath id="${uid}_clip">
             <path d="${vesicaPath}" />
           </clipPath>
         </defs>
 
-        <g filter="url(#vesica-shadow)">
-          <path d="${vesicaPath}" fill="${PALETTE[def.field] || PALETTE.purpure}" stroke="${PALETTE.sable}" stroke-width="2.5" />
-          <g clip-path="url(#vesica-clip)">
+        <!-- Drop Shadow -->
+        <path d="${vesicaPath}" transform="translate(0, 4)" fill="rgba(0,0,0,0.25)" />
+
+        <g>
+          <path d="${vesicaPath}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="2.5" />
+          <g clip-path="url(#${uid}_clip)">
             <!-- Inner Beaded Mandorla Rim -->
             <path d="${vesicaPath}" fill="none" stroke="${PALETTE.or}" stroke-width="4" stroke-dasharray="8 4" opacity="0.85" />
             <!-- Gothic Canopy Arch at Top -->
@@ -1042,22 +1071,24 @@
   function renderCivicBadge(def) {
     const W = 180, H = 200;
     const badgePath = "M 30 25 L 150 25 L 150 110 C 150 155, 90 180, 90 180 C 90 180, 30 155, 30 110 Z";
+    const uid = getUniqueId('badge');
+    const fColor = PALETTE[def.field] || PALETTE.azure;
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
         <defs>
-          <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="130%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5" />
-          </filter>
-          <clipPath id="badge-clip">
+          <clipPath id="${uid}_clip">
             <path d="${badgePath}" />
           </clipPath>
         </defs>
 
-        <g filter="url(#badge-shadow)">
-          <path d="${badgePath}" fill="${PALETTE[def.field] || PALETTE.azure}" stroke="${PALETTE.sable}" stroke-width="2" />
-          <g clip-path="url(#badge-clip)">
-            <rect x="30" y="25" width="120" height="155" fill="${PALETTE[def.field] || PALETTE.azure}" />
+        <!-- Drop Shadow -->
+        <path d="${badgePath}" transform="translate(0, 4)" fill="rgba(0,0,0,0.2)" />
+
+        <g>
+          <path d="${badgePath}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="2" />
+          <g clip-path="url(#${uid}_clip)">
+            <rect x="30" y="25" width="120" height="155" fill="${fColor}" />
             <path d="${badgePath}" fill="none" stroke="${PALETTE.or}" stroke-width="2.5" />
             <!-- Holding Charge -->
             ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, 90, 95) : '').join('')}
