@@ -297,15 +297,15 @@
     "category": "capital_eponymous"
   },
   "b_whitehaven": {
-    "name": "Whitehaven",
-    "b_tarr": "Whitehaven",
+    "name": "Zant-Bêge",
+    "b_tarr": "Zant-Bêge",
     "b_tarr_direct": "Whitehaven",
-    "b_tarr_hist": "Whitehaven",
-    "b_origin": "Whitehaven (constituent holding of Kumberlant)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈwhɪ.tɛ.ha.vən]",
+    "b_tarr_hist": "Zant-Bêge",
+    "b_origin": "Ancient 7th-century monastic cell and priory of St Bega / Kirkeby Becok (in-game: Whitehaven)",
+    "b_anachronism": "Pre-867 Celtic/Saxon monastic cell restored over 1125 Whitehaven.",
+    "b_ipa": "[tsant ˈbeː.ɣə]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_furness": {
     "name": "Furness",
@@ -440,15 +440,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_castleton": {
-    "name": "Castleton",
-    "b_tarr": "Castleton",
+    "name": "Nâvjô",
+    "b_tarr": "Nâvjô",
     "b_tarr_direct": "Castleton",
-    "b_tarr_hist": "Castleton",
-    "b_origin": "Castleton (constituent holding of Derbî)",
-    "b_anachronism": "",
-    "b_ipa": "[kast.lɛ.ˈtɔn]",
+    "b_tarr_hist": "Nâvjô",
+    "b_origin": "Ancient Roman auxiliary fort and settlement Navio at Brough-on-Noe (in-game: Castleton)",
+    "b_anachronism": "Pre-867 Roman fort restored over 1076 Peveril Castle.",
+    "b_ipa": "[naːv.ˈjoː]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_york": {
     "name": "Nortrîding",
@@ -484,15 +484,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_richmond": {
-    "name": "Richmond",
-    "b_tarr": "Richmond",
+    "name": "Gilling",
+    "b_tarr": "Gilling",
     "b_tarr_direct": "Richmond",
-    "b_tarr_hist": "Richmond",
-    "b_origin": "Richmond (constituent holding of Nortrîding)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈrɪç.mɔnd]",
+    "b_tarr_hist": "Gilling",
+    "b_origin": "Ancient Anglo-Saxon royal vill and monastery Ingetlingum / Gilling West (in-game: Richmond)",
+    "b_anachronism": "Pre-867 Anglo-Saxon royal center restored over 1071 Norman fortress of Richmond.",
+    "b_ipa": "[ˈɡɪ.ʎɪŋ]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_yarlestre": {
     "name": "Yarlestre",
@@ -627,15 +627,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_boston": {
-    "name": "Boston",
-    "b_tarr": "Boston",
+    "name": "Ikanhô",
+    "b_tarr": "Ikanhô",
     "b_tarr_direct": "Boston",
-    "b_tarr_hist": "Boston",
-    "b_origin": "Boston (constituent holding of Lindesê)",
-    "b_anachronism": "",
-    "b_ipa": "[bɔs.ˈtɔn]",
+    "b_tarr_hist": "Ikanhô",
+    "b_origin": "Ancient 654 AD Anglo-Saxon monastery Icanho founded by St Botolph (in-game: Boston)",
+    "b_anachronism": "Pre-867 Anglo-Saxon monastery restored over post-conquest town of Boston.",
+    "b_ipa": "[ɪ.kan.ˈhoː]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_bolingsbroke": {
     "name": "Bolingstone",
@@ -1116,10 +1116,10 @@
     "b_tarr_direct": "Salisbury",
     "b_tarr_hist": "Sâlesburch",
     "b_origin": "Ancient Iron Age hillfort and Roman Sorviodunum / Old Sarum (in-game: Salisbury)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Iron Age / Roman / Saxon Fortress.",
     "b_ipa": "[ˈsaː.lɛs.bʊrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_wilton": {
     "name": "Wiltûn",
@@ -1127,10 +1127,10 @@
     "b_tarr_direct": "Wilton",
     "b_tarr_hist": "Wiltûn",
     "b_origin": "Ancient Anglo-Saxon royal burh and seat of the Wilsæte on the Wylye (in-game: Wilton)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Anglo-Saxon Royal Burh (attested 802 AD).",
     "b_ipa": "[wɪl.ˈtuːn]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_ramsbury": {
     "name": "Ramsbury",
@@ -1929,11 +1929,11 @@
     "b_tarr": "Zant-Jônstat",
     "b_tarr_direct": "Zant-Johnston",
     "b_tarr_hist": "Zant-Jônstat",
-    "b_origin": "St Johnston — Option B hydronym/landform (Zant-Jônstat) disambiguated from sub-barony seat Skôn",
-    "b_anachronism": "Disambiguated intra-county capital barony.",
+    "b_origin": "Historic royal burgh St Johnston / Perth on the Tay (chartered 1124 AD) (in-game: Perth)",
+    "b_anachronism": "Post-867 royal burgh (chartered 1124 AD by David I); secondary holding disambiguated from Option A seat Skône.",
     "b_ipa": "[tsant ˈjoːn.stat]",
     "holding_type": "castle",
-    "category": "collision_disambiguation"
+    "category": "secondary_holding_disambiguation"
   },
   "b_coupar_angus": {
     "name": "Skône",
@@ -1941,10 +1941,10 @@
     "b_tarr_direct": "Scone",
     "b_tarr_hist": "Skône",
     "b_origin": "Ancient coronation moot and abbey of the Kings of Alba (Scone) (in-game: Scone)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Royal Moot (attested 843 AD).",
     "b_ipa": "[ˈskoː.nə]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_crieff": {
     "name": "Crieff",
@@ -2491,10 +2491,10 @@
     "b_tarr_direct": "Linlithgow",
     "b_tarr_hist": "Aberkôrn",
     "b_origin": "Ancient Northumbrian episcopal see Abercorn on the Forth (attested 681 AD) (in-game: Linlithgow)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Northumbrian Episcopal See (attested 681 AD).",
     "b_ipa": "[a.bɛr.ˈkoːrn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_queensferry": {
     "name": "Queensferry",
@@ -2513,21 +2513,21 @@
     "b_tarr_direct": "Falkirk",
     "b_tarr_hist": "Fawkirk",
     "b_origin": "Ancient Brythonic/Gaelic church site Egglesbreth on the Antonine Wall (in-game: Falkirk)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Roman Wall Site.",
     "b_ipa": "[ˈfaw.kɪrk]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_lanark": {
     "name": "Lânark",
     "b_tarr": "Lânark",
     "b_tarr_direct": "Lanark",
     "b_tarr_hist": "Lânark",
-    "b_origin": "Ancient Strathclyde burgh Lanark on the Clyde (chartered 1140 AD) (in-game: Lanark)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Ancient Strathclyde burgh Lanark on the Clyde (chartered 1140 AD; site of Roman fort Castledykes) (in-game: Lanark)",
+    "b_anachronism": "Post-867 royal burgh (chartered 1140 AD by David I); secondary holding disambiguated from Option A seat Kadjo.",
     "b_ipa": "[ˈlaː.nark]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_cadyou": {
     "name": "Kadjo",
@@ -2535,10 +2535,10 @@
     "b_tarr_direct": "Cadyou",
     "b_tarr_hist": "Kadjo",
     "b_origin": "Ancient Strathclyde Brythonic comital center Cadzow (Cadyou) (in-game: Cadyou)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Strathclyde Royal Center.",
     "b_ipa": "[ˈkad.jɔ]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_biggar": {
     "name": "Biggar",
@@ -2832,10 +2832,10 @@
     "b_tarr_direct": "Athlone",
     "b_tarr_hist": "Âth-Lôen",
     "b_origin": "Historic Shannon bridge fortress Athlone (Áth Luain, attested 1120 AD) (in-game: Athlone)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 Shannon bridge castle (built 1120 AD) established at ancient ford Áth Luain (Tier 2).",
     "b_ipa": "[aːth ˈloː.ɛn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_birr": {
     "name": "Birr",
@@ -2854,10 +2854,10 @@
     "b_tarr_direct": "Uisneach",
     "b_tarr_hist": "Uisnech",
     "b_origin": "Ancient sacred royal hill and navel of Ireland (Aill na Mireann) (in-game: Uisneach)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Prehistoric Sacred Royal Hill.",
     "b_ipa": "[ˈʊ.ɪs.nɛç]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_downpatrick": {
     "name": "Dûnpatrich",
@@ -2909,10 +2909,10 @@
     "b_tarr_direct": "Dundalk",
     "b_tarr_hist": "Dundalk",
     "b_origin": "Ancient fortified ford Dún Dealgan of the Castletown River (in-game: Dundalk)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Prehistoric Irish Fortress.",
     "b_ipa": "[ˈdʊn.dalk]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_armagh": {
     "name": "Armâch",
@@ -2920,10 +2920,10 @@
     "b_tarr_direct": "Armagh",
     "b_tarr_hist": "Armâch",
     "b_origin": "Ancient ecclesiastical capital of Ireland and primary see of St Patrick (Ard Mhacha) (in-game: Armagh)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Episcopal See (founded 445 AD).",
     "b_ipa": "[ar.ˈmaːx]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_ardee": {
     "name": "Ardee",
@@ -3052,10 +3052,10 @@
     "b_tarr_direct": "Galway",
     "b_tarr_hist": "Gâlewe",
     "b_origin": "Historic Corrib river fortress and burgh Galway (Dún Gaillimhe, attested 1124 AD) (in-game: Galway)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 river fortress (built 1124 AD by Tairrdelbach Ua Conchobair) established on ancient hydronym Gaillimh (Tier 2).",
     "b_ipa": "[ɡaː.ˈlɛ.wə]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_athenry": {
     "name": "Athenry",
@@ -3074,10 +3074,10 @@
     "b_tarr_direct": "Tuam",
     "b_tarr_hist": "Tuâm",
     "b_origin": "Ancient monastic foundation and metropolitan archiepiscopal see of Tuam (in-game: Tuam)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Monastic See (founded c. 501 AD).",
     "b_ipa": "[tʊ.ˈaːm]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_da_chainoc": {
     "name": "Da Chainoc",
@@ -3381,11 +3381,11 @@
     "b_tarr": "Dêpholtz",
     "b_tarr_direct": "Diepholz",
     "b_tarr_hist": "Dêpholtz",
-    "b_origin": "Historic noble lordship and water castle Diepholz on the Hunte (in-game: Diepholz)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Historic noble lordship and water castle Diepholz on the Hunte (attested c. 1160 AD) (in-game: Diepholz)",
+    "b_anachronism": "Post-867 comital water castle (founded c. 1160 AD by Gottschalk of Diepholz on the Hunte); secondary holding of c_minden.",
     "b_ipa": "[ˈdeːp.hɔlts]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_minden": {
     "name": "Minden",
@@ -3393,10 +3393,10 @@
     "b_tarr_direct": "Minden",
     "b_tarr_hist": "Minden",
     "b_origin": "Ancient episcopal see and cathedral chapter of Minden on the Weser (attested 798 AD) (in-game: Minden)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Episcopal See (founded 798 AD).",
     "b_ipa": "[ˈmɪn.dən]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_bruchhausen": {
     "name": "Bruchhausen",
@@ -3432,15 +3432,15 @@
     "category": "capital_eponymous"
   },
   "b_schwalenberg": {
-    "name": "Schwalenberch",
-    "b_tarr": "Schwalenberch",
+    "name": "Marienmunster",
+    "b_tarr": "Marienmunster",
     "b_tarr_direct": "Schwalenberch",
-    "b_tarr_hist": "Schwalenberch",
-    "b_origin": "Schwalenberg (constituent holding of Detmolt)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈʃwa.lɛn.bɛrx]",
+    "b_tarr_hist": "Marienmunster",
+    "b_origin": "Ancient monastic foundation and collegiate abbey of Marienmünster in the Westphalian hills (in-game: Schwalenberg)",
+    "b_anachronism": "Pre-867 monastic foundation restored over 1228 feudal castle of Schwalenberg.",
+    "b_ipa": "[ˈma.rɪ.ɛn.mʊn.stər]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_everstein": {
     "name": "Metzmunster",
@@ -3591,10 +3591,10 @@
     "b_tarr_direct": "Oldenburch",
     "b_tarr_hist": "Aldenburch",
     "b_origin": "Medieval comital fortress Oldenburg on the Hunte (attested 1108 AD) (in-game: Oldenburg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 comital fortress (attested 1108 AD under Count Egilmar I); secondary holding disambiguated from Option A seat Lêre.",
     "b_ipa": "[ˈal.dɛn.bʊrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_leer": {
     "name": "Lêre",
@@ -3602,10 +3602,10 @@
     "b_tarr_direct": "Leer",
     "b_tarr_hist": "Lêre",
     "b_origin": "Ancient 8th-century Frisian trading gau settlement Leer on the Leda (attested 791 AD) (in-game: Leer)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Frisian Missionary Center (attested 791 AD).",
     "b_ipa": "[ˈleː.rə]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_twistringen": {
     "name": "Twistringen",
@@ -3630,15 +3630,15 @@
     "category": "capital_eponymous"
   },
   "b_ravensberg": {
-    "name": "Ravensberch",
-    "b_tarr": "Ravensberch",
+    "name": "Halle",
+    "b_tarr": "Halle",
     "b_tarr_direct": "Ravensberch",
-    "b_tarr_hist": "Ravensberch",
-    "b_origin": "Ravensberg (constituent holding of Osnabrücke)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈra.vəns.bɛrx]",
+    "b_tarr_hist": "Halle",
+    "b_origin": "Ancient Carolingian parish and salt estate Halle in Westfalen (in-game: Ravensberg)",
+    "b_anachronism": "Pre-867 Carolingian estate restored over 1080 Castle Ravensberg.",
+    "b_ipa": "[ˈha.ʎə]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_vechta": {
     "name": "Vechta",
@@ -3817,15 +3817,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_lippstadt": {
-    "name": "Lippstat",
-    "b_tarr": "Lippstat",
+    "name": "Kappel",
+    "b_tarr": "Kappel",
     "b_tarr_direct": "Lippstat",
-    "b_tarr_hist": "Lippstat",
-    "b_origin": "Lippstadt (constituent holding of Paderborne)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈlɪp.stat]",
+    "b_tarr_hist": "Kappel",
+    "b_origin": "Ancient 9th-century collegiate church and estate of Cappel on the Lippe (in-game: Lippstadt)",
+    "b_anachronism": "Pre-867 collegiate foundation restored over 1185 planned town of Lippstadt.",
+    "b_ipa": "[ka.ˈpəl]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_luneburg": {
     "name": "Lûneburch",
@@ -3998,10 +3998,10 @@
     "b_tarr_direct": "Lübeck",
     "b_tarr_hist": "Lübeck",
     "b_origin": "Chartered Baltic trading port Lübeck founded 1143 AD (in-game: Lübeck)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 chartered Baltic trading port (founded 1143 AD by Adolf II of Schauenburg); secondary holding disambiguated from Option A seat Liubice.",
     "b_ipa": "[ˈlyː.bɛk]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_femera": {
     "name": "Femera",
@@ -4547,11 +4547,11 @@
     "b_tarr": "Lützelburch",
     "b_tarr_direct": "Luxembourg",
     "b_tarr_hist": "Lützelburch",
-    "b_origin": "Ancient rock fortress Lucilinburhuc founded 963 AD by Count Sigfried (in-game: Luxembourg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Rock fortress Lucilinburhuc founded 963 AD by Count Sigfried (in-game: Luxembourg)",
+    "b_anachronism": "Rock fortress Lucilinburhuc founded 963 AD by Count Sigfried; secondary holding disambiguated from Option A seat Echternach.",
     "b_ipa": "[ˈlyː.tsɛl.bʊrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_bastogne": {
     "name": "Bastogne",
@@ -4680,10 +4680,10 @@
     "b_tarr_direct": "Namur",
     "b_tarr_hist": "Nâmen",
     "b_origin": "Ancient junction citadel Namur at the confluence of Sambre and Meuse (in-game: Namur)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Junction Citadel.",
     "b_ipa": "[ˈnaː.mən]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_charleroi": {
     "name": "Dinant",
@@ -5373,10 +5373,10 @@
     "b_tarr_direct": "Berch",
     "b_tarr_hist": "Berch",
     "b_origin": "Ancestral castle Burg an der Wupper / County of Berg (in-game: Berg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancestral Comital Seat.",
     "b_ipa": "[bɛrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_siegburg": {
     "name": "Lotharstat",
@@ -5548,11 +5548,11 @@
     "b_tarr": "München",
     "b_tarr_direct": "München",
     "b_tarr_hist": "München",
-    "b_origin": "Chartered toll bridge burgh Munich founded 1158 by Henry the Lion (in-game: München)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Chartered toll bridge burgh Munich founded 1158 by Henry the Lion (in-game: Munich)",
+    "b_anachronism": "Post-867 chartered toll-bridge burgh (founded 1158 AD by Henry the Lion); secondary holding disambiguated from Option A seat Frîsinge.",
     "b_ipa": "[ˈmyːn.xən]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_aheim": {
     "name": "Aheim",
@@ -5604,10 +5604,10 @@
     "b_tarr_direct": "Rottenburch",
     "b_tarr_hist": "Rôtenburch",
     "b_origin": "Imperial castle and burgh Rothenburg ob der Tauber (in-game: Rottenburg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Imperial Castle.",
     "b_ipa": "[ˈroː.tən.bʊrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_freising": {
     "name": "Frîsinge",
@@ -5615,10 +5615,10 @@
     "b_tarr_direct": "Freising",
     "b_tarr_hist": "Frîsinge",
     "b_origin": "Ancient Agilolfing ducal seat and prince-bishopric Freising on the Isar (attested 739 AD) (in-game: Freising)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Ducal See (attested 739 AD).",
     "b_ipa": "[friː.ˈzɪ.ŋɛ]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_ilmunster": {
     "name": "Ilmmünster",
@@ -6237,15 +6237,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_ravensburg": {
-    "name": "Râvensburch",
-    "b_tarr": "Râvensburch",
+    "name": "Altdorf",
+    "b_tarr": "Altdorf",
     "b_tarr_direct": "Ravensburch",
-    "b_tarr_hist": "Râvensburch",
-    "b_origin": "Welf ancestral fortress Ravensburg on the Schussen (attested 1088 AD) (in-game: Ravensburg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[ˈraː.vəns.bʊrx]",
+    "b_tarr_hist": "Altdorf",
+    "b_origin": "Ancestral 750 AD Welf estate and monastery of Altdorf / Weingarten on the Schussen (in-game: Ravensburg)",
+    "b_anachronism": "Authentic Pre-867 Historical Settlement (attested 750 AD).",
+    "b_ipa": "[ˈalt.dɔrf]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_bregenz": {
     "name": "Briganz",
@@ -6253,10 +6253,10 @@
     "b_tarr_direct": "Bregenz",
     "b_tarr_hist": "Briganz",
     "b_origin": "Ancient Roman naval base and civitas Brigantium on Lake Constance (attested 15 BC) (in-game: Bregenz)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[ˈbrɪ.ɣants]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_burgau": {
     "name": "Güntzburch",
@@ -7386,10 +7386,10 @@
     "b_tarr_direct": "Coburch",
     "b_tarr_hist": "Kôburch",
     "b_origin": "Medieval comital castle Coburg in the Radenzgau (attested 1056 AD) (in-game: Coburg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 comital castle (attested 1056 AD in deed of Queen Richeza); secondary holding disambiguated from Option A seat Liechtenfels.",
     "b_ipa": "[ˈkoː.bʊrx]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_lichtenfels": {
     "name": "Liechtenfels",
@@ -7397,10 +7397,10 @@
     "b_tarr_direct": "Lichtenfels",
     "b_tarr_hist": "Liechtenfels",
     "b_origin": "Ancient Radenzgau fortress on the Main (Lichtenfels) (in-game: Lichtenfels)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Radenzgau Fortress.",
     "b_ipa": "[ˈlɪ.ɛç.tən.fɛls]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_mergentheim": {
     "name": "Öringen",
@@ -7782,10 +7782,10 @@
     "b_tarr_direct": "Konstanz",
     "b_tarr_hist": "Konstantz",
     "b_origin": "Roman Constantia / Episcopal See of Lake Constance (attested 585 AD) (in-game: Konstanz)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[ˈkɔn.stants]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_sankt_gallen": {
     "name": "Zant-Gallen",
@@ -7793,10 +7793,10 @@
     "b_tarr_direct": "Sankt Gallen",
     "b_tarr_hist": "Zant-Gallen",
     "b_origin": "Imperial Abbey and monastic republic of Saint Gall (attested 612 AD) (in-game: Sankt Gallen)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Monastic Abbey (founded 612 AD).",
     "b_ipa": "[tsant ˈɡa.ʎən]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_zurich": {
     "name": "Zürich",
@@ -8178,10 +8178,10 @@
     "b_tarr_direct": "Hohenberch",
     "b_tarr_hist": "Hôhenberch",
     "b_origin": "Comital ancestral fortress Hohenberg on the Neckar (in-game: Hohenberg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Comital Fortress.",
     "b_ipa": "[ˈhoː.hɛn.bɛrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_rottweil": {
     "name": "Rôtwîl",
@@ -8189,10 +8189,10 @@
     "b_tarr_direct": "Rottweil",
     "b_tarr_hist": "Rôtwîl",
     "b_origin": "Ancient Roman municipium Arae Flaviae / oldest chartered town of Swabia (Rottweil) (in-game: Rottweil)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Roman Municipium.",
     "b_ipa": "[roːt.ˈwiːl]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_nellenburg": {
     "name": "Nellenburch",
@@ -8475,10 +8475,10 @@
     "b_tarr_direct": "Gleichenstên",
     "b_tarr_hist": "Glêichenstên",
     "b_origin": "Comital hill castle Gleichenstein in the Eichsfeld (in-game: Gleichenstein)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Comital Castle.",
     "b_ipa": "[ɡleː.ɪ.çən.ˈsteːn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_ebeleben": {
     "name": "Ebeleben",
@@ -8497,10 +8497,10 @@
     "b_tarr_direct": "Mülhausen",
     "b_tarr_hist": "Mülhûsen",
     "b_origin": "Imperial free city and Frankish royal court Mühlhausen on the Unstrut (in-game: Mülhausen)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Frankish Royal Court.",
     "b_ipa": "[ˈmyːl.huː.zən]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_orlamunde": {
     "name": "Orlamünde",
@@ -8629,10 +8629,10 @@
     "b_tarr_direct": "Brysis",
     "b_tarr_hist": "Brüsis",
     "b_origin": "Ancient Byzantine fortress and bishopric Brysis in Thrace (in-game: Brysis)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Byzantine Fortress.",
     "b_ipa": "[ˈbryː.sɪs]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_arkadiopolis": {
     "name": "Arkadîôpel",
@@ -8640,10 +8640,10 @@
     "b_tarr_direct": "Arkadiopolis",
     "b_tarr_hist": "Arkadîôpel",
     "b_origin": "Ancient Roman-Byzantine episcopal city Arcadiopolis on the Ergene (in-game: Arkadiopolis)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Byzantine Civitas.",
     "b_ipa": "[ar.ka.diː.oː.ˈpəl]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_selymbria": {
     "name": "Selymbria",
@@ -9922,15 +9922,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_mistra": {
-    "name": "Mistrâ",
-    "b_tarr": "Mistrâ",
+    "name": "Amûklê",
+    "b_tarr": "Amûklê",
     "b_tarr_direct": "Mistra",
-    "b_tarr_hist": "Mistrâ",
-    "b_origin": "Byzantine fortified capital and Despotate seat of Mistra on Mount Taygetos (in-game: Mistra)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[mɪs.ˈtraː]",
+    "b_tarr_hist": "Amûklê",
+    "b_origin": "Ancient Achaean polis and sacred sanctuary of Apollo Amyklaios on Mount Taygetos (in-game: Mistra)",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis (Amyclae).",
+    "b_ipa": "[a.muː.ˈkleː]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_monemvasia": {
     "name": "Monemvasia",
@@ -9949,10 +9949,10 @@
     "b_tarr_direct": "Lacedaemonia",
     "b_tarr_hist": "Lakedêmôn",
     "b_origin": "Classical Sparta / Lacedaemon on the Eurotas (in-game: Lacedaemonia)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[la.kɛ.deː.ˈmoːn]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_iraklio": {
     "name": "Chandâx",
@@ -10279,10 +10279,10 @@
     "b_tarr_direct": "Zagreb",
     "b_tarr_hist": "Sagreb",
     "b_origin": "Diocesan hillfort Gradec / Kaptol of Zagreb (attested 1094 AD) (in-game: Zagreb)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 diocesan hillfort (founded 1094 AD by Ladislaus I; Gradec 1242); secondary holding disambiguated from Option A seat Sissek.",
     "b_ipa": "[ˈsa.ɡrɛb]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_cazma": {
     "name": "Cazma",
@@ -10312,10 +10312,10 @@
     "b_tarr_direct": "Sisak",
     "b_tarr_hist": "Sissek",
     "b_origin": "Roman Siscia / 9th-century seat of Duke Ljudevit Posavski (in-game: Sisak)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[ˈsɪ.sɛk]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_krapina": {
     "name": "Sâgorje",
@@ -12798,10 +12798,10 @@
     "b_tarr_direct": "Phocaea",
     "b_tarr_hist": "Phôkêe",
     "b_origin": "Ancient Ionian maritime city Phocaea on the Aegean coast (in-game: Phocaea)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[phoː.ˈkeː.ɛ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_pergamon": {
     "name": "Pergamôn",
@@ -12809,10 +12809,10 @@
     "b_tarr_direct": "Pergamon",
     "b_tarr_hist": "Pergamôn",
     "b_origin": "Ancient Hellenistic royal capital and acropolis of Pergamon (in-game: Pergamon)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[pɛr.ɡa.ˈmoːn]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_adramyttium": {
     "name": "Adramyttium",
@@ -12831,10 +12831,10 @@
     "b_tarr_direct": "Philadelphia",
     "b_tarr_hist": "Philadelphîe",
     "b_origin": "Ancient Hellenistic fortress city Philadelphia in Lydia (in-game: Philadelphia)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[phɪ.la.dɛlp.ˈhiː.ɛ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_sardes": {
     "name": "Sârdes",
@@ -12842,10 +12842,10 @@
     "b_tarr_direct": "Sardes",
     "b_tarr_hist": "Sârdes",
     "b_origin": "Ancient Lydian royal capital and acropolis Sardis on the Pactolus (in-game: Sardes)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas.",
     "b_ipa": "[ˈsaːr.dɛs]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_akrainos": {
     "name": "Akrainos",
@@ -13018,10 +13018,10 @@
     "b_tarr_direct": "Chalcedon",
     "b_tarr_hist": "Kalkêdôn",
     "b_origin": "Ancient Megarian colony and Ecumenical Council city Chalcedon on the Bosphorus (in-game: Chalcedon)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[kal.keː.ˈdoːn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_chelai": {
     "name": "Chelai",
@@ -13040,10 +13040,10 @@
     "b_tarr_direct": "Nikomedia",
     "b_tarr_hist": "Nikomêdje",
     "b_origin": "Ancient Bithynian and Roman imperial capital Nicomedia (in-game: Nikomedia)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas.",
     "b_ipa": "[nɪ.kɔ.ˈmeːd.jɛ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_crius": {
     "name": "Crius",
@@ -13700,10 +13700,10 @@
     "b_tarr_direct": "Sozopolis",
     "b_tarr_hist": "Sôsôpel",
     "b_origin": "Ancient Byzantine episcopal fortress Sozopolis in Pisidia (in-game: Sozopolis)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas.",
     "b_ipa": "[soː.zoː.ˈpəl]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_salda": {
     "name": "Salda",
@@ -13722,10 +13722,10 @@
     "b_tarr_direct": "Sagalassus",
     "b_tarr_hist": "Sagalâs",
     "b_origin": "Ancient Pisidian mountain metropolis Sagalassos (in-game: Sagalassus)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
     "b_ipa": "[sa.ɣa.ˈlaːs]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_parlais": {
     "name": "Parlais",
@@ -14921,10 +14921,10 @@
     "b_tarr_direct": "Musch",
     "b_tarr_hist": "Mûsch",
     "b_origin": "Ancient Armenian capital of Taron on the Euphrates plain (in-game: Musch)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Historical Armenian Capital.",
     "b_ipa": "[muːʃ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_tatvan": {
     "name": "Tatvan",
@@ -14954,10 +14954,10 @@
     "b_tarr_direct": "Manzikert",
     "b_tarr_hist": "Manzikêrt",
     "b_origin": "Ancient Armenian fortress city and battlefield Manzikert (in-game: Manzikert)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Historical Armenian Fortress.",
     "b_ipa": "[man.tsɪ.ˈkeːrt]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_arjesh": {
     "name": "Arjesch",
@@ -15829,15 +15829,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_castrogiovanni": {
-    "name": "Dschirgent",
-    "b_tarr": "Dschirgent",
-    "b_tarr_direct": "Dschirgent",
-    "b_tarr_hist": "Dschirgent",
-    "b_origin": "Castrogiovanni (Castrogiovanni)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈdʒɪr.ɡɛnt]",
+    "name": "Ênne",
+    "b_tarr": "Ênne",
+    "b_tarr_direct": "Castrogiovanni",
+    "b_tarr_hist": "Ênne",
+    "b_origin": "Classical Siculian/Roman acropolis Castrum Hennae / Enna (in-game: Castrogiovanni)",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Civitas (Castrum Hennae).",
+    "b_ipa": "[ˈeː.nə]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "classical_antiquity"
   },
   "b_agricento": {
     "name": "Girgenti",
@@ -16247,15 +16247,15 @@
     "category": "capital_eponymous"
   },
   "b_castrovillari": {
-    "name": "Castrovillari",
-    "b_tarr": "Castrovillari",
+    "name": "Kassân",
+    "b_tarr": "Kassân",
     "b_tarr_direct": "Castrovillari",
-    "b_tarr_hist": "Castrovillari",
-    "b_origin": "Castrovillari (constituent holding of Kosentz)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈkas.trɔ.vɪ.ʎa.rɪ]",
+    "b_tarr_hist": "Kassân",
+    "b_origin": "Ancient Byzantine/Italo-Greek episcopal see Cassanum / Cassano all'Ionio (in-game: Castrovillari)",
+    "b_anachronism": "Pre-867 Byzantine see restored over 1064 Norman fortress Castrum Villarum.",
+    "b_ipa": "[ka.ˈsaːn]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_belvedere": {
     "name": "Belvedere",
@@ -17429,10 +17429,10 @@
     "b_tarr_direct": "Bonifacio",
     "b_tarr_hist": "Bonifâtzo",
     "b_origin": "Historic 828 AD citadel of Count Boniface II of Tuscany (Bonifacio) (in-game: Bonifacio)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Citadel (attested 828 AD).",
     "b_ipa": "[ˈbɔ.nɪ.faː.tsɔ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_vecchio": {
     "name": "Porto-Wêckjo",
@@ -17440,10 +17440,10 @@
     "b_tarr_direct": "Vecchio",
     "b_tarr_hist": "Porto-Wêckjo",
     "b_origin": "Ancient Roman port Portus Syracusanus / Porto-Vecchio (in-game: Vecchio)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Roman Port.",
     "b_ipa": "[ˈpɔr.tɔ ˈweːk.jɔ]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_cagliari": {
     "name": "Kaljers",
@@ -22423,10 +22423,10 @@
     "b_tarr_direct": "Stolp",
     "b_tarr_hist": "Slûptzich",
     "b_origin": "Ancient Pomeranian tribal gord Słupsk on the Słupia (in-game: Stolp)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic 9th-Century Slavic Gord.",
     "b_ipa": "[ˈsluːp.tsɪç]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_koszalin": {
     "name": "Cöslîn",
@@ -22434,10 +22434,10 @@
     "b_tarr_direct": "Köslin",
     "b_tarr_hist": "Cöslîn",
     "b_origin": "Ancient Pomeranian trading center Koszalin near the Baltic coast (in-game: Köslin)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Early Medieval Slavic Settlement.",
     "b_ipa": "[køːs.ˈliːn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_lebno": {
     "name": "Kunostat",
@@ -22533,10 +22533,10 @@
     "b_tarr_direct": "Brandenburch",
     "b_tarr_hist": "Brennabor",
     "b_origin": "Ancient princely fortress Brennabor of the Slavic Hevelli on the Havel (in-game: Brandenburg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Slavic Princely Gord.",
     "b_ipa": "[brɛ.na.ˈbɔr]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_potsdam": {
     "name": "Pôtzupimi",
@@ -22544,10 +22544,10 @@
     "b_tarr_direct": "Potzdam",
     "b_tarr_hist": "Pôtzupimi",
     "b_origin": "Ancient Hevelli Slavic settlement Poztupimi (attested 993 AD) (in-game: Potsdam)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Early Slavic Hevelli settlement Poztupimi (attested 993 AD deed of Otto III); secondary holding of c_brandenburg.",
     "b_ipa": "[ˈpoː.tsʊ.pɪ.mɪ]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_lehnin": {
     "name": "Annosburch",
@@ -24468,11 +24468,11 @@
     "b_tarr": "Warschauwe",
     "b_tarr_direct": "Warszawa",
     "b_tarr_hist": "Warschauwe",
-    "b_origin": "Ancient Mazovian crossing settlement on the Vistula (Warszewa) (in-game: Warszawa)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Ancient Mazovian crossing settlement on the Vistula (Warszewa) (in-game: Warsaw)",
+    "b_anachronism": "Medieval Vistula crossing settlement Warszewa (developed 13th c.); secondary holding disambiguated from Option A seat Tschêrtzich.",
     "b_ipa": "[war.ˈʃɔʊ.wə]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_liw": {
     "name": "Baldewinsburch",
@@ -25975,11 +25975,11 @@
     "b_tarr": "Lemberch",
     "b_tarr_direct": "Lemberch",
     "b_tarr_hist": "Lemberch",
-    "b_origin": "Ruthenian princely stronghold founded c. 1256 on the Poltva; held in save by House Luki (in-game: Lemberg)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Ruthenian princely stronghold founded c. 1256 on the Poltva; held in save by House Luki (in-game: Lviv)",
+    "b_anachronism": "Post-867 princely stronghold (founded 1256 AD by Daniel of Galicia on the Poltva); secondary holding disambiguated from Option A seat Swenigorot.",
     "b_ipa": "[ˈlɛm.bɛrx]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_zvenyhorod": {
     "name": "Swenigorot",
@@ -26064,10 +26064,10 @@
     "b_tarr_direct": "Zaslavl",
     "b_tarr_hist": "Saslâwl",
     "b_origin": "Ancient comital gord of Zaslavl on the Horyn (in-game: Zaslavl)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Slavic Gord.",
     "b_ipa": "[sas.ˈlaːwl]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_dubno": {
     "name": "Dubne",
@@ -26075,10 +26075,10 @@
     "b_tarr_direct": "Dubno",
     "b_tarr_hist": "Dubne",
     "b_origin": "Ancient fortress Dubno in Volhynia (attested 1100 AD) (in-game: Dubno)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Medieval Volhynian fortress (attested 1100 AD in Primary Chronicle); secondary holding disambiguated from Option A seat.",
     "b_ipa": "[ˈdʊb.nə]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_ostroh": {
     "name": "Kasparszelle",
@@ -26163,10 +26163,10 @@
     "b_tarr_direct": "Peremyschl",
     "b_tarr_hist": "Peremyschl",
     "b_origin": "Ancient princely gord Peremyshl on the San (in-game: Peremyshl)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Slavic Princely Gord.",
     "b_ipa": "[ˈpɛ.rɛ.mɪʃl]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_yaroslav_VOL": {
     "name": "Heikemunster",
@@ -26306,10 +26306,10 @@
     "b_tarr_direct": "Colditz",
     "b_tarr_hist": "Colditz",
     "b_origin": "Ancient castle Colditz on the Zwickauer Mulde (in-game: Colditz)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Slavic Castle.",
     "b_ipa": "[ˈkɔl.dɪts]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_devin": {
     "name": "Hannaszelle",
@@ -26702,10 +26702,10 @@
     "b_tarr_direct": "Zvyahel",
     "b_tarr_hist": "Swîâhel",
     "b_origin": "Ancient comital gord Zvyahel on the Sluch (in-game: Zvyahel)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Slavic Gord.",
     "b_ipa": "[swiː.aː.ˈhɛl]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_kolodiazhen": {
     "name": "Kolodjâschen",
@@ -26713,10 +26713,10 @@
     "b_tarr_direct": "Kolodiadschen",
     "b_tarr_hist": "Kolodjâschen",
     "b_origin": "Ancient fortress Kolodiazhen in Volhynia (in-game: Kolodiazhen)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Slavic Fortress.",
     "b_ipa": "[ˈkɔ.lɔd.jaː.ʃən]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_chortolisy": {
     "name": "Juttasburch",
@@ -27010,10 +27010,10 @@
     "b_tarr_direct": "Hradyzk",
     "b_tarr_hist": "Gradischk",
     "b_origin": "Ancient Dnieper fortress Gradischk (in-game: Hradyzk)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Dnieper Gord.",
     "b_ipa": "[ˈɡra.dɪʃk]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_akhtyr": {
     "name": "",
@@ -27493,7 +27493,7 @@
     "b_tarr": "Wulfhildesburch",
     "b_tarr_direct": "Lyuban",
     "b_tarr_hist": "Wulfhildesburch",
-    "b_origin": "Lyuban — Self-eponymous fortress founded by Wulfhilde (['fickle', 'greedy'])",
+    "b_origin": "Lyuban — Self-eponymous fortress founded by Wulfhilde (['greedy', 'fickle'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Wulfhilde under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈwʊlf.hɪl.dɛs.bʊrx]",
     "holding_type": "castle",
@@ -27603,7 +27603,7 @@
     "b_tarr": "Ostrouwe",
     "b_tarr_direct": "Ostrouwe",
     "b_tarr_hist": "Ostrouwe",
-    "b_origin": "Ancient hydronym/toponym of the river island on the Velikaya River (Slavic Ostrov; fortress attested 1341) (in-game: Ostrov)",
+    "b_origin": "Ancient hydronym/toponym of the river island on the Velikaya River (Slavic Ostrov) (in-game: Ostrov)",
     "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
     "b_ipa": "[ɔs.ˈtrɔʊ.wə]",
     "holding_type": "church",
@@ -27614,7 +27614,7 @@
     "b_tarr": "Gdouwe",
     "b_tarr_direct": "Gdouwe",
     "b_tarr_hist": "Gdouwe",
-    "b_origin": "Pre-867 hydronym of the Gdovka River (Slavic Gda/Gdova / Finnic Oudova; attested as settlement 1322, fortress 1431) (in-game: Gdov)",
+    "b_origin": "Pre-867 hydronym of the Gdovka River (Slavic Gda/Gdova / Finnic Oudova) (in-game: Gdov)",
     "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
     "b_ipa": "[ˈɡdɔʊ.wə]",
     "holding_type": "church",
@@ -28109,7 +28109,7 @@
     "b_tarr": "Ekkehardsburch",
     "b_tarr_direct": "Rechtytza",
     "b_tarr_hist": "Ekkehardsburch",
-    "b_origin": "Rechtytsa — Self-eponymous fortress founded by Ekkehard (['fickle', 'greedy'])",
+    "b_origin": "Rechtytsa — Self-eponymous fortress founded by Ekkehard (['greedy', 'fickle'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Ekkehard of House Kleve.",
     "b_ipa": "[ˈɛ.kɛ.hards.bʊrx]",
     "holding_type": "castle",
@@ -30206,15 +30206,15 @@
     "category": "capital_eponymous"
   },
   "b_aqmescit": {
-    "name": "Akmesdschît",
-    "b_tarr": "Akmesdschît",
+    "name": "Neâpolis",
+    "b_tarr": "Neâpolis",
     "b_tarr_direct": "Aqmescit",
-    "b_tarr_hist": "Akmesdschît",
-    "b_origin": "Historic Crimean Tatar fortress Aqmescit on the Salgir (in-game: Aqmescit)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-    "b_ipa": "[ak.mɛs.ˈdʒiːt]",
+    "b_tarr_hist": "Neâpolis",
+    "b_origin": "Ancient 3rd-century BC royal capital Scythian Neapolis on the Salgir River (in-game: Aqmescit)",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas (Scythian Neapolis).",
+    "b_ipa": "[ˈnɛ.aː.pɔ.lɪs]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_perekop": {
     "name": "Tâfros",
@@ -30222,10 +30222,10 @@
     "b_tarr_direct": "Or tschapi",
     "b_tarr_hist": "Tâfros",
     "b_origin": "Ancient Greek trench and fortress Taphros on the Isthmus of Crimea (in-game: Or Qapi)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity Greek Fortress.",
     "b_ipa": "[ˈtaː.frɔs]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_dzhankoi": {
     "name": "Zant-Heike",
@@ -52925,7 +52925,7 @@
     "b_tarr": "Bertasburch",
     "b_tarr_direct": "Selmecbânya",
     "b_tarr_hist": "Bertasburch",
-    "b_origin": "Selmecbánya — Self-eponymous fortress founded by Berta (['fickle', 'greedy', 'arrogant'])",
+    "b_origin": "Selmecbánya — Self-eponymous fortress founded by Berta (['greedy', 'fickle', 'arrogant'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Berta of House Hohenlohe.",
     "b_ipa": "[ˈbɛr.tas.bʊrx]",
     "holding_type": "castle",
@@ -53299,11 +53299,11 @@
     "b_tarr": "Hermannstat",
     "b_tarr_direct": "Nagyszeben",
     "b_tarr_hist": "Hermannstat",
-    "b_origin": "Transylvanian Saxon chartered city Hermannstadt / Sibiu (attested 1191 AD) (in-game: Nagyszeben)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_origin": "Transylvanian Saxon chartered city Hermannstadt / Sibiu (attested 1191 AD) (in-game: Hermannstadt)",
+    "b_anachronism": "Post-867 chartered Transylvanian Saxon city (founded c. 1191 AD under King Béla III; site of Roman Cedonia).",
     "b_ipa": "[ˈhɛr.man.stat]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_alvinc": {
     "name": "Alvinc",
@@ -54494,15 +54494,15 @@
     "category": "capital_eponymous"
   },
   "b_chateauroux": {
-    "name": "Kastel-Rûs",
-    "b_tarr": "Kastel-Rûs",
+    "name": "Dôls",
+    "b_tarr": "Dôls",
     "b_tarr_direct": "Kastel-Rûs",
-    "b_tarr_hist": "Kastel-Rûs",
-    "b_origin": "Châteauroux (constituent holding of Bursches)",
-    "b_anachronism": "",
-    "b_ipa": "[kas.ˈtɛl ruːs]",
+    "b_tarr_hist": "Dôls",
+    "b_origin": "Ancient Gallo-Roman vicus and Cluniac abbey of Déols / Vicus Dolensis on the Indre (in-game: Châteauroux)",
+    "b_anachronism": "Pre-867 Gallo-Roman civitas restored over 937 Castrum Radulphi.",
+    "b_ipa": "[doːls]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_la_haye": {
     "name": "La Haie",
@@ -55055,15 +55055,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_chateau_renard": {
-    "name": "Kastel- Renard",
-    "b_tarr": "Kastel- Renard",
+    "name": "Zant-Fîrmîn",
+    "b_tarr": "Zant-Fîrmîn",
     "b_tarr_direct": "Kastel- Renard",
-    "b_tarr_hist": "Kastel- Renard",
-    "b_origin": "Château Renard (constituent holding of Kastel-Landûn)",
-    "b_anachronism": "",
-    "b_ipa": "[kas.ˈtɛl ˈrɛ.nard]",
+    "b_tarr_hist": "Zant-Fîrmîn",
+    "b_origin": "Ancient Merovingian parish of Saint-Firmin on the Ouanne (in-game: Château Renard)",
+    "b_anachronism": "Pre-867 Merovingian parish restored over 997 Castrum Raynaldi.",
+    "b_ipa": "[tsant fiːr.ˈmiːn]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_vendome": {
     "name": "Vendosme",
@@ -55093,10 +55093,10 @@
     "b_tarr_direct": "Dreux",
     "b_tarr_hist": "Drôchs",
     "b_origin": "Ancient Gaulish capital of the Durocasses / comital castle Dreux (in-game: Dreux)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Gaulish Civitas.",
     "b_ipa": "[droːxs]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_chartres": {
     "name": "Schartres",
@@ -55104,10 +55104,10 @@
     "b_tarr_direct": "Chartres",
     "b_tarr_hist": "Schartres",
     "b_origin": "Classical Carnutes civitas and cathedral city Autricum / Chartres (in-game: Chartres)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Civitas.",
     "b_ipa": "[ˈʃar.trɛs]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_perche": {
     "name": "Mortenje",
@@ -55231,15 +55231,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_joinville": {
-    "name": "Joinwîl",
-    "b_tarr": "Joinwîl",
+    "name": "Zant-Urbân",
+    "b_tarr": "Zant-Urbân",
     "b_tarr_direct": "Joinwîl",
-    "b_tarr_hist": "Joinwîl",
-    "b_origin": "Joinville (constituent holding of Trôjes)",
-    "b_anachronism": "",
-    "b_ipa": "[jɔ.ɪn.ˈwiːl]",
+    "b_tarr_hist": "Zant-Urbân",
+    "b_origin": "Ancient 7th-century monastery and settlement of Saint-Urbain on the Marne (in-game: Joinville)",
+    "b_anachronism": "Pre-867 monastic settlement restored over 1027 castle of Joinville.",
+    "b_ipa": "[tsant ʊr.ˈbaːn]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_bar_sur_aube": {
     "name": "Bar-Sur-Aube",
@@ -55500,10 +55500,10 @@
     "b_tarr_direct": "Autun",
     "b_tarr_hist": "Ostûn",
     "b_origin": "Ancient Augustodunum / Episcopal See of Autun (attested secondary variant of the Bishopric of Avalois) (in-game: Autun)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[ɔs.ˈtuːn]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_auxerre": {
     "name": "Oussêr",
@@ -55566,10 +55566,10 @@
     "b_tarr_direct": "Vêzelay",
     "b_tarr_hist": "Wêzelê",
     "b_origin": "Ancient Vizeliacum / Benedictine Abbey of Sainte-Marie-Madeleine at Vézelay (attested 858 AD) (in-game: Vézelay)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Historical Monastic Abbey (founded 858 AD).",
     "b_ipa": "[weː.tsɛ.ˈleː]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_morvan": {
     "name": "Avalûn",
@@ -55577,10 +55577,10 @@
     "b_tarr_direct": "Avallon",
     "b_tarr_hist": "Avalûn",
     "b_origin": "Ancient Gallo-Roman Aballo / fortified caput of the Avalois on the Cousin (attested 843 AD) (in-game: Avallon)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Gallo-Roman Civitas.",
     "b_ipa": "[a.va.ˈluːn]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_macon": {
     "name": "Mâskûn",
@@ -56243,15 +56243,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_castelsarrasin": {
-    "name": "Castelsarrasin",
-    "b_tarr": "Castelsarrasin",
+    "name": "Moissac",
+    "b_tarr": "Moissac",
     "b_tarr_direct": "Castelsarrasin",
-    "b_tarr_hist": "Castelsarrasin",
-    "b_origin": "Castelsarrasin (constituent holding of Tolôse)",
-    "b_anachronism": "",
-    "b_ipa": "[kas.tɛl.sa.ra.ˈzɪn]",
+    "b_tarr_hist": "Moissac",
+    "b_origin": "Ancient 659 AD Benedictine Abbey of Moissac on the Tarn (in-game: Castelsarrasin)",
+    "b_anachronism": "Pre-867 Benedictine Abbey restored over 961 Castel Sarracenum.",
+    "b_ipa": "[ˈmɔ.ɪ.sak]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_beaumont_sur_leze": {
     "name": "Belmunt-an-der-Lêze",
@@ -56430,15 +56430,15 @@
     "category": "capital_eponymous"
   },
   "b_castelnaudary": {
-    "name": "Kastelnoudarî",
-    "b_tarr": "Kastelnoudarî",
+    "name": "Bram",
+    "b_tarr": "Bram",
     "b_tarr_direct": "Kastelnoudarî",
-    "b_tarr_hist": "Kastelnoudarî",
-    "b_origin": "Castelnaudary (constituent holding of Albî)",
-    "b_anachronism": "",
-    "b_ipa": "[kas.tɛl.nɔʊ.da.ˈriː]",
+    "b_tarr_hist": "Bram",
+    "b_origin": "Ancient Gallo-Roman civitas Eburomagus / Bram in the Lauragais (in-game: Castelnaudary)",
+    "b_anachronism": "Pre-867 Gallo-Roman civitas restored over 1103 Castrum Novum Arri.",
+    "b_ipa": "[bram]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_montlaur": {
     "name": "Usês",
@@ -56468,10 +56468,10 @@
     "b_tarr_direct": "Montpellier",
     "b_tarr_hist": "Muntpêljê",
     "b_origin": "Chartered comital burgh Montpellier (attested 985 AD) (in-game: Montpellier)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Post-867 chartered comital burgh (attested 985 AD); secondary holding disambiguated from Option A seat Magelône.",
     "b_ipa": "[mʊnt.peː.ˈʎeː]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "secondary_holding_disambiguation"
   },
   "b_nimes": {
     "name": "Nîmes",
@@ -57200,15 +57200,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_chateaubriant": {
-    "name": "Kastel-Brîant",
-    "b_tarr": "Kastel-Brîant",
+    "name": "Bêrê",
+    "b_tarr": "Bêrê",
     "b_tarr_direct": "Kastel-Brîant",
-    "b_tarr_hist": "Kastel-Brîant",
-    "b_origin": "Châteaubriant (constituent holding of Nantes)",
-    "b_anachronism": "",
-    "b_ipa": "[kas.ˈtɛl ˈbriː.ant]",
+    "b_tarr_hist": "Bêrê",
+    "b_origin": "Ancient 9th-century Breton parish and priory of Béré on the Chère (in-game: Châteaubriant)",
+    "b_anachronism": "Pre-867 Breton parish restored over 1050 motte castle of Brient.",
+    "b_ipa": "[beː.ˈreː]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_quimper": {
     "name": "Kornuâlje",
@@ -57684,15 +57684,15 @@
     "category": "capital_eponymous"
   },
   "b_villars": {
-    "name": "Villars",
-    "b_tarr": "Villars",
+    "name": "Amberjô",
+    "b_tarr": "Amberjô",
     "b_tarr_direct": "Villars",
-    "b_tarr_hist": "Villars",
-    "b_origin": "Villars (constituent holding of Lijûn)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎars]",
+    "b_tarr_hist": "Amberjô",
+    "b_origin": "Ancient Roman station Ambiacum on the Saône in the Dombes (in-game: Villars)",
+    "b_anachronism": "Pre-867 Roman station restored over 10th-century lordship of Villars.",
+    "b_ipa": "[am.bɛr.ˈjoː]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_beaujeu": {
     "name": "Beljô",
@@ -58520,15 +58520,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_villarejodesalvanes": {
-    "name": "Villarejo de Salvanes",
-    "b_tarr": "Villarejo de Salvanes",
+    "name": "Salvanês",
+    "b_tarr": "Salvanês",
     "b_tarr_direct": "Villarejo de Salvanes",
-    "b_tarr_hist": "Villarejo de Salvanes",
-    "b_origin": "Villarejo de Salvanes (constituent holding of Madrît)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎa.rɛ.jɔ dɛ ˈsal.va.nɛs]",
+    "b_tarr_hist": "Salvanês",
+    "b_origin": "Ancient Roman mansio Salvensis on the Tagus plain (in-game: Villarejo de Salvanes)",
+    "b_anachronism": "Pre-867 Roman mansio restored over 1200 Order of Santiago commandery.",
+    "b_ipa": "[sal.va.ˈneːs]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_arganda": {
     "name": "Arganda",
@@ -58756,10 +58756,10 @@
     "b_tarr_direct": "Êvora",
     "b_tarr_hist": "Êvore",
     "b_origin": "Ancient Roman Ebora Liberalitas Julia / major episcopal see (in-game: Évora)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[eː.ˈvɔ.rə]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_beja": {
     "name": "Bêdsche",
@@ -58767,10 +58767,10 @@
     "b_tarr_direct": "Beja",
     "b_tarr_hist": "Bêdsche",
     "b_origin": "Ancient Roman Pax Julia / Visigothic and Andalusian Bājah (Beja) (in-game: Beja)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
     "b_ipa": "[ˈbeː.dʒə]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_alcacerdosal": {
     "name": "Salâtsje",
@@ -60346,15 +60346,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_villablino": {
-    "name": "Villablino",
-    "b_tarr": "Villablino",
+    "name": "Latzjâne",
+    "b_tarr": "Latzjâne",
     "b_tarr_direct": "Villablino",
-    "b_tarr_hist": "Villablino",
-    "b_origin": "Villablino (constituent holding of Lejôn)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎa.blɪ.nɔ]",
+    "b_tarr_hist": "Latzjâne",
+    "b_origin": "Ancient Astur-Roman gold valley civitas Vallis Lacciana (in-game: Villablino)",
+    "b_anachronism": "Pre-867 Astur-Roman civitas restored over 1270 royal charter of Villablino.",
+    "b_ipa": "[lats.ˈjaː.nə]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_guardo": {
     "name": "Cea",
@@ -60533,15 +60533,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_villaviciosa": {
-    "name": "Villaviciosa",
-    "b_tarr": "Villaviciosa",
+    "name": "Maljâjo",
+    "b_tarr": "Maljâjo",
     "b_tarr_direct": "Villaviciosa",
-    "b_tarr_hist": "Villaviciosa",
-    "b_origin": "Villaviciosa (constituent holding of Ovjêt)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎa.vɪ.tsɪ.ɔ.za]",
+    "b_tarr_hist": "Maljâjo",
+    "b_origin": "Ancient Asturian comital center Maliayo on the ria (attested 800 AD) (in-game: Villaviciosa)",
+    "b_anachronism": "Pre-867 Asturian center restored over 1270 charter of Villaviciosa.",
+    "b_ipa": "[ˈma.ʎaː.jɔ]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_gijon": {
     "name": "Gijôn",
@@ -60863,15 +60863,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_villa_real": {
-    "name": "Villa Real",
-    "b_tarr": "Villa Real",
+    "name": "Panôjas",
+    "b_tarr": "Panôjas",
     "b_tarr_direct": "Villa Real",
-    "b_tarr_hist": "Villa Real",
-    "b_origin": "Villa Real (constituent holding of Bragantze)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.ʎa ˈrɛ.al]",
+    "b_tarr_hist": "Panôjas",
+    "b_origin": "Ancient Roman civitas and sanctuary of Panóias in Trás-os-Montes (in-game: Villa Real)",
+    "b_anachronism": "Pre-867 Roman civitas restored over 1289 royal foundation of Vila Real.",
+    "b_ipa": "[ˈpa.noː.jas]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_mogadouro": {
     "name": "Mogadouro",
@@ -61560,7 +61560,7 @@
     "b_tarr": "Stefansburch",
     "b_tarr_direct": "Warzigh",
     "b_tarr_hist": "Stefansburch",
-    "b_origin": "Warzigh — Disambiguated foundation: Self-eponymous fortress founded by Stefan (['fickle', 'greedy'])",
+    "b_origin": "Warzigh — Disambiguated foundation: Self-eponymous fortress founded by Stefan (['greedy', 'fickle'])",
     "b_anachronism": "Disambiguated sub-barony foundation.",
     "b_ipa": "[tsant ˈɛ.fans.bʊrx]",
     "holding_type": "castle",
@@ -68524,10 +68524,10 @@
     "b_tarr_direct": "Lalībäla",
     "b_tarr_hist": "Lalîbela",
     "b_origin": "Monolithic rock-hewn church center Lalibela (in-game: Lalībäla)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Historic Church Center.",
     "b_ipa": "[ˈla.liː.bɛ.la]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_tekeze": {
     "name": "Tekezê",
@@ -68546,10 +68546,10 @@
     "b_tarr_direct": "Lāstā",
     "b_tarr_hist": "Laste",
     "b_origin": "Ancient mountainous province and lordship of Lasta (in-game: Lāstā)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Lordship.",
     "b_ipa": "[ˈlas.tə]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_adafa": {
     "name": "Rôhe",
@@ -68557,10 +68557,10 @@
     "b_tarr_direct": "Adafa",
     "b_tarr_hist": "Rôhe",
     "b_origin": "Ancient capital of the Zagwe Dynasty Roha (in-game: Adafa)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Ancient Zagwe Capital.",
     "b_ipa": "[ˈroː.hɛ]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_doba": {
     "name": "Doba",
@@ -71548,7 +71548,7 @@
     "b_tarr": "Adelasburch",
     "b_tarr_direct": "Hudur",
     "b_tarr_hist": "Adelasburch",
-    "b_origin": "Hudur — Self-eponymous fortress founded by Adela (['fickle', 'greedy'])",
+    "b_origin": "Hudur — Self-eponymous fortress founded by Adela (['greedy', 'fickle'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Adela under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈa.dɛ.las.bʊrx]",
     "holding_type": "castle",
@@ -78577,7 +78577,7 @@
     "b_tarr": "Philotheossburch",
     "b_tarr_direct": "Banda",
     "b_tarr_hist": "Philotheossburch",
-    "b_origin": "Banda — Self-eponymous fortress founded by Philotheos (['fickle', 'greedy'])",
+    "b_origin": "Banda — Self-eponymous fortress founded by Philotheos (['greedy', 'fickle'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Philotheos under Toponym-First foundation (disqualifying circular in-game house).",
     "b_ipa": "[ˈphɪ.lɔt.hɛ.ɔs.bʊrx]",
     "holding_type": "castle",
@@ -89578,10 +89578,10 @@
     "b_tarr_direct": "Potala",
     "b_tarr_hist": "Pôtâla",
     "b_origin": "Tibetan palace and religious fortress on the Red Hill / Marpori (in-game: Potala)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Historical Tibetan Fortress (built 637 AD).",
     "b_ipa": "[ˈpoː.taː.la]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_lhasa": {
     "name": "Lâse",
@@ -89589,10 +89589,10 @@
     "b_tarr_direct": "Lhasa",
     "b_tarr_hist": "Lâse",
     "b_origin": "Ancient sacred Tibetan imperial capital and Jokhang cathedral city (in-game: Lhasa)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Authentic Pre-867 Historical Tibetan Capital (built 647 AD).",
     "b_ipa": "[ˈlaː.zə]",
     "holding_type": "city",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_samye": {
     "name": "Zant-Walpurga",
@@ -93042,7 +93042,7 @@
     "b_tarr": "Geirrsburch",
     "b_tarr_direct": "Khalatze",
     "b_tarr_hist": "Geirrsburch",
-    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['ambitious', 'greedy'])",
+    "b_origin": "Khalatse — Self-eponymous fortress founded by Geirr (['greedy', 'ambitious'])",
     "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler Geirr of House Njudunge-Örebro.",
     "b_ipa": "[ˈɡɛɪrs.bʊrx]",
     "holding_type": "castle",
@@ -108399,10 +108399,10 @@
     "b_tarr_direct": "Jinguan",
     "b_tarr_hist": "Goltpfôrte",
     "b_origin": "Logographic semantic calque for Jīnguān (Golden Gate/Pass) (in-game: Jinguan)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Logographic semantic calque.",
     "b_ipa": "[ɡɔltp.ˈfoːr.tə]",
     "holding_type": "castle",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_heihe": {
     "name": "Swartzflôz",
@@ -115571,10 +115571,10 @@
     "b_tarr_direct": "Liodong",
     "b_tarr_hist": "Luterweit",
     "b_origin": "Logographic semantic calque for Chéngmài (Clear Progress) (in-game: Liodong)",
-    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+    "b_anachronism": "Logographic semantic calque.",
     "b_ipa": "[lʊ.tɛr.ˈwɛɪt]",
     "holding_type": "church",
-    "category": "indigenous_restitution"
+    "category": "classical_antiquity"
   },
   "b_lingui": {
     "name": "Lôrbergouwe",

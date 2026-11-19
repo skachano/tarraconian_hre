@@ -126,10 +126,11 @@ The Chancellery enforces the **Disambiguation Rule**:
 | `c_beja` | `b_evora` | `b_beja` | **Bêdsche** | **Êvore** | Évora (*Ebora*) was the ancient Roman civitas see; Beja (*Pax Julia / Bājah*) the southern fortress city. |
 | `c_lanarkshire` | `b_lanark` | `b_cadyou` | **Kadjo** | **Lânark** | Cadzow was the ancient Strathclyde comital center; Lanark the chartered royal burgh. |
 | `c_athlone` | `b_athlone` | `b_uisneach` | **Uisnech** | **Âth-Lôen** | Uisneach was the sacred royal hill and navel of Ireland; Athlone the 1120 Shannon bridge castle. |
-| `c_ravensburg` | `b_ravensburg` | `b_bregenz` | **Briganz** | **Râvensburch** | Bregenz was the ancient Roman *Brigantium*; Ravensburg the 1088 Welf ancestral fortress. |
+| `c_ravensburg` | `b_ravensburg` | `b_bregenz` | **Briganz** | **Altdorf** | Bregenz was the ancient Roman *Brigantium*; Altdorf (Weingarten) the 750 AD ancestral Welf estate. |
 | `c_coburg` | `b_coburg` | `b_lichtenfels` | **Liechtenfels** | **Kôburch** | Lichtenfels was the ancient Radenzgau Main fortress; Coburg the 1056 comital stronghold. |
 | `c_slupsk` | `b_slupsk` | `b_koszalin` | **Cöslîn** | **Slûptzich** | Koszalin was the coastal Pomeranian center; Słupsk the inland ducal gord. |
-| `c_perekop` | `b_aqmescit` | `b_perekop` | **Tâfros** | **Akmesdschît** | Taphros was the ancient Greek isthmus fort; Aqmescit the Crimean Tatar fortress. |
+| `c_perekop` | `b_aqmescit` | `b_perekop` | **Tâfros** | **Neâpolis** | Taphros was the ancient Greek isthmus fort; Neapolis the 3rd-c. BC royal capital of the Crimean Scythians. |
+| `c_laconia` | `b_mistra` | `b_lacedaemonia` | **Lakedêmôn** | **Amûklê** | Sparta was the classical Dorian capital; Amyclae the ancient Achaean polis and sanctuary of Apollo Amyklaios. |
 
 ---
 
@@ -174,6 +175,26 @@ In [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_
 | `b_morvan` | `c_avalois` | Church | **Avalûn** | Avallon | `[a.va.ˈluːn]` | Ancient Gallo-Roman Aballo / fortified caput of the Avalois on the Cousin (843 AD). |
 | `b_vezelay` | `c_avalois` | Church | **Wêzelê** | Vézelay | `[weː.tsɛ.ˈleː]` | Ancient Vizeliacum / Benedictine Abbey of Sainte-Marie-Madeleine at Vézelay (858 AD). |
 | `b_autun` | `c_chalon` | Castle | **Ostûn** | Autun | `[ɔs.ˈtuːn]` | Ancient Augustodunum / Episcopal See of Autun (secondary variant of the Bishopric of Avalois). |
+| `b_villa_real` | `c_braganza` | Castle | **Panôjas** | Villa Real | `[ˈpa.noː.jas]` | Ancient Roman civitas and sanctuary Panóias in Trás-os-Montes (pre-1289 royal foundation). |
+| `b_chateauroux` | `c_berry` | Castle | **Dôls** | Kastel-Rûs | `[doːls]` | Ancient Gallo-Roman vicus and Cluniac abbey Déols / Vicus Dolensis (pre-937 Castrum Radulphi). |
+| `b_castelnaudary` | `c_albi` | Castle | **Bram** | Kastelnoudarî | `[bram]` | Ancient Gallo-Roman civitas Eburomagus / Bram in Lauragais (pre-1103 Castrum Novum Arri). |
+| `b_chateaubriant` | `c_nantes` | Castle | **Bêrê** | Kastel-Brîant | `[beː.ˈreː]` | Ancient 9th-century Breton parish and priory Béré on the Chère (pre-1050 motte castle). |
+| `b_castelsarrasin` | `c_toulouse` | Castle | **Moissac** | Castelsarrasin | `[ˈmɔ.ɪ.sak]` | Ancient 659 AD Benedictine Abbey of Moissac on the Tarn (pre-961 Castel Sarracenum). |
+| `b_castrovillari` | `c_cosenza` | Castle | **Kassân** | Castrovillari | `[ka.ˈsaːn]` | Ancient Byzantine episcopal see Cassanum / Cassano all'Ionio (pre-1064 Norman fortress). |
+| `b_joinville` | `c_troyes` | Castle | **Zant-Urbân** | Joinwîl | `[tsant ʊr.ˈbaːn]` | Ancient 7th-century monastery and settlement Saint-Urbain (pre-1027 castle of Joinville). |
+| `b_chateau_renard` | `c_montargis` | Castle | **Zant-Fîrmîn** | Kastel-Renard | `[tsant fiːr.ˈmiːn]` | Ancient Merovingian parish Saint-Firmin on the Ouanne (pre-997 Castrum Raynaldi). |
+| `b_villaviciosa` | `c_asturias_de_oviedo` | Castle | **Maljâjo** | Villaviciosa | `[ˈma.ʎaː.jɔ]` | Ancient Asturian comital center Maliayo on the ria (800 AD charter of Alfonso II; pre-1270). |
+| `b_villablino` | `c_leon` | Castle | **Latzjâne** | Villablino | `[lats.ˈjaː.nə]` | Ancient Astur-Roman gold valley civitas Vallis Lacciana (pre-1270 royal charter). |
+| `b_villarejodesalvanes` | `c_madrid` | Castle | **Salvanês** | Villarejo-De-Salvanes | `[sal.va.ˈneːs]` | Ancient Roman mansio Salvensis on the Tagus plain (pre-1200 Order of Santiago commandery). |
+| `b_villars` | `c_lyon` | Castle | **Amberjô** | Villars | `[am.bɛr.ˈjoː]` | Ancient Roman station Ambiacum on the Saône in Dombes (pre-10th-c. feudal lordship). |
+| `b_richmond` | `c_north_riding` | Castle | **Gilling** | Richmond | `[ˈɡɪ.ʎɪŋ]` | Ancient Anglo-Saxon royal vill Ingetlingum / Gilling West (Bede 651 AD; pre-1071 castle). |
+| `b_castleton` | `c_derby` | Castle | **Nâvjô** | Castleton | `[naːv.ˈjoː]` | Ancient Roman auxiliary fort Navio at Brough-on-Noe (pre-1076 Peveril Castle). |
+| `b_boston` | `c_lincolnshire` | Castle | **Ikanhô** | Boston | `[ɪ.kan.ˈhoː]` | Ancient 654 AD Anglo-Saxon monastery Icanho of St Botolph (pre-1080 town of Boston). |
+| `b_whitehaven` | `c_cumberland` | Castle | **Zant-Bêge** | Whitehaven | `[tsant ˈbeː.ɣə]` | Ancient 7th-century cell and priory of St Bega / Kirkeby Becok (pre-1125 Whitehaven). |
+| `b_lippstadt` | `c_paderborn` | City | **Kappel** | Lippstat | `[ka.ˈpəl]` | Ancient 9th-century collegiate church Cappel on the Lippe (pre-1185 planned town). |
+| `b_schwalenberg` | `c_lippe` | Castle | **Marienmunster** | Schwalenberch | `[ˈma.rɪ.ɛn.mʊn.stər]` | Ancient 844 AD Corvey collegiate abbey Marienmünster (pre-1228 feudal castle). |
+| `b_ravensberg` | `c_osnabruck` | Castle | **Halle** | Ravensberch | `[ˈha.ʎə]` | Ancient Carolingian parish and salt estate Halle in Westfalen (pre-1080 Ravensberg). |
+| `b_castrogiovanni` | `c_agrigento` | Castle | **Ênne** | Dschirgent | `[ˈeː.nə]` | Classical Siculian/Roman acropolis Castrum Hennae / Enna (resolving Agrigento duplicate). |
 
 ### 5.2 Baltic, Nordic & Eastern Europe (`e_wendish_empire`, `e_russia`, `e_scandinavia`, `e_carpathia`)
 
