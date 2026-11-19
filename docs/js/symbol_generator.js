@@ -2429,6 +2429,50 @@
     `;
   }
 
+  // Helper for Duchy Notitia Scutum: positions charges safely clear of the central shield boss (umbo)
+  function renderScutumCharges(def, cx, cy) {
+    if (!def.charges || def.charges.length === 0) return '';
+    const color = def.chargeColor || PALETTE.or;
+    const count = def.chargeCount || def.charges.length || 1;
+
+    // Handle composite charges (primary in upper field, secondary in lower field)
+    if (def.charges.length > 1 && def.charges[0] !== def.charges[1]) {
+      const c1 = def.charges[0];
+      const c2 = def.charges[1];
+      const sc = 0.46;
+      return `
+        ${CHARGES[c1] ? CHARGES[c1](color, sc, cx, 68) : ''}
+        ${CHARGES[c2] ? CHARGES[c2](color, sc, cx, 182) : ''}
+      `;
+    }
+
+    const c = def.charges[0];
+    const builder = CHARGES[c];
+    if (!builder) return '';
+
+    if (count === 1) {
+      // Prominently placed in upper field above central umbo
+      return builder(color, 0.54, cx, 68);
+    } else if (count === 2) {
+      // Symmetrically placed: one above umbo, one below umbo
+      const sc = 0.46;
+      return `
+        ${builder(color, sc, cx, 68)}
+        ${builder(color, sc, cx, 182)}
+      `;
+    } else if (count >= 3) {
+      // Heraldic triad framing the umbo (two above, one below)
+      const sc = 0.38;
+      return `
+        ${builder(color, sc, cx - 28, 68)}
+        ${builder(color, sc, cx + 28, 68)}
+        ${builder(color, sc, cx, 182)}
+      `;
+    }
+
+    return '';
+  }
+
   // --- C. Late-Roman Notitia Command Shield (Duchy Tier) ---
   function renderNotitiaScutum(def) {
     const W = 220, H = 250;
@@ -2473,8 +2517,8 @@
               </text>
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.45, cx, cy + 50) : '').join('')}
             ` : `
-              <!-- Standard Charges -->
-              ${def.chargeCount > 1 ? renderMultiCharges(def, cx, cy - 25, 0.65) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, cx, cy - 25) : '').join('')}
+              <!-- Standard Charges positioned to avoid shield boss -->
+              ${renderScutumCharges(def, cx, cy)}
             `}
           </g>
           <!-- Inner Rim Stitching -->

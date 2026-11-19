@@ -1213,6 +1213,33 @@ class TestSymbolGenerator:
         assert charge_color == "gules", f"c_babruysk charge must be Gules on silver fess, got {charge_color}"
         assert charge_color != ordinary_color, "c_babruysk charge must NOT match ordinary color (avoid silver-on-silver)"
 
+    def test_notitia_scutum_boss_clearance_and_charge_layouts(self):
+        """Verifies that duchy-tier Notitia command shield charges are positioned to avoid the central shield boss (umbo)."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. Dedicated scutum charge layout helper present
+        assert "function renderScutumCharges" in content, "Missing renderScutumCharges helper"
+        assert "renderScutumCharges(def, cx, cy)" in content, "renderNotitiaScutum must invoke renderScutumCharges"
+
+        # 2. Geometry assertions: central umbo is at (110, 125) with radius 22 (covering y: 103..147)
+        # Upper field zone is centered at y=68, lower field zone is centered at y=182
+        assert "builder(color, 0.54, cx, 68)" in content, "Single charge must be placed in upper field zone at y=68"
+        assert "cx, 182" in content, "Multi/composite charges must utilize lower field zone at y=182"
+
+        # 3. Two charges: one above (y=68), one below (y=182)
+        assert "builder(color, sc, cx, 68)" in content
+        assert "builder(color, sc, cx, 182)" in content
+
+        # 4. Three charges: 2-and-1 triad framing the umbo
+        assert "cx - 28, 68" in content
+        assert "cx + 28, 68" in content
+
+        # 5. Composite charges: primary in upper field, secondary in lower field
+        assert "CHARGES[c1] ? CHARGES[c1](color, sc, cx, 68) : ''" in content
+        assert "CHARGES[c2] ? CHARGES[c2](color, sc, cx, 182) : ''" in content
+
+
 
 
 
