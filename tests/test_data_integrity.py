@@ -96,8 +96,15 @@ class TestWebAssets:
             "lexicon-category-filters",
             "lexicon-match-count",
             "lexicon-table-body",
+            "barony-legend",
         ]:
             assert f'id="{elem_id}"' in content, f"Missing element #{elem_id} in index.html"
+
+        # Verify barony holding type legend is a separate element from hover-info / map-stats-badge
+        import re
+        stats_match = re.search(r'<div class="map-stats-badge"[^>]*>(.*?)</div>', content, re.DOTALL)
+        assert stats_match, "map-stats-badge not found in index.html"
+        assert "barony-legend" not in stats_match.group(1), "barony-legend should not be nested inside map-stats-badge"
 
         for tab_name in ["tarraconian", "sinosphere", "lexicon"]:
             assert f'data-tab="{tab_name}"' in content, f"Missing tab button data-tab={tab_name} in index.html"
@@ -119,6 +126,8 @@ class TestWebAssets:
         assert "--gold-primary" in content
         assert "@media (max-width: 768px)" in content
         assert "drawer-drag-handle" in content
+        assert ".barony-legend" in content
+        assert ".map-stats-badge" in content
 
     def test_js_app_exists(self):
         js_path = DOCS_DIR / "js" / "app.js"

@@ -736,7 +736,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   Hover Stats Badge & Tooltips
+   Hover Stats Badge & Barony Legend
    -------------------------------------------------------------------------- */
 .map-stats-badge {
   position: absolute;
@@ -754,20 +754,40 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .barony-legend {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  background: rgba(18, 16, 14, 0.88);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  pointer-events: none;
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  padding-left: 0.75rem;
-  border-left: 1px solid var(--border-subtle);
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .barony-legend.hidden {
-  display: none;
+  display: none !important;
+}
+
+.legend-title {
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
 }
 
 .legend-item {
@@ -1686,7 +1706,7 @@ body {
     align-self: flex-start;
   }
 
-  /* Floating Territory Badge & Legend */
+  /* Floating Territory Badge & Barony Legend Mobile */
   .map-stats-badge {
     top: 10px;
     bottom: auto;
@@ -1701,15 +1721,29 @@ body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   }
 
-  .inspector-drawer.open ~ .map-stats-badge {
-    display: none;
-  }
-
   .barony-legend {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    right: 10px;
+    top: auto;
+    max-width: calc(100vw - 20px);
+    justify-content: center;
+    background: rgba(18, 16, 14, 0.92);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+    padding: 0.38rem 0.6rem;
+    font-size: 0.7rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 4px;
+    gap: 0.45rem;
+    z-index: 1000;
+  }
+
+  .inspector-drawer.open ~ .map-stats-badge,
+  .inspector-drawer.open ~ .barony-legend {
+    display: none;
   }
 
   .legend-item {

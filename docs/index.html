@@ -156,15 +156,18 @@
       </div>
     </aside>
 
-    <!-- Map Floating Stats / Coordinates Badge -->
-    <div class="map-stats-badge">
+    <!-- Map Floating Territory / Hover Badge -->
+    <div class="map-stats-badge" aria-live="polite">
       <span id="hover-info">Hover over a territory to inspect</span>
-      <div id="barony-legend" class="barony-legend hidden">
-        <span class="legend-item"><span class="legend-dot dot-castle"></span>Castle</span>
-        <span class="legend-item"><span class="legend-dot dot-church"></span>Bishopric</span>
-        <span class="legend-item"><span class="legend-dot dot-city"></span>City</span>
-        <span class="legend-item"><span class="legend-dot dot-unoccupied"></span>Unoccupied</span>
-      </div>
+    </div>
+
+    <!-- Map Barony Holding Type Legend (Separate Floating Control) -->
+    <div id="barony-legend" class="barony-legend hidden" role="region" aria-label="Holding Type Legend">
+      <span class="legend-title">Holdings:</span>
+      <span class="legend-item"><span class="legend-dot dot-castle"></span>Castle</span>
+      <span class="legend-item"><span class="legend-dot dot-church"></span>Bishopric</span>
+      <span class="legend-item"><span class="legend-dot dot-city"></span>City</span>
+      <span class="legend-item"><span class="legend-dot dot-unoccupied"></span>Unoccupied</span>
     </div>
   </main>
 

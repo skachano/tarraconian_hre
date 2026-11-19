@@ -510,6 +510,17 @@ async function runE2ETests() {
       throw new Error('Expected #barony-legend to be visible in Barony tier');
     }
 
+    // Verify #barony-legend is separate from .map-stats-badge / #hover-info
+    const isSeparateElement = await page.evaluate(() => {
+      const legend = document.getElementById('barony-legend');
+      const badge = document.querySelector('.map-stats-badge');
+      return legend && badge && !badge.contains(legend) && !legend.contains(badge);
+    });
+    if (!isSeparateElement) {
+      throw new Error('Expected #barony-legend to be completely separate from .map-stats-badge');
+    }
+    console.log('  Holding type legend verified as a separate floating component from hover-info badge.');
+
     const baronyFills = await page.evaluate(() => {
       const paths = Array.from(document.querySelectorAll('#map svg path'));
       const fills = new Set(paths.slice(0, 100).map(p => p.getAttribute('fill')));
@@ -855,6 +866,25 @@ async function runE2ETests() {
     await mobileCloseGuide.click();
     await mobilePage.waitForSelector('#linguistics-modal', { state: 'hidden', timeout: 5000 });
     console.log('  Mobile modal closed successfully.');
+
+    // Test Mobile Barony Tier Legend & Hover info separation
+    console.log('  Testing mobile Barony tier holding legend separation...');
+    const mobileBaronyBtn = mobilePage.locator('.tier-btn[data-tier="barony"]');
+    await mobileBaronyBtn.click();
+    await mobilePage.waitForSelector('#barony-legend:not(.hidden)', { timeout: 10000 });
+    const mobileLegendVisible = await mobilePage.locator('#barony-legend').isVisible();
+    if (!mobileLegendVisible) {
+      throw new Error('Expected #barony-legend to be visible in mobile Barony tier');
+    }
+    const mobileSeparate = await mobilePage.evaluate(() => {
+      const legend = document.getElementById('barony-legend');
+      const badge = document.querySelector('.map-stats-badge');
+      return legend && badge && !badge.contains(legend);
+    });
+    if (!mobileSeparate) {
+      throw new Error('Expected #barony-legend to be separate from .map-stats-badge on mobile');
+    }
+    console.log('  Mobile Barony holding legend verified as separate from tap inspector badge.');
 
     await mobilePage.close();
     await mobileContext.close();
