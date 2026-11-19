@@ -9,6 +9,7 @@ __pycache__/
 /var/tmp/ck3_audit/
 tmp/
 *.tmp
+scratch/
 
 # Web app dependencies & build outputs
 node_modules/
