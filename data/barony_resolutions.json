@@ -187,15 +187,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_newport": {
-    "name": "Newport",
-    "b_tarr": "Newport",
+    "name": "Ûsemunde",
+    "b_tarr": "Ûsemunde",
     "b_tarr_direct": "Newport",
-    "b_tarr_hist": "Newport",
-    "b_origin": "Newport (constituent holding of Buckingeham)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈnɛw.pɔrt]",
+    "b_tarr_hist": "Ûsemunde",
+    "b_origin": "Confluence of River Great Ouse and Ouzel (pre-conquest crossing, replacing c. 1100 Novus Burgus) (in-game: Newport)",
+    "b_anachronism": "Anglo-Norman planned borough Novus Burgus built c. 1100 by Robert Fitzhamon. Resolved via Option B to the ancient Ouse confluence (Ûsemunde).",
+    "b_ipa": "[uː.zɛ.ˈmʊn.də]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_wycombe": {
     "name": "Wycombe",
@@ -1199,15 +1199,15 @@
     "category": "secondary_variant"
   },
   "b_newbury": {
-    "name": "Newbury",
-    "b_tarr": "Newbury",
+    "name": "Kennetbrücke",
+    "b_tarr": "Kennetbrücke",
     "b_tarr_direct": "Newbury",
-    "b_tarr_hist": "Newbury",
-    "b_origin": "Newbury (constituent holding of Berkschîr)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈnɛw.bʊ.rɪ]",
+    "b_tarr_hist": "Kennetbrücke",
+    "b_origin": "Kennet river crossing (pre-conquest Kennet river settlement, replacing c. 1080 Neuberie) (in-game: Newbury)",
+    "b_anachronism": "Anglo-Norman planned borough Neuberie founded c. 1080 after the Norman Conquest. Resolved via Option B to the ancient Kennet river crossing (Kennetbrücke).",
+    "b_ipa": "[kɛ.nɛt.ˈbryː.kə]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_abingdon": {
     "name": "Abingdon",
@@ -2651,15 +2651,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_peterhead": {
-    "name": "Peterhead",
-    "b_tarr": "Peterhead",
+    "name": "Inverûgje",
+    "b_tarr": "Inverûgje",
     "b_tarr_direct": "Peterhead",
-    "b_tarr_hist": "Peterhead",
-    "b_origin": "Peterhead (constituent holding of Bûchan)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈpɛ.tɛr.hɛ.ad]",
+    "b_tarr_hist": "Inverûgje",
+    "b_origin": "Mouth of the River Ugie / Deer Abbey catchment (pre-867 Celtic toponym, replacing 1593 Peterhead) (in-game: Peterhead)",
+    "b_anachronism": "Planned fishing port founded in 1593 by George Keith, 5th Earl Marischal. Resolved via Option B to the ancient mouth of the River Ugie (Inverûgje).",
+    "b_ipa": "[ɪn.vɛ.ˈruːɡ.jɛ]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_dornoch": {
     "name": "Sûderlant",
@@ -4477,15 +4477,15 @@
     "category": "secondary_variant"
   },
   "b_wilhelmshaven": {
-    "name": "Jever",
-    "b_tarr": "Jever",
+    "name": "Sîbetzburch",
+    "b_tarr": "Sîbetzburch",
     "b_tarr_direct": "Jever",
-    "b_tarr_hist": "Jever",
-    "b_origin": "Jever (constituent holding of Ôstvrîslant)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈjɛ.vər]",
+    "b_tarr_hist": "Sîbetzburch",
+    "b_origin": "Sibetsburg castle on the Jade Bight (14th-century Frisian chieftain fortress, replacing 1869 Wilhelmshaven) (in-game: Jever)",
+    "b_anachronism": "Prussian naval base founded in 1869 by King Wilhelm I on the Jade Bight. Restored to the historical Frisian chieftain fortress Sibetsburg (Sîbetzburch).",
+    "b_ipa": "[ˈsiː.bɛts.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "indigenous_restitution"
   },
   "b_varel": {
     "name": "Varel",
@@ -21659,15 +21659,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_oulu": {
-    "name": "Oulû",
-    "b_tarr": "Oulû",
-    "b_tarr_direct": "Oulû",
-    "b_tarr_hist": "Oulû",
-    "b_origin": "Oulu (Oulu)",
-    "b_anachronism": "",
-    "b_ipa": "[ɔʊ.ˈluː]",
+    "name": "Oulujôki",
+    "b_tarr": "Oulujôki",
+    "b_tarr_direct": "Oulu",
+    "b_tarr_hist": "Oulujôki",
+    "b_origin": "Oulujoki River catchment (pre-867 Finnic hydronym, replacing 1605 chartered town of Oulu) (in-game: Oulu)",
+    "b_anachronism": "Trading town chartered in 1605 by Charles IX of Sweden opposite the 1590 castle. Resolved via Option B to the pre-867 Oulujoki river basin (Oulujôki).",
+    "b_ipa": "[ˈɔʊ.lʊ.joː.kɪ]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "option_b_hydronym"
   },
   "b_liminka": {
     "name": "Liminka",
@@ -22715,15 +22715,15 @@
     "category": "capital_eponymous"
   },
   "b_vilnius": {
-    "name": "Wilne",
-    "b_tarr": "Wilne",
+    "name": "Wîlnje",
+    "b_tarr": "Wîlnje",
     "b_tarr_direct": "Wilne",
-    "b_tarr_hist": "Wilne",
-    "b_origin": "Vilnius (constituent holding of Kernâwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈwɪl.nɛ]",
+    "b_tarr_hist": "Wîlnje",
+    "b_origin": "Vilnia River basin (pre-867 Baltic/Slavic hydronym, replacing 1323 capital of Vilnius) (in-game: Vilnius)",
+    "b_anachronism": "First attested in 1323 in the letters of Grand Duke Gediminas; ancient regional capitals were Kernavė and Voruta. Resolved via Option B to the pre-867 Vilnia River hydronym (Wîlnje).",
+    "b_ipa": "[ˈwiːl.ɲɛ]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_vilkmerge": {
     "name": "Vilkmerge",
@@ -22759,15 +22759,15 @@
     "category": "option_a_seat"
   },
   "b_kaunas": {
-    "name": "Kaunas",
-    "b_tarr": "Kaunas",
+    "name": "Santaka",
+    "b_tarr": "Santaka",
     "b_tarr_direct": "Kaunas",
-    "b_tarr_hist": "Kaunas",
-    "b_origin": "Kaunas (constituent holding of Merkinê)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈkɔʊ.nas]",
+    "b_tarr_hist": "Santaka",
+    "b_origin": "Santaka (sacred confluence of the Nemunas and Neris rivers, replacing 1361 Kaunas) (in-game: Kaunas)",
+    "b_anachronism": "First attested in 1361 in the Teutonic chronicle Chronica nova Prutenica. Restored to the ancient Baltic sacred confluence site Santaka.",
+    "b_ipa": "[ˈsan.ta.ka]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "indigenous_restitution"
   },
   "b_merkine": {
     "name": "",
@@ -23573,15 +23573,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_daugavpils": {
-    "name": "Dünaburch",
-    "b_tarr": "Dünaburch",
+    "name": "Dôugowe",
+    "b_tarr": "Dôugowe",
     "b_tarr_direct": "Dünaburch",
-    "b_tarr_hist": "Dünaburch",
-    "b_origin": "Dünaburg (constituent holding of Gêrsike)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈdyː.na.bʊrx]",
+    "b_tarr_hist": "Dôugowe",
+    "b_origin": "Daugava River basin (pre-867 Baltic hydronym, replacing 1275 Livonian Dinaburg castle) (in-game: Dünaburg)",
+    "b_anachronism": "Dinaburg castle built in 1275 by Livonian Order Master Ernst von Ratzeburg; ancient Latgalian principality seat was Jersika. Resolved via Option B to the ancient Daugava River hydronym (Dôugowe).",
+    "b_ipa": "[doː.ʊ.ˈɣɔ.wə]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_rezekne": {
     "name": "Rositten",
@@ -23859,15 +23859,15 @@
     "category": "capital_eponymous"
   },
   "b_olsztyn": {
-    "name": "Olschtîn",
-    "b_tarr": "Olschtîn",
+    "name": "Alne",
+    "b_tarr": "Alne",
     "b_tarr_direct": "Olschtîn",
-    "b_tarr_hist": "Olschtîn",
-    "b_origin": "Olsztyn (constituent holding of Krakouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ɔl.ˈʃtiːn]",
+    "b_tarr_hist": "Alne",
+    "b_origin": "Lyna / Alle River (Old Prussian hydronym Alna, replacing 1348 Allenstein castle) (in-game: Olsztyn)",
+    "b_anachronism": "Allenstein castle founded in 1348 by the Warmian cathedral chapter on the Lyna (Alle) river. Restored to the Old Prussian hydronym Alna (Alne).",
+    "b_ipa": "[ˈal.nɛ]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "indigenous_restitution"
   },
   "b_czestochowa": {
     "name": "Tschestochouwe",
@@ -25080,15 +25080,15 @@
     "category": "capital_eponymous"
   },
   "b_lodz": {
-    "name": "Lôtsch",
-    "b_tarr": "Lôtsch",
+    "name": "Lôdza",
+    "b_tarr": "Lôdza",
     "b_tarr_direct": "Lôtsch",
-    "b_tarr_hist": "Lôtsch",
-    "b_origin": "Łódź (constituent holding of Lentschitz)",
-    "b_anachronism": "",
-    "b_ipa": "[loːtʃ]",
+    "b_tarr_hist": "Lôdza",
+    "b_origin": "Lodzia stream catchment (pre-867 hydronym, replacing 1332 village of Lodzia) (in-game: Łódź)",
+    "b_anachronism": "First attested in 1332 as the agricultural village of Lodzia. Resolved via Option B to the pre-867 Lodzia stream catchment (Lôdza).",
+    "b_ipa": "[ˈloːd.tsa]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_klodawa": {
     "name": "Klodawa",
@@ -26785,15 +26785,15 @@
     "category": "option_a_seat"
   },
   "b_vinnytsia": {
-    "name": "Vinnytzia",
-    "b_tarr": "Vinnytzia",
+    "name": "Bôch",
+    "b_tarr": "Bôch",
     "b_tarr_direct": "Vinnytzia",
-    "b_tarr_hist": "Vinnytzia",
-    "b_origin": "Vinnytsia (constituent holding of Bakôte)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.nɪ.tsɪ.a]",
+    "b_tarr_hist": "Bôch",
+    "b_origin": "Southern Bug River basin (ancient Slavic Bog / Greek Hypanis, replacing 1363 Lithuanian fortress Vinnytsia) (in-game: Vinnytsia)",
+    "b_anachronism": "Lithuanian fortress built in 1363 by the Koriatovych princes after the Battle of Blue Waters. Resolved via Option B to the ancient Southern Bug river hydronym (Bôch).",
+    "b_ipa": "[boːx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_yampil": {
     "name": "Yampil",
@@ -27269,15 +27269,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_konotop": {
-    "name": "Konotop",
-    "b_tarr": "Konotop",
+    "name": "Konotôpka",
+    "b_tarr": "Konotôpka",
     "b_tarr_direct": "Konotop",
-    "b_tarr_hist": "Konotop",
-    "b_origin": "Konotop (constituent holding of Putîwel)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈkɔ.nɔ.tɔp]",
+    "b_tarr_hist": "Konotôpka",
+    "b_origin": "Konotopka stream basin (pre-867 hydronym, replacing 1634 Konotop) (in-game: Konotop)",
+    "b_anachronism": "Fortified Cossack outpost first attested in 1634 during the Smolensk War. Resolved via Option B to the pre-867 Konotopka stream hydronym (Konotôpka).",
+    "b_ipa": "[ˈkɔ.nɔ.toːp.ka]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_kursk": {
     "name": "Kûrtzich",
@@ -27302,15 +27302,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_sudzha": {
-    "name": "Suddscha",
-    "b_tarr": "Suddscha",
+    "name": "Sûdscha",
+    "b_tarr": "Sûdscha",
     "b_tarr_direct": "Suddscha",
-    "b_tarr_hist": "Suddscha",
-    "b_origin": "Sudzha (constituent holding of Kûrtzich)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈsʊ.dʒa]",
+    "b_tarr_hist": "Sûdscha",
+    "b_origin": "Sudzha River basin (pre-867 hydronym, replacing 1664 Sudzha) (in-game: Sudzha)",
+    "b_anachronism": "Fortified Cossack sloboda founded in 1664 during the Russo-Polish War. Resolved via Option B to the pre-867 Sudzha River hydronym (Sûdscha).",
+    "b_ipa": "[ˈsuː.dʒa]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_oboyan": {
     "name": "",
@@ -27346,15 +27346,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_oryol": {
-    "name": "Oryol",
-    "b_tarr": "Oryol",
+    "name": "Orlîk",
+    "b_tarr": "Orlîk",
     "b_tarr_direct": "Oryol",
-    "b_tarr_hist": "Oryol",
-    "b_origin": "Oryol (constituent holding of Karatschouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈɔr.jɔl]",
+    "b_tarr_hist": "Orlîk",
+    "b_origin": "Orlik River basin (pre-867 hydronym at confluence with Oka, replacing 1566 Oryol) (in-game: Oryol)",
+    "b_anachronism": "Fortress founded in 1566 by Ivan the Terrible at the confluence of the Oka and Orlik. Resolved via Option B to the pre-867 Orlik River hydronym (Orlîk).",
+    "b_ipa": "[ɔr.ˈliːk]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_kozelsk": {
     "name": "Kosêltzich",
@@ -27522,15 +27522,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_pushkin": {
-    "name": "Puschkin",
-    "b_tarr": "Puschkin",
+    "name": "Sâri",
+    "b_tarr": "Sâri",
     "b_tarr_direct": "Puschkin",
-    "b_tarr_hist": "Puschkin",
-    "b_origin": "Pushkin (constituent holding of Nîenburch-am-Wolchouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[pʊʃ.ˈkɪn]",
+    "b_tarr_hist": "Sâri",
+    "b_origin": "Saari Mojs / Saaris (ancient Finnic 'High Island' / estate attested before 1710 Tsarskoye Selo / 1937 Pushkin) (in-game: Pushkin)",
+    "b_anachronism": "Modern Soviet renaming (1937) of Tsarskoye Selo (founded 1710 by Peter the Great) on Finnish Saari Mojs. Restored to pre-867 Finnic toponym Sâri.",
+    "b_ipa": "[ˈsaː.rɪ]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "indigenous_restitution"
   },
   "b_rusa": {
     "name": "Rûsse",
@@ -27643,15 +27643,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_novorzhev": {
-    "name": "Novorschheuwe",
-    "b_tarr": "Novorschheuwe",
+    "name": "Arschô",
+    "b_tarr": "Arschô",
     "b_tarr_direct": "Novorschheuwe",
-    "b_tarr_hist": "Novorschheuwe",
-    "b_origin": "Novorzhev (constituent holding of Sebêsch)",
-    "b_anachronism": "",
-    "b_ipa": "[nɔ.vɔrʃ.ˈhɔʏ.wə]",
+    "b_tarr_hist": "Arschô",
+    "b_origin": "Lake Arsho basin (pre-867 hydronym of the Rzheva Pustaya region, replacing 1777 Novorzhev) (in-game: Novorzhev)",
+    "b_anachronism": "Administrative center founded in 1777 by Catherine the Great on Lake Arsho. Resolved via Option B to the ancient Lake Arsho hydronym (Arschô).",
+    "b_ipa": "[ar.ˈʃoː]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_nyen": {
     "name": "Wôtlant",
@@ -27896,15 +27896,15 @@
     "category": "capital_eponymous"
   },
   "b_zhelezny_ustyug": {
-    "name": "Dschelezny Ustyug",
-    "b_tarr": "Dschelezny Ustyug",
+    "name": "Katûn",
+    "b_tarr": "Katûn",
     "b_tarr_direct": "Dschelezny Ustyug",
-    "b_tarr_hist": "Dschelezny Ustyug",
-    "b_origin": "Zhelezny Ustyug (constituent holding of Besitsch)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈdʒɛ.lɛts.nɪ ˈʊst.jʊɡ]",
+    "b_tarr_hist": "Katûn",
+    "b_origin": "Katun River basin (pre-867 hydronym of the ironworking region, replacing 1252 Ustyuzhna) (in-game: Zhelezny Ustyug)",
+    "b_anachronism": "First attested in 1252 as Ustyuzhna Zheleznopolskaya. Resolved via Option B to the ancient Katun River hydronym (Katûn).",
+    "b_ipa": "[ka.ˈtuːn]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_grodno": {
     "name": "Garten",
@@ -27973,15 +27973,15 @@
     "category": "capital_eponymous"
   },
   "b_slonim": {
-    "name": "Slonim",
-    "b_tarr": "Slonim",
+    "name": "Schtscharâ",
+    "b_tarr": "Schtscharâ",
     "b_tarr_direct": "Slonim",
-    "b_tarr_hist": "Slonim",
-    "b_origin": "Slonim (constituent holding of Plîse)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈslɔ.nɪm]",
+    "b_tarr_hist": "Schtscharâ",
+    "b_origin": "Shchara River basin (pre-867 Baltic/Slavic hydronym, replacing 1252 Vslonim) (in-game: Slonim)",
+    "b_anachronism": "First attested in 1252 as Vslonim in the Hypatian Chronicle. Resolved via Option B to the ancient Shchara River hydronym (Schtscharâ).",
+    "b_ipa": "[ʃtʃa.ˈraː]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_pinsk": {
     "name": "Pîntzich",
@@ -28160,15 +28160,15 @@
     "category": "option_b_hydronym"
   },
   "b_barysaw": {
-    "name": "Barysaw",
-    "b_tarr": "Barysaw",
+    "name": "Berêzene",
+    "b_tarr": "Berêzene",
     "b_tarr_direct": "Barysaw",
-    "b_tarr_hist": "Barysaw",
-    "b_origin": "Barysaw (constituent holding of Alt-Mêne)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈba.rɪ.zaw]",
+    "b_tarr_hist": "Berêzene",
+    "b_origin": "Berezina River basin (ancient Baltic/Slavic hydronym, replacing 1102 Borisov) (in-game: Barysaw)",
+    "b_anachronism": "Founded in 1102 by Prince Boris Vseslavich of Polotsk after victory over the Yatviags. Resolved via Option B to the pre-867 Berezina River hydronym (Berêzene).",
+    "b_ipa": "[bɛ.reː.ˈtsɛ.nə]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_orsha": {
     "name": "Orsche",
@@ -28699,26 +28699,26 @@
     "category": "option_c_foundation"
   },
   "b_naro-fominsk": {
-    "name": "Naro-Fomintzich",
-    "b_tarr": "Naro-Fomintzich",
+    "name": "Nâra",
+    "b_tarr": "Nâra",
     "b_tarr_direct": "Naro-Fomintzich",
-    "b_tarr_hist": "Naro-Fomintzich",
-    "b_origin": "Naro-Fominsk (constituent holding of Moskouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈna.rɔ ˈfɔ.mɪn.tsɪç]",
+    "b_tarr_hist": "Nâra",
+    "b_origin": "Nara River basin (pre-867 hydronym, replacing 1864 factory combine Naro-Fominsk) (in-game: Naro-Fominsk)",
+    "b_anachronism": "Modern industrial factory town formed in 1864 around Fominskoye village (1339). Resolved via Option B to the pre-867 Nara River hydronym (Nâra).",
+    "b_ipa": "[ˈnaː.ra]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_serpukhov": {
-    "name": "Serpukhouwe",
-    "b_tarr": "Serpukhouwe",
+    "name": "Serpêjka",
+    "b_tarr": "Serpêjka",
     "b_tarr_direct": "Serpukhouwe",
-    "b_tarr_hist": "Serpukhouwe",
-    "b_origin": "Serpukhov (constituent holding of Moskouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[sɛr.pʊk.ˈhɔʊ.wə]",
+    "b_tarr_hist": "Serpêjka",
+    "b_origin": "Serpeyka River basin (pre-867 hydronym at confluence with Nara, replacing 1339 Serpukhov) (in-game: Serpukhov)",
+    "b_anachronism": "First attested in 1339 in the spiritual testament of Grand Prince Ivan Kalita. Resolved via Option B to the pre-867 Serpeyka River hydronym (Serpêjka).",
+    "b_ipa": "[ˈsɛr.peːj.ka]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_ryazan": {
     "name": "Rêsan",
@@ -28985,26 +28985,26 @@
     "category": "capital_eponymous"
   },
   "b_arkhangelsk": {
-    "name": "Arkhangeltzich",
-    "b_tarr": "Arkhangeltzich",
+    "name": "Pûr-Nâwolok",
+    "b_tarr": "Pûr-Nâwolok",
     "b_tarr_direct": "Arkhangeltzich",
-    "b_tarr_hist": "Arkhangeltzich",
-    "b_origin": "Arkhangelsk (constituent holding of Cholmogôre)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈark.ha.ŋɛl.tsɪç]",
+    "b_tarr_hist": "Pûr-Nâwolok",
+    "b_origin": "Cape Pur-Navolok on the Northern Dvina (ancient Finnic/Pomor cape, replacing 1584 Arkhangelsk) (in-game: Arkhangelsk)",
+    "b_anachronism": "Founded in 1584 by Ivan the Terrible as Novokholmogory around the 1388 Archangel Michael Monastery. Restored to the ancient cape toponym Pur-Navolok (Pûr-Nâwolok).",
+    "b_ipa": "[puːr ˈnaː.wɔ.lɔk]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "indigenous_restitution"
   },
   "b_brin_navolok": {
-    "name": "Brin Navolok",
-    "b_tarr": "Brin Navolok",
+    "name": "Schirmburch",
+    "b_tarr": "Schirmburch",
     "b_tarr_direct": "Brin Navolok",
-    "b_tarr_hist": "Brin Navolok",
-    "b_origin": "Brin Navolok (constituent holding of Cholmogôre)",
-    "b_anachronism": "",
-    "b_ipa": "[brɪn ˈna.vɔ.lɔk]",
+    "b_tarr_hist": "Schirmburch",
+    "b_origin": "Brin Navolok — Disambiguated foundation: Protective march fortress built by Philipp",
+    "b_anachronism": "Disambiguated sub-barony foundation.",
+    "b_ipa": "[ˈʃɪrm.bʊrx]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "option_c_foundation"
   },
   "b_pertominsk": {
     "name": "Pertomintzich",
@@ -32219,15 +32219,15 @@
     "category": "capital_eponymous"
   },
   "b_pavlovsk": {
-    "name": "Pavlovtzich",
-    "b_tarr": "Pavlovtzich",
+    "name": "Ozêret",
+    "b_tarr": "Ozêret",
     "b_tarr_direct": "Pavlovtzich",
-    "b_tarr_hist": "Pavlovtzich",
-    "b_origin": "Pavlovsk (constituent holding of Karatâjach)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈpa.vlɔv.tsɪç]",
+    "b_tarr_hist": "Ozêret",
+    "b_origin": "Osered River basin (pre-867 hydronym on the Don, replacing 1709/1711 Pavlovsk) (in-game: Pavlovsk)",
+    "b_anachronism": "Osered fortress founded in 1709 by Peter the Great on the Don, renamed Pavlovsk in 1711. Resolved via Option B to the pre-867 Osered River hydronym (Ozêret).",
+    "b_ipa": "[ɔ.tseː.ˈrɛt]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_babrov": {
     "name": "Babrouwe",

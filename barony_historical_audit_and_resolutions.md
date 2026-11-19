@@ -110,7 +110,36 @@ Titles are anchored strictly in physical substrates, verified classical settleme
      - Near Eastern / Arabic: `b_hisn_al-mashuq` $\rightarrow$ **`Maschûchburch`**, `b_hisn_di-l-qarnain` $\rightarrow$ **`Tscharnainburch`**, `b_hisn_lawata` $\rightarrow$ **`Lawâtaburch`**, `b_hisn_al-abr` $\rightarrow$ **`Vurtburch`**, `b_qalat_jundi` $\rightarrow$ **`Knechtburch`**, `b_qalat_ar-rum` $\rightarrow$ **`Rômerburch`**, `b_kasr_al-kabir` $\rightarrow$ **`Grôzcastel`**.
      - Intra-county capital disambiguation: `b_serres` $\rightarrow$ **`Sêrres`** disambiguated from coastal port `b_chrysopolis` $\rightarrow$ **`Goltstat`**.
 
-### 2.2 In-Game Save Universe Creator & Holder Attribution
+### 2.3 Second-Wave Anachronism Reconciliation (23 Titles)
+Following the discovery of the late-14th century anachronism in `b_maladzyechna`, a second-wave audit identified 23 additional constituent sub-baronies across Eastern Europe, the Baltic, Scandinavia, Scotland, and the Pontic Steppe that were post-867 foundations masking under `sub_barony_adaptation`. These were reconciled under **Option B (Hydronym / Landform)** and **Indigenous Restitution**:
+
+| Barony Key | County Key | Holding Type | Resolved Tarraconian Name | Historical Foundation Date | Tarraconian IPA | Historical Attribution & Resolution Note |
+| :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| `b_pushkin` | `c_novgorod` | Church | **Sâri** | 1937 AD (1710) | `[ˈsaː.rɪ]` | Finnic *Saari Mojs* / *Saaris* ('High Island'), replacing 1937 Soviet memorial / 1710 Tsarskoye Selo. |
+| `b_naro-fominsk` | `c_moskva` | Castle | **Nâra** | 1864 AD (1339) | `[ˈnaː.ra]` | Pre-867 Nara River hydronym, replacing 1864 industrial factory combine. |
+| `b_novorzhev` | `c_sebezh` | Castle | **Arschô** | 1777 AD | `[ar.ˈʃoː]` | Pre-867 Lake Arsho hydronym / *Rzheva Pustaya* substrate, replacing 1777 foundation by Catherine II. |
+| `b_pavlovsk` | `c_karatayak` | Castle | **Ozêret** | 1709 AD | `[ɔ.tseː.ˈrɛt]` | Pre-867 Osered River hydronym on the Don, replacing 1709/1711 Peter the Great fortress. |
+| `b_wilhelmshaven` | `c_ostfriesland` | Castle | **Sîbetzburch** | 1869 AD | `[ˈsiː.bɛts.bʊrx]` | Historical 14th-century Frisian chieftain fortress Sibetsburg on the Jade Bight, replacing 1869 naval port. |
+| `b_peterhead` | `c_buchan` | Castle | **Inverûgje** | 1593 AD | `[ɪn.vɛ.ˈruːɡ.jɛ]` | Ancient mouth of the River Ugie / Deer Abbey catchment, replacing 1593 planned fishing port. |
+| `b_arkhangelsk` | `c_kholmogory` | Castle | **Pûr-Nâwolok** | 1584 AD | `[puːr ˈnaː.wɔ.lɔk]` | Ancient Cape Pur-Navolok on the Northern Dvina, replacing 1584 fortress Novokholmogory. |
+| `b_oryol` | `c_karachev` | Castle | **Orlîk** | 1566 AD | `[ɔr.ˈliːk]` | Pre-867 Orlik River hydronym at confluence with Oka, replacing 1566 fortress by Ivan the Terrible. |
+| `b_konotop` | `c_putyvl` | Castle | **Konotôpka** | 1634 AD | `[ˈkɔ.nɔ.toːp.ka]` | Pre-867 Konotopka stream hydronym, replacing 1634 fortified Cossack outpost. |
+| `b_sudzha` | `c_kursk` | Castle | **Sûdscha** | 1664 AD | `[ˈsuː.dʒa]` | Pre-867 Sudzha River hydronym, replacing 1664 fortified sloboda. |
+| `b_oulu` | `c_oulu` | Castle | **Oulujôki** | 1605 AD | `[ˈɔʊ.lʊ.joː.kɪ]` | Pre-867 Oulujoki river basin (Sami *Oulu* flood hydronym), replacing 1605 chartered Swedish town. |
+| `b_vinnytsia` | `c_ushytsia` | Castle | **Bôch** | 1363 AD | `[boːx]` | Ancient Southern Bug River hydronym (*Bog* / Greek *Hypanis*), replacing 1363 Lithuanian fortress. |
+| `b_kaunas` | `c_trakai` | Castle | **Santaka** | 1361 AD | `[ˈsan.ta.ka]` | Sacred pre-crusade confluence of the Nemunas and Neris rivers, replacing 1361 Teutonic mention. |
+| `b_olsztyn` | `c_krakowska` | Castle | **Alne** | 1348 AD | `[ˈal.nɛ]` | Old Prussian hydronym *Alna* ('Trout River', Lyna/Alle), replacing 1348 Warmian castle Allenstein. |
+| `b_serpukhov` | `c_moskva` | Castle | **Serpêjka** | 1339 AD | `[ˈsɛr.peːj.ka]` | Pre-867 Serpeyka River hydronym, replacing 1339 settlement in testament of Ivan Kalita. |
+| `b_lodz` | `c_leczycka` | Castle | **Lôdza** | 1332 AD | `[ˈloːd.tsa]` | Pre-867 Lodzia stream catchment, replacing 1332 agricultural village. |
+| `b_vilnius` | `c_kernave` | Castle | **Wîlnje** | 1323 AD | `[ˈwiːl.ɲɛ]` | Pre-867 Vilnia River hydronym, replacing 1323 capital of Grand Duke Gediminas. |
+| `b_daugavpils` | `c_jersika` | Castle | **Dôugowe** | 1275 AD | `[doː.ʊ.ˈɣɔ.wə]` | Pre-867 Daugava River hydronym, replacing 1275 Livonian Order castle Dinaburg. |
+| `b_slonim` | `c_novogrudok` | Castle | **Schtscharâ** | 1252 AD | `[ʃtʃa.ˈraː]` | Pre-867 Shchara River hydronym, replacing 1252 *Vslonim* in Hypatian Chronicle. |
+| `b_zhelezny_ustyug` | `c_bezichi` | Castle | **Katûn** | 1252 AD | `[ka.ˈtuːn]` | Pre-867 Katun River hydronym of ironworking region, replacing 1252 Ustyuzhna. |
+| `b_newport` | `c_buckinghamshire` | Castle | **Ûsemunde** | 1100 AD | `[uː.zɛ.ˈmʊn.də]` | Ancient confluence of Great Ouse and Ouzel, replacing c. 1100 Anglo-Norman *Novus Burgus*. |
+| `b_newbury` | `c_berkshire` | Castle | **Kennetbrücke** | 1080 AD | `[kɛ.nɛt.ˈbryː.kə]` | Ancient Kennet river crossing settlement, replacing c. 1080 post-conquest borough *Neuberie*. |
+| `b_barysaw` | `c_minsk` | Castle | **Berêzene** | 1102 AD | `[bɛ.reː.ˈtsɛ.nə]` | Ancient Berezina River hydronym, replacing 1102 fortress founded by Prince Boris of Polotsk. |
+
+### 2.4 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:
 - The active holder (`holder = <character_id>`) in 1194 AD.
 - The date of enfeoffment or construction (`date = <YYYY.M.D>`).
