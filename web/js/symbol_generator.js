@@ -318,7 +318,254 @@
         <!-- Claws -->
         <path d="M 42 32 L 35 42 M 72 38 L 78 50 M 35 62 L 25 70" stroke="${color}" stroke-width="2.5" />
       </g>
+    `,
+
+    // Crossed Chivalric Broadswords
+    sword_crossed: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, hilt = PALETTE.or) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <!-- Sword 1 (dexter to sinister) -->
+        <line x1="12" y1="68" x2="68" y2="12" stroke="${color}" stroke-width="3.5" stroke-linecap="round" />
+        <polygon points="68,12 65,18 70,15" fill="${color}" />
+        <line x1="18" y1="62" x2="26" y2="70" stroke="${hilt}" stroke-width="3" stroke-linecap="round" />
+        <circle cx="12" cy="68" r="3" fill="${hilt}" />
+        <!-- Sword 2 (sinister to dexter) -->
+        <line x1="68" y1="68" x2="12" y2="12" stroke="${color}" stroke-width="3.5" stroke-linecap="round" />
+        <polygon points="12,12 18,15 15,18" fill="${color}" />
+        <line x1="62" y1="62" x2="54" y2="70" stroke="${hilt}" stroke-width="3" stroke-linecap="round" />
+        <circle cx="68" cy="68" r="3" fill="${hilt}" />
+      </g>
+    `,
+
+    // Frankish / Nordic Battleaxe
+    battleaxe: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, shaft = PALETTE.wood) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <line x1="35" y1="10" x2="35" y2="80" stroke="${shaft}" stroke-width="5" stroke-linecap="round" />
+        <path d="M 35 18 C 52 14, 65 22, 65 38 C 65 52, 48 58, 35 52 Z" fill="${color}" />
+        <path d="M 35 22 L 24 26 L 24 44 L 35 48 Z" fill="${color}" />
+        <polygon points="35,10 32,5 38,5" fill="${color}" />
+      </g>
+    `,
+
+    // Chivalric Lance / Spear with Pennon
+    spear: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, shaft = PALETTE.wood) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <line x1="35" y1="15" x2="35" y2="80" stroke="${shaft}" stroke-width="4" stroke-linecap="round" />
+        <path d="M 35 3 C 28 12, 30 22, 35 25 C 40 22, 42 12, 35 3 Z" fill="${color}" />
+        <line x1="35" y1="5" x2="35" y2="24" stroke="${PALETTE.sable}" stroke-width="0.8" />
+        <polygon points="35,26 55,32 35,40" fill="${PALETTE.gules}" />
+      </g>
+    `,
+
+    // Recurve Bow & Nocked Arrow
+    bow_and_arrow: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, stringColor = PALETTE.argent) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 20 15 C 38 25, 45 40, 45 40 C 45 40, 38 55, 20 65" fill="none" stroke="${color}" stroke-width="4.5" stroke-linecap="round" />
+        <line x1="20" y1="15" x2="20" y2="65" stroke="${stringColor}" stroke-width="1" />
+        <line x1="12" y1="40" x2="62" y2="40" stroke="${color}" stroke-width="2.5" />
+        <polygon points="62,40 54,36 56,40 54,44" fill="${color}" />
+        <polygon points="12,40 18,36 15,40 18,44" fill="${PALETTE.argent}" />
+      </g>
+    `,
+
+    // Heraldic Inescutcheon
+    shield_escutcheon: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, border = PALETTE.or) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -40)" stroke="${PALETTE.sable}" stroke-width="1.5">
+        <path d="M 12 12 L 58 12 L 58 45 C 58 64, 35 74, 35 74 C 35 74, 12 64, 12 45 Z" fill="${color}" />
+        <path d="M 16 16 L 54 16 L 54 44 C 54 60, 35 68, 35 68 C 35 68, 16 60, 16 44 Z" fill="none" stroke="${border}" stroke-width="2" />
+      </g>
+    `,
+
+    // Standing Stag Attired
+    stag_attired: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, antlers = PALETTE.or) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2" stroke-linejoin="round">
+        <path d="M 28 42 C 32 38, 48 38, 54 44 C 56 50, 56 60, 53 62 L 54 78 L 50 78 L 48 64 L 38 64 L 38 78 L 34 78 L 33 60 C 27 58, 25 50, 28 42 Z" />
+        <path d="M 30 44 L 28 26 C 26 24, 22 24, 20 25 L 18 28 L 24 30 L 26 36 L 28 44 Z" />
+        <path d="M 26 24 C 24 16, 18 10, 14 8 M 20 14 C 16 14, 14 16, 14 16 M 22 18 C 18 19, 16 22, 16 22 M 27 24 C 30 16, 36 10, 40 8 M 32 14 C 36 14, 38 16, 38 16 M 31 18 C 35 19, 37 22, 37 22" fill="none" stroke="${antlers}" stroke-width="2" stroke-linecap="round" />
+      </g>
+    `,
+
+    // Bear Rampant
+    bear_rampant: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2" stroke-linejoin="round">
+        <path d="M 45 80 L 52 80 L 50 64 C 55 58, 56 46, 52 38 L 58 30 L 54 28 L 46 34 C 42 32, 36 30, 30 26 C 26 24, 22 25, 20 28 C 18 32, 22 36, 26 36 L 22 42 L 26 44 L 32 38 C 36 44, 36 54, 32 60 L 32 80 L 38 80 L 38 66 C 40 68, 43 68, 45 66 Z" />
+        <circle cx="28" cy="28" r="2.5" fill="${color}" />
+      </g>
+    `,
+
+    // Galloping Steed / Horse Courant
+    horse_courant: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-45, -35)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2" stroke-linejoin="round">
+        <path d="M 22 28 C 24 22, 28 16, 32 18 C 36 20, 38 26, 44 26 C 54 26, 62 30, 68 34 L 80 26 L 82 28 L 74 38 C 72 44, 68 48, 62 48 L 72 58 L 68 60 L 56 48 C 48 50, 38 48, 34 44 L 24 58 L 20 56 L 26 42 C 22 38, 18 34, 12 32 L 14 26 C 18 28, 20 28, 22 28 Z" />
+        <path d="M 70 34 C 76 38, 80 46, 82 54" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" />
+      </g>
+    `,
+
+    // Wolf Statant
+    wolf_statant: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-45, -35)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 24 26 L 14 28 L 18 32 C 20 34, 24 38, 28 38 L 26 58 L 30 58 L 34 42 L 52 42 L 52 58 L 56 58 L 58 40 C 64 38, 68 32, 70 28 L 74 44 L 78 44 L 72 24 C 66 22, 58 26, 50 26 C 42 26, 34 22, 28 22 Z" />
+        <polygon points="26,22 24,16 28,20" />
+      </g>
+    `,
+
+    // Twin Heraldic Fish Haurient
+    fish_twin: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -40)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 22 15 C 14 28, 14 48, 22 62 L 16 68 L 22 64 L 28 68 L 22 62 C 30 48, 30 28, 22 15 Z" />
+        <circle cx="22" cy="22" r="2" fill="${PALETTE.sable}" />
+        <path d="M 48 15 C 40 28, 40 48, 48 62 L 42 68 L 48 64 L 54 68 L 48 62 C 56 48, 56 28, 48 15 Z" />
+        <circle cx="48" cy="22" r="2" fill="${PALETTE.sable}" />
+      </g>
+    `,
+
+    // Hunting Falcon on Perch
+    falcon_perched: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110, perch = PALETTE.wood) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <line x1="10" y1="68" x2="60" y2="68" stroke="${perch}" stroke-width="4" stroke-linecap="round" />
+        <path d="M 32 20 C 30 15, 36 12, 40 14 C 44 16, 44 22, 42 26 C 46 32, 48 42, 44 58 L 40 76 L 36 76 L 36 60 C 30 56, 26 48, 26 38 C 26 30, 28 24, 32 20 Z" />
+        <polygon points="40,16 46,18 41,20" fill="${PALETTE.or}" />
+        <circle cx="36" cy="18" r="1.8" fill="${PALETTE.or}" />
+      </g>
+    `,
+
+    // Seeded Heraldic Rose
+    rose_seeded: (color = PALETTE.gules, scale = 1, cx = 110, cy = 110, seeds = PALETTE.or) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <polygon points="40,8 35,24 45,24" fill="${PALETTE.vert}" />
+        <polygon points="70,30 55,35 62,45" fill="${PALETTE.vert}" />
+        <polygon points="58,70 48,56 40,64" fill="${PALETTE.vert}" />
+        <polygon points="22,70 32,56 40,64" fill="${PALETTE.vert}" />
+        <polygon points="10,30 25,35 18,45" fill="${PALETTE.vert}" />
+        <circle cx="40" cy="24" r="14" fill="${color}" />
+        <circle cx="55" cy="35" r="14" fill="${color}" />
+        <circle cx="49" cy="53" r="14" fill="${color}" />
+        <circle cx="31" cy="53" r="14" fill="${color}" />
+        <circle cx="25" cy="35" r="14" fill="${color}" />
+        <circle cx="40" cy="40" r="8" fill="${seeds}" />
+      </g>
+    `,
+
+    // Royal Fleur-de-lis
+    fleur_de_lis: (color = PALETTE.or, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 40 10 C 35 22, 34 35, 40 50 C 46 35, 45 22, 40 10 Z" />
+        <path d="M 37 36 C 24 30, 14 36, 12 45 C 15 54, 25 56, 35 50 C 32 54, 26 62, 20 66 L 35 60 C 36 56, 37 46, 37 36 Z" />
+        <path d="M 43 36 C 56 30, 66 36, 68 45 C 65 54, 55 56, 45 50 C 48 54, 54 62, 60 66 L 45 60 C 44 56, 43 46, 43 36 Z" />
+        <rect x="28" y="48" width="24" height="5" rx="1.5" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        <path d="M 34 53 C 34 65, 40 72, 40 72 C 40 72, 46 65, 46 53 Z" />
+      </g>
+    `,
+
+    // Wheatsheaf Garb
+    wheatsheaf_garb: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, band = PALETTE.gules) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 35 45 C 24 35, 12 25, 15 15 C 22 20, 30 32, 35 45 Z" />
+        <path d="M 35 45 C 30 30, 28 18, 35 10 C 42 18, 40 30, 35 45 Z" />
+        <path d="M 35 45 C 46 35, 58 25, 55 15 C 48 20, 40 32, 35 45 Z" />
+        <path d="M 35 52 L 20 74 L 50 74 Z" />
+        <rect x="22" y="44" width="26" height="8" rx="2" fill="${band}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+      </g>
+    `,
+
+    // Oak Branch with Acorns
+    oak_branch: (color = PALETTE.vert, scale = 1, cx = 110, cy = 110, acorn = PALETTE.or) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -40)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 35 70 C 35 60, 20 55, 24 45 C 18 42, 18 32, 25 28 C 22 22, 28 15, 35 10 C 42 15, 48 22, 45 28 C 52 32, 52 42, 46 45 C 50 55, 35 60, 35 70 Z" fill="${color}" />
+        <line x1="35" y1="18" x2="35" y2="65" stroke="${PALETTE.sable}" stroke-width="1" />
+        <rect x="18" y="48" width="8" height="6" rx="2" fill="${PALETTE.wood}" />
+        <path d="M 19 54 C 19 60, 25 60, 25 54 Z" fill="${acorn}" />
+        <rect x="44" y="48" width="8" height="6" rx="2" fill="${PALETTE.wood}" />
+        <path d="M 45 54 C 45 60, 51 60, 51 54 Z" fill="${acorn}" />
+      </g>
+    `,
+
+    // Cluster of Grapes with Vine Leaf
+    grape_cluster: (color = PALETTE.purpure, scale = 1, cx = 110, cy = 110, leaf = PALETTE.vert) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -40)" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 35 10 Q 30 18 35 25" fill="none" stroke="${PALETTE.wood}" stroke-width="3" />
+        <polygon points="35,18 20,12 25,24" fill="${leaf}" />
+        <polygon points="35,18 50,12 45,24" fill="${leaf}" />
+        <circle cx="27" cy="30" r="5" fill="${color}" />
+        <circle cx="35" cy="30" r="5" fill="${color}" />
+        <circle cx="43" cy="30" r="5" fill="${color}" />
+        <circle cx="23" cy="38" r="5" fill="${color}" />
+        <circle cx="31" cy="38" r="5" fill="${color}" />
+        <circle cx="39" cy="38" r="5" fill="${color}" />
+        <circle cx="47" cy="38" r="5" fill="${color}" />
+        <circle cx="27" cy="46" r="5" fill="${color}" />
+        <circle cx="35" cy="46" r="5" fill="${color}" />
+        <circle cx="43" cy="46" r="5" fill="${color}" />
+        <circle cx="31" cy="54" r="5" fill="${color}" />
+        <circle cx="39" cy="54" r="5" fill="${color}" />
+        <circle cx="35" cy="62" r="5" fill="${color}" />
+      </g>
+    `,
+
+    // Radiant Sun with 16 Rays
+    sun_radiant: (color = PALETTE.or, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        ${[0, 45, 90, 135, 180, 225, 270, 315].map(deg => `
+          <polygon points="40,15 37,28 43,28" transform="rotate(${deg} 40 40)" />
+          <path d="M 38 28 Q 44 20 40 12 Q 36 20 42 28" transform="rotate(${deg + 22.5} 40 40)" />
+        `).join('')}
+        <circle cx="40" cy="40" r="14" fill="${color}" />
+      </g>
+    `,
+
+    // Six-pointed Star / Mullet
+    star_six_pointed: (color = PALETTE.or, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <polygon points="40,12 47,28 64,28 50,38 56,54 40,44 24,54 30,38 16,28 33,28" />
+      </g>
+    `,
+
+    // Crescent Moon
+    crescent_moon: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -35)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <path d="M 35 10 C 50 10, 60 22, 60 35 C 60 48, 50 60, 35 60 C 45 52, 48 42, 48 35 C 48 28, 45 18, 35 10 Z" />
+      </g>
+    `,
+
+    // Six-spoked Cart / Mill Wheel
+    wheel_spoked: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-40, -40)" stroke="${PALETTE.sable}" stroke-width="1.5">
+        <circle cx="40" cy="40" r="28" fill="${color}" />
+        <circle cx="40" cy="40" r="22" fill="none" stroke="${PALETTE.sable}" stroke-width="1.5" />
+        ${[0, 60, 120, 180, 240, 300].map(deg => `
+          <line x1="40" y1="40" x2="${(40 + 22 * Math.cos(deg * Math.PI / 180)).toFixed(1)}" y2="${(40 + 22 * Math.sin(deg * Math.PI / 180)).toFixed(1)}" stroke="${PALETTE.sable}" stroke-width="2.5" />
+        `).join('')}
+        <circle cx="40" cy="40" r="7" fill="${color}" />
+        <circle cx="40" cy="40" r="3" fill="${PALETTE.sable}" />
+      </g>
+    `,
+
+    // Maritime Anchor
+    anchor: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, stock = PALETTE.wood) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" stroke="${PALETTE.sable}" stroke-width="1.5">
+        <rect x="15" y="24" width="40" height="6" rx="2" fill="${stock}" />
+        <line x1="35" y1="14" x2="35" y2="70" stroke="${color}" stroke-width="5" stroke-linecap="round" />
+        <circle cx="35" cy="14" r="6" fill="none" stroke="${color}" stroke-width="3" />
+        <path d="M 12 50 C 18 76, 52 76, 58 50" fill="none" stroke="${color}" stroke-width="5" stroke-linecap="round" />
+        <polygon points="12,50 6,56 16,56" fill="${color}" />
+        <polygon points="58,50 54,56 64,56" fill="${color}" />
+      </g>
+    `,
+
+    // Classical Roman Column
+    column_roman: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-35, -45)" fill="${color}" stroke="${PALETTE.sable}" stroke-width="1.2">
+        <rect x="18" y="14" width="34" height="6" rx="1.5" />
+        <polygon points="16,14 54,14 48,22 22,22" />
+        <rect x="24" y="22" width="22" height="46" />
+        <line x1="28" y1="23" x2="28" y2="67" stroke="${PALETTE.sable}" stroke-width="0.8" />
+        <line x1="32" y1="23" x2="32" y2="67" stroke="${PALETTE.sable}" stroke-width="0.8" />
+        <line x1="36" y1="23" x2="36" y2="67" stroke="${PALETTE.sable}" stroke-width="0.8" />
+        <line x1="40" y1="23" x2="40" y2="67" stroke="${PALETTE.sable}" stroke-width="0.8" />
+        <polygon points="22,68 48,68 52,74 18,74" />
+        <rect x="16" y="74" width="38" height="6" rx="1" />
+      </g>
     `
+
   };
 
   // =========================================================================
@@ -352,7 +599,52 @@
     lion_rampant: { tarrNoun: 'klimmender Lôwe', enNoun: 'lion rampant', enArticle: 'a' },
     ship: { tarrNoun: 'Kogge', enNoun: 'lymphad under sail', enArticle: 'a' },
     crown: { tarrNoun: 'Keiserkrône', enNoun: 'imperial crown', enArticle: 'an' },
-    dragon: { tarrNoun: 'Drache', enNoun: 'dragon', enArticle: 'a' }
+    dragon: { tarrNoun: 'Drache', enNoun: 'dragon', enArticle: 'a' },
+    sword_crossed: { tarrNoun: 'gekrütztes Swert', tarrPlural: 'gekrützte Swerter', enNoun: 'swords in saltire', enPlural: 'swords in saltire', enArticle: '' },
+    battleaxe: { tarrNoun: 'Strîtbîle', tarrPlural: 'Strîtbîlen', enNoun: 'battleaxe', enPlural: 'battleaxes', enArticle: 'a' },
+    spear: { tarrNoun: 'Spêr', tarrPlural: 'Spêre', enNoun: 'spear with pennon', enPlural: 'spears with pennons', enArticle: 'a' },
+    bow_and_arrow: { tarrNoun: 'Boge mit Pfiil', tarrPlural: 'Bogen mit Pfiilen', enNoun: 'bow and arrow', enPlural: 'bows and arrows', enArticle: 'a' },
+    shield_escutcheon: { tarrNoun: 'Schiltelîn', tarrPlural: 'Schiltelîne', enNoun: 'inescutcheon', enPlural: 'inescutcheons', enArticle: 'an' },
+    stag_attired: { tarrNoun: 'stehender Hirz', tarrPlural: 'stehende Hirze', enNoun: 'stag attired', enPlural: 'stags attired', enArticle: 'a' },
+    bear_rampant: { tarrNoun: 'klimmender Bêr', tarrPlural: 'klimmende Bêren', enNoun: 'bear rampant', enPlural: 'bears rampant', enArticle: 'a' },
+    horse_courant: { tarrNoun: 'lopendes Ros', tarrPlural: 'lopende Rosse', enNoun: 'horse courant', enPlural: 'horses courant', enArticle: 'a' },
+    wolf_statant: { tarrNoun: 'stehender Wolf', tarrPlural: 'stehende Wolfe', enNoun: 'wolf statant', enPlural: 'wolves statant', enArticle: 'a' },
+    fish_twin: { tarrNoun: 'zwên aufsteigende Vische', tarrPlural: 'Vische', enNoun: 'two fish haurient', enPlural: 'fish haurient', enArticle: '' },
+    falcon_perched: { tarrNoun: 'sitzender Valke', tarrPlural: 'sitzende Valken', enNoun: 'falcon perched', enPlural: 'falcons perched', enArticle: 'a' },
+    rose_seeded: { tarrNoun: 'gekernde Rôse', tarrPlural: 'gekernde Rôsen', enNoun: 'heraldic rose', enPlural: 'heraldic roses', enArticle: 'a' },
+    fleur_de_lis: { tarrNoun: 'Lilje', tarrPlural: 'Liljen', enNoun: 'fleur-de-lis', enPlural: 'fleurs-de-lis', enArticle: 'a' },
+    wheatsheaf_garb: { tarrNoun: 'Kornbouche', tarrPlural: 'Kornbouchen', enNoun: 'wheat garb', enPlural: 'wheat garbs', enArticle: 'a' },
+    oak_branch: { tarrNoun: 'Eikentwîch mit Eicheln', tarrPlural: 'Eikentwîge', enNoun: 'oak branch with acorns', enPlural: 'oak branches', enArticle: 'an' },
+    grape_cluster: { tarrNoun: 'Wîntrûbe mit Blat', tarrPlural: 'Wîntrûben', enNoun: 'cluster of grapes', enPlural: 'clusters of grapes', enArticle: 'a' },
+    sun_radiant: { tarrNoun: 'strâlende Sunne', tarrPlural: 'strâlende Sunnen', enNoun: 'sun radiant', enPlural: 'suns radiant', enArticle: 'a' },
+    star_six_pointed: { tarrNoun: 'sechsspitziger Stern', tarrPlural: 'sechsspitzige Sterne', enNoun: 'six-pointed mullet', enPlural: 'six-pointed mullets', enArticle: 'a' },
+    crescent_moon: { tarrNoun: 'Mânschîn', tarrPlural: 'Mânschîne', enNoun: 'crescent moon', enPlural: 'crescent moons', enArticle: 'a' },
+    wheel_spoked: { tarrNoun: 'speichertes Rad', tarrPlural: 'speicherte Reder', enNoun: 'spoked wheel', enPlural: 'spoked wheels', enArticle: 'a' },
+    anchor: { tarrNoun: 'Anker', tarrPlural: 'Ankere', enNoun: 'anchor', enPlural: 'anchors', enArticle: 'an' },
+    column_roman: { tarrNoun: 'rômische Sûle', tarrPlural: 'rômische Sûlen', enNoun: 'Roman column', enPlural: 'Roman columns', enArticle: 'a' }
+  };
+
+  const ORDINARY_BLAZONS = {
+    solid: { key: 'solid', tarr: 'Einfach', en: 'Solid' },
+    per_pale: { key: 'per_pale', tarr: 'Gespalten', en: 'Party per pale' },
+    per_fess: { key: 'per_fess', tarr: 'Geteilt', en: 'Party per fess' },
+    per_bend: { key: 'per_bend', tarr: 'Schräggeteilt', en: 'Party per bend' },
+    per_bend_sinister: { key: 'per_bend_sinister', tarr: 'Links-schräggeteilt', en: 'Party per bend sinister' },
+    quarterly: { key: 'quarterly', tarr: 'Geviert', en: 'Quarterly' },
+    per_saltire: { key: 'per_saltire', tarr: 'Schräggeviert', en: 'Party per saltire' },
+    fess: { key: 'fess', tarr: 'Balken', en: 'Fess' },
+    pale: { key: 'pale', tarr: 'Pfahl', en: 'Pale' },
+    bend: { key: 'bend', tarr: 'Schrägbalken', en: 'Bend' },
+    bend_sinister: { key: 'bend_sinister', tarr: 'Schräglinksbalken', en: 'Bend sinister' },
+    chevron: { key: 'chevron', tarr: 'Sparren', en: 'Chevron' },
+    cross: { key: 'cross', tarr: 'Krütz', en: 'Cross' },
+    saltire: { key: 'saltire', tarr: 'Andreaskrütz', en: 'Saltire' },
+    chief: { key: 'chief', tarr: 'Schildhaupt', en: 'Chief' },
+    bordure: { key: 'bordure', tarr: 'Bordüre', en: 'Bordure' },
+    barry: { key: 'barry', tarr: 'Gestreift', en: 'Barry' },
+    chequy: { key: 'chequy', tarr: 'Geschacht', en: 'Chequy' },
+    pales: { key: 'pales', tarr: 'Gepfählt', en: 'Paly' },
+    pales_undy: { key: 'pales_undy', tarr: 'Wellengepfählt', en: 'Paly undy' }
   };
 
   const CANONICAL_SINOSPHERE_HANZI = {
@@ -367,7 +659,7 @@
     e_amur: '阿穆尔'
   };
 
-  function formatBlazon(fieldKey, chargeKey, chargeColorHex) {
+  function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null) {
     const fieldTinc = TINCTURES[fieldKey] || TINCTURES.gules;
     let chargeTincKey = 'argent';
     if (chargeColorHex === PALETTE.or) chargeTincKey = 'or';
@@ -377,25 +669,114 @@
     else if (chargeColorHex === PALETTE.vert) chargeTincKey = 'vert';
     const chargeTinc = TINCTURES[chargeTincKey] || TINCTURES.argent;
 
+    let ordTincKey = 'argent';
+    if (ordColorHex === PALETTE.or) ordTincKey = 'or';
+    else if (ordColorHex === PALETTE.sable) ordTincKey = 'sable';
+    else if (ordColorHex === PALETTE.gules) ordTincKey = 'gules';
+    else if (ordColorHex === PALETTE.azure) ordTincKey = 'azure';
+    else if (ordColorHex === PALETTE.vert) ordTincKey = 'vert';
+    const ordTinc = TINCTURES[ordTincKey] || TINCTURES.argent;
+
     const chargeMeta = CHARGE_BLAZONS[chargeKey] || {
       tarrNoun: 'Emblem',
+      tarrPlural: 'Embleme',
       enNoun: (chargeKey || 'charge').replace(/_/g, ' '),
+      enPlural: ((chargeKey || 'charge') + 's').replace(/_/g, ' '),
       enArticle: 'a'
     };
 
-    let blazonTarr = '';
+    let chargeTextTarr = '';
+    let chargeTextEn = '';
+    const adj = chargeTinc.tarrAdj;
+    const plAdj = adj.endsWith('er') ? adj.slice(0, -2) + 'e' : (adj.endsWith('en') ? adj : adj + 'e');
+
     if (chargeKey === 'waves') {
-      blazonTarr = `In ${fieldTinc.tarr} Meereswâgen van ${chargeTinc.tarr}`;
+      if (chargeCount === 2) {
+        chargeTextTarr = `zwô Meereswâgen van ${chargeTinc.tarr}`;
+        chargeTextEn = `two waves ${chargeTinc.en}`;
+      } else if (chargeCount >= 3) {
+        chargeTextTarr = `drî Meereswâgen van ${chargeTinc.tarr}`;
+        chargeTextEn = `three waves ${chargeTinc.en}`;
+      } else {
+        chargeTextTarr = `Meereswâgen van ${chargeTinc.tarr}`;
+        chargeTextEn = `waves ${chargeTinc.en}`;
+      }
     } else if (chargeKey === 'keys_st_peter') {
-      blazonTarr = `In ${fieldTinc.tarr} zwên gekrützte Slüttele van Zant Peter van ${chargeTinc.tarr}`;
+      chargeTextTarr = `zwên gekrützte Slüttele van Zant Peter van Golt und Silber`;
+      chargeTextEn = `two keys in saltire of St. Peter Or and Argent`;
+    } else if (chargeCount === 2) {
+      chargeTextTarr = `zwên ${plAdj} ${chargeMeta.tarrPlural || chargeMeta.tarrNoun}`;
+      chargeTextEn = `two ${chargeMeta.enPlural || chargeMeta.enNoun} in pale ${chargeTinc.en}`;
+    } else if (chargeCount >= 3) {
+      chargeTextTarr = `drî ${plAdj} ${chargeMeta.tarrPlural || chargeMeta.tarrNoun}`;
+      chargeTextEn = `three ${chargeMeta.enPlural || chargeMeta.enNoun} ${chargeTinc.en}`;
     } else {
-      const adj = chargeTinc.tarrAdj;
-      blazonTarr = `In ${fieldTinc.tarr} ein ${adj} ${chargeMeta.tarrNoun}`;
+      chargeTextTarr = `ein ${adj} ${chargeMeta.tarrNoun}`;
+      const art = chargeMeta.enArticle ? `${chargeMeta.enArticle} ` : '';
+      chargeTextEn = `${art}${chargeMeta.enNoun} ${chargeTinc.en}`;
     }
 
+    let blazonTarr = '';
     let blazonEn = '';
-    const art = chargeMeta.enArticle ? `${chargeMeta.enArticle} ` : '';
-    blazonEn = `${fieldTinc.en}, ${art}${chargeMeta.enNoun} ${chargeTinc.en}`;
+
+    if (!ordinaryKey || ordinaryKey === 'solid') {
+      blazonTarr = `In ${fieldTinc.tarr} ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'per_pale') {
+      blazonTarr = `Gespalten van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Party per pale ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'per_fess') {
+      blazonTarr = `Geteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Party per fess ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'per_bend') {
+      blazonTarr = `Schräggeteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Party per bend ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'per_bend_sinister') {
+      blazonTarr = `Links-schräggeteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Party per bend sinister ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'quarterly') {
+      blazonTarr = `Geviert van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Quarterly ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'per_saltire') {
+      blazonTarr = `Schräggeviert van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Party per saltire ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'fess') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Balken begleitet van ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a fess ${ordTinc.en} accompanied by ${chargeTextEn}`;
+    } else if (ordinaryKey === 'pale') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Pfahl belegt mit ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a pale ${ordTinc.en} charged with ${chargeTextEn}`;
+    } else if (ordinaryKey === 'bend') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schrägbalken belegt mit ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, on a bend ${ordTinc.en} ${chargeTextEn}`;
+    } else if (ordinaryKey === 'bend_sinister') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schräglinksbalken belegt mit ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, on a bend sinister ${ordTinc.en} ${chargeTextEn}`;
+    } else if (ordinaryKey === 'chevron') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Sparren begleitet van ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a chevron ${ordTinc.en} between ${chargeTextEn}`;
+    } else if (ordinaryKey === 'cross') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Krütz belegt mit ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a cross ${ordTinc.en} charged with ${chargeTextEn}`;
+    } else if (ordinaryKey === 'saltire') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Andreaskrütz belegt mit ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a saltire ${ordTinc.en} charged with ${chargeTextEn}`;
+    } else if (ordinaryKey === 'chief') {
+      blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schildhoubet, im Schilt ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, a chief ${ordTinc.en}, in the field ${chargeTextEn}`;
+    } else if (ordinaryKey === 'bordure') {
+      blazonTarr = `In ${fieldTinc.tarr} innerhalb eines ${ordTinc.tarrAdj.endsWith('er') ? ordTinc.tarrAdj.slice(0, -2) + 'en' : ordTinc.tarrAdj + 'en'} Bordes ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, within a bordure ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'barry') {
+      blazonTarr = `Sechsmâl geteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Barry of six ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'chequy') {
+      blazonTarr = `Geschacht van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Chequy ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else {
+      blazonTarr = `In ${fieldTinc.tarr} ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, ${chargeTextEn}`;
+    }
 
     return { blazonTarr, blazonEn };
   }
@@ -444,7 +825,7 @@
   };
 
   // =========================================================================
-  // 4. Deterministic Hash & Canting Analyzer
+  // 4. Deterministic Hash, Chronological Horizons & Canting Analyzer
   // =========================================================================
   function hashString(str) {
     let hash = 5381;
@@ -453,6 +834,42 @@
       hash = hash & hash;
     }
     return Math.abs(hash);
+  }
+
+  const HORIZON_0_TITLES = new Set([
+    'h_roman_empire', 'e_hre', 'c_roma', 'd_latium', 'k_romagna', 'k_papal_state',
+    'c_byzantion', 'e_byzantium', 'c_tarragona', 'c_barcelona', 'd_barcelona',
+    'c_metz', 'd_upper_lorraine', 'k_lotharingia', 'c_aachen', 'c_trier', 'c_cologne',
+    'c_paris', 'c_alexandria', 'c_antioch', 'c_jerusalem', 'c_lviv', 'c_szekesfehervar'
+  ]);
+
+  const HORIZON_1_EMPIRES = new Set(['e_germany', 'e_france']);
+  const HORIZON_1_KINGDOMS = new Set([
+    'k_germany', 'k_lotharingia', 'k_bavaria', 'k_italy', 'k_burgundy',
+    'k_francia', 'k_aquitaine', 'k_east_francia', 'k_west_francia'
+  ]);
+
+  const HORIZON_2_EMPIRES = new Set(['e_britannia', 'e_carpathia']);
+  const HORIZON_2_KINGDOMS = new Set([
+    'k_england', 'k_bohemia', 'k_poland', 'k_denmark', 'k_croatia',
+    'k_sicily', 'k_hungary', 'k_aragon', 'k_navarra', 'k_castille', 'k_valencia'
+  ]);
+
+  const HORIZON_3_EMPIRES = new Set([
+    'e_scandinavia', 'e_russia', 'e_west_slavia', 'e_wendish_empire',
+    'e_anatolia', 'e_macedonia', 'e_illyria', 'e_maghreb', 'e_africa',
+    'e_aegyptus', 'e_oriens'
+  ]);
+
+  function getChronologicalHorizon(key, props, tier) {
+    const k = (key || '').toLowerCase();
+    if (HORIZON_0_TITLES.has(k)) return 0;
+    const emp = props.empire || props.e_key || '';
+    const kng = props.kingdom || props.k_key || '';
+    if (HORIZON_1_EMPIRES.has(emp) || HORIZON_1_KINGDOMS.has(kng)) return 1;
+    if (HORIZON_2_EMPIRES.has(emp) || HORIZON_2_KINGDOMS.has(kng)) return 2;
+    if (HORIZON_3_EMPIRES.has(emp)) return 3;
+    return 4;
   }
 
   function analyzeTitle(titleKey, props = {}, tier = 'county') {
@@ -522,6 +939,7 @@
         field: 'gules',
         ordinary: 'solid',
         charges: ['eagle_double', 'crown'],
+        chargeCount: 1,
         chargeColor: PALETTE.sable,
         blazonTarr: 'In Keiser-Rôt ein gekrônter doppelter Adler van Swartz mit guldenen Nimben und SPQR-Schilt',
         blazonEn: 'Gules, a double-headed eagle Sable crowned and nimbed Or bearing an inescutcheon Argent inscribed SPQR',
@@ -536,6 +954,7 @@
         field: 'gules',
         ordinary: 'solid',
         charges: ['keys_st_peter'],
+        chargeCount: 1,
         chargeColor: PALETTE.or,
         blazonTarr: 'In Keiser-Rôt zwên gekrützte Slüttele van Zant Peter van Golt und Silber',
         blazonEn: 'Gules, two keys in saltire of St. Peter Or and Argent',
@@ -551,6 +970,7 @@
         field: 'or',
         ordinary: isWavy ? 'pales_undy' : 'pales',
         charges: [],
+        chargeCount: 0,
         chargeColor: PALETTE.gules,
         blazonTarr: isWavy ? 'In Golt vîr wâgende Pâle van Keiser-Rôt' : 'In Golt vîr Pâle van Keiser-Rôt',
         blazonEn: isWavy ? 'Or, four pales undy Gules' : 'Or, four pales Gules',
@@ -566,6 +986,7 @@
         field: isMetz ? 'per_pale' : 'or',
         ordinary: isMetz ? 'per_pale' : 'bend',
         charges: isMetz ? [] : ['alerion'],
+        chargeCount: isMetz ? 0 : 3,
         chargeColor: isMetz ? PALETTE.argent : PALETTE.argent,
         blazonTarr: isMetz ? 'Gespalten van Silber und Swartz' : 'In Golt ein rôter Schrägbalken belegt mit drîn silbern Alerions',
         blazonEn: isMetz ? 'Party per pale Argent and Sable' : 'Or, on a bend Gules three alerions Argent',
@@ -580,6 +1001,7 @@
         field: 'azure',
         ordinary: 'solid',
         charges: ['castrum', 'bell'],
+        chargeCount: 2,
         chargeColor: PALETTE.argent,
         blazonTarr: 'In Lâsûr ein silbern Burch mit drîn Türmen unter einer goldenen Glocke',
         blazonEn: 'Azure, a triple-towered castrum Argent beneath a bell Or',
@@ -594,6 +1016,7 @@
         field: 'gules',
         ordinary: 'solid',
         charges: ['castrum', 'crown'],
+        chargeCount: 2,
         chargeColor: PALETTE.argent,
         blazonTarr: 'In Keiser-Rôt ein wîtze dreitürmige Burch, darüber ein kûninclicher Stûl van Golt',
         blazonEn: 'Gules, a triple-towered castrum Argent surmounted by a royal throne Or',
@@ -608,6 +1031,7 @@
         field: 'gules',
         ordinary: 'cross_byzantine',
         charges: ['cross_byzantine'],
+        chargeCount: 1,
         chargeColor: PALETTE.or,
         blazonTarr: 'In Keiser-Rôt ein gulden Krütz begleitet van vîr Füristeinen',
         blazonEn: 'Gules, a cross between four firesteels Or',
@@ -655,6 +1079,7 @@
         field: fieldColor,
         ordinary: 'solid',
         charges: [calqueCharge],
+        chargeCount: 1,
         hanzi: hanzi || '州',
         hanziChar: charStr,
         chargeColor: PALETTE.or,
@@ -666,9 +1091,12 @@
     }
 
     // 3. Canting Morpheme Toponymic Derivation Engine
+    const horizon = getChronologicalHorizon(key, props, tier);
+
     let detectedField = 'gules';
     let detectedCharge = 'castrum';
     let detectedOrdinary = 'solid';
+    let chargeCount = 1;
 
     // Color detection across multilingual stems
     if (TINCTURE_PATTERNS.argent.test(combinedText)) {
@@ -689,7 +1117,29 @@
       detectedField = fields[h % fields.length];
     }
 
-    // Architectural / topographic morphemes
+    // Ordinary / Partition selection based on Chronological Horizon & Tier
+    // Titles that became administrative earlier (Horizon 0 & 1) get simpler designs (predominantly solid field).
+    // Titles integrated later (Horizon 2, 3, 4) get geometric ordinaries, partitions, and bordures.
+    if (horizon <= 1) {
+      const earlyOrdinaries = ['solid', 'solid', 'solid', 'solid', 'solid', 'solid', 'fess', 'pale', 'per_pale', 'per_fess'];
+      detectedOrdinary = earlyOrdinaries[(h >> 2) % earlyOrdinaries.length];
+    } else if (horizon === 2) {
+      const midOrdinaries = ['solid', 'solid', 'fess', 'pale', 'bend', 'chevron', 'cross', 'per_bend', 'per_fess', 'barry'];
+      detectedOrdinary = midOrdinaries[(h >> 2) % midOrdinaries.length];
+    } else if (horizon === 3) {
+      const lateOrdinaries = ['solid', 'fess', 'bend', 'bend_sinister', 'chevron', 'cross', 'saltire', 'quarterly', 'per_saltire', 'chief', 'bordure', 'barry'];
+      detectedOrdinary = lateOrdinaries[(h >> 2) % lateOrdinaries.length];
+    } else {
+      const frontierOrdinaries = ['fess', 'bend', 'chevron', 'cross', 'saltire', 'quarterly', 'per_saltire', 'chequy', 'bordure', 'chief', 'barry', 'solid'];
+      detectedOrdinary = frontierOrdinaries[(h >> 2) % frontierOrdinaries.length];
+    }
+
+    // Baronies cadency differencing: use bordure or solid to avoid collision with superior duchy/county
+    if (tier === 'barony' && (detectedOrdinary === 'cross' || detectedOrdinary === 'saltire' || detectedOrdinary === 'quarterly') && (h % 3 === 0)) {
+      detectedOrdinary = 'bordure';
+    }
+
+    // Architectural, natural, and expanded toponymic charges
     if (tarrName.includes('burch') || tarrName.includes('kastel') || tarrName.includes('wâr') || tarrName.includes('grad') || origName.includes('burg') || origName.includes('castr')) {
       detectedCharge = 'castrum';
     } else if (tarrName.includes('stat') || tarrName.includes('polis') || origName.includes('gorod') || origName.includes('ville') || origName.includes('civitas')) {
@@ -708,14 +1158,88 @@
       detectedCharge = 'ship';
     } else if (tarrName.includes('lôwe') || origName.includes('lion') || origName.includes('león')) {
       detectedCharge = 'lion_rampant';
+    } else if (tarrName.includes('swert') || tarrName.includes('klinge') || origName.includes('sword') || origName.includes('blade')) {
+      detectedCharge = 'sword_crossed';
+    } else if (tarrName.includes('rôse') || tarrName.includes('rosen') || origName.includes('rose')) {
+      detectedCharge = 'rose_seeded';
+    } else if (tarrName.includes('rad') || tarrName.includes('rade') || origName.includes('wheel') || origName.includes('rad')) {
+      detectedCharge = 'wheel_spoked';
+    } else if (tarrName.includes('hirz') || tarrName.includes('hart') || origName.includes('stag') || origName.includes('hart') || origName.includes('cervo')) {
+      detectedCharge = 'stag_attired';
+    } else if (tarrName.includes('bêr') || tarrName.includes('bern') || origName.includes('bear') || origName.includes('orso') || origName.includes('medved')) {
+      detectedCharge = 'bear_rampant';
+    } else if (tarrName.includes('ros') || tarrName.includes('pfert') || origName.includes('horse') || origName.includes('cheval') || origName.includes('cavallo')) {
+      detectedCharge = 'horse_courant';
+    } else if (tarrName.includes('stern') || origName.includes('star') || origName.includes('stella')) {
+      detectedCharge = 'star_six_pointed';
+    } else if (tarrName.includes('sunne') || origName.includes('sun') || origName.includes('sole')) {
+      detectedCharge = 'sun_radiant';
+    } else if (tarrName.includes('mâne') || origName.includes('moon') || origName.includes('lune')) {
+      detectedCharge = 'crescent_moon';
+    } else if (tarrName.includes('korn') || tarrName.includes('weiz') || origName.includes('wheat') || origName.includes('grain')) {
+      detectedCharge = 'wheatsheaf_garb';
+    } else if (tarrName.includes('lilje') || origName.includes('lily') || origName.includes('lis')) {
+      detectedCharge = 'fleur_de_lis';
+    } else if (tarrName.includes('eik') || tarrName.includes('eich') || origName.includes('oak') || origName.includes('quercia')) {
+      detectedCharge = 'oak_branch';
+    } else if (tarrName.includes('wîn') || tarrName.includes('rebe') || tarrName.includes('trûbe') || origName.includes('wine') || origName.includes('grape')) {
+      detectedCharge = 'grape_cluster';
+    } else if (tarrName.includes('anker') || origName.includes('anchor') || origName.includes('ancora')) {
+      detectedCharge = 'anchor';
+    } else if (tarrName.includes('bîle') || tarrName.includes('axt') || origName.includes('axe') || origName.includes('hache')) {
+      detectedCharge = 'battleaxe';
+    } else if (tarrName.includes('visch') || origName.includes('fish') || origName.includes('poisson') || origName.includes('pesce')) {
+      detectedCharge = 'fish_twin';
+    } else if (tarrName.includes('valke') || origName.includes('falcon') || origName.includes('faucon')) {
+      detectedCharge = 'falcon_perched';
     } else {
-      // Deterministic charges pool
-      const chargeList = ['castrum', 'roman_gate', 'mount_triple', 'ship', 'tree_chestnut', 'lion_rampant', 'waves', 'crown'];
-      detectedCharge = chargeList[(h >> 3) % chargeList.length];
+      // Tier-aware expanded charge pool fallback
+      if (tier === 'empire') {
+        const empirePool = ['eagle_double', 'crown', 'lion_rampant', 'sun_radiant', 'sword_crossed', 'fleur_de_lis', 'dragon'];
+        detectedCharge = empirePool[(h >> 4) % empirePool.length];
+      } else if (tier === 'kingdom') {
+        const kingdomPool = ['crown', 'lion_rampant', 'sword_crossed', 'fleur_de_lis', 'horse_courant', 'bear_rampant', 'stag_attired', 'sun_radiant', 'battleaxe', 'ship'];
+        detectedCharge = kingdomPool[(h >> 4) % kingdomPool.length];
+      } else if (tier === 'barony') {
+        const baronyPool = ['wheel_spoked', 'wheatsheaf_garb', 'rose_seeded', 'star_six_pointed', 'oak_branch', 'anchor', 'fish_twin', 'roman_gate', 'castrum', 'grape_cluster'];
+        detectedCharge = baronyPool[(h >> 4) % baronyPool.length];
+      } else {
+        const generalPool = [
+          'castrum', 'roman_gate', 'mount_triple', 'ship', 'tree_chestnut',
+          'lion_rampant', 'waves', 'crown', 'sword_crossed', 'battleaxe',
+          'stag_attired', 'wolf_statant', 'bear_rampant', 'horse_courant',
+          'falcon_perched', 'fish_twin', 'rose_seeded', 'fleur_de_lis',
+          'wheatsheaf_garb', 'oak_branch', 'sun_radiant', 'star_six_pointed',
+          'crescent_moon', 'wheel_spoked', 'anchor'
+        ];
+        detectedCharge = generalPool[(h >> 4) % generalPool.length];
+      }
+    }
+
+    // Multi-Charge Disambiguation:
+    // Earlier chronological horizons (Horizon 0 and 1) have preference for simpler designs (count = 1).
+    // Later horizons and newly integrated marches feature 2 or 3 charges.
+    if (horizon <= 1 || tier === 'empire') {
+      chargeCount = 1;
+    } else if (horizon === 2) {
+      chargeCount = (h % 4 !== 0) ? 1 : 2;
+    } else if (horizon === 3) {
+      const counts3 = [1, 2, 3, 1, 3];
+      chargeCount = counts3[(h >> 5) % counts3.length];
+    } else {
+      const counts4 = [1, 2, 3, 3, 2, 3];
+      chargeCount = counts4[(h >> 5) % counts4.length];
+    }
+
+    // Certain architectural or large solitary charges look best single
+    if (detectedCharge === 'castrum' || detectedCharge === 'roman_gate' || detectedCharge === 'bridge' || detectedCharge === 'sun_radiant' || detectedCharge === 'eagle_double') {
+      chargeCount = 1;
     }
 
     // Select suitable contrast charge color
     const chargeColor = (detectedField === 'argent' || detectedField === 'or') ? PALETTE.sable : PALETTE.argent;
+    const ordinaryColorHex = (detectedField === 'argent' || detectedField === 'or') ? (detectedField === 'or' ? PALETTE.gules : PALETTE.azure) : PALETTE.argent;
+    const ordinaryColor = (detectedField === 'argent' || detectedField === 'or') ? (detectedField === 'or' ? 'gules' : 'azure') : 'argent';
 
     // Physical medium based on de jure tier
     let chosenMedium = 'bulla_seal';
@@ -730,13 +1254,15 @@
       .replace(/[^a-zA-Z]/g, '')
       .toUpperCase();
 
-    const blazon = formatBlazon(detectedField, detectedCharge, chargeColor);
+    const blazon = formatBlazon(detectedField, detectedCharge, chargeColor, detectedOrdinary, chargeCount, ordinaryColorHex);
 
     return {
       medium: chosenMedium,
       field: detectedField,
       ordinary: detectedOrdinary,
-      charges: [detectedCharge],
+      ordinaryColor: ordinaryColor,
+      charges: Array(chargeCount).fill(detectedCharge),
+      chargeCount: chargeCount,
       chargeColor: chargeColor,
       blazonTarr: blazon.blazonTarr,
       blazonEn: blazon.blazonEn,
@@ -757,10 +1283,12 @@
 
   function renderField(def, width, height, clipId) {
     const fColor = PALETTE[def.field] || PALETTE.gules;
+    const fColor2 = PALETTE[def.ordinaryColor] || (def.field === 'argent' || def.field === 'or' ? PALETTE.gules : PALETTE.argent);
     const clipAttr = clipId ? `clip-path="url(#${clipId})"` : '';
+    const ord = def.ordinary || 'solid';
 
-    if (def.ordinary === 'pales' || def.ordinary === 'pales_undy') {
-      const isUndy = def.ordinary === 'pales_undy';
+    if (ord === 'pales' || ord === 'pales_undy') {
+      const isUndy = ord === 'pales_undy';
       return `
         <g ${clipAttr}>
           <rect x="0" y="0" width="${width}" height="${height}" fill="${PALETTE.or}" />
@@ -776,25 +1304,207 @@
       `;
     }
 
-    if (def.ordinary === 'per_pale') {
+    if (ord === 'per_pale') {
       return `
         <g ${clipAttr}>
-          <rect x="0" y="0" width="${width / 2}" height="${height}" fill="${PALETTE.argent}" />
-          <rect x="${width / 2}" y="0" width="${width / 2}" height="${height}" fill="${PALETTE.sable}" />
+          <rect x="0" y="0" width="${width / 2}" height="${height}" fill="${fColor}" />
+          <rect x="${width / 2}" y="0" width="${width / 2}" height="${height}" fill="${fColor2}" />
         </g>
       `;
     }
 
-    if (def.ordinary === 'bend') {
+    if (ord === 'per_fess') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height / 2}" fill="${fColor}" />
+          <rect x="0" y="${height / 2}" width="${width}" height="${height / 2}" fill="${fColor2}" />
+        </g>
+      `;
+    }
+
+    if (ord === 'per_bend') {
       return `
         <g ${clipAttr}>
           <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
-          <polygon points="0,0 ${width * 0.35},0 ${width},${height * 0.65} ${width},${height} ${width * 0.65},${height} 0,${height * 0.35}" fill="${PALETTE.gules}" stroke="${PALETTE.sable}" stroke-width="1.5" />
+          <polygon points="0,0 ${width},${height} 0,${height}" fill="${fColor2}" />
+        </g>
+      `;
+    }
+
+    if (ord === 'per_bend_sinister') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="${width},0 ${width},${height} 0,${height}" fill="${fColor2}" />
+        </g>
+      `;
+    }
+
+    if (ord === 'quarterly') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <rect x="${width / 2}" y="0" width="${width / 2}" height="${height / 2}" fill="${fColor2}" />
+          <rect x="0" y="${height / 2}" width="${width / 2}" height="${height / 2}" fill="${fColor2}" />
+        </g>
+      `;
+    }
+
+    if (ord === 'per_saltire') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="0,0 ${width / 2},${height / 2} 0,${height}" fill="${fColor2}" />
+          <polygon points="${width},0 ${width / 2},${height / 2} ${width},${height}" fill="${fColor2}" />
+        </g>
+      `;
+    }
+
+    if (ord === 'fess') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <rect x="0" y="${height * 0.35}" width="${width}" height="${height * 0.30}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'pale') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <rect x="${width * 0.35}" y="0" width="${width * 0.30}" height="${height}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'bend') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="0,0 ${width * 0.35},0 ${width},${height * 0.65} ${width},${height} ${width * 0.65},${height} 0,${height * 0.35}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'bend_sinister') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="${width},0 ${width * 0.65},0 0,${height * 0.65} 0,${height} ${width * 0.35},${height} ${width},${height * 0.35}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'chevron') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="0,${height * 0.8} ${width / 2},${height * 0.32} ${width},${height * 0.8} ${width},${height * 0.6} ${width / 2},${height * 0.12} 0,${height * 0.6}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'cross') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <rect x="0" y="${height * 0.38}" width="${width}" height="${height * 0.24}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+          <rect x="${width * 0.38}" y="0" width="${width * 0.24}" height="${height}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'saltire') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <polygon points="0,0 ${width * 0.20},0 ${width},${height * 0.80} ${width},${height} ${width * 0.80},${height} 0,${height * 0.20}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+          <polygon points="${width},0 ${width * 0.80},0 0,${height * 0.80} 0,${height} ${width * 0.20},${height} ${width},${height * 0.20}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'chief') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" />
+          <rect x="0" y="0" width="${width}" height="${height * 0.30}" fill="${fColor2}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'bordure') {
+      return `
+        <g ${clipAttr}>
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${fColor2}" />
+          <rect x="${width * 0.12}" y="${height * 0.12}" width="${width * 0.76}" height="${height * 0.76}" fill="${fColor}" stroke="${PALETTE.sable}" stroke-width="1.2" />
+        </g>
+      `;
+    }
+
+    if (ord === 'barry') {
+      return `
+        <g ${clipAttr}>
+          ${[0, 1, 2, 3, 4, 5].map(i => `<rect x="0" y="${(i * height) / 6}" width="${width}" height="${height / 6 + 0.5}" fill="${i % 2 === 0 ? fColor : fColor2}" />`).join('')}
+        </g>
+      `;
+    }
+
+    if (ord === 'chequy') {
+      return `
+        <g ${clipAttr}>
+          ${Array.from({ length: 16 }).map((_, i) => {
+            const row = Math.floor(i / 4), col = i % 4;
+            return `<rect x="${(col * width) / 4}" y="${(row * height) / 4}" width="${width / 4 + 0.5}" height="${height / 4 + 0.5}" fill="${(row + col) % 2 === 0 ? fColor : fColor2}" />`;
+          }).join('')}
         </g>
       `;
     }
 
     return `<rect x="0" y="0" width="${width}" height="${height}" fill="${fColor}" ${clipAttr} />`;
+  }
+
+  function renderMultiCharges(def, cx, cy, baseScale) {
+    if (!def.charges || def.charges.length === 0) return '';
+    const color = def.chargeColor || PALETTE.or;
+    const count = def.chargeCount || def.charges.length || 1;
+
+    // Handle composite charges (e.g. Székesfehérvár or Lviv)
+    if (def.charges.length > 1 && def.charges[0] !== def.charges[1]) {
+      const sc1 = baseScale * 0.60;
+      const sc2 = baseScale * 0.48;
+      const c1 = def.charges[0];
+      const c2 = def.charges[1];
+      return `
+        ${CHARGES[c1] ? CHARGES[c1](color, sc1, cx, cy + 14) : ''}
+        ${CHARGES[c2] ? CHARGES[c2](color, sc2, cx, cy - 28) : ''}
+      `;
+    }
+
+    const c = def.charges[0];
+    const builder = CHARGES[c];
+    if (!builder) return '';
+
+    if (count === 2) {
+      const dy = Math.round(baseScale * 38);
+      const sc = baseScale * 0.62;
+      return `
+        ${builder(color, sc, cx, cy - dy)}
+        ${builder(color, sc, cx, cy + dy)}
+      `;
+    } else if (count >= 3) {
+      const dx = Math.round(baseScale * 38);
+      const dy = Math.round(baseScale * 25);
+      const sc = baseScale * 0.50;
+      return `
+        ${builder(color, sc, cx - dx, cy - dy)}
+        ${builder(color, sc, cx + dx, cy - dy)}
+        ${builder(color, sc, cx, cy + Math.round(dy * 1.15))}
+      `;
+    }
+
+    return builder(color, baseScale, cx, cy);
   }
 
   // --- A. Imperial Vexillum (Empire Tier) ---
@@ -845,7 +1555,7 @@
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.55, 110, 166) : '').join('')}
             ` : `
               <!-- Standard Charges -->
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.82, 110, 135) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, 110, 135, 0.82) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.82, 110, 135) : '').join('')}
             `}
           </g>
 
@@ -909,7 +1619,7 @@
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.46, 110, 134) : '').join('')}
             ` : `
               <!-- Standard Charges -->
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.72, 110, 105) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, 110, 105, 0.72) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.72, 110, 105) : '').join('')}
             `}
           </g>
         </g>
@@ -962,7 +1672,7 @@
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.45, cx, cy + 50) : '').join('')}
             ` : `
               <!-- Standard Charges -->
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, cx, cy - 25) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, cx, cy - 25, 0.65) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, cx, cy - 25) : '').join('')}
             `}
           </g>
           <!-- Inner Rim Stitching -->
@@ -1036,7 +1746,7 @@
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.42, cx, cy + 24) : '').join('')}
             ` : `
               <!-- Standard Charges -->
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.62, cx, cy) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, cx, cy, 0.62) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.62, cx, cy) : '').join('')}
             `}
           </g>
         </g>
@@ -1133,7 +1843,7 @@
               </text>
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.50, 110, 168) : '').join('')}
             ` : `
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.72, 110, 140) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, 110, 140, 0.72) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor || PALETTE.or, 0.72, 110, 140) : '').join('')}
             `}
           </g>
           <!-- Border Trim -->
@@ -1178,7 +1888,7 @@
               ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.44, 90, 118) : '').join('')}
             ` : `
               <!-- Standard Charges -->
-              ${def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, 90, 95) : '').join('')}
+              ${def.chargeCount > 1 ? renderMultiCharges(def, 90, 95, 0.65) : def.charges.map(c => CHARGES[c] ? CHARGES[c](def.chargeColor, 0.65, 90, 95) : '').join('')}
             `}
           </g>
         </g>
@@ -1274,8 +1984,10 @@
     CHARGES,
     TINCTURES,
     CHARGE_BLAZONS,
+    ORDINARY_BLAZONS,
     TINCTURE_PATTERNS,
     CANONICAL_SINOSPHERE_HANZI,
+    getChronologicalHorizon,
     formatBlazon,
     analyzeTitle
   };

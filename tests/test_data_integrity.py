@@ -781,7 +781,7 @@ class TestSymbolGenerator:
         assert 'fill="${ink}"' in content
 
     def test_charge_builders_uniform_signature(self):
-        """All 17 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
+        """All 39 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
         import re
 
         js_path = DOCS_DIR / "js" / "symbol_generator.js"
@@ -791,8 +791,15 @@ class TestSymbolGenerator:
             "eagle_double", "alerion", "castrum", "roman_gate", "mount_triple",
             "bridge", "waves", "bell", "keys_st_peter", "crozier",
             "cross_patriarchal", "cross_byzantine", "tree_chestnut",
-            "lion_rampant", "ship", "crown", "dragon"
+            "lion_rampant", "ship", "crown", "dragon",
+            "sword_crossed", "battleaxe", "spear", "bow_and_arrow", "shield_escutcheon",
+            "stag_attired", "bear_rampant", "horse_courant", "wolf_statant", "fish_twin",
+            "falcon_perched", "rose_seeded", "fleur_de_lis", "wheatsheaf_garb", "oak_branch",
+            "grape_cluster", "sun_radiant", "star_six_pointed", "crescent_moon", "wheel_spoked",
+            "anchor", "column_roman"
         ]
+
+        assert len(charges) == 39
 
         for charge in charges:
             # Match charge declaration: charge: (arg1, arg2, arg3, arg4...) =>
@@ -912,5 +919,51 @@ class TestSymbolGenerator:
         assert '<!-- Sinitic Hanzi Logograph on Civic Badge -->' in content
         assert 'y="${def.charges.length > 0 ? 70 : 95}"' in content
         assert 'CHARGES[c](def.chargeColor, 0.44, 90, 118)' in content
+
+    def test_expanded_field_ordinaries(self):
+        """Verify presence and valid blazoning of all 19 field ordinaries and geometric partitions."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        ordinaries = [
+            "solid", "per_fess", "per_pale", "per_bend", "per_bend_sinister",
+            "quarterly", "per_saltire", "fess", "pale", "bend", "bend_sinister",
+            "chevron", "cross", "saltire", "chief", "bordure", "barry",
+            "chequy", "pales", "pales_undy"
+        ]
+
+        assert "ORDINARY_BLAZONS" in content, "ORDINARY_BLAZONS dictionary missing"
+        assert "renderField" in content, "renderField function missing"
+
+        for ord_key in ordinaries:
+            assert f"{ord_key}:" in content, f"Missing ordinary {ord_key} in ORDINARY_BLAZONS or renderField"
+
+        # Check renderField SVG partition handlers
+        assert "if (ord === 'per_fess')" in content
+        assert "if (ord === 'per_pale')" in content
+        assert "if (ord === 'per_bend')" in content
+        assert "if (ord === 'quarterly')" in content
+        assert "if (ord === 'chevron')" in content
+        assert "if (ord === 'cross')" in content
+        assert "if (ord === 'saltire')" in content
+        assert "if (ord === 'chequy')" in content
+
+    def test_chronological_horizon_cadency_and_multi_charge(self):
+        """Verify chronological cadency engine and multi-charge layout rendering."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. Horizon determination function and exports
+        assert "getChronologicalHorizon" in content, "Missing getChronologicalHorizon function"
+        assert "getChronologicalHorizon," in content, "getChronologicalHorizon must be exported"
+        assert "renderMultiCharges" in content, "Missing renderMultiCharges function"
+
+        # 2. Multi-charge layout patterns (pale stack and 2-and-1)
+        assert "def.chargeCount > 1 ? renderMultiCharges(def" in content
+        assert "if (count === 2)" in content
+        assert "else if (count >= 3)" in content
+
+        # 3. Blazon generation includes count and ordinary
+        assert "function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null)" in content
 
 
