@@ -1054,7 +1054,7 @@ class TestSymbolGenerator:
 
         violations = []
         for title, data in canon.items():
-            f_col, o_key, chg, chg_col, cnt, o_col = data
+            f_col, o_key, chg, chg_col, cnt, o_col = data[:6]
             field_is_metal = f_col in metals
             charge_is_metal = chg_col in metals
 
@@ -1113,6 +1113,44 @@ class TestSymbolGenerator:
 
         kng_dups = {b: klist for b, klist in kng_blazons.items() if len(klist) > 1}
         assert len(kng_dups) == 0, f"Duplicate kingdom blazons detected: {kng_dups}"
+
+    def test_duchy_heraldic_uniqueness(self, counties_data):
+        """Verify 100% heraldic uniqueness across all 970 geojson duchies and 0 collisions with higher tiers."""
+        canon_path = REPO_DIR / "data" / "canonical_title_heraldry.json"
+        with open(canon_path, "r", encoding="utf-8") as f:
+            canon = json.load(f)
+
+        features = counties_data.get("features", [])
+        duchies = sorted(list(set(f["properties"].get("duchy") for f in features if f["properties"].get("duchy"))))
+        assert len(duchies) == 970, f"Expected 970 duchies, got {len(duchies)}"
+
+        # 1. All 970 geojson duchies present in canon
+        for d in duchies:
+            assert d in canon, f"Duchy {d} missing from canonical heraldry"
+
+        # 2. 100% uniqueness among all 970 duchies
+        duchy_blazons = {}
+        for d in duchies:
+            sig = tuple(canon[d])
+            duchy_blazons.setdefault(sig, []).append(d)
+
+        dups = {b: dlist for b, dlist in duchy_blazons.items() if len(dlist) > 1}
+        assert len(dups) == 0, f"Duplicate duchy blazons detected: {dups}"
+
+        # 3. Zero collisions between duchies and higher-tier realms (empires, kingdoms)
+        higher_blazons = set()
+        for k, spec in canon.items():
+            if k.startswith(('e_', 'k_', 'h_')):
+                higher_blazons.add(tuple(spec))
+                higher_blazons.add(tuple(spec[:6]))
+
+        collisions = []
+        for d in duchies:
+            spec = canon[d]
+            if tuple(spec) in higher_blazons or tuple(spec[:6]) in higher_blazons:
+                collisions.append((d, spec))
+
+        assert len(collisions) == 0, f"Duchy collisions with higher tiers: {collisions}"
 
     def test_charge_builders_tincture_adaptation(self):
         """Verify dynamic contrast immunity for multi-element charges in symbol_generator.js."""

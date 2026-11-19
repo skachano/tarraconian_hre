@@ -28,8 +28,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "k_danelaw": [
     "argent",
@@ -49,43 +50,48 @@
   ],
   "d_sunni": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "gules",
     1,
-    "sable"
+    "azure",
+    "in_chief"
   ],
   "d_shiite": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "vert",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_imami": [
     "vert",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_ismaili": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_nizari": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_zayidi": [
     "vert",
@@ -93,7 +99,8 @@
     "castrum",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_masmudi": [
     "argent",
@@ -101,15 +108,17 @@
     "castrum",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_muwalladi": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "vert",
+    3,
     "azure",
-    1,
-    "or"
+    "two_and_one"
   ],
   "e_golden_horde": [
     "argent",
@@ -329,11 +338,12 @@
   ],
   "d_jomsvikings": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "sable",
+    2,
     "azure",
-    1,
-    "gules"
+    "above_below"
   ],
   "e_latin_empire": [
     "gules",
@@ -441,19 +451,21 @@
   ],
   "d_zaragoza": [
     "gules",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
-    1,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_amalfi": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "e_hre": [
     "or",
@@ -492,8 +504,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_middlesex": [
     "argent",
@@ -588,8 +601,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_northumberland": [
     "or",
@@ -616,12 +630,13 @@
     "azure"
   ],
   "d_lancaster": [
+    "gules",
+    "solid",
+    "rose_seeded",
     "argent",
-    "per_pale",
-    "cross",
-    "or",
     1,
-    "gules"
+    "argent",
+    "in_chief"
   ],
   "c_lancashire": [
     "argent",
@@ -700,8 +715,9 @@
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_norfolk": [
     "argent",
@@ -732,8 +748,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "c_warwickshire": [
     "or",
@@ -812,8 +829,9 @@
     "solid",
     "alerion",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_gloucestershire": [
     "gules",
@@ -900,8 +918,9 @@
     "solid",
     "dragon",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_hampton": [
     "or",
@@ -946,10 +965,11 @@
   "d_cornwall": [
     "sable",
     "solid",
-    "crown",
+    "wheel_spoked",
     "or",
     1,
-    "argent"
+    "or",
+    "in_chief"
   ],
   "c_devon": [
     "or",
@@ -996,8 +1016,9 @@
     "solid",
     "dragon",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_cardiganshire": [
     "sable",
@@ -1060,8 +1081,9 @@
     "solid",
     "lion_rampant",
     "gules",
-    1,
-    "gules"
+    3,
+    "gules",
+    "one_and_two"
   ],
   "c_maldwyn": [
     "argent",
@@ -1121,11 +1143,12 @@
   ],
   "d_deheubarth": [
     "gules",
-    "solid",
+    "bordure",
     "lion_rampant",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_carmarthenshire": [
     "azure",
@@ -1184,12 +1207,13 @@
     "gules"
   ],
   "d_albany": [
-    "azure",
-    "solid",
+    "or",
+    "fess",
     "castrum",
     "or",
     1,
-    "argent"
+    "sable",
+    "in_chief"
   ],
   "c_gowrie": [
     "or",
@@ -1258,10 +1282,11 @@
   "d_the_isles": [
     "gules",
     "solid",
-    "castrum",
+    "ship",
     "or",
-    1,
-    "argent"
+    2,
+    "or",
+    "above_below"
   ],
   "c_isle_of_man": [
     "gules",
@@ -1282,10 +1307,11 @@
   "d_galloway": [
     "azure",
     "solid",
-    "crown",
+    "lion_rampant",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_lennox": [
     "argent",
@@ -1344,12 +1370,13 @@
     "argent"
   ],
   "d_lothian": [
-    "gules",
-    "solid",
-    "lion_rampant",
     "argent",
+    "solid",
+    "castrum",
+    "sable",
     1,
-    "argent"
+    "sable",
+    "in_chief"
   ],
   "c_lothian": [
     "argent",
@@ -1413,7 +1440,8 @@
     "star_six_pointed",
     "argent",
     3,
-    "argent"
+    "argent",
+    "two_and_one"
   ],
   "c_moray": [
     "azure",
@@ -1476,8 +1504,9 @@
     "solid",
     "crown",
     "or",
-    3,
-    "or"
+    1,
+    "or",
+    "in_base"
   ],
   "b_kildare": [
     "argent",
@@ -1497,11 +1526,12 @@
   ],
   "d_ulster": [
     "or",
-    "solid",
     "cross",
-    "gules",
+    "cross",
+    "argent",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_ulster": [
     "or",
@@ -1529,11 +1559,12 @@
   ],
   "d_connacht": [
     "argent",
-    "solid",
-    "oak_branch",
-    "vert",
+    "per_pale",
+    "alerion",
+    "sable",
     1,
-    "vert"
+    "gules",
+    "in_chief"
   ],
   "c_connacht": [
     "argent",
@@ -1556,8 +1587,9 @@
     "solid",
     "lion_rampant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_leinster": [
     "gules",
@@ -1577,11 +1609,12 @@
   ],
   "d_munster": [
     "argent",
-    "solid",
+    "per_fess",
     "lion_rampant",
+    "sable",
+    1,
     "gules",
-    3,
-    "gules"
+    "in_chief"
   ],
   "c_thomond": [
     "gules",
@@ -1637,7 +1670,8 @@
     "fess",
     "or",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "e_germany": [
     "or",
@@ -1660,8 +1694,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_minden": [
     "gules",
@@ -1724,8 +1759,9 @@
     "solid",
     "horse_courant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_osnabruck": [
     "argent",
@@ -1772,8 +1808,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_luneburg": [
     "or",
@@ -1817,11 +1854,12 @@
   ],
   "d_holstein": [
     "gules",
-    "solid",
+    "bordure",
     "castrum",
-    "or",
+    "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_lubeck": [
     "or",
@@ -1860,8 +1898,9 @@
     "solid",
     "crown",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_holland": [
     "or",
@@ -1889,11 +1928,12 @@
   ],
   "d_gelre": [
     "azure",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "c_guelders": [
     "or",
@@ -1924,8 +1964,9 @@
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_nedersticht": [
     "argent",
@@ -1953,11 +1994,12 @@
   ],
   "d_frisia": [
     "azure",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
+    "sable",
     2,
-    "or"
+    "argent",
+    "above_below"
   ],
   "c_dokkum": [
     "azure",
@@ -1993,11 +2035,12 @@
   ],
   "d_luxembourg": [
     "argent",
-    "solid",
-    "crown",
+    "barry",
+    "lion_rampant",
     "gules",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_luxembourg": [
     "argent",
@@ -2053,7 +2096,8 @@
     "lion_rampant",
     "or",
     1,
-    "or"
+    "gules",
+    "in_chief"
   ],
   "c_brabant": [
     "or",
@@ -2109,7 +2153,8 @@
     "crown",
     "sable",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_aachen": [
     "or",
@@ -2137,11 +2182,12 @@
   ],
   "d_upper_lorraine": [
     "or",
-    "solid",
     "bend",
+    "alerion",
+    "argent",
+    3,
     "gules",
-    1,
-    "gules"
+    "above_below"
   ],
   "c_trier": [
     "argent",
@@ -2217,11 +2263,12 @@
   ],
   "d_lower_lorraine": [
     "argent",
-    "solid",
-    "crown",
-    "gules",
+    "fess",
+    "castrum",
+    "argent",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_cologne": [
     "argent",
@@ -2297,11 +2344,12 @@
   ],
   "d_bar": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
     "or",
-    3,
-    "or"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_bar": [
     "azure",
@@ -2345,11 +2393,12 @@
   ],
   "d_bavaria": [
     "argent",
-    "solid",
-    "bend",
-    "azure",
+    "per_fess",
+    "castrum",
+    "sable",
     1,
-    "azure"
+    "gules",
+    "in_base"
   ],
   "c_regensburg": [
     "gules",
@@ -2425,11 +2474,12 @@
   ],
   "d_nordgau": [
     "azure",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
-    3,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "c_eichstadt": [
     "gules",
@@ -2473,11 +2523,12 @@
   ],
   "d_salzburg": [
     "or",
-    "solid",
+    "per_pale",
     "lion_rampant",
     "sable",
     1,
-    "sable"
+    "gules",
+    "in_chief"
   ],
   "c_salzburg": [
     "argent",
@@ -2541,7 +2592,8 @@
     "oak_branch",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_augsburg": [
     "gules",
@@ -2594,10 +2646,11 @@
   "d_steyermark": [
     "vert",
     "solid",
-    "castrum",
-    "or",
+    "dragon",
+    "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_graz": [
     "argent",
@@ -2628,8 +2681,9 @@
     "solid",
     "fess",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_vienna": [
     "sable",
@@ -2701,7 +2755,8 @@
     "alerion",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_innsbruck": [
     "azure",
@@ -2728,12 +2783,13 @@
     "or"
   ],
   "d_carinthia": [
-    "argent",
-    "solid",
-    "castrum",
-    "azure",
+    "or",
+    "per_pale",
+    "lion_rampant",
+    "sable",
     1,
-    "sable"
+    "gules",
+    "in_base"
   ],
   "c_karnten": [
     "or",
@@ -2773,7 +2829,8 @@
     "alerion",
     "azure",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_kranj": [
     "argent",
@@ -2805,7 +2862,8 @@
     "crown",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_frankfurt": [
     "gules",
@@ -2924,8 +2982,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_wurzburg": [
     "argent",
@@ -3021,7 +3080,8 @@
     "crown",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_kassel": [
     "argent",
@@ -3068,8 +3128,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_grisons": [
     "sable",
@@ -3117,7 +3178,8 @@
     "bend",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_strassburg": [
     "argent",
@@ -3154,10 +3216,11 @@
   "d_swabia": [
     "or",
     "solid",
-    "castrum",
+    "lion_rampant",
     "sable",
-    1,
-    "sable"
+    3,
+    "sable",
+    "two_and_one"
   ],
   "c_ulm": [
     "argent",
@@ -3276,8 +3339,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "c_dessau": [
     "or",
@@ -3332,8 +3396,9 @@
     "solid",
     "crown",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_schmalkalden": [
     "azure",
@@ -3540,16 +3605,18 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_strymon": [
     "or",
     "solid",
     "cross",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_mosynopolis": [
     "gules",
@@ -3565,7 +3632,8 @@
     "bend",
     "azure",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_naxos": [
     "or",
@@ -3604,16 +3672,18 @@
     "solid",
     "sword_crossed",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_thessaly": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
     "azure",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "k_epirus": [
     "sable",
@@ -3628,8 +3698,9 @@
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_epeiros": [
     "argent",
@@ -3645,15 +3716,17 @@
     "lion_rampant",
     "or",
     3,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cephalonia": [
     "azure",
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "k_hellas": [
     "argent",
@@ -3669,7 +3742,8 @@
     "column_roman",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_achaia": [
     "or",
@@ -3677,7 +3751,8 @@
     "cross",
     "sable",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_achaia": [
     "azure",
@@ -3705,11 +3780,12 @@
   ],
   "d_krete": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "sable",
+    2,
     "or",
-    1,
-    "argent"
+    "above_below"
   ],
   "c_chandax": [
     "azure",
@@ -3729,11 +3805,12 @@
   ],
   "d_dalmatia": [
     "gules",
-    "solid",
+    "per_fess",
     "lion_rampant",
+    "sable",
+    1,
     "argent",
-    3,
-    "argent"
+    "in_chief"
   ],
   "d_croatia": [
     "gules",
@@ -3741,39 +3818,44 @@
     "star_six_pointed",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_slavonia": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "purpure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_bosna": [
     "gules",
     "solid",
     "bend",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_usora": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "gules"
+    "purpure",
+    2,
+    "gules",
+    "above_below"
   ],
   "d_ragusa": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "gules"
+    "or",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "k_serbia": [
     "gules",
@@ -3789,7 +3871,8 @@
     "eagle_double",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_rashka": [
     "azure",
@@ -3801,11 +3884,12 @@
   ],
   "d_macva": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "vert",
     1,
-    "gules"
+    "azure",
+    "in_chief"
   ],
   "d_duklja": [
     "gules",
@@ -3813,7 +3897,8 @@
     "bend",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_bosnia": [
     "azure",
@@ -3841,11 +3926,12 @@
   ],
   "d_vidin": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_vidin": [
     "gules",
@@ -3861,7 +3947,8 @@
     "lion_rampant",
     "purpure",
     3,
-    "purpure"
+    "purpure",
+    "in_chief"
   ],
   "c_nikopolis": [
     "gules",
@@ -3876,24 +3963,27 @@
     "solid",
     "cross",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "d_bulgaria": [
     "sable",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
-    3,
-    "or"
+    "vert",
+    1,
+    "argent",
+    "in_chief"
   ],
   "d_philippopolis": [
     "argent",
     "solid",
     "crescent_moon",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_philippopolis": [
     "argent",
@@ -3925,7 +4015,8 @@
     "crescent_moon",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_nikaea": [
     "gules",
@@ -3937,11 +4028,12 @@
   ],
   "d_opsikion": [
     "or",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    2,
     "gules",
-    1,
-    "gules"
+    "above_below"
   ],
   "c_nikaea": [
     "azure",
@@ -3956,8 +4048,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "azure"
+    3,
+    "azure",
+    "two_and_one"
   ],
   "d_thracesia": [
     "argent",
@@ -3965,23 +4058,26 @@
     "chevron",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_optimatoi": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
+    "vert",
+    2,
     "argent",
-    3,
-    "argent"
+    "above_below"
   ],
   "d_bucellaria": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "azure"
+    "sable",
+    2,
+    "gules",
+    "above_below"
   ],
   "k_anatolia": [
     "azure",
@@ -3993,11 +4089,12 @@
   ],
   "d_cilicia": [
     "or",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "gules",
+    "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_seleucia": [
     "argent",
@@ -4012,8 +4109,9 @@
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_anatolia": [
     "argent",
@@ -4021,7 +4119,8 @@
     "cross",
     "vert",
     3,
-    "vert"
+    "vert",
+    "in_chief"
   ],
   "d_cappadocia": [
     "sable",
@@ -4029,15 +4128,17 @@
     "fess",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_charsianon": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "k_pontus": [
     "argent",
@@ -4053,31 +4154,35 @@
     "star_six_pointed",
     "argent",
     3,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_armeniac": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
-    1,
-    "sable"
+    "azure",
+    2,
+    "gules",
+    "above_below"
   ],
   "d_sebasteia": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_chaldia": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "vert"
+    2,
+    "vert",
+    "above_below"
   ],
   "k_armenia": [
     "or",
@@ -4092,16 +4197,18 @@
     "solid",
     "lion_rampant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_vaspurakan": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "azure",
+    2,
+    "argent",
+    "above_below"
   ],
   "k_georgia": [
     "argent",
@@ -4132,8 +4239,9 @@
     "solid",
     "lion_rampant",
     "argent",
-    2,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_kakheti": [
     "argent",
@@ -4157,7 +4265,8 @@
     "alerion",
     "sable",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_palermo": [
     "gules",
@@ -4205,7 +4314,8 @@
     "castrum",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_benevento": [
     "gules",
@@ -4228,8 +4338,9 @@
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_capua": [
     "gules",
@@ -4252,8 +4363,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "c_apulia": [
     "azure",
@@ -4285,7 +4397,8 @@
     "bend",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_salerno": [
     "argent",
@@ -4308,8 +4421,9 @@
     "solid",
     "cross",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_reggio_calabria": [
     "or",
@@ -4348,8 +4462,9 @@
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "one_and_two"
   ],
   "c_venezia": [
     "azure",
@@ -4428,8 +4543,9 @@
     "solid",
     "crown",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_aquileia": [
     "azure",
@@ -4460,8 +4576,9 @@
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "c_verona": [
     "azure",
@@ -4501,7 +4618,8 @@
     "castrum",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_monferrato": [
     "argent",
@@ -4545,11 +4663,12 @@
   ],
   "d_lombardia": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "sable",
     1,
-    "gules"
+    "gules",
+    "in_base"
   ],
   "c_lombardia": [
     "argent",
@@ -4620,8 +4739,9 @@
     "solid",
     "cross",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_genoa": [
     "gules",
@@ -4652,8 +4772,9 @@
     "solid",
     "crown",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_modena": [
     "azure",
@@ -4685,7 +4806,8 @@
     "cross",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_pisa": [
     "gules",
@@ -4704,12 +4826,13 @@
     "gules"
   ],
   "d_toscana": [
-    "gules",
+    "argent",
     "solid",
-    "castrum",
-    "or",
+    "fleur_de_lis",
+    "gules",
     1,
-    "argent"
+    "gules",
+    "in_chief"
   ],
   "c_firenze": [
     "argent",
@@ -4756,8 +4879,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "k_sardinia": [
     "vert",
@@ -4772,8 +4896,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_ajaccio": [
     "gules",
@@ -4801,11 +4926,12 @@
   ],
   "d_sardinia": [
     "argent",
-    "solid",
     "cross",
-    "gules",
+    "cross",
+    "or",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_cagliari": [
     "or",
@@ -4861,7 +4987,8 @@
     "eagle_double",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_ravenna": [
     "or",
@@ -4900,8 +5027,9 @@
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_ancona": [
     "gules",
@@ -4929,11 +5057,12 @@
   ],
   "d_spoleto": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "or",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_spoleto": [
     "argent",
@@ -4985,11 +5114,12 @@
   ],
   "d_latium": [
     "gules",
-    "chequy",
-    "crown",
-    "azure",
-    1,
-    "or"
+    "solid",
+    "keys_st_peter",
+    "or",
+    2,
+    "or",
+    "flanked"
   ],
   "c_roma": [
     "gules",
@@ -5037,7 +5167,8 @@
     "bear_rampant",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_duortnoseatnu": [
     "gules",
@@ -5045,7 +5176,8 @@
     "pale",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_finland": [
     "gules",
@@ -5060,8 +5192,9 @@
     "solid",
     "sword_crossed",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "one_and_two"
   ],
   "d_savo": [
     "sable",
@@ -5069,7 +5202,8 @@
     "bow_and_arrow",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_pohjanmaa": [
     "or",
@@ -5077,15 +5211,17 @@
     "bear_rampant",
     "sable",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "d_karelia": [
     "gules",
     "solid",
     "bear_rampant",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "e_wendish_empire": [
     "sable",
@@ -5108,8 +5244,9 @@
     "solid",
     "dragon",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "d_nordmark": [
     "azure",
@@ -5117,7 +5254,8 @@
     "dragon",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_mecklenburg": [
     "or",
@@ -5164,8 +5302,9 @@
     "solid",
     "dragon",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_danzig": [
     "gules",
@@ -5188,8 +5327,9 @@
     "solid",
     "crown",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_brandenburg": [
     "argent",
@@ -5233,27 +5373,30 @@
   ],
   "d_lithuanians": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "flanked"
   ],
   "d_prussia": [
     "argent",
     "solid",
     "alerion",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_courland": [
     "azure",
     "solid",
     "stag_attired",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_samogitia": [
     "gules",
@@ -5261,7 +5404,8 @@
     "bear_rampant",
     "or",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "d_latgalians": [
     "gules",
@@ -5269,7 +5413,8 @@
     "dragon",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_talava": [
     "argent",
@@ -5289,11 +5434,12 @@
   ],
   "d_esthonia": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
     "sable",
     1,
-    "azure"
+    "gules",
+    "in_chief"
   ],
   "c_osel": [
     "azure",
@@ -5308,8 +5454,9 @@
     "solid",
     "cross",
     "sable",
-    1,
-    "sable"
+    3,
+    "sable",
+    "two_and_one"
   ],
   "k_livonia": [
     "argent",
@@ -5348,8 +5495,9 @@
     "solid",
     "alerion",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_krakowska": [
     "gules",
@@ -5396,8 +5544,9 @@
     "solid",
     "alerion",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_kaliska": [
     "argent",
@@ -5420,8 +5569,9 @@
     "solid",
     "alerion",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_plocka": [
     "gules",
@@ -5453,7 +5603,8 @@
     "alerion",
     "or",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_opole": [
     "azure",
@@ -5508,8 +5659,9 @@
     "solid",
     "alerion",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "c_breslau": [
     "gules",
@@ -5541,7 +5693,8 @@
     "lion_rampant",
     "gules",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_kujawy": [
     "or",
@@ -5581,7 +5734,8 @@
     "alerion",
     "gules",
     3,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_praha": [
     "sable",
@@ -5669,7 +5823,8 @@
     "crown",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_olomouc": [
     "argent",
@@ -5716,16 +5871,18 @@
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_halych": [
     "argent",
     "solid",
     "falcon_perched",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_cherven_cities": [
     "azure",
@@ -5733,7 +5890,8 @@
     "lion_rampant",
     "gules",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_sorbia": [
     "gules",
@@ -5748,8 +5906,9 @@
     "solid",
     "crown",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_meissen": [
     "or",
@@ -5820,8 +5979,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "c_juterbog": [
     "argent",
@@ -5892,16 +6052,18 @@
     "solid",
     "bow_and_arrow",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_chernigov": [
     "sable",
     "solid",
     "cross",
     "argent",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "c_chernigov": [
     "argent",
@@ -5924,16 +6086,18 @@
     "solid",
     "spear",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_luki": [
     "gules",
-    "solid",
+    "per_fess",
     "bow_and_arrow",
-    "or",
-    3,
-    "or"
+    "sable",
+    1,
+    "argent",
+    "in_chief"
   ],
   "k_white_rus": [
     "gules",
@@ -5948,8 +6112,9 @@
     "solid",
     "bear_rampant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_pinsk": [
     "argent",
@@ -5957,15 +6122,17 @@
     "bow_and_arrow",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_polotsk": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "vert",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_polotsk": [
     "argent",
@@ -5980,8 +6147,9 @@
     "solid",
     "bear_rampant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_smolensk": [
     "gules",
@@ -6001,11 +6169,12 @@
   ],
   "d_opolye": [
     "gules",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
-    1,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "c_yaroslavl": [
     "or",
@@ -6028,8 +6197,9 @@
     "solid",
     "horse_courant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_ryazan": [
     "gules",
@@ -6045,7 +6215,8 @@
     "stag_attired",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "k_bjarmaland": [
     "gules",
@@ -6073,11 +6244,12 @@
   ],
   "d_crimea": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "vert",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_caucasus": [
     "vert",
@@ -6205,7 +6377,8 @@
     "bow_and_arrow",
     "gules",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_ulaanbaatar": [
     "azure",
@@ -6229,7 +6402,8 @@
     "chevron",
     "or",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "k_tuva": [
     "sable",
@@ -6249,11 +6423,12 @@
   ],
   "d_khakass_hollow": [
     "vert",
-    "chevron",
+    "per_fess",
     "crescent_moon",
-    "or",
-    2,
-    "argent"
+    "sable",
+    1,
+    "argent",
+    "in_chief"
   ],
   "k_buryatia": [
     "azure",
@@ -6357,7 +6532,8 @@
     "sun_radiant",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_bukhara": [
     "or",
@@ -6393,11 +6569,12 @@
   ],
   "d_isfahan": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "azure",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_bam": [
     "or",
@@ -6412,16 +6589,18 @@
     "solid",
     "bow_and_arrow",
     "azure",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "d_kermanshah": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_kermanshah": [
     "gules",
@@ -6444,8 +6623,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_ghur": [
     "or",
@@ -6461,7 +6641,8 @@
     "bow_and_arrow",
     "azure",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_balkh": [
     "sable",
@@ -6529,11 +6710,12 @@
   ],
   "d_samarra": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_samarra": [
     "sable",
@@ -6548,8 +6730,9 @@
     "solid",
     "bow_and_arrow",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_baghdad": [
     "argent",
@@ -6597,23 +6780,26 @@
     "alerion",
     "argent",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "d_muntenia": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "vert"
+    2,
+    "vert",
+    "flanked"
   ],
   "d_oltenia": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "k_moldavia": [
     "gules",
@@ -6629,7 +6815,8 @@
     "star_six_pointed",
     "or",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_suceava": [
     "argent",
@@ -6645,7 +6832,8 @@
     "star_six_pointed",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_hungary": [
     "gules",
@@ -6657,11 +6845,12 @@
   ],
   "d_visegrad": [
     "azure",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_base"
   ],
   "c_szekesfehervar": [
     "azure",
@@ -6677,7 +6866,8 @@
     "fess",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_baranya": [
     "gules",
@@ -6692,8 +6882,9 @@
     "solid",
     "cross_patriarchal",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_ungvar": [
     "or",
@@ -6701,7 +6892,8 @@
     "bear_rampant",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_abauj": [
     "gules",
@@ -6717,7 +6909,8 @@
     "cross",
     "or",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_marmaros": [
     "gules",
@@ -6733,39 +6926,44 @@
     "alerion",
     "or",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "d_bihar": [
     "gules",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_temes": [
     "azure",
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_bacs": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "gules"
+    "or",
+    2,
+    "gules",
+    "above_below"
   ],
   "d_gyor": [
     "gules",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_gyor": [
     "azure",
@@ -6777,11 +6975,12 @@
   ],
   "d_syrmia": [
     "azure",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
-    3,
-    "or"
+    "vert",
+    1,
+    "argent",
+    "in_chief"
   ],
   "c_szerem": [
     "gules",
@@ -6808,12 +7007,13 @@
     "or"
   ],
   "d_valois": [
-    "gules",
-    "solid",
+    "azure",
+    "bordure",
     "fleur_de_lis",
     "or",
     3,
-    "azure"
+    "or",
+    "two_and_one"
   ],
   "c_ile_de_france": [
     "azure",
@@ -6976,12 +7176,13 @@
     "azure"
   ],
   "d_berry": [
-    "gules",
-    "solid",
+    "azure",
+    "bordure",
     "fleur_de_lis",
     "or",
     3,
-    "azure"
+    "argent",
+    "two_and_one"
   ],
   "c_berry": [
     "argent",
@@ -7025,11 +7226,12 @@
   ],
   "d_anjou": [
     "azure",
-    "solid",
+    "per_fess",
     "fleur_de_lis",
-    "or",
-    3,
-    "or"
+    "sable",
+    1,
+    "argent",
+    "in_base"
   ],
   "c_anjou": [
     "azure",
@@ -7082,10 +7284,11 @@
   "d_normandy": [
     "gules",
     "solid",
-    "castrum",
+    "lion_rampant",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_rouen": [
     "gules",
@@ -7169,11 +7372,12 @@
   ],
   "d_orleans": [
     "azure",
-    "solid",
+    "bordure",
     "fleur_de_lis",
     "or",
     3,
-    "or"
+    "argent",
+    "one_and_two"
   ],
   "c_orleans": [
     "argent",
@@ -7265,11 +7469,12 @@
   ],
   "d_champagne": [
     "azure",
-    "solid",
     "bend",
-    "argent",
+    "bend",
+    "azure",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_reims": [
     "azure",
@@ -7345,11 +7550,12 @@
   ],
   "d_burgundy": [
     "azure",
-    "solid",
-    "castrum",
+    "bordure",
+    "bend",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_dijon": [
     "azure",
@@ -7461,7 +7667,8 @@
     "lion_rampant",
     "sable",
     1,
-    "sable"
+    "gules",
+    "in_chief"
   ],
   "c_brugge": [
     "argent",
@@ -7548,8 +7755,9 @@
     "solid",
     "lion_rampant",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_bordeaux": [
     "or",
@@ -7620,8 +7828,9 @@
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_angouleme": [
     "or",
@@ -7706,10 +7915,11 @@
   "d_toulouse": [
     "gules",
     "solid",
-    "cross",
+    "cross_byzantine",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_toulouse": [
     "gules",
@@ -7757,7 +7967,8 @@
     "cross",
     "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_albi": [
     "gules",
@@ -7818,10 +8029,11 @@
   "d_armagnac": [
     "argent",
     "solid",
-    "crown",
+    "lion_rampant",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "c_armagnac": [
     "argent",
@@ -7865,11 +8077,12 @@
   ],
   "d_poitou": [
     "argent",
-    "solid",
+    "bordure",
     "lion_rampant",
     "gules",
     1,
-    "gules"
+    "sable",
+    "in_chief"
   ],
   "c_poitiers": [
     "argent",
@@ -7922,10 +8135,11 @@
   "d_auvergne": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "shield_escutcheon",
+    "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_auvergne": [
     "or",
@@ -7977,11 +8191,12 @@
   ],
   "d_bourbon": [
     "azure",
-    "solid",
+    "bend",
     "fleur_de_lis",
-    "or",
+    "gules",
     3,
-    "gules"
+    "argent",
+    "two_and_one"
   ],
   "c_bourbon": [
     "or",
@@ -8032,12 +8247,13 @@
     "sable"
   ],
   "d_brittany": [
-    "or",
+    "argent",
     "solid",
-    "castrum",
+    "cross",
     "sable",
     1,
-    "azure"
+    "sable",
+    "in_chief"
   ],
   "c_vannes": [
     "gules",
@@ -8121,11 +8337,12 @@
   ],
   "d_provence": [
     "or",
-    "solid",
-    "castrum",
-    "sable",
+    "pale",
+    "rose_seeded",
+    "or",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_venaissin": [
     "or",
@@ -8221,7 +8438,8 @@
     "alerion",
     "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_savoie": [
     "gules",
@@ -8273,11 +8491,12 @@
   ],
   "d_dauphine": [
     "or",
-    "solid",
-    "castrum",
-    "sable",
+    "fess",
+    "fish_twin",
+    "or",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_lyon": [
     "gules",
@@ -8373,7 +8592,8 @@
     "crown",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_besancon": [
     "gules",
@@ -8421,7 +8641,8 @@
     "eagle_double",
     "gules",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_bern": [
     "gules",
@@ -8485,7 +8706,8 @@
     "crown",
     "gules",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_cordoba": [
     "argent",
@@ -8500,8 +8722,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_granada": [
     "argent",
@@ -8524,8 +8747,9 @@
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_cuenca": [
     "gules",
@@ -8548,8 +8772,9 @@
     "solid",
     "castrum",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_lisboa": [
     "or",
@@ -8572,8 +8797,9 @@
     "solid",
     "crown",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_badajoz": [
     "azure",
@@ -8596,8 +8822,9 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "k_valencia": [
     "or",
@@ -8613,7 +8840,8 @@
     "bend",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_valencia": [
     "or",
@@ -8645,15 +8873,17 @@
     "bend",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_murcia": [
     "gules",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
-    3,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "flanked"
   ],
   "k_castille": [
     "gules",
@@ -8665,19 +8895,21 @@
   ],
   "d_castilla": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "argent",
+    1,
     "or",
-    3,
-    "or"
+    "in_chief"
   ],
   "d_cantabria": [
     "argent",
     "solid",
     "cross",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "k_aragon": [
     "or",
@@ -8692,8 +8924,9 @@
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "c_zaragoza": [
     "gules",
@@ -8729,11 +8962,12 @@
   ],
   "d_barcelona": [
     "or",
-    "solid",
+    "pales",
     "castrum",
-    "sable",
+    "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_barcelona": [
     "or",
@@ -8801,11 +9035,12 @@
   ],
   "d_navarra": [
     "gules",
-    "solid",
+    "saltire",
     "cross",
-    "or",
+    "gules",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_navarra": [
     "or",
@@ -8852,8 +9087,9 @@
     "solid",
     "lion_rampant",
     "purpure",
-    1,
-    "purpure"
+    2,
+    "purpure",
+    "above_below"
   ],
   "c_leon": [
     "argent",
@@ -8876,8 +9112,9 @@
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_asturias_de_oviedo": [
     "azure",
@@ -8900,8 +9137,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_coruna": [
     "argent",
@@ -8940,8 +9178,9 @@
     "solid",
     "cross",
     "azure",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "c_porto": [
     "argent",
@@ -8965,7 +9204,8 @@
     "fleur_de_lis",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "c_castelo_branco": [
     "gules",
@@ -9025,11 +9265,12 @@
   ],
   "d_bejaia": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "k_africa": [
     "or",
@@ -9140,8 +9381,9 @@
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_alexandria": [
     "azure",
@@ -9157,7 +9399,8 @@
     "castrum",
     "gules",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_cairo": [
     "azure",
@@ -9196,8 +9439,9 @@
     "solid",
     "alerion",
     "sable",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_ghazza": [
     "gules",
@@ -9252,8 +9496,9 @@
     "solid",
     "cross_patriarchal",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_alexandretta": [
     "argent",
@@ -9265,11 +9510,12 @@
   ],
   "d_lebanon": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_base"
   ],
   "c_tripoli": [
     "gules",
@@ -9317,7 +9563,8 @@
     "bend",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "k_nubia": [
     "argent",
@@ -9329,11 +9576,12 @@
   ],
   "d_makuria": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "purpure",
+    2,
     "azure",
-    1,
-    "sable"
+    "above_below"
   ],
   "c_atbara": [
     "vert",
@@ -9413,7 +9661,8 @@
     "crescent_moon",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_lamu": [
     "vert",
@@ -9428,8 +9677,9 @@
     "solid",
     "waves",
     "azure",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "c_mombasa": [
     "argent",
@@ -9452,8 +9702,9 @@
     "solid",
     "crescent_moon",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_mrima": [
     "azure",
@@ -9953,27 +10204,30 @@
   ],
   "d_JAV_mataram": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "purpure",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_laamp_sabbah": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "azure",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_laamp_wake": [
     "or",
     "solid",
     "lion_rampant",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "d_laamp_el_cid": [
     "vert",
@@ -9981,15 +10235,17 @@
     "bend",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_laamp_crispin": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_laamp_suleyman": [
     "azure",
@@ -9997,39 +10253,44 @@
     "alerion",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_laamp_wallada": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "azure"
+    "vert",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_laamp_kizil_buga": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_laamp_andronikos_komnenos": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
+    "azure",
     1,
-    "sable"
+    "gules",
+    "in_chief"
   ],
   "d_laamp_raoul": [
     "azure",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "k_adiukru": [
     "argent",
@@ -10537,43 +10798,48 @@
   ],
   "d_dongji": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "vert",
+    2,
     "azure",
-    1,
-    "or"
+    "above_below"
   ],
   "d_biansong": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_shanguo": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_zhenghua": [
     "or",
     "solid",
     "castrum",
     "sable",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_chenxu": [
     "argent",
     "solid",
     "castrum",
     "azure",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "k_qingxu": [
     "gules",
@@ -10588,32 +10854,36 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    3,
+    "sable",
+    "two_and_one"
   ],
   "d_yanhai": [
     "gules",
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_xusi": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_yuncao": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "k_hebei": [
     "or",
@@ -10625,11 +10895,12 @@
   ],
   "d_weibo": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
     "sable",
-    1,
-    "azure"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_xingming": [
     "azure",
@@ -10637,31 +10908,35 @@
     "fish_twin",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_chengde": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
     "sable",
-    1,
-    "azure"
+    2,
+    "gules",
+    "above_below"
   ],
   "d_cangjing": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "or"
+    "purpure",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_heyang": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "purpure",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "k_hedong": [
     "or",
@@ -10676,32 +10951,36 @@
     "solid",
     "fish_twin",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_yanmen": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
-    1,
-    "gules"
+    "vert",
+    2,
+    "gules",
+    "above_below"
   ],
   "d_hezhong": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
-    1,
-    "sable"
+    "purpure",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_zelu": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "purpure",
+    2,
     "or",
-    1,
-    "or"
+    "above_below"
   ],
   "k_youji": [
     "gules",
@@ -10713,27 +10992,30 @@
   ],
   "d_youzhou": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "purpure",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_yideng": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "sable",
     1,
-    "gules"
+    "azure",
+    "in_chief"
   ],
   "d_yingmo": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "k_daibei": [
     "sable",
@@ -10748,24 +11030,27 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_sanggan": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_xinan": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
-    1,
-    "sable"
+    "azure",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "e_yongliang": [
     "argent",
@@ -10788,64 +11073,72 @@
     "solid",
     "castrum",
     "azure",
-    1,
-    "sable"
+    3,
+    "sable",
+    "two_and_one"
   ],
   "d_fengxiang": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_jinshang": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_binning": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "purpure",
     1,
-    "sable"
+    "azure",
+    "in_chief"
   ],
   "d_fufang": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_jingyuan": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "or",
+    3,
     "azure",
-    1,
-    "sable"
+    "two_and_one"
   ],
   "d_qincheng": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "purpure",
+    3,
     "azure",
-    1,
-    "sable"
+    "two_and_one"
   ],
   "d_xingfeng": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "k_hexi": [
     "gules",
@@ -10857,35 +11150,39 @@
   ],
   "d_hexi": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "sable",
+    3,
     "azure",
-    1,
-    "gules"
+    "two_and_one"
   ],
   "d_longyou": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "purpure",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_gansu": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "sable",
     1,
-    "argent"
+    "or",
+    "in_chief"
   ],
   "d_guasha": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
     "azure",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "k_xia": [
     "sable",
@@ -10897,51 +11194,57 @@
   ],
   "d_shuofang": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "azure",
+    2,
     "or",
-    1,
-    "sable"
+    "above_below"
   ],
   "d_xiasui": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "d_tiande": [
     "gules",
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "d_langshan": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_xiutu": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "azure",
+    3,
     "or",
-    1,
-    "sable"
+    "two_and_one"
   ],
   "d_juyan": [
     "sable",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "gules"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "e_jingyang": [
     "gules",
@@ -10964,16 +11267,18 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "d_xuanshe": [
     "azure",
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "gules",
+    "flanked"
   ],
   "k_liangzhe": [
     "purpure",
@@ -10989,15 +11294,17 @@
     "castrum",
     "azure",
     1,
-    "purpure"
+    "purpure",
+    "in_chief"
   ],
   "d_zhedong": [
     "purpure",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "k_fujian": [
     "azure",
@@ -11009,19 +11316,21 @@
   ],
   "d_weiwu": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_pinghai": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "vert",
     1,
-    "azure"
+    "gules",
+    "in_chief"
   ],
   "c_zhangzhou": [
     "sable",
@@ -11033,11 +11342,12 @@
   ],
   "d_jianning": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "k_huainan": [
     "purpure",
@@ -11053,7 +11363,8 @@
     "castrum",
     "or",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_yangzhou": [
     "purpure",
@@ -11069,7 +11380,8 @@
     "castrum",
     "or",
     1,
-    "purpure"
+    "purpure",
+    "in_chief"
   ],
   "k_jiangxi": [
     "purpure",
@@ -11084,8 +11396,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "purpure"
+    2,
+    "purpure",
+    "above_below"
   ],
   "d_dingjiang": [
     "or",
@@ -11093,15 +11406,17 @@
     "castrum",
     "sable",
     1,
-    "purpure"
+    "purpure",
+    "in_chief"
   ],
   "d_zhaoxin": [
     "purpure",
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "k_shannan": [
     "gules",
@@ -11113,27 +11428,30 @@
   ],
   "d_xiangdeng": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
+    "vert",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_jingnan": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "azure",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_eyue": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "purpure",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "k_hunan": [
     "gules",
@@ -11145,19 +11463,21 @@
   ],
   "d_hunan": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "purpure",
+    3,
     "or",
-    1,
-    "or"
+    "two_and_one"
   ],
   "d_lingling": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "vert",
+    2,
     "or",
-    1,
-    "or"
+    "above_below"
   ],
   "e_liangyi": [
     "azure",
@@ -11180,16 +11500,18 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "flanked"
   ],
   "d_qiongnan": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "or"
+    "purpure",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_meizhou": [
     "vert",
@@ -11209,27 +11531,30 @@
   ],
   "d_xingyuan": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_lilang": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_baqu": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "azure"
+    "vert",
+    2,
+    "gules",
+    "above_below"
   ],
   "k_dongchuan": [
     "azure",
@@ -11241,19 +11566,21 @@
   ],
   "d_dongchuan": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "azure"
+    "sable",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_wuxin": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "k_kuizhou": [
     "sable",
@@ -11268,24 +11595,27 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "vert"
+    3,
+    "vert",
+    "two_and_one"
   ],
   "d_qianzhong": [
     "azure",
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_wuxi": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "k_qianzhong": [
     "azure",
@@ -11297,43 +11627,48 @@
   ],
   "d_luodian": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_luoshi": [
     "azure",
     "solid",
     "castrum",
     "or",
-    1,
-    "vert"
+    2,
+    "vert",
+    "above_below"
   ],
   "d_shimen": [
     "vert",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
-    1,
-    "argent"
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_zangke": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "d_xiyuan": [
     "argent",
     "solid",
     "castrum",
     "azure",
-    1,
-    "azure"
+    3,
+    "azure",
+    "two_and_one"
   ],
   "k_dali": [
     "argent",
@@ -11345,51 +11680,57 @@
   ],
   "d_dali": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
+    "or",
+    2,
     "azure",
-    1,
-    "or"
+    "above_below"
   ],
   "d_jianchuan": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
+    "or",
     1,
-    "or"
+    "azure",
+    "in_chief"
   ],
   "d_huichuan": [
     "argent",
     "solid",
     "castrum",
     "azure",
-    1,
-    "azure"
+    2,
+    "azure",
+    "flanked"
   ],
   "d_yinsheng": [
     "azure",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_tuodong": [
     "azure",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_tonghai": [
     "argent",
     "solid",
     "castrum",
     "azure",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "e_lingnan": [
     "vert",
@@ -11409,35 +11750,39 @@
   ],
   "d_lingnan": [
     "vert",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_huixun": [
     "argent",
     "solid",
     "castrum",
     "azure",
-    1,
-    "vert"
+    2,
+    "vert",
+    "above_below"
   ],
   "d_gaoliang": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_qiongguan": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "k_lingxi": [
     "vert",
@@ -11452,24 +11797,27 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "flanked"
   ],
   "d_jingjiang": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "vert"
+    2,
+    "vert",
+    "above_below"
   ],
   "d_rongguan": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_yongguan": [
     "sable",
@@ -11477,7 +11825,8 @@
     "castrum",
     "or",
     1,
-    "vert"
+    "vert",
+    "in_chief"
   ],
   "k_viet": [
     "azure",
@@ -11492,32 +11841,36 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "vert"
+    2,
+    "vert",
+    "flanked"
   ],
   "d_nghe_an": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "flanked"
   ],
   "d_lam_tay": [
     "vert",
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    3,
+    "azure",
+    "two_and_one"
   ],
   "d_thang_long": [
     "azure",
-    "solid",
+    "per_fess",
     "castrum",
-    "or",
+    "vert",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "e_minister_chancellor": [
     "azure",
@@ -11612,32 +11965,36 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "d_ramannadesa": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
+    "purpure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_yongchang": [
     "gules",
     "solid",
     "castrum",
     "or",
-    1,
-    "vert"
+    2,
+    "vert",
+    "above_below"
   ],
   "d_haripunjaya": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "vert",
+    3,
     "or",
-    1,
-    "or"
+    "two_and_one"
   ],
   "k_siam": [
     "gules",
@@ -11684,8 +12041,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "azure"
+    2,
+    "azure",
+    "flanked"
   ],
   "c_nf_wang_738b_6": [
     "gules",
@@ -11753,11 +12111,12 @@
   ],
   "d_tamna": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
+    "sable",
+    3,
     "or",
-    1,
-    "argent"
+    "two_and_one"
   ],
   "k_yongson_throne": [
     "gules",
@@ -11781,7 +12140,8 @@
     "crescent_moon",
     "gules",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "k_ruucuu": [
     "argent",
@@ -11797,7 +12157,8 @@
     "wolf_statant",
     "azure",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "d_cd_ostia": [
     "azure",
@@ -11805,7 +12166,8 @@
     "anchor",
     "gules",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_porto": [
     "azure",
@@ -11813,31 +12175,35 @@
     "ship",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_velletri": [
     "gules",
     "per_fess",
     "castrum",
-    "or",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_base"
   ],
   "d_cd_frascati": [
     "azure",
     "solid",
     "cross",
     "argent",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_cd_albano": [
     "azure",
     "solid",
     "mount_triple",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_cd_palestrina": [
     "gules",
@@ -11845,31 +12211,35 @@
     "crown",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_sabina": [
     "azure",
     "solid",
     "star_six_pointed",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_cd_san_ciriaco": [
     "argent",
     "solid",
     "lion_rampant",
     "gules",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_cd_san_lorenzo": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "purpure",
+    2,
     "argent",
-    1,
-    "or"
+    "above_below"
   ],
   "d_cd_santa_cecilia": [
     "azure",
@@ -11877,31 +12247,35 @@
     "star_six_pointed",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santa_balbina": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_san_pietro": [
     "gules",
     "solid",
     "keys_st_peter",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_cd_santa_anastasia": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    3,
     "gules",
-    1,
-    "gules"
+    "two_and_one"
   ],
   "d_cd_damaso": [
     "gules",
@@ -11909,7 +12283,8 @@
     "crown",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santa_rufina": [
     "argent",
@@ -11917,7 +12292,8 @@
     "waves",
     "azure",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "d_cd_santa_sabina": [
     "vert",
@@ -11925,15 +12301,17 @@
     "cross",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_santa_maria": [
     "azure",
     "solid",
     "ship",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_cd_santa_prassede": [
     "gules",
@@ -11941,23 +12319,26 @@
     "oak_branch",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santi_cosma_e_damiano": [
     "vert",
     "solid",
     "cross",
     "argent",
-    2,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_cd_san_stefano": [
     "gules",
     "solid",
     "oak_branch",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_cd_san_clemente": [
     "azure",
@@ -11965,7 +12346,8 @@
     "anchor",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_santi_silvestro_e_martino": [
     "azure",
@@ -11973,15 +12355,17 @@
     "crown",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santi_nereo_ed_achilleo": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "vert",
+    3,
     "argent",
-    1,
-    "argent"
+    "two_and_one"
   ],
   "d_cd_san_eustachio": [
     "azure",
@@ -11989,23 +12373,26 @@
     "stag_attired",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santa_maria_nuova": [
     "azure",
     "solid",
     "star_six_pointed",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_cd_san_teodoro": [
     "gules",
-    "solid",
+    "per_fess",
     "dragon",
-    "or",
-    1,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_cd_san_adriano": [
     "sable",
@@ -12013,15 +12400,17 @@
     "sword_crossed",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_san_marcello": [
     "gules",
     "solid",
     "cross_patriarchal",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_cd_san_vitale": [
     "gules",
@@ -12029,7 +12418,8 @@
     "oak_branch",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_san_angelo": [
     "azure",
@@ -12037,15 +12427,17 @@
     "sword_crossed",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santa_croce": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "or",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_cd_portico_octaviae": [
     "gules",
@@ -12053,15 +12445,17 @@
     "cross",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_san_crisogono": [
     "or",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    3,
     "gules",
-    1,
-    "gules"
+    "two_and_one"
   ],
   "d_cd_san_giorgio": [
     "argent",
@@ -12069,23 +12463,26 @@
     "cross",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_cd_cosmedin": [
     "azure",
     "solid",
     "star_six_pointed",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_cd_san_marco": [
     "gules",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
-    1,
-    "or"
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_cd_santi_apostoli": [
     "azure",
@@ -12093,7 +12490,8 @@
     "keys_st_peter",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_cd_santa_pudenziana": [
     "azure",
@@ -12101,63 +12499,71 @@
     "oak_branch",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_cd_san_eusebio": [
     "vert",
     "solid",
     "cross",
     "argent",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_cd_santi_sergio_e_bacco": [
     "vert",
     "solid",
     "cross",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_cd_san_nicola": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "vert",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "d_cd_santi_giovanni_e_paolo": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "vert",
+    2,
     "argent",
-    1,
-    "argent"
+    "above_below"
   ],
   "d_et_toledo": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "or",
+    3,
     "argent",
-    1,
-    "or"
+    "two_and_one"
   ],
   "d_et_santiago": [
     "azure",
-    "per_pale",
+    "per_fess",
     "star_six_pointed",
-    "or",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_tarragona": [
     "gules",
-    "solid",
+    "per_fess",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_et_sevilla": [
     "gules",
@@ -12165,7 +12571,8 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_braga": [
     "azure",
@@ -12173,15 +12580,17 @@
     "star_six_pointed",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_merida": [
     "gules",
     "solid",
     "cross",
     "argent",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_et_tingitana": [
     "azure",
@@ -12189,15 +12598,17 @@
     "cross",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_york": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "vert",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_tuam": [
     "vert",
@@ -12205,7 +12616,8 @@
     "cross",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_dublin": [
     "azure",
@@ -12213,7 +12625,8 @@
     "castrum",
     "argent",
     3,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_cashel": [
     "vert",
@@ -12221,47 +12634,53 @@
     "mount_triple",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_armagh": [
     "argent",
-    "solid",
+    "per_fess",
     "castrum",
-    "azure",
-    1,
-    "gules"
+    "purpure",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_et_canterbury": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "vert",
     3,
-    "argent"
+    "argent",
+    "two_and_one"
   ],
   "d_et_rouen": [
     "gules",
     "solid",
     "cross",
     "argent",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_reims": [
     "azure",
     "solid",
     "cross_patriarchal",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_sens": [
     "azure",
     "solid",
     "cross_patriarchal",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_et_tours": [
     "azure",
@@ -12269,39 +12688,44 @@
     "sword_crossed",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_bourges": [
     "azure",
-    "solid",
+    "per_fess",
     "fleur_de_lis",
-    "or",
-    3,
-    "or"
+    "sable",
+    2,
+    "argent",
+    "above_below"
   ],
   "d_et_bordeaux": [
     "azure",
     "solid",
     "ship",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_et_lyon": [
     "gules",
     "solid",
     "cross_patriarchal",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_tarentaise": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "or",
+    2,
     "argent",
-    1,
-    "argent"
+    "above_below"
   ],
   "d_et_vienne": [
     "or",
@@ -12309,7 +12733,8 @@
     "cross",
     "azure",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "d_et_eauze": [
     "azure",
@@ -12317,23 +12742,26 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_auch": [
     "azure",
     "solid",
     "cross",
     "argent",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_et_narbonne": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "vert",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_besancon": [
     "or",
@@ -12341,23 +12769,26 @@
     "cross_patriarchal",
     "sable",
     1,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "d_et_arles": [
     "or",
     "solid",
     "cross",
     "gules",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_et_aix": [
     "or",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "vert",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_embrun": [
     "vert",
@@ -12365,39 +12796,44 @@
     "mount_triple",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_milano": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
+    "vert",
+    2,
     "gules",
-    1,
-    "gules"
+    "above_below"
   ],
   "d_et_genoa": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_cagliari": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
+    "vert",
+    3,
     "gules",
-    1,
-    "gules"
+    "two_and_one"
   ],
   "d_et_torres": [
     "or",
-    "solid",
+    "per_fess",
     "cross",
-    "gules",
+    "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_oristano": [
     "argent",
@@ -12405,7 +12841,8 @@
     "cross",
     "gules",
     1,
-    "vert"
+    "vert",
+    "in_chief"
   ],
   "d_et_reggio_calabria": [
     "gules",
@@ -12413,7 +12850,8 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_cosenza": [
     "vert",
@@ -12421,23 +12859,26 @@
     "mount_triple",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_messina": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    2,
     "argent",
-    1,
-    "argent"
+    "above_below"
   ],
   "d_et_palermo": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "purpure",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "d_et_santa_severina": [
     "vert",
@@ -12445,7 +12886,8 @@
     "oak_branch",
     "argent",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_ravenna": [
     "or",
@@ -12453,7 +12895,8 @@
     "alerion",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_roma": [
     "argent",
@@ -12461,15 +12904,17 @@
     "keys_st_peter",
     "azure",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_pisa": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    3,
     "argent",
-    1,
-    "argent"
+    "two_and_one"
   ],
   "d_et_capua": [
     "gules",
@@ -12477,7 +12922,8 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_napoli": [
     "or",
@@ -12485,7 +12931,8 @@
     "horse_courant",
     "sable",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "d_et_salerno": [
     "vert",
@@ -12493,23 +12940,26 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_benevento": [
     "gules",
     "solid",
     "cross_patriarchal",
     "argent",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_bari": [
     "sable",
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "d_et_trani": [
     "azure",
@@ -12517,23 +12967,26 @@
     "cross",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_brindisi": [
     "gules",
     "solid",
     "cross",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_et_aquileia": [
     "azure",
     "solid",
     "alerion",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_esztergom": [
     "gules",
@@ -12541,15 +12994,17 @@
     "cross_patriarchal",
     "or",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_kalocsa": [
     "gules",
     "solid",
     "cross_patriarchal",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_et_split": [
     "gules",
@@ -12557,95 +13012,107 @@
     "cross",
     "azure",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_ohrid": [
     "sable",
     "solid",
     "cross",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_ragusa": [
     "gules",
     "solid",
     "cross",
     "or",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_et_salzburg": [
     "or",
     "solid",
     "lion_rampant",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_et_trier": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    2,
     "gules",
-    1,
-    "gules"
+    "above_below"
   ],
   "d_et_gniezno": [
     "gules",
-    "solid",
+    "per_fess",
     "alerion",
-    "argent",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_mainz": [
     "gules",
     "solid",
     "wheel_spoked",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "d_et_magdeburg": [
     "gules",
     "per_fess",
     "castrum",
-    "or",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_cologne": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
-    "sable",
-    1,
-    "sable"
+    "or",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "d_et_hamburg": [
     "gules",
     "solid",
     "castrum",
     "argent",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_et_lund": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    2,
     "argent",
-    1,
-    "argent"
+    "above_below"
   ],
   "d_et_uppsala": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "or",
-    1,
-    "or"
+    "purpure",
+    3,
+    "argent",
+    "two_and_one"
   ],
   "d_et_nidaros": [
     "gules",
@@ -12653,31 +13120,35 @@
     "lion_rampant",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_kyiv": [
     "azure",
-    "solid",
+    "per_fess",
     "cross",
+    "sable",
+    3,
     "argent",
-    1,
-    "or"
+    "two_and_one"
   ],
   "d_et_constantinople": [
     "or",
     "solid",
     "alerion",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "d_et_jerusalem": [
     "argent",
     "solid",
     "cross",
     "azure",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_et_antioch": [
     "gules",
@@ -12685,7 +13156,8 @@
     "cross_patriarchal",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_cyprus": [
     "argent",
@@ -12693,39 +13165,44 @@
     "crown",
     "gules",
     1,
-    "azure"
+    "azure",
+    "in_base"
   ],
   "d_et_georgia": [
     "argent",
-    "solid",
+    "per_fess",
     "cross",
+    "or",
+    2,
     "gules",
-    1,
-    "gules"
+    "above_below"
   ],
   "d_et_kartli": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "argent",
+    "sable",
     1,
-    "argent"
+    "argent",
+    "in_chief"
   ],
   "d_et_armenia": [
     "gules",
-    "solid",
+    "per_fess",
     "cross",
-    "or",
+    "azure",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "d_et_seleucia_ctesiphon": [
     "azure",
     "solid",
     "anchor",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_et_tyre": [
     "argent",
@@ -12733,15 +13210,17 @@
     "cross",
     "gules",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "d_et_alexandria": [
     "azure",
     "solid",
     "lion_rampant",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "d_et_axum": [
     "vert",
@@ -12749,7 +13228,8 @@
     "cross",
     "argent",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_et_africa": [
     "azure",
@@ -12757,15 +13237,17 @@
     "oak_branch",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_arc": [
     "sable",
     "solid",
     "lion_rampant",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "flanked"
   ],
   "e_scandinavia_norse": [
     "argent",
@@ -12777,11 +13259,12 @@
   ],
   "d_viken_norse": [
     "or",
-    "solid",
+    "per_fess",
     "castrum",
-    "sable",
-    1,
-    "gules"
+    "vert",
+    3,
+    "gules",
+    "two_and_one"
   ],
   "c_sudurland_norse": [
     "gules",
@@ -12812,8 +13295,9 @@
     "solid",
     "ship",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_orkney": [
     "azure",
@@ -12853,7 +13337,8 @@
     "ship",
     "sable",
     3,
-    "sable"
+    "sable",
+    "in_chief"
   ],
   "c_inner_hebrides": [
     "or",
@@ -12889,11 +13374,12 @@
   ],
   "d_iceland": [
     "or",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "gules",
+    "sable",
     1,
-    "gules"
+    "gules",
+    "in_base"
   ],
   "c_dublin": [
     "or",
@@ -12912,12 +13398,13 @@
     "gules"
   ],
   "d_york": [
-    "or",
+    "azure",
     "solid",
-    "crown",
-    "gules",
+    "rose_seeded",
+    "argent",
     1,
-    "gules"
+    "argent",
+    "in_chief"
   ],
   "c_harjadalen": [
     "gules",
@@ -12932,16 +13419,18 @@
     "solid",
     "battleaxe",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "d_halogaland": [
     "gules",
     "solid",
     "dragon",
     "or",
-    1,
-    "or"
+    3,
+    "or",
+    "two_and_one"
   ],
   "c_vastmanland": [
     "argent",
@@ -12972,8 +13461,9 @@
     "solid",
     "stag_attired",
     "argent",
-    1,
-    "argent"
+    2,
+    "argent",
+    "above_below"
   ],
   "c_medelpad": [
     "argent",
@@ -12996,8 +13486,9 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "argent"
+    3,
+    "argent",
+    "two_and_one"
   ],
   "c_gutland": [
     "gules",
@@ -13013,7 +13504,8 @@
     "dragon",
     "azure",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_lolland_falster": [
     "azure",
@@ -13036,16 +13528,18 @@
     "solid",
     "castrum",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "d_vestlandi": [
     "gules",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_base"
   ],
   "c_halland": [
     "argent",
@@ -13089,11 +13583,12 @@
   ],
   "d_jamtland": [
     "gules",
-    "solid",
+    "per_fess",
     "lion_rampant",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_base"
   ],
   "c_helgum": [
     "argent",
@@ -13116,8 +13611,9 @@
     "solid",
     "oak_branch",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "above_below"
   ],
   "c_nedenes": [
     "azure",
@@ -13133,7 +13629,8 @@
     "lion_rampant",
     "gules",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "c_norwegian_more": [
     "gules",
@@ -13165,7 +13662,8 @@
     "castrum",
     "sable",
     1,
-    "azure"
+    "azure",
+    "in_chief"
   ],
   "c_viborg": [
     "argent",
@@ -13236,8 +13734,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "azure"
+    2,
+    "azure",
+    "above_below"
   ],
   "c_sjaelland": [
     "sable",
@@ -13252,8 +13751,9 @@
     "solid",
     "cross",
     "gules",
-    1,
-    "gules"
+    2,
+    "gules",
+    "above_below"
   ],
   "c_vorbasse": [
     "argent",
@@ -13308,8 +13808,9 @@
     "solid",
     "lion_rampant",
     "gules",
-    1,
-    "gules"
+    3,
+    "gules",
+    "two_and_one"
   ],
   "c_more": [
     "or",
@@ -13372,8 +13873,9 @@
     "solid",
     "castrum",
     "sable",
-    1,
-    "sable"
+    3,
+    "sable",
+    "two_and_one"
   ],
   "c_gudbrandsdalir": [
     "sable",
@@ -13465,11 +13967,12 @@
   ],
   "d_ostergotland": [
     "gules",
-    "solid",
+    "per_fess",
     "dragon",
-    "or",
+    "sable",
     1,
-    "or"
+    "argent",
+    "in_chief"
   ],
   "c_kinda": [
     "argent",
@@ -13492,8 +13995,9 @@
     "solid",
     "bear_rampant",
     "sable",
-    1,
-    "sable"
+    2,
+    "sable",
+    "above_below"
   ],
   "c_hedmork": [
     "sable",
@@ -13513,11 +14017,12 @@
   ],
   "d_svealand": [
     "azure",
-    "solid",
+    "per_fess",
     "crown",
-    "or",
+    "sable",
     3,
-    "or"
+    "argent",
+    "two_and_one"
   ],
   "c_upland": [
     "gules",
@@ -13601,11 +14106,12 @@
   ],
   "d_canterbury": [
     "gules",
-    "solid",
+    "chief",
     "horse_courant",
     "argent",
     1,
-    "argent"
+    "or",
+    "in_base"
   ],
   "c_hereford": [
     "gules",
@@ -13936,12 +14442,13 @@
     "or"
   ],
   "d_lombardy": [
-    "gules",
+    "azure",
     "solid",
     "crown",
     "or",
     1,
-    "or"
+    "or",
+    "in_chief"
   ],
   "d_ravenna": [
     "or",
@@ -13949,7 +14456,8 @@
     "eagle_double",
     "gules",
     1,
-    "gules"
+    "gules",
+    "in_chief"
   ],
   "c_antioch": [
     "azure",
@@ -13972,8 +14480,9 @@
     "solid",
     "dragon",
     "or",
-    1,
-    "or"
+    2,
+    "or",
+    "flanked"
   ],
   "c_york": [
     "argent",
@@ -14006,5 +14515,5477 @@
     "or",
     1,
     "or"
+  ],
+  "x_script_3271": [
+    "argent",
+    "bend",
+    "waves",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_oultrejourdain": [
+    "argent",
+    "bend_sinister",
+    "rose_seeded",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_syrte": [
+    "argent",
+    "bordure",
+    "rose_seeded",
+    "azure",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_kentarlau": [
+    "argent",
+    "bordure",
+    "sword_crossed",
+    "azure",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_diyarbakr": [
+    "argent",
+    "bordure",
+    "waves",
+    "azure",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_5297": [
+    "argent",
+    "chevron",
+    "battleaxe",
+    "argent",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_orkhon": [
+    "argent",
+    "chevron",
+    "castrum",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_charkliq": [
+    "argent",
+    "per_fess",
+    "castrum",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_vidharba": [
+    "argent",
+    "chevron",
+    "crescent_moon",
+    "argent",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_multan": [
+    "argent",
+    "chevron",
+    "sun_radiant",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_salamat": [
+    "argent",
+    "chevron",
+    "wolf_statant",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_barsuki": [
+    "argent",
+    "chief",
+    "battleaxe",
+    "azure",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_sipsongpanna": [
+    "argent",
+    "chief",
+    "lion_rampant",
+    "azure",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_kanyakubja": [
+    "argent",
+    "chief",
+    "ship",
+    "azure",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_mongnai": [
+    "argent",
+    "cross",
+    "battleaxe",
+    "argent",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_ciscaucasia": [
+    "argent",
+    "cross",
+    "roman_gate",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_wagadugu": [
+    "argent",
+    "fess",
+    "anchor",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_1264": [
+    "argent",
+    "fess",
+    "castrum",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_damot": [
+    "argent",
+    "fess",
+    "crescent_moon",
+    "argent",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_abkhazia": [
+    "argent",
+    "fess",
+    "crown",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_timbuktu": [
+    "argent",
+    "fess",
+    "falcon_perched",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_2481": [
+    "argent",
+    "per_fess",
+    "falcon_perched",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_lahore": [
+    "argent",
+    "fess",
+    "fleur_de_lis",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_BOR_tanjungpura": [
+    "argent",
+    "fess",
+    "roman_gate",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_kazan": [
+    "argent",
+    "per_fess",
+    "roman_gate",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_saran": [
+    "argent",
+    "fess",
+    "stag_attired",
+    "argent",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_SuMa_tompotika": [
+    "argent",
+    "fess",
+    "star_six_pointed",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_loulan": [
+    "argent",
+    "fess",
+    "sword_crossed",
+    "argent",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_aral_karakum": [
+    "argent",
+    "fess",
+    "wolf_statant",
+    "argent",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_futa_jalon": [
+    "argent",
+    "pale",
+    "anchor",
+    "argent",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_tagant": [
+    "argent",
+    "per_fess",
+    "crown",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_1314": [
+    "argent",
+    "per_fess",
+    "fleur_de_lis",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_3987": [
+    "argent",
+    "per_fess",
+    "mount_triple",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "x_script_7781": [
+    "argent",
+    "per_fess",
+    "tree_chestnut",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_jalmat": [
+    "argent",
+    "per_pale",
+    "crown",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_nagormo": [
+    "argent",
+    "per_pale",
+    "oak_branch",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_lhatok": [
+    "argent",
+    "per_fess",
+    "oak_branch",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_pecheneg": [
+    "argent",
+    "per_fess",
+    "oak_branch",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_khuzestan": [
+    "argent",
+    "per_saltire",
+    "bear_rampant",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_touat": [
+    "argent",
+    "per_saltire",
+    "fish_twin",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_IDO_bali": [
+    "argent",
+    "per_saltire",
+    "lion_rampant",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_tengchong": [
+    "argent",
+    "per_saltire",
+    "roman_gate",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_bugurslan": [
+    "argent",
+    "per_saltire",
+    "rose_seeded",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_gobi_ongi": [
+    "argent",
+    "quarterly",
+    "fleur_de_lis",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_warangal": [
+    "argent",
+    "quarterly",
+    "ship",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_eastern_sayan": [
+    "argent",
+    "quarterly",
+    "star_six_pointed",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_gyaman": [
+    "argent",
+    "quarterly",
+    "sun_radiant",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_kohestan": [
+    "argent",
+    "quarterly",
+    "sword_crossed",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_BOR_santubong": [
+    "argent",
+    "quarterly",
+    "tree_chestnut",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_jinghiz": [
+    "argent",
+    "quarterly",
+    "wolf_statant",
+    "or",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_gyalrong": [
+    "argent",
+    "solid",
+    "bear_rampant",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_tobol-ishim": [
+    "argent",
+    "solid",
+    "castrum",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_baigaur": [
+    "argent",
+    "solid",
+    "crown",
+    "sable",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_ladakh": [
+    "argent",
+    "solid",
+    "fish_twin",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_baqlin": [
+    "argent",
+    "solid",
+    "horse_courant",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_oman": [
+    "argent",
+    "solid",
+    "horse_courant",
+    "sable",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_gobi_altai": [
+    "argent",
+    "solid",
+    "lion_rampant",
+    "sable",
+    2,
+    "azure",
+    "above_below"
+  ],
+  "x_script_4597": [
+    "argent",
+    "solid",
+    "roman_gate",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_shirvan": [
+    "argent",
+    "solid",
+    "rose_seeded",
+    "sable",
+    3,
+    "azure",
+    "in_chief"
+  ],
+  "d_khovsgol": [
+    "argent",
+    "solid",
+    "ship",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_lingtsang": [
+    "argent",
+    "solid",
+    "ship",
+    "sable",
+    2,
+    "azure",
+    "above_below"
+  ],
+  "d_dege": [
+    "argent",
+    "solid",
+    "ship",
+    "sable",
+    3,
+    "azure",
+    "two_and_one"
+  ],
+  "d_SUM_aceh": [
+    "argent",
+    "solid",
+    "stag_attired",
+    "sable",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_manatau": [
+    "argent",
+    "solid",
+    "star_six_pointed",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_karachev": [
+    "argent",
+    "solid",
+    "sun_radiant",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_ibadan": [
+    "argent",
+    "solid",
+    "sun_radiant",
+    "sable",
+    2,
+    "azure",
+    "above_below"
+  ],
+  "d_upper_gurma": [
+    "argent",
+    "solid",
+    "sun_radiant",
+    "sable",
+    3,
+    "azure",
+    "two_and_one"
+  ],
+  "d_badakhshan": [
+    "argent",
+    "solid",
+    "sword_crossed",
+    "sable",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_hormuz": [
+    "argent",
+    "solid",
+    "waves",
+    "sable",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_gurjara_mandala": [
+    "argent",
+    "solid",
+    "wheatsheaf_garb",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_medapata": [
+    "argent",
+    "solid",
+    "wheel_spoked",
+    "sable",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_khotan": [
+    "argent",
+    "solid",
+    "wheel_spoked",
+    "sable",
+    2,
+    "azure",
+    "in_chief"
+  ],
+  "d_nadia": [
+    "azure",
+    "barry",
+    "crescent_moon",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_ili-alatau": [
+    "azure",
+    "barry",
+    "falcon_perched",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_konda": [
+    "azure",
+    "barry",
+    "fleur_de_lis",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_karashar": [
+    "azure",
+    "barry",
+    "rose_seeded",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_najd": [
+    "azure",
+    "barry",
+    "sword_crossed",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_udayagiri": [
+    "azure",
+    "bend",
+    "lion_rampant",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_aksum": [
+    "azure",
+    "bend",
+    "roman_gate",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_handumans": [
+    "azure",
+    "bend",
+    "star_six_pointed",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_limbuwan": [
+    "azure",
+    "bend",
+    "tree_chestnut",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_blue_khakassia": [
+    "azure",
+    "bordure",
+    "anchor",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_azerbaijan": [
+    "azure",
+    "chequy",
+    "crescent_moon",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_SUM_jambi": [
+    "azure",
+    "chequy",
+    "fleur_de_lis",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_mukdahan": [
+    "azure",
+    "chequy",
+    "fleur_de_lis",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_baraba_steppe": [
+    "azure",
+    "per_fess",
+    "fleur_de_lis",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_mordvinia": [
+    "azure",
+    "chequy",
+    "grape_cluster",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_mecca": [
+    "azure",
+    "chequy",
+    "horse_courant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_ala_tau": [
+    "azure",
+    "chequy",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kaffa": [
+    "azure",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_uzboy": [
+    "azure",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_sennar": [
+    "azure",
+    "chequy",
+    "mount_triple",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_mahra": [
+    "azure",
+    "chequy",
+    "roman_gate",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_ruhunu": [
+    "azure",
+    "chequy",
+    "rose_seeded",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_basra": [
+    "azure",
+    "chequy",
+    "wheel_spoked",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tunis": [
+    "azure",
+    "chief",
+    "anchor",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_kroumerie": [
+    "azure",
+    "chief",
+    "bear_rampant",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_8766": [
+    "azure",
+    "chief",
+    "bear_rampant",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_semey": [
+    "azure",
+    "chief",
+    "crown",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_samalo": [
+    "azure",
+    "chief",
+    "fleur_de_lis",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_khuttal": [
+    "azure",
+    "chief",
+    "horse_courant",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_zab": [
+    "azure",
+    "chief",
+    "waves",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_aley": [
+    "azure",
+    "cross",
+    "fleur_de_lis",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_socotra": [
+    "azure",
+    "cross",
+    "fleur_de_lis",
+    "azure",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_altay": [
+    "azure",
+    "cross",
+    "mount_triple",
+    "azure",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_SUM_riau": [
+    "azure",
+    "cross",
+    "oak_branch",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sauvira": [
+    "azure",
+    "cross",
+    "roman_gate",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nias": [
+    "azure",
+    "cross",
+    "waves",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_zammour": [
+    "azure",
+    "cross",
+    "wolf_statant",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_3406": [
+    "azure",
+    "fess",
+    "battleaxe",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_4423": [
+    "azure",
+    "per_fess",
+    "battleaxe",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kalyani": [
+    "azure",
+    "fess",
+    "bear_rampant",
+    "azure",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_homs": [
+    "azure",
+    "fess",
+    "castrum",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_5703": [
+    "azure",
+    "fess",
+    "horse_courant",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tirabhukti": [
+    "azure",
+    "fess",
+    "oak_branch",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_beshbalik": [
+    "azure",
+    "per_fess",
+    "oak_branch",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kufa": [
+    "azure",
+    "fess",
+    "oak_branch",
+    "azure",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_damascus": [
+    "azure",
+    "fess",
+    "rose_seeded",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kush-murun": [
+    "azure",
+    "fess",
+    "star_six_pointed",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_pelym": [
+    "azure",
+    "fess",
+    "sun_radiant",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2263": [
+    "azure",
+    "fess",
+    "tree_chestnut",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_5253": [
+    "azure",
+    "fess",
+    "wheatsheaf_garb",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tagaung": [
+    "azure",
+    "fess",
+    "wheatsheaf_garb",
+    "azure",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_rutog": [
+    "azure",
+    "pale",
+    "oak_branch",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_loma": [
+    "azure",
+    "pale",
+    "rose_seeded",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_aksay": [
+    "azure",
+    "per_fess",
+    "rose_seeded",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_bugeac": [
+    "azure",
+    "pale",
+    "stag_attired",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_9046": [
+    "azure",
+    "pale",
+    "star_six_pointed",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_daksina_kosala": [
+    "azure",
+    "per_fess",
+    "battleaxe",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_bonde_la_ufa": [
+    "azure",
+    "per_fess",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_lhoyul": [
+    "azure",
+    "per_fess",
+    "fleur_de_lis",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_dzayul": [
+    "azure",
+    "per_pale",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kara_khoja": [
+    "azure",
+    "per_pale",
+    "crown",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_BOR_nan_sarunai": [
+    "azure",
+    "per_pale",
+    "tree_chestnut",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_aleppo": [
+    "azure",
+    "per_saltire",
+    "bear_rampant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_yenisei_kan": [
+    "azure",
+    "per_saltire",
+    "fleur_de_lis",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_euphrates": [
+    "azure",
+    "per_saltire",
+    "roman_gate",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kashgar": [
+    "azure",
+    "per_fess",
+    "roman_gate",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kong": [
+    "azure",
+    "per_saltire",
+    "stag_attired",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_jemba": [
+    "azure",
+    "per_saltire",
+    "sun_radiant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_BOR_barune": [
+    "azure",
+    "per_saltire",
+    "wheatsheaf_garb",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kiev": [
+    "azure",
+    "per_saltire",
+    "wolf_statant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_alwa": [
+    "azure",
+    "saltire",
+    "crown",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_rayy": [
+    "azure",
+    "saltire",
+    "fleur_de_lis",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_lasta": [
+    "azure",
+    "saltire",
+    "oak_branch",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_selenga_valley": [
+    "azure",
+    "saltire",
+    "ship",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_3253": [
+    "azure",
+    "saltire",
+    "stag_attired",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_bahrain": [
+    "azure",
+    "saltire",
+    "star_six_pointed",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_gondar": [
+    "azure",
+    "saltire",
+    "waves",
+    "azure",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_western_sayan": [
+    "azure",
+    "solid",
+    "crescent_moon",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2623": [
+    "azure",
+    "solid",
+    "fish_twin",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_nasa": [
+    "azure",
+    "solid",
+    "fish_twin",
+    "argent",
+    3,
+    "argent",
+    "one_and_two"
+  ],
+  "d_takrur": [
+    "azure",
+    "solid",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "one_and_two"
+  ],
+  "x_script_4403": [
+    "azure",
+    "per_fess",
+    "horse_courant",
+    "sable",
+    1,
+    "argent",
+    "in_base"
+  ],
+  "d_PHI_ilocana": [
+    "azure",
+    "solid",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_anupa": [
+    "azure",
+    "per_fess",
+    "horse_courant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_adiukru": [
+    "azure",
+    "solid",
+    "lion_rampant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_papua": [
+    "azure",
+    "solid",
+    "rose_seeded",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_jangladesh": [
+    "azure",
+    "solid",
+    "ship",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_silla": [
+    "azure",
+    "per_fess",
+    "ship",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_mora": [
+    "azure",
+    "solid",
+    "stag_attired",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_sagya": [
+    "azure",
+    "per_fess",
+    "stag_attired",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_vanga": [
+    "azure",
+    "per_fess",
+    "stag_attired",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_zaila": [
+    "azure",
+    "per_fess",
+    "stag_attired",
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_akara_dasarna": [
+    "azure",
+    "solid",
+    "sun_radiant",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_dandakaranya": [
+    "azure",
+    "solid",
+    "sun_radiant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_liuqiu": [
+    "azure",
+    "solid",
+    "sun_radiant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_yatenga": [
+    "azure",
+    "per_fess",
+    "sun_radiant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_jejakabhukti": [
+    "azure",
+    "solid",
+    "sword_crossed",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_5729": [
+    "azure",
+    "solid",
+    "sword_crossed",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_cyrenaica": [
+    "azure",
+    "solid",
+    "waves",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_SW_qingxingan": [
+    "azure",
+    "solid",
+    "waves",
+    "or",
+    1,
+    "azure",
+    "in_chief"
+  ],
+  "d_dagomba": [
+    "azure",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kokturgay": [
+    "azure",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_wagadu": [
+    "azure",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "d_lhasa": [
+    "azure",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_kawkaw": [
+    "gules",
+    "barry",
+    "falcon_perched",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_7177": [
+    "gules",
+    "barry",
+    "falcon_perched",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_phonsavan": [
+    "gules",
+    "barry",
+    "fleur_de_lis",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_kirman": [
+    "gules",
+    "barry",
+    "lion_rampant",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_taizz": [
+    "gules",
+    "bend",
+    "castrum",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_perm": [
+    "gules",
+    "bend",
+    "mount_triple",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_gangavadi": [
+    "gules",
+    "bend",
+    "ship",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_SUM_minangkabau": [
+    "gules",
+    "bend",
+    "ship",
+    "gules",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_arakan": [
+    "gules",
+    "bend",
+    "star_six_pointed",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_fes": [
+    "gules",
+    "bend",
+    "tree_chestnut",
+    "gules",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_fezzan": [
+    "gules",
+    "bend",
+    "wheatsheaf_garb",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2637": [
+    "gules",
+    "chequy",
+    "bear_rampant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_mzab": [
+    "gules",
+    "chequy",
+    "star_six_pointed",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_amman": [
+    "gules",
+    "chequy",
+    "sword_crossed",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_hafun": [
+    "gules",
+    "chevron",
+    "waves",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_aqtobe": [
+    "gules",
+    "chief",
+    "castrum",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_ghat": [
+    "gules",
+    "chief",
+    "crescent_moon",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_dakhina_desa": [
+    "gules",
+    "per_fess",
+    "crescent_moon",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1641": [
+    "gules",
+    "chief",
+    "crown",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_chah": [
+    "gules",
+    "per_fess",
+    "crown",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_lop_buri": [
+    "gules",
+    "chief",
+    "lion_rampant",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_tokumbay": [
+    "gules",
+    "chief",
+    "lion_rampant",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_bhakkar": [
+    "gules",
+    "chief",
+    "stag_attired",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_tun_sun": [
+    "gules",
+    "chief",
+    "sun_radiant",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_urdunn": [
+    "gules",
+    "chief",
+    "sword_crossed",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_osrushana": [
+    "gules",
+    "chief",
+    "wolf_statant",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_chuvashia": [
+    "gules",
+    "cross",
+    "fleur_de_lis",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_ferghana": [
+    "gules",
+    "cross",
+    "ship",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_novosil": [
+    "gules",
+    "fess",
+    "anchor",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tlemcen": [
+    "gules",
+    "fess",
+    "battleaxe",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_tahert": [
+    "gules",
+    "per_fess",
+    "battleaxe",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_minsk": [
+    "gules",
+    "fess",
+    "crescent_moon",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_saryupara": [
+    "gules",
+    "fess",
+    "star_six_pointed",
+    "gules",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_wasit": [
+    "gules",
+    "fess",
+    "sun_radiant",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_diyarrabia": [
+    "gules",
+    "fess",
+    "tree_chestnut",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_SuMa_luwu": [
+    "gules",
+    "pale",
+    "falcon_perched",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_red_levedia": [
+    "gules",
+    "pale",
+    "stag_attired",
+    "gules",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_kordofan": [
+    "gules",
+    "pale",
+    "star_six_pointed",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_gurgan": [
+    "gules",
+    "per_fess",
+    "falcon_perched",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_dadhipadra": [
+    "gules",
+    "per_pale",
+    "anchor",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sistan": [
+    "gules",
+    "per_fess",
+    "anchor",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_makran": [
+    "gules",
+    "per_pale",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_eweland": [
+    "gules",
+    "per_pale",
+    "oak_branch",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_giemajohka": [
+    "gules",
+    "per_pale",
+    "tree_chestnut",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_wenyon": [
+    "gules",
+    "per_saltire",
+    "waves",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_kulyndy_steppe": [
+    "gules",
+    "per_saltire",
+    "wheatsheaf_garb",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_indrapura": [
+    "gules",
+    "saltire",
+    "castrum",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kazakh": [
+    "gules",
+    "saltire",
+    "fleur_de_lis",
+    "gules",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_palmyra": [
+    "gules",
+    "saltire",
+    "star_six_pointed",
+    "gules",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_eastern_desert": [
+    "gules",
+    "solid",
+    "castrum",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_diafunu": [
+    "gules",
+    "solid",
+    "castrum",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_benin": [
+    "gules",
+    "solid",
+    "crescent_moon",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_bazin": [
+    "gules",
+    "solid",
+    "fish_twin",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_xigaze": [
+    "gules",
+    "solid",
+    "fish_twin",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_danakil": [
+    "gules",
+    "solid",
+    "fleur_de_lis",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_kurgan": [
+    "gules",
+    "solid",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_arkhangai": [
+    "gules",
+    "solid",
+    "mount_triple",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_igboland": [
+    "gules",
+    "solid",
+    "mount_triple",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_jenne": [
+    "gules",
+    "solid",
+    "mount_triple",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_aksai_chin": [
+    "gules",
+    "solid",
+    "roman_gate",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_3434": [
+    "gules",
+    "solid",
+    "ship",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tuyuhun": [
+    "gules",
+    "solid",
+    "stag_attired",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1894": [
+    "gules",
+    "solid",
+    "stag_attired",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_nupe": [
+    "gules",
+    "solid",
+    "stag_attired",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_katu_yaryk": [
+    "gules",
+    "solid",
+    "star_six_pointed",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_herat": [
+    "gules",
+    "solid",
+    "star_six_pointed",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_ubsunur_hollow": [
+    "gules",
+    "solid",
+    "sun_radiant",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "d_PHI_maguindanao": [
+    "gules",
+    "solid",
+    "sun_radiant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_nishapur": [
+    "gules",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_PHI_tondo": [
+    "gules",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_bambuk": [
+    "gules",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_mamprusi": [
+    "gules",
+    "per_fess",
+    "wheel_spoked",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kamarupanagara": [
+    "gules",
+    "per_fess",
+    "wheel_spoked",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_bali": [
+    "or",
+    "bordure",
+    "crown",
+    "gules",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_vepsia": [
+    "or",
+    "bordure",
+    "fish_twin",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_kasmira": [
+    "or",
+    "bordure",
+    "mount_triple",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_jawf": [
+    "or",
+    "bordure",
+    "rose_seeded",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_4732": [
+    "or",
+    "bordure",
+    "ship",
+    "gules",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_kasi": [
+    "or",
+    "bordure",
+    "ship",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_transcaspiana": [
+    "or",
+    "bordure",
+    "wolf_statant",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_muang_sua": [
+    "or",
+    "chevron",
+    "battleaxe",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_viscaya": [
+    "or",
+    "chevron",
+    "bear_rampant",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_nepal": [
+    "or",
+    "per_fess",
+    "bear_rampant",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_kizilyedisan": [
+    "or",
+    "chevron",
+    "lion_rampant",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_tripolitania": [
+    "or",
+    "chevron",
+    "waves",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_khorezm": [
+    "or",
+    "per_fess",
+    "waves",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_sukhothai": [
+    "or",
+    "chevron",
+    "wolf_statant",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_saryarka": [
+    "or",
+    "chief",
+    "castrum",
+    "gules",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_canarias": [
+    "or",
+    "chief",
+    "crown",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_1315": [
+    "or",
+    "chief",
+    "fleur_de_lis",
+    "gules",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_mathura": [
+    "or",
+    "chief",
+    "roman_gate",
+    "gules",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_masuria": [
+    "or",
+    "chief",
+    "sun_radiant",
+    "gules",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_bashkiria": [
+    "or",
+    "chief",
+    "sword_crossed",
+    "gules",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_medina": [
+    "or",
+    "per_fess",
+    "sword_crossed",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_shoria": [
+    "or",
+    "cross",
+    "anchor",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_yamama": [
+    "or",
+    "cross",
+    "fish_twin",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_1782": [
+    "or",
+    "cross",
+    "lion_rampant",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_greater_armenia": [
+    "or",
+    "cross",
+    "star_six_pointed",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_alania": [
+    "or",
+    "cross",
+    "sun_radiant",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_kairouan": [
+    "or",
+    "cross",
+    "sword_crossed",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_bornu": [
+    "or",
+    "cross",
+    "tree_chestnut",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_dauria": [
+    "or",
+    "cross",
+    "tree_chestnut",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_vasyugan_mire": [
+    "or",
+    "cross",
+    "wolf_statant",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_sharka": [
+    "or",
+    "fess",
+    "battleaxe",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_lobi": [
+    "or",
+    "fess",
+    "falcon_perched",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_kawar": [
+    "or",
+    "fess",
+    "lion_rampant",
+    "or",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_angara": [
+    "or",
+    "fess",
+    "star_six_pointed",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_wadai": [
+    "or",
+    "fess",
+    "sword_crossed",
+    "or",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_bobo": [
+    "or",
+    "pale",
+    "anchor",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_paro": [
+    "or",
+    "per_fess",
+    "anchor",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_conyi": [
+    "or",
+    "pale",
+    "battleaxe",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_qamdo": [
+    "or",
+    "per_fess",
+    "battleaxe",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_sinai": [
+    "or",
+    "pale",
+    "falcon_perched",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_lower_gurma": [
+    "or",
+    "per_fess",
+    "rose_seeded",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_chakla": [
+    "or",
+    "per_fess",
+    "rose_seeded",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_SuMa_maluku": [
+    "or",
+    "pale",
+    "wolf_statant",
+    "or",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_levedia": [
+    "or",
+    "per_fess",
+    "anchor",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_turgay": [
+    "or",
+    "per_fess",
+    "crescent_moon",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_itil": [
+    "or",
+    "per_fess",
+    "crescent_moon",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_4712": [
+    "or",
+    "per_fess",
+    "crown",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_wandala": [
+    "or",
+    "per_fess",
+    "fleur_de_lis",
+    "azure",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_saurashtra": [
+    "or",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_baguirmi": [
+    "or",
+    "per_fess",
+    "oak_branch",
+    "azure",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_nangqen": [
+    "or",
+    "per_pale",
+    "crown",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_marrakesh": [
+    "or",
+    "per_saltire",
+    "bear_rampant",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_kru": [
+    "or",
+    "per_saltire",
+    "star_six_pointed",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_diyarmudar": [
+    "or",
+    "per_saltire",
+    "sun_radiant",
+    "azure",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_togina": [
+    "or",
+    "per_saltire",
+    "waves",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_toro": [
+    "or",
+    "quarterly",
+    "bear_rampant",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_air": [
+    "or",
+    "quarterly",
+    "crescent_moon",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_ural": [
+    "or",
+    "per_fess",
+    "crescent_moon",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_worodugu": [
+    "or",
+    "quarterly",
+    "horse_courant",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_garabogazkol": [
+    "or",
+    "per_fess",
+    "horse_courant",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_naiman_gobi": [
+    "or",
+    "quarterly",
+    "oak_branch",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_haritanaka": [
+    "or",
+    "quarterly",
+    "waves",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_tibesti": [
+    "or",
+    "quarterly",
+    "wolf_statant",
+    "azure",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_vologda": [
+    "or",
+    "solid",
+    "bear_rampant",
+    "sable",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_kaniaga": [
+    "or",
+    "solid",
+    "castrum",
+    "sable",
+    3,
+    "gules",
+    "two_and_one"
+  ],
+  "d_kaabu": [
+    "or",
+    "per_fess",
+    "castrum",
+    "purpure",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_adrar": [
+    "or",
+    "solid",
+    "crown",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_talas_alatau": [
+    "or",
+    "solid",
+    "falcon_perched",
+    "sable",
+    2,
+    "gules",
+    "in_chief"
+  ],
+  "d_daylam": [
+    "or",
+    "solid",
+    "fish_twin",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_chudia": [
+    "or",
+    "solid",
+    "lion_rampant",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_manding": [
+    "or",
+    "solid",
+    "lion_rampant",
+    "sable",
+    3,
+    "gules",
+    "two_and_one"
+  ],
+  "d_PHI_visayas": [
+    "or",
+    "solid",
+    "mount_triple",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_degelen": [
+    "or",
+    "solid",
+    "oak_branch",
+    "sable",
+    3,
+    "gules",
+    "in_chief"
+  ],
+  "d_vijaya": [
+    "or",
+    "solid",
+    "roman_gate",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_1218": [
+    "or",
+    "solid",
+    "stag_attired",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_mugodzhar_hills": [
+    "or",
+    "solid",
+    "star_six_pointed",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_adal": [
+    "or",
+    "solid",
+    "star_six_pointed",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_pandya_nadu": [
+    "or",
+    "solid",
+    "star_six_pointed",
+    "sable",
+    3,
+    "gules",
+    "two_and_one"
+  ],
+  "d_gainlho": [
+    "or",
+    "solid",
+    "sun_radiant",
+    "sable",
+    2,
+    "gules",
+    "flanked"
+  ],
+  "d_EM_yujuelu": [
+    "or",
+    "solid",
+    "sun_radiant",
+    "sable",
+    2,
+    "gules",
+    "above_below"
+  ],
+  "d_kargassia": [
+    "or",
+    "solid",
+    "sun_radiant",
+    "sable",
+    3,
+    "gules",
+    "two_and_one"
+  ],
+  "d_dendi": [
+    "or",
+    "solid",
+    "wheatsheaf_garb",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "d_baltiyul": [
+    "or",
+    "solid",
+    "wolf_statant",
+    "sable",
+    1,
+    "gules",
+    "in_chief"
+  ],
+  "x_script_4892": [
+    "sable",
+    "barry",
+    "crescent_moon",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tafilalt": [
+    "sable",
+    "barry",
+    "horse_courant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_volga_bulgaria": [
+    "sable",
+    "barry",
+    "lion_rampant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_ustyug": [
+    "sable",
+    "barry",
+    "roman_gate",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_rif": [
+    "sable",
+    "barry",
+    "ship",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_asir": [
+    "sable",
+    "barry",
+    "sword_crossed",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_don_valley": [
+    "sable",
+    "bend",
+    "battleaxe",
+    "sable",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_gurbantunggut": [
+    "sable",
+    "bend",
+    "tree_chestnut",
+    "sable",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_raichur_doab": [
+    "sable",
+    "bend",
+    "wheatsheaf_garb",
+    "sable",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_voronezh": [
+    "sable",
+    "bordure",
+    "crescent_moon",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_udmurtia": [
+    "sable",
+    "bordure",
+    "fish_twin",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_5215": [
+    "sable",
+    "bordure",
+    "roman_gate",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_vodamayutja": [
+    "sable",
+    "bordure",
+    "star_six_pointed",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_martyuba": [
+    "sable",
+    "per_fess",
+    "star_six_pointed",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_chuna_valley": [
+    "sable",
+    "chequy",
+    "anchor",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_EM_onon": [
+    "sable",
+    "chequy",
+    "battleaxe",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_kurdistan": [
+    "sable",
+    "chequy",
+    "falcon_perched",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_muyunkum": [
+    "sable",
+    "chequy",
+    "horse_courant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_SUM_palembang": [
+    "sable",
+    "chequy",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_vyadhapura": [
+    "sable",
+    "chequy",
+    "roman_gate",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_MAL_langkasuka": [
+    "sable",
+    "chequy",
+    "ship",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_khazaria": [
+    "sable",
+    "per_fess",
+    "ship",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_altaishan": [
+    "sable",
+    "chequy",
+    "stag_attired",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_devagiri": [
+    "sable",
+    "chequy",
+    "sun_radiant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_karabas": [
+    "sable",
+    "chequy",
+    "wheatsheaf_garb",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_konkana": [
+    "sable",
+    "chevron",
+    "castrum",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sapi": [
+    "sable",
+    "chevron",
+    "fish_twin",
+    "sable",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_biarmia": [
+    "sable",
+    "fess",
+    "anchor",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_zadoi": [
+    "sable",
+    "fess",
+    "oak_branch",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_gobi_shatuoguo": [
+    "sable",
+    "fess",
+    "waves",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_malho": [
+    "sable",
+    "pale",
+    "anchor",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_litang": [
+    "sable",
+    "pale",
+    "oak_branch",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_IDO_lesser_sunda": [
+    "sable",
+    "pale",
+    "sun_radiant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tannu_ola": [
+    "sable",
+    "pale",
+    "tree_chestnut",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_qumarleb": [
+    "sable",
+    "pale",
+    "wolf_statant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_magadha": [
+    "sable",
+    "per_fess",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_xining": [
+    "sable",
+    "per_fess",
+    "crown",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_7455": [
+    "sable",
+    "per_fess",
+    "falcon_perched",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_amdo": [
+    "sable",
+    "per_fess",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kalinga": [
+    "sable",
+    "per_fess",
+    "oak_branch",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_alger": [
+    "sable",
+    "per_fess",
+    "tree_chestnut",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_8252": [
+    "sable",
+    "per_fess",
+    "tree_chestnut",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_zabulistan": [
+    "sable",
+    "per_pale",
+    "battleaxe",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_maru": [
+    "sable",
+    "per_pale",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tsagaanbaigal": [
+    "sable",
+    "quarterly",
+    "star_six_pointed",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_sutiya": [
+    "sable",
+    "quarterly",
+    "wolf_statant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_qyzylsaryarka": [
+    "sable",
+    "saltire",
+    "fleur_de_lis",
+    "sable",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_kono": [
+    "sable",
+    "saltire",
+    "stag_attired",
+    "sable",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_hadramawt": [
+    "sable",
+    "saltire",
+    "sun_radiant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tao-klarjeti": [
+    "sable",
+    "saltire",
+    "sword_crossed",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tambov": [
+    "sable",
+    "saltire",
+    "tree_chestnut",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_baigaluuls": [
+    "sable",
+    "saltire",
+    "waves",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kuru": [
+    "sable",
+    "saltire",
+    "wheatsheaf_garb",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_em_tataria": [
+    "sable",
+    "saltire",
+    "wheel_spoked",
+    "sable",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_vogulia": [
+    "sable",
+    "saltire",
+    "wolf_statant",
+    "sable",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_SuMa_minahasa": [
+    "sable",
+    "solid",
+    "anchor",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_bargujin_tukum": [
+    "sable",
+    "solid",
+    "battleaxe",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_varendra": [
+    "sable",
+    "solid",
+    "bear_rampant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_kano": [
+    "sable",
+    "solid",
+    "bear_rampant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "x_script_2975": [
+    "sable",
+    "solid",
+    "castrum",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_vengi": [
+    "sable",
+    "solid",
+    "castrum",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_mogadishu": [
+    "sable",
+    "solid",
+    "crescent_moon",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "x_script_3608": [
+    "sable",
+    "solid",
+    "crescent_moon",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_oyo": [
+    "sable",
+    "solid",
+    "crown",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_katsina": [
+    "sable",
+    "solid",
+    "fish_twin",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sanaag": [
+    "sable",
+    "solid",
+    "fish_twin",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_PHI_butuan": [
+    "sable",
+    "solid",
+    "fish_twin",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_akaltay": [
+    "sable",
+    "solid",
+    "fleur_de_lis",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_al-wahat": [
+    "sable",
+    "solid",
+    "horse_courant",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "d_batang": [
+    "sable",
+    "solid",
+    "horse_courant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_ajmer": [
+    "sable",
+    "solid",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_boyul": [
+    "sable",
+    "per_fess",
+    "horse_courant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sibir": [
+    "sable",
+    "per_fess",
+    "horse_courant",
+    "vert",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_dahala": [
+    "sable",
+    "solid",
+    "lion_rampant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_ngamring": [
+    "sable",
+    "solid",
+    "mount_triple",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_shammar": [
+    "sable",
+    "solid",
+    "oak_branch",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_al-hasa": [
+    "sable",
+    "solid",
+    "oak_branch",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_ratanpur": [
+    "sable",
+    "solid",
+    "roman_gate",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_purang": [
+    "sable",
+    "solid",
+    "rose_seeded",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_zavkhan": [
+    "sable",
+    "solid",
+    "rose_seeded",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_edessa": [
+    "sable",
+    "solid",
+    "ship",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nyingchi": [
+    "sable",
+    "solid",
+    "ship",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_wuli": [
+    "sable",
+    "solid",
+    "ship",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_gobir": [
+    "sable",
+    "per_fess",
+    "ship",
+    "vert",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_tabaristan": [
+    "sable",
+    "per_fess",
+    "ship",
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_lower_bosna": [
+    "sable",
+    "solid",
+    "stag_attired",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_yedisan": [
+    "sable",
+    "solid",
+    "stag_attired",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_al-said": [
+    "sable",
+    "solid",
+    "waves",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_ngari": [
+    "sable",
+    "solid",
+    "waves",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_anartta": [
+    "sable",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_borgu": [
+    "sable",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_kabul": [
+    "sable",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_pamir": [
+    "sable",
+    "per_fess",
+    "wheatsheaf_garb",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_jharkand": [
+    "sable",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kebbi": [
+    "sable",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_gaeseong": [
+    "vermilion",
+    "solid",
+    "castrum",
+    "or",
+    1,
+    "vermilion",
+    "in_chief"
+  ],
+  "d_BAL_cheolli": [
+    "vermilion",
+    "solid",
+    "mount_triple",
+    "or",
+    1,
+    "vermilion",
+    "in_chief"
+  ],
+  "d_tokaido": [
+    "vermilion",
+    "solid",
+    "mount_triple",
+    "or",
+    2,
+    "vermilion",
+    "above_below"
+  ],
+  "d_tosando": [
+    "vermilion",
+    "solid",
+    "mount_triple",
+    "or",
+    3,
+    "vermilion",
+    "two_and_one"
+  ],
+  "d_sum": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_eman_nivkhia": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_SW_dashiweiguo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_eman_bureya": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_south_saikaido": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_yanyun_yuyi": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_hokurikudo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_BAL_southern_balhae": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "or",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_BAL_dongpyeong": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "or",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_SW_sushenguo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_gwangju": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_donggye": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_BAL_amnok_jangryeong": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_east_sanindo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_east_sanyodo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_BAL_hoewon": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_eman_sikhotebei": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_eman_amar": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_bukgye": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_BAL_anwon": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_BAL_buyeo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "sable",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_nushiro": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_BAL_moe_su": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_SW_puyudao": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "vert",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_LIAO_zhongjing": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_BAL_parhae": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_jeonju": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "purpure",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_eman_samagero": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_liaoxi": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_north_saikaido": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "azure",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_qilian": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "argent",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_gyeongju": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "argent",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_SW_lingxiguo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "argent",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_LIAO_linhuang": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_sahaliyan": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_SW_heicheziguo": [
+    "vermilion",
+    "per_fess",
+    "mount_triple",
+    "gules",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_east_bando": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_hitakami": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_west_bando": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_BAL_yeojintang": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nankaido": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_west_sanindo": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_west_sanyodo": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1250": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "or",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_1439": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "or",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "x_script_1505": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1737": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_2047": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "x_script_2362": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "azure",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2388": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "azure",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_2533": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "azure",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "x_script_2799": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "gules",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2924": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "gules",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_chungju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "gules",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_LIAO_shangjing": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_LIAO_dongjing": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_SW_ruzheguo": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "sable",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_naju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_gyoju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_haeju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "vert",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_jinju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_kinai": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    2,
+    "or",
+    "above_below"
+  ],
+  "d_menas": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "purpure",
+    3,
+    "or",
+    "two_and_one"
+  ],
+  "d_yukju": [
+    "vermilion",
+    "per_pale",
+    "mount_triple",
+    "azure",
+    1,
+    "or",
+    "in_chief"
+  ],
+  "d_kanem": [
+    "vert",
+    "barry",
+    "battleaxe",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_sinhala": [
+    "vert",
+    "barry",
+    "crescent_moon",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tarbagatai": [
+    "vert",
+    "barry",
+    "crown",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_taghaza": [
+    "vert",
+    "barry",
+    "crown",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_sevilla": [
+    "vert",
+    "barry",
+    "fish_twin",
+    "or",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_azov": [
+    "vert",
+    "barry",
+    "oak_branch",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_lena": [
+    "vert",
+    "barry",
+    "sun_radiant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nasikya": [
+    "vert",
+    "barry",
+    "waves",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_sakmara": [
+    "vert",
+    "barry",
+    "wolf_statant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tana": [
+    "vert",
+    "bend",
+    "anchor",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1416": [
+    "vert",
+    "bend",
+    "anchor",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_salair": [
+    "vert",
+    "bend",
+    "fish_twin",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_EM_wajiezi": [
+    "vert",
+    "bend",
+    "rose_seeded",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_khopyor": [
+    "vert",
+    "bend",
+    "ship",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_racakonda": [
+    "vert",
+    "bend",
+    "sun_radiant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sanaa": [
+    "vert",
+    "bend",
+    "sword_crossed",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_em_wuguguo": [
+    "vert",
+    "bend",
+    "waves",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_ostyaki": [
+    "vert",
+    "bend",
+    "wolf_statant",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_JAV_taruma": [
+    "vert",
+    "bordure",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_7430": [
+    "vert",
+    "bordure",
+    "oak_branch",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_hamadan": [
+    "vert",
+    "bordure",
+    "rose_seeded",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_chera_nadu": [
+    "vert",
+    "bordure",
+    "stag_attired",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1553": [
+    "vert",
+    "bordure",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_kurmanchal": [
+    "vert",
+    "bordure",
+    "wheel_spoked",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_khovd": [
+    "vert",
+    "chequy",
+    "battleaxe",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_darfur": [
+    "vert",
+    "chequy",
+    "castrum",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_6239": [
+    "vert",
+    "per_fess",
+    "castrum",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_betpa": [
+    "vert",
+    "per_fess",
+    "castrum",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_aral_il": [
+    "vert",
+    "chequy",
+    "horse_courant",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_zhetysu": [
+    "vert",
+    "per_fess",
+    "horse_courant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nulambavadi": [
+    "vert",
+    "chequy",
+    "roman_gate",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kazym": [
+    "vert",
+    "per_fess",
+    "roman_gate",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_alakol": [
+    "vert",
+    "chequy",
+    "tree_chestnut",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_tadmekka": [
+    "vert",
+    "chevron",
+    "anchor",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_syr_darya": [
+    "vert",
+    "chevron",
+    "crown",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_karkaraly": [
+    "vert",
+    "chevron",
+    "falcon_perched",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_jerid": [
+    "vert",
+    "chevron",
+    "fish_twin",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_chola_nadu": [
+    "vert",
+    "chevron",
+    "lion_rampant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_angkor_borey": [
+    "vert",
+    "chevron",
+    "wheel_spoked",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_jawf-al-yamani": [
+    "vert",
+    "chevron",
+    "wheel_spoked",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_mema": [
+    "vert",
+    "fess",
+    "roman_gate",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_guoldat": [
+    "vert",
+    "fess",
+    "waves",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_shabelle": [
+    "vert",
+    "fess",
+    "wolf_statant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_dawaro": [
+    "vert",
+    "pale",
+    "battleaxe",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_para_lauhitya": [
+    "vert",
+    "pale",
+    "falcon_perched",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_djolof": [
+    "vert",
+    "pale",
+    "horse_courant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_west_ajuraan": [
+    "vert",
+    "pale",
+    "rose_seeded",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_delta": [
+    "vert",
+    "pale",
+    "star_six_pointed",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_3603": [
+    "vert",
+    "pale",
+    "wheel_spoked",
+    "vert",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_naqis": [
+    "vert",
+    "pale",
+    "wolf_statant",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_ife": [
+    "vert",
+    "per_fess",
+    "battleaxe",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_savalu": [
+    "vert",
+    "per_fess",
+    "crown",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_merv": [
+    "vert",
+    "per_fess",
+    "falcon_perched",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_PHI_cagayan": [
+    "vert",
+    "per_fess",
+    "fleur_de_lis",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_pereyaslavl": [
+    "vert",
+    "per_pale",
+    "bear_rampant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_MAL_pahang": [
+    "vert",
+    "per_fess",
+    "bear_rampant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_kinnaur": [
+    "vert",
+    "per_pale",
+    "crown",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_1816": [
+    "vert",
+    "per_pale",
+    "mount_triple",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_showa": [
+    "vert",
+    "quarterly",
+    "crescent_moon",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_uraltau": [
+    "vert",
+    "quarterly",
+    "mount_triple",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_gauda": [
+    "vert",
+    "quarterly",
+    "rose_seeded",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_4589": [
+    "vert",
+    "quarterly",
+    "ship",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nobatia": [
+    "vert",
+    "quarterly",
+    "sun_radiant",
+    "or",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2260": [
+    "vert",
+    "quarterly",
+    "tree_chestnut",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_gabes": [
+    "vert",
+    "quarterly",
+    "waves",
+    "or",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_sriksetra": [
+    "vert",
+    "saltire",
+    "battleaxe",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_khasa": [
+    "vert",
+    "saltire",
+    "oak_branch",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_yazd": [
+    "vert",
+    "saltire",
+    "oak_branch",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tara": [
+    "vert",
+    "saltire",
+    "rose_seeded",
+    "vert",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_dahlaks": [
+    "vert",
+    "saltire",
+    "ship",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_brong": [
+    "vert",
+    "saltire",
+    "star_six_pointed",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2536": [
+    "vert",
+    "saltire",
+    "waves",
+    "vert",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_tondai_nadu": [
+    "vert",
+    "solid",
+    "battleaxe",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_lanikaz": [
+    "vert",
+    "solid",
+    "bear_rampant",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_west_darfur": [
+    "vert",
+    "solid",
+    "crown",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_shamir": [
+    "vert",
+    "solid",
+    "fish_twin",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "x_script_2626": [
+    "vert",
+    "solid",
+    "fish_twin",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_8046": [
+    "vert",
+    "solid",
+    "fleur_de_lis",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_rattapadi": [
+    "vert",
+    "per_fess",
+    "fleur_de_lis",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_stravani": [
+    "vert",
+    "solid",
+    "horse_courant",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "x_script_6299": [
+    "vert",
+    "solid",
+    "horse_courant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_ratanakiri": [
+    "vert",
+    "solid",
+    "horse_courant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_vuovdisamieana": [
+    "vert",
+    "solid",
+    "lion_rampant",
+    "argent",
+    2,
+    "argent",
+    "flanked"
+  ],
+  "x_script_1373": [
+    "vert",
+    "solid",
+    "lion_rampant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_lata": [
+    "vert",
+    "solid",
+    "lion_rampant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_kagha": [
+    "vert",
+    "per_fess",
+    "lion_rampant",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_sous": [
+    "vert",
+    "solid",
+    "roman_gate",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_IDO_timor": [
+    "vert",
+    "solid",
+    "roman_gate",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_2703": [
+    "vert",
+    "solid",
+    "roman_gate",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_gandhara": [
+    "vert",
+    "solid",
+    "rose_seeded",
+    "argent",
+    3,
+    "argent",
+    "in_chief"
+  ],
+  "d_ashanti": [
+    "vert",
+    "solid",
+    "ship",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_jabal_kufs": [
+    "vert",
+    "solid",
+    "ship",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_zanskar": [
+    "vert",
+    "solid",
+    "ship",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_kasa": [
+    "vert",
+    "per_fess",
+    "ship",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_atbasar": [
+    "vert",
+    "solid",
+    "star_six_pointed",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_bassa": [
+    "vert",
+    "solid",
+    "star_six_pointed",
+    "argent",
+    2,
+    "argent",
+    "in_chief"
+  ],
+  "d_ishim": [
+    "vert",
+    "solid",
+    "sun_radiant",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_suhma": [
+    "vert",
+    "solid",
+    "sun_radiant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_PHI_sandao": [
+    "vert",
+    "solid",
+    "sun_radiant",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_kwararafa": [
+    "vert",
+    "solid",
+    "sword_crossed",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nagchu": [
+    "vert",
+    "solid",
+    "sword_crossed",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "x_script_1506": [
+    "vert",
+    "solid",
+    "sword_crossed",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_SuMa_halmahera": [
+    "vert",
+    "solid",
+    "waves",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_gobi_dadaels": [
+    "vert",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_atyrau": [
+    "vert",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_yarlung": [
+    "vert",
+    "solid",
+    "wheatsheaf_garb",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_bumthang": [
+    "vert",
+    "per_fess",
+    "wheatsheaf_garb",
+    "sable",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_nyima": [
+    "vert",
+    "per_fess",
+    "wheatsheaf_garb",
+    "sable",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_monyul": [
+    "vert",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_SuMa_konawe": [
+    "vert",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    2,
+    "argent",
+    "above_below"
+  ],
+  "d_uda_valley": [
+    "vert",
+    "solid",
+    "wheel_spoked",
+    "argent",
+    3,
+    "argent",
+    "two_and_one"
+  ],
+  "d_tosali": [
+    "vert",
+    "solid",
+    "wolf_statant",
+    "argent",
+    1,
+    "argent",
+    "in_chief"
+  ],
+  "d_golog": [
+    "vert",
+    "solid",
+    "wolf_statant",
+    "argent",
+    2,
+    "argent",
+    "above_below"
   ]
 }
