@@ -1152,6 +1152,44 @@ class TestSymbolGenerator:
 
         assert len(collisions) == 0, f"Duchy collisions with higher tiers: {collisions}"
 
+    def test_county_heraldic_uniqueness(self, counties_data):
+        """Verify 100% heraldic uniqueness across all 3,476 geojson counties and 0 collisions with higher tiers."""
+        canon_path = REPO_DIR / "data" / "canonical_title_heraldry.json"
+        with open(canon_path, "r", encoding="utf-8") as f:
+            canon = json.load(f)
+
+        features = counties_data.get("features", [])
+        counties = sorted(list(set(f["properties"].get("county") for f in features if f["properties"].get("county"))))
+        assert len(counties) == 3476, f"Expected 3476 counties, got {len(counties)}"
+
+        # 1. All 3,476 geojson counties present in canon
+        for c in counties:
+            assert c in canon, f"County {c} missing from canonical heraldry"
+
+        # 2. 100% uniqueness among all 3,476 counties
+        county_blazons = {}
+        for c in counties:
+            sig = tuple(canon[c])
+            county_blazons.setdefault(sig, []).append(c)
+
+        dups = {b: clist for b, clist in county_blazons.items() if len(clist) > 1}
+        assert len(dups) == 0, f"Duplicate county blazons detected: {dups}"
+
+        # 3. Zero collisions between counties and higher-tier realms (empires, kingdoms, duchies)
+        higher_blazons = set()
+        for k, spec in canon.items():
+            if k.startswith(('e_', 'k_', 'h_', 'd_')):
+                higher_blazons.add(tuple(spec))
+                higher_blazons.add(tuple(spec[:6]))
+
+        collisions = []
+        for c in counties:
+            spec = canon[c]
+            if tuple(spec) in higher_blazons or tuple(spec[:6]) in higher_blazons:
+                collisions.append((c, spec))
+
+        assert len(collisions) == 0, f"County collisions with higher tiers: {collisions}"
+
     def test_charge_builders_tincture_adaptation(self):
         """Verify dynamic contrast immunity for multi-element charges in symbol_generator.js."""
         js_path = DOCS_DIR / "js" / "symbol_generator.js"
