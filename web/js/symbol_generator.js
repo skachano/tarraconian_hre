@@ -242,6 +242,13 @@
       </g>
     `,
 
+    // Heraldic Cross Couped (Equal-armed Greek / Chancellery cross)
+    cross: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5" stroke-linejoin="round">
+        <path d="M 38 10 L 62 10 L 62 38 L 90 38 L 90 62 L 62 62 L 62 90 L 38 90 L 38 62 L 10 62 L 10 38 L 38 38 Z" />
+      </g>
+    `,
+
     // Chestnut Tree (Kestenholz / Châtenois canting)
     tree_chestnut: (color = PALETTE.vert, scale = 1, cx = 110, cy = 115, trunk = PALETTE.wood, field = null) => {
       const crownColor = (field === 'vert' || color === PALETTE.or || color === PALETTE.argent) ? (color !== PALETTE.vert ? color : PALETTE.or) : (color || PALETTE.vert);
@@ -568,6 +575,41 @@
         <line x1="40" y1="23" x2="40" y2="67" stroke="${PALETTE.sable}" stroke-width="0.8" />
         <polygon points="22,68 48,68 52,74 18,74" />
         <rect x="16" y="74" width="38" height="6" rx="1" />
+      </g>
+    `,
+
+    // Heraldic Fess Charge (Horizontal bar couped)
+    fess: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5">
+        <rect x="5" y="37" width="90" height="26" rx="1.5" />
+      </g>
+    `,
+
+    // Heraldic Pale Charge (Vertical bar couped)
+    pale: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5">
+        <rect x="37" y="5" width="26" height="90" rx="1.5" />
+      </g>
+    `,
+
+    // Heraldic Bend Charge (Diagonal bend couped)
+    bend: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale * 0.88})" fill="${color}" stroke="${accent}" stroke-width="1.5" stroke-linejoin="round">
+        <polygon points="-26,-46 46,26 26,46 -46,-26" />
+      </g>
+    `,
+
+    // Heraldic Chevron Charge (Inverted V couped)
+    chevron: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -48)" fill="${color}" stroke="${accent}" stroke-width="1.5" stroke-linejoin="round">
+        <polygon points="50,18 86,68 74,78 50,44 26,78 14,68" />
+      </g>
+    `,
+
+    // Heraldic Bordure / Orle Charge (Escutcheon border couped)
+    bordure: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5" stroke-linejoin="round">
+        <path d="M 16 12 L 84 12 L 84 50 C 84 72, 50 88, 50 88 C 50 88, 16 72, 16 50 Z M 26 22 L 74 22 L 74 48 C 74 66, 50 78, 50 78 C 50 78, 26 66, 26 48 Z" fill-rule="evenodd" />
       </g>
     `
 

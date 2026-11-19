@@ -790,7 +790,7 @@ class TestSymbolGenerator:
         assert 'fill="${ink}"' in content
 
     def test_charge_builders_uniform_signature(self):
-        """All 39 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
+        """All 45 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
         import re
 
         js_path = DOCS_DIR / "js" / "symbol_generator.js"
@@ -799,16 +799,16 @@ class TestSymbolGenerator:
         charges = [
             "eagle_double", "alerion", "castrum", "roman_gate", "mount_triple",
             "bridge", "waves", "bell", "keys_st_peter", "crozier",
-            "cross_patriarchal", "cross_byzantine", "tree_chestnut",
+            "cross_patriarchal", "cross_byzantine", "cross", "tree_chestnut",
             "lion_rampant", "ship", "crown", "dragon",
             "sword_crossed", "battleaxe", "spear", "bow_and_arrow", "shield_escutcheon",
             "stag_attired", "bear_rampant", "horse_courant", "wolf_statant", "fish_twin",
             "falcon_perched", "rose_seeded", "fleur_de_lis", "wheatsheaf_garb", "oak_branch",
             "grape_cluster", "sun_radiant", "star_six_pointed", "crescent_moon", "wheel_spoked",
-            "anchor", "column_roman"
+            "anchor", "column_roman", "fess", "pale", "bend", "chevron", "bordure"
         ]
 
-        assert len(charges) == 39
+        assert len(charges) == 45
 
         for charge in charges:
             # Match charge declaration: charge: (arg1, arg2, arg3, arg4...) =>
@@ -1078,6 +1078,37 @@ class TestSymbolGenerator:
         # 5. St. Peter keys contrast adaptation
         assert "keys_st_peter:" in content
         assert "k1" in content and "k2" in content
+
+    def test_thessalonika_and_ordinary_charges_coverage(self):
+        """Verify k_thessalonika cross charge and all ordinary charges are defined in CHARGES."""
+        import json
+        import re
+
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. k_thessalonika in canonical heraldry
+        canon_path = REPO_DIR / "data" / "canonical_title_heraldry.json"
+        with open(canon_path, "r", encoding="utf-8") as f:
+            canon = json.load(f)
+
+        assert "k_thessalonika" in canon, "k_thessalonika must be present in canonical heraldry"
+        field, ord_key, charge, charge_col, count, ord_col = canon["k_thessalonika"]
+        assert field == "gules", f"k_thessalonika field must be Gules, got {field}"
+        assert charge == "cross", f"k_thessalonika charge must be cross, got {charge}"
+        assert charge_col == "argent", f"k_thessalonika charge color must be Argent, got {charge_col}"
+
+        # 2. All charges in canon are present in CHARGES
+        defined_charges = set(re.findall(r"^\s*([a-zA-Z0-9_]+)\s*:\s*\([^)]*\)\s*=>", content, re.MULTILINE))
+        canon_charges = set(spec[2] for spec in canon.values() if len(spec) > 2 and spec[2])
+
+        missing_charges = canon_charges - defined_charges
+        assert len(missing_charges) == 0, f"Charges in canon missing from CHARGES: {missing_charges}"
+
+        # 3. Explicit check for cross and ordinary charges
+        for ordinary_charge in ["cross", "fess", "pale", "bend", "chevron", "bordure"]:
+            assert ordinary_charge in defined_charges, f"Ordinary charge {ordinary_charge} missing from CHARGES"
+
 
 
 
