@@ -147,8 +147,9 @@ def generate_tarraconian_ipa(name: str) -> str:
     if "/" in s:
         s = s.split("/")[0].strip()
         
-    # Expand Saint abbreviations
-    s = re.sub(r"\bSt\.?\s*", "Zant-", s)
+    # Expand Saint abbreviations (requiring dot or whitespace before capital to prevent matching Stendal, Stade, etc.)
+    s = re.sub(r"\bSt\.(?:\s+|-)?", "Zant-", s)
+    s = re.sub(r"\bSt\s+(?=[A-Z])", "Zant-", s)
     s = re.sub(r"\bSaint[\s\-]+", "Zant-", s, flags=re.IGNORECASE)
     
     # Store original stripped name to detect Romance/Germanic patterns for stress
@@ -871,6 +872,39 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
     return fallback_nm, f"Municipal foundation established by {clean_founder}"
 
 
+POST_867_ANACHRONISMS = {
+    "b_lorient": "1666 French East India Company port",
+    "b_portsmouth": "1180 Norman port founded by Jean de Gisors",
+    "b_dunkirk": "c. 960 Flemish coastal town",
+    "b_cherbourg": "10th-century Norman fortress",
+    "b_versailles": "1038 medieval village",
+    "b_cuxhaven": "16th-century Elbe mouth port",
+    "b_montauban": "1144 bastide founded by Alfonso Jordan",
+    "b_limbourg": "1020 castle built by Frederick of Luxembourg",
+    "b_combourg": "1014-1040 castle built by Archbishop of Dol",
+    "b_taillebourg": "10th-11th century Charente fortress",
+    "b_floridsdorf": "1786 modern Danube plain foundation",
+    "b_castlebar": "1235 Norman castle built by Gerald de Barry",
+    "b_portogruaro": "1140 Lemene river port",
+    "b_gelnhausen": "1170 Barbarossa Kaiserpfalz",
+    "b_bruchhausen": "1199 collegiate church",
+    "b_recklinghausen": "1017 first attested settlement",
+    "b_wolfratshausen": "1116 first attested castle",
+    "b_burghausen": "1025 castle first attested",
+    "b_neumarkt": "1130 planned market town",
+    "b_rockenhausen": "1144 first attested settlement",
+    "b_sangerhausen": "991 first attested settlement",
+    "b_peterborough": "970 refounded monastic burh",
+    "b_chatellerault": "952 Castrum Heraldi",
+    "b_saint_dizier": "1227 castle built by Guy II of Dampierre",
+    "b_chambery": "1057 first attested castle",
+    "b_montbrison": "1089 castle of the Counts of Forez",
+    "b_faucigny": "1000 castle of the Lords of Faucigny",
+    "b_jonkoping": "1284 chartered trading town",
+    "b_borgarsyslar": "1016 royal fortress founded by St. Olaf",
+}
+
+
 def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
     """
     Evaluates whether a sub-barony has positive pre-867 proof under the Burden of Proof on Antiquity.
@@ -878,6 +912,8 @@ def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
     """
     if bk in INDIGENOUS_RESTITUTIONS:
         return True, "indigenous_restitution"
+    if bk in POST_867_ANACHRONISMS:
+        return False, "classical_late_foundation"
     c_key = bk.replace("b_", "c_")
     if c_key in ATTESTATION_REGISTRY:
         att_yr = ATTESTATION_REGISTRY[c_key][0]
@@ -1499,6 +1535,8 @@ def resolve_all_baronies():
                     house_desc = f"of House {house_name}" if (house_name and not circ) else "under Toponym-First foundation (disqualifying circular in-game house)"
                     if bk == "b_baranovichi":
                         anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1871 railway station); resolved via Option C based on save ruler {holder_name}."
+                    elif bk in POST_867_ANACHRONISMS:
+                        anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity ({POST_867_ANACHRONISMS[bk]}); resolved via Option C based on save ruler {holder_name} {house_desc}."
                     elif anc_reason == "classical_late_foundation":
                         anach_note = f"Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     elif anc_reason == "high_medieval_foundation":

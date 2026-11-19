@@ -322,7 +322,117 @@
   };
 
   // =========================================================================
-  // 3. Deterministic Hash & Canting Analyzer
+  // 3. Heraldic Tincture & Charge Dictionaries & Morphological Patterns
+  // =========================================================================
+  const TINCTURES = {
+    or: { key: 'or', tarr: 'Golt', tarrAdj: 'gülden', en: 'Or', enAdj: 'Or', hex: PALETTE.or },
+    argent: { key: 'argent', tarr: 'Silber', tarrAdj: 'silbern', en: 'Argent', enAdj: 'Argent', hex: PALETTE.argent },
+    gules: { key: 'gules', tarr: 'Keiser-Rôt', tarrAdj: 'rôt', en: 'Gules', enAdj: 'Gules', hex: PALETTE.gules },
+    sable: { key: 'sable', tarr: 'Swartz', tarrAdj: 'swartz', en: 'Sable', enAdj: 'Sable', hex: PALETTE.sable },
+    azure: { key: 'azure', tarr: 'Lâsûr', tarrAdj: 'blou', en: 'Azure', enAdj: 'Azure', hex: PALETTE.azure },
+    vert: { key: 'vert', tarr: 'Grûne', tarrAdj: 'grûne', en: 'Vert', enAdj: 'Vert', hex: PALETTE.vert },
+    purpure: { key: 'purpure', tarr: 'Purper', tarrAdj: 'purpern', en: 'Purpure', enAdj: 'Purpure', hex: PALETTE.purpure },
+    vermilion: { key: 'vermilion', tarr: 'Zinôber-Rôt', tarrAdj: 'zinôber-rôt', en: 'Vermilion', enAdj: 'Vermilion', hex: PALETTE.vermilion }
+  };
+
+  const CHARGE_BLAZONS = {
+    eagle_double: { tarrNoun: 'doppelter Adler', enNoun: 'double-headed eagle', enArticle: 'a' },
+    alerion: { tarrNoun: 'Alerion', enNoun: 'alerion', enArticle: 'an' },
+    castrum: { tarrNoun: 'Burch mit drîn Türmen', enNoun: 'triple-towered castrum', enArticle: 'a' },
+    roman_gate: { tarrNoun: 'römisches Stat-Tôr', enNoun: 'Roman city gate', enArticle: 'a' },
+    mount_triple: { tarrNoun: 'Dreiberch', enNoun: 'triple mount', enArticle: 'a' },
+    bridge: { tarrNoun: 'steinene Brücke', enNoun: 'stone bridge', enArticle: 'a' },
+    waves: { tarrNoun: 'Meereswâgen', enNoun: 'waves in base', enArticle: '' },
+    bell: { tarrNoun: 'Glocke', enNoun: 'bell', enArticle: 'a' },
+    keys_st_peter: { tarrNoun: 'Slüttele van Zant Peter', enNoun: 'keys of St. Peter in saltire', enArticle: 'the' },
+    crozier: { tarrNoun: 'Bischofsstap', enNoun: 'crozier', enArticle: 'a' },
+    cross_patriarchal: { tarrNoun: 'Patriarchenkrütz', enNoun: 'patriarchal cross', enArticle: 'a' },
+    cross_byzantine: { tarrNoun: 'bîsantinisch Krütz belegt mit vîr Füristeinen', enNoun: 'cross between four firesteels', enArticle: 'a' },
+    tree_chestnut: { tarrNoun: 'Kestenboum', enNoun: 'chestnut tree', enArticle: 'a' },
+    lion_rampant: { tarrNoun: 'klimmender Lôwe', enNoun: 'lion rampant', enArticle: 'a' },
+    ship: { tarrNoun: 'Kogge', enNoun: 'lymphad under sail', enArticle: 'a' },
+    crown: { tarrNoun: 'Keiserkrône', enNoun: 'imperial crown', enArticle: 'an' },
+    dragon: { tarrNoun: 'Drache', enNoun: 'dragon', enArticle: 'a' }
+  };
+
+  function formatBlazon(fieldKey, chargeKey, chargeColorHex) {
+    const fieldTinc = TINCTURES[fieldKey] || TINCTURES.gules;
+    let chargeTincKey = 'argent';
+    if (chargeColorHex === PALETTE.or) chargeTincKey = 'or';
+    else if (chargeColorHex === PALETTE.sable) chargeTincKey = 'sable';
+    else if (chargeColorHex === PALETTE.gules) chargeTincKey = 'gules';
+    else if (chargeColorHex === PALETTE.azure) chargeTincKey = 'azure';
+    else if (chargeColorHex === PALETTE.vert) chargeTincKey = 'vert';
+    const chargeTinc = TINCTURES[chargeTincKey] || TINCTURES.argent;
+
+    const chargeMeta = CHARGE_BLAZONS[chargeKey] || {
+      tarrNoun: 'Emblem',
+      enNoun: (chargeKey || 'charge').replace(/_/g, ' '),
+      enArticle: 'a'
+    };
+
+    let blazonTarr = '';
+    if (chargeKey === 'waves') {
+      blazonTarr = `In ${fieldTinc.tarr} Meereswâgen van ${chargeTinc.tarr}`;
+    } else if (chargeKey === 'keys_st_peter') {
+      blazonTarr = `In ${fieldTinc.tarr} zwên gekrützte Slüttele van Zant Peter van ${chargeTinc.tarr}`;
+    } else {
+      const adj = chargeTinc.tarrAdj;
+      blazonTarr = `In ${fieldTinc.tarr} ein ${adj} ${chargeMeta.tarrNoun}`;
+    }
+
+    let blazonEn = '';
+    const art = chargeMeta.enArticle ? `${chargeMeta.enArticle} ` : '';
+    blazonEn = `${fieldTinc.en}, ${art}${chargeMeta.enNoun} ${chargeTinc.en}`;
+
+    return { blazonTarr, blazonEn };
+  }
+
+  // Multilingual Toponymic Tincture Morpheme Patterns
+  const TINCTURE_PATTERNS = {
+    vert: new RegExp(
+      '(?:' +
+      'gr[uûü]n[a-z]*|' +
+      '\\bzelen[a-z]*\\b|\\bseleng[oô]r[a-z]*\\b|' +
+      '\\bz[oö]ld[a-z]*\\b|' +
+      '\\b(?:al[-_]?)?akhdar\\b|\\b(?:al[-_]?)?kh?adra\\b(?!mawt)|' +
+      '\\byashil[a-z]*\\b|\\bye[sş]il[a-z]*\\b|' +
+      '\\bchlor[a-z]*\\b|' +
+      '\\bglas\\b|buglas|' +
+      '\\bvert\\b|\\bverde[a-z]*\\b|\\bvirid[a-z]*\\b|' +
+      '\\bgreen[a-z]*\\b|' +
+      '\\bl[uü]se\\b|\\blv\\b|\\bverdant\\b' +
+      ')',
+      'i'
+    ),
+    azure: new RegExp(
+      '(?:' +
+      '\\bblou[a-z]*\\b|k[oô]lblou[a-z]*|z[iî]blou[a-z]*|' +
+      '\\bbl[aâ]u[a-z]*\\b|\\bblâ(?!n)[a-z]*\\b|' +
+      '\\bl[aâ]s[uû]r[a-z]*\\b|' +
+      '\\bazur[a-z]*\\b|\\bazzurr[a-z]*\\b|\\bazure\\b|' +
+      '\\bk[eé]k[a-z]*\\b|' +
+      '\\bsin[yi][a-z]*\\b|' +
+      '\\bplav[a-z]*\\b|' +
+      '\\b(?:al[-_]?)?azraq\\b|\\bzarqa\\b|' +
+      '\\bg[oö]k[a-z]*\\b|' +
+      '\\bkyan[a-z]*\\b|\\bcyano[a-z]*\\b|' +
+      '\\bbleu[a-z]*\\b|\\bblue[a-z]*\\b|' +
+      '\\bcaerul[a-z]*\\b|' +
+      '\\bgorm\\b|' +
+      '\\bqing[a-z]*\\b|' +
+      '\\bcang(?:zhou|jing)\\b' +
+      ')',
+      'i'
+    ),
+    argent: new RegExp('(?:w[îi]tz[a-z]*|weiss[a-z]*|blank[a-z]*|\\balba\\b|\\balbus\\b|\\bfeh[eé]r[a-z]*|\\bb[eé]l[a-z]*|\\bblanc\\b|\\bbianco\\b|\\babyad\\b)', 'i'),
+    gules: new RegExp('(?:r[oô]t[a-z]*|\\bv[oö]r[oö]s[a-z]*|\\bpiros[a-z]*|\\brouge\\b|\\brosso\\b|\\bahmar\\b|\\bcz?erven[a-z]*|\\bkrasn[a-z]*|\\bred\\b)', 'i'),
+    sable: new RegExp('(?:swartz[a-z]*|schwarz[a-z]*|\\bcz?ern[a-z]*|\\bfekete[a-z]*|\\bnoir\\b|\\bnero\\b|\\baswad\\b|\\bqara\\b|\\bblack\\b)', 'i'),
+    or: new RegExp('(?:golt[a-z]*|gold[a-z]*|g[uü]ld[a-z]*|\\barany[a-z]*|\\bzlat[a-z]*|\\baur[a-z]*|\\bchrys[a-z]*|\\bdhahab\\b|\\baltyn\\b)', 'i')
+  };
+
+  // =========================================================================
+  // 4. Deterministic Hash & Canting Analyzer
   // =========================================================================
   function hashString(str) {
     let hash = 5381;
@@ -335,10 +445,52 @@
 
   function analyzeTitle(titleKey, props = {}, tier = 'county') {
     const key = (titleKey || '').toLowerCase();
-    const tarrName = (props.tarr_hist || props.tarr_direct || props.tarr || props.c_tarr || props.d_tarr || props.k_tarr || props.e_tarr || props.name || '').toLowerCase();
-    const origName = (props.c_origin || props.d_origin || props.k_origin || props.e_origin || props.name || '').toLowerCase();
-    const anachNote = (props.c_anachronism || props.d_anachronism || props.k_anachronism || '').toLowerCase();
-    const hanzi = props.c_hanzi || props.d_hanzi || props.k_hanzi || props.e_hanzi || props.hanzi || '';
+    const tarrName = (
+      props.tarr_hist ||
+      props.tarr_direct ||
+      props.tarr ||
+      (tier === 'barony' ? props.b_tarr : '') ||
+      (tier === 'county' ? (props.c_tarr || props.tarr_hist || props.tarr_direct) : '') ||
+      (tier === 'duchy' ? (props.d_tarr_hist || props.d_tarr_direct || props.d_tarr) : '') ||
+      (tier === 'kingdom' ? (props.k_tarr_hist || props.k_tarr_direct || props.k_tarr) : '') ||
+      (tier === 'empire' ? (props.e_tarr_hist || props.e_tarr_direct || props.e_tarr) : '') ||
+      props.name || ''
+    ).toLowerCase();
+
+    const origName = (
+      (tier === 'county' ? props.c_origin : '') ||
+      (tier === 'duchy' ? props.d_origin : '') ||
+      (tier === 'kingdom' ? props.k_origin : '') ||
+      (tier === 'empire' ? props.e_origin : '') ||
+      props.c_origin || props.d_origin || props.k_origin || props.e_origin ||
+      props.origin || props.name || ''
+    ).toLowerCase();
+
+    const anachNote = (
+      props.c_anachronism ||
+      props.d_anachronism ||
+      props.k_anachronism ||
+      props.e_anachronism || ''
+    ).toLowerCase();
+
+    const hanzi = (
+      (tier === 'county' ? props.c_hanzi : '') ||
+      (tier === 'duchy' ? (props.d_hanzi || props.hanzi) : '') ||
+      (tier === 'kingdom' ? (props.k_hanzi || props.hanzi) : '') ||
+      (tier === 'empire' ? (props.e_hanzi || props.hanzi) : '') ||
+      (tier === 'barony' ? (props.b_hanzi || props.c_hanzi) : '') ||
+      props.c_hanzi || props.d_hanzi || props.k_hanzi || props.e_hanzi || props.hanzi || ''
+    );
+
+    const combinedText = [
+      key,
+      tarrName,
+      origName,
+      anachNote,
+      props.c_calque || props.d_calque || props.k_calque || props.calque || '',
+      props.c_origin || props.d_origin || props.k_origin || props.origin || '',
+      props.name || ''
+    ].join(' ');
 
     const h = hashString(key || tarrName);
 
@@ -448,27 +600,42 @@
       const charStr = hanzi ? hanzi.charAt(0) : '城';
       let calqueCharge = 'mount_triple';
       let fieldColor = 'vermilion';
-      if (tarrName.includes('drak') || origName.includes('long')) {
-        calqueCharge = 'dragon';
-      } else if (tarrName.includes('flutz') || tarrName.includes('wazzer') || origName.includes('he') || origName.includes('jiang')) {
+
+      // Detect Azure / Hydronymic Sinosphere titles
+      if (TINCTURE_PATTERNS.azure.test(combinedText) || tarrName.includes('flutz') || tarrName.includes('wazzer') || origName.includes('he') || origName.includes('jiang')) {
         calqueCharge = 'waves';
         fieldColor = 'azure';
+      } else if (TINCTURE_PATTERNS.vert.test(combinedText) || origName.includes('zhu') || tarrName.includes('bambûs')) {
+        calqueCharge = 'tree_chestnut';
+        fieldColor = 'vert';
+      } else if (tarrName.includes('drak') || origName.includes('long')) {
+        calqueCharge = 'dragon';
       } else if (tarrName.includes('tor') || tarrName.includes('port') || origName.includes('men') || origName.includes('guan')) {
         calqueCharge = 'roman_gate';
       } else if (tarrName.includes('burch') || origName.includes('cheng') || origName.includes('zhou')) {
         calqueCharge = 'castrum';
       }
 
+      const fieldTinc = TINCTURES[fieldColor] || TINCTURES.vermilion;
+      const chargeMeta = CHARGE_BLAZONS[calqueCharge] || { tarrNoun: 'golden Emblem', enNoun: 'emblem', enArticle: 'an' };
+
+      let sinoMedium = 'sinosphere_chop';
+      if (tier === 'empire') sinoMedium = 'vexillum';
+      else if (tier === 'kingdom') sinoMedium = 'gonfanon';
+      else if (tier === 'duchy') sinoMedium = 'notitia_scutum';
+      else if (tier === 'county') sinoMedium = 'sinosphere_chop';
+      else if (tier === 'barony') sinoMedium = 'civic_badge';
+
       return {
-        medium: 'sinosphere_chop',
+        medium: sinoMedium,
         field: fieldColor,
         ordinary: 'solid',
         charges: [calqueCharge],
         hanzi: hanzi || '州',
         chargeColor: PALETTE.or,
-        blazonTarr: `In Zinôber-Rôt das Siegel-Schriftzeichen ${hanzi || '州'} begleitet van einem goldenen Emblem`,
-        blazonEn: `Gules, the seal-script glyph ${hanzi || '州'} accompanied by an emblem Or`,
-        legend: `${(props.tarr_hist || props.tarr || key).toUpperCase()} • ${hanzi || '州'}之印`,
+        blazonTarr: `In ${fieldTinc.tarr} das Siegel-Schriftzeichen ${charStr} begleitet van einem goldenen ${chargeMeta.tarrNoun}`,
+        blazonEn: `${fieldTinc.en}, the seal-script glyph ${charStr} accompanied by ${chargeMeta.enArticle ? chargeMeta.enArticle + ' ' : ''}${chargeMeta.enNoun} Or`,
+        legend: `${(props.tarr_hist || props.tarr || key).toUpperCase()} • ${charStr}之印`,
         source: 'Procedure 1 Sinosphere Continuity Protocol'
       };
     }
@@ -478,18 +645,18 @@
     let detectedCharge = 'castrum';
     let detectedOrdinary = 'solid';
 
-    // Color prefixes
-    if (tarrName.startsWith('wîtz') || tarrName.startsWith('weiss') || origName.startsWith('alba') || origName.startsWith('fehér') || origName.startsWith('bél')) {
+    // Color detection across multilingual stems
+    if (TINCTURE_PATTERNS.argent.test(combinedText)) {
       detectedField = 'argent';
-    } else if (tarrName.startsWith('rôt') || tarrName.startsWith('rot') || origName.startsWith('red') || origName.startsWith('vörös')) {
+    } else if (TINCTURE_PATTERNS.gules.test(combinedText)) {
       detectedField = 'gules';
-    } else if (tarrName.startsWith('swartz') || tarrName.startsWith('schwarz') || origName.startsWith('čern') || origName.startsWith('fekete')) {
+    } else if (TINCTURE_PATTERNS.sable.test(combinedText)) {
       detectedField = 'sable';
-    } else if (tarrName.startsWith('golt') || tarrName.startsWith('gold') || origName.startsWith('arany') || origName.startsWith('aur')) {
+    } else if (TINCTURE_PATTERNS.or.test(combinedText)) {
       detectedField = 'or';
-    } else if (tarrName.startsWith('grûn') || tarrName.startsWith('grün') || origName.startsWith('zöld')) {
+    } else if (TINCTURE_PATTERNS.vert.test(combinedText)) {
       detectedField = 'vert';
-    } else if (tarrName.startsWith('blâ') || tarrName.startsWith('blau') || origName.startsWith('kék')) {
+    } else if (TINCTURE_PATTERNS.azure.test(combinedText)) {
       detectedField = 'azure';
     } else {
       // Deterministic field pick based on region / hash
@@ -502,17 +669,17 @@
       detectedCharge = 'castrum';
     } else if (tarrName.includes('stat') || tarrName.includes('polis') || origName.includes('gorod') || origName.includes('ville') || origName.includes('civitas')) {
       detectedCharge = 'roman_gate';
-    } else if (tarrName.includes('berch') || tarrName.includes('stein') || tarrName.includes('vêls') || origName.includes('mont') || origName.includes('hegy')) {
+    } else if (tarrName.includes('berch') || tarrName.includes('stein') || tarrName.includes('vêls') || tarrName.includes('gôre') || origName.includes('mont') || origName.includes('hegy') || origName.includes('gora')) {
       detectedCharge = 'mount_triple';
     } else if (tarrName.includes('brücke') || origName.includes('bridge') || origName.includes('puente') || origName.includes('ponte')) {
       detectedCharge = 'bridge';
-    } else if (tarrName.includes('vort') || tarrName.includes('flutz') || tarrName.includes('münde') || tarrName.includes('sê') || origName.includes('ford') || origName.includes('water')) {
+    } else if (tarrName.includes('vort') || tarrName.includes('flutz') || tarrName.includes('flôz') || tarrName.includes('wazzer') || tarrName.includes('münde') || tarrName.includes('sê') || origName.includes('ford') || origName.includes('water')) {
       detectedCharge = 'waves';
     } else if (tarrName.includes('kîrch') || tarrName.includes('münster') || tarrName.includes('dom') || tarrName.startsWith('zant-') || origName.startsWith('st-') || origName.startsWith('saint')) {
       detectedCharge = 'cross_patriarchal';
     } else if (tarrName.includes('wald') || tarrName.includes('holt') || tarrName.includes('holz') || origName.includes('wood') || origName.includes('forest')) {
       detectedCharge = 'tree_chestnut';
-    } else if (tarrName.includes('hâven') || tarrName.includes('port') || origName.includes('havn') || origName.includes('sea')) {
+    } else if (tarrName.includes('hâven') || tarrName.includes('port') || tarrName.includes('insel') || origName.includes('havn') || origName.includes('sea') || origName.includes('island')) {
       detectedCharge = 'ship';
     } else if (tarrName.includes('lôwe') || origName.includes('lion') || origName.includes('león')) {
       detectedCharge = 'lion_rampant';
@@ -538,14 +705,16 @@
       .replace(/[^a-zA-Z]/g, '')
       .toUpperCase();
 
+    const blazon = formatBlazon(detectedField, detectedCharge, chargeColor);
+
     return {
       medium: chosenMedium,
       field: detectedField,
       ordinary: detectedOrdinary,
       charges: [detectedCharge],
       chargeColor: chargeColor,
-      blazonTarr: `In ${detectedField.charAt(0).toUpperCase() + detectedField.slice(1)} ein Emblem van ${chargeColor === PALETTE.argent ? 'Silber' : (chargeColor === PALETTE.or ? 'Golt' : 'Swartz')}`,
-      blazonEn: `${detectedField} charged with ${detectedCharge.replace('_', ' ')}`,
+      blazonTarr: blazon.blazonTarr,
+      blazonEn: blazon.blazonEn,
       legend: `+ S. MAGISTRATVS • ${latinized}ENSIS •`,
       source: 'Chancellery Toponymic & Morpheme Calque'
     };
@@ -788,6 +957,8 @@
     const W = 220, H = 220;
     const boxSize = 170, boxX = 25, boxY = 25;
     const hanziChar = def.hanzi ? def.hanzi.charAt(0) : '州';
+    const ink = PALETTE[def.field] || PALETTE.vermilion;
+    const inkDark = def.field === 'azure' ? PALETTE.azure : (def.field === 'vert' ? PALETTE.vert : PALETTE.vermilion_dark);
 
     return `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="tarr-symbol-svg" aria-label="${def.blazonEn}">
@@ -804,29 +975,29 @@
           <!-- Parchment background under stamp -->
           <rect x="${boxX}" y="${boxY}" width="${boxSize}" height="${boxSize}" rx="8" fill="#f8f4e8" stroke="${PALETTE.sable}" stroke-width="1.5" />
           
-          <!-- Outer Thick Vermilion Ink Border -->
-          <rect x="${boxX + 4}" y="${boxY + 4}" width="${boxSize - 8}" height="${boxSize - 8}" rx="6" fill="none" stroke="${PALETTE.vermilion}" stroke-width="5" />
-          <!-- Inner Fine Vermilion Border -->
-          <rect x="${boxX + 12}" y="${boxY + 12}" width="${boxSize - 24}" height="${boxSize - 24}" rx="4" fill="none" stroke="${PALETTE.vermilion}" stroke-width="1.8" />
+          <!-- Outer Thick Seal Ink Border -->
+          <rect x="${boxX + 4}" y="${boxY + 4}" width="${boxSize - 8}" height="${boxSize - 8}" rx="6" fill="none" stroke="${ink}" stroke-width="5" />
+          <!-- Inner Fine Seal Ink Border -->
+          <rect x="${boxX + 12}" y="${boxY + 12}" width="${boxSize - 24}" height="${boxSize - 24}" rx="4" fill="none" stroke="${ink}" stroke-width="1.8" />
 
           <!-- Meander Corner Ornaments -->
-          <path d="M ${boxX + 15} ${boxY + 24} L ${boxX + 24} ${boxY + 24} L ${boxX + 24} ${boxY + 15}" fill="none" stroke="${PALETTE.vermilion}" stroke-width="1.5" />
-          <path d="M ${boxX + boxSize - 15} ${boxY + 24} L ${boxX + boxSize - 24} ${boxY + 24} L ${boxX + boxSize - 24} ${boxY + 15}" fill="none" stroke="${PALETTE.vermilion}" stroke-width="1.5" />
-          <path d="M ${boxX + 15} ${boxY + boxSize - 24} L ${boxX + 24} ${boxY + boxSize - 24} L ${boxX + 24} ${boxY + boxSize - 15}" fill="none" stroke="${PALETTE.vermilion}" stroke-width="1.5" />
-          <path d="M ${boxX + boxSize - 15} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 15}" fill="none" stroke="${PALETTE.vermilion}" stroke-width="1.5" />
+          <path d="M ${boxX + 15} ${boxY + 24} L ${boxX + 24} ${boxY + 24} L ${boxX + 24} ${boxY + 15}" fill="none" stroke="${ink}" stroke-width="1.5" />
+          <path d="M ${boxX + boxSize - 15} ${boxY + 24} L ${boxX + boxSize - 24} ${boxY + 24} L ${boxX + boxSize - 24} ${boxY + 15}" fill="none" stroke="${ink}" stroke-width="1.5" />
+          <path d="M ${boxX + 15} ${boxY + boxSize - 24} L ${boxX + 24} ${boxY + boxSize - 24} L ${boxX + 24} ${boxY + boxSize - 15}" fill="none" stroke="${ink}" stroke-width="1.5" />
+          <path d="M ${boxX + boxSize - 15} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 24} L ${boxX + boxSize - 24} ${boxY + boxSize - 15}" fill="none" stroke="${ink}" stroke-width="1.5" />
 
           <!-- Sinitic Watermark Charge in Background -->
           <g opacity="0.22" clip-path="url(#chop-clip)">
-            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](PALETTE.vermilion, 0.75, 110, 110) : '').join('')}
+            ${def.charges.map(c => CHARGES[c] ? CHARGES[c](ink, 0.75, 110, 110) : '').join('')}
           </g>
 
           <!-- Seal Script / Classical Hanzi Logograph (Carved in Relief) -->
-          <text x="110" y="125" text-anchor="middle" dominant-baseline="central" fill="${PALETTE.vermilion}" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="68" font-weight="900" letter-spacing="2">
+          <text x="110" y="125" text-anchor="middle" dominant-baseline="central" fill="${ink}" font-family="'Songti SC', 'Noto Serif SC', 'Kaiti SC', 'SimSun', serif" font-size="68" font-weight="900" letter-spacing="2">
             ${hanziChar}
           </text>
 
-          <!-- Bottom Vermilion Seal Legend -->
-          <text x="110" y="174" text-anchor="middle" fill="${PALETTE.vermilion_dark}" font-family="'Cinzel', serif" font-size="8" font-weight="700" letter-spacing="1">
+          <!-- Bottom Seal Legend -->
+          <text x="110" y="174" text-anchor="middle" fill="${inkDark}" font-family="'Cinzel', serif" font-size="8" font-weight="700" letter-spacing="1">
             ${def.legend ? def.legend.split('•')[0].trim() : 'MAGISTRAT'}
           </text>
         </g>
@@ -981,6 +1152,11 @@
     generateSymbol,
     renderSymbolToElement,
     PALETTE,
-    CHARGES
+    CHARGES,
+    TINCTURES,
+    CHARGE_BLAZONS,
+    TINCTURE_PATTERNS,
+    formatBlazon,
+    analyzeTitle
   };
 }));

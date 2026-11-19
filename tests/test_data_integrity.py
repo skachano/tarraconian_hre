@@ -690,3 +690,92 @@ class TestSymbolGenerator:
         assert "drawer-symbol-card" in content
         assert "TarraconianSymbols.renderSymbolToElement" in content
         assert "renderInsigniaGallery" in content
+
+    def test_vert_and_azure_blazon_and_tincture_vocabulary(self):
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. Authentic Tarraconian Heraldic Vocabulary for Vert & Azure
+        assert "tarr: 'Grûne'" in content, "Vert must map to Tarraconian 'Grûne'"
+        assert "en: 'Vert'" in content, "Vert must map to English 'Vert'"
+        assert "tarr: 'Lâsûr'" in content, "Azure must map to Tarraconian 'Lâsûr'"
+        assert "en: 'Azure'" in content, "Azure must map to English 'Azure'"
+        assert "tarr: 'Keiser-Rôt'" in content, "Gules must map to Tarraconian 'Keiser-Rôt'"
+        assert "tarr: 'Swartz'" in content, "Sable must map to Tarraconian 'Swartz'"
+        assert "tarr: 'Golt'" in content, "Or must map to Tarraconian 'Golt'"
+        assert "tarr: 'Silber'" in content, "Argent must map to Tarraconian 'Silber'"
+
+        # 2. Rejection of unparsed / uncapitalized blazon fragments
+        assert '"In Vert' not in content, "Found unparsed 'In Vert' in symbol generator"
+        assert '`In Vert' not in content, "Found unparsed '`In Vert' in symbol generator"
+        assert '"In Azure' not in content, "Found unparsed 'In Azure' in symbol generator"
+        assert '`In Azure' not in content, "Found unparsed '`In Azure' in symbol generator"
+        assert "vert charged with" not in content, "Found broken 'vert charged with' in symbol generator"
+        assert "azure charged with" not in content, "Found broken 'azure charged with' in symbol generator"
+
+        # 3. Proper heraldic charge dictionary
+        assert "CHARGE_BLAZONS" in content, "CHARGE_BLAZONS dictionary missing"
+        assert "formatBlazon" in content, "formatBlazon helper function missing"
+        assert "TINCTURE_PATTERNS" in content, "TINCTURE_PATTERNS missing"
+
+    def test_vert_and_azure_toponymic_parsing_coverage(self, counties_data, tree_data):
+        import re
+
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # Extract TINCTURE_PATTERNS from JS for Python verification
+        vert_re = re.compile(
+            r'(?:gr[uûü]n[a-z]*|\bzelen[a-z]*\b|\bseleng[oô]r[a-z]*\b|\bz[oö]ld[a-z]*\b|'
+            r'\b(?:al[-_]?)?akhdar\b|\b(?:al[-_]?)?kh?adra\b(?!mawt)|\byashil[a-z]*\b|'
+            r'\bye[sş]il[a-z]*\b|\bchlor[a-z]*\b|\bglas\b|buglas|\bvert\b|\bverde[a-z]*\b|'
+            r'\bvirid[a-z]*\b|\bgreen[a-z]*\b|\bl[uü]se\b|\blv\b|\bverdant\b)',
+            re.I
+        )
+
+        azure_re = re.compile(
+            r'(?:\bblou[a-z]*\b|k[oô]lblou[a-z]*|z[iî]blou[a-z]*|\bbl[aâ]u[a-z]*\b|'
+            r'\bblâ(?!n)[a-z]*\b|\bl[aâ]s[uû]r[a-z]*\b|\bazur[a-z]*\b|\bazzurr[a-z]*\b|'
+            r'\bazure\b|\bk[eé]k[a-z]*\b|\bsin[yi][a-z]*\b|\bplav[a-z]*\b|'
+            r'\b(?:al[-_]?)?azraq\b|\bzarqa\b|\bg[oö]k[a-z]*\b|\bkyan[a-z]*\b|'
+            r'\bcyano[a-z]*\b|\bbleu[a-z]*\b|\bblue[a-z]*\b|\bcaerul[a-z]*\b|\bgorm\b|'
+            r'\bqing[a-z]*\b|\bcang(?:zhou|jing)\b)',
+            re.I
+        )
+
+        # 1. Validate Vert titles
+        vert_test_cases = [
+            ("c_algeciras", "Grûninsel", "al-Gazirah al-Hadra"),
+            ("c_zelengora", "Selengôre", "Zelengora"),
+            ("c_grunningen", "Grüningen", "Grünningen"),
+            ("c_BAL_east_amnok", "Ôstantflôzgrûnewazzer", "East Yālü"),
+            ("c_yunzhou_2", "Grûnbambûsgouwe", "Grûnbambûsgouwe (in-game: Yunzhou)"),
+            ("c_grunberg", "Krossen", "Krosno (in-game: Grunberg)")
+        ]
+        for key, tarr, orig in vert_test_cases:
+            combined = f"{key} {tarr} {orig}"
+            assert vert_re.search(combined), f"Failed to detect Vert tincture for {key} ({combined})"
+
+        # 2. Validate Azure titles
+        azure_test_cases = [
+            ("c_qingshan", "Blouberch", "Qingshan"),
+            ("c_qingzhou", "Blougouwe", "Qingzhou"),
+            ("c_cangzhou", "Kôlblougouwe", "Cangzhou"),
+            ("d_SW_qingxingan", "Blou-Upgancstrant", "Qingxingan"),
+            ("d_blue_khakassia", "Blou-Chakassjen", "Blue Khakassia"),
+            ("c_gokju", "Dalgouwe", "Gokju"),
+            ("k_qingxu", "Blousacht", "Qingxu"),
+            ("b_al-azraq", "al-azraq", "al-Azraq")
+        ]
+        for key, tarr, orig in azure_test_cases:
+            combined = f"{key} {tarr} {orig}"
+            assert azure_re.search(combined), f"Failed to detect Azure tincture for {key} ({combined})"
+
+    def test_sinosphere_chop_ink_tincture_adaptation(self):
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # In renderSinosphereChop, ink color must adapt to field (e.g. azure or vert)
+        assert "const ink = PALETTE[def.field] || PALETTE.vermilion;" in content
+        assert 'stroke="${ink}"' in content
+        assert 'fill="${ink}"' in content

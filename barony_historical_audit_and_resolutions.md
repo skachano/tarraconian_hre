@@ -38,9 +38,9 @@ Every single occupied holding has been resolved according to:
 ```mermaid
 pie title Occupied Barony Resolutions (10,237 Titles)
     "Category 1: Sinosphere Logographic Calques" : 1979
-    "Category 2: Capital / Eponymous Holdings" : 2753
-    "Category 3a: Ancient Sub-Baronies & Attestations" : 3699
-    "Category 3b: Option C Founder Foundations" : 1806
+    "Category 2: Capital / Eponymous Holdings" : 2747
+    "Category 3a: Ancient Sub-Baronies & Attestations" : 3676
+    "Category 3b: Option C Founder Foundations" : 1835
 ```
 
 1. **Category 1 (Sinosphere Logographic Calques — 1,979 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,235-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
@@ -62,6 +62,11 @@ Titles are anchored strictly in physical substrates, verified classical settleme
 * **Paradox Default:** Baranovichi (founded November 17, 1871 around a railway station on the Brest-Moscow line). Lacked any medieval or pre-867 attestation.
 * **Save Universe Reality:** Church holding in `c_kletsk` enfeoffed on April 9, 1187 to Character `269993` (**Ehrenfried** of House **Suerbeer** / `dynn_Suerbeer`, head of house, ambitious churchman).
 * **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via diversified Option C for church holdings $\rightarrow$ Resolved to **`Ehrenfrîtszelle`** (*Monastic cell endowed by Ehrenfrît of House Suerbeer*). Populates `b_anachronism` with explicit railway-era historical provenance.
+
+#### Case Study: Resolution of `b_lorient` (`c_cornouaille`)
+* **Paradox Default:** Lorient (founded 1666 around the shipyards of the *Compagnie des Indes orientales*). Lacked any pre-867 attestation.
+* **Save Universe Reality:** City holding in `c_cornouaille` enfeoffed on August 11, 1191 to Character `17039416` (**Archembald** of House **Kestenholz-Sitzichow**, master steward/financier with trait `education_stewardship_4` / Midas Touched).
+* **Burden of Proof Resolution:** Fails antiquity check $\rightarrow$ Evaluated via Option C for city holdings $\rightarrow$ Resolved to **`Archembaldstat`** `[ˈar.xɛm.bald.stat]` (*Municipal foundation chartered by Archembald*). Populates `b_anachronism` with explicit 1666 East India Company foundation note.
 
 ### 2.2 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:
