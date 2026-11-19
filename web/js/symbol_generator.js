@@ -611,6 +611,190 @@
       <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.5" stroke-linejoin="round">
         <path d="M 16 12 L 84 12 L 84 50 C 84 72, 50 88, 50 88 C 50 88, 16 72, 16 50 Z M 26 22 L 74 22 L 74 48 C 74 66, 50 78, 50 78 C 50 78, 26 66, 26 48 Z" fill-rule="evenodd" />
       </g>
+    `,
+
+    // 1. Escallop (Shell of Saint James / pilgrim_compostella)
+    escallop: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 32 20 L 68 20 L 74 28 L 66 30 L 34 30 L 26 28 Z" />
+        <path d="M 34 30 C 18 42, 14 68, 26 82 C 34 90, 66 90, 74 82 C 86 68, 82 42, 66 30 Z" />
+        <path d="M 50 30 L 50 86 M 42 30 C 36 45, 34 68, 36 83 M 58 30 C 64 45, 66 68, 64 83 M 46 30 C 30 50, 24 65, 27 76 M 54 30 C 70 50, 76 65, 73 76" fill="none" stroke="${accent}" stroke-width="1.2" />
+      </g>
+    `,
+
+    // 2. Jerusalem Cross (Cross Potent with 4 Crosslets / pilgrim_jerusalem)
+    cross_jerusalem: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 44 22 L 56 22 L 56 44 L 78 44 L 78 56 L 56 56 L 56 78 L 44 78 L 44 56 L 22 56 L 22 44 L 44 44 Z" />
+        <rect x="36" y="16" width="28" height="7" rx="1" />
+        <rect x="36" y="77" width="28" height="7" rx="1" />
+        <rect x="16" y="36" width="7" height="28" rx="1" />
+        <rect x="77" y="36" width="7" height="28" rx="1" />
+        <path d="M 74 20 L 78 20 L 78 23 L 81 23 L 81 27 L 78 27 L 78 30 L 74 30 L 74 27 L 71 27 L 71 23 L 74 23 Z" stroke-width="0.8" />
+        <path d="M 22 20 L 26 20 L 26 23 L 29 23 L 29 27 L 26 27 L 26 30 L 22 30 L 22 27 L 19 27 L 19 23 L 22 23 Z" stroke-width="0.8" />
+        <path d="M 22 70 L 26 70 L 26 73 L 29 73 L 29 77 L 26 77 L 26 80 L 22 80 L 22 77 L 19 77 L 19 73 L 22 73 Z" stroke-width="0.8" />
+        <path d="M 74 70 L 78 70 L 78 73 L 81 73 L 81 77 L 78 77 L 78 80 L 74 80 L 74 77 L 71 77 L 71 73 L 74 73 Z" stroke-width="0.8" />
+      </g>
+    `,
+
+    // 3. Catherine Wheel (Spiked Breaking Wheel / pilgrim_badge_st_catherine)
+    catherine_wheel: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.3" stroke-linejoin="round">
+        <circle cx="50" cy="50" r="32" fill="none" stroke="${color}" stroke-width="6" />
+        <circle cx="50" cy="50" r="8" fill="${accent}" stroke="${accent}" stroke-width="1" />
+        <line x1="50" y1="18" x2="50" y2="82" stroke="${color}" stroke-width="3" />
+        <line x1="18" y1="50" x2="82" y2="50" stroke="${color}" stroke-width="3" />
+        <line x1="27" y1="27" x2="73" y2="73" stroke="${color}" stroke-width="3" />
+        <line x1="73" y1="27" x2="27" y2="73" stroke="${color}" stroke-width="3" />
+        <path d="M 50 18 C 50 10, 58 10, 62 13 L 53 18 Z" />
+        <path d="M 50 82 C 50 90, 42 90, 38 87 L 47 82 Z" />
+        <path d="M 82 50 C 90 50, 90 58, 87 62 L 82 53 Z" />
+        <path d="M 18 50 C 10 50, 10 42, 13 38 L 18 47 Z" />
+        <path d="M 73 27 C 79 21, 85 27, 86 31 L 76 29 Z" />
+        <path d="M 73 73 C 79 79, 73 85, 69 86 L 71 76 Z" />
+        <path d="M 27 73 C 21 79, 15 73, 14 69 L 24 71 Z" />
+        <path d="M 27 27 C 21 21, 27 15, 31 14 L 29 24 Z" />
+      </g>
+    `,
+
+    // 4. Pilgrim's Scrip / Pouch (Tasseled Travel Purse / pilgrim_badge_purse)
+    pilgrim_scrip: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <circle cx="50" cy="18" r="5" fill="none" stroke="${accent}" stroke-width="2.5" />
+        <path d="M 46 22 L 35 34 L 65 34 L 54 22 Z" />
+        <path d="M 28 36 C 24 55, 25 78, 50 82 C 75 78, 76 55, 72 36 Z" />
+        <path d="M 28 36 L 72 36 L 68 56 C 58 64, 42 64, 32 56 Z" fill="${accent}" />
+        <circle cx="50" cy="56" r="3.5" fill="${color}" stroke="${accent}" stroke-width="1" />
+        <line x1="42" y1="81" x2="39" y2="89" stroke="${accent}" stroke-width="2" />
+        <line x1="50" y1="82" x2="50" y2="90" stroke="${accent}" stroke-width="2" />
+        <line x1="58" y1="81" x2="61" y2="89" stroke="${accent}" stroke-width="2" />
+      </g>
+    `,
+
+    // 5. Holy Lance (Spear of Destiny / artifact_unique_lance_of_longius)
+    holy_lance: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.3" stroke-linejoin="round">
+        <path d="M 50 10 L 62 42 L 56 68 L 56 90 L 44 90 L 44 68 L 38 42 Z" />
+        <line x1="50" y1="14" x2="50" y2="90" stroke="${accent}" stroke-width="1" />
+        <path d="M 42 64 L 30 70 L 32 78 L 44 76 Z" />
+        <path d="M 58 64 L 70 70 L 68 78 L 56 76 Z" />
+        <rect x="43" y="38" width="14" height="20" fill="${PALETTE.or}" stroke="${accent}" stroke-width="1" rx="1" />
+        <path d="M 47 43 L 53 43 M 50 40 L 50 56" stroke="${accent}" stroke-width="1.4" />
+      </g>
+    `,
+
+    // 6. Reichskrone (Crown Imperial with High Arch & Cross / artifact_icons_unique_artifact_reichskrone)
+    crown_imperial: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 38 38 C 42 22, 58 22, 62 38" fill="none" stroke="${color}" stroke-width="5" />
+        <path d="M 38 38 C 42 22, 58 22, 62 38" fill="none" stroke="${accent}" stroke-width="1.2" />
+        <path d="M 47 12 L 53 12 L 53 15 L 56 15 L 56 19 L 53 19 L 53 28 L 47 28 L 47 19 L 44 19 L 44 15 L 47 15 Z" fill="${color}" />
+        <path d="M 38 42 L 50 36 L 62 42 L 62 76 L 38 76 Z" fill="${color}" />
+        <path d="M 20 48 L 38 42 L 38 76 L 20 74 Z" fill="${color}" />
+        <path d="M 62 42 L 80 48 L 80 74 L 62 76 Z" fill="${color}" />
+        <rect x="44" y="48" width="12" height="14" rx="3" fill="${PALETTE.gules}" stroke="${accent}" stroke-width="1" />
+        <circle cx="29" cy="56" r="4" fill="${PALETTE.azure}" stroke="${accent}" stroke-width="1" />
+        <circle cx="71" cy="56" r="4" fill="${PALETTE.azure}" stroke="${accent}" stroke-width="1" />
+        <rect x="18" y="74" width="64" height="6" rx="1.5" fill="${color}" />
+      </g>
+    `,
+
+    // 7. Crown Kamelaukion (Crown of Justinian / artifact_icons_unique_artifact_byzantine_imperial_crown)
+    crown_kamelaukion: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 48 14 L 52 14 L 52 17 L 55 17 L 55 20 L 52 20 L 52 26 L 48 26 L 48 20 L 45 20 L 45 17 L 48 17 Z" />
+        <path d="M 24 64 C 24 35, 76 35, 76 64 Z" fill="${PALETTE.gules}" />
+        <rect x="22" y="60" width="56" height="14" rx="2" fill="${color}" />
+        <path d="M 50 26 L 50 60 M 36 32 C 40 45, 42 54, 42 60 M 64 32 C 60 45, 58 54, 58 60" fill="none" stroke="${color}" stroke-width="2.5" />
+        <circle cx="32" cy="67" r="3" fill="${PALETTE.argent}" stroke="${accent}" stroke-width="0.8" />
+        <circle cx="50" cy="67" r="3.5" fill="${PALETTE.azure}" stroke="${accent}" stroke-width="0.8" />
+        <circle cx="68" cy="67" r="3" fill="${PALETTE.argent}" stroke="${accent}" stroke-width="0.8" />
+        <path d="M 24 74 L 24 88 M 28 74 L 28 85" stroke="${accent}" stroke-width="1.5" stroke-linecap="round" />
+        <circle cx="24" cy="88" r="2.5" fill="${PALETTE.argent}" />
+        <circle cx="28" cy="85" r="2" fill="${PALETTE.argent}" />
+        <path d="M 76 74 L 76 88 M 72 74 L 72 85" stroke="${accent}" stroke-width="1.5" stroke-linecap="round" />
+        <circle cx="76" cy="88" r="2.5" fill="${PALETTE.argent}" />
+        <circle cx="72" cy="85" r="2" fill="${PALETTE.argent}" />
+      </g>
+    `,
+
+    // 8. Imperial Investiture Seal Chop (tgp_seal_02_a)
+    seal_chop: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 38 42 C 38 24, 62 24, 62 42 Z" fill="${color}" />
+        <circle cx="50" cy="35" r="4" fill="${PALETTE.gules}" stroke="${accent}" stroke-width="1" />
+        <path d="M 28 42 L 72 42 L 76 50 L 24 50 Z" />
+        <rect x="22" y="50" width="56" height="32" rx="1.5" />
+        <circle cx="50" cy="66" r="5" fill="${PALETTE.argent}" stroke="${accent}" stroke-width="1.2" />
+        <line x1="28" y1="76" x2="72" y2="76" stroke="${accent}" stroke-width="1.2" />
+      </g>
+    `,
+
+    // 9. Paiza Tablet of Command (Gerege / paiza_artifact_icon)
+    paiza_tablet: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 34 26 C 34 14, 66 14, 66 26 L 66 84 C 66 88, 34 88, 34 84 Z" />
+        <circle cx="50" cy="24" r="5" fill="${PALETTE.vert}" stroke="${accent}" stroke-width="1.5" />
+        <rect x="39" y="35" width="22" height="44" rx="1" fill="none" stroke="${accent}" stroke-width="1" />
+        <line x1="43" y1="43" x2="57" y2="43" stroke="${accent}" stroke-width="1.4" />
+        <line x1="43" y1="51" x2="57" y2="51" stroke="${accent}" stroke-width="1.4" />
+        <line x1="43" y1="59" x2="57" y2="59" stroke="${accent}" stroke-width="1.4" />
+        <line x1="43" y1="67" x2="57" y2="67" stroke="${accent}" stroke-width="1.4" />
+      </g>
+    `,
+
+    // 10. War Hammer (Châtenois Martel / artifact_hammer)
+    war_hammer: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <line x1="50" y1="30" x2="50" y2="88" stroke="${PALETTE.wood}" stroke-width="5" stroke-linecap="round" />
+        <line x1="50" y1="30" x2="50" y2="88" stroke="${accent}" stroke-width="1" />
+        <polygon points="50,14 47,26 53,26" fill="${color}" />
+        <rect x="44" y="26" width="12" height="14" rx="1" fill="${color}" />
+        <path d="M 56 28 L 76 25 L 78 41 L 56 38 Z" fill="${color}" />
+        <path d="M 44 29 C 32 30, 20 40, 18 48 C 24 43, 36 38, 44 38 Z" fill="${color}" />
+      </g>
+    `,
+
+    // 11. Flanged War Mace (artifact_mace)
+    flanged_mace: (color = PALETTE.argent, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <rect x="47" y="32" width="6" height="56" rx="1" fill="${color}" />
+        <line x1="46" y1="74" x2="54" y2="74" stroke="${accent}" stroke-width="1.5" />
+        <line x1="46" y1="80" x2="54" y2="80" stroke="${accent}" stroke-width="1.5" />
+        <circle cx="50" cy="88" r="4" fill="${color}" />
+        <polygon points="50,14 46,24 54,24" fill="${color}" />
+        <rect x="46" y="24" width="8" height="18" rx="1" fill="${color}" />
+        <path d="M 46 24 C 34 26, 26 31, 26 33 C 26 35, 34 40, 46 42 Z" fill="${color}" />
+        <path d="M 54 24 C 66 26, 74 31, 74 33 C 74 35, 66 40, 54 42 Z" fill="${color}" />
+        <polygon points="47,24 53,24 51,42 49,42" fill="${color}" />
+      </g>
+    `,
+
+    // 12. Ceremonial Goblet / Chalice (artifact_goblet)
+    chalice: (color = PALETTE.or, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 48 14 L 52 14 M 50 12 L 50 18" stroke="${accent}" stroke-width="1.5" />
+        <circle cx="50" cy="18" r="2.5" fill="${color}" />
+        <path d="M 32 30 C 32 20, 68 20, 68 30 Z" />
+        <path d="M 30 30 C 30 52, 42 60, 50 60 C 58 60, 70 52, 70 30 Z" />
+        <rect x="28" y="29" width="44" height="4" rx="1" />
+        <path d="M 48 60 L 48 78 L 52 78 L 52 60 Z" />
+        <circle cx="50" cy="69" r="5.5" fill="${color}" />
+        <path d="M 38 78 L 26 86 L 74 86 L 62 78 Z" />
+        <rect x="24" y="86" width="52" height="4" rx="1" />
+      </g>
+    `,
+
+    // 13. Stag Attire (Antler of Swabia / artifact_antlers)
+    stag_attire: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
+      <g transform="translate(${cx}, ${cy}) scale(${scale}) translate(-50, -50)" fill="${color}" stroke="${accent}" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M 24 72 C 36 68, 54 55, 62 38 C 66 30, 68 20, 70 14 C 71 16, 73 24, 71 34 C 67 48, 50 64, 30 76 Z" />
+        <rect x="21" y="70" width="11" height="8" rx="1.5" transform="rotate(-25 26 74)" />
+        <path d="M 34 68 C 36 56, 32 46, 22 40 C 26 48, 32 58, 38 66 Z" />
+        <path d="M 46 58 C 48 46, 46 38, 38 32 C 43 40, 48 48, 50 56 Z" />
+        <path d="M 56 46 C 59 36, 60 28, 54 22 C 58 30, 60 38, 60 44 Z" />
+        <path d="M 65 24 C 68 18, 76 16, 80 14 C 77 19, 72 26, 68 30 Z" />
+      </g>
     `
 
   };
@@ -668,7 +852,26 @@
     crescent_moon: { tarrNoun: 'Mânschîn', tarrPlural: 'Mânschîne', enNoun: 'crescent moon', enPlural: 'crescent moons', enArticle: 'a' },
     wheel_spoked: { tarrNoun: 'speichertes Rad', tarrPlural: 'speicherte Reder', enNoun: 'spoked wheel', enPlural: 'spoked wheels', enArticle: 'a' },
     anchor: { tarrNoun: 'Anker', tarrPlural: 'Ankere', enNoun: 'anchor', enPlural: 'anchors', enArticle: 'an' },
-    column_roman: { tarrNoun: 'rômische Sûle', tarrPlural: 'rômische Sûlen', enNoun: 'Roman column', enPlural: 'Roman columns', enArticle: 'a' }
+    column_roman: { tarrNoun: 'rômische Sûle', tarrPlural: 'rômische Sûlen', enNoun: 'Roman column', enPlural: 'Roman columns', enArticle: 'a' },
+    cross: { tarrNoun: 'Krütz', tarrPlural: 'Krütze', enNoun: 'cross couped', enPlural: 'crosses couped', enArticle: 'a' },
+    fess: { tarrNoun: 'Balke', tarrPlural: 'Balken', enNoun: 'fess couped', enPlural: 'fesses couped', enArticle: 'a' },
+    pale: { tarrNoun: 'Pfâl', tarrPlural: 'Pfâle', enNoun: 'pale couped', enPlural: 'pales couped', enArticle: 'a' },
+    bend: { tarrNoun: 'Schrägbalke', tarrPlural: 'Schrägbalken', enNoun: 'bend couped', enPlural: 'bends couped', enArticle: 'a' },
+    chevron: { tarrNoun: 'Sparre', tarrPlural: 'Sparren', enNoun: 'chevron couped', enPlural: 'chevrons couped', enArticle: 'a' },
+    bordure: { tarrNoun: 'Schiltbort', tarrPlural: 'Schiltborde', enNoun: 'escutcheon orle', enPlural: 'escutcheon orles', enArticle: 'an' },
+    escallop: { tarrNoun: 'Pilger-Musschel van Zant Jâcop', tarrPlural: 'Pilger-Musscheln', enNoun: 'escallop shell', enPlural: 'escallops', enArticle: 'an' },
+    cross_jerusalem: { tarrNoun: 'Jerusalemskrütz belegt mit vîr Krützelînen', tarrPlural: 'Jerusalemskrütze', enNoun: 'Jerusalem cross potent cantoned with four crosslets', enPlural: 'Jerusalem crosses', enArticle: 'a' },
+    catherine_wheel: { tarrNoun: 'Katherînen-Rad mit Klingen', tarrPlural: 'Katherînen-Reder', enNoun: 'Catherine wheel', enPlural: 'Catherine wheels', enArticle: 'a' },
+    pilgrim_scrip: { tarrNoun: 'Pilgertasche mit Quasten', tarrPlural: 'Pilgertaschen', enNoun: 'pilgrim scrip', enPlural: 'pilgrim scrips', enArticle: 'a' },
+    holy_lance: { tarrNoun: 'Heilige Lanze mit Krütz-Bande', tarrPlural: 'Heilige Lanzen', enNoun: 'Holy Lance of Longinus', enPlural: 'Holy Lances', enArticle: 'the' },
+    crown_imperial: { tarrNoun: 'rômische Keiserkrône mit Bügel und Krütz', tarrPlural: 'Keiserkrônen', enNoun: 'Imperial Crown of Rome', enPlural: 'Imperial Crowns', enArticle: 'the' },
+    crown_kamelaukion: { tarrNoun: 'bîsantinische Kamelaukion-Krône mit Perlensnüren', tarrPlural: 'Kamelaukion-Krônen', enNoun: 'kamelaukion dome crown with pendilia', enPlural: 'kamelaukion crowns', enArticle: 'a' },
+    seal_chop: { tarrNoun: 'keiserliches Insigel-Guóxī', tarrPlural: 'Insigel-Guóxī', enNoun: 'imperial seal chop', enPlural: 'imperial seal chops', enArticle: 'an' },
+    paiza_tablet: { tarrNoun: 'Gerege-Kommando-Tavel', tarrPlural: 'Gerege-Kommando-Taveln', enNoun: 'paiza tablet of command', enPlural: 'paiza tablets', enArticle: 'a' },
+    war_hammer: { tarrNoun: 'Strîthamer van Châtenois', tarrPlural: 'Strîthameren', enNoun: 'chivalric war hammer', enPlural: 'war hammers', enArticle: 'a' },
+    flanged_mace: { tarrNoun: 'Flügelflegel-Masse', tarrPlural: 'Flügelflegel-Massen', enNoun: 'flanged war mace', enPlural: 'flanged war maces', enArticle: 'a' },
+    chalice: { tarrNoun: 'deckelter Kelch', tarrPlural: 'deckelte Kelche', enNoun: 'covered chalice', enPlural: 'covered chalices', enArticle: 'a' },
+    stag_attire: { tarrNoun: 'Hirzstange', tarrPlural: 'Hirzstangen', enNoun: "stag's attire", enPlural: "stags' attires", enArticle: 'a' }
   };
 
   const ORDINARY_BLAZONS = {
@@ -923,7 +1126,259 @@
     return 4;
   }
 
-  function analyzeTitle(titleKey, props = {}, tier = 'county') {
+  // =========================================================================
+  // 3b. Heraldic Rationale Generator (Signa Imperii Explicatio)
+  // =========================================================================
+
+  function buildImageryRationale(def, titleKey, props, tier) {
+    const key = (titleKey || '').toLowerCase();
+    const primaryCharge = (def.charges && def.charges.length > 0) ? def.charges[0] : null;
+    const count = def.chargeCount || 1;
+
+    // 1. Bespoke Historical Titles (High Attestation / Pre-867)
+    if (key === 'h_roman_empire' || key === 'e_hre') {
+      return "The imperial double-headed eagle (Reichsadler) crowned and bearing the SPQR shield, symbolizing universal Roman-Carolingian translatio imperii and supreme temporal and spiritual hegemony.";
+    }
+    if (key === 'c_roma' || key === 'd_latium' || key === 'k_romagna' || key === 'k_papal_state') {
+      return "The crossed Keys of Heaven of Saint Peter (claves regni caelorum) in saltire, representing the apostolic authority of binding and loosing in the Patrimonium Sancti Petri.";
+    }
+    if (key === 'c_tarragona' || key === 'c_barcelona' || key === 'd_barcelona') {
+      return "The archaic paly field of the Counts of Barcelona and Tarragona, representing ancient maritime Catalan administration and pre-heraldic comital authority.";
+    }
+    if (key === 'c_metz' || key === 'd_upper_lorraine' || key === 'k_lotharingia') {
+      return key === 'c_metz'
+        ? "The ancient bipartite civic arms of the Free Imperial City of Metz (gespalten van Silber und Swartz), commemorating its autonomous municipal consulate."
+        : "The three silver alerions (éscouffions) on a red bend, ancestral chancellery arms of the House of Lorraine (Châtenois / House Kestenholz).";
+    }
+    if (key === 'c_lviv') {
+      return "A triple-towered fortified castrum beneath a golden bell, reflecting the 10th-century fortified bell-tower acropolis of Zvenyhorod (Swenigorot).";
+    }
+    if (key === 'c_szekesfehervar') {
+      return "A triple-towered white castrum surmounted by a golden throne, reflecting Stûlwîtzenburch ('White Castle of the Royal Throne'), historic coronation city of the Hungarian kings.";
+    }
+    if (key === 'c_byzantion' || key === 'e_byzantium') {
+      return "The tetragrammatic imperial cross accompanied by four firesteels (B's) of Constantinople, representing the sovereign Basileia Romaion.";
+    }
+    if (key === 'c_paris') {
+      return "An ancient Roman galley (nef) with billowed sail, ancient canting emblem of the Gallo-Roman corporation of the Nautae Parisiaci on the Seine.";
+    }
+    if (key === 'c_milano' || key === 'd_lombardy' || key === 'k_italy') {
+      return "The Iron Crown of Lombardy (Corona Ferrea) encasing a beaten Roman nail of the True Cross, ancient regalia of the Kingdom of Italy.";
+    }
+    if (key === 'c_aachen') {
+      return "The displayed black Palatine eagle of Charlemagne (Reichsadler), commemorating Aachen as the imperial seat of Charlemagne in 800 AD.";
+    }
+    if (key === 'c_venezia' || key === 'd_venice') {
+      return "The winged Lion of Saint Mark holding the Gospel, patronal protector of the Venetian lagoon since the translation of relics in 828 AD.";
+    }
+    if (key === 'c_ravenna' || key === 'd_ravenna') {
+      return "The red double-headed eagle of the Exarchate of Ravenna, seat of Byzantine civil and military vicarship in northern Italy.";
+    }
+    if (key === 'c_antioch' || key === 'd_antioch') {
+      return "The apostolic patriarchal cross of Antioch, commemorating the earliest see of Saint Peter prior to his journey to Rome.";
+    }
+    if (key === 'c_jerusalem' || key === 'k_jerusalem') {
+      return "The patriarchal cross of the Holy Sepulchre, representing the Holy City and custody of the Tomb of Christ.";
+    }
+    if (key === 'd_wessex' || key === 'c_wiltshire') {
+      return "The Golden Dragon of Wessex (Draig Aur), ancient West Saxon royal battle-standard attested from 752 AD under King Cuthred and Alfred the Great.";
+    }
+    if (key === 'c_kent' || key === 'd_canterbury') {
+      return "The White Horse of Kent (Invicta), mythological steed of Hengist and Horsa and archaic Jutish/Saxon canting emblem.";
+    }
+    if (key === 'k_danelaw' || key === 'c_york') {
+      return "The Raven Banner (Hrafnsmerki), sacred war-totem of the Great Heathen Army of 867 AD dedicated to Odin.";
+    }
+    if (key === 'c_kyiv') {
+      return "The princely falcon tamga of Kiev, dynastic bident/trident totem of Askold and Dir in 867 AD.";
+    }
+    if (key === 'c_athens' || key === 'd_athens') {
+      return "A classical fluted Roman-Attic column, representing the ancient philosophical acropolis and Theme of Hellas.";
+    }
+    if (key === 'c_thessaloniki' || key === 'd_thessalonika') {
+      return "Crossed golden swords of Saint Demetrius of Thessalonica, warrior-martyr and heavenly defender of the city walls.";
+    }
+
+    // 2. Procedure 1: Sinospheric Titles
+    if (def.hanziChar || def.medium === 'sinosphere_chop') {
+      const charStr = def.hanziChar || def.hanzi || '州';
+      const SINO_CHARGES = {
+        waves: "heraldic waves representing riverine waterways and commercial canal networks",
+        tree_chestnut: "a spreading tree representing bamboo groves and verdant forest tracts",
+        dragon: "a dragon representing imperial dragon toponyms and sovereign strength",
+        roman_gate: "a fortified gatehouse representing frontier garrison passes and municipal gates",
+        castrum: "a fortified walled citadel representing regional administrative seats and prefecture walls",
+        mount_triple: "a triple mount representing sacred mountain peaks and montane geography"
+      };
+      const chargeDesc = primaryCharge && SINO_CHARGES[primaryCharge] ? SINO_CHARGES[primaryCharge] : "heraldic charge denoting regional geography";
+      return `The authentic seal-script glyph '${charStr}' from the Sinitic toponymic corpus, accompanied by a golden ${chargeDesc}.`;
+    }
+
+    // 3. Artifact Charges (Extracted from 1194 Save Regalia & Relics)
+    const ARTIFACT_CHARGES_RATIONALE = {
+      escallop: "The pilgrim scallop shell of Saint James (pilgrim_compostella), commemorating the holy pilgrimage route to Santiago de Compostela.",
+      cross_jerusalem: "The Jerusalem Cross potent with four crosslets (pilgrim_jerusalem), sacred armorial bearing of the Latin Kingdom and the Five Holy Wounds.",
+      catherine_wheel: "The spiked breaking wheel of Saint Catherine (pilgrim_badge_st_catherine), symbol of martyrdom and the sacred monastery of Mount Sinai.",
+      pilgrim_scrip: "The pilgrim's wallet and scrip (pilgrim_pouch), emblem of perpetual spiritual peregrinatio and hospitaller monastic devotion.",
+      holy_lance: "The Holy Lance of Longinus (holy_lance), supreme Reichskleinod pierced with a Crucifixion nail, palladium of imperial victory.",
+      crown_imperial: "The Imperial Reichskrone of the Holy Roman Empire (reichskrone), single-arched octagonal diadem of the Western Caesars.",
+      crown_kamelaukion: "The Byzantine domed Kamelaukion crown (crown_byzantine) with pearl prependulia, imperial regalia of the Eastern Basileus.",
+      seal_chop: "The Imperial Square Seal of Investiture (guoxi), jade and cinnabar authority seal conferring imperial civil mandate.",
+      paiza_tablet: "The Imperial Gerege / Paiza Command Tablet (gerege_tablet), inscribed gold warrant granting safe conduct across imperial post roads.",
+      war_hammer: "The Châtenois War Hammer (war_hammer), chivalric martel de fer wielded by the ancestral dukes of Lorraine.",
+      flanged_mace: "The six-flanged knightly battle mace (flanged_mace), chivalric bludgeon of command carried by imperial marshals.",
+      chalice: "The Covered Ceremonial Chalice (chalice), sacred eucharistic and banqueting vessel of the imperial court.",
+      stag_attire: "The curved antler attire of the imperial stag (stag_attire), symbolizing the venerable game preserves of the crown fisc."
+    };
+
+    if (primaryCharge && ARTIFACT_CHARGES_RATIONALE[primaryCharge]) {
+      let r = ARTIFACT_CHARGES_RATIONALE[primaryCharge];
+      if (count > 1) {
+        r += ` Borne in a multiplicity of ${count} for administrative cadency disambiguation across the regional roll.`;
+      }
+      return r;
+    }
+
+    // 4. Standard Repertoire Charges & Toponymic Morphemes
+    const CHARGE_DESCRIPTIONS = {
+      castrum: "A triple-towered fortified castrum, canting morpheme for burg (-burch, -kastel, -grad, -burg) indicating a fortress or fortified residence.",
+      roman_gate: "A twin-towered Roman gatehouse, canting morpheme for civitas or town (-stat, -gorod, -ville, -polis) indicating an urban administrative center.",
+      mount_triple: "A heraldic triple mount (Dreiberg), canting morpheme for montane geography (-berch, -stein, -vêls, -gôre, -mont) denoting upland crags.",
+      bridge: "A masonry arched bridge, canting morpheme for river crossings (-brücke, -ponte, -puente) indicating a key tollway and crossing point.",
+      waves: "Heraldic barrulets wavy, canting morpheme for waterways and estuaries (-flutz, -wazzer, -münde, -sê, -ford) denoting riparian trade.",
+      cross_patriarchal: "A patriarchal cross with double crossbeams, canting morpheme for ecclesiastical foundations (-kîrch, -münster, -dom, zant-) indicating holy patronal devotion.",
+      tree_chestnut: "A spreading deciduous tree, canting morpheme for royal woodlands (-wald, -holt, -holz, -forest) denoting game preserves and timberlands.",
+      lion_rampant: "A fierce lion rampant, ancient heraldic beast denoting sovereign princely courage, ducal dignity, or feline toponymic stems (lôwe, lion).",
+      crown: "An open royal coronet, representing sovereign ducal status, royal mint privileges, or ancient regal dignity.",
+      sword_crossed: "Crossed arming swords in saltire, representing martial readiness, border defense, or military comital jurisdiction.",
+      battleaxe: "A knightly broadaxe, representing border vanguard defense and martial frontier vigilance.",
+      spear: "An upright spear, symbolizing vanguard patrol authority and warrior stewardship.",
+      bow_and_arrow: "A drawn longbow and arrow, symbolizing woodland ranger garrisons and archer defense.",
+      shield_escutcheon: "An inescutcheon shield, representing ancestral seignorial tenure and heraldic tenure.",
+      stag_attired: "A ten-tined stag attired, canting morpheme for royal hunting grounds (hirz, hart, cervo).",
+      bear_rampant: "A rampant bear, canting morpheme for mountain forests and ursine toponyms (bêr, bern, medved).",
+      horse_courant: "A galloping courser, canting morpheme for equestrian breeding estates and chivalric remounts (ros, pfert, cheval).",
+      wolf_statant: "A statant timber wolf, symbolizing frontier vigilance across wild forest marches.",
+      fish_twin: "Twin addorsed fish, canting morpheme for riparian fisheries and coastal commerce (visch, fish, pesce).",
+      falcon_perched: "A perched hunting falcon, canting morpheme for princely falconry estates and keen vigilance (valke, falcon).",
+      rose_seeded: "A seeded heraldic rose, canting morpheme for floral beauty and municipal flourishing (rôse, rosen).",
+      fleur_de_lis: "A heraldic fleur-de-lis, representing royal dignity, purity, and sovereign comital stature (lilje, lily).",
+      wheatsheaf_garb: "A bound wheatsheaf garb, canting morpheme for agricultural abundance and granary bailiwicks (korn, weiz, wheat).",
+      oak_branch: "An oak branch with acorns, canting morpheme for venerable oak timberlands and ancient civil longevity (eik, eich, quercia).",
+      grape_cluster: "A cluster of ripe grapes, canting morpheme for terraced vineyards and imperial cellar estates (wîn, rebe, trûbe).",
+      sun_radiant: "A radiant sun in splendour, symbolizing divine imperial favor and celestial light (sunne, sole).",
+      star_six_pointed: "A six-pointed mullet star, canting morpheme for guidance and stellar toponyms (stern, stella).",
+      crescent_moon: "An increscent moon, symbolizing nocturnal border vigilance and lunar cycles (mâne, lune).",
+      wheel_spoked: "A six-spoked cartwheel, canting morpheme for transport junctions, milling rights, and crossroads (rad, rade).",
+      anchor: "A maritime fouled anchor, representing roadsteads, sea harbors, and maritime naval jurisdiction (anker, ancor).",
+      column_roman: "A classical fluted Roman column, symbolizing ancient Greco-Roman civil heritage and architecture.",
+      bell: "A church bell, representing liturgical assembly and civic council gathering.",
+      alerion: "A displayed alerion (beakless eagle), symbolizing ancient Lotharingian nobility.",
+      eagle_double: "A double-headed imperial eagle, symbolizing supreme civil and military jurisdiction."
+    };
+
+    if (primaryCharge && CHARGE_DESCRIPTIONS[primaryCharge]) {
+      let r = CHARGE_DESCRIPTIONS[primaryCharge];
+      if (count > 1) {
+        r += ` Borne in a multiplicity of ${count} for administrative cadency disambiguation across the regional heraldic roll.`;
+      }
+      return r;
+    }
+
+    if (!primaryCharge || def.charges.length === 0) {
+      return "Borne as an uncharged ordinary or pure partition, prioritizing archaic geometrical clarity over figurative charges.";
+    }
+
+    return `The charge ${primaryCharge} borne as the central heraldic emblem of this administrative jurisdiction.`;
+  }
+
+  function buildColoursRationale(def, titleKey, props, tier) {
+    const fKey = def.field || 'gules';
+    const fTinc = TINCTURES[fKey] || { en: 'Gules', tarr: 'Keiser-Rôt' };
+
+    const isFieldMetal = (fKey === 'or' || fKey === 'argent');
+    const isSinosphere = def.medium === 'sinosphere_chop' || fKey === 'vermilion';
+
+    let contrastText = "";
+    if (isSinosphere) {
+      contrastText = "Tincture Vermilion (Chancellery Cinnabar) reflects the sacred imperial red ink used exclusively for imperial decrees, contrasted with Or (Golt) for divine civil legitimacy.";
+    } else if (isFieldMetal) {
+      contrastText = `The field of ${fTinc.en} (${fTinc.tarr}) is a heraldic metal; all charges and ordinaries are placed in contrasting colour enamels strictly conforming to the Rule of Tincture (no metal upon metal) to ensure high visibility.`;
+    } else {
+      contrastText = `The field of ${fTinc.en} (${fTinc.tarr}) is a heraldic colour; all charges and ordinaries are placed in metal (Or / Golt or Argent / Silber) strictly conforming to the Rule of Tincture (no colour upon colour) to maximize recognition from afar.`;
+    }
+
+    let toponymicText = "";
+    if (fKey === 'gules') {
+      toponymicText = " Gules embodies imperial authority (Keiser-Rôt), martial valor, and red sandstone terrain.";
+    } else if (fKey === 'azure') {
+      toponymicText = " Azure represents riparian waters, alpine skies, and maritime commerce.";
+    } else if (fKey === 'vert') {
+      toponymicText = " Vert represents verdant agrarian soils, pastures, and venerable crown forests.";
+    } else if (fKey === 'sable') {
+      toponymicText = " Sable represents rich peat soils, iron mining, and steadfast frontier constancy.";
+    } else if (fKey === 'or') {
+      toponymicText = " Or represents imperial majesty, golden grain harvests, and solar providence.";
+    } else if (fKey === 'argent') {
+      toponymicText = " Argent represents limestone cliffs, clear river springs, and civic purity.";
+    }
+
+    return contrastText + toponymicText;
+  }
+
+  function buildSplitsRationale(def, titleKey, props, tier) {
+    const ord = def.ordinary || 'solid';
+    const horizon = getChronologicalHorizon(titleKey, props, tier);
+
+    const ORDINARY_DESCRIPTIONS = {
+      solid: "A solid unpartitioned field: reserved for ancient core jurisdictions and primary administrative seats, reflecting unified civil sovereignty without differencing.",
+      fess: "Divided by a horizontal fess: represents a military belt of honor and boundary demarcations across the administrative territory.",
+      pale: "Divided by a vertical pale: symbolizes fortified palisades, upright frontier defenses, and civic integrity.",
+      bend: "Divided by a diagonal bend: represents a knight's chivalric baldric and administrative stewardship across marching routes.",
+      bend_sinister: "Divided by a bend sinister: represents frontier patrol cadency and regional bailiwick distinction.",
+      chevron: "Divided by an arched chevron: symbolizes roof-timbers, fortress gables, and protectorate fortification.",
+      cross: "Quartered by a central cross: symbolizes the sacred imperial protectorate and ecclesiastical episcopal jurisdiction.",
+      saltire: "Divided by a diagonal saltire (Saint Andrew's cross): represents strategic crossroads, border junction governance, and vigilance.",
+      quarterly: "Partitioned quarterly into four cantons: represents the union of distinct sub-districts or federated territorial bailiwicks.",
+      per_saltire: "Parted per saltire: diagonal quadripartition balancing administrative quarters across mountain or river marches.",
+      per_pale: "Parted per pale: vertical bipartition reflecting dual civic jurisdictions, twin diocesan borders, or historical condominium.",
+      per_fess: "Parted per fess: horizontal bipartition reflecting highland/lowland zones or river valley divisions.",
+      chief: "Borne with an elevated chief: represents superior imperial investiture and honorary chancellery elevation.",
+      bordure: "Enclosed within a differencing bordure: baronial cadency differencing to distinguish subsidiary holdings from paramount comital seats.",
+      barry: "Barry of multiple horizontal stripes: represents layered riparian terraces or historic boundary treaties.",
+      chequy: "Chequy of alternating squares: represents fiscal counting tables, chancellery treasuries, and frontier marches.",
+      pales: "Vertical pales (the Senyera): ancient Barcelona and Tarragona dynastic stripes, representing naval maritime hegemony and ancestral comital tenure.",
+      pales_undy: "Undy wavy pales (the Senyera undy): ancient Tarraconian maritime dynastic stripes, representing naval coastal hegemony.",
+      cross_byzantine: "Byzantine imperial cross with four firesteels: sovereign tetragrammatic insignia of Constantinople."
+    };
+
+    let desc = ORDINARY_DESCRIPTIONS[ord] || `Divided according to the ${ord} ordinary.`;
+
+    let cadencyNote = "";
+    if (horizon <= 1) {
+      cadencyNote = " As a Chronological Horizon 0/1 core territory, it retains archaic geometric simplicity.";
+    } else if (horizon === 2) {
+      cadencyNote = " As a Chronological Horizon 2 territory (Salian/Staufen era), classical geometric ordinaries are employed for distinction.";
+    } else {
+      cadencyNote = " As a Chronological Horizon 3/4 frontier or later administrative acquisition, cadency partitions are used to ensure unique identification.";
+    }
+
+    if (tier === 'barony' && ord === 'bordure') {
+      cadencyNote += " The bordure specifically denotes baronial cadency, preventing collision with superior county or ducal insignia.";
+    }
+
+    return `${desc}${cadencyNote}`;
+  }
+
+  function buildHeraldicRationale(def, titleKey, props, tier) {
+    return {
+      imagery: buildImageryRationale(def, titleKey, props, tier),
+      colours: buildColoursRationale(def, titleKey, props, tier),
+      splits: buildSplitsRationale(def, titleKey, props, tier)
+    };
+  }
+
+  function analyzeTitleRaw(titleKey, props = {}, tier = 'county') {
     const key = (titleKey || '').toLowerCase();
 
     let tarrName = '';
@@ -1555,6 +2010,12 @@
       legend: `+ S. MAGISTRATVS • ${latinized}ENSIS •`,
       source: 'Chancellery Toponymic & Morpheme Calque'
     };
+  }
+
+  function analyzeTitle(titleKey, props = {}, tier = 'county') {
+    const def = analyzeTitleRaw(titleKey, props, tier);
+    def.rationale = buildHeraldicRationale(def, titleKey, props, tier);
+    return def;
   }
 
   // =========================================================================
@@ -2233,6 +2694,7 @@
       blazonEn: def.blazonEn,
       legend: def.legend,
       source: def.source,
+      rationale: def.rationale,
       definition: def
     };
   }
@@ -2240,6 +2702,7 @@
   function renderSymbolToElement(containerElem, titleKey, props = {}, tier = 'county') {
     if (!containerElem) return;
     const res = generateSymbol(titleKey, props, tier);
+    const rat = res.rationale || { imagery: '', colours: '', splits: '' };
 
     containerElem.innerHTML = `
       <div class="symbol-card-inner">
@@ -2259,6 +2722,26 @@
           </div>
         </div>
       </div>
+      <details class="symbol-rationale-details">
+        <summary class="symbol-rationale-summary">
+          <span class="symbol-rationale-title">Heraldic Rationale</span>
+          <span class="rationale-arrow">&#9662;</span>
+        </summary>
+        <div class="symbol-rationale-body">
+          <div class="rationale-entry">
+            <span class="rationale-label">Imagery:</span>
+            <span class="rationale-desc">${rat.imagery}</span>
+          </div>
+          <div class="rationale-entry">
+            <span class="rationale-label">Colours:</span>
+            <span class="rationale-desc">${rat.colours}</span>
+          </div>
+          <div class="rationale-entry">
+            <span class="rationale-label">Splits:</span>
+            <span class="rationale-desc">${rat.splits}</span>
+          </div>
+        </div>
+      </details>
     `;
     containerElem.classList.remove('hidden');
   }

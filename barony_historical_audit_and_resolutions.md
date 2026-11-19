@@ -86,6 +86,16 @@ Titles are anchored strictly in physical substrates, verified classical settleme
   - Standardized root-for-root to Tarraconian **`Nordmancrûz`** `[nɔrd.maŋk.ˈruːts]` (*Cross of the Northman*).
   - Explicit historical provenance recorded in `b_origin` (attested 963 AD Danelaw hundred moot) and `b_anachronism` (annotating the 1797 Napoleonic POW depot association).
 
+#### Case Study: Historical Audit & Option B Resolution of `b_maladzyechna` (`c_minsk`)
+* **Paradox Setup:** In vanilla CK3, `c_minsk` contains constituent sub-baronies `b_lahoysk`, `b_zaslawye`, `b_barysaw`, and `b_maladzyechna`.
+* **Historical Reality & Anachronism:**
+  - `b_maladzyechna` is first mentioned in written sources on **December 16, 1388** in a charter of Prince Dmitry Olgierdovich to King Jogaila and Queen Jadwiga (*«А дали есьмо грамоту на Молодечно и на весь тот повет...»*).
+  - It postdates the 867 AD campaign start date by **+521 years** and the 1059 Imperial canon by **+329 years**. While an ancient Baltic/Slavic hillfort (*haradshcha*) existed at the confluence of the Usha and Maladzechanka, the medieval settlement only coalesced around a wooden castle in the late 14th century.
+* **Chancellery Option B Resolution:**
+  - Resolved under **Option B (Ancient Hydronym / Landform)** to the physical river basin: the **Usha River** (Slavic *Uša*, Baltic *Auseia* / *Ausė*, 'loop / ear').
+  - Standardized under Tarraconian sound laws to **`Ûsche`** `[ˈuː.ʃə]` (open stressed syllable with circumflex long vowel `û-` + Franconian fricative `-sch-`).
+  - Recorded in `data/barony_resolutions.json` and `data/ck3_baronies.geojson` under category `option_b_hydronym`.
+
 ### 2.2 Frontier Sinosphere & Non-Sinosphere Descriptive Calques (Fixes 1 & 2)
 1. **Frontier Sinosphere Calquing (Fix 1):**
    - 12 frontier counties under `e_mongolia` curated in `sinosphere_hanzi_calques.json` (`c_SW_hongxingan`, `c_SW_lingxiguo`, `c_SW_zhongcheziguo`, etc.) were integrated into the Sinosphere engine.

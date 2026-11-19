@@ -28149,15 +28149,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_maladzyechna": {
-    "name": "Maladzyechna",
-    "b_tarr": "Maladzyechna",
+    "name": "Ûsche",
+    "b_tarr": "Ûsche",
     "b_tarr_direct": "Maladzyechna",
-    "b_tarr_hist": "Maladzyechna",
-    "b_origin": "Maladzyechna (constituent holding of Alt-Mêne)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈma.ladts.jɛç.na]",
+    "b_tarr_hist": "Ûsche",
+    "b_origin": "Usha River basin (ancient Baltic Auseia / Slavic Uša hydronym, replacing late 1388 Maladzyechna) (in-game: Maladzyechna)",
+    "b_anachronism": "Maladzyechna was first attested in 1388 under Duke Dmitry Olgierdovich (+521 years after 867 AD). Resolved via Option B to the ancient Usha river hydronym (Ûsche).",
+    "b_ipa": "[ˈuː.ʃə]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "option_b_hydronym"
   },
   "b_barysaw": {
     "name": "Barysaw",

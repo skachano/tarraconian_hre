@@ -1743,6 +1743,7 @@ INDIGENOUS_RESTITUTIONS = {
     "b_qalat_jundi": ("Knechtburch", "Qal'at al-Jundi (Arabic 'Soldier's / Garrison Citadel' on Mount Sudr)", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Knechtburch."),
     "b_qalat_ar-rum": ("Rômerburch", "Qal'at ar-Rum / Hromgla (Arabic/Armenian 'Citadel of the Romans' on the Euphrates)", "descriptive_calque", "Descriptive Near Eastern fortress toponym calqued to Tarraconian Rômerburch."),
     "b_kasr_al-kabir": ("Grôzcastel", "Ksar el-Kebir / Qasr al-Kabir (Arabic 'The Great Castle / Citadel')", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Grôzcastel."),
+    "b_maladzyechna": ("Ûsche", "Usha River basin (ancient Baltic Auseia / Slavic Uša hydronym, replacing late 1388 Maladzyechna)", "option_b_hydronym", "Maladzyechna was first attested in 1388 under Duke Dmitry Olgierdovich (+521 years after 867 AD). Resolved via Option B to the ancient Usha river hydronym (Ûsche)."),
 }
 
 

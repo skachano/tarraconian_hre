@@ -790,7 +790,7 @@ class TestSymbolGenerator:
         assert 'fill="${ink}"' in content
 
     def test_charge_builders_uniform_signature(self):
-        """All 45 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
+        """All 58 charges in CHARGES must accept (color, scale, cx, cy) in standard order."""
         import re
 
         js_path = DOCS_DIR / "js" / "symbol_generator.js"
@@ -805,10 +805,13 @@ class TestSymbolGenerator:
             "stag_attired", "bear_rampant", "horse_courant", "wolf_statant", "fish_twin",
             "falcon_perched", "rose_seeded", "fleur_de_lis", "wheatsheaf_garb", "oak_branch",
             "grape_cluster", "sun_radiant", "star_six_pointed", "crescent_moon", "wheel_spoked",
-            "anchor", "column_roman", "fess", "pale", "bend", "chevron", "bordure"
+            "anchor", "column_roman", "fess", "pale", "bend", "chevron", "bordure",
+            "escallop", "cross_jerusalem", "catherine_wheel", "pilgrim_scrip",
+            "holy_lance", "crown_imperial", "crown_kamelaukion", "seal_chop",
+            "paiza_tablet", "war_hammer", "flanged_mace", "chalice", "stag_attire"
         ]
 
-        assert len(charges) == 45
+        assert len(charges) == 58
 
         for charge in charges:
             # Match charge declaration: charge: (arg1, arg2, arg3, arg4...) =>
@@ -824,6 +827,50 @@ class TestSymbolGenerator:
             # Third and fourth must be cx and cy
             assert params[2] == "cx", f"{charge} third param must be cx, got {params[2]}"
             assert params[3] == "cy", f"{charge} fourth param must be cy, got {params[3]}"
+
+    def test_heraldic_rationale_collapsible_and_artifact_charges(self):
+        """Verifies presence of 13 artifact charges, rationale generator, and collapsible drawer markup."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+        css_path = DOCS_DIR / "css" / "styles.css"
+        css_content = css_path.read_text(encoding="utf-8")
+
+        # 1. 13 Artifact Charges in CHARGES & CHARGE_BLAZONS
+        artifact_charges = [
+            "escallop", "cross_jerusalem", "catherine_wheel", "pilgrim_scrip",
+            "holy_lance", "crown_imperial", "crown_kamelaukion", "seal_chop",
+            "paiza_tablet", "war_hammer", "flanged_mace", "chalice", "stag_attire"
+        ]
+        for ac in artifact_charges:
+            assert f"{ac}:" in content, f"Artifact charge builder {ac} missing"
+            assert f"'{ac}':" in content or f'"{ac}":' in content or f"{ac}:" in content, f"Artifact charge blazon {ac} missing"
+
+        # 2. Heraldic Rationale Functions
+        assert "function buildHeraldicRationale" in content
+        assert "function buildImageryRationale" in content
+        assert "function buildColoursRationale" in content
+        assert "function buildSplitsRationale" in content
+        assert "def.rationale = buildHeraldicRationale(def, titleKey, props, tier);" in content
+        assert "rationale: def.rationale" in content
+
+        # 3. Collapsible markup in renderSymbolToElement
+        assert '<details class="symbol-rationale-details">' in content
+        assert '<summary class="symbol-rationale-summary">' in content
+        assert '<span class="symbol-rationale-title">Heraldic Rationale</span>' in content
+        assert '<span class="rationale-arrow">&#9662;</span>' in content
+        assert '<div class="symbol-rationale-body">' in content
+        assert '<span class="rationale-label">Imagery:</span>' in content
+        assert '<span class="rationale-label">Colours:</span>' in content
+        assert '<span class="rationale-label">Splits:</span>' in content
+
+        # 4. CSS Rules for Collapsible Details
+        assert ".symbol-rationale-details" in css_content
+        assert ".symbol-rationale-summary" in css_content
+        assert ".symbol-rationale-title" in css_content
+        assert ".symbol-rationale-body" in css_content
+        assert ".rationale-entry" in css_content
+        assert ".rationale-label" in css_content
+        assert ".rationale-desc" in css_content
 
     def test_unique_id_generation_and_no_static_id_collisions(self):
         """All 7 renderers must generate per-instance unique IDs to prevent SVG filter/clipPath collisions."""

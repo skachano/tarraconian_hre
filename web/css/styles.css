@@ -508,6 +508,75 @@ body {
   word-break: break-all;
 }
 
+/* Symbol Rationale Collapsible Section */
+.symbol-rationale-details {
+  margin-top: 0.65rem;
+  border-top: 1px dashed rgba(212, 175, 55, 0.25);
+  padding-top: 0.45rem;
+}
+
+.symbol-rationale-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.symbol-rationale-summary::-webkit-details-marker {
+  display: none;
+}
+
+.symbol-rationale-title {
+  font-size: 0.72rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-bright);
+}
+
+.rationale-arrow {
+  font-size: 0.75rem;
+  color: var(--gold-dim);
+  transition: transform 0.2s ease;
+}
+
+.symbol-rationale-details[open] .rationale-arrow {
+  transform: rotate(180deg);
+}
+
+.symbol-rationale-body {
+  margin-top: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.45rem 0.55rem;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 4px;
+  border-left: 2px solid var(--gold-dim);
+}
+
+.rationale-entry {
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+}
+
+.rationale-label {
+  font-weight: 700;
+  font-family: var(--font-serif);
+  color: var(--gold-bright);
+  margin-right: 0.35rem;
+  display: inline;
+}
+
+.rationale-desc {
+  color: var(--text-main);
+  display: inline;
+}
+
 /* Insignia Gallery in Linguistics Guide Modal */
 .insignia-gallery-grid {
   display: grid;
