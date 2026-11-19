@@ -319,7 +319,7 @@ The following tables demonstrate how specific titles across the Empire in [tarra
 | `c_albarracin` | Albarracín | **Magistrat van Râsinburch** *(or **Albarrasîn**)* | Berber dynasty *Banu Razin* + fortress *Hisn*. |
 | `c_algeciras` | Algeciras | **Magistrat van Grûninsel** *(or **Algesîre**)* | Arabic *Al-Jazira al-Khadra* ("The Green Island"). |
 | `c_guadalquivir` | Seville / Guadalquivir | **Magistrat van Grôzwazzer** *(or **Sevîlje**)* | Arabic *Wādī al-Kabīr* ("Great River / Big Valley"). |
-| `c_alcantara` | Alcántara | **Magistrat van Dat Brücke** *(or **Alcantâre**)* | Arabic *Al-Qantara* ("The Roman Viaduct/Bridge"). |
+| `c_alcantara` | Alcántara | **Magistrat van der Brücke** *(or **Alcantâre**)* | Arabic *Al-Qantara* ("The Roman Viaduct/Bridge"). |
 | `c_pontevedra` | Pontevedra | **Magistrat van Altbrücke** *(or **Pontevêdre**)* | Latin *Pons Vetus* ("Old Bridge"). |
 | `c_castelnaudary` | Castelnaudary | **Magistrat van Nîecastel** *(or **Castelnoudarî**)* | Occitan *Castèlnòu d'Arri* ("New Castle of Arrius"). |
 | `c_forcalquier` | Forcalquier | **Magistrat van Kalkovens** *(or **Forkalkêr**)* | Latin *Furnus Calcarius* ("Lime Kilns / Lime Ovens", cf. *Ofen*). |

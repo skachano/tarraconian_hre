@@ -601,7 +601,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Dalmatia** (`d_dalmatia`) $\rightarrow$ **Gubernat van Dalmatjen**
   * `c_zadar` (Zadar) $\rightarrow$ **Magistrat van Zâre** *(Romance/Catalan *Zara* + MHG `-e`)*
   * `c_knin` (Knin) $\rightarrow$ **Magistrat van Knîn** *(or **Tenîn**)*
-  * `c_cetina` (Cetina) $\rightarrow$ **Magistrat van Tzetîne** *(or **Spalât** for Split)*
+  * `c_cetina` (Cetina) $\rightarrow$ **Magistrat van Zetîne** *(or **Spalât** for Split)*
 * **Duchy of Croatia** (`d_croatia`) $\rightarrow$ **Gubernat van Croatjen**
   * `c_gacka` (Gacka) $\rightarrow$ **Magistrat van Gatzke**
   * `c_lika` (Lika) $\rightarrow$ **Magistrat van Lîke**
@@ -689,7 +689,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 * **Duchy of Friuli** (`d_friuli`) $\rightarrow$ **Gubernat van Vrîûl** `[vriː.ˈuːl]`
   * `c_aquileia` (Aquileia) $\rightarrow$ **Fürstbisdom van Aglêi** `[a.ˈɡlɛɪ]` *(Authentic MHG name for Aquileia!)*
-  * `c_friuli` (Friuli) $\rightarrow$ **Magistrat van Vrîûl** *(or **Tzividâl**)*
+  * `c_friuli` (Friuli) $\rightarrow$ **Magistrat van Vrîûl** *(or **Zividâl**)*
   * `c_gorz` (Goriza) $\rightarrow$ **Magistrat van Görtz** `[ɡœrts]`
 * **Duchy of Lombardy** (`d_lombardia`) $\rightarrow$ **Gubernat van Lamparten** *(or **Lombardîe**)*
   * `c_lombardia` (Lombardia) $\rightarrow$ **Magistrat van Meilân** `[mɛɪ.ˈlaːn]` *(MHG *Meilân* + Catalan *Milà* for Milan)*
@@ -711,7 +711,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Tuscany** (`d_toscana`) $\rightarrow$ **Gubernat van Toskâne** *(or **Tuszjen**)*
   * `c_firenze` (Firenze) $\rightarrow$ **Magistrat van Vlorentz** `[vlo.ˈrɛnts]`
   * `c_lucca` (Lucca) $\rightarrow$ **Magistrat van Lûke** `[ˈluː.kə]` *(Attested Tarraconian county, promoted 1054)*
-  * `c_arezzo` (Arezzo) $\rightarrow$ **Magistrat van Aretz**
+  * `c_arezzo` (Arezzo) $\rightarrow$ **Magistrat van Arêtz**
   * `c_siena` (Siena) $\rightarrow$ **Magistrat van Sêne**
   * `c_orbetello` (Orbetello) $\rightarrow$ **Magistrat van Orbetel** (`[1059 Historical: Magistrat van Sovâne / Rosel]`)
 * **Duchy of Istria** (`d_istria`) $\rightarrow$ **March van Îstrjen** *(or **Îsterrîch**)*
@@ -1170,7 +1170,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Orleans** (`d_orleans`) $\rightarrow$ **Gubernat van Orljâns**
   * `c_orleans` (Orléans) $\rightarrow$ **Magistrat van Orljâns**
   * `c_montargis` (Montargis) $\rightarrow$ **Magistrat van Muntargîs** (`[1059 Historical: Magistrat van Kastel-Landûn (Château-Landon)]`)
-  * `c_vendome` (Vendôme) $\rightarrow$ **Magistrat van Vendôme**
+  * `c_vendome` (Vendôme) $\rightarrow$ **Magistrat van Vendosme**
   * `c_chartres` (Chartres) $\rightarrow$ **Magistrat van Schartres**
   * `c_sancerre` (Sancerre) $\rightarrow$ **Magistrat van Zant-Sêr** `[tsant.ˈseːr]` *(Attested Tarraconian county, promoted 1054; `[1059 Historical: Magistrat van Kastel-Gordûn]`)*
 * **Duchy of Champagne** (`d_champagne`) $\rightarrow$ **Gubernat van Schampanje** `[ʃam.ˈpa.ɲə]`
@@ -1337,7 +1337,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of Badajoz** (`d_badajoz`) $\rightarrow$ **Gubernat van Badallôz**
   * `c_badajoz` (Badajoz) $\rightarrow$ **Magistrat van Badallôz**
   * `c_plasencia` (Plasencia) $\rightarrow$ **Magistrat van Plasentz** (`[1059 Historical: Magistrat van Kôrje (Coria)]`)
-  * `c_caceres` (hisn Qasras) $\rightarrow$ **Magistrat van Dat Brücke** *(calque of Arabic *al-Qanṭarah* \"The Bridge\" / Alcántara, or **Kâtzeres**)*
+  * `c_caceres` (hisn Qasras) $\rightarrow$ **Magistrat van der Brücke** *(calque of Arabic *al-Qanṭarah* \"The Bridge\" / Alcántara, or **Kâtzeres**)*
   * `c_merida` (Maridah) $\rightarrow$ **Magistrat van Mêride**
   * `c_medellin` (Medellin) $\rightarrow$ **Magistrat van Medeljîn**
 * **Duchy of al-Gharb** (`d_algarve`) $\rightarrow$ **Gubernat van Algârve** *(or **Westerlant**)*
@@ -1351,7 +1351,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 * **Duchy of València** (`d_valencia`) $\rightarrow$ **Gubernat van Valentz**
   * `c_valencia` (Valencia) $\rightarrow$ **Magistrat van Valentz** `[va.ˈlɛnts]`
   * `c_castellon` (Burjanna) $\rightarrow$ **Magistrat van Burdschâne** *(Retaining the save's historical 1059 name *Burriana*, or **Castellôn**)*
-  * `c_teruel` (Teruel) $\rightarrow$ **Magistrat van Terôl** *(Old Catalan *Terol*; `[1059 Historical: Magistrat van Tzêlje (Cella)]`)*
+  * `c_teruel` (Teruel) $\rightarrow$ **Magistrat van Terôl** *(Old Catalan *Terol*; `[1059 Historical: Magistrat van Zêlje (Cella)]`)*
   * `c_denia` (Denia) $\rightarrow$ **Magistrat van Dênje** `[ˈdeː.njə]`
   * `c_alicante` (al-Laqant) $\rightarrow$ **Magistrat van Alakant** `[a.la.ˈkant]` *(Old Catalan *Alacant*)*
 * **Duchy of Mallorca** (`d_mallorca`) $\rightarrow$ **Gubernat van Maljôrke** `[ma.ˈʎoːr.kə]`
@@ -5901,7 +5901,7 @@ In Tarraconian chancellery usage, a Metropolitan Archdiocese is styled **`Erzbis
 | 25 | **Archdiocese of Roma** | `d_et_roma` | **Erzbisdom van Rôme** | `[ˈroː.mə]` | Rôme (`c_roma`) |
 | 26 | **Archdiocese of Bari** | `d_et_bari` | **Erzbisdom van Bâr-in-Pûlje** | `[baːr ɪn ˈpuː.ljə]` | Bâr-in-Pûlje (`c_bari`) |
 | 27 | **Archdiocese of Aquileia** | `d_et_aquileia` | **Erzbisdom van Aglêi** *(or **Patriarchat van Aglêi**)* | `[a.ˈɡlɛɪ]` | Aglêi (`c_aquileia`) |
-| 28 | **Archdiocese of Split** | `d_et_split` | **Erzbisdom van Spalât** | `[spa.ˈlaːt]` | Tzetîne (`c_cetina`) |
+| 28 | **Archdiocese of Split** | `d_et_split` | **Erzbisdom van Spalât** | `[spa.ˈlaːt]` | Zetîne (`c_cetina`) |
 | 29 | **Archdiocese of Salzburg** | `d_et_salzburg` | **Erzbisdom van Saltzburch** | `[ˈzalts.bʊrx]` | Saltzburch (`c_salzburg`) |
 | 30 | **Archdiocese of Trier** | `d_et_trier` | **Erzbisdom van Trîer** | `[ˈtriː.ər]` | Trîer (`c_trier`) |
 | 31 | **Archdiocese of Mainz** | `d_et_mainz` | **Erzbisdom van Mênz** | `[meːnts]` | Mênz (`c_mainz`) |

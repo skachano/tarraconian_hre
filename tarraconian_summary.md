@@ -75,7 +75,7 @@ By **27 December 1154**, Tarraconian continues to anchor a family of **three his
   7. *Mountaineers* (`tradition_mountaineers`)
 * **1154 Province Footprint (13 counties):**
   * **Lotharingia & Languedoc Imperial Fiefs (7):** `c_luxembourg` (*Lützelburch / Echternach*), `c_bouillon` (*Buljûn*), `c_namur` (*Nâmen*), `c_uses` (*Usês*), `c_montpellier` (*Montpeljêr*), `c_carcassonne` (*Karkassôn*), `c_foix` (*Fôsch*).
-  * **Adriatic & Pannonia (2):** `c_zagreb` (*Sissek / Sâgrep*), `c_ragusa` (*Ragûs*). *(Note: `c_cetina` / Tzetîne and `c_vukovar` / Wukowâr have assimilated into standard Imperial Tarraconian).*
+  * **Adriatic & Pannonia (2):** `c_zagreb` (*Sissek / Sâgrep*), `c_ragusa` (*Ragûs*). *(Note: `c_cetina` / Zetîne and `c_vukovar` / Wukowâr have assimilated into standard Imperial Tarraconian).*
   * **Maghreb Imperial Marches (4):** `c_tadla` (*Tâdle*), `c_ziz` (*Sîs*), and newly integrated `c_asfi` (*Asfi / Safi*), `c_tinmallal` (*Tinmallal / Tinmel*). *(Note: Northern Jutland's `c_aalborg` / Âlburch has assimilated into standard Imperial Tarraconian).*
 * **Technological Status:** High Medieval era completed (unlocked *Hoardings*, *Men-at-Arms*, *Heraldry*, and *Development 03* at 100%; active fascination *Divine Right* at 45.92%, with *Knighthood* spreading at 59.84%).
 

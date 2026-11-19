@@ -88,11 +88,12 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     """
     s = name.strip()
     
-    # 1. Normalize accents: acutes to circumflexes
+    # 1. Normalize accents: acutes to circumflexes, cedillas to affricates
     s = s.replace("á", "â").replace("é", "ê").replace("í", "î").replace("ó", "ô").replace("ú", "û")
     s = s.replace("Á", "Â").replace("É", "Ê").replace("Í", "Î").replace("Ó", "Ô").replace("Ú", "Û")
     s = s.replace("à", "â").replace("è", "ê").replace("ì", "î").replace("ò", "ô").replace("ù", "û")
     s = s.replace("À", "Â").replace("È", "Ê").replace("Ì", "Î").replace("Ò", "Ô").replace("Ù", "Û")
+    s = s.replace("ç", "tz").replace("Ç", "Tz")
     
     # 2. Pinyin digraphs
     s = re.sub(r"zh", "dsch", s, flags=re.I)
@@ -147,6 +148,7 @@ def generate_tarraconian_ipa(name: str) -> str:
         
     # Expand Saint abbreviations
     s = re.sub(r"\bSt\.?\s*", "Zant-", s)
+    s = re.sub(r"\bSaint[\s\-]+", "Zant-", s, flags=re.IGNORECASE)
     
     # Store original stripped name to detect Romance/Germanic patterns for stress
     raw_stem = s
@@ -155,6 +157,15 @@ def generate_tarraconian_ipa(name: str) -> str:
     
     # Clean apostrophes
     res = res.replace("'", "")
+    
+    # Regularize y in diphthongs, onsets, and vocalic codas
+    res = re.sub(r"ey", "ei", res)
+    res = re.sub(r"ay", "ai", res)
+    res = re.sub(r"oy", "eu", res)
+    res = re.sub(r"uy", "ui", res)
+    res = re.sub(r"y\b", "i", res)
+    res = re.sub(r"y(?=[aeiouâêîôûäöü])", "j", res)
+    res = re.sub(r"y", "i", res)
     
     # Convert foreign diacritics / non-Tarraconian orthography
     res = res.replace("š", "sch").replace("ž", "dsch").replace("č", "tsch")
@@ -184,9 +195,9 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = re.sub(r"c(?=[eiêîy])", "ts", res)
     res = res.replace("c", "k")
     
-    # Palatal nj / ny / ll (Catalan/Romance)
+    # Palatal nj / ny / ll / lj (Catalan/Romance)
     res = re.sub(r"nj|ny", "ɲ", res)
-    res = re.sub(r"ll", "ʎ", res)
+    res = re.sub(r"lj|ll", "ʎ", res)
     
     # Long vowels (from circumflexes)
     res = res.replace("â", "aː").replace("ê", "eː").replace("î", "iː").replace("ô", "oː").replace("û", "uː")
@@ -226,13 +237,16 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = re.sub(f"({C_SET})ɛn({C_SET})", r"\1ən\2", res)
     
     # Romance words ending in -tel, -del, -pel with oxytone stress keep [ɛl] if root is Romance
-    if re.search(r"(castel|montpel|bordel)\b", raw_stem, re.IGNORECASE):
-        res = re.sub(r"əl\b", "ɛl", res)
+    if re.search(r"(castel|kastel|montpel|bordel)", raw_stem, re.IGNORECASE):
+        res = re.sub(r"əl\b|əl(?=\s|-)", "ɛl", res)
         
     res = re.sub(f"({C_SET})ɛ\\b", r"\1ə", res)
     
-    # Intervocalic lenition of [ɡ] -> [ɣ] between vowels
+    # Intervocalic s -> z (single s only between vowels)
     v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|ɛɪ|ɔʊ|ɔʏ)"
+    res = re.sub(f"(?<![s])({v_regex})s({v_regex})(?![s])", r"\1z\2", res)
+    
+    # Intervocalic lenition of [ɡ] -> [ɣ] between vowels
     res = re.sub(f"({v_regex})ɡ({v_regex})", r"\1ɣ\2", res)
     
     # Double consonants reduction in IPA
@@ -486,17 +500,39 @@ def load_secondary_variants_and_collisions(counties_lookup, en_cache):
     if tarr_md.exists():
         text = tarr_md.read_text(encoding="utf-8")
         matches = re.findall(
-            r"\*\s+`([c]_[a-z0-9_]+)`\s*\([^)]*\)\s*\$\\rightarrow\$\s*\*\*([^*]+)\*\*\s*\*\(\s*or\s+\*\*([^*]+)\*\*\s*\)\*",
+            r"\*\s+`([c]_[a-z0-9_]+)`\s*\([^)]*\)\s*\$\\rightarrow\$\s*\*\*([^*]+)\*\*\s*\*\(\s*or\s+\*\*([^*]+)\*\*[^)]*\)\*",
             text
         )
         def norm_s(s):
             s = s.lower().replace("â", "a").replace("ê", "e").replace("î", "i").replace("ô", "o").replace("û", "u").replace("ö", "o").replace("ü", "u")
+            s = re.sub(r"^(zant|saint|sankt|st|san|santa)[^a-z]*", "", s)
             s = re.sub(r"[^a-z]", "", s)
-            s = s.replace("tz", "z").replace("tsch", "ch").replace("sch", "sh").replace("v", "f").replace("w", "v")
+            s = s.replace("tz", "z").replace("tsch", "ch").replace("sch", "sh").replace("v", "f").replace("w", "v").replace("j", "dsh")
             return s
+
+        KNOWN_EQUIVS = [
+            ("gallen", "gallen"),
+            ("beja", "bedsh"),
+            ("konstanz", "konst"),
+            ("evora", "evor"),
+            ("york", "everw"), ("eborac", "everw"),
+            ("canterbury", "kant"), ("cant", "kant"),
+            ("shrewsbury", "amw"), ("shrew", "amw"),
+            ("aix", "ax"),
+            ("reading", "reding"),
+            ("winchester", "wintz"),
+            ("exeter", "exetz"),
+            ("lincoln", "linkoln"),
+            ("london", "lunden"),
+            ("cambridge", "kambritsch"), ("cambridge", "grant"),
+            ("deventer", "deventer"),
+            ("chur", "kur"),
+            ("split", "spalat"),
+        ]
 
         for ck, prim, sec in matches:
             clean_sec = re.sub(r"^(Magistrat|Gubernat|Kûnincrich|Keiserrîch|Erzbisdom|Fürstbisdom)\s+van\s+(dem\s+|der\s+|den\s+)?", "", sec.strip())
+            clean_sec = clean_sec.split("/")[0].strip()
             norm_sec = norm_s(clean_sec)
             baronies = counties_lookup.get(ck, {}).get("baronies", [])
             
@@ -514,17 +550,18 @@ def load_secondary_variants_and_collisions(counties_lookup, en_cache):
                     score = 80
                 elif norm_b[:4] == norm_sec[:4] or norm_en[:4] == norm_sec[:4]:
                     score = 60
-                elif ("york" in norm_en and "everw" in norm_sec) or ("cant" in norm_en and "kant" in norm_sec) or ("shrew" in norm_en and "amw" in norm_sec):
-                    score = 90
+                else:
+                    for k1, k2 in KNOWN_EQUIVS:
+                        if (k1 in norm_en or k1 in norm_b) and k2 in norm_sec:
+                            score = 95
+                            break
                     
                 if score > best_score:
                     best_score = score
                     best_b = b
                     
-            if not best_b and baronies:
-                best_b = baronies[0]
-                
-            if best_b:
+            # Only assign if positive match (score >= 60)
+            if best_b and best_score >= 60:
                 barony_to_sec_variant[best_b] = (clean_sec, ck)
 
     # Parse Option A designations and intra-county collisions from screen_phase3_titles.py
@@ -548,6 +585,44 @@ def load_secondary_variants_and_collisions(counties_lookup, en_cache):
                     "opt_a_name": opt_name,
                     "opt_b_name": hyd.group(1) if hyd else "",
                 }
+
+    OPTION_A_CAPITAL_DISAMBIGUATION = {
+        "c_zagreb": "Sagreb",
+        "c_linlithgowshire": "Aberkôrn",
+        "c_oldenburg": "Aldenburch",
+        "c_brandenburg": "Brennabor",
+        "c_lanarkshire": "Lânark",
+        "c_athlone": "Âth-Lôen",
+        "c_ravensburg": "Râvensburch",
+        "c_coburg": "Kôburch",
+        "c_slupsk": "Slûptzich",
+        "c_gowrie": "Zant-Jônstat",
+        "c_lviv": "Lemberch",
+        "c_zaslavl": "Saslâwl",
+        "c_peremyshl": "Peremyschl",
+        "c_zvyahel": "Swîâhel",
+        "c_perekop": "Akmesdschît",
+        "c_osterland": "Îlenburch",
+        "c_hradyzk": "Gradischk",
+        "c_lasta": "Lalîbela",
+        "c_luxembourg": "Lützelburch",
+        "c_bergh": "Berch",
+        "c_namur": "Nâmen",
+        "c_munchen": "München",
+        "c_vecchio": "Bonifâtzo",
+        "c_montpellier": "Muntpêljê",
+        "c_algier": "Alschîr",
+        "c_bornu": "Gasargamu",
+        "c_lubeck": "Lübeck",
+        "c_stezycka": "Stensitz",
+        "c_finland": "Abô",
+        "c_nyland": "Borchâ",
+        "c_satakunta": "Wûlvildô",
+        "c_czerska": "Warschauwe",
+    }
+    for ck, b_name in OPTION_A_CAPITAL_DISAMBIGUATION.items():
+        if ck in collision_counties:
+            collision_counties[ck]["opt_b_name"] = b_name
 
     return barony_to_sec_variant, option_a_baronies, collision_counties
 
@@ -824,6 +899,135 @@ def adapt_european_toponym(name: str) -> str:
     """Adapts a standard historical European settlement name into Rhine-Moselle Franconian phonology."""
     s = name.strip()
     
+    # 0. Canonical Latin / Classical / Romance toponyms
+    if re.match(r"^Aix\b", s, re.I):
+        return "Âx"
+    if re.match(r"^Saintes\b", s, re.I):
+        return "Santes"
+    if re.match(r"^(?:É|Ê|E)tampes\b", s, re.I):
+        return "Estampes"
+    if re.match(r"^Beauvais\b", s, re.I):
+        return "Belvês"
+    if re.match(r"^Beaugency\b", s, re.I):
+        return "Belgentzî"
+    if re.match(r"^Beaujeu\b", s, re.I):
+        return "Beljô"
+    if re.match(r"^(?:Beaumont|Beaumunt)[-\s]+(?:sur|Sur)[-\s]+(?:Lèze|Lêze)\b", s, re.I):
+        return "Belmunt-an-der-Lêze"
+    if re.match(r"^Versailles\b", s, re.I):
+        return "Versalje"
+    if re.match(r"^Marseille\b", s, re.I):
+        return "Marsîlje"
+    if re.match(r"^Taillebourg\b", s, re.I):
+        return "Taljeburch"
+    if re.match(r"^Cornouailles\b", s, re.I):
+        return "Kornuâlje"
+    if re.match(r"^Mortagne\b", s, re.I):
+        return "Mortenje"
+    if re.match(r"^Draguignan\b", s, re.I):
+        return "Draginjân"
+    if re.match(r"^Valen[çc]ay\b", s, re.I):
+        return "Valentzê"
+    if re.match(r"^Montlu[çc]on\b", s, re.I):
+        return "Muntlutzôn"
+    if re.match(r"^Brian[çc]on\b", s, re.I):
+        return "Briantzôn"
+    if re.match(r"^(?:La\s+)?Peyrade\b", s, re.I):
+        return "La Peirâde"
+    if re.match(r"^(?:La\s+)?Haye\b", s, re.I):
+        return "La Haie"
+    if re.match(r"^Bray\b", s, re.I):
+        return "Brê"
+    if re.match(r"^Gray\b", s, re.I):
+        return "Grê"
+    if re.match(r"^Blaye\b", s, re.I):
+        return "Blâje"
+    if re.match(r"^Melay\b", s, re.I):
+        return "Melê"
+    if re.match(r"^Fontenay\b", s, re.I):
+        return "Fontenê"
+    if re.match(r"^Parthenay\b", s, re.I):
+        return "Parthenê"
+    if re.match(r"^(?:É|Ê|E)pernay\b", s, re.I):
+        return "Êpernê"
+    if re.match(r"^(?:Courtenay|Coutenay)\b", s, re.I):
+        return "Kourtenê"
+    if re.match(r"^Belley\b", s, re.I):
+        return "Belê"
+    if re.match(r"^Quingey\b", s, re.I):
+        return "Quingê"
+    if re.match(r"^Annonay\b", s, re.I):
+        return "Annonê"
+    if re.match(r"^Alcoy\b", s, re.I):
+        return "Alkoi"
+    if re.match(r"^(?:Crêpy|Crepy)\b", s, re.I):
+        return "Crêpî"
+    if re.match(r"^(?:Crêcy|Crecy)\b", s, re.I):
+        return "Crêtzî"
+    if re.match(r"^Roucy\b", s, re.I):
+        return "Routzî"
+    if re.match(r"^Coucy\b", s, re.I):
+        return "Koutzî"
+    if re.match(r"^Annecy\b", s, re.I):
+        return "Annetzî"
+    if re.match(r"^Donzy\b", s, re.I):
+        return "Dontzy"
+    if re.match(r"^(?:Chambéry|Chambêry)\b", s, re.I):
+        return "Schambêrî"
+    if re.match(r"^(?:Montlhéry|Montlhêry)\b", s, re.I):
+        return "Muntlêrî"
+    if re.match(r"^Castelnaudary\b", s, re.I):
+        return "Kastelnoudarî"
+    if re.match(r"^Sully[-\s]+(?:sur|Sur)[-\s]+Loire\b", s, re.I):
+        return "Sullî-an-der-Loire"
+    if re.match(r"^Vitry[-\s]+(?:en|En)[-\s]+Perthois\b", s, re.I):
+        return "Vitrî-in-Perthes"
+    if re.match(r"^Cluny\b", s, re.I):
+        return "Klunî"
+    if re.match(r"^Noyon\b", s, re.I):
+        return "Nôjôn"
+    if re.match(r"^Mayenne\b", s, re.I):
+        return "Majenne"
+    if re.match(r"^Royan\b", s, re.I):
+        return "Rôjân"
+    if re.match(r"^Herry\b", s, re.I):
+        return "Herrî"
+    if re.match(r"^Romilly\b", s, re.I):
+        return "Romiljî"
+    if re.match(r"^Martigny\b", s, re.I):
+        return "Martinjî"
+    if re.match(r"^Faucigny\b", s, re.I):
+        return "Fautsinjî"
+    if re.match(r"^Romigny\b", s, re.I):
+        return "Rominjî"
+    if re.match(r"^Poulangy\b", s, re.I):
+        return "Poulanjî"
+    if re.match(r"^Gy\b", s, re.I):
+        return "Gî"
+
+    # Saints -> Zant-
+    s = re.sub(r"\bSaint[\s\-]+", "Zant-", s, flags=re.I)
+    s = re.sub(r"\bSt\.?[\s\-]+", "Zant-", s, flags=re.I)
+    s = re.sub(r"Zant-Denis\b", "Zant-Dionîs", s, flags=re.I)
+    s = re.sub(r"Zant-Quentin\b", "Zant-Quentîn", s, flags=re.I)
+    s = re.sub(r"Zant-Omer\b", "Zant-Omêr", s, flags=re.I)
+    s = re.sub(r"Zant-Hubert\b", "Zant-Hûbert", s, flags=re.I)
+    s = re.sub(r"Zant-Dizier\b", "Zant-Dizjêr", s, flags=re.I)
+    s = re.sub(r"Zant-Junien\b", "Zant-Junjân", s, flags=re.I)
+    s = re.sub(r"Zant-Flour\b", "Zant-Flôr", s, flags=re.I)
+    s = re.sub(r"Zant-Lizier\b", "Zant-Lizjêr", s, flags=re.I)
+    s = re.sub(r"Zant-Malo\b", "Zant-Malô", s, flags=re.I)
+    s = re.sub(r"Zant-Mihiel\b", "Zant-Mîhîl", s, flags=re.I)
+    s = re.sub(r"Zant-Albans\b", "Zant-Albân", s, flags=re.I)
+    s = re.sub(r"Zant-Catherine\b", "Zant-Katerîne", s, flags=re.I)
+    s = re.sub(r"Zant-Michel-De-Maurienne\b", "Zant-Mîchel-in-Morjêne", s, flags=re.I)
+
+    # Château- / Chateau- -> Kastel-
+    s = re.sub(r"château-?|chateau-?", "Kastel-", s, flags=re.I)
+    s = re.sub(r"Kastel-Roux\b", "Kastel-Rûs", s, flags=re.I)
+    s = re.sub(r"Kastel-Dun\b", "Kasteldûn", s, flags=re.I)
+    s = re.sub(r"Kastel-Briant\b", "Kastel-Brîant", s, flags=re.I)
+
     # German / English suffixes
     s = re.sub(r"burg\b|burgh\b", "burch", s, flags=re.I)
     s = re.sub(r"berg\b", "berch", s, flags=re.I)
@@ -841,20 +1045,26 @@ def adapt_european_toponym(name: str) -> str:
     s = re.sub(r"werder\b|werth\b", "werder", s, flags=re.I)
     
     # French / Occitan
-    s = re.sub(r"château\b|chateau\b", "castel", s, flags=re.I)
     s = re.sub(r"ville\b", "wîl", s, flags=re.I)
     s = re.sub(r"mont\b", "munt", s, flags=re.I)
     s = re.sub(r"pont\b", "brücke", s, flags=re.I)
+    s = re.sub(r"beau(?=[a-z])", "bel", s, flags=re.I)
+    s = re.sub(r"ailles?\b", "alje", s, flags=re.I)
+    s = re.sub(r"eilles?\b", "îlje", s, flags=re.I)
     
     # Slavic
     s = re.sub(r"grad\b|grod\b|gorod\b", "gort", s, flags=re.I)
     s = re.sub(r"sk\b|ysk\b", "tzich", s, flags=re.I)
     s = re.sub(r"ice\b|yce\b", "itz", s, flags=re.I)
     
+    # Cedilla
+    s = s.replace("ç", "tz").replace("Ç", "Tz")
+    
     return enforce_tarraconian_sound_laws(s)
 
 
 INDIGENOUS_RESTITUTIONS = {
+    # Original Authentic Pre-867 Restitutions
     "b_konigsberg": ("Twangste", "Old Prussian sacred grove and hillfort Twangste (attested before 1255 Teutonic Order castle)"),
     "b_reval": ("Lindanisa", "Ancient Finnic/Estonian settlement Lindanisa (attested before 1219 Danish crusade fortress)"),
     "b_wesenburg": ("Tarvanpää", "Ancient Estonian stronghold Tarvanpää ('Bull's Head', attested 1226)"),
@@ -877,6 +1087,108 @@ INDIGENOUS_RESTITUTIONS = {
     "b_gdov": ("Gdouwe", "Pre-867 hydronym of the Gdovka River (Slavic Gda/Gdova / Finnic Oudova; attested as settlement 1322, fortress 1431)"),
     "b_ostrov": ("Ostrouwe", "Ancient hydronym/toponym of the river island on the Velikaya River (Slavic Ostrov; fortress attested 1341)"),
     "b_ostrov_BJA": ("Ostrouwe", "Ancient hydronym/toponym of the river island (Slavic Ostrov)"),
+
+    # c_avalois & c_chalon Disambiguation
+    "b_vezelay": ("Wêzelê", "Ancient Vizeliacum / Benedictine Abbey of Sainte-Marie-Madeleine at Vézelay (attested 858 AD)"),
+    "b_morvan": ("Avalûn", "Ancient Gallo-Roman Aballo / fortified caput of the Avalois on the Cousin (attested 843 AD)"),
+    "b_autun": ("Ostûn", "Ancient Augustodunum / Episcopal See of Autun (attested secondary variant of the Bishopric of Avalois)"),
+
+    # Inverted / Swapped Seats (Archetype 2)
+    "b_konstanz": ("Konstantz", "Roman Constantia / Episcopal See of Lake Constance (attested 585 AD)"),
+    "b_sankt_gallen": ("Zant-Gallen", "Imperial Abbey and monastic republic of Saint Gall (attested 612 AD)"),
+    "b_evora": ("Êvore", "Ancient Roman Ebora Liberalitas Julia / major episcopal see"),
+    "b_beja": ("Bêdsche", "Ancient Roman Pax Julia / Visigothic and Andalusian Bājah (Beja)"),
+
+    # Option A Collision Counties (Archetype 4)
+    "b_zagreb": ("Sagreb", "Diocesan hillfort Gradec / Kaptol of Zagreb (attested 1094 AD)"),
+    "b_linlithgow": ("Aberkôrn", "Ancient Northumbrian episcopal see Abercorn on the Forth (attested 681 AD)"),
+    "b_falkirk": ("Fawkirk", "Ancient Brythonic/Gaelic church site Egglesbreth on the Antonine Wall"),
+    "b_oldenburg": ("Aldenburch", "Medieval comital fortress Oldenburg on the Hunte (attested 1108 AD)"),
+    "b_leer": ("Lêre", "Ancient 8th-century Frisian trading gau settlement Leer on the Leda (attested 791 AD)"),
+    "b_potsdam": ("Pôtzupimi", "Ancient Hevelli Slavic settlement Poztupimi (attested 993 AD)"),
+    "b_brandenburg": ("Brennabor", "Ancient princely fortress Brennabor of the Slavic Hevelli on the Havel"),
+    "b_lanark": ("Lânark", "Ancient Strathclyde burgh Lanark on the Clyde (chartered 1140 AD)"),
+    "b_cadyou": ("Kadjo", "Ancient Strathclyde Brythonic comital center Cadzow (Cadyou)"),
+    "b_athlone": ("Âth-Lôen", "Historic Shannon bridge fortress Athlone (Áth Luain, attested 1120 AD)"),
+    "b_uisneach": ("Uisnech", "Ancient sacred royal hill and navel of Ireland (Aill na Mireann)"),
+    "b_ravensburg": ("Râvensburch", "Welf ancestral fortress Ravensburg on the Schussen (attested 1088 AD)"),
+    "b_bregenz": ("Briganz", "Ancient Roman naval base and civitas Brigantium on Lake Constance (attested 15 BC)"),
+    "b_coburg": ("Kôburch", "Medieval comital castle Coburg in the Radenzgau (attested 1056 AD)"),
+    "b_lichtenfels": ("Liechtenfels", "Ancient Radenzgau fortress on the Main (Lichtenfels)"),
+    "b_slupsk": ("Slûptzich", "Ancient Pomeranian tribal gord Słupsk on the Słupia"),
+    "b_koszalin": ("Cöslîn", "Ancient Pomeranian trading center Koszalin near the Baltic coast"),
+    "b_perekop": ("Tâfros", "Ancient Greek trench and fortress Taphros on the Isthmus of Crimea"),
+    "b_aqmescit": ("Akmesdschît", "Historic Crimean Tatar fortress Aqmescit on the Salgir"),
+    "b_vecchio": ("Porto-Wêckjo", "Ancient Roman port Portus Syracusanus / Porto-Vecchio"),
+    "b_bonifacio": ("Bonifâtzo", "Historic 828 AD citadel of Count Boniface II of Tuscany (Bonifacio)"),
+    "b_gowrie": ("Zant-Jônstat", "Historic royal burgh St Johnston / Perth on the Tay"),
+    "b_coupar_angus": ("Skône", "Ancient coronation moot and abbey of the Kings of Alba (Scone)"),
+    "b_zaslavl": ("Saslâwl", "Ancient comital gord of Zaslavl on the Horyn"),
+    "b_dubno": ("Dubne", "Ancient fortress Dubno in Volhynia (attested 1100 AD)"),
+    "b_peremyshl": ("Peremyschl", "Ancient princely gord Peremyshl on the San"),
+    "b_przemysl": ("Przemîschel", "Historic crossing settlement Przemysl"),
+    "b_zvyahel": ("Swîâhel", "Ancient comital gord Zvyahel on the Sluch"),
+    "b_kolodiazhen": ("Kolodjâschen", "Ancient fortress Kolodiazhen in Volhynia"),
+    "b_osterland": ("Îlenburch", "Historic Mulde fortress Eilenburg in Osterland"),
+    "b_colditz": ("Colditz", "Ancient castle Colditz on the Zwickauer Mulde"),
+    "b_hradyzk": ("Gradischk", "Ancient Dnieper fortress Gradischk"),
+    "b_poltava": ("Altâwe", "Ancient 9th-century fortress Ltava / Poltava on the Vorskla"),
+    "b_lasta": ("Laste", "Ancient mountainous province and lordship of Lasta"),
+    "b_lalibela": ("Lalîbela", "Monolithic rock-hewn church center Lalibela"),
+    "b_adafa": ("Rôhe", "Ancient capital of the Zagwe Dynasty Roha"),
+    "b_luxembourg": ("Lützelburch", "Ancient rock fortress Lucilinburhuc founded 963 AD by Count Sigfried"),
+    "b_echternach": ("Echternach", "Ancient Benedictine Abbey of Echternach founded 698 AD by St Willibrord"),
+    "b_bergh": ("Berch", "Ancestral castle Burg an der Wupper / County of Berg"),
+    "b_kaiserswerth": ("Keiserswert", "Ancient Roman and Merovingian Rhine island fortress Kaiserswerth"),
+    "b_namur": ("Nâmen", "Ancient junction citadel Namur at the confluence of Sambre and Meuse"),
+    "b_dinant": ("Dînant", "Ancient Celtic and Merovingian Mosan trading port Dinant"),
+    "b_munchen": ("München", "Chartered toll bridge burgh Munich founded 1158 by Henry the Lion"),
+    "b_freising": ("Frîsinge", "Ancient Agilolfing ducal seat and prince-bishopric Freising on the Isar (attested 739 AD)"),
+    "b_montpellier": ("Muntpêljê", "Chartered comital burgh Montpellier (attested 985 AD)"),
+    "b_maguelone": ("Magelône", "Ancient coastal episcopal island see of Maguelone"),
+    "b_algier": ("Alschîr", "Historic Zirid island fortress al-Jazā'ir (Algiers)"),
+    "b_bornu": ("Gasargamu", "Historic Kanem-Bornu capital Birni Gazargamo"),
+    "b_lubeck": ("Lübeck", "Chartered Baltic trading port Lübeck founded 1143 AD"),
+    "b_liubice": ("Liubice", "Ancient Obotrite Slavic princely seat Liubice on the Trave"),
+    "b_stezycka": ("Stensitz", "Historic Vistula castellan seat Stężyca"),
+    "b_sieciechow": ("Sitzichow", "Ancient Benedictine abbey and fortress Sieciechów"),
+
+    # Displaced Non-Eponymous Capitals (Archetypes 1 & 3)
+    "b_wilton": ("Wiltûn", "Ancient Anglo-Saxon royal burh and seat of the Wilsæte on the Wylye"),
+    "b_salisbury": ("Sâlesburch", "Ancient Iron Age hillfort and Roman Sorviodunum / Old Sarum"),
+    "b_minden": ("Minden", "Ancient episcopal see and cathedral chapter of Minden on the Weser (attested 798 AD)"),
+    "b_diepholz": ("Dêpholtz", "Historic noble lordship and water castle Diepholz on the Hunte"),
+    "b_chartres": ("Schartres", "Classical Carnutes civitas and cathedral city Autricum / Chartres"),
+    "b_dreux": ("Drôchs", "Ancient Gaulish capital of the Durocasses / comital castle Dreux"),
+    "b_tuam": ("Tuâm", "Ancient monastic foundation and metropolitan archiepiscopal see of Tuam"),
+    "b_galway": ("Gâlewe", "Historic Corrib river fortress and burgh Galway (Dún Gaillimhe, attested 1124 AD)"),
+    "b_pergamon": ("Pergamôn", "Ancient Hellenistic royal capital and acropolis of Pergamon"),
+    "b_phocaea": ("Phôkêe", "Ancient Ionian maritime city Phocaea on the Aegean coast"),
+    "b_nikomedia": ("Nikomêdje", "Ancient Bithynian and Roman imperial capital Nicomedia"),
+    "b_chalcedon": ("Kalkêdôn", "Ancient Megarian colony and Ecumenical Council city Chalcedon on the Bosphorus"),
+    "b_sardes": ("Sârdes", "Ancient Lydian royal capital and acropolis Sardis on the Pactolus"),
+    "b_philadelphia": ("Philadelphîe", "Ancient Hellenistic fortress city Philadelphia in Lydia"),
+    "b_lacedaemonia": ("Lakedêmôn", "Classical Sparta / Lacedaemon on the Eurotas"),
+    "b_mistra": ("Mistrâ", "Byzantine fortified capital and Despotate seat of Mistra on Mount Taygetos"),
+    "b_sagalassus": ("Sagalâs", "Ancient Pisidian mountain metropolis Sagalassos"),
+    "b_sozopolis": ("Sôsôpel", "Ancient Byzantine episcopal fortress Sozopolis in Pisidia"),
+    "b_manzikert": ("Manzikêrt", "Ancient Armenian fortress city and battlefield Manzikert"),
+    "b_musch": ("Mûsch", "Ancient Armenian capital of Taron on the Euphrates plain"),
+    "b_armagh": ("Armâch", "Ancient ecclesiastical capital of Ireland and primary see of St Patrick (Ard Mhacha)"),
+    "b_dundalk": ("Dundalk", "Ancient fortified ford Dún Dealgan of the Castletown River"),
+    "b_lhasa": ("Lâse", "Ancient sacred Tibetan imperial capital and Jokhang cathedral city"),
+    "b_potala": ("Pôtâla", "Tibetan palace and religious fortress on the Red Hill / Marpori"),
+    "b_rothenburg": ("Rôtenburch", "Imperial castle and burgh Rothenburg ob der Tauber"),
+    "b_hohenberg": ("Hôhenberch", "Comital ancestral fortress Hohenberg on the Neckar"),
+    "b_rottweil": ("Rôtwîl", "Ancient Roman municipium Arae Flaviae / oldest chartered town of Swabia (Rottweil)"),
+    "b_gleichenstein": ("Glêichenstên", "Comital hill castle Gleichenstein in the Eichsfeld"),
+    "b_muhlhausen": ("Mülhûsen", "Imperial free city and Frankish royal court Mühlhausen on the Unstrut"),
+    "b_brysis": ("Brüsis", "Ancient Byzantine fortress and bishopric Brysis in Thrace"),
+    "b_arkadiopolis": ("Arkadîôpel", "Ancient Roman-Byzantine episcopal city Arcadiopolis on the Ergene"),
+    "b_nagyszeben": ("Hermannstat", "Transylvanian Saxon chartered city Hermannstadt / Sibiu (attested 1191 AD)"),
+    "b_jinguan": ("Goltpfôrte", "Logographic semantic calque for Jīnguān (Golden Gate/Pass)"),
+    "b_chengmai": ("Luterweit", "Logographic semantic calque for Chéngmài (Clear Progress)"),
+    "b_mopet": ("Môtpet", "Indigenous Ainu/Nivkh river mouth settlement Mopet"),
 }
 
 
@@ -968,10 +1280,33 @@ def resolve_all_baronies():
         emp = props.get("empire")
         is_sinosphere = (emp in SINO_EMPIRES or ck in SINO_FRONTIER_COUNTIES)
 
+        if ck not in county_used_names:
+            county_used_names[ck] = set()
+
+        # ----------------------------------------------------------------------
+        # A. AUTHENTIC INDIGENOUS / ARCHAEOLOGICAL RESTITUTION OVERRIDE
+        # ----------------------------------------------------------------------
+        if bk in INDIGENOUS_RESTITUTIONS:
+            sub_barony_count += 1
+            tarr_name, orig_desc = INDIGENOUS_RESTITUTIONS[bk]
+            tarr_clean = enforce_tarraconian_sound_laws(tarr_name)
+            res = {
+                "name": tarr_clean,
+                "b_tarr": tarr_clean,
+                "b_tarr_direct": adapt_european_toponym(save_name),
+                "b_tarr_hist": tarr_clean,
+                "b_origin": f"{orig_desc} (in-game: {save_name})",
+                "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+                "b_ipa": generate_tarraconian_ipa(tarr_clean),
+                "holding_type": ht,
+                "category": "indigenous_restitution"
+            }
+            county_used_names[ck].add(res["name"])
+
         # ----------------------------------------------------------------------
         # B. SINOSPHERE BARONIES (Logographic Semantic Calques)
         # ----------------------------------------------------------------------
-        if is_sinosphere:
+        elif is_sinosphere:
             sino_count += 1
             raw_zh = zh_cache.get(bk, "")
             c_tarr = c_props.get("tarr_hist") or c_props.get("tarr_direct") or c_props.get("tarr", "")
@@ -988,41 +1323,19 @@ def resolve_all_baronies():
                 "holding_type": ht,
                 "category": "sinosphere_calque"
             }
-            if ck not in county_used_names:
-                county_used_names[ck] = set()
             county_used_names[ck].add(res["name"])
 
         # ----------------------------------------------------------------------
         # C. NON-SINOSPHERE BARONIES
         # ----------------------------------------------------------------------
         else:
-            if ck not in county_used_names:
-                county_used_names[ck] = set()
-
             c_dir = c_props.get("tarr_direct") or adapt_european_toponym(save_name)
             c_hist = c_props.get("tarr_hist") or c_dir
             c_tarr = c_hist or c_dir
             kd = c_props.get("kingdom", "")
 
-            # 1. Check known authentic indigenous / archaeological restitution
-            if bk in INDIGENOUS_RESTITUTIONS:
-                sub_barony_count += 1
-                tarr_name, orig_desc = INDIGENOUS_RESTITUTIONS[bk]
-                tarr_clean = enforce_tarraconian_sound_laws(tarr_name)
-                res = {
-                    "name": tarr_clean,
-                    "b_tarr": tarr_clean,
-                    "b_tarr_direct": adapt_european_toponym(save_name),
-                    "b_tarr_hist": tarr_clean,
-                    "b_origin": f"{orig_desc} (in-game: {save_name})",
-                    "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-                    "b_ipa": generate_tarraconian_ipa(tarr_clean),
-                    "holding_type": ht,
-                    "category": "indigenous_restitution"
-                }
-
-            # 2. Check Option A sub-barony designation
-            elif bk in opt_a_baronies:
+            # 1. Check Option A sub-barony designation
+            if bk in opt_a_baronies:
                 sub_barony_count += 1
                 opt_name = opt_a_baronies[bk]
                 tarr_clean = enforce_tarraconian_sound_laws(opt_name)
@@ -1038,7 +1351,7 @@ def resolve_all_baronies():
                     "category": "option_a_seat"
                 }
 
-            # 3. Check Intra-County Collision (capital barony of an Option A county)
+            # 2. Check Intra-County Collision (capital barony of an Option A county)
             elif ck in collisions and collisions[ck]["opt_a_key"] != bk and is_capital:
                 eponymous_count += 1
                 coll = collisions[ck]
@@ -1065,7 +1378,7 @@ def resolve_all_baronies():
                     "category": "collision_disambiguation"
                 }
 
-            # 4. Check Precisely Paired Secondary Variants *(or **X**)* from tarraconian_titles_1059.md
+            # 3. Check Precisely Paired Secondary Variants *(or **X**)* from tarraconian_titles_1059.md
             elif bk in sec_variants:
                 sub_barony_count += 1
                 sec_name, sec_ck = sec_variants[bk]
@@ -1082,7 +1395,7 @@ def resolve_all_baronies():
                     "category": "secondary_variant"
                 }
 
-            # 5. Eponymous / Capital Barony inheriting parent county
+            # 4. Eponymous / Capital Barony inheriting parent county
             elif is_capital or (ck and bk.replace("b_", "") == ck.replace("c_", "")):
                 eponymous_count += 1
                 if c_tarr in county_used_names[ck]:
@@ -1114,14 +1427,22 @@ def resolve_all_baronies():
                     "category": "capital_eponymous"
                 }
 
-            # 6. Non-Capital Sub-Baronies: Strict Burden of Proof on Antiquity
+            # 5. Non-Capital Sub-Baronies: Strict Burden of Proof on Antiquity
             else:
                 sub_barony_count += 1
                 is_anc, anc_reason = check_barony_antiquity(bk, save_name, ck, kd)
 
                 if is_anc:
                     cand = adapt_european_toponym(save_name)
-                    if cand in county_used_names[ck]:
+                    has_stem_collision = any(
+                        difflib.SequenceMatcher(
+                            None,
+                            cand.lower().replace("â","a").replace("ê","e").replace("î","i").replace("ô","o").replace("û","u"),
+                            un.lower().replace("â","a").replace("ê","e").replace("î","i").replace("ô","o").replace("û","u")
+                        ).ratio() >= 0.75
+                        for un in county_used_names[ck]
+                    )
+                    if cand in county_used_names[ck] or has_stem_collision:
                         opt_c_name, c_desc = evaluate_founder_option_c(
                             holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
                         )

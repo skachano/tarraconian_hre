@@ -584,7 +584,7 @@
 * **Duchy of Dalmatia** (`d_dalmatia`) — *3/3 in HRE*
   * **[HRE]** **Zadar** (`c_zadar`) — *Tarraconian: **Magistrat van Zâre***
   * **[HRE]** **Knin** (`c_knin`) — *Tarraconian: **Magistrat van Knîn***
-  * **[HRE]** **Cetina** (`c_cetina`) — *Tarraconian: **Magistrat van Tzetîne***
+  * **[HRE]** **Cetina** (`c_cetina`) — *Tarraconian: **Magistrat van Zetîne***
 * **Duchy of Croatia** (`d_croatia`) — *4/4 in HRE*
   * **[HRE]** **Gacka** (`c_gacka`) — *Tarraconian: **Magistrat van Gatzke***
   * **[HRE]** **Lika** (`c_lika`) — *Tarraconian: **Magistrat van Lîke***
@@ -697,7 +697,7 @@
 * **Duchy of Tuscany** (`d_toscana`) — *5/5 in HRE*
   * **[HRE]** **Firenze** (`c_firenze`) — *Tarraconian: **Magistrat van Vlorentz***
   * **[HRE]** **Lucca** (`c_lucca`) — *Tarraconian: **Magistrat van Lûke***
-  * **[HRE]** **Arezzo** (`c_arezzo`) — *Tarraconian: **Magistrat van Aretz***
+  * **[HRE]** **Arezzo** (`c_arezzo`) — *Tarraconian: **Magistrat van Arêtz***
   * **[HRE]** **Siena** (`c_siena`) — *Tarraconian: **Magistrat van Sêne***
   * **[HRE]** **Orbetello** (`c_orbetello`) — *(Note: Pre-1059 comital & episcopal centres of southern Tuscia were **Sovana** [seat of the Aldobrandeschi counts] and **Roselle** [Rusellae])*
 * **Duchy of Istria** (`d_istria`) — *1/1 in HRE*
@@ -1171,7 +1171,7 @@
 * **Duchy of Orleans** (`d_orleans`) — *5/5 in HRE*
   * **[HRE]** **Orléans** (`c_orleans`) — *Tarraconian: **Magistrat van Orljâns***
   * **[HRE]** **Montargis** (`c_montargis`) — ⚠️ **[Post-1059 Foundation]** *(12th-c. Courtenay/royal castle; pre-1059 capital of the Gâtinais: **Château-Landon** and **Ferrières Abbey**)*
-  * **[HRE]** **Vendôme** (`c_vendome`) — *Tarraconian: **Magistrat van Vendôme***
+  * **[HRE]** **Vendôme** (`c_vendome`) — *Tarraconian: **Magistrat van Vendosme***
   * **[HRE]** **Chartres** (`c_chartres`) — *Tarraconian: **Magistrat van Schartres***
   * **[HRE]** **Sancerre** (`c_sancerre`) — ⚠️ **[Post-1059 Foundation]** *(Name 'Sancerre' [Sacrum Caesaris] & county date to 1152; pre-1059 name: **Château-Gordon** [Castrum Gordonicum])*
 * **Duchy of Champagne** (`d_champagne`) — *7/7 in HRE*
@@ -1342,7 +1342,7 @@
 * **Duchy of Badajoz** (`d_badajoz`) — *5/5 in HRE*
   * **[HRE]** **Badajoz** (`c_badajoz`) — *Tarraconian: **Magistrat van Badallôz***
   * **[HRE]** **Plasencia** (`c_plasencia`) — ⚠️ **[Post-1059 Foundation]** *(Founded 1186 by Alfonso VIII of Castile; pre-1059 centres: **Coria** [Qūriya, Roman/Visigothic episcopal city] and **Cáparra**)*
-  * **[HRE]** **hisn Qasras** (`c_caceres`) — *Tarraconian: **Magistrat van Dat Brücke***
+  * **[HRE]** **hisn Qasras** (`c_caceres`) — *Tarraconian: **Magistrat van der Brücke***
   * **[HRE]** **Maridah** (`c_merida`) — *Tarraconian: **Magistrat van Mêride***
   * **[HRE]** **Medellin** (`c_medellin`) — *Tarraconian: **Magistrat van Medeljîn***
 * **Duchy of al-Gharb** (`d_algarve`) — *2/2 in HRE*
@@ -6088,7 +6088,7 @@ In this campaign's ecclesiastical structure (Catholic Trinity / Metropolitan Arc
 | **Archdiocese of Constantinople** | `d_et_constantinople` | Konstantînôpel (`c_byzantion`) | Byzantine Empire (`e_byzantium`) |
 | **Archdiocese of Jerusalem** | `d_et_jerusalem` | Jerûsalêm (`c_jerusalem`) | Arabian Empire (`e_arabia`) |
 | **Archdiocese of Antioch** | `d_et_antioch` | Antjôchje (`c_antiocheia`) | Independent |
-| **Archdiocese of Church of Cyprus** | `d_et_cyprus` | Tzîpern (`c_nicosia`) | Byzantine Empire (`e_byzantium`) |
+| **Archdiocese of Church of Cyprus** | `d_et_cyprus` | Zîpern (`c_nicosia`) | Byzantine Empire (`e_byzantium`) |
 | **Archdiocese of Kartli** | `d_et_kartli` | Kartlî (`c_kartli`) | Independent |
 | **Archdiocese of Armenia** | `d_et_armenia` | Armênjen (`c_hayk`) | Independent |
 | **Archdiocese of Seleucia-Ctesiphon** | `d_et_seleucia_ctesiphon` | Selêutzje-Tesiphôn (`c_baghdad`) | Arabian Empire (`e_arabia`) |

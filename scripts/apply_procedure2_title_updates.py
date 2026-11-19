@@ -66,7 +66,7 @@ REPLACEMENTS = [
     ),
     (
         r"  \* `c_caceres` \(hisn Qasras\) \$\\rightarrow\$ \*\*Magistrat van Kâtzeres\*\*",
-        r"  * `c_caceres` (hisn Qasras) $\\rightarrow$ **Magistrat van Dat Brücke** *(calque of Arabic *al-Qanṭarah* \"The Bridge\" / Alcántara, or **Kâtzeres**)*"
+        r"  * `c_caceres` (hisn Qasras) $\\rightarrow$ **Magistrat van der Brücke** *(calque of Arabic *al-Qanṭarah* \"The Bridge\" / Alcántara, or **Kâtzeres**)*"
     ),
     (
         r"  \* `c_santiago` \(Yant Yaqub\) \$\\rightarrow\$ \*\*Magistrat van Zant-Jâcop\*\* \*\(MHG \*Sant Jâcob\* \+ Catalan \*Sant Jaume\* for Compostela\)\*",

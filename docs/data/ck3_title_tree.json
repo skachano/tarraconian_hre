@@ -17877,9 +17877,9 @@
               },
               "c_vendome": {
                 "key": "c_vendome",
-                "tarr": "Vendôme",
-                "tarr_direct": "Vendôme",
-                "tarr_hist": "Vendôme",
+                "tarr": "Vendosme",
+                "tarr_direct": "Vendosme",
+                "tarr_hist": "Vendosme",
                 "ipa": "",
                 "origin": "Vendôme",
                 "anachronism": "",
@@ -23285,9 +23285,9 @@
             "counties": {
               "c_arezzo": {
                 "key": "c_arezzo",
-                "tarr": "Aretz",
-                "tarr_direct": "Aretz",
-                "tarr_hist": "Aretz",
+                "tarr": "Arêtz",
+                "tarr_direct": "Arêtz",
+                "tarr_hist": "Arêtz",
                 "ipa": "",
                 "origin": "Arezzo",
                 "anachronism": "",
@@ -25520,9 +25520,9 @@
               },
               "c_teruel": {
                 "key": "c_teruel",
-                "tarr": "Tzêlje",
+                "tarr": "Zêlje",
                 "tarr_direct": "Terôl",
-                "tarr_hist": "Tzêlje",
+                "tarr_hist": "Zêlje",
                 "ipa": "",
                 "origin": "Cella (in-game: Teruel)",
                 "anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
@@ -28587,9 +28587,9 @@
             "counties": {
               "c_cetina": {
                 "key": "c_cetina",
-                "tarr": "Tzetîne",
-                "tarr_direct": "Tzetîne",
-                "tarr_hist": "Tzetîne",
+                "tarr": "Zetîne",
+                "tarr_direct": "Zetîne",
+                "tarr_hist": "Zetîne",
                 "ipa": "",
                 "origin": "Cetina",
                 "anachronism": "",
