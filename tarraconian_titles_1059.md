@@ -945,7 +945,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
   * `c_volodymyr` (Volodymyr) $\rightarrow$ **Magistrat van Simne-an-der-Lûge** *(or **Simne / Lûge**)*
   * `c_peresopnytsia` (Peresopnytsia) $\rightarrow$ **Magistrat van Peresopnitz**
   * `c_berestye` (Berestye) $\rightarrow$ **Magistrat van Berestîe** *(or **Brest**)*
-  * `c_dorohychyn` (Dorohychyn) $\rightarrow$ **Magistrat van Dorohitschin**
+  * `c_dorohychyn` (Dorohychyn) $\rightarrow$ **Magistrat van Bûch** (`[1142 Historical: Magistrat van Bûch]` — Option B: Western Bug River / *Bugъ*)
 * **Duchy of Halytsch** (`d_halych`) $\rightarrow$ **Gubernat van Halitsch**
   * `c_halych` (Halytsch) $\rightarrow$ **Magistrat van Halitsch**
   * `c_lviv` (Lemberg) $\rightarrow$ **Magistrat van Klingeburch** *(or **Lüwenburch / Lewenburch**; `[1059 Historical Default: Magistrat van Swenigorot (Zvenyhorod) / Busk — Cadet House: Chatenois-Swenigorot]`)*

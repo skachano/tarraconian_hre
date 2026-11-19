@@ -1793,6 +1793,17 @@ INDIGENOUS_RESTITUTIONS = {
     "b_newport": ("Ûsemunde", "Confluence of River Great Ouse and Ouzel (pre-conquest crossing, replacing c. 1100 Novus Burgus)", "option_b_hydronym", "Anglo-Norman planned borough Novus Burgus built c. 1100 by Robert Fitzhamon. Resolved via Option B to the ancient Ouse confluence (Ûsemunde)."),
     "b_newbury": ("Kennetbrücke", "Kennet river crossing (pre-conquest Kennet river settlement, replacing c. 1080 Neuberie)", "option_b_hydronym", "Anglo-Norman planned borough Neuberie founded c. 1080 after the Norman Conquest. Resolved via Option B to the ancient Kennet river crossing (Kennetbrücke)."),
     "b_barysaw": ("Berêsene", "Berezina River basin (ancient Baltic/Slavic hydronym with intervocalic -s- [z], replacing 1102 Borisov)", "option_b_hydronym", "Founded in 1102 by Prince Boris Vseslavich of Polotsk after victory over the Yatviags. Resolved via Option B to the pre-867 Berezina River hydronym (Berêsene)."),
+    "b_dorohychyn": ("Bûch", "Western Bug River basin (Slavic Bugъ, replacing 1142 Drohiczyn)", "option_b_hydronym", "Drohiczyn was first attested in 1142 in the Hypatian Chronicle as a frontier customs gord. Resolved via Option B to the authentic pre-867 Western Bug River hydronym (Bûch)."),
+    "b_kobryn": ("Muchawêtz", "Mukhavets River basin (pre-867 hydronym, replacing 1287 Kobryn)", "option_b_hydronym", "First attested in 1287 in the Hypatian Chronicle. Resolved via Option B to the pre-867 Mukhavets River hydronym (Muchawêtz)."),
+    "b_blotkowo": ("Blotkowe", "Blotkowo (constituent holding of Bûch)", "sub_barony_adaptation", ""),
+    "b_galati": ("Barbôs", "Ancient Roman camp Barboși on the Danube (replacing 1445 Galați)", "indigenous_restitution", "First attested in 1445 AD. Restored to the ancient Roman frontier castrum Barboși (Barbôs) on the lower Danube."),
+    "b_hotin": ("Nîster", "Dniester River basin (ancient Danastris / Slavic Dnestr, replacing high medieval Khotyn fortress)", "option_b_hydronym", "Medieval fortress on the Dniester first attested in 1002/1250. Resolved via Option B to the ancient Dniester River hydronym (Nîster)."),
+    "b_orhei": ("Rêut", "Răut River basin (pre-867 hydronym, replacing medieval Orhei)", "option_b_hydronym", "Medieval town on the Răut River. Resolved via Option B to the pre-867 Răut River hydronym (Rêut)."),
+    "b_soroca": ("Nîstervurt", "Dniester River crossing (replacing late medieval Soroca fortress)", "option_b_hydronym", "Late medieval Dniester fortress. Resolved via Option B to the ancient Dniester River crossing (Nîstervurt)."),
+    "b_stoenesti": ("Jalômnetze", "Ialomița River basin (ancient Slavic/Dacian hydronym, replacing Stoenești)", "option_b_hydronym", "Late medieval Wallachian village. Resolved via Option B to the pre-867 Ialomița River hydronym (Jalômnetze)."),
+    "b_orsha": ("Ôrsche", "Orshitsa River basin (pre-867 hydronym at Dnieper confluence, replacing 1067 Orsha)", "option_b_hydronym", "First attested in 1067 in the Primary Chronicle. Resolved via Option B to the pre-867 Orshitsa River hydronym (Ôrsche)."),
+    "b_toropets": ("Torôpe", "Toropa River basin (pre-867 hydronym, replacing 1074 Toropets)", "option_b_hydronym", "First attested in 1074 in the Lavrentian Chronicle. Resolved via Option B to the pre-867 Toropa River hydronym (Torôpe)."),
+    "b_kholmogory": ("Dwîne", "Northern Dvina River reach (ancient hydronym, replacing 14th-century Kholmogory)", "option_b_hydronym", "First attested in 1355 as Kolmogory. Resolved via Option B to the ancient Northern Dvina River hydronym (Dwîne)."),
 }
 
 
@@ -1844,6 +1855,12 @@ def resolve_all_baronies():
         bk = props["barony"]
         ck = props.get("county")
         c_props = counties_lookup.get(ck, {})
+        if c_props:
+            props["c_tarr"] = c_props.get("tarr", "")
+            props["c_tarr_direct"] = c_props.get("tarr_direct", "")
+            props["c_tarr_hist"] = c_props.get("tarr_hist", "")
+            props["c_origin"] = c_props.get("c_origin", "")
+            props["c_anachronism"] = c_props.get("c_anachronism", "")
 
         ht = barony_holdings.get(bk, "unoccupied")
         props["holding_type"] = ht
@@ -2026,6 +2043,13 @@ def resolve_all_baronies():
                     anach_note = c_props.get("c_anachronism", "")
 
                 tarr_clean = enforce_tarraconian_sound_laws(b_chosen)
+                if anach_note and (
+                    f"Option B {tarr_clean}" in anach_note
+                    or f"Option B {b_chosen}" in anach_note
+                    or ("Option B" in anach_note and (b_chosen == c_tarr or b_chosen == save_name))
+                    or ("Lacks documented pre-867 urban center" in anach_note and (tarr_clean in anach_note or b_chosen in anach_note))
+                ):
+                    anach_note = ""
                 res = {
                     "name": tarr_clean,
                     "b_tarr": tarr_clean,

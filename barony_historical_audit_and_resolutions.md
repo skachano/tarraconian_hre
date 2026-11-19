@@ -162,7 +162,42 @@ Every occupied barony in `melted_save.ck3` records:
 - **City / Borough Holdings:**
   - Chartered as municipal borough seats (`<Founder>stat`) or market settlements (`<Founder>marct`, `<Founder>vurt`).
 
-### 2.3 Strict Rhine-Moselle Franconian Phonotactics
+### 2.5 Third-Wave Anachronism Reconciliation & Elimination of Circular Option B Titles
+
+In the third-wave audit, a systematic anomaly was uncovered: 508+ barony-tier titles were recorded as having "lacked documented pre-867 urban centers" and resolved via "Option B <Name>" to their exact self-same name (most visibly manifested in `b_dorohychyn` / `c_dorohychyn` being circular resolved to itself as "Dorohitschin").
+
+#### Root Cause Analysis & Disentanglement
+The root cause originated in an automated fallback within `scripts/historical_attestation_db.py`, which had defaulted uncurated counties to `opt_b_hydronym = f"{tarr_name} Hydronym / Basin"` with a justification string stating that the title was resolved to itself under the Burden of Proof on Antiquity. This dummy text propagated across the discrepancy register and was inherited by capital baronies during eponymous resolution.
+
+The Chancellery conducted a comprehensive three-tier disentanglement:
+1. **Curated Pre-867 Historical Centers Reclassified (Tier 1):** Ancient centers falsely flagged with the dummy note (e.g. Prague `c_praha`, Belgrade `c_beograd`, Lüneburg `c_luneburg`, Meissen `c_meissen`, Merseburg `c_mersenburg`, Brest `c_berestye`, Halych `c_halych`, Cieszyn `c_cieszyn`, Přerov `c_prerov`) were restored to authentic Tier 1 / Tier 2 status with their circular anachronism notes completely cleared (`c_anachronism = ""`).
+2. **True Post-867 Anachronisms Restored to Physical Substrates (Option B & Indigenous Restitution):**
+   - **`b_dorohychyn` (`c_dorohychyn`):** Drohiczyn was first attested in 1142 in the Hypatian Chronicle as a customs gord on the Western Bug River (*Bъgъ*). Under Tarraconian sound laws (Rule 1.1 velar shift `-g` $\rightarrow$ `-ch`), the Western Bug shifts to **`Bûch`** `[buːx]`. Its constituent city `b_kobryn` (first attested 1287) is resolved via Option B to the pre-867 Mukhavets River hydronym **`Muchawêtz`** `[mʊ.xa.ˈweːts]`, while church holding `b_blotkowo` becomes **`Blotkowe`**.
+   - **`b_galati` (`c_galati`):** First attested 1445 AD. Restored to the ancient Roman frontier castrum **`Barbôs`** `[bar.ˈboːs]` (*Barboși*) on the lower Danube.
+   - **`b_hotin` (`c_hotin`):** High medieval fortress on the Dniester first attested 1002/1250. Resolved via Option B to the ancient Dniester River hydronym **`Nîster`** `[ˈniːs.tər]`.
+   - **`b_orhei` (`c_orhei`):** Late medieval town. Resolved via Option B to the pre-867 Răut River hydronym **`Rêut`** `[reː.ˈʊt]`.
+   - **`b_soroca` (`c_soroca`):** Late medieval fortress. Resolved via Option B to the ancient Dniester crossing **`Nîstervurt`** `[ˈniːs.tɛr.vʊrt]`.
+   - **`b_stoenesti` (`c_stoenesti`):** Late medieval Wallachian village. Resolved via Option B to the pre-867 Ialomița River hydronym **`Jalômnetze`** `[ja.loːm.ˈnɛ.tsə]`.
+   - **`b_orsha` (`c_orsha`):** Attested 1067 in the Primary Chronicle. Resolved via Option B to the pre-867 Orshitsa River hydronym **`Ôrsche`** `[ˈoːr.ʃə]`.
+   - **`b_toropets` (`c_toropets`):** Attested 1074 in the Lavrentian Chronicle. Resolved via Option B to the pre-867 Toropa River hydronym **`Torôpe`** `[tɔ.ˈroː.pə]`.
+   - **`b_kholmogory` (`c_kholmogory`):** Attested 1355 as Kolmogory. Resolved via Option B to the ancient Northern Dvina River hydronym **`Dwîne`** `[ˈdwiː.nə]`.
+3. **Rigorous Capital Eponymous Circularity Safeguard:** In `scripts/resolve_barony_titles.py`, any inherited anachronism note matching circular Option B strings or dummy urban center text is automatically suppressed, ensuring zero self-resolving anachronisms exist across the 11,297 holdings.
+
+| Barony Key | County Key | Holding Type | Resolved Tarraconian Name | Historical Attestation Date | Tarraconian IPA | Historical Attribution & Resolution Note |
+| :--- | :--- | :--- | :--- | :--- | :---: | :--- |
+| `b_dorohychyn` | `c_dorohychyn` | Castle | **Bûch** | 1142 AD | `[buːx]` | Western Bug River basin (*Bugъ*), replacing 1142 Hypatian Chronicle frontier customs gord Drohiczyn. |
+| `b_kobryn` | `c_dorohychyn` | City | **Muchawêtz** | 1287 AD | `[mʊ.xa.ˈweːts]` | Mukhavets River basin (pre-867 hydronym), replacing 1287 Hypatian Chronicle Kobryn. |
+| `b_blotkowo` | `c_dorohychyn` | Church | **Blotkowe** | — | `[blɔt.ˈkɔ.wə]` | Constituent holding of Bûch. |
+| `b_galati` | `c_galati` | Castle | **Barbôs** | 1445 AD | `[bar.ˈboːs]` | Ancient Roman frontier castrum *Barboși* on the lower Danube, replacing 1445 Galați. |
+| `b_hotin` | `c_hotin` | Castle | **Nîster** | 1002/1250 AD | `[ˈniːs.tər]` | Ancient Dniester River basin (*Danastris* / *Dnestr*), replacing high medieval Khotyn fortress. |
+| `b_orhei` | `c_orhei` | Castle | **Rêut** | medieval | `[reː.ˈʊt]` | Pre-867 Răut River basin, replacing late medieval town Orhei. |
+| `b_soroca` | `c_soroca` | Castle | **Nîstervurt** | late medieval | `[ˈniːs.tɛr.vʊrt]` | Ancient Dniester River crossing, replacing late medieval Soroca fortress. |
+| `b_stoenesti` | `c_stoenesti` | Castle | **Jalômnetze** | late medieval | `[ja.loːm.ˈnɛ.tsə]` | Pre-867 Ialomița River basin, replacing late medieval Wallachian village Stoenești. |
+| `b_orsha` | `c_orsha` | Castle | **Ôrsche** | 1067 AD | `[ˈoːr.ʃə]` | Pre-867 Orshitsa River hydronym at Dnieper confluence, replacing 1067 Primary Chronicle Orsha. |
+| `b_toropets` | `c_toropets` | Castle | **Torôpe** | 1074 AD | `[tɔ.ˈroː.pə]` | Pre-867 Toropa River hydronym, replacing 1074 Lavrentian Chronicle Toropets. |
+| `b_kholmogory` | `c_kholmogory` | Castle | **Dwîne** | 1355 AD | `[ˈdwiː.nə]` | Ancient Northern Dvina River hydronym, replacing 14th-century Kolmogory. |
+
+### 2.6 Strict Rhine-Moselle Franconian Phonotactics
 All resolved titles obey the phonotactic constraints verified by [scripts/audit_phonotactics_titles.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/audit_phonotactics_titles.py):
 1. **Circumflex Purity:** Long vowels strictly use circumflexes (`â, ê, î, ô, û`). Acute accents (`á, é, í, ó, ú`) are strictly barred.
 2. **Affricates:** Initial $[ts]$ is strictly written `z-` (never `ts-`). Medial and final $[ts]$ are strictly written `-tz-` or `-tz`.

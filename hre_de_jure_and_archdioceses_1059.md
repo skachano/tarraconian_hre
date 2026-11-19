@@ -940,7 +940,7 @@
   * **[HRE]** **Volodymyr** (`c_volodymyr`) — *Tarraconian: **Magistrat van Simne-an-der-Lûge***
   * **[HRE]** **Peresopnytsia** (`c_peresopnytsia`) — *Tarraconian: **Magistrat van Peresopnitz***
   * **[HRE]** **Berestye** (`c_berestye`) — *Tarraconian: **Magistrat van Berestîe***
-  * **[HRE]** **Dorohychyn** (`c_dorohychyn`) — *Tarraconian: **Magistrat van Dorohitschin***
+  * **[HRE]** **Dorohychyn** (`c_dorohychyn`) — ⚠️ **[Post-1059 Foundation]** *(Drohiczyn first attested in 1142 in Hypatian Chronicle; resolved via Option B to the authentic Western Bug hydronym **Bûch** — Tarraconian: **Magistrat van Bûch**)*
 * **Duchy of Halytsch** (`d_halych`) — *4/4 in HRE*
   * **[HRE]** **Halytsch** (`c_halych`) — *Tarraconian: **Magistrat van Halitsch***
   * **[HRE]** **Lemberg** (`c_lviv`) — ⚠️ **[Post-1059 Foundation & Ostsiedlung Anachronism]** *(Lviv founded c. 1250 by King Daniel, 'Lemberg' is its later German exonym; pre-1059 princely/tribal centres: **Zvenyhorod** and **Plisnensk**)*
