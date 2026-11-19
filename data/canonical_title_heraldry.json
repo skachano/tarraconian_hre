@@ -5,7 +5,7 @@
     "keys_st_peter",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_orthodox": [
     "azure",
@@ -154,15 +154,15 @@
   "e_aarlud_khanate": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "bow_and_arrow",
+    "sable",
     1,
     "sable"
   ],
   "e_togskol_khanate": [
     "gules",
     "solid",
-    "castrum",
+    "bow_and_arrow",
     "or",
     1,
     "or"
@@ -170,8 +170,8 @@
   "e_baruun_khanate": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "argent"
   ],
@@ -186,24 +186,24 @@
   "e_blue_horde": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "or"
   ],
   "e_omnod_dalai_khanate": [
     "vert",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "argent"
   ],
   "e_uyghur_khanate": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "argent"
   ],
@@ -266,7 +266,7 @@
   "k_naiman": [
     "sable",
     "chevron",
-    "chevron",
+    "bow_and_arrow",
     "or",
     1,
     "or"
@@ -306,7 +306,7 @@
   "k_carantania": [
     "argent",
     "solid",
-    "crescent_moon",
+    "crown",
     "azure",
     1,
     "azure"
@@ -394,8 +394,8 @@
   "e_carthage": [
     "purpure",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "argent"
   ],
@@ -482,10 +482,10 @@
   "k_england": [
     "gules",
     "solid",
-    "dragon",
-    "argent",
-    1,
-    "argent"
+    "lion_rampant",
+    "or",
+    3,
+    "or"
   ],
   "d_bedford": [
     "gules",
@@ -538,8 +538,8 @@
   "c_hertfordshire": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "chevron",
+    "gules",
     1,
     "gules"
   ],
@@ -650,7 +650,7 @@
   "c_cheshire": [
     "azure",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
     1,
     "argent"
@@ -666,7 +666,7 @@
   "c_north_riding": [
     "azure",
     "solid",
-    "castrum",
+    "fess",
     "or",
     1,
     "or"
@@ -738,7 +738,7 @@
   "c_warwickshire": [
     "or",
     "solid",
-    "castrum",
+    "bend",
     "sable",
     1,
     "azure"
@@ -802,8 +802,8 @@
   "c_shropshire": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "azure",
     1,
     "azure"
   ],
@@ -834,16 +834,16 @@
   "c_oxfordshire": [
     "gules",
     "chequy",
-    "castrum",
-    "or",
+    "star_six_pointed",
+    "argent",
     1,
     "or"
   ],
   "c_berkshire": [
     "argent",
     "per_pale",
-    "castrum",
-    "azure",
+    "fess",
+    "gules",
     1,
     "gules"
   ],
@@ -946,7 +946,7 @@
   "d_cornwall": [
     "sable",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "argent"
@@ -1114,8 +1114,8 @@
   "b_clifford": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "gules",
     1,
     "azure"
   ],
@@ -1154,8 +1154,8 @@
   "c_glamorgan": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "chevron",
+    "argent",
     1,
     "argent"
   ],
@@ -1210,8 +1210,8 @@
   "c_strathearn": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "chevron",
+    "gules",
     1,
     "gules"
   ],
@@ -1242,15 +1242,15 @@
   "b_mar": [
     "azure",
     "solid",
-    "cross",
+    "bend",
     "or",
-    3,
+    1,
     "or"
   ],
   "c_mearns": [
     "argent",
     "solid",
-    "castrum",
+    "pale",
     "azure",
     1,
     "gules"
@@ -1282,7 +1282,7 @@
   "d_galloway": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "argent",
     1,
     "argent"
@@ -1322,8 +1322,8 @@
   "c_ayrshire": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "fess",
+    "azure",
     1,
     "argent"
   ],
@@ -1394,9 +1394,9 @@
   "c_lanarkshire": [
     "argent",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "azure",
-    1,
+    3,
     "azure"
   ],
   "b_cadyou": [
@@ -1418,9 +1418,9 @@
   "c_moray": [
     "azure",
     "solid",
-    "castrum",
-    "or",
-    1,
+    "star_six_pointed",
+    "argent",
+    3,
     "argent"
   ],
   "c_ross": [
@@ -1434,17 +1434,17 @@
   "c_buchan": [
     "azure",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_sutherland": [
     "gules",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_caithness": [
@@ -1458,9 +1458,9 @@
   "c_inverness": [
     "gules",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
-    1,
+    3,
     "or"
   ],
   "k_ireland": [
@@ -1474,9 +1474,9 @@
   "d_meath": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "b_kildare": [
@@ -1530,7 +1530,7 @@
   "d_connacht": [
     "argent",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "vert",
     1,
     "vert"
@@ -1610,9 +1610,9 @@
   "k_cornwall": [
     "sable",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "k_mann_the_isles": [
@@ -1626,7 +1626,7 @@
   "k_cumbria": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "azure",
     1,
     "gules"
@@ -1849,16 +1849,16 @@
   ],
   "k_frisia": [
     "azure",
-    "solid",
-    "castrum",
-    "or",
-    1,
+    "bend",
+    "rose_seeded",
+    "argent",
+    2,
     "argent"
   ],
   "d_holland": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -1890,7 +1890,7 @@
   "d_gelre": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "or"
@@ -1930,7 +1930,7 @@
   "c_nedersticht": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "gules"
@@ -1994,7 +1994,7 @@
   "d_luxembourg": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "azure"
@@ -2002,7 +2002,7 @@
   "c_luxembourg": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "azure"
@@ -2034,7 +2034,7 @@
   "c_liege": [
     "gules",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
     "or"
@@ -2058,8 +2058,8 @@
   "c_brabant": [
     "or",
     "solid",
-    "lion_rampant",
-    "sable",
+    "pale",
+    "gules",
     1,
     "gules"
   ],
@@ -2090,7 +2090,7 @@
   "c_hainaut": [
     "or",
     "solid",
-    "castrum",
+    "chevron",
     "sable",
     1,
     "sable"
@@ -2106,7 +2106,7 @@
   "d_julich": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "sable",
     1,
     "sable"
@@ -2177,16 +2177,16 @@
   ],
   "c_metz": [
     "argent",
-    "solid",
-    "castrum",
-    "azure",
+    "per_pale",
+    "cross",
+    "gules",
     1,
-    "sable"
+    "gules"
   ],
   "c_saarbrucken": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "argent",
     1,
     "argent"
@@ -2194,16 +2194,16 @@
   "c_puttlingen": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "pale",
+    "gules",
     1,
     "gules"
   ],
   "c_neufchateau": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "gules",
     1,
     "gules"
   ],
@@ -2218,7 +2218,7 @@
   "d_lower_lorraine": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -2258,8 +2258,8 @@
   "c_mark": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "fess",
+    "gules",
     1,
     "gules"
   ],
@@ -2314,7 +2314,7 @@
   "c_briey": [
     "or",
     "solid",
-    "castrum",
+    "pale",
     "sable",
     1,
     "sable"
@@ -2337,8 +2337,8 @@
   ],
   "k_bavaria": [
     "argent",
-    "solid",
-    "crown",
+    "chequy",
+    "castrum",
     "azure",
     1,
     "azure"
@@ -2346,7 +2346,7 @@
   "d_bavaria": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "azure"
@@ -2394,8 +2394,8 @@
   "c_frontenhausen": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "bend",
+    "argent",
     1,
     "argent"
   ],
@@ -2426,9 +2426,9 @@
   "d_nordgau": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_eichstadt": [
@@ -2530,7 +2530,7 @@
   "b_strasswalchen": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "gules"
@@ -2538,7 +2538,7 @@
   "d_augsburg": [
     "gules",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "or",
     1,
     "argent"
@@ -2562,7 +2562,7 @@
   "c_kempten": [
     "gules",
     "solid",
-    "castrum",
+    "fess",
     "or",
     1,
     "azure"
@@ -2586,7 +2586,7 @@
   "c_burgau": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "gules"
@@ -2746,8 +2746,8 @@
   "c_kammersberg": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "bend",
+    "sable",
     1,
     "sable"
   ],
@@ -2802,7 +2802,7 @@
   "d_west_franconia": [
     "sable",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "or"
@@ -2818,7 +2818,7 @@
   "b_hanau": [
     "or",
     "solid",
-    "castrum",
+    "chevron",
     "sable",
     1,
     "gules"
@@ -2858,9 +2858,9 @@
   "c_erbach": [
     "argent",
     "solid",
-    "star_six_pointed",
-    "azure",
-    2,
+    "fess",
+    "gules",
+    1,
     "gules"
   ],
   "c_worms": [
@@ -3018,7 +3018,7 @@
   "d_hesse": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "azure",
     1,
     "gules"
@@ -3098,7 +3098,7 @@
   "c_zurich": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "azure"
@@ -3210,7 +3210,7 @@
   "b_teck": [
     "or",
     "solid",
-    "castrum",
+    "bend",
     "sable",
     1,
     "sable"
@@ -3306,8 +3306,8 @@
   "c_blankenburg": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "fess",
+    "argent",
     1,
     "argent"
   ],
@@ -3330,7 +3330,7 @@
   "d_thuringia": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -3386,7 +3386,7 @@
   "e_macedonia": [
     "azure",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "or",
     1,
     "argent"
@@ -3411,7 +3411,7 @@
     "gules",
     "solid",
     "column_roman",
-    "argent",
+    "or",
     1,
     "or"
   ],
@@ -3450,9 +3450,9 @@
   "k_tekke": [
     "argent",
     "solid",
-    "crescent_moon",
+    "star_six_pointed",
     "gules",
-    3,
+    1,
     "gules"
   ],
   "k_trebizond": [
@@ -3490,7 +3490,7 @@
   "k_karaman": [
     "argent",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "azure",
     1,
     "azure"
@@ -3522,18 +3522,18 @@
   "k_candar": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "star_six_pointed",
+    "gules",
     1,
     "gules"
   ],
   "k_thessalonika": [
-    "argent",
+    "gules",
     "solid",
     "cross",
-    "gules",
+    "argent",
     1,
-    "gules"
+    "argent"
   ],
   "d_thrace": [
     "purpure",
@@ -3602,8 +3602,8 @@
   "d_thessalonika": [
     "or",
     "solid",
-    "bend",
-    "gules",
+    "castrum",
+    "sable",
     1,
     "gules"
   ],
@@ -3698,10 +3698,10 @@
   "k_krete": [
     "gules",
     "solid",
-    "castrum",
+    "ship",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "d_krete": [
     "gules",
@@ -3721,9 +3721,9 @@
   ],
   "k_croatia": [
     "gules",
-    "solid",
-    "castrum",
-    "or",
+    "chequy",
+    "shield_escutcheon",
+    "argent",
     1,
     "argent"
   ],
@@ -3832,12 +3832,12 @@
     "argent"
   ],
   "k_bulgaria": [
-    "or",
+    "gules",
     "solid",
-    "castrum",
-    "sable",
+    "lion_rampant",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "d_vidin": [
     "azure",
@@ -3866,7 +3866,7 @@
   "c_nikopolis": [
     "gules",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "argent"
@@ -3914,7 +3914,7 @@
   "k_cyprus": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -3930,7 +3930,7 @@
   "k_nikaea": [
     "gules",
     "solid",
-    "cross",
+    "eagle_double",
     "or",
     1,
     "or"
@@ -3962,8 +3962,8 @@
   "d_thracesia": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "chevron",
+    "gules",
     1,
     "gules"
   ],
@@ -3978,18 +3978,18 @@
   "d_bucellaria": [
     "argent",
     "solid",
-    "bend",
+    "castrum",
     "azure",
     1,
     "azure"
   ],
   "k_anatolia": [
-    "gules",
+    "azure",
     "solid",
     "cross",
-    "or",
-    3,
-    "or"
+    "argent",
+    1,
+    "argent"
   ],
   "d_cilicia": [
     "or",
@@ -4042,10 +4042,10 @@
   "k_pontus": [
     "argent",
     "solid",
-    "castrum",
+    "ship",
     "azure",
     1,
-    "sable"
+    "azure"
   ],
   "d_paphlagonia": [
     "gules",
@@ -4144,12 +4144,12 @@
     "vert"
   ],
   "k_sicily": [
-    "argent",
-    "solid",
-    "eagle_double",
+    "or",
+    "per_saltire",
+    "alerion",
     "sable",
     1,
-    "sable"
+    "argent"
   ],
   "d_sicily": [
     "argent",
@@ -4218,7 +4218,7 @@
   "c_foggia": [
     "or",
     "per_bend_sinister",
-    "castrum",
+    "bend",
     "sable",
     1,
     "gules"
@@ -4234,7 +4234,7 @@
   "c_capua": [
     "gules",
     "solid",
-    "castrum",
+    "crown",
     "or",
     1,
     "or"
@@ -4242,7 +4242,7 @@
   "c_napoli": [
     "or",
     "solid",
-    "castrum",
+    "fess",
     "sable",
     1,
     "gules"
@@ -4258,8 +4258,8 @@
   "c_apulia": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bend",
+    "argent",
     1,
     "argent"
   ],
@@ -4314,7 +4314,7 @@
   "c_reggio_calabria": [
     "or",
     "solid",
-    "castrum",
+    "bend",
     "sable",
     1,
     "gules"
@@ -4370,7 +4370,7 @@
   "k_armenian_principality": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -4378,7 +4378,7 @@
   "k_old_armenia": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -4426,7 +4426,7 @@
   "d_friuli": [
     "azure",
     "solid",
-    "alerion",
+    "crown",
     "or",
     1,
     "or"
@@ -4570,7 +4570,7 @@
   "c_como": [
     "argent",
     "solid",
-    "lion_rampant",
+    "bend",
     "gules",
     1,
     "gules"
@@ -4650,7 +4650,7 @@
   "d_emilia": [
     "azure",
     "solid",
-    "alerion",
+    "crown",
     "argent",
     1,
     "argent"
@@ -4722,7 +4722,7 @@
   "c_lucca": [
     "argent",
     "solid",
-    "castrum",
+    "fess",
     "azure",
     1,
     "gules"
@@ -4738,7 +4738,7 @@
   "c_siena": [
     "argent",
     "solid",
-    "castrum",
+    "fess",
     "azure",
     1,
     "sable"
@@ -4818,7 +4818,7 @@
   "c_arborea": [
     "argent",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "azure",
     1,
     "gules"
@@ -4882,7 +4882,7 @@
   "c_ferrara": [
     "sable",
     "solid",
-    "castrum",
+    "fess",
     "or",
     1,
     "argent"
@@ -4914,8 +4914,8 @@
   "c_urbino": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bend",
+    "argent",
     1,
     "or"
   ],
@@ -4946,7 +4946,7 @@
   "c_orvieto": [
     "azure",
     "solid",
-    "castrum",
+    "bend",
     "or",
     1,
     "or"
@@ -4986,7 +4986,7 @@
   "d_latium": [
     "gules",
     "chequy",
-    "alerion",
+    "crown",
     "or",
     1,
     "or"
@@ -5018,7 +5018,7 @@
   "c_tivoli": [
     "gules",
     "chequy",
-    "alerion",
+    "crown",
     "or",
     1,
     "or"
@@ -5026,10 +5026,10 @@
   "k_sapmi": [
     "argent",
     "solid",
-    "castrum",
+    "sun_radiant",
     "azure",
     1,
-    "sable"
+    "azure"
   ],
   "d_aarjetje": [
     "argent",
@@ -5042,7 +5042,7 @@
   "d_duortnoseatnu": [
     "gules",
     "solid",
-    "castrum",
+    "pale",
     "or",
     1,
     "or"
@@ -5122,7 +5122,7 @@
   "c_mecklenburg": [
     "or",
     "solid",
-    "castrum",
+    "crown",
     "sable",
     1,
     "sable"
@@ -5186,7 +5186,7 @@
   "d_ostmark": [
     "argent",
     "solid",
-    "alerion",
+    "crown",
     "gules",
     1,
     "gules"
@@ -5226,8 +5226,8 @@
   "k_lithuania": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "sword_crossed",
+    "argent",
     1,
     "argent"
   ],
@@ -5282,7 +5282,7 @@
   "k_esthonia": [
     "or",
     "solid",
-    "crown",
+    "star_six_pointed",
     "gules",
     3,
     "azure"
@@ -5314,7 +5314,7 @@
   "k_livonia": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     2,
     "azure"
@@ -5322,10 +5322,10 @@
   "e_west_slavia": [
     "gules",
     "solid",
-    "dragon",
-    "or",
+    "alerion",
+    "argent",
     1,
-    "or"
+    "argent"
   ],
   "k_moravia": [
     "gules",
@@ -5354,8 +5354,8 @@
   "c_krakowska": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "fess",
+    "argent",
     1,
     "argent"
   ],
@@ -5402,7 +5402,7 @@
   "c_kaliska": [
     "argent",
     "solid",
-    "castrum",
+    "crown",
     "azure",
     1,
     "gules"
@@ -5482,7 +5482,7 @@
   "c_cieszyn": [
     "azure",
     "solid",
-    "alerion",
+    "crown",
     "or",
     1,
     "or"
@@ -5650,7 +5650,7 @@
   "c_hradec": [
     "gules",
     "solid",
-    "castrum",
+    "bend",
     "or",
     1,
     "or"
@@ -5666,7 +5666,7 @@
   "d_moravia": [
     "azure",
     "chequy",
-    "alerion",
+    "crown",
     "argent",
     1,
     "gules"
@@ -5674,9 +5674,9 @@
   "c_olomouc": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
-    1,
+    "fess",
+    "gules",
+    2,
     "gules"
   ],
   "c_opava": [
@@ -5698,18 +5698,18 @@
   "c_znojmo": [
     "azure",
     "chequy",
-    "alerion",
+    "crown",
     "argent",
     1,
     "gules"
   ],
   "k_galicia-volhynia": [
-    "gules",
+    "azure",
     "solid",
-    "cross",
-    "argent",
+    "lion_rampant",
+    "or",
     1,
-    "argent"
+    "or"
   ],
   "d_volhynia": [
     "gules",
@@ -5738,15 +5738,15 @@
   "k_sorbia": [
     "gules",
     "solid",
-    "castrum",
+    "battleaxe",
     "or",
     1,
-    "sable"
+    "or"
   ],
   "d_meissen": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "sable",
     1,
     "sable"
@@ -5762,7 +5762,7 @@
   "c_dresden": [
     "sable",
     "per_pale",
-    "lion_rampant",
+    "pale",
     "or",
     1,
     "or"
@@ -5770,7 +5770,7 @@
   "c_wolkenstein": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "gules"
@@ -5778,7 +5778,7 @@
   "c_osterland": [
     "gules",
     "per_fess",
-    "lion_rampant",
+    "bend",
     "or",
     1,
     "argent"
@@ -5826,7 +5826,7 @@
   "c_juterbog": [
     "argent",
     "solid",
-    "castrum",
+    "fess",
     "azure",
     1,
     "gules"
@@ -5834,7 +5834,7 @@
   "c_wittenberg": [
     "azure",
     "solid",
-    "alerion",
+    "crown",
     "or",
     1,
     "or"
@@ -5874,15 +5874,15 @@
   "e_russia": [
     "gules",
     "solid",
-    "crown",
+    "spear",
     "or",
-    2,
+    1,
     "or"
   ],
   "k_ruthenia": [
     "azure",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
     "or"
@@ -5912,12 +5912,12 @@
     "sable"
   ],
   "k_novgorod": [
-    "gules",
+    "argent",
     "solid",
-    "spear",
-    "or",
+    "bear_rampant",
+    "sable",
     1,
-    "or"
+    "sable"
   ],
   "d_novgorod": [
     "azure",
@@ -5938,7 +5938,7 @@
   "k_white_rus": [
     "gules",
     "solid",
-    "cross",
+    "horse_courant",
     "argent",
     1,
     "argent"
@@ -5992,9 +5992,9 @@
     "argent"
   ],
   "k_opolye": [
-    "gules",
+    "azure",
     "solid",
-    "lion_rampant",
+    "alerion",
     "or",
     1,
     "or"
@@ -6002,7 +6002,7 @@
   "d_opolye": [
     "gules",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "or"
@@ -6050,7 +6050,7 @@
   "k_bjarmaland": [
     "gules",
     "solid",
-    "ship",
+    "bear_rampant",
     "or",
     1,
     "or"
@@ -6098,7 +6098,7 @@
   "k_caspian_steppe": [
     "azure",
     "solid",
-    "alerion",
+    "falcon_perched",
     "or",
     1,
     "or"
@@ -6170,7 +6170,7 @@
   "k_sibir": [
     "argent",
     "solid",
-    "castrum",
+    "bear_rampant",
     "azure",
     1,
     "azure"
@@ -6178,8 +6178,8 @@
   "k_ob": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "fish_twin",
+    "argent",
     1,
     "argent"
   ],
@@ -6202,7 +6202,7 @@
   "d_ogrash": [
     "gules",
     "chevron",
-    "chevron",
+    "bow_and_arrow",
     "argent",
     1,
     "argent"
@@ -6210,15 +6210,15 @@
   "c_ulaanbaatar": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bow_and_arrow",
+    "argent",
     1,
     "argent"
   ],
   "c_khentii": [
     "or",
     "chevron",
-    "chevron",
+    "bow_and_arrow",
     "sable",
     1,
     "sable"
@@ -6296,20 +6296,20 @@
     "or"
   ],
   "k_cuman": [
-    "gules",
+    "azure",
     "solid",
     "bow_and_arrow",
-    "argent",
+    "or",
     1,
-    "argent"
+    "or"
   ],
   "k_kipchak": [
     "vert",
     "solid",
-    "castrum",
+    "horse_courant",
     "or",
     1,
-    "gules"
+    "or"
   ],
   "k_dzungaria": [
     "azure",
@@ -6330,10 +6330,10 @@
   "k_oghuz_il": [
     "azure",
     "solid",
-    "castrum",
+    "horse_courant",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_syr_darya": [
     "or",
@@ -6384,7 +6384,7 @@
     "or"
   ],
   "k_persia": [
-    "gules",
+    "vert",
     "solid",
     "sun_radiant",
     "or",
@@ -6410,7 +6410,7 @@
   "d_fars": [
     "argent",
     "solid",
-    "castrum",
+    "bow_and_arrow",
     "azure",
     1,
     "azure"
@@ -6458,7 +6458,7 @@
   "d_balkh": [
     "gules",
     "per_bend",
-    "castrum",
+    "bow_and_arrow",
     "or",
     1,
     "sable"
@@ -6474,7 +6474,7 @@
   "k_daylam": [
     "vert",
     "solid",
-    "castrum",
+    "mount_triple",
     "or",
     1,
     "or"
@@ -6490,7 +6490,7 @@
   "c_mazandaran": [
     "gules",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "or",
     1,
     "purpure"
@@ -6498,7 +6498,7 @@
   "c_baduspan": [
     "azure",
     "solid",
-    "castrum",
+    "bow_and_arrow",
     "or",
     1,
     "or"
@@ -6506,18 +6506,18 @@
   "k_makran": [
     "vert",
     "solid",
-    "castrum",
+    "anchor",
     "or",
     1,
-    "gules"
+    "or"
   ],
   "k_kabulistan": [
     "gules",
     "solid",
-    "castrum",
+    "bow_and_arrow",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_mesopotamia": [
     "sable",
@@ -6546,7 +6546,7 @@
   "d_baghdad": [
     "argent",
     "solid",
-    "crescent_moon",
+    "bow_and_arrow",
     "sable",
     1,
     "sable"
@@ -6554,7 +6554,7 @@
   "c_baghdad": [
     "argent",
     "solid",
-    "crescent_moon",
+    "bow_and_arrow",
     "sable",
     1,
     "sable"
@@ -6562,7 +6562,7 @@
   "k_jazira": [
     "vert",
     "solid",
-    "sun_radiant",
+    "star_six_pointed",
     "or",
     1,
     "or"
@@ -6578,9 +6578,9 @@
   "e_carpathia": [
     "gules",
     "solid",
-    "lion_rampant",
-    "or",
-    3,
+    "cross_patriarchal",
+    "argent",
+    1,
     "argent"
   ],
   "k_dacia": [
@@ -6618,7 +6618,7 @@
   "k_moldavia": [
     "gules",
     "solid",
-    "star_six_pointed",
+    "stag_attired",
     "or",
     1,
     "or"
@@ -6658,7 +6658,7 @@
   "d_visegrad": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "or"
@@ -6778,9 +6778,9 @@
   "d_syrmia": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_szerem": [
@@ -6890,9 +6890,9 @@
   "c_valois": [
     "gules",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
-    1,
+    3,
     "or"
   ],
   "b_crepy": [
@@ -6922,7 +6922,7 @@
   "b_corbie": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -6962,9 +6962,9 @@
   "c_clermont": [
     "gules",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
-    1,
+    3,
     "or"
   ],
   "b_noyon": [
@@ -6986,8 +6986,8 @@
   "c_berry": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "fess",
+    "gules",
     1,
     "gules"
   ],
@@ -7018,9 +7018,9 @@
   "c_issoudun": [
     "azure",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
-    1,
+    3,
     "or"
   ],
   "d_anjou": [
@@ -7050,7 +7050,7 @@
   "c_maine": [
     "or",
     "solid",
-    "castrum",
+    "chevron",
     "sable",
     1,
     "gules"
@@ -7138,8 +7138,8 @@
   "c_alencon": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "azure",
     1,
     "azure"
   ],
@@ -7162,8 +7162,8 @@
   "b_aumale": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "azure",
     1,
     "azure"
   ],
@@ -7210,7 +7210,7 @@
   "c_vendome": [
     "gules",
     "chief",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "argent"
@@ -7242,8 +7242,8 @@
   "b_perche": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "chevron",
+    "gules",
     1,
     "gules"
   ],
@@ -7266,8 +7266,8 @@
   "d_champagne": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "bend",
+    "argent",
     1,
     "argent"
   ],
@@ -7346,8 +7346,8 @@
   "d_burgundy": [
     "azure",
     "solid",
-    "bend",
-    "argent",
+    "castrum",
+    "or",
     1,
     "or"
   ],
@@ -7362,7 +7362,7 @@
   "b_gray": [
     "gules",
     "solid",
-    "castrum",
+    "bend",
     "or",
     1,
     "or"
@@ -7426,7 +7426,7 @@
   "c_macon": [
     "argent",
     "solid",
-    "castrum",
+    "chevron",
     "azure",
     1,
     "gules"
@@ -7434,7 +7434,7 @@
   "b_semur_en_brionnais": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "gules"
@@ -7466,7 +7466,7 @@
   "c_brugge": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "azure",
     1,
     "gules"
@@ -7538,7 +7538,7 @@
   "k_aquitaine": [
     "gules",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "or"
@@ -7562,7 +7562,7 @@
   "b_fronsac": [
     "gules",
     "solid",
-    "castrum",
+    "pale",
     "or",
     1,
     "or"
@@ -7610,7 +7610,7 @@
   "c_agenais": [
     "or",
     "solid",
-    "castrum",
+    "bend",
     "sable",
     1,
     "gules"
@@ -7666,8 +7666,8 @@
   "b_turenne": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "gules",
     1,
     "gules"
   ],
@@ -7730,7 +7730,7 @@
   "c_gevaudan": [
     "gules",
     "solid",
-    "castrum",
+    "wheatsheaf_garb",
     "or",
     1,
     "argent"
@@ -7746,8 +7746,8 @@
   "c_millau": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "pale",
+    "gules",
     1,
     "gules"
   ],
@@ -7770,7 +7770,7 @@
   "c_uses": [
     "gules",
     "solid",
-    "bend",
+    "castrum",
     "or",
     1,
     "argent"
@@ -7786,7 +7786,7 @@
   "c_carcassonne": [
     "gules",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "or",
     1,
     "or"
@@ -7818,7 +7818,7 @@
   "d_armagnac": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -8025,9 +8025,9 @@
   ],
   "k_brittany": [
     "argent",
-    "solid",
-    "castrum",
-    "azure",
+    "chequy",
+    "fleur_de_lis",
+    "sable",
     1,
     "sable"
   ],
@@ -8113,11 +8113,11 @@
   ],
   "k_burgundy": [
     "or",
-    "solid",
-    "castrum",
-    "sable",
+    "barry",
+    "bordure",
+    "azure",
     1,
-    "azure"
+    "gules"
   ],
   "d_provence": [
     "or",
@@ -8138,8 +8138,8 @@
   "b_arles": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "star_six_pointed",
+    "argent",
     1,
     "argent"
   ],
@@ -8162,7 +8162,7 @@
   "c_provence": [
     "gules",
     "solid",
-    "castrum",
+    "pale",
     "or",
     1,
     "or"
@@ -8290,7 +8290,7 @@
   "b_villars": [
     "or",
     "solid",
-    "castrum",
+    "bend",
     "sable",
     1,
     "gules"
@@ -8354,8 +8354,8 @@
   "b_monteil": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "azure",
     1,
     "azure"
   ],
@@ -8370,7 +8370,7 @@
   "d_upper_burgundy": [
     "gules",
     "solid",
-    "alerion",
+    "crown",
     "argent",
     1,
     "argent"
@@ -8386,8 +8386,8 @@
   "b_vesoul": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "bend",
+    "gules",
     1,
     "gules"
   ],
@@ -8426,7 +8426,7 @@
   "c_bern": [
     "gules",
     "solid",
-    "bear_rampant",
+    "bend",
     "or",
     1,
     "or"
@@ -8458,8 +8458,8 @@
   "c_neuchatel": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "chevron",
+    "argent",
     1,
     "argent"
   ],
@@ -8482,7 +8482,7 @@
   "d_cordoba": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -8538,7 +8538,7 @@
   "k_badajoz": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "argent",
     1,
     "argent"
@@ -8570,7 +8570,7 @@
   "d_badajoz": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "argent",
     1,
     "argent"
@@ -8578,7 +8578,7 @@
   "c_badajoz": [
     "azure",
     "solid",
-    "lion_rampant",
+    "crown",
     "argent",
     1,
     "argent"
@@ -8600,12 +8600,12 @@
     "sable"
   ],
   "k_valencia": [
-    "gules",
-    "solid",
-    "castrum",
     "or",
+    "per_pale",
+    "pale",
+    "gules",
     1,
-    "or"
+    "gules"
   ],
   "d_valencia": [
     "vert",
@@ -8618,8 +8618,8 @@
   "c_valencia": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "pale",
+    "gules",
     1,
     "gules"
   ],
@@ -8650,9 +8650,9 @@
   "d_murcia": [
     "gules",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "k_castille": [
@@ -8698,7 +8698,7 @@
   "c_zaragoza": [
     "gules",
     "solid",
-    "lion_rampant",
+    "crown",
     "or",
     1,
     "argent"
@@ -8736,9 +8736,9 @@
     "gules"
   ],
   "c_barcelona": [
-    "argent",
-    "solid",
-    "cross",
+    "or",
+    "pales",
+    "pale",
     "gules",
     1,
     "gules"
@@ -8778,23 +8778,23 @@
   "c_rossello": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "pale",
+    "gules",
     1,
     "gules"
   ],
   "c_tarragona": [
     "or",
-    "solid",
-    "castrum",
-    "sable",
+    "pales",
+    "waves",
+    "azure",
     1,
     "gules"
   ],
   "k_navarra": [
     "gules",
+    "solid",
     "cross",
-    "star_six_pointed",
     "or",
     1,
     "or"
@@ -8890,7 +8890,7 @@
   "k_spanish_galicia": [
     "azure",
     "solid",
-    "castrum",
+    "cross_patriarchal",
     "or",
     1,
     "or"
@@ -8930,7 +8930,7 @@
   "k_portugal": [
     "argent",
     "solid",
-    "castrum",
+    "cross",
     "azure",
     1,
     "azure"
@@ -8978,18 +8978,18 @@
   "e_maghreb": [
     "argent",
     "solid",
-    "castrum",
+    "crescent_moon",
     "azure",
     1,
-    "sable"
+    "azure"
   ],
   "k_maghreb": [
     "gules",
     "solid",
-    "castrum",
+    "crescent_moon",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "c_fes": [
     "azure",
@@ -9008,10 +9008,10 @@
     "gules"
   ],
   "k_tahert": [
-    "gules",
+    "sable",
     "solid",
-    "castrum",
-    "or",
+    "crescent_moon",
+    "argent",
     1,
     "argent"
   ],
@@ -9058,7 +9058,7 @@
   "k_sahara": [
     "or",
     "solid",
-    "castrum",
+    "sun_radiant",
     "sable",
     1,
     "gules"
@@ -9082,7 +9082,7 @@
   "k_arabia": [
     "gules",
     "solid",
-    "lion_rampant",
+    "falcon_perched",
     "or",
     1,
     "or"
@@ -9106,10 +9106,10 @@
   "k_yemen": [
     "gules",
     "solid",
-    "castrum",
+    "alerion",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "c_mahra": [
     "argent",
@@ -9130,7 +9130,7 @@
   "k_egypt": [
     "vert",
     "solid",
-    "castrum",
+    "crescent_moon",
     "or",
     1,
     "or"
@@ -9306,7 +9306,7 @@
   "k_abyssinia": [
     "or",
     "solid",
-    "castrum",
+    "star_six_pointed",
     "sable",
     1,
     "sable"
@@ -9320,12 +9320,12 @@
     "argent"
   ],
   "k_nubia": [
-    "or",
+    "azure",
     "solid",
-    "castrum",
-    "sable",
+    "cross_patriarchal",
+    "or",
     1,
-    "gules"
+    "or"
   ],
   "d_makuria": [
     "argent",
@@ -9362,7 +9362,7 @@
   "k_damot": [
     "gules",
     "solid",
-    "castrum",
+    "cross_patriarchal",
     "or",
     1,
     "or"
@@ -9442,7 +9442,7 @@
   "c_malindi": [
     "azure",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "argent",
     1,
     "argent"
@@ -9466,7 +9466,7 @@
   "e_kanem_bornu": [
     "argent",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "vert",
     1,
     "gules"
@@ -9482,15 +9482,15 @@
   "k_sao": [
     "gules",
     "solid",
-    "castrum",
+    "oak_branch",
     "or",
     1,
-    "sable"
+    "or"
   ],
   "k_hausaland": [
     "gules",
     "solid",
-    "castrum",
+    "horse_courant",
     "or",
     1,
     "or"
@@ -9506,15 +9506,15 @@
   "k_darfur": [
     "gules",
     "solid",
-    "castrum",
+    "crescent_moon",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "e_mali": [
     "gules",
     "solid",
-    "castrum",
+    "sun_radiant",
     "or",
     1,
     "or"
@@ -9522,7 +9522,7 @@
   "k_songhay": [
     "gules",
     "solid",
-    "crescent_moon",
+    "spear",
     "argent",
     1,
     "argent"
@@ -9530,15 +9530,15 @@
   "k_gurma": [
     "sable",
     "solid",
-    "castrum",
+    "horse_courant",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_ghana": [
     "sable",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
     "or"
@@ -9546,7 +9546,7 @@
   "k_mali": [
     "or",
     "solid",
-    "castrum",
+    "sun_radiant",
     "sable",
     1,
     "sable"
@@ -9562,10 +9562,10 @@
   "k_takrur": [
     "azure",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_jenne": [
     "azure",
@@ -9578,7 +9578,7 @@
   "k_kaabu": [
     "gules",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
     "or"
@@ -9594,7 +9594,7 @@
   "k_guinea": [
     "or",
     "solid",
-    "castrum",
+    "tree_chestnut",
     "sable",
     1,
     "sable"
@@ -9602,7 +9602,7 @@
   "k_kong": [
     "gules",
     "solid",
-    "falcon_perched",
+    "anchor",
     "or",
     1,
     "or"
@@ -9626,7 +9626,7 @@
   "k_borgu": [
     "vert",
     "solid",
-    "castrum",
+    "spear",
     "or",
     1,
     "or"
@@ -9642,15 +9642,15 @@
   "k_igbo-benue": [
     "azure",
     "solid",
-    "castrum",
+    "bell",
     "or",
     1,
-    "sable"
+    "or"
   ],
   "e_rajastan": [
     "vert",
     "solid",
-    "castrum",
+    "sun_radiant",
     "or",
     1,
     "or"
@@ -9658,28 +9658,20 @@
   "k_sindh": [
     "argent",
     "solid",
-    "castrum",
+    "horse_courant",
     "azure",
     1,
-    "or"
+    "azure"
   ],
   "k_punjab": [
     "argent",
     "solid",
-    "castrum",
+    "lion_rampant",
     "azure",
     1,
     "azure"
   ],
   "k_delhi": [
-    "argent",
-    "solid",
-    "castrum",
-    "azure",
-    1,
-    "or"
-  ],
-  "k_gujarat": [
     "vert",
     "solid",
     "crescent_moon",
@@ -9687,10 +9679,18 @@
     1,
     "or"
   ],
+  "k_gujarat": [
+    "vert",
+    "solid",
+    "lion_rampant",
+    "or",
+    1,
+    "or"
+  ],
   "k_rajputana": [
     "gules",
     "solid",
-    "star_six_pointed",
+    "sun_radiant",
     "argent",
     1,
     "argent"
@@ -9706,7 +9706,7 @@
   "k_malwa": [
     "or",
     "solid",
-    "castrum",
+    "wheel_spoked",
     "sable",
     1,
     "sable"
@@ -9714,23 +9714,23 @@
   "k_kosala": [
     "argent",
     "solid",
-    "castrum",
+    "bow_and_arrow",
     "azure",
     1,
     "azure"
   ],
   "k_himalaya": [
-    "gules",
+    "azure",
     "solid",
-    "crescent_moon",
+    "mount_triple",
     "argent",
-    1,
+    3,
     "argent"
   ],
   "k_kashmir": [
     "gules",
     "solid",
-    "star_six_pointed",
+    "mount_triple",
     "or",
     1,
     "or"
@@ -9746,7 +9746,7 @@
   "k_bengal": [
     "vert",
     "solid",
-    "castrum",
+    "rose_seeded",
     "or",
     1,
     "or"
@@ -9762,7 +9762,7 @@
   "k_bihar": [
     "vert",
     "solid",
-    "rose_seeded",
+    "star_six_pointed",
     "or",
     1,
     "or"
@@ -9802,9 +9802,9 @@
   "k_maharastra": [
     "gules",
     "solid",
-    "sun_radiant",
+    "sword_crossed",
     "or",
-    1,
+    2,
     "or"
   ],
   "k_karnata": [
@@ -9818,15 +9818,15 @@
   "k_tamilakam": [
     "gules",
     "solid",
-    "castrum",
+    "fish_twin",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_andhra": [
     "gules",
     "solid",
-    "lion_rampant",
+    "wheel_spoked",
     "or",
     1,
     "or"
@@ -9840,7 +9840,7 @@
     "or"
   ],
   "k_lanka": [
-    "gules",
+    "sable",
     "solid",
     "lion_rampant",
     "or",
@@ -9858,7 +9858,7 @@
   "k_u": [
     "azure",
     "solid",
-    "crescent_moon",
+    "wheel_spoked",
     "argent",
     1,
     "argent"
@@ -9866,15 +9866,15 @@
   "k_tsang": [
     "or",
     "solid",
-    "castrum",
+    "wheel_spoked",
     "sable",
     1,
-    "azure"
+    "sable"
   ],
   "k_kham": [
     "gules",
     "solid",
-    "castrum",
+    "mount_triple",
     "or",
     1,
     "or"
@@ -9882,15 +9882,15 @@
   "k_amdo": [
     "azure",
     "solid",
-    "castrum",
+    "mount_triple",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "k_gyalrong": [
     "gules",
     "solid",
-    "castrum",
+    "wheel_spoked",
     "or",
     1,
     "or"
@@ -9930,8 +9930,8 @@
   "k_balhae": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "horse_courant",
+    "argent",
     1,
     "argent"
   ],
@@ -9978,8 +9978,8 @@
   "d_laamp_el_cid": [
     "vert",
     "per_pale",
-    "castrum",
-    "or",
+    "bend",
+    "argent",
     1,
     "azure"
   ],
@@ -10042,8 +10042,8 @@
   "k_toro": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "star_six_pointed",
+    "sable",
     1,
     "sable"
   ],
@@ -10106,8 +10106,8 @@
   "c_nf_fujiwara_kajuji": [
     "purpure",
     "solid",
-    "castrum",
-    "or",
+    "oak_branch",
+    "argent",
     1,
     "argent"
   ],
@@ -10618,7 +10618,7 @@
   "k_hebei": [
     "or",
     "solid",
-    "waves",
+    "fess",
     "azure",
     1,
     "azure"
@@ -10850,10 +10850,10 @@
   "k_hexi": [
     "gules",
     "solid",
-    "castrum",
+    "roman_gate",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "d_hexi": [
     "argent",
@@ -11002,10 +11002,10 @@
   "k_fujian": [
     "azure",
     "solid",
-    "castrum",
+    "ship",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "d_weiwu": [
     "azure",
@@ -11106,7 +11106,7 @@
   "k_shannan": [
     "gules",
     "solid",
-    "castrum",
+    "column_roman",
     "or",
     1,
     "or"
@@ -11138,7 +11138,7 @@
   "k_hunan": [
     "gules",
     "solid",
-    "castrum",
+    "tree_chestnut",
     "or",
     1,
     "or"
@@ -11234,7 +11234,7 @@
   "k_dongchuan": [
     "argent",
     "solid",
-    "castrum",
+    "mount_triple",
     "azure",
     1,
     "azure"
@@ -11290,10 +11290,10 @@
   "k_qianzhong": [
     "azure",
     "solid",
-    "castrum",
+    "tree_chestnut",
     "or",
     1,
-    "argent"
+    "or"
   ],
   "d_luodian": [
     "azure",
@@ -11338,10 +11338,10 @@
   "k_dali": [
     "argent",
     "solid",
-    "castrum",
+    "dragon",
     "azure",
     1,
-    "or"
+    "azure"
   ],
   "d_dali": [
     "argent",
@@ -11672,12 +11672,12 @@
     "gules"
   ],
   "k_funan": [
-    "gules",
-    "solid",
-    "castrum",
     "or",
+    "solid",
+    "dragon",
+    "sable",
     1,
-    "argent"
+    "sable"
   ],
   "d_angkor": [
     "gules",
@@ -11728,17 +11728,17 @@
     "vert"
   ],
   "k_goguryeo": [
-    "gules",
+    "azure",
     "solid",
-    "castrum",
-    "or",
+    "falcon_perched",
+    "argent",
     1,
     "argent"
   ],
   "k_silla": [
     "azure",
     "solid",
-    "crescent_moon",
+    "crown",
     "argent",
     1,
     "argent"
@@ -11874,8 +11874,8 @@
   "d_cd_santa_cecilia": [
     "azure",
     "solid",
-    "castrum",
-    "or",
+    "star_six_pointed",
+    "argent",
     1,
     "or"
   ],
@@ -11906,8 +11906,8 @@
   "d_cd_damaso": [
     "gules",
     "solid",
-    "castrum",
-    "or",
+    "crown",
+    "argent",
     1,
     "or"
   ],
@@ -11938,7 +11938,7 @@
   "d_cd_santa_prassede": [
     "gules",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "argent",
     1,
     "or"
@@ -11954,7 +11954,7 @@
   "d_cd_san_stefano": [
     "gules",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "or",
     1,
     "or"
@@ -11970,7 +11970,7 @@
   "d_cd_santi_silvestro_e_martino": [
     "azure",
     "solid",
-    "mount_triple",
+    "crown",
     "argent",
     1,
     "or"
@@ -11978,7 +11978,7 @@
   "d_cd_santi_nereo_ed_achilleo": [
     "gules",
     "solid",
-    "sword_crossed",
+    "cross",
     "argent",
     1,
     "argent"
@@ -12026,7 +12026,7 @@
   "d_cd_san_vitale": [
     "gules",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "argent",
     1,
     "argent"
@@ -12098,7 +12098,7 @@
   "d_cd_santa_pudenziana": [
     "azure",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "argent",
     1,
     "argent"
@@ -12114,7 +12114,7 @@
   "d_cd_santi_sergio_e_bacco": [
     "vert",
     "solid",
-    "sword_crossed",
+    "cross",
     "argent",
     1,
     "argent"
@@ -12130,7 +12130,7 @@
   "d_cd_santi_giovanni_e_paolo": [
     "gules",
     "solid",
-    "sword_crossed",
+    "cross",
     "argent",
     1,
     "argent"
@@ -12170,7 +12170,7 @@
   "d_et_braga": [
     "azure",
     "per_pale",
-    "wolf_statant",
+    "star_six_pointed",
     "argent",
     1,
     "vert"
@@ -12442,7 +12442,7 @@
   "d_et_santa_severina": [
     "vert",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "argent",
     1,
     "argent"
@@ -12690,7 +12690,7 @@
   "d_et_cyprus": [
     "argent",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "azure"
@@ -12754,7 +12754,7 @@
   "d_et_africa": [
     "azure",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "or",
     1,
     "or"
@@ -12914,7 +12914,7 @@
   "d_york": [
     "or",
     "solid",
-    "lion_rampant",
+    "crown",
     "gules",
     1,
     "gules"
@@ -12946,15 +12946,15 @@
   "c_vastmanland": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "dragon",
+    "sable",
     1,
     "sable"
   ],
   "c_dalarna": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
     1,
     "or"
@@ -13042,9 +13042,9 @@
   "d_vestlandi": [
     "gules",
     "solid",
-    "battleaxe",
+    "crown",
     "or",
-    2,
+    1,
     "or"
   ],
   "c_halland": [
@@ -13114,7 +13114,7 @@
   "d_agder": [
     "vert",
     "solid",
-    "tree_chestnut",
+    "oak_branch",
     "or",
     1,
     "or"
@@ -13186,7 +13186,7 @@
   "c_ringkobing": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "azure"
@@ -13202,9 +13202,9 @@
   "k_sweden": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_skara": [
@@ -13226,10 +13226,10 @@
   "k_denmark": [
     "or",
     "solid",
-    "crown",
-    "gules",
+    "lion_rampant",
+    "azure",
     3,
-    "azure"
+    "gules"
   ],
   "d_slesvig": [
     "or",
@@ -13298,7 +13298,7 @@
   "c_rogalandi": [
     "argent",
     "solid",
-    "castrum",
+    "bend",
     "azure",
     1,
     "azure"
@@ -13338,8 +13338,8 @@
   "c_blekinge": [
     "argent",
     "solid",
-    "castrum",
-    "azure",
+    "crown",
+    "sable",
     1,
     "gules"
   ],
@@ -13402,9 +13402,9 @@
   "c_telemark": [
     "sable",
     "solid",
-    "castrum",
-    "or",
-    1,
+    "star_six_pointed",
+    "argent",
+    3,
     "azure"
   ],
   "c_firdafylki": [
@@ -13418,7 +13418,7 @@
   "k_norway": [
     "gules",
     "solid",
-    "crown",
+    "battleaxe",
     "or",
     1,
     "or"
@@ -13442,8 +13442,8 @@
   "c_raniriki": [
     "or",
     "solid",
-    "castrum",
-    "sable",
+    "star_six_pointed",
+    "gules",
     1,
     "gules"
   ],
@@ -13514,9 +13514,9 @@
   "d_svealand": [
     "azure",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "c_upland": [
@@ -13586,9 +13586,9 @@
   "e_scandinavia": [
     "gules",
     "solid",
-    "castrum",
+    "crown",
     "or",
-    1,
+    3,
     "or"
   ],
   "e_hre_roman": [
@@ -13610,7 +13610,311 @@
   "c_hereford": [
     "gules",
     "per_bend_sinister",
-    "castrum",
+    "bend",
+    "or",
+    1,
+    "or"
+  ],
+  "c_byzantion": [
+    "gules",
+    "solid",
+    "cross",
+    "or",
+    1,
+    "or"
+  ],
+  "h_roman_empire": [
+    "or",
+    "solid",
+    "eagle_double",
+    "sable",
+    1,
+    "sable"
+  ],
+  "e_turan": [
+    "azure",
+    "solid",
+    "wolf_statant",
+    "or",
+    1,
+    "or"
+  ],
+  "x_script_7238": [
+    "or",
+    "solid",
+    "cross",
+    "sable",
+    1,
+    "sable"
+  ],
+  "x_script_6717": [
+    "gules",
+    "solid",
+    "alerion",
+    "or",
+    1,
+    "or"
+  ],
+  "k_tanjungnagara": [
+    "vert",
+    "solid",
+    "ship",
+    "or",
+    1,
+    "or"
+  ],
+  "k_azuma": [
+    "azure",
+    "solid",
+    "mount_triple",
+    "argent",
+    1,
+    "argent"
+  ],
+  "k_maluku": [
+    "vert",
+    "solid",
+    "ship",
+    "or",
+    1,
+    "or"
+  ],
+  "x_script_2942": [
+    "or",
+    "solid",
+    "cross_patriarchal",
+    "sable",
+    1,
+    "sable"
+  ],
+  "k_amur": [
+    "azure",
+    "solid",
+    "fish_twin",
+    "argent",
+    2,
+    "argent"
+  ],
+  "k_aynumosir": [
+    "sable",
+    "solid",
+    "bear_rampant",
+    "argent",
+    1,
+    "argent"
+  ],
+  "k_khitan": [
+    "azure",
+    "solid",
+    "falcon_perched",
+    "or",
+    1,
+    "or"
+  ],
+  "k_luzhen": [
+    "vert",
+    "solid",
+    "oak_branch",
+    "or",
+    1,
+    "or"
+  ],
+  "k_raole": [
+    "or",
+    "solid",
+    "oak_branch",
+    "sable",
+    1,
+    "sable"
+  ],
+  "k_gobi": [
+    "or",
+    "solid",
+    "horse_courant",
+    "sable",
+    1,
+    "sable"
+  ],
+  "x_script_4359": [
+    "gules",
+    "solid",
+    "cross",
+    "or",
+    2,
+    "or"
+  ],
+  "x_script_4774": [
+    "azure",
+    "solid",
+    "cross",
+    "or",
+    1,
+    "or"
+  ],
+  "x_script_6373": [
+    "argent",
+    "solid",
+    "cross",
+    "gules",
+    2,
+    "gules"
+  ],
+  "k_qara_dala": [
+    "vert",
+    "solid",
+    "horse_courant",
+    "argent",
+    1,
+    "argent"
+  ],
+  "x_script_5503": [
+    "azure",
+    "solid",
+    "bow_and_arrow",
+    "argent",
+    1,
+    "argent"
+  ],
+  "x_script_3965": [
+    "or",
+    "solid",
+    "alerion",
+    "sable",
+    2,
+    "sable"
+  ],
+  "x_script_4328": [
+    "argent",
+    "solid",
+    "lion_rampant",
+    "gules",
+    2,
+    "gules"
+  ],
+  "k_hitakami": [
+    "vert",
+    "solid",
+    "tree_chestnut",
+    "or",
+    1,
+    "or"
+  ],
+  "k_tsukushi": [
+    "azure",
+    "solid",
+    "waves",
+    "argent",
+    1,
+    "argent"
+  ],
+  "k_yamato": [
+    "gules",
+    "solid",
+    "sun_radiant",
+    "or",
+    1,
+    "or"
+  ],
+  "k_champa": [
+    "or",
+    "solid",
+    "rose_seeded",
+    "gules",
+    1,
+    "gules"
+  ],
+  "k_chenla": [
+    "gules",
+    "solid",
+    "column_roman",
+    "or",
+    1,
+    "or"
+  ],
+  "k_naimania": [
+    "gules",
+    "solid",
+    "bow_and_arrow",
+    "or",
+    1,
+    "or"
+  ],
+  "k_shiwei": [
+    "azure",
+    "solid",
+    "stag_attired",
+    "argent",
+    1,
+    "argent"
+  ],
+  "k_kabisay-an": [
+    "azure",
+    "solid",
+    "ship",
+    "or",
+    1,
+    "or"
+  ],
+  "k_liuqiu": [
+    "azure",
+    "solid",
+    "sun_radiant",
+    "or",
+    1,
+    "or"
+  ],
+  "k_lusung": [
+    "gules",
+    "solid",
+    "star_six_pointed",
+    "or",
+    3,
+    "or"
+  ],
+  "k_sulawesi": [
+    "or",
+    "solid",
+    "anchor",
+    "sable",
+    1,
+    "sable"
+  ],
+  "k_hujung_medini": [
+    "gules",
+    "solid",
+    "sword_crossed",
+    "or",
+    1,
+    "or"
+  ],
+  "k_malayadvipa": [
+    "or",
+    "solid",
+    "ship",
+    "gules",
+    1,
+    "gules"
+  ],
+  "k_yavakadvipa": [
+    "gules",
+    "solid",
+    "rose_seeded",
+    "or",
+    1,
+    "or"
+  ],
+  "k_dvaravati": [
+    "or",
+    "solid",
+    "wheel_spoked",
+    "gules",
+    1,
+    "gules"
+  ],
+  "k_saryarka": [
+    "vert",
+    "solid",
+    "bow_and_arrow",
     "or",
     1,
     "or"

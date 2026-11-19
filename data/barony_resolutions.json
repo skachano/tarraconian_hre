@@ -11,26 +11,26 @@
     "category": "secondary_variant"
   },
   "b_southwark": {
-    "name": "Southwark",
-    "b_tarr": "Southwark",
-    "b_tarr_direct": "Southwark",
-    "b_tarr_hist": "Southwark",
-    "b_origin": "Southwark (constituent holding of Middelsachsen)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈsɔʊth.wark]",
+    "name": "Sûtwerc",
+    "b_tarr": "Sûtwerc",
+    "b_tarr_direct": "Southwerc",
+    "b_tarr_hist": "Sûtwerc",
+    "b_origin": "Southwark (Old English Sūþ-geweorc, 'South Defensive Works / Rampart') (in-game: Southwark)",
+    "b_anachronism": "Descriptive Old English fortification toponym calqued to Tarraconian Sûtwerc.",
+    "b_ipa": "[ˈsuːt.wɛrk]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_woxbrigge": {
-    "name": "Woxbrigge",
-    "b_tarr": "Woxbrigge",
+    "name": "Woxbrücke",
+    "b_tarr": "Woxbrücke",
     "b_tarr_direct": "Woxbrigge",
-    "b_tarr_hist": "Woxbrigge",
-    "b_origin": "Woxbrigge (constituent holding of Middelsachsen)",
-    "b_anachronism": "",
-    "b_ipa": "[wɔks.ˈbrɪɡ.ɡə]",
+    "b_tarr_hist": "Woxbrücke",
+    "b_origin": "Uxbridge / Woxbrigge (Old English crossing on the Colne) (in-game: Woxbrigge)",
+    "b_anachronism": "Descriptive Old English crossing toponym calqued to Tarraconian Woxbrücke.",
+    "b_ipa": "[wɔks.ˈbryː.kə]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_gore": {
     "name": "Gore",
@@ -979,15 +979,15 @@
     "category": "capital_eponymous"
   },
   "b_norman_cross": {
-    "name": "Norman Cross",
-    "b_tarr": "Norman Cross",
+    "name": "Nordmancrûz",
+    "b_tarr": "Nordmancrûz",
     "b_tarr_direct": "Norman Cross",
-    "b_tarr_hist": "Norman Cross",
-    "b_origin": "Norman Cross (constituent holding of Huntingedûn)",
-    "b_anachronism": "",
-    "b_ipa": "[nɔr.ˈman krɔs]",
+    "b_tarr_hist": "Nordmancrûz",
+    "b_origin": "Norman Cross (Anglo-Saxon Northmannescros, Danelaw hundred moot cross attested 963 AD) (in-game: Norman Cross)",
+    "b_anachronism": "Danelaw hundred moot site (attested 963 AD Northmannescros); later site of 1797 Napoleonic POW depot.",
+    "b_ipa": "[nɔrd.maŋk.ˈruːts]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "hundred_moot_calque"
   },
   "b_leightonstone": {
     "name": "Leightonstone",
@@ -1595,15 +1595,15 @@
     "category": "capital_eponymous"
   },
   "b_aberystwyth": {
-    "name": "Aberystwyth",
-    "b_tarr": "Aberystwyth",
+    "name": "Ystwythmunde",
+    "b_tarr": "Ystwythmunde",
     "b_tarr_direct": "Aberystwyth",
-    "b_tarr_hist": "Aberystwyth",
-    "b_origin": "Aberystwyth (constituent holding of Keredigjôn)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈa.bɛ.rɪst.wɪth]",
+    "b_tarr_hist": "Ystwythmunde",
+    "b_origin": "Aberystwyth (Brythonic Aber-Ystwyth, 'Mouth of the River Ystwyth') (in-game: Aberystwyth)",
+    "b_anachronism": "Descriptive Celtic hydronymic confluence calqued to Tarraconian Ystwythmunde.",
+    "b_ipa": "[ɪst.wɪth.ˈmʊn.də]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_dolgellau": {
     "name": "Merjônet",
@@ -2794,15 +2794,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_kildare": {
-    "name": "Kildare",
-    "b_tarr": "Kildare",
+    "name": "Eichenkirchen",
+    "b_tarr": "Eichenkirchen",
     "b_tarr_direct": "Kildare",
-    "b_tarr_hist": "Kildare",
-    "b_origin": "Kildare (constituent holding of Swartzpûl)",
-    "b_anachronism": "",
-    "b_ipa": "[kɪl.ˈda.rə]",
+    "b_tarr_hist": "Eichenkirchen",
+    "b_origin": "Kildare / Cill Dara (Old Irish Cill Dara, 'Church of the Oak Grove') (in-game: Kildare)",
+    "b_anachronism": "Descriptive Celtic ecclesiastical toponym calqued to Tarraconian Eichenkirchen.",
+    "b_ipa": "[ˈɛɪ.çɛ.ŋkɪr.xən]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_trim": {
     "name": "Trim",
@@ -8613,15 +8613,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_chariopolis": {
-    "name": "Chariopolis",
-    "b_tarr": "Chariopolis",
+    "name": "Fröudestat",
+    "b_tarr": "Fröudestat",
     "b_tarr_direct": "Chariopolis",
-    "b_tarr_hist": "Chariopolis",
-    "b_origin": "Chariopolis (constituent holding of Schönstat)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈxa.rɪ.ɔ.pɔ.lɪs]",
+    "b_tarr_hist": "Fröudestat",
+    "b_origin": "Chariopolis (Greek Chario-polis, 'City of Joy / Grace') (in-game: Chariopolis)",
+    "b_anachronism": "Descriptive Greek city toponym calqued to Tarraconian Fröudestat.",
+    "b_ipa": "[ˈfrøː.ʊ.dɛs.tat]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_brysis": {
     "name": "Brüsis",
@@ -8745,26 +8745,26 @@
     "category": "sub_barony_adaptation"
   },
   "b_serres": {
-    "name": "Goltztat",
-    "b_tarr": "Goltztat",
-    "b_tarr_direct": "Goltstat",
-    "b_tarr_hist": "Goltstat",
-    "b_origin": "Serres (Serres)",
-    "b_anachronism": "",
-    "b_ipa": "[ɡɔlts.ˈtat]",
+    "name": "Sêrres",
+    "b_tarr": "Sêrres",
+    "b_tarr_direct": "Serres",
+    "b_tarr_hist": "Sêrres",
+    "b_origin": "Serres / Siris (ancient inland Paeonian and Byzantine fortress) (in-game: Serres)",
+    "b_anachronism": "Inland fortress of Serres disambiguated from coastal port Goltstat / Chrysopolis.",
+    "b_ipa": "[ˈseː.rɛs]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "capital_disambiguation"
   },
   "b_siderokastron": {
-    "name": "Siderokastron",
-    "b_tarr": "Siderokastron",
+    "name": "Îsenburch",
+    "b_tarr": "Îsenburch",
     "b_tarr_direct": "Siderokastron",
-    "b_tarr_hist": "Siderokastron",
-    "b_origin": "Siderokastron (constituent holding of Goltstat)",
-    "b_anachronism": "",
-    "b_ipa": "[sɪ.dɛ.rɔ.kas.ˈtrɔn]",
+    "b_tarr_hist": "Îsenburch",
+    "b_origin": "Siderokastron (Greek Sidero-kastron, 'Iron Castle') (in-game: Siderokastron)",
+    "b_anachronism": "Descriptive Byzantine fortress toponym calqued to Tarraconian Îsenburch.",
+    "b_ipa": "[ˈiː.zən.bʊrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_drama": {
     "name": "Drama",
@@ -8789,15 +8789,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_chrysopolis": {
-    "name": "Chrysopolis",
-    "b_tarr": "Chrysopolis",
+    "name": "Goltztat",
+    "b_tarr": "Goltztat",
     "b_tarr_direct": "Chrysopolis",
-    "b_tarr_hist": "Chrysopolis",
-    "b_origin": "Chrysopolis (constituent holding of Goltstat)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈxrɪ.zɔ.pɔ.lɪs]",
+    "b_tarr_hist": "Goltztat",
+    "b_origin": "Chrysopolis (Greek Chryso-polis, 'Golden City' on the Aegean) (in-game: Chrysopolis)",
+    "b_anachronism": "Ancient Greek trading emporium and port Chrysopolis disambiguated from inland Serres.",
+    "b_ipa": "[ɡɔlts.ˈtat]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "classical_antiquity"
   },
   "b_naxos": {
     "name": "Naxos",
@@ -9009,15 +9009,15 @@
     "category": "capital_eponymous"
   },
   "b_gynaikokastron": {
-    "name": "Gynaikokastron",
-    "b_tarr": "Gynaikokastron",
+    "name": "Vrouwenburch",
+    "b_tarr": "Vrouwenburch",
     "b_tarr_direct": "Gynaikokastron",
-    "b_tarr_hist": "Gynaikokastron",
-    "b_origin": "Gynaikokastron (constituent holding of Thessalonîke)",
-    "b_anachronism": "",
-    "b_ipa": "[ɡɪ.nɛɪ.kɔ.kas.ˈtrɔn]",
+    "b_tarr_hist": "Vrouwenburch",
+    "b_origin": "Gynaikokastron (Greek Gynaiko-kastron, 'Women's Castle / Queen's Castle') (in-game: Gynaikokastron)",
+    "b_anachronism": "Descriptive Byzantine fortress toponym calqued to Tarraconian Vrouwenburch.",
+    "b_ipa": "[ˈvrɔʊ.wən.bʊrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_langades": {
     "name": "Langades",
@@ -10043,15 +10043,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_biograd": {
-    "name": "Biogort",
-    "b_tarr": "Biogort",
+    "name": "Wîtzenburch",
+    "b_tarr": "Wîtzenburch",
     "b_tarr_direct": "Biogort",
-    "b_tarr_hist": "Biogort",
-    "b_origin": "Biograd (constituent holding of Zâre)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈbɪ.ɔ.ɣɔrt]",
+    "b_tarr_hist": "Wîtzenburch",
+    "b_origin": "Biograd na Moru (Slavic bio-grad, 'White Town on the Sea') (in-game: Biograd)",
+    "b_anachronism": "Descriptive South Slavic toponym calqued to Tarraconian Wîtzenburch.",
+    "b_ipa": "[ˈwiː.tsən.bʊrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_obrovac": {
     "name": "Obrovac",
@@ -11924,15 +11924,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_novobrdo": {
-    "name": "Novo Brdo",
-    "b_tarr": "Novo Brdo",
+    "name": "Nîenberch",
+    "b_tarr": "Nîenberch",
     "b_tarr_direct": "Novo Brdo",
-    "b_tarr_hist": "Novo Brdo",
-    "b_origin": "Novo Brdo (constituent holding of Morâwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈnɔ.vɔ brdɔ]",
+    "b_tarr_hist": "Nîenberch",
+    "b_origin": "Novo Brdo (Slavic novo-brdo, 'New Mountain / Mining Hill') (in-game: Novo Brdo)",
+    "b_anachronism": "Descriptive South Slavic toponym calqued to Tarraconian Nîenberch.",
+    "b_ipa": "[ˈniː.ɛn.bɛrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_morava": {
     "name": "Morâwe",
@@ -22506,15 +22506,15 @@
     "category": "capital_eponymous"
   },
   "b_tuchowna": {
-    "name": "Starogard",
-    "b_tarr": "Starogard",
+    "name": "Altenburch",
+    "b_tarr": "Altenburch",
     "b_tarr_direct": "Starogard",
-    "b_tarr_hist": "Starogard",
-    "b_origin": "Starogard (constituent holding of Wischegrat)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈsta.rɔ.ɣard]",
+    "b_tarr_hist": "Altenburch",
+    "b_origin": "Starogard (Slavic stary-gard, 'Old Castle / Stronghold') (in-game: Starogard)",
+    "b_anachronism": "Descriptive Slavic toponym calqued to Tarraconian Altenburch.",
+    "b_ipa": "[ˈal.tɛn.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_konitz": {
     "name": "Konitz",
@@ -26609,26 +26609,26 @@
     "category": "capital_eponymous"
   },
   "b_vyshgorod": {
-    "name": "Wischgort",
-    "b_tarr": "Wischgort",
+    "name": "Hôchburch",
+    "b_tarr": "Hôchburch",
     "b_tarr_direct": "Wischgort",
-    "b_tarr_hist": "Wischgort",
-    "b_origin": "Vyshgorod (constituent holding of Kîouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈwɪʃ.ɡɔrt]",
+    "b_tarr_hist": "Hôchburch",
+    "b_origin": "Vyshhorod / Vyshgorod (Slavic vyše-gorod, 'High Castle' on the Dnieper) (in-game: Vyshgorod)",
+    "b_anachronism": "Descriptive Slavic toponym calqued to Tarraconian Hôchburch.",
+    "b_ipa": "[ˈhoːx.bʊrx]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_bilhorod": {
-    "name": "Bilhorod",
-    "b_tarr": "Bilhorod",
+    "name": "Wîtzenburch",
+    "b_tarr": "Wîtzenburch",
     "b_tarr_direct": "Bilhorod",
-    "b_tarr_hist": "Bilhorod",
-    "b_origin": "Bilhorod (constituent holding of Kîouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈbɪl.hɔ.rɔd]",
+    "b_tarr_hist": "Wîtzenburch",
+    "b_origin": "Bilhorod Kyivskyi (Slavic bely-gorod, 'White Castle' on the Irpin) (in-game: Bilhorod)",
+    "b_anachronism": "Descriptive Slavic toponym calqued to Tarraconian Wîtzenburch.",
+    "b_ipa": "[ˈwiː.tsən.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_yuriev": {
     "name": "Yurieuwe",
@@ -29469,15 +29469,15 @@
     "category": "capital_eponymous"
   },
   "b_krasny_bor": {
-    "name": "Krasny Bor",
-    "b_tarr": "Krasny Bor",
+    "name": "Rôtenwalt",
+    "b_tarr": "Rôtenwalt",
     "b_tarr_direct": "Krasny Bor",
-    "b_tarr_hist": "Krasny Bor",
-    "b_origin": "Krasny Bor (constituent holding of Wâge)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈkras.nɪ bɔr]",
+    "b_tarr_hist": "Rôtenwalt",
+    "b_origin": "Krasny Bor (Slavic krasny-bor, 'Red/Beautiful Pine Forest') (in-game: Krasny Bor)",
+    "b_anachronism": "Descriptive Slavic toponym calqued to Tarraconian Rôtenwalt.",
+    "b_ipa": "[ˈroː.tən.walt]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_bereznik": {
     "name": "Bereznik",
@@ -50061,15 +50061,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_hisn_al-mashuq": {
-    "name": "Hisn al-Maschuq",
-    "b_tarr": "Hisn al-Maschuq",
+    "name": "Maschûchburch",
+    "b_tarr": "Maschûchburch",
     "b_tarr_direct": "Hisn al-Maschuq",
-    "b_tarr_hist": "Hisn al-Maschuq",
-    "b_origin": "Hisn al-Mashuq (constituent holding of Samârre)",
-    "b_anachronism": "",
-    "b_ipa": "[hɪsn al ˈma.ʃʊk]",
+    "b_tarr_hist": "Maschûchburch",
+    "b_origin": "Hisn al-Mashuq (Arabic Hisn al-Ma'shuq, 'Citadel of the Beloved') (in-game: Hisn al-Mashuq)",
+    "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Maschûchburch.",
+    "b_ipa": "[ˈma.ʃuːx.bʊrx]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_hulwan": {
     "name": "Hulwân",
@@ -51271,15 +51271,15 @@
     "category": "capital_eponymous"
   },
   "b_hisn_di-l-qarnain": {
-    "name": "Hisn di-L-Tscharnain",
-    "b_tarr": "Hisn di-L-Tscharnain",
+    "name": "Tscharnainburch",
+    "b_tarr": "Tscharnainburch",
     "b_tarr_direct": "Hisn di-L-Tscharnain",
-    "b_tarr_hist": "Hisn di-L-Tscharnain",
-    "b_origin": "Hisn di-l-Qarnain (constituent holding of Hâni)",
-    "b_anachronism": "",
-    "b_ipa": "[hɪsn dɪ l tʃar.ˈnɛɪn]",
+    "b_tarr_hist": "Tscharnainburch",
+    "b_origin": "Hisn Dhi'l-Qarnayn (Arabic fortress of Dhul-Qarnayn) (in-game: Hisn di-l-Qarnain)",
+    "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Tscharnainburch.",
+    "b_ipa": "[ˈtʃar.nɛɪn.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_qulb": {
     "name": "Qulb",
@@ -52426,15 +52426,15 @@
     "category": "capital_eponymous"
   },
   "b_csakvar": {
-    "name": "Csâkvâr",
-    "b_tarr": "Csâkvâr",
+    "name": "Tschiâckesburch",
+    "b_tarr": "Tschiâckesburch",
     "b_tarr_direct": "Csâkvâr",
-    "b_tarr_hist": "Csâkvâr",
-    "b_origin": "Csákvár (constituent holding of Stûlwîtzenburch)",
-    "b_anachronism": "",
-    "b_ipa": "[ksaːk.ˈvaːr]",
+    "b_tarr_hist": "Tschiâckesburch",
+    "b_origin": "Csákvár (Hungarian Csák-vár, 'Csák Castle') (in-game: Csákvár)",
+    "b_anachronism": "Descriptive Hungarian fortress toponym calqued to Tarraconian Tschiâckesburch.",
+    "b_ipa": "[ˈtʃɪ.aː.kɛs.bʊrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_kalocsa": {
     "name": "Kalocsa",
@@ -53900,15 +53900,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_fehertemplom": {
-    "name": "Fehêrtemplom",
-    "b_tarr": "Fehêrtemplom",
+    "name": "Wîzenkirchen",
+    "b_tarr": "Wîzenkirchen",
     "b_tarr_direct": "Fehêrtemplom",
-    "b_tarr_hist": "Fehêrtemplom",
-    "b_origin": "Fehértemplom (constituent holding of Krassouwe)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈfɛ.heːr.tɛm.plɔm]",
+    "b_tarr_hist": "Wîzenkirchen",
+    "b_origin": "Fehértemplom (Hungarian Fehér-templom, 'White Church') (in-game: Fehértemplom)",
+    "b_anachronism": "Descriptive Hungarian ecclesiastical toponym calqued to Tarraconian Wîzenkirchen.",
+    "b_ipa": "[ˈwiː.tsɛ.ŋkɪr.xən]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_kevevar": {
     "name": "Kêwe",
@@ -54153,15 +54153,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_vasarhely": {
-    "name": "Vâsârhely",
-    "b_tarr": "Vâsârhely",
+    "name": "Marctztat",
+    "b_tarr": "Marctztat",
     "b_tarr_direct": "Vâsârhely",
-    "b_tarr_hist": "Vâsârhely",
-    "b_origin": "Vásárhely (constituent holding of Wesprîm)",
-    "b_anachronism": "",
-    "b_ipa": "[ˈvaː.zaːr.hɛ.lɪ]",
+    "b_tarr_hist": "Marctztat",
+    "b_origin": "Vásárhely (Hungarian Vásár-hely, 'Market Place / Town') (in-game: Vásárhely)",
+    "b_anachronism": "Descriptive Hungarian market toponym calqued to Tarraconian Marctstat.",
+    "b_ipa": "[markts.ˈtat]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_szerem": {
     "name": "Sîrmjen",
@@ -61776,15 +61776,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_kasr_al-kabir": {
-    "name": "Kasr al-Kabir",
-    "b_tarr": "Kasr al-Kabir",
+    "name": "Grôzcastel",
+    "b_tarr": "Grôzcastel",
     "b_tarr_direct": "Kasr al-Kabir",
-    "b_tarr_hist": "Kasr al-Kabir",
-    "b_origin": "Kasr al-Kabir (constituent holding of Tandscher)",
-    "b_anachronism": "",
-    "b_ipa": "[kasr al ˈka.bɪr]",
+    "b_tarr_hist": "Grôzcastel",
+    "b_origin": "Ksar el-Kebir / Qasr al-Kabir (Arabic 'The Great Castle / Citadel') (in-game: Kasr al-Kabir)",
+    "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Grôzcastel.",
+    "b_ipa": "[ɡroːts.kas.ˈtɛl]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_tahlit": {
     "name": "Tahlit",
@@ -62106,15 +62106,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_hisn_lawata": {
-    "name": "Hisn Lawata",
-    "b_tarr": "Hisn Lawata",
+    "name": "Lawâtaburch",
+    "b_tarr": "Lawâtaburch",
     "b_tarr_direct": "Hisn Lawata",
-    "b_tarr_hist": "Hisn Lawata",
-    "b_origin": "Hisn Lawata (constituent holding of Tâhert)",
-    "b_anachronism": "",
-    "b_ipa": "[hɪsn ˈla.wa.ta]",
+    "b_tarr_hist": "Lawâtaburch",
+    "b_origin": "Hisn Lawata (Berber Lawata tribal fortress) (in-game: Hisn Lawata)",
+    "b_anachronism": "Descriptive Berber fortress toponym calqued to Tarraconian Lawâtaburch.",
+    "b_ipa": "[ˈla.waː.ta.bʊrx]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_yalala": {
     "name": "Jalâle",
@@ -66055,15 +66055,15 @@
     "category": "capital_eponymous"
   },
   "b_hisn_al-abr": {
-    "name": "Hisn al-'Abr",
-    "b_tarr": "Hisn al-'Abr",
+    "name": "Vurtburch",
+    "b_tarr": "Vurtburch",
     "b_tarr_direct": "Hisn al-'Abr",
-    "b_tarr_hist": "Hisn al-'Abr",
-    "b_origin": "Hisn al-'Abr (constituent holding of Wabâr)",
-    "b_anachronism": "",
-    "b_ipa": "[hɪsn al abr]",
+    "b_tarr_hist": "Vurtburch",
+    "b_origin": "Hisn al-'Abr (Arabic fortress of the crossing/pass) (in-game: Hisn al-'Abr)",
+    "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Vurtburch.",
+    "b_ipa": "[ˈvʊrt.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_taizz": {
     "name": "Taîtz",
@@ -67342,15 +67342,15 @@
     "category": "sub_barony_adaptation"
   },
   "b_qalat_jundi": {
-    "name": "Tschalat Jundi",
-    "b_tarr": "Tschalat Jundi",
+    "name": "Knechtburch",
+    "b_tarr": "Knechtburch",
     "b_tarr_direct": "Tschalat Jundi",
-    "b_tarr_hist": "Tschalat Jundi",
-    "b_origin": "Qalat Jundi (constituent holding of Sînai)",
-    "b_anachronism": "",
-    "b_ipa": "[tʃa.ˈlat ˈjʊn.dɪ]",
+    "b_tarr_hist": "Knechtburch",
+    "b_origin": "Qal'at al-Jundi (Arabic 'Soldier's / Garrison Citadel' on Mount Sudr) (in-game: Qalat Jundi)",
+    "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Knechtburch.",
+    "b_ipa": "[ˈknɛçt.bʊrx]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_tih": {
     "name": "Tih",
@@ -67804,15 +67804,15 @@
     "category": "capital_eponymous"
   },
   "b_qalat_ar-rum": {
-    "name": "Tschalat Rr-Rum",
-    "b_tarr": "Tschalat Rr-Rum",
+    "name": "Rômerburch",
+    "b_tarr": "Rômerburch",
     "b_tarr_direct": "Tschalat Rr-Rum",
-    "b_tarr_hist": "Tschalat Rr-Rum",
-    "b_origin": "Qalat Rr-Rum (constituent holding of Germanikêe)",
-    "b_anachronism": "",
-    "b_ipa": "[tʃa.ˈlat r rʊm]",
+    "b_tarr_hist": "Rômerburch",
+    "b_origin": "Qal'at ar-Rum / Hromgla (Arabic/Armenian 'Citadel of the Romans' on the Euphrates) (in-game: Qalat Rr-Rum)",
+    "b_anachronism": "Descriptive Near Eastern fortress toponym calqued to Tarraconian Rômerburch.",
+    "b_ipa": "[ˈroː.mɛr.bʊrx]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "descriptive_calque"
   },
   "b_kaisum": {
     "name": "Kaisum",
@@ -95117,114 +95117,114 @@
     "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Jialingxi": {
-    "name": "Rückewestlant",
-    "b_tarr": "Rückewestlant",
-    "b_tarr_direct": "Rückewestlant",
-    "b_tarr_hist": "Rückewestlant",
-    "b_origin": "Jialingxi (Lingxiguo)",
+    "name": "LêhenrückeWest",
+    "b_tarr": "LêhenrückeWest",
+    "b_tarr_direct": "LêhenrückeWest",
+    "b_tarr_hist": "LêhenrückeWest",
+    "b_origin": "假岭西 [Jialingxi] — Calque: Provisional + Mountain ridge + West",
     "b_anachronism": "",
-    "b_ipa": "[ˈryː.kɛ.wɛst.lant]",
+    "b_ipa": "[ˈleː.hɛn.ryː.kɛ.wɛst]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Yuancao": {
-    "name": "Yuancao",
-    "b_tarr": "Yuancao",
-    "b_tarr_direct": "Yuancao",
-    "b_tarr_hist": "Yuancao",
-    "b_origin": "Yuancao (constituent holding of Rückewestlant)",
+    "name": "Veitwêde",
+    "b_tarr": "Veitwêde",
+    "b_tarr_direct": "Veitwêde",
+    "b_tarr_hist": "Veitwêde",
+    "b_origin": "原草 [Yuancao] — Calque: High plateau plain + Grass meadow",
     "b_anachronism": "",
-    "b_ipa": "[ˈjʊ.a.ŋka.ɔ]",
+    "b_ipa": "[vɛɪt.ˈweː.də]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Hurka": {
-    "name": "Hurka",
-    "b_tarr": "Hurka",
-    "b_tarr_direct": "Hurka",
-    "b_tarr_hist": "Hurka",
-    "b_origin": "Hurka (constituent holding of Rückewestlant)",
+    "name": "HûSunnenChâ",
+    "b_tarr": "HûSunnenChâ",
+    "b_tarr_direct": "HûSunnenChâ",
+    "b_tarr_hist": "HûSunnenChâ",
+    "b_origin": "呼日哈 [Hurka] — Calque: Call + Sun + Altaic steppe river transcription Ha- (Harbin)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhʊr.ka]",
+    "b_ipa": "[huː.zʊ.nən.ˈxaː]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Beihelin": {
-    "name": "Beihelin",
-    "b_tarr": "Beihelin",
-    "b_tarr_direct": "Beihelin",
-    "b_tarr_hist": "Beihelin",
-    "b_origin": "Beihelin (constituent holding of Swartzflôzlant)",
+    "name": "NordJamatowalt",
+    "b_tarr": "NordJamatowalt",
+    "b_tarr_direct": "NordJamatowalt",
+    "b_tarr_hist": "NordJamatowalt",
+    "b_origin": "北和林 [Beihelin] — Calque: North + Harmony + Forest woodland",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.hɛ.ˈlɪn]",
+    "b_ipa": "[ˈnɔrd.ja.ma.tɔ.walt]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Humari": {
-    "name": "Swartzflôzlant",
-    "b_tarr": "Swartzflôzlant",
-    "b_tarr_direct": "Swartzflôzlant",
-    "b_tarr_hist": "Swartzflôzlant",
-    "b_origin": "Humari (Heiheguo)",
+    "name": "HûRosSunnen",
+    "b_tarr": "HûRosSunnen",
+    "b_tarr_direct": "HûRosSunnen",
+    "b_tarr_hist": "HûRosSunnen",
+    "b_origin": "胡马日 [Humari] — Calque: Northern steppe nomads + Steed horse + Sun",
     "b_anachronism": "",
-    "b_ipa": "[ˈswarts.floːts.lant]",
+    "b_ipa": "[ˈhuː.rɔ.sʊ.nən]",
     "holding_type": "church",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Banouhe": {
-    "name": "Banouhe",
-    "b_tarr": "Banouhe",
-    "b_tarr_direct": "Banouhe",
-    "b_tarr_hist": "Banouhe",
-    "b_origin": "Banouhe (constituent holding of Swartzflôzlant)",
+    "name": "Achtpadflôz",
+    "b_tarr": "Achtpadflôz",
+    "b_tarr_direct": "Achtpadflôz",
+    "b_tarr_hist": "Achtpadflôz",
+    "b_origin": "八弄河 [Banouhe] — Calque: Eight + Karst mountain defile + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ba.ˈnɔʊ.hɛ]",
+    "b_ipa": "[ˈaxt.pad.floːts]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Jiapowo": {
-    "name": "Bâwôlant",
-    "b_tarr": "Bâwôlant",
-    "b_tarr_direct": "Bâwôlant",
-    "b_tarr_hist": "Bâwôlant",
-    "b_origin": "Jiapowo (Powoguo)",
+    "name": "LêhenBâWô",
+    "b_tarr": "LêhenBâWô",
+    "b_tarr_direct": "LêhenBâWô",
+    "b_tarr_hist": "LêhenBâWô",
+    "b_origin": "假婆莴 [Jiapowo] — Calque: Provisional + Elder matron + Nomadic clan transcription",
     "b_anachronism": "",
-    "b_ipa": "[ˈbaː.woː.lant]",
+    "b_ipa": "[leː.hɛn.baː.ˈwoː]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Iskenhe": {
-    "name": "Iskenhe",
-    "b_tarr": "Iskenhe",
-    "b_tarr_direct": "Iskenhe",
-    "b_tarr_hist": "Iskenhe",
-    "b_origin": "Iskenhe (constituent holding of Bâwôlant)",
+    "name": "TrûweWestKênflôz",
+    "b_tarr": "TrûweWestKênflôz",
+    "b_tarr_direct": "TrûweWestKênflôz",
+    "b_tarr_hist": "TrûweWestKênflôz",
+    "b_origin": "依西肯河 [Iskenhe] — Calque: Rely upon + West + Willing + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ɪs.ˈkɛn.hɛ]",
+    "b_ipa": "[ˈtruː.wɛ.wɛst.keːn.floːts]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Ganyijiang": {
-    "name": "Ganyijiang",
-    "b_tarr": "Ganyijiang",
-    "b_tarr_direct": "Ganyijiang",
-    "b_tarr_hist": "Ganyijiang",
-    "b_origin": "Ganyijiang (constituent holding of Bâwôlant)",
+    "name": "SôteEbisflôz",
+    "b_tarr": "SôteEbisflôz",
+    "b_tarr_direct": "SôteEbisflôz",
+    "b_tarr_hist": "SôteEbisflôz",
+    "b_origin": "甘夷江 [Ganyijiang] — Calque: Sweet waters + Eastern march dwellers + Major southern river",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡa.ɲɪ.jɪ.aŋ]",
+    "b_ipa": "[ˈsoː.tɛ.ɛ.bɪs.floːts]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Ganhejiang": {
-    "name": "Sanistat",
-    "b_tarr": "Sanistat",
-    "b_tarr_direct": "Ganhejiang",
-    "b_tarr_hist": "Sanistat",
-    "b_origin": "Ganhejiang — Disambiguated foundation: Municipal foundation chartered by Sani",
-    "b_anachronism": "Disambiguated sub-barony foundation.",
-    "b_ipa": "[ˈsa.nɪs.tat]",
+    "name": "Kanteflôzflôz",
+    "b_tarr": "Kanteflôzflôz",
+    "b_tarr_direct": "Kanteflôzflôz",
+    "b_tarr_hist": "Kanteflôzflôz",
+    "b_origin": "干河江 [Ganhejiang] — Calque: Riverbank + Great Northern River + Major southern river",
+    "b_anachronism": "",
+    "b_ipa": "[ˈkan.tɛ.floːts.floːts]",
     "holding_type": "city",
-    "category": "option_c_foundation"
+    "category": "sinosphere_calque"
   },
   "b_Jiqin_Hari": {
     "name": "VurtZînflôzChâSunnen",
@@ -95656,191 +95656,191 @@
     "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Zuunbuir": {
-    "name": "Middenwagenedellant",
-    "b_tarr": "Middenwagenedellant",
-    "b_tarr_direct": "Middenwagenedellant",
-    "b_tarr_hist": "Middenwagenedellant",
-    "b_origin": "Zuunbuir (Zhongcheziguo)",
+    "name": "ÔstvancFischken",
+    "b_tarr": "ÔstvancFischken",
+    "b_tarr_direct": "ÔstvancFischken",
+    "b_tarr_hist": "ÔstvancFischken",
+    "b_origin": "东捕鱼儿 [Zuunbuir] — Calque: East + Fishery haul + Fish + Child",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɪ.dən.wa.ɣɛ.nɛ.dɛ.ʎant]",
+    "b_ipa": "[ˈoːst.vaŋk.fɪʃ.kən]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Xisaiyin": {
-    "name": "Xisaiyin",
-    "b_tarr": "Xisaiyin",
-    "b_tarr_direct": "Xisaiyin",
-    "b_tarr_hist": "Xisaiyin",
-    "b_origin": "Xisaiyin (constituent holding of Middenwagenedellant)",
+    "name": "WestzâiGrunt",
+    "b_tarr": "WestzâiGrunt",
+    "b_tarr_direct": "WestzâiGrunt",
+    "b_tarr_hist": "WestzâiGrunt",
+    "b_origin": "西赛因 [Xisaiyin] — Calque: West + Compete + Reliance",
     "b_anachronism": "",
-    "b_ipa": "[ksɪ.sɛɪ.ˈjɪn]",
+    "b_ipa": "[ˈwɛs.tsaː.ɪ.ɡrʊnt]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Beiheisha": {
-    "name": "Beiheischa",
-    "b_tarr": "Beiheischa",
-    "b_tarr_direct": "Beiheischa",
-    "b_tarr_hist": "Beiheischa",
-    "b_origin": "Beiheisha (constituent holding of Middenwagenedellant)",
+    "name": "NordSwartzsant",
+    "b_tarr": "NordSwartzsant",
+    "b_tarr_direct": "NordSwartzsant",
+    "b_tarr_hist": "NordSwartzsant",
+    "b_origin": "北黑沙 [Beiheisha] — Calque: North + Jet black + Sand",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.hɛɪ.ʃa]",
+    "b_ipa": "[ˈnɔrds.war.tsant]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Nanchezi": {
-    "name": "Nanchezi",
-    "b_tarr": "Nanchezi",
-    "b_tarr_direct": "Nanchezi",
-    "b_tarr_hist": "Nanchezi",
-    "b_origin": "Nanchezi (constituent holding of Middenwagenedellant)",
+    "name": "SûtwagenEdel",
+    "b_tarr": "SûtwagenEdel",
+    "b_tarr_direct": "SûtwagenEdel",
+    "b_tarr_hist": "SûtwagenEdel",
+    "b_origin": "南车子 [Nanchezi] — Calque: South + Chariot wagon + Viscount",
     "b_anachronism": "",
-    "b_ipa": "[ˈnan.xɛ.tsɪ]",
+    "b_ipa": "[suːt.wa.ɣɛ.nɛ.ˈdəl]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Jiasaihe": {
-    "name": "Ôsttschelant",
-    "b_tarr": "Ôsttschelant",
-    "b_tarr_direct": "Ôsttschelant",
-    "b_tarr_hist": "Ôsttschelant",
-    "b_origin": "Jiasaihe (Dongcheziguo)",
+    "name": "LêhenvesteHâ",
+    "b_tarr": "LêhenvesteHâ",
+    "b_tarr_direct": "LêhenvesteHâ",
+    "b_tarr_hist": "LêhenvesteHâ",
+    "b_origin": "假塞曷 [Jiasaihe] — Calque: Provisional + Frontier fortress + Mohe",
     "b_anachronism": "",
-    "b_ipa": "[ˈoːs.tʃɛ.lant]",
+    "b_ipa": "[leː.hɛn.vɛs.tɛ.ˈhaː]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Dongheisha": {
-    "name": "Dongheischa",
-    "b_tarr": "Dongheischa",
-    "b_tarr_direct": "Dongheischa",
-    "b_tarr_hist": "Dongheischa",
-    "b_origin": "Dongheisha (constituent holding of Ôsttschelant)",
+    "name": "Ôstzwartzsant",
+    "b_tarr": "Ôstzwartzsant",
+    "b_tarr_direct": "Ôstzwartzsant",
+    "b_tarr_hist": "Ôstzwartzsant",
+    "b_origin": "东黑沙 [Dongheisha] — Calque: East + Jet black + Sand",
     "b_anachronism": "",
-    "b_ipa": "[ˈdɔŋ.hɛɪ.ʃa]",
+    "b_ipa": "[ˈoːsts.war.tsant]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Chezier": {
-    "name": "Chezier",
-    "b_tarr": "Chezier",
-    "b_tarr_direct": "Chezier",
-    "b_tarr_hist": "Chezier",
-    "b_origin": "Chezier (constituent holding of Ôsttschelant)",
+    "name": "WagenEdelken",
+    "b_tarr": "WagenEdelken",
+    "b_tarr_direct": "WagenEdelken",
+    "b_tarr_hist": "WagenEdelken",
+    "b_origin": "车子儿 [Chezier] — Calque: Chariot wagon + Viscount + Child",
     "b_anachronism": "",
-    "b_ipa": "[xɛ.tsɪ.ˈɛr]",
+    "b_ipa": "[ˈwa.ɣɛ.nɛ.dɛl.kɛn]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Kharulagai": {
-    "name": "Kharulagai",
-    "b_tarr": "Kharulagai",
-    "b_tarr_direct": "Kharulagai",
-    "b_tarr_hist": "Kharulagai",
-    "b_origin": "Kharulagai (constituent holding of Ôsttschelant)",
+    "name": "ChâLâÔtLûHôei",
+    "b_tarr": "ChâLâÔtLûHôei",
+    "b_tarr_direct": "ChâLâÔtLûHôei",
+    "b_tarr_hist": "ChâLâÔtLûHôei",
+    "b_origin": "哈剌兀鲁回 [Kharulagai] — Calque: Altaic steppe river transcription Ha- (Harbin) + Altaic steppe transcription (Chalaer clan) + High flat-topped crag + Ancient State of Lu + Uyghur Huihe ethnic stem",
     "b_anachronism": "",
-    "b_ipa": "[kha.rʊ.la.ˈɣɛɪ]",
+    "b_ipa": "[xaː.laː.oːt.luː.hoː.ˈɛɪ]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Oyuhulun": {
-    "name": "Wîdschakelvancfischken",
-    "b_tarr": "Wîdschakelvancfischken",
-    "b_tarr_direct": "Wîdschakelvancfischken",
-    "b_tarr_hist": "Wîdschakelvancfischken",
-    "b_origin": "Oyuhulun (Hulunbuir)",
+    "name": "ÔrFûrjôWîdSchakel",
+    "b_tarr": "ÔrFûrjôWîdSchakel",
+    "b_tarr_direct": "ÔrFûrjôWîdSchakel",
+    "b_tarr_hist": "ÔrFûrjôWîdSchakel",
+    "b_origin": "斡余阔连 [Oyuhulun] — Calque: Khitan + Surplus + Broad vast expanse + Connected chain",
     "b_anachronism": "",
-    "b_ipa": "[ˈwiː.dʒa.kɛl.vaŋk.fɪʃ.kən]",
+    "b_ipa": "[oːr.fuːr.joː.wiː.dʒa.ˈkəl]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Khailangol": {
-    "name": "Khailangol",
-    "b_tarr": "Khailangol",
-    "b_tarr_direct": "Khailangol",
-    "b_tarr_hist": "Khailangol",
-    "b_origin": "Khailangol (constituent holding of Wîdschakelvancfischken)",
+    "name": "KâBlômenDalLê",
+    "b_tarr": "KâBlômenDalLê",
+    "b_tarr_direct": "KâBlômenDalLê",
+    "b_tarr_hist": "KâBlômenDalLê",
+    "b_origin": "可兰豁勒 [Khailangol] — Calque: Worthy + Orchid + Open valley + Bridle",
     "b_anachronism": "",
-    "b_ipa": "[ˈkhɛɪ.la.ŋɔl]",
+    "b_ipa": "[kaː.bloː.mən.da.ˈʎeː]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Kharbuir": {
-    "name": "Kharbuir",
-    "b_tarr": "Kharbuir",
-    "b_tarr_direct": "Kharbuir",
-    "b_tarr_hist": "Kharbuir",
-    "b_origin": "Kharbuir (constituent holding of Wîdschakelvancfischken)",
+    "name": "ChâLâvancFischken",
+    "b_tarr": "ChâLâvancFischken",
+    "b_tarr_direct": "ChâLâvancFischken",
+    "b_tarr_hist": "ChâLâvancFischken",
+    "b_origin": "哈剌捕鱼儿 [Kharbuir] — Calque: Altaic steppe river transcription Ha- (Harbin) + Altaic steppe transcription (Chalaer clan) + Fishery haul + Fish + Child",
     "b_anachronism": "",
-    "b_ipa": "[ˈkhar.bʊ.ɪr]",
+    "b_ipa": "[ˈxaː.laː.vaŋk.fɪʃ.kən]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Khalkagol": {
-    "name": "Schirmburch",
-    "b_tarr": "Schirmburch",
-    "b_tarr_direct": "Khalkagol",
-    "b_tarr_hist": "Schirmburch",
-    "b_origin": "Khalkagol — Disambiguated foundation: Protective march fortress built by Delbeg",
-    "b_anachronism": "Disambiguated sub-barony foundation.",
-    "b_ipa": "[ˈʃɪrm.bʊrx]",
+    "name": "ZâmenLêZâmenflôz",
+    "b_tarr": "ZâmenLêZâmenflôz",
+    "b_tarr_direct": "ZâmenLêZâmenflôz",
+    "b_tarr_hist": "ZâmenLêZâmenflôz",
+    "b_origin": "合泐合河 [Khalkagol] — Calque: Confluence + Steppe phonetic Le + Confluence + Great Northern River",
+    "b_anachronism": "",
+    "b_ipa": "[ˈtsaː.mɛn.leː.tsaː.mɛn.floːts]",
     "holding_type": "castle",
-    "category": "option_c_foundation"
+    "category": "sinosphere_calque"
   },
   "b_Liao_Wuzhou": {
-    "name": "Rôtupgancfrid",
-    "b_tarr": "Rôtupgancfrid",
-    "b_tarr_direct": "Rôtupgancfrid",
-    "b_tarr_hist": "Rôtupgancfrid",
-    "b_origin": "Wuzhou (Hongxingan)",
+    "name": "Swartzgouwe",
+    "b_tarr": "Swartzgouwe",
+    "b_tarr_direct": "Swartzgouwe",
+    "b_tarr_hist": "Swartzgouwe",
+    "b_origin": "乌州 [Wuzhou] — Calque: Raven + Prefecture",
     "b_anachronism": "",
-    "b_ipa": "[ˈroː.tʊp.ɡaŋk.frɪd]",
+    "b_ipa": "[ˈswarts.ɡɔʊ.wə]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Liao_Liquan": {
-    "name": "Liquan",
-    "b_tarr": "Liquan",
-    "b_tarr_direct": "Liquan",
-    "b_tarr_hist": "Liquan",
-    "b_origin": "Liquan (constituent holding of Rôtupgancfrid)",
+    "name": "Sûzewînbrunn",
+    "b_tarr": "Sûzewînbrunn",
+    "b_tarr_direct": "Sûzewînbrunn",
+    "b_tarr_hist": "Sûzewînbrunn",
+    "b_origin": "醴泉 [Liquan] — Calque: Sweet spring water (Liquan) + Natural spring",
     "b_anachronism": "",
-    "b_ipa": "[lɪk.ˈwan]",
+    "b_ipa": "[ˈsuː.tsɛ.wiːn.brʊn]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Liao_Wuluan": {
-    "name": "Wuluan",
-    "b_tarr": "Wuluan",
-    "b_tarr_direct": "Wuluan",
-    "b_tarr_hist": "Wuluan",
-    "b_origin": "Wuluan (constituent holding of Rôtupgancfrid)",
+    "name": "ÔtLûouwe",
+    "b_tarr": "ÔtLûouwe",
+    "b_tarr_direct": "ÔtLûouwe",
+    "b_tarr_hist": "ÔtLûouwe",
+    "b_origin": "兀鲁岸 [Wuluan] — Calque: High flat-topped crag + Ancient State of Lu + Riparian riverbank",
     "b_anachronism": "",
-    "b_ipa": "[wʊ.lʊ.ˈan]",
+    "b_ipa": "[oːt.luː.ˈɔʊ.wə]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Amur_Shangwulu": {
-    "name": "Schangwulu",
-    "b_tarr": "Schangwulu",
-    "b_tarr_direct": "Schangwulu",
-    "b_tarr_hist": "Schangwulu",
-    "b_origin": "Shangwulu (constituent holding of Rôtupgancfrid)",
+    "name": "ÔverÔtLû",
+    "b_tarr": "ÔverÔtLû",
+    "b_tarr_direct": "ÔverÔtLû",
+    "b_tarr_hist": "ÔverÔtLû",
+    "b_origin": "上兀鲁 [Shangwulu] — Calque: Upper + High flat-topped crag + Ancient State of Lu",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃaŋ.wʊ.lʊ]",
+    "b_ipa": "[oː.vɛ.roːt.ˈluː]",
     "holding_type": "castle",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_Mong_Pibeihe": {
-    "name": "Pelzdekkeflôz",
-    "b_tarr": "Pelzdekkeflôz",
-    "b_tarr_direct": "Pelzdekkeflôz",
-    "b_tarr_hist": "Pelzdekkeflôz",
-    "b_origin": "Pibeihe (Pibeihe)",
+    "name": "PelzDekkeflôz",
+    "b_tarr": "PelzDekkeflôz",
+    "b_tarr_direct": "PelzDekkeflôz",
+    "b_tarr_hist": "PelzDekkeflôz",
+    "b_origin": "皮被河 [Pibeihe] — Calque: Fur pelt trade + Covered by imperial favor + Great Northern River",
     "b_anachronism": "",
     "b_ipa": "[ˈpɛlts.dɛ.kɛ.floːts]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Genhegol": {
     "name": "",
@@ -95865,37 +95865,37 @@
     "category": "unoccupied"
   },
   "b_FIC_Mong_Banukhol": {
-    "name": "Mongwûlant",
-    "b_tarr": "Mongwûlant",
-    "b_tarr_direct": "Mongwûlant",
-    "b_tarr_hist": "Mongwûlant",
-    "b_origin": "Banukhol (Mengwuo)",
+    "name": "BâNûDalken",
+    "b_tarr": "BâNûDalken",
+    "b_tarr_direct": "BâNûDalken",
+    "b_tarr_hist": "BâNûDalken",
+    "b_origin": "巴努豁儿 [Banukhol] — Calque: Ancient Kingdom of Ba + Exertion + Open valley + Child",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɔŋ.wuː.lant]",
+    "b_ipa": "[ˈbaː.nuː.dal.kɛn]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Kamaraekh": {
-    "name": "Kamaraekh",
-    "b_tarr": "Kamaraekh",
-    "b_tarr_direct": "Kamaraekh",
-    "b_tarr_hist": "Kamaraekh",
-    "b_origin": "Kamaraekh (constituent holding of Mongwûlant)",
+    "name": "ChâAgâterflôzspring",
+    "b_tarr": "ChâAgâterflôzspring",
+    "b_tarr_direct": "ChâAgâterflôzspring",
+    "b_tarr_hist": "ChâAgâterflôzspring",
+    "b_origin": "哈玛尔河源 [Kamaraekh] — Calque: Altaic steppe river transcription Ha- (Harbin) + Agate mineral + Tungusic + Great Northern River + Riverhead spring source",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ma.ra.ɛkh]",
+    "b_ipa": "[ˈxaː.a.ɣaː.tɛr.floːts.prɪŋ]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Ilkuriuul": {
-    "name": "Ilkuriuul",
-    "b_tarr": "Ilkuriuul",
-    "b_tarr_direct": "Ilkuriuul",
-    "b_tarr_hist": "Ilkuriuul",
-    "b_origin": "Ilkuriuul (constituent holding of Mongwûlant)",
+    "name": "ÎLêHûdorpberch",
+    "b_tarr": "ÎLêHûdorpberch",
+    "b_tarr_direct": "ÎLêHûdorpberch",
+    "b_tarr_hist": "ÎLêHûdorpberch",
+    "b_origin": "伊勒呼里山 [Ilkuriuul] — Calque: Yi River hydronym + Bridle + Call + Village settlement + Mountain",
     "b_anachronism": "",
-    "b_ipa": "[ˈɪl.kʊ.rɪ.ʊ.ʊl]",
+    "b_ipa": "[ˈiː.leː.huː.dɔrp.bɛrx]",
     "holding_type": "church",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Xiailehuli": {
     "name": "",
@@ -95909,26 +95909,26 @@
     "category": "unoccupied"
   },
   "b_FIC_Mong_Huraalin": {
-    "name": "Swartzerwellen",
-    "b_tarr": "Swartzerwellen",
-    "b_tarr_direct": "Swartzerwellen",
-    "b_tarr_hist": "Swartzerwellen",
-    "b_origin": "Huraalin (Heiergun)",
+    "name": "HûSunnenBochtwalt",
+    "b_tarr": "HûSunnenBochtwalt",
+    "b_tarr_direct": "HûSunnenBochtwalt",
+    "b_tarr_hist": "HûSunnenBochtwalt",
+    "b_origin": "呼日阿林 [Huraalin] — Calque: Call + Sun + River meander mound + Forest woodland",
     "b_anachronism": "",
-    "b_ipa": "[ˈswar.tsɛr.wɛ.ʎən]",
+    "b_ipa": "[ˈhuː.zʊ.nən.bɔxt.walt]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Oyuulvzar": {
-    "name": "Oyuulvzar",
-    "b_tarr": "Oyuulvzar",
-    "b_tarr_direct": "Oyuulvzar",
-    "b_tarr_hist": "Oyuulvzar",
-    "b_origin": "Oyuulvzar (constituent holding of Swartzerwellen)",
+    "name": "BochtWolchenSwartzKraftZâer",
+    "b_tarr": "BochtWolchenSwartzKraftZâer",
+    "b_tarr_direct": "BochtWolchenSwartzKraftZâer",
+    "b_tarr_hist": "BochtWolchenSwartzKraftZâer",
+    "b_origin": "阿云乌力扎尔 [Oyuulvzar] — Calque: River meander mound + Cloud mountain mist (Traditional) + Raven + Strength + Mongolic + Tungusic",
     "b_anachronism": "",
-    "b_ipa": "[ˈɔʏ.ʊ.ʊlv.tsar]",
+    "b_ipa": "[ˈbɔxt.wɔl.xɛns.warts.kraf.tsaː.ɛr]",
     "holding_type": "city",
-    "category": "sub_barony_adaptation"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Emurgol": {
     "name": "",
@@ -95942,15 +95942,15 @@
     "category": "unoccupied"
   },
   "b_FIC_Mong_Telburgol": {
-    "name": "Jedorpaltinneem",
-    "b_tarr": "Jedorpaltinneem",
-    "b_tarr_direct": "Jedorpaltinneem",
-    "b_tarr_hist": "Jedorpaltinneem",
-    "b_origin": "Telburgol (Ergunia)",
+    "name": "WechselStarcHoltzkenflôz",
+    "b_tarr": "WechselStarcHoltzkenflôz",
+    "b_tarr_direct": "WechselStarcHoltzkenflôz",
+    "b_tarr_hist": "WechselStarcHoltzkenflôz",
+    "b_origin": "迭烈木儿河 [Telburgol] — Calque: Alternate + Fiery + Wood + Child + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɛ.dɔr.pal.tɪ.nɛ.ɛm]",
+    "b_ipa": "[ˈwɛç.sɛl.star.xɔlts.kɛn.floːts]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Gangoluul": {
     "name": "",
@@ -95975,15 +95975,15 @@
     "category": "unoccupied"
   },
   "b_FIC_Mong_Hailargol": {
-    "name": "Mêrlâken",
-    "b_tarr": "Mêrlâken",
-    "b_tarr_direct": "Mêrlâken",
-    "b_tarr_hist": "Mêrlâken",
-    "b_origin": "Hailargol (Hailar)",
+    "name": "MêrLâkenflôz",
+    "b_tarr": "MêrLâkenflôz",
+    "b_tarr_direct": "MêrLâkenflôz",
+    "b_tarr_hist": "MêrLâkenflôz",
+    "b_origin": "海剌儿河 [Hailargol] — Calque: Sea + Altaic steppe transcription (Chalaer clan) + Child + Great Northern River",
     "b_anachronism": "",
-    "b_ipa": "[ˈmeːr.laː.kən]",
+    "b_ipa": "[ˈmeːr.laː.kɛn.floːts]",
     "holding_type": "castle",
-    "category": "capital_eponymous"
+    "category": "sinosphere_calque"
   },
   "b_FIC_Mong_Gaoxuanya": {
     "name": "",

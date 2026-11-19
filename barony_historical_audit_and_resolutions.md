@@ -76,6 +76,30 @@ Titles are anchored strictly in physical substrates, verified classical settleme
   - `b_tralee` is the distinct Tralee seat (*Trá Lí*) $\rightarrow$ resolved to **`Tralî`** `[tra.ˈliː]`.
   - Zero duplicate collision; both holdings preserve their authentic historical identity.
 
+#### Case Study: Historical Audit & Resolution of `b_norman_cross` (`c_huntingdonshire`)
+* **Paradox Setup:** In vanilla CK3, `c_huntingdonshire` contains holdings named after the historic Huntingdonshire hundreds (`b_hurstingstone`, `b_norman_cross`, `b_leightonstone`), with `b_norman_cross` assigned as a civic city holding.
+* **Historical Attestation & Etymology:**
+  - *Northmannescros* is attested in an Anglo-Saxon charter of King Edgar (963 AD, Cartularium Saxonicum no. 1128) and recorded in the Domesday Book (1086) as *Normancros hundred*.
+  - The name derives from Old English *Norþmann* ("Northman / Norseman / Dane of the Danelaw") + *cros* ("stone/wooden cross"), designating the open-air hundred meeting place at the intersection of Roman Ermine Street and the Peterborough highway.
+  - While historical as a 10th-century Danelaw administrative moot site, there was never a medieval borough of this name; the only physical settlement built there was the 1797 **Norman Cross Depot** (the world's first modern prisoner-of-war camp).
+* **Chancellery Calquing & Resolution:**
+  - Standardized root-for-root to Tarraconian **`Nordmancrûz`** `[nɔrd.maŋk.ˈruːts]` (*Cross of the Northman*).
+  - Explicit historical provenance recorded in `b_origin` (attested 963 AD Danelaw hundred moot) and `b_anachronism` (annotating the 1797 Napoleonic POW depot association).
+
+### 2.2 Frontier Sinosphere & Non-Sinosphere Descriptive Calques (Fixes 1 & 2)
+1. **Frontier Sinosphere Calquing (Fix 1):**
+   - 12 frontier counties under `e_mongolia` curated in `sinosphere_hanzi_calques.json` (`c_SW_hongxingan`, `c_SW_lingxiguo`, `c_SW_zhongcheziguo`, etc.) were integrated into the Sinosphere engine.
+   - All 34 frontier baronies with authentic Hanzi characters (`b_FIC_Liao_Liquan` 醴泉 $\rightarrow$ **`Sûzewînbrunn`**, `b_FIC_Mong_Beiheisha` 北黑沙 $\rightarrow$ **`NordSwartzsant`**, `b_FIC_Amur_Yuancao` 原草 $\rightarrow$ **`Veitwêde`**, `b_FIC_Mong_Dongheisha` 东黑沙 $\rightarrow$ **`Ôstzwartzsant`**) now receive full logographic morpheme calques.
+2. **Descriptive Non-Sinosphere Sub-Barony Calquing (Fix 2):**
+   - Transparent descriptive toponyms matching the Master Morpheme Matrix in `tarraconian_descriptive_title_calques.md` were systematically calqued:
+     - Slavic: `b_vyshgorod` $\rightarrow$ **`Hôchburch`**, `b_bilhorod` $\rightarrow$ **`Wîtzenburch`**, `b_tuchowna` (Starogard) $\rightarrow$ **`Altenburch`**, `b_novobrdo` $\rightarrow$ **`Nîenberch`**, `b_biograd` $\rightarrow$ **`Wîtzenburch`**, `b_krasny_bor` $\rightarrow$ **`Rôtenwalt`**.
+     - Greek: `b_siderokastron` $\rightarrow$ **`Îsenburch`**, `b_gynaikokastron` $\rightarrow$ **`Vrouwenburch`**, `b_chrysopolis` $\rightarrow$ **`Goltstat`**, `b_chariopolis` $\rightarrow$ **`Fröudestat`**.
+     - Hungarian: `b_csakvar` $\rightarrow$ **`Tschiâckesburch`**, `b_fehertemplom` $\rightarrow$ **`Wîzenkirchen`**, `b_vasarhely` $\rightarrow$ **`Marctstat`**.
+     - Celtic: `b_kildare` $\rightarrow$ **`Eichenkirchen`**, `b_aberystwyth` $\rightarrow$ **`Ystwythmunde`**.
+     - English / Germanic: `b_southwark` $\rightarrow$ **`Sûtwerc`**, `b_woxbrigge` $\rightarrow$ **`Woxbrücke`**, `b_norman_cross` $\rightarrow$ **`Nordmancrûz`**.
+     - Near Eastern / Arabic: `b_hisn_al-mashuq` $\rightarrow$ **`Maschûchburch`**, `b_hisn_di-l-qarnain` $\rightarrow$ **`Tscharnainburch`**, `b_hisn_lawata` $\rightarrow$ **`Lawâtaburch`**, `b_hisn_al-abr` $\rightarrow$ **`Vurtburch`**, `b_qalat_jundi` $\rightarrow$ **`Knechtburch`**, `b_qalat_ar-rum` $\rightarrow$ **`Rômerburch`**, `b_kasr_al-kabir` $\rightarrow$ **`Grôzcastel`**.
+     - Intra-county capital disambiguation: `b_serres` $\rightarrow$ **`Sêrres`** disambiguated from coastal port `b_chrysopolis` $\rightarrow$ **`Goltstat`**.
+
 ### 2.2 In-Game Save Universe Creator & Holder Attribution
 Every occupied barony in `melted_save.ck3` records:
 - The active holder (`holder = <character_id>`) in 1194 AD.

@@ -68,8 +68,19 @@ SINO_EMPIRES = {
 }
 SINO_FRONTIER_COUNTIES = {
     "c_jining", "c_chahar", "c_xilinhaote", "c_duolun", "c_chifeng",
-    "c_tongliao", "c_hulunbuir", "c_wulagai", "c_haerbin"
+    "c_tongliao", "c_hulunbuir", "c_wulagai", "c_haerbin",
+    "c_SW_ergunia", "c_SW_hailar", "c_SW_heiergun", "c_SW_mengwuo",
+    "c_SW_pibeihe", "c_SW_dongcheziguo", "c_SW_hongxingan",
+    "c_SW_zhongcheziguo", "c_SW_heiheguo", "c_SW_lingxiguo", "c_SW_powoguo"
 }
+SINO_CURATED_COUNTIES = set()
+if SINO_HANZI_JSON.exists():
+    try:
+        with open(SINO_HANZI_JSON, "r", encoding="utf-8") as _f:
+            _shc = json.load(_f)
+            SINO_CURATED_COUNTIES = {k for k in _shc if k.startswith("c_")}
+    except Exception:
+        pass
 
 
 # ==============================================================================
@@ -1477,6 +1488,7 @@ def _adapt_european_toponym_raw(name: str) -> str:
     s = re.sub(r"wald\b", "wout", s, flags=re.I)
     s = re.sub(r"feld\b", "velt", s, flags=re.I)
     s = re.sub(r"brück\b|bruck\b|bridge\b", "brücke", s, flags=re.I)
+    s = re.sub(r"wark\b", "werc", s, flags=re.I)
     s = re.sub(r"werder\b|werth\b", "werder", s, flags=re.I)
     
     # French / Occitan
@@ -1703,6 +1715,34 @@ INDIGENOUS_RESTITUTIONS = {
     "b_kamakhya": ("Kamâkje", "Kamakhya (ancient sacred Kamarupa hill shrine of Kamakhya)", "classical_antiquity", "Ancient sacred Kamarupa temple shrine Kamakhya."),
     "b_brno": ("Brünn", "Brno (Moravian capital city)", "classical_antiquity", "Historical capital city of Moravia Brno / Brünn."),
     "b_zdar": ("Schdâr", "Žďár nad Sázavou (Cistercian monastic foundation 1252)", "sub_barony_adaptation", "Constituent holding of Brno."),
+
+    # Descriptive Sub-Barony Semantic Calques (tarraconian_descriptive_title_calques.md)
+    "b_vyshgorod": ("Hôchburch", "Vyshhorod / Vyshgorod (Slavic vyše-gorod, 'High Castle' on the Dnieper)", "descriptive_calque", "Descriptive Slavic toponym calqued to Tarraconian Hôchburch."),
+    "b_bilhorod": ("Wîtzenburch", "Bilhorod Kyivskyi (Slavic bely-gorod, 'White Castle' on the Irpin)", "descriptive_calque", "Descriptive Slavic toponym calqued to Tarraconian Wîtzenburch."),
+    "b_tuchowna": ("Altenburch", "Starogard (Slavic stary-gard, 'Old Castle / Stronghold')", "descriptive_calque", "Descriptive Slavic toponym calqued to Tarraconian Altenburch."),
+    "b_novobrdo": ("Nîenberch", "Novo Brdo (Slavic novo-brdo, 'New Mountain / Mining Hill')", "descriptive_calque", "Descriptive South Slavic toponym calqued to Tarraconian Nîenberch."),
+    "b_biograd": ("Wîtzenburch", "Biograd na Moru (Slavic bio-grad, 'White Town on the Sea')", "descriptive_calque", "Descriptive South Slavic toponym calqued to Tarraconian Wîtzenburch."),
+    "b_krasny_bor": ("Rôtenwalt", "Krasny Bor (Slavic krasny-bor, 'Red/Beautiful Pine Forest')", "descriptive_calque", "Descriptive Slavic toponym calqued to Tarraconian Rôtenwalt."),
+    "b_csakvar": ("Tschiâckesburch", "Csákvár (Hungarian Csák-vár, 'Csák Castle')", "descriptive_calque", "Descriptive Hungarian fortress toponym calqued to Tarraconian Tschiâckesburch."),
+    "b_fehertemplom": ("Wîzenkirchen", "Fehértemplom (Hungarian Fehér-templom, 'White Church')", "descriptive_calque", "Descriptive Hungarian ecclesiastical toponym calqued to Tarraconian Wîzenkirchen."),
+    "b_vasarhely": ("Marctstat", "Vásárhely (Hungarian Vásár-hely, 'Market Place / Town')", "descriptive_calque", "Descriptive Hungarian market toponym calqued to Tarraconian Marctstat."),
+    "b_siderokastron": ("Îsenburch", "Siderokastron (Greek Sidero-kastron, 'Iron Castle')", "descriptive_calque", "Descriptive Byzantine fortress toponym calqued to Tarraconian Îsenburch."),
+    "b_gynaikokastron": ("Vrouwenburch", "Gynaikokastron (Greek Gynaiko-kastron, 'Women's Castle / Queen's Castle')", "descriptive_calque", "Descriptive Byzantine fortress toponym calqued to Tarraconian Vrouwenburch."),
+    "b_chrysopolis": ("Goltstat", "Chrysopolis (Greek Chryso-polis, 'Golden City' on the Aegean)", "classical_antiquity", "Ancient Greek trading emporium and port Chrysopolis disambiguated from inland Serres."),
+    "b_serres": ("Sêrres", "Serres / Siris (ancient inland Paeonian and Byzantine fortress)", "capital_disambiguation", "Inland fortress of Serres disambiguated from coastal port Goltstat / Chrysopolis."),
+    "b_chariopolis": ("Fröudestat", "Chariopolis (Greek Chario-polis, 'City of Joy / Grace')", "descriptive_calque", "Descriptive Greek city toponym calqued to Tarraconian Fröudestat."),
+    "b_kildare": ("Eichenkirchen", "Kildare / Cill Dara (Old Irish Cill Dara, 'Church of the Oak Grove')", "descriptive_calque", "Descriptive Celtic ecclesiastical toponym calqued to Tarraconian Eichenkirchen."),
+    "b_aberystwyth": ("Ystwythmunde", "Aberystwyth (Brythonic Aber-Ystwyth, 'Mouth of the River Ystwyth')", "descriptive_calque", "Descriptive Celtic hydronymic confluence calqued to Tarraconian Ystwythmunde."),
+    "b_southwark": ("Sûtwerc", "Southwark (Old English Sūþ-geweorc, 'South Defensive Works / Rampart')", "descriptive_calque", "Descriptive Old English fortification toponym calqued to Tarraconian Sûtwerc."),
+    "b_woxbrigge": ("Woxbrücke", "Uxbridge / Woxbrigge (Old English crossing on the Colne)", "descriptive_calque", "Descriptive Old English crossing toponym calqued to Tarraconian Woxbrücke."),
+    "b_norman_cross": ("Nordmancrûz", "Norman Cross (Anglo-Saxon Northmannescros, Danelaw hundred moot cross attested 963 AD)", "hundred_moot_calque", "Danelaw hundred moot site (attested 963 AD Northmannescros); later site of 1797 Napoleonic POW depot."),
+    "b_hisn_al-mashuq": ("Maschûchburch", "Hisn al-Mashuq (Arabic Hisn al-Ma'shuq, 'Citadel of the Beloved')", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Maschûchburch."),
+    "b_hisn_di-l-qarnain": ("Tscharnainburch", "Hisn Dhi'l-Qarnayn (Arabic fortress of Dhul-Qarnayn)", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Tscharnainburch."),
+    "b_hisn_lawata": ("Lawâtaburch", "Hisn Lawata (Berber Lawata tribal fortress)", "descriptive_calque", "Descriptive Berber fortress toponym calqued to Tarraconian Lawâtaburch."),
+    "b_hisn_al-abr": ("Vurtburch", "Hisn al-'Abr (Arabic fortress of the crossing/pass)", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Vurtburch."),
+    "b_qalat_jundi": ("Knechtburch", "Qal'at al-Jundi (Arabic 'Soldier's / Garrison Citadel' on Mount Sudr)", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Knechtburch."),
+    "b_qalat_ar-rum": ("Rômerburch", "Qal'at ar-Rum / Hromgla (Arabic/Armenian 'Citadel of the Romans' on the Euphrates)", "descriptive_calque", "Descriptive Near Eastern fortress toponym calqued to Tarraconian Rômerburch."),
+    "b_kasr_al-kabir": ("Grôzcastel", "Ksar el-Kebir / Qasr al-Kabir (Arabic 'The Great Castle / Citadel')", "descriptive_calque", "Descriptive Arabic fortress toponym calqued to Tarraconian Grôzcastel."),
 }
 
 
@@ -1792,7 +1832,7 @@ def resolve_all_baronies():
         save_name = save_b.get("save_name") or en_cache.get(bk, bk.replace("b_", "").replace("_", " ").title())
 
         emp = props.get("empire")
-        is_sinosphere = (emp in SINO_EMPIRES or ck in SINO_FRONTIER_COUNTIES)
+        is_sinosphere = (emp in SINO_EMPIRES or ck in SINO_FRONTIER_COUNTIES or ck in SINO_CURATED_COUNTIES)
 
         if ck not in county_used_names:
             county_used_names[ck] = set()
