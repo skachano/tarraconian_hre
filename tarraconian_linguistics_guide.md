@@ -44,7 +44,8 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 | **û** | `[uː]` | Long close back vowel (has not yet diphthongized to *au* as in Modern German). | **Lûke** `[ˈluː.kə]` ("Lucca"), **Lûnstat** `[ˈluːn.stat]` ("Lunéville") |
 | **ü / iu** | `[ʏ]` / `[yː]` | Close front rounded vowel (umlaut of *u* / *û*, or borrowed Old French/Occitan/Greek *u/y*). | **Fürst** `[fʏrst]` ("Prince"), **Brüsch** `[brʏʃ]` ("Brysis") |
 | **ö / oe** | `[œ]` / `[øː]` | Mid front rounded vowel (umlaut of *o* / *ô*). | **Böhmisch** `[ˈbøː.mɪʃ]` ("Bohemian"), **Kölne** `[ˈkœl.nə]` |
-| **ei / ai** | `[ɛɪ]` | Falling diphthong; written `ai` in Romance/Arabic loans and southern names. | **Keiser** `[ˈkɛɪ.zər]` ("Emperor"), **Kaisarêe** `[kɛɪ.za.ˈreː.ə]` |
+| **ei** | `[ɛɪ]` | Native Middle High German falling diphthong. | **Keiser** `[ˈkɛɪ.zər]` ("Emperor"), **Heidelberch** `[ˈhɛɪ.dɛl.bɛrx]` |
+| **ai / ay** | `[aɪ]` | Open closing diphthong; standard in Romance/Catalan, Arabic, Greek, Asian, Celtic, Steppe, and southern Germanic loans and names. | **Kaisarêe** `[kaɪ.za.ˈreː.ə]`, **Bôhai** `[boː.ˈhaɪ]`, **Znaim** `[tsnaɪm]`, **Baidha** `[ˈbaɪ.ða]` |
 | **ou / au** | `[ɔʊ]` | Rounded back diphthong; often followed by glide `-w-` (`-ouwe`). | **Anschou** `[ˈan.ʃɔʊ]` ("Anjou"), **Troppouwe** `[ˈtrɔ.pɔʊ.wə]` ("Opava") |
 | **îe / ie** | `[iː.ə]` or `[iə]` | Centering diphthong `[iə]` in German roots; disyllabic `[iː.ə]` in Romance/Greek `-ia` endings. | **Bastîe** `[bas.ˈtiː.ə]` ("Bastia"), **Veguerîe** `[vɛ.ɣə.ˈriː.ə]` ("Magistracy") |
 
@@ -234,7 +235,7 @@ In 1122, **The Roman Empire** (`h_roman_empire`) operates an imperial bureaucrac
 | :--- | :--- | :--- | :--- |
 | Magistracy of **Byzantion** | **Magistrat van Konstantînôpel** *(or **Bisantz-am-Bospor**)* | `[kɔn.stan.tiː.ˈnoː.pəl]` | Imperial capital on the Bosporus (*Constantinople / Miklagard*). |
 | Magistracy of **Thessalonika** | **Magistrat van Sâlonîch** | `[zaː.lo.ˈniːç]` | Medieval Catalan/Western *Salonic* + MHG `-îch` (`[iːç]`). |
-| Magistracy of **Kaisereia** | **Magistrat van Kaisarêe** | `[kɛɪ.za.ˈreː.ə]` | Cappadocian metropolis *Caesarea Mazaca* adapted to *Keiser / Kaisarêe*. |
+| Magistracy of **Kaisereia** | **Magistrat van Kaisarêe** | `[kaɪ.za.ˈreː.ə]` | Cappadocian metropolis *Caesarea Mazaca* adapted to *Keiser / Kaisarêe*. |
 | Magistracy of **Kerak** (`c_kerak`) | **Magistrat van Pêtre** *(or **Krach**)* | `[ma.ɡɪs.ˈtraːt van ˈpeː.trə]` | Pre-1142 Nabataean/Byzantine metropolis *Petra / Walî Mûsâ* (Crusader *Kerak* built 1142). |
 | Magistracy of **Negev** (`c_negev`) | **Magistrat van Arabâ** | `[ma.ɡɪs.ˈtraːt van a.ra.ˈbaː]` | Ancient Semitic rift valley depression *Ha-ʿArābāh / Wādī al-ʿArabah*, with preserved oxytone long `-â` `[aː]`. |
 | Magistracy of **Aleppo** | **Magistrat van Halep** | `[ma.ɡɪs.ˈtraːt van ˈha.lɛp]` | Arabic *Ḥalab* (`b_halab`) with final devoicing `-b` $\rightarrow$ `-p`. |

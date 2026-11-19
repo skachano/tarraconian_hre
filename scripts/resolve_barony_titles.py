@@ -252,13 +252,14 @@ def generate_tarraconian_ipa(name: str) -> str:
     # Clean apostrophes
     res = res.replace("'", "")
     
-    # Regularize y in diphthongs, onsets, and vocalic codas
+    # Regularize y in onsets, glides, diphthongs, and vocalic codas
+    res = re.sub(r"y(?=[aeiouâêîôûäöü])", "j", res)
+    res = re.sub(r"(?<=[aeiouâêîôûäöü])i(?=[aeiouâêîôûäöü])", "j", res)
     res = re.sub(r"ey", "ei", res)
     res = re.sub(r"ay", "ai", res)
     res = re.sub(r"oy", "eu", res)
     res = re.sub(r"uy", "ui", res)
     res = re.sub(r"y\b", "i", res)
-    res = re.sub(r"y(?=[aeiouâêîôûäöü])", "j", res)
     res = re.sub(r"y", "i", res)
     
     # Convert foreign diacritics / non-Tarraconian orthography
@@ -284,7 +285,7 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = re.sub(r"sch", "ʃ", res)
     
     # ch after front vowels / diphthongs -> ç, after back vowels -> x
-    res = re.sub(r"([iîeêyüö]|eː|iː|yː|øː|ɛɪ|ɔʏ)ch", r"\1ç", res)
+    res = re.sub(r"([iîeêyüö]|eː|iː|yː|øː|aɪ|ɛɪ|ɔʏ)ch", r"\1ç", res)
     res = res.replace("ch", "x")
     
     # Catalan/Latin c -> ts before e/i/ê/î/y, k elsewhere
@@ -299,8 +300,9 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = res.replace("â", "aː").replace("ê", "eː").replace("î", "iː").replace("ô", "oː").replace("û", "uː")
     res = res.replace("ö", "øː").replace("ü", "yː")
     
-    # Diphthongs
-    res = re.sub(r"ei|ai", "ɛɪ", res)
+    # Diphthongs: ei is [ɛɪ] (native MHG), ai is [aɪ] (Romance/Arabic/Asian/Southern loans)
+    res = re.sub(r"ei", "ɛɪ", res)
+    res = re.sub(r"ai", "aɪ", res)
     res = re.sub(r"ou|au", "ɔʊ", res)
     res = re.sub(r"eu", "ɔʏ", res)
     
@@ -326,7 +328,7 @@ def generate_tarraconian_ipa(name: str) -> str:
     # Reduced vowel [ə] in unstressed Germanic inflectional endings (-en, -er, -el, -e)
     # Only in multisyllabic words (must be preceded by a vowel in the stem)
     # But preserve stressed Romance -el, -et, -at, -on, -an
-    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|ɛɪ|ɔʊ|ɔʏ)"
+    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|aɪ|ɛɪ|ɔʊ|ɔʏ)"
     C_SET = r"[bdfɡɣkmnprstvwxzʒʃçʎɲ]"
     res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛn\\b", r"\1\2ən", res)
     res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛr\\b", r"\1\2ər", res)
@@ -357,7 +359,7 @@ def generate_tarraconian_ipa(name: str) -> str:
         if not w:
             return ""
         
-        vowel_phones = ["aː", "eː", "iː", "oː", "uː", "øː", "yː", "ɛɪ", "ɔʊ", "ɔʏ", "a", "ɛ", "ɪ", "ɔ", "ʊ", "ʏ", "œ", "ə"]
+        vowel_phones = ["aː", "eː", "iː", "oː", "uː", "øː", "yː", "aɪ", "ɛɪ", "ɔʊ", "ɔʏ", "a", "ɛ", "ɪ", "ɔ", "ʊ", "ʏ", "œ", "ə"]
         consonant_phones = [
             "dʒ", "tʃ", "ts", "ʃ", "ç", "x", "ŋk", "ŋ",
             "b", "d", "ɡ", "ɣ", "p", "t", "k", "f", "v", "s", "z", "h",
@@ -447,7 +449,7 @@ def generate_tarraconian_ipa(name: str) -> str:
         ends_oxytone = (not is_germanic_compound) and any(raw_w.lower().endswith(sfx) for sfx in romance_oxytone)
         
         final_syl = syllables[-1]
-        has_final_long = any(lv in final_syl for lv in ["aː", "eː", "iː", "oː", "uː", "ɛɪ", "ɔʊ", "ɔʏ"])
+        has_final_long = any(lv in final_syl for lv in ["aː", "eː", "iː", "oː", "uː", "aɪ", "ɛɪ", "ɔʊ", "ɔʏ"])
         
         ends_schwa = syllables[-1].endswith("ə") or raw_w.lower().endswith("e")
         

@@ -182,7 +182,7 @@
     "b_tarr_hist": "Aylesbury",
     "b_origin": "Aylesbury (constituent holding of Buckingeham)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.lɛs.bʊ.rɪ]",
+    "b_ipa": "[ˈaɪ.lɛs.bʊ.rɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -2602,7 +2602,7 @@
     "b_tarr_hist": "Gairloch",
     "b_origin": "Gairloch (constituent holding of Ros-in-Albe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɛɪr.lɔx]",
+    "b_ipa": "[ˈɡaɪr.lɔx]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -2613,7 +2613,7 @@
     "b_tarr_hist": "Tain",
     "b_origin": "Tain (constituent holding of Ros-in-Albe)",
     "b_anachronism": "",
-    "b_ipa": "[tɛɪn]",
+    "b_ipa": "[taɪn]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -2965,7 +2965,7 @@
     "b_tarr_hist": "Ailêch",
     "b_origin": "Donegal (Ailech)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪ.ˈleːç]",
+    "b_ipa": "[aɪ.ˈleːç]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -3086,7 +3086,7 @@
     "b_tarr_hist": "Da Chainoc",
     "b_origin": "Da Chainoc (constituent holding of Tuâm)",
     "b_anachronism": "",
-    "b_ipa": "[da ˈxɛɪ.nɔk]",
+    "b_ipa": "[da ˈxaɪ.nɔk]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -3416,7 +3416,7 @@
     "b_tarr_hist": "Hoya",
     "b_origin": "Hoya (constituent holding of Minden)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɔʏ.a]",
+    "b_ipa": "[ˈhɔ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -4791,7 +4791,7 @@
     "b_tarr_hist": "Tournai",
     "b_origin": "Tournai (constituent holding of Hennegouwe)",
     "b_anachronism": "",
-    "b_ipa": "[tɔʊr.ˈnɛɪ]",
+    "b_ipa": "[tɔʊr.ˈnaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -5473,7 +5473,7 @@
     "b_tarr_hist": "Hayange",
     "b_origin": "Hayange (constituent holding of Brijê)",
     "b_anachronism": "",
-    "b_ipa": "[hɛɪ.ˈa.ŋɛ]",
+    "b_ipa": "[ha.ˈja.ŋɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -5858,7 +5858,7 @@
     "b_tarr_hist": "Bayreuth",
     "b_origin": "Bayreuth (constituent holding of Nabburch)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈrɔʏth]",
+    "b_ipa": "[baɪ.ˈrɔʏth]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -6155,7 +6155,7 @@
     "b_tarr_hist": "Lechrain",
     "b_origin": "Lechrain (constituent holding of Ougsburch)",
     "b_anachronism": "",
-    "b_ipa": "[lɛç.ˈrɛɪn]",
+    "b_ipa": "[lɛç.ˈraɪn]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -6595,7 +6595,7 @@
     "b_tarr_hist": "Waidhofen",
     "b_origin": "Waidhofen (constituent holding of Amstetten)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪd.hɔ.fən]",
+    "b_ipa": "[ˈwaɪd.hɔ.fən]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -6881,7 +6881,7 @@
     "b_tarr_hist": "Krainburch",
     "b_origin": "Krainburg (Krain)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkrɛɪn.bʊrx]",
+    "b_ipa": "[ˈkraɪn.bʊrx]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -7200,7 +7200,7 @@
     "b_tarr_hist": "Vaihingen",
     "b_origin": "Vaihingen (Vaihingen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɛɪ.hɪ.ŋɛn]",
+    "b_ipa": "[ˈvaɪ.hɪ.ŋɛn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -7541,7 +7541,7 @@
     "b_tarr_hist": "Crailsheim",
     "b_origin": "Crailsheim (constituent holding of Nördlingen)",
     "b_anachronism": "",
-    "b_ipa": "[krɛɪls.ˈhɛɪm]",
+    "b_ipa": "[kraɪls.ˈhɛɪm]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -7596,7 +7596,7 @@
     "b_tarr_hist": "Ziegenhain",
     "b_origin": "Ziegenhain (constituent holding of Kassel)",
     "b_anachronism": "",
-    "b_ipa": "[tsɪ.ɛ.ɣɛn.ˈhɛɪn]",
+    "b_ipa": "[tsɪ.ɛ.ɣɛn.ˈhaɪn]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -8586,7 +8586,7 @@
     "b_tarr_hist": "Ainos",
     "b_origin": "Ainos (constituent holding of Schönstat)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.nɔs]",
+    "b_ipa": "[ˈaɪ.nɔs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -8608,7 +8608,7 @@
     "b_tarr_hist": "Raidestos",
     "b_origin": "Raidestos (constituent holding of Schönstat)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrɛɪ.dɛs.tɔs]",
+    "b_ipa": "[ˈraɪ.dɛs.tɔs]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -8663,7 +8663,7 @@
     "b_tarr_hist": "Herakleia Perinthos",
     "b_origin": "Herakleia Perinthos (constituent holding of Arkadîôpel)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛ.ra.klɛɪ.a ˈpɛ.rɪnt.hɔs]",
+    "b_ipa": "[ˈhɛ.ra.klɛ.ja ˈpɛ.rɪnt.hɔs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -8718,7 +8718,7 @@
     "b_tarr_hist": "Traianopolis",
     "b_origin": "Traianopolis (constituent holding of Mosinôpel)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtrɛɪ.a.nɔ.pɔ.lɪs]",
+    "b_ipa": "[ˈtra.ja.nɔ.pɔ.lɪs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -9070,7 +9070,7 @@
     "b_tarr_hist": "Kassandreia",
     "b_origin": "Kassandreia (constituent holding of Chalkidîke)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.san.drɛɪ.a]",
+    "b_ipa": "[ˈka.san.drɛ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -12645,7 +12645,7 @@
     "b_tarr_hist": "Katyaion",
     "b_origin": "Katyaion (constituent holding of Prûse)",
     "b_anachronism": "",
-    "b_ipa": "[kat.jɛɪ.ˈɔn]",
+    "b_ipa": "[kat.ja.ˈjɔn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -12700,7 +12700,7 @@
     "b_tarr_hist": "Dorylaion",
     "b_origin": "Dorylaion (constituent holding of Dorîlêe)",
     "b_anachronism": "",
-    "b_ipa": "[dɔ.rɪ.lɛɪ.ˈɔn]",
+    "b_ipa": "[dɔ.rɪ.la.ˈjɔn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -12854,7 +12854,7 @@
     "b_tarr_hist": "Akrainos",
     "b_origin": "Akrainos (constituent holding of Sârdes)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.krɛɪ.nɔs]",
+    "b_ipa": "[ˈa.kraɪ.nɔs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -13030,7 +13030,7 @@
     "b_tarr_hist": "Chelai",
     "b_origin": "Chelai (constituent holding of Nikomêdje)",
     "b_anachronism": "",
-    "b_ipa": "[xɛ.ˈlɛɪ]",
+    "b_ipa": "[xɛ.ˈlaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -13129,7 +13129,7 @@
     "b_tarr_hist": "Krateia",
     "b_origin": "Krateia (constituent holding of Heraklêe-Pontîke)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkra.tɛɪ.a]",
+    "b_ipa": "[ˈkra.tɛ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -13217,7 +13217,7 @@
     "b_tarr_hist": "Krateia",
     "b_origin": "Krateia (constituent holding of Hadrianôpel-in-Paflagônjen)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkra.tɛɪ.a]",
+    "b_ipa": "[ˈkra.tɛ.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -13426,7 +13426,7 @@
     "b_tarr_hist": "Ayas",
     "b_origin": "Ayas (constituent holding of Anasârbe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.as]",
+    "b_ipa": "[ˈa.jas]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -13448,7 +13448,7 @@
     "b_tarr_hist": "Attaleia",
     "b_origin": "Attaleia (constituent holding of Mîre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.ta.lɛɪ.a]",
+    "b_ipa": "[ˈa.ta.lɛ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -13646,7 +13646,7 @@
     "b_tarr_hist": "Aisanoî",
     "b_origin": "Aizanoi (ancient Phrygian sanctuary city with Temple of Zeus) (in-game: Aezani)",
     "b_anachronism": "Ancient Greco-Roman civitas Aizanoi.",
-    "b_ipa": "[ɛɪ.za.nɔ.ˈiː]",
+    "b_ipa": "[aɪ.za.nɔ.ˈiː]",
     "holding_type": "castle",
     "category": "classical_antiquity"
   },
@@ -13657,7 +13657,7 @@
     "b_tarr_hist": "Nakoleia",
     "b_origin": "Nakoleia (constituent holding of Sînnade)",
     "b_anachronism": "",
-    "b_ipa": "[ˈna.kɔ.lɛɪ.a]",
+    "b_ipa": "[ˈna.kɔ.lɛ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -13734,7 +13734,7 @@
     "b_tarr_hist": "Parlais",
     "b_origin": "Parlais (constituent holding of Sagalâs)",
     "b_anachronism": "",
-    "b_ipa": "[par.ˈlɛɪs]",
+    "b_ipa": "[par.ˈlaɪs]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -13822,7 +13822,7 @@
     "b_tarr_hist": "Tyraion",
     "b_origin": "Tyraion (constituent holding of Polîbot)",
     "b_anachronism": "",
-    "b_ipa": "[tɪ.rɛɪ.ˈɔn]",
+    "b_ipa": "[tɪ.ra.ˈjɔn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -14031,7 +14031,7 @@
     "b_tarr_hist": "Euaissa",
     "b_origin": "Euaissa (constituent holding of Charsjanôn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɔʏ.ɛɪ.sa]",
+    "b_ipa": "[ˈɔʏ.aɪ.sa]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -14075,7 +14075,7 @@
     "b_tarr_hist": "Kaisarêe",
     "b_origin": "Kaisereia (Kaisereia)",
     "b_anachronism": "",
-    "b_ipa": "[kɛɪ.za.ˈreː.ɛ]",
+    "b_ipa": "[kaɪ.za.ˈreː.ɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -14152,7 +14152,7 @@
     "b_tarr_hist": "Aigialos",
     "b_origin": "Aigialos (constituent holding of Amâstris)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.ɣɪ.a.lɔs]",
+    "b_ipa": "[ˈaɪ.ɣɪ.a.lɔs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -14372,7 +14372,7 @@
     "b_tarr_hist": "Agranai",
     "b_origin": "Agranai (constituent holding of Sêle)",
     "b_anachronism": "",
-    "b_ipa": "[a.ɡra.ˈnɛɪ]",
+    "b_ipa": "[a.ɡra.ˈnaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -14449,7 +14449,7 @@
     "b_tarr_hist": "Gauraina",
     "b_origin": "Gauraina (constituent holding of Asîsje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɔʊ.rɛɪ.na]",
+    "b_ipa": "[ˈɡɔʊ.raɪ.na]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -14581,7 +14581,7 @@
     "b_tarr_hist": "Oinaion",
     "b_origin": "Oinaion (constituent holding of Kerasûnt)",
     "b_anachronism": "",
-    "b_ipa": "[ɔ.ɪ.nɛɪ.ˈɔn]",
+    "b_ipa": "[ɔ.ɪ.na.ˈjɔn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -14625,7 +14625,7 @@
     "b_tarr_hist": "Neokaisareia",
     "b_origin": "Neokaisareia (constituent holding of Kolônêe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɛ.ɔ.kɛɪ.za.rɛɪ.a]",
+    "b_ipa": "[ˈnɛ.ɔ.kaɪ.za.rɛ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -14647,7 +14647,7 @@
     "b_tarr_hist": "Hypseie",
     "b_origin": "Hypseie (constituent holding of Kolônêe)",
     "b_anachronism": "",
-    "b_ipa": "[hɪp.ˈsɛɪ.ɛ]",
+    "b_ipa": "[hɪp.ˈsɛ.jɛ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -15010,7 +15010,7 @@
     "b_tarr_hist": "Kumayri",
     "b_origin": "Kumayri (constituent holding of Âni)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkʊ.mɛɪ.rɪ]",
+    "b_ipa": "[ˈkʊ.maɪ.rɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -15604,7 +15604,7 @@
     "b_tarr_hist": "Kayan",
     "b_origin": "Kayan (constituent holding of Lôri)",
     "b_anachronism": "",
-    "b_ipa": "[kɛɪ.ˈan]",
+    "b_ipa": "[ka.ˈjan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -17210,7 +17210,7 @@
     "b_tarr_hist": "Pistoia",
     "b_origin": "Pistoia (constituent holding of Lûke)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpɪs.tɔ.ɪ.a]",
+    "b_ipa": "[ˈpɪs.tɔ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -19157,7 +19157,7 @@
     "b_tarr_hist": "Lais",
     "b_origin": "Lais (constituent holding of Ume-Flutz)",
     "b_anachronism": "",
-    "b_ipa": "[lɛɪs]",
+    "b_ipa": "[laɪs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -19333,7 +19333,7 @@
     "b_tarr_hist": "Ylikainuu",
     "b_origin": "Ylikainuu (constituent holding of Tôrne-Flutz)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɪ.lɪ.kɛɪ.nʊ.ʊ]",
+    "b_ipa": "[ˈɪ.lɪ.kaɪ.nʊ.ʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -19443,7 +19443,7 @@
     "b_tarr_hist": "Guovdageaidnu",
     "b_origin": "Guovdageaidnu (constituent holding of Awjowâre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡʊ.ɔv.da.ɣɛ.ɛɪd.nʊ]",
+    "b_ipa": "[ˈɡʊ.ɔv.da.ɣɛ.aɪd.nʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -21841,7 +21841,7 @@
     "b_tarr_hist": "Savitaipale",
     "b_origin": "Savitaipale (constituent holding of Wîpuri)",
     "b_anachronism": "",
-    "b_ipa": "[sa.vɪ.tɛɪ.ˈpa.lɛ]",
+    "b_ipa": "[sa.vɪ.taɪ.ˈpa.lɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -23370,7 +23370,7 @@
     "b_tarr_hist": "Kedainiai",
     "b_origin": "Kedainiai (constituent holding of Rassêinen)",
     "b_anachronism": "",
-    "b_ipa": "[kɛ.dɛɪ.nɪ.ˈɛɪ]",
+    "b_ipa": "[kɛ.daɪ.nɪ.ˈaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -23447,7 +23447,7 @@
     "b_tarr_hist": "Telsiai",
     "b_origin": "Telsiai (constituent holding of Palânge)",
     "b_anachronism": "",
-    "b_ipa": "[tɛl.sɪ.ˈɛɪ]",
+    "b_ipa": "[tɛl.sɪ.ˈaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -23480,7 +23480,7 @@
     "b_tarr_hist": "Birschai",
     "b_origin": "Birzai (constituent holding of Schaulen)",
     "b_anachronism": "",
-    "b_ipa": "[bɪr.ˈʃɛɪ]",
+    "b_ipa": "[bɪr.ˈʃaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -24338,7 +24338,7 @@
     "b_tarr_hist": "Kraine",
     "b_origin": "Nakel (Krajna)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkrɛɪ.nə]",
+    "b_ipa": "[ˈkraɪ.nə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -25724,7 +25724,7 @@
     "b_tarr_hist": "Znaim",
     "b_origin": "Znojmo — Historical Option A seat of c_znojmo",
     "b_anachronism": "",
-    "b_ipa": "[tsnɛɪm]",
+    "b_ipa": "[tsnaɪm]",
     "holding_type": "castle",
     "category": "option_a_seat"
   },
@@ -26230,7 +26230,7 @@
     "b_tarr_hist": "Grossenhain",
     "b_origin": "Grossenhain (constituent holding of Mîssen)",
     "b_anachronism": "",
-    "b_ipa": "[ɡrɔ.sɛn.ˈhɛɪn]",
+    "b_ipa": "[ɡrɔ.sɛn.ˈhaɪn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -26824,7 +26824,7 @@
     "b_tarr_hist": "Malaia Skvirka",
     "b_origin": "Malaia Skvirka (constituent holding of Korsûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈma.lɛɪ.a ˈskvɪr.ka]",
+    "b_ipa": "[ˈma.la.ja ˈskvɪr.ka]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -26835,7 +26835,7 @@
     "b_tarr_hist": "Haisyn",
     "b_origin": "Haisyn (constituent holding of Korsûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhɛɪ.zɪn]",
+    "b_ipa": "[ˈhaɪ.zɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -27869,7 +27869,7 @@
     "b_tarr_hist": "Valday",
     "b_origin": "Valday (constituent holding of Torschôch)",
     "b_anachronism": "",
-    "b_ipa": "[val.ˈdɛɪ]",
+    "b_ipa": "[val.ˈdaɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -28254,7 +28254,7 @@
     "b_tarr_hist": "Hlybokaye",
     "b_origin": "Hlybokaye (constituent holding of Lukômel)",
     "b_anachronism": "",
-    "b_ipa": "[hlɪ.bɔ.ˈkɛɪ.ɛ]",
+    "b_ipa": "[hlɪ.bɔ.ˈka.jɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -28408,7 +28408,7 @@
     "b_tarr_hist": "Moschaitzich",
     "b_origin": "Mozhaysk (Hydronym: Named after the Mozhayka River (in-game: Mozhaysk))",
     "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-    "b_ipa": "[ˈmɔ.ʃɛɪ.tsɪç]",
+    "b_ipa": "[ˈmɔ.ʃaɪ.tsɪç]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -28595,7 +28595,7 @@
     "b_tarr_hist": "Pereyaslavl Zalessky",
     "b_origin": "Pereyaslavl Zalessky (constituent holding of Sûsdal)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpɛ.rɛɪ.as.lavl ˈtsa.lɛs.kɪ]",
+    "b_ipa": "[ˈpɛ.rɛ.jas.lavl ˈtsa.lɛs.kɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -28617,7 +28617,7 @@
     "b_tarr_hist": "Gavrilovskoye",
     "b_origin": "Gavrilovskoye (constituent holding of Sûsdal)",
     "b_anachronism": "",
-    "b_ipa": "[ɡa.vrɪ.lɔv.ˈskɔʏ.ɛ]",
+    "b_ipa": "[ɡa.vrɪ.lɔv.ˈskɔ.jɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -28738,7 +28738,7 @@
     "b_tarr_hist": "Pereyaslavl Ryazanski",
     "b_origin": "Pereyaslavl Ryazanski (constituent holding of Rêsan)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpɛ.rɛɪ.as.lavl ˈrja.tsan.skɪ]",
+    "b_ipa": "[ˈpɛ.rɛ.jas.lavl ˈrja.tsan.skɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -28914,7 +28914,7 @@
     "b_tarr_hist": "Schuya",
     "b_origin": "Shuya (constituent holding of Plês)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃʊ.ɪ.a]",
+    "b_ipa": "[ˈʃʊ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -28925,7 +28925,7 @@
     "b_tarr_hist": "Sol Vilikaya",
     "b_origin": "Sol Vilikaya (constituent holding of Plês)",
     "b_anachronism": "",
-    "b_ipa": "[sɔl ˈvɪ.lɪ.kɛɪ.a]",
+    "b_ipa": "[sɔl ˈvɪ.lɪ.ka.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -29057,7 +29057,7 @@
     "b_tarr_hist": "Korelskoye",
     "b_origin": "Korelskoye (constituent holding of Onêge-Münde)",
     "b_anachronism": "",
-    "b_ipa": "[kɔ.rɛl.ˈskɔʏ.ɛ]",
+    "b_ipa": "[kɔ.rɛl.ˈskɔ.jɛ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -29310,7 +29310,7 @@
     "b_tarr_hist": "Vyatzkoye",
     "b_origin": "Vyatskoye (constituent holding of Wologde)",
     "b_anachronism": "",
-    "b_ipa": "[vjats.ˈkɔʏ.ɛ]",
+    "b_ipa": "[vjats.ˈkɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -29332,7 +29332,7 @@
     "b_tarr_hist": "Razlivnoye",
     "b_origin": "Razlivnoye (constituent holding of Sôl-Galitsch)",
     "b_anachronism": "",
-    "b_ipa": "[rats.lɪv.ˈnɔʏ.ɛ]",
+    "b_ipa": "[rats.lɪv.ˈnɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -29376,7 +29376,7 @@
     "b_tarr_hist": "Suday",
     "b_origin": "Suday (constituent holding of Unsche)",
     "b_anachronism": "",
-    "b_ipa": "[sʊ.ˈdɛɪ]",
+    "b_ipa": "[sʊ.ˈdaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -30256,7 +30256,7 @@
     "b_tarr_hist": "Aksay",
     "b_origin": "Aksay (constituent holding of Sarkêl)",
     "b_anachronism": "",
-    "b_ipa": "[ak.ˈsɛɪ]",
+    "b_ipa": "[ak.ˈsaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -30333,7 +30333,7 @@
     "b_tarr_hist": "Yenotayevka",
     "b_origin": "Yenotayevka (constituent holding of Beksîme)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɛ.nɔ.tɛɪ.ɛv.ka]",
+    "b_ipa": "[ˈjɛ.nɔ.ta.jɛv.ka]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -31037,7 +31037,7 @@
     "b_tarr_hist": "Kosch Kurbay",
     "b_origin": "Kosh Kurbay (Kosh Kurbay)",
     "b_anachronism": "",
-    "b_ipa": "[kɔʃ kʊr.ˈbɛɪ]",
+    "b_ipa": "[kɔʃ kʊr.ˈbaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -31301,7 +31301,7 @@
     "b_tarr_hist": "Kainar",
     "b_origin": "Kainar (Kainar (in-game: Kainar))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Kainar under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈkɛɪ.nar]",
+    "b_ipa": "[ˈkaɪ.nar]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -31323,7 +31323,7 @@
     "b_tarr_hist": "Baisary",
     "b_origin": "Baisary (Baisary (in-game: Baisary))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Baisary under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈbɛɪ.za.rɪ]",
+    "b_ipa": "[ˈbaɪ.za.rɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -32610,7 +32610,7 @@
     "b_tarr_hist": "Repnoye",
     "b_origin": "Repnoye (constituent holding of Durôwke)",
     "b_anachronism": "",
-    "b_ipa": "[rɛp.ˈnɔʏ.ɛ]",
+    "b_ipa": "[rɛp.ˈnɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -33644,7 +33644,7 @@
     "b_tarr_hist": "Kandiskaya",
     "b_origin": "Kandiskaya (constituent holding of Kartaûsch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkan.dɪs.kɛɪ.a]",
+    "b_ipa": "[ˈkan.dɪs.ka.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -34557,7 +34557,7 @@
     "b_tarr_hist": "Terektai",
     "b_origin": "Terektai (Terektai)",
     "b_anachronism": "",
-    "b_ipa": "[tɛ.rɛk.ˈtɛɪ]",
+    "b_ipa": "[tɛ.rɛk.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -35756,7 +35756,7 @@
     "b_tarr_hist": "Baibalich",
     "b_origin": "Baibalik (Baibalik)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.ba.lɪç]",
+    "b_ipa": "[ˈbaɪ.ba.lɪç]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -36185,7 +36185,7 @@
     "b_tarr_hist": "Talbai",
     "b_origin": "Mongotalbai (Talbai)",
     "b_anachronism": "",
-    "b_ipa": "[tal.ˈbɛɪ]",
+    "b_ipa": "[tal.ˈbaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -36218,7 +36218,7 @@
     "b_tarr_hist": "Chiltzaiz",
     "b_origin": "Khiltsaiz (Khiltsaiz)",
     "b_anachronism": "",
-    "b_ipa": "[xɪl.ˈtsɛɪts]",
+    "b_ipa": "[xɪl.ˈtsaɪts]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -37945,7 +37945,7 @@
     "b_tarr_hist": "Muye",
     "b_origin": "Muya (Muya)",
     "b_anachronism": "",
-    "b_ipa": "[mʊ.ˈɪ.ɛ]",
+    "b_ipa": "[ˈmʊ.jɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38121,7 +38121,7 @@
     "b_tarr_hist": "Karabaigal",
     "b_origin": "Chuulunuruu (Karabaigal)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ra.bɛɪ.ɣal]",
+    "b_ipa": "[ˈka.ra.baɪ.ɣal]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38154,7 +38154,7 @@
     "b_tarr_hist": "Tschuye",
     "b_origin": "Chuya (Chuya)",
     "b_anachronism": "",
-    "b_ipa": "[tʃʊ.ˈɪ.ɛ]",
+    "b_ipa": "[ˈtʃʊ.jɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -38176,7 +38176,7 @@
     "b_tarr_hist": "Baigalûls",
     "b_origin": "Kirenga (Baigaluuls)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ɣa.ˈluːls]",
+    "b_ipa": "[baɪ.ɣa.ˈluːls]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -39309,7 +39309,7 @@
     "b_tarr_hist": "Abakhai",
     "b_origin": "Kur Chagan (Abakhai (in-game: Abakhai))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Abakhai under Burden of Proof on Antiquity.",
-    "b_ipa": "[a.bak.ˈhɛɪ]",
+    "b_ipa": "[a.bak.ˈhaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -39397,7 +39397,7 @@
     "b_tarr_hist": "Tschayalitsch",
     "b_origin": "Qayaliq (Qayaliq)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʃɛɪ.a.lɪtʃ]",
+    "b_ipa": "[ˈtʃa.ja.lɪtʃ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -39540,7 +39540,7 @@
     "b_tarr_hist": "Aksuyech",
     "b_origin": "Aksuyek (Aksuyech (in-game: Aksuyek))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Aksuyech under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈak.sʊ.ɪ.ɛç]",
+    "b_ipa": "[ˈak.sʊ.jɛç]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -39870,7 +39870,7 @@
     "b_tarr_hist": "Karamay",
     "b_origin": "Karamay (Karamay)",
     "b_anachronism": "",
-    "b_ipa": "[ka.ra.ˈmɛɪ]",
+    "b_ipa": "[ka.ra.ˈmaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40013,7 +40013,7 @@
     "b_tarr_hist": "Turgay",
     "b_origin": "Turgay (Turgay (in-game: Turgay))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Turgay under Burden of Proof on Antiquity.",
-    "b_ipa": "[tʊr.ˈɡɛɪ]",
+    "b_ipa": "[tʊr.ˈɡaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40288,7 +40288,7 @@
     "b_tarr_hist": "Togotai",
     "b_origin": "Kaptadyr (Togotai)",
     "b_anachronism": "",
-    "b_ipa": "[tɔ.ɣɔ.ˈtɛɪ]",
+    "b_ipa": "[tɔ.ɣɔ.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40640,7 +40640,7 @@
     "b_tarr_hist": "Kostanay",
     "b_origin": "Kostanay (Kostanay)",
     "b_anachronism": "",
-    "b_ipa": "[kɔs.ta.ˈnɛɪ]",
+    "b_ipa": "[kɔs.ta.ˈnaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40860,7 +40860,7 @@
     "b_tarr_hist": "Nurtay",
     "b_origin": "Nurtay (Nurtay)",
     "b_anachronism": "",
-    "b_ipa": "[nʊr.ˈtɛɪ]",
+    "b_ipa": "[nʊr.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -40893,7 +40893,7 @@
     "b_tarr_hist": "Tokumbay",
     "b_origin": "Tokumbay (Tokumbay)",
     "b_anachronism": "",
-    "b_ipa": "[tɔ.kʊm.ˈbɛɪ]",
+    "b_ipa": "[tɔ.kʊm.ˈbaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41300,7 +41300,7 @@
     "b_tarr_hist": "Kandygatai",
     "b_origin": "Kandygataï (Kandygatai)",
     "b_anachronism": "",
-    "b_ipa": "[kan.dɪ.ɣa.ˈtɛɪ]",
+    "b_ipa": "[kan.dɪ.ɣa.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41366,7 +41366,7 @@
     "b_tarr_hist": "Achtaylach",
     "b_origin": "Ak-Taylak (Ak-Taylak)",
     "b_anachronism": "",
-    "b_ipa": "[ˈax.tɛɪ.lax]",
+    "b_ipa": "[ˈax.taɪ.lax]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41443,7 +41443,7 @@
     "b_tarr_hist": "Aigun",
     "b_origin": "Tulkulam (Aigun)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.ɣʊn]",
+    "b_ipa": "[ˈaɪ.ɣʊn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41652,7 +41652,7 @@
     "b_tarr_hist": "Burgasutai",
     "b_origin": "Burgasutai (Burgasutai (in-game: Burgasutai))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Burgasutai under Burden of Proof on Antiquity.",
-    "b_ipa": "[bʊr.ɡa.zʊ.ˈtɛɪ]",
+    "b_ipa": "[bʊr.ɡa.zʊ.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41806,7 +41806,7 @@
     "b_tarr_hist": "Altay",
     "b_origin": "Altay (Altay)",
     "b_anachronism": "",
-    "b_ipa": "[al.ˈtɛɪ]",
+    "b_ipa": "[al.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -41927,7 +41927,7 @@
     "b_tarr_hist": "Agairich",
     "b_origin": "Agairik (Agairik)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.ɣɛɪ.rɪç]",
+    "b_ipa": "[ˈa.ɣaɪ.rɪç]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -42059,7 +42059,7 @@
     "b_tarr_hist": "Jeminay",
     "b_origin": "Jeminay (constituent holding of Kaerdschi)",
     "b_anachronism": "",
-    "b_ipa": "[jɛ.mɪ.ˈnɛɪ]",
+    "b_ipa": "[jɛ.mɪ.ˈnaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -42191,7 +42191,7 @@
     "b_tarr_hist": "Morin Tolochai",
     "b_origin": "Morin Tolochai (constituent holding of Karasirgan)",
     "b_anachronism": "",
-    "b_ipa": "[mɔ.ˈrɪn tɔ.lɔ.ˈxɛɪ]",
+    "b_ipa": "[mɔ.ˈrɪn tɔ.lɔ.ˈxaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -42268,7 +42268,7 @@
     "b_tarr_hist": "Bugaiwilik",
     "b_origin": "Bugaiwilik (constituent holding of Chotan)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbʊ.ɣɛɪ.wɪ.lɪk]",
+    "b_ipa": "[ˈbʊ.ɣaɪ.wɪ.lɪk]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -42719,7 +42719,7 @@
     "b_tarr_hist": "Schayar",
     "b_origin": "Shayar (constituent holding of Kutsche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃɛɪ.ar]",
+    "b_ipa": "[ˈʃa.jar]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -42730,7 +42730,7 @@
     "b_tarr_hist": "Luntai",
     "b_origin": "Luntai (Luntai)",
     "b_anachronism": "",
-    "b_ipa": "[lʊn.ˈtɛɪ]",
+    "b_ipa": "[lʊn.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -42829,7 +42829,7 @@
     "b_tarr_hist": "Baschkoyumal",
     "b_origin": "Bashkoyumal (constituent holding of Tscharklitsch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbaʃ.kɔʏ.ʊ.mal]",
+    "b_ipa": "[ˈbaʃ.kɔ.jʊ.mal]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -42862,7 +42862,7 @@
     "b_tarr_hist": "Omotrunnaisse",
     "b_origin": "Omotrunnaisse (constituent holding of Miran)",
     "b_anachronism": "",
-    "b_ipa": "[ɔ.mɔ.trʊ.ˈnɛɪ.sə]",
+    "b_ipa": "[ɔ.mɔ.trʊ.ˈnaɪ.sə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -43357,7 +43357,7 @@
     "b_tarr_hist": "Raimskoe",
     "b_origin": "Raimskoe (Raimskoe)",
     "b_anachronism": "",
-    "b_ipa": "[rɛɪm.ˈskɔ.ɛ]",
+    "b_ipa": "[raɪm.ˈskɔ.ɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -43379,7 +43379,7 @@
     "b_tarr_hist": "Kara-Mugai",
     "b_origin": "Kara-Mugai (Kara-Mugai)",
     "b_anachronism": "",
-    "b_ipa": "[ˈka.ra mʊ.ˈɣɛɪ]",
+    "b_ipa": "[ˈka.ra mʊ.ˈɣaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -43500,7 +43500,7 @@
     "b_tarr_hist": "Airyuch",
     "b_origin": "Airyuk (Airyuk)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪr.jʊx]",
+    "b_ipa": "[ˈaɪr.jʊx]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -43742,7 +43742,7 @@
     "b_tarr_hist": "Sayram",
     "b_origin": "Sayram (constituent holding of Tschah)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪ.ram]",
+    "b_ipa": "[ˈsaɪ.ram]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -43929,7 +43929,7 @@
     "b_tarr_hist": "Tschuriltay",
     "b_origin": "Quriltay (Quriltay)",
     "b_anachronism": "",
-    "b_ipa": "[tʃʊ.rɪl.ˈtɛɪ]",
+    "b_ipa": "[tʃʊ.rɪl.ˈtaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -44017,7 +44017,7 @@
     "b_tarr_hist": "Suyap",
     "b_origin": "Suyab (Suyab)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsʊ.ɪ.ap]",
+    "b_ipa": "[ˈsʊ.jap]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -44281,7 +44281,7 @@
     "b_tarr_hist": "Paikênt",
     "b_origin": "Paykend (Paikênt (in-game: Firabr))",
     "b_anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
-    "b_ipa": "[pɛɪ.ˈkeːnt]",
+    "b_ipa": "[paɪ.ˈkeːnt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -44490,7 +44490,7 @@
     "b_tarr_hist": "Zaybak",
     "b_origin": "Zaybak (constituent holding of Mundschân)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsɛɪ.bak]",
+    "b_ipa": "[ˈtsaɪ.bak]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -45326,7 +45326,7 @@
     "b_tarr_hist": "Wayikhan",
     "b_origin": "Wayikhan (constituent holding of Gardamân)",
     "b_anachronism": "",
-    "b_ipa": "[wɛɪ.ɪk.ˈhan]",
+    "b_ipa": "[wa.jɪk.ˈhan]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -45491,7 +45491,7 @@
     "b_tarr_hist": "Ortakuyu",
     "b_origin": "Ortakuyu (constituent holding of Gelwen Riete)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɔr.ta.kʊ.ɪ.ʊ]",
+    "b_ipa": "[ˈɔr.ta.kʊ.jʊ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -45590,7 +45590,7 @@
     "b_tarr_hist": "Gulpaygan",
     "b_origin": "Gulpaygan (constituent holding of Isfahân)",
     "b_anachronism": "",
-    "b_ipa": "[ɡʊl.pɛɪ.ˈɣan]",
+    "b_ipa": "[ɡʊl.paɪ.ˈɣan]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -45810,7 +45810,7 @@
     "b_tarr_hist": "Nayband",
     "b_origin": "Nayband (constituent holding of Behabât)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɛɪ.band]",
+    "b_ipa": "[ˈnaɪ.band]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -45821,7 +45821,7 @@
     "b_tarr_hist": "Khubayan",
     "b_origin": "Khubayan (constituent holding of Behabât)",
     "b_anachronism": "",
-    "b_ipa": "[khʊ.bɛɪ.ˈan]",
+    "b_ipa": "[khʊ.ba.ˈjan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -45953,7 +45953,7 @@
     "b_tarr_hist": "Ruyan-Jirufti",
     "b_origin": "Ruyan-Jirufti (constituent holding of Dschirûft)",
     "b_anachronism": "",
-    "b_ipa": "[rʊ.ɪ.ˈan ˈjɪ.rʊf.tɪ]",
+    "b_ipa": "[rʊ.ˈjan ˈjɪ.rʊf.tɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -45975,7 +45975,7 @@
     "b_tarr_hist": "Nain",
     "b_origin": "Nain (constituent holding of Jast)",
     "b_anachronism": "",
-    "b_ipa": "[nɛɪn]",
+    "b_ipa": "[naɪn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -45997,7 +45997,7 @@
     "b_tarr_hist": "Maibud",
     "b_origin": "Maibud (constituent holding of Jast)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.bʊd]",
+    "b_ipa": "[ˈmaɪ.bʊd]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -46151,7 +46151,7 @@
     "b_tarr_hist": "Maschkuya",
     "b_origin": "Mashkuya (constituent holding of Rêi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmaʃ.kʊ.ɪ.a]",
+    "b_ipa": "[ˈmaʃ.kʊ.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -46580,7 +46580,7 @@
     "b_tarr_hist": "Mayin",
     "b_origin": "Mayin (constituent holding of Istâcher)",
     "b_anachronism": "",
-    "b_ipa": "[mɛɪ.ˈɪn]",
+    "b_ipa": "[ma.ˈjɪn]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -46822,7 +46822,7 @@
     "b_tarr_hist": "Huwaiza",
     "b_origin": "Huwaiza (constituent holding of Achwâs)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhʊ.wɛɪ.tsa]",
+    "b_ipa": "[ˈhʊ.waɪ.tsa]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -46987,7 +46987,7 @@
     "b_tarr_hist": "Bayan",
     "b_origin": "Bayan (constituent holding of Abbadân)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈan]",
+    "b_ipa": "[ba.ˈjan]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -47119,7 +47119,7 @@
     "b_tarr_hist": "Saimâre",
     "b_origin": "as-Saimara (ancient historical capital of the Saimara district) (in-game: as-Saimara)",
     "b_anachronism": "Historical regional capital of Saimara.",
-    "b_ipa": "[sɛɪ.ˈmaː.rə]",
+    "b_ipa": "[saɪ.ˈmaː.rə]",
     "holding_type": "city",
     "category": "classical_antiquity"
   },
@@ -47218,7 +47218,7 @@
     "b_tarr_hist": "Maihana",
     "b_origin": "Maihana (constituent holding of Tûs)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.ha.na]",
+    "b_ipa": "[ˈmaɪ.ha.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -47284,7 +47284,7 @@
     "b_tarr_hist": "Isfarain",
     "b_origin": "Isfarain (constituent holding of Dschuweîn)",
     "b_anachronism": "",
-    "b_ipa": "[ɪs.fa.ˈrɛɪn]",
+    "b_ipa": "[ɪs.fa.ˈraɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -47295,7 +47295,7 @@
     "b_tarr_hist": "Baihâch",
     "b_origin": "Keshmar (Baihaq)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈhaːx]",
+    "b_ipa": "[baɪ.ˈhaːx]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -47427,7 +47427,7 @@
     "b_tarr_hist": "Kuschmaihan",
     "b_origin": "Kushmaihan (constituent holding of Merwe)",
     "b_anachronism": "",
-    "b_ipa": "[kʊʃ.mɛɪ.ˈhan]",
+    "b_ipa": "[kʊʃ.maɪ.ˈhan]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -47482,7 +47482,7 @@
     "b_tarr_hist": "Tscharinayn",
     "b_origin": "Qarinayn (constituent holding of Merwe-ar-Rût)",
     "b_anachronism": "",
-    "b_ipa": "[tʃa.rɪ.ˈnɛɪn]",
+    "b_ipa": "[tʃa.rɪ.ˈnaɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -47647,7 +47647,7 @@
     "b_tarr_hist": "Sayat",
     "b_origin": "Sayat (constituent holding of Amûl-am-Oxus)",
     "b_anachronism": "",
-    "b_ipa": "[sɛɪ.ˈat]",
+    "b_ipa": "[sa.ˈjat]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -47845,7 +47845,7 @@
     "b_tarr_hist": "Tayabat",
     "b_origin": "Tayabad (constituent holding of Bachârs)",
     "b_anachronism": "",
-    "b_ipa": "[tɛɪ.a.ˈbat]",
+    "b_ipa": "[ta.ja.ˈbat]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -47889,7 +47889,7 @@
     "b_tarr_hist": "Bamain",
     "b_origin": "Bamain (constituent holding of Badgîs)",
     "b_anachronism": "",
-    "b_ipa": "[ba.ˈmɛɪn]",
+    "b_ipa": "[ba.ˈmaɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -48780,7 +48780,7 @@
     "b_tarr_hist": "Bailakân",
     "b_origin": "Bailaqan (Bailaqan)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.la.ˈkaːn]",
+    "b_ipa": "[baɪ.la.ˈkaːn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -48835,7 +48835,7 @@
     "b_tarr_hist": "Uschnuya",
     "b_origin": "Ushnuya (constituent holding of Urmîje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʊʃ.nʊ.ɪ.a]",
+    "b_ipa": "[ˈʊʃ.nʊ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -48945,7 +48945,7 @@
     "b_tarr_hist": "Paidangaran",
     "b_origin": "Paidangaran (constituent holding of Schemâche)",
     "b_anachronism": "",
-    "b_ipa": "[pɛɪ.da.ŋa.ˈran]",
+    "b_ipa": "[paɪ.da.ŋa.ˈran]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -48989,7 +48989,7 @@
     "b_tarr_hist": "Paitakarân",
     "b_origin": "Paytakaran (Paitakarân (in-game: Mugan))",
     "b_anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
-    "b_ipa": "[pɛɪ.ta.ka.ˈraːn]",
+    "b_ipa": "[paɪ.ta.ka.ˈraːn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -49066,7 +49066,7 @@
     "b_tarr_hist": "Saindak",
     "b_origin": "Saindak (constituent holding of Pandschgûr)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪn.dak]",
+    "b_ipa": "[ˈsaɪn.dak]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -49077,7 +49077,7 @@
     "b_tarr_hist": "Chagai",
     "b_origin": "Chagai (constituent holding of Pandschgûr)",
     "b_anachronism": "",
-    "b_ipa": "[xa.ˈɣɛɪ]",
+    "b_ipa": "[xa.ˈɣaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -49517,7 +49517,7 @@
     "b_tarr_hist": "Karkuya",
     "b_origin": "Karkuya (constituent holding of Sarântsch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkar.kʊ.ɪ.a]",
+    "b_ipa": "[ˈkar.kʊ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -49583,7 +49583,7 @@
     "b_tarr_hist": "Juwain",
     "b_origin": "Juwain (constituent holding of Farâch)",
     "b_anachronism": "",
-    "b_ipa": "[jʊ.ˈwɛɪn]",
+    "b_ipa": "[jʊ.ˈwaɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -49814,7 +49814,7 @@
     "b_tarr_hist": "Jarbaya",
     "b_origin": "Jarbaya (constituent holding of Bamian)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjar.bɛɪ.a]",
+    "b_ipa": "[ˈjar.ba.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -49979,7 +49979,7 @@
     "b_tarr_hist": "Panjway",
     "b_origin": "Panjway (constituent holding of Ruchatsch)",
     "b_anachronism": "",
-    "b_ipa": "[paɲ.ˈwɛɪ]",
+    "b_ipa": "[paɲ.ˈwaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -50056,7 +50056,7 @@
     "b_tarr_hist": "Aiwana",
     "b_origin": "Aiwana (constituent holding of Samârre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.wa.na]",
+    "b_ipa": "[ˈaɪ.wa.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -50298,7 +50298,7 @@
     "b_tarr_hist": "Ain At-Tamr",
     "b_origin": "Ain At-Tamr (constituent holding of Safâte)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪn at tamr]",
+    "b_ipa": "[aɪn at tamr]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -50331,7 +50331,7 @@
     "b_tarr_hist": "Al-Udhaib",
     "b_origin": "Al-Udhaib (constituent holding of Kadisîje)",
     "b_anachronism": "",
-    "b_ipa": "[al ʊd.ˈhɛɪb]",
+    "b_ipa": "[al ʊd.ˈhaɪb]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -50441,7 +50441,7 @@
     "b_tarr_hist": "Hifair",
     "b_origin": "Hifair (constituent holding of Basre)",
     "b_anachronism": "",
-    "b_ipa": "[hɪ.ˈfɛɪr]",
+    "b_ipa": "[hɪ.ˈfaɪr]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -50452,7 +50452,7 @@
     "b_tarr_hist": "Ar-Rukhail",
     "b_origin": "Ar-Rukhail (constituent holding of Basre)",
     "b_anachronism": "",
-    "b_ipa": "[ar rʊk.ˈhɛɪl]",
+    "b_ipa": "[ar rʊk.ˈhaɪl]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -50485,7 +50485,7 @@
     "b_tarr_hist": "Ain Said",
     "b_origin": "Ain Said (constituent holding of Ubûlle)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪn sɛɪd]",
+    "b_ipa": "[aɪn saɪd]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -50694,7 +50694,7 @@
     "b_tarr_hist": "Bakusaya",
     "b_origin": "Bakusaya (constituent holding of Badarâje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈba.kʊ.zɛɪ.a]",
+    "b_ipa": "[ˈba.kʊ.za.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -50727,7 +50727,7 @@
     "b_tarr_hist": "Ain al-Tschayyara",
     "b_origin": "ain al-Qayyara (constituent holding of Môsul)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪn al ˈtʃɛɪ.ja.ra]",
+    "b_ipa": "[aɪn al ˈtʃaɪ.ja.ra]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -50749,7 +50749,7 @@
     "b_tarr_hist": "Juhaina",
     "b_origin": "Juhaina (constituent holding of Môsul)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjʊ.hɛɪ.na]",
+    "b_ipa": "[ˈjʊ.haɪ.na]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -50837,7 +50837,7 @@
     "b_tarr_hist": "Al-Hayyal",
     "b_origin": "al-Hayyal (constituent holding of Sindschâr)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈhɛɪ.jal]",
+    "b_ipa": "[al ˈhaɪ.jal]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -50881,7 +50881,7 @@
     "b_tarr_hist": "Barqaid",
     "b_origin": "Barqaid (constituent holding of Nasibîn)",
     "b_anachronism": "",
-    "b_ipa": "[bar.ˈkɛɪd]",
+    "b_ipa": "[bar.ˈkaɪd]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -51123,7 +51123,7 @@
     "b_tarr_hist": "As-Suwaida",
     "b_origin": "as-Suwaida (constituent holding of Amîde)",
     "b_anachronism": "",
-    "b_ipa": "[as ˈsʊ.wɛɪ.da]",
+    "b_ipa": "[as ˈsʊ.waɪ.da]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -51200,7 +51200,7 @@
     "b_tarr_hist": "Saird",
     "b_origin": "Saird (constituent holding of Hakkâri)",
     "b_anachronism": "",
-    "b_ipa": "[sɛɪrd]",
+    "b_ipa": "[saɪrd]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -51277,7 +51277,7 @@
     "b_tarr_hist": "Tscharnainburch",
     "b_origin": "Hisn Dhi'l-Qarnayn (Arabic fortress of Dhul-Qarnayn) (in-game: Hisn di-l-Qarnain)",
     "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Tscharnainburch.",
-    "b_ipa": "[ˈtʃar.nɛɪn.bʊrx]",
+    "b_ipa": "[ˈtʃar.naɪn.bʊrx]",
     "holding_type": "city",
     "category": "descriptive_calque"
   },
@@ -51354,7 +51354,7 @@
     "b_tarr_hist": "Sukayr al-Abbas",
     "b_origin": "Sukayr al-Abbas (constituent holding of Hadîthat-Âne)",
     "b_anachronism": "",
-    "b_ipa": "[sʊ.ˈkɛɪr al ˈa.bas]",
+    "b_ipa": "[sʊ.ˈkaɪr al ˈa.bas]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -51750,7 +51750,7 @@
     "b_tarr_hist": "Ploiesti",
     "b_origin": "Ploiesti (constituent holding of Busouwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈplɔ.ɪ.ɛs.tɪ]",
+    "b_ipa": "[ˈplɔ.jɛs.tɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -51794,7 +51794,7 @@
     "b_tarr_hist": "Baia-De-Arama",
     "b_origin": "Baia de Aramă (constituent holding of Schîu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.a dɛ ˈa.ra.ma]",
+    "b_ipa": "[ˈba.ja dɛ ˈa.ra.ma]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -51871,7 +51871,7 @@
     "b_tarr_hist": "Strehaia",
     "b_origin": "Strehaia (constituent holding of Drobête)",
     "b_anachronism": "",
-    "b_ipa": "[ˈstrɛ.hɛɪ.a]",
+    "b_ipa": "[ˈstrɛ.ha.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -51937,7 +51937,7 @@
     "b_tarr_hist": "Baia",
     "b_origin": "Baia (constituent holding of Sutschouwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.a]",
+    "b_ipa": "[ˈba.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -54511,7 +54511,7 @@
     "b_tarr_hist": "La Haie",
     "b_origin": "La Haye (constituent holding of Bursches)",
     "b_anachronism": "",
-    "b_ipa": "[la ˈhɛɪ.ɛ]",
+    "b_ipa": "[la ˈha.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -54852,7 +54852,7 @@
     "b_tarr_hist": "Falaise",
     "b_origin": "Falaise (constituent holding of Bajôs)",
     "b_anachronism": "",
-    "b_ipa": "[fa.ˈlɛɪ.zə]",
+    "b_ipa": "[fa.ˈlaɪ.zə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -54907,7 +54907,7 @@
     "b_tarr_hist": "Mortain",
     "b_origin": "Mortain (constituent holding of Alenzûn)",
     "b_anachronism": "",
-    "b_ipa": "[mɔr.ˈtɛɪn]",
+    "b_ipa": "[mɔr.ˈtaɪn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55226,7 +55226,7 @@
     "b_tarr_hist": "Clairvaux",
     "b_origin": "Clairvaux (constituent holding of Trôjes)",
     "b_anachronism": "",
-    "b_ipa": "[klɛɪr.ˈvɔʊks]",
+    "b_ipa": "[klaɪr.ˈvɔʊks]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55611,7 +55611,7 @@
     "b_tarr_hist": "Semur-En-Brionnais",
     "b_origin": "Semur-en-Brionnais (constituent holding of Mâskûn)",
     "b_anachronism": "",
-    "b_ipa": "[sɛ.ˈmʊr ɛn brɪ.ɔ.ˈnɛɪs]",
+    "b_ipa": "[sɛ.ˈmʊr ɛn brɪ.ɔ.ˈnaɪs]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55798,7 +55798,7 @@
     "b_tarr_hist": "Courtrai",
     "b_origin": "Courtrai (constituent holding of Dornîch)",
     "b_anachronism": "",
-    "b_ipa": "[kɔʊr.ˈtrɛɪ]",
+    "b_ipa": "[kɔʊr.ˈtraɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -55809,7 +55809,7 @@
     "b_tarr_hist": "Aire",
     "b_origin": "Aire (constituent holding of Dornîch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.rə]",
+    "b_ipa": "[ˈaɪ.rə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -55996,7 +55996,7 @@
     "b_tarr_hist": "Bazadais",
     "b_origin": "Bazadais (constituent holding of Atûre)",
     "b_anachronism": "",
-    "b_ipa": "[ba.tsa.ˈdɛɪs]",
+    "b_ipa": "[ba.tsa.ˈdaɪs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -56997,7 +56997,7 @@
     "b_tarr_hist": "Velai",
     "b_origin": "Le Puy (Velay)",
     "b_anachronism": "",
-    "b_ipa": "[vɛ.ˈlɛɪ]",
+    "b_ipa": "[vɛ.ˈlaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -57118,7 +57118,7 @@
     "b_tarr_hist": "Garait",
     "b_origin": "Guéret (constituent holding of Welschen March)",
     "b_anachronism": "",
-    "b_ipa": "[ɡa.ˈrɛɪt]",
+    "b_ipa": "[ɡa.ˈraɪt]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57184,7 +57184,7 @@
     "b_tarr_hist": "Rais",
     "b_origin": "Rais (constituent holding of Nantes)",
     "b_anachronism": "",
-    "b_ipa": "[rɛɪs]",
+    "b_ipa": "[raɪs]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -57283,7 +57283,7 @@
     "b_tarr_hist": "Trêguier",
     "b_origin": "Tréguier (constituent holding of Pentjêver)",
     "b_anachronism": "",
-    "b_ipa": "[treː.ɣɪ.ˈɛr]",
+    "b_ipa": "[treː.ɣʊ.ˈjɛr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -57360,7 +57360,7 @@
     "b_tarr_hist": "Vaison",
     "b_origin": "Vaison (constituent holding of Venessîn)",
     "b_anachronism": "",
-    "b_ipa": "[vɛɪ.ˈzɔn]",
+    "b_ipa": "[vaɪ.ˈzɔn]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -57624,7 +57624,7 @@
     "b_tarr_hist": "Thonon-Les-Bains",
     "b_origin": "Thonon-les-Bains (constituent holding of Dschenêf)",
     "b_anachronism": "",
-    "b_ipa": "[thɔ.ˈnɔn lɛs bɛɪns]",
+    "b_ipa": "[thɔ.ˈnɔn lɛs baɪns]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -58427,7 +58427,7 @@
     "b_tarr_hist": "Ayamonte",
     "b_origin": "Ayamonte (constituent holding of Nêble)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪ.a.ˈmɔn.tə]",
+    "b_ipa": "[a.ja.ˈmɔn.tə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -60187,7 +60187,7 @@
     "b_tarr_hist": "Maials",
     "b_origin": "Maials (constituent holding of Tarracôn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.als]",
+    "b_ipa": "[ˈma.jals]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -61023,7 +61023,7 @@
     "b_tarr_hist": "Aitiyat",
     "b_origin": "Aitiyat (constituent holding of Agmât)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪ.tɪ.ˈjat]",
+    "b_ipa": "[aɪ.tɪ.ˈjat]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -61078,7 +61078,7 @@
     "b_tarr_hist": "Dai",
     "b_origin": "Dai (constituent holding of Tadle)",
     "b_anachronism": "",
-    "b_ipa": "[dɛɪ]",
+    "b_ipa": "[daɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -61122,7 +61122,7 @@
     "b_tarr_hist": "Ait i Tab",
     "b_origin": "Ait i Tab (constituent holding of Tadle)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪt ɪ tab]",
+    "b_ipa": "[aɪt ɪ tab]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -61947,7 +61947,7 @@
     "b_tarr_hist": "Aintekbalet",
     "b_origin": "Aintekbalet (constituent holding of Tremissên)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪn.tɛk.ba.ˈlɛt]",
+    "b_ipa": "[aɪn.tɛk.ba.ˈlɛt]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -62211,7 +62211,7 @@
     "b_tarr_hist": "Ainsefra",
     "b_origin": "Ainsefra (constituent holding of Figîch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪn.sɛ.fra]",
+    "b_ipa": "[ˈaɪn.sɛ.fra]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -62563,7 +62563,7 @@
     "b_tarr_hist": "Al-Qulaya",
     "b_origin": "al-Qulaya (constituent holding of Gardâje)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈkwlɛɪ.a]",
+    "b_ipa": "[al ˈkwla.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -62618,7 +62618,7 @@
     "b_tarr_hist": "Kairwân",
     "b_origin": "Kairouan (Kairwan)",
     "b_anachronism": "",
-    "b_ipa": "[kɛɪr.ˈwaːn]",
+    "b_ipa": "[kaɪr.ˈwaːn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -62739,7 +62739,7 @@
     "b_tarr_hist": "Maydara",
     "b_origin": "Maydara (constituent holding of Tebesse)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.da.ra]",
+    "b_ipa": "[ˈmaɪ.da.ra]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -63311,7 +63311,7 @@
     "b_tarr_hist": "Al Aghaila",
     "b_origin": "Al Aghaila (constituent holding of Sirte)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈaɡ.hɛɪ.la]",
+    "b_ipa": "[al ˈaɡ.haɪ.la]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -63388,7 +63388,7 @@
     "b_tarr_hist": "Tinnai",
     "b_origin": "Tinnai (constituent holding of Waddân)",
     "b_anachronism": "",
-    "b_ipa": "[tɪ.ˈnɛɪ]",
+    "b_ipa": "[tɪ.ˈnaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -63410,7 +63410,7 @@
     "b_tarr_hist": "Sequiet El-Hamra",
     "b_origin": "Sequiet El-Hamra (constituent holding of Sammûr)",
     "b_anachronism": "",
-    "b_ipa": "[sɛk.wɪ.ˈɛt ɛl ˈham.ra]",
+    "b_ipa": "[sɛkw.ˈjɛt ɛl ˈham.ra]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -63905,7 +63905,7 @@
     "b_tarr_hist": "Air Route",
     "b_origin": "Air Route (constituent holding of Takkêde)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪr ˈrɔʊ.tə]",
+    "b_ipa": "[aɪr ˈrɔʊ.tə]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -64070,7 +64070,7 @@
     "b_tarr_hist": "Faya",
     "b_origin": "Faya (constituent holding of Aîn-Galâkke)",
     "b_anachronism": "",
-    "b_ipa": "[ˈfɛɪ.a]",
+    "b_ipa": "[ˈfa.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64136,7 +64136,7 @@
     "b_tarr_hist": "Bardai",
     "b_origin": "Bardai (constituent holding of Tibêsti)",
     "b_anachronism": "",
-    "b_ipa": "[bar.ˈdɛɪ]",
+    "b_ipa": "[bar.ˈdaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -64400,7 +64400,7 @@
     "b_tarr_hist": "Zaiza",
     "b_origin": "Zaiza (constituent holding of Areôpel)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtsɛɪ.tsa]",
+    "b_ipa": "[ˈtsaɪ.tsa]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64499,7 +64499,7 @@
     "b_tarr_hist": "Ainun",
     "b_origin": "Ainun (constituent holding of Aîle)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.nʊn]",
+    "b_ipa": "[ˈaɪ.nʊn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64554,7 +64554,7 @@
     "b_tarr_hist": "Al-Humayma",
     "b_origin": "Al-Humayma (constituent holding of Maân)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈhʊ.mɛɪ.ma]",
+    "b_ipa": "[al ˈhʊ.maɪ.ma]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64576,7 +64576,7 @@
     "b_tarr_hist": "Taimâ",
     "b_origin": "Tayma' (Tayma')",
     "b_anachronism": "",
-    "b_ipa": "[tɛɪ.ˈmaː]",
+    "b_ipa": "[taɪ.ˈmaː]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -64620,7 +64620,7 @@
     "b_tarr_hist": "As-Saya'a",
     "b_origin": "As-Saya'a (constituent holding of Medîne)",
     "b_anachronism": "",
-    "b_ipa": "[as ˈsɛɪ.a.a]",
+    "b_ipa": "[as ˈsa.ja.a]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64697,7 +64697,7 @@
     "b_tarr_hist": "Chaibâr",
     "b_origin": "Khaybar (Khaybar)",
     "b_anachronism": "",
-    "b_ipa": "[xɛɪ.ˈbaːr]",
+    "b_ipa": "[xaɪ.ˈbaːr]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -64807,7 +64807,7 @@
     "b_tarr_hist": "Madinat Bani Sulaym",
     "b_origin": "Madinat Bani Sulaym (constituent holding of Suwarikîje)",
     "b_anachronism": "",
-    "b_ipa": "[ma.dɪ.ˈnat ˈba.nɪ sʊ.ˈlɛɪm]",
+    "b_ipa": "[ma.dɪ.ˈnat ˈba.nɪ sʊ.ˈlaɪm]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -64818,7 +64818,7 @@
     "b_tarr_hist": "Sufaina",
     "b_origin": "Sufaina (constituent holding of Suwarikîje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsʊ.fɛɪ.na]",
+    "b_ipa": "[ˈsʊ.faɪ.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -64851,7 +64851,7 @@
     "b_tarr_hist": "Khulays",
     "b_origin": "Khulays (constituent holding of Mekke)",
     "b_anachronism": "",
-    "b_ipa": "[khʊ.ˈlɛɪs]",
+    "b_ipa": "[khʊ.ˈlaɪs]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -64939,7 +64939,7 @@
     "b_tarr_hist": "Asch-Schuqayq",
     "b_origin": "Ash-Shuqayq (constituent holding of Tihâme)",
     "b_anachronism": "",
-    "b_ipa": "[aʃ ʃʊ.ˈkɛɪk]",
+    "b_ipa": "[aʃ ʃʊ.ˈkaɪk]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -65225,7 +65225,7 @@
     "b_tarr_hist": "Al-Khuzaimiya",
     "b_origin": "Al-Khuzaimiya (constituent holding of Schakîch)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈkhʊ.tsɛɪ.mɪ.ja]",
+    "b_ipa": "[al ˈkhʊ.tsaɪ.mɪ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -65236,7 +65236,7 @@
     "b_tarr_hist": "As-Sumaina",
     "b_origin": "As-Sumaina (constituent holding of Schakîch)",
     "b_anachronism": "",
-    "b_ipa": "[as ˈsʊ.mɛɪ.na]",
+    "b_ipa": "[as ˈsʊ.maɪ.na]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -65533,7 +65533,7 @@
     "b_tarr_hist": "Al-Jubayl",
     "b_origin": "Al-Jubayl (constituent holding of Katîf)",
     "b_anachronism": "",
-    "b_ipa": "[al jʊ.ˈbɛɪl]",
+    "b_ipa": "[al jʊ.ˈbaɪl]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -65577,7 +65577,7 @@
     "b_tarr_hist": "Ar-Ruqai'i",
     "b_origin": "Ar-Ruqai'i (constituent holding of Kasîme)",
     "b_anachronism": "",
-    "b_ipa": "[ar ˈrʊ.kɛɪ.ɪ]",
+    "b_ipa": "[ar ˈrʊ.ka.jɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -65874,7 +65874,7 @@
     "b_tarr_hist": "Ar-Rayda",
     "b_origin": "Ar-Rayda (constituent holding of Sanâ)",
     "b_anachronism": "",
-    "b_ipa": "[ar ˈrɛɪ.da]",
+    "b_ipa": "[ar ˈraɪ.da]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -66028,7 +66028,7 @@
     "b_tarr_hist": "Bayhan",
     "b_origin": "Bayhan (constituent holding of Maîn)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈhan]",
+    "b_ipa": "[baɪ.ˈhan]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -66149,7 +66149,7 @@
     "b_tarr_hist": "Musaymir",
     "b_origin": "Musaymir (constituent holding of Âden)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmʊ.zɛɪ.mɪr]",
+    "b_ipa": "[ˈmʊ.zaɪ.mɪr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -66303,7 +66303,7 @@
     "b_tarr_hist": "Khurayba",
     "b_origin": "Khurayba (constituent holding of Kînde-Sakûn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkhʊ.rɛɪ.ba]",
+    "b_ipa": "[ˈkhʊ.raɪ.ba]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -66358,7 +66358,7 @@
     "b_tarr_hist": "Raisût",
     "b_origin": "Raysut (Raisût (in-game: Dhufar))",
     "b_anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
-    "b_ipa": "[rɛɪ.ˈzuːt]",
+    "b_ipa": "[raɪ.ˈzuːt]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -66600,7 +66600,7 @@
     "b_tarr_hist": "Kanais Al-Hadid",
     "b_origin": "Kanais Al-Hadid (constituent holding of Sullûm)",
     "b_anachronism": "",
-    "b_ipa": "[ka.ˈnɛɪs al ˈha.dɪd]",
+    "b_ipa": "[ka.ˈnaɪs al ˈha.dɪd]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -66622,7 +66622,7 @@
     "b_tarr_hist": "Ain Al-Gharbi",
     "b_origin": "Ain Al-Gharbi (constituent holding of Sîwe)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪn al ˈɡhar.bɪ]",
+    "b_ipa": "[aɪn al ˈɡhar.bɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -66963,7 +66963,7 @@
     "b_tarr_hist": "Tunayda",
     "b_origin": "Tunayda (constituent holding of Dachle)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʊ.nɛɪ.da]",
+    "b_ipa": "[ˈtʊ.naɪ.da]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -67161,7 +67161,7 @@
     "b_tarr_hist": "Ibschaya",
     "b_origin": "Ibshaya (constituent holding of Asjût)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɪb.ʃɛɪ.a]",
+    "b_ipa": "[ˈɪb.ʃa.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -67315,7 +67315,7 @@
     "b_tarr_hist": "Sînai",
     "b_origin": "At-Tur (Sinai)",
     "b_anachronism": "",
-    "b_ipa": "[siː.ˈnɛɪ]",
+    "b_ipa": "[siː.ˈnaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -67436,7 +67436,7 @@
     "b_tarr_hist": "Baidha-Petra",
     "b_origin": "Baidha-Petra (constituent holding of Arabâ)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪd.ha ˈpɛ.tra]",
+    "b_ipa": "[ˈbaɪd.ha ˈpɛ.tra]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -67458,7 +67458,7 @@
     "b_tarr_hist": "Aila",
     "b_origin": "Aila (constituent holding of Arabâ)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.la]",
+    "b_ipa": "[ˈaɪ.la]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -67821,7 +67821,7 @@
     "b_tarr_hist": "Kaisum",
     "b_origin": "Kaisum (constituent holding of Germanikêe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɛɪ.zʊm]",
+    "b_ipa": "[ˈkaɪ.zʊm]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -67975,7 +67975,7 @@
     "b_tarr_hist": "As-Suwaydiya",
     "b_origin": "As-Suwaydiya (constituent holding of Antiôchje)",
     "b_anachronism": "",
-    "b_ipa": "[as ˈsʊ.wɛɪ.dɪ.ja]",
+    "b_ipa": "[as ˈsʊ.waɪ.dɪ.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -68052,7 +68052,7 @@
     "b_tarr_hist": "Saida",
     "b_origin": "Saida (constituent holding of Beirût)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪ.da]",
+    "b_ipa": "[ˈsaɪ.da]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -68107,7 +68107,7 @@
     "b_tarr_hist": "Darayya",
     "b_origin": "Darayya (constituent holding of Damasch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈda.rɛɪ.ja]",
+    "b_ipa": "[ˈda.raɪ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -68217,7 +68217,7 @@
     "b_tarr_hist": "As-Suwaida-Hauran",
     "b_origin": "As-Suwaida-Hauran (constituent holding of Bôstre)",
     "b_anachronism": "",
-    "b_ipa": "[as ˈsʊ.wɛɪ.da hɔʊ.ˈran]",
+    "b_ipa": "[as ˈsʊ.waɪ.da hɔʊ.ˈran]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -68261,7 +68261,7 @@
     "b_tarr_hist": "Dair Ar-Ruman",
     "b_origin": "Dair Ar-Ruman (constituent holding of Sûchne)",
     "b_anachronism": "",
-    "b_ipa": "[dɛɪr ar rʊ.ˈman]",
+    "b_ipa": "[daɪr ar rʊ.ˈman]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -68316,7 +68316,7 @@
     "b_tarr_hist": "South Seraye",
     "b_origin": "South Seraye (constituent holding of Aksûm)",
     "b_anachronism": "",
-    "b_ipa": "[sɔʊth sɛ.ˈrɛɪ.ɛ]",
+    "b_ipa": "[sɔʊth sɛ.ˈra.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -68404,7 +68404,7 @@
     "b_tarr_hist": "Tschohaito",
     "b_origin": "Qohaito (constituent holding of Intârte)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʃɔ.hɛɪ.tɔ]",
+    "b_ipa": "[ˈtʃɔ.haɪ.tɔ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -69152,7 +69152,7 @@
     "b_tarr_hist": "Sayala",
     "b_origin": "Sayala (constituent holding of Kûrte)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪ.a.la]",
+    "b_ipa": "[ˈsa.ja.la]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -69350,7 +69350,7 @@
     "b_tarr_hist": "Bir el-Kai",
     "b_origin": "Bir el-kai (constituent holding of Wâdi-el-Mîlch)",
     "b_anachronism": "",
-    "b_ipa": "[bɪr ɛl kɛɪ]",
+    "b_ipa": "[bɪr ɛl kaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -69471,7 +69471,7 @@
     "b_tarr_hist": "Schunqayr",
     "b_origin": "Shunqayr (constituent holding of Atbâre)",
     "b_anachronism": "",
-    "b_ipa": "[ʃʊ.ˈŋkɛɪr]",
+    "b_ipa": "[ʃʊ.ˈŋkaɪr]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -69559,7 +69559,7 @@
     "b_tarr_hist": "Tarfaya",
     "b_origin": "Tarfaya (constituent holding of Kûrgus)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtar.fɛɪ.a]",
+    "b_ipa": "[ˈtar.fa.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -69779,7 +69779,7 @@
     "b_tarr_hist": "Jebel Moya",
     "b_origin": "Jebel Moya (constituent holding of Môjaberch)",
     "b_anachronism": "",
-    "b_ipa": "[jɛ.ˈbəl ˈmɔʏ.a]",
+    "b_ipa": "[jɛ.ˈbəl ˈmɔ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -69823,7 +69823,7 @@
     "b_tarr_hist": "Al-Rusayrisi",
     "b_origin": "Al-Rusayrisi (constituent holding of Fasûgli)",
     "b_anachronism": "",
-    "b_ipa": "[al ˈrʊ.zɛɪ.rɪ.zɪ]",
+    "b_ipa": "[al ˈrʊ.zaɪ.rɪ.zɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -69911,7 +69911,7 @@
     "b_tarr_hist": "Aidâp",
     "b_origin": "Aydhab (Aydhab)",
     "b_anachronism": "",
-    "b_ipa": "[ɛɪ.ˈdaːp]",
+    "b_ipa": "[aɪ.ˈdaːp]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -69955,7 +69955,7 @@
     "b_tarr_hist": "Haimur",
     "b_origin": "Haimur (constituent holding of Allâki)",
     "b_anachronism": "",
-    "b_ipa": "[hɛɪ.ˈmʊr]",
+    "b_ipa": "[haɪ.ˈmʊr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -70395,7 +70395,7 @@
     "b_tarr_hist": "Abbay-Agaw",
     "b_origin": "Abbay-Agaw (constituent holding of Bêrte)",
     "b_anachronism": "",
-    "b_ipa": "[a.ˈbɛɪ ˈa.ɣaw]",
+    "b_ipa": "[a.ˈbaɪ ˈa.ɣaw]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -70637,7 +70637,7 @@
     "b_tarr_hist": "Abaya",
     "b_origin": "Abaya (constituent holding of Dâre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.bɛɪ.a]",
+    "b_ipa": "[ˈa.ba.ja]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -70890,7 +70890,7 @@
     "b_tarr_hist": "Hargaya-South",
     "b_origin": "Hargaya-south (constituent holding of Hargâje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈhar.ɡɛɪ.a sɔʊth]",
+    "b_ipa": "[ˈhar.ɡa.ja sɔʊth]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -71198,7 +71198,7 @@
     "b_tarr_hist": "Laas tschoray",
     "b_origin": "Laas Qoray (constituent holding of Maît)",
     "b_anachronism": "",
-    "b_ipa": "[ˈla.as tʃɔ.ˈrɛɪ]",
+    "b_ipa": "[ˈla.as tʃɔ.ˈraɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -71209,7 +71209,7 @@
     "b_tarr_hist": "Haylan",
     "b_origin": "Haylan (constituent holding of Maît)",
     "b_anachronism": "",
-    "b_ipa": "[hɛɪ.ˈlan]",
+    "b_ipa": "[haɪ.ˈlan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -71275,7 +71275,7 @@
     "b_tarr_hist": "El-Ayo",
     "b_origin": "El-Ayo (constituent holding of Mosîl)",
     "b_anachronism": "",
-    "b_ipa": "[ɛl ˈɛɪ.ɔ]",
+    "b_ipa": "[ɛl ˈa.jɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -71407,7 +71407,7 @@
     "b_tarr_hist": "Afgooye",
     "b_origin": "Afgooye (constituent holding of Mogadîschu)",
     "b_anachronism": "",
-    "b_ipa": "[af.ɡɔ.ˈɔʏ.ɛ]",
+    "b_ipa": "[af.ɡɔ.ˈɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -71451,7 +71451,7 @@
     "b_tarr_hist": "Galkayo",
     "b_origin": "Galkayo (constituent holding of Berchbrunn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡal.kɛɪ.ɔ]",
+    "b_ipa": "[ˈɡal.ka.jɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -71594,7 +71594,7 @@
     "b_tarr_hist": "Baydhabô",
     "b_origin": "Baydhabo (Baydhabô (in-game: Baydhabo))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Baydhabô under Burden of Proof on Antiquity.",
-    "b_ipa": "[bɛɪd.ha.ˈboː]",
+    "b_ipa": "[baɪd.ha.ˈboː]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -71825,7 +71825,7 @@
     "b_tarr_hist": "Gidaya-North",
     "b_origin": "Gidaya-north (constituent holding of Gidâje)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɪ.dɛɪ.a nɔrth]",
+    "b_ipa": "[ˈɡɪ.da.ja nɔrth]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -72067,7 +72067,7 @@
     "b_tarr_hist": "Kismayo",
     "b_origin": "Kismayo (constituent holding of Pate)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɪs.mɛɪ.ɔ]",
+    "b_ipa": "[ˈkɪs.ma.jɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -73299,7 +73299,7 @@
     "b_tarr_hist": "Ngambay",
     "b_origin": "Ngambay (constituent holding of Kere)",
     "b_anachronism": "",
-    "b_ipa": "[ŋam.ˈbɛɪ]",
+    "b_ipa": "[ŋam.ˈbaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -73552,7 +73552,7 @@
     "b_tarr_hist": "Ulaira",
     "b_origin": "Ulaira (constituent holding of Jauri)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʊ.lɛɪ.ra]",
+    "b_ipa": "[ˈʊ.laɪ.ra]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -73706,7 +73706,7 @@
     "b_tarr_hist": "Hurayz",
     "b_origin": "Hurayz (constituent holding of Dâr-es-Saît)",
     "b_anachronism": "",
-    "b_ipa": "[hʊ.ˈrɛɪts]",
+    "b_ipa": "[hʊ.ˈraɪts]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -73783,7 +73783,7 @@
     "b_tarr_hist": "Ghubaysch",
     "b_origin": "Ghubaysh (constituent holding of Ôst-Dârfûr)",
     "b_anachronism": "",
-    "b_ipa": "[ɡhʊ.ˈbɛɪʃ]",
+    "b_ipa": "[ɡhʊ.ˈbaɪʃ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -73827,7 +73827,7 @@
     "b_tarr_hist": "Kubayh",
     "b_origin": "Kubayh (constituent holding of Aîn-Farâch)",
     "b_anachronism": "",
-    "b_ipa": "[kʊ.ˈbɛɪh]",
+    "b_ipa": "[kʊ.ˈbaɪh]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -74443,7 +74443,7 @@
     "b_tarr_hist": "Gaya",
     "b_origin": "Gaya (constituent holding of Dschamâre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɛɪ.a]",
+    "b_ipa": "[ˈɡa.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -74575,7 +74575,7 @@
     "b_tarr_hist": "Say",
     "b_origin": "Say (Say (in-game: Say))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Say under Burden of Proof on Antiquity.",
-    "b_ipa": "[sɛɪ]",
+    "b_ipa": "[saɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -75697,7 +75697,7 @@
     "b_tarr_hist": "Diouboye",
     "b_origin": "Diouboye (constituent holding of Bambuch)",
     "b_anachronism": "",
-    "b_ipa": "[dɪ.ɔʊ.ˈbɔʏ.ɛ]",
+    "b_ipa": "[dɪ.ɔʊ.ˈbɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -75961,7 +75961,7 @@
     "b_tarr_hist": "Bambaya",
     "b_origin": "Bambaya (constituent holding of Kokoli)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbam.bɛɪ.a]",
+    "b_ipa": "[ˈbam.ba.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -76016,7 +76016,7 @@
     "b_tarr_hist": "Mafindi-Kabaya",
     "b_origin": "Mafindi-Kabaya (constituent holding of Kurankô)",
     "b_anachronism": "",
-    "b_ipa": "[ˈma.fɪn.dɪ ˈka.bɛɪ.a]",
+    "b_ipa": "[ˈma.fɪn.dɪ ˈka.ba.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -76434,7 +76434,7 @@
     "b_tarr_hist": "Lambaye",
     "b_origin": "Lambaye (constituent holding of Baôl)",
     "b_anachronism": "",
-    "b_ipa": "[lam.ˈbɛɪ.ɛ]",
+    "b_ipa": "[lam.ˈba.jɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -76918,7 +76918,7 @@
     "b_tarr_hist": "Bainuk",
     "b_origin": "Bainuk (constituent holding of Dschâm)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.nʊk]",
+    "b_ipa": "[ˈbaɪ.nʊk]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -77083,7 +77083,7 @@
     "b_tarr_hist": "Kamabai-Sanda",
     "b_origin": "Kamabai-Sanda (constituent holding of Sande)",
     "b_anachronism": "",
-    "b_ipa": "[ka.ma.ˈbɛɪ ˈsan.da]",
+    "b_ipa": "[ka.ma.ˈbaɪ ˈsan.da]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -77248,7 +77248,7 @@
     "b_tarr_hist": "Gbanschay",
     "b_origin": "Gbanshay (constituent holding of Nuôn)",
     "b_anachronism": "",
-    "b_ipa": "[ɡban.ˈʃɛɪ]",
+    "b_ipa": "[ɡban.ˈʃaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -77622,7 +77622,7 @@
     "b_tarr_hist": "Neyo",
     "b_origin": "Neyo (constituent holding of Dibrî)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɛɪ.ɔ]",
+    "b_ipa": "[ˈnɛ.jɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -78227,7 +78227,7 @@
     "b_tarr_hist": "Adaboye",
     "b_origin": "Adaboye (constituent holding of Adanse)",
     "b_anachronism": "",
-    "b_ipa": "[a.da.ˈbɔʏ.ɛ]",
+    "b_ipa": "[a.da.ˈbɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -78271,7 +78271,7 @@
     "b_tarr_hist": "Schai",
     "b_origin": "Shai (constituent holding of Kwahu-Akjem)",
     "b_anachronism": "",
-    "b_ipa": "[ʃɛɪ]",
+    "b_ipa": "[ʃaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -78337,7 +78337,7 @@
     "b_tarr_hist": "Beyin",
     "b_origin": "Beyin (constituent holding of Wasse)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈɪn]",
+    "b_ipa": "[bɛ.ˈjɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -78920,7 +78920,7 @@
     "b_tarr_hist": "Kayao",
     "b_origin": "Kayao (constituent holding of Wagadugû)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɛɪ.a.ɔ]",
+    "b_ipa": "[ˈka.ja.ɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -79162,7 +79162,7 @@
     "b_tarr_hist": "Kaiama",
     "b_origin": "Kaiama (constituent holding of Busse)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɛɪ.a.ma]",
+    "b_ipa": "[ˈka.ja.ma]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -79415,7 +79415,7 @@
     "b_tarr_hist": "Ijaye",
     "b_origin": "Ijaye (constituent holding of Ibadân)",
     "b_anachronism": "",
-    "b_ipa": "[ɪ.ˈjɛɪ.ɛ]",
+    "b_ipa": "[ɪ.ˈja.jɛ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -79580,7 +79580,7 @@
     "b_tarr_hist": "Iseyin",
     "b_origin": "Iseyin (constituent holding of Igane)",
     "b_anachronism": "",
-    "b_ipa": "[ɪ.zɛɪ.ˈɪn]",
+    "b_ipa": "[ɪ.zɛ.ˈjɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -80691,7 +80691,7 @@
     "b_tarr_hist": "Asfanjay",
     "b_origin": "Asfanjay (constituent holding of Sîbi)",
     "b_anachronism": "",
-    "b_ipa": "[as.fa.ˈɲɛɪ]",
+    "b_ipa": "[as.fa.ˈɲaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -81736,7 +81736,7 @@
     "b_tarr_hist": "Bayana",
     "b_origin": "Bayana (constituent holding of Sripathe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.a.na]",
+    "b_ipa": "[ˈba.ja.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -81758,7 +81758,7 @@
     "b_tarr_hist": "Wodamayutje",
     "b_origin": "Vodamayutja (Vodamayutja)",
     "b_anachronism": "",
-    "b_ipa": "[wɔ.da.mɛɪ.ˈʊt.jɛ]",
+    "b_ipa": "[wɔ.da.ma.ˈjʊt.jɛ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -82198,7 +82198,7 @@
     "b_tarr_hist": "Saymûr",
     "b_origin": "Saymūr (constituent holding of Somnath)",
     "b_anachronism": "",
-    "b_ipa": "[sɛɪ.ˈmuːr]",
+    "b_ipa": "[saɪ.ˈmuːr]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -82264,7 +82264,7 @@
     "b_tarr_hist": "Schatrunjaya",
     "b_origin": "Shatrunjaya (constituent holding of Walabhi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈʃa.trʊ.ɲɛɪ.a]",
+    "b_ipa": "[ˈʃa.trʊ.ɲa.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -82308,7 +82308,7 @@
     "b_tarr_hist": "Kayavarohan",
     "b_origin": "Kayavarohan (constituent holding of Wadodare)",
     "b_anachronism": "",
-    "b_ipa": "[kɛɪ.a.va.rɔ.ˈhan]",
+    "b_ipa": "[ka.ja.va.rɔ.ˈhan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -82616,7 +82616,7 @@
     "b_tarr_hist": "Kolayat",
     "b_origin": "Kolayat (constituent holding of Wikramapure)",
     "b_anachronism": "",
-    "b_ipa": "[kɔ.lɛɪ.ˈat]",
+    "b_ipa": "[kɔ.la.ˈjat]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -82660,7 +82660,7 @@
     "b_tarr_hist": "Jaisalmer",
     "b_origin": "Jaisalmer (constituent holding of Ludrâwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɛɪ.zal.mɛr]",
+    "b_ipa": "[ˈjaɪ.zal.mɛr]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -82814,7 +82814,7 @@
     "b_tarr_hist": "Bhainsrorgarh",
     "b_origin": "Bhainsrorgarh (constituent holding of Tschitrakut)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbhɛɪns.rɔr.ɡarh]",
+    "b_ipa": "[ˈbhaɪns.rɔr.ɡarh]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -82946,7 +82946,7 @@
     "b_tarr_hist": "Wairate",
     "b_origin": "Harshnath (Wairate (in-game: Vairata))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Wairate under Burden of Proof on Antiquity.",
-    "b_ipa": "[wɛɪ.ˈra.tə]",
+    "b_ipa": "[waɪ.ˈra.tə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -83221,7 +83221,7 @@
     "b_tarr_hist": "Raisin",
     "b_origin": "Raisin (constituent holding of Widise)",
     "b_anachronism": "",
-    "b_ipa": "[rɛɪ.ˈzɪn]",
+    "b_ipa": "[raɪ.ˈzɪn]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -83353,7 +83353,7 @@
     "b_tarr_hist": "Jarai-Ka-Math",
     "b_origin": "Jarai-ka-Math (constituent holding of Tschanderi)",
     "b_anachronism": "",
-    "b_ipa": "[ja.ˈrɛɪ ka math]",
+    "b_ipa": "[ja.ˈraɪ ka math]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -83386,7 +83386,7 @@
     "b_tarr_hist": "Kadwaya",
     "b_origin": "Kadwaya (constituent holding of Zandhobe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkad.wɛɪ.a]",
+    "b_ipa": "[ˈkad.wa.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -83683,7 +83683,7 @@
     "b_tarr_hist": "Prayage",
     "b_origin": "Prayaga (Prayaga)",
     "b_anachronism": "",
-    "b_ipa": "[prɛɪ.ˈa.ɣə]",
+    "b_ipa": "[pra.ˈja.ɣə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -83716,7 +83716,7 @@
     "b_tarr_hist": "Faizabat",
     "b_origin": "Faizabad (constituent holding of Ajôdje)",
     "b_anachronism": "",
-    "b_ipa": "[fɛɪ.tsa.ˈbat]",
+    "b_ipa": "[faɪ.tsa.ˈbat]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -83738,7 +83738,7 @@
     "b_tarr_hist": "Naimise",
     "b_origin": "Naimisa (Naimisa)",
     "b_anachronism": "",
-    "b_ipa": "[nɛɪ.ˈmɪ.zə]",
+    "b_ipa": "[naɪ.ˈmɪ.zə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -83749,7 +83749,7 @@
     "b_tarr_hist": "Bahraich",
     "b_origin": "Bahraich (constituent holding of Naimise)",
     "b_anachronism": "",
-    "b_ipa": "[bah.ˈrɛɪç]",
+    "b_ipa": "[bah.ˈraɪç]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -83815,7 +83815,7 @@
     "b_tarr_hist": "Ajaigarh",
     "b_origin": "Ajaigarh (constituent holding of Mahobe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈa.jɛɪ.ɣarh]",
+    "b_ipa": "[ˈa.jaɪ.ɣarh]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -84068,7 +84068,7 @@
     "b_tarr_hist": "Baitadi",
     "b_origin": "Baitadi (constituent holding of Doti)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.ta.dɪ]",
+    "b_ipa": "[ˈbaɪ.ta.dɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -84475,7 +84475,7 @@
     "b_tarr_hist": "Allai",
     "b_origin": "Allai (Allai)",
     "b_anachronism": "",
-    "b_ipa": "[a.ˈʎɛɪ]",
+    "b_ipa": "[a.ˈʎaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -84486,7 +84486,7 @@
     "b_tarr_hist": "Waihind",
     "b_origin": "Waihind (constituent holding of Allai)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪ.hɪnd]",
+    "b_ipa": "[ˈwaɪ.hɪnd]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -84827,7 +84827,7 @@
     "b_tarr_hist": "Bokainagar",
     "b_origin": "Bokainagar (constituent holding of Suwarnagrâm)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɔ.kɛɪ.na.ɣar]",
+    "b_ipa": "[ˈbɔ.kaɪ.na.ɣar]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -84992,7 +84992,7 @@
     "b_tarr_hist": "Mainamati",
     "b_origin": "Mainamati (constituent holding of Karmânte)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.na.ma.tɪ]",
+    "b_ipa": "[ˈmaɪ.na.ma.tɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -85003,7 +85003,7 @@
     "b_tarr_hist": "Udaipur",
     "b_origin": "Udaipur (constituent holding of Karmânte)",
     "b_anachronism": "",
-    "b_ipa": "[ʊ.dɛɪ.ˈpʊr]",
+    "b_ipa": "[ʊ.daɪ.ˈpʊr]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -85399,7 +85399,7 @@
     "b_tarr_hist": "Carguya",
     "b_origin": "Carguya (constituent holding of Patkâi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkar.ɡɪ.a]",
+    "b_ipa": "[ˈkar.ɡʊ.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -85509,7 +85509,7 @@
     "b_tarr_hist": "Maibong",
     "b_origin": "Maibong (constituent holding of Dansîri)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.bɔŋ]",
+    "b_ipa": "[ˈmaɪ.bɔŋ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -85685,7 +85685,7 @@
     "b_tarr_hist": "Bodh Gaya",
     "b_origin": "Bodh Gaya (constituent holding of Gâje)",
     "b_anachronism": "",
-    "b_ipa": "[bɔdh ˈɡɛɪ.a]",
+    "b_ipa": "[bɔdh ˈɡa.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86202,7 +86202,7 @@
     "b_tarr_hist": "Savarinarayana",
     "b_origin": "Savarinarayana (constituent holding of Ratanpur)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsa.va.rɪ.na.rɛɪ.a.na]",
+    "b_ipa": "[ˈsa.va.rɪ.na.ra.ja.na]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86389,7 +86389,7 @@
     "b_tarr_hist": "Raibania",
     "b_origin": "Raibania (constituent holding of Wiradsche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrɛɪ.ba.nɪ.a]",
+    "b_ipa": "[ˈraɪ.ba.nɪ.a]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -86422,7 +86422,7 @@
     "b_tarr_hist": "Nayagarh",
     "b_origin": "Nayagarh (constituent holding of Chindschali-Mandale)",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɛɪ.a.ɣarh]",
+    "b_ipa": "[ˈna.ja.ɣarh]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -86510,7 +86510,7 @@
     "b_tarr_hist": "Malayagiri",
     "b_origin": "Malayagiri (constituent holding of Chidschingakote)",
     "b_anachronism": "",
-    "b_ipa": "[ˈma.lɛɪ.a.ɣɪ.rɪ]",
+    "b_ipa": "[ˈma.la.ja.ɣɪ.rɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -86774,7 +86774,7 @@
     "b_tarr_hist": "Rayagada",
     "b_origin": "Rayagada (constituent holding of Swetaka-Mandale)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrɛɪ.a.ɣa.da]",
+    "b_ipa": "[ˈra.ja.ɣa.da]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -86950,7 +86950,7 @@
     "b_tarr_hist": "Bhainsa",
     "b_origin": "Bhainsa (constituent holding of Mulake)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbhɛɪn.sa]",
+    "b_ipa": "[ˈbhaɪn.sa]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -87126,7 +87126,7 @@
     "b_tarr_hist": "Wairagare",
     "b_origin": "Vairagara (Vairagara)",
     "b_anachronism": "",
-    "b_ipa": "[wɛɪ.ra.ˈɣa.rə]",
+    "b_ipa": "[waɪ.ra.ˈɣa.rə]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -87423,7 +87423,7 @@
     "b_tarr_hist": "Vijayapura",
     "b_origin": "Vijayapura (constituent holding of Taradawâdi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.jɛɪ.a.pʊ.ra]",
+    "b_ipa": "[ˈvɪ.ja.ja.pʊ.ra]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -87742,7 +87742,7 @@
     "b_tarr_hist": "Moyar",
     "b_origin": "Moyar (constituent holding of Talakat)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɔʏ.ar]",
+    "b_ipa": "[ˈmɔ.jar]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -87874,7 +87874,7 @@
     "b_tarr_hist": "Vijayanagara",
     "b_origin": "Vijayanagara (constituent holding of Kampili)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.jɛɪ.a.na.ɣa.ra]",
+    "b_ipa": "[ˈvɪ.ja.ja.na.ɣa.ra]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -87940,7 +87940,7 @@
     "b_tarr_hist": "Idatarainâdu",
     "b_origin": "Mudgal (Idatarainadu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɪ.da.ta.rɛɪ.naː.dʊ]",
+    "b_ipa": "[ˈɪ.da.ta.raɪ.naː.dʊ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -87973,7 +87973,7 @@
     "b_tarr_hist": "Raichur",
     "b_origin": "Raichur (constituent holding of Idatarainâdu)",
     "b_anachronism": "",
-    "b_ipa": "[rɛɪ.ˈçʊr]",
+    "b_ipa": "[raɪ.ˈçʊr]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -88028,7 +88028,7 @@
     "b_tarr_hist": "Waidschajanti",
     "b_origin": "Vaijayanti (Vaijayanti)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪ.dʒa.jan.tɪ]",
+    "b_ipa": "[ˈwaɪ.dʒa.jan.tɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -88094,7 +88094,7 @@
     "b_tarr_hist": "Madurai",
     "b_origin": "Madurai (Madurai)",
     "b_anachronism": "",
-    "b_ipa": "[ma.dʊ.ˈrɛɪ]",
+    "b_ipa": "[ma.dʊ.ˈraɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -88149,7 +88149,7 @@
     "b_tarr_hist": "Korkai",
     "b_origin": "Korkai (constituent holding of Madurai)",
     "b_anachronism": "",
-    "b_ipa": "[kɔr.ˈkɛɪ]",
+    "b_ipa": "[kɔr.ˈkaɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -88160,7 +88160,7 @@
     "b_tarr_hist": "Kayal",
     "b_origin": "Kayal (constituent holding of Madurai)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɛɪ.al]",
+    "b_ipa": "[ˈka.jal]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -88193,7 +88193,7 @@
     "b_tarr_hist": "Kovai",
     "b_origin": "Kovai (constituent holding of Kongu)",
     "b_anachronism": "",
-    "b_ipa": "[kɔ.ˈvɛɪ]",
+    "b_ipa": "[kɔ.ˈvaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -88215,7 +88215,7 @@
     "b_tarr_hist": "Uraijûr",
     "b_origin": "Uraiyur (Uraiyur)",
     "b_anachronism": "",
-    "b_ipa": "[ʊ.rɛɪ.ˈjuːr]",
+    "b_ipa": "[ʊ.raɪ.ˈjuːr]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -88281,7 +88281,7 @@
     "b_tarr_hist": "Gangaikondacolapuram",
     "b_origin": "Gangaikondacolapuram (constituent holding of Tschôlamandalam)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡa.ŋɛɪ.kɔn.da.kɔ.la.pʊ.ram]",
+    "b_ipa": "[ˈɡa.ŋaɪ.kɔn.da.kɔ.la.pʊ.ram]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -88314,7 +88314,7 @@
     "b_tarr_hist": "Kelrayan",
     "b_origin": "Kelrayan (constituent holding of Tagadûr)",
     "b_anachronism": "",
-    "b_ipa": "[kɛl.rɛɪ.ˈan]",
+    "b_ipa": "[kɛl.ra.ˈjan]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -88336,7 +88336,7 @@
     "b_tarr_hist": "Tiruwannamalai",
     "b_origin": "Tiruvannamalai (Tiruvannamalai)",
     "b_anachronism": "",
-    "b_ipa": "[tɪ.rʊ.wa.na.ma.ˈlɛɪ]",
+    "b_ipa": "[tɪ.rʊ.wa.na.ma.ˈlaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -88391,7 +88391,7 @@
     "b_tarr_hist": "Kottayam",
     "b_origin": "Kottayam (constituent holding of Wembanât)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɔ.tɛɪ.am]",
+    "b_ipa": "[ˈkɔ.ta.jam]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -88633,7 +88633,7 @@
     "b_tarr_hist": "Arjayadengjayaketanastat",
     "b_origin": "Kuvalala — Disambiguated foundation: Municipal foundation chartered by Arjayadengjayaketana",
     "b_anachronism": "Disambiguated sub-barony foundation.",
-    "b_ipa": "[ˈar.jɛɪ.a.dɛŋ.jɛɪ.a.kɛ.ta.nas.tat]",
+    "b_ipa": "[ˈar.ja.ja.dɛŋ.ja.ja.kɛ.ta.nas.tat]",
     "holding_type": "city",
     "category": "option_c_foundation"
   },
@@ -88644,7 +88644,7 @@
     "b_tarr_hist": "Padaividu",
     "b_origin": "Padaividu (constituent holding of Kuwalâle)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpa.dɛɪ.vɪ.dʊ]",
+    "b_ipa": "[ˈpa.daɪ.vɪ.dʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -88754,7 +88754,7 @@
     "b_tarr_hist": "Bhairavunikonda",
     "b_origin": "Bhairavunikonda (constituent holding of Kammanâdu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbhɛɪ.ra.vʊ.nɪ.kɔn.da]",
+    "b_ipa": "[ˈbhaɪ.ra.vʊ.nɪ.kɔn.da]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -88864,7 +88864,7 @@
     "b_tarr_hist": "Vijayawada",
     "b_origin": "Vijayawada (constituent holding of Wengipure)",
     "b_anachronism": "",
-    "b_ipa": "[ˈvɪ.jɛɪ.a.wa.da]",
+    "b_ipa": "[ˈvɪ.ja.ja.wa.da]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -89337,7 +89337,7 @@
     "b_tarr_hist": "Dhamballai",
     "b_origin": "Dhamballai (constituent holding of Pihîti)",
     "b_anachronism": "",
-    "b_ipa": "[dham.ba.ˈʎɛɪ]",
+    "b_ipa": "[dham.ba.ˈʎaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -89381,7 +89381,7 @@
     "b_tarr_hist": "Mullaitivu",
     "b_origin": "Mullaitivu (constituent holding of Nâgadîpe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmʊ.ʎɛɪ.tɪ.vʊ]",
+    "b_ipa": "[ˈmʊ.ʎaɪ.tɪ.vʊ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -89502,7 +89502,7 @@
     "b_tarr_hist": "Zomai",
     "b_origin": "Comai (Zomai (in-game: Comai))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Zomai under Burden of Proof on Antiquity.",
-    "b_ipa": "[tsɔ.ˈmɛɪ]",
+    "b_ipa": "[tsɔ.ˈmaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -89821,7 +89821,7 @@
     "b_tarr_hist": "Baingoin",
     "b_origin": "Pukpa (Baingoin (in-game: Baingoin))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Baingoin under Burden of Proof on Antiquity.",
-    "b_ipa": "[bɛɪ.ŋɔ.ˈɪn]",
+    "b_ipa": "[baɪ.ŋɔ.ˈɪn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -89964,7 +89964,7 @@
     "b_tarr_hist": "Margai",
     "b_origin": "Margai (constituent holding of Garkung)",
     "b_anachronism": "",
-    "b_ipa": "[mar.ˈɡɛɪ]",
+    "b_ipa": "[mar.ˈɡaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -90074,7 +90074,7 @@
     "b_tarr_hist": "Tobgyai",
     "b_origin": "Tobgyai (constituent holding of Schigazê)",
     "b_anachronism": "",
-    "b_ipa": "[tɔbɡ.ˈjɛɪ]",
+    "b_ipa": "[tɔbɡ.ˈjaɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -90195,7 +90195,7 @@
     "b_tarr_hist": "Mainpu",
     "b_origin": "Mainpu (constituent holding of Nyalam)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪn.pʊ]",
+    "b_ipa": "[ˈmaɪn.pʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -90470,7 +90470,7 @@
     "b_tarr_hist": "Schainze",
     "b_origin": "Xainza (Schainze (in-game: Xainza))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Schainze under Burden of Proof on Antiquity.",
-    "b_ipa": "[ˈʃɛɪn.tsə]",
+    "b_ipa": "[ˈʃaɪn.tsə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91174,7 +91174,7 @@
     "b_tarr_hist": "Gyaitang",
     "b_origin": "Gyaitang (Gyaitang)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡjɛɪ.taŋ]",
+    "b_ipa": "[ˈɡjaɪ.taŋ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91493,7 +91493,7 @@
     "b_tarr_hist": "Tûlain",
     "b_origin": "Tu'ulain (Tu'ulain)",
     "b_anachronism": "",
-    "b_ipa": "[tuː.ˈlɛɪn]",
+    "b_ipa": "[tuː.ˈlaɪn]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91592,7 +91592,7 @@
     "b_tarr_hist": "Tschaidam",
     "b_origin": "Qaidam (constituent holding of Lenghu)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʃɛɪ.dam]",
+    "b_ipa": "[ˈtʃaɪ.dam]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -91603,7 +91603,7 @@
     "b_tarr_hist": "Mangnai",
     "b_origin": "Mangnai (Mangnai)",
     "b_anachronism": "",
-    "b_ipa": "[maŋ.ˈnɛɪ]",
+    "b_ipa": "[maŋ.ˈnaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91691,7 +91691,7 @@
     "b_tarr_hist": "Nyainrong",
     "b_origin": "Nyainrong (Nyainrong)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɲɛɪn.rɔŋ]",
+    "b_ipa": "[ˈɲaɪn.rɔŋ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91768,7 +91768,7 @@
     "b_tarr_hist": "Atschênganggyai",
     "b_origin": "Aqênganggyai (Aqênganggyai)",
     "b_anachronism": "",
-    "b_ipa": "[a.tʃeː.ŋaŋɡ.ˈjɛɪ]",
+    "b_ipa": "[a.tʃeː.ŋaŋɡ.ˈjaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -91988,7 +91988,7 @@
     "b_tarr_hist": "Aksay",
     "b_origin": "Gonghe (Aksay)",
     "b_anachronism": "",
-    "b_ipa": "[ak.ˈsɛɪ]",
+    "b_ipa": "[ak.ˈsaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -92131,7 +92131,7 @@
     "b_tarr_hist": "Jiudschaigou",
     "b_origin": "Jiuzhaigou (constituent holding of Soigê)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɪ.ʊ.dʒɛɪ.ɣɔʊ]",
+    "b_ipa": "[ˈjɪ.ʊ.dʒaɪ.ɣɔʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -92362,7 +92362,7 @@
     "b_tarr_hist": "Baime",
     "b_origin": "Sailaitang (Baima)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.mə]",
+    "b_ipa": "[ˈbaɪ.mə]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -92373,7 +92373,7 @@
     "b_tarr_hist": "Jimai",
     "b_origin": "Jimai (constituent holding of Baime)",
     "b_anachronism": "",
-    "b_ipa": "[jɪ.ˈmɛɪ]",
+    "b_ipa": "[jɪ.ˈmaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -92406,7 +92406,7 @@
     "b_tarr_hist": "Jaindscha",
     "b_origin": "Jainzha (constituent holding of Rebgong)",
     "b_anachronism": "",
-    "b_ipa": "[ˈjɛɪn.dʒa]",
+    "b_ipa": "[ˈjaɪn.dʒa]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -92659,7 +92659,7 @@
     "b_tarr_hist": "Gêgyai",
     "b_origin": "Gê'gyai (Gêgyai (in-game: Gê'gyai))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Gêgyai under Burden of Proof on Antiquity.",
-    "b_ipa": "[ɡeːɡ.ˈjɛɪ]",
+    "b_ipa": "[ɡeːɡ.ˈjaɪ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -93451,7 +93451,7 @@
     "b_tarr_hist": "Bairab",
     "b_origin": "Bairab (constituent holding of Memar)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.rab]",
+    "b_ipa": "[ˈbaɪ.rab]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -93737,7 +93737,7 @@
     "b_tarr_hist": "Yümai",
     "b_origin": "Yümai (constituent holding of Lünzê)",
     "b_anachronism": "",
-    "b_ipa": "[jyː.ˈmɛɪ]",
+    "b_ipa": "[jyː.ˈmaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -93814,7 +93814,7 @@
     "b_tarr_hist": "Mainling",
     "b_origin": "Mainling (Mainling)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪn.lɪŋ]",
+    "b_ipa": "[ˈmaɪn.lɪŋ]",
     "holding_type": "castle",
     "category": "capital_eponymous"
   },
@@ -93880,7 +93880,7 @@
     "b_tarr_hist": "Dzayül",
     "b_origin": "Dzayül (constituent holding of Rime)",
     "b_anachronism": "",
-    "b_ipa": "[ˈdtsɛɪ.yːl]",
+    "b_ipa": "[ˈdtsa.jyːl]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -93924,7 +93924,7 @@
     "b_tarr_hist": "Goyü",
     "b_origin": "Goyü (constituent holding of Golach)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɡɔʏ.yː]",
+    "b_ipa": "[ˈɡɔ.jyː]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -93979,7 +93979,7 @@
     "b_tarr_hist": "Hawai",
     "b_origin": "Hawai (constituent holding of Tezu)",
     "b_anachronism": "",
-    "b_ipa": "[ha.ˈwɛɪ]",
+    "b_ipa": "[ha.ˈwaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -94001,7 +94001,7 @@
     "b_tarr_hist": "Bôhaigouwe",
     "b_origin": "渤州 [Bozhou] — Calque: Bohai Sea surge + Prefecture",
     "b_anachronism": "",
-    "b_ipa": "[ˈboː.hɛɪ.ɣɔʊ.wə]",
+    "b_ipa": "[ˈboː.haɪ.ɣɔʊ.wə]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -96300,7 +96300,7 @@
     "b_tarr_hist": "NaiKraftvurt",
     "b_origin": "乃力度 [Nalidu] — Calque: Steppe + Strength + Ferry crossing",
     "b_anachronism": "",
-    "b_ipa": "[ˈnɛɪ.kraft.vʊrt]",
+    "b_ipa": "[ˈnaɪ.kraft.vʊrt]",
     "holding_type": "church",
     "category": "sinosphere_calque"
   },
@@ -99314,7 +99314,7 @@
     "b_tarr_hist": "Batujaya",
     "b_origin": "Batujaya (constituent holding of Tschîmanuch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈba.tʊ.jɛɪ.a]",
+    "b_ipa": "[ˈba.tʊ.ja.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -99831,7 +99831,7 @@
     "b_tarr_hist": "Pagaruyung",
     "b_origin": "Pagaruyung (constituent holding of Muâra Takus)",
     "b_anachronism": "",
-    "b_ipa": "[ˈpa.ɣa.rʊ.ɪ.ʊŋ]",
+    "b_ipa": "[ˈpa.ɣa.rʊ.jʊŋ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -100007,7 +100007,7 @@
     "b_tarr_hist": "Pasai",
     "b_origin": "Pasai (constituent holding of Lambrî)",
     "b_anachronism": "",
-    "b_ipa": "[pa.ˈzɛɪ]",
+    "b_ipa": "[pa.ˈzaɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -100062,7 +100062,7 @@
     "b_tarr_hist": "Panai",
     "b_origin": "Panai (Panai)",
     "b_anachronism": "",
-    "b_ipa": "[pa.ˈnɛɪ]",
+    "b_ipa": "[pa.ˈnaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -100249,7 +100249,7 @@
     "b_tarr_hist": "Mentawai",
     "b_origin": "Siberut (Mentawai)",
     "b_anachronism": "",
-    "b_ipa": "[mɛn.ta.ˈwɛɪ]",
+    "b_ipa": "[mɛn.ta.ˈwaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -100348,7 +100348,7 @@
     "b_tarr_hist": "Saiburi",
     "b_origin": "Saiburi (constituent holding of Patâni)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪ.bʊ.rɪ]",
+    "b_ipa": "[ˈsaɪ.bʊ.rɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -100568,7 +100568,7 @@
     "b_tarr_hist": "Saimwang",
     "b_origin": "Saimwang (constituent holding of Pahang)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪm.waŋ]",
+    "b_ipa": "[ˈsaɪm.waŋ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -104682,7 +104682,7 @@
     "b_tarr_hist": "Bôhaimêr",
     "b_origin": "渤海 [Bohai] — Calque: Bohai Sea surge + Sea",
     "b_anachronism": "",
-    "b_ipa": "[boː.hɛɪ.ˈmeːr]",
+    "b_ipa": "[boː.haɪ.ˈmeːr]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -108389,7 +108389,7 @@
     "b_tarr_hist": "AltzunnenNai",
     "b_origin": "古日乃 [Gurinai] — Calque: Ancient + Sun + Steppe",
     "b_anachronism": "",
-    "b_ipa": "[al.tsʊ.nə.ˈnɛɪ]",
+    "b_ipa": "[al.tsʊ.nə.ˈnaɪ]",
     "holding_type": "city",
     "category": "sinosphere_calque"
   },
@@ -116617,7 +116617,7 @@
     "b_tarr_hist": "HôchblûeiUpganc",
     "b_origin": "隆兴 [Long Hung] — Calque: Exalted elevation + Rising prosperity",
     "b_anachronism": "",
-    "b_ipa": "[ˈhoːx.bluː.ɛɪ.ʊp.ɡaŋk]",
+    "b_ipa": "[ˈhoːx.bluː.ɛ.jʊp.ɡaŋk]",
     "holding_type": "castle",
     "category": "sinosphere_calque"
   },
@@ -116760,7 +116760,7 @@
     "b_tarr_hist": "Maingmaw",
     "b_origin": "Maingmaw (constituent holding of Kjauksê)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪŋ.maw]",
+    "b_ipa": "[ˈmaɪŋ.maw]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -116771,7 +116771,7 @@
     "b_tarr_hist": "Mekkhaya",
     "b_origin": "Mekkhaya (constituent holding of Kjauksê)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛk.hɛɪ.a]",
+    "b_ipa": "[ˈmɛk.ha.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -116925,7 +116925,7 @@
     "b_tarr_hist": "Htigyaing",
     "b_origin": "Htigyaing (constituent holding of Takôn)",
     "b_anachronism": "",
-    "b_ipa": "[htɪɡ.ˈjɛɪŋ]",
+    "b_ipa": "[htɪɡ.ˈjaɪŋ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117068,7 +117068,7 @@
     "b_tarr_hist": "Thayetmyo",
     "b_origin": "Thayetmyo (constituent holding of Srîkschetre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈthɛɪ.ɛtm.jɔ]",
+    "b_ipa": "[ˈtha.jɛtm.jɔ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117145,7 +117145,7 @@
     "b_tarr_hist": "Möng Pai",
     "b_origin": "Möng Pai (constituent holding of Swâ)",
     "b_anachronism": "",
-    "b_ipa": "[møːŋ pɛɪ]",
+    "b_ipa": "[møːŋ paɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117167,7 +117167,7 @@
     "b_tarr_hist": "Waisâli",
     "b_origin": "Waithali (Vaiśālĩ)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪ.zaː.lɪ]",
+    "b_ipa": "[ˈwaɪ.zaː.lɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -117332,7 +117332,7 @@
     "b_tarr_hist": "Taikkala",
     "b_origin": "Taikkala (constituent holding of Tatôn)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtɛɪ.ka.la]",
+    "b_ipa": "[ˈtaɪ.ka.la]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -117464,7 +117464,7 @@
     "b_tarr_hist": "Negrais",
     "b_origin": "Negrais (constituent holding of Kusumi)",
     "b_anachronism": "",
-    "b_ipa": "[nɛ.ˈɡrɛɪs]",
+    "b_ipa": "[nɛ.ˈɡraɪs]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117475,7 +117475,7 @@
     "b_tarr_hist": "Möngnai",
     "b_origin": "Mongnai (Mongnai)",
     "b_anachronism": "",
-    "b_ipa": "[møːŋ.ˈnɛɪ]",
+    "b_ipa": "[møːŋ.ˈnaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -117497,7 +117497,7 @@
     "b_tarr_hist": "Mawkmai",
     "b_origin": "Mawkmai (constituent holding of Möngnai)",
     "b_anachronism": "",
-    "b_ipa": "[mawk.ˈmɛɪ]",
+    "b_ipa": "[mawk.ˈmaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -117563,7 +117563,7 @@
     "b_tarr_hist": "Möng Pai",
     "b_origin": "Möng Pai (constituent holding of Inle-Sê)",
     "b_anachronism": "",
-    "b_ipa": "[møːŋ pɛɪ]",
+    "b_ipa": "[møːŋ paɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117574,7 +117574,7 @@
     "b_tarr_hist": "Laihka",
     "b_origin": "Laihka (constituent holding of Inle-Sê)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɛɪh.ka]",
+    "b_ipa": "[ˈlaɪh.ka]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117717,7 +117717,7 @@
     "b_tarr_hist": "Waingmaw",
     "b_origin": "Waingmaw (constituent holding of Momauch)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪŋ.maw]",
+    "b_ipa": "[ˈwaɪŋ.maw]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117739,7 +117739,7 @@
     "b_tarr_hist": "Danai",
     "b_origin": "Danai (constituent holding of Mjitkjînâ)",
     "b_anachronism": "",
-    "b_ipa": "[da.ˈnɛɪ]",
+    "b_ipa": "[da.ˈnaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117937,7 +117937,7 @@
     "b_tarr_hist": "Uthai Thani",
     "b_origin": "Uthai Thani (constituent holding of Chu Bue)",
     "b_anachronism": "",
-    "b_ipa": "[ʊt.ˈhɛɪ ˈtha.nɪ]",
+    "b_ipa": "[ʊt.ˈhaɪ ˈtha.nɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -117981,7 +117981,7 @@
     "b_tarr_hist": "Ayuthia",
     "b_origin": "Ayuthia (constituent holding of Nachôn Patôm)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.ʊt.hɪ.a]",
+    "b_ipa": "[ˈa.jʊt.hɪ.a]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118014,7 +118014,7 @@
     "b_tarr_hist": "Sainyabuli",
     "b_origin": "Sainyabuli (constituent holding of Muang Sue)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsɛɪ.ɲa.bʊ.lɪ]",
+    "b_ipa": "[ˈsaɪ.ɲa.bʊ.lɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118135,7 +118135,7 @@
     "b_tarr_hist": "Tschjang Rai",
     "b_origin": "Chiang Rai (constituent holding of Ingönjang)",
     "b_anachronism": "",
-    "b_ipa": "[tʃjaŋ rɛɪ]",
+    "b_ipa": "[tʃjaŋ raɪ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -118234,7 +118234,7 @@
     "b_tarr_hist": "Si Satchanalai",
     "b_origin": "Si Satchanalai (constituent holding of Tschaljâng)",
     "b_anachronism": "",
-    "b_ipa": "[sɪ sat.xa.na.ˈlɛɪ]",
+    "b_ipa": "[sɪ sat.xa.na.ˈlaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118278,7 +118278,7 @@
     "b_tarr_hist": "Phayao",
     "b_origin": "Phayao (constituent holding of Lampang)",
     "b_anachronism": "",
-    "b_ipa": "[ˈphɛɪ.a.ɔ]",
+    "b_ipa": "[ˈpha.ja.ɔ]",
     "holding_type": "castle",
     "category": "sub_barony_adaptation"
   },
@@ -118410,7 +118410,7 @@
     "b_tarr_hist": "Laingbwe",
     "b_origin": "Hlaingbwe (Hlaingbwe)",
     "b_anachronism": "",
-    "b_ipa": "[ˈlɛɪŋb.wɛ]",
+    "b_ipa": "[ˈlaɪŋb.wɛ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -118465,7 +118465,7 @@
     "b_tarr_hist": "Tschjang Mai",
     "b_origin": "Chiang Mai (constituent holding of Haripundschaje)",
     "b_anachronism": "",
-    "b_ipa": "[tʃjaŋ mɛɪ]",
+    "b_ipa": "[tʃjaŋ maɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118509,7 +118509,7 @@
     "b_tarr_hist": "Pai",
     "b_origin": "Pai (constituent holding of Mê Hông Sôn)",
     "b_anachronism": "",
-    "b_ipa": "[pɛɪ]",
+    "b_ipa": "[paɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -118663,7 +118663,7 @@
     "b_tarr_hist": "Bîndai",
     "b_origin": "Binh Dai (Binh Dai)",
     "b_anachronism": "",
-    "b_ipa": "[biːn.ˈdɛɪ]",
+    "b_ipa": "[biːn.ˈdaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -118696,7 +118696,7 @@
     "b_tarr_hist": "Baigaur",
     "b_origin": "Baigaur (Baigaur)",
     "b_anachronism": "",
-    "b_ipa": "[bɛɪ.ˈɣɔʊr]",
+    "b_ipa": "[baɪ.ˈɣɔʊr]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -118795,7 +118795,7 @@
     "b_tarr_hist": "Svay Rieng",
     "b_origin": "Svay Rieng (constituent holding of Wjâdapure)",
     "b_anachronism": "",
-    "b_ipa": "[svɛɪ ˈrɪ.ɛŋ]",
+    "b_ipa": "[svaɪ ˈrɪ.ɛŋ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -118828,7 +118828,7 @@
     "b_tarr_hist": "Tay Ninh",
     "b_origin": "Tay Ninh (constituent holding of Kratscheh Nokôr)",
     "b_anachronism": "",
-    "b_ipa": "[tɛɪ nɪnh]",
+    "b_ipa": "[taɪ nɪnh]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119136,7 +119136,7 @@
     "b_tarr_hist": "Bayang",
     "b_origin": "Bayang (constituent holding of Angkôr Borêi)",
     "b_anachronism": "",
-    "b_ipa": "[ˈbɛɪ.aŋ]",
+    "b_ipa": "[ˈba.jaŋ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -119246,7 +119246,7 @@
     "b_tarr_hist": "Rayong",
     "b_origin": "Rayong (constituent holding of Muang Pra Rôt)",
     "b_anachronism": "",
-    "b_ipa": "[ˈrɛɪ.ɔŋ]",
+    "b_ipa": "[ˈra.jɔŋ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -119378,7 +119378,7 @@
     "b_tarr_hist": "Salo Tai",
     "b_origin": "Salo Tai (Salo Tai)",
     "b_anachronism": "",
-    "b_ipa": "[ˈsa.lɔ tɛɪ]",
+    "b_ipa": "[ˈsa.lɔ taɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -119444,7 +119444,7 @@
     "b_tarr_hist": "Tschaiyaphum",
     "b_origin": "Chaiyaphum (constituent holding of Tschanasche)",
     "b_anachronism": "",
-    "b_ipa": "[ˈtʃɛɪ.jap.hʊm]",
+    "b_ipa": "[ˈtʃaɪ.jap.hʊm]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -119488,7 +119488,7 @@
     "b_tarr_hist": "Nong Khai",
     "b_origin": "Nong Khai (constituent holding of Ku Kêo)",
     "b_anachronism": "",
-    "b_ipa": "[nɔŋ khɛɪ]",
+    "b_ipa": "[nɔŋ khaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -119565,7 +119565,7 @@
     "b_tarr_hist": "Phon Sai",
     "b_origin": "Phon Sai (constituent holding of Mûndal)",
     "b_anachronism": "",
-    "b_ipa": "[phɔn sɛɪ]",
+    "b_ipa": "[phɔn saɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119631,7 +119631,7 @@
     "b_tarr_hist": "Quang Ngai",
     "b_origin": "Quang Ngai (constituent holding of Indrapure)",
     "b_anachronism": "",
-    "b_ipa": "[kwaŋ ŋɛɪ]",
+    "b_ipa": "[kwaŋ ŋaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119653,7 +119653,7 @@
     "b_tarr_hist": "Tan Xuyen",
     "b_origin": "Tan Xuyen (constituent holding of Simhapure)",
     "b_anachronism": "",
-    "b_ipa": "[tan ˈksʊ.ɪ.ɛn]",
+    "b_ipa": "[tan ˈksʊ.jɛn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119719,7 +119719,7 @@
     "b_tarr_hist": "Tay Son",
     "b_origin": "Tay Son (constituent holding of Widschaje)",
     "b_anachronism": "",
-    "b_ipa": "[tɛɪ sɔn]",
+    "b_ipa": "[taɪ sɔn]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -119752,7 +119752,7 @@
     "b_tarr_hist": "Aya Ru",
     "b_origin": "Aya Ru (constituent holding of Kautâre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈɛɪ.a rʊ]",
+    "b_ipa": "[ˈa.ja rʊ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -121358,7 +121358,7 @@
     "b_tarr_hist": "Maynila",
     "b_origin": "Maynila (constituent holding of Tondô)",
     "b_anachronism": "",
-    "b_ipa": "[ˈmɛɪ.nɪ.la]",
+    "b_ipa": "[ˈmaɪ.nɪ.la]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -121655,7 +121655,7 @@
     "b_tarr_hist": "Calayan",
     "b_origin": "Calayan (constituent holding of Iwatan)",
     "b_anachronism": "",
-    "b_ipa": "[ka.lɛɪ.ˈan]",
+    "b_ipa": "[ka.la.ˈjan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -121776,7 +121776,7 @@
     "b_tarr_hist": "Taytay",
     "b_origin": "Taytay (Taytay (in-game: Taytay))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Taytay under Burden of Proof on Antiquity.",
-    "b_ipa": "[tɛɪ.ˈtɛɪ]",
+    "b_ipa": "[taɪ.ˈtaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -122425,7 +122425,7 @@
     "b_tarr_hist": "Ulay",
     "b_origin": "Ulay (constituent holding of Hoânje)",
     "b_anachronism": "",
-    "b_ipa": "[ʊ.ˈlɛɪ]",
+    "b_ipa": "[ʊ.ˈlaɪ]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -122623,7 +122623,7 @@
     "b_tarr_hist": "Seruyan",
     "b_origin": "Seruyan (constituent holding of Waringin)",
     "b_anachronism": "",
-    "b_ipa": "[sɛ.rʊ.ɪ.ˈan]",
+    "b_ipa": "[sɛ.rʊ.ˈjan]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -123008,7 +123008,7 @@
     "b_tarr_hist": "Taiau",
     "b_origin": "Taiao (Taiau (in-game: Taiao))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Taiau under Burden of Proof on Antiquity.",
-    "b_ipa": "[tɛɪ.ˈɔʊ]",
+    "b_ipa": "[ta.ˈjɔʊ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123096,7 +123096,7 @@
     "b_tarr_hist": "Kutai Loman",
     "b_origin": "Kutai Loman (constituent holding of Mûara Kaman)",
     "b_anachronism": "",
-    "b_ipa": "[kʊ.ˈtɛɪ lɔ.ˈman]",
+    "b_ipa": "[kʊ.ˈtaɪ lɔ.ˈman]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -123118,7 +123118,7 @@
     "b_tarr_hist": "Nord-Kutai",
     "b_origin": "Sangkulirang (Nord-Kutai (in-game: Kutai Utara))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Nord-Kutai under Burden of Proof on Antiquity.",
-    "b_ipa": "[nɔrd kʊ.ˈtɛɪ]",
+    "b_ipa": "[nɔrd kʊ.ˈtaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123184,7 +123184,7 @@
     "b_tarr_hist": "Ferne-Kutai",
     "b_origin": "Badak (Ferne-Kutai (in-game: Kutai Jauh))",
     "b_anachronism": "Post-867 Malay/Dayak directional subdivision ('Distant Kutai'); Procedure 2 confirms unbroken Dayak continuity, calquing jauh ('far') to Ferne-Kutai parallel to Nord-Kutai.",
-    "b_ipa": "[ˈfɛr.nə kʊ.ˈtɛɪ]",
+    "b_ipa": "[ˈfɛr.nə kʊ.ˈtaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123602,7 +123602,7 @@
     "b_tarr_hist": "Banggai",
     "b_origin": "Banggai (Banggai (in-game: Banggai))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Banggai under Burden of Proof on Antiquity.",
-    "b_ipa": "[baŋ.ˈɡɛɪ]",
+    "b_ipa": "[baŋ.ˈɡaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123657,7 +123657,7 @@
     "b_tarr_hist": "Waya",
     "b_origin": "Waya (constituent holding of Mori)",
     "b_anachronism": "",
-    "b_ipa": "[ˈwɛɪ.a]",
+    "b_ipa": "[ˈwa.ja]",
     "holding_type": "church",
     "category": "sub_barony_adaptation"
   },
@@ -123668,7 +123668,7 @@
     "b_tarr_hist": "Nord-Banggai",
     "b_origin": "Tojo (Nord-Banggai (in-game: Banggai Utara))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Nord-Banggai under Burden of Proof on Antiquity.",
-    "b_ipa": "[nɔrd baŋ.ˈɡɛɪ]",
+    "b_ipa": "[nɔrd baŋ.ˈɡaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -123745,7 +123745,7 @@
     "b_tarr_hist": "Koye",
     "b_origin": "Koye (constituent holding of Tidôre)",
     "b_anachronism": "",
-    "b_ipa": "[ˈkɔʏ.ɛ]",
+    "b_ipa": "[ˈkɔ.jɛ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -123811,7 +123811,7 @@
     "b_tarr_hist": "Wahai",
     "b_origin": "Wahai (constituent holding of Sêram)",
     "b_anachronism": "",
-    "b_ipa": "[wa.ˈhɛɪ]",
+    "b_ipa": "[wa.ˈhaɪ]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -123976,7 +123976,7 @@
     "b_tarr_hist": "Sonbai",
     "b_origin": "Kupang (Sonbai (in-game: Sonba'i))",
     "b_anachronism": "Lacks documented pre-867 urban center; resolved via Option B Sonbai under Burden of Proof on Antiquity.",
-    "b_ipa": "[sɔn.ˈbɛɪ]",
+    "b_ipa": "[sɔn.ˈbaɪ]",
     "holding_type": "church",
     "category": "capital_eponymous"
   },
@@ -124075,7 +124075,7 @@
     "b_tarr_hist": "Barat Daya",
     "b_origin": "Barat Daya (constituent holding of Wêtar)",
     "b_anachronism": "",
-    "b_ipa": "[ba.ˈrat ˈdɛɪ.a]",
+    "b_ipa": "[ba.ˈrat ˈda.ja]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },
@@ -124152,7 +124152,7 @@
     "b_tarr_hist": "Maybrat",
     "b_origin": "Maybrat (constituent holding of Bintûni)",
     "b_anachronism": "",
-    "b_ipa": "[mɛɪ.ˈbrat]",
+    "b_ipa": "[maɪ.ˈbrat]",
     "holding_type": "city",
     "category": "sub_barony_adaptation"
   },

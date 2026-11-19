@@ -522,7 +522,7 @@ flowchart LR
 * **Historical Rationale:** Because Tarraconian possesses the **Courtly** ethos (`ethos_courtly`) directly inherited from its Catalan parent (`ID 82`), the courtly names of the House of Barcelona, the Counts of Urgell, Cerdanya, Empúries, and the Occitan counts of Toulouse and Carcassonne constitute a central pillar of noble identity.
 * **Key Repertoire:**
   * **Male:**
-    * **Raimunt / Rêmunt** `[ˈrɛɪ.mʊnt ~ ˈreː.mʊnt]` (Catalan *Ramon*, Occitan *Raimon* — counts of Barcelona)
+    * **Raimunt / Rêmunt** `[ˈraɪ.mʊnt ~ ˈreː.mʊnt]` (Catalan *Ramon*, Occitan *Raimon* — counts of Barcelona)
     * **Guilhem** `[ˈɡi.ʎɛm]` (Catalan *Guillem*, Occitan *Guilhem* — courtly variant of Wilhelm)
     * **Berengâr** `[bə.rɛn.ˈɡaːr]` (Catalan *Berenguer* — counts of Barcelona)
     * **Bernhart** `[ˈbɛrn.hart]` (Catalan *Bernat* — counts of Besalú)
@@ -651,7 +651,7 @@ To expand the Tarraconian onomasticon beyond the 239 vanilla Franconian keys, th
 | Visigothic | **Bêremunt** | `[ˈbeː.rə.mʊnt]` | Bermudo / Veremundus, bear-protection. |
 | Visigothic | **Sanzo** | `[ˈzan.tso]` | Sancho / Sanctius, consecrated. |
 | Visigothic | **Pelâgi** | `[pə.ˈlaː.ɣi]` | Pelayo / Pelagius, hero of Covadonga. |
-| Catalan Courtly | **Raimunt** | `[ˈrɛɪ.mʊnt]` | Ramon, premier counts of Barcelona. |
+| Catalan Courtly | **Raimunt** | `[ˈraɪ.mʊnt]` | Ramon, premier counts of Barcelona. |
 | Catalan Courtly | **Guilhem** | `[ˈɡi.ʎɛm]` | Guillem, courtly Occitano-Catalan Wilhelm. |
 | Catalan Courtly | **Ermengôl** | `[ɛr.mən.ˈɡoːl]` | Ermengol, counts of Urgell. |
 | Catalan Courtly | **Dalmâtz** | `[dal.ˈmaːts]` | Dalmau, noble Catalan baronial name. |

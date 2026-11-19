@@ -290,15 +290,15 @@ In accordance with [tarraconian_linguistics_guide.md](file:///home/siarzhuk/code
    * `b_chaul` $\rightarrow$ **`Tschaul`** `[tʃɔʊl]`
    * `b_chiplun` $\rightarrow$ **`Tschiprarulana`** `[ˈtʃɪ.pra.rʊ.la.na]`
    * `b_chiang_klang` $\rightarrow$ **`Tschjang Klang`** `[tʃjaŋ klaŋ]`
-   * `b_chiang_rai` $\rightarrow$ **`Tschjang Rai`** `[tʃjaŋ rɛɪ]`
-   * `b_chiang_mai` $\rightarrow$ **`Tschjang Mai`** `[tʃjaŋ mɛɪ]`
+   * `b_chiang_rai` $\rightarrow$ **`Tschjang Rai`** `[tʃjaŋ raɪ]`
+   * `b_chiang_mai` $\rightarrow$ **`Tschjang Mai`** `[tʃjaŋ maɪ]`
    * `b_thap_chumphon` $\rightarrow$ **`Thap Tschumphon`** `[thap tʃʊmp.ˈhɔn]`
    * `b_THAI_Chumpon` $\rightarrow$ **`Tschumpon`** `[tʃʊm.ˈpɔn]`
    * `b_chom_thong` $\rightarrow$ **`Tschom Thong`** `[tʃɔm thɔŋ]`
    * `b_choam_khsant` $\rightarrow$ **`Tschoam Khsant`** `[ˈtʃɔ.am khsant]`
    * `b_phnom_penh` $\rightarrow$ **`Tschaturmukha`** `[ˈtʃa.tʊr.mʊk.ha]`
    * `b_chachoengsoo` $\rightarrow$ **`Tschachoengsoo`** `[ˈtʃa.xɔ.ɛŋ.sɔ.ɔ]`
-   * `b_chaiyaphum` $\rightarrow$ **`Tschaiyaphum`** `[ˈtʃɛɪ.jap.hʊm]`
+   * `b_chaiyaphum` $\rightarrow$ **`Tschaiyaphum`** `[ˈtʃaɪ.jap.hʊm]`
 
 Authentic velar fricative `/x/` toponyms of Greek (Χ: `Chîos`, `Chalkidîke`, `Charsjanôn`, `Chaldîe`), Slavic (Х: `Chulm`, `Chwosne`, `Chotîn`, `Chopjôr`), and Semitic/Turkic/Mongolic origin (خ / Х: `Chîwe`, `Chotan`, `Chaibâr`, `Chitân`) legitimately retain Tarraconian scribal `Ch-` and phonetic `[x]`.
 
