@@ -235,7 +235,7 @@
     "sable",
     "chevron",
     "chevron",
-    "or",
+    "sable",
     1,
     "or"
   ],
@@ -267,7 +267,7 @@
     "sable",
     "chevron",
     "bow_and_arrow",
-    "or",
+    "sable",
     1,
     "or"
   ],
@@ -403,7 +403,7 @@
     "gules",
     "chevron",
     "horse_courant",
-    "argent",
+    "gules",
     1,
     "argent"
   ],
@@ -619,7 +619,7 @@
     "argent",
     "per_pale",
     "cross",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -843,7 +843,7 @@
     "argent",
     "per_pale",
     "fess",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -1587,7 +1587,7 @@
     "gules",
     "per_pale",
     "castrum",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -1811,7 +1811,7 @@
     "argent",
     "per_pale",
     "alerion",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -1851,7 +1851,7 @@
     "azure",
     "bend",
     "rose_seeded",
-    "argent",
+    "azure",
     2,
     "argent"
   ],
@@ -2179,7 +2179,7 @@
     "argent",
     "per_pale",
     "cross",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -2339,7 +2339,7 @@
     "argent",
     "chequy",
     "castrum",
-    "azure",
+    "or",
     1,
     "azure"
   ],
@@ -2507,7 +2507,7 @@
     "gules",
     "per_fess",
     "fess",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -2667,7 +2667,7 @@
     "sable",
     "per_pale",
     "alerion",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -3299,7 +3299,7 @@
     "gules",
     "per_pale",
     "alerion",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -3723,7 +3723,7 @@
     "gules",
     "chequy",
     "shield_escutcheon",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -4387,7 +4387,7 @@
     "gules",
     "per_pale",
     "eagle_double",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -4451,7 +4451,7 @@
     "azure",
     "per_bend_sinister",
     "lion_rampant",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -4499,7 +4499,7 @@
     "gules",
     "per_pale",
     "castrum",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -4691,7 +4691,7 @@
     "gules",
     "per_pale",
     "eagle_double",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -4987,7 +4987,7 @@
     "gules",
     "chequy",
     "crown",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -5019,7 +5019,7 @@
     "gules",
     "chequy",
     "crown",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -5331,7 +5331,7 @@
     "gules",
     "chequy",
     "cross",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -5531,7 +5531,7 @@
     "or",
     "per_pale",
     "alerion",
-    "sable",
+    "gules",
     1,
     "sable"
   ],
@@ -5539,7 +5539,7 @@
     "or",
     "per_pale",
     "lion_rampant",
-    "sable",
+    "gules",
     1,
     "sable"
   ],
@@ -5547,7 +5547,7 @@
     "or",
     "per_pale",
     "lion_rampant",
-    "gules",
+    "azure",
     1,
     "gules"
   ],
@@ -5555,7 +5555,7 @@
     "argent",
     "per_pale",
     "lion_rampant",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -5563,7 +5563,7 @@
     "or",
     "per_pale",
     "lion_rampant",
-    "gules",
+    "azure",
     1,
     "gules"
   ],
@@ -5667,7 +5667,7 @@
     "azure",
     "chequy",
     "crown",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -5699,7 +5699,7 @@
     "azure",
     "chequy",
     "crown",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -5731,7 +5731,7 @@
     "azure",
     "per_pale",
     "lion_rampant",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -5763,7 +5763,7 @@
     "sable",
     "per_pale",
     "pale",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -6203,7 +6203,7 @@
     "gules",
     "chevron",
     "bow_and_arrow",
-    "argent",
+    "gules",
     1,
     "argent"
   ],
@@ -6219,7 +6219,7 @@
     "or",
     "chevron",
     "bow_and_arrow",
-    "sable",
+    "or",
     1,
     "sable"
   ],
@@ -6227,7 +6227,7 @@
     "or",
     "chevron",
     "chevron",
-    "sable",
+    "or",
     1,
     "sable"
   ],
@@ -6283,7 +6283,7 @@
     "gules",
     "chevron",
     "chevron",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -6291,7 +6291,7 @@
     "sable",
     "chevron",
     "chevron",
-    "or",
+    "sable",
     1,
     "or"
   ],
@@ -6339,7 +6339,7 @@
     "or",
     "chevron",
     "chevron",
-    "gules",
+    "or",
     1,
     "gules"
   ],
@@ -6459,7 +6459,7 @@
     "gules",
     "per_bend",
     "bow_and_arrow",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -6707,7 +6707,7 @@
     "gules",
     "per_pale",
     "eagle_double",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -6731,7 +6731,7 @@
     "argent",
     "per_pale",
     "alerion",
-    "azure",
+    "or",
     1,
     "azure"
   ],
@@ -8027,7 +8027,7 @@
     "argent",
     "chequy",
     "fleur_de_lis",
-    "sable",
+    "or",
     1,
     "sable"
   ],
@@ -8419,7 +8419,7 @@
     "or",
     "per_pale",
     "eagle_double",
-    "sable",
+    "gules",
     1,
     "sable"
   ],
@@ -8603,7 +8603,7 @@
     "or",
     "per_pale",
     "pale",
-    "gules",
+    "azure",
     1,
     "gules"
   ],
@@ -8683,7 +8683,7 @@
     "or",
     "pales",
     "pale",
-    "gules",
+    "azure",
     1,
     "gules"
   ],
@@ -8739,7 +8739,7 @@
     "or",
     "pales",
     "pale",
-    "gules",
+    "azure",
     1,
     "gules"
   ],
@@ -9091,7 +9091,7 @@
     "sable",
     "chequy",
     "castrum",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -9211,7 +9211,7 @@
     "gules",
     "per_pale",
     "castrum",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -9347,7 +9347,7 @@
     "gules",
     "per_fess",
     "castrum",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -9979,7 +9979,7 @@
     "vert",
     "per_pale",
     "bend",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -11803,7 +11803,7 @@
     "azure",
     "per_fess",
     "anchor",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -11819,7 +11819,7 @@
     "gules",
     "per_fess",
     "castrum",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -12171,7 +12171,7 @@
     "azure",
     "per_pale",
     "star_six_pointed",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -12267,7 +12267,7 @@
     "azure",
     "per_pale",
     "sword_crossed",
-    "argent",
+    "or",
     1,
     "argent"
   ],
@@ -12555,7 +12555,7 @@
     "gules",
     "per_pale",
     "cross",
-    "or",
+    "azure",
     1,
     "or"
   ],
@@ -13131,7 +13131,7 @@
     "sable",
     "per_bend",
     "lion_rampant",
-    "or",
+    "gules",
     1,
     "or"
   ],
@@ -13611,7 +13611,7 @@
     "gules",
     "per_bend_sinister",
     "bend",
-    "or",
+    "azure",
     1,
     "or"
   ],

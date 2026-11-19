@@ -228,6 +228,17 @@ def main():
         charge_col = enforce_contrast(charge_col, field)
         if pat != 'solid':
             ord_field = enforce_contrast(ord_field, field)
+            # Divided field rule of tinctures:
+            if pat in ('fess', 'pale', 'bend', 'bend_sinister', 'chevron', 'cross', 'saltire'):
+                if charge_col == ord_field:
+                    charge_col = field
+            elif pat in ('bordure', 'chief'):
+                if charge_col == field:
+                    charge_col = ord_field
+            elif pat in ('per_pale', 'per_fess', 'per_bend', 'per_bend_sinister', 'quarterly', 'per_saltire', 'barry', 'chequy', 'pales', 'pales_undy'):
+                if charge_col in (field, ord_field):
+                    charge_col = 'or' if (field != 'or' and ord_field != 'or') else ('azure' if (field == 'gules' or ord_field == 'gules') else 'gules')
+
         canonical_heraldry[t] = [field, pat, charge, charge_col, count, ord_field]
 
     # Explicit Authentic Historical Heraldry Overrides & 100% Realm Disambiguations
@@ -238,13 +249,13 @@ def main():
         "k_portugal": ["argent", "solid", "cross", "azure", 1, "azure"],
         "k_castille": ["gules", "solid", "castrum", "or", 1, "or"],
         "k_leon": ["argent", "solid", "lion_rampant", "purpure", 1, "purpure"],
-        "k_aragon": ["or", "pales", "pale", "gules", 1, "gules"],
+        "k_aragon": ["or", "pales", "pale", "azure", 1, "gules"],
         "k_navarra": ["gules", "solid", "cross", "or", 1, "or"],
-        "c_barcelona": ["or", "pales", "pale", "gules", 1, "gules"],
+        "c_barcelona": ["or", "pales", "pale", "azure", 1, "gules"],
         "c_tarragona": ["or", "pales", "waves", "azure", 1, "gules"],
         "c_roma": ["gules", "solid", "cross", "or", 1, "or"],
         "c_byzantion": ["gules", "solid", "cross", "or", 1, "or"],
-        "c_metz": ["argent", "per_pale", "cross", "gules", 1, "gules"],
+        "c_metz": ["argent", "per_pale", "cross", "or", 1, "gules"],
 
         # Western Europe & HRE
         "e_germany": ["or", "solid", "eagle_double", "sable", 1, "sable"],
@@ -262,11 +273,11 @@ def main():
         "k_sweden": ["azure", "solid", "crown", "or", 3, "or"],
         "k_norway": ["gules", "solid", "battleaxe", "or", 1, "or"],
         "k_denmark": ["or", "solid", "lion_rampant", "azure", 3, "gules"],
-        "k_bavaria": ["argent", "chequy", "castrum", "azure", 1, "azure"],
+        "k_bavaria": ["argent", "chequy", "castrum", "or", 1, "azure"],
         "k_sicily": ["or", "per_saltire", "alerion", "sable", 1, "gules"],
         "k_papal_state": ["gules", "solid", "keys_st_peter", "or", 1, "or"],
         "k_burgundy": ["or", "barry", "bordure", "azure", 1, "gules"],
-        "k_croatia": ["gules", "chequy", "shield_escutcheon", "argent", 1, "argent"],
+        "k_croatia": ["gules", "chequy", "shield_escutcheon", "or", 1, "argent"],
 
         # Empires without collisions
         "e_turan": ["azure", "solid", "wolf_statant", "or", 1, "or"],

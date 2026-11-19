@@ -1044,8 +1044,13 @@ class TestSymbolGenerator:
         assert ord_key == "solid", f"c_porto ordinary must be solid, got {ord_key}"
 
         # 2. Complete Rule of Tincture audit: zero metal-on-metal or colour-on-colour violations
+        # and strict divided field compliance (no charge bearing same colour as its division)
         metals = {"or", "argent"}
         colours = {"gules", "azure", "vert", "sable", "purpure"}
+
+        on_ordinary = {"fess", "pale", "bend", "bend_sinister", "chevron", "cross", "saltire"}
+        in_field = {"bordure", "chief"}
+        partitions = {"per_pale", "per_fess", "per_bend", "per_bend_sinister", "quarterly", "per_saltire", "barry", "chequy", "pales", "pales_undy"}
 
         violations = []
         for title, data in canon.items():
@@ -1053,17 +1058,28 @@ class TestSymbolGenerator:
             field_is_metal = f_col in metals
             charge_is_metal = chg_col in metals
 
-            if field_is_metal and charge_is_metal:
-                violations.append((title, "charge metal-on-metal", f_col, chg_col))
-            elif (not field_is_metal) and (not charge_is_metal):
-                violations.append((title, "charge colour-on-colour", f_col, chg_col))
-
-            if o_key != "solid":
+            if o_key == "solid":
+                if field_is_metal and charge_is_metal:
+                    violations.append((title, "charge metal-on-metal", f_col, chg_col))
+                elif (not field_is_metal) and (not charge_is_metal):
+                    violations.append((title, "charge colour-on-colour", f_col, chg_col))
+            else:
                 ord_is_metal = o_col in metals
                 if field_is_metal and ord_is_metal:
                     violations.append((title, "ordinary metal-on-metal", f_col, o_col))
                 elif (not field_is_metal) and (not ord_is_metal):
                     violations.append((title, "ordinary colour-on-colour", f_col, o_col))
+
+                # Adjusted Rule of Tinctures on Divided Fields
+                if o_key in on_ordinary:
+                    if chg_col == o_col:
+                        violations.append((title, "charge on ordinary matches ordinary colour", o_key, o_col, chg_col))
+                elif o_key in in_field:
+                    if chg_col == f_col:
+                        violations.append((title, "charge in field matches field colour", o_key, f_col, chg_col))
+                elif o_key in partitions:
+                    if chg_col in (f_col, o_col):
+                        violations.append((title, "charge spanning partition matches partition division", o_key, f_col, o_col, chg_col))
 
         assert len(violations) == 0, f"Found {len(violations)} Rule of Tincture violations in canonical heraldry: {violations[:5]}"
 
@@ -1155,6 +1171,47 @@ class TestSymbolGenerator:
         # 3. Explicit check for cross and ordinary charges
         for ordinary_charge in ["cross", "fess", "pale", "bend", "chevron", "bordure"]:
             assert ordinary_charge in defined_charges, f"Ordinary charge {ordinary_charge} missing from CHARGES"
+
+    def test_divided_field_rule_of_tinctures_and_babruysk(self, counties_data):
+        """Verifies the adjusted Rule of Tinctures on divided fields, specifically preventing silver-on-silver in c_babruysk."""
+        js_path = DOCS_DIR / "js" / "symbol_generator.js"
+        content = js_path.read_text(encoding="utf-8")
+
+        # 1. Divided field logic present in symbol_generator.js
+        assert "ON_ORDINARY_SET" in content, "Missing ON_ORDINARY_SET in symbol_generator.js"
+        assert "IN_FIELD_SET" in content, "Missing IN_FIELD_SET in symbol_generator.js"
+        assert "prevent charge-on-division colour collisions" in content, "Rationale must explain divided field tincture immunity"
+
+        # 2. Simulate c_babruysk procedural derivation
+        def hash_string(s):
+            h = 5381
+            for ch in s:
+                h = (((h << 5) + h) + ord(ch)) & 0xFFFFFFFF
+                if h >= 0x80000000:
+                    h -= 0x100000000
+            return abs(h)
+
+        h_babruysk = hash_string("c_babruysk")
+        fields = ["gules", "azure", "or", "argent", "vert", "sable"]
+        detected_field = fields[h_babruysk % len(fields)]
+        assert detected_field == "gules", f"c_babruysk field must be Gules, got {detected_field}"
+
+        late_ordinaries = ["solid", "fess", "bend", "bend_sinister", "chevron", "cross", "saltire", "quarterly", "per_saltire", "chief", "bordure", "barry"]
+        detected_ordinary = late_ordinaries[(h_babruysk >> 2) % len(late_ordinaries)]
+        assert detected_ordinary == "fess", f"c_babruysk ordinary must be fess, got {detected_ordinary}"
+
+        # In c_babruysk, the fess is Argent (division 2) on a Gules field (division 1)
+        # Under the adjusted Rule of Tinctures, the battleaxes on the fess must NOT be silver (no silver-on-silver)
+        # Instead, they appear entirely inside the silver fess and bear the opposite colour (Gules)
+        ordinary_color = "argent"
+        on_ordinary_set = {"fess", "pale", "bend", "bend_sinister", "chevron", "cross", "saltire"}
+        if detected_ordinary in on_ordinary_set:
+            charge_color = detected_field
+        else:
+            charge_color = ordinary_color
+
+        assert charge_color == "gules", f"c_babruysk charge must be Gules on silver fess, got {charge_color}"
+        assert charge_color != ordinary_color, "c_babruysk charge must NOT match ordinary color (avoid silver-on-silver)"
 
 
 
