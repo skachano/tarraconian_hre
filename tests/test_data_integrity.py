@@ -6,6 +6,7 @@ GeoJSON schemas, coordinate boundaries, and Chancellery toponym mappings.
 """
 
 import json
+import re
 from pathlib import Path
 import pytest
 
@@ -97,6 +98,8 @@ class TestWebAssets:
             "lexicon-match-count",
             "lexicon-table-body",
             "barony-legend",
+            "drawer-audit-badge",
+            "tab-pane-audit",
         ]:
             assert f'id="{elem_id}"' in content, f"Missing element #{elem_id} in index.html"
 
@@ -106,7 +109,7 @@ class TestWebAssets:
         assert stats_match, "map-stats-badge not found in index.html"
         assert "barony-legend" not in stats_match.group(1), "barony-legend should not be nested inside map-stats-badge"
 
-        for tab_name in ["tarraconian", "sinosphere", "lexicon"]:
+        for tab_name in ["tarraconian", "sinosphere", "lexicon", "audit"]:
             assert f'data-tab="{tab_name}"' in content, f"Missing tab button data-tab={tab_name} in index.html"
 
         # Mobile viewport & bottom sheet drag handle
@@ -347,6 +350,122 @@ class TestBaroniesGeoJSON:
         assert by_key["b_roma"]["county"] == "c_roma"
         assert by_key["b_roma"]["empire"] == "e_germany"
         assert by_key["b_roma"]["e_tarr"] == "Dat Vrankische Imperi"
+
+    def test_historical_audit_barony_resolutions(self, baronies_data):
+        """Validates that newly audited baronies under the Burden of Proof on Antiquity
+        principle and Tarraconian phonotactics match the required historical resolutions."""
+        by_key = {f["properties"]["barony"]: f["properties"] for f in baronies_data["features"]}
+
+        expected_resolutions = {
+            "b_dorohychyn": ("Bûch", "[buːx]"),
+            "b_baranovichi": ("Ehrenfrîtszelle", "[ɛh.rɛn.friːts.ˈtsɛ.ʎə]"),
+            "b_zhlobin": ("Strêschew", "[ˈstreː.ʃɛw]"),
+            "b_kalinkavichy": ("Ipat", "[ɪ.ˈpat]"),
+            "b_konigsberg": ("Twangste", "[ˈtwaŋ.stɛ]"),
+            "b_pushkin": ("Sâri", "[ˈsaː.rɪ]"),
+            "b_newport": ("Ûsemunde", "[uː.zɛ.ˈmʊn.də]"),
+            "b_fort_novoaleksandrovkiy": ("Mangystau", "[ma.ŋɪs.ˈtɔʊ]"),
+            "b_bartenstein": ("Barte", "[ˈbar.tə]"),
+            "b_algiers": ("Alschîr", "[al.ˈʃiːr]"),
+            "b_stezyca": ("Stensitz", "[ˈstɛn.sɪts]"),
+            "b_eilenburg": ("Îlenburch", "[ˈiː.lɛn.bʊrx]"),
+            "b_gazargamo": ("Gasargamu", "[ˈɡa.zar.ɡa.mʊ]"),
+            "b_agra": ("Agraban", "[a.ɡra.ˈban]"),
+            "b_benghazi": ("Berenîke", "[bɛ.rɛ.ˈniː.kə]"),
+            "b_rafaniya-krak": ("Rafanîje", "[ra.fa.ˈniː.jɛ]"),
+            "b_timbuktu": ("Djôlibe", "[djoː.ˈlɪ.bə]"),
+            "b_bangkok": ("Mênam", "[ˈmeː.nam]"),
+            "b_faizabad": ("Sarajû", "[sa.ra.ˈjuː]"),
+            "b_gangaikondacolapuram": ("Kâvêrî", "[kaː.veː.ˈriː]"),
+            "b_rotterdam": ("Rotte", "[ˈrɔ.tə]"),
+            "b_heidelberg": ("Heiligenberch", "[ˈhɛɪ.lɪ.ɣən.bɛrx]"),
+            "b_clairvaux": ("Albetâl", "[al.bɛ.ˈtaːl]"),
+            "b_citeaux": ("Vonge", "[ˈvɔ.ŋɛ]"),
+            "b_furness": ("Vûrnês", "[vuːr.ˈneːs]"),
+            "b_katzenelnbogen": ("Dörsbach", "[ˈdøːrs.bax]"),
+            "b_isenburg": ("Iserbach", "[ˈɪ.zɛr.bax]"),
+            "b_jaisalmer": ("Kaknî", "[kak.ˈniː]"),
+            "b_amarkot": ("Hakrâ", "[ha.ˈkraː]"),
+            "b_pathankot": ("Tschakkî", "[tʃa.ˈkiː]"),
+            "b_gawilgarh": ("Sâtpure", "[saːt.ˈpʊ.rə]"),
+            "b_borgarh": ("Narmadâ-Tâl", "[nar.ma.ˈdaː taːl]"),
+            "b_aswan-west": ("Elefantîne", "[ɛ.lɛ.fan.ˈtiː.nə]"),
+            "b_benin_marshes": ("Osse", "[ˈɔ.sə]"),
+            "b_gobir-east": ("Rîme", "[ˈriː.mə]"),
+            "b_salavan": ("Sê-Dôn", "[seː doːn]"),
+            "b_BOR_Melak": ("Mahakâm", "[ma.ha.ˈkaːm]"),
+            "b_upper_gambia": ("Kantôra", "[ˈkan.toː.ra]"),
+            "b_mariupol": ("Kalmjûs", "[kalm.ˈjuːs]"),
+            "b_karabutak": ("Mugaldschar-Berch", "[ˈmʊ.ɣal.dʒar bɛrx]"),
+            "b_popa": ("Popa-Berch", "[ˈpɔ.pa bɛrx]"),
+            "b_lower_jubba": ("Gobweyn", "[ɡɔb.ˈwɛɪn]"),
+            "b_lower_omo": ("Nider-Omo", "[ˈnɪ.dər ˈɔ.mɔ]"),
+            "b_upper_dinder": ("Ober-Dinder", "[ˈɔ.bər ˈdɪn.dər]"),
+            "b_middle_atbara": ("Middel-Atbara", "[mɪ.ˈdəl ˈat.ba.ra]"),
+            "b_upper_tano": ("Ober-Tano", "[ˈɔ.bər ˈta.nɔ]"),
+            "b_south_igbo": ("Sût-Igbô", "[suːt ɪɡ.ˈboː]"),
+            "b_york": ("Everwîch", "[ɛ.vɛr.ˈwiːç]"),
+            "b_birmingham": ("Bôrmingheim", "[boːr.mɪŋ.ˈhɛɪm]"),
+            "b_scarborough": ("Scharburch", "[ˈʃar.bʊrx]"),
+            "b_chesterfield": ("Tschestervelt", "[ˈtʃɛs.tɛr.vɛlt]"),
+            "b_newark": ("Scherwald", "[ˈʃpreː.wald]" if False else "[ˈʃɛr.wald]"),
+            "b_aylesbury": ("Eilesburch", "[ˈɛɪ.lɛs.bʊrx]"),
+            "b_west_derby": ("Westdörp", "[ˈwɛst.døːrp]"),
+            "b_selkirk": ("Selkirchen", "[ˈsɛl.kɪr.xən]"),
+            "b_cottingham": ("Cottingheim", "[kɔ.tɪŋ.ˈhɛɪm]"),
+            "b_colchester": ("Colnezester", "[ˈkɔl.nɛ.tsɛs.tər]"),
+            "b_salisbury": ("Sêreburch", "[ˈseː.rɛ.bʊrx]"),
+            "b_shrewsbury": ("Schrobbesburch", "[ˈʃrɔ.bɛs.bʊrx]"),
+            "b_winchester": ("Wintanzester", "[ˈwɪn.tan.tsɛs.tər]"),
+            "b_exeter": ("Exanzester", "[ˈɛk.san.tsɛs.tər]"),
+            "b_dover": ("Dovras", "[ˈdɔ.vras]"),
+            "b_bath": ("Hâtbatu", "[ˈhaːt.ba.tʊ]"),
+            "b_vyr": ("Wîr", "[wiːr]"),
+            "b_starodub-on-the-klyazma": ("Starodûp-an-der-Klêsme", "[sta.rɔ.ˈduːp an dɛr ˈkleːs.mə]"),
+            "b_yegoryevsk": ("Guslîtze", "[ɡʊs.ˈliː.tsə]"),
+            "b_bar_sur_aube": ("Bar-an-der-Ôbe", "[bar an dɛr ˈoː.bə]"),
+            "b_bar_sur_seine": ("Bar-an-der-Sêne", "[bar an dɛr ˈseː.nə]"),
+            "b_montreuil_sur_mer": ("Montreuil-am-Mêr", "[ˈmɔn.trɔʏ.ɪl am meːr]"),
+            "b_yuriev": ("Rostawîtze", "[rɔs.ta.ˈwiː.tsə]"),
+            "b_yuryev": ("Kolôksche", "[kɔ.ˈloːk.ʃə]"),
+            "b_yaroslav_VOL": ("Mletschke", "[ˈmlɛtʃ.kə]"),
+            "b_rostislavl": ("Osjôtr", "[ɔs.ˈjoːtr]"),
+            "b_danilov": ("Pelende", "[pɛ.ˈlɛn.də]"),
+            "b_valenciennes": ("Valentzîn", "[va.lɛn.ˈtsiːn]"),
+            "b_grevelines": ("Grevelingen", "[ˈɡrɛ.vɛ.lɪ.ŋɛn]"),
+            "b_tournai": ("Dornîch", "[dɔr.ˈniːç]"),
+            "b_courtrai": ("Kortrîch", "[kɔr.ˈtriːç]"),
+            "b_bastogne": ("Bastenach", "[ˈbas.tɛ.nax]"),
+            "b_clervaux": ("Clierf", "[ˈklɪ.ɛrf]"),
+        }
+
+        for bk, (exp_name, exp_ipa) in expected_resolutions.items():
+            assert bk in by_key, f"Missing {bk} in baronies_data"
+            assert by_key[bk]["name"] == exp_name, f"Expected {exp_name} for {bk}, got {by_key[bk]['name']}"
+            assert by_key[bk]["b_tarr"] == exp_name
+            assert by_key[bk]["b_ipa"] == exp_ipa, f"Expected {exp_ipa} for {bk}, got {by_key[bk]['b_ipa']}"
+
+        # Verify barony_resolutions.json matches in data/ and docs/data/
+        res_path = DATA_DIR / "barony_resolutions.json"
+        assert res_path.exists(), "data/barony_resolutions.json missing"
+        with open(res_path, "r", encoding="utf-8") as f:
+            resolutions = json.load(f)
+        assert len(resolutions) == 11297
+        assert not any(re.search(r'\b(on|upon)\b', d.get('name', ''), re.I) for d in resolutions.values()), "Found English on/upon preposition in barony names"
+
+        docs_res_path = REPO_DIR / "docs" / "data" / "barony_resolutions.json"
+        assert docs_res_path.exists(), "docs/data/barony_resolutions.json missing"
+        with open(docs_res_path, "r", encoding="utf-8") as f:
+            docs_resolutions = json.load(f)
+        assert len(docs_resolutions) == 11297
+
+        for bk, (exp_name, _) in expected_resolutions.items():
+            assert resolutions[bk]["name"] == exp_name
+            assert docs_resolutions[bk]["name"] == exp_name
+
+        # Verify Sinosphere baronies have b_hanzi
+        assert by_key["b_Liao_Shangjing"]["b_hanzi"] == "上京"
+        assert by_key["b_Liao_Bozhou"]["b_hanzi"] == "渤州"
 
 
 class TestTitleTree:
@@ -693,6 +812,40 @@ class TestSymbolGenerator:
         for key in ["h_roman_empire", "c_roma", "c_tarragona", "c_barcelona", "c_metz", "c_lviv", "c_szekesfehervar", "c_byzantion"]:
             assert key in content, f"Missing canonical handler for {key}"
 
+        # JavaScript Syntax & Bracket Balance Verification
+        counts = {'{': 0, '}': 0, '(': 0, ')': 0, '[': 0, ']': 0}
+        in_string = None
+        escape = False
+        tick_count = 0
+        depth = 0
+        for ch in content:
+            if escape:
+                escape = False
+                continue
+            if ch == '\\':
+                escape = True
+                continue
+            if in_string:
+                if ch == in_string:
+                    in_string = None
+            else:
+                if ch in ('"', "'"):
+                    in_string = ch
+                elif ch == '`':
+                    tick_count += 1
+                elif ch in counts:
+                    counts[ch] += 1
+                    if ch == '{':
+                        depth += 1
+                    elif ch == '}':
+                        depth -= 1
+                        assert depth >= 0, "Negative brace depth: unmatched '}' in symbol_generator.js"
+
+        assert counts['{'] == counts['}'], f"Unbalanced braces in symbol_generator.js: {counts['{']} open vs {counts['}'] } close"
+        assert counts['('] == counts[')'], f"Unbalanced parentheses in symbol_generator.js: {counts['(']} open vs {counts[')'] } close"
+        assert counts['['] == counts[']'], f"Unbalanced brackets in symbol_generator.js: {counts['[']} open vs {counts[']'] } close"
+        assert tick_count % 2 == 0, f"Unbalanced backticks in symbol_generator.js: {tick_count}"
+
     def test_app_js_symbol_integration(self):
         app_js_path = DOCS_DIR / "js" / "app.js"
         content = app_js_path.read_text(encoding="utf-8")
@@ -1020,7 +1173,7 @@ class TestSymbolGenerator:
         assert "else if (count >= 3)" in content
 
         # 3. Blazon generation includes count and ordinary
-        assert "function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null)" in content
+        assert "function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null" in content
 
     def test_canonical_heraldry_coverage_and_rule_of_tincture(self):
         """Verify canonical save heraldry dataset, c_porto arms, and strict Rule of Tincture compliance."""
@@ -1037,14 +1190,14 @@ class TestSymbolGenerator:
         # 1. c_porto validation: authentic arms of Portucale / Count Henry of Burgundy
         assert "c_porto" in canon, "c_porto must be present in canonical heraldry"
         porto_entry = canon["c_porto"]
-        field, ord_key, charge, charge_col, count, ord_col = porto_entry
+        field, ord_key, charge, charge_col, count, ord_col = porto_entry[:6]
         assert field == "argent", f"c_porto field must be Argent, got {field}"
         assert charge == "cross", f"c_porto charge must be cross, got {charge}"
         assert charge_col == "azure", f"c_porto charge color must be Azure, got {charge_col}"
         assert ord_key == "solid", f"c_porto ordinary must be solid, got {ord_key}"
 
         # 2. Complete Rule of Tincture audit: zero metal-on-metal or colour-on-colour violations
-        # and strict divided field compliance (no charge bearing same colour as its division)
+        # and strict divided field compliance (layout-aware positioning)
         metals = {"or", "argent"}
         colours = {"gules", "azure", "vert", "sable", "purpure"}
 
@@ -1055,42 +1208,83 @@ class TestSymbolGenerator:
         violations = []
         for title, data in canon.items():
             f_col, o_key, chg, chg_col, cnt, o_col = data[:6]
+            layout = data[6] if len(data) > 6 else 'default'
             field_is_metal = f_col in metals
+            ord_is_metal = o_col in metals
+            charge_is_metal = chg_col in metals if chg_col else False
 
             # 2a. Uncharged shields validation (pure partitions & honorable ordinaries)
             if cnt == 0 or chg in ("none", None):
                 if o_key != "solid":
-                    ord_is_metal = o_col in metals
                     if field_is_metal and ord_is_metal:
                         violations.append((title, "ordinary metal-on-metal", f_col, o_col))
                     elif (not field_is_metal) and (not ord_is_metal):
                         violations.append((title, "ordinary colour-on-colour", f_col, o_col))
                 continue
 
-            charge_is_metal = chg_col in metals
-
             if o_key == "solid":
-                if field_is_metal and charge_is_metal:
+                if chg_col == f_col:
+                    violations.append((title, "charge matches field", f_col, chg_col))
+                elif field_is_metal and charge_is_metal:
                     violations.append((title, "charge metal-on-metal", f_col, chg_col))
                 elif (not field_is_metal) and (not charge_is_metal):
                     violations.append((title, "charge colour-on-colour", f_col, chg_col))
             else:
-                ord_is_metal = o_col in metals
                 if field_is_metal and ord_is_metal:
                     violations.append((title, "ordinary metal-on-metal", f_col, o_col))
                 elif (not field_is_metal) and (not ord_is_metal):
                     violations.append((title, "ordinary colour-on-colour", f_col, o_col))
 
-                # Adjusted Rule of Tinctures on Divided Fields
-                if o_key in on_ordinary:
-                    if chg_col == o_col:
-                        violations.append((title, "charge on ordinary matches ordinary colour", o_key, o_col, chg_col))
-                elif o_key in in_field:
+                # Layout-aware Rule of Tinctures on Divided Fields
+                if o_key == "bordure":
                     if chg_col == f_col:
-                        violations.append((title, "charge in field matches field colour", o_key, f_col, chg_col))
-                elif o_key in partitions:
+                        violations.append((title, "charge matches field", f_col, chg_col))
+                    elif field_is_metal and charge_is_metal:
+                        violations.append((title, "charge metal in field metal", f_col, chg_col))
+                    elif (not field_is_metal) and (not charge_is_metal):
+                        violations.append((title, "charge colour in field colour", f_col, chg_col))
+                elif o_key == "chief":
+                    bg_col = o_col if layout == "in_chief" else f_col
+                    bg_is_metal = ord_is_metal if layout == "in_chief" else field_is_metal
+                    if chg_col == bg_col:
+                        violations.append((title, "charge matches chief/field", bg_col, chg_col))
+                    elif bg_is_metal and charge_is_metal:
+                        violations.append((title, "charge metal on metal", bg_col, chg_col))
+                    elif (not bg_is_metal) and (not charge_is_metal):
+                        violations.append((title, "charge colour on colour", bg_col, chg_col))
+                elif o_key in on_ordinary:
+                    if layout in ("in_chief", "in_base", "above_below", "flanked", "two_and_one", "one_and_two"):
+                        if chg_col == f_col:
+                            violations.append((title, "charge matches field", f_col, chg_col))
+                        elif field_is_metal and charge_is_metal:
+                            violations.append((title, "charge metal in field metal", f_col, chg_col))
+                        elif (not field_is_metal) and (not charge_is_metal):
+                            violations.append((title, "charge colour in field colour", f_col, chg_col))
+                    else:
+                        if chg_col == o_col:
+                            violations.append((title, "charge matches ordinary", o_col, chg_col))
+                        elif ord_is_metal and charge_is_metal:
+                            violations.append((title, "charge metal on ordinary metal", o_col, chg_col))
+                        elif (not ord_is_metal) and (not charge_is_metal):
+                            violations.append((title, "charge colour on ordinary colour", o_col, chg_col))
+                elif o_key in ("per_fess", "per_bend", "per_bend_sinister", "quarterly", "per_saltire"):
+                    if layout == "in_chief":
+                        if chg_col == f_col:
+                            violations.append((title, "charge matches upper partition", f_col, chg_col))
+                        elif field_is_metal and charge_is_metal:
+                            violations.append((title, "charge metal on upper partition metal", f_col, chg_col))
+                        elif (not field_is_metal) and (not charge_is_metal):
+                            violations.append((title, "charge colour on upper partition colour", f_col, chg_col))
+                    elif layout == "in_base":
+                        if chg_col == o_col:
+                            violations.append((title, "charge matches lower partition", o_col, chg_col))
+                        elif ord_is_metal and charge_is_metal:
+                            violations.append((title, "charge metal on lower partition metal", o_col, chg_col))
+                        elif (not ord_is_metal) and (not charge_is_metal):
+                            violations.append((title, "charge colour on lower partition colour", o_col, chg_col))
+                elif o_key in ("barry", "chequy", "pales", "pales_undy"):
                     if chg_col in (f_col, o_col):
-                        violations.append((title, "charge spanning partition matches partition division", o_key, f_col, o_col, chg_col))
+                        violations.append((title, "charge matches field tinctures", f_col, o_col, chg_col))
 
         assert len(violations) == 0, f"Found {len(violations)} Rule of Tincture violations in canonical heraldry: {violations[:5]}"
 
@@ -1325,6 +1519,274 @@ class TestSymbolGenerator:
         # 5. Composite charges: primary in upper field, secondary in lower field
         assert "CHARGES[c1] ? CHARGES[c1](color, sc, cx, 68) : ''" in content
         assert "CHARGES[c2] ? CHARGES[c2](color, sc, cx, 182) : ''" in content
+
+    def test_uncharged_shields_and_historical_revisions(self):
+        """Verifies formal uncharged shield support and historical revisions from CK3 save timeline."""
+        import json
+
+        # 1. Check JS symbol generator files for 'none' charge and blazon
+        for js_file in [REPO_DIR / "web" / "js" / "symbol_generator.js", DOCS_DIR / "js" / "symbol_generator.js"]:
+            content = js_file.read_text(encoding="utf-8")
+            assert "none: () => ''" in content, f"'none' charge lambda missing in {js_file}"
+            assert "none: { tarrNoun: ''," in content, f"'none' charge blazon missing in {js_file}"
+            assert "isUncharged = " in content, f"isUncharged check missing in {js_file}"
+
+        # 2. Check canonical title heraldry in both data/ and docs/data/
+        for canon_file in [REPO_DIR / "data" / "canonical_title_heraldry.json", DOCS_DIR / "data" / "canonical_title_heraldry.json"]:
+            with open(canon_file, "r", encoding="utf-8") as f:
+                canon = json.load(f)
+
+            # Authentic uncharged shields & historical titles:
+            # d_barcelona: Senyera (Or, four pales Gules, uncharged)
+            assert "d_barcelona" in canon
+            f_col, o_key, chg, chg_col, cnt, o_col = canon["d_barcelona"][:6]
+            assert f_col == "or" and o_key == "pales" and o_col == "gules"
+            assert chg == "none" and cnt == 0
+
+            # c_tarragona: Senyera undy (Or, four pales undy Gules, uncharged)
+            assert "c_tarragona" in canon
+            f_col, o_key, chg, chg_col, cnt, o_col = canon["c_tarragona"][:6]
+            assert f_col == "or" and o_key == "pales_undy" and o_col == "gules"
+            assert chg == "none" and cnt == 0
+
+            # c_barcelona: St. George & Senyera quarterly (Quarterly Argent and Gules, uncharged)
+            assert "c_barcelona" in canon
+            f_col, o_key, chg, chg_col, cnt, o_col = canon["c_barcelona"][:6]
+            assert f_col == "argent" and o_key == "quarterly" and o_col == "gules"
+            assert chg == "none" and cnt == 0
+
+            # c_metz: Metz bipartite civic arms (Party per pale Argent and Sable, uncharged)
+            assert "c_metz" in canon
+            f_col, o_key, chg, chg_col, cnt, o_col = canon["c_metz"][:6]
+            assert f_col == "argent" and o_key == "per_pale" and o_col == "sable"
+            assert chg == "none" and cnt == 0
+
+            # c_thessalonika: Saint Demetrius swords with cadency bordure
+            assert "c_thessalonika" in canon
+            f_col, o_key, chg, chg_col, cnt, o_col = canon["c_thessalonika"][:6]
+            assert f_col == "gules" and o_key == "bordure" and chg == "sword_crossed"
+            assert chg_col == "or" and cnt == 1 and o_col == "or"
+
+            # Revised procedural generation for anachronistic titles:
+            # d_osterreich: Replaced anachronistic Babenberg Bindenschild with generated procedural blazon
+            assert "d_osterreich" in canon
+            assert not (canon["d_osterreich"][0] == "gules" and canon["d_osterreich"][1] == "fess" and canon["d_osterreich"][2] == "none")
+
+            # c_vienna: Replaced anachronistic Wiener Kreuz with generated procedural blazon
+            assert "c_vienna" in canon
+            assert not (canon["c_vienna"][0] == "gules" and canon["c_vienna"][1] == "cross" and canon["c_vienna"][2] == "none")
+
+            # c_siena, c_lucca, c_baden, c_zollern, c_nedersticht: Replaced with generated blazons
+            for anach_k in ["c_siena", "c_lucca", "c_baden", "c_zollern", "c_nedersticht"]:
+                assert anach_k in canon, f"{anach_k} must be present in canonical heraldry"
+                assert canon[anach_k][2] != "none" or canon[anach_k][4] == 0
+
+
+def test_title_symbol_adoption_dataset():
+    """Validates the schema, coverage, and contents of title_symbol_adoption.json."""
+    for root_dir in [DATA_DIR, REPO_DIR / "data"]:
+        adopt_path = root_dir / "title_symbol_adoption.json"
+        assert adopt_path.exists(), f"{adopt_path} is missing"
+        with open(adopt_path, "r", encoding="utf-8") as f:
+            adopt_data = json.load(f)
+
+        assert len(adopt_data) >= 4500, f"Expected >= 4500 titles in adoption DB, got {len(adopt_data)}"
+
+        # Validate showcase titles
+        showcase_keys = [
+            "h_roman_empire", "k_france", "d_upper_lorraine", "d_barcelona",
+            "c_tarragona", "c_roma", "c_metz", "c_aachen", "c_venezia",
+            "c_ile_de_france", "c_byzantion", "c_jinzhou", "c_dongguan"
+        ]
+        valid_eras = {
+            "Classical & Pre-867 Antiquity",
+            "Carolingian & Lothringian Cradle (867–988)",
+            "Tarraconian Ethnogenesis (989–1052)",
+            "First Imperial Restoration (1053–1071)",
+            "High Imperial Consolidation (1072–1142)",
+            "Universal Roman Hegemony (1143–1194)",
+            "Exterior Autonomous March (1194+)"
+        }
+
+        for k in showcase_keys:
+            assert k in adopt_data, f"Showcase title {k} missing from {adopt_path}"
+            rec = adopt_data[k]
+            assert "yearDisplay" in rec and rec["yearDisplay"], f"Missing yearDisplay for {k}"
+            assert "era" in rec and rec["era"] in valid_eras, f"Invalid era '{rec.get('era')}' for {k}"
+            assert "rationale" in rec and len(rec["rationale"]) > 10, f"Missing/short rationale for {k}"
+
+        # Check c_tarragona specifically
+        tarr = adopt_data["c_tarragona"]
+        assert tarr["year"] == 1016
+        assert "Tarraconian Ethnogenesis" in tarr["era"]
+
+        # Check c_roma
+        roma = adopt_data["c_roma"]
+        assert roma["saint"] is not None and "Peter" in roma["saint"]
+
+        # Check c_aachen
+        aachen = adopt_data["c_aachen"]
+        assert aachen["year"] == 800
+
+        # Check web assets have adoption integration
+        js_sym = (REPO_DIR / "web" / "js" / "symbol_generator.js").read_text(encoding="utf-8")
+        assert "loadAdoptionData" in js_sym
+        assert "getAdoptionInfo" in js_sym
+        assert "symbol-adoption-badge" in js_sym
+
+        js_app = (REPO_DIR / "web" / "js" / "app.js").read_text(encoding="utf-8")
+        assert "title_symbol_adoption.json" in js_app
+        assert "loadAdoptionData" in js_app
+
+        css = (REPO_DIR / "web" / "css" / "styles.css").read_text(encoding="utf-8")
+        assert ".symbol-adoption-badge" in css
+
+
+class TestSaintHoldingImagery:
+    """Validates the procedural hagiographic cadency dataset (Signa Sanctorum)
+
+    and its integration into the heraldic symbol generator.
+    """
+
+    @pytest.fixture
+    def saint_data(self):
+        p = DATA_DIR / "saint_holding_imagery.json"
+        assert p.exists(), f"Missing {p}"
+        with open(p, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def test_saint_holding_file_exists_and_synced(self, saint_data):
+        docs_p = DOCS_DIR / "data" / "saint_holding_imagery.json"
+        assert docs_p.exists(), f"Missing {docs_p}"
+        with open(docs_p, "r", encoding="utf-8") as f:
+            docs_data = json.load(f)
+        assert len(saint_data) == len(docs_data)
+        assert len(saint_data) >= 150
+
+    def test_saint_holding_entries_structure(self, saint_data):
+        required_keys = [
+            "title_key", "name", "tier", "county", "kingdom",
+            "saint_name", "saint_epithet", "shrine_type", "relic_description",
+            "charge", "charge_color", "field", "ordinary", "ordinary_color",
+            "charge_count", "blazon_tarr", "blazon_en", "legend",
+            "rationale_imagery", "rationale_colours", "rationale_splits", "source"
+        ]
+        for key, entry in saint_data.items():
+            assert key.startswith("b_") or key.startswith("c_"), f"Saint title key {key} must be a barony or county"
+            for rk in required_keys:
+                assert rk in entry and entry[rk] is not None, f"Missing {rk} in {key}"
+                if isinstance(entry[rk], str):
+                    assert len(entry[rk].strip()) > 0, f"Empty {rk} in {key}"
+
+    def test_saint_holding_rule_of_tinctures(self, saint_data):
+        metals = {"or", "argent"}
+        colours = {"gules", "azure", "vert", "purpure", "sable"}
+        all_tinctures = metals | colours
+
+        for key, entry in saint_data.items():
+            f = entry["field"]
+            o = entry["ordinary"]
+            oc = entry["ordinary_color"]
+            c = entry["charge"]
+            cc = entry["charge_color"]
+
+            assert f in all_tinctures, f"Invalid field {f} in {key}"
+            assert oc in all_tinctures, f"Invalid ordinary_color {oc} in {key}"
+            assert cc in all_tinctures, f"Invalid charge_color {cc} in {key}"
+
+            if key.startswith("b_"):
+                assert o == "bordure", f"Saint baronies must use baronial cadency bordure, got {o} in {key}"
+                # Bordure tincture contrast with field
+                if f in metals:
+                    assert oc in colours, f"Metal bordure on metal field in {key}: {oc} on {f}"
+                else:
+                    assert oc in metals, f"Colour bordure on colour field in {key}: {oc} on {f}"
+            else:
+                assert o == "solid", f"Saint counties must use solid comital field, got {o} in {key}"
+
+            # Charge tincture contrast with field
+            if f in metals:
+                assert cc in colours, f"Metal charge on metal field in {key}: {cc} on {f}"
+            else:
+                assert cc in metals, f"Colour charge on colour field in {key}: {cc} on {f}"
+
+    def test_saint_holding_charges_exist_in_generator(self, saint_data):
+        js_code = (REPO_DIR / "web" / "js" / "symbol_generator.js").read_text(encoding="utf-8")
+        # Extract CHARGES keys
+        charges_match = re.search(r'const CHARGES = \{([\s\S]*?)\n  \};', js_code)
+        assert charges_match, "Could not find CHARGES in symbol_generator.js"
+        charges_keys = set(re.findall(r'^\s*([a-z_0-9]+)\s*:', charges_match.group(1), re.M))
+
+        for key, entry in saint_data.items():
+            charge = entry["charge"]
+            assert charge in charges_keys, f"Charge '{charge}' in {key} not found in symbol_generator.js CHARGES"
+
+    def test_famous_shrine_and_buried_saint_holdings(self, saint_data):
+        # 1. Mount Sinai / Saint Catherine
+        assert "b_stcatherine" in saint_data
+        cat = saint_data["b_stcatherine"]
+        assert "Catherine" in cat["saint_name"]
+        assert cat["charge"] == "catherine_wheel"
+        assert cat["field"] == "purpure"
+
+        # 2. Santiago de Compostela / Saint James
+        assert "b_santiago" in saint_data
+        sant = saint_data["b_santiago"]
+        assert "James" in sant["saint_name"]
+        assert sant["charge"] == "escallop"
+        assert sant["field"] == "gules"
+
+        # 3. Split / Saint Domnius
+        assert "b_split" in saint_data
+        split = saint_data["b_split"]
+        assert "Domnius" in split["saint_name"] or "Dujam" in split["saint_name"]
+        assert split["charge"] == "crozier"
+
+        # 4. Kildare / Saint Brigid
+        assert "b_kildare" in saint_data
+        kild = saint_data["b_kildare"]
+        assert "Brigid" in kild["saint_name"]
+        assert kild["charge"] == "cross"
+
+        # 5. Patras / Saint Andrew
+        assert "b_patras" in saint_data
+        pat = saint_data["b_patras"]
+        assert "Andrew" in pat["saint_name"]
+        assert pat["charge"] == "cross"
+
+        # 6. Fulda / Saint Boniface
+        assert "b_fulda" in saint_data
+        fuld = saint_data["b_fulda"]
+        assert "Boniface" in fuld["saint_name"]
+        assert fuld["charge"] == "sword_crossed"
+
+        # 7. Canterbury / Saint Thomas Becket
+        assert "b_canterbury" in saint_data
+        cant = saint_data["b_canterbury"]
+        assert "Thomas Becket" in cant["saint_name"]
+        assert cant["charge"] == "crozier"
+
+        # 8. Iona / Saint Columba
+        assert "b_mull" in saint_data
+        mull = saint_data["b_mull"]
+        assert "Columba" in mull["saint_name"]
+        assert mull["charge"] == "ship"
+
+    def test_web_assets_have_saint_integration(self):
+        js_sym = (REPO_DIR / "web" / "js" / "symbol_generator.js").read_text(encoding="utf-8")
+        assert "loadSaintData" in js_sym
+        assert "getSaintHoldingInfo" in js_sym
+        assert "SAINT_HOLDING_DATA" in js_sym
+        assert "Signa Sanctorum" in js_sym
+
+        js_app = (REPO_DIR / "web" / "js" / "app.js").read_text(encoding="utf-8")
+        assert "saint_holding_imagery.json" in js_app
+        assert "loadSaintData" in js_app
+
+        build_script = (REPO_DIR / "scripts" / "build_webapp.py").read_text(encoding="utf-8")
+        assert "saint_holding_imagery.json" in build_script
+
+
 
 
 

@@ -47,49 +47,110 @@ def clean_charge(c):
         else: return c.split('_')[-1]
     return c
 
-def check_rot(f_col, o_key, chg, chg_col, cnt, o_col):
+def check_rot(f_col, o_key, chg, chg_col, cnt, o_col, layout='default'):
     field_is_metal = f_col in metals
+    ord_is_metal = o_col in metals
+    charge_is_metal = chg_col in metals if chg_col else False
+
+    # 1. Uncharged Shields (cnt == 0 or chg in ('none', None))
     if cnt == 0 or chg in ('none', None):
         if o_key == 'solid':
             return True, 'ok'
-        ord_is_metal = o_col in metals
         if field_is_metal and ord_is_metal:
             return False, 'ordinary metal on metal'
         if (not field_is_metal) and (not ord_is_metal):
             return False, 'ordinary colour on colour'
         return True, 'ok'
 
-    charge_is_metal = chg_col in metals
+    # 2. Solid Field
     if o_key == 'solid':
+        if chg_col == f_col:
+            return False, 'charge matches field'
         if field_is_metal and charge_is_metal:
-            return False, 'metal on metal'
+            return False, 'charge metal on field metal'
         if (not field_is_metal) and (not charge_is_metal):
-            return False, 'colour on colour'
+            return False, 'charge colour on field colour'
         return True, 'ok'
-    else:
-        ord_is_metal = o_col in metals
-        if field_is_metal and ord_is_metal:
-            return False, 'ordinary metal on metal'
-        if (not field_is_metal) and (not ord_is_metal):
-            return False, 'ordinary colour on colour'
-        if o_key in on_ordinary:
-            if chg_col == o_col:
-                return False, 'charge matches ordinary'
-            if ord_is_metal and charge_is_metal:
-                return False, 'charge metal on ordinary metal'
-            if (not ord_is_metal) and (not charge_is_metal):
-                return False, 'charge colour on ordinary colour'
-        elif o_key in in_field:
+
+    # 3. Field Ordinaries & Modifiers
+    if field_is_metal and ord_is_metal:
+        return False, 'ordinary metal on field metal'
+    if (not field_is_metal) and (not ord_is_metal):
+        return False, 'ordinary colour on field colour'
+
+    if o_key == 'bordure':
+        if chg_col == f_col:
+            return False, 'charge matches field'
+        if field_is_metal and charge_is_metal:
+            return False, 'charge metal in field metal'
+        if (not field_is_metal) and (not charge_is_metal):
+            return False, 'charge colour in field colour'
+        return True, 'ok'
+
+    if o_key == 'chief':
+        if layout == 'in_chief':
+            bg_col = o_col
+            bg_is_metal = ord_is_metal
+        else:
+            bg_col = f_col
+            bg_is_metal = field_is_metal
+        if chg_col == bg_col:
+            return False, 'charge matches chief/field'
+        if bg_is_metal and charge_is_metal:
+            return False, 'charge metal on metal'
+        if (not bg_is_metal) and (not charge_is_metal):
+            return False, 'charge colour on colour'
+        return True, 'ok'
+
+    if o_key in on_ordinary:
+        if layout in ('in_chief', 'in_base', 'above_below', 'flanked', 'two_and_one', 'one_and_two'):
+            # The charge physically sits in the field (f_col)
             if chg_col == f_col:
                 return False, 'charge matches field'
             if field_is_metal and charge_is_metal:
                 return False, 'charge metal in field metal'
             if (not field_is_metal) and (not charge_is_metal):
                 return False, 'charge colour in field colour'
-        elif o_key in partitions:
-            if chg_col in (f_col, o_col):
-                return False, 'charge matches partition'
+            return True, 'ok'
+        else:
+            # Charge sits on the ordinary (o_col)
+            if chg_col == o_col:
+                return False, 'charge matches ordinary'
+            if ord_is_metal and charge_is_metal:
+                return False, 'charge metal on ordinary metal'
+            if (not ord_is_metal) and (not charge_is_metal):
+                return False, 'charge colour on ordinary colour'
+            return True, 'ok'
+
+    # 4. Geometric Partitions
+    if o_key in ('per_fess', 'per_bend', 'per_bend_sinister', 'quarterly', 'per_saltire'):
+        if layout == 'in_chief':
+            if chg_col == f_col:
+                return False, 'charge matches upper partition'
+            if field_is_metal and charge_is_metal:
+                return False, 'charge metal on upper partition metal'
+            if (not field_is_metal) and (not charge_is_metal):
+                return False, 'charge colour on upper partition colour'
+            return True, 'ok'
+        elif layout == 'in_base':
+            if chg_col == o_col:
+                return False, 'charge matches lower partition'
+            if ord_is_metal and charge_is_metal:
+                return False, 'charge metal on lower partition metal'
+            if (not ord_is_metal) and (not charge_is_metal):
+                return False, 'charge colour on lower partition colour'
+            return True, 'ok'
         return True, 'ok'
+
+    if o_key == 'per_pale':
+        return True, 'ok'
+
+    if o_key in ('barry', 'chequy', 'pales', 'pales_undy'):
+        if chg_col in (f_col, o_col):
+            return False, 'charge matches field tinctures'
+        return True, 'ok'
+
+    return True, 'ok'
 
 HORIZON_0_TITLES = {
     'c_aachen', 'c_alexandria', 'c_antioch', 'c_athens', 'c_barcelona', 'c_byzantion',
@@ -142,7 +203,6 @@ def hash_string(s):
 
 HISTORICAL_COUNTY_OVERRIDES = {
     'c_porto': ['argent', 'solid', 'cross', 'azure', 1, 'azure'],
-    'c_vienna': ['gules', 'cross', 'none', None, 0, 'argent', 'default'],
     'c_roma': ['gules', 'chief', 'keys_st_peter', 'or', 1, 'or', 'in_base'],
     'c_paris': ['gules', 'solid', 'ship', 'argent', 1, 'argent', 'in_chief'],
     'c_aachen': ['or', 'bordure', 'alerion', 'sable', 1, 'gules', 'in_chief'],
@@ -163,23 +223,16 @@ HISTORICAL_COUNTY_OVERRIDES = {
     'c_antioch': ['azure', 'solid', 'cross_patriarchal', 'argent', 1, 'argent', 'in_chief'],
     'c_athens': ['argent', 'solid', 'column_roman', 'azure', 1, 'azure', 'in_chief'],
     'c_thessalonika': ['gules', 'bordure', 'sword_crossed', 'or', 1, 'or', 'in_chief'],
-    'c_thessaloniki': ['gules', 'bordure', 'sword_crossed', 'or', 1, 'or', 'in_chief'],
     'c_wiltshire': ['vert', 'chief', 'horse_courant', 'argent', 1, 'argent', 'in_base'],
     'c_kent': ['gules', 'bordure', 'horse_courant', 'argent', 1, 'argent', 'in_chief'],
-    'c_york': ['argent', 'cross', 'rose_seeded', 'or', 1, 'gules', 'in_chief'],
+    'c_york': ['argent', 'cross', 'rose_seeded', 'argent', 1, 'gules', 'default'],
     'c_kyiv': ['azure', 'chief', 'sword_crossed', 'or', 1, 'or', 'in_base'],
     'c_middlesex': ['argent', 'solid', 'sword_crossed', 'gules', 1, 'gules', 'in_chief'],
     'c_cornwall': ['sable', 'bordure', 'wheel_spoked', 'or', 1, 'or', 'in_chief'],
     'c_lancashire': ['argent', 'solid', 'rose_seeded', 'gules', 1, 'gules', 'in_chief'],
     'c_cleves': ['gules', 'solid', 'shield_escutcheon', 'argent', 1, 'argent', 'in_chief'],
     'c_hamburg': ['gules', 'solid', 'castrum', 'argent', 1, 'argent', 'in_chief'],
-    'c_firenze': ['argent', 'per_pale', 'fleur_de_lis', 'or', 1, 'gules', 'in_chief'],
-    'c_siena': ['argent', 'per_fess', 'none', None, 0, 'sable', 'default'],
-    'c_lucca': ['argent', 'per_fess', 'none', None, 0, 'gules', 'default'],
-    'c_baden': ['or', 'bend', 'none', None, 0, 'gules', 'default'],
-    'c_zollern': ['argent', 'quarterly', 'none', None, 0, 'sable', 'default'],
-    'c_solms': ['or', 'fess', 'none', None, 0, 'gules', 'default'],
-    'c_utrecht': ['gules', 'per_bend', 'none', None, 0, 'argent', 'default'],
+    'c_firenze': ['argent', 'per_pale', 'fleur_de_lis', 'gules', 1, 'gules', 'in_chief'],
     'c_pisa': ['gules', 'bordure', 'cross', 'argent', 1, 'argent', 'in_chief'],
     'c_genoa': ['argent', 'bordure', 'cross', 'gules', 1, 'gules', 'in_chief'],
     'c_marseille': ['argent', 'bordure', 'cross', 'azure', 1, 'azure', 'in_chief'],
@@ -190,9 +243,9 @@ HISTORICAL_COUNTY_OVERRIDES = {
     'c_lubeck': ['argent', 'per_fess', 'alerion', 'sable', 1, 'gules', 'in_chief'],
     'c_worms': ['sable', 'solid', 'keys_st_peter', 'argent', 1, 'argent', 'in_chief'],
     'c_speyer': ['azure', 'solid', 'castrum', 'argent', 1, 'argent', 'in_chief'],
-    'c_strasbourg': ['argent', 'bend', 'castrum', 'argent', 1, 'gules', 'in_chief'],
-    'c_zurich': ['azure', 'per_bend', 'lion_rampant', 'gules', 1, 'argent', 'in_chief'],
-    'c_bern': ['gules', 'bend', 'bear_rampant', 'sable', 1, 'or', 'in_chief'],
+    'c_strasbourg': ['argent', 'bend', 'castrum', 'gules', 1, 'gules', 'in_chief'],
+    'c_zurich': ['argent', 'per_bend', 'lion_rampant', 'gules', 1, 'azure', 'in_chief'],
+    'c_bern': ['gules', 'bend', 'bear_rampant', 'sable', 1, 'or', 'default'],
     'c_geneva': ['or', 'per_pale', 'keys_st_peter', 'gules', 1, 'sable', 'in_chief'],
     'c_basel': ['argent', 'solid', 'crozier', 'sable', 1, 'sable', 'in_chief']
 }
@@ -329,40 +382,56 @@ def generate_county_candidates(base_spec, horizon, title_key):
     ]
     for part in candidate_partitions:
         for otinc in ord_tinctures:
-            valid_chg_tincs = [c for c in (metals | colours) if c != f_col and c != otinc]
-            for ctinc in valid_chg_tincs:
-                for c_cnt in (1, 2, 3):
-                    layout = 'in_chief' if c_cnt == 1 else ('above_below' if c_cnt == 2 else 'two_and_one')
-                    candidates.append([f_col, part, chg, ctinc, c_cnt, otinc, layout])
-                    if c_cnt == 1:
-                        candidates.append([f_col, part, chg, ctinc, 1, otinc, 'in_base'])
-                    elif c_cnt == 2:
-                        candidates.append([f_col, part, chg, ctinc, 2, otinc, 'flanked'])
-                    elif c_cnt == 3:
-                        candidates.append([f_col, part, chg, ctinc, 3, otinc, 'one_and_two'])
+            # Layout in_chief: charge sits in upper partition (f_col)
+            valid_chg_tincs_chief = list(colours) if field_is_metal else list(metals)
+            for ctinc in valid_chg_tincs_chief:
+                candidates.append([f_col, part, chg, ctinc, 1, otinc, 'in_chief'])
 
-    # Strategy 4: Field ordinaries (bordure, chief, fess, pale, bend, chevron)
+            # Layout in_base: charge sits in lower partition (otinc)
+            otinc_is_metal = otinc in metals
+            valid_chg_tincs_base = list(colours) if otinc_is_metal else list(metals)
+            for ctinc in valid_chg_tincs_base:
+                candidates.append([f_col, part, chg, ctinc, 1, otinc, 'in_base'])
+
+            # Multi charges across divisions
+            for ctinc in valid_chg_tincs_chief:
+                candidates.append([f_col, part, chg, ctinc, 2, otinc, 'above_below'])
+                candidates.append([f_col, part, chg, ctinc, 2, otinc, 'flanked'])
+                candidates.append([f_col, part, chg, ctinc, 3, otinc, 'two_and_one'])
+                candidates.append([f_col, part, chg, ctinc, 3, otinc, 'one_and_two'])
+
+    # Strategy 4: Field ordinaries (bordure, chief, fess, pale, bend, chevron, cross, saltire)
     candidate_ords = ['bordure', 'chief', 'fess', 'pale', 'bend', 'chevron', 'cross', 'saltire']
     for ord_k in candidate_ords:
         for otinc in ord_tinctures:
-            if ord_k in on_ordinary:
-                otinc_is_metal = otinc in metals
-                c_pool = list(colours) if otinc_is_metal else list(metals)
-                for ctinc in c_pool:
-                    for c_cnt in (1, 2):
-                        layout = 'in_chief' if c_cnt == 1 else 'above_below'
-                        candidates.append([f_col, ord_k, chg, ctinc, c_cnt, otinc, layout])
-            elif ord_k in in_field:
-                c_pool = list(colours) if field_is_metal else list(metals)
-                for ctinc in c_pool:
-                    for c_cnt in (1, 2):
-                        layout = 'in_base' if ord_k == 'chief' else ('in_chief' if c_cnt == 1 else 'above_below')
-                        candidates.append([f_col, ord_k, chg, ctinc, c_cnt, otinc, layout])
+            otinc_is_metal = otinc in metals
+            if ord_k == 'chief':
+                c_pool_chief = list(colours) if otinc_is_metal else list(metals)
+                for ctinc in c_pool_chief:
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'in_chief'])
+                c_pool_field = list(colours) if field_is_metal else list(metals)
+                for ctinc in c_pool_field:
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'in_base'])
+                    candidates.append([f_col, ord_k, chg, ctinc, 2, otinc, 'above_below'])
+            elif ord_k == 'bordure':
+                c_pool_field = list(colours) if field_is_metal else list(metals)
+                for ctinc in c_pool_field:
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'in_chief'])
+                    candidates.append([f_col, ord_k, chg, ctinc, 2, otinc, 'above_below'])
+            elif ord_k in on_ordinary:
+                c_pool_ord = list(colours) if otinc_is_metal else list(metals)
+                for ctinc in c_pool_ord:
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'default'])
+                c_pool_field = list(colours) if field_is_metal else list(metals)
+                for ctinc in c_pool_field:
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'in_chief'])
+                    candidates.append([f_col, ord_k, chg, ctinc, 1, otinc, 'in_base'])
+                    candidates.append([f_col, ord_k, chg, ctinc, 2, otinc, 'above_below'])
 
     # Filter Rule of Tinctures
     valid_candidates = []
     for cand in candidates:
-        ok, _ = check_rot(*cand[:6])
+        ok, _ = check_rot(*cand[:6], layout=cand[6] if len(cand) > 6 else 'default')
         if ok:
             valid_candidates.append(cand)
 
@@ -383,7 +452,8 @@ def disambiguate_all_counties():
     canon['k_dali'] = ['vert', 'solid', 'dragon', 'or', 1, 'or']
     canon['k_portugal'] = ['argent', 'bordure', 'shield_escutcheon', 'azure', 1, 'gules']
     canon['k_genoa'] = ['argent', 'chief', 'cross', 'gules', 1, 'gules']
-    canon['d_eastern_desert'] = ['gules', 'per_fess', 'sun_radiant', 'azure', 1, 'or', 'in_chief']
+    canon['k_lotharingia'] = ['or', 'bend', 'alerion', 'argent', 3, 'gules']
+    canon['d_eastern_desert'] = ['gules', 'per_fess', 'sun_radiant', 'or', 1, 'argent', 'in_chief']
 
     # 2. Build higher-tier reserved signatures (Empires, Kingdoms, Duchies)
     higher_reserved_7 = set()
@@ -405,7 +475,8 @@ def disambiguate_all_counties():
             geojson_counties.add(c)
             props_map[c] = p
 
-    all_counties = sorted(geojson_counties | set(k for k in canon if k.startswith('c_')))
+    canon.pop('c_thessaloniki', None)
+    all_counties = sorted(geojson_counties | set(k for k in canon if k.startswith('c_')) | set(HISTORICAL_COUNTY_OVERRIDES.keys()))
     print(f"Total counties to disambiguate: {len(all_counties)} (3476 geojson + {len(all_counties) - len(geojson_counties)} titular)")
 
     # 4. Generate base blazons
@@ -471,7 +542,7 @@ def disambiguate_all_counties():
             sig_7_0 = tuple(cand_0)
             sig_6_0 = tuple(cand_0[:6])
 
-            rot_ok, _ = check_rot(*cand_0[:6])
+            rot_ok, _ = check_rot(*cand_0[:6], layout=cand_0[6])
             if rot_ok and sig_7_0 not in used_7_signatures and sig_7_0 not in higher_reserved_7 and sig_6_0 not in used_6_signatures and sig_6_0 not in higher_reserved_6:
                 assigned_blazons[c] = cand_0
                 used_7_signatures.add(sig_7_0)
@@ -532,7 +603,7 @@ def disambiguate_all_counties():
     # C. Rule of Tinctures Audit
     rot_violations = []
     for c, spec in assigned_blazons.items():
-        ok, reason = check_rot(*spec[:6])
+        ok, reason = check_rot(*spec[:6], layout=spec[6] if len(spec) > 6 else 'default')
         if not ok:
             rot_violations.append((c, reason, spec))
     assert len(rot_violations) == 0, f"Rule of Tincture violations found: {rot_violations}"

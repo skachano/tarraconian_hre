@@ -297,7 +297,7 @@
   * **[HRE]** **East Seaxe** (`c_essex`) — *Tarraconian: **Magistrat van Ôstsachsen***
   * **[HRE]** **Bedanford** (`c_bedford`) — *Tarraconian: **Magistrat van Bedevort***
   * **[HRE]** **Herutford** (`c_hertfordshire`) — *Tarraconian: **Magistrat van Herutvort***
-  * **[HRE]** **Buccingahamm** (`c_buckinghamshire`) — *Tarraconian: **Magistrat van Buckingeham***
+  * **[HRE]** **Buccingahamm** (`c_buckinghamshire`) — *Tarraconian: **Magistrat van Buckingheim***
 * **Duchy of Northumbria** (`d_northumberland`) — *3/3 in HRE*
   * **[HRE]** **Bernicia** (`c_northumberland`) — *Tarraconian: **Magistrat van Bernitzje***
   * **[HRE]** **Dunholm** (`c_durham`) — *Tarraconian: **Magistrat van Dûnholm***
@@ -318,16 +318,16 @@
   * **[HRE]** **Cambridgeshire** (`c_cambridgeshire`) — *Tarraconian: **Magistrat van Grantebrücke***
 * **Duchy of Mercia** (`d_hereford`) — *9/9 in HRE*
   * **[HRE]** **Warwickshire** (`c_warwickshire`) — *Tarraconian: **Magistrat van Warwîch***
-  * **[HRE]** **Leicestershire** (`c_leicestershire`) — *Tarraconian: **Magistrat van Leitzester***
-  * **[HRE]** **Nottinghamshire** (`c_nottinghamshire`) — *Tarraconian: **Magistrat van Snotingham***
+  * **[HRE]** **Leicestershire** (`c_leicestershire`) — *Tarraconian: **Magistrat van Legrezester***
+  * **[HRE]** **Nottinghamshire** (`c_nottinghamshire`) — *Tarraconian: **Magistrat van Snotingheim***
   * **[HRE]** **Staffordshire** (`c_staffordshire`) — *Tarraconian: **Magistrat van Statvort***
   * **[HRE]** **Worcestershire** (`c_worcestershire`) *(Prince-Bishopric / Ecclesiastical)*
   * **[HRE]** **Huntingdonshire** (`c_huntingdonshire`) — *Tarraconian: **Magistrat van Huntingedûn***
   * **[HRE]** **Northamptonshire** (`c_northamptonshire`) — *Tarraconian: **Magistrat van Northamptûn***
-  * **[HRE]** **Amwythig** (`c_shropshire`) — *Tarraconian: **Magistrat van Schrobberîe***
+  * **[HRE]** **Amwythig** (`c_shropshire`) — *Tarraconian: **Magistrat van Schrobbesburch***
   * **[HRE]** **Herefordshire** (`c_hereford`) — *Tarraconian: **Magistrat van Herevort***
 * **Duchy of Hwicce** (`d_gloucester`) — *4/4 in HRE*
-  * **[HRE]** **Gloucestershire** (`c_gloucestershire`) — *Tarraconian: **Magistrat van Glôtzester***
+  * **[HRE]** **Gloucestershire** (`c_gloucestershire`) — *Tarraconian: **Magistrat van Glôwzester***
   * **[HRE]** **Wiltshire** (`c_wiltshire`) — *Tarraconian: **Magistrat van Wiltûn***
   * **[HRE]** **Oxfordshire** (`c_oxfordshire`) — *Tarraconian: **Magistrat van Ochsenvort***
   * **[HRE]** **Berkshire** (`c_berkshire`) — *Tarraconian: **Magistrat van Berkschîr***

@@ -37,17 +37,17 @@ Every single occupied holding has been resolved according to:
 
 ```mermaid
 pie title Occupied Barony Resolutions (10,237 Titles)
-    "Category 1: Sinosphere Logographic Calques" : 1979
-    "Category 2: Capital / Eponymous Holdings" : 2747
-    "Category 3a: Cultural Sub-Baronies & Attestations" : 5387
-    "Category 3b: Option C Foundations & Post-867 Stems" : 124
+    "Category 1: Sinosphere Logographic Calques" : 2013
+    "Category 2: Capital / Eponymous Holdings" : 2701
+    "Category 3a: Cultural Sub-Baronies & Attestations" : 5388
+    "Category 3b: Option C Foundations & Post-867 Stems" : 135
 ```
 
-1. **Category 1 (Sinosphere Logographic Calques — 1,979 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,384-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
-2. **Category 2 (Capital / Eponymous Holdings — 2,747 titles):** The primary or capital seat of its parent county (including disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
-3. **Category 3 (Sub-Baronies & Historical Attestations — 5,511 titles):**
-   - **Cultural Sub-Baronies & Attestations (5,387 titles):** Includes 5,081 indigenous cultural adaptations adhering to county cultural substrata, classical/ancient civitates and toponymic stems (87), Option A archaeological seats (142), paired secondary variants from `tarraconian_titles_1059.md` (39), secondary holding/collision disambiguations (21), and authentic indigenous restitutions (17).
-   - **Option C Campaign Foundations (124 titles):** Reserved strictly for verified post-867 historical foundations (such as `b_lorient`, `b_portsmouth`, `b_versailles`, `b_dunkirk`, `b_floridsdorf`, `b_baranovichi`) and severe intra-county stem collisions (>75% similarity with parent county capital). Formatted according to save ruler character traits and holding taxonomy.
+1. **Category 1 (Sinosphere Logographic Calques — 2,013 titles):** Located in the 9 East Asian empires (`e_andong`, `e_liangyi`, `e_zhongyuan`, `e_jingyang`, `e_yongliang`, `e_japan`, `e_lingnan`, `e_goryeo`, `e_amur`) and drifted frontier counties. Resolved character-by-character using the 1,384-entry merged CJK morpheme dictionary ([data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json) and [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py)).
+2. **Category 2 (Capital / Eponymous Holdings — 2,701 titles):** The primary or capital seat of its parent county (including disambiguated capital seats). Inherits the county's established resolution (`tarr_direct`, `tarr_hist`), subject to the *Intra-County Collision Disambiguation Rule*.
+3. **Category 3 (Sub-Baronies & Historical Attestations — 5,523 titles):**
+   - **Cultural Sub-Baronies & Attestations (5,388 titles):** Includes 4,977 indigenous cultural adaptations adhering to county cultural substrata, classical/ancient civitates and toponymic stems (121), Option A archaeological seats (135), paired secondary variants from `tarraconian_titles_1059.md` (37), Option B ancient hydronyms (29), secondary holding/collision disambiguations (41), descriptive calques (23), hundred moot cross (1), and authentic indigenous restitutions (24).
+   - **Option C Campaign Foundations (135 titles):** Reserved strictly for verified post-867 historical foundations (such as `b_lorient`, `b_portsmouth`, `b_versailles`, `b_dunkirk`, `b_floridsdorf`, `b_baranovichi`) and severe intra-county stem collisions (>75% similarity with parent county capital). Formatted according to save ruler character traits and holding taxonomy.
 
 ---
 
@@ -187,6 +187,23 @@ The Chancellery conducted a comprehensive three-tier disentanglement:
 | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
 | `b_dorohychyn` | `c_dorohychyn` | Castle | **Bûch** | 1142 AD | `[buːx]` | Western Bug River basin (*Bugъ*), replacing 1142 Hypatian Chronicle frontier customs gord Drohiczyn. |
 | `b_kobryn` | `c_dorohychyn` | City | **Muchawêtz** | 1287 AD | `[mʊ.xa.ˈweːts]` | Mukhavets River basin (pre-867 hydronym), replacing 1287 Hypatian Chronicle Kobryn. |
+| `b_vyr` | `c_putyvl` | City | **Wîr** | 1113 AD | `[wiːr]` | Ancient Vyr River basin and chronicle gord (*Вырь*), eliminating raw Cyrillic soft-sign transliteration (*Vyr'*). |
+| `b_yegoryevsk` | `c_vladimir` | City | **Guslîtze** | pre-867 | `[ɡʊs.ˈliː.tsə]` | Pre-867 Guslitsa River basin (*Гуслица*) in the Meshchera Lowland, replacing 1778 Catherine-era town Yegoryevsk (1462 *Vysokoye*). |
+| `b_starodub-on-the-klyazma` | `c_vladimir` | Church | **Starodûp-an-der-Klêsme** | 1152 AD | `[sta.rɔ.ˈduːp an dɛr ˈkleːs.mə]` | 1152 fortress founded by Yuri Dolgorukiy on the Klyazma River, calqued to Franconian river preposition *-an-der-* with Auslautverhärtung. |
+| `b_bar_sur_aube` | `c_troyes` | City | **Bar-an-der-Ôbe** | ancient | `[bar an dɛr ˈoː.bə]` | Ancient Gallo-Roman castrum *Barrense* on the Aube, regularized to Franconian *-an-der-Ôbe*. |
+| `b_bar_sur_seine` | `c_sens` | Church | **Bar-an-der-Sêne** | ancient | `[bar an dɛr ˈseː.nə]` | Ancient comital seat on the Seine, regularized to Franconian *-an-der-Sêne*. |
+| `b_montreuil_sur_mer` | `c_boulogne` | Church | **Montreuil-am-Mêr** | ancient | `[ˈmɔn.trɔʏ.ɪl am meːr]` | Merovingian/Carolingian *Monasteriolum* on the English Channel coast, regularized to Franconian *-am-Mêr*. |
+| `b_valenciennes` | `c_cambray` | City | **Valentzîn** | 693 AD | `[va.lɛn.ˈtsiːn]` | Merovingian *Valentianas* / Middle Dutch *Valencijn*, regularized to Franconian *Valentzîn* (eliminating raw French *Valenciennes*). |
+| `b_grevelines` | `c_guines` | Church | **Grevelingen** | medieval | `[ˈɡrɛ.vɛ.lɪ.ŋɛn]` | Authentic Flemish/Low Franconian *Grevelingen* on the Aa River, replacing French *Gravelines*. |
+| `b_tournai` | `c_hainaut` | City | **Dornîch** | ancient | `[dɔr.ˈniːç]` | Ancient Roman *Tornacum* / Dutch *Doornik* on the Scheldt, regularized to Franconian *Dornîch*. |
+| `b_courtrai` | `c_lille` | City | **Kortrîch** | ancient | `[kɔr.ˈtriːç]` | Ancient Roman *Cortoriacum* / Dutch *Kortrijk* on the Leie, regularized to Franconian *Kortrîch*. |
+| `b_bastogne` | `c_luxembourg` | City | **Bastenach** | ancient | `[ˈbas.tɛ.nax]` | Ancient Ardennes comital center, regularized to traditional Luxembourgish/German *Bastenach*. |
+| `b_clervaux` | `c_luxembourg` | Castle | **Clierf** | medieval | `[ˈklɪ.ɛrf]` | Traditional Luxembourgish/German *Clierf* / *Klierf* on the Clerve, replacing French *Clervaux*. |
+| `b_yuriev` | `c_kiev` | Castle | **Rostawîtze** | pre-867 | `[rɔs.ta.ˈwiː.tsə]` | Pre-867 Rostavytsia River basin at the Ros confluence, replacing 1032 frontier fortress Yuriev founded by Yaroslav the Wise (baptismal name *Yuri*). |
+| `b_yuryev` | `c_suzdal` | Castle | **Kolôksche** | pre-867 | `[kɔ.ˈloːk.ʃə]` | Pre-867 Koloksha River basin (*Колокша*) in the Opolye fields, replacing 1152 fortress Yuryev-Polsky founded by Yuri Dolgorukiy. |
+| `b_yaroslav_VOL` | `c_peremyshl` | Church | **Mletschke** | pre-867 | `[ˈmlɛtʃ.kə]` | Pre-867 Mleczka River basin (*Млечка*) at the San confluence, replacing 1031 fortress Jarosław founded by Yaroslav the Wise. |
+| `b_rostislavl` | `c_ryazan` | Church | **Osjôtr** | pre-867 | `[ɔs.ˈjoːtr]` | Pre-867 Osyotr River basin (*Осётр*) at the Oka confluence, replacing 1153 fortress Rostislavl founded by Prince Rostislav Yaroslavich. |
+| `b_danilov` | `c_vologda` | Castle | **Pelende** | pre-867 | `[pɛ.ˈlɛn.də]` | Pre-867 Pelenda River basin (*Пеленда*), replacing late medieval Danilov named after Prince Daniil of Moscow. |
 | `b_blotkowo` | `c_dorohychyn` | Church | **Blotkowe** | — | `[blɔt.ˈkɔ.wə]` | Constituent holding of Bûch. |
 | `b_galati` | `c_galati` | Castle | **Barbôs** | 1445 AD | `[bar.ˈboːs]` | Ancient Roman frontier castrum *Barboși* on the lower Danube, replacing 1445 Galați. |
 | `b_hotin` | `c_hotin` | Castle | **Nîster** | 1002/1250 AD | `[ˈniːs.tər]` | Ancient Dniester River basin (*Danastris* / *Dnestr*), replacing high medieval Khotyn fortress. |
@@ -219,6 +236,12 @@ To eliminate lingering circularity and spurious anachronisms (such as `c_dorohyc
    - Finalized official Tarraconian Chancellery titles and adjectives obeying Rhine-Moselle Franconian phonology.
    - Refined 187 county-level historical name resolutions across [data/ck3_counties.geojson](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_counties.geojson), [data/ck3_title_tree.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_title_tree.json), [data/ck3_baronies.geojson](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_baronies.geojson), and [data/barony_resolutions.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/barony_resolutions.json).
    - Mirrored all compiled assets to `docs/data/` via [scripts/build_webapp.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/build_webapp.py).
+
+### 2.8 Campaign Save File Barony Renaming Pipeline
+To eliminate vanilla ahistorical exonyms from the active campaign save (`chatenois_867_01_01.ck3` / `/var/tmp/ck3_audit/melted_save.ck3`), the Chancellery executed [scripts/rename_baronies_in_save.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/rename_baronies_in_save.py):
+1. **Burden of Proof Audit:** Identified 3,407 ahistorical baronies in the active save (including post-867 foundations, modern settlements, railway stations, Teutonic/crusade fortresses, and Sinosphere un-calqued characters).
+2. **Save Stream Modification:** Updated `title_name_data={ name="..." }` across 5,953 baronies in `melted_save.ck3` (3,407 ahistorical titles + 2,546 capital and standardized Chancellery adaptations), suppressing obsolete anachronistic adjectives. Exactly 1,060 unoccupied territorial reserves remain untouched.
+3. **Save Archive Repacking:** Repacked `chatenois_867_01_01.ck3` with the updated melted `gamestate`, providing complete bidirectional save synchrony.
 
 ---
 
@@ -392,11 +415,43 @@ Authentic velar fricative `/x/` toponyms of Greek (Χ: `Chîos`, `Chalkidîke`, 
 | `b_schwalenberg` | `c_lippe` | Castle | **Marienmunster** | Schwalenberch | `[ˈma.rɪ.ɛn.mʊn.stər]` | Ancient 844 AD Corvey collegiate abbey Marienmünster (pre-1228 feudal castle). |
 | `b_ravensberg` | `c_osnabruck` | Castle | **Halle** | Ravensberch | `[ˈha.ʎə]` | Ancient Carolingian parish and salt estate Halle in Westfalen (pre-1080 Ravensberg). |
 | `b_castrogiovanni` | `c_agrigento` | Castle | **Ênne** | Dschirgent | `[ˈeː.nə]` | Classical Siculian/Roman acropolis Castrum Hennae / Enna (resolving Agrigento duplicate). |
+| `b_carrickfergus` | `c_ulster` | Castle | **Karrech-Vergûs** | Carrickfergus | `[ˈka.rɛç vɛr.ˈɡuːs]` | Ancient Gaelic rock and bay of Fergus (Carraig Fhearghais); 1177 Anglo-Norman castle fails Burden of Proof. |
+| `b_freiberg` | `c_dresden` | City | **Mûlde** | Freiberch | `[ˈmuːl.dɛ]` | Ancient Mulde River basin in Meissen march; 1168 silver boom town fails Burden of Proof. |
+| `b_gisors` | `c_rouen` | Castle | **Epte-Furt** | Gisors | `[ˈɛp.tə fʊrt]` | Pre-conquest Epte river crossing in the Vexin; 1096 Norman border fortress of William Rufus fails Burden of Proof. |
+| `b_pamiers` | `c_toulouse` | Castle | **Zant-Antônîn** | Pamiers | `[tsant an.toː.ˈniːn]` | Ancient 9th-c. Benedictine abbey of Saint-Antonin on the Ariège; 1111 crusader fortress fails Burden of Proof. |
+| `b_lodi` | `c_pavia` | City | **Lôdi-Vêch** | Lodi | `[ˈloː.dɪ veːç]` | Ancient Roman civitas Laus Pompeia (Lodi Vecchio); 1158 Lodi Nuovo of Frederick Barbarossa fails Burden of Proof. |
+| `b_crema` | `c_cremona` | Castle | **Sêrjo** | Crema | `[ˈseːr.jɔ]` | Ancient Serio River basin in Lombardy; 1074 first attested medieval settlement fails Burden of Proof. |
+| `b_montfort` | `c_beaumont` | Castle | **Montfortveste** | Montfort | `[mɔnt.fɔrt.ˈvɛs.tə]` | March fortress citadel of House Montfort; c. 990 fortress of Amaury de Montfort resolved via Option C. |
+| `b_coucy` | `c_valois` | Castle | **Koutzîveste** | Koutzî | `[kɔʊ.tsiː.ˈvɛs.tə]` | March fortress citadel of Coucy; c. 920 fortress of Archbishop Herve resolved via Option C. |
+| `b_lapueblademontalban` | `c_malagon` | Castle | **Tâjo** | La Puebla de Montalban | `[ˈtaː.jɔ]` | Ancient pre-867 Tagus River basin; 12th-c. repoblación of Alfonso VII fails Burden of Proof. |
+| `b_furness` | `c_cumberland` | Castle | **Vûrnês** | Furness | `[vuːr.ˈneːs]` | Ancient Furness peninsula and headland reach (*Fuðrnes*); 1127 Savigniac/Cistercian abbey fails Burden of Proof on Antiquity. |
+| `b_rotterdam` | `c_holland` | Church | **Rotte** | Rotterdam | `[ˈrɔ.tə]` | Ancient pre-867 Rotte River peat stream in Lower Lotharingia; 1270 dam (*Rotterdam*) fails Burden of Proof on Antiquity. |
+| `b_isenburg` | `c_sayn` | Church | **Iserbach** | Isenburch | `[ˈɪ.zɛr.bax]` | Ancient pre-867 Iserbach stream valley in the Westerwald; 1103 dynastic spur castle of Gerlach I fails Burden of Proof on Antiquity. |
+| `b_katzenelnbogen` | `c_mainz` | Church | **Dörsbach** | Katzenelnbogen | `[ˈdøːrs.bax]` | Ancient pre-867 Dörsbach stream basin in the Taunus; 1095 castle of Count Diether I fails Burden of Proof on Antiquity. |
+| `b_heidelberg` | `c_speyer` | Church | **Heiligenberch** | Heidelberch | `[ˈhɛɪ.lɪ.ɣən.bɛrx]` | Classical Celtic/Roman sacred mountain (*Mons Sanctus* / Heiligenberg) and shrine overlooking Neckar; 1196 castle settlement fails Burden of Proof on Antiquity. |
+| `b_clairvaux` | `c_troyes` | Church | **Albetâl** | Clairvaux | `[al.bɛ.ˈtaːl]` | Ancient pre-867 Aube River valley (*Alba*); 1115 Bernardine Cistercian reform abbey *Clara Vallis* fails Burden of Proof on Antiquity. |
+| `b_citeaux` | `c_chalon` | Church | **Vonge** | Cîteaux | `[ˈvɔ.ŋɛ]` | Ancient pre-867 Vouge River stream (*Vonga*); 1098 Robert of Molesme reform abbey *Cistercium* fails Burden of Proof on Antiquity. |
 
 ### 5.2 Baltic, Nordic & Eastern Europe (`e_wendish_empire`, `e_russia`, `e_scandinavia`, `e_carpathia`)
 
 | Barony Key | County Key | Holding Type | Resolved Tarraconian Name | Direct Translation | IPA | Historical Origin & Attribution Note |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `b_zdar` | `c_brno` | Church | **Sâzouwe** | Schdâr | `[saː.ˈtsɔʊ.wə]` | Ancient Sázava River basin; 1252 Cistercian monastery Žďár nad Sázavou fails Burden of Proof. |
+| `b_helsingborg` | `c_skane` | Castle | **Helsingör-Sund** | Helsingborg | `[ˈhɛl.sɪ.ŋøːr sʊnd]` | Ancient Öresund strait and coastal sound of the Helsingar; 1085 Danish fortress fails Burden of Proof. |
+| `b_birzula` | `c_ladyzyn` | Castle | **Jahorlîch** | Birschula | `[ja.hɔr.ˈliːç]` | Ancient Yagorlyk River basin; 18th-century settlement Birzula fails Burden of Proof. |
+| `b_nikopol` | `c_lower_dniepr` | City | **Mîkîtîn-Rîch** | Nikopol | `[miː.kiː.ˈtiːn riːç]` | Ancient pre-867 Dnieper river crossing / Horn of Mykyta; 1782 imperial city fails Burden of Proof. |
+| `b_pokrovsk` | `c_lozova` | Castle | **Samatkân** | Pokrovtzich | `[sa.mat.ˈkaːn]` | Ancient pre-867 Samatka stream in Donets steppe; 1875 railway station Grishino fails Burden of Proof. |
+| `b_oranienburg` | `c_kozlov` | Castle | **Rjâsa** | Oranienburch | `[ˈrjaː.za]` | Ancient Stanovaya Ryasa River basin; 1638 fortress of Peter the Great fails Burden of Proof. |
+| `b_viazovka` | `c_balachev` | Castle | **Chopjôr** | Viazovka | `[xɔp.ˈjoːr]` | Ancient Khopyor River basin; 18th-century village Viazovka fails Burden of Proof. |
+| `b_zhlobin` | `c_rochev` | City | **Strêschew** | Dschlobin | `[ˈstreː.ʃɛw]` | 1127 chronicle border gord & Iron Age hillfort Stary Gorodok on Dnieper (*Strezhev* / Streshin). 1654 Cossack fortress Zhlobin fails Burden of Proof on Antiquity. |
+| `b_kalinkavichy` | `c_mozyr` | Church | **Ipat** | Kalinkavichy | `[ɪ.ˈpat]` | Pre-867 ancient Ipa River basin. 1560 village Kalinkavichy fails Burden of Proof on Antiquity. |
+| `b_baranovichi` | `c_novogrudok` | Church | **Ehrenfrîtszelle** | Ehrenfrîtszelle | `[ɛh.rɛn.friːts.ˈtsɛ.ʎə]` | Monastic cell endowed by ruler Ehrenfried (House Suerbeer). 1871 railway station fails Burden of Proof on Antiquity. |
+| `b_dedovichi` | `c_rusa` | Castle | **Schêlôn** | Dedovichi | `[ʃeː.ˈloːn]` | Ancient Shelon River basin trade route. 1901 railway station fails Burden of Proof on Antiquity. |
+| `b_borovichi` | `c_tikhvin` | City | **Mste** | Borovichi | `[mstə]` | Pre-867 Msta River rapids trade route. 1495 village fails Burden of Proof on Antiquity. |
+| `b_zhytkavichy` | `c_sluck` | Castle | **Hlûschitza** | Dschytkavichy | `[ˈhluː.ʃɪ.tsa]` | Glushitsa stream and marshes of Turov land. 1500 village fails Burden of Proof on Antiquity. |
+| `b_mikashevichy` | `c_sluck` | City | **Lan** | Mikaschevichy | `[lan]` | Pre-867 Lan River basin in Polesia. 1785 village fails Burden of Proof on Antiquity. |
+| `b_klimavichy` | `c_oster` | Castle | **Lôbdscha** | Klimavichy | `[ˈloːp.dʒa]` | Pre-867 Lobzha River basin on Sozh tributary. 1581 village fails Burden of Proof on Antiquity. |
+| `b_dukhovshchina` | `c_smolensk` | Church | **Tzârewitza** | Dûchovschina | `[tsaː.rɛ.ˈwɪ.tsa]` | Pre-867 Tsarevitsa River basin near Smolensk. 1777 settlement fails Burden of Proof on Antiquity. |
 | `b_konigsberg` | `c_sambia` | Castle | **Twangste** | Königsburch | `[ˈtwaŋ.stə]` | Old Prussian sacred oak grove Twangste (pre-1255). |
 | `b_reval` | `c_reval` | Castle | **Lindanisa** | Rêvel | `[lɪn.da.ˈniː.sa]` | Ancient Estonian hillfort Lindanisa (pre-1219). |
 | `b_marienburg` | `c_malbork` | Castle | **Malbork** | Marienburch | `[ˈmal.bɔrk]` | Ancient Prussian/Slavic Nogat settlement. |
@@ -427,6 +482,119 @@ Authentic velar fricative `/x/` toponyms of Greek (Χ: `Chîos`, `Chalkidîke`, 
 | `b_delhi` | `c_delhi` | Castle | **Dillî** | Dillî | `[ˈdɪl.liː]` | Ancient Indraprastha / Tomara Rajput citadel Dhillika. |
 | `b_varanasi` | `c_varanasi` | Church | **Baranasi** | Baranasi | `[ba.ra.ˈna.si]` | Classical Vedic holy city Kashi on the Ganges. |
 | `b_fort_novoaleksandrovskiy` | `c_mangyshlak` | Castle | **Mangystau** | Mangystau | `[maŋ.gɪs.ˈtɔʊ]` | Ancient Oghuz/Turkic peninsula and fort. |
+| `b_benghazi` | `c_barqa` | Castle | **Berenîke** | Benghazi | `[bɛ.rɛ.ˈniː.kə]` | Ancient Greek Pentapolis city Berenice / Hesperides; 15th-c. port of Sidi Ghazi fails Burden of Proof. |
+| `b_rafaniya-krak` | `c_homs` | Castle | **Rafanîje** | Rafaniya-Krak | `[ra.fa.ˈniː.jɛ]` | Ancient Roman and Byzantine civitas Raphanea; 1142 Hospitaller fortress Krak des Chevaliers fails Burden of Proof. |
+| `b_agra` | `c_mathura` | Castle | **Agraban** | Agra | `[a.ɡra.ˈban]` | Ancient sacred Yamuna forest grove attested in Mahabharata; 1504 Lodi capital fails Burden of Proof. |
+| `b_vijayanagara` | `c_adoni` | City | **Pampâ-Kschêtre** | Vijayanagara | `[pam.ˈpaː ˈkʃeː.trə]` | Ancient sacred pilgrimage sanctuary Pampa Kshetra (Hampi) on Tungabhadra; 1336 capital fails Burden of Proof. |
+| `b_timbuktu` | `c_tirakka` | City | **Djôlibe** | Timbuktu | `[djoː.ˈlɪ.bə]` | Ancient native Mandé hydronym of the Niger River *Joliba*; c. 1100 Tuareg seasonal camp fails Burden of Proof. |
+| `b_mansuriya` | `c_kairwan` | Castle | **Sâbrâ** | Mansuriya | `[saː.ˈbraː]` | Ancient substrate Sabra in the Byzacena plain near Kairouan; 946 Fatimid caliphal capital fails Burden of Proof. |
+| `b_raqqada` | `c_kairwan` | Castle | **Safûn** | Raqqada | `[sa.ˈfuːn]` | Ancient Byzacena watercourse and olive plain; 876 Aghlabid palace city fails Burden of Proof. |
+| `b_gede` | `c_malindi` | City | **Sabâki** | Gede | `[ˈsa.baː.kɪ]` | Ancient Sabaki River estuary on Swahili coast; 11th-c. Swahili stone town fails Burden of Proof. |
+| `b_ungwana` | `c_malindi` | City | **Tâne** | Ungwana | `[ˈtaː.nə]` | Ancient Tana River delta reach on Swahili coast; 13th-c. Swahili coastal town fails Burden of Proof. |
+| `b_hargeisa` | `c_fafan` | Castle | **Lâs-Gêel** | Hargeisa | `[laːs ɡeː.ˈɛl]` | Ancient prehistoric rock art sanctuary complex Las Geel; 19th-c. settlement fails Burden of Proof. |
+| `b_faizabad` | `c_ayodhya` | Castle | **Sarajû** | Faizabat | `[sa.ra.ˈjuː]` | Ancient sacred Sarayu River of the Ramayana; 1730 foundation of Nawab Saadat Ali Khan I fails Burden of Proof. |
+| `b_ahmadnagar` | `c_trikuta` | Castle | **Sînâ** | Ahmadnagar | `[siː.ˈnaː]` | Ancient Sina River basin in the Deccan; 1494 capital of Ahmad Nizam Shah I fails Burden of Proof. |
+| `b_hoshangabad` | `c_chauragarh` | Castle | **Narmadâ** | Hoschangabat | `[nar.ma.ˈdaː]` | Ancient sacred Narmada River reach; 1405 fortress of Hoshang Shah fails Burden of Proof. |
+| `b_fathabad` | `c_bikrampur` | City | **Padmâ** | Fathabat | `[pad.ˈmaː]` | Ancient Padma River reach of Ganges delta; late 15th-c. sultanate mint town fails Burden of Proof. |
+| `b_nasirabad` | `c_suvarnagram` | City | **Brahmapûtra** | Nasirabat | `[ˈbrah.ma.puː.tra]` | Ancient sacred Brahmaputra River reach; 19th-c. colonial town fails Burden of Proof. |
+| `b_khudabad` | `c_ranikot` | Castle | **Mêhrân** | Khudabat | `[meːh.ˈraːn]` | Ancient Mehran / Indus River reach in Sindh; 1701 Kalhora capital fails Burden of Proof. |
+| `b_shergarh` | `c_purushapura` | Castle | **Kâbul** | Schergarh | `[ˈkaː.bʊl]` | Ancient Kabul River confluence reach; 1540 fortress of Sher Shah Suri fails Burden of Proof. |
+| `b_udaipur` | `c_karmanta` | Castle | **Rangamatî** | Udaipur | `[ra.ŋa.ma.ˈtiː]` | Ancient Manikya royal capital Rangamati on Gomati; 1567 capital of Udai Manikya fails Burden of Proof. |
+| `b_gangaikondacolapuram` | `c_cholamandalam` | Castle | **Kâvêrî** | Gangaikondacolapuram | `[kaː.veː.ˈriː]` | Ancient sacred Kaveri River reach; 1025 Chola imperial capital of Rajendra Chola I fails Burden of Proof. |
+| `b_aswan-west` | `c_aswan` | Castle | **Elefantîne** | West Aswan | `[ɛ.lɛ.fan.ˈtiː.nə]` | Ancient Pharaonic and Roman island fortress Elephantine on the Nile; Modern administrative sector West Aswan fails Burden of Proof on Antiquity. |
+| `b_benin_marshes` | `c_benin` | Church | **Osse** | Benin marsches | `[ˈɔ.sə]` | Ancient pre-867 Osse River delta reach; Colonial administrative sector fails Burden of Proof on Antiquity. |
+| `b_gobir-east` | `c_gobir` | City | **Rîme** | Gobir-East | `[ˈriː.mə]` | Ancient pre-867 Rima River basin in Hausaland; Administrative sector Gobir-East fails Burden of Proof on Antiquity. |
+| `b_amarkot` | `c_sonda` | Church | **Hakrâ** | Amarkot | `[ha.ˈkraː]` | Ancient pre-867 Hakra River basin in Thar Desert; 13th-century Sodha Rajput fortress fails Burden of Proof on Antiquity. |
+| `b_pathankot` | `c_trigarta` | Church | **Tschakkî** | Pathankot | `[tʃa.ˈkiː]` | Ancient pre-867 Chakki River confluence in Trigarta; 11th-century Pathania Rajput stronghold fails Burden of Proof on Antiquity. |
+| `b_jaisalmer` | `c_ludrava` | Castle | **Kaknî** | Jaisalmer | `[kak.ˈniː]` | Ancient pre-867 Kakni River basin in Thar Desert; 1156 Bhati Rajput desert fort of Rawal Jaisal fails Burden of Proof on Antiquity. |
+| `b_gawilgarh` | `c_acalapura` | City | **Sâtpure** | Gawîlgarh | `[saːt.ˈpʊ.rə]` | Ancient pre-867 Satpura mountain ridge in Maharashtra; 12th-century Gawali hillfort fails Burden of Proof on Antiquity. |
+| `b_borgarh` | `c_mandapika` | Church | **Narmadâ-Tâl** | Borgarh | `[nar.ma.ˈdaː taːl]` | Ancient pre-867 Narmada River valley in Malwa; High medieval Paramara fortress fails Burden of Proof on Antiquity. |
+| `b_upper_gambia` | `c_konko` | City | **Kantôra** | Upper Gambia | `[ˈkan.toː.ra]` | Ancient pre-867 Mandinka trade kingdom and terminal Kantora on the Upper Gambia; colonial administrative sector fails Burden of Proof. |
+| `b_mariupol` | `c_khortytsia` | City | **Kalmjûs** | South Kalka | `[kalm.ˈjuːs]` | Ancient pre-867 Kalmius River estuary on Sea of Azov; 1778 foundation Mariupol fails Burden of Proof. |
+| `b_karabutak` | `c_mugodzhar_hills` | Castle | **Mugaldschar-Berch** | Mugodschar Hills | `[ˈmʊ.ɣal.dʒar bɛrx]` | Ancient Turkic Mugalzhar mountain range in western Kazakhstan; English "Hills" fails Burden of Proof. |
+| `b_lower_jubba` | `c_lag_dera` | Church | **Gobweyn** | Lower Jubba | `[ɡɔb.ˈwɛɪn]` | Ancient estuarine coastal settlement Gobweyn at the mouth of the Jubba River; colonial English descriptor fails Burden of Proof. |
+
+### 5.5 Southeast Asia, Nusantara & Scandinavia (`e_suvarnabhumi`, `e_nusantara`, `e_scandinavia`)
+
+| Barony Key | County Key | Holding Type | Resolved Tarraconian Name | Direct Translation | IPA | Historical Origin & Attribution Note |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `b_bangkok` | `c_nakhon_pathom` | City | **Mênam** | Bangkok | `[ˈmeː.nam]` | Ancient Chao Phraya River basin, Mother of Waters (*Mae Nam*); 15th-c. village / 1782 capital fails Burden of Proof. |
+| `b_chiang_mai` | `c_haripunjaya` | Castle | **Pîng** | Tschjang Mai | `[piːŋ]` | Ancient Mae Ping River basin of Mon-Dvaravati realm; 1296 new capital of Lan Na fails Burden of Proof. |
+| `b_BOR_Seria` | `c_BOR_brunei` | City | **Serîje** | Seria | `[sɛ.ˈriː.jɛ]` | Ancient Seria River basin of northern Borneo; 1929 oil town fails Burden of Proof. |
+| `b_svendborg` | `c_fyn` | City | **Swînesunt** | Svendborg | `[ˈswiː.nɛ.zʊnt]` | Ancient Svendborgsund sound and strait of Funen; 1229 Danish royal castle fails Burden of Proof. |
+| `b_salavan` | `c_sanasomboon` | City | **Sê-Dôn** | Salavan | `[seː doːn]` | Ancient pre-867 Se Don River basin in southern Laos; Late medieval provincial outpost fails Burden of Proof on Antiquity. |
+| `b_BOR_Melak` | `c_BOR_kutai_jauh` | City | **Mahakâm** | Melak | `[ma.ha.ˈkaːm]` | Ancient pre-867 Mahakam River basin in Borneo; Late river trading post fails Burden of Proof on Antiquity. |
+| `b_popa` | `c_pagan` | Church | **Popa-Berch** | Mount Popa | `[ˈpɔ.pa bɛrx]` | Classical Burmese sacred volcanic Nat sanctuary Popa Taung (*Puppha*); English "Mount" fails Burden of Proof. |
+
+### 5.6 Britannia & Insular Anglo-Saxon Semantic Calques (`k_england`, `k_scotland`, `k_ireland`)
+
+Under the **Tarraconian Anglo-Saxon Morpheme Matrix**, all holdings in Britannia that previously retained raw Old English or hybrid colonial spellings have been systematically calqued into authentic Rhine-Moselle Franconian / High German forms, aligning them with the county-tier magistrats (`Middelsachsen`, `Ôstsachsen`, `Nortvolch`, `Ochsenvort`, `Grantebrücke`):
+
+| Barony Key | County Key | Holding Type | Resolved Tarraconian Name | Direct Translation | IPA | Historical Origin & Attribution Note |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `b_york` | `c_north_riding` | City | **Everwîch** | York | `[ɛ.vɛr.ˈwiːç]` | Ancient archiepiscopal metropolitan capital York (*Eoforwīc* / *Eboracum*); disambiguated from riding. |
+| `b_pockington` | `c_east_riding` | Castle | **Pocklingtûn** | Pocklington | `[pɔ.klɪŋ.ˈtuːn]` | Royal estate of the East Riding (*Poclintun*); disambiguated from regional riding. |
+| `b_leeds` | `c_west_riding` | Castle | **Ledes** | Leeds | `[ˈlɛ.dɛs]` | Ancient Celtic Elmet district capital (*regio Loidis* / Domesday *Ledes*); disambiguated from riding. |
+| `b_birmingham` | `c_warwickshire` | City | **Bôrmingheim** | Birmingham | `[boːr.mɪŋ.ˈhɛɪm]` | Old English *Beorminga-hām* ('estate of Beorma's kin') regularized to archaic Old English Bôrmingheim. |
+| `b_buckingham` | `c_buckinghamshire` | Castle | **Buckingheim** | Buckingham | `[bʊ.kɪŋ.ˈhɛɪm]` | Old English *Buccingahamm* ('meadow/settlement of Bucca's folk') calqued to Buckingheim. |
+| `b_cottingham` | `c_east_riding` | Castle | **Cottingheim** | Cottingham | `[kɔ.tɪŋ.ˈhɛɪm]` | Old English *Cottinga-hām* ('homestead of Cotta's folk') calqued to Cottingheim. |
+| `b_evesham` | `c_worcestershire` | Church | **Evescheim** | Evesham | `[ɛ.vɛ.ˈʃɛɪm]` | Old English *Eoves-ham* ('homestead of Eof') calqued to Evescheim. |
+| `b_hexham` | `c_northumberland` | Church | **Hexheim** | Hexham | `[hɛks.ˈhɛɪm]` | Old English *Hagustaldes-hām* ('warrior's estate') calqued to Hexheim. |
+| `b_walsingham` | `c_norfolk` | Church | **Walschingheim** | Walsingham | `[wal.ʃɪŋ.ˈhɛɪm]` | Old English *Wælsinga-hām* ('homestead of Wæls's folk') calqued to Walschingheim. |
+| `b_nottingham` | `c_nottinghamshire` | City | **Snotingheim** | Nottingham | `[snɔ.tɪŋ.ˈhɛɪm]` | Old English *Snotingahām* ('homestead of Snot's folk') calqued to Snotingheim. |
+| `b_cunningham` | `c_ayrshire` | Castle | **Cunningheim** | Cunningham | `[kʊ.nɪŋ.ˈhɛɪm]` | Scoto-Saxon toponym in *-ham* calqued to Tarraconian Cunningheim. |
+| `b_coldingham` | `c_dunbar` | Church | **Coldingheim** | Coldingham | `[kɔl.dɪŋ.ˈhɛɪm]` | Scoto-Saxon toponym in *-ham* calqued to Tarraconian Coldingheim. |
+| `b_aylesbury` | `c_buckinghamshire` | City | **Eilesburch** | Aylesbury | `[ˈɛɪ.lɛs.bʊrx]` | Old English *Ægeles-burh* ('Aegel's stronghold') calqued to Eilesburch. |
+| `b_banbury` | `c_oxfordshire` | Castle | **Bannaburch** | Banbury | `[ˈba.na.bʊrx]` | Old English *Banna's burh* calqued to Bannaburch. |
+| `b_bishops_castle` | `c_shropshire` | Castle | **Westburch** | Bishops Castle | `[ˈwɛst.bʊrx]` | Old English *West-burh* ('western stronghold') calqued to Westburch. |
+| `b_malmesbury` | `c_wiltshire` | Church | **Malmesburch** | Malmesbury | `[ˈmal.mɛs.bʊrx]` | Old English *Maildubh's burh* calqued to Malmesburch. |
+| `b_ramsbury` | `c_wiltshire` | Church | **Ramesburch** | Ramsbury | `[ˈra.mɛs.bʊrx]` | Old English *Hræfnes-burh* ('Raven's fort') calqued to Ramesburch. |
+| `b_rothbury` | `c_northumberland` | Castle | **Rôtburch** | Rothbury | `[ˈroːt.bʊrx]` | Old English *Rōþ-burh* ('red/cleared stronghold') calqued to Rôtburch. |
+| `b_shaftesbury` | `c_dorset` | Church | **Schaftesburch** | Shaftesbury | `[ˈʃaf.tɛs.bʊrx]` | Old English *Sceaftes-burh* calqued to Schaftesburch. |
+| `b_sudbury` | `c_suffolk` | City | **Sûtburch** | Sudbury | `[ˈsuːt.bʊrx]` | Old English *Sūþ-burh* ('southern stronghold') calqued to Sûtburch. |
+| `b_scarborough` | `c_north_riding` | Castle | **Scharburch** | Scarborough | `[ˈʃar.bʊrx]` | Old Norse *Skarthabork* ('Skarthi's fort') calqued to Scharburch. |
+| `b_chesterfield` | `c_derby` | Castle | **Tschestervelt** | Chesterfield | `[ˈtʃɛs.tɛr.vɛlt]` | Old English *Ceaster-feld* ('open field by the Roman fort') calqued to Tschestervelt. |
+| `b_macclesfield` | `c_cheshire` | City | **Makelesvelt** | Macclesfield | `[ˈma.kɛ.lɛs.vɛlt]` | Old English *Maccelesfeld* ('open field of Maccel') regularized to Makelesvelt. |
+| `b_radfield` | `c_cambridgeshire` | Castle | **Radvelt** | Radfield | `[ˈrad.vɛlt]` | Old English *Rād-feld* ('field by the highway') calqued to Radvelt. |
+| `b_newark` | `c_nottinghamshire` | Castle | **Scherwald** | Newark | `[ˈʃɛr.wald]` | Old English *Scīrwudu* ('shire boundary forest') calqued to Scherwald. |
+| `b_beodericsworth` | `c_suffolk` | Church | **Bôdericswerth** | Beodericsworth | `[ˈboː.dɛ.rɪks.wɛrth]` | Old English *Beodrices-weorþ* ('Beodric's enclosure') calqued to Bôdericswerth. |
+| `b_bosworth` | `c_leicestershire` | Castle | **Boswerth** | Bosworth | `[ˈbɔs.wɛrth]` | Old English *Bosa's weorþ* calqued to Boswerth. |
+| `b_papworth` | `c_cambridgeshire` | Castle | **Papwerth** | Papworth | `[ˈpap.wɛrth]` | Old English *Pappa's weorþ* calqued to Papwerth. |
+| `b_bolingsbroke` | `c_lincolnshire` | Castle | **Bolingstên** | Bolingbroke | `[bɔ.lɪŋ.ˈsteːn]` | Old English stone marker of Bulla's folk calqued to Bolingstên. |
+| `b_leightonstone` | `c_huntingdonshire` | Castle | **Leightonstên** | Leightonstone | `[lɛɪɡh.tɔn.ˈsteːn]` | Old English stone marker of the leek garden calqued to Leightonstên. |
+| `b_basingstoke` | `c_hampton` | Castle | **Basingstoc** | Basingstoke | `[ˈba.zɪŋ.stɔk]` | Old English *Basinga-stoc* ('hamlet of Basa's folk') calqued to Basingstoc. |
+| `b_winterstoke` | `c_somerset` | Castle | **Winterstoc** | Winterstoke | `[ˈwɪn.tɛr.stɔk]` | Old English *Winter-stoc* ('winter settlement') calqued to Winterstoc. |
+| `b_hartlepool` | `c_durham` | City | **Hôrtepûl** | Hartlepool | `[hoːr.tɛ.ˈpuːl]` | Old English *Heruteu-pōl* ('pool of the Hart/Deer island') calqued to Hôrtepûl. |
+| `b_poole` | `c_dorset` | City | **Pûl** | Poole | `[puːl]` | Old English *Pōl* ('harbor pool') calqued to Pûl. |
+| `b_colchester` | `c_essex` | City | **Colnezester** | Colchester | `[ˈkɔl.nɛ.tsɛs.tər]` | Old English *Colne-ceaster* ('fort on the Colne') regularized to Colnezester. |
+| `b_chichester` | `c_sussex` | City | **Tschitzester** | Chichester | `[ˈtʃɪ.tsɛs.tər]` | Old English *Cisse-ceaster* adapted with High German affrication to Tschitzester. |
+| `b_west_derby` | `c_lancashire` | Castle | **Westdörp** | West Derby | `[ˈwɛst.døːrp]` | Old Norse *Djúrbý* ('deer-settlement') calqued to Westdörp. |
+| `b_appleby` | `c_westmorland` | Castle | **Applebî** | Appleby | `[ˈa.plə.biː]` | Old Norse *Eplabý* ('apple orchard farmstead') adapted to Applebî. |
+| `b_whitby` | `c_north_riding` | Church | **Whitbî** | Whitby | `[ˈwɪt.biː]` | Old Norse *Hvítabý* ('white settlement') adapted to Whitbî. |
+| `b_grimsby` | `c_lincolnshire` | City | **Grimsbî** | Grimsby | `[ˈɡrɪms.biː]` | Old Norse *Grímsbý* ('Grim's settlement') adapted to Grimsbî. |
+| `b_berwick` | `c_dunbar` | City | **Berwîch** | Berwick | `[bɛr.ˈwiːç]` | Old English *Bere-wīc* ('barley farm/granary') calqued to Berwîch. |
+| `b_selkirk` | `c_teviotdale` | City | **Selkirchen** | Selkirk | `[ˈsɛl.kɪr.xən]` | Old English *Sele-cyrice* ('hall-church') calqued to Selkirchen. |
+| `b_wicklow` | `c_dublin` | Castle | **Wîkingelô** | Wicklow | `[wiː.kɪ.ŋɛ.ˈloː]` | Old Norse *Víkingaló* ('meadow of the vikings') calqued to Wîkingelô. |
+| `b_salisbury` | `c_wiltshire` | Castle | **Sêreburch** | Salisbury | `[ˈseː.rɛ.bʊrx]` | Ancient Iron Age / Roman *Sorviodunum*, Old English *Searoburh* regularized over Norman *Salesbires*. |
+| `b_shrewsbury` | `c_shropshire` | Castle | **Schrobbesburch** | Shrewsbury | `[ˈʃrɔ.bɛs.bʊrx]` | Ancient Old English *Scrobbesburh* ('scrubland fort') regularized over Norman *Scrobesbyry*. |
+| `b_ilchester` | `c_somerset` | City | **Gifelzester** | Ilchester | `[ˈɡɪ.fɛl.tsɛs.tər]` | Ancient Old English *Givelceaster* (River Gifle fort) regularized over Norman *Ivelcestre*. |
+| `b_leicester` | `c_leicestershire` | City | **Legrezester** | Leicester | `[ˈlɛ.ɡrɛ.tsɛs.tər]` | Ancient Old English *Legraceaster* (fort of the Legra folk) regularized over Norman *Leicester*. |
+| `b_worcester` | `c_worcestershire` | Church | **Wigortzester** | Worcester | `[ˈwɪ.ɣɔr.tsɛs.tər]` | Ancient Old English *Wigorceaster* (fort of the Weogora folk) regularized over Norman *Worcester*. |
+| `b_gloucester` | `c_gloucestershire` | City | **Glôwzester** | Gloucester | `[ˈɡloːw.tsɛs.tər]` | Ancient Old English *Glēawceaster* (Roman *Glevum*) regularized over Norman *Gloucester*. |
+| `b_rochester` | `c_kent` | Church | **Rôfezester** | Rochester | `[ˈroː.fɛ.tsɛs.tər]` | Ancient Old English *Hrōfeceaster* (Roman *Durobrivae*) regularized over Norman *Rochester*. |
+| `b_chelmsford` | `c_essex` | Castle | **Tschelmêresvurt** | Chelmsford | `[ˈtʃɛl.meː.rɛs.vʊrt]` | Ancient Old English *Cēolmǣresford* ('crossing of Ceolmaer') regularized to Tschelmêresvurt. |
+| `b_coventry` | `c_warwickshire` | Castle | **Koventrê** | Coventry | `[kɔ.vən.ˈtreː]` | Ancient Old English *Cofantrēo* ('Cofa's boundary tree') regularized to Koventrê. |
+| `b_witney` | `c_oxfordshire` | Castle | **Wittenöye** | Witney | `[wɪ.tɛ.ˈnøː.jɛ]` | Ancient Old English *Wittan-īeg* ('Witta's meadow island') regularized to Wittenöye. |
+| `b_totnes` | `c_devon` | Castle | **Tottenês** | Totnes | `[tɔ.tɛ.ˈneːs]` | Ancient Old English *Tottan-næss* ('Totta's headland') regularized to Tottenês. |
+| `b_lyme` | `c_dorset` | City | **Lîm** | Lyme | `[liːm]` | Ancient Old English *Līm* (river stream hydronym) regularized to Lîm. |
+| `b_ripon` | `c_west_riding` | Church | **Hripum** | Ripon | `[ˈhrɪ.pʊm]` | Ancient Old English *Inhrypum* (dative tribal folk settlement of the Hrype) regularized to Hripum. |
+| `b_chertsey` | `c_surrey` | Church | **Tschôrtesöye** | Chertsey | `[tʃoːr.tɛ.ˈzøː.jɛ]` | Ancient Old English *Ceortes-īeg* ('Ceorot's island', 666 AD abbey of St. Erkenwald) restored over county designation. |
+| `b_wareham` | `c_dorset` | Castle | **Wêrheim** | Wareham | `[weːr.ˈhɛɪm]` | Ancient Old English *Werhām* ('weir enclosure settlement', King Alfred's burh) restored over county designation. |
+| `b_winchester` | `c_hampton` | Castle | **Wintanzester** | Winchester | `[ˈwɪn.tan.tsɛs.tər]` | Ancient Old English *Wintanceaster* (Roman *Venta Belgarum*, royal capital of Wessex) restored over county designation. |
+| `b_exeter` | `c_devon` | City | **Exanzester** | Exeter | `[ˈɛk.san.tsɛs.tər]` | Ancient Old English *Exanceaster* (Roman *Isca Dumnoniorum* on the Exe) restored over county designation. |
+| `b_dover` | `c_kent` | Castle | **Dovras** | Dover | `[ˈdɔ.vras]` | Ancient Old English *Dofras* (Roman *Portus Dubris* at the Dour) restored over county designation. |
+| `b_bath` | `c_somerset` | Church | **Hâtbatu** | Bath | `[ˈhaːt.ba.tʊ]` | Ancient Old English *Hāt Bæðu* (Roman *Aquae Sulis*, King Edgar's 973 coronation site) restored over county designation. |
+| `b_kendal` | `c_westmorland` | Castle | **Kêntâl** | Kendal | `[keːn.ˈtaːl]` | Ancient Old English *Cenet-dāl* (valley of the River Kent) restored over county designation. |
 
 ---
 
@@ -448,4 +616,6 @@ The resolved barony dataset is fully integrated across the entire Tarraconian At
 - [x] **100% Sinosphere CJK Coverage:** All CJK characters across the Sinosphere map are mapped in [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py) and [data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json).
 - [x] **Intra-County Collision Disambiguation:** 68 potential duplicate collisions disambiguated between sub-baronies and capital seats.
 - [x] **Secondary Variant Mapping:** All 442 `*(or **X**)*` variants from [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) correctly paired.
-- [x] **Automated Regression Suite Passing:** `pytest tests/test_data_integrity.py` passes 52/52 tests with 100% compliance.
+- [x] **Automated Regression Suite Passing:** `pytest tests/test_data_integrity.py` passes 55/55 tests with 100% compliance.
+- [x] **CK3 Save Synchronization:** All ahistorical baronies updated in `melted_save.ck3` and repacked into `chatenois_867_01_01.ck3`.
+- [x] **Sub-Barony Antiquity Overhaul:** Rule of thumb globally enforced; post-867 raw names eliminated in favor of pre-867 chronicle gords, hydronyms, and save-consistent Option C founder foundations.

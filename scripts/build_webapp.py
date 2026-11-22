@@ -42,12 +42,15 @@ def main():
     required_datasets = [
         "ck3_counties.geojson",
         "ck3_baronies.geojson",
+        "barony_resolutions.json",
         "ck3_title_tree.json",
         "ck3_adjacencies.json",
         "sinosphere_hanzi_calques.json",
         "sinosphere_kanji_tarraconian.json",
         "sinosphere_title_calques.json",
         "canonical_title_heraldry.json",
+        "title_symbol_adoption.json",
+        "saint_holding_imagery.json",
     ]
     for dset in required_datasets:
         src = DATA_DIR / dset

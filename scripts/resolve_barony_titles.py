@@ -107,7 +107,7 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     # Polish / Slavic nasals & digraphs
     s = s.replace("ą", "on").replace("ę", "en").replace("Ą", "On").replace("Ę", "En")
     s = re.sub(r"cz", "tsch", s, flags=re.I)
-    s = re.sub(r"sz", "sch", s, flags=re.I)
+    s = re.sub(r"sz(?!elle)", "sch", s, flags=re.I)
     s = re.sub(r"rz", "rsch", s, flags=re.I)
     s = s.replace("ł", "l").replace("Ł", "L")
     s = s.replace("ń", "nj").replace("Ń", "Nj")
@@ -193,12 +193,15 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     s = re.sub(r"berg\b", "berch", s, flags=re.I)
     s = re.sub(r"bad\b", "bat", s, flags=re.I)
     s = re.sub(r"dsch\b", "tsch", s, flags=re.I)
+    s = re.sub(r"stadt\b", "stat", s, flags=re.I)
+    s = re.sub(r"land\b", "lant", s, flags=re.I)
     
     # 7. Affricates
     # Initial ts -> z
     s = re.sub(r"\bts(?!ch)", "z", s, flags=re.I)
     # Medial/final ts -> tz (only after vowels, preventing corruption of -st- clusters like -stat, -stûr, -sachsen)
-    s = re.sub(r"(?<=[aeiouyâêîôûäöü])ts(?!ch)", "tz", s, flags=re.I)
+    s = re.sub(r"(?<=[aeiouyâêîôûäöü])ts(?!ch|z)", "tz", s, flags=re.I)
+    s = re.sub(r"tz[z]+", "tz", s, flags=re.I)
     
     # Strip any broken trailing punctuation
     s = s.rstrip(" (;,[{")
@@ -809,6 +812,7 @@ def resolve_sinosphere_barony(b_key: str, zh_raw: str, en_name: str, k_map: dict
         "b_tarr": tarr_name,
         "b_origin": origin_str,
         "b_anachronism": "",
+        "b_hanzi": clean_zh or hist_kanji,
         "b_ipa": generate_tarraconian_ipa(tarr_name)
     }
 
@@ -834,7 +838,7 @@ def is_circular_house(house_str: str, stem_str: str, barony_key: str = "", count
     return (h in s or s in h or (b and (h in b or b in h)) or (c and (h in c or c in h)))
 
 
-def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str, used_names: set = None, save_name: str = "", bk: str = "", ck: str = ""):
+def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, holding_type: str, used_names: set = None, save_name: str = "", bk: str = "", ck: str = "", is_anachronism: bool = True):
     """
     Evaluates ruler character traits and holding type according to Section 3.2.
     Strictly disqualifies circular in-game auto-generated houses under the Toponym-First Principle.
@@ -847,12 +851,12 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
 
     raw_house = house_name.replace("Chatenois-", "").replace("Kestenholz-", "").replace("dynn_", "")
     clean_house = re.sub(r"[^a-zA-Z]", "", raw_house) or ""
-    clean_stem = re.sub(r"[^a-zA-Z]", "", save_name.split()[0]) if save_name else ""
-    if not clean_stem:
+    clean_stem = "" if is_anachronism else (re.sub(r"[^a-zA-Z]", "", save_name.split()[0]) if save_name else "")
+    if not clean_stem and not is_anachronism:
         clean_stem = "Burch"
 
     # Toponym-First Principle: Disqualify circular pseudo-dynasties derived from the holding
-    if clean_house and is_circular_house(clean_house, clean_stem, bk, ck):
+    if clean_house and is_circular_house(clean_house, clean_stem or save_name, bk, ck):
         clean_house = ""
 
     used = used_names or set()
@@ -878,7 +882,10 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
             if clean_house:
                 candidates.append((f"{clean_house}burch", f"Dynastic fortress seat of House {clean_house}"))
                 candidates.append((f"{clean_house}veste", f"Defensive march stronghold of House {clean_house}"))
-            candidates.append((f"{clean_stem}burch", f"Fortress seat of {clean_stem} established by {clean_founder}"))
+            if clean_stem:
+                candidates.append((f"{clean_stem}burch", f"Fortress seat of {clean_stem} established by {clean_founder}"))
+            else:
+                candidates.append((f"{clean_founder}shûsen", f"Feudal settlement and stronghold of {clean_founder}"))
 
     elif holding_type in {"church", "temple"}:
         seed = int(hashlib.md5(bk.encode("utf-8")).hexdigest()[:8], 16) % 10 if bk else 0
@@ -962,14 +969,20 @@ def evaluate_founder_option_c(char_name: str, traits: list, house_name: str, hol
             candidates.append((f"{clean_founder}marct", f"Market borough established by {clean_founder}"))
             if clean_house:
                 candidates.append((f"{clean_house}stat", f"Chartered civic borough of House {clean_house}"))
-            candidates.append((f"{clean_stem}stat", f"Chartered borough of {clean_stem} established by {clean_founder}"))
+            if clean_stem:
+                candidates.append((f"{clean_stem}stat", f"Chartered borough of {clean_stem} established by {clean_founder}"))
+            else:
+                candidates.append((f"{clean_founder}shûsen", f"Chartered borough established by {clean_founder}"))
 
     for c_nm, desc in candidates:
         clean_cand = enforce_tarraconian_sound_laws(c_nm)
         if clean_cand not in used:
             return clean_cand, desc
 
-    fallback_nm = enforce_tarraconian_sound_laws(f"{clean_founder}s{clean_stem[:4]}stat")
+    if clean_stem:
+        fallback_nm = enforce_tarraconian_sound_laws(f"{clean_founder}s{clean_stem[:4]}stat")
+    else:
+        fallback_nm = enforce_tarraconian_sound_laws(f"{clean_founder}swart")
     return fallback_nm, f"Municipal foundation established by {clean_founder}"
 
 
@@ -1027,6 +1040,13 @@ POST_867_ANACHRONISMS = {
     "b_newbury": "1080 Anglo-Norman planned borough Neuberie",
     "b_barysaw": "1102 fortress founded by Prince Boris of Polotsk",
     "b_maladzyechna": "1388 charter of Prince Dmitry Olgierdovich",
+    "b_starodub-on-the-klyazma": "1152 fortress founded by Yuri Dolgorukiy on Klyazma River",
+    "b_yegoryevsk": "1778 town chartered by Catherine II; originally 1462 village of Vysokoye on Guslitsa",
+    "b_yuriev": "1032 fortress founded on the Ros by Yaroslav the Wise (baptismal name Yuri)",
+    "b_yuryev": "1152 fortress Yuryev-Polsky founded by Yuri Dolgorukiy on Koloksha/Gza",
+    "b_yaroslav_VOL": "1031 fortress Jarosław founded on the San by Yaroslav the Wise",
+    "b_rostislavl": "1153 fortress founded on the Oka by Prince Rostislav Yaroslavich",
+    "b_danilov": "Late medieval settlement founded on Pelenda by Prince Daniil of Moscow",
 }
 
 
@@ -1042,9 +1062,37 @@ def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
     if bk == "b_baranovichi":
         return False, "modern_railway_foundation"
 
-    # Specific late industrial/railway markers (excluding native language morphology)
-    if re.search(r"\b(railway|station)\b", save_name, re.I):
+    clean_k = bk.replace("b_", "").replace("_", " ")
+    test_text = f"{clean_k} {save_name}"
+
+    # Specific late industrial/railway markers
+    if re.search(r"\b(railway|station|mine|kolkhoz|soviet|lenin|stalin|zavod|fabrik)\b", test_text, re.I):
         return False, "modern_railway_foundation"
+
+    # Late patronymic / manor settlement morphology (Slavic -ovichi/-evichi, -shchina, etc.)
+    if re.search(r'(ovichi|evichi|avichy|evichy|ovichy|evits|ovits|ovtsy|evtsy|shchina|szczyna|chytsy)$', save_name, re.I) or \
+       re.search(r'(ovichi|evichi|avichy|evichy|ovichy|evits|ovits|ovtsy|evtsy|shchina|szczyna|chytsy)$', clean_k, re.I):
+        return False, "late_settlement_foundation"
+
+    # Late medieval planned towns, bastides, repoblaciones, and conquest boroughs
+    if re.search(r'\b(villeneuve|villefranche|neuville|bourgneuf|castelnau|chateauneuf|sauveterre|bastide|aigueperse)\b', test_text, re.I) or \
+       re.search(r'\b(newport|newbury|newcastle|newborough|pontefract)\b', test_text, re.I) or \
+       re.search(r'\b(neustadt|neuenburg|neuburg|freiberg|freistadt)\b', test_text, re.I) or \
+       re.search(r'\b(villanueva|villafranca|puebla|ciudad[-_ ]real|villarreal|lapueblademontalban)\b', test_text, re.I) or \
+       re.search(r'\b(castelfranco|castelnuovo|villanuova|cittanova)\b', test_text, re.I):
+        return False, "late_settlement_foundation"
+
+    # Eponymous foundations named after concrete historical persons living after 867 AD
+    # (e.g. Yaroslav the Wise, Yuri Dolgorukiy, Vladimir Monomakh, Izyaslav, Rostislav, Mstislav, Danilov, etc.)
+    if re.search(r'\b(?:yuri[e]?v|yury[e]?v|jurjew|yuriew|yuryevsk|yurievets)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:yaroslav|jaroslaw|jaroslav)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:izyaslav|zasla[vw]|isjaslaw)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:mstislav|rostislav|svyatoslav|vsevolod|vsevolozh)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:borisov|barysaw|borisogleb|glebov)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:dmitrov|danilov|bogolyub)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:konstantinov|romanov)[a-z]*\b', test_text, re.I) or \
+       re.search(r'\b(?:kristianstad|christiania|frederik|valdemars|philippeville|charleville)[a-z]*\b', test_text, re.I):
+        return False, "post_867_eponymous_person"
 
     c_key = bk.replace("b_", "c_")
     if c_key in ATTESTATION_REGISTRY:
@@ -1060,7 +1108,6 @@ def check_barony_antiquity(bk: str, save_name: str, ck: str, kd: str):
         return True, "ancient_toponym"
 
     # Cultural & historical settlement continuity across all realms
-    # (Removes destructive LATE_PATTERNS regex and classical-only whitelist gate)
     return True, "cultural_continuity"
 
 
@@ -1269,6 +1316,8 @@ def _adapt_european_toponym_raw(name: str) -> str:
         return "Tschangdschi"
 
     # Slavic & Baltic historical exonyms and standard adaptations
+    if re.match(r"^Vyr['’]?\b", s, re.I):
+        return "Wîr"
     if re.match(r"^Vy[sš]ehrad\b", s, re.I):
         return "Wischegrat"
     if re.match(r"^M[eě]ln[ií]k\b", s, re.I):
@@ -1463,6 +1512,38 @@ def _adapt_european_toponym_raw(name: str) -> str:
         return "Kastelnoudarî"
     if re.match(r"^Sully[-\s]+(?:sur|Sur)[-\s]+Loire\b", s, re.I):
         return "Sullî-an-der-Loire"
+    if re.match(r"^Bar[-\s]+(?:sur|Sur)[-\s]+Aube\b", s, re.I):
+        return "Bar-an-der-Ôbe"
+    if re.match(r"^Bar[-\s]+(?:sur|Sur)[-\s]+Seine\b", s, re.I):
+        return "Bar-an-der-Sêne"
+    if re.match(r"^Montreuil[-\s]+(?:sur|Sur)[-\s]+Mer\b", s, re.I):
+        return "Montreuil-am-Mêr"
+    if re.match(r"^Starodub[-\s]+(?:on|On)[-\s]+(?:the|The)[-\s]+Klyazma\b", s, re.I):
+        return "Starodûp-an-der-Klêsme"
+    if re.match(r"^Yegoryevsk\b", s, re.I):
+        return "Guslîtze"
+    if re.match(r"^Yuriev\b", s, re.I):
+        return "Rostawîtze"
+    if re.match(r"^Yuryev\b", s, re.I):
+        return "Kolôksche"
+    if re.match(r"^Yaroslav\b", s, re.I):
+        return "Mletschke"
+    if re.match(r"^Rostislavl\b", s, re.I):
+        return "Osjôtr"
+    if re.match(r"^Danilov\b", s, re.I):
+        return "Pelende"
+    if re.match(r"^Valenciennes\b", s, re.I):
+        return "Valentzîn"
+    if re.match(r"^(?:Gravelines|Grevelines)\b", s, re.I):
+        return "Grevelingen"
+    if re.match(r"^Tournai\b", s, re.I):
+        return "Dornîch"
+    if re.match(r"^Courtrai\b", s, re.I):
+        return "Kortrîch"
+    if re.match(r"^Bastogne\b", s, re.I):
+        return "Bastenach"
+    if re.match(r"^Clervaux\b", s, re.I):
+        return "Clierf"
     if re.match(r"^Vitry[-\s]+(?:en|En)[-\s]+Perthois\b", s, re.I):
         return "Vitrî-in-Perthes"
     if re.match(r"^Cluny\b", s, re.I):
@@ -1560,7 +1641,7 @@ INDIGENOUS_RESTITUTIONS = {
     "b_wesenburg": ("Tarvanpää", "Ancient Estonian stronghold Tarvanpää ('Bull's Head', attested 1226)", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
     "b_marienburg": ("Malbork", "Prussian/Slavic settlement Malbork on the Nogat (attested before 1274 Teutonic fortress)", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
     "b_allenstein": ("Alna", "Old Prussian hydronym Alna ('Trout River', Alle / Olsztyn)", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
-    "b_fort_novoaleksandrovskiy": ("Mangystau", "Ancient Turkic/Oghuz peninsula and fortress Mangystau", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
+    "b_fort_novoaleksandrovkiy": ("Mangystau", "Ancient Turkic/Oghuz peninsula and fortress Mangystau", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
     "b_schwanenburg": ("Gulbene", "Ancient Latgalian settlement Gulbene (attested before 1224 Archbishopric castle)", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
     "b_neidenburg": ("Niba", "Old Prussian river settlement Niba (attested before 1371 fortress)", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
     "b_zvenyhorod": ("Swenigorot", "Ancient 10th-century princely capital gord of the Cherven Cities", "indigenous_restitution", "Pre-867 native toponym restored over post-867 colonial foundation."),
@@ -1603,7 +1684,7 @@ INDIGENOUS_RESTITUTIONS = {
     "b_vecchio": ("Porto-Wêckjo", "Ancient Roman port Portus Syracusanus / Porto-Vecchio", "classical_antiquity", "Authentic Classical Antiquity Roman Port."),
     "b_coupar_angus": ("Skône", "Ancient coronation moot and abbey of the Kings of Alba (Scone)", "classical_antiquity", "Authentic Pre-867 Royal Moot (attested 843 AD)."),
     "b_wilton": ("Wiltûn", "Ancient Anglo-Saxon royal burh and seat of the Wilsæte on the Wylye", "classical_antiquity", "Authentic Pre-867 Anglo-Saxon Royal Burh (attested 802 AD)."),
-    "b_salisbury": ("Sâlesburch", "Ancient Iron Age hillfort and Roman Sorviodunum / Old Sarum", "classical_antiquity", "Authentic Pre-867 Iron Age / Roman / Saxon Fortress."),
+    "b_salisbury": ("Sêreburch", "Ancient Iron Age hillfort and Roman Sorviodunum / Old Sarum (Old English Searoburh)", "classical_antiquity", "Authentic Pre-867 Iron Age / Roman / Saxon Fortress Searoburh."),
     "b_minden": ("Minden", "Ancient episcopal see and cathedral chapter of Minden on the Weser (attested 798 AD)", "classical_antiquity", "Authentic Pre-867 Episcopal See (founded 798 AD)."),
     "b_chartres": ("Schartres", "Classical Carnutes civitas and cathedral city Autricum / Chartres", "classical_antiquity", "Authentic Classical Antiquity / Pre-867 Civitas."),
     "b_dreux": ("Drôchs", "Ancient Gaulish capital of the Durocasses / comital castle Dreux", "classical_antiquity", "Authentic Classical Antiquity / Pre-867 Gaulish Civitas."),
@@ -1640,22 +1721,141 @@ INDIGENOUS_RESTITUTIONS = {
     "b_zaslavl": ("Saslâwl", "Ancient comital gord of Zaslavl on the Horyn", "classical_antiquity", "Authentic Ancient Slavic Gord."),
     "b_zvyahel": ("Swîâhel", "Ancient comital gord Zvyahel on the Sluch", "classical_antiquity", "Authentic Ancient Slavic Gord."),
     "b_kolodiazhen": ("Kolodjâschen", "Ancient fortress Kolodiazhen in Volhynia", "classical_antiquity", "Authentic Ancient Slavic Fortress."),
-    "b_osterland": ("Îlenburch", "Historic Mulde fortress Eilenburg in Osterland", "classical_antiquity", "Authentic Ancient Slavic Gord."),
+    "b_eilenburg": ("Îlenburch", "Historic Mulde fortress Eilenburg in Osterland", "classical_antiquity", "Authentic Ancient Slavic Gord."),
     "b_colditz": ("Colditz", "Ancient castle Colditz on the Zwickauer Mulde", "classical_antiquity", "Authentic Ancient Slavic Castle."),
     "b_hradyzk": ("Gradischk", "Ancient Dnieper fortress Gradischk", "classical_antiquity", "Authentic Ancient Dnieper Gord."),
     "b_lasta": ("Laste", "Ancient mountainous province and lordship of Lasta", "classical_antiquity", "Authentic Pre-867 Lordship."),
     "b_lalibela": ("Lalîbela", "Monolithic rock-hewn church center Lalibela", "classical_antiquity", "Authentic Historic Church Center."),
     "b_adafa": ("Rôhe", "Ancient capital of the Zagwe Dynasty Roha", "classical_antiquity", "Authentic Ancient Zagwe Capital."),
-    "b_algier": ("Alschîr", "Historic Zirid island fortress al-Jazā'ir (Algiers)", "classical_antiquity", "Authentic Ancient Island Fortress."),
-    "b_bornu": ("Gasargamu", "Historic Kanem-Bornu capital Birni Gazargamo", "classical_antiquity", "Authentic Historic Capital."),
+    "b_algiers": ("Alschîr", "Historic Zirid island fortress al-Jazā'ir (Algiers)", "classical_antiquity", "Authentic Ancient Island Fortress."),
+    "b_gazargamo": ("Gasargamu", "Historic Kanem-Bornu capital Birni Gazargamo", "classical_antiquity", "Authentic Historic Capital."),
     "b_bergh": ("Berch", "Ancestral castle Burg an der Wupper / County of Berg", "classical_antiquity", "Authentic Ancestral Comital Seat."),
-    "b_stezycka": ("Stensitz", "Historic Vistula castellan seat Stężyca", "classical_antiquity", "Authentic Vistula Castellan Seat."),
+    "b_stezyca": ("Stensitz", "Historic Vistula castellan seat Stężyca", "classical_antiquity", "Authentic Vistula Castellan Seat."),
+    "b_bartenstein": ("Barte", "Old Prussian tribal territory and river basin of Bartia (replacing 1326 Teutonic castle Bartenstein)", "option_b_hydronym", "Teutonic Order castle Bartenstein built in 1326 in Bartia. Resolved via Option B to the authentic Old Prussian regional stem Barte."),
     "b_rothenburg": ("Rôtenburch", "Imperial castle and burgh Rothenburg ob der Tauber", "classical_antiquity", "Authentic Imperial Castle."),
     "b_hohenberg": ("Hôhenberch", "Comital ancestral fortress Hohenberg on the Neckar", "classical_antiquity", "Authentic Comital Fortress."),
     "b_gleichenstein": ("Glêichenstên", "Comital hill castle Gleichenstein in the Eichsfeld", "classical_antiquity", "Authentic Comital Castle."),
     "b_muhlhausen": ("Mülhûsen", "Imperial free city and Frankish royal court Mühlhausen on the Unstrut", "classical_antiquity", "Authentic Frankish Royal Court."),
     "b_jinguan": ("Goltpfôrte", "Logographic semantic calque for Jīnguān (Golden Gate/Pass)", "classical_antiquity", "Logographic semantic calque."),
     "b_chengmai": ("Luterweit", "Logographic semantic calque for Chéngmài (Clear Progress)", "classical_antiquity", "Logographic semantic calque."),
+
+    # Burden of Proof on Antiquity: Pre-867 Chronicle Gords, Ancient Hydronyms & Hillfort Restitutions
+    # White Rus' & Polesia
+    "b_zhlobin": ("Strêschew", "Chronicle border gord & Iron Age hillfort Stary Gorodok on the Dnieper (attested 1127 Strezhev / modern Streshin) (in-game: Zhlobin)", "chronicle_gord", "1654 Cossack fortress Zhlobin fails Burden of Proof on Antiquity; resolved to 1127 chronicle gord Strezhev."),
+    "b_kalinkavichy": ("Ipat", "Ancient pre-867 Ipa River basin (in-game: Kalinkavichy)", "option_b_hydronym", "1560 village Kalinkavichy fails Burden of Proof on Antiquity; resolved to ancient Ipa hydronym."),
+    "b_sarny": ("Slûtsch", "Ancient Sluch River basin (in-game: Sarny)", "option_b_hydronym", "1670 village Sarny fails Burden of Proof on Antiquity; resolved to ancient Sluch hydronym."),
+    "b_selo": ("Stwîga", "Stvyha River basin in the Pripyat marshes (in-game: Selo)", "option_b_hydronym", "Generic settlement label 'Selo' resolved to ancient Stvyha hydronym."),
+    "b_ovruch": ("Wrûtsch", "Ancient Drevlian chronicle gord Vruchiy (attested 977 in Primary Chronicle) (in-game: Ovruch)", "chronicle_gord", "Authentic 10th-century chronicle gord of the Drevlians."),
+    "b_mazyr": ("Masîr", "Ancient Pripyat chronicle gord Mazyr (attested 1155 in Hypatian Chronicle) (in-game: Mazyr)", "chronicle_gord", "Authentic 12th-century chronicle gord on the Pripyat."),
+    "b_naroulia": ("Narôwlja", "Narovlyanka River basin at the Pripyat bend (in-game: Naroulia)", "option_b_hydronym", "18th-century private estate Naroulia fails Burden of Proof on Antiquity; resolved to Narovlyanka hydronym."),
+    "b_lelchytsy": ("Ûbort", "Ubort River basin in the Polesian lowlands (in-game: Lelchytsy)", "option_b_hydronym", "1569 charter settlement Lelchytsy fails Burden of Proof on Antiquity; resolved to ancient Ubort hydronym."),
+    "b_stepan": ("Horîn", "Horyn River basin (attested 1292 gord Stepan) (in-game: Stepan)", "option_b_hydronym", "13th-century settlement resolved to ancient Horyn hydronym."),
+    "b_liubeshiv": ("Stokhît", "Stokhid River basin ('Hundred Paths' marsh river) (in-game: Liubeshiv)", "option_b_hydronym", "1484 private estate Liubeshiv fails Burden of Proof on Antiquity; resolved to Stokhid hydronym."),
+    "b_lyubech": ("Liubêtsch", "Ancient 9th-century chronicle gord Lyubech on the Dnieper (attested 882 in Primary Chronicle) (in-game: Lyubech)", "chronicle_gord", "Authentic 9th-century chronicle gord on the Dnieper trade route."),
+    "b_gomel": ("Gômê", "Ancient Radimich chronicle gord Gomiy at the Homeyka/Sozh confluence (attested 1142 in Hypatian Chronicle) (in-game: Gomel)", "chronicle_gord", "Authentic 12th-century Radimich chronicle gord."),
+    "b_unenezh": ("Unenetsch", "Ancient chronicle gord Unenezh in Chernigov land (attested 1147 in Hypatian Chronicle) (in-game: Unenezh)", "chronicle_gord", "Authentic 12th-century chronicle gord."),
+    "b_surazichi": ("Îput", "Iput River basin (in-game: Surazichi)", "option_b_hydronym", "17th-century settlement Surazh fails Burden of Proof on Antiquity; resolved to Iput hydronym."),
+    "b_lida": ("Lidêja", "Lideya River basin (replacing 1323 Gediminas castle Lida) (in-game: Lida)", "option_b_hydronym", "1323 castle Lida fails Burden of Proof on Antiquity; resolved to Lideya hydronym."),
+    "b_sokolka": ("Sokôlda", "Sokołda River basin in the Knyszyn Forest (in-game: Sokolka)", "option_b_hydronym", "16th-century village Sokolka fails Burden of Proof on Antiquity; resolved to Sokołda hydronym."),
+    "b_bielastock": ("Bêla", "Biała River basin ('White River') (replacing 1437 settlement Bialystok) (in-game: Bielastock)", "option_b_hydronym", "1437 settlement Bialystok fails Burden of Proof on Antiquity; resolved to ancient Biała hydronym."),
+    "b_lahishyn": ("Jâselda", "Yaselda River basin (replacing 1495 village Lohishyn) (in-game: Lahishyn)", "option_b_hydronym", "1495 estate Lohishyn fails Burden of Proof on Antiquity; resolved to ancient Yaselda hydronym."),
+    "b_luninets": ("Zwîne", "Tsvna River basin in Pinsk marshlands (replacing 1449 village Luninets) (in-game: Luninets)", "option_b_hydronym", "1449 village Luninets fails Burden of Proof on Antiquity; resolved to Tsvna hydronym."),
+    "b_zhytkavichy": ("Hlûschitza", "Glushitsa stream and marshes of Turov land (in-game: Zhytkavichy)", "option_b_hydronym", "1500 estate Zhytkavichy fails Burden of Proof on Antiquity; resolved to Glushitsa hydronym."),
+    "b_mikashevichy": ("Lan", "Lan River basin (replacing 1785 private estate Mikashevichy) (in-game: Mikashevichy)", "option_b_hydronym", "1785 private estate Mikashevichy fails Burden of Proof on Antiquity; resolved to Lan hydronym."),
+    "b_rechytsa": ("Rechtzîe", "Rechitsa stream confluence with the Dnieper (attested 1213 in Novgorod Chronicle) (in-game: Rechytsa)", "chronicle_gord", "Authentic Dregovich chronicle settlement on the Dnieper."),
+    "b_lahoysk": ("Logôtsk", "Logozhsk on the Gaina River (attested 1078 in Vladimir Monomakh's Pouchenie) (in-game: Lahoysk)", "chronicle_gord", "Authentic 11th-century chronicle gord."),
+    "b_zaslawye": ("Isjaslâwl", "Izyaslavl on the Svisloch (founded 985 by Grand Prince Vladimir for Rogneda) (in-game: Zaslawye)", "chronicle_gord", "Authentic 10th-century chronicle fortress of Rogneda."),
+    "b_drutsk": ("Drûtzich", "Drutsk on the Drut River (attested 1092 in Primary Chronicle) (in-game: Drutsk)", "chronicle_gord", "Authentic 11th-century chronicle princely center."),
+    "b_drysa": ("Drîse", "Drysa River confluence with the Western Dvina (in-game: Drysa)", "option_b_hydronym", "Ancient Drysa hydronym at the Dvina confluence."),
+    "b_myory": ("Mêre", "Lake Myory and Meryanka stream (replacing 1514 village Myory) (in-game: Myory)", "option_b_hydronym", "1514 village Myory fails Burden of Proof on Antiquity; resolved to Lake Myory hydronym."),
+    "b_vetrino": ("Ekimân", "Ancient Dvina crossing and settlement Ekimania (in-game: Vetrino)", "indigenous_restitution", "Late village Vetrino fails Burden of Proof on Antiquity; resolved to ancient Dvina crossing Ekimania."),
+    "b_hlybokaye": ("Berêswets", "Ancient Berezvechye on Lake Berezovitsa (in-game: Hlybokaye)", "option_b_hydronym", "1414 private estate Hlybokaye fails Burden of Proof on Antiquity; resolved to ancient Berezvechye."),
+    "b_haradok": ("Horodôtz", "Ancient Gorodok hillfort on the Gorozhanka (in-game: Haradok)", "chronicle_gord", "Authentic ancient Slavic hillfort."),
+    "b_dorogobyzh": ("Dorogobûsch", "Dorogobuzh on the Dnieper (attested 1150 in Prince Rostislav's charter) (in-game: Dorogobyzh)", "chronicle_gord", "Authentic 12th-century Smolensk Dnieper gord."),
+    "b_mstislavl": ("Wîchra", "Vikhra River basin (replacing 1135 fortress Mstislavl) (in-game: Mstislavl)", "option_b_hydronym", "1135 foundation Mstislavl fails Burden of Proof on Antiquity; resolved to ancient Vikhra hydronym."),
+    "b_yelnya": ("Ôverdêsne", "Upper Desna River basin (attested 1150 Yelnya) (in-game: Yelnya)", "option_b_hydronym", "1150 charter Yelnya resolved to Upper Desna hydronym."),
+    "b_vyazma": ("Wjâsma", "Vyazma River basin (attested 1239 Life of St. Euphrosyne) (in-game: Vyazma)", "option_b_hydronym", "Pre-867 Vyazma hydronym on the Volga-Dnieper watershed."),
+    "b_velizh": ("Wêlisa", "Velizhka River basin at the Western Dvina (in-game: Velizh)", "option_b_hydronym", "1536 fortress Velizh fails Burden of Proof on Antiquity; resolved to Velizhka hydronym."),
+    "b_dukhovshchina": ("Tzârewitza", "Tsarevitsa River basin (in-game: Dukhovshchina)", "option_b_hydronym", "1777 town Dukhovshchina fails Burden of Proof on Antiquity; resolved to Tsarevitsa hydronym."),
+    "b_klimavichy": ("Lôbdscha", "Lobzha River basin (in-game: Klimavichy)", "option_b_hydronym", "1581 village Klimavichy fails Burden of Proof on Antiquity; resolved to Lobzha hydronym."),
+    "b_cherykaw": ("Sôsch", "Sozh River basin (in-game: Cherykaw)", "option_b_hydronym", "1460 village Cherykaw fails Burden of Proof on Antiquity; resolved to ancient Sozh hydronym."),
+    "b_lotoshino": ("Lôbe", "Lob River basin (in-game: Lotoshino)", "option_b_hydronym", "1478 estate Lotoshino fails Burden of Proof on Antiquity; resolved to Lob hydronym."),
+    "b_zubstov": ("Wâsûsa", "Vazuza River confluence with the Volga (attested 1216 in Novgorod Chronicle) (in-game: Zubstov)", "option_b_hydronym", "Pre-867 Vazuza hydronym at the Volga junction."),
+    "b_andreapol": ("Ôverdwîne", "Upper Western Dvina headwaters (in-game: Andreapol)", "option_b_hydronym", "1906 railway station Andreapol fails Burden of Proof on Antiquity; resolved to Upper Dvina hydronym."),
+    "b_ozerski": ("Sêliger", "Lake Seliger basin (in-game: Ozerski)", "option_b_hydronym", "Generic settlement Ozerski resolved to Lake Seliger hydronym."),
+
+    # Baltic, Prussia & Livonia
+    "b_graudenz": ("Kwidzîn", "Old Prussian tribal settlement Kwidzîn / Queden on the Liwa (replacing 1233 Teutonic castle Marienwerder) (in-game: Graudenz)", "indigenous_restitution", "1233 Teutonic castle Marienwerder fails Burden of Proof on Antiquity; restored to native Old Prussian Kwidzîn."),
+    "b_wislana": ("Wîselwerder", "Vistula Spit and Nogat river delta (replacing Stutthof) (in-game: Wislana)", "option_b_hydronym", "Late estate Stutthof fails Burden of Proof on Antiquity; resolved to Vistula delta hydronym Wîselwerder."),
+    "b_mohrungen": ("Marînge", "Old Prussian Lake Marąg basin (replacing 1302 Teutonic castle Mohrungen) (in-game: Mohrungen)", "indigenous_restitution", "1302 Teutonic castle Mohrungen fails Burden of Proof on Antiquity; restored to Old Prussian Lake Marąg."),
+    "b_braunsberg": ("Passarîa", "Old Prussian Pasłęka River basin in Warmia (replacing 1240 Teutonic castle Braunsberg) (in-game: Braunsberg)", "indigenous_restitution", "1240 Teutonic castle Braunsberg fails Burden of Proof on Antiquity; restored to Old Prussian Pasłęka."),
+    "b_paterswalde": ("Tapiouwe", "Old Prussian Pregolya river settlement Tapiow (replacing 1258 Teutonic castle Tapiau) (in-game: Paterswalde)", "indigenous_restitution", "1258 Teutonic castle Tapiau fails Burden of Proof on Antiquity; restored to Old Prussian Tapiow."),
+    "b_ostlandsberg": ("Welouwe", "Old Prussian Pregolya/Lava fortress Welow (replacing 1255 Teutonic castle Wehlau) (in-game: Ostlandsberg)", "indigenous_restitution", "1255 Teutonic castle Wehlau fails Burden of Proof on Antiquity; restored to Old Prussian Welow."),
+    "b_insterburg": ("Instre", "Old Prussian Inster River confluence (replacing 1336 Teutonic castle Insterburg) (in-game: Insterburg)", "indigenous_restitution", "1336 Teutonic castle Insterburg fails Burden of Proof on Antiquity; restored to Old Prussian Inster."),
+    "b_rastenburg": ("Raste", "Old Prussian tribal settlement Raste (replacing 1329 Teutonic castle Rastenburg) (in-game: Rastenburg)", "indigenous_restitution", "1329 Teutonic castle Rastenburg fails Burden of Proof on Antiquity; restored to Old Prussian Raste."),
+    "b_briesen": ("Wonbrscheschno", "Ancient Slavic/Prussian settlement Wąbrzeźno (in-game: Briesen)", "indigenous_restitution", "Pre-867 native toponym restored over Teutonic Order Briesen."),
+    "b_brodnica": ("Drwêntza", "Drwęca River crossing (replacing 1298 Teutonic castle Strasburg) (in-game: Brodnica)", "option_b_hydronym", "1298 Teutonic castle Strasburg fails Burden of Proof on Antiquity; resolved to ancient Drwęca hydronym."),
+    "b_ortelsburg": ("Pessûne", "Old Prussian Galindian lake settlement (replacing 1360 Teutonic castle Ortelsburg) (in-game: Ortelsburg)", "indigenous_restitution", "1360 Teutonic castle Ortelsburg fails Burden of Proof on Antiquity; restored to Old Prussian Galindian stem."),
+    "b_lyck": ("Lêke", "Ancient Old Prussian/Yotvingian Ełk River basin (replacing 1398 Teutonic castle Lyck) (in-game: Lyck)", "indigenous_restitution", "1398 Teutonic castle Lyck fails Burden of Proof on Antiquity; restored to Old Prussian river stem Lêke."),
+    "b_mitau": ("Jêlgawa", "Ancient Semigallian Lielupe river crossing (replacing 1265 Livonian castle Mitau) (in-game: Mitau)", "indigenous_restitution", "1265 Livonian castle Mitau fails Burden of Proof on Antiquity; restored to native Jelgava."),
+    "b_bauska": ("Bôwse", "Ancient Semigallian Mūša/Mēmele river confluence (replacing 1443 Livonian castle Bauska) (in-game: Bauska)", "indigenous_restitution", "1443 Livonian castle Bauska fails Burden of Proof on Antiquity; restored to native Semigallian stem."),
+    "b_neuenburg": ("Jaunepel", "Curonian hillfort Jaunpils (replacing 14th-century Livonian castle Neuenburg) (in-game: Neuenburg)", "indigenous_restitution", "14th-century Livonian castle Neuenburg fails Burden of Proof on Antiquity; restored to Curonian hillfort."),
+    "b_tilsit": ("Tîlse", "Old Prussian Tilse River confluence with the Nemunas (replacing 1288 Teutonic castle Tilsit) (in-game: Tilsit)", "indigenous_restitution", "1288 Teutonic castle Tilsit fails Burden of Proof on Antiquity; restored to Old Prussian Tilse."),
+    "b_taurage": ("Jûra", "Jūra River basin (replacing 1507 village Tauragė) (in-game: Taurage)", "option_b_hydronym", "1507 settlement Tauragė fails Burden of Proof on Antiquity; resolved to ancient Jūra hydronym."),
+    "b_rauna": ("Rôwne", "Ancient Latgalian Rauna river hillfort (replacing 1262 Archbishop castle Ronneburg) (in-game: Rauna)", "indigenous_restitution", "1262 Archbishop castle Ronneburg fails Burden of Proof on Antiquity; restored to native Rauna hillfort."),
+    "b_cesvaine": ("Sessouwe", "Ancient Latgalian hillfort Cessowe (attested 1209) (replacing Sesswegen) (in-game: Cesvaine)", "indigenous_restitution", "Authentic 1209 Latgalian hillfort."),
+    "b_lennewarden": ("Lênewarde", "Ancient Livonian Daugava hillfort Lielvārde (in-game: Lennewarden)", "indigenous_restitution", "Authentic ancient Livonian Daugava hillfort."),
+    "b_jekabpils": ("Sêlburch", "Ancient Selonian Daugava crossing and hillfort Sēlpils (replacing 1670 town Jakobstadt) (in-game: Jekabpils)", "indigenous_restitution", "1670 ducal town Jakobstadt fails Burden of Proof on Antiquity; restored to ancient Selonian Sēlpils."),
+    "b_rezekne": ("Rêsne", "Ancient Latgalian Rēzekne hillfort on the Rēzekne river (replacing 1285 Livonian castle Rositten) (in-game: Rezekne)", "indigenous_restitution", "1285 Livonian castle Rositten fails Burden of Proof on Antiquity; restored to native Latgalian hillfort."),
+    "b_kandava": ("Kandouwe", "Ancient Curonian hillfort Candeve (attested 1230 in treaty of Balduin von Alna) (in-game: Kandava)", "indigenous_restitution", "Authentic Curonian hillfort."),
+    "b_jurbarkas": ("Jurbarch", "Nemunas river crossing (replacing 1259 Teutonic castle Georgenburg) (in-game: Jurbarkas)", "indigenous_restitution", "1259 Teutonic castle Georgenburg fails Burden of Proof on Antiquity; restored to native Nemunas crossing."),
+
+    # Novgorod & North Russia
+    "b_noteborg": ("Nêwewerder", "Ancient Neva River island at Lake Ladoga (replacing 1323 Oreshek fortress) (in-game: Noteborg)", "option_b_hydronym", "1323 fortress Oreshek fails Burden of Proof on Antiquity; resolved to Neva island hydronym Nêwewerder."),
+    "b_koporye": ("Kôpôre", "Ancient Votic hillfort of the Izhora plateau (attested 1237) (in-game: Koporye)", "indigenous_restitution", "Authentic Votic hillfort on the Izhora plateau."),
+    "b_yama": ("Lûge", "Luga River basin (replacing 1384 Novgorod fortress Yama / Kingisepp) (in-game: Yama)", "option_b_hydronym", "1384 fortress Yama fails Burden of Proof on Antiquity; resolved to ancient Luga hydronym."),
+    "b_cherepovets": ("Schêksna", "Sheksna River basin at Lake Beloye (replacing 1362 Voskresensky monastery Cherepovets) (in-game: Cherepovets)", "option_b_hydronym", "1362 monastery Cherepovets fails Burden of Proof on Antiquity; resolved to ancient Sheksna hydronym."),
+    "b_kirishi": ("Ôverwolchouwe", "Upper Volkhov River basin (replacing 1693 village Kirishi) (in-game: Kirishi)", "option_b_hydronym", "1693 village Kirishi fails Burden of Proof on Antiquity; resolved to Upper Volkhov hydronym."),
+    "b_borovichi": ("Mste", "Msta River rapids trade route (replacing 1495 pogost Borovichi) (in-game: Borovichi)", "option_b_hydronym", "1495 pogost Borovichi fails Burden of Proof on Antiquity; resolved to ancient Msta river hydronym."),
+    "b_podporozhye": ("Swîre", "Svir River rapids (replacing 1563 village Podporozhye) (in-game: Podporozhye)", "option_b_hydronym", "1563 village Podporozhye fails Burden of Proof on Antiquity; resolved to ancient Svir hydronym."),
+    "b_vyshny_volochyok": ("Wolôch", "Ancient Tsna/Msta portage of the Valdai Hills (in-game: Vyshny Volochyok)", "option_b_hydronym", "1471 settlement Vyshny Volochyok fails Burden of Proof on Antiquity; resolved to ancient Valdai portage Wolôch."),
+    "b_dedovichi": ("Schêlôn", "Shelon River basin (replacing 1901 railway station Dedovichi) (in-game: Dedovichi)", "option_b_hydronym", "1901 railway station Dedovichi fails Burden of Proof on Antiquity; resolved to ancient Shelon hydronym."),
+    "b_lyuban": ("Tîgôda", "Tigoda River basin (replacing 1499 village Lyuban) (in-game: Lyuban)", "option_b_hydronym", "1499 village Lyuban fails Burden of Proof on Antiquity; resolved to Tigoda hydronym."),
+    "b_soltsy": ("Salzbrûch", "Shelon river salt crossing (attested 1239 under Alexander Nevsky) (in-game: Soltsy)", "indigenous_restitution", "Authentic 13th-century salt ford on the Shelon."),
+
+    # Ruthenia & Galicia-Volhynia
+    "b_boryspil": ("Alte", "Ancient chronicle river Alta, site of 1019 & 1068 battles (replacing 1590 town Boryspil) (in-game: Boryspil)", "option_b_hydronym", "1590 town Boryspil fails Burden of Proof on Antiquity; resolved to ancient Alta river."),
+    "b_zolotonosha": ("Gûldenbach", "Zolotonoshka River basin ('Golden Stream') (in-game: Zolotonosha)", "option_b_hydronym", "1576 settlement Zolotonosha fails Burden of Proof on Antiquity; resolved to Zolotonoshka hydronym."),
+    "b_haisyn": ("Sôbe", "Sob River basin (in-game: Haisyn)", "option_b_hydronym", "1545 settlement Haisyn fails Burden of Proof on Antiquity; resolved to Sob hydronym."),
+    "b_yampil": ("Ôverdnester", "Dniester River rapids of Podolia (in-game: Yampil)", "option_b_hydronym", "16th-century settlement Yampil fails Burden of Proof on Antiquity; resolved to Dniester rapids hydronym."),
+    "b_ivankiv": ("Teterîw", "Teteriv River crossing (in-game: Ivankiv)", "option_b_hydronym", "1589 private estate Ivankiv fails Burden of Proof on Antiquity; resolved to Teteriv hydronym."),
+    "b_kaniv": ("Kanouwe", "Ancient chronicle gord Kaniv on the Dnieper (attested 1144 in Hypatian Chronicle) (in-game: Kaniv)", "chronicle_gord", "Authentic 12th-century chronicle gord."),
+    "b_suvorov": ("Tscherêpet", "Cherepet River basin (replacing 1949 Soviet industrial town Suvorov) (in-game: Suvorov)", "option_b_hydronym", "1949 Soviet town Suvorov fails Burden of Proof on Antiquity; resolved to ancient Cherepet hydronym."),
+    "b_debryansk": ("Debrjânzk", "Desna river chronicle gord Bryansk (attested 985 in Hypatian Chronicle as Dъbryansk) (in-game: Debryansk)", "chronicle_gord", "Authentic 10th-century chronicle gord on the Desna."),
+    "b_mglin": ("Iputouwe", "Iput River water-meadow (replacing 1389 fortress Mglin) (in-game: Mglin)", "option_b_hydronym", "1389 fortress Mglin fails Burden of Proof on Antiquity; resolved to Iput river basin."),
+    "b_kovel": ("Tûrje", "Turya River basin in Volhynia (in-game: Kovel)", "option_b_hydronym", "1518 settlement Kovel fails Burden of Proof on Antiquity; resolved to ancient Turya hydronym."),
+    "b_rozhyshche": ("Stîrouwe", "Styr River water-meadow (in-game: Rozhyshche)", "option_b_hydronym", "1377 settlement Rozhyshche fails Burden of Proof on Antiquity; resolved to Styr river meadow."),
+    "b_rivne": ("Ûstje", "Ustya River basin (replacing 1283 settlement Rivne) (in-game: Rivne)", "option_b_hydronym", "1283 settlement Rivne fails Burden of Proof on Antiquity; resolved to Ustya hydronym."),
+    "b_klevan": ("Stûble", "Stubla River basin (in-game: Klevan)", "option_b_hydronym", "1458 estate Klevan fails Burden of Proof on Antiquity; resolved to Stubla hydronym."),
+    "b_kamyanyets": ("Lêsne", "Lesnaya River basin (replacing 1276 fortress Kamyanyets) (in-game: Kamyanyets)", "option_b_hydronym", "1276 foundation Kamyanyets fails Burden of Proof on Antiquity; resolved to Lesnaya hydronym."),
+    "b_simiatychi": ("Mûchawetz", "Muchawiec River headwaters (in-game: Simiatychi)", "option_b_hydronym", "15th-century settlement Siemiatycze fails Burden of Proof on Antiquity; resolved to Muchawiec hydronym."),
+    "b_chortkiv": ("Sêret", "Seret River basin in Podolia (in-game: Chortkiv)", "option_b_hydronym", "1522 settlement Chortkiv fails Burden of Proof on Antiquity; resolved to Seret hydronym."),
+    "b_buchach": ("Strîpe", "Strypa River canyon (in-game: Buchach)", "option_b_hydronym", "1260 settlement Buchach fails Burden of Proof on Antiquity; resolved to Strypa hydronym."),
+    "b_kolomyia": ("Prûtouwe", "Prut River water-meadow in Pokuttya (attested 1240 in Galician-Volhynian Chronicle) (in-game: Kolomyia)", "option_b_hydronym", "Prut river trade crossing."),
+    "b_lizhensk": ("Sanbrûch", "San River bridge crossing (replacing 1397 chartered town Leżajsk) (in-game: Lizhensk)", "option_b_hydronym", "1397 town Leżajsk fails Burden of Proof on Antiquity; resolved to ancient San crossing."),
+
+    # Poland
+    "b_czestochowa": ("Jasnagôra", "Ancient limestone hill Jasna Góra on the Warta (in-game: Czestochowa)", "option_b_hydronym", "1220 settlement Częstochowa fails Burden of Proof on Antiquity; resolved to ancient limestone crest Jasna Góra."),
+    "b_dabrowa_gorn": ("Prsêmscha", "Czarna Przemsza River basin (replacing 18th-century industrial settlement Dąbrowa Górnicza) (in-game: Dabrowa Gorn)", "option_b_hydronym", "18th-century industrial settlement fails Burden of Proof on Antiquity; resolved to Przemsza hydronym."),
+    "b_nowytarg": ("Dûnajetz", "Dunajec River valley of Podhale (replacing 1346 chartered town Nowy Targ) (in-game: Nowytarg)", "option_b_hydronym", "1346 town Nowy Targ fails Burden of Proof on Antiquity; resolved to Dunajec river valley."),
+    "b_bochnia": ("Salzrâbe", "Raba River salt crossing (attested 1248 salt discovery) (in-game: Bochnia)", "option_b_hydronym", "13th-century salt mine Bochnia resolved to ancient Raba salt ford Salzrâbe."),
+    "b_wieliczka": ("Gros-Salze", "Magnum Sal saltworks on the Serafa (in-game: Wieliczka)", "indigenous_restitution", "Historic 13th-century Magnum Sal saltworks."),
+    "b_kielce": ("Silnîtze", "Silnica River basin in the Świętokrzyskie Mountains (in-game: Kielce)", "option_b_hydronym", "11th-century settlement Kielce resolved to Silnica river basin."),
+    "b_checiny": ("Chêntzîn", "Chęciny limestone ridge (in-game: Checiny)", "indigenous_restitution", "Historic 13th-century royal fortress."),
+
+    # Finland
+    "b_raseborg": ("Snappertûne", "Ancient coastal bay Snappertuna (replacing 1374 Swedish castle Raseborg) (in-game: Raasepori)", "indigenous_restitution", "1374 Swedish castle Raseborg fails Burden of Proof on Antiquity; restored to native coastal bay Snappertuna."),
+    "b_rauma": ("Raumanjôki", "Raumanjoki River mouth (replacing 1442 Franciscan town Rauma) (in-game: Rauma)", "option_b_hydronym", "1442 Franciscan town Rauma fails Burden of Proof on Antiquity; resolved to Raumanjoki hydronym."),
 
     # Reconciled Classical Antiquity & Pre-867 Western European Restitutions (Romance, Germanic & British Substrates)
     "b_villa_real": ("Panôjas", "Ancient Roman civitas and sanctuary of Panóias in Trás-os-Montes", "classical_antiquity", "Pre-867 Roman civitas restored over 1289 royal foundation of Vila Real."),
@@ -1806,6 +2006,23 @@ INDIGENOUS_RESTITUTIONS = {
     "b_barysaw": ("Berêsene", "Berezina River basin (ancient Baltic/Slavic hydronym with intervocalic -s- [z], replacing 1102 Borisov)", "option_b_hydronym", "Founded in 1102 by Prince Boris Vseslavich of Polotsk after victory over the Yatviags. Resolved via Option B to the pre-867 Berezina River hydronym (Berêsene)."),
     "b_dorohychyn": ("Bûch", "Western Bug River basin (Slavic Bugъ, replacing 1142 Drohiczyn)", "option_b_hydronym", "Drohiczyn was first attested in 1142 in the Hypatian Chronicle as a frontier customs gord. Resolved via Option B to the authentic pre-867 Western Bug River hydronym (Bûch)."),
     "b_kobryn": ("Muchawêtz", "Mukhavets River basin (pre-867 hydronym, replacing 1287 Kobryn)", "option_b_hydronym", "First attested in 1287 in the Hypatian Chronicle. Resolved via Option B to the pre-867 Mukhavets River hydronym (Muchawêtz)."),
+    "b_vyr": ("Wîr", "Ancient pre-867 Vyr River basin and chronicle gord at the Seym confluence (in-game: Vyr')", "option_b_hydronym", "1113 chronicle gord and ancient Vyr River hydronym regularized to Tarraconian Wîr, eliminating Cyrillic soft-sign apostrophe."),
+    "b_yegoryevsk": ("Guslîtze", "Pre-867 Guslitsa River basin in Meshchera Lowland (in-game: Yegoryevsk)", "option_b_hydronym", "1778 Catherine-era town Yegoryevsk (originally 1462 village Vysokoye) fails Burden of Proof on Antiquity; resolved via Option B to ancient Guslitsa River hydronym."),
+    "b_starodub-on-the-klyazma": ("Starodûp-an-der-Klêsme", "Starodûp-an-der-Klêsme (founded 1152 by Yuri Dolgorukiy on the Klyazma River) calqued with Franconian river preposition -an-der- and Auslautverhärtung (in-game: Starodub-on-the-Klyazma)", "descriptive_calque", "1152 fortress Starodub-on-the-Klyazma calqued to Tarraconian Starodûp-an-der-Klêsme, eliminating English -on-the- preposition."),
+    "b_bar_sur_aube": ("Bar-an-der-Ôbe", "Bar-an-der-Ôbe (ancient Gallo-Roman castrum Barrense on the Aube) regularized to Franconian river-affix (in-game: Bar-Sur-Aube)", "descriptive_calque", "French river preposition -sur- regularized to Franconian -an-der-."),
+    "b_bar_sur_seine": ("Bar-an-der-Sêne", "Bar-an-der-Sêne (ancient comital seat on the Seine) regularized to Franconian river-affix (in-game: Bar-Sur-Seine)", "descriptive_calque", "French river preposition -sur- regularized to Franconian -an-der-."),
+    "b_montreuil_sur_mer": ("Montreuil-am-Mêr", "Montreuil-am-Mêr (Monasteriolum on the English Channel coast) regularized to Franconian water-affix (in-game: Montreuil-Sur-Mer)", "descriptive_calque", "French sea preposition -sur-mer regularized to Franconian -am-Mêr."),
+    "b_yuriev": ("Rostawîtze", "Pre-867 Rostavytsia River basin at the Ros confluence (in-game: Yuriev)", "option_b_hydronym", "1032 fortress Yuriev founded by Yaroslav the Wise (Yuri) fails Burden of Proof on Antiquity; resolved via Option B to pre-867 Rostavytsia hydronym."),
+    "b_yuryev": ("Kolôksche", "Pre-867 Koloksha River basin in the Opolye region (in-game: Yuryev)", "option_b_hydronym", "1152 fortress Yuryev-Polsky founded by Yuri Dolgorukiy fails Burden of Proof on Antiquity; resolved via Option B to pre-867 Koloksha hydronym."),
+    "b_yaroslav_VOL": ("Mletschke", "Pre-867 Mleczka River basin at the San confluence (in-game: Yaroslav)", "option_b_hydronym", "1031 fortress Jarosław founded by Yaroslav the Wise fails Burden of Proof on Antiquity; resolved via Option B to pre-867 Mleczka hydronym."),
+    "b_rostislavl": ("Osjôtr", "Pre-867 Osyotr River basin at the Oka confluence (in-game: Rostislavl)", "option_b_hydronym", "1153 fortress Rostislavl founded by Prince Rostislav Yaroslavich fails Burden of Proof on Antiquity; resolved via Option B to pre-867 Osyotr hydronym."),
+    "b_danilov": ("Pelende", "Pre-867 Pelenda River basin in Vologda land (in-game: Danilov)", "option_b_hydronym", "Late medieval settlement Danilov named after Prince Daniil of Moscow fails Burden of Proof on Antiquity; resolved via Option B to pre-867 Pelenda hydronym."),
+    "b_valenciennes": ("Valentzîn", "Valentzîn (Middle Dutch Valencijn / Latin Valentianas, constituent holding of Kamerîch) (in-game: Valenciennes)", "descriptive_calque", "French Valenciennes regularized to Middle Dutch/Franconian Valentzîn."),
+    "b_grevelines": ("Grevelingen", "Grevelingen (authentic Flemish/Low Franconian Grevelingen on the Aa River, constituent holding of Terwâne) (in-game: Gravelines)", "descriptive_calque", "French Gravelines regularized to authentic Flemish Grevelingen."),
+    "b_tournai": ("Dornîch", "Dornîch (ancient Roman Tornacum / Dutch Doornik on the Scheldt, constituent holding of Hennegouwe) (in-game: Tournai)", "descriptive_calque", "French Tournai regularized to authentic Franconian/Dutch Dornîch."),
+    "b_courtrai": ("Kortrîch", "Kortrîch (Roman Cortoriacum / Dutch Kortrijk on the Leie, constituent holding of Dornîch) (in-game: Courtrai)", "descriptive_calque", "French Courtrai regularized to authentic Flemish/Franconian Kortrîch."),
+    "b_bastogne": ("Bastenach", "Bastenach (ancient comital center of the Ardennes, German/Luxembourgish Bastenach) (in-game: Bastogne)", "descriptive_calque", "French Bastogne regularized to authentic Luxembourgish/German Bastenach."),
+    "b_clervaux": ("Clierf", "Clierf (traditional Luxembourgish/German Clierf / Klierf on the Clerve) (in-game: Clervaux)", "descriptive_calque", "French Clervaux regularized to traditional Luxembourgish Clierf."),
     "b_blotkowo": ("Blotkowe", "Blotkowo (constituent holding of Bûch)", "sub_barony_adaptation", ""),
     "b_galati": ("Barbôs", "Ancient Roman camp Barboși on the Danube (replacing 1445 Galați)", "indigenous_restitution", "First attested in 1445 AD. Restored to the ancient Roman frontier castrum Barboși (Barbôs) on the lower Danube."),
     "b_hotin": ("Nîster", "Dniester River basin (ancient Danastris / Slavic Dnestr, replacing high medieval Khotyn fortress)", "option_b_hydronym", "Medieval fortress on the Dniester first attested in 1002/1250. Resolved via Option B to the ancient Dniester River hydronym (Nîster)."),
@@ -1815,6 +2032,264 @@ INDIGENOUS_RESTITUTIONS = {
     "b_orsha": ("Ôrsche", "Orshitsa River basin (pre-867 hydronym at Dnieper confluence, replacing 1067 Orsha)", "option_b_hydronym", "First attested in 1067 in the Primary Chronicle. Resolved via Option B to the pre-867 Orshitsa River hydronym (Ôrsche)."),
     "b_toropets": ("Torôpe", "Toropa River basin (pre-867 hydronym, replacing 1074 Toropets)", "option_b_hydronym", "First attested in 1074 in the Lavrentian Chronicle. Resolved via Option B to the pre-867 Toropa River hydronym (Torôpe)."),
     "b_kholmogory": ("Dwîne", "Northern Dvina River reach (ancient hydronym, replacing 14th-century Kholmogory)", "option_b_hydronym", "First attested in 1355 as Kolmogory. Resolved via Option B to the ancient Northern Dvina River hydronym (Dwîne)."),
+
+    # Global Western, Mediterranean, Pontic & Asian Restitutions
+    "b_zdar": ("Sâzouwe", "Ancient pre-867 Sázava River basin (in-game: Zdar)", "option_b_hydronym", "1252 Cistercian monastery Žďár nad Sázavou fails Burden of Proof on Antiquity; resolved to ancient Sázava hydronym."),
+    "b_carrickfergus": ("Karrech-Vergûs", "Ancient Gaelic rock and bay of Fergus (in-game: Carrickfergus)", "option_b_hydronym", "1177 Anglo-Norman castle of John de Courcy fails Burden of Proof on Antiquity; resolved to ancient Gaelic Carraig Fhearghais."),
+    "b_helsingborg": ("Helsingör-Sund", "Ancient Öresund strait and coastal sound of the Helsingar (in-game: Helsingborg)", "option_b_hydronym", "1085 Danish royal fortress fails Burden of Proof on Antiquity; resolved to ancient sound hydronym."),
+    "b_freiberg": ("Mûlde", "Ancient pre-867 Mulde River basin in the Meissen march (in-game: Freiberg)", "option_b_hydronym", "1168 silver boom town fails Burden of Proof on Antiquity; resolved to ancient Mulde hydronym."),
+    "b_birzula": ("Jahorlîch", "Ancient pre-867 Yagorlyk River basin (in-game: Birzula)", "option_b_hydronym", "18th-century settlement Birzula fails Burden of Proof on Antiquity; resolved to ancient Yagorlyk hydronym."),
+    "b_nikopol": ("Mîkîtîn-Rîch", "Ancient pre-867 Dnieper river crossing / Horn of Mykyta (in-game: Nikopol)", "option_b_hydronym", "1782 Russian imperial city Nikopol fails Burden of Proof on Antiquity; resolved to ancient Dnieper crossing."),
+    "b_pokrovsk": ("Samatkân", "Ancient pre-867 Samatka stream in the Donets steppe (in-game: Pokrovsk)", "option_b_hydronym", "1875 railway station Grishino fails Burden of Proof on Antiquity; resolved to ancient Samatka stream."),
+    "b_oranienburg": ("Rjâsa", "Ancient pre-867 Stanovaya Ryasa River basin (in-game: Oranienburg)", "option_b_hydronym", "1638 fortress of Peter the Great fails Burden of Proof on Antiquity; resolved to ancient Ryasa hydronym."),
+    "b_viazovka": ("Chopjôr", "Ancient pre-867 Khopyor River basin (in-game: Viazovka)", "option_b_hydronym", "18th-century village Viazovka fails Burden of Proof on Antiquity; resolved to ancient Khopyor hydronym."),
+    "b_montfort": ("Montfortveste", "March fortress citadel of House Montfort (in-game: Montfort)", "option_c_foundation", "c. 990 fortress of Amaury de Montfort fails Burden of Proof on Antiquity; resolved via Option C march stronghold."),
+    "b_lapueblademontalban": ("Tâjo", "Ancient pre-867 Tagus River basin (in-game: La Puebla de Montalban)", "option_b_hydronym", "12th-century repoblación of Alfonso VII fails Burden of Proof on Antiquity; resolved to ancient Tagus hydronym."),
+    "b_benghazi": ("Berenîke", "Ancient Greek Pentapolis city Berenice / Hesperides (in-game: Benghazi)", "indigenous_restitution", "15th-century port of Sidi Ghazi fails Burden of Proof on Antiquity; restored to classical Greek Berenice."),
+    "b_rafaniya-krak": ("Rafanîje", "Ancient Roman and Byzantine civitas Raphanea (in-game: Rafaniya-Krak)", "indigenous_restitution", "1142 Hospitaller fortress Krak des Chevaliers fails Burden of Proof on Antiquity; restored to ancient Raphanea."),
+    "b_agra": ("Agraban", "Ancient sacred forest grove of the Yamuna attested in the Mahabharata (in-game: Agra)", "indigenous_restitution", "1504 Lodi Sultanate capital Agra fails Burden of Proof on Antiquity; restored to ancient Agraban."),
+    "b_vijayanagara": ("Pampâ-Kschêtre", "Ancient sacred pilgrimage sanctuary of Pampa (Hampi) on the Tungabhadra (in-game: Vijayanagara)", "indigenous_restitution", "1336 Sangama capital Vijayanagara fails Burden of Proof on Antiquity; restored to ancient sacred site Pampa Kshetra."),
+    "b_gisors": ("Epte-Furt", "Ancient pre-867 Epte river crossing in the Vexin (in-game: Gisors)", "option_b_hydronym", "1096 Norman border fortress of William Rufus fails Burden of Proof on Antiquity; resolved to ancient Epte crossing."),
+    "b_pamiers": ("Zant-Antônîn", "Ancient 9th-century Benedictine abbey of Saint-Antonin on the Ariège (in-game: Pamiers)", "indigenous_restitution", "1111 crusader fortress of Roger II of Foix fails Burden of Proof on Antiquity; restored to pre-867 monastic foundation."),
+    "b_lodi": ("Lôdi-Vêch", "Ancient Roman civitas Laus Pompeia / Lodi Vecchio (in-game: Lodi)", "indigenous_restitution", "1158 Lodi Nuovo of Frederick Barbarossa fails Burden of Proof on Antiquity; restored to Roman Laus Pompeia."),
+    "b_crema": ("Sêrjo", "Ancient pre-867 Serio River basin in Lombardy (in-game: Crema)", "option_b_hydronym", "1074 medieval settlement Crema fails Burden of Proof on Antiquity; resolved to ancient Serio hydronym."),
+    "b_coucy": ("Koutzîveste", "March fortress citadel of Coucy (in-game: Coucy)", "option_c_foundation", "c. 920 fortress of Archbishop Herve fails Burden of Proof on Antiquity; resolved via Option C march stronghold."),
+
+    # Regional Sweep: Africa, India, Southeast Asia & Scandinavia
+    "b_timbuktu": ("Djôlibe", "Ancient native Mandé hydronym of the Niger River Joliba (in-game: Timbuktu)", "option_b_hydronym", "c. 1100 Tuareg seasonal camp fails Burden of Proof on Antiquity; resolved to ancient Niger river hydronym Djôlibe."),
+    "b_mansuriya": ("Sâbrâ", "Ancient substrate Sabra in the Byzacena plain near Kairouan (in-game: Mansuriya)", "indigenous_restitution", "946 Fatimid caliphal capital al-Mansuriya fails Burden of Proof on Antiquity; restored to ancient site Sabra."),
+    "b_raqqada": ("Safûn", "Ancient Byzacena river course and olive plain (in-game: Raqqada)", "option_b_hydronym", "876 Aghlabid palace city Raqqada fails Burden of Proof on Antiquity; resolved to ancient Byzacena watercourse."),
+    "b_gede": ("Sabâki", "Ancient Sabaki River estuary on the Swahili coast (in-game: Gede)", "option_b_hydronym", "11th-century Swahili stone town fails Burden of Proof on Antiquity; resolved to ancient Sabaki river basin."),
+    "b_ungwana": ("Tâne", "Ancient Tana River delta reach on the Swahili coast (in-game: Ungwana)", "option_b_hydronym", "13th-century Swahili coastal town fails Burden of Proof on Antiquity; resolved to ancient Tana river delta."),
+    "b_hargeisa": ("Lâs-Gêel", "Ancient Neolithic rock art sanctuary complex Las Geel (in-game: Hargeisa)", "indigenous_restitution", "19th-century settlement Hargeisa fails Burden of Proof on Antiquity; restored to ancient prehistoric sanctuary complex."),
+    "b_bangkok": ("Mênam", "Ancient Chao Phraya River basin, Mother of Waters (in-game: Bangkok)", "option_b_hydronym", "15th-century village / 1782 capital fails Burden of Proof on Antiquity; resolved to ancient Chao Phraya hydronym Mênam."),
+    "b_chiang_mai": ("Pîng", "Ancient Mae Ping River basin of the Mon-Dvaravati realm (in-game: Chiang Mai)", "option_b_hydronym", "1296 new capital of Lan Na fails Burden of Proof on Antiquity; resolved to ancient Ping river hydronym."),
+    "b_BOR_Seria": ("Serîje", "Ancient Seria River basin of northern Borneo (in-game: Seria)", "option_b_hydronym", "1929 oil town fails Burden of Proof on Antiquity; resolved to ancient Seria river hydronym."),
+    "b_faizabad": ("Sarajû", "Ancient sacred Sarayu River of the Ramayana (in-game: Faizabad)", "option_b_hydronym", "1730 foundation of Nawab Saadat Ali Khan I fails Burden of Proof on Antiquity; resolved to ancient sacred Sarayu hydronym."),
+    "b_ahmadnagar": ("Sînâ", "Ancient Sina River basin in the Deccan plateau (in-game: Ahmadnagar)", "option_b_hydronym", "1494 capital of Ahmad Nizam Shah I fails Burden of Proof on Antiquity; resolved to ancient Sina river hydronym."),
+    "b_hoshangabad": ("Narmadâ", "Ancient sacred Narmada River reach (in-game: Hoshangabad)", "option_b_hydronym", "1405 fortress of Hoshang Shah fails Burden of Proof on Antiquity; resolved to ancient sacred Narmada hydronym."),
+    "b_fathabad": ("Padmâ", "Ancient Padma River reach of the Ganges delta (in-game: Fathabad)", "option_b_hydronym", "Late 15th-century sultanate mint town fails Burden of Proof on Antiquity; resolved to ancient Padma river hydronym."),
+    "b_nasirabad": ("Brahmapûtra", "Ancient sacred Brahmaputra River reach (in-game: Nasirabad)", "option_b_hydronym", "19th-century colonial town fails Burden of Proof on Antiquity; resolved to ancient Brahmaputra river hydronym."),
+    "b_khudabad": ("Mêhrân", "Ancient Mehran / Indus River reach in Sindh (in-game: Khudabad)", "option_b_hydronym", "1701 Kalhora capital fails Burden of Proof on Antiquity; resolved to ancient Indus/Mehran river hydronym."),
+    "b_shergarh": ("Kâbul", "Ancient Kabul River confluence reach (in-game: Shergarh)", "option_b_hydronym", "1540 fortress of Sher Shah Suri fails Burden of Proof on Antiquity; resolved to ancient Kabul river hydronym."),
+    "b_udaipur": ("Rangamatî", "Ancient Manikya royal capital Rangamati on the Gomati (in-game: Udaipur)", "indigenous_restitution", "1567 capital of Udai Manikya fails Burden of Proof on Antiquity; restored to ancient capital Rangamati."),
+    "b_gangaikondacolapuram": ("Kâvêrî", "Ancient sacred Kaveri River reach in Cholamandalam (in-game: Gangaikondacolapuram)", "option_b_hydronym", "1025 Chola imperial capital of Rajendra Chola I fails Burden of Proof on Antiquity; resolved to ancient Kaveri hydronym."),
+    "b_svendborg": ("Swînesunt", "Ancient Svendborgsund sound and strait of Funen (in-game: Svendborg)", "option_b_hydronym", "1229 Danish royal castle fails Burden of Proof on Antiquity; resolved to ancient Svendborgsund sound."),
+
+    # Step 1: Western European Reform Abbeys, Dams & Dynastic Castles
+    "b_clairvaux": ("Albetâl", "Ancient pre-867 Aube River valley (in-game: Clairvaux)", "option_b_hydronym", "1115 Cistercian abbey Clairvaux of St. Bernard fails Burden of Proof on Antiquity; resolved to ancient Aube river valley."),
+    "b_citeaux": ("Vonge", "Ancient pre-867 Vouge River reach in Burgundy (in-game: Citeaux)", "option_b_hydronym", "1098 Cistercian mother abbey Cîteaux fails Burden of Proof on Antiquity; resolved to ancient Vouge river hydronym."),
+    "b_rotterdam": ("Rotte", "Ancient pre-867 Rotte River basin in Holland (in-game: Rotterdam)", "option_b_hydronym", "c. 1270 river dam and settlement Rotterdam fails Burden of Proof on Antiquity; resolved to ancient Rotte river hydronym."),
+    "b_heidelberg": ("Heiligenberch", "Ancient Celtic hillfort oppidum and Roman sanctuary on the Heiligenberg overlooking the Neckar (in-game: Heidelberg)", "indigenous_restitution", "1196 Hohenstaufen comital castle Heidelberg fails Burden of Proof on Antiquity; restored to ancient Celtic/Roman Heiligenberg."),
+    "b_katzenelnbogen": ("Dörsbach", "Ancient pre-867 Dörsbach stream basin in the Taunus (in-game: Katzenelnbogen)", "option_b_hydronym", "c. 1095 comital castle Katzenelnbogen fails Burden of Proof on Antiquity; resolved to ancient Dörsbach hydronym."),
+    "b_isenburg": ("Iserbach", "Ancient pre-867 Iserbach stream basin in the Westerwald (in-game: Isenburg)", "option_b_hydronym", "c. 1100 comital castle Isenburg fails Burden of Proof on Antiquity; resolved to ancient Iserbach hydronym."),
+    "b_jaisalmer": ("Kaknî", "Ancient pre-867 Kakni River basin in the Thar desert (in-game: Jaisalmer)", "option_b_hydronym", "1156 desert citadel of Rawal Jaisal fails Burden of Proof on Antiquity; resolved to ancient Kakni river basin."),
+    "b_furness": ("Vûrnês", "Ancient pre-867 Norse and Celtic coastal headland Fúrnese (in-game: Furness)", "option_b_hydronym", "1123 Cistercian abbey Furness fails Burden of Proof on Antiquity; resolved to ancient coastal headland."),
+
+    # Step 2: Non-European Frontier Sweep (India, Africa, Southeast Asia)
+    "b_amarkot": ("Hakrâ", "Ancient pre-867 Hakra River paleochannel basin in Sindh (in-game: Amarkot)", "option_b_hydronym", "11th-century Soomro desert fortress Amarkot fails Burden of Proof on Antiquity; resolved to ancient Hakra river basin."),
+    "b_pathankot": ("Tschakkî", "Ancient pre-867 Chakki River confluence in Trigarta (in-game: Pathankot)", "option_b_hydronym", "11th-century Pathania Rajput stronghold fails Burden of Proof on Antiquity; resolved to ancient Chakki river confluence."),
+    "b_gawilgarh": ("Sâtpure", "Ancient pre-867 Satpura mountain ridge in Maharashtra (in-game: Gawilgarh)", "option_b_hydronym", "12th-century Gawali hillfort fails Burden of Proof on Antiquity; resolved to ancient Satpura range."),
+    "b_borgarh": ("Narmadâ-Tâl", "Ancient pre-867 Narmada River valley in Malwa (in-game: Borgarh)", "option_b_hydronym", "High medieval Paramara fortress fails Burden of Proof on Antiquity; resolved to ancient Narmada valley."),
+    "b_aswan-west": ("Elefantîne", "Ancient Pharaonic and Roman island fortress Elephantine on the Nile (in-game: West Aswan)", "indigenous_restitution", "Modern administrative sector West Aswan fails Burden of Proof on Antiquity; restored to classical island fortress Elephantine."),
+    "b_benin_marshes": ("Osse", "Ancient pre-867 Osse River delta reach (in-game: Benin marsches)", "option_b_hydronym", "Colonial administrative sector fails Burden of Proof on Antiquity; resolved to ancient Osse river delta."),
+    "b_gobir-east": ("Rîme", "Ancient pre-867 Rima River basin in Hausaland (in-game: Gobir-East)", "option_b_hydronym", "Administrative sector Gobir-East fails Burden of Proof on Antiquity; resolved to ancient Rima river basin."),
+    "b_salavan": ("Sê-Dôn", "Ancient pre-867 Se Don River basin in southern Laos (in-game: Salavan)", "option_b_hydronym", "Late medieval provincial outpost fails Burden of Proof on Antiquity; resolved to ancient Se Don river basin."),
+    "b_BOR_Melak": ("Mahakâm", "Ancient pre-867 Mahakam River basin in Borneo (in-game: Melak)", "option_b_hydronym", "Late river trading post fails Burden of Proof on Antiquity; resolved to ancient Mahakam river basin."),
+
+    # Step 3: De-Anglicization & Colonial Directional Remediation
+    # West Africa & Sahel
+    "b_upper_gambia": ("Kantôra", "Ancient pre-867 Mandinka trade kingdom and terminal Kantora on the Upper Gambia (in-game: Upper Gambia)", "indigenous_restitution", "Colonial administrative sector Upper Gambia fails Burden of Proof on Antiquity; restored to ancient Mandinka kingdom Kantora."),
+    "b_west_kru": ("West-Krû", "Western reach of the ancient Kru / Krao coastline (in-game: West Kru)", "option_b_hydronym", "Colonial English descriptor West Kru fails Burden of Proof on Antiquity; standardized to West-Krû."),
+    "b_upper_lobo": ("Ober-Lobô", "Upper reach of the pre-867 Lobo River basin (in-game: Upper Lobo)", "option_b_hydronym", "Colonial English descriptor Upper Lobo fails Burden of Proof on Antiquity; standardized to Ober-Lobô."),
+    "b_lower_lobo": ("Nider-Lobô", "Lower confluence of the pre-867 Lobo and Sassandra rivers (in-game: Lower Lobo)", "option_b_hydronym", "Colonial English descriptor Lower Lobo fails Burden of Proof on Antiquity; standardized to Nider-Lobô."),
+    "b_bandama-west": ("West-Bandama", "Western basin of the pre-867 Bandama River (in-game: Bandama-West)", "option_b_hydronym", "Colonial English descriptor Bandama-West fails Burden of Proof on Antiquity; standardized to West-Bandama."),
+    "b_upper_nyene": ("Ober-Njene", "Upper reach of the pre-867 Nyene River basin (in-game: Upper Nyene)", "option_b_hydronym", "Colonial English descriptor Upper Nyene fails Burden of Proof on Antiquity; standardized to Ober-Njene."),
+    "b_lower_nyene": ("Nider-Njene", "Lower reach of the pre-867 Nyene River basin (in-game: Lower Nyene)", "option_b_hydronym", "Colonial English descriptor Lower Nyene fails Burden of Proof on Antiquity; standardized to Nider-Njene."),
+    "b_upper_nzi": ("Ober-Nzi", "Upper reach of the pre-867 Nzi River basin (in-game: Upper Nzi)", "option_b_hydronym", "Colonial English descriptor Upper Nzi fails Burden of Proof on Antiquity; standardized to Ober-Nzi."),
+    "b_kweni-east": ("Ôst-Kwêni", "Eastern plateau of the pre-867 Kweni region (in-game: Kweni-East)", "sub_barony_adaptation", "Colonial English descriptor Kweni-East fails Burden of Proof on Antiquity; standardized to Ôst-Kwêni."),
+    "b_upper_tano": ("Ober-Tano", "Upper reach of the pre-867 sacred Tano River basin in Akan territory (in-game: Upper Tano)", "option_b_hydronym", "Colonial English descriptor Upper Tano fails Burden of Proof on Antiquity; standardized to Ober-Tano."),
+    "b_middle_tano": ("Middel-Tano", "Middle reach of the pre-867 sacred Tano River basin (in-game: Middle Tano)", "option_b_hydronym", "Colonial English descriptor Middle Tano fails Burden of Proof on Antiquity; standardized to Middel-Tano."),
+    "b_mole_south": ("Sût-Mole", "Southern basin of the pre-867 Mole River in Gonja (in-game: Mole-South)", "option_b_hydronym", "Colonial English descriptor Mole-South fails Burden of Proof on Antiquity; standardized to Sût-Mole."),
+    "b_upper_mole": ("Ober-Mole", "Upper basin of the pre-867 Mole River near Daboya (in-game: Upper Mole)", "option_b_hydronym", "Colonial English descriptor Upper Mole fails Burden of Proof on Antiquity; standardized to Ober-Mole."),
+    "b_south_igbo": ("Sût-Igbô", "Southern forest reach of the pre-867 Igbo territory (in-game: South Igbo)", "sub_barony_adaptation", "Colonial English descriptor South Igbo fails Burden of Proof on Antiquity; standardized to Sût-Igbô."),
+    "b_east_igala": ("Ôst-Igale", "Eastern plateau of the pre-867 Igala realm (in-game: East Igala)", "sub_barony_adaptation", "Colonial English descriptor East Igala fails Burden of Proof on Antiquity; standardized to Ôst-Igale."),
+    "b_lower_guara": ("Nider-Guara", "Lower confluence of the pre-867 Gurara River with the Niger (in-game: Lower Guara)", "option_b_hydronym", "Colonial English descriptor Lower Guara fails Burden of Proof on Antiquity; standardized to Nider-Guara."),
+    "b_seno-south": ("Sût-Senô", "Southern plain of the pre-867 Séno-Gondo depression (in-game: Seno-South)", "sub_barony_adaptation", "Colonial English descriptor Seno-South fails Burden of Proof on Antiquity; standardized to Sût-Senô."),
+    "b_west_mema": ("West-Meme", "Western marshes of the ancient pre-867 Soninke kingdom of Méma (in-game: West Mema)", "sub_barony_adaptation", "Colonial English descriptor West Mema fails Burden of Proof on Antiquity; standardized to West-Meme."),
+    "b_hodh_west": ("West-Hodh", "Western basin of the ancient pre-867 Hodh depression (in-game: Hodh-West)", "sub_barony_adaptation", "Colonial English descriptor Hodh-West fails Burden of Proof on Antiquity; standardized to West-Hodh."),
+
+    # Horn of Africa, Nile Basin & East Africa
+    "b_lower_omo": ("Nider-Omo", "Lower delta reach of the pre-867 Omo River near Lake Turkana (in-game: Lower Omo)", "option_b_hydronym", "Colonial English descriptor Lower Omo fails Burden of Proof on Antiquity; standardized to Nider-Omo."),
+    "b_upper_dinder": ("Ober-Dinder", "Upper headwaters reach of the pre-867 Dinder River in the Ethiopian highlands (in-game: Upper Dinder)", "option_b_hydronym", "Colonial English descriptor Upper Dinder fails Burden of Proof on Antiquity; standardized to Ober-Dinder."),
+    "b_upper_milk": ("Ober-Mîlch", "Upper reach of the pre-867 Wadi el-Malik in the Bayuda Steppe (in-game: Upper Milk)", "option_b_hydronym", "Colonial English descriptor Upper Milk fails Burden of Proof on Antiquity; standardized to Ober-Mîlch."),
+    "b_middle_atbara": ("Middel-Atbara", "Middle reach of the pre-867 Atbara River basin in Kassala (in-game: Middle Atbara)", "option_b_hydronym", "Colonial English descriptor Middle Atbara fails Burden of Proof on Antiquity; standardized to Middel-Atbara."),
+    "b_middle_awash": ("Middel-Awâsch", "Middle rift basin reach of the pre-867 Awash River (in-game: Middle Awâsch)", "option_b_hydronym", "Colonial English descriptor Middle Awâsch fails Burden of Proof on Antiquity; standardized to Middel-Awâsch."),
+    "b_lower_odib": ("Nider-Aidâp", "Lower coastal plain of the pre-867 Wadi Odib near Aidhab (in-game: Lower Odib)", "option_b_hydronym", "Colonial English descriptor Lower Odib fails Burden of Proof on Antiquity; standardized to Nider-Aidâp."),
+    "b_naqis-north": ("Nord-Nakîs", "Northern gold-mining district of the pre-867 Wadi Allaqi (in-game: North Naqis)", "sub_barony_adaptation", "Colonial English descriptor North Naqis fails Burden of Proof on Antiquity; standardized to Nord-Nakîs."),
+    "b_upper_amur": ("Ober-Amûr", "Upper basin reach of the pre-867 Wadi Amur in Nubia (in-game: Upper Amur)", "option_b_hydronym", "Colonial English descriptor Upper Amur fails Burden of Proof on Antiquity; standardized to Ober-Amûr."),
+    "b_baqlin-north": ("Nord-Baklîn", "Northern territory of the pre-867 Beja Baqlin kingdom (in-game: North Baqlin)", "sub_barony_adaptation", "Colonial English descriptor North Baqlin fails Burden of Proof on Antiquity; standardized to Nord-Baklîn."),
+    "b_baqlin-west": ("West-Baklîn", "Western hills of the pre-867 Beja Baqlin kingdom (in-game: West Baqlin)", "sub_barony_adaptation", "Colonial English descriptor West Baqlin fails Burden of Proof on Antiquity; standardized to West-Baklîn."),
+    "b_south_seraye": ("Sût-Seraje", "Southern plateau of the pre-867 Seraye realm (in-game: South Seraye)", "sub_barony_adaptation", "Colonial English descriptor South Seraye fails Burden of Proof on Antiquity; standardized to Sût-Seraje."),
+    "b_east_amhara": ("Ôst-Amhära", "Eastern escarpment of the pre-867 Amhara realm (in-game: East Amhära)", "sub_barony_adaptation", "Colonial English descriptor East Amhära fails Burden of Proof on Antiquity; standardized to Ôst-Amhära."),
+    "b_west_gojjam": ("West-Gojjam", "Western loop of the pre-867 Gojjam province within the Blue Nile bend (in-game: West Gojjam)", "sub_barony_adaptation", "Colonial English descriptor West Gojjam fails Burden of Proof on Antiquity; standardized to West-Gojjam."),
+    "b_damot-west": ("West-Damôt", "Western marches of the pre-867 Kingdom of Damot (in-game: Damot-West)", "sub_barony_adaptation", "Colonial English descriptor Damot-West fails Burden of Proof on Antiquity; standardized to West-Damôt."),
+    "b_wellega-south": ("Sût-Welega", "Southern basin of the pre-867 Welega / Didesa region (in-game: Wellega-South)", "sub_barony_adaptation", "Colonial English descriptor Wellega-South fails Burden of Proof on Antiquity; standardized to Sût-Welega."),
+    "b_arusi-north": ("Nord-Arûsi", "Northern plateau reach of the pre-867 Arsi realm (in-game: Arusi-North)", "sub_barony_adaptation", "Colonial English descriptor Arusi-North fails Burden of Proof on Antiquity; standardized to Nord-Arûsi."),
+    "b_west_adal": ("West-Adal", "Western plateau reach of the pre-867 Adal region near Harar (in-game: West Adal)", "sub_barony_adaptation", "Colonial English descriptor West Adal fails Burden of Proof on Antiquity; standardized to West-Adal."),
+    "b_hargaya-south": ("Sût-Hargâje", "Southern Ogo plateau reach near Hargeisa (in-game: Hargaya-South)", "sub_barony_adaptation", "Colonial English descriptor Hargaya-South fails Burden of Proof on Antiquity; standardized to Sût-Hargâje."),
+    "b_fafan-south": ("Sût-Fafân", "Southern reach of the pre-867 Fafan River valley (in-game: Fafan-South)", "option_b_hydronym", "Colonial English descriptor Fafan-South fails Burden of Proof on Antiquity; standardized to Sût-Fafân."),
+    "b_edd-north": ("Nord-Êt", "Northern coastal plain of the pre-867 Red Sea port of Edd (in-game: Edd-North)", "sub_barony_adaptation", "Colonial English descriptor Edd-North fails Burden of Proof on Antiquity; standardized to Nord-Êt."),
+    "b_south_danakil": ("Sût-Danakil", "Southern salt depression reach of the pre-867 Danakil basin (in-game: South Danakil)", "sub_barony_adaptation", "Colonial English descriptor South Danakil fails Burden of Proof on Antiquity; standardized to Sût-Danakil."),
+    "b_lower_nugaal": ("Nider-Nugâl", "Lower reach of the pre-867 Nugaal Valley towards the ocean (in-game: Lower Nugaal)", "option_b_hydronym", "Colonial English descriptor Lower Nugaal fails Burden of Proof on Antiquity; standardized to Nider-Nugâl."),
+    "b_upper_nugaal": ("Ober-Nugâl", "Upper limestone plateau reach of the pre-867 Nugaal Valley (in-game: Upper Nugaal)", "option_b_hydronym", "Colonial English descriptor Upper Nugaal fails Burden of Proof on Antiquity; standardized to Ober-Nugâl."),
+    "b_mudug-north": ("Nord-Mudûch", "Northern plateau reach of the pre-867 Mudug region (in-game: Mudug-North)", "sub_barony_adaptation", "Colonial English descriptor Mudug-North fails Burden of Proof on Antiquity; standardized to Nord-Mudûch."),
+    "b_hobyo-north": ("Nord-Hobyo", "Northern coastal reach of the pre-867 Hobyo strand (in-game: Hobyo-North)", "sub_barony_adaptation", "Colonial English descriptor Hobyo-North fails Burden of Proof on Antiquity; standardized to Nord-Hobyo."),
+    "b_jubba-north": ("Nord-Jubba", "Upper reach of the pre-867 Jubba River confluence near Luuq (in-game: Jubba-North)", "option_b_hydronym", "Colonial English descriptor Jubba-North fails Burden of Proof on Antiquity; standardized to Nord-Jubba."),
+    "b_marehan-north": ("Nord-Marehân", "Northern pastoral reach of the pre-867 Marehan region on the Jubba (in-game: Marehan-North)", "sub_barony_adaptation", "Colonial English descriptor Marehan-North fails Burden of Proof on Antiquity; standardized to Nord-Marehân."),
+    "b_middle_shebelle": ("Middel-Schebelle", "Middle agricultural basin of the pre-867 Shebelle River (in-game: Middle-Schebelle)", "option_b_hydronym", "Colonial English descriptor Middle-Schebelle fails Burden of Proof on Antiquity; standardized to Middel-Schebelle."),
+    "b_gidaya-north": ("Nord-Gidâje", "Northern highland basin reach of the pre-867 Gidaya realm (in-game: Gidaya-North)", "sub_barony_adaptation", "Colonial English descriptor Gidaya-North fails Burden of Proof on Antiquity; standardized to Nord-Gidâje."),
+    "b_east_sidamo": ("Ôst-Sidâme", "Eastern escarpment reach of the pre-867 Sidamo region (in-game: East Sidamo)", "sub_barony_adaptation", "Colonial English descriptor East Sidamo fails Burden of Proof on Antiquity; standardized to Ôst-Sidâme."),
+    "b_lower_dawa": ("Nider-Dawa", "Lower canyon confluence reach of the pre-867 Dawa River (in-game: Lower Dawa)", "option_b_hydronym", "Colonial English descriptor Lower Dawa fails Burden of Proof on Antiquity; standardized to Nider-Dawa."),
+    "b_bali-west": ("West-Bâle", "Western alpine reach of the pre-867 Bale Mountains (in-game: Bali-West)", "sub_barony_adaptation", "Colonial English descriptor Bali-West fails Burden of Proof on Antiquity; standardized to West-Bâle."),
+    "b_upper_kutulo": ("Ober-Kutulo", "Upper watering basin reach of the pre-867 Kutulo depression (in-game: Upper Kutulo)", "sub_barony_adaptation", "Colonial English descriptor Upper Kutulo fails Burden of Proof on Antiquity; standardized to Ober-Kutulo."),
+    "b_dawa_south": ("Sût-Dawa", "Southern basin reach of the pre-867 Dawa River near El Wak (in-game: Dawa-South)", "option_b_hydronym", "Colonial English descriptor Dawa-South fails Burden of Proof on Antiquity; standardized to Sût-Dawa."),
+    "b_lower_jubba": ("Gobweyn", "Ancient estuarine coastal settlement of Gobweyn at the mouth of the Jubba River (in-game: Lower Jubba)", "indigenous_restitution", "Colonial English descriptor Lower Jubba fails Burden of Proof on Antiquity; restored to ancient estuarine settlement Gobweyn."),
+    "b_lower_kutulo": ("Nider-Kutulo", "Lower drainage reach of the pre-867 Kutulo / Lak Dera basin (in-game: Lower Kutulo)", "sub_barony_adaptation", "Colonial English descriptor Lower Kutulo fails Burden of Proof on Antiquity; standardized to Nider-Kutulo."),
+    "b_central_jbl_quzlum": ("Middel-Kolsûm", "Central range of the classical Red Sea Hills Mount Clysma / Qulzum (in-game: Central Jabal Quzlum)", "classical_antiquity", "Colonial English descriptor Central Jabal Quzlum fails Burden of Proof on Antiquity; standardized to Middel-Kolsûm."),
+    "b_south_jbl_quzlum": ("Sût-Kolsûm", "Southern range of the classical Red Sea Hills Mount Clysma monastic zone (in-game: South Jabal Quzlum)", "classical_antiquity", "Colonial English descriptor South Jabal Quzlum fails Burden of Proof on Antiquity; standardized to Sût-Kolsûm."),
+    "b_central_kordofan": ("Middel-Kordofân", "Central savanna reach of the pre-867 Kordofan realm (in-game: Central Kordofan)", "sub_barony_adaptation", "Colonial English descriptor Central Kordofan fails Burden of Proof on Antiquity; standardized to Middel-Kordofân."),
+    "b_kadam-west": ("West-Kadâm", "Western slopes of the pre-867 Mount Kadam massif (in-game: Kadam-West)", "sub_barony_adaptation", "Colonial English descriptor Kadam-West fails Burden of Proof on Antiquity; standardized to West-Kadâm."),
+    "b_tibesti-central": ("Middel-Tibêsti", "Central volcanic plateau of the pre-867 Tibesti Mountains (in-game: Central Tibesti)", "sub_barony_adaptation", "Colonial English descriptor Central Tibesti fails Burden of Proof on Antiquity; standardized to Middel-Tibêsti."),
+    "b_fazughli_east": ("Ôst-Fasûgli", "Eastern foothills of the pre-867 Fazughli gold-bearing massif on the Blue Nile (in-game: Eastern Fazughli)", "sub_barony_adaptation", "Colonial English descriptor Eastern Fazughli fails Burden of Proof on Antiquity; standardized to Ôst-Fasûgli."),
+    "b_gumuz_west": ("West-Gumûs", "Western lowlands of the pre-867 Gumuz realm (in-game: Gumuz-West)", "sub_barony_adaptation", "Colonial English descriptor Gumuz-West fails Burden of Proof on Antiquity; standardized to West-Gumûs."),
+
+    # Steppe, Central Asia, Iran & Burma
+    "b_mariupol": ("Kalmjûs", "Ancient pre-867 Kalmius River estuary on the Sea of Azov (in-game: South Kalka)", "option_b_hydronym", "1778 foundation Mariupol / colonial descriptor South Kalka fails Burden of Proof on Antiquity; resolved to ancient Kalmius rivermouth."),
+    "b_karabutak": ("Mugaldschar-Berch", "Ancient Turkic Mugalzhar mountain range in western Kazakhstan (in-game: Mugodschar Hills)", "option_b_hydronym", "Colonial English descriptor Mugodschar Hills fails Burden of Proof on Antiquity; standardized to Mugaldschar-Berch."),
+    "b_lower_karran": ("Nider-Karrân", "Lower alluvial reach of the pre-867 Karran district in Transoxiana (in-game: Lower Karran)", "sub_barony_adaptation", "Colonial English descriptor Lower Karran fails Burden of Proof on Antiquity; standardized to Nider-Karrân."),
+    "b_north_jaz_murian": ("Nord-Jaz-Murjân", "Northern endorheic depression of the pre-867 Jaz Murian basin in Kirman (in-game: North Jaz Murian)", "sub_barony_adaptation", "Colonial English descriptor North Jaz Murian fails Burden of Proof on Antiquity; standardized to Nord-Jaz-Murjân."),
+    "b_popa": ("Popa-Berch", "Classical Burmese sacred volcanic Nat sanctuary Popa Taung (in-game: Mount Popa)", "indigenous_restitution", "Colonial English descriptor Mount Popa fails Burden of Proof on Antiquity; restored to classical Burmese sacred peak Popa-Berch."),
+
+    # Step 4: Britannia & Insular Anglo-Saxon Semantic Calques
+    # Fortresses, Burhs & Enclosures (-burh / -bury / -borough -> -burch)
+    "b_aylesbury": ("Eilesburch", "Aylesbury (Old English Ægeles-burh, Aegel's stronghold) calqued to Tarraconian Eilesburch (in-game: Aylesbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Eilesburch."),
+    "b_banbury": ("Bannaburch", "Banbury (Old English Banna's burh) calqued to Tarraconian Bannaburch (in-game: Banbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Bannaburch."),
+    "b_bishops_castle": ("Westburch", "Westbury (Old English West-burh, western stronghold) calqued to Tarraconian Westburch (in-game: Bishops Castle)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Westburch."),
+    "b_malmesbury": ("Malmesburch", "Malmesbury (Old English Maildubh's burh) calqued to Tarraconian Malmesburch (in-game: Malmesbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Malmesburch."),
+    "b_ramsbury": ("Ramesburch", "Ramsbury (Old English Hræfnes-burh, Raven's fort) calqued to Tarraconian Ramesburch (in-game: Ramsbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Ramesburch."),
+    "b_rothbury": ("Rôtburch", "Rothbury (Old English Rōþ-burh, red/cleared stronghold) calqued to Tarraconian Rôtburch (in-game: Rothbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Rôtburch."),
+    "b_shaftesbury": ("Schaftesburch", "Shaftesbury (Old English Sceaftes-burh) calqued to Tarraconian Schaftesburch (in-game: Shaftesbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Schaftesburch."),
+    "b_sudbury": ("Sûtburch", "Sudbury (Old English Sūþ-burh, southern stronghold) calqued to Tarraconian Sûtburch (in-game: Sudbury)", "descriptive_calque", "Anglo-Saxon burh toponym calqued to Tarraconian Sûtburch."),
+    "b_scarborough": ("Scharburch", "Scarborough (Old Norse Skarthabork) calqued to Tarraconian Scharburch (in-game: Scarborough)", "descriptive_calque", "Norse burh toponym calqued to Tarraconian Scharburch."),
+
+    # Homesteads & Settlements (-hām / -ham / -hêm -> -heim)
+    "b_birmingham": ("Bôrmingheim", "Birmingham (Old English Beorminga-hām, estate of Beorma's kin) regularized to archaic Old English Bôrmingheim (in-game: Birmingham)", "descriptive_calque", "Archaic Old English hām toponym regularized to Bôrmingheim."),
+    "b_buckingham": ("Buckingheim", "Buckingham (Old English Buccingahamm, meadow/settlement of Bucca's folk) calqued to Tarraconian Buckingheim (in-game: Buckingham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Buckingheim."),
+    "b_cottingham": ("Cottingheim", "Cottingham (Old English Cottinga-hām, homestead of Cotta's folk) calqued to Tarraconian Cottingheim (in-game: Cottingham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Cottingheim."),
+    "b_evesham": ("Evescheim", "Evesham (Old English Eoves-ham, homestead of Eof) calqued to Tarraconian Evescheim (in-game: Evesham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Evescheim."),
+    "b_hexham": ("Hexheim", "Hexham (Old English Hagustaldes-hām, warrior's estate) calqued to Tarraconian Hexheim (in-game: Hexham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Hexheim."),
+    "b_walsingham": ("Walschingheim", "Walsingham (Old English Wælsinga-hām, homestead of Wæls's folk) calqued to Tarraconian Walschingheim (in-game: Walsingham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Walschingheim."),
+    "b_nottingham": ("Snotingheim", "Nottingham (Old English Snotingahām, homestead of Snot's folk) calqued to Tarraconian Snotingheim (in-game: Nottingham)", "descriptive_calque", "Anglo-Saxon hām toponym calqued to Tarraconian Snotingheim."),
+    "b_cunningham": ("Cunningheim", "Cunningham (Gaelic/Scots Cunnyngham) calqued to Tarraconian Cunningheim (in-game: Cunningham)", "descriptive_calque", "Scoto-Saxon toponym calqued to Tarraconian Cunningheim."),
+    "b_coldingham": ("Coldingheim", "Coldingham (Old English Coludes-burh / Coldingham) calqued to Tarraconian Coldingheim (in-game: Coldingham)", "descriptive_calque", "Scoto-Saxon toponym calqued to Tarraconian Coldingheim."),
+
+    # Open Fields & Clearings (-feld / -field / -fild -> -velt)
+    "b_chesterfield": ("Tschestervelt", "Chesterfield (Old English Ceaster-feld, open field by the Roman fort) calqued to Tarraconian Tschestervelt (in-game: Chesterfield)", "descriptive_calque", "Anglo-Saxon feld toponym calqued to Tarraconian Tschestervelt."),
+    "b_macclesfield": ("Makelesvelt", "Macclesfield (Old English Maccelesfeld, open field of Maccel) regularized to Old English Makelesvelt (in-game: Macclesfield)", "descriptive_calque", "Anglo-Saxon feld toponym regularized to Makelesvelt."),
+    "b_radfield": ("Radvelt", "Radfield (Old English Rād-feld, open field by the highway/riding road) calqued to Tarraconian Radvelt (in-game: Radfield)", "descriptive_calque", "Anglo-Saxon feld toponym calqued to Tarraconian Radvelt."),
+
+    # Woodlands & Forests (-wudu / -wood -> -walt)
+    "b_newark": ("Scherwald", "Sherwood (Old English Scīrwudu, shire boundary forest) calqued to Tarraconian Scherwald (in-game: Newark)", "descriptive_calque", "Anglo-Saxon wudu toponym calqued to Tarraconian Scherwald."),
+
+    # Enclosures & Homesteads (-weorþ / -worth -> -werth)
+    "b_beodericsworth": ("Bôdericswerth", "Beodericsworth / Bury St Edmunds (Old English Beodrices-weorþ, Beodric's enclosure) calqued to Tarraconian Bôdericswerth (in-game: Beodericsworth)", "descriptive_calque", "Anglo-Saxon weorþ toponym calqued to Tarraconian Bôdericswerth."),
+    "b_bosworth": ("Boswerth", "Bosworth (Old English Bosa's weorþ) calqued to Tarraconian Boswerth (in-game: Bosworth)", "descriptive_calque", "Anglo-Saxon weorþ toponym calqued to Tarraconian Boswerth."),
+    "b_papworth": ("Papwerth", "Papworth (Old English Pappa's weorþ) calqued to Tarraconian Papwerth (in-game: Papworth)", "descriptive_calque", "Anglo-Saxon weorþ toponym calqued to Tarraconian Papwerth."),
+
+    # Stone Landmarks (-stān / -stone -> -stên)
+    "b_bolingsbroke": ("Bolingstên", "Bolingbroke / Bolingstone (Old English stone marker of Bulla's folk) calqued to Tarraconian Bolingstên (in-game: Bolingbroke)", "descriptive_calque", "Anglo-Saxon stān toponym calqued to Tarraconian Bolingstên."),
+    "b_leightonstone": ("Leightonstên", "Leightonstone (Old English stone marker of the leek enclosure) calqued to Tarraconian Leightonstên (in-game: Leightonstone)", "descriptive_calque", "Anglo-Saxon stān toponym calqued to Tarraconian Leightonstên."),
+
+    # Outlying Hamlets & Dairy Farms (-stoc / -stoke -> -stoc)
+    "b_basingstoke": ("Basingstoc", "Basingstoke (Old English Basinga-stoc, outlying hamlet of Basa's folk) calqued to Tarraconian Basingstoc (in-game: Basingstoke)", "descriptive_calque", "Anglo-Saxon stoc toponym calqued to Tarraconian Basingstoc."),
+    "b_winterstoke": ("Winterstoc", "Winterstoke (Old English Winter-stoc, winter settlement) calqued to Tarraconian Winterstoc (in-game: Winterstoke)", "descriptive_calque", "Anglo-Saxon stoc toponym calqued to Tarraconian Winterstoc."),
+
+    # Pools & Harbors (-pōl / -pool -> -pûl)
+    "b_hartlepool": ("Hôrtepûl", "Hartlepool (Old English Heruteu-pōl, pool of the Hart/Deer island) calqued to Tarraconian Hôrtepûl (in-game: Hartlepool)", "descriptive_calque", "Anglo-Saxon pōl toponym calqued to Tarraconian Hôrtepûl."),
+    "b_poole": ("Pûl", "Poole (Old English Pōl, harbor pool) calqued to Tarraconian Pûl (in-game: Poole)", "descriptive_calque", "Anglo-Saxon pōl toponym calqued to Tarraconian Pûl."),
+
+    # Romano-British Castra (-ceaster -> -zester)
+    "b_colchester": ("Colnezester", "Colchester (Old English Colne-ceaster, Roman Camulodunum fort on the River Colne) regularized to Old English Colnezester (in-game: Colchester)", "descriptive_calque", "Romano-British castra toponym regularized to Colnezester."),
+    "b_chichester": ("Tschitzester", "Chichester (Old English Cisse-ceaster, fort of Cissa) adapted with High German affrication to Tschitzester (in-game: Chichester)", "descriptive_calque", "Romano-British castra toponym adapted to Tarraconian Tschitzester."),
+
+    # Enclosed Estates & Towns (-tūn / -ton -> -tûn)
+    "b_abingdon": ("Abingtûn", "Abingdon (Old English Æbban-dun / Abing-tūn) calqued to Tarraconian Abingtûn (in-game: Abingdon)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Abingtûn."),
+    "b_bolton": ("Bôltûn", "Bolton (Old English Bōþl-tūn, settlement with a hall/manor) calqued to Tarraconian Bôltûn (in-game: Bolton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Bôltûn."),
+    "b_bridlington": ("Bridlingtûn", "Bridlington (Old English Bretling-tūn) calqued to Tarraconian Bridlingtûn (in-game: Bridlington)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Bridlingtûn."),
+    "b_darlington": ("Darlingtûn", "Darlington (Old English Deornōþing-tūn) calqued to Tarraconian Darlingtûn (in-game: Darlington)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Darlingtûn."),
+    "b_kingston": ("Künincstûn", "Kingston upon Thames (Old English Cyninges-tūn, royal estate of coronations) calqued to Tarraconian Künincstûn (in-game: Kingston)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Künincstûn."),
+    "b_melton": ("Meltûn", "Melton Mowbray (Old English Middel-tūn / Melton) calqued to Tarraconian Meltûn (in-game: Melton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Meltûn."),
+    "b_okehampton": ("Ochamptûn", "Okehampton (Old English Okement-tūn, settlement on the Okement) calqued to Tarraconian Ochamptûn (in-game: Okehampton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Ochamptûn."),
+    "b_southampton": ("Sûthamptûn", "Southampton (Old English Sūþ-hām-tūn) calqued to Tarraconian Sûthamptûn (in-game: Southampton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Sûthamptûn."),
+    "b_wigton": ("Wigtûn", "Wigton (Old English Wicga's tūn) calqued to Tarraconian Wigtûn (in-game: Wigton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Wigtûn."),
+    "b_wigtown": ("Wigtûn", "Wigtown (Old English Wicga's tūn) calqued to Tarraconian Wigtûn (in-game: Wigtown)", "descriptive_calque", "Northumbrian Old English tūn calqued to Tarraconian Wigtûn."),
+    "b_wolverhampton": ("Wulfrûne-Hamptûn", "Wolverhampton (Old English Wulfrūnehēantūn, high estate endowed by Lady Wulfrūn in 985 AD) calqued to Tarraconian Wulfrûne-Hamptûn (in-game: Wolverhampton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Wulfrûne-Hamptûn."),
+    "b_taunton": ("Tônetûn", "Taunton (Old English Tone-tūn, town on the River Tone) calqued to Tarraconian Tônetûn (in-game: Taunton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Tônetûn."),
+    "b_luton": ("Lêatûn", "Luton (Old English Lea-tūn, town on the River Lea) calqued to Tarraconian Lêatûn (in-game: Luton)", "descriptive_calque", "Anglo-Saxon tūn toponym calqued to Tarraconian Lêatûn."),
+
+    # Minsters, Pillars & Churches (-mynster / -stapol / -kirk -> -munster / -stapel / -kirchen)
+    "b_kidderminster": ("Kiddermunster", "Kidderminster (Old English Crideminster, minster church of Cynebert) calqued to High German Kiddermunster (in-game: Kidderminster)", "descriptive_calque", "Anglo-Saxon mynster toponym calqued to Tarraconian Kiddermunster."),
+    "b_barnstaple": ("Bôrnstapel", "Barnstaple (Old English Beorn-stapol, post/pillar of Beorn) calqued to Tarraconian Bôrnstapel (in-game: Barnstaple)", "descriptive_calque", "Anglo-Saxon stapol toponym calqued to Tarraconian Bôrnstapel."),
+    "b_selkirk": ("Selkirchen", "Selkirk (Old English Sele-cyrice, hall-church) calqued to Tarraconian Selkirchen (in-game: Selkirk)", "descriptive_calque", "Northumbrian Old English church toponym calqued to Selkirchen."),
+
+    # Scandinavian Settlements & Havens (-býr / -by / -vík -> -dörp / -bî / -wîch / -lô)
+    "b_west_derby": ("Westdörp", "West Derby (Old Norse Djúrbý / Domesday Westderbi, western deer-park settlement) calqued to Tarraconian Westdörp (in-game: West Derby)", "descriptive_calque", "Norse býr toponym calqued to Tarraconian Westdörp."),
+    "b_appleby": ("Applebî", "Appleby (Old Norse Eplabý, apple orchard farmstead) adapted to Tarraconian Applebî (in-game: Appleby)", "descriptive_calque", "Norse býr toponym adapted to Tarraconian Applebî."),
+    "b_whitby": ("Whitbî", "Whitby (Old Norse Hvítabý, white settlement / Streoneshalh) adapted to Tarraconian Whitbî (in-game: Whitby)", "descriptive_calque", "Norse býr toponym adapted to Tarraconian Whitbî."),
+    "b_grimsby": ("Grimsbî", "Grimsby (Old Norse Grímsbý, Grim's settlement) adapted to Tarraconian Grimsbî (in-game: Grimsby)", "descriptive_calque", "Norse býr toponym adapted to Tarraconian Grimsbî."),
+    "b_berwick": ("Berwîch", "Berwick-upon-Tweed (Old English Bere-wīc, barley farm/granary) calqued to Tarraconian Berwîch (in-game: Berwick)", "descriptive_calque", "Northumbrian Old English toponym calqued to Tarraconian Berwîch."),
+    "b_wicklow": ("Wîkingelô", "Wicklow (Old Norse Víkingaló, meadow of the vikings) calqued to Tarraconian Wîkingelô (in-game: Wicklow)", "descriptive_calque", "Norse coastal haven toponym calqued to Tarraconian Wîkingelô."),
+
+    # Metropolitan Restitutions & Disambiguations
+    "b_york": ("Everwîch", "York (Old English Eoforwīc, Latin Eboracum, Old Norse Jórvík) metropolitan archiepiscopal capital of Northumbria disambiguated from regional North Riding (in-game: York)", "metropolitan_restitution", "Historical metropolitan archiepiscopal seat restored over riding."),
+    "b_pockington": ("Pocklingtûn", "Pocklington (Old English Poclintun, royal estate of the East Riding) disambiguated from regional East Riding (in-game: Pocklington)", "descriptive_calque", "Historical constituent holding disambiguated from riding."),
+    "b_leeds": ("Ledes", "Leeds (Celtic Elmet regio Loidis, Domesday Ledes) ancient district capital disambiguated from regional West Riding (in-game: Leeds)", "descriptive_calque", "Historical constituent holding disambiguated from riding."),
+
+    # Tribal & Hundred Descriptors (-ingas / -ing -> -ingen)
+    "b_blything": ("Blîthingen", "Blything (Old English Blīðingas, dwellers on the River Blyth) calqued to Tarraconian Blîthingen (in-game: Blything)", "descriptive_calque", "Anglo-Saxon tribal/hundred designation calqued to Blîthingen."),
+    "b_kettering": ("Keteringen", "Kettering (Old English Cytringas, settlement of Ketel's folk) calqued to Tarraconian Keteringen (in-game: Kettering)", "descriptive_calque", "Anglo-Saxon tribal designation calqued to Keteringen."),
+    "b_hastings": ("Hestingen", "Hastings (Old English Hæstingas, settlement of Hæsta's folk) calqued to Tarraconian Hestingen (in-game: Hastings)", "descriptive_calque", "Anglo-Saxon tribal designation calqued to Hestingen."),
+
+    # Topographic Features & Valleys (-māw / -hlāw / -mōr / -gāra / -hyll / -cumb / -dell)
+    "b_dunmow": ("Dûnmâwe", "Dunmow (Old English Dūn-māw, meadow on the hill) calqued to Tarraconian Dûnmâwe (in-game: Dunmow)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Dûnmâwe."),
+    "b_ludlow": ("Lûdlouwe", "Ludlow (Old English Hlūd-hlāw, hill by the loud river/rapids) calqued to Tarraconian Lûdlouwe (in-game: Ludlow)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Lûdlouwe."),
+    "b_wigmore": ("Wiggamôr", "Wigmore (Old English Wicga's mōr, Wicga's moorland) calqued to Tarraconian Wiggamôr (in-game: Wigmore)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Wiggamôr."),
+    "b_gore": ("Gâre", "Gore (Old English Gāra, triangular spit of land, ancient hundred moot site) calqued to Tarraconian Gâre (in-game: Gore)", "hundred_moot_calque", "Anglo-Saxon hundred moot site calqued to Gâre."),
+    "b_ampthill": ("Emetehil", "Ampthill (Old English Æmete-hyll, ant hill) calqued to Tarraconian Emetehil (in-game: Ampthill)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Emetehil."),
+    "b_wycombe": ("Wîckumbe", "Wycombe (Old English Wīc-cumb, valley of dwellings) calqued to Tarraconian Wîckumbe (in-game: Wycombe)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Wîckumbe."),
+    "b_arun": ("Arundâl", "Arundel (Old English Hārhunde-dell, horehound herb valley) calqued to Tarraconian Arundâl (in-game: Arun)", "descriptive_calque", "Anglo-Saxon topographic toponym calqued to Arundâl."),
+    # Archaic Old English Stem Regularizations & Civic Restorations
+    "b_shrewsbury": ("Schrobbesburch", "Shrewsbury (Old English Scrobbesburh, scrubland fort) regularized to authentic Old English Schrobbesburch (in-game: Shrewsbury)", "indigenous_restitution", "Archaic Old English burh restored over Anglo-Norman Scrobesbyry."),
+    "b_ilchester": ("Gifelzester", "Ilchester (Old English Givelceaster, Roman Lindinis fort on River Gifle/Ivel) regularized to Old English Gifelzester (in-game: Ilchester)", "descriptive_calque", "Archaic Old English ceaster regularized over Anglo-Norman Ivelcestre."),
+    "b_leicester": ("Legrezester", "Leicester (Old English Legraceaster, fort of the Legra dwellers on River Soar) regularized to Old English Legrezester (in-game: Leicester)", "descriptive_calque", "Archaic Old English ceaster regularized over Anglo-Norman Leicester."),
+    "b_worcester": ("Wigortzester", "Worcester (Old English Wigorceaster / Weogornaceaster, fort of the Weogora folk) regularized to Old English Wigortzester (in-game: Worcester)", "descriptive_calque", "Archaic Old English ceaster regularized to Wigortzester."),
+    "b_gloucester": ("Glôwzester", "Gloucester (Old English Glēawceaster, Roman Glevum) regularized to Old English Glôwzester (in-game: Gloucester)", "descriptive_calque", "Archaic Old English ceaster regularized to Glôwzester."),
+    "b_rochester": ("Rôfezester", "Rochester (Old English Hrōfeceaster, Roman Durobrivae fort of Hrof) regularized to Old English Rôfezester (in-game: Rochester)", "descriptive_calque", "Archaic Old English ceaster regularized to Rôfezester."),
+    "b_chelmsford": ("Tschelmêresvurt", "Chelmsford (Old English Cēolmǣresford, crossing of Ceolmaer) regularized to Old English Tschelmêresvurt (in-game: Chelmsford)", "descriptive_calque", "Archaic Old English crossing regularized to Tschelmêresvurt."),
+    "b_coventry": ("Koventrê", "Coventry (Old English Cofantrēo, Cofa's boundary tree) regularized to Old English Koventrê (in-game: Coventry)", "descriptive_calque", "Archaic Old English boundary toponym regularized to Koventrê."),
+    "b_witney": ("Wittenöye", "Witney (Old English Wittan-īeg, Witta's island / meadow) regularized to Old English Wittenöye (in-game: Witney)", "descriptive_calque", "Archaic Old English river island toponym regularized to Wittenöye."),
+    "b_totnes": ("Tottenês", "Totnes (Old English Tottan-næss, Totta's headland/ridge) regularized to Old English Tottenês (in-game: Totnes)", "descriptive_calque", "Archaic Old English headland toponym regularized to Tottenês."),
+    "b_lyme": ("Lîm", "Lyme Regis (Old English Līm, ancient stream hydronym) regularized to Old English Lîm (in-game: Lyme)", "option_b_hydronym", "Archaic Old English stream hydronym regularized to Lîm."),
+    "b_ripon": ("Hripum", "Ripon (Old English Inhrypum, dative settlement of the Hrype tribe) regularized to Old English Hripum (in-game: Ripon)", "indigenous_restitution", "Ancient tribal folk settlement regularized to Old English Hripum."),
+    "b_chertsey": ("Tschôrtesöye", "Chertsey (Old English Ceortes-īeg, Ceorot's island, site of 666 AD St. Erkenwald abbey) regularized to Old English Tschôrtesöye (in-game: Chertsey)", "indigenous_restitution", "Ancient monastic river-island foundation restored over county designation."),
+    "b_wareham": ("Wêrheim", "Wareham (Old English Werhām, settlement by the weir, King Alfred's burh) regularized to Old English Wêrheim (in-game: Wareham)", "indigenous_restitution", "Alfredian fortified naval burh restored over county designation."),
+    "b_winchester": ("Wintanzester", "Winchester (Old English Wintanceaster, Roman Venta Belgarum, royal capital of Wessex) regularized to Old English Wintanzester (in-game: Winchester)", "indigenous_restitution", "Ancient royal capital of Wessex restored over county designation."),
+    "b_exeter": ("Exanzester", "Exeter (Old English Exanceaster, Roman Isca Dumnoniorum fort on River Exe) regularized to Old English Exanzester (in-game: Exeter)", "indigenous_restitution", "Ancient Roman-Saxon capital of Devon restored over county designation."),
+    "b_dover": ("Dovras", "Dover (Old English Dofras, Roman Portus Dubris at the Dour waters) regularized to Old English Dovras (in-game: Dover)", "indigenous_restitution", "Ancient Roman-Saxon port haven restored over county designation."),
+    "b_bath": ("Hâtbatu", "Bath (Old English Hāt Bæðu, Roman Aquae Sulis, King Edgar's 973 coronation site) regularized to Old English Hâtbatu (in-game: Bath)", "indigenous_restitution", "Ancient Roman-Saxon bath and coronation sanctuary restored over county designation."),
+    "b_kendal": ("Kêntâl", "Kendal (Old English Cenet-dāl, valley of the River Kent) regularized to Old English Kêntâl (in-game: Kendal)", "option_b_hydronym", "Ancient Kent river valley toponym regularized over county designation."),
+
 }
 
 
@@ -1959,6 +2434,7 @@ def resolve_all_baronies():
                 "b_origin": sino_res["b_origin"],
                 "b_anachronism": sino_res["b_anachronism"],
                 "b_ipa": sino_res["b_ipa"],
+                "b_hanzi": sino_res.get("b_hanzi", ""),
                 "holding_type": ht,
                 "category": "sinosphere_calque"
             }
@@ -2090,7 +2566,7 @@ def resolve_all_baronies():
                     )
                     if cand in county_used_names[ck] or has_stem_collision:
                         opt_c_name, c_desc = evaluate_founder_option_c(
-                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
+                            holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck, is_anachronism=False
                         )
                         tarr_clean = opt_c_name
                         orig_desc = f"{save_name} — Disambiguated foundation: {c_desc}"
@@ -2103,7 +2579,7 @@ def resolve_all_baronies():
                         cat_label = "sub_barony_adaptation"
                 else:
                     opt_c_name, c_desc = evaluate_founder_option_c(
-                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck
+                        holder_name, holder_traits, house_name, ht, county_used_names[ck], save_name, bk=bk, ck=ck, is_anachronism=True
                     )
                     tarr_clean = opt_c_name
                     orig_desc = f"{save_name} — {c_desc}"
@@ -2118,6 +2594,12 @@ def resolve_all_baronies():
                         anach_note = f"Post-867 feudal fortress / late foundation in classical province; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     elif anc_reason == "high_medieval_foundation":
                         anach_note = f"Post-867 high medieval foundation; resolved via Option C based on save ruler {holder_name} {house_desc}."
+                    elif anc_reason == "modern_railway_foundation":
+                        anach_note = f"Modern industrial/railway foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} {house_desc}."
+                    elif anc_reason == "late_settlement_foundation":
+                        anach_note = f"Post-867 late settlement foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} {house_desc}."
+                    elif anc_reason == "post_867_eponymous_person":
+                        anach_note = f"Post-867 eponymous foundation named after historical person post-dating 867 AD under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     else:
                         anach_note = f"Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity; resolved via Option C based on save ruler {holder_name} {house_desc}."
                     cat_label = "option_c_foundation"

@@ -266,7 +266,7 @@ def main():
         "k_england": ["gules", "solid", "lion_rampant", "or", 3, "or"],
         "k_scotland": ["or", "bordure", "lion_rampant", "gules", 1, "gules"],
         "k_ireland": ["azure", "solid", "castrum", "or", 1, "or"],
-        "k_lotharingia": ["or", "bend", "alerion", "sable", 3, "gules"],
+        "k_lotharingia": ["or", "bend", "alerion", "argent", 3, "gules"],
         "k_hungary": ["gules", "solid", "cross_patriarchal", "argent", 1, "argent"],
         "k_bohemia": ["gules", "solid", "lion_rampant", "argent", 1, "argent"],
         "k_poland": ["gules", "solid", "alerion", "argent", 1, "argent"],

@@ -28,6 +28,7 @@ const kingdomLayersMap = new Map();
 const empireLayersMap = new Map();
 const baronyLayerMap = new Map();
 const baronyPropsMap = new Map();
+const baronyCountyIndex = new Map();
 
 // Sinosphere Hanzi & Calque datasets
 let sinosphereCalques = null;
@@ -114,6 +115,44 @@ async function loadData() {
     const countiesRes = await fetch('data/ck3_counties.geojson');
     countiesGeojson = await countiesRes.json();
 
+    // Map each constituent barony key to its parent county & superior hierarchy
+    if (countiesGeojson && countiesGeojson.features) {
+      for (const feat of countiesGeojson.features) {
+        const p = feat.properties;
+        const cInfo = {
+          county: p.county,
+          c_tarr: p.tarr_hist || p.tarr_direct || p.tarr || formatKey(p.county),
+          duchy: p.duchy,
+          d_tarr: p.d_tarr || (p.duchy ? formatKey(p.duchy) : ''),
+          kingdom: p.kingdom,
+          k_tarr: p.k_tarr || (p.kingdom ? formatKey(p.kingdom) : ''),
+          empire: p.empire,
+          e_tarr: p.e_tarr || (p.empire ? formatKey(p.empire) : '')
+        };
+        for (const b of (p.baronies || [])) {
+          baronyCountyIndex.set(b, cInfo);
+        }
+      }
+    }
+
+    // Pre-load barony historical resolutions so constituent holdings display immediately
+    try {
+      const bRes = await fetch('data/barony_resolutions.json');
+      if (bRes.ok) {
+        const baronyResolutions = await bRes.json();
+        for (const [bk, bData] of Object.entries(baronyResolutions)) {
+          const cInfo = baronyCountyIndex.get(bk) || {};
+          baronyPropsMap.set(bk, {
+            barony: bk,
+            ...cInfo,
+            ...bData
+          });
+        }
+      }
+    } catch (e) {
+      console.warn('Could not pre-load barony_resolutions.json:', e);
+    }
+
     // Load Sinosphere Hanzi & Calque metadata
     try {
       const sinoRes = await fetch('data/sinosphere_hanzi_calques.json');
@@ -122,6 +161,32 @@ async function loadData() {
       }
     } catch (e) {
       console.warn('Could not load sinosphere_hanzi_calques.json:', e);
+    }
+
+    // Load Title Symbol Adoption metadata & estimated years
+    try {
+      const adoptRes = await fetch('data/title_symbol_adoption.json');
+      if (adoptRes.ok) {
+        const adoptData = await adoptRes.json();
+        if (window.TarraconianSymbols && window.TarraconianSymbols.loadAdoptionData) {
+          window.TarraconianSymbols.loadAdoptionData(adoptData);
+        }
+      }
+    } catch (e) {
+      console.warn('Could not load title_symbol_adoption.json:', e);
+    }
+
+    // Load Saint Holding Imagery metadata & attributes
+    try {
+      const saintRes = await fetch('data/saint_holding_imagery.json');
+      if (saintRes.ok) {
+        const saintData = await saintRes.json();
+        if (window.TarraconianSymbols && window.TarraconianSymbols.loadSaintData) {
+          window.TarraconianSymbols.loadSaintData(saintData);
+        }
+      }
+    } catch (e) {
+      console.warn('Could not load saint_holding_imagery.json:', e);
     }
 
     // Render primary layer
@@ -154,9 +219,17 @@ async function ensureBaroniesLoaded() {
     const res = await fetch('data/ck3_baronies.geojson');
     baroniesGeojson = await res.json();
     if (baroniesGeojson && baroniesGeojson.features) {
+      const featMap = new Map();
       for (const feat of baroniesGeojson.features) {
         if (feat.properties && feat.properties.barony) {
-          baronyPropsMap.set(feat.properties.barony, feat.properties);
+          featMap.set(feat.properties.barony, feat);
+          const old = baronyPropsMap.get(feat.properties.barony) || {};
+          baronyPropsMap.set(feat.properties.barony, { ...old, ...feat.properties });
+        }
+      }
+      for (const item of searchIndex) {
+        if (item.tier === 'barony' && !item.feature) {
+          item.feature = featMap.get(item.key) || null;
         }
       }
       indexBaroniesForSearch();
@@ -191,8 +264,14 @@ function getFeatureColor(props, tier) {
       return props.d_color || stringToColor(props.duchy, 50, 45);
     case 'county':
       return props.c_color || stringToColor(props.county, 45, 40);
-    case 'barony':
-      return props.b_color || stringToColor(props.barony, 40, 42);
+    case 'barony': {
+      const ht = props.holding_type || (props.barony && baronyPropsMap.get(props.barony)?.holding_type);
+      if (ht === 'castle') return '#ab3348';
+      if (ht === 'church' || ht === 'temple') return '#3069a8';
+      if (ht === 'city') return '#3b824a';
+      if (ht === 'unoccupied') return '#424242';
+      return props.b_color || '#424242';
+    }
     default:
       return '#3d3832';
   }
@@ -316,6 +395,11 @@ async function renderBaronies() {
   clearHover();
   await ensureBaroniesLoaded();
   if (!baroniesGeojson) return;
+  if (currentTier !== 'barony') return;
+
+  if (countiesLayer && map.hasLayer(countiesLayer)) {
+    map.removeLayer(countiesLayer);
+  }
 
   if (!baroniesLayer) {
     baroniesLayer = L.geoJSON(baroniesGeojson, {
@@ -411,7 +495,7 @@ function onHover(layer, feature, tier = currentTier) {
       } else {
         const htName = p.holding_type_name || (p.holding_type ? p.holding_type.charAt(0).toUpperCase() + p.holding_type.slice(1) : '');
         rankLabel = htName ? `Holding (${htName})` : 'Holding';
-        titleName = p.name || formatKey(p.barony);
+        titleName = p.name || p.b_tarr || formatKey(p.barony);
       }
     } else if (tier === 'county') {
       rankLabel = 'County';
@@ -503,6 +587,7 @@ function openInspector(props, tier) {
   const bcCounty = document.getElementById('bc-county');
 
   const originGroup = document.getElementById('drawer-origin-group');
+  const auditBadge = document.getElementById('drawer-audit-badge');
   const isUnoccupiedBarony = tier === 'barony' && props.holding_type === 'unoccupied';
 
   // Tier info & Title Key
@@ -516,6 +601,43 @@ function openInspector(props, tier) {
   } else {
     badge.textContent = tier.toUpperCase();
   }
+
+  // Barony Resolution Category Badge
+  if (auditBadge) {
+    if (tier === 'barony' && !isUnoccupiedBarony) {
+      const cat = props.category || '';
+      if (cat === 'option_b_hydronym') {
+        auditBadge.textContent = 'Option B · Ancient Hydronym';
+        auditBadge.className = 'audit-badge audit-badge-hydronym';
+        auditBadge.classList.remove('hidden');
+      } else if (cat === 'indigenous_restitution') {
+        auditBadge.textContent = 'Historical Restitution';
+        auditBadge.className = 'audit-badge audit-badge-restitution';
+        auditBadge.classList.remove('hidden');
+      } else if (cat === 'option_c_foundation') {
+        auditBadge.textContent = 'Option C · Foundation';
+        auditBadge.className = 'audit-badge audit-badge-founder';
+        auditBadge.classList.remove('hidden');
+      } else if (cat === 'sinosphere_calque') {
+        auditBadge.textContent = 'Sinosphere Calque';
+        auditBadge.className = 'audit-badge audit-badge-sinosphere';
+        auditBadge.classList.remove('hidden');
+      } else if (cat === 'classical_antiquity' || cat === 'option_a_seat') {
+        auditBadge.textContent = 'Classical Antiquity';
+        auditBadge.className = 'audit-badge audit-badge-antiquity';
+        auditBadge.classList.remove('hidden');
+      } else if (cat === 'chronicle_gord') {
+        auditBadge.textContent = 'Chronicle Gord';
+        auditBadge.className = 'audit-badge audit-badge-gord';
+        auditBadge.classList.remove('hidden');
+      } else {
+        auditBadge.classList.add('hidden');
+      }
+    } else {
+      auditBadge.classList.add('hidden');
+    }
+  }
+
   const currentKey = getTitleKeyForTier(props, tier);
   titleKeyElem.textContent = currentKey;
 
@@ -534,10 +656,10 @@ function openInspector(props, tier) {
       tarrName.textContent = '';
       originName.textContent = '';
     } else {
-      tarrName.textContent = props.name || formatKey(props.barony);
+      tarrName.textContent = props.name || props.b_tarr || formatKey(props.barony);
       originName.textContent = props.b_origin || props.name || formatKey(props.barony);
     }
-    currentAnachronism = isUnoccupiedBarony ? '' : (props.b_anachronism || props.c_anachronism || '');
+    currentAnachronism = isUnoccupiedBarony ? '' : (props.b_anachronism || '');
     currentIpa = isUnoccupiedBarony ? '' : (props.b_ipa || props.ipa || '');
   } else if (tier === 'duchy') {
     tarrName.textContent = props.d_tarr || formatKey(props.duchy);
@@ -567,7 +689,8 @@ function openInspector(props, tier) {
   const anachNote = document.getElementById('drawer-anachronism-note');
   if (anachNote) {
     if (currentAnachronism) {
-      anachNote.innerHTML = `<strong>ℹ️ Anachronistic Title Analysis:</strong> ${currentAnachronism}`;
+      const heading = tier === 'barony' ? 'ℹ️ Burden of Proof Historical Audit:' : 'ℹ️ Anachronistic Title Analysis:';
+      anachNote.innerHTML = `<strong>${heading}</strong> ${currentAnachronism}`;
       anachNote.classList.remove('hidden');
     } else {
       anachNote.classList.add('hidden');
@@ -733,6 +856,47 @@ function openInspector(props, tier) {
     symbolCard.innerHTML = '';
   }
 
+  // Relic Shrine Callout in Inspector Drawer if this territorial holding contains holy relics
+  const relicCalloutElem = document.getElementById('drawer-relic-callout');
+  let shrineBarony = null;
+  let shrineInfo = null;
+
+  if (tier === 'county' && props && props.baronies) {
+    for (const b of props.baronies) {
+      const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(b);
+      if (sInfo) {
+        shrineBarony = b;
+        shrineInfo = sInfo;
+        break;
+      }
+    }
+  }
+
+  if (relicCalloutElem) {
+    if (shrineInfo && shrineBarony) {
+      relicCalloutElem.classList.remove('hidden');
+      const bProps = baronyPropsMap.get(shrineBarony) || {};
+      const bDispName = bProps.b_tarr || bProps.name || shrineInfo.name || formatKey(shrineBarony);
+      relicCalloutElem.innerHTML = `
+        <div class="relic-callout-inner" data-key="${shrineBarony}" data-tier="barony" style="cursor:pointer" title="Click to inspect sacred shrine of ${shrineInfo.saint_name}">
+          <span class="relic-callout-icon">☧</span>
+          <div class="relic-callout-body">
+            <div class="relic-callout-title">Sacred Shrine: ${shrineInfo.saint_name}</div>
+            <div class="relic-callout-desc">Enshrined at <strong>${bDispName}</strong> (${shrineBarony}) &bull; <em>${shrineInfo.relic_description}</em></div>
+          </div>
+          <span class="relic-callout-arrow">&rarr;</span>
+        </div>
+      `;
+      const inner = relicCalloutElem.querySelector('.relic-callout-inner');
+      if (inner) {
+        inner.onclick = () => selectTitleByKey(shrineBarony, 'barony');
+      }
+    } else {
+      relicCalloutElem.classList.add('hidden');
+      relicCalloutElem.innerHTML = '';
+    }
+  }
+
   // Constituent Titles list in drawer
   renderConstituentTitles(props, tier, baroniesSection, baroniesLabel, baroniesList);
 
@@ -794,6 +958,8 @@ function renderConstituentTitles(props, tier, section, label, listElem) {
       label.textContent = `Constituent Holdings (Baronies)`;
       listElem.innerHTML = props.baronies.map(b => {
         let bName = formatKey(b);
+        let htBadge = '';
+        let auditPill = '';
         const bp = baronyPropsMap.get(b);
         if (bp) {
           if (bp.holding_type === 'unoccupied') {
@@ -801,8 +967,16 @@ function renderConstituentTitles(props, tier, section, label, listElem) {
           } else if (bp.b_tarr || bp.name) {
             bName = bp.b_tarr || bp.name;
           }
+          if (bp.holding_type && bp.holding_type !== 'unoccupied') {
+            htBadge = `<span class="holding-type-tag tag-${bp.holding_type}">${bp.holding_type.charAt(0).toUpperCase()}</span>`;
+          }
+          if (bp.category === 'option_b_hydronym' || bp.category === 'indigenous_restitution' || bp.category === 'option_c_foundation' || bp.b_anachronism) {
+            auditPill = `<span class="pill-audit-indicator" title="Audited under Burden of Proof on Antiquity">⚡</span>`;
+          }
         }
-        return `<li class="barony-pill" data-key="${b}" data-tier="barony" style="cursor:pointer" title="Click to inspect ${bName}">${bName} <small style="opacity:0.6;font-family:var(--font-mono)">(${b})</small></li>`;
+        const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(b);
+        const saintPill = sInfo ? `<span class="saint-shrine-tag" title="Buried Saint Shrine: ${sInfo.saint_name} (${sInfo.shrine_type})">☧ Relic Shrine</span>` : '';
+        return `<li class="barony-pill" data-key="${b}" data-tier="barony" style="cursor:pointer" title="Click to inspect ${bName} (${b})">${htBadge}${bName} ${saintPill}${auditPill} <small style="opacity:0.6;font-family:var(--font-mono)">(${b})</small></li>`;
       }).join('');
       attachPillHandlers(listElem);
     } else {
@@ -819,7 +993,7 @@ function attachPillHandlers(listElem) {
   listElem.querySelectorAll('.barony-pill[data-key]').forEach(pill => {
     pill.addEventListener('click', () => {
       const key = pill.getAttribute('data-key');
-      const targetTier = pill.getAttribute('data-tier');
+      const targetTier = pill.getAttribute('data-tier') || 'barony';
       selectTitleByKey(key, targetTier);
     });
   });
@@ -835,10 +1009,13 @@ async function selectTitleByKey(titleKey, tier) {
     currentTier = 'barony';
     renderActiveLayer();
     await ensureBaroniesLoaded();
+
     const bLayer = baronyLayerMap.get(titleKey);
     if (bLayer) {
       onSelect(bLayer, bLayer.feature, 'barony');
       map.fitBounds(bLayer.getBounds(), { padding: [60, 60] });
+    } else if (baronyPropsMap.has(titleKey)) {
+      openInspector(baronyPropsMap.get(titleKey), 'barony');
     }
     return;
   }
@@ -905,11 +1082,14 @@ function buildSearchIndex() {
     const p = feat.properties;
     const sino = sinosphereCalques ? sinosphereCalques[p.county] : null;
     const hanzi = (sino && sino.hanzi) ? sino.hanzi : (p.c_hanzi || '');
+    const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(p.county);
+    const saintName = sInfo ? sInfo.saint_name : '';
     searchIndex.push({
       key: p.county,
       tarr: p.tarr_hist || p.tarr_direct || p.tarr || '',
       origin: p.c_origin || formatKey(p.county),
       hanzi: hanzi,
+      saint: saintName,
       tier: 'county',
       duchy: p.d_tarr || formatKey(p.duchy),
       kingdom: p.k_tarr || formatKey(p.kingdom),
@@ -971,24 +1151,50 @@ function buildSearchIndex() {
 }
 
 function indexBaroniesForSearch() {
-  if (!baroniesGeojson || !baroniesGeojson.features) return;
   // Prevent duplicate barony indexation
   if (searchIndex.some(item => item.tier === 'barony')) return;
-  for (const feat of baroniesGeojson.features) {
-    const p = feat.properties;
-    if (p.holding_type !== 'unoccupied' && (p.b_tarr || p.name)) {
-      searchIndex.push({
-        key: p.barony,
-        tarr: p.b_tarr || p.name,
-        origin: p.b_origin || p.name,
-        hanzi: '',
-        tier: 'barony',
-        county: p.c_tarr || formatKey(p.county),
-        duchy: p.d_tarr || formatKey(p.duchy),
-        kingdom: p.k_tarr || formatKey(p.kingdom),
-        empire: p.e_tarr || formatKey(p.empire),
-        feature: feat
-      });
+
+  if (baroniesGeojson && baroniesGeojson.features) {
+    for (const feat of baroniesGeojson.features) {
+      const p = feat.properties;
+      if (p.holding_type !== 'unoccupied' && (p.b_tarr || p.name)) {
+        const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(p.barony);
+        const saintName = sInfo ? sInfo.saint_name : '';
+        searchIndex.push({
+          key: p.barony,
+          tarr: p.b_tarr || p.name,
+          origin: p.b_origin || p.name,
+          hanzi: p.b_hanzi || '',
+          saint: saintName,
+          tier: 'barony',
+          county: p.c_tarr || formatKey(p.county),
+          duchy: p.d_tarr || formatKey(p.duchy),
+          kingdom: p.k_tarr || formatKey(p.kingdom),
+          empire: p.e_tarr || formatKey(p.empire),
+          feature: feat
+        });
+      }
+    }
+  } else if (baronyPropsMap.size > 0) {
+    for (const [bk, p] of baronyPropsMap.entries()) {
+      if (p.holding_type !== 'unoccupied' && (p.b_tarr || p.name)) {
+        const cInfo = baronyCountyIndex.get(bk) || {};
+        const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(bk);
+        const saintName = sInfo ? sInfo.saint_name : '';
+        searchIndex.push({
+          key: bk,
+          tarr: p.b_tarr || p.name,
+          origin: p.b_origin || p.name,
+          hanzi: p.b_hanzi || '',
+          saint: saintName,
+          tier: 'barony',
+          county: p.c_tarr || cInfo.c_tarr || '',
+          duchy: p.d_tarr || cInfo.d_tarr || '',
+          kingdom: p.k_tarr || cInfo.k_tarr || '',
+          empire: p.e_tarr || cInfo.e_tarr || '',
+          feature: null
+        });
+      }
     }
   }
 }
@@ -1014,6 +1220,7 @@ function handleSearch(query) {
       item.key.toLowerCase().includes(queryLower) ||
       item.tarr.toLowerCase().includes(queryLower) ||
       (item.origin && item.origin.toLowerCase().includes(queryLower)) ||
+      (item.saint && item.saint.toLowerCase().includes(queryLower)) ||
       (item.hanzi && item.hanzi.includes(queryRaw))
     );
   }).slice(0, 10);
@@ -1032,14 +1239,17 @@ function handleSearch(query) {
       subline = `Kingdom &bull; ${m.empire}`;
     } else if (m.tier === 'duchy') {
       subline = `Duchy &bull; ${m.kingdom} (${m.empire})`;
+    } else if (m.tier === 'barony') {
+      subline = `Holding &bull; ${m.county || ''} &bull; ${m.kingdom || ''}`;
     } else {
       subline = `${m.kingdom} (${m.empire})`;
     }
     const originLabel = m.origin && m.origin !== m.tarr ? ` &bull; <em>${m.origin}</em>` : '';
     const hanziBadge = m.hanzi ? `<span class="result-hanzi">${m.hanzi}</span>` : '';
+    const saintBadge = m.saint ? `<span class="saint-shrine-tag" style="margin-left:4px;font-size:9px">☧ ${m.saint}</span>` : '';
     return `
       <div class="search-item" data-key="${m.key}" data-tier="${m.tier}">
-        <div class="search-item-primary">${m.tarr || m.origin} ${hanziBadge} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
+        <div class="search-item-primary">${m.tarr || m.origin} ${hanziBadge}${saintBadge} <span style="font-size:0.7rem;opacity:0.5;text-transform:uppercase">[${m.tier}]</span></div>
         <div class="search-item-secondary">
           <code>${m.key}</code>${originLabel} &bull; <span>${subline}</span>
         </div>
@@ -1081,6 +1291,8 @@ function setupEventListeners() {
           if (baronyKey && baronyLayerMap.has(baronyKey)) {
             const bLayer = baronyLayerMap.get(baronyKey);
             onSelect(bLayer, bLayer.feature, 'barony');
+          } else if (baronyKey && baronyPropsMap.has(baronyKey)) {
+            openInspector(baronyPropsMap.get(baronyKey), 'barony');
           } else {
             closeInspector();
           }
@@ -1174,7 +1386,8 @@ function initLinguisticsModal() {
     tarraconian: document.getElementById('tab-pane-tarraconian'),
     sinosphere: document.getElementById('tab-pane-sinosphere'),
     lexicon: document.getElementById('tab-pane-lexicon'),
-    insignia: document.getElementById('tab-pane-insignia')
+    insignia: document.getElementById('tab-pane-insignia'),
+    audit: document.getElementById('tab-pane-audit')
   };
 
   tabBtns.forEach(btn => {
@@ -1205,6 +1418,19 @@ function initLinguisticsModal() {
       }
     });
   });
+
+  // Setup Audit Exemplar Click-to-Inspect Handlers
+  const auditPane = document.getElementById('tab-pane-audit');
+  if (auditPane) {
+    auditPane.querySelectorAll('.audit-exemplar-card[data-key]').forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-key');
+        const targetTier = card.getAttribute('data-tier') || 'barony';
+        closeModal();
+        selectTitleByKey(key, targetTier);
+      });
+    });
+  }
 
   // Setup Lexicon Controls
   const searchInput = document.getElementById('lexicon-search-input');
@@ -1347,13 +1573,14 @@ function renderInsigniaGallery() {
   container.innerHTML = showcaseTitles.map(s => {
     const sym = window.TarraconianSymbols.generateSymbol(s.key, { tarr: s.label }, s.tier);
     return `
-      <div class="insignia-gallery-card" data-key="${s.key}" data-tier="${s.tier}" title="Click to inspect ${s.label} on map">
+      <div class="insignia-gallery-card" data-key="${s.key}" data-tier="${s.tier}" title="Click to inspect ${s.label} (${sym.adoptionYearDisplay}) on map">
         <div class="insignia-card-graphic">
           ${sym.svgHtml}
         </div>
         <div class="insignia-card-title">${s.label}</div>
         <div class="insignia-card-meta">
           <span class="symbol-medium-badge">${sym.mediumLabel.split('(')[0].trim()}</span>
+          ${sym.adoptionYearDisplay ? `<span class="symbol-adoption-badge" style="font-size:0.6rem;padding:1px 6px;">${sym.adoptionYearDisplay}</span>` : ''}
           <span class="tier-badge" style="font-size:0.6rem;padding:1px 6px;">${s.tier.toUpperCase()}</span>
         </div>
         <div class="insignia-card-blazon">&ldquo;${sym.blazonTarr}&rdquo;</div>
