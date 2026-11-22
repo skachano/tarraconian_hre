@@ -335,6 +335,212 @@ ATTESTATION_REGISTRY = {
     'c_SUM_dharmasraya': (1050, 'high_medieval_foundation', 'Melayu Grahi Stele', False, 'Post-1025 Melayu upstream seat; resolves to ancient Srivijayan Batanghari River basin'),
     'c_BOR_sukadana': (1365, 'high_medieval_foundation', 'Nagarakretagama', False, 'Late medieval sultanate; resolves to classical Bornean coastal polity Tanjungpura'),
     'c_BOR_martapura': (1630, 'high_medieval_foundation', 'Banjar Chronicle', False, 'Banjar Martapura dates to 1630; resolves to 400 AD Mulavarman Sanskrit Yupa site Muara Kaman (b_BOR_Muara_Kaman)'),
+
+    # =========================================================================
+    # CLASSICAL MEDITERRANEAN, GREECE & BYZANTIUM (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_roma': (-753, 'classical_antiquity', 'Livy / Roman Archaeology', False, 'Traditional foundation 753 BC on the Tiber; capital of the Roman Kingdom, Republic, and Empire'),
+    'c_byzantion': (-657, 'classical_antiquity', 'Herodotus / Thucydides', False, 'Founded 657 BC by Megarian colonists; dedicated as Constantinople 330 AD by Constantine the Great'),
+    'c_alexandria': (-331, 'classical_antiquity', 'Arrian / Plutarch', False, 'Founded 331 BC by Alexander the Great; Ptolemaic and Roman metropolis'),
+    'c_antiocheia': (-300, 'classical_antiquity', 'Strabo', False, 'Founded 300 BC by Seleucus I Nicator on the Orontes; ancient Patriarchate'),
+    'c_jerusalem': (-1000, 'classical_antiquity', 'Amarna Letters / Biblical records', False, 'Attested as Urusalim in 14th c. BC Amarna letters; ancient Judean and Christian religious capital'),
+    'c_attica': (-1400, 'classical_antiquity', 'Mycenaean Archaeology / Classical Greek', False, 'Mycenaean fortress c. 1400 BC; classical Athenian polis on Acropolis'),
+    'c_thessalonika': (-315, 'classical_antiquity', 'Strabo', False, 'Founded 315 BC by Cassander of Macedon; co-capital of the Byzantine Empire'),
+    'c_thessalia': (-500, 'classical_antiquity', 'Classical Greek sources', False, 'Ancient Thessalian capital Larissa on the Pineios'),
+    'c_ionia': (-1000, 'classical_antiquity', 'Strabo / Pausanias', False, 'Archaic Ionian cities Ephesos and Smyrna founded c. 10th c. BC'),
+    'c_korinthos': (-700, 'classical_antiquity', 'Classical Greek sources', False, 'Major archaic and classical Greek polis on the Isthmus of Corinth'),
+    'c_rhodos': (-408, 'classical_antiquity', 'Diodorus Siculus', False, 'Synoecism 408 BC founding Rhodes city'),
+    'c_chandax': (824, 'early_chronicle', 'Byzantine/Arab chronicles', False, 'Arab fortified capital Rabdh al-Khandaq founded 824 AD on Crete'),
+
+    # =========================================================================
+    # ITALY & CISALPINE GAUL (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_aquileia': (-181, 'classical_antiquity', 'Livy', False, 'Aquileia Latin colony founded 181 BC on the Natiso; Roman naval and trading emporium'),
+    'c_brescia': (-225, 'classical_antiquity', 'Polybius', False, 'Cenomani Celtic capital Brixia, Roman municipium 89 BC'),
+    'c_verona': (-49, 'classical_antiquity', 'Roman Inscriptions', False, 'Verona Roman municipium 49 BC; Ostrogothic royal seat under Theodoric'),
+    'c_lombardia': (-222, 'classical_antiquity', 'Polybius', False, 'Insubrian Mediolanum (Milan) captured 222 BC; Western Roman capital 286 AD'),
+    'c_pavia': (-89, 'classical_antiquity', 'Pliny', False, 'Ticinum Roman municipium; Lombard royal capital Pavia 572-774 AD'),
+    'c_cremona': (-218, 'classical_antiquity', 'Polybius / Livy', False, 'Cremona Roman colonia founded 218 BC on the Po'),
+    'c_como': (-196, 'classical_antiquity', 'Livy', False, 'Novum Comum founded 196 BC; Caesar\'s colony 59 BC'),
+    'c_genoa': (-200, 'classical_antiquity', 'Livy', False, 'Genua Roman oppidum and naval base on Ligurian Sea'),
+    'c_turin': (-28, 'classical_antiquity', 'Roman Inscriptions', False, 'Augusta Taurinorum founded 28 BC under Augustus on Po'),
+    'c_pisa': (-180, 'classical_antiquity', 'Livy', False, 'Pisae Roman colonia established 180 BC on Arno'),
+    'c_firenze': (-59, 'classical_antiquity', 'Florus / Tacitus', False, 'Florentia founded 59 BC as Roman veteran colony on Arno'),
+    'c_lucca': (-180, 'classical_antiquity', 'Livy', False, 'Luca Roman colonia founded 180 BC; Lombard ducal capital'),
+    'c_siena': (70, 'classical_antiquity', 'Tacitus (Historiae)', False, 'Saena Julia Roman colony founded c. 70 AD under Augustus'),
+    'c_arezzo': (-300, 'classical_antiquity', 'Livy', False, 'Etruscan Arretium, major Dodecapolis city on Arno'),
+    'c_bologna': (-189, 'classical_antiquity', 'Livy', False, 'Bononia Roman colonia founded 189 BC; Etruscan Felsina'),
+    'c_ravenna': (-89, 'classical_antiquity', 'Strabo', False, 'Classis Roman naval base; Western Roman capital 402 AD; Exarchate 584-751 AD'),
+    'c_napoli': (-470, 'classical_antiquity', 'Strabo / Dionysius of Halicarnassus', False, 'Neapolis founded c. 470 BC by Cumaean colonists'),
+    'c_salerno': (-194, 'classical_antiquity', 'Livy', False, 'Salernum Roman colonia founded 194 BC; Lombard principality 851 AD'),
+    'c_benevento': (-268, 'classical_antiquity', 'Livy', False, 'Beneventum Roman colonia 268 BC; Lombard Duchy of Benevento 571 AD'),
+    'c_bari': (-180, 'classical_antiquity', 'Livy / Horace', False, 'Barium Roman municipium on Adriatic; Byzantine Catapanate seat'),
+    'c_palermo': (-734, 'classical_antiquity', 'Thucydides', False, 'Panormos founded 734 BC by Phoenicians; Arab capital Bal\'harm 831 AD'),
+    'c_siracusa': (-734, 'classical_antiquity', 'Thucydides', False, 'Syracuse founded 734 BC by Corinthian colonists'),
+    'c_messina': (-730, 'classical_antiquity', 'Thucydides', False, 'Zankle / Messana founded 8th c. BC on strait; includes Catania (-729 BC)'),
+    'c_cagliari': (-600, 'classical_antiquity', 'Phoenician inscriptions', False, 'Caralis Phoenician/Punic port founded 7th-6th c. BC'),
+    'c_venezia': (421, 'classical_antiquity', 'Chronicon Altinate', False, 'Traditional foundation 421 AD; Rialto ducal seat 810 AD'),
+
+    # =========================================================================
+    # GAUL, FRANCE, BURGUNDY & LOW COUNTRIES (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_ile_de_france': (-250, 'classical_antiquity', 'Caesar (De Bello Gallico)', False, 'Lutetia Parisiorum oppidum 3rd c. BC (Paris); Merovingian capital 508 AD'),
+    'c_provence': (-600, 'classical_antiquity', 'Thucydides / Aristotle', False, 'Massalia (Marseille) founded 600 BC by Phocaean Greeks; Arles colonia 46 BC'),
+    'c_lyon': (-43, 'classical_antiquity', 'Dio Cassius / Inscriptions', False, 'Lugdunum founded 43 BC by Plancus; capital of Gallia Lugdunensis'),
+    'c_toulouse': (-106, 'classical_antiquity', 'Caesar / Strabo', False, 'Tolosa Volcarum captured 106 BC; Visigothic capital 418-507 AD'),
+    'c_bordeaux': (-56, 'classical_antiquity', 'Strabo / Ausonius', False, 'Burdigala Biturigum capital; major Roman port of Aquitania'),
+    'c_rouen': (-10, 'classical_antiquity', 'Ptolemy', False, 'Rotomagus founded under Augustus on the Seine; archbishopric 344 AD'),
+    'c_reims': (-80, 'classical_antiquity', 'Caesar', False, 'Durocortorum Remorum; baptism of Clovis 496 AD; coronation cathedral'),
+    'c_orleans': (-52, 'classical_antiquity', 'Caesar', False, 'Cenabum Carnutum rebuilt as Aurelianum 3rd c. AD'),
+    'c_tourraine': (-10, 'classical_antiquity', 'Ptolemy / Gregory of Tours', False, 'Caesarodunum Turonum (Tours); Basilica of Saint Martin 471 AD'),
+    'c_dijon': (270, 'classical_antiquity', 'Gregory of Tours', False, 'Divio Roman castrum founded c. 270 AD on the Ouche'),
+    'c_venaissin': (-500, 'classical_antiquity', 'Strabo', False, 'Avenio Cavares Greek/Gallo-Roman emporium (Avignon) and Arles'),
+    'c_poitiers': (-52, 'classical_antiquity', 'Ptolemy', False, 'Lemonum Pictonum; Saint Hilary of Poitiers 350 AD; Battle of Poitiers 732'),
+    'c_rennes': (-52, 'classical_antiquity', 'Ptolemy', False, 'Condate Redonum Roman civitas at Ille-Vilaine confluence'),
+    'c_nantes': (-52, 'classical_antiquity', 'Ptolemy', False, 'Condevicnum / Portus Namnetum on Loire'),
+    'c_amiens': (-52, 'classical_antiquity', 'Caesar', False, 'Samarobriva Ambianorum on Somme; Roman headquarters'),
+    'c_blois': (410, 'classical_antiquity', 'Gregory of Tours', False, 'Blesum attested 5th c. AD on the Loire'),
+    'c_troyes': (-52, 'classical_antiquity', 'Ptolemy / Ammianus Marcellinus', False, 'Augustobona Tricassium on the Seine'),
+    'c_sens': (-52, 'classical_antiquity', 'Caesar', False, 'Agedincum Senonum Roman civitas and metropolitan archdiocese'),
+    'c_chalon': (-52, 'classical_antiquity', 'Caesar', False, 'Cabillonum Aeduorum port on Saone; Merovingian royal capital'),
+    'c_macon': (-52, 'classical_antiquity', 'Caesar', False, 'Matisco Aeduorum river port on Saone'),
+    'c_besancon': (-52, 'classical_antiquity', 'Caesar', False, 'Vesontio Sequanorum oppidum on the Doubs'),
+    'c_viennois': (-121, 'classical_antiquity', 'Strabo / Pliny', False, 'Vienna Allobrogum (Vienne) colonia on Rhone; major early Christian archdiocese'),
+    'c_clermont': (-52, 'classical_antiquity', 'Caesar / Strabo', False, 'Augustonemetum Arvernorum near Gergovia oppidum'),
+    'c_angouleme': (-52, 'classical_antiquity', 'Ausonius', False, 'Iculisma / Ecolisma Roman civitas on Charente'),
+    'c_carcassonne': (-100, 'classical_antiquity', 'Pliny', False, 'Carcaso Volcarum Tectosagum; Visigothic fortress 5th c.'),
+    'c_beziers': (-575, 'classical_antiquity', 'Archaeology / Avienus', False, 'Baeterrae founded c. 575 BC; Roman veteran colonia 36 BC'),
+    'c_chartres': (-52, 'classical_antiquity', 'Caesar', False, 'Autricum Carnutum sacred center of the Druids'),
+    'c_evreux': (-52, 'classical_antiquity', 'Ptolemy', False, 'Mediolanum Aulercorum Eburovicum on Iton'),
+    'c_cambray': (400, 'classical_antiquity', 'Notitia Dignitatum', False, 'Camaracum Roman civitas; Frankish royal seat under Chlodio'),
+    'c_vermandois': (500, 'early_medieval_charter', 'Gregory of Tours', False, 'Lugdunum Clavatum (Laon) fortress 500 AD and Augusta Viromanduorum'),
+    'c_brugge': (630, 'early_medieval_charter', 'Life of St. Amand', False, 'Bruggia wharf 840 AD and Ganda abbey (Ghent) founded 630 AD'),
+    'c_liege': (705, 'early_medieval_charter', 'Life of St. Lambert', False, 'Leodium attested 705 AD at martyrdom of St. Lambert; episcopal see'),
+    'c_yperen': (800, 'archaeology', 'Early Flemish charter', False, 'Early medieval market settlement on the Ieperlee'),
+    'c_boulogne': (40, 'classical_antiquity', 'Suetonius', False, 'Gesoriacum / Bononia Roman naval base for the conquest of Britain'),
+    'c_anjou': (-52, 'classical_antiquity', 'Ptolemy', False, 'Juliomagus Andecavorum (Angers) on Maine'),
+    'c_auxerre': (-52, 'classical_antiquity', 'Ammianus Marcellinus', False, 'Autessiodurum Roman civitas on the Yonne; St. Germanus 418 AD'),
+    'c_bayeux': (-52, 'classical_antiquity', 'Ptolemy', False, 'Augustodurum Civitas Baiocassium on Aure'),
+    'c_avranches': (-52, 'classical_antiquity', 'Ptolemy', False, 'Ingena Civitas Abrincatum; Bishopric 511 AD'),
+    'c_agenais': (-52, 'classical_antiquity', 'Ptolemy', False, 'Aginnum Nitiobrogum (Agen) Roman civitas on Garonne'),
+    'c_albi': (100, 'classical_antiquity', 'Roman Archaeology', False, 'Civitas Albigensium on Tarn; bishopric 5th c.'),
+    'c_quercy': (-52, 'classical_antiquity', 'Ptolemy', False, 'Divona Cadurcorum (Cahors) sacred spring and Roman civitas on Lot'),
+    'c_limousin': (-10, 'classical_antiquity', 'Ptolemy', False, 'Augustoritum Lemovicum (Limoges) founded 10 BC on Vienne'),
+    'c_perigord': (-52, 'classical_antiquity', 'Ptolemy', False, 'Vesunna Petrocoriorum (Périgueux) on Isle'),
+    'c_auvergne': (-52, 'classical_antiquity', 'Caesar', False, 'Arverni tribal territory; Gergovia oppidum and Augustonemetum'),
+    'c_bigorre': (-52, 'classical_antiquity', 'Gregory of Tours', False, 'Turba / Tarba Bigerrionum (Tarbes) on Adour'),
+    'c_labourd': (350, 'classical_antiquity', 'Notitia Dignitatum', False, 'Lapurdum (Bayonne) Roman castrum 4th c. AD'),
+    'c_avalois': (858, 'early_medieval_charter', 'Monastic Annals', False, 'Benedictine Abbey of Sainte-Marie-Madeleine at Vézelay founded 858 AD'),
+    'c_antwerpen': (726, 'early_medieval_charter', 'Life of St. Eligius / St. Willibrord', False, 'Andawerpum attested 726 AD; castrum on Scheldt'),
+    'c_brabant': (891, 'high_medieval_foundation', 'Royal Frankish Annals', False, 'Loven (Leuven) attested 891 AD in Viking wars; ancient Pagus Bracbatensis'),
+
+    # =========================================================================
+    # GERMANY, BAVARIA & ALPS (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_bamberg': (800, 'archaeology', 'Babenberg excavations', False, 'Castrum Babenberch attested 902 AD; pre-867 8th-c. settlement on Regnitz'),
+    'c_colmar': (823, 'carolingian_charter', 'Charter of Louis the Pious', False, 'Columbarium fiscal domain attested 823 AD'),
+    'c_breisgau': (750, 'early_medieval_charter', 'Lorsch Codex', False, 'Breisgau Carolingian pagus attested 750 AD; Roman Tarodunum'),
+    'c_ansbach': (748, 'early_medieval_charter', 'Monastic Annals', False, 'Onoltesbach Benedictine monastery founded 748 AD by Gumbert'),
+    'c_eichstadt': (741, 'early_medieval_charter', 'Life of St. Willibald', False, 'Eichstätt diocese founded 741 AD by Saint Boniface and Willibald'),
+    'c_brixen': (800, 'early_medieval_charter', 'Carolingian Inscriptions', False, 'Prihsna attested pre-867; Roman Mansio Sebatum'),
+    'c_frontenhausen': (788, 'early_medieval_charter', 'Breves Notitiae', False, 'Frantenhusa attested 788 AD in Salzburg codex'),
+    'c_kempten': (15, 'classical_antiquity', 'Strabo', False, 'Cambodunum Roman provincial capital founded 15 BC'),
+    'c_grisons': (451, 'classical_antiquity', 'Acts of the Council of Chalcedon', False, 'Curia Rhaetorum (Chur), Roman provincial capital and bishopric attested 451 AD'),
+    'c_bern': (565, 'early_medieval_charter', 'Gregory of Tours', False, 'Lousonna Roman vicus / Lausanne see 565 AD and Aventicum'),
+
+    # =========================================================================
+    # IBERIA (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_cordoba': (-169, 'classical_antiquity', 'Polybius / Strabo', False, 'Roman Corduba founded 169 BC by Claudius Marcellus; Umayyad capital'),
+    'c_sevilla': (-700, 'classical_antiquity', 'Phoenician / Roman sources', False, 'Hispalis founded c. 8th-7th c. BC on Guadalquivir'),
+    'c_toledo': (-192, 'classical_antiquity', 'Livy (Ab Urbe Condita)', False, 'Toletum captured 192 BC by Marcus Fulvius Nobilior; Visigothic capital'),
+    'c_granada': (-500, 'classical_antiquity', 'Iberian / Roman sources', False, 'Iberian Iliberri / Roman Florentia Iliberritana; Elvira bishopric'),
+    'c_zaragoza': (-24, 'classical_antiquity', 'Roman Military Records', False, 'Caesaraugusta founded 24 BC under Emperor Augustus on Ebro'),
+    'c_valencia': (-138, 'classical_antiquity', 'Livy', False, 'Valentia Edetanorum founded 138 BC by Decimus Junius Brutus'),
+    'c_barcelona': (-15, 'classical_antiquity', 'Roman Inscriptions', False, 'Colonia Faventia Julia Augusta Pia Barcino founded 15 BC'),
+    'c_tarragona': (-218, 'classical_antiquity', 'Polybius / Pliny', False, 'Tarraco founded 218 BC by Scipio Calvus; capital of Hispania Tarraconensis'),
+    'c_lisboa': (-205, 'classical_antiquity', 'Roman / Strabo', False, 'Roman Olisipo Felicitas Julia on Tagus estuary'),
+    'c_porto': (400, 'classical_antiquity', 'Suebic / Roman sources', False, 'Portus Cale on the Douro; origin of name Portugal'),
+    'c_coimbra': (569, 'early_medieval_charter', 'Parochiale Suevicum', False, 'Aeminium Roman civitas, bishopric transferred from Conimbriga 569 AD'),
+    'c_merida': (-25, 'classical_antiquity', 'Roman Inscriptions', False, 'Emerita Augusta founded 25 BC by Augustus as capital of Lusitania'),
+    'c_badajoz': (875, 'high_medieval_foundation', 'Ibn Hayyan', False, 'Founded 875 AD by Ibn Marwan; pre-867 center is Roman Merida'),
+    'c_leon': (68, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Legio VII Gemina legionary fortress established 68 AD'),
+    'c_santiago': (820, 'early_chronicle', 'Charter of Alfonso II of Asturias', False, 'Tomb discovered c. 820 AD; basilica and bishopric founded by Alfonso II'),
+    'c_burgos': (884, 'high_medieval_foundation', 'Chronicle of Alfonso III', False, 'Founded 884 AD by Count Diego Rodriguez Porcelos'),
+    'c_valladolid': (1072, 'high_medieval_foundation', 'Charter of Alfonso VI', False, 'Lordship granted 1072 to Count Pedro Ansurez; pre-867 center Simancas (714 AD)'),
+    'c_madrid': (860, 'early_chronicle', 'Ibn Hayyan / al-Idrisi', False, 'Mayrit fortress founded c. 860 AD by Emir Muhammad I of Cordoba'),
+    'c_algeciras': (711, 'early_chronicle', 'Ibn Abd al-Hakam', False, 'Al-Jazira al-Khadra founded 711 AD by Tariq ibn Ziyad; Roman Iulia Traducta'),
+    'c_almeria': (800, 'archaeology', 'Andalusian Archaeology', False, 'Ancient Portus Magnus; Andalusian watchtower Al-Mariyya'),
+    'c_cadiz': (-1104, 'classical_antiquity', 'Velleius Paterculus / Strabo', False, 'Phoenician Gadir founded 1104 BC; oldest continuously inhabited city in Western Europe'),
+    'c_cuenca': (784, 'early_chronicle', 'Andalusian Chronicles', False, 'Kunka fortress built 784 AD by Banu Dhi-l-Nun; pre-867 Celtiberian Conca'),
+    'c_amaya': (574, 'early_chronicle', 'John of Biclaro (Chronicle)', False, 'Cantabrian mountain fortress Amaya captured 574 AD by Visigothic King Liuvigild'),
+    'c_cuellar': (-100, 'classical_antiquity', 'Livy', False, 'Ancient Celtiberian Colenda; Roman Segovia aqueduct 1st c. AD'),
+
+    # =========================================================================
+    # BRITISH ISLES & SCANDINAVIA (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_middlesex': (47, 'classical_antiquity', 'Tacitus (Annales)', False, 'Londinium founded c. 47 AD under Emperor Claudius on the Thames'),
+    'c_lothian': (638, 'early_chronicle', 'Annals of Ulster', False, 'Din Eidyn (Edinburgh) besieged 638 AD by Angles of Northumbria'),
+    'c_dublin': (841, 'early_chronicle', 'Annals of Ulster', False, 'Norse longphort Dyflin founded 841 AD on the Liffey'),
+    'c_derby': (871, 'high_medieval_foundation', 'Anglo-Saxon Chronicle', False, 'Norse Djúra-bý / pre-867 Saxon Northworthy Roman Derventio 70 AD'),
+    'c_durham': (995, 'high_medieval_foundation', 'Historia Dunelmensis Ecclesiae', False, 'Founded 995 AD for body of St. Cuthbert; pre-867 Roman Concangis / Chester-le-Street'),
+    'c_oxfordshire': (912, 'high_medieval_foundation', 'Anglo-Saxon Chronicle', True, 'First attested 912 AD on the Isis/Thames; pre-867 monastery of St. Frideswide 727 AD'),
+    'c_cambridgeshire': (730, 'classical_antiquity', 'Bede (Historia Ecclesiastica)', False, 'Roman Duroliponte / Grantebrycge attested by Bede c. 730 AD'),
+    'c_gloucestershire': (48, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Glevum Roman colonia founded 48 AD on the Severn'),
+    'c_devon': (55, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Isca Dumnoniorum (Exeter) Roman legionary fortress founded c. 55 AD'),
+    'c_leicestershire': (47, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Ratae Corieltauvorum (Leicester) Roman civitas founded c. 47 AD'),
+    'c_desmond': (606, 'early_medieval_charter', 'Life of St. Finbarr', False, 'Monastic settlement Corcach Mór (Cork) founded 606 AD by St. Finbarr'),
+    'c_oriel': (445, 'early_medieval_charter', 'Annals of Ulster', False, 'Armagh founded 445 AD by Saint Patrick as primary ecclesiastical see of Ireland'),
+    'c_cheshire': (79, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Deva Victrix (Chester) legionary fortress founded 79 AD on Dee'),
+    'c_cumberland': (72, 'classical_antiquity', 'Roman Military Inscriptions', False, 'Luguvalium (Carlisle) Roman fort founded 72 AD on Hadrian\'s Wall'),
+    'c_dorset': (705, 'early_medieval_charter', 'Bede / Saxon Charters', False, 'Sherborne episcopal see founded 705 AD; Wareham Saxon burh'),
+    'c_berkshire': (871, 'early_chronicle', 'Asser (Life of King Alfred)', False, 'Reading attested 871 AD as royal Saxon estate; Battle of Reading'),
+    'c_bedford': (571, 'early_chronicle', 'Anglo-Saxon Chronicle', False, 'Bedcanford attested 571 AD; King Offa buried at Bedford 796 AD'),
+    'c_buckinghamshire': (600, 'early_chronicle', 'Tribal Hidage', False, 'Buccingas settlement attested 7th c. AD on the Great Ouse'),
+    'c_cornwall': (800, 'early_chronicle', 'Annales Cambriae', False, 'Ancient Brythonic kingdom of Kernow / Cornwall'),
+    'c_ribe': (704, 'early_chronicle', 'Dendrochronology / Life of St. Anskar', False, 'Oldest market town in Scandinavia founded c. 704 AD on the Ribe Å'),
+    'c_slesvig': (770, 'early_chronicle', 'Royal Frankish Annals', False, 'Major Viking trading emporium Haithabu (Hedeby) founded c. 770 AD at the Danevirke'),
+    'c_skara': (988, 'high_medieval_foundation', 'Adam of Bremen', False, 'Bishopric c. 1014; pre-867 Geatish Ting center'),
+    'c_upland': (300, 'classical_antiquity', 'Ynglinga saga / Tacitus', False, 'Old Uppsala sacred pagan temple and royal mound center of the Svear'),
+    'c_sjaelland': (980, 'high_medieval_foundation', 'Adam of Bremen / Saxo Grammaticus', False, 'Roskilde founded c. 980 AD by Harald Bluetooth; pre-867 royal seat Lejre'),
+    'c_skane': (990, 'high_medieval_foundation', 'Archaeology / Adam of Bremen', False, 'Lund founded c. 990 AD by Sweyn Forkbeard; pre-867 Uppåkra Iron Age center (100 BC - 950 AD)'),
+    'c_vingulmork': (1048, 'high_medieval_foundation', 'Snorri Sturluson', False, 'Oslo founded c. 1048 AD by Harald Hardrada; pre-867 Viken assembly'),
+
+    # =========================================================================
+    # MIDDLE EAST, NORTH AFRICA, CENTRAL ASIA & INDIA (TIER 1 <= 867 AD)
+    # =========================================================================
+    'c_damascus': (-2500, 'classical_antiquity', 'Amarna Letters / Ebla tablets', False, 'Continuously inhabited since 3rd millennium BC; Umayyad capital'),
+    'c_aleppo': (-2500, 'classical_antiquity', 'Ebla tablets', False, 'Attested as Halab in 3rd millennium BC Ebla tablets'),
+    'c_homs': (50, 'classical_antiquity', 'Strabo / Pliny', False, 'Classical Emesa, seat of the Emesene dynasty'),
+    'c_baghdad': (762, 'early_chronicle', 'Al-Tabari', False, 'Founded 762 AD by Abbasid Caliph al-Mansur'),
+    'c_kufa': (638, 'early_chronicle', 'Al-Baladhuri', False, 'Arab garrison city founded 638 AD by Sa\'d ibn Abi Waqqas'),
+    'c_basra': (636, 'early_chronicle', 'Al-Baladhuri', False, 'Founded 636 AD by Utbah ibn Ghazwan'),
+    'c_samarra': (836, 'early_chronicle', 'Al-Ya\'qubi', False, 'Abbasid caliphal capital founded 836 AD by Caliph al-Mu\'tasim'),
+    'c_mosul': (641, 'early_chronicle', 'Al-Baladhuri', False, 'Ancient Nineveh bridgehead / fortified city founded 641 AD'),
+    'c_cairo': (641, 'early_chronicle', 'Al-Kindi', False, 'Fustat founded 641 AD by Amr ibn al-As; Babylon Fortress 1st c. AD'),
+    'c_tunis': (-814, 'classical_antiquity', 'Polybius / Livy', False, 'Ancient Tunes near Carthage; developed 698 AD by Hasan ibn al-Nu\'man'),
+    'c_tripoli': (-700, 'classical_antiquity', 'Phoenician/Roman sources', False, 'Phoenician Oea founded 7th c. BC'),
+    'c_constantine': (-200, 'classical_antiquity', 'Polybius / Appian', False, 'Numidian royal capital Cirta; rebuilt 313 AD by Constantine'),
+    'c_algier': (-300, 'classical_antiquity', 'Phoenician / Roman sources', False, 'Phoenician/Roman Icosium; rebuilt 944 AD by Bologhine ibn Ziri'),
+    'c_marrakesh': (1070, 'high_medieval_foundation', 'Ibn Idhari', False, 'Founded 1070 by Abu Bakr ibn Umar / Yusuf ibn Tashfin; pre-867 center Aghmat'),
+    'c_fes': (789, 'early_chronicle', 'Ibn Abi Zar (Rawd al-Qirtas)', False, 'Founded 789 AD by Idris I on Jawhar river'),
+    'c_isfahan': (-600, 'classical_antiquity', 'Strabo / Achaemenid inscriptions', False, 'Ancient Aspadana / Spahan on Zayandeh River'),
+    'c_hamadan': (-1100, 'classical_antiquity', 'Tiglath-Pileser I / Herodotus', False, 'Ecbatana, capital of the Median Empire (Hagmatana)'),
+    'c_shiraz': (-2000, 'classical_antiquity', 'Elamite clay tablets', False, 'Attested as Tiraziš in Elamite clay tablets; Umayyad administrative city 693 AD'),
+    'c_rayy': (-3000, 'classical_antiquity', 'Avesta / Behistun Inscription', False, 'Ragha attested in Vendidad; Arsacid spring capital'),
+    'c_nishapur': (240, 'classical_antiquity', 'Sasanian Inscriptions', False, 'New-Shapur founded c. 240 AD by Shapur I'),
+    'c_merv': (-1200, 'classical_antiquity', 'Avesta (Mouru)', False, 'Ancient oasis metropolis Mouru / Margiana Antiochia'),
+    'c_bukhara': (-500, 'classical_antiquity', 'Avesta / Narshakhi', False, 'Ancient Sogdian oasis metropolis on the Zeravshan'),
+    'c_samarkand': (-700, 'classical_antiquity', 'Arrian / Quintus Curtius', False, 'Ancient Sogdian capital Afrasiab / Marakanda captured 329 BC by Alexander'),
+    'c_balkh': (-1500, 'classical_antiquity', 'Rigveda / Avesta (Bakhdi)', False, 'Bactra, Mother of Cities on the Balkh River'),
+    'c_kabul': (-1500, 'classical_antiquity', 'Rigveda (Kubha) / Ptolemy', False, 'Ancient settlement on Kabul River; Kabul Shahi capital'),
+    'c_lahur': (630, 'classical_antiquity', 'Xuanzang', False, 'Ancient city Lavapuri (Lahore) attested by Xuanzang 630 AD on the Ravi'),
+    'c_purushapura': (127, 'classical_antiquity', 'Rabatak Inscription / Kanishka', False, 'Kushan imperial capital Purushapura (Peshawar) of Emperor Kanishka I'),
+    'c_sakala': (-150, 'classical_antiquity', 'Milinda Panha / Strabo', False, 'Yavana Indo-Greek royal capital of King Menander I (Milinda)'),
+    'c_multan': (500, 'classical_antiquity', 'Bhavishya Purana / Xuanzang', False, 'Ancient Sun Temple of Multan (Mulasthana) on the Chenab'),
+    'c_udabhanda': (850, 'early_chronicle', 'Al-Biruni / Rajatarangini', False, 'Ancient Hindu Shahi winter capital Udabhandapura (Hund) on the Indus'),
+    'c_bamian': (500, 'archaeology', 'Xuanzang / Faxian', False, 'Ancient Buddhist monastery and monumental cliff Buddha sanctuary on Silk Road'),
+    'c_ghazna': (644, 'early_chronicle', 'Xuanzang', False, 'Ancient town Gazna / Ghazni attested 7th c. AD on trade route to India'),
 }
 
 # Ancient Kingdoms where unflagged titles have classical Roman / Hellenistic / Carolingian continuity
@@ -372,8 +578,13 @@ CLASSICAL_OR_ANCIENT_KINGDOMS = {
 def resolve_county_attestation(county_key: str, county_data: dict, md_record: dict = None):
     """
     Resolves the real-world historical attestation date, evidence type, and primary source.
-    Inverts the default: positive pre-867 proof (<= 867) is required for Tier 1.
-    Post-867 foundations or unverified titles default to Tier 2 (if hydronym/tribal) or Tier 3.
+    Strictly enforces the Burden of Proof on Antiquity:
+      - Attested historical foundation dates (or chronicle attestation years) <= 867 AD
+        serve as the SOLE proof for Tier 1.
+      - Titles derived from hydronymic, oronymic, or geographic roots without pre-867
+        settlement proof default to Tier 2 (yr = None, is_geo = True).
+      - All other post-867 foundations or unverified titles default to Tier 3 under
+        the Burden of Proof principle.
     """
     # 1. Explicit Registry Lookup
     if county_key in ATTESTATION_REGISTRY:
@@ -383,29 +594,31 @@ def resolve_county_attestation(county_key: str, county_data: dict, md_record: di
     # 2. Markdown Reference Check from Previous Audits
     if md_record:
         prev_reason = md_record.get('previous_reason', '')
-        m_year = re.search(r"\b(1[0-9]{3}|[9][0-9]{2})\b", prev_reason)
-        if m_year:
+        # Check for BC/BCE foundation dates
+        m_bc = re.search(r"\b([0-9]{1,4})\s*(?:BC|BCE)\b", prev_reason, re.I)
+        m_year = re.search(r"\b(1[0-9]{3}|[1-9][0-9]{2})\b", prev_reason)
+        is_geo_stem = bool(re.search(r"(river|hydronym|lake|mountain|tribe)", prev_reason, re.I))
+        if m_bc:
+            f_year = -int(m_bc.group(1))
+            return f_year, 'classical_antiquity', 'Previous Chancellery Audit (anachronistic_titles_1059.md)', is_geo_stem, prev_reason
+        elif m_year:
             f_year = int(m_year.group(1))
-            if f_year > 867:
-                is_geo_stem = bool(re.search(r"(river|hydronym|lake|mountain|tribe)", prev_reason, re.I))
+            if f_year <= 867:
+                return f_year, 'early_foundation', 'Previous Chancellery Audit (anachronistic_titles_1059.md)', is_geo_stem, prev_reason
+            else:
                 return f_year, 'high_medieval_foundation', 'Previous Chancellery Audit (anachronistic_titles_1059.md)', is_geo_stem, prev_reason
         elif md_record.get('is_flagged_in_previous_audit'):
-            return 1100, 'high_medieval_foundation', 'Previous Chancellery Audit (anachronistic_titles_1059.md)', False, prev_reason or 'Flagged in previous audit'
+            return 1100, 'high_medieval_foundation', 'Previous Chancellery Audit (anachronistic_titles_1059.md)', is_geo_stem, prev_reason or 'Flagged in previous audit'
 
     name = county_data.get('name') or ''
-    kd = county_data.get('de_jure_kingdom') or ''
 
     # 3. Ancient Hydronym / Oronym / Geographic Feature Check
-    if re.search(r"(gau|gebirge|tal|wald|fluv|am-|an-der-)", county_key + " " + name, re.I):
-        return -500, 'ancient_hydronym', 'Classical Geography / Regional Toponym', True, 'Derived from ancient river, mountain, or topographic regional stem'
+    # Classified strictly as Tier 2 (substrates with pre-HRE morphology), NOT Tier 1 (attested historical settlements)
+    if re.search(r"(gau|gebirge|tal|wald|fluv|am-|an-der-|see|meer|joki|järvi|vesi|salmi|saari|niemi|lahti|koski|suo|vuori|harju|selkä|ostrov|gora|blato|jazero)", county_key + " " + name, re.I):
+        return None, 'geographic_feature', 'Classical Geography / Regional Toponym', True, 'Derived from river, mountain, lake, or topographic regional stem'
 
-    # 4. Classical Roman / Hellenistic / Carolingian / Ancient Civilizational Civitas Continuity
-    # Valid only in recognized ancient provincial kingdoms and excluding late castle/colonial stems
-    if kd in CLASSICAL_OR_ANCIENT_KINGDOMS:
-        if not re.search(r"(burg|stein|grad|sk|novo|aleksandr|stanitsa|gorod)$", county_key):
-            return 100, 'classical_civitas', 'Classical Roman / Hellenistic / Ancient Provincial Continuity', False, 'Ancient Mediterranean / European / Asian civitas, commandery, or provincial division with documented pre-867 continuity'
-
-    # 5. Default Fallback under Burden of Proof on Antiquity
+    # 4. Default Fallback under Burden of Proof on Antiquity
+    # Without documented foundation date <= 867 AD, all unverified settlements default to Tier 3
     return None, 'unverified_default', 'None', False, 'Lacks verified historical attestation prior to 867 AD; defaulted to Tier 3 under Burden of Proof on Antiquity'
 
 
