@@ -204,6 +204,22 @@ All resolved titles obey the phonotactic constraints verified by [scripts/audit_
 3. **Auslautverhärtung:** Word-final devoicing is mandatory: `-burch` (not `-burg`), `-berch` (not `-berg`), `-bat` (not `-bad`), `-stat` (not `-stadt`), `-vurt` (not `-furt`), `-tsch` (not `-dsch`).
 4. **Digraph Prohibitions:** Modern Pinyin `zh` $\rightarrow$ `dsch`; bare `q-` $\rightarrow$ `tsch`; bare `sh` $\rightarrow$ `sch`; Korean modern revised romanization `eo` $\rightarrow$ `ô`.
 
+### 2.7 Phase 2–4 Comprehensive Re-Screening under the Burden of Proof on Antiquity Principle
+To eliminate lingering circularity and spurious anachronisms (such as `c_dorohychyn` / `b_dorohychyn` previously resolving to itself), the Chancellery executed a comprehensive three-phase re-audit across all 2,644 Imperial counties:
+1. **Phase 2 (Burden of Proof on Antiquity Enforced):**
+   - Eliminated blanket antiquity assumptions (Check 4 in [scripts/historical_attestation_db.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/historical_attestation_db.py)). Positive pre-867 foundation or chronicle attestation dates ($\le 867$ AD) are strictly enforced as the sole proof of antiquity.
+   - Disentangled geographic and hydronymic stems (`gau|gebirge|tal|wald|see|meer...`), placing them in **Tier 2** (substrates requiring pre-HRE morphology restoration) rather than Tier 1.
+   - Unverified titles default to **Tier 3**.
+   - Result: 208 counties (7.9%) verified as **Tier 1**; 68 counties (2.6%) classified as **Tier 2**; 2,368 counties (89.6%) classified as **Tier 3**; total **2,436 flagged Imperial titles** (92.1%).
+2. **Phase 3 (Toponym-First Screening & Strategy Matrix):**
+   - Evaluated all 2,436 titles against Option A (attested pre-867 sub-barony oppidum/castrum), Option B (indigenous hydronym/oronym basin), and Option C (save ruler attribution).
+   - Recommended distributions: **408 Option A titles (16.7%)** and **2,028 Option B titles (83.3%)**.
+   - Coupled 35 cadet branches of Dynasty 1582 (*House Kestenholz*) and 12 emergent dynamic cultures to resolved pre-867 seats under the Toponym-First Principle.
+3. **Phase 4 (Final Resolution & Dataset Synchronization):**
+   - Finalized official Tarraconian Chancellery titles and adjectives obeying Rhine-Moselle Franconian phonology.
+   - Refined 187 county-level historical name resolutions across [data/ck3_counties.geojson](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_counties.geojson), [data/ck3_title_tree.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_title_tree.json), [data/ck3_baronies.geojson](file:///home/siarzhuk/code/personal/tarraconian_hre/data/ck3_baronies.geojson), and [data/barony_resolutions.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/barony_resolutions.json).
+   - Mirrored all compiled assets to `docs/data/` via [scripts/build_webapp.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/build_webapp.py).
+
 ---
 
 ## 3. Option A Intra-County Collision Disambiguation Matrix
@@ -220,7 +236,7 @@ The Chancellery enforces the **Disambiguation Rule**:
 | County Key | Primary Seat Barony | Sub-Barony Target (Option A) | Option A Toponym | Capital Barony Disambiguation | Historical Rationale & Disambiguation Formula |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `c_lviv` | `b_lviv` | `b_zvenyhorod` | **Swenigorot** | **Lemberch** *(Poltwaburch)* | Zvenyhorod was the ancient 10th-c. princely gord; Lviv founded 1256 on the Poltva by Prince Lev. Held in save by House Luki. |
-| `c_zagreb` | `b_zagreb` | `b_sisak` | **Sissek** | **Sagreb** *(Grâdetz)* | Sisak was the Roman provincial capital Siscia; Zagreb diocesan hillfort (Gradec/Kaptol) founded 1094. |
+| `c_zagreb` | `b_zagreb` | `b_sisak` | **Sissech** | **Sagreb** *(Grâdetz)* | Sisak was the Roman provincial capital Siscia; Zagreb diocesan hillfort (Gradec/Kaptol) founded 1094. |
 | `c_finland` | `b_turku` | `b_rikala` | **Rîkale** | **Abô** *(Turku)* | Rikala was the Iron Age trade center and hillfort; Turku (Swedish Åbo) established c. 1229 at Koroinen. |
 | `c_nyland` | `b_porvoo` | `b_espoo` | **Espô** | **Borchâ** *(Porwô)* | Espoo was the ancient coastal settlement; Porvoo (Borgå) founded as a 13th-century Swedish river stronghold. |
 | `c_satakunta` | `b_ulvila` | `b_telja` | **Teljê** | **Wûlvildô** | Teljä was the ancient Iron Age trading place; Ulvila founded c. 1365 on the Kokemäenjoki. |
@@ -432,4 +448,4 @@ The resolved barony dataset is fully integrated across the entire Tarraconian At
 - [x] **100% Sinosphere CJK Coverage:** All CJK characters across the Sinosphere map are mapped in [scripts/sino_barony_kanji_ext.py](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/sino_barony_kanji_ext.py) and [data/sinosphere_kanji_tarraconian.json](file:///home/siarzhuk/code/personal/tarraconian_hre/data/sinosphere_kanji_tarraconian.json).
 - [x] **Intra-County Collision Disambiguation:** 68 potential duplicate collisions disambiguated between sub-baronies and capital seats.
 - [x] **Secondary Variant Mapping:** All 442 `*(or **X**)*` variants from [tarraconian_titles_1059.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_titles_1059.md) correctly paired.
-- [x] **Automated Regression Suite Passing:** `pytest tests/test_data_integrity.py` passes 29/29 tests with 100% compliance.
+- [x] **Automated Regression Suite Passing:** `pytest tests/test_data_integrity.py` passes 52/52 tests with 100% compliance.

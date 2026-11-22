@@ -197,12 +197,23 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     # 7. Affricates
     # Initial ts -> z
     s = re.sub(r"\bts(?!ch)", "z", s, flags=re.I)
-    # Medial/final ts -> tz
-    s = re.sub(r"(?<=[a-zA-Z])ts(?!ch)", "tz", s, flags=re.I)
+    # Medial/final ts -> tz (only after vowels, preventing corruption of -st- clusters like -stat, -stûr, -sachsen)
+    s = re.sub(r"(?<=[aeiouyâêîôûäöü])ts(?!ch)", "tz", s, flags=re.I)
     
-    # Capitalize first letter of compound components
+    # Strip any broken trailing punctuation
+    s = s.rstrip(" (;,[{")
+    
+    # Capitalize first letter of compound components while keeping grammatical prepositions lowercase
     if "-" in s:
-        s = "-".join(p[:1].upper() + p[1:] if p else "" for p in s.split("-"))
+        parts = s.split("-")
+        LOWERCASE_PARTICLES = {"in", "an", "der", "dem", "den", "am", "van", "vom", "von", "ende", "und", "el", "es", "er", "al", "de", "del", "du", "hügel"}
+        res_parts = []
+        for idx, p in enumerate(parts):
+            if idx > 0 and p.lower() in LOWERCASE_PARTICLES:
+                res_parts.append(p.lower())
+            else:
+                res_parts.append(p[:1].upper() + p[1:] if p else "")
+        s = "-".join(res_parts)
     else:
         s = s[:1].upper() + s[1:] if s else ""
         

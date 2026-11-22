@@ -59,6 +59,9 @@
   // 2. Vector Charge Library (24 Path Builders)
   // =========================================================================
   const CHARGES = {
+    // Uncharged Shield
+    none: () => '',
+
     // Double-headed Imperial Eagle (Rome / HRE)
     eagle_double: (color = PALETTE.sable, scale = 1, cx = 110, cy = 110, accent = PALETTE.sable) => `
       <g transform="translate(${cx}, ${cy}) scale(${scale * 0.95}) translate(-100, -105)" fill="${color}" stroke="${accent}" stroke-width="0.35">
@@ -814,6 +817,7 @@
   };
 
   const CHARGE_BLAZONS = {
+    none: { tarrNoun: '', tarrPlural: '', enNoun: 'plain', enPlural: 'plain', enArticle: '' },
     eagle_double: { tarrNoun: 'doppelter Adler', enNoun: 'double-headed eagle', enArticle: 'a' },
     alerion: { tarrNoun: 'Alerion', enNoun: 'alerion', enArticle: 'an' },
     castrum: { tarrNoun: 'Burch mit drîn Türmen', enNoun: 'triple-towered castrum', enArticle: 'a' },
@@ -914,6 +918,7 @@
 
   function formatBlazon(fieldKey, chargeKey, chargeColorHex, ordinaryKey = 'solid', chargeCount = 1, ordColorHex = null) {
     const fieldTinc = TINCTURES[fieldKey] || TINCTURES.gules;
+    const isUncharged = chargeCount === 0 || chargeKey === 'none' || !chargeKey;
     let chargeTincKey = 'argent';
     if (typeof chargeColorHex === 'string' && TINCTURES[chargeColorHex]) chargeTincKey = chargeColorHex;
     else if (chargeColorHex === PALETTE.or) chargeTincKey = 'or';
@@ -933,6 +938,76 @@
     else if (ordColorHex === PALETTE.vert) ordTincKey = 'vert';
     else if (ordColorHex === PALETTE.purpure) ordTincKey = 'purpure';
     const ordTinc = TINCTURES[ordTincKey] || TINCTURES.argent;
+
+    if (isUncharged) {
+      let blazonTarr = '';
+      let blazonEn = '';
+      if (!ordinaryKey || ordinaryKey === 'solid') {
+        blazonTarr = `In ${fieldTinc.tarr}`;
+        blazonEn = `${fieldTinc.en}`;
+      } else if (ordinaryKey === 'per_pale') {
+        blazonTarr = `Gespalten van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Party per pale ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'per_fess') {
+        blazonTarr = `Geteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Party per fess ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'per_bend') {
+        blazonTarr = `Schräggeteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Party per bend ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'per_bend_sinister') {
+        blazonTarr = `Links-schräggeteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Party per bend sinister ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'quarterly') {
+        blazonTarr = `Geviert van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Quarterly ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'per_saltire') {
+        blazonTarr = `Schräggeviert van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Party per saltire ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'fess') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Balken`;
+        blazonEn = `${fieldTinc.en}, a fess ${ordTinc.en}`;
+      } else if (ordinaryKey === 'pale') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Pfahl`;
+        blazonEn = `${fieldTinc.en}, a pale ${ordTinc.en}`;
+      } else if (ordinaryKey === 'bend') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schrägbalken`;
+        blazonEn = `${fieldTinc.en}, a bend ${ordTinc.en}`;
+      } else if (ordinaryKey === 'bend_sinister') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schräglinksbalken`;
+        blazonEn = `${fieldTinc.en}, a bend sinister ${ordTinc.en}`;
+      } else if (ordinaryKey === 'chevron') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Sparren`;
+        blazonEn = `${fieldTinc.en}, a chevron ${ordTinc.en}`;
+      } else if (ordinaryKey === 'cross') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Krütz`;
+        blazonEn = `${fieldTinc.en}, a cross ${ordTinc.en}`;
+      } else if (ordinaryKey === 'saltire') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Andreaskrütz`;
+        blazonEn = `${fieldTinc.en}, a saltire ${ordTinc.en}`;
+      } else if (ordinaryKey === 'chief') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj} Schildhoubet`;
+        blazonEn = `${fieldTinc.en}, a chief ${ordTinc.en}`;
+      } else if (ordinaryKey === 'bordure') {
+        blazonTarr = `In ${fieldTinc.tarr} ein ${ordTinc.tarrAdj.endsWith('er') ? ordTinc.tarrAdj.slice(0, -2) + 'er' : ordTinc.tarrAdj + 'er'} Bort`;
+        blazonEn = `${fieldTinc.en}, a bordure ${ordTinc.en}`;
+      } else if (ordinaryKey === 'barry') {
+        blazonTarr = `Sechsmâl geteilt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Barry of six ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'chequy') {
+        blazonTarr = `Geschacht van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Chequy ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'pales') {
+        blazonTarr = `Gepfählt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Paly ${fieldTinc.en} and ${ordTinc.en}`;
+      } else if (ordinaryKey === 'pales_undy') {
+        blazonTarr = `Wellengepfählt van ${fieldTinc.tarr} und ${ordTinc.tarr}`;
+        blazonEn = `Paly undy ${fieldTinc.en} and ${ordTinc.en}`;
+      } else {
+        blazonTarr = `In ${fieldTinc.tarr}`;
+        blazonEn = `${fieldTinc.en}`;
+      }
+      return { blazonTarr, blazonEn };
+    }
 
     const chargeMeta = CHARGE_BLAZONS[chargeKey] || {
       tarrNoun: 'Emblem',
@@ -1030,6 +1105,16 @@
     } else if (ordinaryKey === 'chequy') {
       blazonTarr = `Geschacht van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
       blazonEn = `Chequy ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'pales') {
+      blazonTarr = `Gepfählt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Paly ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else if (ordinaryKey === 'pales_undy') {
+      blazonTarr = `Wellengepfählt van ${fieldTinc.tarr} und ${ordTinc.tarr}, belegt mit ${chargeTextTarr}`;
+      blazonEn = `Paly undy ${fieldTinc.en} and ${ordTinc.en}, ${chargeTextEn}`;
+    } else {
+      blazonTarr = `In ${fieldTinc.tarr} ${chargeTextTarr}`;
+      blazonEn = `${fieldTinc.en}, ${chargeTextEn}`;
+    }
     } else {
       blazonTarr = `In ${fieldTinc.tarr} ${chargeTextTarr}`;
       blazonEn = `${fieldTinc.en}, ${chargeTextEn}`;

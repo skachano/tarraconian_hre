@@ -1056,6 +1056,17 @@ class TestSymbolGenerator:
         for title, data in canon.items():
             f_col, o_key, chg, chg_col, cnt, o_col = data[:6]
             field_is_metal = f_col in metals
+
+            # 2a. Uncharged shields validation (pure partitions & honorable ordinaries)
+            if cnt == 0 or chg in ("none", None):
+                if o_key != "solid":
+                    ord_is_metal = o_col in metals
+                    if field_is_metal and ord_is_metal:
+                        violations.append((title, "ordinary metal-on-metal", f_col, o_col))
+                    elif (not field_is_metal) and (not ord_is_metal):
+                        violations.append((title, "ordinary colour-on-colour", f_col, o_col))
+                continue
+
             charge_is_metal = chg_col in metals
 
             if o_key == "solid":
@@ -1239,7 +1250,7 @@ class TestSymbolGenerator:
 
         # 2. All charges in canon are present in CHARGES
         defined_charges = set(re.findall(r"^\s*([a-zA-Z0-9_]+)\s*:\s*\([^)]*\)\s*=>", content, re.MULTILINE))
-        canon_charges = set(spec[2] for spec in canon.values() if len(spec) > 2 and spec[2])
+        canon_charges = set(spec[2] for spec in canon.values() if len(spec) > 2 and spec[2] and spec[2] != 'none')
 
         missing_charges = canon_charges - defined_charges
         assert len(missing_charges) == 0, f"Charges in canon missing from CHARGES: {missing_charges}"

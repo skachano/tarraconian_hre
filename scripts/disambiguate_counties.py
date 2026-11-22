@@ -49,6 +49,16 @@ def clean_charge(c):
 
 def check_rot(f_col, o_key, chg, chg_col, cnt, o_col):
     field_is_metal = f_col in metals
+    if cnt == 0 or chg in ('none', None):
+        if o_key == 'solid':
+            return True, 'ok'
+        ord_is_metal = o_col in metals
+        if field_is_metal and ord_is_metal:
+            return False, 'ordinary metal on metal'
+        if (not field_is_metal) and (not ord_is_metal):
+            return False, 'ordinary colour on colour'
+        return True, 'ok'
+
     charge_is_metal = chg_col in metals
     if o_key == 'solid':
         if field_is_metal and charge_is_metal:
@@ -132,6 +142,7 @@ def hash_string(s):
 
 HISTORICAL_COUNTY_OVERRIDES = {
     'c_porto': ['argent', 'solid', 'cross', 'azure', 1, 'azure'],
+    'c_vienna': ['gules', 'cross', 'none', None, 0, 'argent', 'default'],
     'c_roma': ['gules', 'chief', 'keys_st_peter', 'or', 1, 'or', 'in_base'],
     'c_paris': ['gules', 'solid', 'ship', 'argent', 1, 'argent', 'in_chief'],
     'c_aachen': ['or', 'bordure', 'alerion', 'sable', 1, 'gules', 'in_chief'],
@@ -140,9 +151,9 @@ HISTORICAL_COUNTY_OVERRIDES = {
     'c_trier': ['argent', 'solid', 'keys_st_peter', 'gules', 1, 'gules', 'in_chief'],
     'c_jerusalem': ['gules', 'bordure', 'cross_patriarchal', 'or', 1, 'or', 'in_chief'],
     'c_byzantion': ['gules', 'cross_byzantine', 'cross_byzantine', 'or', 1, 'or', 'in_chief'],
-    'c_barcelona': ['argent', 'per_pale', 'cross', 'or', 1, 'gules', 'in_chief'],
-    'c_tarragona': ['or', 'pales_undy', 'castrum', 'azure', 1, 'gules', 'in_chief'],
-    'c_metz': ['argent', 'per_pale', 'cross', 'sable', 1, 'gules', 'in_chief'],
+    'c_barcelona': ['argent', 'quarterly', 'none', None, 0, 'gules', 'default'],
+    'c_tarragona': ['or', 'pales_undy', 'none', None, 0, 'gules', 'default'],
+    'c_metz': ['argent', 'per_pale', 'none', None, 0, 'sable', 'default'],
     'c_lviv': ['azure', 'solid', 'bell', 'argent', 1, 'argent', 'in_chief'],
     'c_szekesfehervar': ['gules', 'bordure', 'crown', 'argent', 1, 'argent', 'in_chief'],
     'c_venezia': ['azure', 'per_fess', 'lion_rampant', 'or', 1, 'argent', 'in_chief'],
@@ -151,7 +162,8 @@ HISTORICAL_COUNTY_OVERRIDES = {
     'c_alexandria': ['azure', 'solid', 'column_roman', 'argent', 1, 'argent', 'in_chief'],
     'c_antioch': ['azure', 'solid', 'cross_patriarchal', 'argent', 1, 'argent', 'in_chief'],
     'c_athens': ['argent', 'solid', 'column_roman', 'azure', 1, 'azure', 'in_chief'],
-    'c_thessaloniki': ['gules', 'chief', 'sword_crossed', 'or', 1, 'or', 'in_base'],
+    'c_thessalonika': ['gules', 'bordure', 'sword_crossed', 'or', 1, 'or', 'in_chief'],
+    'c_thessaloniki': ['gules', 'bordure', 'sword_crossed', 'or', 1, 'or', 'in_chief'],
     'c_wiltshire': ['vert', 'chief', 'horse_courant', 'argent', 1, 'argent', 'in_base'],
     'c_kent': ['gules', 'bordure', 'horse_courant', 'argent', 1, 'argent', 'in_chief'],
     'c_york': ['argent', 'cross', 'rose_seeded', 'or', 1, 'gules', 'in_chief'],
@@ -162,7 +174,12 @@ HISTORICAL_COUNTY_OVERRIDES = {
     'c_cleves': ['gules', 'solid', 'shield_escutcheon', 'argent', 1, 'argent', 'in_chief'],
     'c_hamburg': ['gules', 'solid', 'castrum', 'argent', 1, 'argent', 'in_chief'],
     'c_firenze': ['argent', 'per_pale', 'fleur_de_lis', 'or', 1, 'gules', 'in_chief'],
-    'c_siena': ['argent', 'per_fess', 'lion_rampant', 'gules', 1, 'sable', 'in_chief'],
+    'c_siena': ['argent', 'per_fess', 'none', None, 0, 'sable', 'default'],
+    'c_lucca': ['argent', 'per_fess', 'none', None, 0, 'gules', 'default'],
+    'c_baden': ['or', 'bend', 'none', None, 0, 'gules', 'default'],
+    'c_zollern': ['argent', 'quarterly', 'none', None, 0, 'sable', 'default'],
+    'c_solms': ['or', 'fess', 'none', None, 0, 'gules', 'default'],
+    'c_utrecht': ['gules', 'per_bend', 'none', None, 0, 'argent', 'default'],
     'c_pisa': ['gules', 'bordure', 'cross', 'argent', 1, 'argent', 'in_chief'],
     'c_genoa': ['argent', 'bordure', 'cross', 'gules', 1, 'gules', 'in_chief'],
     'c_marseille': ['argent', 'bordure', 'cross', 'azure', 1, 'azure', 'in_chief'],

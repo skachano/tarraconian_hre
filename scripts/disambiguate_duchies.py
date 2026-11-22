@@ -53,6 +53,16 @@ def clean_charge(c):
 
 def check_rot(f_col, o_key, chg, chg_col, cnt, o_col):
     field_is_metal = f_col in metals
+    if cnt == 0 or chg in ('none', None):
+        if o_key == 'solid':
+            return True, 'ok'
+        ord_is_metal = o_col in metals
+        if field_is_metal and ord_is_metal:
+            return False, 'ordinary metal on metal'
+        if (not field_is_metal) and (not ord_is_metal):
+            return False, 'ordinary colour on colour'
+        return True, 'ok'
+
     charge_is_metal = chg_col in metals
     if o_key == 'solid':
         if field_is_metal and charge_is_metal:
@@ -172,8 +182,9 @@ HISTORICAL_DUCHY_OVERRIDES = {
     'd_antioch': ['azure', 'solid', 'cross_patriarchal', 'or', 1, 'or', 'in_chief'],
     'd_latium': ['gules', 'solid', 'keys_st_peter', 'or', 1, 'or', 'in_chief'],
     'd_upper_lorraine': ['or', 'bend', 'alerion', 'argent', 3, 'gules', 'above_below'],
+    'd_osterreich': ['gules', 'fess', 'none', None, 0, 'argent', 'default'],
     'd_lower_lorraine': ['argent', 'fess', 'castrum', 'argent', 1, 'gules', 'in_chief'],
-    'd_barcelona': ['or', 'pales', 'castrum', 'azure', 1, 'gules', 'in_chief'],
+    'd_barcelona': ['or', 'pales', 'none', None, 0, 'gules', 'default'],
     'd_the_isles': ['gules', 'solid', 'ship', 'or', 1, 'or', 'in_chief'],
     'd_cornwall': ['sable', 'solid', 'wheel_spoked', 'or', 1, 'or', 'in_chief'],
     'd_lancaster': ['gules', 'solid', 'rose_seeded', 'argent', 1, 'argent', 'in_chief'],
