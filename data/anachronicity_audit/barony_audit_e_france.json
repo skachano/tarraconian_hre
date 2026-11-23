@@ -17,14 +17,14 @@
     },
     "summary_statistics": {
       "total_baronies": 310,
-      "historical_867_true": 171,
-      "historical_867_false": 139,
+      "historical_867_true": 170,
+      "historical_867_false": 140,
       "named_after_post_867_person": 7,
       "named_after_hydronym": 30,
       "named_after_any_natural_proper_name": 97,
       "has_older_name_by_867_total": 71,
-      "has_older_name_by_867_for_anachronistic": 24,
-      "has_older_name_by_867_for_historical": 47
+      "has_older_name_by_867_for_anachronistic": 25,
+      "has_older_name_by_867_for_historical": 46
     }
   },
   "baronies": {
@@ -3678,7 +3678,7 @@
     },
     "b_manresa": {
       "barony_key": "b_manresa",
-      "modern_name": "Manresa",
+      "modern_name": "Cardona",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -3686,8 +3686,8 @@
         "county": "c_barcelona",
         "holding_type": "city"
       },
-      "first_mention_year": 889,
-      "first_mention_attestation": "889–890 (Minorisa; re-established by Wilfred the Hairy, though name Minorisa is Roman/pre-Roman)",
+      "first_mention_year": 798,
+      "first_mention_attestation": "798 AD (fortified by Louis the Pious and Count Borrell along the Carolingian Spanish March frontier)",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3698,12 +3698,12 @@
       },
       "morphemes": [
         {
-          "form": "Minorisa",
-          "language": "Iberian / Latinized",
-          "translation": "ancient Iberian/Roman settlement name"
+          "form": "Cardona",
+          "language": "Pre-Roman / Latin",
+          "translation": "ancient settlement name by the salt mountain (Muntanya de Sal)"
         }
       ],
-      "etymology_analysis": "From ancient Minorisa (attested in 889–890 upon Carolingian repopulation, preserving a pre-Roman/Roman toponym). Historically grounded by the late 9th century (note: current repo maps b_manresa to Cardona).",
+      "etymology_analysis": "Cardona (in-game b_manresa localized as Cardona), strategic salt-mining hillfort on the Cardener river. Fortified by Louis the Pious and Count Borrell in 798 AD (and later granted a settlement charter by Wilfred the Hairy in 886 / Borrell II in 986).",
       "current_repo_state": {
         "b_tarr": "Cardona",
         "b_tarr_direct": "Cardona",
@@ -3712,7 +3712,7 @@
         "b_anachronism": "",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://ca.wikipedia.org/wiki/Manresa",
+      "source_url": "https://ca.wikipedia.org/wiki/Cardona",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3865,7 +3865,7 @@
     },
     "b_loredo": {
       "barony_key": "b_loredo",
-      "modern_name": "Lloret de Mar (in-game b_loredo)",
+      "modern_name": "Ullastret",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -3873,8 +3873,8 @@
         "county": "c_girona",
         "holding_type": "church"
       },
-      "first_mention_year": 966,
-      "first_mention_attestation": "966 (Lauredo, in a charter of Count Borrell II)",
+      "first_mention_year": 899,
+      "first_mention_attestation": "899 AD (first documented in a Carolingian-era County of Empúries charter)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3885,17 +3885,17 @@
       },
       "morphemes": [
         {
-          "form": "laurus",
+          "form": "oleaster",
           "language": "Latin",
-          "translation": "laurel tree"
+          "translation": "wild olive tree"
         },
         {
-          "form": "-etum",
-          "language": "Latin",
-          "translation": "grove of ('laurel grove', Lauredo > Lloret)"
+          "form": "-ētum > -et",
+          "language": "Latin / Catalan",
+          "translation": "collective grove suffix (wild olive grove)"
         }
       ],
-      "etymology_analysis": "First attested in 966 as Lauredo (from Latin lauretum, 'laurel grove'). Although the site had Iberian ruins, the medieval settlement name Lauredo/Lloret is unattested before 867 (note: current repo maps b_loredo to Ullastret).",
+      "etymology_analysis": "Ullastret (in-game b_loredo localized as Ullastret), from Latin oleastrētum (wild olive grove). First documented under this name in 899 AD; the nearby ancient Iberian oppidum was Indika (Indigetes).",
       "current_repo_state": {
         "b_tarr": "Ullastret",
         "b_tarr_direct": "Ullastret",
@@ -3904,14 +3904,16 @@
         "b_anachronism": "",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://ca.wikipedia.org/wiki/Lloret_de_Mar",
+      "source_url": "https://en.wikipedia.org/wiki/Ullastret",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Indika"
+        ],
+        "first_mention_year": -300,
+        "first_mention_source": "Ancient Iberian oppidum Indika (Indigetes, 4th–3rd century BCE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "Ancient Iberian city of Indika on Puig de Sant Andreu preceded medieval Ullastret (attested 899)."
       }
     },
     "b_olot": {
@@ -4797,7 +4799,7 @@
     },
     "b_balaguer": {
       "barony_key": "b_balaguer",
-      "modern_name": "Balaguer",
+      "modern_name": "Organyà (in-game Ordanyá)",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -4805,8 +4807,8 @@
         "county": "c_urgell",
         "holding_type": "castle"
       },
-      "first_mention_year": 860,
-      "first_mention_attestation": "9th century (Andalusi Madīnat Balaghī; pre-Roman *Balagaiu per Joan Coromines)",
+      "first_mention_year": 839,
+      "first_mention_attestation": "839 AD (attested as Organius in the Acta de consagració de la catedral d'Urgell)",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -4817,12 +4819,17 @@
       },
       "morphemes": [
         {
-          "form": "*Balagaiu / Balaghī",
-          "language": "Pre-Roman / Iberian (adapted into Arabic Balaghī)",
-          "translation": "ancient settlement name on the Segre"
+          "form": "Organius",
+          "language": "Latin",
+          "translation": "personal name Organius"
+        },
+        {
+          "form": "-anum > -à",
+          "language": "Latin / Catalan",
+          "translation": "estate/domain suffix"
         }
       ],
-      "etymology_analysis": "Andalusi fortress city of Madīnat Balaghī (9th c.), preserving a pre-Roman Iberian toponym *Balagaiu consolidated before 800 (per Joan Coromines). Historical for 867 (note: current repo maps b_balaguer to Ordanyâ).",
+      "etymology_analysis": "Organyà (Spanish Ordanyá; in-game b_balaguer localized as Ordanyá), from Latin estate name *Organianum (property of Organius). Attested as Organius in the 839 Act of Consecration of Urgell Cathedral.",
       "current_repo_state": {
         "b_tarr": "Ordanyâ",
         "b_tarr_direct": "Ordanyâ",
@@ -4831,7 +4838,7 @@
         "b_anachronism": "",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://ca.wikipedia.org/wiki/Balaguer",
+      "source_url": "https://ca.wikipedia.org/wiki/Organy%C3%A0",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6624,7 +6631,7 @@
     },
     "b_grand": {
       "barony_key": "b_grand",
-      "modern_name": "Grand (Vosges)",
+      "modern_name": "Poulangy",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -6632,9 +6639,9 @@
         "county": "c_langres",
         "holding_type": "church"
       },
-      "first_mention_year": 350,
-      "first_mention_attestation": "4th century AD (Grannum; Merovingian Granno; earlier Andesina)",
-      "is_historical_867": true,
+      "first_mention_year": 870,
+      "first_mention_attestation": "870 AD (attested as Polemniacum; Abbey of Poulangy also attested in 870)",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -6644,12 +6651,17 @@
       },
       "morphemes": [
         {
-          "form": "Grannus",
-          "language": "Gaulish theonym",
-          "translation": "Celtic healing god Apollo Grannus (sanctuary of Grannus)"
+          "form": "Poleminius",
+          "language": "Latin",
+          "translation": "Gallo-Roman personal name Poleminius"
+        },
+        {
+          "form": "-acum > -y",
+          "language": "Gaulish / Gallo-Roman",
+          "translation": "estate/domain suffix"
         }
       ],
-      "etymology_analysis": "Attested from the 4th century AD as Grannum (Merovingian Granno), derived from the major Gallo-Roman sanctuary of Apollo Grannus at Andesina. Historical for 867 (note: current repo maps b_grand to Poulanjî).",
+      "etymology_analysis": "Poulangy (in-game b_grand localized as Poulangy), Gallo-Roman estate name Polemniacum (870 AD), from personal name Poleminius + -acum. First attested in 870 AD, three years after the 867 start date.",
       "current_repo_state": {
         "b_tarr": "Poulanjî",
         "b_tarr_direct": "Poulanjî",
@@ -6658,16 +6670,14 @@
         "b_anachronism": "",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://fr.wikipedia.org/wiki/Grand_(Vosges)",
+      "source_url": "https://fr.wikipedia.org/wiki/Poulangy",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Andesina"
-        ],
-        "first_mention_year": 365,
-        "first_mention_source": "Peutinger Table (4th c. AD, Andesina)",
-        "relationship": "same_site_earlier_name",
-        "notes": "Roman spa town Andesina preceded Grannum (Grand, named after Apollo Grannus)."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_champs": {
