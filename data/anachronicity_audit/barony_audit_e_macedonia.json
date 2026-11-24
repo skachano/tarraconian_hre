@@ -1,0 +1,3095 @@
+{
+  "metadata": {
+    "scope": "e_macedonia (all baronies across k_hellas and k_thessalonika)",
+    "version": "1.0.0",
+    "reference_start_year": 867,
+    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "source_files": [
+      "data/ck3_title_tree.json",
+      "data/barony_resolutions.json",
+      "data/barony_holdings.json"
+    ],
+    "schema_notes": {
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
+      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
+      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
+      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+    },
+    "summary_statistics": {
+      "total_baronies": 63,
+      "historical_867_true": 51,
+      "historical_867_false": 12,
+      "first_mention_year_known": 63,
+      "first_mention_year_unknown": 0,
+      "named_after_post_867_person": 0,
+      "named_after_hydronym": 3,
+      "named_after_any_natural_proper_name": 16,
+      "has_older_name_by_867_total": 23,
+      "has_older_name_by_867_for_anachronistic": 10,
+      "has_older_name_by_867_for_historical": 13,
+      "wikipedia_source_attached": 63
+    }
+  },
+  "baronies": {
+    "b_patras": {
+      "barony_key": "b_patras",
+      "modern_name": "Patras",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 1.145 (c. 440 BCE), listing Patrees (Patrai) among the twelve Achaean cities.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after the mythological Achaean founder Patreus (Pausanias, Description of Greece 7.18.5).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Patreus",
+          "language": "Ancient Greek",
+          "translation": "mythological founder Patreus"
+        },
+        {
+          "form": "-ai",
+          "language": "Ancient Greek",
+          "translation": "plural toponymic suffix (Patrai)"
+        }
+      ],
+      "etymology_analysis": "Derived from Ancient Greek Patrai (Πάτραι, plural), traditionally traced by Pausanias to the eponymous Achaean hero Patreus; Latinized as Patrae and adapted in Medieval/Modern Greek as Patra/Patras.",
+      "current_repo_state": {
+        "b_tarr": "Patrâs",
+        "b_tarr_direct": "Achâje",
+        "b_tarr_hist": "Patrâs",
+        "b_origin": "Patrâs (Patrâs (in-game: Achaia))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Patras",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vostitsa": {
+      "barony_key": "b_vostitsa",
+      "modern_name": "Vostitsa",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1209,
+      "first_mention_attestation": "Chronicle of the Morea / establishment of the Frankish Barony of Vostitsa (c. 1209 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "vostan / vosk-",
+          "language": "South Slavic",
+          "translation": "garden / orchard (or wax/east, disputed)"
+        }
+      ],
+      "etymology_analysis": "Medieval Greek Vostitza (Βοστίτζα) is a Slavic-derived toponym that replaced ancient Aigion in the Middle Ages (commonly linked to South Slavic *vostan 'garden' or *vostitsa), first securely attested in the 13th-century Frankish Barony of Vostitsa.",
+      "current_repo_state": {
+        "b_tarr": "Vostitza",
+        "b_tarr_direct": "Vostitza",
+        "b_tarr_hist": "Vostitza",
+        "b_origin": "Vostitza (constituent holding of Patrâs)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Barony_of_Vostitsa",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Aigion",
+          "Aegium"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.574 (c. 8th century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ancient Aigion (Latin Aegium) occupied the exact site and was restored as the modern name Aigio in the 19th century."
+      }
+    },
+    "b_andravida": {
+      "barony_key": "b_andravida",
+      "modern_name": "Andravida",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1205,
+      "first_mention_attestation": "Chronicle of the Morea (1205–1208 CE), recording Andravida as the capital of the Frankish Principality of Achaea; Latin bishopric attested 1212 CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Andravida",
+          "language": "Medieval Greek / Slavic",
+          "translation": "uncertain (possibly Slavic or personal/topographic origin)"
+        }
+      ],
+      "etymology_analysis": "Medieval toponym (Greek Ανδραβίδα, French Andreville) of uncertain pre-1204 origin, first emerging in historical records after the Fourth Crusade (1205 CE) as the unfortified capital of the Principality of Achaea.",
+      "current_repo_state": {
+        "b_tarr": "Andravida",
+        "b_tarr_direct": "Andravida",
+        "b_tarr_hist": "Andravida",
+        "b_origin": "Andravida (constituent holding of Patrâs)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Andravida",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": "No distinct pre-867 CE settlement name is attested for the specific site of Andravida (ancient Elis lay ~15 km southeast)."
+      }
+    },
+    "b_kalavryta": {
+      "barony_key": "b_kalavryta",
+      "modern_name": "Kalavryta",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1209,
+      "first_mention_attestation": "Chronicle of the Morea / establishment of the Frankish Barony of Kalavryta (c. 1208–1209 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Kalavryta"
+      },
+      "morphemes": [
+        {
+          "form": "kala",
+          "language": "Medieval Greek",
+          "translation": "good"
+        },
+        {
+          "form": "vryta",
+          "language": "Medieval Greek",
+          "translation": "springs, flowing waters (from brysis)"
+        }
+      ],
+      "etymology_analysis": "From Medieval Greek Kalavryta (Καλάβρυτα), literally 'good springs' (kalos 'good' + vrysis 'spring/water'), first documented as a baronial seat after the Frankish conquest in 1208–1209 CE.",
+      "current_repo_state": {
+        "b_tarr": "Kalavryta",
+        "b_tarr_direct": "Kalavryta",
+        "b_tarr_hist": "Kalavryta",
+        "b_origin": "Kalavryta (constituent holding of Patrâs)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Barony_of_Kalavryta",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Cynaetha",
+          "Kynaitha"
+        ],
+        "first_mention_year": -220,
+        "first_mention_source": "Polybius, Histories 4.17–21 (2nd century BCE, recording events of 220 BCE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "Modern Kalavryta was built near/on the site of ancient Arcadian/Achaean Cynaetha (Kynaitha)."
+      }
+    },
+    "b_corinth": {
+      "barony_key": "b_corinth",
+      "modern_name": "Corinth",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.570 (c. 8th century BCE) as Korinthos; also attested in Mycenaean Linear B (ko-ri-to, c. 1200 BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked to Corinthus, son of Zeus or Marathon (Pausanias 2.1.1), though linguistically pre-Greek.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Kor-",
+          "language": "Pre-Greek",
+          "translation": "substrate root"
+        },
+        {
+          "form": "-inthos",
+          "language": "Pre-Greek",
+          "translation": "pre-Greek toponymic suffix (cf. Tiryns, Zakynthos)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek substrate toponym Korinthos (Κόρινθος) featuring the characteristic -nth- suffix, continuously attested from Mycenaean Linear B and Homeric epic through the Byzantine era.",
+      "current_repo_state": {
+        "b_tarr": "Korînth",
+        "b_tarr_direct": "Korînth",
+        "b_tarr_hist": "Korînth",
+        "b_origin": "Korînth (Korinthos)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ancient_Corinth",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_nikli": {
+      "barony_key": "b_nikli",
+      "modern_name": "Nikli",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1209,
+      "first_mention_attestation": "Chronicle of the Morea / establishment of the Frankish Barony of Nikli (c. 1209 CE); predecessor form Amyklion appears from the 10th–11th century.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "(A)mykl-",
+          "language": "Medieval Greek",
+          "translation": "shortened from Amyklai / Amyklion"
+        },
+        {
+          "form": "-i",
+          "language": "Medieval Greek",
+          "translation": "neuter/reduced ending (Nikli)"
+        }
+      ],
+      "etymology_analysis": "Medieval Greek Nikli (Νίκλι) developed by aphaeresis and metathesis/assimilation from Amyklion/Amykli (Ἀμύκλιον), a middle Byzantine name (attested 10th–11th c.) applied to the site of ancient Tegea.",
+      "current_repo_state": {
+        "b_tarr": "Nikli",
+        "b_tarr_direct": "Nikli",
+        "b_tarr_hist": "Nikli",
+        "b_origin": "Nikli (constituent holding of Korînth)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Barony_of_Nikli",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Tegea"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.607 (c. 8th century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Nikli stood directly on the site of ancient Tegea, attested from Homer through the Council of Chalcedon (451 CE)."
+      }
+    },
+    "b_argos": {
+      "barony_key": "b_argos",
+      "modern_name": "Argos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.559 (c. 8th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically associated with Argos, son of Zeus and Niobe, though etymologically a topographic/pre-Greek term.",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Argos"
+      },
+      "morphemes": [
+        {
+          "form": "argos",
+          "language": "Ancient Greek / Pelasgian",
+          "translation": "plain, flat fertile land (or shining/bright)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Argos (Ἄργος), explained by Strabo (8.6.9) as a Pelasgian/archaic word for 'plain' (describing the Argive plain), continuously attested from the Bronze Age and Homer onward.",
+      "current_repo_state": {
+        "b_tarr": "Argos",
+        "b_tarr_direct": "Argos",
+        "b_tarr_hist": "Argos",
+        "b_origin": "Argos (constituent holding of Korînth)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Argos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_damala": {
+      "barony_key": "b_damala",
+      "modern_name": "Damala",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1212,
+      "first_mention_attestation": "Post-1204 Frankish conquest / Chronicle of the Morea (c. 1212 CE, when the Argolid and Damala passed to the de la Roche family).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Damala",
+          "language": "Medieval Greek",
+          "translation": "uncertain (possibly from damalis 'heifer' or personal/family name Damalas)"
+        }
+      ],
+      "etymology_analysis": "Medieval Greek Damala (Δαμαλᾶ, French Damalet), which replaced ancient Troezen in the Middle Ages and became part of the Frankish Barony of Veligosti–Damala in the 13th century.",
+      "current_repo_state": {
+        "b_tarr": "Damala",
+        "b_tarr_direct": "Damala",
+        "b_tarr_hist": "Damala",
+        "b_origin": "Damala (constituent holding of Korînth)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Barony_of_Veligosti",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Troezen"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.561 (c. 8th century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Damala is the medieval name for the site of ancient Troezen (Troizen)."
+      }
+    },
+    "b_mistra": {
+      "barony_key": "b_mistra",
+      "modern_name": "Mistra",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_laconia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1249,
+      "first_mention_attestation": "Chronicle of the Morea (1249 CE), recording the construction of the fortress of Myzithras/Mistra by William II of Villehardouin.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Myzithras / Mystras",
+          "language": "Medieval Greek",
+          "translation": "uncertain (possibly from myzithra 'whey cheese' hill shape or a personal name Myzithras)"
+        }
+      ],
+      "etymology_analysis": "Founded in 1249 CE on Mount Myzithras (Μυζηθρᾶς, shortened to Μυστρᾶς / Mistra) by William II of Villehardouin; etymology is debated between a local landowner's name and the conical hill's resemblance to myzithra cheese.",
+      "current_repo_state": {
+        "b_tarr": "Amûklê",
+        "b_tarr_direct": "Amûklê",
+        "b_tarr_hist": "Amûklê",
+        "b_origin": "Ancient Achaean polis and sacred sanctuary of Apollo Amyklaios on Mount Taygetos (in-game: Mistra)",
+        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis (Amyclae).",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mystras",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": "Mistra was founded as a new fortress in 1249 CE; nearby Sparta/Lacedaemonia is already a separate barony (b_lacedaemonia) in e_macedonia."
+      }
+    },
+    "b_monemvasia": {
+      "barony_key": "b_monemvasia",
+      "modern_name": "Monemvasia",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_laconia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 723,
+      "first_mention_attestation": "Willibald's Hodoeporicon (c. 723–728 CE), the oldest surviving mention of Monemvasia, founded in the late 6th century CE.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "mone",
+          "language": "Byzantine Greek",
+          "translation": "single, sole"
+        },
+        {
+          "form": "emvasis",
+          "language": "Byzantine Greek",
+          "translation": "entrance, approach"
+        }
+      ],
+      "etymology_analysis": "From Byzantine Greek Monemvasia (Μονεμβασία), compounded from mone ('single') + emvasis ('entrance'), referring to the narrow causeway linking the rock island fortress to the Laconian mainland.",
+      "current_repo_state": {
+        "b_tarr": "Monemvasia",
+        "b_tarr_direct": "Monemvasia",
+        "b_tarr_hist": "Monemvasia",
+        "b_origin": "Monemvasia (constituent holding of Lakedêmôn)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Monemvasia",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lacedaemonia": {
+      "barony_key": "b_lacedaemonia",
+      "modern_name": "Lacedaemonia",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_laconia",
+        "holding_type": "church"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.581 (c. 8th century BCE) as Lakedaimon; also attested in Mycenaean Linear B (ra-ke-da-mi-ni-jo).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Lacedaemon, son of Zeus and Taygete.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lakedaimon",
+          "language": "Ancient Greek",
+          "translation": "Lacedaemon (country/state of Sparta)"
+        },
+        {
+          "form": "-ia",
+          "language": "Latin / Greek",
+          "translation": "territorial/adjectival suffix (Lacedaemonia)"
+        }
+      ],
+      "etymology_analysis": "Classical Greek Lakedaimon (Λακεδαίμων, Latinized Lacedaemonia), the official ancient and medieval Byzantine name (Lakedaimonia) for Sparta and its Laconian territory.",
+      "current_repo_state": {
+        "b_tarr": "Lakedêmôn",
+        "b_tarr_direct": "Lakedêmôn",
+        "b_tarr_hist": "Lakedêmôn",
+        "b_origin": "Classical Sparta / Lacedaemon on the Eurotas (in-game: Lakedêmôn)",
+        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sparta",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_karytaina": {
+      "barony_key": "b_karytaina",
+      "modern_name": "Karytaina",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1209,
+      "first_mention_attestation": "Treaty of Sapienza (1209 CE) and Chronicle of the Morea, establishing the Frankish Barony of Karytaina.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Karytaina",
+          "language": "Medieval Greek",
+          "translation": "uncertain (possibly Slavic *koryto 'trough/riverbed' or Greek karydia 'walnut')"
+        }
+      ],
+      "etymology_analysis": "Medieval toponym Karytaina (Καρύταινα) of uncertain origin (variously linked to Slavic or Greek roots), unknown in sources before the 1205–1209 CE Frankish conquest.",
+      "current_repo_state": {
+        "b_tarr": "Messênjen",
+        "b_tarr_direct": "Messênjen",
+        "b_tarr_hist": "Messênjen",
+        "b_origin": "Messênjen (Messenia)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Karytaina",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Brenthe"
+        ],
+        "first_mention_year": 170,
+        "first_mention_source": "Pausanias, Description of Greece 8.28.7 (c. 170 CE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "Karytaina occupies a hill near/at the site of ancient Arcadian Brenthe, already in ruins when described by Pausanias."
+      }
+    },
+    "b_arcadia": {
+      "barony_key": "b_arcadia",
+      "modern_name": "Arcadia",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Middle Byzantine sources from the 10th–11th century CE onward, when Kyparissia became known as Arkadia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Arcadia"
+      },
+      "morphemes": [
+        {
+          "form": "Arkas / Arkad-",
+          "language": "Ancient Greek",
+          "translation": "Arcadian (from mythical Arkas)"
+        },
+        {
+          "form": "-ia",
+          "language": "Ancient Greek",
+          "translation": "land/region of"
+        }
+      ],
+      "etymology_analysis": "The regional choronym Arkadia (Ἀρκαδία) was transferred to coastal Kyparissia in the Middle Byzantine period (attested 10th–11th c. CE) due to refugees migrating from inland Arcadia during Slavic raids.",
+      "current_repo_state": {
+        "b_tarr": "Arcadia",
+        "b_tarr_direct": "Arcadia",
+        "b_tarr_hist": "Arcadia",
+        "b_origin": "Arcadia (constituent holding of Messênjen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kyparissia",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Kyparissia",
+          "Cyparissia"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.593 (c. 8th century BCE, as Kyparissēeis); Strabo & Pausanias (Kyparissia)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ancient Kyparissia was renamed Arkadia in the 10th–11th century and resumed its ancient name after 1825."
+      }
+    },
+    "b_kalamata": {
+      "barony_key": "b_kalamata",
+      "modern_name": "Kalamata",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "church"
+      },
+      "first_mention_year": 950,
+      "first_mention_attestation": "10th-century Byzantine document and the 11th-century Life of Saint Nikon the Metanoeite.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Kalamai / Kalama-",
+          "language": "Greek",
+          "translation": "reeds (from kalamos 'reed', cf. ancient Calamae)"
+        },
+        {
+          "form": "-ta",
+          "language": "Medieval Greek",
+          "translation": "toponymic suffix (or from kalomata 'fair-eyed' Virgin Mary)"
+        }
+      ],
+      "etymology_analysis": "First attested in the 10th century CE as Kalamata (Καλαμάτα), either derived from ancient Messenian Calamae ('reeds') or from a medieval church of the Panagia Kalomata ('fair-eyed').",
+      "current_repo_state": {
+        "b_tarr": "Kalamata",
+        "b_tarr_direct": "Kalamata",
+        "b_tarr_hist": "Kalamata",
+        "b_origin": "Kalamata (constituent holding of Messênjen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kalamata",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Pharae",
+          "Pharai"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 9.151 (c. 8th century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Medieval Kalamata Castle stands directly on the acropolis of ancient Pharae (Pharai)."
+      }
+    },
+    "b_modon": {
+      "barony_key": "b_modon",
+      "modern_name": "Modon",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1125,
+      "first_mention_attestation": "First attested as the Venetian/Frankish form 'Modon' in 1125 CE (following Venetian Doge Domenico Michiel's 1124–1125 expedition and 12th-century Italian/Crusader sources).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked by Pausanias to Mothone, daughter of Oeneus, or the harbour rock Mothon.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Methone / Mothone",
+          "language": "Ancient Greek",
+          "translation": "ancient Messenian port name"
+        },
+        {
+          "form": "Modon",
+          "language": "Venetian / Italian",
+          "translation": "medieval Romance adaptation of Mothone"
+        }
+      ],
+      "etymology_analysis": "Venetian/Frankish Modon is the direct medieval Romance phonological adaptation of Byzantine/Ancient Greek Mothone / Methone (Μοθώνη / Μεθώνη), continuously attested from Classical antiquity.",
+      "current_repo_state": {
+        "b_tarr": "Modon",
+        "b_tarr_direct": "Modon",
+        "b_tarr_hist": "Modon",
+        "b_origin": "Modon (constituent holding of Messênjen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Methoni,_Messenia",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Methone",
+          "Mothone"
+        ],
+        "first_mention_year": -431,
+        "first_mention_source": "Thucydides, History of the Peloponnesian War 2.25.1 (431 BCE, as Methone); Pausanias 4.35 (as Mothone)",
+        "relationship": "same_site_earlier_name",
+        "notes": "The ancient Greek and Middle Byzantine city was called Methone / Mothone (Μεθώνη / Μοθώνη) prior to the Venetian/Frankish adaptation 'Modon' attested from 1125 CE."
+      }
+    },
+    "b_abydos": {
+      "barony_key": "b_abydos",
+      "modern_name": "Abydos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.836 (c. 8th century BCE); Milesian colony founded c. 670 BCE.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Abydos",
+          "language": "Pre-Greek / Thracian-Phrygian",
+          "translation": "uncertain pre-Greek substrate toponym"
+        }
+      ],
+      "etymology_analysis": "Ancient Hellespontine city Abydos (Ἄβυδος), of pre-Greek (likely Thracian or Anatolian) origin, attested in Homer and continuously occupied as a Byzantine customs station.",
+      "current_repo_state": {
+        "b_tarr": "Abîdos",
+        "b_tarr_direct": "Abîdos",
+        "b_tarr_hist": "Abîdos",
+        "b_origin": "Abîdos (Abydos)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Abydos_(Hellespont)",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lampsakos": {
+      "barony_key": "b_lampsakos",
+      "modern_name": "Lampsakos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "church"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 5.117 and 6.37 (c. 440 BCE); colonized by Phocaea/Miletus in the 7th century BCE.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Lampsake, a local Bebrycian princess who aided Phocaean colonists.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lampsakos",
+          "language": "Ancient Greek / Anatolian",
+          "translation": "city name (folk-etymologized via Lampsake)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Lampsakos (Λάμψακος), a major Hellespontine polis colonized in the 7th century BCE (earlier called Pityusa), continuously attested through Roman and Byzantine times.",
+      "current_repo_state": {
+        "b_tarr": "Lampsakos",
+        "b_tarr_direct": "Lampsakos",
+        "b_tarr_hist": "Lampsakos",
+        "b_origin": "Lampsakos (constituent holding of Abîdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lampsacus",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Pityusa",
+          "Pityoussa"
+        ],
+        "first_mention_year": 20,
+        "first_mention_source": "Strabo, Geographica 13.1.18 (c. 20 CE) and Pliny the Elder, Naturalis Historia 5.141",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ancient Greek sources record that Lampsakos was earlier called Pityusa/Pityoussa ('pine-clad') prior to Phocaean colonization."
+      }
+    },
+    "b_ilion": {
+      "barony_key": "b_ilion",
+      "modern_name": "Ilion",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "city"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 1.71 (c. 8th century BCE) as Ilion / Ilios; corresponds to Hittite Wilusa (13th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Ilus, legendary founder of Troy.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Wilion / Ilion",
+          "language": "Anatolian / Ancient Greek",
+          "translation": "from Hittite/Luwian Wilusa via Greek *Wilion"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Ilion (Ἴλιον, earlier *Wilion with digamma), derived from Bronze Age Anatolian Wilusa and continuously attested from Homer through the Byzantine bishopric of Ilion.",
+      "current_repo_state": {
+        "b_tarr": "Ilion",
+        "b_tarr_direct": "Ilion",
+        "b_tarr_hist": "Ilion",
+        "b_origin": "Ilion (constituent holding of Abîdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Troy",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_alexandriatroas": {
+      "barony_key": "b_alexandriatroas",
+      "modern_name": "Alexandria Troas",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "church"
+      },
+      "first_mention_year": -301,
+      "first_mention_attestation": "Strabo, Geography 13.1.26 (recording Lysimachus's renaming of Antigonia to Alexandria Troas in 301 BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Renamed in 301 BCE by Lysimachus in memory of Alexander III (the Great) of Macedon.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Alexandreia",
+          "language": "Ancient Greek",
+          "translation": "city of Alexander"
+        },
+        {
+          "form": "Troas",
+          "language": "Ancient Greek",
+          "translation": "of the Troad (region)"
+        }
+      ],
+      "etymology_analysis": "Hellenistic Greek Alexandreia Troas (Ἀλεξάνδρεια Τρωάς, 'Alexandria of the Troad'), renamed in 301 BCE from Antigonia Troas (founded 306 BCE) and attested through Late Antiquity and Byzantine bishopric lists.",
+      "current_repo_state": {
+        "b_tarr": "Alexandria Troas",
+        "b_tarr_direct": "Alexandria Troas",
+        "b_tarr_hist": "Alexandria Troas",
+        "b_origin": "Alexandria Troas (constituent holding of Abîdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Alexandria_Troas",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Antigonia Troas",
+          "Antigonia"
+        ],
+        "first_mention_year": -306,
+        "first_mention_source": "Strabo, Geographica 13.1.26 (recording its foundation as Antigonia by Antigonus I Monophthalmus in 306 BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Founded as Antigonia Troas by Antigonus I Monophthalmus in 306 BCE before Lysimachus renamed it Alexandria Troas in 301 BCE."
+      }
+    },
+    "b_pagaea": {
+      "barony_key": "b_pagaea",
+      "modern_name": "Pagaea",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1148,
+      "first_mention_attestation": "Anna Komnene, Alexiad (c. 1148 CE), referring to the Byzantine coastal fortress as Pigas / Pegai.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Pegai"
+      },
+      "morphemes": [
+        {
+          "form": "pegai",
+          "language": "Byzantine Greek",
+          "translation": "springs, water sources (plural of pege)"
+        }
+      ],
+      "etymology_analysis": "Latinized/game adaptation of Medieval Greek Pegai (Πηγαί, Latin Pegae, 'Springs'), the Middle Byzantine fortress name (attested 12th c. CE) for ancient Priapos on the Propontis.",
+      "current_repo_state": {
+        "b_tarr": "Pagaea",
+        "b_tarr_direct": "Pagaea",
+        "b_tarr_hist": "Pagaea",
+        "b_origin": "Pagaea (constituent holding of Abîdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Karabiga",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Priapus",
+          "Priapos"
+        ],
+        "first_mention_year": -334,
+        "first_mention_source": "Arrian, Anabasis 1.12.7 (recording Alexander's capture in 334 BCE); Strabo, Geography 13.1.12",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ancient Mysian polis Priapos (modern Karabiga) occupied the exact site before being renamed Pegai in the Middle Byzantine period."
+      }
+    },
+    "b_chios": {
+      "barony_key": "b_chios",
+      "modern_name": "Chios",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_chios",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Odyssey 3.170 (c. 8th century BCE); also attested in Mycenaean Linear B (ki-si-wi-jo).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked to Chios, son of Poseidon (Pausanias 7.4.8).",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Chios"
+      },
+      "morphemes": [
+        {
+          "form": "Chios",
+          "language": "Pre-Greek / Ancient Greek",
+          "translation": "island name (possibly from Phoenician 'mastic' or pre-Greek)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Chios (Χίος), naming both the northern Aegean island and its chief polis, attested since Mycenaean Linear B and Homer.",
+      "current_repo_state": {
+        "b_tarr": "Chîos",
+        "b_tarr_direct": "Chîos",
+        "b_tarr_hist": "Chîos",
+        "b_origin": "Chîos (Chios)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Chios",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_samos": {
+      "barony_key": "b_samos",
+      "modern_name": "Samos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_chios",
+        "holding_type": "city"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Odyssey 4.671 and Homeric Hymn to Apollo 41 (c. 8th–7th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Samos"
+      },
+      "morphemes": [
+        {
+          "form": "samos",
+          "language": "Pre-Greek / Phoenician",
+          "translation": "height, high place by the shore (Strabo 10.2.17)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Samos (Σάμος), explained by Strabo as an archaic/pre-Greek term meaning 'heights' (shared with Samothrace and Cephallenia/Same), naming the eastern Aegean island and its polis.",
+      "current_repo_state": {
+        "b_tarr": "Samos",
+        "b_tarr_direct": "Samos",
+        "b_tarr_hist": "Samos",
+        "b_origin": "Samos (constituent holding of Chîos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Samos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_mytilene": {
+      "barony_key": "b_mytilene",
+      "modern_name": "Mytilene",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_lesbos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -600,
+      "first_mention_attestation": "Fragments of Alcaeus and Sappho (c. 600 BCE) and Herodotus, Histories 1.160 (c. 440 BCE); founded in the 11th century BCE.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Mytilene, daughter of Macareus (Diodorus Siculus 5.81).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Mytilene",
+          "language": "Aeolic Greek / Pre-Greek",
+          "translation": "chief polis of Lesbos"
+        }
+      ],
+      "etymology_analysis": "Ancient Aeolic Greek Mytilene (Μυτιλήνη, possibly of Anatolian/pre-Greek origin), the principal city of Lesbos, attested from the Archaic lyric poets and Herodotus onward.",
+      "current_repo_state": {
+        "b_tarr": "Lesbos",
+        "b_tarr_direct": "Lesbos",
+        "b_tarr_hist": "Lesbos",
+        "b_origin": "Lesbos (Lesbos)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mytilene",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lemnos": {
+      "barony_key": "b_lemnos",
+      "modern_name": "Lemnos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_lesbos",
+        "holding_type": "city"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 1.593 (c. 8th century BCE); also attested in Mycenaean Linear B (ra-mi-ni-ja).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Lemnos"
+      },
+      "morphemes": [
+        {
+          "form": "Lemnos",
+          "language": "Pre-Greek / Tyrsenian",
+          "translation": "northern Aegean island name"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek (possibly Tyrsenian/Lemnian) island name Lemnos (Λῆμνος), attested from Mycenaean Linear B and Homeric epic through the Byzantine period.",
+      "current_repo_state": {
+        "b_tarr": "Lemnos",
+        "b_tarr_direct": "Lemnos",
+        "b_tarr_hist": "Lemnos",
+        "b_origin": "Lemnos (constituent holding of Lesbos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lemnos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_skyros": {
+      "barony_key": "b_skyros",
+      "modern_name": "Skyros",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_lesbos",
+        "holding_type": "church"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 9.668 (c. 8th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Skyros"
+      },
+      "morphemes": [
+        {
+          "form": "skyros / skiron",
+          "language": "Ancient Greek / Pre-Greek",
+          "translation": "stony, rugged, rocky ground (gypsum/stone)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Skyros (Σκῦρος), traditionally linked to Greek skyros ('stone/chippings', reflecting the island's rugged limestone terrain), attested since the Iliad.",
+      "current_repo_state": {
+        "b_tarr": "Skyros",
+        "b_tarr_direct": "Skyros",
+        "b_tarr_hist": "Skyros",
+        "b_origin": "Skyros (constituent holding of Lesbos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Skyros",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_naxos": {
+      "barony_key": "b_naxos",
+      "modern_name": "Naxos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_naxos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 5.28 and 6.96 (c. 440 BCE); Pindar, Pythian 4.88 (c. 462 BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Naxos, leader of the Carians who settled the island.",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Naxos"
+      },
+      "morphemes": [
+        {
+          "form": "Naxos",
+          "language": "Pre-Greek / Ancient Greek",
+          "translation": "island name (Cyclades)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek island name Naxos (Νάξος), naming the largest Cycladic island and its main town, attested from Archaic/Classical Greek sources onward.",
+      "current_repo_state": {
+        "b_tarr": "Naxos",
+        "b_tarr_direct": "Naxos",
+        "b_tarr_hist": "Naxos",
+        "b_origin": "Naxos (Naxos)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Naxos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_thera": {
+      "barony_key": "b_thera",
+      "modern_name": "Thera",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_naxos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -462,
+      "first_mention_attestation": "Pindar, Pythian Ode 4.10–20 (462 BCE) and Herodotus, Histories 4.147–150 (c. 440 BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after the legendary Dorian leader Theras, son of Autesion (Herodotus 4.147).",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Thera"
+      },
+      "morphemes": [
+        {
+          "form": "Thera",
+          "language": "Doric / Ancient Greek",
+          "translation": "island/polis name (traditionally from Theras)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Thera (Θήρα), naming the southern Cycladic island (modern Santorini) and its ancient city, attested from Pindar and Herodotus onward.",
+      "current_repo_state": {
+        "b_tarr": "Thera",
+        "b_tarr_direct": "Thera",
+        "b_tarr_hist": "Thera",
+        "b_origin": "Thera (constituent holding of Naxos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Santorini",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_andros": {
+      "barony_key": "b_andros",
+      "modern_name": "Andros",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_naxos",
+        "holding_type": "city"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 4.33 and 8.111 (c. 440 BCE); Thucydides 4.42.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Andreus, a Cretan general of Rhadamanthus (Diodorus Siculus 5.79).",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Andros"
+      },
+      "morphemes": [
+        {
+          "form": "Andros",
+          "language": "Pre-Greek / Ancient Greek",
+          "translation": "island name (northern Cyclades)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Andros (Ἄνδρος), naming the northernmost Cycladic island and its ancient polis, attested from Herodotus and Classical inscriptions onward.",
+      "current_repo_state": {
+        "b_tarr": "Andros",
+        "b_tarr_direct": "Andros",
+        "b_tarr_hist": "Andros",
+        "b_origin": "Andros (constituent holding of Naxos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Andros,_Greece",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tinos": {
+      "barony_key": "b_tinos",
+      "modern_name": "Tinos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_naxos",
+        "holding_type": "church"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 4.33, 6.97, and 8.66 (c. 440 BCE) as Tenos.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Tenos, leader of Ionian colonists.",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Tinos"
+      },
+      "morphemes": [
+        {
+          "form": "Tenos / Tinos",
+          "language": "Pre-Greek / Ancient Greek",
+          "translation": "island name (or Phoenician tannoth 'serpent')"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Tenos (Τῆνος, Modern/Byzantine Tinos), naming the Cycladic island and its chief town, continuously attested since Herodotus.",
+      "current_repo_state": {
+        "b_tarr": "Tinos",
+        "b_tarr_direct": "Tinos",
+        "b_tarr_hist": "Tinos",
+        "b_origin": "Tinos (constituent holding of Naxos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tinos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_rhodos": {
+      "barony_key": "b_rhodos",
+      "modern_name": "Rhodos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_rhodos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -408,
+      "first_mention_attestation": "Synoecized city of Rhodos founded in 408 BCE (Diodorus Siculus 13.75); the island name Rhodos is earlier attested in Homer, Iliad 2.654 (c. 8th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked to the nymph Rhode, daughter of Poseidon.",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Rhodos"
+      },
+      "morphemes": [
+        {
+          "form": "rhodon / Rhodos",
+          "language": "Pre-Greek / Ancient Greek",
+          "translation": "rose / hibiscus (or pre-Greek island name)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Rhodos (Ῥόδος), naming the largest Dodecanese island and its synoecized capital (founded 408 BCE), attested in Homer and Mycenaean sources.",
+      "current_repo_state": {
+        "b_tarr": "Rôdos",
+        "b_tarr_direct": "Rôdos",
+        "b_tarr_hist": "Rôdos",
+        "b_origin": "Rôdos (Rhodos)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Rhodes",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kos": {
+      "barony_key": "b_kos",
+      "modern_name": "Kos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_rhodos",
+        "holding_type": "church"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.677 (c. 8th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked to Kos, daughter of Merops.",
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Kos"
+      },
+      "morphemes": [
+        {
+          "form": "Kos",
+          "language": "Pre-Greek / Anatolian",
+          "translation": "Dodecanese island name"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek island name Kos (Κῶς), naming the Dodecanese island and its chief polis, attested since the Iliad.",
+      "current_repo_state": {
+        "b_tarr": "Kos",
+        "b_tarr_direct": "Kos",
+        "b_tarr_hist": "Kos",
+        "b_origin": "Kos (constituent holding of Rôdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lindos": {
+      "barony_key": "b_lindos",
+      "modern_name": "Lindos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_rhodos",
+        "holding_type": "city"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.656 (c. 8th century BCE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically named after Lindus, grandson of Helios.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lind-",
+          "language": "Pre-Greek",
+          "translation": "pre-Greek substrate root"
+        },
+        {
+          "form": "-os",
+          "language": "Ancient Greek",
+          "translation": "toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek toponym Lindos (Λίνδος), one of the three ancient Dorian cities of Rhodes, attested in Homer's Catalogue of Ships and continuously inhabited through the Byzantine era.",
+      "current_repo_state": {
+        "b_tarr": "Lindos",
+        "b_tarr_direct": "Lindos",
+        "b_tarr_hist": "Lindos",
+        "b_origin": "Lindos (constituent holding of Rôdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lindos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_karpathos": {
+      "barony_key": "b_karpathos",
+      "modern_name": "Karpathos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_rhodos",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.676 (as Krapathos, c. 8th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Κάρπαθος / Κράπαθος",
+          "language": "Ancient Greek (Pre-Greek substrate)",
+          "translation": "Karpathos (etymology uncertain; pre-Greek Aegean island name)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek Aegean island toponym attested in Homer (Iliad 2.676) with metathesis as Krapathos and later standardly as Karpathos.",
+      "current_repo_state": {
+        "b_tarr": "Karpathos",
+        "b_tarr_direct": "Karpathos",
+        "b_tarr_hist": "Karpathos",
+        "b_origin": "Karpathos (constituent holding of Rôdos)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Karpathos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_athens": {
+      "barony_key": "b_athens",
+      "modern_name": "Athens",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_attica",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -1400,
+      "first_mention_attestation": "Mycenaean Linear B tablet KN V 52 (a-ta-na-po-ti-ni-ja, c. 1400 BCE) and Homer, Iliad 2.546 / Odyssey 7.80 (c. 8th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἀθῆναι (Athênai)",
+          "language": "Ancient Greek (Pre-Greek substrate)",
+          "translation": "Athens (plural toponym; pre-Greek root shared with goddess Athena)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek toponym attested in Mycenaean Linear B (a-ta-na) and Homeric Greek as plural Athenai; modern scholarship generally holds that the goddess Athena was named after the city.",
+      "current_repo_state": {
+        "b_tarr": "Athên",
+        "b_tarr_direct": "Attîke",
+        "b_tarr_hist": "Athên",
+        "b_origin": "Athên (Athên (in-game: Attica))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Athens",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_thebeshellas": {
+      "barony_key": "b_thebeshellas",
+      "modern_name": "Thebes",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_attica",
+        "holding_type": "city"
+      },
+      "first_mention_year": -1300,
+      "first_mention_attestation": "Mycenaean Linear B tablets from Thebes and Pylos (te-qa-i, c. 1300 BCE) and Homer, Iliad 4.378 (c. 8th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Θῆβαι (Thêbai)",
+          "language": "Ancient Greek (Pre-Greek substrate)",
+          "translation": "Thebes (plural toponym; Mycenaean *Thegwai)"
+        }
+      ],
+      "etymology_analysis": "Bronze Age Mycenaean toponym attested in Linear B as te-qa-i (*Thegwai), evolving into Classical Greek Thebai.",
+      "current_repo_state": {
+        "b_tarr": "Thebes",
+        "b_tarr_direct": "Thebes",
+        "b_tarr_hist": "Thebes",
+        "b_origin": "Thebes (constituent holding of Athên)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Thebes,_Greece",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_megara": {
+      "barony_key": "b_megara",
+      "modern_name": "Megara",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_attica",
+        "holding_type": "church"
+      },
+      "first_mention_year": -550,
+      "first_mention_attestation": "Theognis of Megara (6th century BCE) and Herodotus, Histories (5th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Μέγαρα (Mégara)",
+          "language": "Ancient Greek",
+          "translation": "great halls / sanctuaries / underground chambers (plural of megaron)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek plural of megaron ('great hall' or 'sacred chamber/sanctuary', traditionally linked to sanctuaries of Demeter).",
+      "current_repo_state": {
+        "b_tarr": "Megara",
+        "b_tarr_direct": "Megara",
+        "b_tarr_hist": "Megara",
+        "b_origin": "Megara (constituent holding of Athên)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Megara",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_levadia": {
+      "barony_key": "b_levadia",
+      "modern_name": "Levadia",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_boeotia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 8.134 (as Lebadeia, c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Λεβάδεια (Lebádeia)",
+          "language": "Ancient Greek",
+          "translation": "Lebadeia (traditionally from mythical founder Lebados; modern Greek Livadeia/Levadia)"
+        }
+      ],
+      "etymology_analysis": "Ancient Boeotian city name Lebadeia (attested in Herodotus 8.134), whose Modern Greek pronunciation yields Livadeia / Levadia.",
+      "current_repo_state": {
+        "b_tarr": "Thêben",
+        "b_tarr_direct": "Böôtjen",
+        "b_tarr_hist": "Thêben",
+        "b_origin": "Thêben (Thêben (in-game: Boeotia))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Livadeia",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Mideia"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.507; Pausanias 9.39.1",
+        "relationship": "same_site_earlier_name",
+        "notes": "Pausanias (9.39.1) states that the city originally stood on high ground under the name Mideia (attested in Homer's Catalogue of Ships) before moving to the plain as Lebadeia."
+      }
+    },
+    "b_boudounitsa": {
+      "barony_key": "b_boudounitsa",
+      "modern_name": "Boudounitsa",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_boeotia",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1204,
+      "first_mention_attestation": "Chronicle of the Morea and Frankish feudal grants establishing the Marquisate of Bodonitsa in 1204 CE",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Βοδονίτσα (Bodonítsa / Boudonítsa)",
+          "language": "South Slavic / Medieval Greek",
+          "translation": "little water-place / streamlet (likely from Slavic *voda 'water' + -ica)"
+        }
+      ],
+      "etymology_analysis": "Medieval toponym (also Bodonitsa, Vodonitsa, later Mendenitsa) of likely Slavic origin from the Middle Byzantine period, first documented in 1204 when Boniface of Montferrat granted it to Guido Pallavicini.",
+      "current_repo_state": {
+        "b_tarr": "Boudounitza",
+        "b_tarr_direct": "Boudounitza",
+        "b_tarr_hist": "Boudounitza",
+        "b_origin": "Boudounitza (constituent holding of Thêben)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mendenitsa",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Pharygai"
+        ],
+        "first_mention_year": 20,
+        "first_mention_source": "Strabo, Geography 9.4.4 (1st century BCE/CE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "The Frankish castle of Bodonitsa incorporates ancient ashlar blocks on an acropolis often identified with ancient Pharygai in Epicnemidian Locris."
+      }
+    },
+    "b_amfissa": {
+      "barony_key": "b_amfissa",
+      "modern_name": "Amfissa",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_boeotia",
+        "holding_type": "city"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 8.32 (as Amphissa, c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Mythologically linked to Amphissa, daughter of Macar and beloved of Apollo.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "ἀμφί (amphí)",
+          "language": "Ancient Greek",
+          "translation": "around, on both sides"
+        },
+        {
+          "form": "-ισσα (-issa)",
+          "language": "Ancient Greek / Pre-Greek suffix",
+          "translation": "toponymic suffix (traditionally linked to amphiennymi 'to surround', as it is surrounded by mountains)"
+        }
+      ],
+      "etymology_analysis": "Ancient Locrian polis name Amphissa, classically explained from amphiennymi ('to surround', referencing Mt. Giona and Mt. Parnassus) or mythical eponym Amphissa.",
+      "current_repo_state": {
+        "b_tarr": "Amfissa",
+        "b_tarr_direct": "Amfissa",
+        "b_tarr_hist": "Amfissa",
+        "b_origin": "Amfissa (constituent holding of Thêben)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Amfissa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_chalkis": {
+      "barony_key": "b_chalkis",
+      "modern_name": "Chalkis",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_euboea",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 2.537 (c. 8th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "χαλκός (chalkós)",
+          "language": "Ancient Greek",
+          "translation": "copper, bronze"
+        },
+        {
+          "form": "-ίς (-ís)",
+          "language": "Ancient Greek",
+          "translation": "feminine toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Chalkis, derived from chalkos ('copper/bronze'), attested from Homer's Catalogue of Ships (Iliad 2.537).",
+      "current_repo_state": {
+        "b_tarr": "Negropont",
+        "b_tarr_direct": "Koperstat",
+        "b_tarr_hist": "Negropont",
+        "b_origin": "Negropont (Negropont (in-game: Euboea))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Chalcis",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_skopelos": {
+      "barony_key": "b_skopelos",
+      "modern_name": "Skopelos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_euboea",
+        "holding_type": "city"
+      },
+      "first_mention_year": 150,
+      "first_mention_attestation": "Claudius Ptolemy, Geography 3.13 (c. 150 CE, as Skopelos)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Skopelos (reef / crag)"
+      },
+      "morphemes": [
+        {
+          "form": "σκόπελος (skópelos)",
+          "language": "Ancient Greek",
+          "translation": "high rock, promontory, reef, lookout"
+        }
+      ],
+      "etymology_analysis": "From Ancient Greek skopelos ('lookout rock, crag, reef'), referring to the reefs around the island; first attested in Ptolemy (2nd century CE), replacing earlier Peparethos.",
+      "current_repo_state": {
+        "b_tarr": "Skopelos",
+        "b_tarr_direct": "Skopelos",
+        "b_tarr_hist": "Skopelos",
+        "b_origin": "Skopelos (constituent holding of Negropont)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Skopelos",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Peparethos"
+        ],
+        "first_mention_year": -600,
+        "first_mention_source": "Homeric Hymn to Apollo 32 (c. 6th century BCE); Thucydides 3.89",
+        "relationship": "same_site_earlier_name",
+        "notes": "Throughout the Archaic, Classical, and Hellenistic periods the island and its main settlement were known as Peparethos."
+      }
+    },
+    "b_oreoi": {
+      "barony_key": "b_oreoi",
+      "modern_name": "Oreoi",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_euboea",
+        "holding_type": "church"
+      },
+      "first_mention_year": -445,
+      "first_mention_attestation": "Attic inscriptions / Thucydides 8.95 following the Athenian synoecism of 445 BCE (as Oreos)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ὠρεός (Ōreós)",
+          "language": "Ancient Greek",
+          "translation": "Oreus (traditionally linked to the hunter Orion or mountain/border watch)"
+        }
+      ],
+      "etymology_analysis": "Ancient Euboean town Oreos (pluralized in Modern Greek as Oreoi), which became the main city name after Pericles settled Athenian cleruchs there in 445 BCE.",
+      "current_repo_state": {
+        "b_tarr": "Orôi",
+        "b_tarr_direct": "Orôi",
+        "b_tarr_hist": "Orôi",
+        "b_origin": "Orôi (constituent holding of Negropont)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Oreoi",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Histiaia",
+          "Hestiaia"
+        ],
+        "first_mention_year": -750,
+        "first_mention_source": "Homer, Iliad 2.537 (c. 8th century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Prior to the 5th-century BCE synoecism (445 BCE), the city was known as Histiaia (Hestiaia), attested in the Iliad."
+      }
+    },
+    "b_phocaea": {
+      "barony_key": "b_phocaea",
+      "modern_name": "Phocaea",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_aeolis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 1.163 (c. 440 BCE; city founded c. 8th–7th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "φώκη (phṓkē)",
+          "language": "Ancient Greek",
+          "translation": "seal (marine mammal)"
+        },
+        {
+          "form": "-αια (-aia)",
+          "language": "Ancient Greek",
+          "translation": "feminine toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "From Ancient Greek phoke ('seal'), reflected on Phocaean coinage depicting seals; an ancient Ionian polis founded by Phocian/Athenian colonists.",
+      "current_repo_state": {
+        "b_tarr": "Phôkêe",
+        "b_tarr_direct": "Phôkêe",
+        "b_tarr_hist": "Phôkêe",
+        "b_origin": "Ancient Ionian maritime city Phocaea on the Aegean coast (in-game: Phôkêe)",
+        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Phocaea",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_pergamon": {
+      "barony_key": "b_pergamon",
+      "modern_name": "Pergamon",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_aeolis",
+        "holding_type": "city"
+      },
+      "first_mention_year": -399,
+      "first_mention_attestation": "Xenophon, Anabasis 7.8.8 (events of 399 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Πέργαμον (Pérgamon)",
+          "language": "Ancient Greek (Pre-Greek / Anatolian)",
+          "translation": "citadel, height, fortified acropolis"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek / Anatolian toponym cognate with Greek pergamos ('citadel'), attested historically from Xenophon's Anabasis (399 BCE) and later capital of the Attalid kingdom.",
+      "current_repo_state": {
+        "b_tarr": "Pergamôn",
+        "b_tarr_direct": "Pergamôn",
+        "b_tarr_hist": "Pergamôn",
+        "b_origin": "Ancient Hellenistic royal capital and acropolis of Pergamon (in-game: Pergamôn)",
+        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Pergamon",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_adramyttium": {
+      "barony_key": "b_adramyttium",
+      "modern_name": "Adramyttium",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_aeolis",
+        "holding_type": "church"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 7.42 (c. 440 BCE; city founded 6th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after Adramytos, brother of Croesus and son of Lydian King Alyattes (6th century BCE), according to Aristotle.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἀδραμύττιον (Adramýttion)",
+          "language": "Ancient Greek (from Lydian personal name)",
+          "translation": "city of Adramytos (son of Lydian king Alyattes)"
+        }
+      ],
+      "etymology_analysis": "Greek adaptation (Adramyttion / Latin Adramyttium) of a Lydian foundation attributed by Aristotle to Adramytos, son of King Alyattes (6th century BCE).",
+      "current_repo_state": {
+        "b_tarr": "Adramyttium",
+        "b_tarr_direct": "Adramyttium",
+        "b_tarr_hist": "Adramyttium",
+        "b_origin": "Adramyttium (constituent holding of Pergamôn)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Adramyttium",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_smyrna": {
+      "barony_key": "b_smyrna",
+      "modern_name": "Smyrna",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -630,
+      "first_mention_attestation": "Mimnermus fr. 9 (7th century BCE) and Herodotus, Histories 1.149 (c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Σμύρνη (Smýrnē)",
+          "language": "Ancient Greek (Anatolian / Pre-Greek)",
+          "translation": "Smyrna (traditionally associated with myrrh / Amazon Smyrna; cf. Old Assyrian Ti-smurna)"
+        }
+      ],
+      "etymology_analysis": "Ancient Anatolian/Aeolic toponym (Ionic Smyrne, Aeolic/Attic Smyrna), attested in Archaic Greek poetry (Mimnermus, 7th century BCE) and Herodotus.",
+      "current_repo_state": {
+        "b_tarr": "Smîrne",
+        "b_tarr_direct": "Jônjen",
+        "b_tarr_hist": "Smîrne",
+        "b_origin": "Smîrne (Smîrne (in-game: Ionia))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Smyrna",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_halikarnassos": {
+      "barony_key": "b_halikarnassos",
+      "modern_name": "Halikarnassos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 1.144 and 7.99 (c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἁλικαρνασσός (Halikarnassós)",
+          "language": "Ancient Greek / Carian substrate",
+          "translation": "Halicarnassus (pre-Greek/Anatolian toponym with -ssos suffix)"
+        }
+      ],
+      "etymology_analysis": "Carian-Greek toponym featuring the Anatolian/Pre-Greek -ssos suffix; famous as the birthplace of Herodotus and capital of Caria under Mausolus.",
+      "current_repo_state": {
+        "b_tarr": "Halikarnassos",
+        "b_tarr_direct": "Halikarnassos",
+        "b_tarr_hist": "Halikarnassos",
+        "b_origin": "Halikarnassos (constituent holding of Smîrne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Halicarnassus",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Zephyria"
+        ],
+        "first_mention_year": 20,
+        "first_mention_source": "Strabo, Geography 14.2.16; Pliny the Elder, Naturalis Historia 5.29",
+        "relationship": "same_site_earlier_name",
+        "notes": "Classical geographers (Strabo, Pliny) record Zephyria as the original name of the settlement on the former island/peninsula."
+      }
+    },
+    "b_iassus": {
+      "barony_key": "b_iassus",
+      "modern_name": "Iassus",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "city"
+      },
+      "first_mention_year": -412,
+      "first_mention_attestation": "Thucydides, History of the Peloponnesian War 8.28 (events of 412 BCE) and Athenian Tribute Lists (5th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἰασός / Ἰασσός (Iasós / Iassós)",
+          "language": "Ancient Greek / Carian substrate",
+          "translation": "Iasos (Latinized Iasus/Iassus)"
+        }
+      ],
+      "etymology_analysis": "Ancient Carian-Greek coastal city name (Iasos/Iassos, Latinized Iassus), attested in 5th-century BCE Athenian Tribute Lists and Thucydides.",
+      "current_repo_state": {
+        "b_tarr": "Iassus",
+        "b_tarr_direct": "Iassus",
+        "b_tarr_hist": "Iassus",
+        "b_origin": "Iassus (constituent holding of Smîrne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Iasos",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_miletus": {
+      "barony_key": "b_miletus",
+      "modern_name": "Miletus",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "church"
+      },
+      "first_mention_year": -1320,
+      "first_mention_attestation": "Hittite Annals of Mursili II (as Millawanda, c. 1320 BCE), Mycenaean Linear B (mi-ra-ti-ja, c. 1200 BCE), and Homer, Iliad 2.868 (c. 8th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Μίλητος (Mílētos)",
+          "language": "Ancient Greek (from Anatolian / Minoan)",
+          "translation": "Miletus (cf. Hittite Millawanda / Milawata)"
+        }
+      ],
+      "etymology_analysis": "Bronze Age Anatolian toponym (Hittite Millawanda/Milawata), adapted into Mycenaean/Ionic Greek as Miletos (Doric/Aeolic Milatos).",
+      "current_repo_state": {
+        "b_tarr": "Miletus",
+        "b_tarr_direct": "Miletus",
+        "b_tarr_hist": "Miletus",
+        "b_origin": "Miletus (constituent holding of Smîrne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Miletus",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ephesos": {
+      "barony_key": "b_ephesos",
+      "modern_name": "Ephesos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -650,
+      "first_mention_attestation": "Callinus of Ephesus (7th century BCE) and Herodotus, Histories 1.26 (c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἔφεσος (Éphesos)",
+          "language": "Ancient Greek (from Anatolian / Luwian)",
+          "translation": "Ephesus (Greek adaptation of Bronze Age Luwian/Hittite Apasa)"
+        }
+      ],
+      "etymology_analysis": "Greek adaptation (Ephesos) of the Bronze Age Arzawan city name Apasa; attested in Greek from the 7th century BCE.",
+      "current_repo_state": {
+        "b_tarr": "Ephesos",
+        "b_tarr_direct": "Ephesos",
+        "b_tarr_hist": "Ephesos",
+        "b_origin": "Ephesos (constituent holding of Smîrne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ephesus",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Apasa"
+        ],
+        "first_mention_year": -1320,
+        "first_mention_source": "Hittite Annals of Mursili II (c. 1320 BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ephesus was built on the site of Apasa, the Bronze Age capital of the kingdom of Arzawa attested in 14th–13th century BCE Hittite records."
+      }
+    },
+    "b_lebedos": {
+      "barony_key": "b_lebedos",
+      "modern_name": "Lebedos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_ephese",
+        "county": "c_ionia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 1.142 (c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Λέβεδος (Lébedos)",
+          "language": "Ancient Greek / Anatolian substrate",
+          "translation": "Lebedus (one of the twelve cities of the Ionian League)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek / Anatolian coastal toponym attested as an Ionian League polis in Herodotus 1.142.",
+      "current_repo_state": {
+        "b_tarr": "Lebedos",
+        "b_tarr_direct": "Lebedos",
+        "b_tarr_hist": "Lebedos",
+        "b_origin": "Lebedos (constituent holding of Smîrne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lebedus",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Artis"
+        ],
+        "first_mention_year": 20,
+        "first_mention_source": "Strabo, Geography 14.1.29 (1st century BCE/CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Strabo (14.1.29) records that the site previously bore the Lydian/pre-Greek name Artis."
+      }
+    },
+    "b_brysis": {
+      "barony_key": "b_brysis",
+      "modern_name": "Brysis",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 787,
+      "first_mention_attestation": "Acts of the Second Council of Nicaea (787 CE, Bishop John of Brysis; also traditionally dated to c. 425 CE under Theodosius II)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Brysis (spring / source of water)"
+      },
+      "morphemes": [
+        {
+          "form": "βρύσις (brýsis)",
+          "language": "Ancient / Byzantine Greek",
+          "translation": "spring, fountain, gushing water"
+        }
+      ],
+      "etymology_analysis": "From Greek brysis ('spring, source of water'), later translated into Turkish as Pınarhisar ('spring-fortress'); attested as a Byzantine bishopric by 787 CE.",
+      "current_repo_state": {
+        "b_tarr": "Brüsis",
+        "b_tarr_direct": "Brüsis",
+        "b_tarr_hist": "Brüsis",
+        "b_origin": "Ancient Byzantine fortress and bishopric Brysis in Thrace (in-game: Brüsis)",
+        "b_anachronism": "Authentic Classical Antiquity Byzantine Fortress.",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/P%C4%B1narhisar",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_arkadiopolis": {
+      "barony_key": "b_arkadiopolis",
+      "modern_name": "Arkadiopolis",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "city"
+      },
+      "first_mention_year": 400,
+      "first_mention_attestation": "Renamed under Eastern Roman Emperor Arcadius (r. 395–408 CE); attested in 5th–6th century Byzantine sources (e.g., Hierocles, Synecdemus)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after Eastern Roman Emperor Arcadius (r. 395–408 CE), who refounded the city c. 400 CE.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἀρκαδίου (Arkadiou)",
+          "language": "Byzantine Greek (from Latin Arcadius)",
+          "translation": "of Arcadius"
+        },
+        {
+          "form": "πόλις (pólis)",
+          "language": "Ancient / Byzantine Greek",
+          "translation": "city"
+        }
+      ],
+      "etymology_analysis": "Compound of Emperor Arcadius's name and Greek polis ('City of Arcadius'), refounded c. 400 CE on the site of ancient Bergoule.",
+      "current_repo_state": {
+        "b_tarr": "Arkadîôpel",
+        "b_tarr_direct": "Arkadîôpel",
+        "b_tarr_hist": "Arkadîôpel",
+        "b_origin": "Ancient Roman-Byzantine episcopal city Arcadiopolis on the Ergene (in-game: Arkadîôpel)",
+        "b_anachronism": "Authentic Classical Antiquity Byzantine Civitas.",
+        "category": "classical_antiquity"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/L%C3%BCleburgaz",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Bergoule",
+          "Bergule"
+        ],
+        "first_mention_year": 150,
+        "first_mention_source": "Claudius Ptolemy, Geography 3.11.12 (c. 150 CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Earlier Thracian/Roman town of Bergoule (Bergule/Bergula), attested in Ptolemy and the Antonine/Bordeaux Itineraries before being renamed Arkadiopolis."
+      }
+    },
+    "b_selymbria": {
+      "barony_key": "b_selymbria",
+      "modern_name": "Selymbria",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "church"
+      },
+      "first_mention_year": -440,
+      "first_mention_attestation": "Herodotus, Histories 6.33 (c. 440 BCE; Megarian colony founded c. 7th century BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after its legendary Thracian founder Selys (Thracian 'Selys-bria', town of Selys).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Σήλυς (Sḗlys)",
+          "language": "Thracian",
+          "translation": "Selys (mythical Thracian founder)"
+        },
+        {
+          "form": "βρία (bría)",
+          "language": "Thracian",
+          "translation": "town, fortified settlement"
+        }
+      ],
+      "etymology_analysis": "Thracian compound meaning 'town of Selys' (-bria = 'town'), Hellenized as Selymbria when colonized by Megarians.",
+      "current_repo_state": {
+        "b_tarr": "Selymbria",
+        "b_tarr_direct": "Selymbria",
+        "b_tarr_hist": "Selymbria",
+        "b_origin": "Selymbria (constituent holding of Arkadîôpel)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Silivri",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_herakleiaperinthos": {
+      "barony_key": "b_herakleiaperinthos",
+      "modern_name": "Herakleia Perinthos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "church"
+      },
+      "first_mention_year": 300,
+      "first_mention_attestation": "Renamed Heraclea c. 300 CE under Diocletian (attested in Ammianus Marcellinus 27.4 and Notitia Dignitatum); combined with classical Perinthos (Herodotus 4.90)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Renamed Herakleia c. 300 CE in honor of Heracles (patron deity of the Herculian Tetrarchy under Diocletian and Maximian).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ἡράκλεια (Hērákleia)",
+          "language": "Ancient / Late Roman Greek",
+          "translation": "city of Heracles (adopted c. 300 CE)"
+        },
+        {
+          "form": "Πέρινθος (Périnthos)",
+          "language": "Pre-Greek / Thracian",
+          "translation": "Perinthus (original Samian colony name)"
+        }
+      ],
+      "etymology_analysis": "Late Roman name Herakleia (adopted c. 300 CE in honor of Heracles/Herculian tetrarchy) paired with the older pre-Greek/Thracian name Perinthos.",
+      "current_repo_state": {
+        "b_tarr": "Herakleia Perinthos",
+        "b_tarr_direct": "Herakleia Perinthos",
+        "b_tarr_hist": "Herakleia Perinthos",
+        "b_origin": "Herakleia Perinthos (constituent holding of Arkadîôpel)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Marmara_Ere%C4%9Flisi",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Perinthus",
+          "Perinthos"
+        ],
+        "first_mention_year": -440,
+        "first_mention_source": "Herodotus, Histories 4.90 (c. 440 BCE; founded c. 600 BCE by Samians)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Originally founded as Perinthos (Perinthus) c. 600 BCE; renamed Heraclea c. 300 CE."
+      }
+    },
+    "b_bizye": {
+      "barony_key": "b_bizye",
+      "modern_name": "Bizye",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "city"
+      },
+      "first_mention_year": -25,
+      "first_mention_attestation": "Strabo, Geography 7 fr. 47 (1st century BCE/CE) and late 1st-century BCE Thracian inscriptions",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Βιζύη (Bizýē)",
+          "language": "Thracian (Greek adaptation)",
+          "translation": "Bizye (royal residence of the Thracian Asti)"
+        }
+      ],
+      "etymology_analysis": "Thracian toponym (Greek Bizye, modern Turkish Vize), attested from the 1st century BCE/CE as the royal capital of the Thracian Asti tribe.",
+      "current_repo_state": {
+        "b_tarr": "Bizye",
+        "b_tarr_direct": "Bizye",
+        "b_tarr_hist": "Bizye",
+        "b_origin": "Bizye (constituent holding of Arkadîôpel)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Vize",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_salmydessus": {
+      "barony_key": "b_salmydessus",
+      "modern_name": "Salmydessus",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_brysis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -460,
+      "first_mention_attestation": "Aeschylus, Prometheus Bound 726 (c. 460 BCE) and Herodotus, Histories 4.93 (c. 440 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Σαλμυδησσός (Salmydēssós)",
+          "language": "Thracian / Pre-Greek substrate",
+          "translation": "Salmydessus (coastal district and town on the Black Sea)"
+        }
+      ],
+      "etymology_analysis": "Pre-Greek / Thracian toponym with -ssos suffix, attested in 5th-century BCE Greek sources (Aeschylus, Herodotus, Xenophon) for the dangerous Black Sea coast and town.",
+      "current_repo_state": {
+        "b_tarr": "Salmydessus",
+        "b_tarr_direct": "Salmydessus",
+        "b_tarr_hist": "Salmydessus",
+        "b_origin": "Salmydessus (constituent holding of Arkadîôpel)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Salmydessus",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_constantinople": {
+      "barony_key": "b_constantinople",
+      "modern_name": "Constantinople",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_byzantion",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 330,
+      "first_mention_attestation": "Dedicated as Constantinopolis by Emperor Constantine I on 11 May 330 CE",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after Roman Emperor Constantine I (Constantine the Great), who dedicated Constantinopolis as the new imperial capital on 11 May 330 CE.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Κωνσταντίνου (Kōnstantínou)",
+          "language": "Greek (from Latin Constantinus)",
+          "translation": "of Constantine"
+        },
+        {
+          "form": "πόλις (pólis)",
+          "language": "Ancient / Byzantine Greek",
+          "translation": "city"
+        }
+      ],
+      "etymology_analysis": "Greek Konstantinoupolis / Latin Constantinopolis ('City of Constantine'), dedicated in 330 CE as the new imperial capital on the site of Byzantion.",
+      "current_repo_state": {
+        "b_tarr": "Bîsantz",
+        "b_tarr_direct": "Konstantinôpel",
+        "b_tarr_hist": "Bîsantz",
+        "b_origin": "Bîsantz (Bîsantz (in-game: Byzantion))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Constantinople",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Byzantium",
+          "Byzantion"
+        ],
+        "first_mention_year": -440,
+        "first_mention_source": "Herodotus, Histories 4.144 (c. 440 BCE; Megarian colony founded c. 657 BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Founded as a Megarian colony under the name Byzantion (Latin Byzantium) in the 7th century BCE before Constantine I refounded it as Constantinople in 324–330 CE."
+      }
+    },
+    "b_kalliopolis": {
+      "barony_key": "b_kalliopolis",
+      "modern_name": "Kalliopolis",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_kalliopolis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -434,
+      "first_mention_attestation": "Athenian Tribute Lists (434 BCE, as Kallipolitai) and Livy, History of Rome 31.16 (events of 200 BCE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "καλλι- (kalli-)",
+          "language": "Ancient Greek",
+          "translation": "beautiful, fair (from kalos)"
+        },
+        {
+          "form": "πόλις (pólis)",
+          "language": "Ancient Greek",
+          "translation": "city"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Kallipolis ('beautiful city'), attested from the 5th century BCE in the Athenian Tribute Lists and later Latinized as Callipolis / Italian Gallipoli / Turkish Gelibolu.",
+      "current_repo_state": {
+        "b_tarr": "Schönstat",
+        "b_tarr_direct": "Schönstat",
+        "b_tarr_hist": "Schönstat",
+        "b_origin": "Schönstat (Kallipolis)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gelibolu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ainos": {
+      "barony_key": "b_ainos",
+      "modern_name": "Ainos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_kalliopolis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -750,
+      "first_mention_attestation": "Homer, Iliad 4.520 (c. 8th century BCE, as Ainos)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Αἶνος (Aînos)",
+          "language": "Ancient Greek",
+          "translation": "Ainos (Latinized Aenus; modern Turkish Enez)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek city name attested in Homer (Iliad 4.520), colonized by Aeolians from Mytilene and Kyme at the mouth of the Hebrus.",
+      "current_repo_state": {
+        "b_tarr": "Ainos",
+        "b_tarr_direct": "Ainos",
+        "b_tarr_hist": "Ainos",
+        "b_origin": "Ainos (constituent holding of Schönstat)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Enez",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Poltymbria",
+          "Poltyobria"
+        ],
+        "first_mention_year": 20,
+        "first_mention_source": "Strabo, Geography 7.6.1; Stephanus of Byzantium",
+        "relationship": "same_site_earlier_name",
+        "notes": "Classical sources (Strabo, Stephanus of Byzantium) record Poltymbria / Poltyobria ('town of Poltys') as the earlier Thracian name of the site."
+      }
+    },
+    "b_kypsela": {
+      "barony_key": "b_kypsela",
+      "modern_name": "Kypsela",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_kalliopolis",
+        "holding_type": "castle"
+      },
+      "first_mention_year": -255,
+      "first_mention_attestation": "Coins of Thracian ruler Adaios minted at Kypsela (c. 255–245 BCE) and Strabo, Geography 7 fr. 47",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "κυψέλα / κυψέλη (kypséla / kypsélē)",
+          "language": "Ancient Greek",
+          "translation": "hollow vessel, beehive (or named after a Thracian/Greek Cypselus)"
+        }
+      ],
+      "etymology_analysis": "Ancient Greek Kypsela (Latin Cypsela, modern Turkish Ipsala), attested from the 3rd century BCE as a key Thracian city and Via Egnatia station on the Hebrus.",
+      "current_repo_state": {
+        "b_tarr": "Kypsela",
+        "b_tarr_direct": "Kypsela",
+        "b_tarr_hist": "Kypsela",
+        "b_origin": "Kypsela (constituent holding of Schönstat)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Cypsela_(Thrace)",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_raidestos": {
+      "barony_key": "b_raidestos",
+      "modern_name": "Raidestos",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_kalliopolis",
+        "holding_type": "city"
+      },
+      "first_mention_year": 550,
+      "first_mention_attestation": "Procopius, De Aedificiis 4.9 (c. 550 CE, as Rhaedestus / Raidestos; cf. Pliny NH 4.11 Resisto, c. 77 CE)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ῥαιδεστός (Rhaidestós)",
+          "language": "Late Antique / Byzantine Greek (Thracian substrate)",
+          "translation": "Rhaedestus / Raidestos (later Rodosto / Tekirdag)"
+        }
+      ],
+      "etymology_analysis": "Late Roman/Byzantine name Raidestos (Latinized Rhaedestus), attested by Procopius in the 6th century CE as the successor name to ancient Bisanthe.",
+      "current_repo_state": {
+        "b_tarr": "Raidestos",
+        "b_tarr_direct": "Raidestos",
+        "b_tarr_hist": "Raidestos",
+        "b_origin": "Raidestos (constituent holding of Schönstat)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tekirda%C4%9F",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Bisanthe",
+          "Bysanthe"
+        ],
+        "first_mention_year": -440,
+        "first_mention_source": "Herodotus, Histories 7.137 (c. 440 BCE); Xenophon, Anabasis 7.2.38",
+        "relationship": "same_site_earlier_name",
+        "notes": "Founded by Samian colonists and attested as Bisanthe in Herodotus and Xenophon before being renamed Rhaedestus/Raidestos by Late Antiquity."
+      }
+    },
+    "b_chariopolis": {
+      "barony_key": "b_chariopolis",
+      "modern_name": "Chariopolis",
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_thessalonika",
+        "duchy": "d_thrace",
+        "county": "c_kalliopolis",
+        "holding_type": "church"
+      },
+      "first_mention_year": 787,
+      "first_mention_attestation": "Acts of the Second Council of Nicaea (787 CE, Bishop Theophylact of Chariopolis)",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "χάρις (cháris)",
+          "language": "Byzantine Greek",
+          "translation": "grace, favor, joy"
+        },
+        {
+          "form": "πόλις (pólis)",
+          "language": "Byzantine Greek",
+          "translation": "city"
+        }
+      ],
+      "etymology_analysis": "Byzantine Greek compound Chariopolis ('City of Grace/Joy'), first attested at the Second Council of Nicaea in 787 CE and later Ottoman Hayrabolu.",
+      "current_repo_state": {
+        "b_tarr": "Fröudestat",
+        "b_tarr_direct": "Fröudestat",
+        "b_tarr_hist": "Fröudestat",
+        "b_origin": "Chariopolis (Greek Chario-polis, 'City of Joy / Grace') (in-game: Fröudestat)",
+        "b_anachronism": "Descriptive Greek city toponym calqued to Tarraconian Fröudestat.",
+        "category": "descriptive_calque"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Hayrabolu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    }
+  }
+}
