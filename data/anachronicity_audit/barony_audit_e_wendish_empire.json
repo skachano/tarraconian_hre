@@ -1,0 +1,5303 @@
+{
+  "metadata": {
+    "scope": "e_wendish_empire (all baronies across k_esthonia and k_lithuania)",
+    "version": "1.0.0",
+    "reference_start_year": 867,
+    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "source_files": [
+      "data/ck3_title_tree.json",
+      "data/barony_resolutions.json",
+      "data/barony_holdings.json"
+    ],
+    "schema_notes": {
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
+      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
+      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
+      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+    },
+    "summary_statistics": {
+      "total_baronies": 104,
+      "historical_867_true": 0,
+      "historical_867_false": 104,
+      "first_mention_year_known": 104,
+      "first_mention_year_unknown": 0,
+      "named_after_post_867_person": 8,
+      "named_after_hydronym": 21,
+      "named_after_any_natural_proper_name": 34,
+      "has_older_name_by_867_total": 1,
+      "has_older_name_by_867_for_anachronistic": 1,
+      "has_older_name_by_867_for_historical": 0,
+      "wikipedia_source_attached": 104
+    }
+  },
+  "baronies": {
+    "b_narva": {
+      "barony_key": "b_narva",
+      "modern_name": "Narva",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_narva",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1172,
+      "first_mention_attestation": "1172 CE in the First Novgorod Chronicle (Nerevsky/Narovsky konets); Narvia village attested in 1241 CE in the Danish Census Book.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Narva River"
+      },
+      "morphemes": [
+        {
+          "form": "narva",
+          "language": "Proto-Finnic / Veps",
+          "translation": "threshold, rapids, waterfall (cf. Veps narvāne 'doorsill/rapid')"
+        }
+      ],
+      "etymology_analysis": "Named after the Narva River (attested 1221 CE). The hydronym is most commonly linked by Finnic linguists (e.g., Lauri Kettunen) to a Finnic/Vepsian root narva meaning 'threshold' or 'rapids', referring to the Narva waterfalls; alternative hypotheses propose a Germanic (*narwaz 'narrow') or Slavic origin.",
+      "current_repo_state": {
+        "b_tarr": "Narwe",
+        "b_tarr_direct": "Narwe",
+        "b_tarr_hist": "Narwe",
+        "b_origin": "Narva (ancient river crossing settlement on the Narva River) (in-game: Narwe)",
+        "b_anachronism": "Constituent capital seat disambiguated from ancient Estonian stronghold Tarvanpää.",
+        "category": "capital_disambiguation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Narva",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_wesenburg": {
+      "barony_key": "b_wesenburg",
+      "modern_name": "Wesenburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_narva",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1252,
+      "first_mention_attestation": "1252 CE as Wesenbergh in Middle Low German records (preceded by Estonian Tarwanpe in 1226 CE in the Livonian Chronicle of Henry).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Wesen / Wisent",
+          "language": "Middle Low German",
+          "translation": "aurochs, European bison"
+        },
+        {
+          "form": "bergh",
+          "language": "Middle Low German",
+          "translation": "hill, mountain, stronghold"
+        }
+      ],
+      "etymology_analysis": "Middle Low German adaptation and partial calque of the Estonian hillfort name Tarvanpää ('aurochs's head', attested 1226 CE), combining wesen ('aurochs/bison') with bergh ('hill/fortress').",
+      "current_repo_state": {
+        "b_tarr": "Tarvanpää",
+        "b_tarr_direct": "Tarvanpää",
+        "b_tarr_hist": "Tarvanpää",
+        "b_origin": "Ancient Estonian stronghold Tarvanpää ('Bull's Head', attested 1226) (in-game: Tarvanpää)",
+        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Rakvere",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_poltsamaa": {
+      "barony_key": "b_poltsamaa",
+      "modern_name": "Poltsamaa",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_narva",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1272,
+      "first_mention_attestation": "1272 CE upon the founding of the Livonian Order castle Oberpahlen/Overpalen; the surrounding Mõhu (Moche) district is attested in 1234 CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "põltsa / *põldus",
+          "language": "Estonian",
+          "translation": "field-rich, cultivated (from põld 'field')"
+        },
+        {
+          "form": "maa",
+          "language": "Estonian",
+          "translation": "land, territory"
+        }
+      ],
+      "etymology_analysis": "Estonian Põltsamaa derives from põld ('field', reconstructed *põldus / *põltoisa 'rich in fields') + maa ('land'), meaning 'land of fields'. Known in German as Oberpahlen ('upper Pahlen/pale') and in Russian chronicles as Polchev.",
+      "current_repo_state": {
+        "b_tarr": "Poltsamaa",
+        "b_tarr_direct": "Poltsamaa",
+        "b_tarr_hist": "Poltsamaa",
+        "b_origin": "Poltsamaa (constituent holding of Nârwe)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/P%C3%B5ltsamaa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kuressare": {
+      "barony_key": "b_kuressare",
+      "modern_name": "Kuressare",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_osel",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1381,
+      "first_mention_attestation": "1381 CE in Latin texts as arx aquilae (German Arensburg) for the episcopal castle; Estonian Kurresare Linna attested by 1710 CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kure",
+          "language": "Estonian",
+          "translation": "crane (genitive of kurg) or large bird"
+        },
+        {
+          "form": "saare",
+          "language": "Estonian",
+          "translation": "island (genitive of saar)"
+        }
+      ],
+      "etymology_analysis": "Estonian Kuressaare combines kure ('crane', genitive of kurg) and saar ('island'), either from an older name of Saaremaa or as a folk reinterpretation of the eagle (German Arensburg, Latin arx aquilae) on the coat of arms of the Bishopric of Ösel-Wiek.",
+      "current_repo_state": {
+        "b_tarr": "Sâremâ",
+        "b_tarr_direct": "Sâremâ",
+        "b_tarr_hist": "Sâremâ",
+        "b_origin": "Sâremâ — Historical Option A seat of c_osel",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kuressaare",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_maasilinna": {
+      "barony_key": "b_maasilinna",
+      "modern_name": "Maasilinna",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_osel",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1345,
+      "first_mention_attestation": "1345 CE when the Livonian Order castle (German Soneburg) was established by Landmeister Burchard von Dreileben.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Maasi",
+          "language": "Estonian",
+          "translation": "Maasi (local village name)"
+        },
+        {
+          "form": "linn / linna",
+          "language": "Estonian",
+          "translation": "castle, fortress, stronghold"
+        }
+      ],
+      "etymology_analysis": "Estonian Maasilinn(a) means 'fortress of Maasi' (from the nearby village of Maasi + linn 'fortress'). In German it was called Soneburg ('atonement/punishment castle') because it was built as a punitive stronghold after the St. George's Night Uprising (1343–1345 CE).",
+      "current_repo_state": {
+        "b_tarr": "Maasilinna",
+        "b_tarr_direct": "Maasilinna",
+        "b_tarr_hist": "Maasilinna",
+        "b_origin": "Maasilinna (constituent holding of Sâremâ)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Maasi_Castle",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_muhu": {
+      "barony_key": "b_muhu",
+      "modern_name": "Muhu",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_osel",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1227,
+      "first_mention_attestation": "1227 CE as Mone in the Livonian Chronicle of Henry (and 1228 CE as Mona).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Muhu"
+      },
+      "morphemes": [
+        {
+          "form": "muhk / muhu",
+          "language": "Estonian",
+          "translation": "bump, mound, or boggy land (disputed; cf. Swedish Moon)"
+        }
+      ],
+      "etymology_analysis": "Island name attested in 1227 CE as Mone. Linguists have connected Estonian Muhu to muhk ('mound/elevation') or muhu ('boggy ground'), or alternatively to the historical Swedish name Moon ('white sand', borrowed into German as Mohn/Moon).",
+      "current_repo_state": {
+        "b_tarr": "Moon",
+        "b_tarr_direct": "Moon",
+        "b_tarr_hist": "Moon",
+        "b_origin": "Moon (constituent holding of Sâremâ)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Muhu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_hiiumaa": {
+      "barony_key": "b_hiiumaa",
+      "modern_name": "Hiiumaa",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_osel",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1575,
+      "first_mention_attestation": "1575 CE as Hioma in written records (the island was earlier attested in 1228 CE as Dageida).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Hiiumaa"
+      },
+      "morphemes": [
+        {
+          "form": "hiis / hiiu",
+          "language": "Estonian",
+          "translation": "sacred grove, burial site (later 'giant')"
+        },
+        {
+          "form": "maa",
+          "language": "Estonian",
+          "translation": "land, island"
+        }
+      ],
+      "etymology_analysis": "Estonian Hiiumaa combines hiis (genitive hiiu, originally 'sacred grove' or 'burial place', cf. Finnish Hiidenmaa) and maa ('land'). The older 1228 CE Latin/Germanic attestation Dageida (Swedish Dagö) reflects Old Gutnish Dagaiþ ('day isthmus').",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Hiiumaa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_reval": {
+      "barony_key": "b_reval",
+      "modern_name": "Reval",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_reval",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1219,
+      "first_mention_attestation": "1219 CE / c. 1227 CE as Reval / Revalia following the Danish conquest of northern Estonia (derived from the adjacent county Revala/Revele).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Revala / Rävala",
+          "language": "Estonian",
+          "translation": "name of the ancient Estonian coastal county (etymology uncertain)"
+        }
+      ],
+      "etymology_analysis": "Reval (Latin Revalia, Old Norse Rafala) is the German and Scandinavian name for Tallinn, taken from the surrounding ancient Estonian county of Revala (Rävala) after the 1219 CE Danish conquest. The Estonian name Tallinn derives from Taani-linna ('Danish castle').",
+      "current_repo_state": {
+        "b_tarr": "Lindanisa",
+        "b_tarr_direct": "Lindanisa",
+        "b_tarr_hist": "Lindanisa",
+        "b_origin": "Ancient Finnic/Estonian settlement Lindanisa (attested before 1219 Danish crusade fortress) (in-game: Lindanisa)",
+        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tallinn",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_harjumaa": {
+      "barony_key": "b_harjumaa",
+      "modern_name": "Harjumaa",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_reval",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1212,
+      "first_mention_attestation": "1212 CE as Harien in the Livonian Chronicle of Henry (and 1219–1241 CE as Hæriæ / Harriæn in the Danish Census Book).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Harjumaa"
+      },
+      "morphemes": [
+        {
+          "form": "hari / harju",
+          "language": "Estonian",
+          "translation": "ridge, crest (cf. Finnish harju 'esker, ridge')"
+        },
+        {
+          "form": "maa",
+          "language": "Estonian",
+          "translation": "land, region"
+        }
+      ],
+      "etymology_analysis": "Ancient Estonian province name (Latin Harria, German Harrien). Most scholars connect Harju to Estonian (mäe)hari ('mountain/hill ridge', cf. Finnish harju 'ridge') + maa ('land').",
+      "current_repo_state": {
+        "b_tarr": "Harjumaa",
+        "b_tarr_direct": "Harjumaa",
+        "b_tarr_hist": "Harjumaa",
+        "b_origin": "Harjumaa (constituent holding of Rêwale)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Harju_County",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_jarva": {
+      "barony_key": "b_jarva",
+      "modern_name": "Jarva",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_reval",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1212,
+      "first_mention_attestation": "1212 CE as Gerwiam / Gerwa in the Livonian Chronicle of Henry (and 1214 CE as Yereva in the First Novgorod Chronicle).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Järvamaa"
+      },
+      "morphemes": [
+        {
+          "form": "järv / järva",
+          "language": "Estonian",
+          "translation": "lake, wetland (loaned from Baltic *jaura 'marsh, boggy land')"
+        }
+      ],
+      "etymology_analysis": "Ancient Estonian province name (Latin Jervia/Gerwia, German Jerwen). Derived from Estonian järv ('lake'), which Enn Tarvel traces to a Baltic loanword *jaura ('marshy/wetland area'), reflecting the region's historic bogs.",
+      "current_repo_state": {
+        "b_tarr": "Järva",
+        "b_tarr_direct": "Järva",
+        "b_tarr_hist": "Järva",
+        "b_origin": "Järva (constituent holding of Rêwale)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/J%C3%A4rva_County",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_hapsal": {
+      "barony_key": "b_hapsal",
+      "modern_name": "Hapsal",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_wiek",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1279,
+      "first_mention_attestation": "1279 CE as Hapsal in the town charter granted by the Bishop of Ösel-Wiek.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Haapsalu"
+      },
+      "morphemes": [
+        {
+          "form": "haab",
+          "language": "Estonian",
+          "translation": "aspen tree"
+        },
+        {
+          "form": "salu",
+          "language": "Estonian",
+          "translation": "(forested) island, grove"
+        }
+      ],
+      "etymology_analysis": "German and Swedish Hapsal is an adaptation of Estonian Haapsalu, compounded from haab ('aspen') and salu (archaically '(forested) island', modern 'grove'), meaning 'aspen grove/island'.",
+      "current_repo_state": {
+        "b_tarr": "Rîdale",
+        "b_tarr_direct": "Rîdale",
+        "b_tarr_hist": "Rîdale",
+        "b_origin": "Rîdale — Historical Option A seat of c_wiek",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Haapsalu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_leal": {
+      "barony_key": "b_leal",
+      "modern_name": "Leal",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_esthonia",
+        "county": "c_wiek",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1211,
+      "first_mention_attestation": "1211 CE as Leale in the Livonian Chronicle of Henry (also seat of the Diocese of Leal).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lihula / Leale",
+          "language": "Estonian",
+          "translation": "uncertain (possibly from liha or lehu 'mud', or an ancient hillfort name)"
+        }
+      ],
+      "etymology_analysis": "Leal (1211 CE Leale) is the Germanized form of Estonian Lihula, an ancient Estonian hillfort and parish center whose etymology remains uncertain.",
+      "current_repo_state": {
+        "b_tarr": "Lihula",
+        "b_tarr_direct": "Lihula",
+        "b_tarr_hist": "Lihula",
+        "b_origin": "Lihula (constituent holding of Rîdale)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lihula",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tartu": {
+      "barony_key": "b_tartu",
+      "modern_name": "Tartu",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_dorpat",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1224,
+      "first_mention_attestation": "1224 CE as Tarbatum / Darbete in the Livonian Chronicle of Henry (the site was earlier attested in 1030 CE as Yuryev in the Primary Chronicle).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "tarvas",
+          "language": "Estonian",
+          "translation": "aurochs"
+        },
+        {
+          "form": "-tu",
+          "language": "Estonian",
+          "translation": "toponymic suffix ('place abounding in')"
+        }
+      ],
+      "etymology_analysis": "Estonian Tartu (and German Dorpat) evolved from ancient Estonian *Tarvatu (attested in Latin as Tarbatum/Darbete), meaning 'place abounding in aurochs' (tarvas + -tu). In 1030 CE, Yaroslav the Wise briefly named the fort Yuryev after his baptismal name.",
+      "current_repo_state": {
+        "b_tarr": "Tarbâte",
+        "b_tarr_direct": "Tarbâte",
+        "b_tarr_hist": "Tarbâte",
+        "b_origin": "Tarbâte — Historical Option A seat of c_dorpat",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tartu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vastseliina": {
+      "barony_key": "b_vastseliina",
+      "modern_name": "Vastseliina",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_dorpat",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1342,
+      "first_mention_attestation": "1342 CE when the border fortress was founded (initially called Frauenburg, later Neuhausen / Vastseliina).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "vastne / vahtsõ",
+          "language": "South Estonian / Võro",
+          "translation": "new"
+        },
+        {
+          "form": "liin / liina",
+          "language": "South Estonian / Võro",
+          "translation": "castle, fortress, town"
+        }
+      ],
+      "etymology_analysis": "South Estonian Vastseliina (Võro Vahtsõliina) literally means 'new castle', corresponding to German Neuhausen and Latin Novum castrum, distinguishing the 1342 CE fortress from older Kirumpää Castle.",
+      "current_repo_state": {
+        "b_tarr": "Vastseliina",
+        "b_tarr_direct": "Vastseliina",
+        "b_tarr_hist": "Vastseliina",
+        "b_origin": "Vastseliina (constituent holding of Tarbâte)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Vastseliina",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_valga": {
+      "barony_key": "b_valga",
+      "modern_name": "Valga",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_dorpat",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1286,
+      "first_mention_attestation": "1286 CE as Walko in the credit register of the city of Riga.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Walko / Valga",
+          "language": "Estonian / Finnic (uncertain)",
+          "translation": "uncertain (possibly 'white/light' or Slavic volok 'portage')"
+        }
+      ],
+      "etymology_analysis": "Attested in 1286 CE as Walko (German Walk, Latvian Valka, Estonian Valga). The etymology is uncertain; proposals include a Finnic root valk- ('white/light'), Latvian valks ('stream'), or Russian volok ('boat portage').",
+      "current_repo_state": {
+        "b_tarr": "Walko",
+        "b_tarr_direct": "Walko",
+        "b_tarr_hist": "Walko",
+        "b_origin": "Walko (constituent holding of Tarbâte)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Valga,_Estonia",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_parnu": {
+      "barony_key": "b_parnu",
+      "modern_name": "Parnu",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_livs",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1251,
+      "first_mention_attestation": "1251 CE as Perona (Old Pärnu, founded by the Bishop of Ösel-Wiek; river attested as Perona in 1260 CE; 1154 CE Barnū in al-Idrisi is uncertain).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Pärnu River"
+      },
+      "morphemes": [
+        {
+          "form": "Perona / Pärnu",
+          "language": "Finnic / Pre-Finnic substrate (disputed)",
+          "translation": "river name (cf. Veps pern 'steep riverbank' or Estonian pärn 'linden')"
+        }
+      ],
+      "etymology_analysis": "Derived from the river name Perona (1260 CE, German Pernau). While folk etymology links it to Estonian pärn ('linden tree'), linguists also propose a pre-Finnic substrate hydronym, a Baltic origin, or Vepsian pern ('steep riverbank').",
+      "current_repo_state": {
+        "b_tarr": "Sakâle",
+        "b_tarr_direct": "Sakâle",
+        "b_tarr_hist": "Sakâle",
+        "b_origin": "Sakâle (Sakâle (in-game: Sakala (Livs))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/P%C3%A4rnu",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_viljandi": {
+      "barony_key": "b_viljandi",
+      "modern_name": "Viljandi",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_livs",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1211,
+      "first_mention_attestation": "1211 CE in the Livonian Chronicle of Henry (Viliende); town charter recorded in 1283 CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "vili",
+          "language": "Estonian",
+          "translation": "grain, crop, fertility"
+        },
+        {
+          "form": "-ndi",
+          "language": "Estonian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Estonian Viljandi (early 13th-century Viliende, German Fellin) is derived from Estonian vili ('grain, crop, fruit') with the suffix -ndi. An alleged 1154 CE mention (FLMWS) in al-Idrisi is widely rejected by Estonian scholars.",
+      "current_repo_state": {
+        "b_tarr": "Fellin",
+        "b_tarr_direct": "Fellin",
+        "b_tarr_hist": "Fellin",
+        "b_origin": "Fellin (constituent holding of Sakâle)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Viljandi",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_alistegunde": {
+      "barony_key": "b_alistegunde",
+      "modern_name": "Alistegunde",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_livs",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1211,
+      "first_mention_attestation": "1211 CE as Alistegunde in the Livonian Chronicle of Henry (XV.7).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Alistekund"
+      },
+      "morphemes": [
+        {
+          "form": "aline / aliste",
+          "language": "Estonian / Finnic",
+          "translation": "lower, low-lying"
+        },
+        {
+          "form": "-kund / -gunde",
+          "language": "Estonian / Finnic",
+          "translation": "district, parish, community"
+        }
+      ],
+      "etymology_analysis": "Ancient Estonian parish (muinaskihelkond) in southern Sakala, recorded in 1211 CE as Alistegunde (modern Estonian Alistekund, later Halliste). Combines *aline ('lower') with the Finnic territorial suffix -kund ('district/parish').",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://et.wikipedia.org/wiki/Alistekund",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_riga": {
+      "barony_key": "b_riga",
+      "modern_name": "Riga",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_vidzeme",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1198,
+      "first_mention_attestation": "1198–1201 CE in the Livonian Chronicle of Henry (Bishop Berthold's campaign in 1198 CE and Bishop Albert's founding of Riga in 1201 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Rīja / Rie",
+          "language": "Livonian / Latvian (disputed)",
+          "translation": "threshing barn, granary/warehouse (or Rīdzene stream / ringa 'loop')"
+        }
+      ],
+      "etymology_analysis": "Founded in 1201 CE at an earlier Livonian trading port (portus antiquus). The name Riga most reliably derives from Livonian/Latvian rīja ('granary/warehouse' along the Daugava), or alternatively from the Rīdzene (Riege) tributary or Livonian ringa ('loop').",
+      "current_repo_state": {
+        "b_tarr": "Gauje",
+        "b_tarr_direct": "Metzepôle",
+        "b_tarr_hist": "Gauje",
+        "b_origin": "Gauje (Gauja (in-game: Metsepole (Vidzeme))",
+        "b_anachronism": "Vidzeme is a late medieval division ('Middle Land'). Ancient pre-867 reach is the river Gauja.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Riga",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lemisele": {
+      "barony_key": "b_lemisele",
+      "modern_name": "Lemisele",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_vidzeme",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1223,
+      "first_mention_attestation": "1223 CE in historical tradition for Bishop Albert's castle at Lemsal/Lemisele (town rights granted in 1385 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Lemisele"
+      },
+      "morphemes": [
+        {
+          "form": "lemb / leme",
+          "language": "Livonian",
+          "translation": "broad, wide"
+        },
+        {
+          "form": "sel / sele",
+          "language": "Livonian",
+          "translation": "island/ridge in a forest swamp"
+        }
+      ],
+      "etymology_analysis": "Livonian settlement name Lemisele (also Lembsele, German Lemsal/Lemsahl, modern Latvian Limbaži), meaning 'wide isle in a forest swamp' in Livonian.",
+      "current_repo_state": {
+        "b_tarr": "Lemsal",
+        "b_tarr_direct": "Lemsal",
+        "b_tarr_hist": "Lemsal",
+        "b_origin": "Lemsal (constituent holding of Gauje)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Limba%C5%BEi",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_salacgriva": {
+      "barony_key": "b_salacgriva",
+      "modern_name": "Salacgriva",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_esthonia",
+        "duchy": "d_livonia",
+        "county": "c_vidzeme",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1391,
+      "first_mention_attestation": "1391 CE as Saltze in the Lübeck Chronicle (referring to the Archbishop of Riga's castle at the earlier Livonian settlement of Saletsa).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Salacgrīva"
+      },
+      "morphemes": [
+        {
+          "form": "Salaca",
+          "language": "Latvian (from Livonian Saletsa)",
+          "translation": "Salaca River"
+        },
+        {
+          "form": "grīva",
+          "language": "Latvian",
+          "translation": "river mouth, estuary"
+        }
+      ],
+      "etymology_analysis": "Latvian Salacgrīva literally means 'mouth of the Salaca River' (German Salismünde), combining the river name Salaca (from Livonian Saletsa) with Latvian grīva ('river mouth').",
+      "current_repo_state": {
+        "b_tarr": "Salatzi",
+        "b_tarr_direct": "Salatzi",
+        "b_tarr_hist": "Salatzi",
+        "b_origin": "Salatzi (constituent holding of Gauje)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Salacgr%C4%ABva",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_grobin": {
+      "barony_key": "b_grobin",
+      "modern_name": "Grobin",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_grobin",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1253,
+      "first_mention_attestation": "1253 CE Curonian partition treaty between the Bishop of Courland and the Livonian Order (Grobin); Teutonic castle built in the 13th century CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "grob-",
+          "language": "Curonian / Baltic",
+          "translation": "hornbeam (cf. Lithuanian skroblas) or ditch/trench"
+        },
+        {
+          "form": "-iņa",
+          "language": "Latvian",
+          "translation": "toponymic/diminutive suffix"
+        }
+      ],
+      "etymology_analysis": "Germanized as Grobin from a Curonian/Baltic root, often linked to Baltic *grab-/*skrobl- ('hornbeam') or *grāvis ('ditch, moat'), adapted into Latvian as Grobiņa.",
+      "current_repo_state": {
+        "b_tarr": "Sêburch",
+        "b_tarr_direct": "Grôbin",
+        "b_tarr_hist": "Sêburch",
+        "b_origin": "Sêburch (Sêburch (in-game: Grobin))",
+        "b_anachronism": "Resolved via verified historical center Sêburch documented in tarraconian_titles_1059.md.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Grobi%C5%86a",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Seeburg"
+        ],
+        "first_mention_year": 854,
+        "first_mention_source": "Rimbert, Vita Ansgari (c. 875 CE, describing events of c. 854 CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Rimbert's Vita Ansgari records that King Olof of Sweden captured and burned the Curonian coastal stronghold of Seeburg (usually identified with Grobiņa) in c. 854 CE."
+      }
+    },
+    "b_bandava": {
+      "barony_key": "b_bandava",
+      "modern_name": "Bandava",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_grobin",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1231,
+      "first_mention_attestation": "1231 CE treaty between papal vice-legate Baldwin of Alna and the Curonians (Latin: Bandowe); partitioned in 1253 CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "band-",
+          "language": "Curonian / Baltic",
+          "translation": "herd, cattle, or allotted plot of land (cf. Latvian banda)"
+        },
+        {
+          "form": "-ava",
+          "language": "Baltic",
+          "translation": "territorial/locative suffix"
+        }
+      ],
+      "etymology_analysis": "Curonian regional name (Latinized as Bandowe) derived from Baltic *banda ('herd, cattle' or 'allotted land') with the Baltic toponymic suffix -ava.",
+      "current_repo_state": {
+        "b_tarr": "Bandava",
+        "b_tarr_direct": "Bandava",
+        "b_tarr_hist": "Bandava",
+        "b_origin": "Bandava (constituent holding of Sêburch)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Bandava",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": "Rimbert's Vita Ansgari (c. 875 CE) mentions five Curonian civitates without naming Bandava; the name Bandowe is first attested in 1231 CE."
+      }
+    },
+    "b_duvzare": {
+      "barony_key": "b_duvzare",
+      "modern_name": "Duvzare",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_grobin",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1252,
+      "first_mention_attestation": "1252–1253 CE treaties between the Livonian Order and the Bishopric of Courland (attested as Dovsare, Dovzare, Duizare).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Duvzare"
+      },
+      "morphemes": [
+        {
+          "form": "duvi / donis",
+          "language": "Curonian",
+          "translation": "two (or 'gift / sacred')"
+        },
+        {
+          "form": "ezars / azaran",
+          "language": "Curonian",
+          "translation": "lake (or zars 'branch')"
+        }
+      ],
+      "etymology_analysis": "Curonian land name (Dovsare, Duizare), analyzed by Kazimieras Būga as Curonian *duvi + *ezars ('two lakes' or 'branched lake', referring to Lake Pape) or West Baltic *donis + *azaran ('sacred/gift lake').",
+      "current_repo_state": {
+        "b_tarr": "Duvzare",
+        "b_tarr_direct": "Duvzare",
+        "b_tarr_hist": "Duvzare",
+        "b_origin": "Duvzare (constituent holding of Sêburch)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://lt.wikipedia.org/wiki/Duvzar%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ceklis": {
+      "barony_key": "b_ceklis",
+      "modern_name": "Ceklis",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_grobin",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1252,
+      "first_mention_attestation": "1252 CE treaty between the Livonian Master and the Bishop of Courland regarding Memel/Klaipėda Castle (Latin: Ceclis).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "cekl- / kekl-",
+          "language": "Curonian",
+          "translation": "clearing, scrubland, or corner/region (uncertain Baltic root)"
+        },
+        {
+          "form": "-is",
+          "language": "Curonian / Baltic",
+          "translation": "masculine noun ending"
+        }
+      ],
+      "etymology_analysis": "Curonian regional name (Latin: Ceclis; Lithuanian: Ceklis / Keklys) of Baltic origin, first recorded in 1252–1253 CE partition acts of southern Courland.",
+      "current_repo_state": {
+        "b_tarr": "Ceklis",
+        "b_tarr_direct": "Ceklis",
+        "b_tarr_hist": "Ceklis",
+        "b_origin": "Ceklis (constituent holding of Sêburch)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://lt.wikipedia.org/wiki/Ceklis",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_selpils": {
+      "barony_key": "b_selpils",
+      "modern_name": "Selpils",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_selpils",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1208,
+      "first_mention_attestation": "1208 CE in the Chronicle of Henry of Livonia, recording the capture of the Selonian stronghold (castrum Selonum / Sēlpils).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "sēļ-",
+          "language": "Latvian / Selonian",
+          "translation": "Selonians (Baltic tribe)"
+        },
+        {
+          "form": "pils",
+          "language": "Latvian",
+          "translation": "castle, hillfort"
+        }
+      ],
+      "etymology_analysis": "Compound of the ethnonym Sēļi (Selonians) and Latvian pils ('castle, hillfort'), meaning 'castle of the Selonians' (German: Selburg).",
+      "current_repo_state": {
+        "b_tarr": "Sêlônjen",
+        "b_tarr_direct": "Sêlpils",
+        "b_tarr_hist": "Sêlônjen",
+        "b_origin": "Sêlônjen (Sêlônjen (in-game: Selpils))",
+        "b_anachronism": "Resolved via verified historical center Sêlônjen documented in tarraconian_titles_1059.md.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/S%C4%93lpils_Castle",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_oknist": {
+      "barony_key": "b_oknist",
+      "modern_name": "Oknist",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_selpils",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1298,
+      "first_mention_attestation": "1298 CE historical sources mentioning Aknīste (German: Oknist; Lithuanian: Aknysta).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Aknīste"
+      },
+      "morphemes": [
+        {
+          "form": "akn-",
+          "language": "Baltic",
+          "translation": "hydronymic root (cf. Lithuanian Aknysta)"
+        },
+        {
+          "form": "-īste / -ysta",
+          "language": "Baltic",
+          "translation": "hydronymic/toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Baltic toponym (Latvian Aknīste, Lithuanian Aknysta, German Oknist) derived from a local Baltic hydronym.",
+      "current_repo_state": {
+        "b_tarr": "Oknist",
+        "b_tarr_direct": "Oknist",
+        "b_tarr_hist": "Oknist",
+        "b_origin": "Oknist (constituent holding of Sêlônjen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Akn%C4%ABste",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_piltene": {
+      "barony_key": "b_piltene",
+      "modern_name": "Piltene",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_vanemane",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1295,
+      "first_mention_attestation": "1295 CE historical records mentioning Piltene (German: Pilten), seat of the Bishopric of Courland (a 1220 CE Danish castle tradition is unverified).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "pilt-",
+          "language": "Baltic / Livonian",
+          "translation": "earthwork, embankment, or castle (cf. Baltic *pil- 'fort')"
+        },
+        {
+          "form": "-ene",
+          "language": "Latvian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Toponym (Latvian Piltene, Livonian Piltõn, German Pilten) associated with Baltic *pil- ('fort, castle, earthwork') or Finnic/Livonian coastal trading-post terminology.",
+      "current_repo_state": {
+        "b_tarr": "Wanemâne",
+        "b_tarr_direct": "Wanemâne",
+        "b_tarr_hist": "Wanemâne",
+        "b_origin": "Wanemâne (Wanemâne (in-game: Vanemane))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Piltene",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_dundaga": {
+      "barony_key": "b_dundaga",
+      "modern_name": "Dundaga",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_vanemane",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1245,
+      "first_mention_attestation": "1245 CE charter of Bishop Nicholas of Riga granting land in Donedange (Dundaga) to the Riga Cathedral chapter.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "dund- / don-",
+          "language": "Livonian / Curonian",
+          "translation": "reed, marshy corner, or Finnic/Baltic root"
+        },
+        {
+          "form": "-aga / -ange",
+          "language": "Curonian / Livonian",
+          "translation": "locative/toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "First attested in 1245 CE as Donedange (Livonian: Dūoņig; German: Dondangen), reflecting Curonian-Livonian contact in northern Courland.",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://lv.wikipedia.org/wiki/Dundaga",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kandava": {
+      "barony_key": "b_kandava",
+      "modern_name": "Kandava",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_vanemane",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1230,
+      "first_mention_attestation": "1230 CE peace treaty between the Livonian Brothers of the Sword, Riga, and Curonians of the Abava valley (Latin: villa Candowe).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kand-",
+          "language": "Curonian / Finnic",
+          "translation": "stump, edge, or bend (cf. Baltic *kand- / Livonian kāndav)"
+        },
+        {
+          "form": "-ava",
+          "language": "Baltic",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Attested in 1230 CE as villa Candowe (German: Kandau, Livonian: Kāndav), a Curonian hillfort center in Vanema formed with the Baltic suffix -ava.",
+      "current_repo_state": {
+        "b_tarr": "Kandouwe",
+        "b_tarr_direct": "Kandouwe",
+        "b_tarr_hist": "Kandouwe",
+        "b_origin": "Ancient Curonian hillfort Candeve (attested 1230 in treaty of Balduin von Alna) (in-game: Kandava)",
+        "b_anachronism": "Authentic Curonian hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kandava",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_uxkull": {
+      "barony_key": "b_uxkull",
+      "modern_name": "Uxkull",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_zemigalians",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1184,
+      "first_mention_attestation": "1184–1185 CE in the Chronicle of Henry of Livonia (Ykescola / Ykescole), when Saint Meinhard arrived to missionize the Livonians.",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "According to linguist Urmas Sutrop, named after a 12th-century CE Livonian local ruler named Ike (Ike's son's ford/islet, Ykescola).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ike-",
+          "language": "Livonian",
+          "translation": "personal name Ike (meaning 'age, lifetime')"
+        },
+        {
+          "form": "-scola / -kīla",
+          "language": "Livonian",
+          "translation": "ford/islet (or 'village' in older folk etymology)"
+        }
+      ],
+      "etymology_analysis": "Germanized as Üxküll (modern Latvian Ikšķile) from Livonian Ykescola/Ykescole. Urmas Sutrop derives it from a Livonian term meaning the Daugava ford or islet belonging to the son of local ruler Ike (rejecting the older folk etymology ikš-ķile 'one village').",
+      "current_repo_state": {
+        "b_tarr": "Semgallen",
+        "b_tarr_direct": "Semgallen",
+        "b_tarr_hist": "Semgallen",
+        "b_origin": "Semgallen (Semgallen (in-game: Semigallia))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ik%C5%A1%C4%B7ile",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_dobele": {
+      "barony_key": "b_dobele",
+      "modern_name": "Dobele",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_zemigalians",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1254,
+      "first_mention_attestation": "1254 CE German document mentioning the Semigallian wooden fortress as Dubelene or Dubelone.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Dobele"
+      },
+      "morphemes": [
+        {
+          "form": "duob-",
+          "language": "Semigallian / Baltic",
+          "translation": "pit, hollow, delve"
+        },
+        {
+          "form": "-ele / -elene",
+          "language": "Semigallian / Baltic",
+          "translation": "diminutive/locative suffix ('dimple, dip')"
+        }
+      ],
+      "etymology_analysis": "Reconstructed as Semigallian *Dobelene (German: Doblen), derived from Baltic duobe ('pit, hollow') and duobele ('dip, dimple'), meaning a settlement in a hollow or depression.",
+      "current_repo_state": {
+        "b_tarr": "Dobeln",
+        "b_tarr_direct": "Dobeln",
+        "b_tarr_hist": "Dobeln",
+        "b_origin": "Dobeln (constituent holding of Semgallen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Dobele",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_mitau": {
+      "barony_key": "b_mitau",
+      "modern_name": "Mitau",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_zemigalians",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1265,
+      "first_mention_attestation": "1265 CE construction of the Livonian Order castle of Mitau (Mītava) on an island in the Lielupe River.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "mit- / mīt",
+          "language": "Latvian / Middle Low German",
+          "translation": "to exchange/trade (or German Mitte 'middle')"
+        },
+        {
+          "form": "-au / -ava",
+          "language": "Middle Low German / Latvian",
+          "translation": "meadow/riverbank (Aue) or toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German name Mitau (used until 1917 CE) is explained either from Latvian mīt ('to trade/exchange', i.e. trading place) or German Mitte in der Aue ('middle of the Aa/Lielupe river-meadow'); the modern Latvian name Jelgava derives from Livonian jālgab ('town on the river').",
+      "current_repo_state": {
+        "b_tarr": "Jêlgawa",
+        "b_tarr_direct": "Jêlgawa",
+        "b_tarr_hist": "Jêlgawa",
+        "b_origin": "Ancient Semigallian Lielupe river crossing (replacing 1265 Livonian castle Mitau) (in-game: Mitau)",
+        "b_anachronism": "1265 Livonian castle Mitau fails Burden of Proof on Antiquity; restored to native Jelgava.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Jelgava",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_bauska": {
+      "barony_key": "b_bauska",
+      "modern_name": "Bauska",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_zemigalians",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1443,
+      "first_mention_attestation": "1443 CE first mention of the construction of Bauska Castle (German: Bauske) by the Livonian Order.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "bausk-",
+          "language": "Latvian / Semigallian",
+          "translation": "poor meadow or swelling/hillock (or German Bausch)"
+        },
+        {
+          "form": "-a",
+          "language": "Latvian",
+          "translation": "feminine noun ending"
+        }
+      ],
+      "etymology_analysis": "First attested with the 1443 CE Livonian Order castle (German: Bauske). Linguist Jānis Endzelīns linked Latvian bauska to an archaic word for a poor/marshy meadow, while other hypotheses connect it to German Bausch ('bend, hillock').",
+      "current_repo_state": {
+        "b_tarr": "Bôwse",
+        "b_tarr_direct": "Bôwse",
+        "b_tarr_hist": "Bôwse",
+        "b_origin": "Ancient Semigallian Mūša/Mēmele river confluence (replacing 1443 Livonian castle Bauska) (in-game: Bauska)",
+        "b_anachronism": "1443 Livonian castle Bauska fails Burden of Proof on Antiquity; restored to native Semigallian stem.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Bauska",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_neuenburg": {
+      "barony_key": "b_neuenburg",
+      "modern_name": "Neuenburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_courland",
+        "county": "c_zemigalians",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1411,
+      "first_mention_attestation": "1411 CE list of Livonian Order castles (attested as Nuwenburg, later Nienborch, Neuenburg; Latvian: Jaunpils).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "neuen-",
+          "language": "German",
+          "translation": "new"
+        },
+        {
+          "form": "-burg",
+          "language": "German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "Middle Low German Nuwenburg / High German Neuenburg ('new castle'), built by the Livonian Order in the late 14th century CE and calqued into Latvian as Jaunpils ('new castle').",
+      "current_repo_state": {
+        "b_tarr": "Jaunepel",
+        "b_tarr_direct": "Jaunepel",
+        "b_tarr_hist": "Jaunepel",
+        "b_origin": "Curonian hillfort Jaunpils (replacing 14th-century Livonian castle Neuenburg) (in-game: Neuenburg)",
+        "b_anachronism": "14th-century Livonian castle Neuenburg fails Burden of Proof on Antiquity; restored to Curonian hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Jaunpils_Castle",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_aluksne": {
+      "barony_key": "b_aluksne",
+      "modern_name": "Aluksne",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_aluksne",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1284,
+      "first_mention_attestation": "1284 CE in the Pskov Chronicles under the names Olysta, Alyst, and Volyst (later German: Marienburg).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Alūksne"
+      },
+      "morphemes": [
+        {
+          "form": "olūksn-",
+          "language": "Latgalian",
+          "translation": "forest spring, brook"
+        },
+        {
+          "form": "-e",
+          "language": "Latvian",
+          "translation": "feminine noun ending"
+        }
+      ],
+      "etymology_analysis": "Derived from the Latgalian word olūksna ('spring in a forest'), attested in 1284 CE in East Slavic as Olysta/Alyst; later renamed Marienburg by the Livonian Order in 1342 CE.",
+      "current_repo_state": {
+        "b_tarr": "Alûksne",
+        "b_tarr_direct": "Alûksne",
+        "b_tarr_hist": "Alûksne",
+        "b_origin": "Alûksne — Historical Option A seat of c_aluksne",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Al%C5%ABksne",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gulbene": {
+      "barony_key": "b_gulbene",
+      "modern_name": "Gulbene",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_aluksne",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1224,
+      "first_mention_attestation": "1224 CE Tālava partition treaty between the Livonian Brothers of the Sword and the Bishop of Riga (attested as Gulbana).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "gulb-",
+          "language": "Latvian / Latgalian",
+          "translation": "swan (gulbis)"
+        },
+        {
+          "form": "-ene",
+          "language": "Latvian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Latgalian/Latvian toponym (attested as Gulbana in 1224 CE) derived from gulbis ('swan'), which was later translated into German as Schwanenburg ('swan castle') when the Archbishop of Riga built a stone castle in 1340 CE.",
+      "current_repo_state": {
+        "b_tarr": "Schwanenburch",
+        "b_tarr_direct": "Schwanenburch",
+        "b_tarr_hist": "Schwanenburch",
+        "b_origin": "Schwanenburch (constituent holding of Alûksne)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gulbene",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_jersika": {
+      "barony_key": "b_jersika",
+      "modern_name": "Jersika",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_jersika",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1203,
+      "first_mention_attestation": "1203 CE in the Chronicle of Henry of Livonia (Latin: Gercike / Gerzika), seat of Prince Visvaldis.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "gers- / gerc-",
+          "language": "Latgalian / East Slavic",
+          "translation": "fortified town/citadel (cf. Slavic *gorodec or Baltic root)"
+        },
+        {
+          "form": "-ika",
+          "language": "Latvian / Latinized",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Medieval Latgalian principality and hillfort attested as Gerzika/Gercike in 1203 CE (Old East Slavic Герсике), variously linked to Baltic roots or a Slavic adaptation *Gorodishche/*Zargrad.",
+      "current_repo_state": {
+        "b_tarr": "Gêrsike",
+        "b_tarr_direct": "Gêrsike",
+        "b_tarr_hist": "Gêrsike",
+        "b_origin": "Gêrsike (Gersika / Gêrsike (in-game: Jersika))",
+        "b_anachronism": "Gersika (Jersika) on the Daugava was the ancient Latgalian hillfort documented in the Livonian Chronicle. Resolved to Gêrsike.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Principality_of_Jersika",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_jekabpils": {
+      "barony_key": "b_jekabpils",
+      "modern_name": "Jekabpils",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_jersika",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1670,
+      "first_mention_attestation": "1670 CE charter by Duke Jacob Kettler granting Magdeburg town rights to Jēkabmiests (German: Jakobstadt).",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Jacob Kettler (1610–1682 CE), Duke of Courland and Semigallia, who granted the town Magdeburg rights in 1670 CE.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Jēkab-",
+          "language": "Latvian",
+          "translation": "Jacob (personal name of Duke Jacob Kettler)"
+        },
+        {
+          "form": "-pils",
+          "language": "Latvian",
+          "translation": "castle, town"
+        }
+      ],
+      "etymology_analysis": "Literally 'Castle/Town of Jacob' (originally German Jakobstadt / Latvian Jēkabmiests), named in 1670 CE after Duke Jacob Kettler of Courland.",
+      "current_repo_state": {
+        "b_tarr": "Sêlburch",
+        "b_tarr_direct": "Sêlburch",
+        "b_tarr_hist": "Sêlburch",
+        "b_origin": "Ancient Selonian Daugava crossing and hillfort Sēlpils (replacing 1670 town Jakobstadt) (in-game: Jekabpils)",
+        "b_anachronism": "1670 ducal town Jakobstadt fails Burden of Proof on Antiquity; restored to ancient Selonian Sēlpils.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/J%C4%93kabpils",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_daugavpils": {
+      "barony_key": "b_daugavpils",
+      "modern_name": "Daugavpils",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_jersika",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1275,
+      "first_mention_attestation": "1275 CE construction of Dinaburg (Dünaburg) Castle by Livonian Order Master Ernst von Ratzeburg (modern Latvian Daugavpils adopted in 1920 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Daugav-",
+          "language": "Latvian",
+          "translation": "Daugava River"
+        },
+        {
+          "form": "-pils",
+          "language": "Latvian",
+          "translation": "castle, fort"
+        }
+      ],
+      "etymology_analysis": "Latvian compound 'Daugava Castle' (from the Daugava River + pils 'castle'), calquing the 1275 CE German name Dünaburg / Dinaburg ('Düna/Daugava Castle').",
+      "current_repo_state": {
+        "b_tarr": "Dôugowe",
+        "b_tarr_direct": "Dôugowe",
+        "b_tarr_hist": "Dôugowe",
+        "b_origin": "Daugava River basin (pre-867 Baltic hydronym, replacing 1275 Livonian Dinaburg castle) (in-game: Dôugowe)",
+        "b_anachronism": "Dinaburg castle built in 1275 by Livonian Order Master Ernst von Ratzeburg; ancient Latgalian principality seat was Jersika. Resolved via Option B to the ancient Daugava River hydronym (Dôugowe).",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Daugavpils",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_rezekne": {
+      "barony_key": "b_rezekne",
+      "modern_name": "Rezekne",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_jersika",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1285,
+      "first_mention_attestation": "1285 CE first documented mention when the Livonian Order built a stone castle (German: Rositten; Latvian: Rēzekne).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Rēzekne"
+      },
+      "morphemes": [
+        {
+          "form": "rēz-",
+          "language": "Latgalian / Baltic",
+          "translation": "cut, channel, or stream (from the Rēzekne River)"
+        },
+        {
+          "form": "-ekne",
+          "language": "Latgalian / Latvian",
+          "translation": "hydronymic suffix"
+        }
+      ],
+      "etymology_analysis": "Derived from the Rēzekne River valley (Latgalian: Rēzne), first documented in 1285 CE (German: Rositten, Polish: Rzeżyca).",
+      "current_repo_state": {
+        "b_tarr": "Rêsne",
+        "b_tarr_direct": "Rêsne",
+        "b_tarr_hist": "Rêsne",
+        "b_origin": "Ancient Latgalian Rēzekne hillfort on the Rēzekne river (replacing 1285 Livonian castle Rositten) (in-game: Rezekne)",
+        "b_anachronism": "1285 Livonian castle Rositten fails Burden of Proof on Antiquity; restored to native Latgalian hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/R%C4%93zekne",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kokenois": {
+      "barony_key": "b_kokenois",
+      "modern_name": "Kokenois",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_kokenois",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1205,
+      "first_mention_attestation": "1205 CE in the Chronicle of Henry of Livonia (Kukenois / Kokenhusen), when Prince Vyachko ceded half his land to Bishop Albert of Riga.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kuke- / kok-",
+          "language": "Latgalian / Selonian",
+          "translation": "tree, wood, or bend (or river name)"
+        },
+        {
+          "form": "-nois / -nese",
+          "language": "Latgalian / Livonian",
+          "translation": "headland, cape (cf. Livonian *nīna / Baltic *-nese)"
+        }
+      ],
+      "etymology_analysis": "Latgalian and Selonian settlement originally attested as Kukenois in 1205 CE, Germanized as Kokenhusen and modernized in Latvian as Koknese.",
+      "current_repo_state": {
+        "b_tarr": "Kokenhûsen",
+        "b_tarr_direct": "Kokenhûsen",
+        "b_tarr_hist": "Kokenhûsen",
+        "b_origin": "Kokenhûsen (Kokenhûsen (in-game: Kokenois))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Koknese",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_cesvaine": {
+      "barony_key": "b_cesvaine",
+      "modern_name": "Cesvaine",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_kokenois",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1209,
+      "first_mention_attestation": "1209 CE treaty between Bishop Albert of Riga and Visvaldis of Jersika (Latin: Urbs Zcessowe).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "cesv- / cess-",
+          "language": "Latgalian",
+          "translation": "Baltic root (possibly personal or hydronymic)"
+        },
+        {
+          "form": "-aine / -owe",
+          "language": "Latvian / Latgalian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Ancient Latgalian hillfort attested in 1209 CE as Urbs Zcessowe (German: Seßwegen, modern Latvian: Cesvaine).",
+      "current_repo_state": {
+        "b_tarr": "Sessouwe",
+        "b_tarr_direct": "Sessouwe",
+        "b_tarr_hist": "Sessouwe",
+        "b_origin": "Ancient Latgalian hillfort Cessowe (attested 1209) (replacing Sesswegen) (in-game: Cesvaine)",
+        "b_anachronism": "Authentic 1209 Latgalian hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Cesvaine",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lennewarden": {
+      "barony_key": "b_lennewarden",
+      "modern_name": "Lennewarden",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_kokenois",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1201,
+      "first_mention_attestation": "1201 CE in the Chronicle of Henry of Livonia, recording the Baltic hillfort Lennewarden granted in fief by Bishop Albert.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "lenne- / liel-",
+          "language": "Baltic / German",
+          "translation": "broad, great (or Baltic *lēn- / *liel-)"
+        },
+        {
+          "form": "-warden / -vārde",
+          "language": "German / Baltic",
+          "translation": "guard, ford, or enclosure (cf. Latvian vārti 'gate')"
+        }
+      ],
+      "etymology_analysis": "Attested in 1201 CE as Lennewarden in the Chronicle of Henry of Livonia, a Germanized form of the local Baltic/Livonian Daugava hillfort name (modern Latvian: Lielvārde).",
+      "current_repo_state": {
+        "b_tarr": "Lênewarde",
+        "b_tarr_direct": "Lênewarde",
+        "b_tarr_hist": "Lênewarde",
+        "b_origin": "Ancient Livonian Daugava hillfort Lielvārde (in-game: Lennewarden)",
+        "b_anachronism": "Authentic ancient Livonian Daugava hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lielv%C4%81rde",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_valmiera": {
+      "barony_key": "b_valmiera",
+      "modern_name": "Valmiera",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_talava",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1323,
+      "first_mention_attestation": "1323 CE first mention as a town (German: Wolmar; castle/church site from 1224/1283 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Derived from the personal name Waldemar / Vladimir, attributed either to Prince Vladimir Mstislavich of Pskov (fl. 1212–1214 CE) or King Valdemar II of Denmark (1170–1241 CE).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Waldemar / Vladimir",
+          "language": "Old German / East Slavic",
+          "translation": "personal name ('famous ruler')"
+        },
+        {
+          "form": "-a",
+          "language": "Latvian",
+          "translation": "feminine toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Latvian adaptation of German Wolmar / Waldemer (East Slavic Volodimirec), derived from the personal name of either Prince Vladimir Mstislavich of Pskov (early 13th century CE) or King Valdemar II of Denmark.",
+      "current_repo_state": {
+        "b_tarr": "Tâlawe",
+        "b_tarr_direct": "Tâlawe",
+        "b_tarr_hist": "Tâlawe",
+        "b_origin": "Tâlawe (Talava)",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Valmiera",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_venden": {
+      "barony_key": "b_venden",
+      "modern_name": "Venden",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_talava",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1206,
+      "first_mention_attestation": "1206 CE in the Chronicle of Henry of Livonia, recording events at the settlement of the Vends (Wenden; modern Cēsis).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Wend-",
+          "language": "German / Livonian",
+          "translation": "Vends (tribe that settled at Riekstu Hill)"
+        },
+        {
+          "form": "-en",
+          "language": "German",
+          "translation": "dative plural locative suffix"
+        }
+      ],
+      "etymology_analysis": "German Wenden (Livonian: Venden), named after the Vends who inhabited the hillfort at Riekstu Hill in the 11th–12th centuries CE; the Latvian name Cēsis has an independent Baltic origin.",
+      "current_repo_state": {
+        "b_tarr": "Wenden",
+        "b_tarr_direct": "Wenden",
+        "b_tarr_hist": "Wenden",
+        "b_origin": "Wenden (constituent holding of Tâlawe)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/C%C4%93sis",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_rauna": {
+      "barony_key": "b_rauna",
+      "modern_name": "Rauna",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_latgalians",
+        "county": "c_talava",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1381,
+      "first_mention_attestation": "1381 CE first documented mention of Rauna Castle (German: Ronneburg / Rownenborgh; 18th-century tradition claims 1262 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Rauna"
+      },
+      "morphemes": [
+        {
+          "form": "raun-",
+          "language": "Latvian / Baltic",
+          "translation": "Rauna River (cf. Baltic *raun- 'stream, furrow')"
+        },
+        {
+          "form": "-a",
+          "language": "Latvian",
+          "translation": "feminine noun ending"
+        }
+      ],
+      "etymology_analysis": "Named after the Rauna River, around which the medieval archbishopric castle of Rownenborgh / Ronneburg was built.",
+      "current_repo_state": {
+        "b_tarr": "Rôwne",
+        "b_tarr_direct": "Rôwne",
+        "b_tarr_hist": "Rôwne",
+        "b_origin": "Ancient Latgalian Rauna river hillfort (replacing 1262 Archbishop castle Ronneburg) (in-game: Rauna)",
+        "b_anachronism": "1262 Archbishop castle Ronneburg fails Burden of Proof on Antiquity; restored to native Rauna hillfort.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://lv.wikipedia.org/wiki/Rauna",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_braslau": {
+      "barony_key": "b_braslau",
+      "modern_name": "Braslau",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_braslau",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1065,
+      "first_mention_attestation": "1065 CE first mention in East Slavic chronicles as a border castle of the Principality of Polotsk (Braslav).",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Derived from the East Slavic personal name *Braslavъ / Bryachislav, traditionally attributed to Prince Bryachislav Izyaslavich of Polotsk (c. 997–1044 CE).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Braslav-",
+          "language": "East Slavic",
+          "translation": "personal name *Braslavъ (Bryachislav)"
+        },
+        {
+          "form": "-jь",
+          "language": "East Slavic",
+          "translation": "possessive anthroponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Derived from the East Slavic personal name *Braslavъ (associated with Bryachislav of Polotsk) with the possessive suffix -jь, yielding Braslaw/Braslav.",
+      "current_repo_state": {
+        "b_tarr": "Bratzlâw",
+        "b_tarr_direct": "Bratzlâw",
+        "b_tarr_hist": "Bratzlâw",
+        "b_origin": "Bratzlâw — Historical Option A seat of c_braslau",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Braslaw",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_utena": {
+      "barony_key": "b_utena",
+      "modern_name": "Utena",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_braslau",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1261,
+      "first_mention_attestation": "1261 CE charter of King Mindaugas of Lithuania mentioning Utena as a center of Nalšia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Utena"
+      },
+      "morphemes": [
+        {
+          "form": "ut-",
+          "language": "Lithuanian / Baltic",
+          "translation": "hydronymic root (cf. Utenėlė / Utena stream)"
+        },
+        {
+          "form": "-ena",
+          "language": "Lithuanian",
+          "translation": "hydronymic/toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian toponym derived from a local Baltic hydronym (the Utena / Utenėlė stream), first attested in 1261 CE.",
+      "current_repo_state": {
+        "b_tarr": "Utena",
+        "b_tarr_direct": "Utena",
+        "b_tarr_hist": "Utena",
+        "b_origin": "Utena (constituent holding of Braslouwe)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Utena,_Lithuania",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kernave": {
+      "barony_key": "b_kernave",
+      "modern_name": "Kernave",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_kernave",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1279,
+      "first_mention_attestation": "1279 CE in the Livonian Rhymed Chronicle (Kernowe), describing the Teutonic siege of Grand Duke Traidenis's seat.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kern-",
+          "language": "Lithuanian / Baltic",
+          "translation": "bushy/scrubby place or swamp-edge (cf. Lithuanian kerna)"
+        },
+        {
+          "form": "-avė",
+          "language": "Lithuanian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian toponym (attested as Kernowe in 1279 CE), formed from a Baltic root (cf. Lithuanian kerna 'thicket, scrub') with the suffix -avė.",
+      "current_repo_state": {
+        "b_tarr": "Kernâwe",
+        "b_tarr_direct": "Kernâwe",
+        "b_tarr_hist": "Kernâwe",
+        "b_origin": "Kernâwe (Kernâwe (in-game: Kernave))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kernav%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vilnius": {
+      "barony_key": "b_vilnius",
+      "modern_name": "Vilnius",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_kernave",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1323,
+      "first_mention_attestation": "1323 CE letters of Grand Duke Gediminas of Lithuania, naming Vilnius as his capital.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Vilnia"
+      },
+      "morphemes": [
+        {
+          "form": "viln-",
+          "language": "Lithuanian",
+          "translation": "wave, surge (vilnis, via the Vilnia River)"
+        },
+        {
+          "form": "-ius",
+          "language": "Lithuanian",
+          "translation": "masculine noun ending"
+        }
+      ],
+      "etymology_analysis": "Masculine oikonym derived from the feminine hydronym of the Vilnia River, itself from Lithuanian vilnis ('wave, surge').",
+      "current_repo_state": {
+        "b_tarr": "Wîlnje",
+        "b_tarr_direct": "Wîlnje",
+        "b_tarr_hist": "Wîlnje",
+        "b_origin": "Vilnia River basin (pre-867 Baltic/Slavic hydronym, replacing 1323 capital of Vilnius) (in-game: Wîlnje)",
+        "b_anachronism": "First attested in 1323 in the letters of Grand Duke Gediminas; ancient regional capitals were Kernavė and Voruta. Resolved via Option B to the pre-867 Vilnia River hydronym (Wîlnje).",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Vilnius",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vilkmerge": {
+      "barony_key": "b_vilkmerge",
+      "modern_name": "Vilkmerge",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_kernave",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1225,
+      "first_mention_attestation": "1225 CE historical records (attested as Wilkemerge / Wilkamergen; 1333 CE as Vilkenberge in Hermann von Wartberge's chronicle).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Vilkmergė"
+      },
+      "morphemes": [
+        {
+          "form": "vilk-",
+          "language": "Lithuanian",
+          "translation": "wolf (vilkas)"
+        },
+        {
+          "form": "-mergė",
+          "language": "Lithuanian",
+          "translation": "to submerge/dip (verb stem merg-/merk-; folk-etymologized as merga 'maiden')"
+        }
+      ],
+      "etymology_analysis": "Derived from the Vilkmergė (now Vilkmergėlė) River hydronym, combining vilk- ('wolf') with the verb stem merg-/merk- ('to submerge, dip'), later folk-etymologized as 'wolf-maiden' and renamed Ukmergė in the 20th century CE.",
+      "current_repo_state": {
+        "b_tarr": "Vilkmerge",
+        "b_tarr_direct": "Vilkmerge",
+        "b_tarr_hist": "Vilkmerge",
+        "b_origin": "Vilkmerge (constituent holding of Kernâwe)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ukmerg%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kreva": {
+      "barony_key": "b_kreva",
+      "modern_name": "Kreva",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_kernave",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1250,
+      "first_mention_attestation": "13th century CE first documented mention (exact year unrecorded; Kreva Castle built in the early-to-mid 14th century CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "krev-",
+          "language": "East Slavic / Baltic",
+          "translation": "Krivichs (East Slavic tribe) or Baltic *kreivas ('crooked')"
+        },
+        {
+          "form": "-a",
+          "language": "Belarusian / Lithuanian",
+          "translation": "toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Toponym (Belarusian Крэва, Lithuanian Krėva, Polish Krewo) derived from the ethnonym of the Krivichs tribe (or a Baltic root).",
+      "current_repo_state": {
+        "b_tarr": "Kreva",
+        "b_tarr_direct": "Kreva",
+        "b_tarr_hist": "Kreva",
+        "b_origin": "Kreva (constituent holding of Kernâwe)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kreva",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_trakai": {
+      "barony_key": "b_trakai",
+      "modern_name": "Trakai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_trakai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1337,
+      "first_mention_attestation": "1337 CE German chronicles recording the settlement as Tracken (later Traken).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Trakai"
+      },
+      "morphemes": [
+        {
+          "form": "trak-",
+          "language": "Lithuanian",
+          "translation": "glade, forest clearing (trakas)"
+        },
+        {
+          "form": "-ai",
+          "language": "Lithuanian",
+          "translation": "masculine plural toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Plural of Lithuanian trakas ('glade, forest clearing'), first attested in 1337 CE as Tracken.",
+      "current_repo_state": {
+        "b_tarr": "Merkinê",
+        "b_tarr_direct": "Merkinê",
+        "b_tarr_hist": "Merkinê",
+        "b_origin": "Merkinê — Historical Option A seat of c_trakai",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Trakai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kaunas": {
+      "barony_key": "b_kaunas",
+      "modern_name": "Kaunas",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_trakai",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1361,
+      "first_mention_attestation": "1361 CE in Wigand of Marburg's Chronica nova Prutenica (attested in Teutonic sources).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": "Hypothesized unknown Baltic personal name *Kaunas (from adjective kaunus 'pugnacious, liking to fight'), though a topographic/hydronymic origin is also proposed.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kaun-",
+          "language": "Lithuanian",
+          "translation": "fighting/pugnacious (kaunus) or low/marshy place"
+        },
+        {
+          "form": "-as",
+          "language": "Lithuanian",
+          "translation": "masculine noun ending"
+        }
+      ],
+      "etymology_analysis": "Lithuanian toponym first attested in 1361 CE, most commonly derived from a hypothesized personal name *Kaunas (related to kaunus 'who likes to fight') or a Baltic topographic root.",
+      "current_repo_state": {
+        "b_tarr": "Santake",
+        "b_tarr_direct": "Santake",
+        "b_tarr_hist": "Santake",
+        "b_origin": "Santaka (sacred confluence of the Nemunas and Neris rivers with Rule 2 final vowel reduction, replacing 1361 Kaunas) (in-game: Santake)",
+        "b_anachronism": "First attested in 1361 in the Teutonic chronicle Chronica nova Prutenica. Restored to the ancient Baltic sacred confluence site Santake.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kaunas",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_merkine": {
+      "barony_key": "b_merkine",
+      "modern_name": "Merkine",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_trakai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1359,
+      "first_mention_attestation": "1359 CE in the Novgorod annals (and 1377 CE as Merken / Merkenpill in Teutonic Order chronicles).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Merkys"
+      },
+      "morphemes": [
+        {
+          "form": "merk-",
+          "language": "Lithuanian",
+          "translation": "to soak, steep (merkti, via the Merkys River)"
+        },
+        {
+          "form": "-inė",
+          "language": "Lithuanian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Derived from the Merkys River hydronym (from Lithuanian merkti 'to soak') with the toponymic suffix -inė.",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Merkin%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_aliten": {
+      "barony_key": "b_aliten",
+      "modern_name": "Aliten",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_trakai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1377,
+      "first_mention_attestation": "1377 CE in the Chronicle of Wigand of Marburg under the Germanized name Aliten.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Alytupis"
+      },
+      "morphemes": [
+        {
+          "form": "alyt- / alit-",
+          "language": "Lithuanian",
+          "translation": "hydronymic stem from the Alytupis stream"
+        },
+        {
+          "form": "-en / -us",
+          "language": "German / Lithuanian",
+          "translation": "toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Germanized form Aliten (Polish: Olita, Lithuanian: Alytus) derived from the local Lithuanian hydronym Alytupis.",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Alytus",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_valkininkai": {
+      "barony_key": "b_valkininkai",
+      "modern_name": "Valkininkai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_trakai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1387,
+      "first_mention_attestation": "1387 CE letter from Grand Duke Jogaila to his brother Skirgaila.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "valk-",
+          "language": "Lithuanian",
+          "translation": "puddle, marshy stream (valka)"
+        },
+        {
+          "form": "-ininkai",
+          "language": "Lithuanian",
+          "translation": "plural inhabitant/agentive suffix ('dwellers by the marsh/stream')"
+        }
+      ],
+      "etymology_analysis": "Lithuanian inhabitant-type toponym (Polish: Olkieniki) formed with the suffix -ininkai from valka ('small marshy stream, puddle'), denoting people living by the stream/island.",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Valkininkai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_panemune": {
+      "barony_key": "b_panemune",
+      "modern_name": "Panemune",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_yatvyagi",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1923,
+      "first_mention_attestation": "1923 CE naming of Panemunė following Lithuanian annexation of the Memel Territory (previously the German suburb Übermemel, disentangled from Tilsit in 1920 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "pa-",
+          "language": "Lithuanian",
+          "translation": "along, by (locative prefix)"
+        },
+        {
+          "form": "Nemun-",
+          "language": "Lithuanian",
+          "translation": "Nemunas River"
+        },
+        {
+          "form": "-ė",
+          "language": "Lithuanian",
+          "translation": "feminine toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Lithuanian prepositional compound pa- ('along, by') + Nemunas ('Nemunas River'), meaning 'settlement along the Nemunas', adopted in 1923 CE to replace German Übermemel ('across the Memel').",
+      "current_repo_state": {
+        "b_tarr": "Jatwîgen",
+        "b_tarr_direct": "Jatwîgen",
+        "b_tarr_hist": "Jatwîgen",
+        "b_origin": "Jatwîgen (Jatwîgen (in-game: Yatvyagi))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Panemun%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vilkaviskis": {
+      "barony_key": "b_vilkaviskis",
+      "modern_name": "Vilkaviskis",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_yatvyagi",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1561,
+      "first_mention_attestation": "1561 CE first written mention (granted Magdeburg city rights in 1660 CE by King John II Casimir Vasa).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Vilkauja"
+      },
+      "morphemes": [
+        {
+          "form": "vilk-",
+          "language": "Lithuanian",
+          "translation": "wolf (vilkas, via the Vilkauja River)"
+        },
+        {
+          "form": "-aviškis",
+          "language": "Lithuanian",
+          "translation": "toponymic suffix (earlier Vilkaujiškis)"
+        }
+      ],
+      "etymology_analysis": "Derived from the Vilkauja River (originally Vilkaujiškis, simplified to Vilkaviškis), ultimately from Lithuanian vilkas ('wolf').",
+      "current_repo_state": {
+        "b_tarr": "Vilkaviskis",
+        "b_tarr_direct": "Vilkaviskis",
+        "b_tarr_hist": "Vilkaviskis",
+        "b_origin": "Vilkaviskis (constituent holding of Jatwîgen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Vilkavi%C5%A1kis",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_suvalkai": {
+      "barony_key": "b_suvalkai",
+      "modern_name": "Suvalkai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_yatvyagi",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1667,
+      "first_mention_attestation": "1667 CE land grant to Camaldolese monks by King John II Casimir, who subsequently founded the village of Suwałki.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "su-",
+          "language": "Lithuanian",
+          "translation": "near, by (prepositional prefix)"
+        },
+        {
+          "form": "valk-",
+          "language": "Lithuanian",
+          "translation": "creek, marsh (valka)"
+        },
+        {
+          "form": "-ai",
+          "language": "Lithuanian",
+          "translation": "masculine plural ending (Polonized as Suwałki)"
+        }
+      ],
+      "etymology_analysis": "From Lithuanian su- ('near') + valka ('creek, marsh'), meaning 'place near a small stream or swampy area', Polonized as Suwałki.",
+      "current_repo_state": {
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Suwa%C5%82ki",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sejny": {
+      "barony_key": "b_sejny",
+      "modern_name": "Sejny",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_lithuanians",
+        "county": "c_yatvyagi",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1522,
+      "first_mention_attestation": "1522 CE land grant (estate/river Sejna; town founded in 1593–1602 CE as Juriewo/Sejny; area first noted in 1385 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Sejna"
+      },
+      "morphemes": [
+        {
+          "form": "sein-",
+          "language": "Yotvingian",
+          "translation": "hay (West Baltic s- and diphthong ei, cognate with Lithuanian šienas)"
+        },
+        {
+          "form": "-y",
+          "language": "Polish",
+          "translation": "plural/toponymic ending"
+        }
+      ],
+      "etymology_analysis": "Polonized from the Yotvingian river name Sejna (modern Marycha; Lithuanian Seinai), preserving West Baltic s- and diphthong ei (cognate with Lithuanian šienas 'hay').",
+      "current_repo_state": {
+        "b_tarr": "Sejny",
+        "b_tarr_direct": "Sejny",
+        "b_tarr_hist": "Sejny",
+        "b_origin": "Sejny (constituent holding of Jatwîgen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sejny",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_allenstein": {
+      "barony_key": "b_allenstein",
+      "modern_name": "Allenstein",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_allenstein",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1348,
+      "first_mention_attestation": "1348 CE historical document mentioning the settlement (watchtower established c. 1334 CE, forest cleared 1346 CE, municipal rights 1353 CE).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Allen-",
+          "language": "German (from Old Prussian)",
+          "translation": "Alle/Łyna River (Old Prussian Alna 'hind')"
+        },
+        {
+          "form": "-stein",
+          "language": "German",
+          "translation": "stone, castle"
+        }
+      ],
+      "etymology_analysis": "German compound meaning 'castle on the Alle River', combining the Germanized name of the Old Prussian river Alna ('hind', modern Łyna) with -stein ('stone, castle'); later Polonized as Olsztyn.",
+      "current_repo_state": {
+        "b_tarr": "Alna",
+        "b_tarr_direct": "Alna",
+        "b_tarr_hist": "Alna",
+        "b_origin": "Old Prussian hydronym Alna ('Trout River', Alle / Olsztyn) (in-game: Alna)",
+        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Olsztyn",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ortelsburg": {
+      "barony_key": "b_ortelsburg",
+      "modern_name": "Ortelsburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_allenstein",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1360,
+      "first_mention_attestation": "1360 CE Teutonic Order document mentioning the fort Ortulfsburg",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Ortolf von Trier, a 14th-century knight of the Teutonic Order and Komtur of Elbing (Elbląg), who founded the fort between 1350 and 1360 CE.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ortulf / Ortolf",
+          "language": "Middle High German",
+          "translation": "personal name Ortolf (von Trier)"
+        },
+        {
+          "form": "-s-",
+          "language": "Middle High German",
+          "translation": "genitive linking element"
+        },
+        {
+          "form": "burg",
+          "language": "Middle High German",
+          "translation": "fortress, castle"
+        }
+      ],
+      "etymology_analysis": "Derived from Ortulfsburg, named after Teutonic Komtur Ortolf von Trier in the 1350s CE, which gradually morphed into German Ortelsburg (Polish: Szczytno).",
+      "current_repo_state": {
+        "b_tarr": "Pessûne",
+        "b_tarr_direct": "Pessûne",
+        "b_tarr_hist": "Pessûne",
+        "b_origin": "Old Prussian Galindian lake settlement (replacing 1360 Teutonic castle Ortelsburg) (in-game: Ortelsburg)",
+        "b_anachronism": "1360 Teutonic castle Ortelsburg fails Burden of Proof on Antiquity; restored to Old Prussian Galindian stem.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Szczytno",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_niedenburg": {
+      "barony_key": "b_niedenburg",
+      "modern_name": "Niedenburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_allenstein",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1355,
+      "first_mention_attestation": "1355 CE Teutonic Order invasion and foundation record (castle c. 1376 CE, town charter 1381 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Nida / Neide",
+          "language": "Old Prussian / Polish",
+          "translation": "Nida river name"
+        },
+        {
+          "form": "-en-",
+          "language": "German",
+          "translation": "linking element"
+        },
+        {
+          "form": "burg",
+          "language": "German",
+          "translation": "fortress, castle"
+        }
+      ],
+      "etymology_analysis": "German Neidenburg (variant Niedenburg) combines the local river name Nida/Neide with German -burg ('castle'), built by the Teutonic Order in the late 14th century CE near an Old Prussian fort.",
+      "current_repo_state": {
+        "b_tarr": "Neidenburch",
+        "b_tarr_direct": "Neidenburch",
+        "b_tarr_hist": "Neidenburch",
+        "b_origin": "Neidenburch (constituent holding of Galindjen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Nidzica",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lotzen": {
+      "barony_key": "b_lotzen",
+      "modern_name": "Lotzen",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_angerburg",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1340,
+      "first_mention_attestation": "1340 CE Teutonic Order castle foundation as Lötzen",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lötzen / Lec",
+          "language": "German / Old Prussian",
+          "translation": "adapted Baltic settlement name (cf. Polish Łuczany)"
+        }
+      ],
+      "etymology_analysis": "German Lötzen (adapted from Old Prussian/Polish Lec / Łuczany) was first documented in 1340 CE when the Teutonic Knights built a castle on the isthmus between Lakes Kisajno and Niegocin.",
+      "current_repo_state": {
+        "b_tarr": "Angerâpe",
+        "b_tarr_direct": "Sudouwen",
+        "b_tarr_hist": "Angerâpe",
+        "b_origin": "Angerâpe (Angerâpe (in-game: Sudovian (Angerburg))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gi%C5%BCycko",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lyck": {
+      "barony_key": "b_lyck",
+      "modern_name": "Lyck",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_angerburg",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1398,
+      "first_mention_attestation": "1398 CE Teutonic Order documentation of the castle and settlement Lyck",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Lyck (Ełk)"
+      },
+      "morphemes": [
+        {
+          "form": "Luka / Luks",
+          "language": "Old Prussian",
+          "translation": "waterlily (or river name)"
+        }
+      ],
+      "etymology_analysis": "German Lyck (Polish: Ełk, earlier Łek/Łęg) is derived either from the Old Prussian hydronym Luks (from luka, 'waterlily') or from Polish łęg ('meadow'), first documented in 1398 CE.",
+      "current_repo_state": {
+        "b_tarr": "Lêke",
+        "b_tarr_direct": "Lêke",
+        "b_tarr_hist": "Lêke",
+        "b_origin": "Ancient Old Prussian/Yotvingian Ełk River basin (replacing 1398 Teutonic castle Lyck) (in-game: Lyck)",
+        "b_anachronism": "1398 Teutonic castle Lyck fails Burden of Proof on Antiquity; restored to Old Prussian river stem Lêke.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/E%C5%82k",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_angerburg": {
+      "barony_key": "b_angerburg",
+      "modern_name": "Angerburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_angerburg",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1335,
+      "first_mention_attestation": "1335 CE chronicle mention as Angirburg",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "anger",
+          "language": "Old Prussian",
+          "translation": "eel"
+        },
+        {
+          "form": "burg",
+          "language": "Middle High German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "German Angerburg ('eel castle') is a hybrid toponym combining the Old Prussian word anger ('eel', also reflected in the Angrapa River) with German burg ('castle'), first recorded as Angirburg in 1335 CE.",
+      "current_repo_state": {
+        "b_tarr": "Sudouwen",
+        "b_tarr_direct": "Sudouwen",
+        "b_tarr_hist": "Angerâpe",
+        "b_origin": "Sudouwen — Disambiguated capital seat from sub-barony Angerâpe",
+        "b_anachronism": "Disambiguated intra-county capital barony.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/W%C4%99gorzewo",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_eylau": {
+      "barony_key": "b_eylau",
+      "modern_name": "Eylau",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_osterode",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1305,
+      "first_mention_attestation": "1305 CE foundation by Komtur Sieghard von Schwartzburg (Deutsch Eylau / Ylavia)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "īl- / il-",
+          "language": "Old Prussian",
+          "translation": "mud, silt"
+        },
+        {
+          "form": "-au / -awa",
+          "language": "German / Baltic",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German (Deutsch) Eylau (Polish: Iława) derives from an Old Prussian settlement name Ylavia (from Baltic *il- 'mud, silt'), first documented in 1305 CE when the Teutonic Order founded the town.",
+      "current_repo_state": {
+        "b_tarr": "Sassenlant",
+        "b_tarr_direct": "Sassenlant",
+        "b_tarr_hist": "Sassenlant",
+        "b_origin": "Sassenlant — Historical Option A seat of c_osterode",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/I%C5%82awa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_brodnica": {
+      "barony_key": "b_brodnica",
+      "modern_name": "Brodnica",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_osterode",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1263,
+      "first_mention_attestation": "1263 CE first written reference to Brodnica (town charter 1298 CE as Strasburg)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "bród",
+          "language": "Polish",
+          "translation": "ford, river crossing"
+        },
+        {
+          "form": "-nica",
+          "language": "Polish",
+          "translation": "toponymic noun suffix"
+        }
+      ],
+      "etymology_analysis": "Polish Brodnica derives from bród ('ford' across the Drwęca River) with the suffix -nica, first recorded in 1263 CE (later granted town rights in 1298 CE under the German name Strasburg).",
+      "current_repo_state": {
+        "b_tarr": "Drwêntza",
+        "b_tarr_direct": "Drwêntza",
+        "b_tarr_hist": "Drwêntza",
+        "b_origin": "Drwęca River crossing (replacing 1298 Teutonic castle Strasburg) (in-game: Brodnica)",
+        "b_anachronism": "1298 Teutonic castle Strasburg fails Burden of Proof on Antiquity; resolved to ancient Drwęca hydronym.",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Brodnica",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_osterode": {
+      "barony_key": "b_osterode",
+      "modern_name": "Osterode",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_osterode",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1270,
+      "first_mention_attestation": "1270 CE Teutonic Order construction of wooden earthworks named Osterode",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "ost-",
+          "language": "German",
+          "translation": "east"
+        },
+        {
+          "form": "-rode",
+          "language": "German",
+          "translation": "forest clearing"
+        }
+      ],
+      "etymology_analysis": "Named Osterode by the Teutonic Knights in 1270 CE after Osterode am Harz in Lower Saxony (from German ost 'east' + rode 'clearing'), Polonized later as Ostróda.",
+      "current_repo_state": {
+        "b_tarr": "Sassen-in-Prûssen",
+        "b_tarr_direct": "Osterôde",
+        "b_tarr_hist": "Sassen-in-Prûssen",
+        "b_origin": "Sassen-in-Prûssen (Sassen-in-Prûssen (in-game: Sasna (Osterode))",
+        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ostr%C3%B3da",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kulm": {
+      "barony_key": "b_kulm",
+      "modern_name": "Kulm",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_torun",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1065,
+      "first_mention_attestation": "1065 CE Mogilno monastery document (in Culmine; Kulm law charter 1233 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Kulm (Chełmno)"
+      },
+      "morphemes": [
+        {
+          "form": "chełm",
+          "language": "Old Polish",
+          "translation": "hill"
+        }
+      ],
+      "etymology_analysis": "German Kulm (Culm) is a Germanization of Polish Chełmno, derived from Old Polish chełm ('hill'), first attested in a document dated 1065 CE.",
+      "current_repo_state": {
+        "b_tarr": "Kulm",
+        "b_tarr_direct": "Kulm",
+        "b_tarr_hist": "Kulm",
+        "b_origin": "Kulm — Historical Option A seat of c_torun",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Che%C5%82mno",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_torun": {
+      "barony_key": "b_torun",
+      "modern_name": "Torun",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_torun",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1226,
+      "first_mention_attestation": "1226 CE written mention as Thorun (city charter 1233 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "tor",
+          "language": "Old Slavic",
+          "translation": "beaten path, track"
+        },
+        {
+          "form": "-uń",
+          "language": "Old Slavic",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Toruń (German: Thorn) is thought to derive from Old Slavic tor ('beaten path'), meaning 'roadside settlement', first mentioned in writing in 1226 CE as Thorun.",
+      "current_repo_state": {
+        "b_tarr": "Tôrun",
+        "b_tarr_direct": "Tôrun",
+        "b_tarr_hist": "Kulm",
+        "b_origin": "Tôrun — Disambiguated capital seat from sub-barony Kulm",
+        "b_anachronism": "Disambiguated intra-county capital barony.",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Toru%C5%84",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_briesen": {
+      "barony_key": "b_briesen",
+      "modern_name": "Briesen",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_masuria",
+        "county": "c_torun",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1251,
+      "first_mention_attestation": "1251 CE document at Chełmża mentioning Wambresia (with an earlier 12th-century CE battle reference)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "briese / brzeźno",
+          "language": "German / Polish",
+          "translation": "birch (tree/place)"
+        }
+      ],
+      "etymology_analysis": "German Briesen corresponds to Polish Wąbrzeźno (attested in Latinized form as Wambresia in 1251 CE), derived from Slavic *brěza ('birch').",
+      "current_repo_state": {
+        "b_tarr": "Wonbrscheschno",
+        "b_tarr_direct": "Wonbrscheschno",
+        "b_tarr_hist": "Wonbrscheschno",
+        "b_origin": "Ancient Slavic/Prussian settlement Wąbrzeźno (in-game: Briesen)",
+        "b_anachronism": "Pre-867 native toponym restored over Teutonic Order Briesen.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/W%C4%85brze%C5%BAno",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_lautenburg": {
+      "barony_key": "b_lautenburg",
+      "modern_name": "Lautenburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_bartenstein",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1301,
+      "first_mention_attestation": "1301 CE Teutonic Order foundation of Lautenburg (Lidzbark)",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Otto von Lutterberg, a 14th-century Teutonic Komtur of Chełmno Land.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Lutter / Lauten",
+          "language": "Middle High German",
+          "translation": "from personal name (Otto von) Lutterberg"
+        },
+        {
+          "form": "burg",
+          "language": "Middle High German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "German Lautenburg (Polish: Lidzbark) was founded in 1301 CE and named after Teutonic Komtur Otto von Lutterberg, evolving from Lutterberg to Lautenburg.",
+      "current_repo_state": {
+        "b_tarr": "Alne",
+        "b_tarr_direct": "Bartenstein",
+        "b_tarr_hist": "Alne",
+        "b_origin": "Alne (Bartlant (in-game: Bartia (Bartenstein))",
+        "b_anachronism": "Teutonic Order exonym Bartenstein built 1240. Province held directly by Old Prussians -> Roman Empire; resolves to ancient river Alna (*Alle*).",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lidzbark",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_bartenstein": {
+      "barony_key": "b_bartenstein",
+      "modern_name": "Bartenstein",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_bartenstein",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1332,
+      "first_mention_attestation": "1332 CE town charter renaming Rosenthal to Bartenstein (castle built c. 1241 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Barten",
+          "language": "German / Old Prussian",
+          "translation": "Bartians (Old Prussian tribe / Bartia)"
+        },
+        {
+          "form": "stein",
+          "language": "German",
+          "translation": "stone, stone castle"
+        }
+      ],
+      "etymology_analysis": "German Bartenstein ('stone [castle] of the Bartians') combines the Old Prussian tribal name Bartia/Barten with German stein ('stone'), adopted in 1332 CE for the settlement earlier documented as Rosenthal (1326 CE) beside the c. 1241 CE castle.",
+      "current_repo_state": {
+        "b_tarr": "Barte",
+        "b_tarr_direct": "Barte",
+        "b_tarr_hist": "Barte",
+        "b_origin": "Old Prussian tribal territory and river basin of Bartia (replacing 1326 Teutonic castle Bartenstein) (in-game: Barte)",
+        "b_anachronism": "Teutonic Order castle Bartenstein built in 1326 in Bartia. Resolved via Option B to the authentic Old Prussian regional stem Barte.",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Bartoszyce",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_insterburg": {
+      "barony_key": "b_insterburg",
+      "modern_name": "Insterburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_bartenstein",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1337,
+      "first_mention_attestation": "1337 CE Teutonic Order castle foundation as Insterburg",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Inster",
+          "language": "Old Prussian / German",
+          "translation": "Inster (Instruch) river"
+        },
+        {
+          "form": "burg",
+          "language": "German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "German Insterburg ('castle on the Inster') combines the Old Prussian hydronym Inster (Instruch) with German burg ('castle'), founded in 1337 CE by Grand Master Dietrich von Altenburg.",
+      "current_repo_state": {
+        "b_tarr": "Instre",
+        "b_tarr_direct": "Instre",
+        "b_tarr_hist": "Instre",
+        "b_origin": "Old Prussian Inster River confluence (replacing 1336 Teutonic castle Insterburg) (in-game: Insterburg)",
+        "b_anachronism": "1336 Teutonic castle Insterburg fails Burden of Proof on Antiquity; restored to Old Prussian Inster.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Chernyakhovsk",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_rastenburg": {
+      "barony_key": "b_rastenburg",
+      "modern_name": "Rastenburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_bartenstein",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1329,
+      "first_mention_attestation": "1329 CE establishment of Rastenburg by the Teutonic Order",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Rast-",
+          "language": "Old Prussian",
+          "translation": "adapted Old Prussian toponymic stem"
+        },
+        {
+          "form": "-en-",
+          "language": "German",
+          "translation": "linking element"
+        },
+        {
+          "form": "burg",
+          "language": "German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "German Rastenburg (Polish: Rastembork, renamed Kętrzyn in 1946 CE) combines an Old Prussian place stem with German burg ('castle'), first established in 1329 CE.",
+      "current_repo_state": {
+        "b_tarr": "Raste",
+        "b_tarr_direct": "Raste",
+        "b_tarr_hist": "Raste",
+        "b_origin": "Old Prussian tribal settlement Raste (replacing 1329 Teutonic castle Rastenburg) (in-game: Rastenburg)",
+        "b_anachronism": "1329 Teutonic castle Rastenburg fails Burden of Proof on Antiquity; restored to Old Prussian Raste.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/K%C4%99trzyn",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_konigsberg": {
+      "barony_key": "b_konigsberg",
+      "modern_name": "Konigsberg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_konigsberg",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1255,
+      "first_mention_attestation": "1255 CE Teutonic Order foundation of Königsberg on the site of Twangste",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named in honour of King Ottokar II of Bohemia (c. 1233–1278 CE), who led a crusade against the Old Prussians in 1254–1255 CE.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "König",
+          "language": "German",
+          "translation": "king (Ottokar II of Bohemia)"
+        },
+        {
+          "form": "-s-",
+          "language": "German",
+          "translation": "genitive linking element"
+        },
+        {
+          "form": "berg",
+          "language": "German",
+          "translation": "hill, mountain"
+        }
+      ],
+      "etymology_analysis": "German Königsberg ('King's Mountain') was founded in 1255 CE on the site of the Old Prussian settlement Twangste and named in honour of King Ottokar II of Bohemia.",
+      "current_repo_state": {
+        "b_tarr": "Twangste",
+        "b_tarr_direct": "Twangste",
+        "b_tarr_hist": "Twangste",
+        "b_origin": "Old Prussian sacred grove and hillfort Twangste (attested before 1255 Teutonic Order castle) (in-game: Twangste)",
+        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/K%C3%B6nigsberg",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_labiau": {
+      "barony_key": "b_labiau",
+      "modern_name": "Labiau",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_konigsberg",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1258,
+      "first_mention_attestation": "1258 CE chronicle mention as Kaymelabegowe / Labegowe moter",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "lab-",
+          "language": "Old Prussian",
+          "translation": "good, marshy/riverine stem"
+        },
+        {
+          "form": "-iau / -owe",
+          "language": "German / Old Prussian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German Labiau (Lithuanian: Labguva) derives from the Old Prussian toponym Labegowe / Labigow, first attested in 1258 CE when the Teutonic Order built a wooden castle on the Deyma River.",
+      "current_repo_state": {
+        "b_tarr": "Kaup",
+        "b_tarr_direct": "Kaup",
+        "b_tarr_hist": "Kaup",
+        "b_origin": "Kaup (constituent holding of Twangste)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Polessk",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_elblag": {
+      "barony_key": "b_elblag",
+      "modern_name": "Elblag",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_malbork",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1237,
+      "first_mention_attestation": "1237 CE Teutonic Order foundation of Elbing (river attested c. 890 CE as Ylfing by Wulfstan)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Elbląg (Elbing)"
+      },
+      "morphemes": [
+        {
+          "form": "Ylfing / Elbing",
+          "language": "Germanic / Old Prussian",
+          "translation": "river name Elbląg"
+        }
+      ],
+      "etymology_analysis": "Polish Elbląg derives from German Elbing, named after the Elbląg River (first recorded as Ylfing by Wulfstan in the late 9th century CE, c. 890 CE); the Teutonic Order founded the citadel in 1237 CE near the older Prussian emporium of Truso.",
+      "current_repo_state": {
+        "b_tarr": "Trûsô",
+        "b_tarr_direct": "Trûsô",
+        "b_tarr_hist": "Trûsô",
+        "b_origin": "Trûsô — Historical Option A seat of c_malbork",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Elbl%C4%85g",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_marienburg": {
+      "barony_key": "b_marienburg",
+      "modern_name": "Marienburg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_malbork",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1274,
+      "first_mention_attestation": "1274 CE Teutonic Order foundation of Ordensburg Marienburg",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": "Named after the Virgin Mary (pre-867 CE biblical figure), patron saint of the Teutonic Order.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Marien",
+          "language": "Middle High German",
+          "translation": "of (the Virgin) Mary"
+        },
+        {
+          "form": "burg",
+          "language": "Middle High German",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "German Marienburg ('Mary's Castle', Polish: Malbork) was founded in 1274 CE by the Teutonic Knights on the Nogat River and named after their patron saint, the Virgin Mary.",
+      "current_repo_state": {
+        "b_tarr": "Malbork",
+        "b_tarr_direct": "Malbork",
+        "b_tarr_hist": "Malbork",
+        "b_origin": "Prussian/Slavic settlement Malbork on the Nogat (attested before 1274 Teutonic fortress) (in-game: Malbork)",
+        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Malbork",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_graudenz": {
+      "barony_key": "b_graudenz",
+      "modern_name": "Graudenz",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_malbork",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1065,
+      "first_mention_attestation": "1065 CE Mogilno document mentioning Castrum Grudomzch / Grudenczh (chartered 1291 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Graudenz (Grudziądz)"
+      },
+      "morphemes": [
+        {
+          "form": "gruda",
+          "language": "Old Polish",
+          "translation": "clod, lump, dry/elevated ground"
+        },
+        {
+          "form": "-ądz",
+          "language": "Old Polish",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German Graudenz is adapted from Polish Grudziądz, derived from Slavic gruda ('clod, elevated ground'), first documented in 1065 CE as Grudenczh.",
+      "current_repo_state": {
+        "b_tarr": "Kwidzîn",
+        "b_tarr_direct": "Kwidzîn",
+        "b_tarr_hist": "Kwidzîn",
+        "b_origin": "Old Prussian tribal settlement Kwidzîn / Queden on the Liwa (replacing 1233 Teutonic castle Marienwerder) (in-game: Graudenz)",
+        "b_anachronism": "1233 Teutonic castle Marienwerder fails Burden of Proof on Antiquity; restored to native Old Prussian Kwidzîn.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Grudzi%C4%85dz",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_wislana": {
+      "barony_key": "b_wislana",
+      "modern_name": "Wislana",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_malbork",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1248,
+      "first_mention_attestation": "1248 CE transfer of the Sztutowo/Vistula Spit area (fishing settlement attested early 13th century CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Wisł-",
+          "language": "Polish",
+          "translation": "Vistula river"
+        },
+        {
+          "form": "-ana",
+          "language": "Polish",
+          "translation": "adjectival feminine suffix"
+        }
+      ],
+      "etymology_analysis": "Polish Wiślana ('Vistulan', as in Mierzeja Wiślana / Vistula Spit) is an adjectival derivative of Wisła (Vistula), representing the Vistula delta/spit settlement area around Sztutowo (German: Stutthof, attested in the early 13th century CE).",
+      "current_repo_state": {
+        "b_tarr": "Wîselwerder",
+        "b_tarr_direct": "Wîselwerder",
+        "b_tarr_hist": "Wîselwerder",
+        "b_origin": "Vistula Spit and Nogat river delta (replacing Stutthof) (in-game: Wislana)",
+        "b_anachronism": "Late estate Stutthof fails Burden of Proof on Antiquity; resolved to Vistula delta hydronym Wîselwerder.",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sztutowo",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_laukitten": {
+      "barony_key": "b_laukitten",
+      "modern_name": "Laukitten",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_natangia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1407,
+      "first_mention_attestation": "1407 CE first documentary mention as Lawkyten",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "lauk-",
+          "language": "Old Prussian",
+          "translation": "field, clearing"
+        },
+        {
+          "form": "-itten",
+          "language": "Old Prussian / German",
+          "translation": "plural/toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German Laukitten (attested 1407 CE as Lawkyten; Lithuanian: Laukyčiai) derives from Old Prussian lauks ('field'), a settlement name in Natangia.",
+      "current_repo_state": {
+        "b_tarr": "Natângjen",
+        "b_tarr_direct": "Natângjen",
+        "b_tarr_hist": "Natângjen",
+        "b_origin": "Natângjen (Natângjen (in-game: Natangia))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://de.wikipedia.org/wiki/Bolschedoroschnoje",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_paterswalde": {
+      "barony_key": "b_paterswalde",
+      "modern_name": "Paterswalde",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_natangia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1363,
+      "first_mention_attestation": "1363 CE parish foundation (originally named Allendorf, later Paterswalde)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Pater",
+          "language": "German / Latin",
+          "translation": "priest, father (of a forest chapel)"
+        },
+        {
+          "form": "-s-",
+          "language": "German",
+          "translation": "genitive linking element"
+        },
+        {
+          "form": "walde",
+          "language": "German",
+          "translation": "forest, woods"
+        }
+      ],
+      "etymology_analysis": "German Paterswalde ('Priest's Forest') refers to a medieval forest pilgrimage chapel near the village founded around 1363 CE (initially called Allendorf).",
+      "current_repo_state": {
+        "b_tarr": "Tapiouwe",
+        "b_tarr_direct": "Tapiouwe",
+        "b_tarr_hist": "Tapiouwe",
+        "b_origin": "Old Prussian Pregolya river settlement Tapiow (replacing 1258 Teutonic castle Tapiau) (in-game: Paterswalde)",
+        "b_anachronism": "1258 Teutonic castle Tapiau fails Burden of Proof on Antiquity; restored to Old Prussian Tapiow.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://de.wikipedia.org/wiki/Kirche_Paterswalde",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ostlandsberg": {
+      "barony_key": "b_ostlandsberg",
+      "modern_name": "Ostlandsberg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_natangia",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1335,
+      "first_mention_attestation": "1335 CE foundation by Balga Komtur Heinrich von Muro as Landsberg in Ostpreußen",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ost-",
+          "language": "German",
+          "translation": "east (East Prussian disambiguator)"
+        },
+        {
+          "form": "Land",
+          "language": "German",
+          "translation": "land"
+        },
+        {
+          "form": "-s-",
+          "language": "German",
+          "translation": "linking element"
+        },
+        {
+          "form": "berg",
+          "language": "German",
+          "translation": "hill, mountain"
+        }
+      ],
+      "etymology_analysis": "German Landsberg in Ostpreußen (Ostlandsberg, Polish: Górowo Iławeckie) was founded in 1335 CE by the Teutonic Knights in Natangia, using the standard German compound Land + Berg.",
+      "current_repo_state": {
+        "b_tarr": "Welouwe",
+        "b_tarr_direct": "Welouwe",
+        "b_tarr_hist": "Welouwe",
+        "b_origin": "Old Prussian Pregolya/Lava fortress Welow (replacing 1255 Teutonic castle Wehlau) (in-game: Ostlandsberg)",
+        "b_anachronism": "1255 Teutonic castle Wehlau fails Burden of Proof on Antiquity; restored to Old Prussian Welow.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/G%C3%B3rowo_I%C5%82aweckie",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_wormditt": {
+      "barony_key": "b_wormditt",
+      "modern_name": "Wormditt",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_wormditt",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1308,
+      "first_mention_attestation": "1308 CE first written mention (town rights 1313 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Wormditt",
+          "language": "Old Prussian / German",
+          "translation": "adapted Old Prussian settlement name (folk-etymologized to German Wurm 'worm/dragon')"
+        }
+      ],
+      "etymology_analysis": "German Wormditt (Polish: Orneta) is an adaptation of an Old Prussian settlement name first mentioned in 1308 CE, later folk-etymologized in German to Wurm ('worm, dragon') on the town crest.",
+      "current_repo_state": {
+        "b_tarr": "Warmjen",
+        "b_tarr_direct": "Warmjen",
+        "b_tarr_hist": "Warmjen",
+        "b_origin": "Warmjen — Historical Option A seat of c_wormditt",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Orneta",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_mohrungen": {
+      "barony_key": "b_mohrungen",
+      "modern_name": "Mohrungen",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_wormditt",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1327,
+      "first_mention_attestation": "1327 CE Kulm town law charter as Mohrungen (earlier Old Prussian Mawrin/Maurin)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Maur- / Mohr-",
+          "language": "Old Prussian",
+          "translation": "lake/settlement stem (Mawrin / Lake Marąg)"
+        },
+        {
+          "form": "-ungen",
+          "language": "German",
+          "translation": "Germanized toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German Mohrungen (Polish: Morąg) was named in 1327 CE after the nearby lake (Marąg) and the earlier Old Prussian settlement Mawrin/Maurin.",
+      "current_repo_state": {
+        "b_tarr": "Marînge",
+        "b_tarr_direct": "Marînge",
+        "b_tarr_hist": "Marînge",
+        "b_origin": "Old Prussian Lake Marąg basin (replacing 1302 Teutonic castle Mohrungen) (in-game: Mohrungen)",
+        "b_anachronism": "1302 Teutonic castle Mohrungen fails Burden of Proof on Antiquity; restored to Old Prussian Lake Marąg.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mor%C4%85g",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_braunsberg": {
+      "barony_key": "b_braunsberg",
+      "modern_name": "Braunsberg",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_prussia",
+        "county": "c_wormditt",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1254,
+      "first_mention_attestation": "1254 CE town charter founding Brunsberg/Braunsberg (named in honor of Bishop Bruno von Schauenburg during King Ottokar II of Bohemia’s 1254–1255 crusade).",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named Brunsberg after Bruno von Schauenburg (1205–1281 CE), Bishop of Olomouc in Moravia, who accompanied King Ottokar II of Bohemia on the Prussian crusade.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Braun / Bruno",
+          "language": "German",
+          "translation": "personal name Bruno (von Schauenburg)"
+        },
+        {
+          "form": "-s-",
+          "language": "German",
+          "translation": "genitive linking element"
+        },
+        {
+          "form": "berg",
+          "language": "German",
+          "translation": "hill, mountain"
+        }
+      ],
+      "etymology_analysis": "German Braunsberg (earlier Brunsberg, Polish: Braniewo) was named after Bruno von Schauenburg, Bishop of Olomouc, in the mid-13th century CE.",
+      "current_repo_state": {
+        "b_tarr": "Passarîa",
+        "b_tarr_direct": "Passarîa",
+        "b_tarr_hist": "Passarîa",
+        "b_origin": "Old Prussian Pasłęka River basin in Warmia (replacing 1240 Teutonic castle Braunsberg) (in-game: Braunsberg)",
+        "b_anachronism": "1240 Teutonic castle Braunsberg fails Burden of Proof on Antiquity; restored to Old Prussian Pasłęka.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Braniewo",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_memel": {
+      "barony_key": "b_memel",
+      "modern_name": "Memel",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_memel",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1252,
+      "first_mention_attestation": "1252 CE Teutonic Knights' foundation of Memelburg (shortened to Memel)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Memel"
+      },
+      "morphemes": [
+        {
+          "form": "Memel",
+          "language": "German / Baltic",
+          "translation": "German name for the Neman River"
+        }
+      ],
+      "etymology_analysis": "German Memel (shortened from Memelburg, founded 1252 CE; Lithuanian: Klaipėda) takes its name from the Memel (Neman) River.",
+      "current_repo_state": {
+        "b_tarr": "Mêmele",
+        "b_tarr_direct": "Mêmele",
+        "b_tarr_hist": "Mêmele",
+        "b_origin": "Mêmele — Historical Option A seat of c_memel",
+        "b_anachronism": "",
+        "category": "option_a_seat"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Klaip%C4%97da",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_taurage": {
+      "barony_key": "b_taurage",
+      "modern_name": "Taurage",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_memel",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1507,
+      "first_mention_attestation": "1507 CE first written mention of Tauragė",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "tauras",
+          "language": "Lithuanian",
+          "translation": "aurochs"
+        },
+        {
+          "form": "ragas",
+          "language": "Lithuanian",
+          "translation": "horn"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Tauragė (German: Tauroggen) is a compound of tauras ('aurochs') and ragas ('horn'), first documented in 1507 CE.",
+      "current_repo_state": {
+        "b_tarr": "Jûra",
+        "b_tarr_direct": "Jûra",
+        "b_tarr_hist": "Jûra",
+        "b_origin": "Jūra River basin (replacing 1507 village Tauragė) (in-game: Taurage)",
+        "b_anachronism": "1507 settlement Tauragė fails Burden of Proof on Antiquity; resolved to ancient Jūra hydronym.",
+        "category": "option_b_hydronym"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Taurag%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_palanga": {
+      "barony_key": "b_palanga",
+      "modern_name": "Palanga",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_palanga",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1161,
+      "first_mention_attestation": "1161 CE account of King Valdemar I of Denmark's landing (Livonian Order records 1253 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "pal-",
+          "language": "Curonian / Baltic",
+          "translation": "marsh, lowland"
+        },
+        {
+          "form": "-anga",
+          "language": "Curonian",
+          "translation": "Curonian toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Palanga (German: Polangen) is of Curonian origin, combining the Baltic root pal- ('marsh, lowland') with the characteristic Curonian suffix -ng-, first mentioned in 1161 CE.",
+      "current_repo_state": {
+        "b_tarr": "Palânge",
+        "b_tarr_direct": "Palânge",
+        "b_tarr_hist": "Palânge",
+        "b_origin": "Palânge (Palânge (in-game: Palanga))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Palanga",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_medeniken": {
+      "barony_key": "b_medeniken",
+      "modern_name": "Medeniken",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_palanga",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1320,
+      "first_mention_attestation": "1320 CE Battle of Medininkai (Medenike)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "med-",
+          "language": "Lithuanian / Samogitian",
+          "translation": "forest, woods (medis/medė)"
+        },
+        {
+          "form": "-ininkai / -eniken",
+          "language": "Lithuanian / German",
+          "translation": "inhabitants/toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "German Medeniken is an adaptation of Lithuanian/Samogitian Medininkai (later renamed Varniai), derived from medė/medis ('forest, woods'), first attested in 1320 CE.",
+      "current_repo_state": {
+        "b_tarr": "Medeniken",
+        "b_tarr_direct": "Medeniken",
+        "b_tarr_hist": "Medeniken",
+        "b_origin": "Medeniken (constituent holding of Palânge)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Varniai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_telsiai": {
+      "barony_key": "b_telsiai",
+      "modern_name": "Telsiai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_palanga",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1398,
+      "first_mention_attestation": "1398 CE first written mention of Telšiai",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Telšiai (Telšė)"
+      },
+      "morphemes": [
+        {
+          "form": "telš- / telkšoti",
+          "language": "Samogitian / Lithuanian",
+          "translation": "to be flooded with water, splash (Telšė rivulet)"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Telšiai (Samogitian: Telšē) is named after the Telšė rivulet flowing into Lake Mastis, derived from the Baltic root telš-/telkšoti ('to splash, be flooded'), first mentioned in 1398 CE.",
+      "current_repo_state": {
+        "b_tarr": "Telsiai",
+        "b_tarr_direct": "Telsiai",
+        "b_tarr_hist": "Telsiai",
+        "b_origin": "Telsiai (constituent holding of Palânge)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tel%C5%A1iai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_raseiniai": {
+      "barony_key": "b_raseiniai",
+      "modern_name": "Raseiniai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_raseiniai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1253,
+      "first_mention_attestation": "1253 CE donation charter of Grand Duke Mindaugas (Rushigen / Rossyen / Rasseyne)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "ras-",
+          "language": "Lithuanian / Baltic",
+          "translation": "dew, wet/marshy ground (or personal/tribal name)"
+        },
+        {
+          "form": "-einiai",
+          "language": "Lithuanian",
+          "translation": "toponymic plural suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Raseiniai is first attested in 1253 CE in Mindaugas's charters (as Rushigen, Rossyen, Rasseyne) in Samogitia.",
+      "current_repo_state": {
+        "b_tarr": "Rassêinen",
+        "b_tarr_direct": "Rassêinen",
+        "b_tarr_hist": "Rassêinen",
+        "b_origin": "Rassêinen (Rassêinen (in-game: Raseiniai))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Raseiniai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_jurbarkas": {
+      "barony_key": "b_jurbarkas",
+      "modern_name": "Jurbarkas",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_raseiniai",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1259,
+      "first_mention_attestation": "1259 CE Teutonic Knights' Ordensburg castle of Georgenburg",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": "Derived from German Georgenburg ('George's Castle'), named after Saint George (pre-867 CE Christian martyr).",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Jürg / Georg",
+          "language": "German",
+          "translation": "George (Saint George)"
+        },
+        {
+          "form": "burg / barkas",
+          "language": "German / Lithuanian",
+          "translation": "castle, fortress"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Jurbarkas is adapted from German Georgenburg / Jurgenburg ('George's Castle'), first documented in 1259 CE as a Teutonic Order fortress on the Nemunas.",
+      "current_repo_state": {
+        "b_tarr": "Jurbarch",
+        "b_tarr_direct": "Jurbarch",
+        "b_tarr_hist": "Jurbarch",
+        "b_origin": "Nemunas river crossing (replacing 1259 Teutonic castle Georgenburg) (in-game: Jurbarkas)",
+        "b_anachronism": "1259 Teutonic castle Georgenburg fails Burden of Proof on Antiquity; restored to native Nemunas crossing.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Jurbarkas",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_veliuona": {
+      "barony_key": "b_veliuona",
+      "modern_name": "Veliuona",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_raseiniai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1319,
+      "first_mention_attestation": "1319 CE attestation as Veliuona (earlier attested 1291 CE as Junigeda in Peter of Duisburg's chronicle)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "vėlė",
+          "language": "Lithuanian",
+          "translation": "soul of the dead"
+        },
+        {
+          "form": "-uona",
+          "language": "Lithuanian",
+          "translation": "toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Veliuona is associated with vėlė ('soul of the dead') and the Lithuanian goddess Veliona; the castle was first recorded in 1291 CE as Junigeda and by 1319 CE as Veliuona.",
+      "current_repo_state": {
+        "b_tarr": "Veliuona",
+        "b_tarr_direct": "Veliuona",
+        "b_tarr_hist": "Veliuona",
+        "b_origin": "Veliuona (constituent holding of Rassêinen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Veliuona",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kedainiai": {
+      "barony_key": "b_kedainiai",
+      "modern_name": "Kedainiai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_raseiniai",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1372,
+      "first_mention_attestation": "1372 CE Livonian Chronicle of Hermann de Wartberge",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Kėd-",
+          "language": "Lithuanian",
+          "translation": "personal or settlement stem"
+        },
+        {
+          "form": "-ainiai",
+          "language": "Lithuanian",
+          "translation": "toponymic plural suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Kėdainiai (earlier Kidan, Keidany) was first mentioned in the 1372 CE Livonian Chronicle of Hermann de Wartberge.",
+      "current_repo_state": {
+        "b_tarr": "Kedainiai",
+        "b_tarr_direct": "Kedainiai",
+        "b_tarr_hist": "Kedainiai",
+        "b_origin": "Kedainiai (constituent holding of Rassêinen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/K%C4%97dainiai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ragnit": {
+      "barony_key": "b_ragnit",
+      "modern_name": "Ragnit",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_scalovia",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1288,
+      "first_mention_attestation": "1288 CE foundation of Skalvian settlement Ragnita (conquered by Teutonic Knights in 1289 CE)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Ragnit"
+      },
+      "morphemes": [
+        {
+          "form": "ragas",
+          "language": "Old Prussian",
+          "translation": "spur, horn"
+        }
+      ],
+      "etymology_analysis": "German Ragnit (Lithuanian: Ragainė) takes its name from a local tributary of the Neman, derived from Old Prussian ragas ('spur, horn'), first attested in 1288 CE.",
+      "current_repo_state": {
+        "b_tarr": "Schalouwen",
+        "b_tarr_direct": "Schalouwen",
+        "b_tarr_hist": "Schalouwen",
+        "b_origin": "Schalouwen (Schalouwen (in-game: Scalovia))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Neman,_Russia",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tilsit": {
+      "barony_key": "b_tilsit",
+      "modern_name": "Tilsit",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_scalovia",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1288,
+      "first_mention_attestation": "1288 CE foundation of Teutonic castle Schalauer Haus / Tilsit",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Tilsit (Tilse)"
+      },
+      "morphemes": [
+        {
+          "form": "tilž- / tils-",
+          "language": "Old Prussian / Lithuanian",
+          "translation": "wet, marshy stream (Tilse / Tilžė river)"
+        }
+      ],
+      "etymology_analysis": "German Tilsit (Lithuanian: Tilžė) derives from the local Tilse/Tilžė stream at its confluence with the Neman (from Baltic *tilž- 'wet, marshy'), first documented with the 1288 CE Teutonic castle.",
+      "current_repo_state": {
+        "b_tarr": "Tîlse",
+        "b_tarr_direct": "Tîlse",
+        "b_tarr_hist": "Tîlse",
+        "b_origin": "Old Prussian Tilse River confluence with the Nemunas (replacing 1288 Teutonic castle Tilsit) (in-game: Tilsit)",
+        "b_anachronism": "1288 Teutonic castle Tilsit fails Burden of Proof on Antiquity; restored to Old Prussian Tilse.",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sovetsk,_Kaliningrad_Oblast",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_siauliai": {
+      "barony_key": "b_siauliai",
+      "modern_name": "Siauliai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_siauliai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1236,
+      "first_mention_attestation": "1236 CE Livonian Order chronicle mention as Soule (Battle of Saule)",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Šiaul-",
+          "language": "Lithuanian",
+          "translation": "stem related to šiaurė ('north') or Saulė ('sun')"
+        },
+        {
+          "form": "-iai",
+          "language": "Lithuanian",
+          "translation": "plural toponymic suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Šiauliai (German: Schaulen) was first recorded in written sources as Soule in 1236 CE in Livonian Order chronicles describing the Battle of Saule.",
+      "current_repo_state": {
+        "b_tarr": "Schaulen",
+        "b_tarr_direct": "Schaulen",
+        "b_tarr_hist": "Schaulen",
+        "b_origin": "Schaulen (Schaulen (in-game: Siauliai))",
+        "b_anachronism": "",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/%C5%A0iauliai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_upyte": {
+      "barony_key": "b_upyte",
+      "modern_name": "Upyte",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_siauliai",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1254,
+      "first_mention_attestation": "1254 CE Livonian chronicle mention of Upytė",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Upytė"
+      },
+      "morphemes": [
+        {
+          "form": "upė",
+          "language": "Lithuanian",
+          "translation": "river"
+        },
+        {
+          "form": "-ytė",
+          "language": "Lithuanian",
+          "translation": "diminutive suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Upytė is a diminutive of upė ('river'), meaning 'little river/stream', first mentioned in a 1254 CE Livonian chronicle.",
+      "current_repo_state": {
+        "b_tarr": "Upyte",
+        "b_tarr_direct": "Upyte",
+        "b_tarr_hist": "Upyte",
+        "b_origin": "Upyte (constituent holding of Schaulen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Upyt%C4%97",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_birzai": {
+      "barony_key": "b_birzai",
+      "modern_name": "Birzai",
+      "hierarchy": {
+        "empire": "e_wendish_empire",
+        "kingdom": "k_lithuania",
+        "duchy": "d_samogitia",
+        "county": "c_siauliai",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1455,
+      "first_mention_attestation": "1455 CE first written mention of Biržai",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Biržai"
+      },
+      "morphemes": [
+        {
+          "form": "berž- / birž-",
+          "language": "Lithuanian",
+          "translation": "birch (beržas) / birch grove"
+        },
+        {
+          "form": "-ai",
+          "language": "Lithuanian",
+          "translation": "plural suffix"
+        }
+      ],
+      "etymology_analysis": "Lithuanian Biržai (German: Birsen) derives from beržas ('birch'), denoting a birch grove or cleared forest tract, first attested in 1455 CE.",
+      "current_repo_state": {
+        "b_tarr": "Birschai",
+        "b_tarr_direct": "Birschai",
+        "b_tarr_hist": "Birschai",
+        "b_origin": "Birschai (constituent holding of Schaulen)",
+        "b_anachronism": "",
+        "category": "sub_barony_adaptation"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Bir%C5%BEai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    }
+  }
+}
