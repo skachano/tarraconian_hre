@@ -19,12 +19,15 @@
       "total_baronies": 310,
       "historical_867_true": 170,
       "historical_867_false": 140,
+      "first_mention_year_known": 310,
+      "first_mention_year_unknown": 0,
       "named_after_post_867_person": 7,
       "named_after_hydronym": 30,
       "named_after_any_natural_proper_name": 97,
       "has_older_name_by_867_total": 71,
       "has_older_name_by_867_for_anachronistic": 25,
-      "has_older_name_by_867_for_historical": 46
+      "has_older_name_by_867_for_historical": 46,
+      "wikipedia_source_attached": 309
     }
   },
   "baronies": {
