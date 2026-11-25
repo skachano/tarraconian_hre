@@ -10,23 +10,23 @@
     },
     "summary_statistics": {
       "total_baronies": 231,
-      "historical_867_true": 70,
-      "historical_867_false": 161,
-      "first_mention_year_known": 187,
-      "first_mention_year_unknown": 44,
+      "historical_867_true": 65,
+      "historical_867_false": 166,
+      "first_mention_year_known": 204,
+      "first_mention_year_unknown": 27,
       "named_after_post_867_person": 7,
-      "named_after_hydronym": 4,
-      "named_after_any_natural_proper_name": 30,
+      "named_after_hydronym": 1,
+      "named_after_any_natural_proper_name": 8,
       "has_older_name_by_867_total": 14,
-      "has_older_name_by_867_for_anachronistic": 13,
-      "has_older_name_by_867_for_historical": 1,
-      "wikipedia_source_attached": 201
+      "has_older_name_by_867_for_anachronistic": 12,
+      "has_older_name_by_867_for_historical": 2,
+      "wikipedia_source_attached": 212
     }
   },
   "baronies": {
     "b_ittagi": {
       "barony_key": "b_ittagi",
-      "modern_name": "Kambam",
+      "modern_name": "Ittagi",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_andhra",
@@ -34,8 +34,8 @@
         "county": "c_cumbum",
         "holding_type": "castle"
       },
-      "first_mention_year": 1706,
-      "first_mention_attestation": "Inscriptions at Cumbum (Kambam) and Bestavaripeta dated 1706 CE and 1729 CE, referring to the Qiladar of Cumbum fort during Aurangzeb's reign.",
+      "first_mention_year": 1112,
+      "first_mention_attestation": "1112 CE Kannada and Sanskrit stone inscription at the Mahadeva Temple in Ittagi (recorded as Ittage in the Nareyamgal-12 division of Belvola-300), erected by Dandanayaka Mahadeva under Western Chalukya Emperor Vikramaditya VI.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -46,12 +46,12 @@
       },
       "morphemes": [
         {
-          "form": "kambam",
-          "language": "Telugu",
-          "translation": "pillar or post"
+          "form": "ittage",
+          "language": "Kannada",
+          "translation": "brick (from Sanskrit ishtaka)"
         }
       ],
-      "etymology_analysis": "From Telugu 'kambam' (pillar, ultimately from Sanskrit 'stambha'), anglicized in colonial records as Cumbum.",
+      "etymology_analysis": "Derived from Old Kannada 'ittage' (brick, ultimately from Sanskrit 'ishtaka'), designating the temple settlement in Koppal district famous for its 1112 CE Western Chalukya Mahadeva Temple.",
       "current_repo_state": {
         "name": "Kambam",
         "b_tarr": "Kambam",
@@ -63,7 +63,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Cumbum,_Andhra_Pradesh",
+      "source_url": "https://en.wikipedia.org/wiki/Mahadeva_Temple,_Itagi",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -237,7 +237,7 @@
     },
     "b_amaravati": {
       "barony_key": "b_amaravati",
-      "modern_name": "Nallamala",
+      "modern_name": "Amaravati",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_andhra",
@@ -245,29 +245,29 @@
         "county": "c_nallamala",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE epigraphy under the Telugu name Nallamala; early Ikshvaku inscriptions (c. 250–275 CE) refer to the range as Sriparvata.",
+      "first_mention_year": 1796,
+      "first_mention_attestation": "Late 18th-century CE founding of the town of Amaravati (c. 1796–1797 CE) by Zamindar Vasireddy Venkatadri Naidu around the Amaresvara Shiva temple adjacent to ancient Dhanyakataka (Dharanikota).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Nallamala"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "nalla",
-          "language": "Telugu",
-          "translation": "black, dark"
+          "form": "amara",
+          "language": "Sanskrit",
+          "translation": "immortal, deity"
         },
         {
-          "form": "mala",
-          "language": "Telugu",
-          "translation": "hill, mountain range"
+          "form": "vatī",
+          "language": "Sanskrit",
+          "translation": "possessing, abode of"
         }
       ],
-      "etymology_analysis": "Telugu 'nalla-mala' meaning 'Black Hills', adapted in German/repo orthography as Nallamale.",
+      "etymology_analysis": "Sanskrit 'Amaravati' ('abode of the immortals'), adopted for the modern town around the Amaresvara Shiva temple in the late 18th century CE on the site of ancient Buddhist and Satavahana Dhanyakataka.",
       "current_repo_state": {
         "name": "Nallamale",
         "b_tarr": "Nallamale",
@@ -279,17 +279,17 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Nallamala_Hills",
+      "source_url": "https://en.wikipedia.org/wiki/Amaravathi,_Palnadu_district",
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Sriparvata",
-          "Siripavvata"
+          "Dhanyakataka",
+          "Dhamnakada"
         ],
-        "first_mention_year": 250,
-        "first_mention_source": "Ikshvaku inscriptions at Nagarjunakonda (c. 250–275 CE)",
+        "first_mention_year": -150,
+        "first_mention_source": "Early Brahmi inscriptions at the Amaravati Mahachaitya (c. 2nd century BCE – 2nd century CE) and Xuanzang's Si-Yu-Ki (c. 640 CE)",
         "relationship": "same_site_earlier_name",
-        "notes": "Early Prakrit and Sanskrit inscriptions from Nagarjunakonda refer to the Nallamala hill range as Sriparvata (Siripavvata)."
+        "notes": "The ancient Satavahana and Buddhist metropolis at the site was attested as Dhanyakataka (Prakrit Dhamnakada, modern Dharanikota) from early Brahmi inscriptions through the 7th-century CE travelogue of Xuanzang and medieval Kota inscriptions."
       }
     },
     "b_pondugala": {
@@ -397,7 +397,7 @@
     },
     "b_udayagiri": {
       "barony_key": "b_udayagiri",
-      "modern_name": "Kammanadu",
+      "modern_name": "Udayagiri",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_andhra",
@@ -405,29 +405,29 @@
         "county": "c_palakka",
         "holding_type": "church"
       },
-      "first_mention_year": 500,
-      "first_mention_attestation": "Pallava copper-plate inscriptions (Chendaluru grant of Kumara Vishnu II, c. 5th–6th century CE) and Eastern Chalukya inscriptions (Mangi Yuvaraja, r. 627–696 CE) as Kammarashtram / Karmarashtra.",
-      "is_historical_867": true,
+      "first_mention_year": 1343,
+      "first_mention_attestation": "1343 CE stone inscription near Buggabavi at Udayagiri recording temple grants by Kampana I (brother of Harihara I) of the Sangama dynasty of Vijayanagara, administering the province of Udayagiri-rajya.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kammanadu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "kamma",
-          "language": "Telugu",
-          "translation": "fragrant, pleasant, or Kamma regional ethnonym"
+          "form": "udaya",
+          "language": "Sanskrit",
+          "translation": "rising, sunrise"
         },
         {
-          "form": "nāḍu",
-          "language": "Telugu",
-          "translation": "country, territory, district"
+          "form": "giri",
+          "language": "Sanskrit",
+          "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Telugu regional choronym 'Kamma-nāḍu' (corresponding to Sanskritized 'Kammarashtram' / 'Karmarashtra' in 5th–7th century CE Pallava and Chalukya grants).",
+      "etymology_analysis": "Sanskrit compound 'udaya-giri' ('sunrise hill' or 'eastern mountain'), naming the strategic hill fortress in Nellore district, Andhra Pradesh.",
       "current_repo_state": {
         "name": "Kammanâdu",
         "b_tarr": "Kammanâdu",
@@ -439,7 +439,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kammanadu",
+      "source_url": "https://en.wikipedia.org/wiki/Udayagiri_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -613,7 +613,7 @@
     },
     "b_pithapuram": {
       "barony_key": "b_pithapuram",
-      "modern_name": "Mosale",
+      "modern_name": "Pithapuram",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_andhra",
@@ -621,9 +621,9 @@
         "county": "c_mosala",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE epigraphy or classical sources as a settlement or barony name.",
-      "is_historical_867": false,
+      "first_mention_year": 350,
+      "first_mention_attestation": "Samudragupta's Allahabad Pillar Inscription (Prayaga Prashasti, c. 350 CE), which records the defeat of King Mahendragiri of Pishtapura (Mahendragiri-Pishtapuraka), later corroborated by Pulakeshin II's Aihole Inscription (634 CE).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -633,12 +633,17 @@
       },
       "morphemes": [
         {
-          "form": "mosali",
-          "language": "Telugu",
-          "translation": "crocodile"
+          "form": "pīṭha / piṣṭa",
+          "language": "Sanskrit",
+          "translation": "sacred seat, altar (re-etymologized from earlier piṣṭa 'crushed/stronghold')"
+        },
+        {
+          "form": "puram",
+          "language": "Sanskrit/Telugu",
+          "translation": "city, town"
         }
       ],
-      "etymology_analysis": "Repo adaptation of 'Mosala' (Telugu 'mosali', crocodile), distinct from the ancient nearby city of Pithapuram (Pistapura).",
+      "etymology_analysis": "Modern Telugu-Sanskrit evolution of ancient Pishtapura ('stronghold/flour-city'), attested in 4th-century CE Gupta and 7th-century CE Chalukya epigraphy and later re-etymologized as Pithapuram ('city of the sacred seat/Shakti Peetha').",
       "current_repo_state": {
         "name": "Mosale",
         "b_tarr": "Mosale",
@@ -650,7 +655,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Pithapuram",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -932,7 +937,7 @@
     },
     "b_dwarasamudra": {
       "barony_key": "b_dwarasamudra",
-      "modern_name": "Mahishaka",
+      "modern_name": "Dwarasamudra",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_karnata",
@@ -940,29 +945,29 @@
         "county": "c_mahishaka",
         "holding_type": "castle"
       },
-      "first_mention_year": 300,
-      "first_mention_attestation": "Mentioned as Mahishaka / Mahishamandala in the Mahabharata and early Puranas (e.g., Markandeya Purana, c. 300 CE).",
-      "is_historical_867": true,
+      "first_mention_year": 1062,
+      "first_mention_attestation": "11th-century CE Hoysala inscriptions beginning c. 1062 CE under King Vinayaditya, recording Dorasamudra (Dwarasamudra, modern Halebidu) as the Hoysala royal capital.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Mahishaka"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "mahiṣa",
+          "form": "dvāra",
           "language": "Sanskrit",
-          "translation": "buffalo, or great/powerful"
+          "translation": "gate, gateway"
         },
         {
-          "form": "-ka",
+          "form": "samudra",
           "language": "Sanskrit",
-          "translation": "territorial/adjectival suffix"
+          "translation": "ocean, large reservoir"
         }
       ],
-      "etymology_analysis": "Sanskrit choronym 'Mahiṣaka' referring to the ancient region around Mysore (Mahishuru), adapted in repo orthography as Mahischake.",
+      "etymology_analysis": "Sanskrit compound 'dvāra-samudra' ('gateway to the ocean/reservoir', vernacular Dorasamudra), referring to the large royal irrigation tank around which the Hoysala capital of Halebidu was built.",
       "current_repo_state": {
         "name": "Mahischake",
         "b_tarr": "Mahischake",
@@ -974,7 +979,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mahisha_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Halebidu",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1202,7 +1207,7 @@
     },
     "b_srirangapatna": {
       "barony_key": "b_srirangapatna",
-      "modern_name": "Berardstat",
+      "modern_name": "Yadugiri",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_karnata",
@@ -1210,29 +1215,29 @@
         "county": "c_srirangapatna",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; synthetic disambiguated repo placeholder ('Municipal foundation chartered by Berard').",
+      "first_mention_year": 1100,
+      "first_mention_attestation": "Early 12th-century CE Hoysala inscriptions at Melukote (Epigraphia Carnatica Vol. III) from the reign of Vishnuvardhana and the residence of philosopher Ramanujacharya (c. 1098–1120 CE), attesting the sacred hill of Yadugiri / Yadavagiri.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Yadugiri (Yadavagiri)"
       },
       "morphemes": [
         {
-          "form": "Berard",
-          "language": "Germanic",
-          "translation": "Berard (personal name)"
+          "form": "Yadu",
+          "language": "Sanskrit",
+          "translation": "Yadu / Yadava lineage"
         },
         {
-          "form": "-stat",
-          "language": "German",
-          "translation": "town, city (Stadt)"
+          "form": "giri",
+          "language": "Sanskrit",
+          "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Synthetic German-style disambiguated placeholder name created in the repository ('town of Berard'), not a historical Deccan toponym.",
+      "etymology_analysis": "Sanskrit oronym 'Yadu-giri' ('Yadu Hill', also Yadavagiri), the classical sacred name of the rocky hills at Melukote in Mandya district, Karnataka.",
       "current_repo_state": {
         "name": "Berardstat",
         "b_tarr": "Berardstat",
@@ -1244,7 +1249,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Melukote",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1892,7 +1897,7 @@
     },
     "b_adoni": {
       "barony_key": "b_adoni",
-      "modern_name": "Kampili",
+      "modern_name": "Adoni",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_karnata",
@@ -1900,8 +1905,114 @@
         "county": "c_adoni",
         "holding_type": "castle"
       },
-      "first_mention_year": 1320,
-      "first_mention_attestation": "Early 14th-century CE historical records of the Kampili kingdom (c. 1320–1327 CE) on the Tungabhadra river.",
+      "first_mention_year": 1294,
+      "first_mention_attestation": "Raichur Fort stone inscription of Kakatiya commander Gona Vithala dated November 25, 1294 CE (Saka 1216), recording the capture of the fortified town of Adavani (modern Adoni) during Prataparudra II's campaign.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "adavani",
+          "language": "Telugu/Kannada",
+          "translation": "Adavani (historic hill-fort toponym)"
+        }
+      ],
+      "etymology_analysis": "Modern contracted form of medieval Adavani (sometimes Sanskritized as Yadavagiri), the historic fortified town in Kurnool district, Andhra Pradesh.",
+      "current_repo_state": {
+        "name": "Kampili",
+        "b_tarr": "Kampili",
+        "b_tarr_direct": "Kampili",
+        "b_tarr_hist": "Kampili",
+        "b_origin": "Kampili (Kampili)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈkam.pɪ.lɪ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Adoni",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_vijayanagara": {
+      "barony_key": "b_vijayanagara",
+      "modern_name": "Vijayanagara",
+      "hierarchy": {
+        "empire": "e_deccan",
+        "kingdom": "k_karnata",
+        "duchy": "d_nulambavadi",
+        "county": "c_adoni",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1336,
+      "first_mention_attestation": "Founded in 1336 CE by Harihara I and Bukka Raya I of the Sangama dynasty as the imperial capital of the Vijayanagara Empire on the southern bank of the Tungabhadra River.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "vijaya",
+          "language": "Sanskrit",
+          "translation": "victory"
+        },
+        {
+          "form": "nagara",
+          "language": "Sanskrit",
+          "translation": "city"
+        }
+      ],
+      "etymology_analysis": "Sanskrit compound 'vijaya-nagara' meaning 'City of Victory', coined for the new Sangama imperial capital founded in 1336 CE at Hampi.",
+      "current_repo_state": {
+        "name": "Pampâ-Kschêtre",
+        "b_tarr": "Pampâ-Kschêtre",
+        "b_tarr_direct": "Pampâ-Kschêtre",
+        "b_tarr_hist": "Pampâ-Kschêtre",
+        "b_origin": "Ancient sacred pilgrimage sanctuary of Pampa (Hampi) on the Tungabhadra (in-game: Vijayanagara)",
+        "b_anachronism": "1336 Sangama capital Vijayanagara fails Burden of Proof on Antiquity; restored to ancient sacred site Pampa Kshetra.",
+        "b_ipa": "[pam.ˈpaː ˈkʃeː.trə]",
+        "holding_type": "city",
+        "category": "indigenous_restitution"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Vijayanagara",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Pampa-tirtha",
+          "Pampa-kshetra"
+        ],
+        "first_mention_year": 689,
+        "first_mention_source": "Togurshode copper-plate grant of Badami Chalukya King Vinayaditya (689–690 CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "The sacred Tungabhadra river site at Hampi was attested as Pampa-tirtha (Pampa-kshetra) in Badami Chalukya epigraphy from 689 CE, centuries before the founding of Vijayanagara in 1336 CE."
+      }
+    },
+    "b_kampili": {
+      "barony_key": "b_kampili",
+      "modern_name": "Kampili",
+      "hierarchy": {
+        "empire": "e_deccan",
+        "kingdom": "k_karnata",
+        "duchy": "d_nulambavadi",
+        "county": "c_adoni",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1044,
+      "first_mention_attestation": "Mid-11th century CE Chola inscriptions of Rajadhiraja Chola I (c. 1044–1045 CE) and Virarajendra Chola (c. 1068 CE) recording military campaigns against the Western Chalukyas and the sacking of Kampili on the Tungabhadra River.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1914,118 +2025,10 @@
         {
           "form": "kampili",
           "language": "Kannada",
-          "translation": "Kampili (settlement name)"
+          "translation": "Kampili (fortified river-town name)"
         }
       ],
-      "etymology_analysis": "Kannada toponym for the fortified town on the Tungabhadra that served as the capital of the 14th-century Kampili kingdom.",
-      "current_repo_state": {
-        "name": "Kampili",
-        "b_tarr": "Kampili",
-        "b_tarr_direct": "Kampili",
-        "b_tarr_hist": "Kampili",
-        "b_origin": "Kampili (Kampili)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkam.pɪ.lɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Kampili_kingdom",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_vijayanagara": {
-      "barony_key": "b_vijayanagara",
-      "modern_name": "Pampa Kshetra",
-      "hierarchy": {
-        "empire": "e_deccan",
-        "kingdom": "k_karnata",
-        "duchy": "d_nulambavadi",
-        "county": "c_adoni",
-        "holding_type": "city"
-      },
-      "first_mention_year": 600,
-      "first_mention_attestation": "Badami Chalukya inscriptions (6th–8th centuries CE, c. 600 CE) mentioning Pampapura (Hampi), the sacred pilgrimage sanctuary of Pampa Kshetra.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "pampā",
-          "language": "Sanskrit",
-          "translation": "Pampa (ancient name of the Tungabhadra / local goddess)"
-        },
-        {
-          "form": "kṣetra",
-          "language": "Sanskrit",
-          "translation": "sacred field, sanctuary"
-        }
-      ],
-      "etymology_analysis": "Sanskrit 'Pampā-kṣetra' ('sacred field of Pampa'), adapted in repo orthography as Pampâ-Kschêtre.",
-      "current_repo_state": {
-        "name": "Pampâ-Kschêtre",
-        "b_tarr": "Pampâ-Kschêtre",
-        "b_tarr_direct": "Pampâ-Kschêtre",
-        "b_tarr_hist": "Pampâ-Kschêtre",
-        "b_origin": "Ancient sacred pilgrimage sanctuary of Pampa (Hampi) on the Tungabhadra (in-game: Vijayanagara)",
-        "b_anachronism": "1336 Sangama capital Vijayanagara fails Burden of Proof on Antiquity; restored to ancient sacred site Pampa Kshetra.",
-        "b_ipa": "[pam.ˈpaː ˈkʃeː.trə]",
-        "holding_type": "city",
-        "category": "indigenous_restitution"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Hampi",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_kampili": {
-      "barony_key": "b_kampili",
-      "modern_name": "Zant-Mechthild",
-      "hierarchy": {
-        "empire": "e_deccan",
-        "kingdom": "k_karnata",
-        "duchy": "d_nulambavadi",
-        "county": "c_adoni",
-        "holding_type": "church"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; anachronistic European Christian saint placeholder name ('Saint Mechthild').",
-      "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Anachronistic Low German/Dutch-style Christian saint name ('Saint Mechthild'); all historical saints named Matilda/Mechthild (Matilda of Ringelheim, 895–968 CE; Mechthild of Diessen, d. 1160 CE; Mechthild of Magdeburg, d. 1282 CE; Mechthild of Hackeborn, d. 1298 CE) lived after 867 CE.",
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Zant",
-          "language": "Dutch/Low German",
-          "translation": "saint"
-        },
-        {
-          "form": "Mechthild",
-          "language": "German",
-          "translation": "Mechthild (personal name)"
-        }
-      ],
-      "etymology_analysis": "Anachronistic European Christian saint name ('Saint Mechthild') placed in the Deccan.",
+      "etymology_analysis": "Kannada toponym for the strategic fortified town on the southern bank of the Tungabhadra River in Ballari district, contested in 11th-century Chalukya–Chola wars and later capital of the 14th-century Kampili kingdom.",
       "current_repo_state": {
         "name": "Zant-Mechthild",
         "b_tarr": "Zant-Mechthild",
@@ -2037,7 +2040,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kampli",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2049,7 +2052,7 @@
     },
     "b_masur": {
       "barony_key": "b_masur",
-      "modern_name": "Banavasi",
+      "modern_name": "Masur",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_karnata",
@@ -2057,9 +2060,9 @@
         "county": "c_banavasi",
         "holding_type": "castle"
       },
-      "first_mention_year": 345,
-      "first_mention_attestation": "Capital of the Kadamba dynasty established in 345 CE, attested in Kadamba inscriptions (e.g., Talagunda pillar inscription) and 5th-century CE copper coins.",
-      "is_historical_867": true,
+      "first_mention_year": 1050,
+      "first_mention_attestation": "11th-century CE Western Chalukya and Kadamba feudatory inscriptions from Dharwad-Haveri (Bombay-Karnataka epigraphs) citing Masur as the chief town of the Masur-12 administrative division.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -2069,17 +2072,17 @@
       },
       "morphemes": [
         {
-          "form": "vana",
-          "language": "Sanskrit",
-          "translation": "forest"
+          "form": "mas",
+          "language": "Kannada",
+          "translation": "uncertain local root (possibly maha/masu)"
         },
         {
-          "form": "vāsī",
-          "language": "Sanskrit",
-          "translation": "dwelling, abode"
+          "form": "ūr",
+          "language": "Kannada",
+          "translation": "village, settlement"
         }
       ],
-      "etymology_analysis": "From Sanskrit/Prakrit 'Vanavāsī' ('forest dwelling'), adapted in repo orthography as Banawâsi.",
+      "etymology_analysis": "Old Kannada settlement name ending in '-ūr' (village/town), attested in medieval Western Chalukya inscriptions as the administrative seat of the Masur-12 division in modern Haveri district, Karnataka.",
       "current_repo_state": {
         "name": "Banawâsi",
         "b_tarr": "Banawâsi",
@@ -2091,7 +2094,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Banavasi",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2728,7 +2731,7 @@
     },
     "b_mudgal": {
       "barony_key": "b_mudgal",
-      "modern_name": "Idatarainadu",
+      "modern_name": "Mudgal",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_karnata",
@@ -2736,34 +2739,29 @@
         "county": "c_idatarainadu",
         "holding_type": "castle"
       },
-      "first_mention_year": 878,
-      "first_mention_attestation": "Manvi taluk inscription under Rashtrakuta king Krishna II (r. 878–914 CE) as Adedore Eradusavirapranta, and Rajendra Chola I's Kolar inscription (c. 1020 CE) as Idaiturai-nadu.",
+      "first_mention_year": 1100,
+      "first_mention_attestation": "11th–12th century CE Western Chalukya and Seuna (Yadava) stone inscriptions from Mudgal in Raichur district attesting it as an administrative and educational center in the Raichur Doab.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Idatarainadu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "eḍe",
-          "language": "Kannada",
-          "translation": "between, middle"
+          "form": "mudu / mudgala",
+          "language": "Kannada/Sanskrit",
+          "translation": "old/ancient (or traditional sage Mudgala)"
         },
         {
-          "form": "tore",
+          "form": "kal",
           "language": "Kannada",
-          "translation": "river"
-        },
-        {
-          "form": "nāḍu",
-          "language": "Kannada",
-          "translation": "land, country"
+          "translation": "stone, rock"
         }
       ],
-      "etymology_analysis": "Tamil/Kannada regional choronym 'Idaiturai-nāḍu' / 'Eḍedore-nāḍu' meaning 'land between the rivers' (the Raichur Doab between the Krishna and Tungabhadra).",
+      "etymology_analysis": "Kannada toponym combining 'mudu-' (old) with 'kal' (rock/stone, voiced to '-gal'), also linked by local tradition to the Vedic sage Mudgala; a major fortified town in the Raichur Doab.",
       "current_repo_state": {
         "name": "Idatarainâdu",
         "b_tarr": "Idatarainâdu",
@@ -2775,7 +2773,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Raichur",
+      "source_url": "https://en.wikipedia.org/wiki/Mudgal",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3459,7 +3457,7 @@
     },
     "b_gimhathiththa": {
       "barony_key": "b_gimhathiththa",
-      "modern_name": "Dakkhinadesa",
+      "modern_name": "Rayigama",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -3467,9 +3465,9 @@
         "county": "c_dakhina_desa",
         "holding_type": "church"
       },
-      "first_mention_year": 500,
-      "first_mention_attestation": "Attested in the Pali chronicles Mahavamsa (c. 5th-6th century CE) and Culavamsa (recording its governance as the southern appanage of the heir apparent by the 8th century CE, e.g. under Mahinda I in 730 CE).",
-      "is_historical_867": true,
+      "first_mention_year": 1344,
+      "first_mention_attestation": "14th-century CE Sri Lankan chronicles (Rajavaliya, Nikaya Sangrahaya) and Kelani/Alagakkonara epigraphs alongside Ibn Battuta's 1344 CE account documenting the rise of the Alagakkonara stronghold at Rayigama (Raigampura).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -3479,17 +3477,17 @@
       },
       "morphemes": [
         {
-          "form": "dakkhiṇa",
-          "language": "Pali",
-          "translation": "south / southern"
+          "form": "rayi / rāja",
+          "language": "Sinhala",
+          "translation": "royal, king"
         },
         {
-          "form": "desa",
-          "language": "Pali",
-          "translation": "country / province"
+          "form": "gama",
+          "language": "Sinhala",
+          "translation": "village, settlement"
         }
       ],
-      "etymology_analysis": "Pali Dakkhiṇadesa ('Southern Country/Province') was the historical administrative division of southwestern Sri Lanka (later known as Maya Rata), a directional compound.",
+      "etymology_analysis": "Sinhala contraction of 'Rājagrāma' ('royal village'), naming the medieval stronghold in Kalutara district that served as the seat of the Alagakkonara rulers and the 16th-century Kingdom of Raigama.",
       "current_repo_state": {
         "name": "Dakkînadese",
         "b_tarr": "Dakkînadese",
@@ -3501,7 +3499,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Maya_Rata",
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Raigama",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3670,7 +3668,7 @@
     },
     "b_malaya_rata": {
       "barony_key": "b_malaya_rata",
-      "modern_name": "Malaya",
+      "modern_name": "Samantakuta",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -3678,24 +3676,29 @@
         "county": "c_kandy",
         "holding_type": "church"
       },
-      "first_mention_year": 300,
-      "first_mention_attestation": "Attested in the Vayu Purana (c. 300 CE) as the mountain range Malaya on the island, and in the Mahavamsa (c. 5th-6th century CE) as the central highland region Malaya of Lanka.",
+      "first_mention_year": 450,
+      "first_mention_attestation": "Mahavamsa (c. 5th century CE Pali chronicle, Chapter 1) naming the sacred mountain Samantakuta (Sumanakuta), also attested in the 6th-century CE Tamil epic Manimekalai.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
-        "type": "choronym",
-        "name": "Malaya"
+        "type": "oronym",
+        "name": "Samantakuta (Adam's Peak)"
       },
       "morphemes": [
         {
-          "form": "Malaya",
-          "language": "Pali / Sanskrit (from Dravidian malai)",
-          "translation": "mountain / central highlands"
+          "form": "Samanta / Sumana",
+          "language": "Pali/Sanskrit",
+          "translation": "deity Sumana Saman"
+        },
+        {
+          "form": "kūṭa",
+          "language": "Pali/Sanskrit",
+          "translation": "peak, summit"
         }
       ],
-      "etymology_analysis": "Pali/Sanskrit Malaya (borrowed from Dravidian *malai 'mountain') designated the central mountainous region of Sri Lanka (Malaya Rata), one of the three classical divisions of the island.",
+      "etymology_analysis": "Pali and Sanskrit oronym 'Samanta-kūṭa' ('Peak of Sumana/Saman'), the classical name of Adam's Peak (Samanala Kanda / Sri Pada) in the central highlands of Sri Lanka.",
       "current_repo_state": {
         "name": "Malâje",
         "b_tarr": "Malâje",
@@ -3707,7 +3710,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Rajarata",
+      "source_url": "https://en.wikipedia.org/wiki/Adam%27s_Peak",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3827,7 +3830,7 @@
     },
     "b_batticaloa": {
       "barony_key": "b_batticaloa",
-      "modern_name": "Dighavapi",
+      "modern_name": "Batticaloa",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -3835,8 +3838,62 @@
         "county": "c_batticaloa",
         "holding_type": "castle"
       },
+      "first_mention_year": 1602,
+      "first_mention_attestation": "Early 17th-century CE European maritime accounts beginning with Dutch explorer Joris van Spilbergen's landing at Batticaloa (Matecalou / Batecaloa) in 1602 CE and the Portuguese fort built in 1628 CE, adapting the local Tamil name Mattakkalappu.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "maṭṭam",
+          "language": "Tamil",
+          "translation": "flat, muddy"
+        },
+        {
+          "form": "kaḷappu",
+          "language": "Tamil",
+          "translation": "lagoon, backwater"
+        }
+      ],
+      "etymology_analysis": "European colonial adaptation of Tamil 'Mattakkalappu' ('flat/muddy lagoon', Sinhala 'Madakalapuwa'), referring to the coastal lagoon city in eastern Sri Lanka.",
+      "current_repo_state": {
+        "name": "Dîgawâpi",
+        "b_tarr": "Dîgawâpi",
+        "b_tarr_direct": "Battikaloa",
+        "b_tarr_hist": "Dîgawâpi",
+        "b_origin": "Dîgawâpi (Dîgawâpi (in-game: Batticaloa))",
+        "b_anachronism": "Batticaloa is a colonial corruption of Mattakkalappu; resolves via Option A to ancient Mahavamsa city Dighavapi (Dîgawâpi).",
+        "b_ipa": "[ˈdiː.ɣa.waː.pɪ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Batticaloa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_dighavapi": {
+      "barony_key": "b_dighavapi",
+      "modern_name": "Dighavapi",
+      "hierarchy": {
+        "empire": "e_deccan",
+        "kingdom": "k_lanka",
+        "duchy": "d_ruhunu",
+        "county": "c_batticaloa",
+        "holding_type": "church"
+      },
       "first_mention_year": 400,
-      "first_mention_attestation": "Attested in the Dipavamsa (c. 4th century CE) and Mahavamsa (c. 5th-6th century CE) as Dīghavāpī, a major Buddhist shrine and reservoir district in eastern Sri Lanka.",
+      "first_mention_attestation": "Dipavamsa (c. 4th century CE) and Mahavamsa (c. 5th century CE), attesting Dighavapi as a major ancient Buddhist stupa, reservoir, and settlement in eastern Sri Lanka.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3854,64 +3911,10 @@
         {
           "form": "vāpī",
           "language": "Pali",
-          "translation": "reservoir / tank"
+          "translation": "reservoir, tank"
         }
       ],
-      "etymology_analysis": "Pali Dīghavāpī ('long reservoir') refers to the ancient irrigation tank and sacred Buddhist site in Ampara District, eastern Sri Lanka.",
-      "current_repo_state": {
-        "name": "Dîgawâpi",
-        "b_tarr": "Dîgawâpi",
-        "b_tarr_direct": "Battikaloa",
-        "b_tarr_hist": "Dîgawâpi",
-        "b_origin": "Dîgawâpi (Dîgawâpi (in-game: Batticaloa))",
-        "b_anachronism": "Batticaloa is a colonial corruption of Mattakkalappu; resolves via Option A to ancient Mahavamsa city Dighavapi (Dîgawâpi).",
-        "b_ipa": "[ˈdiː.ɣa.waː.pɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Deeghawapi",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_dighavapi": {
-      "barony_key": "b_dighavapi",
-      "modern_name": "Zant-Ernst",
-      "hierarchy": {
-        "empire": "e_deccan",
-        "kingdom": "k_lanka",
-        "duchy": "d_ruhunu",
-        "county": "c_batticaloa",
-        "holding_type": "church"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; fictional Germanic/Tarrencian saint-name adaptation created for the repository.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Zant",
-          "language": "Tarrencian (Germanic-style)",
-          "translation": "saint"
-        },
-        {
-          "form": "Ernst",
-          "language": "Tarrencian (Germanic-style)",
-          "translation": "personal name (Ernest)"
-        }
-      ],
-      "etymology_analysis": "Fictional Germanic-style religious holding name ('Saint Ernst') assigned in the repository to the Dighavapi barony slot in eastern Sri Lanka.",
+      "etymology_analysis": "Pali compound 'Dīgha-vāpī' ('long reservoir'), naming the ancient Buddhist pilgrimage site and irrigation settlement in Ampara district, eastern Sri Lanka.",
       "current_repo_state": {
         "name": "Zant-Ernst",
         "b_tarr": "Zant-Ernst",
@@ -3925,14 +3928,12 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Deeghawapi",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Dighavapi"
-        ],
-        "first_mention_year": 400,
-        "first_mention_source": "Dipavamsa (c. 4th century CE) and Mahavamsa (c. 5th-6th century CE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "The historical site is ancient Dīghavāpī, attested in the Pali chronicles."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_mahiyangana": {
@@ -3991,7 +3992,7 @@
     },
     "b_magampura": {
       "barony_key": "b_magampura",
-      "modern_name": "Rohana",
+      "modern_name": "Magampura",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -3999,24 +4000,34 @@
         "county": "c_rohana",
         "holding_type": "church"
       },
-      "first_mention_year": 400,
-      "first_mention_attestation": "Attested in the Dipavamsa (c. 4th century CE) and Mahavamsa (c. 5th-6th century CE) as Rohaṇa (Sinhala Ruhuna), the southern principality founded c. 200 BCE by Prince Mahanaga.",
+      "first_mention_year": 450,
+      "first_mention_attestation": "Mahavamsa (c. 5th century CE Pali chronicle, Chapter 22) recording Mahagama (Magama / Magampura) as the royal capital of the southern Rohana kingdom founded by Prince Mahanaga, corroborated by early Brahmi inscriptions in the Tissamaharama-Magama area.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Rohana"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Rohaṇa",
-          "language": "Pali",
-          "translation": "regional name of southern and southeastern Sri Lanka"
+          "form": "mahā / mā",
+          "language": "Pali/Sinhala",
+          "translation": "great"
+        },
+        {
+          "form": "gāma / gam",
+          "language": "Pali/Sinhala",
+          "translation": "village, settlement"
+        },
+        {
+          "form": "pura",
+          "language": "Sanskrit/Sinhala",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Pali Rohaṇa (Sinhala Ruhuna) was one of the three classical regions of ancient Sri Lanka, attested in the Pali chronicles and early Brahmi inscriptions.",
+      "etymology_analysis": "Sinhala 'Magampura' derives from Pali 'Mahāgāma' ('great village/settlement') plus '-pura' ('city'), the ancient capital of Ruhuna in southern Sri Lanka.",
       "current_repo_state": {
         "name": "Rohane",
         "b_tarr": "Rohane",
@@ -4028,7 +4039,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Principality_of_Ruhuna",
+      "source_url": "https://en.wikipedia.org/wiki/Magama,_Sri_Lanka",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4148,7 +4159,7 @@
     },
     "b_jaffna": {
       "barony_key": "b_jaffna",
-      "modern_name": "Nagadipa",
+      "modern_name": "Jaffna",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -4156,29 +4167,29 @@
         "county": "c_jaffna",
         "holding_type": "castle"
       },
-      "first_mention_year": 150,
-      "first_mention_attestation": "Attested in Ptolemy's Geography (c. 150 CE) as Nagadiba / Nagadibois and in the Pali chronicles Dipavamsa and Mahavamsa (c. 4th-6th century CE) as Nāgadīpa.",
-      "is_historical_867": true,
+      "first_mention_year": 1300,
+      "first_mention_attestation": "Late 13th to 14th-century CE medieval Sri Lankan records (Culavamsa and Jaffna Kingdom chronicles) attesting Yapapatuna / Yapane and Tamil Yazhppanam as the northern port city of the Aryacakravarti rulers.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Nagadipa"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "nāga",
-          "language": "Pali / Sanskrit",
-          "translation": "Naga (people/serpent-deity)"
+          "form": "yāḻ / yāpa",
+          "language": "Tamil/Sinhala",
+          "translation": "harp/lute (folk etymology from Sinhala Yapapatuna/Yapane)"
         },
         {
-          "form": "dīpa",
-          "language": "Pali",
-          "translation": "island / peninsula"
+          "form": "pāṇam / paṭuna",
+          "language": "Tamil/Sinhala",
+          "translation": "musician settlement / port"
         }
       ],
-      "etymology_analysis": "Pali Nāgadīpa ('Island of the Nagas') was the ancient name for the Jaffna peninsula and northern islands of Sri Lanka.",
+      "etymology_analysis": "Anglicized from Tamil 'Yazhppanam' (historically linked to medieval Sinhala 'Yapapatuna' / 'Yapane', 'port of Yapa', folk-etymologized in Tamil as the settlement of a blind harpist, 'yazh-panan').",
       "current_repo_state": {
         "name": "Nâgadîpe",
         "b_tarr": "Nâgadîpe",
@@ -4190,14 +4201,17 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Nainativu",
+      "source_url": "https://en.wikipedia.org/wiki/Jaffna",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Nagadipa",
+          "Nakadiva"
+        ],
+        "first_mention_year": 150,
+        "first_mention_source": "Vallipuram Gold Plate inscription of King Vasabha (c. 2nd century CE), Claudius Ptolemy's Geography (c. 150 CE, Nagadiboi), and Mahavamsa (c. 5th century CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "The Jaffna peninsula was known in antiquity as Nagadipa (Nakadiva in the 2nd-century CE Vallipuram inscription and Nagadiboi in Ptolemy) prior to the medieval emergence of Yapapatuna / Yazhppanam (Jaffna)."
       }
     },
     "b_mullaitivu": {
@@ -4256,7 +4270,7 @@
     },
     "b_puttalam": {
       "barony_key": "b_puttalam",
-      "modern_name": "Pacinadesa",
+      "modern_name": "Puttalam",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -4264,9 +4278,9 @@
         "county": "c_kotte",
         "holding_type": "church"
       },
-      "first_mention_year": 730,
-      "first_mention_attestation": "Attested in the Culavamsa for 8th-century CE governance of the Anuradhapura Kingdom, when King Mahinda I (730-733 CE) and Mahinda II (777-797 CE) appointed the Uparaja over Pācīnadesa ('Eastern Province').",
-      "is_historical_867": true,
+      "first_mention_year": 1344,
+      "first_mention_attestation": "Ibn Battuta's Rihla (1344 CE), recording the fortified northwestern Sri Lankan port town of Pattala (identified with Puttalam) under the Aryacakravarti rulers.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -4276,17 +4290,17 @@
       },
       "morphemes": [
         {
-          "form": "pācīna",
-          "language": "Pali",
-          "translation": "eastern"
+          "form": "uppu",
+          "language": "Tamil",
+          "translation": "salt"
         },
         {
-          "form": "desa",
-          "language": "Pali",
-          "translation": "country / province"
+          "form": "talam",
+          "language": "Tamil",
+          "translation": "place, area"
         }
       ],
-      "etymology_analysis": "Pali Pācīnadesa ('Eastern Province') was an administrative division of the Anuradhapura Kingdom attested in the 8th century CE, a directional compound.",
+      "etymology_analysis": "Commonly derived from Tamil 'uppu-talam' ('salt place/area', referring to the extensive coastal salt pans, contracted to Puttalam), or alternatively connected to 'pattinam' (port town).",
       "current_repo_state": {
         "name": "Pâtschînadese",
         "b_tarr": "Pâtschînadese",
@@ -4298,7 +4312,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Puttalam",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4415,7 +4429,7 @@
     },
     "b_anuradhapura": {
       "barony_key": "b_anuradhapura",
-      "modern_name": "Pihiti",
+      "modern_name": "Anuradhapura",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -4423,24 +4437,29 @@
         "county": "c_phiti",
         "holding_type": "church"
       },
-      "first_mention_year": 500,
-      "first_mention_attestation": "Attested in the Pali chronicle tradition (Mahavamsa, c. 5th-6th century CE) as Pihiti Rata (also Rajarata), denoting the northern kingdom of Sri Lanka north of the Mahaweli River.",
+      "first_mention_year": 150,
+      "first_mention_attestation": "Claudius Ptolemy's Geography (c. 150 CE, naming the inland royal city Anourogrammon), corroborated by the Dipavamsa (4th century CE), Mahavamsa (5th century CE), and early Brahmi inscriptions from the 3rd century BCE onward.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Pihiti"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Pihiṭi",
-          "language": "Sinhala (from Pali patiṭṭhita)",
-          "translation": "established / settled (northern kingdom region)"
+          "form": "Anurādha",
+          "language": "Pali/Sanskrit",
+          "translation": "Anuradha (legendary founder / lunar mansion)"
+        },
+        {
+          "form": "pura",
+          "language": "Pali/Sanskrit",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Sinhala Pihiṭi (Pihiṭi Raṭa, 'established/settled country') was the classical name for the northern heartland of Sri Lanka around Anuradhapura.",
+      "etymology_analysis": "Pali and Sanskrit 'Anurādha-pura' ('City of Anuradha', elevated from earlier Anuradhagama), the renowned ancient capital of Sri Lanka for over a millennium.",
       "current_repo_state": {
         "name": "Pihîti",
         "b_tarr": "Pihîti",
@@ -4452,7 +4471,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Anuradhapura_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Anuradhapura",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4569,7 +4588,7 @@
     },
     "b_polonnaruwa": {
       "barony_key": "b_polonnaruwa",
-      "modern_name": "Kotthasara",
+      "modern_name": "Polonnaruwa",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -4577,9 +4596,9 @@
         "county": "c_trincomalee",
         "holding_type": "church"
       },
-      "first_mention_year": 1110,
-      "first_mention_attestation": "Attested in the Culavamsa (chapters 61.43 and 74.44) in connection with 12th-century CE events during the Polonnaruwa period.",
-      "is_historical_867": false,
+      "first_mention_year": 632,
+      "first_mention_attestation": "Culavamsa chronicle recording Pulatthinagara (Pulastipura, modern Polonnaruwa) as a royal seat from the 7th century CE onward, starting with King Aggabodhi III (r. 632–643 CE) and Aggabodhi IV (r. 667–683 CE).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -4589,17 +4608,17 @@
       },
       "morphemes": [
         {
-          "form": "koṭṭha",
-          "language": "Pali",
-          "translation": "granary / storehouse / fort"
+          "form": "Pulatthi / Pulastya",
+          "language": "Pali/Sanskrit",
+          "translation": "sage Pulastya"
         },
         {
-          "form": "sāra",
-          "language": "Pali",
-          "translation": "essence / chief / marsh"
+          "form": "nagara / naruwa",
+          "language": "Pali/Sinhala",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Pali Koṭṭhasāra is a medieval place-name in eastern Sri Lanka recorded in the Culavamsa for 12th-century CE campaigns.",
+      "etymology_analysis": "Sinhala phonetic evolution of Pali 'Pulatthinagara' (Sanskrit 'Pulastipura', 'City of Pulastya'), an Anuradhapura-era royal residence that became Sri Lanka's medieval imperial capital.",
       "current_repo_state": {
         "name": "Kottasâre",
         "b_tarr": "Kottasâre",
@@ -4611,7 +4630,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://books.lakdiva.org.lk/culavamsa/vol_1.html",
+      "source_url": "https://en.wikipedia.org/wiki/Polonnaruwa",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4623,7 +4642,7 @@
     },
     "b_trincomalee": {
       "barony_key": "b_trincomalee",
-      "modern_name": "Folkhardmarct",
+      "modern_name": "Trincomalee",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_lanka",
@@ -4631,9 +4650,9 @@
         "county": "c_trincomalee",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; fictional Tarrencian/Germanic market-borough name created in the repository for disambiguation.",
-      "is_historical_867": false,
+      "first_mention_year": 650,
+      "first_mention_attestation": "7th-century CE Tamil Tevaram hymns composed by Shaiva saint Tirugnana Sambandar praising the shrine of Tirukonamalai (Konamamalai), of which Trincomalee is the anglicized form.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -4643,17 +4662,22 @@
       },
       "morphemes": [
         {
-          "form": "Folkhard",
-          "language": "Tarrencian (Germanic-style)",
-          "translation": "fictional personal name"
+          "form": "tiru",
+          "language": "Tamil",
+          "translation": "sacred"
         },
         {
-          "form": "marct",
-          "language": "Tarrencian (Germanic-style)",
-          "translation": "market"
+          "form": "kōṇa / kōṉ",
+          "language": "Tamil",
+          "translation": "lord, peak (or from Gokarna)"
+        },
+        {
+          "form": "malai",
+          "language": "Tamil",
+          "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Fictional Germanic-style borough name ('Folkhard's market') used in the repository to disambiguate the Trincomalee slot; the historical site was ancient Gokanna/Gokarna.",
+      "etymology_analysis": "Colonial anglicization of Tamil 'Tirukonamalai' ('sacred hill of the Lord', referencing the Koneswaram promontory), which succeeded the older Sanskrit/Pali harbor name Gokarna/Gokanna.",
       "current_repo_state": {
         "name": "Folkhardmarct",
         "b_tarr": "Folkhardmarct",
@@ -4669,13 +4693,13 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Gokanna",
-          "Thirukonamalai"
+          "Gokarna",
+          "Gokanna"
         ],
         "first_mention_year": 300,
-        "first_mention_source": "Vayu Purana (c. 300 CE) as Gokarna and Mahavamsa (c. 5th-6th century CE) as Gokanna; 7th-century CE Tevaram as Thirukonamalai",
+        "first_mention_source": "Vayu Purana (c. 300 CE) as Gokarna and Mahavamsa (c. 5th century CE) as Gokanna",
         "relationship": "same_site_earlier_name",
-        "notes": "Trincomalee was historically attested as Gokarna/Gokanna by 300 CE and Thirukonamalai in the 7th century CE."
+        "notes": "Prior to the 7th-century CE Tamil name Tirukonamalai, the harbor and temple site was attested in Sanskrit Puranas and Pali chronicles as Gokarna / Gokanna ('cow's ear')."
       }
     },
     "b_devagiri": {
@@ -4886,7 +4910,7 @@
     },
     "b_pratishthana": {
       "barony_key": "b_pratishthana",
-      "modern_name": "Mulaka",
+      "modern_name": "Pratishthana",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -4894,24 +4918,24 @@
         "county": "c_mulaka",
         "holding_type": "castle"
       },
-      "first_mention_year": -200,
-      "first_mention_attestation": "Attested in early Buddhist Pali texts (such as the Sutta Nipata) and Satavahana-era sources (2nd century BCE-2nd century CE) as Mūlaka, the Deccan region north of the Godavari with its capital at Pratishthana.",
+      "first_mention_year": 50,
+      "first_mention_attestation": "Periplus of the Erythraean Sea (c. 1st century CE, recording Paethana) and Claudius Ptolemy's Geography (c. 140 CE, naming Baithana as the royal capital of Satavahana king Sri Pulumavi), with the regional demonym Petenikas already in Ashoka's Major Rock Edicts (c. 250 BCE).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Mulaka"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Mūlaka",
-          "language": "Sanskrit / Prakrit",
-          "translation": "ancient Deccan janapada / region"
+          "form": "pratiṣṭhāna",
+          "language": "Sanskrit",
+          "translation": "foundation, firm seat, capital"
         }
       ],
-      "etymology_analysis": "Sanskrit/Prakrit Mūlaka was an ancient Deccan territory bordering Ashmaka along the Godavari River, centered on Pratishthana (modern Paithan).",
+      "etymology_analysis": "Sanskrit 'pratiṣṭhāna' ('firm foundation' or 'established seat', Prakrit Paithana, modern Paithan), the ancient capital of the Satavahana dynasty on the Godavari River in Maharashtra.",
       "current_repo_state": {
         "name": "Mulake",
         "b_tarr": "Mulake",
@@ -4923,7 +4947,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Asmaka",
+      "source_url": "https://en.wikipedia.org/wiki/Paithan",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5195,7 +5219,7 @@
     },
     "b_hinawr": {
       "barony_key": "b_hinawr",
-      "modern_name": "Kanara",
+      "modern_name": "Gopakapattana",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -5203,24 +5227,29 @@
         "county": "c_kanara",
         "holding_type": "castle"
       },
-      "first_mention_year": 1498,
-      "first_mention_attestation": "The regional name Kanara (Canara) is attested from the early modern Portuguese period (1498 CE onward) as a European/colonial rendering of Karnataka / Kannada.",
+      "first_mention_year": 1059,
+      "first_mention_attestation": "Panjim copper-plate grant of Goa Kadamba King Jayakeshi I dated 1059 CE, explicitly naming Gopakapattana (modern Goa Velha) as the maritime capital of the Kadambas of Goa.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kanara"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Kanara",
-          "language": "Portuguese / English (from Kannada)",
-          "translation": "coastal Karnataka region"
+          "form": "gopaka",
+          "language": "Sanskrit",
+          "translation": "cowherd, protector (root of Goa)"
+        },
+        {
+          "form": "pattana",
+          "language": "Sanskrit",
+          "translation": "port city, trading town"
         }
       ],
-      "etymology_analysis": "Portuguese/English Canara (Kanara), an adaptation of Kannada/Karnata denoting the coastal strip of Karnataka from Karwar to Kasaragod.",
+      "etymology_analysis": "Sanskrit compound 'Gopaka-pattana' ('port city of Gopaka/Goa'), the medieval Shilahara and Goa Kadamba emporium on the Zuari River in Goa.",
       "current_repo_state": {
         "name": "Kanare",
         "b_tarr": "Kanare",
@@ -5232,7 +5261,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kanara",
+      "source_url": "https://en.wikipedia.org/wiki/Gopakapattana",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5352,7 +5381,7 @@
     },
     "b_thana": {
       "barony_key": "b_thana",
-      "modern_name": "Surparaka",
+      "modern_name": "Thana",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -5360,8 +5389,8 @@
         "county": "c_surparaka",
         "holding_type": "castle"
       },
-      "first_mention_year": -250,
-      "first_mention_attestation": "Attested in the mid-3rd century BCE Major Rock Edicts (VIII and IX) of Emperor Ashoka discovered at Sopara (Śūrpāraka) and in Satavahana-era cave inscriptions.",
+      "first_mention_year": 636,
+      "first_mention_attestation": "Al-Baladhuri's Kitab Futuh al-Buldan recording the 636 CE Arab naval expedition under Uthman ibn Abi al-As against the Konkan port of Tana (Thana), later attested as Sri-Sthanaka in 10th–11th century CE Shilahara copper-plate charters.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5372,12 +5401,12 @@
       },
       "morphemes": [
         {
-          "form": "Śūrpāraka",
+          "form": "sthānaka",
           "language": "Sanskrit",
-          "translation": "ancient Konkan port city (modern Nala Sopara)"
+          "translation": "station, post, town"
         }
       ],
-      "etymology_analysis": "Sanskrit Śūrpāraka (Prakrit Sopāraga, modern Sopara) was the foremost ancient port of the northern Konkan coast, site of Ashokan Rock Edicts in the 3rd century BCE.",
+      "etymology_analysis": "Prakrit/Marathi evolution of Sanskrit 'Sthānaka' ('station' or 'administrative seat', modern Thane), the coastal capital of the North Konkan Shilaharas.",
       "current_repo_state": {
         "name": "Surparake",
         "b_tarr": "Surparake",
@@ -5389,7 +5418,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Nallasopara",
+      "source_url": "https://en.wikipedia.org/wiki/Thane",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5764,7 +5793,7 @@
     },
     "b_nasikya": {
       "barony_key": "b_nasikya",
-      "modern_name": "Trikuta",
+      "modern_name": "Nasikya",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -5772,29 +5801,29 @@
         "county": "c_trikuta",
         "holding_type": "castle"
       },
-      "first_mention_year": 456,
-      "first_mention_attestation": "Attested from the 5th century CE (e.g., Traikutaka king Dharasena, 456 CE, and 490 CE records) as the mountain Trikūṭa bordering Nasik on the west, from which the Traikutaka dynasty took its name.",
+      "first_mention_year": -250,
+      "first_mention_attestation": "Katyayana's Varttika on Panini (c. 250 BCE) citing Nasikya as a city, preserved in Patanjali's Mahabhashya (c. 150 BCE), and extensively corroborated by 1st–2nd century CE Satavahana Brahmi inscriptions at the Pandavleni (Trirashmi) caves.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Trikuta"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "tri",
+          "form": "nāsikā",
           "language": "Sanskrit",
-          "translation": "three"
+          "translation": "nose (traditional Ramayana etymology)"
         },
         {
-          "form": "kūṭa",
+          "form": "-ya",
           "language": "Sanskrit",
-          "translation": "peak / summit"
+          "translation": "locative/pertaining suffix"
         }
       ],
-      "etymology_analysis": "Sanskrit Trikūṭa ('Three-peaked Mountain') refers to the Sahyadri range peak west of Nashik, eponym of the 5th-century CE Traikutaka dynasty.",
+      "etymology_analysis": "Sanskrit 'Nāsikya' (modern Nashik), attested from 3rd-century BCE grammatical literature and Satavahana epigraphy; traditionally derived from Sanskrit 'nāsikā' (nose) via the Ramayana Panchavati episode.",
       "current_repo_state": {
         "name": "Trikûte",
         "b_tarr": "Trikûte",
@@ -5806,7 +5835,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/History_of_Nashik",
+      "source_url": "https://en.wikipedia.org/wiki/Nashik",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5921,7 +5950,7 @@
     },
     "b_ahmadnagar": {
       "barony_key": "b_ahmadnagar",
-      "modern_name": "Sina",
+      "modern_name": "Ahmadnagar",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -5929,24 +5958,29 @@
         "county": "c_trikuta",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "The Sina River (major tributary of the Bhima) is a natural Deccan river near Ahmadnagar (founded 1490 CE); no confirmed contemporary pre-867 CE written attestation of the hydronym Sīnā is verified.",
+      "first_mention_year": 1494,
+      "first_mention_attestation": "Founded in 1494 CE by Malik Ahmad Nizam Shah I on the left bank of the Sina River as the capital of the newly independent Ahmadnagar Sultanate.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Malik Ahmad Nizam Shah I (founder of the Nizam Shahi dynasty of the Ahmadnagar Sultanate), who established the city as his capital in 1494 CE.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Sina"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Sīnā",
-          "language": "Marathi",
-          "translation": "river name (tributary of the Bhima River)"
+          "form": "Ahmad",
+          "language": "Arabic/Persian",
+          "translation": "Malik Ahmad Nizam Shah I (personal name)"
+        },
+        {
+          "form": "nagar",
+          "language": "Sanskrit/Marathi",
+          "translation": "city, town"
         }
       ],
-      "etymology_analysis": "Hydronym of the Sina River in Maharashtra, used in the repository to replace the anachronistic 1490 CE Ahmadnagar name.",
+      "etymology_analysis": "Hybrid Persian-Indic eponymous compound 'Ahmad-nagar' ('City of Ahmad'), named directly after its 1494 CE founder Malik Ahmad Nizam Shah I.",
       "current_repo_state": {
         "name": "Sînâ",
         "b_tarr": "Sînâ",
@@ -5958,7 +5992,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sina_River",
+      "source_url": "https://en.wikipedia.org/wiki/Ahmednagar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5970,7 +6004,7 @@
     },
     "b_lattalura": {
       "barony_key": "b_lattalura",
-      "modern_name": "Ashmaka",
+      "modern_name": "Lattalura",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -5978,24 +6012,29 @@
         "county": "c_ashmaka",
         "holding_type": "castle"
       },
-      "first_mention_year": -500,
-      "first_mention_attestation": "Attested in Panini's Ashtadhyayi (c. 5th century BCE) and early Buddhist Pali texts (Anguttara Nikaya, Sutta Nipata) as Aśmaka / Assaka, one of the sixteen Mahajanapadas.",
+      "first_mention_year": 800,
+      "first_mention_attestation": "Early 9th-century CE Rashtrakuta copper-plate charters and stone inscriptions under Govinda III and Amoghavarsha I styling the dynasty 'Lattalura-puravaradhishvara' ('Lord of Lattalura, the best of cities').",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Ashmaka"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Aśmaka",
-          "language": "Sanskrit (Pali Assaka)",
-          "translation": "stony / ancient Deccan janapada"
+          "form": "lattal",
+          "language": "Kannada",
+          "translation": "Lattal (ancient Rashtrakuta root)"
+        },
+        {
+          "form": "ūr",
+          "language": "Kannada",
+          "translation": "town, city"
         }
       ],
-      "etymology_analysis": "Sanskrit Aśmaka (from aśman 'stone', Pali Assaka) was the sole Mahajanapada located in South India along the Godavari River.",
+      "etymology_analysis": "Sanskritized Old Kannada toponym 'Lattalūra' (modern Latur in Maharashtra), attested in imperial Rashtrakuta charters as the ancestral seat of the dynasty.",
       "current_repo_state": {
         "name": "Aschmake",
         "b_tarr": "Aschmake",
@@ -6007,7 +6046,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Asmaka",
+      "source_url": "https://en.wikipedia.org/wiki/Latur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7162,7 +7201,7 @@
     },
     "b_gawilgarh": {
       "barony_key": "b_gawilgarh",
-      "modern_name": "Satpura",
+      "modern_name": "Gawīlgarh",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -7170,29 +7209,29 @@
         "county": "c_acalapura",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written records under the name Satpura; ancient Sanskrit texts refer to the range as Vindhya-pada or Rksa.",
+      "first_mention_year": 1425,
+      "first_mention_attestation": "Rebuilt and fortified in stone in 1425 CE by Bahmani Sultan Ahmad Shah I Wali while encamped at Ellichpur, as recorded in Firishta's chronicle.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Satpura Range"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Sat",
-          "language": "Hindi / Marathi",
-          "translation": "seven"
+          "form": "gawlī",
+          "language": "Marathi/Hindi",
+          "translation": "Gawli (pastoral cowherd community)"
         },
         {
-          "form": "pura",
-          "language": "Hindi / Sanskrit",
-          "translation": "folds / peaks / cities"
+          "form": "gaṛh",
+          "language": "Hindi/Marathi",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Satpura (rendered Sâtpure) is the vernacular name ('seven folds/peaks') for the central Indian mountain range north of Vidarbha. Pre-867 CE Sanskrit sources such as the Puranas refer to it as Vindhya-pada ('foot of the Vindhyas') rather than Satpura.",
+      "etymology_analysis": "Compound 'Gawīl-gaṛh' ('Fort of the Gawlis'), referring to the earlier mud stronghold of the local Gawli pastoralists in the Melghat/Satpura hills before its 1425 CE Bahmani reconstruction.",
       "current_repo_state": {
         "name": "Sâtpure",
         "b_tarr": "Sâtpure",
@@ -7204,7 +7243,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Vindhya_Range",
+      "source_url": "https://en.wikipedia.org/wiki/Gawilghur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7674,7 +7713,7 @@
     },
     "b_panaji": {
       "barony_key": "b_panaji",
-      "modern_name": "Konkan",
+      "modern_name": "Vijayadurga",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_maharastra",
@@ -7682,24 +7721,29 @@
         "county": "c_panaji",
         "holding_type": "castle"
       },
-      "first_mention_year": 77,
-      "first_mention_attestation": "Attested in classical antiquity (Pliny the Elder, 77 CE; Periplus) and in 6th–7th century CE Badami Chalukya inscriptions (Kirtivarman I, 550–567 CE; Aihole inscription, 634 CE).",
-      "is_historical_867": true,
+      "first_mention_year": 1653,
+      "first_mention_attestation": "1653 CE capture and renaming as Vijaydurg (Vijayadurga) by Chhatrapati Shivaji Maharaj, expanding the older Shilahara coastal fort originally built by Raja Bhoja II (1193–1205 CE) as Gheria.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Konkan"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Konkan",
-          "language": "Sanskrit / Prakrit",
-          "translation": "coastal strip between the Western Ghats and Arabian Sea"
+          "form": "vijaya",
+          "language": "Sanskrit",
+          "translation": "victory"
+        },
+        {
+          "form": "durga",
+          "language": "Sanskrit",
+          "translation": "fort, citadel"
         }
       ],
-      "etymology_analysis": "Konkan (Sanskrit Konkana) is the ancient regional choronym for the western coastal tract of Maharashtra and Goa, attested in early Chalukya inscriptions (6th–7th centuries CE) and classical Puranic and Greco-Roman geography.",
+      "etymology_analysis": "Sanskrit compound 'vijaya-durga' ('Fort of Victory'), bestowed by Shivaji in 1653 CE upon the coastal Konkan fortress previously known as Gheria in Sindhudurg district, Maharashtra.",
       "current_repo_state": {
         "name": "Konkan",
         "b_tarr": "Konkan",
@@ -7711,7 +7755,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Konkan",
+      "source_url": "https://en.wikipedia.org/wiki/Vijaydurg_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7875,7 +7919,7 @@
     },
     "b_kannanur": {
       "barony_key": "b_kannanur",
-      "modern_name": "Kolathunadu",
+      "modern_name": "Kannanur",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -7883,29 +7927,29 @@
         "county": "c_alupa",
         "holding_type": "church"
       },
-      "first_mention_year": 929,
-      "first_mention_attestation": "Attested from the 10th century CE (e.g., 929 CE inscriptions of Vikrama Rama and the Mushika Vamsa lineage of Kola Swarupam).",
+      "first_mention_year": 1300,
+      "first_mention_attestation": "Early 14th-century CE historical accounts by Persian chronicler Rashid al-Din (Jami' al-Tawarikh, c. 1300 CE) and Moroccan traveler Ibn Battuta (c. 1342 CE) documenting the Kolathiri Malabar port of Kannanur (Kannur / Cannanore).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kolathunadu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Kolathu",
+          "form": "Kaṇṇan",
           "language": "Malayalam",
-          "translation": "of the Kola (Mushika) royal house"
+          "translation": "Lord Krishna (or ancient Kanathur root)"
         },
         {
-          "form": "nadu",
-          "language": "Malayalam / Tamil",
-          "translation": "country / land"
+          "form": "ūr",
+          "language": "Malayalam",
+          "translation": "town, place"
         }
       ],
-      "etymology_analysis": "Kolathunadu (rendered Kolatunât) was the North Malabar kingdom centered on Kannur/Ezhimala, attested from the 10th century CE onward as the successor to the early historic Ezhimala/Mushika polity.",
+      "etymology_analysis": "Malayalam 'Kaṇṇan-ūr' ('place of Kannan/Krishna', also linked to early settlement Kanathur; anglicized as Cannanore), a major spice-trading port of the Kolathiri rulers in northern Kerala.",
       "current_repo_state": {
         "name": "Kolatunât",
         "b_tarr": "Kolatunât",
@@ -7917,17 +7961,16 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kolathunadu",
+      "source_url": "https://en.wikipedia.org/wiki/Kannur",
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Ezhimala",
-          "Mushika"
+          "Naura"
         ],
-        "first_mention_year": 100,
-        "first_mention_source": "Sangam literature (c. 1st–3rd centuries CE) and Vishnu Purana / Strabo",
-        "relationship": "same_site_earlier_name",
-        "notes": "Kolathunadu succeeded the early historic Ezhimala / Mushika kingdom in North Malabar."
+        "first_mention_year": 50,
+        "first_mention_source": "Periplus of the Erythraean Sea (1st century CE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "Classical Greco-Roman trade accounts identify the early historic Malabar port of Naura (1st century CE) in the Kannur/Ezhimala coastal belt prior to the medieval emergence of Kannanur."
       }
     },
     "b_udayavara": {
@@ -8038,7 +8081,7 @@
     },
     "b_calicut": {
       "barony_key": "b_calicut",
-      "modern_name": "Eranadu",
+      "modern_name": "Calicut",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8046,29 +8089,29 @@
         "county": "c_eranad",
         "holding_type": "castle"
       },
-      "first_mention_year": 1000,
-      "first_mention_attestation": "Attested c. 1000 CE in the Jewish copper plates of Chera Perumal king Bhaskara Ravi Varman (and in the 1102 CE Rameswaram temple inscription at Kollam).",
+      "first_mention_year": 1124,
+      "first_mention_attestation": "Early 12th-century CE foundation of Kozhikode (Calicut) by the Eradi Zamorins following their conquest of Polanad (c. 1100–1124 CE), later recorded as Qaliqut in Ibn Battuta's 1342 CE Rihla.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Eranadu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Erala",
+          "form": "kōyil",
           "language": "Malayalam",
-          "translation": "Erala (chiefly clan / region name)"
+          "translation": "palace, temple"
         },
         {
-          "form": "nadu",
+          "form": "kōṭṭa / kōṭu",
           "language": "Malayalam",
-          "translation": "country / province"
+          "translation": "fort"
         }
       ],
-      "etymology_analysis": "Eranadu (rendered Eranât, earlier Eralanadu) was a province of the medieval Chera Perumal kingdom in northern Malappuram/Kozhikode, first epigraphically attested around 1000 CE in the Cochin Jewish copper plates.",
+      "etymology_analysis": "Europeanized form (via Arabic Qaliqut) of Malayalam 'Kozhikode', widely derived from 'kōyil-kōṭṭa' ('fortified palace'), the seat of the Zamorins on the Malabar Coast.",
       "current_repo_state": {
         "name": "Eranât",
         "b_tarr": "Eranât",
@@ -8080,7 +8123,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Zamorin",
+      "source_url": "https://en.wikipedia.org/wiki/Kozhikode",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8200,7 +8243,7 @@
     },
     "b_mahoyadapuram": {
       "barony_key": "b_mahoyadapuram",
-      "modern_name": "Vembanad",
+      "modern_name": "Mahoyadapuram",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8208,29 +8251,34 @@
         "county": "c_kerala",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary pre-867 CE written sources under the name Vembanad.",
-      "is_historical_867": false,
+      "first_mention_year": 800,
+      "first_mention_attestation": "Late 8th to early 9th-century CE Tamil Tevaram hymns of Sundarar referencing Makotai (Mahodayapuram), corroborated by 9th-century CE Chera Perumal inscriptions and Sankaranarayana's Laghubhaskariyavivarana (869 CE).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Vembanad Lake"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Vemba",
-          "language": "Malayalam",
-          "translation": "Vempolinad / bamboo-reed region"
+          "form": "mahā",
+          "language": "Sanskrit",
+          "translation": "great"
         },
         {
-          "form": "nad",
-          "language": "Malayalam",
-          "translation": "land / country"
+          "form": "udaya",
+          "language": "Sanskrit",
+          "translation": "rise, prosperity"
+        },
+        {
+          "form": "puram",
+          "language": "Sanskrit",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Vembanad (rendered Wembanât) is the name of India's longest lake and wetland system in central Kerala. No pre-867 CE written attestation of the hydronym Vembanad is documented.",
+      "etymology_analysis": "Sanskrit 'Mahodayapuram' ('city of great prosperity', Tamil 'Makotai', modern Kodungallur), the royal capital of the medieval Chera Perumals of Kerala.",
       "current_repo_state": {
         "name": "Wembanât",
         "b_tarr": "Wembanât",
@@ -8242,7 +8290,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Vembanad",
+      "source_url": "https://en.wikipedia.org/wiki/Mahodayapuram",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8362,7 +8410,7 @@
     },
     "b_mahal": {
       "barony_key": "b_mahal",
-      "modern_name": "Maldives",
+      "modern_name": "Mahal",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8371,28 +8419,23 @@
         "holding_type": "church"
       },
       "first_mention_year": 1343,
-      "first_mention_attestation": "First explicitly attested with the 'Mahal' element as Dhibat al-Mahal by Ibn Battuta (1343 CE), whence Mahaldib / Maldives (earlier sources used Divi, 362 CE, or Dibajat, 851 CE).",
+      "first_mention_attestation": "Ibn Battuta's Rihla (1343–1344 CE), recording the royal capital island of the Maldives as Mahal (Dhibat al-Mahal, modern Malé).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Maldives"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Mahal",
-          "language": "Dhivehi / Sanskrit",
-          "translation": "Male (chief island) / palace"
-        },
-        {
-          "form": "dvipa",
-          "language": "Sanskrit / Dhivehi",
-          "translation": "island(s)"
+          "form": "mahal / maha-ālaya",
+          "language": "Dhivehi/Sanskrit",
+          "translation": "great house, royal palace (modern Malé)"
         }
       ],
-      "etymology_analysis": "Maldives (rendered Mâledîwen) derives from Mahal Dvipa ('islands of Mahal/Malé'), attested with the Mahal element as Dhibat al-Mahal by Ibn Battuta (1343 CE) and later Mahaldib (whereas earlier Roman and 9th-century CE Arab sources such as Ammianus Marcellinus in 362 CE and Sulaiman al-Tajir in 851 CE use Divi and Dibajat).",
+      "etymology_analysis": "Medieval form of Malé, derived from Sanskrit 'mahā-ālaya' ('great house/palace', also assimilated to Arabic 'mahal'), attested as Dhibat al-Mahal in Ibn Battuta's 1343 CE account.",
       "current_repo_state": {
         "name": "Mâledîwen",
         "b_tarr": "Mâledîwen",
@@ -8404,7 +8447,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Names_of_the_Maldives",
+      "source_url": "https://en.wikipedia.org/wiki/Mal%C3%A9",
       "older_name_by_867": {
         "exists": true,
         "names": [
@@ -8414,7 +8457,7 @@
         "first_mention_year": 362,
         "first_mention_source": "Ammianus Marcellinus (362 CE, Divi) and Sulaiman al-Tajir (851 CE, Dibajat)",
         "relationship": "same_site_earlier_name",
-        "notes": "Classical and 9th-century CE Arab sources record the archipelago as Divi (362 CE) and Dibajat (851 CE) prior to the appearance of Dhibat al-Mahal (Ibn Battuta, 1343 CE)."
+        "notes": "Classical and 9th-century CE Arab sources attest the Maldivian archipelago as Divi (362 CE) and Dibajat (851 CE) prior to the appearance of Mahal / Dhibat al-Mahal in 1343 CE."
       }
     },
     "b_thiladhunmathi": {
@@ -8468,7 +8511,7 @@
     },
     "b_kollam": {
       "barony_key": "b_kollam",
-      "modern_name": "Venadu",
+      "modern_name": "Kollam",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8476,29 +8519,24 @@
         "county": "c_venadu",
         "holding_type": "church"
       },
-      "first_mention_year": 849,
-      "first_mention_attestation": "Attested c. 849 CE in the Quilon (Kollam) Syrian copper plates of Venadu chief Ayyan Adikal Tiruvadikal under Chera king Sthanu Ravi.",
+      "first_mention_year": 825,
+      "first_mention_attestation": "825 CE inception of the Kollam Era (Kolla Varsham) and the 849 CE Tharisapalli (Quilon) Syrian copper plates issued by Venad ruler Ayyan Adikal Thiruvadikal under Chera monarch Sthanu Ravi Kulasekhara.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Venadu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Vel",
-          "language": "Tamil / Malayalam",
-          "translation": "Vel (ruling chieftain clan)"
-        },
-        {
-          "form": "nadu",
-          "language": "Tamil / Malayalam",
-          "translation": "country / territory"
+          "form": "kollam",
+          "language": "Malayalam/Sanskrit",
+          "translation": "port/pepper (or contraction of koyil-illam 'palace-house')"
         }
       ],
-      "etymology_analysis": "Venadu (rendered Wenâdu, from Vel-nadu, 'land of the Vel chiefs') is attested in the mid-9th century CE Quilon Syrian copper plates (c. 849 CE) and in early 9th-century CE Tamil Shaiva hymns by Venattadikal.",
+      "etymology_analysis": "Malayalam toponym (Europeanized as Quilon) variously linked to Sanskrit 'kollam' (black pepper / ship harbor) or Malayalam 'koyil-illam' (royal palace homestead), a premier 9th-century Malabar maritime emporium.",
       "current_repo_state": {
         "name": "Wenâdu",
         "b_tarr": "Wenâdu",
@@ -8510,7 +8548,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Venadu_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Kollam",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8625,7 +8663,7 @@
     },
     "b_tanjavur": {
       "barony_key": "b_tanjavur",
-      "modern_name": "Cholamandalam",
+      "modern_name": "Tanjavur",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8633,29 +8671,29 @@
         "county": "c_cholamandalam",
         "holding_type": "castle"
       },
-      "first_mention_year": 950,
-      "first_mention_attestation": "The specific regional compound 'Cholamandalam' is attested from 10th-century CE Chola-era inscriptions (e.g., Boothi Vikramakesari and Rajaraja I); Ashoka's 3rd-century BCE rock edicts attest the Choda (Chola) polity rather than the compound Cholamandalam.",
-      "is_historical_867": false,
+      "first_mention_year": 750,
+      "first_mention_attestation": "8th-century CE Sendalai pillar inscriptions of Perumbidugu Mutharaiyar II styling the Mutharaiyars 'Tanjai-kon' ('Lords of Tanjai'), corroborated by early Tamil Bhakti literature and Vijayalaya Chola's mid-9th century capture.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Cholamandalam"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Chola",
+          "form": "tañcam / tañcai",
           "language": "Tamil",
-          "translation": "Chola dynasty"
+          "translation": "refuge, shelter (or fertile low-lying land)"
         },
         {
-          "form": "mandalam",
-          "language": "Tamil / Sanskrit",
-          "translation": "realm / province"
+          "form": "ūr",
+          "language": "Tamil",
+          "translation": "city, town"
         }
       ],
-      "etymology_analysis": "Cholamandalam (rendered Tschôlamandalam; later Europeanized as Coromandel) means 'realm of the Cholas' in Tamil. The Cholas are epigraphically attested from the 3rd century BCE.",
+      "etymology_analysis": "Tamil 'Tañcai-ūr' (Thanjavur), traditionally derived from 'tañcam' ('refuge') plus 'ūr' ('town'), attested in 8th-century Mutharaiyar epigraphy before becoming the imperial Chola capital.",
       "current_repo_state": {
         "name": "Tschôlamandalam",
         "b_tarr": "Tschôlamandalam",
@@ -8667,17 +8705,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Coromandel_Coast",
+      "source_url": "https://en.wikipedia.org/wiki/Thanjavur",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Choda",
-          "Chola"
-        ],
-        "first_mention_year": -250,
-        "first_mention_source": "Ashoka's Major Rock Edicts II and XIII (c. 250 BCE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "The Chola polity (Choda) is attested from Ashoka's 3rd-century BCE edicts, prior to the 10th-century CE compound Cholamandalam."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_tirukoilur": {
@@ -8798,7 +8833,7 @@
     },
     "b_gangaikondacolapuram": {
       "barony_key": "b_gangaikondacolapuram",
-      "modern_name": "Kaveri",
+      "modern_name": "Gangaikondacolapuram",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -8806,29 +8841,39 @@
         "county": "c_cholamandalam",
         "holding_type": "castle"
       },
-      "first_mention_year": 100,
-      "first_mention_attestation": "Attested in Sangam literature (e.g., Pattinappalai, c. 1st–2nd century CE) and by Ptolemy (c. 150 CE) as Khaberos.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "first_mention_year": 1025,
+      "first_mention_attestation": "Founded c. 1025 CE by Chola Emperor Rajendra Chola I to commemorate his northern Indian campaign to the Ganges, serving as the imperial Chola capital for roughly 250 years.",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Chola Emperor Rajendra Chola I (r. 1014–1044 CE), who assumed the title 'Gangaikonda Chola' ('the Chola who conquered the Ganges') after his northern expedition and founded the city c. 1025 CE.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Kaveri River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Ka",
-          "language": "Tamil",
-          "translation": "grove / garden"
+          "form": "Gaṅgai",
+          "language": "Tamil/Sanskrit",
+          "translation": "Ganges River"
         },
         {
-          "form": "veri",
+          "form": "koṇṭa",
           "language": "Tamil",
-          "translation": "fragrance / abundance (or river name)"
+          "translation": "who conquered/brought"
+        },
+        {
+          "form": "Cōḻa",
+          "language": "Tamil",
+          "translation": "Chola (Rajendra Chola I)"
+        },
+        {
+          "form": "puram",
+          "language": "Tamil/Sanskrit",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Kaveri (rendered Kâvêrî) is the major sacred river of Tamilakam and the Chola heartland, extensively attested in Sangam literature (Pattinappalai, Silappatikaram) and Greco-Roman geography (Ptolemy's Khaberos).",
+      "etymology_analysis": "Tamil-Sanskrit royal title compound 'Gaṅgai-koṇṭa-Cōḻa-puram' ('City of the Chola who conquered the Ganges'), commemorating Rajendra Chola I's c. 1020–1025 CE Gangetic expedition.",
       "current_repo_state": {
         "name": "Kâvêrî",
         "b_tarr": "Kâvêrî",
@@ -8840,7 +8885,7 @@
         "holding_type": "castle",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Karikala",
+      "source_url": "https://en.wikipedia.org/wiki/Gangaikonda_Cholapuram",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9225,7 +9270,7 @@
     },
     "b_karavur": {
       "barony_key": "b_karavur",
-      "modern_name": "Kongu",
+      "modern_name": "Karavur",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -9233,24 +9278,29 @@
         "county": "c_kongu",
         "holding_type": "church"
       },
-      "first_mention_year": 100,
-      "first_mention_attestation": "Classical Tamil Sangam literature (c. 1st–3rd century CE), including Purananuru and Pathitrupathu, which describe the Kongu country (Kongu Nadu).",
+      "first_mention_year": 150,
+      "first_mention_attestation": "Claudius Ptolemy's Geography (c. 150 CE) listing Karoura as the inland Chera royal capital, corroborated by classical Sangam Tamil literature and 1st–2nd century CE Tamil-Brahmi inscriptions at nearby Pugalur.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kongu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Kongu",
-          "language": "Old Tamil",
-          "translation": "pollen, nectar, or western borderland region"
+          "form": "karu / kara",
+          "language": "Tamil",
+          "translation": "nucleus, inner/black (or embryo)"
+        },
+        {
+          "form": "ūr",
+          "language": "Tamil",
+          "translation": "town, city"
         }
       ],
-      "etymology_analysis": "Kongu (Kongu Nadu) is an ancient Tamil choronym attested in Sangam poetry (c. 1st–3rd century CE) denoting the western Tamil upland region around Karuvur and Coimbatore.",
+      "etymology_analysis": "Old Tamil 'Karuvūr' / 'Karavūr' (modern Karur, Ptolemy's Karoura), the inland political capital (Vanci) of the Sangam-era Chera dynasty on the Amaravathi River in Tamil Nadu.",
       "current_repo_state": {
         "name": "Kongu",
         "b_tarr": "Kongu",
@@ -9262,7 +9312,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kongu_Nadu",
+      "source_url": "https://en.wikipedia.org/wiki/Karur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9870,7 +9920,7 @@
     },
     "b_dindigul": {
       "barony_key": "b_dindigul",
-      "modern_name": "Jürgenmünster",
+      "modern_name": "Dindigul",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -9878,8 +9928,8 @@
         "county": "c_uraiyur",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; disambiguated fictional/mod-created Germanic-style holding name in the repository ('Collegiate minster church established by JUrgen').",
+      "first_mention_year": 1538,
+      "first_mention_attestation": "1538 CE Vijayanagara stone inscription of Emperor Achyuta Deva Raya at the Padmagirisvara temple atop Dindigul rock, preceding the construction of the Madurai Nayaka stone fort in 1605 CE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9890,17 +9940,17 @@
       },
       "morphemes": [
         {
-          "form": "Jürgen",
-          "language": "German",
-          "translation": "personal name (George)"
+          "form": "tiṇṭu",
+          "language": "Tamil",
+          "translation": "pillow, bolster"
         },
         {
-          "form": "Münster",
-          "language": "German",
-          "translation": "minster, collegiate church"
+          "form": "kal",
+          "language": "Tamil",
+          "translation": "rock, stone"
         }
       ],
-      "etymology_analysis": "JUrgenmunster (Jürgenmünster) is a non-historical, Germanic-style disambiguated holding name created for the mod, combining the personal name Jürgen with 'Münster' (collegiate church).",
+      "etymology_analysis": "Anglicized from Tamil 'Tiṇṭukkal' ('pillow rock'), describing the massive rounded bare monolithic rock dominating the town and supporting Dindigul Fort in Tamil Nadu.",
       "current_repo_state": {
         "name": "JUrgenmunster",
         "b_tarr": "JUrgenmunster",
@@ -9912,7 +9962,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Dindigul",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9978,7 +10028,7 @@
     },
     "b_padaividu": {
       "barony_key": "b_padaividu",
-      "modern_name": "Melpadi",
+      "modern_name": "Candragiri",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -9986,8 +10036,8 @@
         "county": "c_candragiri",
         "holding_type": "church"
       },
-      "first_mention_year": 959,
-      "first_mention_attestation": "959 CE Rashtrakuta campaign records of Krishna III (and Vemulavada Chalukya feudatory Vagaraja) and early Chola inscriptions at Melpadi (including Rajaraja I's Arinjisvara memorial shrine for Arinjaya Chola, d. c. 957 CE).",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Early 11th-century CE foundation (c. 1000 CE) of Chandragiri Fort under Yadavaraya ruler Immadi Narasinga Yadavaraya, later attested in Vijayanagara epigraphy from 1367 CE onward.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9998,17 +10048,17 @@
       },
       "morphemes": [
         {
-          "form": "Mel",
-          "language": "Tamil",
-          "translation": "west, upper"
+          "form": "candra",
+          "language": "Sanskrit",
+          "translation": "moon"
         },
         {
-          "form": "padi",
-          "language": "Tamil",
-          "translation": "camp, settlement"
+          "form": "giri",
+          "language": "Sanskrit",
+          "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Melpadi derives from Tamil 'mel' (western/upper) and 'padi' (encampment/settlement), functioning as a strategic Chola-Rashtrakuta frontier town on the Ponnai/Pennar basin in the 10th century CE.",
+      "etymology_analysis": "Sanskrit compound 'Candra-giri' ('Moon Hill'), naming the crescent-shaped hill fortress near Tirupati in Andhra Pradesh that served as the final Vijayanagara capital.",
       "current_repo_state": {
         "name": "Melpâdi",
         "b_tarr": "Melpâdi",
@@ -10020,7 +10070,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/South_Indian_Inscriptions",
+      "source_url": "https://en.wikipedia.org/wiki/Chandragiri_Fort,_Andhra_Pradesh",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10032,7 +10082,7 @@
     },
     "b_melpadi": {
       "barony_key": "b_melpadi",
-      "modern_name": "Rudrambastat",
+      "modern_name": "Melpadi",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10040,11 +10090,11 @@
         "county": "c_candragiri",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested as a historical settlement; fictional/mod-created compound combining the name of Kakatiya Queen Rudrama Devi (r. 1262–1289 CE) with the Germanic suffix '-stat'.",
+      "first_mention_year": 959,
+      "first_mention_attestation": "959 CE Rashtrakuta campaign records of Krishna III (and Vemulavada Chalukya feudatory Vagaraja) and early Chola inscriptions at Melpadi, including Rajaraja I's Arinjisvara memorial shrine for Arinjaya Chola (d. c. 957 CE).",
       "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Kakatiya Queen Rudrama Devi (Rudramba, reigned 1262–1289 CE).",
+      "named_after_post_867_person": false,
+      "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -10052,17 +10102,17 @@
       },
       "morphemes": [
         {
-          "form": "Rudramba",
-          "language": "Telugu/Sanskrit",
-          "translation": "Rudrama Devi (Kakatiya queen)"
+          "form": "mēl",
+          "language": "Tamil",
+          "translation": "west, upper"
         },
         {
-          "form": "stat",
-          "language": "Germanic",
-          "translation": "town, place"
+          "form": "pāṭi",
+          "language": "Tamil",
+          "translation": "camp, settlement"
         }
       ],
-      "etymology_analysis": "Rudrambastat is a synthetic mod toponym combining Rudramba (a variant of Kakatiya Queen Rudrama Devi, r. 1262–1289 CE) with the Germanic settlement suffix '-stat' (town/place).",
+      "etymology_analysis": "Tamil compound 'mēl-pāṭi' ('western/upper encampment or settlement'), a strategic 10th-century Chola–Rashtrakuta frontier town in Vellore district, Tamil Nadu.",
       "current_repo_state": {
         "name": "Rudrambastat",
         "b_tarr": "Rudrambastat",
@@ -10074,7 +10124,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Melpadi",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10135,7 +10185,7 @@
     },
     "b_muluvagil": {
       "barony_key": "b_muluvagil",
-      "modern_name": "Kuvalala",
+      "modern_name": "Muluvagil",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10143,9 +10193,9 @@
         "county": "c_muluvagil",
         "holding_type": "castle"
       },
-      "first_mention_year": 350,
-      "first_mention_attestation": "Early Western Ganga dynasty records (c. 350 CE onward), which identify Kuvalala (modern Kolar) as the initial capital of the Western Gangas under Konganivarman Madhava.",
-      "is_historical_867": true,
+      "first_mention_year": 1050,
+      "first_mention_attestation": "11th-century CE Chola-era and subsequent Hoysala and Vijayanagara inscriptions from Kolar district (Epigraphia Carnatica Vol. X) attesting Mudalabagilu / Muluvagil (modern Mulbagal) as an eastern frontier gateway.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -10155,12 +10205,17 @@
       },
       "morphemes": [
         {
-          "form": "Kuvalala",
-          "language": "Kannada/Sanskrit",
-          "translation": "ancient name of Kolar (Ganga capital)"
+          "form": "mūḍalu",
+          "language": "Kannada",
+          "translation": "east, eastern"
+        },
+        {
+          "form": "bāgilu",
+          "language": "Kannada",
+          "translation": "door, gate, entrance"
         }
       ],
-      "etymology_analysis": "Kuvalala (Sanskritized/Kannada form of Kolar, rendered 'Kuwalâle' in the repository) was the 4th-century CE capital of the Western Ganga dynasty before the capital moved to Talakadu.",
+      "etymology_analysis": "Contracted from Old Kannada 'Mūḍala-bāgilu' ('eastern gate/entrance', modern Mulbagal), marking the eastern pass of Kolar district toward Andhra and Tamil Nadu.",
       "current_repo_state": {
         "name": "Kuwalâle",
         "b_tarr": "Kuwalâle",
@@ -10172,7 +10227,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Western_Ganga_dynasty",
+      "source_url": "https://en.wikipedia.org/wiki/Mulbagal",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10184,7 +10239,7 @@
     },
     "b_kuvalala": {
       "barony_key": "b_kuvalala",
-      "modern_name": "Arjayadengjayaketanastat",
+      "modern_name": "Kuvalala",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10192,9 +10247,9 @@
         "county": "c_muluvagil",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; synthetic/mod-created holding name in the repository.",
-      "is_historical_867": false,
+      "first_mention_year": 450,
+      "first_mention_attestation": "5th-century CE authentic Western Ganga copper-plate and stone inscriptions attesting Kuvalala (Kovalalapura, modern Kolar) as the earliest Western Ganga royal capital and basis of the imperial title Kovalalapura-paramesvara.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -10204,17 +10259,12 @@
       },
       "morphemes": [
         {
-          "form": "Arjayadengjayaketana",
-          "language": "Sanskrit/conlang",
-          "translation": "victorious banner compound"
-        },
-        {
-          "form": "stat",
-          "language": "Germanic",
-          "translation": "town, place"
+          "form": "Kuvalāla",
+          "language": "Kannada/Sanskrit",
+          "translation": "Kuvalala (ancient name of Kolar)"
         }
       ],
-      "etymology_analysis": "Arjayadengjayaketanastat is a synthetic mod toponym combining an Indic-styled compound ending in '-jayaketana' (victory banner) with the Germanic suffix '-stat' (town/place).",
+      "etymology_analysis": "Early Sanskritized Kannada toponym 'Kuvalāla' (also Kolala / Kovalalapura, modern Kolar), the initial capital of the Western Ganga dynasty before their move to Talakadu.",
       "current_repo_state": {
         "name": "Arjayadengjayaketanastat",
         "b_tarr": "Arjayadengjayaketanastat",
@@ -10226,7 +10276,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kolar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10508,7 +10558,7 @@
     },
     "b_penugonda": {
       "barony_key": "b_penugonda",
-      "modern_name": "Nandagiri",
+      "modern_name": "Penugonda",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10516,29 +10566,29 @@
         "county": "c_penugonda",
         "holding_type": "castle"
       },
-      "first_mention_year": 806,
-      "first_mention_attestation": "Early 9th-century CE inscriptions (c. 806 and 810 CE) of Nolamba-Pallava ruler Nolambadhiraja and Rashtrakuta Govinda III at Nandi (Nandi Hills).",
-      "is_historical_867": true,
+      "first_mention_year": 1354,
+      "first_mention_attestation": "March 25, 1354 CE Kannada-Sanskrit inscription on the north gate bastion of Penukonda Fort (reign of Bukka Raya I) recording the construction of the stone fortress under minister Anantarasa and Prince Virupanna I.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Nandagiri"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Nandi",
-          "language": "Sanskrit/Kannada",
-          "translation": "Nandi (sacred bull of Shiva)"
+          "form": "penu",
+          "language": "Telugu",
+          "translation": "big, great"
         },
         {
-          "form": "giri",
-          "language": "Sanskrit",
+          "form": "koṇḍa",
+          "language": "Telugu",
           "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Nandagiri ('Nandi Hill', modern Nandi Hills / Nandidurga) is a prominent hillfortress attested in early 9th-century CE Nolamba and Rashtrakuta inscriptions.",
+      "etymology_analysis": "Telugu compound 'penu-koṇḍa' ('big hill', Sanskritized as Ghanagiri), naming the major Vijayanagara hill fortress and post-1565 refuge capital in Anantapur/Sri Sathya Sai district, Andhra Pradesh.",
       "current_repo_state": {
         "name": "Nandagiri",
         "b_tarr": "Nandagiri",
@@ -10550,7 +10600,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bhoganandishwara_Temple",
+      "source_url": "https://en.wikipedia.org/wiki/Penukonda",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10616,7 +10666,7 @@
     },
     "b_nandi": {
       "barony_key": "b_nandi",
-      "modern_name": "Zant-Arnold",
+      "modern_name": "Nandagiri",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10624,29 +10674,29 @@
         "county": "c_penugonda",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; synthetic European/Germanic-styled hagiographic holding name in the repository.",
-      "is_historical_867": false,
+      "first_mention_year": 806,
+      "first_mention_attestation": "Early 9th-century CE inscriptions (c. 806 and 810 CE) of Nolamba-Pallava ruler Nolambadhiraja and Rashtrakuta Emperor Govinda III at Nandi (Nandagiri / Nandi Hills).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Nandagiri"
       },
       "morphemes": [
         {
-          "form": "Zant",
-          "language": "Germanic",
-          "translation": "saint"
+          "form": "Nandi",
+          "language": "Sanskrit/Kannada",
+          "translation": "Nandi (sacred bull of Shiva)"
         },
         {
-          "form": "Arnold",
-          "language": "Germanic",
-          "translation": "personal name Arnold"
+          "form": "giri",
+          "language": "Sanskrit",
+          "translation": "hill, mountain"
         }
       ],
-      "etymology_analysis": "Zant-Arnold is a non-historical, Germanic-styled ecclesiastical holding name ('Saint Arnold') generated for the repository.",
+      "etymology_analysis": "Sanskrit oronym 'Nanda-giri' ('Nandi Hill', modern Nandi Hills / Nandidurga in Chikkaballapur district, Karnataka), attested in early 9th-century CE Nolamba and Rashtrakuta inscriptions.",
       "current_repo_state": {
         "name": "Zant-Arnold",
         "b_tarr": "Zant-Arnold",
@@ -10658,7 +10708,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Nandi_Hills,_India",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10670,7 +10720,7 @@
     },
     "b_togarakunta": {
       "barony_key": "b_togarakunta",
-      "modern_name": "Renandu",
+      "modern_name": "Togarakunta",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_tamilakam",
@@ -10678,29 +10728,29 @@
         "county": "c_renandu",
         "holding_type": "church"
       },
-      "first_mention_year": 575,
-      "first_mention_attestation": "575 CE Kalamalla inscription of Renati Choda king Erikal Mutturaju Dhanunjaya, and 7th-century CE Malepadu plates and Xuanzang's account.",
-      "is_historical_867": true,
+      "first_mention_year": 1100,
+      "first_mention_attestation": "Late 11th to early 12th-century CE Western Chalukya stone inscription of Tribhuvanamalladeva (Vikramaditya VI) and Kumara Tailapadeva at Togarakunta, recording grants to the Chandraprabha Jain basadi at Togarikunte.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Renandu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Re",
-          "language": "Old Telugu",
-          "translation": "regional prefix (Renadu)"
+          "form": "togara",
+          "language": "Telugu",
+          "translation": "red madder dye plant (Morinda tinctoria) / red ochre"
         },
         {
-          "form": "nandu",
-          "language": "Old Telugu",
-          "translation": "country, territory (nadu)"
+          "form": "kuṇṭa",
+          "language": "Telugu",
+          "translation": "pond, tank"
         }
       ],
-      "etymology_analysis": "Renandu (Renadu) is an early medieval Telugu choronym for the Rayalaseema/Kadapa region ruled by the Renati Chodas, attested in Telugu inscriptions from 575 CE onward.",
+      "etymology_analysis": "Telugu compound 'togara-kuṇṭa' ('pond of the red-dye plant / red soil', attested in Chalukya epigraphy as Togarikunte), a historic village in Anantapur/Rayalaseema, Andhra Pradesh.",
       "current_repo_state": {
         "name": "Renandu",
         "b_tarr": "Renandu",
@@ -10712,7 +10762,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/List_of_Telugu_chodas",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11151,7 +11201,7 @@
     },
     "b_racakonda": {
       "barony_key": "b_racakonda",
-      "modern_name": "Nalgonda",
+      "modern_name": "Racakonda",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_telingana",
@@ -11159,8 +11209,8 @@
         "county": "c_racakonda",
         "holding_type": "church"
       },
-      "first_mention_year": 1350,
-      "first_mention_attestation": "Medieval Bahmani-period records (14th–15th century CE), when the town previously called Nilagiri was renamed Nalgunda (later Nalgonda).",
+      "first_mention_year": 1363,
+      "first_mention_attestation": "Mid-14th century CE inscriptions (c. 1363–1369 CE) of Recherla Padmanayaka ruler Anapota Nayaka documenting the founding and fortification of Rachakonda as the Recherla capital.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11171,17 +11221,17 @@
       },
       "morphemes": [
         {
-          "form": "Nalla",
+          "form": "rāca",
           "language": "Telugu",
-          "translation": "black"
+          "translation": "royal, king's (from Sanskrit rāja)"
         },
         {
-          "form": "konda",
+          "form": "koṇḍa",
           "language": "Telugu",
           "translation": "hill"
         }
       ],
-      "etymology_analysis": "Nalgonda (rendered 'Nalgonde' in the repository) derives from Telugu 'nalla' (black) and 'konda' (hill), evolving from Nalgunda during the Bahmani period.",
+      "etymology_analysis": "Telugu compound 'rāca-koṇḍa' ('royal hill'), naming the 14th-century cyclopean hill fortress established by the Recherla Nayakas in Yadadri Bhuvanagiri district, Telangana.",
       "current_repo_state": {
         "name": "Nalgonde",
         "b_tarr": "Nalgonde",
@@ -11193,7 +11243,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Nalgonda",
+      "source_url": "https://en.wikipedia.org/wiki/Rachakonda_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11259,7 +11309,7 @@
     },
     "b_nalgonda": {
       "barony_key": "b_nalgonda",
-      "modern_name": "Meginhardszelle",
+      "modern_name": "Nalgonda",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_telingana",
@@ -11267,8 +11317,8 @@
         "county": "c_racakonda",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; synthetic Germanic-styled monastic holding name in the repository.",
+      "first_mention_year": 1350,
+      "first_mention_attestation": "14th-century CE Bahmani-period records documenting the renaming of the medieval hill town of Nilagiri as Nalgunda (later Nalgonda).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11279,17 +11329,17 @@
       },
       "morphemes": [
         {
-          "form": "Meginhard",
-          "language": "Germanic",
-          "translation": "personal name Meginhard"
+          "form": "nalla",
+          "language": "Telugu",
+          "translation": "black, dark"
         },
         {
-          "form": "zelle",
-          "language": "German",
-          "translation": "monastic cell"
+          "form": "koṇḍa",
+          "language": "Telugu",
+          "translation": "hill"
         }
       ],
-      "etymology_analysis": "Meginhardszelle is a non-historical, Germanic-styled holding name ('Meginhard's cell') generated for the repository.",
+      "etymology_analysis": "Telugu compound 'nalla-koṇḍa' ('black hill'), evolving via medieval Bahmani-era Nalgunda from the earlier hill-town designation Nilagiri ('blue hill') in Telangana.",
       "current_repo_state": {
         "name": "Meginhardszelle",
         "b_tarr": "Meginhardszelle",
@@ -11301,7 +11351,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Nalgonda",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11367,7 +11417,7 @@
     },
     "b_balkonda": {
       "barony_key": "b_balkonda",
-      "modern_name": "Nikolausstat",
+      "modern_name": "Balkonda",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_telingana",
@@ -11375,8 +11425,8 @@
         "county": "c_balkonda",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; disambiguated fictional/mod-created Germanic-style holding name ('Municipal foundation chartered by Nikolaus').",
+      "first_mention_year": 1242,
+      "first_mention_attestation": "March 28, 1242 CE Telugu Kakatiya stone inscription of Emperor Ganapatideva on a Nandi pedestal recording a land grant of 100 marttars in the village of Balakonda.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11387,17 +11437,17 @@
       },
       "morphemes": [
         {
-          "form": "Nikolaus",
-          "language": "German",
-          "translation": "personal name Nicholas"
+          "form": "bāla / bālā",
+          "language": "Telugu/Sanskrit",
+          "translation": "young/strong (or local Balakonda root)"
         },
         {
-          "form": "stat",
-          "language": "Germanic",
-          "translation": "town, city"
+          "form": "koṇḍa",
+          "language": "Telugu",
+          "translation": "hill"
         }
       ],
-      "etymology_analysis": "Nikolausstat is a non-historical, Germanic-styled holding name ('Nicholas's town') created for the repository.",
+      "etymology_analysis": "Telugu hill-fort toponym 'Balakonda' (contracted to Balkonda), attested in 13th-century Kakatiya epigraphy and 15th-century Bahmani chronicles in Nizamabad district, Telangana.",
       "current_repo_state": {
         "name": "Nikolausstat",
         "b_tarr": "Nikolausstat",
@@ -11409,7 +11459,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Balkonda",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11529,7 +11579,7 @@
     },
     "b_kambampet": {
       "barony_key": "b_kambampet",
-      "modern_name": "Irmgardmarct",
+      "modern_name": "Kambampet",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_telingana",
@@ -11537,8 +11587,8 @@
         "county": "c_kambampet",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; disambiguated fictional/mod-created Germanic-style market town name ('Chartered market borough established by Irmgard').",
+      "first_mention_year": 1350,
+      "first_mention_attestation": "14th-century CE late/post-Kakatiya Telugu inscriptions in the Khammam region and the Khammam Fort gateway epigraph attesting Khammamettu / Kambhammettu around the Stambhadri rock hill.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11549,17 +11599,17 @@
       },
       "morphemes": [
         {
-          "form": "Irmgard",
-          "language": "German",
-          "translation": "personal name Irmgard"
+          "form": "kambam / stambha",
+          "language": "Telugu/Sanskrit",
+          "translation": "pillar, vertical rock"
         },
         {
-          "form": "marct",
-          "language": "Germanic",
-          "translation": "market"
+          "form": "meṭṭu / pēṭa",
+          "language": "Telugu",
+          "translation": "hillock, elevation / market town"
         }
       ],
-      "etymology_analysis": "Irmgardmarct is a non-historical, Germanic-styled holding name ('Irmgard's market') created for the repository.",
+      "etymology_analysis": "Historic variant of Khammammett / Kambhammettu (modern Khammam), combining Telugu 'kambam' (from Sanskrit 'stambha', referring to the pillar-like Narasimha hill Stambhadri) with '-mettu' (elevation) / '-peta' (town).",
       "current_repo_state": {
         "name": "Irmgardmarct",
         "b_tarr": "Irmgardmarct",
@@ -11571,7 +11621,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Khammam",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11853,7 +11903,7 @@
     },
     "b_mahur": {
       "barony_key": "b_mahur",
-      "modern_name": "Christineszelle",
+      "modern_name": "Mahur",
       "hierarchy": {
         "empire": "e_deccan",
         "kingdom": "k_telingana",
@@ -11861,8 +11911,8 @@
         "county": "c_mahur",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; disambiguated fictional/mod-created Germanic-style monastic holding name ('Monastic cell and hermitage established by Christine').",
+      "first_mention_year": 1428,
+      "first_mention_attestation": "1428 CE conquest of Mahur (Mahurgad) by Bahmani Sultan Ahmad Shah I Wali recorded in Deccan chronicles, following earlier Devagiri Yadava fortification and Puranic attestations as Matapura / Matripura.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11873,17 +11923,17 @@
       },
       "morphemes": [
         {
-          "form": "Christine",
-          "language": "German",
-          "translation": "personal name Christine"
+          "form": "mātā / mātṛ",
+          "language": "Sanskrit",
+          "translation": "mother (goddess Renuka)"
         },
         {
-          "form": "zelle",
-          "language": "German",
-          "translation": "monastic cell"
+          "form": "pura",
+          "language": "Sanskrit",
+          "translation": "city, abode"
         }
       ],
-      "etymology_analysis": "Christineszelle is a non-historical, Germanic-styled holding name ('Christine's cell') created for the repository.",
+      "etymology_analysis": "Marathi vernacular contraction of Sanskrit 'Mātāpura' / 'Mātṛpura' ('City of the Mother', referencing the Renuka Devi Shakti Peetha), the historic hill-fort town in Nanded district, Maharashtra.",
       "current_repo_state": {
         "name": "Christineszelle",
         "b_tarr": "Christineszelle",
@@ -11895,7 +11945,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Mahur,_Maharashtra",
       "older_name_by_867": {
         "exists": false,
         "names": [],

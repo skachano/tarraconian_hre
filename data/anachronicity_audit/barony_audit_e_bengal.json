@@ -10,22 +10,76 @@
     },
     "summary_statistics": {
       "total_baronies": 205,
-      "historical_867_true": 39,
-      "historical_867_false": 166,
-      "first_mention_year_known": 138,
-      "first_mention_year_unknown": 67,
-      "named_after_post_867_person": 12,
-      "named_after_hydronym": 10,
-      "named_after_any_natural_proper_name": 17,
-      "has_older_name_by_867_total": 19,
-      "has_older_name_by_867_for_anachronistic": 19,
+      "historical_867_true": 33,
+      "historical_867_false": 172,
+      "first_mention_year_known": 140,
+      "first_mention_year_unknown": 65,
+      "named_after_post_867_person": 15,
+      "named_after_hydronym": 5,
+      "named_after_any_natural_proper_name": 12,
+      "has_older_name_by_867_total": 16,
+      "has_older_name_by_867_for_anachronistic": 16,
       "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 191
+      "wikipedia_source_attached": 196
     }
   },
   "baronies": {
     "b_nabadwipa": {
       "barony_key": "b_nabadwipa",
+      "modern_name": "Nabadwipa",
+      "hierarchy": {
+        "empire": "e_bengal",
+        "kingdom": "k_bengal",
+        "duchy": "d_nadia",
+        "county": "c_nabadwipa",
+        "holding_type": "church"
+      },
+      "first_mention_year": 1204,
+      "first_mention_attestation": "First securely attested in contemporary historical sources as 'Nudiah' (Nadia / Nabadwip) in Minhaj-i Siraj's Tabaqat-i Nasiri (completed 1260 CE), describing Bakhtiyar Khalji's raid of c. 1203–1204 CE against Sena king Lakshmana Sena; regional kulaji traditions associate its rise as a Sena royal seat with the late 11th–12th century CE.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "nava",
+          "language": "Sanskrit",
+          "translation": "nine / new"
+        },
+        {
+          "form": "dvipa",
+          "language": "Sanskrit",
+          "translation": "island"
+        }
+      ],
+      "etymology_analysis": "From Sanskrit 'nava' ('nine' or 'new') + 'dvipa' ('island'), meaning 'Nine Islands' (or 'New Island'), referring to the riverine islands along the Bhagirathi-Hooghly River in Nadia district, West Bengal.",
+      "current_repo_state": {
+        "name": "Attahâse",
+        "b_tarr": "Attahâse",
+        "b_tarr_direct": "Nabadwîpe",
+        "b_tarr_hist": "Attahâse",
+        "b_origin": "Attahâse (Attahâse (in-game: Nabadwipa))",
+        "b_anachronism": "Nabadwipa emerged after c. 1063 under the Senas; resolves via Option A to the ancient Shakta Pitha site Attahasa (Attahâse).",
+        "b_ipa": "[a.ta.ˈhaː.zə]",
+        "holding_type": "church",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Nabadwip",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_attahasa": {
+      "barony_key": "b_attahasa",
       "modern_name": "Attahasa",
       "hierarchy": {
         "empire": "e_bengal",
@@ -35,7 +89,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "As a Bengal Shakta Pitha in Birbhum/Katwa, Attahasa is attested in late medieval Tantric/Shakta Pitha compilations (such as the Pithanirnaya / Tantracudamani) rather than by 867 CE; the Vayu Purana (Purva Bhaga ch. 23–24) reference to Attahasa refers to a manifestation of Shiva and a Himalayan mountain, not the Bengal site.",
+      "first_mention_attestation": "As a Bengal Shakta Pitha in Birbhum/Bardhaman (Katwa), Attahasa is attested in late medieval Tantric/Shakta Pitha compilations (such as the Pithanirnaya / Tantracudamani) rather than by 867 CE; the Vayu Purana (Purva Bhaga ch. 23–24) reference to Attahasa refers to a manifestation of Shiva and a Himalayan mountain, not the Bengal site.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -56,61 +110,7 @@
           "translation": "laughter"
         }
       ],
-      "etymology_analysis": "Sanskrit Attahasa ('loud/boisterous laughter' of Shiva/Shakti). While the term appears in the Vayu Purana for a Himalayan peak and Shiva manifestation, the Bengal Shakta Pitha site of Attahasa is documented only in post-867 medieval Tantric Pitha texts.",
-      "current_repo_state": {
-        "name": "Attahâse",
-        "b_tarr": "Attahâse",
-        "b_tarr_direct": "Nabadwîpe",
-        "b_tarr_hist": "Attahâse",
-        "b_origin": "Attahâse (Attahâse (in-game: Nabadwipa))",
-        "b_anachronism": "Nabadwipa emerged after c. 1063 under the Senas; resolves via Option A to the ancient Shakta Pitha site Attahasa (Attahâse).",
-        "b_ipa": "[a.ta.ˈhaː.zə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Attahas,_Katwa",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_attahasa": {
-      "barony_key": "b_attahasa",
-      "modern_name": "Ludolfmunster",
-      "hierarchy": {
-        "empire": "e_bengal",
-        "kingdom": "k_bengal",
-        "duchy": "d_nadia",
-        "county": "c_nabadwipa",
-        "holding_type": "church"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical records; fictional Germanic-adapted ecclesiastical holding name created in the repository.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Ludolf",
-          "language": "Germanic",
-          "translation": "personal name (people-wolf)"
-        },
-        {
-          "form": "munster",
-          "language": "Middle Low German / Old High German",
-          "translation": "monastery / minster church"
-        }
-      ],
-      "etymology_analysis": "A fictional repository compound combining the Germanic personal name 'Ludolf' with 'munster' ('monastery, collegiate church').",
+      "etymology_analysis": "Sanskrit 'Attahasa' ('loud/boisterous laughter' of Shiva/Shakti). While the term appears in the Vayu Purana for a Himalayan peak and Shiva manifestation, the Bengal Shakta Pitha site of Attahasa in Birbhum/Bardhaman, West Bengal is documented only in post-867 medieval Tantric Pitha texts.",
       "current_repo_state": {
         "name": "Ludolfmunster",
         "b_tarr": "Ludolfmunster",
@@ -122,7 +122,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Attahas,_Katwa",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -188,7 +188,7 @@
     },
     "b_saptagrama": {
       "barony_key": "b_saptagrama",
-      "modern_name": "Bhagirathi",
+      "modern_name": "Saptagrama",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bengal",
@@ -196,29 +196,29 @@
         "county": "c_saptagrama",
         "holding_type": "castle"
       },
-      "first_mention_year": -300,
-      "first_mention_attestation": "Attested from c. 300 BCE in the Mahabharata and early Puranic literature as the sacred river Bhagirathi (the western deltaic channel of the Ganges).",
-      "is_historical_867": true,
+      "first_mention_year": 1298,
+      "first_mention_attestation": "Historically attested from the late 13th to early 14th century CE as the Bengal port and administrative center of Satgaon/Saptagram, captured by Zafar Khan under Sultan Ruknuddin Kaikaus (c. 1298 CE), striking Delhi Sultanate silver coins as a mint town from 1327–1328 CE (AH 728), and described by Ibn Battuta (c. 1346–1350 CE).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Bhagirathi River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Bhagiratha",
+          "form": "sapta",
           "language": "Sanskrit",
-          "translation": "mythological king Bhagiratha"
+          "translation": "seven"
         },
         {
-          "form": "-i",
+          "form": "grama",
           "language": "Sanskrit",
-          "translation": "feminine patronymic / river suffix"
+          "translation": "village / settlement"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Bhagirathi' ('of Bhagiratha'), named after the legendary Ikshvaku king Bhagiratha who brought the Ganges down to earth.",
+      "etymology_analysis": "From Sanskrit 'sapta' ('seven') + 'grama' ('village'), meaning 'Seven Villages' (vernacular Bengali Satgaon), a historic riverine port on the Saraswati River in Hooghly district, West Bengal.",
       "current_repo_state": {
         "name": "Bagîratî",
         "b_tarr": "Bagîratî",
@@ -230,7 +230,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Hooghly_River",
+      "source_url": "https://en.wikipedia.org/wiki/Saptagram",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -615,7 +615,7 @@
     },
     "b_fathabad": {
       "barony_key": "b_fathabad",
-      "modern_name": "Padma",
+      "modern_name": "Fathabad",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bengal",
@@ -623,24 +623,29 @@
         "county": "c_bikrampur",
         "holding_type": "castle"
       },
-      "first_mention_year": 1500,
-      "first_mention_attestation": "Attested as a distinct river name from the late medieval period (c. 15th–16th century CE, e.g., Brihaddharma Purana and early Bengal Sultanate/European maps) as the main eastern distributary of the Ganges.",
+      "first_mention_year": 1415,
+      "first_mention_attestation": "Established as a Bengal Sultanate mint town and administrative center during the reign of Sultan Jalaluddin Muhammad Shah (r. 1415–1433 CE), attested on 15th-century silver tanka coinage and later in the Mughal Ain-i-Akbari as Sarkar Fathabad (modern Faridpur, Bangladesh).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Padma River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "padma",
-          "language": "Sanskrit / Bengali",
-          "translation": "lotus flower"
+          "form": "fath",
+          "language": "Arabic / Persian",
+          "translation": "victory / conquest"
+        },
+        {
+          "form": "-abad",
+          "language": "Persian",
+          "translation": "inhabited place / city"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'padma' ('lotus flower'), the Bengali name for the major eastern distributary of the Ganges.",
+      "etymology_analysis": "Perso-Arabic compound 'Fathabad' ('City of Victory'), coined by the Bengal Sultanate in the 15th century CE for the deltaic administrative and mint center corresponding to modern Faridpur, Bangladesh.",
       "current_repo_state": {
         "name": "Padmâ",
         "b_tarr": "Padmâ",
@@ -652,7 +657,7 @@
         "holding_type": "castle",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Padma_River",
+      "source_url": "https://en.wikipedia.org/wiki/Faridpur,_Bangladesh",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -885,7 +890,7 @@
     },
     "b_unakoti": {
       "barony_key": "b_unakoti",
-      "modern_name": "Harikela",
+      "modern_name": "Unakoti",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bengal",
@@ -893,9 +898,9 @@
         "county": "c_harikela",
         "holding_type": "castle"
       },
-      "first_mention_year": 691,
-      "first_mention_attestation": "Attested in the 7th century CE, notably by Chinese pilgrim Yijing (691 CE) as the easternmost kingdom of India ('Ho-li-ki-lo') and in 7th–8th century CE inscriptions.",
-      "is_historical_867": true,
+      "first_mention_year": null,
+      "first_mention_attestation": "Although the colossal Shaivite rock-cut bas-reliefs at Unakoti in Tripura are dated stylistically to the 7th–9th century CE (and brief pilgrim inscriptions on a Chaturmukhalinga date to the 11th–12th century CE), the toponym 'Unakoti' itself has no contemporary pre-867 CE written attestation.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -905,17 +910,17 @@
       },
       "morphemes": [
         {
-          "form": "Hari",
-          "language": "Sanskrit",
-          "translation": "Vishnu / Hari"
+          "form": "una",
+          "language": "Sanskrit / Bengali",
+          "translation": "one less than / deficient by one"
         },
         {
-          "form": "kela",
-          "language": "Sanskrit / Prakrit",
-          "translation": "play / sport / region"
+          "form": "koti",
+          "language": "Sanskrit / Bengali",
+          "translation": "ten million (crore)"
         }
       ],
-      "etymology_analysis": "Sanskritized regional name 'Harikela' (literally 'sport of Hari'), denoting the ancient polity of southeastern Bengal and Chittagong.",
+      "etymology_analysis": "From Sanskrit/Bengali 'una-koti' ('one less than a crore', i.e., 9,999,999), referring to the legendary number of rock-cut Shaivite sculptures carved into the hillside in northern Tripura (known in Kokborok as Subrai Khung).",
       "current_repo_state": {
         "name": "Harikele",
         "b_tarr": "Harikele",
@@ -927,7 +932,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Harikela",
+      "source_url": "https://en.wikipedia.org/wiki/Unakoti",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1145,7 +1150,7 @@
     },
     "b_udaipur": {
       "barony_key": "b_udaipur",
-      "modern_name": "Rangamati",
+      "modern_name": "Udaipur",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bengal",
@@ -1153,11 +1158,11 @@
         "county": "c_karmanta",
         "holding_type": "city"
       },
-      "first_mention_year": 1464,
-      "first_mention_attestation": "Attested as the Manikya royal capital Rangamati on the Gomati River in the 15th century CE (under Ratna Manikya I, c. 1464 CE), before being renamed Udaipur in 1567 CE.",
+      "first_mention_year": 1567,
+      "first_mention_attestation": "Renamed Udaipur in 1567 CE by Tripura ruler Udai Manikya (r. 1567–1572 CE), replacing the earlier 15th-century Manikya royal capital name Rangamati on the Gomati River.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Maharaja Udai Manikya of the Manikya dynasty of Tripura (r. 1567–1572 CE), who renamed the royal capital Rangamati to Udaipur in 1567 CE.",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1165,17 +1170,17 @@
       },
       "morphemes": [
         {
-          "form": "ranga",
-          "language": "Bengali / Sanskrit",
-          "translation": "red / colored"
+          "form": "Udai",
+          "language": "Sanskrit / Bengali",
+          "translation": "Maharaja Udai Manikya (personal name; 'rising')"
         },
         {
-          "form": "mati",
-          "language": "Bengali",
-          "translation": "earth / soil"
+          "form": "pur",
+          "language": "Sanskrit / Bengali",
+          "translation": "city / town"
         }
       ],
-      "etymology_analysis": "From Bengali 'ranga' ('red') + 'mati' ('earth, soil'), referring to the reddish lateritic soil of the Gomati valley.",
+      "etymology_analysis": "From the personal name of Tripura king Udai Manikya + Sanskrit/Bengali '-pur' ('city'), meaning 'City of Udai', replacing the earlier medieval capital name Rangamati in 1567 CE.",
       "current_repo_state": {
         "name": "Rangamatî",
         "b_tarr": "Rangamatî",
@@ -1199,7 +1204,7 @@
     },
     "b_devaparvata": {
       "barony_key": "b_devaparvata",
-      "modern_name": "Samatata",
+      "modern_name": "Devaparvata",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bengal",
@@ -1207,8 +1212,8 @@
         "county": "c_samatata",
         "holding_type": "church"
       },
-      "first_mention_year": 350,
-      "first_mention_attestation": "First epigraphically attested as 'Samatata' in the Allahabad Pillar inscription of Gupta Emperor Samudragupta (c. 350–375 CE).",
+      "first_mention_year": 665,
+      "first_mention_attestation": "Contemporarily attested as 'Devaparvata', the fortified capital of Samatata encircled by the Khiroda River, in the mid-7th-century CE Kailan copperplate inscription of Rata king Sridharana Rata (c. 665–675 CE) and in subsequent 8th-century CE copperplates of the Deva dynasty at Mainamati.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1219,17 +1224,17 @@
       },
       "morphemes": [
         {
-          "form": "sama",
+          "form": "deva",
           "language": "Sanskrit",
-          "translation": "level / flat"
+          "translation": "god / deity"
         },
         {
-          "form": "tata",
+          "form": "parvata",
           "language": "Sanskrit",
-          "translation": "shore / bank"
+          "translation": "mountain / hill"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'sama' ('level, flat') + 'tata' ('shore, bank'), meaning 'level-banked (coastal deltaic) country'.",
+      "etymology_analysis": "From Sanskrit 'deva' ('god') + 'parvata' ('hill, mountain'), denoting the ancient fortified capital city of the Samatata kingdom in the Lalmai-Mainamati hills of Comilla, Bangladesh, epigraphically attested from the 7th century CE.",
       "current_repo_state": {
         "name": "Samatate",
         "b_tarr": "Samatate",
@@ -1241,7 +1246,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Samatata",
+      "source_url": "https://en.wikipedia.org/wiki/Devaparvata",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1469,7 +1474,7 @@
     },
     "b_karnasubarna": {
       "barony_key": "b_karnasubarna",
-      "modern_name": "Gauda",
+      "modern_name": "Karnasubarna",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -1477,8 +1482,8 @@
         "county": "c_gauda",
         "holding_type": "castle"
       },
-      "first_mention_year": -400,
-      "first_mention_attestation": "Attested from c. 400 BCE in Panini's Ashtadhyayi (6.2.100) and later in Kautilya's Arthashastra and the 554 CE Haraha inscription of Ishanavarman.",
+      "first_mention_year": 638,
+      "first_mention_attestation": "Contemporarily attested in the 7th century CE as King Shashanka's capital of Gauda in Bhaskaravarman's Nidhanpur copperplate (issued from the victorious camp at Karnasuvarna) and in Chinese pilgrim Xuanzang's account of his c. 638 CE visit ('Kie-lo-na-su-fa-la-na').",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1489,12 +1494,17 @@
       },
       "morphemes": [
         {
-          "form": "gauda",
+          "form": "karna",
           "language": "Sanskrit",
-          "translation": "jaggery / sugar / ancient Bengal region"
+          "translation": "ear"
+        },
+        {
+          "form": "suvarna",
+          "language": "Sanskrit",
+          "translation": "gold / golden"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Gauda' (possibly linked to 'guda', 'jaggery/sugar', or an ancient ethnonym), denoting the core polity of western/northern Bengal.",
+      "etymology_analysis": "From Sanskrit 'karna' ('ear') + 'suvarna' ('gold'), meaning 'Golden Ear', the early 7th-century CE capital of King Shashanka's Gauda kingdom located at Rangamati/Rajbadidanga in Murshidabad district, West Bengal.",
       "current_repo_state": {
         "name": "Gaude",
         "b_tarr": "Gaude",
@@ -1506,7 +1516,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gau%E1%B8%8Da_(region)",
+      "source_url": "https://en.wikipedia.org/wiki/Karnasuvarna",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1626,7 +1636,7 @@
     },
     "b_ramavati": {
       "barony_key": "b_ramavati",
-      "modern_name": "Kotivarsha",
+      "modern_name": "Ramavati",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -1634,11 +1644,11 @@
         "county": "c_kotivarsa",
         "holding_type": "castle"
       },
-      "first_mention_year": 443,
-      "first_mention_attestation": "First epigraphically attested as 'Kotivarsha' in the Gupta-era Damodarpur copperplate inscriptions (443–543 CE, reign of Kumaragupta I).",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "first_mention_year": 1080,
+      "first_mention_attestation": "Founded and attested in the late 11th century CE (c. 1080–1100 CE) during the reign of Pala Emperor Ramapala (r. c. 1077–1130 CE), who established it as his new imperial capital in Varendra, celebrated in Sandhyakara Nandi's Ramacharitam.",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Pala Emperor Ramapala (r. c. 1077–1130 CE), who founded Ramavati as his new imperial capital in Varendra.",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1646,17 +1656,17 @@
       },
       "morphemes": [
         {
-          "form": "koti",
+          "form": "Rama",
           "language": "Sanskrit",
-          "translation": "ten million / peak"
+          "translation": "Emperor Ramapala"
         },
         {
-          "form": "varsha",
+          "form": "-vati",
           "language": "Sanskrit",
-          "translation": "year / region / rain"
+          "translation": "possessing / city suffix"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'koti' + 'varsha', an ancient fortified city and Gupta administrative district (vishaya) at Bangarh in Dinajpur.",
+      "etymology_analysis": "From Sanskrit 'Rama' (referring to Pala Emperor Ramapala) + '-vati' (feminine suffix forming city names), meaning 'City of Ramapala'.",
       "current_repo_state": {
         "name": "Kotiwarse",
         "b_tarr": "Kotiwarse",
@@ -1668,7 +1678,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Vishnugupta_(Gupta_Empire)",
+      "source_url": "https://en.wikipedia.org/wiki/Ramapala",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1736,7 +1746,7 @@
     },
     "b_kotivarsa": {
       "barony_key": "b_kotivarsa",
-      "modern_name": "Zant-Cecilie",
+      "modern_name": "Kotivarsa",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -1744,9 +1754,9 @@
         "county": "c_kotivarsa",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical records; fictional Germanic-adapted collegiate church name created in the repository.",
-      "is_historical_867": false,
+      "first_mention_year": 443,
+      "first_mention_attestation": "First epigraphically attested as 'Kotivarsha' in the Gupta-era Damodarpur copperplate inscriptions (443–543 CE, beginning in the reign of Kumaragupta I) as a district headquarters (vishaya) of Pundravardhana.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -1756,17 +1766,17 @@
       },
       "morphemes": [
         {
-          "form": "Zant",
-          "language": "Germanic / Low German",
-          "translation": "saint"
+          "form": "koti",
+          "language": "Sanskrit",
+          "translation": "ten million / peak"
         },
         {
-          "form": "Cecilie",
-          "language": "Germanic / Latin",
-          "translation": "personal name Cecilia"
+          "form": "varsha",
+          "language": "Sanskrit",
+          "translation": "year / region / rain"
         }
       ],
-      "etymology_analysis": "Fictional repository name combining Low German 'Zant' ('Saint') with 'Cecilie' ('Cecilia').",
+      "etymology_analysis": "From Sanskrit 'koti' + 'varsha', an ancient fortified city and Gupta administrative district (vishaya) of Pundravardhana at modern Bangarh in Dakshin Dinajpur, West Bengal.",
       "current_repo_state": {
         "name": "Zant-Cecilie",
         "b_tarr": "Zant-Cecilie",
@@ -1778,21 +1788,19 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Bangarh",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Kotivarsha"
-        ],
-        "first_mention_year": 443,
-        "first_mention_source": "Damodarpur copperplate inscriptions (443–543 CE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "Replaces the ancient barony of Kotivarsha, attested in Gupta-era Damodarpur copperplates from 443 CE."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_laksmanavati": {
       "barony_key": "b_laksmanavati",
-      "modern_name": "Ramavati",
+      "modern_name": "Laksmanavati",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -1800,11 +1808,11 @@
         "county": "c_laksmanavati",
         "holding_type": "castle"
       },
-      "first_mention_year": 1080,
-      "first_mention_attestation": "Founded and attested in the late 11th century CE (c. 1080 CE, during the reign of Pala Emperor Ramapala, r. c. 1077–1130 CE, and celebrated in Sandhyakara Nandi's Ramacharitam).",
+      "first_mention_year": 1179,
+      "first_mention_attestation": "Renamed Laksmanavati (later Persianized as Lakhnauti) after Sena king Lakshmana Sena (r. c. 1179–1206 CE), who made the ancient city of Gauda (Gaur) in Malda his imperial capital; attested as 'Lakhnauti' in Minhaj-i Siraj's Tabaqat-i Nasiri (13th century CE).",
       "is_historical_867": false,
       "named_after_post_867_person": true,
-      "eponym_details": "Named after Pala Emperor Ramapala (r. c. 1077–1130 CE), who founded Ramavati as his new imperial capital in Varendra.",
+      "eponym_details": "Named after Sena king Lakshmana Sena (r. c. 1179–1206 CE), who renamed the historic Bengal metropolis of Gauda (Gaur) as Laksmanavati ('City of Lakshmana').",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1812,9 +1820,9 @@
       },
       "morphemes": [
         {
-          "form": "Rama",
+          "form": "Laksmana",
           "language": "Sanskrit",
-          "translation": "Emperor Ramapala"
+          "translation": "King Lakshmana Sena"
         },
         {
           "form": "-vati",
@@ -1822,7 +1830,7 @@
           "translation": "possessing / city suffix"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Rama' (referring to Ramapala) + '-vati' (feminine suffix forming city names), meaning 'city of Ramapala'.",
+      "etymology_analysis": "From Sanskrit 'Laksmana' (King Lakshmana Sena) + '-vati' (feminine city-forming suffix), meaning 'City of Lakshmana', later adapted in Persian sources as Lakhnauti.",
       "current_repo_state": {
         "name": "Râmâwatî",
         "b_tarr": "Râmâwatî",
@@ -1834,14 +1842,17 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ramapala",
+      "source_url": "https://en.wikipedia.org/wiki/Gaur,_West_Bengal",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Gauda",
+          "Gaudapura"
+        ],
+        "first_mention_year": -400,
+        "first_mention_source": "Panini's Ashtadhyayi (c. 400 BCE, mentioning Gaudapura) and Kautilya's Arthashastra.",
+        "relationship": "same_site_earlier_name",
+        "notes": "Before being renamed Laksmanavati under Lakshmana Sena (r. c. 1179–1206 CE), the metropolis was known as Gauda (Gaur / Gaudapura), attested from antiquity."
       }
     },
     "b_gaur": {
@@ -2003,7 +2014,7 @@
     },
     "b_lakhnor": {
       "barony_key": "b_lakhnor",
-      "modern_name": "Radha",
+      "modern_name": "Lakhnor",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -2011,9 +2022,9 @@
         "county": "c_radha",
         "holding_type": "castle"
       },
-      "first_mention_year": -300,
-      "first_mention_attestation": "Attested from c. 300 BCE in the Jain Acharanga Sutra (as 'Ladha') and in a 6th-century CE inscription of Devendravarman (as 'Uttara Radha').",
-      "is_historical_867": true,
+      "first_mention_year": 1205,
+      "first_mention_attestation": "First attested as 'Lakhnor' (identified with Nagor/Rajnagar in Birbhum district, West Bengal) in Minhaj-i Siraj's Tabaqat-i Nasiri (completed 1260 CE) as a key frontier garrison town and iqta of the Khalji governors of Bengal from c. 1205 CE.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -2023,12 +2034,12 @@
       },
       "morphemes": [
         {
-          "form": "Radha",
-          "language": "Sanskrit / Prakrit",
-          "translation": "ancient southwestern Bengal region (Rarh)"
+          "form": "Lakhnor",
+          "language": "Persian / Bengali",
+          "translation": "medieval frontier stronghold (identified with Nagor/Rajnagar)"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Radha' (Prakrit 'Ladha', modern Bengali 'Rarh'), the ancient geopolitical division of southwestern Bengal.",
+      "etymology_analysis": "Persian chronicle spelling 'Lakhnor' (variants Lakhanor/Lakaur) for the medieval frontier garrison town of Nagor (Rajnagar) in Birbhum, West Bengal, possibly reflecting an Indo-Aryan compound ending in 'nagara' ('town, city').",
       "current_repo_state": {
         "name": "Râde",
         "b_tarr": "Râde",
@@ -2040,7 +2051,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Rarh_region",
+      "source_url": "https://en.wikipedia.org/wiki/Rajnagar,_Birbhum",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2214,7 +2225,7 @@
     },
     "b_deogarh2": {
       "barony_key": "b_deogarh2",
-      "modern_name": "Kajangala",
+      "modern_name": "Deogarh",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -2222,9 +2233,9 @@
         "county": "c_damin_i_koh",
         "holding_type": "castle"
       },
-      "first_mention_year": -300,
-      "first_mention_attestation": "Attested from c. 300 BCE in the Pali Vinaya Pitaka (fixing the eastern boundary of Aryavarta at Kajangala) and in Xuanzang's Great Tang Records (646 CE).",
-      "is_historical_867": true,
+      "first_mention_year": null,
+      "first_mention_attestation": "While the Baidyanath Jyotirlinga pilgrimage site in Jharkhand is referenced in medieval Puranic literature (under names such as Haritakivana and Chitabhoomi) and a late 7th-century CE inscription of Later Gupta king Adityasena survives in the region, the modern vernacular settlement name 'Deoghar' / 'Deogarh' ('Abode of the Gods') has no contemporary pre-867 CE written attestation.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -2234,12 +2245,17 @@
       },
       "morphemes": [
         {
-          "form": "Kajangala",
-          "language": "Sanskrit / Pali",
-          "translation": "ancient eastern borderland territory"
+          "form": "deva / deo",
+          "language": "Sanskrit / Hindi",
+          "translation": "god / deity"
+        },
+        {
+          "form": "ghar / garh",
+          "language": "Hindi / Prakrit",
+          "translation": "house / abode (or fort)"
         }
       ],
-      "etymology_analysis": "Ancient Sanskrit/Pali toponym 'Kajangala' denoting the territory around Rajmahal and Santhal Parganas.",
+      "etymology_analysis": "From Indo-Aryan 'deva/deo' ('god') + 'ghar' ('house, abode', often assimilated to 'garh' 'fort'), meaning 'Abode of the Gods', referring to the sacred Baidyanath temple town of Deoghar in Jharkhand.",
       "current_repo_state": {
         "name": "Kadschangale",
         "b_tarr": "Kadschangale",
@@ -2251,7 +2267,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kajangala",
+      "source_url": "https://en.wikipedia.org/wiki/Deoghar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2317,7 +2333,7 @@
     },
     "b_koriya": {
       "barony_key": "b_koriya",
-      "modern_name": "Jharkhand",
+      "modern_name": "Koriya",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -2325,8 +2341,8 @@
         "county": "c_jharkand",
         "holding_type": "church"
       },
-      "first_mention_year": 1295,
-      "first_mention_attestation": "First attested as 'Jharikhanda' in a 13th-century CE copperplate inscription of Eastern Ganga king Narasimhadeva II (c. 1295 CE) and later in the Akbarnama (c. 1590s CE).",
+      "first_mention_year": 1600,
+      "first_mention_attestation": "First documented in early modern regional accounts with the foundation of Korea (Koriya) princely state in northwestern Chhattisgarh by Chauhan Rajput rulers around the late 16th to early 17th century CE (c. 1600 CE); no pre-867 CE written attestation exists.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2337,17 +2353,12 @@
       },
       "morphemes": [
         {
-          "form": "jhari",
-          "language": "Sanskrit / Prakrit",
-          "translation": "forest / thicket"
-        },
-        {
-          "form": "khanda",
-          "language": "Sanskrit",
-          "translation": "land / region"
+          "form": "Koriya",
+          "language": "Chhattisgarhi / Hindi",
+          "translation": "regional toponym (Koriya / Korea state and district)"
         }
       ],
-      "etymology_analysis": "From Sanskrit/Prakrit 'jhari' ('forest, bush') + 'khanda' ('land, region'), meaning 'land of forests'.",
+      "etymology_analysis": "Regional toponym 'Koriya' (anglicized 'Korea') for the forested princely state and district in northern Chhattisgarh (historically linked to the local stronghold Koreagarh).",
       "current_repo_state": {
         "name": "Dschârkant",
         "b_tarr": "Dschârkant",
@@ -2359,7 +2370,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Jharkhand",
+      "source_url": "https://en.wikipedia.org/wiki/Korea_State",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2891,7 +2902,7 @@
     },
     "b_pataliputra": {
       "barony_key": "b_pataliputra",
-      "modern_name": "Magadha",
+      "modern_name": "Pataliputra",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -2899,8 +2910,8 @@
         "county": "c_magadha",
         "holding_type": "castle"
       },
-      "first_mention_year": -1000,
-      "first_mention_attestation": "Attested in the Atharvaveda (c. 1000 BCE) as the name of the eastern people and region of Magadha.",
+      "first_mention_year": -490,
+      "first_mention_attestation": "Attested from the 5th century BCE in early Buddhist texts (Pali Mahaparinibbana Sutta, fortified by Magadhan king Ajatashatru c. 490 BCE and established as the imperial capital by Udayin) and in Greek sources by Megasthenes (c. 300 BCE, as 'Palibothra').",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2911,12 +2922,17 @@
       },
       "morphemes": [
         {
-          "form": "Magadha",
+          "form": "patali",
+          "language": "Sanskrit / Pali",
+          "translation": "trumpet-flower tree (Stereospermum suaveolens)"
+        },
+        {
+          "form": "putra",
           "language": "Sanskrit",
-          "translation": "ancient eastern kingdom and its inhabitants"
+          "translation": "son (or from pattana 'city')"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Magadha', the Vedic and classical name of the kingdom and region in southern Bihar. The active repository name 'Magadhe' is an adaptation of 'Magadha'.",
+      "etymology_analysis": "From Sanskrit 'Pataliputra' (Pali 'Pataliputta', Greek 'Palibothra'), traditionally interpreted as 'Son of the Patali tree' or derived from 'patali' + 'pattana' ('town'), the celebrated capital of the Magadhan, Mauryan, and Gupta empires at modern Patna, Bihar.",
       "current_repo_state": {
         "name": "Magadhe",
         "b_tarr": "Magadhe",
@@ -2928,7 +2944,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Magadha",
+      "source_url": "https://en.wikipedia.org/wiki/Pataliputra",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3463,7 +3479,7 @@
     },
     "b_bishnupur": {
       "barony_key": "b_bishnupur",
-      "modern_name": "Mallabhum",
+      "modern_name": "Bishnupur",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -3471,8 +3487,8 @@
         "county": "c_mallabhum",
         "holding_type": "castle"
       },
-      "first_mention_year": 1550,
-      "first_mention_attestation": "While Malla dynastic chronicles trace the kingdom to Adi Malla (c. 694 CE), contemporary historical attestation of 'Mallabhum' dates to the late medieval/Mughal period (16th century CE).",
+      "first_mention_year": 1590,
+      "first_mention_attestation": "Although Malla dynastic chronicles credit 19th king Jagat Malla with shifting the capital of Mallabhum to Bishnupur c. 994–997 CE, contemporary external historical documentation of Bishnupur begins in late 16th-century Mughal records (c. 1590 CE, under Malla ruler Bir Hambir); neither date precedes 867 CE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3483,17 +3499,17 @@
       },
       "morphemes": [
         {
-          "form": "Malla",
-          "language": "Sanskrit / Bengali",
-          "translation": "wrestler, Malla ruling dynasty"
+          "form": "Bishnu (Vishnu)",
+          "language": "Bengali / Sanskrit",
+          "translation": "Hindu deity Vishnu"
         },
         {
-          "form": "bhum (bhumi)",
-          "language": "Sanskrit / Bengali",
-          "translation": "land, territory"
+          "form": "pur",
+          "language": "Bengali / Sanskrit",
+          "translation": "city / town"
         }
       ],
-      "etymology_analysis": "From Sanskrit/Bengali 'Mallabhum' ('Land of the Mallas'), referring to the kingdom ruled by the Malla kings of Bishnupur in Bankura, West Bengal.",
+      "etymology_analysis": "From Sanskrit 'Vishnupura' (Bengali 'Bishnupur', 'City of Vishnu'), the historic capital of the Malla kings of Mallabhum in Bankura district, West Bengal.",
       "current_repo_state": {
         "name": "Mallabûm",
         "b_tarr": "Mallabûm",
@@ -3505,7 +3521,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mallabhum_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Bishnupur,_Bankura",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3571,7 +3587,7 @@
     },
     "b_midnapore": {
       "barony_key": "b_midnapore",
-      "modern_name": "Dandabhukti",
+      "modern_name": "Midnapore",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -3579,9 +3595,9 @@
         "county": "c_midnapore",
         "holding_type": "castle"
       },
-      "first_mention_year": 600,
-      "first_mention_attestation": "Contemporarily attested in the Midnapore copperplate inscriptions of Gauda king Shashanka (first half of the 7th century CE, c. 600–625 CE).",
-      "is_historical_867": true,
+      "first_mention_year": 1595,
+      "first_mention_attestation": "Earliest securely dated administrative mention appears in Abu'l-Fazl's Ain-i-Akbari (c. 1595 CE, within Sarkar Jaleswar of the Mughal Empire); local traditions connect the foundation of Medinipur to the 13th–15th century CE, with no pre-867 CE attestation.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -3591,17 +3607,17 @@
       },
       "morphemes": [
         {
-          "form": "danda",
-          "language": "Sanskrit / Odia",
-          "translation": "road, path, or staff/punishment"
+          "form": "medini",
+          "language": "Sanskrit / Bengali",
+          "translation": "earth / world (or goddess Medinimata / Medinikara)"
         },
         {
-          "form": "bhukti",
-          "language": "Sanskrit",
-          "translation": "administrative province, division"
+          "form": "pur",
+          "language": "Sanskrit / Bengali",
+          "translation": "city / town"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Dandabhukti', an ancient and early medieval administrative province ('bhukti') in the Rarh region of Bengal/Odisha, attested in 7th-century CE copperplates of Shashanka.",
+      "etymology_analysis": "Anglicized spelling of Bengali 'Medinipur' ('City of the Earth / Medini'), from Sanskrit 'medini' ('earth') + 'pura' ('city'); local traditions associate the name either with the goddess Medinimata or the medieval lexicographer/chief Medinikara.",
       "current_repo_state": {
         "name": "Dandabukti",
         "b_tarr": "Dandabukti",
@@ -3613,7 +3629,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Dandabhukti",
+      "source_url": "https://en.wikipedia.org/wiki/Midnapore",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3897,7 +3913,7 @@
     },
     "b_bangaon": {
       "barony_key": "b_bangaon",
-      "modern_name": "Burhi Gandak",
+      "modern_name": "Bangaon",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -3906,28 +3922,28 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "The modern Hindi river name 'Burhi Gandak' ('Old Gandak') has no datable pre-867 CE attestation.",
+      "first_mention_attestation": "No contemporary pre-867 CE written attestation of the vernacular toponym 'Bangaon' exists; although the 11th-century CE Bangaon copperplate of Pala king Vigrahapala III was discovered at Bangaon in Saharsa district, Bihar, the charter records a grant in 'Vasukavarta' within Hodreya vishaya of Tirabhukti rather than naming Bangaon.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Burhi Gandak River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "burhi",
-          "language": "Hindi / Bihari",
-          "translation": "old, aged (feminine)"
+          "form": "ban (vana)",
+          "language": "Hindi / Maithili (from Sanskrit vana)",
+          "translation": "forest / wood"
         },
         {
-          "form": "Gandak",
-          "language": "Hindi / Sanskrit",
-          "translation": "Gandaki River"
+          "form": "gaon (grama)",
+          "language": "Hindi / Maithili (from Sanskrit grama)",
+          "translation": "village"
         }
       ],
-      "etymology_analysis": "From Hindi 'burhi' (old) + 'Gandak' (from Sanskrit 'Gandaki'), designating an old paleochannel of the Gandaki River in northern Bihar.",
+      "etymology_analysis": "From Indo-Aryan 'ban' (Sanskrit 'vana', 'forest') + 'gaon' (Sanskrit 'grama', 'village'), meaning 'Forest Village', a historic settlement in Saharsa district, northern Bihar (Mithila/Tirabhukti).",
       "current_repo_state": {
         "name": "Bûri-Gandach",
         "b_tarr": "Bûri-Gandach",
@@ -3939,17 +3955,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Burhi_Gandak_River",
+      "source_url": "https://en.wikipedia.org/wiki/Bangaon,_Saharsa",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Gandaki",
-          "Kondochates"
-        ],
-        "first_mention_year": -300,
-        "first_mention_source": "Megasthenes' Indica (c. 300 BCE, as 'Kondochates') and the Mahabharata (as 'Gandaki').",
-        "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "Burhi Gandak is an old channel of the Gandaki River system, attested in antiquity as Gandaki / Kondochates."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_jalalghar": {
@@ -4008,7 +4021,7 @@
     },
     "b_burhi_gandak": {
       "barony_key": "b_burhi_gandak",
-      "modern_name": "Kunigundeszelle",
+      "modern_name": "Burhi Gandak",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -4017,28 +4030,28 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "A German-language/Christianized adaptation in the repository ('Kunigundeszelle'), referencing Saint Cunigunde of Luxembourg (c. 975–1033 CE, canonized 1200 CE); no pre-867 CE attestation exists.",
+      "first_mention_attestation": "The modern Hindi river name 'Burhi Gandak' ('Old Gandak') has no datable pre-867 CE written attestation.",
       "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Saint Cunigunde (Kunigunde) of Luxembourg (c. 975–1033 CE, canonized 1200 CE), Empress of the Holy Roman Empire.",
+      "named_after_post_867_person": false,
+      "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Burhi Gandak River"
       },
       "morphemes": [
         {
-          "form": "Kunigundes",
-          "language": "German",
-          "translation": "of Kunigunde (genitive)"
+          "form": "burhi",
+          "language": "Hindi / Bihari",
+          "translation": "old, aged (feminine)"
         },
         {
-          "form": "Zelle",
-          "language": "German",
-          "translation": "cell, monastic hermitage"
+          "form": "Gandak",
+          "language": "Hindi / Sanskrit",
+          "translation": "Gandaki River"
         }
       ],
-      "etymology_analysis": "German compound meaning 'Kunigunde's cell/hermitage', a repository adaptation of the Bihar barony 'b_burhi_gandak' named after post-867 CE Saint Cunigunde of Luxembourg.",
+      "etymology_analysis": "From Hindi 'burhi' ('old') + 'Gandak' (from Sanskrit 'Gandaki'), designating an old paleochannel of the Gandaki River in northern Bihar.",
       "current_repo_state": {
         "name": "Kunigundeszelle",
         "b_tarr": "Kunigundeszelle",
@@ -4050,7 +4063,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Burhi_Gandak_River",
       "older_name_by_867": {
         "exists": true,
         "names": [
@@ -4058,9 +4071,9 @@
           "Kondochates"
         ],
         "first_mention_year": -300,
-        "first_mention_source": "Megasthenes, Indica (c. 300 BCE, as Kondochates) and Mahabharata (as Gaṇḍakī)",
+        "first_mention_source": "Megasthenes' Indica (c. 300 BCE, as 'Kondochates') and the Mahabharata (as 'Gandaki').",
         "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "The fictional Germanicized name Kunigundeszelle sits on the Burhi Gandak / Gandaki river slot, whose classical hydronym Kondochates / Gaṇḍakī is attested by c. 300 BCE (matching neighboring b_bangaon)."
+        "notes": "Burhi Gandak is an old channel of the Gandaki River system, attested in antiquity as Gandaki / Kondochates."
       }
     },
     "b_kusinagara": {
@@ -5071,7 +5084,7 @@
     },
     "b_nasirabad": {
       "barony_key": "b_nasirabad",
-      "modern_name": "Brahmaputra",
+      "modern_name": "Nasirabad",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -5079,29 +5092,29 @@
         "county": "c_suvarnagram",
         "holding_type": "castle"
       },
-      "first_mention_year": 950,
-      "first_mention_attestation": "The river name 'Brahmaputra' ('Son of Brahma') is first attested in the 10th-century CE Kalika Purana (c. 950–1000 CE); earlier texts and inscriptions refer to the river as 'Lauhitya'.",
+      "first_mention_year": 1519,
+      "first_mention_attestation": "Established and named Nasirabad in the early 16th century CE during the reign of Bengal Sultan Nasiruddin Nusrat Shah (r. 1519–1533 CE), corresponding to modern Mymensingh in Bangladesh.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Bengal Sultan Nasiruddin Nusrat Shah (r. 1519–1533 CE) of the Hussain Shahi dynasty, after whom the town of Nasirabad (modern Mymensingh) was named.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Brahmaputra River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Brahma",
-          "language": "Sanskrit",
-          "translation": "Hindu creator deity Brahma"
+          "form": "Nasir",
+          "language": "Arabic / Persian",
+          "translation": "Sultan Nasiruddin Nusrat Shah ('helper / protector')"
         },
         {
-          "form": "putra",
-          "language": "Sanskrit",
-          "translation": "son"
+          "form": "-abad",
+          "language": "Persian",
+          "translation": "inhabited place / town"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Brahmaputra' ('son of Brahma'), the major river flowing through Assam and Bangladesh, which replaced the older Sanskrit hydronym 'Lauhitya' in the 10th-century CE Kalika Purana.",
+      "etymology_analysis": "Perso-Arabic eponymous compound combining 'Nasir' (referring to Bengal Sultan Nasiruddin Nusrat Shah) + Persian '-abad' ('settlement, town'), the historical name of Mymensingh, Bangladesh.",
       "current_repo_state": {
         "name": "Brahmapûtra",
         "b_tarr": "Brahmapûtra",
@@ -5113,22 +5126,19 @@
         "holding_type": "castle",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Brahmaputra_River",
+      "source_url": "https://en.wikipedia.org/wiki/Mymensingh",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Lauhitya",
-          "Lohitya"
-        ],
-        "first_mention_year": 300,
-        "first_mention_source": "Markandeya Purana (c. 3rd–6th century CE), Mahabharata, and Kamarupa copperplate inscriptions.",
-        "relationship": "same_site_earlier_name",
-        "notes": "Lauhitya/Lohitya was the standard Sanskrit name for the Brahmaputra River prior to the 10th-century CE Kalika Purana."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_chutia": {
       "barony_key": "b_chutia",
-      "modern_name": "Munda",
+      "modern_name": "Chutia",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_bihar",
@@ -5137,7 +5147,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Ethnonym of the Austroasiatic-speaking Munda people of Chotanagpur/Jharkhand; no datable pre-867 CE written attestation of 'Munda' as a territorial/barony name exists.",
+      "first_mention_attestation": "Although late medieval Nagvanshi genealogical chronicles (Nagvanshavali) ascribe the founding of the capital at Chutia (in modern Ranchi, Jharkhand) to 4th-century CE ruler Pratap Rai, there is no contemporary pre-867 CE written attestation of the settlement name 'Chutia'; historical documentation appears in late medieval and early modern records (giving rise to the regional name Chutia-Nagpur / Chota Nagpur).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5148,12 +5158,12 @@
       },
       "morphemes": [
         {
-          "form": "Munda",
-          "language": "Mundari / Sanskrit",
-          "translation": "headman, Munda ethnic group"
+          "form": "Chutia",
+          "language": "Mundari / Nagpuri",
+          "translation": "historic Nagvanshi capital settlement (associated with Chutia-Nagpur)"
         }
       ],
-      "etymology_analysis": "Ethnonym of the Munda people of Jharkhand (from Sanskrit/Mundari 'munda', originally meaning 'headman' or 'village chief').",
+      "etymology_analysis": "Indigenous toponym 'Chutia' (Chutiya) on the Subarnarekha River in Ranchi, Jharkhand, traditionally linked to an early Munda patriarch and the Nagvanshi dynasty, and the source of the compound regional name Chutia-Nagpur (Chota Nagpur).",
       "current_repo_state": {
         "name": "Munde",
         "b_tarr": "Munde",
@@ -5165,7 +5175,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Munda_people",
+      "source_url": "https://en.wikipedia.org/wiki/Chutia,_Ranchi",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5334,7 +5344,7 @@
     },
     "b_hoshangabad": {
       "barony_key": "b_hoshangabad",
-      "modern_name": "Narmada",
+      "modern_name": "Hoshangabad",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_gondwana",
@@ -5342,29 +5352,29 @@
         "county": "c_chauragarh",
         "holding_type": "city"
       },
-      "first_mention_year": 80,
-      "first_mention_attestation": "Attested in the Periplus of the Erythraean Sea (c. 80 CE, as 'Nammadios'), Ptolemy's Geographica (c. 150 CE, as 'Namadus'), and the Mahabharata and Puranas.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "first_mention_year": 1405,
+      "first_mention_attestation": "Founded and first attested c. 1405 CE when Sultan Hoshang Shah Ghori of the Malwa Sultanate (r. 1405–1435 CE) built a fort on the Narmada River and named the town Hoshangabad (officially renamed Narmadapuram in 2022).",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Sultan Hoshang Shah Ghori (Alap Khan, r. 1405–1435 CE), second ruler of the Malwa Sultanate, who fortified the town on the Narmada c. 1405 CE.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Narmada River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "narma",
-          "language": "Sanskrit",
-          "translation": "pleasure, delight"
+          "form": "Hoshang",
+          "language": "Persian",
+          "translation": "Sultan Hoshang Shah Ghori"
         },
         {
-          "form": "da",
-          "language": "Sanskrit",
-          "translation": "giver, bestowing"
+          "form": "-abad",
+          "language": "Persian",
+          "translation": "inhabited place / city"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'Narmada' ('giver of pleasure'), the sacred west-flowing river of central India, attested in 1st-century CE Greco-Roman and Sanskrit sources.",
+      "etymology_analysis": "Persian eponymous compound 'Hoshang' (Sultan Hoshang Shah of Malwa) + '-abad' ('city, settlement'), meaning 'City of Hoshang', on the south bank of the Narmada River in Madhya Pradesh.",
       "current_repo_state": {
         "name": "Narmadâ",
         "b_tarr": "Narmadâ",
@@ -5376,7 +5386,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Narmada_River",
+      "source_url": "https://en.wikipedia.org/wiki/Narmadapuram",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6492,7 +6502,7 @@
     },
     "b_kamatapur": {
       "barony_key": "b_kamatapur",
-      "modern_name": "Bhitagarh",
+      "modern_name": "Kamatapur",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_kamarupa",
@@ -6500,8 +6510,8 @@
         "county": "c_kamatapur",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "The fortified city at Bhitagarh in Panchagarh, Bangladesh, dates archaeologically to the 5th–6th century CE, but the Bengali name Bhitagarh ('Inner Fort') is a modern/vernacular designation with no contemporary pre-867 CE written attestation.",
+      "first_mention_year": 1257,
+      "first_mention_attestation": "Founded c. 1257 CE when Kamarupa king Sandhya shifted his capital west to Kamatapur (modern Gosanimari in Cooch Behar district, West Bengal), establishing the medieval Kamata Kingdom.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6512,17 +6522,17 @@
       },
       "morphemes": [
         {
-          "form": "bhitar",
-          "language": "Bengali",
-          "translation": "inner, interior"
+          "form": "Kamata",
+          "language": "Assamese / Bengali / Sanskrit",
+          "translation": "Kamata realm / goddess Kamateswari"
         },
         {
-          "form": "gaṛh",
-          "language": "Bengali",
-          "translation": "fort, enclosure"
+          "form": "pur",
+          "language": "Sanskrit / Bengali",
+          "translation": "city / fortified town"
         }
       ],
-      "etymology_analysis": "Bengali compound bhitar ('inner') + gaṛh ('fort'), rendered in-repo as Bîtâgar (replacing the 13th-century CE Kamatapur). Although the site's fortifications date to the 5th–6th century CE, its contemporary ancient name is unrecorded.",
+      "etymology_analysis": "From 'Kamata' (the medieval western successor polity of Kamarupa and tutelary goddess Kamateswari) + Sanskrit 'pura' ('city'), designating the 13th-century fortified capital at Gosanimari, Cooch Behar, West Bengal.",
       "current_repo_state": {
         "name": "Bîtâgar",
         "b_tarr": "Bîtâgar",
@@ -6534,7 +6544,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bhitargarh",
+      "source_url": "https://en.wikipedia.org/wiki/Kamatapur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6605,7 +6615,7 @@
     },
     "b_bhitagarh": {
       "barony_key": "b_bhitagarh",
-      "modern_name": "Wangenstifft",
+      "modern_name": "Bhitagarh",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_kamarupa",
@@ -6614,7 +6624,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historical South Asian toponym; fictional/Germanic-style name in the repository state.",
+      "first_mention_attestation": "The fortified city at Bhitagarh (Bhitargarh) in Panchagarh district, Bangladesh, dates archaeologically to the 5th–7th century CE, but the Bengali name Bhitagarh ('Inner Fort') is a modern vernacular designation with no contemporary pre-867 CE written attestation.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6625,17 +6635,17 @@
       },
       "morphemes": [
         {
-          "form": "Wangen",
-          "language": "Germanic",
-          "translation": "cheeks, slopes, meadows"
+          "form": "bhitar",
+          "language": "Bengali",
+          "translation": "inner, interior"
         },
         {
-          "form": "Stift",
-          "language": "Germanic",
-          "translation": "abbey, foundation, chapter"
+          "form": "gaṛh",
+          "language": "Bengali",
+          "translation": "fort, enclosure"
         }
       ],
-      "etymology_analysis": "Non-Indian Germanic-style compound ('meadow-abbey/foundation') present in current_repo_state.name for b_bhitagarh; not a historical pre-867 CE toponym in Bengal/Kamarupa.",
+      "etymology_analysis": "Bengali compound 'bhitar' ('inner') + 'gaṛh' ('fort'), designating an extensive ancient fortified urban site in Panchagarh, northern Bangladesh, whose fortifications date archaeologically to the 5th–7th century CE though its contemporary ancient name is unrecorded.",
       "current_repo_state": {
         "name": "Wangenstifft",
         "b_tarr": "Wangenstifft",
@@ -6647,7 +6657,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Bhitargarh",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7022,7 +7032,7 @@
     },
     "b_dimapur": {
       "barony_key": "b_dimapur",
-      "modern_name": "Dhansiri",
+      "modern_name": "Dimapur",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_kamarupa",
@@ -7031,28 +7041,33 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1526,
-      "first_mention_attestation": "Unattested in datable pre-867 CE written sources; the Dimasa Kachari capital at Dimapur on the Dhansiri River dates from the 10th–13th century CE (sacked by Ahoms in 1526 CE).",
+      "first_mention_attestation": "Although archaeological remains of the Dimasa Kachari capital at Dimapur on the Dhansiri River date to the 13th–16th century CE, the earliest datable written historical records appear in the Ahom Buranjis documenting the Ahom–Kachari wars of 1526–1536 CE (where the city is also termed Che-din-chi-pen, 'Brick Town').",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Dhansiri River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "dhan",
-          "language": "Assamese (from Sanskrit dhana)",
-          "translation": "wealth, rice"
+          "form": "di",
+          "language": "Dimasa",
+          "translation": "water / river"
         },
         {
-          "form": "siri / śrī",
-          "language": "Assamese (from Sanskrit śrī)",
-          "translation": "prosperity, beauty"
+          "form": "ma",
+          "language": "Dimasa",
+          "translation": "big / great"
+        },
+        {
+          "form": "pur",
+          "language": "Sanskrit / Assamese",
+          "translation": "city / town"
         }
       ],
-      "etymology_analysis": "Assamese river hydronym Dhansiri (rendered in-repo as Dansîri), flowing past Dimapur (Dimasa Dima 'big river' + Sanskritized pura 'city').",
+      "etymology_analysis": "Hybrid Dimasa–Indo-Aryan toponym combining Dimasa 'di-ma' ('big river', also ethnonym root of the Dimasa people) + Sanskrit/Assamese 'pura' ('city'), designating the medieval capital of the Dimasa Kachari kingdom in modern Nagaland.",
       "current_repo_state": {
         "name": "Dansîri",
         "b_tarr": "Dansîri",
@@ -7668,7 +7683,7 @@
     },
     "b_charaideo": {
       "barony_key": "b_charaideo",
-      "modern_name": "Patkai",
+      "modern_name": "Charaideo",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_kamarupa",
@@ -7676,29 +7691,34 @@
         "county": "c_charaideo",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; the Tai-Ahom name Patkai (Pat-kai) dates from after the Ahom migration across the range in the 13th century CE.",
+      "first_mention_year": 1253,
+      "first_mention_attestation": "Founded in 1253 CE by Chaolung Sukaphaa, founder of the Ahom Kingdom, as the first permanent Ahom capital and royal necropolis in Upper Assam, recorded in the Ahom Buranjis as Che-Rai-Doi.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Patkai Range"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "pāt",
+          "form": "che",
           "language": "Tai-Ahom",
-          "translation": "to cut"
+          "translation": "city / town"
         },
         {
-          "form": "kai",
+          "form": "rai",
           "language": "Tai-Ahom",
-          "translation": "chicken, fowl"
+          "translation": "shining / dazzling"
+        },
+        {
+          "form": "doi",
+          "language": "Tai-Ahom",
+          "translation": "hill / mountain"
         }
       ],
-      "etymology_analysis": "From Tai-Ahom Pat-kai ('to cut a chicken', referring to an oath sworn on the mountain pass), applied to the Patkai Range on the Indo-Myanmar border (used in-repo as a pre-Ahom replacement for Charaideo).",
+      "etymology_analysis": "Assamese adaptation of Tai-Ahom 'Che-Rai-Doi' ('shining city on the hill'), the first capital of the Ahom Kingdom established by Sukaphaa in 1253 CE in Upper Assam.",
       "current_repo_state": {
         "name": "Patkâi",
         "b_tarr": "Patkâi",
@@ -7710,7 +7730,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Patkai",
+      "source_url": "https://en.wikipedia.org/wiki/Charaideo",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7771,7 +7791,7 @@
     },
     "b_patkai": {
       "barony_key": "b_patkai",
-      "modern_name": "Klementiastat",
+      "modern_name": "Patkai",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_kamarupa",
@@ -7780,28 +7800,28 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historical South Asian toponym; fictional/Germanic-style name in the repository state.",
+      "first_mention_attestation": "Unattested in pre-867 CE written sources; the Tai-Ahom name Patkai (Pat-kai) dates from after the Ahom migration across the mountain range in the 13th century CE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Patkai Range"
       },
       "morphemes": [
         {
-          "form": "Klementia",
-          "language": "Latin / Germanic",
-          "translation": "clemency, mercy (personal/virtue name)"
+          "form": "pāt",
+          "language": "Tai-Ahom",
+          "translation": "to cut"
         },
         {
-          "form": "stat / Stadt",
-          "language": "Germanic",
-          "translation": "town, city"
+          "form": "kai",
+          "language": "Tai-Ahom",
+          "translation": "chicken, fowl"
         }
       ],
-      "etymology_analysis": "Non-Indian Germanic-style compound ('Clementia-town') present in current_repo_state.name for b_patkai; not a historical pre-867 CE toponym in Assam.",
+      "etymology_analysis": "From Tai-Ahom 'Pat-kai' ('to cut a chicken', referring to an oath sworn on the mountain pass), applied to the Patkai mountain range along the Assam–Myanmar border.",
       "current_repo_state": {
         "name": "Klementiastat",
         "b_tarr": "Klementiastat",
@@ -7813,7 +7833,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Patkai",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8995,7 +9015,7 @@
     },
     "b_mandasa": {
       "barony_key": "b_mandasa",
-      "modern_name": "Kalinganagar",
+      "modern_name": "Mandasa",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_orissa",
@@ -9003,8 +9023,57 @@
         "county": "c_kalinganagar",
         "holding_type": "church"
       },
+      "first_mention_year": null,
+      "first_mention_attestation": "Historic town and medieval Odia zamindari estate (Manjusha / Mandasa) in Srikakulam district, Andhra Pradesh; although an 11th-century CE copperplate of Kadamba feudatory Dharmakhedi was found at Mandasa, the toponym 'Mandasa' itself has no contemporary pre-867 CE written attestation.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Mandasa (Manjusha)",
+          "language": "Telugu / Odia / Sanskrit",
+          "translation": "historic Kalinga estate and town (from Sanskrit manjusha 'casket/box' or regional toponym)"
+        }
+      ],
+      "etymology_analysis": "Regional toponym 'Mandasa' (historically also Sanskritized as 'Manjusha') in Srikakulam district, northern Andhra Pradesh, seat of a historic zamindari estate near the Mahendragiri hills.",
+      "current_repo_state": {
+        "name": "Kalinganagar",
+        "b_tarr": "Kalinganagar",
+        "b_tarr_direct": "Kalinganagar",
+        "b_tarr_hist": "Kalinganagar",
+        "b_origin": "Kalinganagar (Kalinganagar)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈka.lɪ.ŋa.na.ɣar]",
+        "holding_type": "church",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mandasa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kalinganagara": {
+      "barony_key": "b_kalinganagara",
+      "modern_name": "Kalinganagara",
+      "hierarchy": {
+        "empire": "e_bengal",
+        "kingdom": "k_orissa",
+        "duchy": "d_kalinga",
+        "county": "c_kalinganagar",
+        "holding_type": "city"
+      },
       "first_mention_year": 577,
-      "first_mention_attestation": "c. 577 CE (Narasimhapalli copper-plate grant of Eastern Ganga king Hastivarman, Ganga year 79, recording Kalinganagara)",
+      "first_mention_attestation": "Contemporarily attested as 'Kalinganagara' in the late 6th-century CE Narasimhapalli copperplate grant of Eastern Ganga king Hastivarman (Ganga era year 79, c. 577 CE) and the Achyutapuram plates of Indravarman II (Ganga year 87, c. 585 CE), succeeding earlier 6th-century Eastern Ganga charters (Jirjingi 537 CE, Ponnuturu 562 CE).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9020,66 +9089,12 @@
           "translation": "regional ethnonym Kalinga"
         },
         {
-          "form": "nagar",
+          "form": "nagara",
           "language": "Sanskrit",
           "translation": "city / capital"
         }
       ],
-      "etymology_analysis": "Sanskrit Kalinganagara ('city of Kalinga'), the early Eastern Ganga capital (modern Mukhalingam in Srikakulam district, Andhra Pradesh), attested from the late 6th century CE.",
-      "current_repo_state": {
-        "name": "Kalinganagar",
-        "b_tarr": "Kalinganagar",
-        "b_tarr_direct": "Kalinganagar",
-        "b_tarr_hist": "Kalinganagar",
-        "b_origin": "Kalinganagar (Kalinganagar)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.lɪ.ŋa.na.ɣar]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Eastern_Ganga_dynasty",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_kalinganagara": {
-      "barony_key": "b_kalinganagara",
-      "modern_name": "Wernhardstat",
-      "hierarchy": {
-        "empire": "e_bengal",
-        "kingdom": "k_orissa",
-        "duchy": "d_kalinga",
-        "county": "c_kalinganagar",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Anomalous Germanicized placeholder name in the repository ('Wernhardstat') with no historical attestation",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Wernhard",
-          "language": "Germanic",
-          "translation": "personal name Wernhard"
-        },
-        {
-          "form": "stat",
-          "language": "German",
-          "translation": "town / place"
-        }
-      ],
-      "etymology_analysis": "Anomalous Germanicized repository name Wernhardstat ('Wernhard's town') assigned to the barony key b_kalinganagara, replacing the historical Sanskrit toponym Kalinganagara.",
+      "etymology_analysis": "Sanskrit 'Kalinganagara' ('City of Kalinga'), the early Eastern Ganga imperial capital identified with modern Mukhalingam in Srikakulam district, Andhra Pradesh, epigraphically attested from the late 6th century CE.",
       "current_repo_state": {
         "name": "Wernhardstat",
         "b_tarr": "Wernhardstat",
@@ -9091,16 +9106,14 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Eastern_Ganga_dynasty",
+      "source_url": "https://en.wikipedia.org/wiki/Mukhalingam",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Kalinganagara"
-        ],
-        "first_mention_year": 577,
-        "first_mention_source": "Narasimhapalli copper-plate grant of Eastern Ganga king Hastivarman (Ganga year 79, c. 577 CE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "The active repository name 'Wernhardstat' is an anomalous Germanicized label on b_kalinganagara; the historical Eastern Ganga capital Kalinganagara (modern Mukhalingam) is attested by c. 577 CE."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_srikakulam": {
@@ -9159,7 +9172,7 @@
     },
     "b_swetakapura": {
       "barony_key": "b_swetakapura",
-      "modern_name": "Swetaka-Mandala",
+      "modern_name": "Swetakapura",
       "hierarchy": {
         "empire": "e_bengal",
         "kingdom": "k_orissa",
@@ -9168,7 +9181,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 786,
-      "first_mention_attestation": "Late 8th century CE (c. 756–786 CE; Ganjam copper-plate grant of Shvetaka Ganga ruler Jayavarmadeva as vassal of Bhauma-Kara king Shivakara I)",
+      "first_mention_attestation": "Attested as 'Shvetaka' (Swetakapura, modern Chikiti in Ganjam district, Odisha), capital of the collateral Shvetaka branch of the Eastern Gangas, in 7th–8th-century CE copperplate charters including Samantavarman's Pherava grant and Jayavarmadeva's Ganjam grant (c. 756–786 CE, under Bhauma-Kara overlord Shivakara I).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9179,17 +9192,17 @@
       },
       "morphemes": [
         {
-          "form": "Swetaka",
+          "form": "Swetaka (Shvetaka)",
           "language": "Sanskrit",
-          "translation": "white / Svetaka"
+          "translation": "white / Shvetaka"
         },
         {
-          "form": "Mandala",
+          "form": "pura",
           "language": "Sanskrit",
-          "translation": "circle / province / realm"
+          "translation": "city / fortified capital"
         }
       ],
-      "etymology_analysis": "Sanskrit Shvetaka-Mandala ('Swetaka province'), the realm of the collateral Shvetaka branch of the Eastern Gangas in northern Kalinga / Ganjam, attested in 8th-century CE copper-plate charters.",
+      "etymology_analysis": "Sanskrit 'Shvetakapura' ('City of Shvetaka', derived from 'shveta' 'white' + '-ka' + 'pura' 'city'), capital of the collateral Shvetaka branch of the Eastern Gangas at modern Chikiti in Ganjam district, Odisha, attested in 7th–9th century CE copperplate charters.",
       "current_repo_state": {
         "name": "Swetaka-Mandale",
         "b_tarr": "Swetaka-Mandale",
@@ -9201,7 +9214,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sivakara_Deva_I",
+      "source_url": "https://en.wikipedia.org/wiki/Eastern_Ganga_dynasty",
       "older_name_by_867": {
         "exists": false,
         "names": [],

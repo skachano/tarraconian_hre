@@ -10,23 +10,23 @@
     },
     "summary_statistics": {
       "total_baronies": 398,
-      "historical_867_true": 70,
-      "historical_867_false": 328,
-      "first_mention_year_known": 273,
-      "first_mention_year_unknown": 125,
-      "named_after_post_867_person": 33,
-      "named_after_hydronym": 12,
-      "named_after_any_natural_proper_name": 34,
-      "has_older_name_by_867_total": 30,
-      "has_older_name_by_867_for_anachronistic": 26,
+      "historical_867_true": 68,
+      "historical_867_false": 330,
+      "first_mention_year_known": 286,
+      "first_mention_year_unknown": 112,
+      "named_after_post_867_person": 38,
+      "named_after_hydronym": 6,
+      "named_after_any_natural_proper_name": 22,
+      "has_older_name_by_867_total": 26,
+      "has_older_name_by_867_for_anachronistic": 22,
       "has_older_name_by_867_for_historical": 4,
-      "wikipedia_source_attached": 380
+      "wikipedia_source_attached": 385
     }
   },
   "baronies": {
     "b_asigarh": {
       "barony_key": "b_asigarh",
-      "modern_name": "Hisar",
+      "modern_name": "Asigarh",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_delhi",
@@ -34,11 +34,11 @@
         "county": "c_hisar",
         "holding_type": "castle"
       },
-      "first_mention_year": 1354,
-      "first_mention_attestation": "Founded in 1354 CE as Hisar-e-Firoza ('Fort of Firuz') by Delhi Sultan Firuz Shah Tughlaq.",
+      "first_mention_year": 1168,
+      "first_mention_attestation": "Epigraphically attested as the fort of Asika (Asigarh) in the 1168 CE Hansi stone inscription of Chahamana ruler Prithviraja II; earlier Ghaznavid chronicles (such as Baihaqi's Tarikh-i-Mas'udi) record the fortress town of Hansi during Mas'ud I's 1037 CE siege.",
       "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Originally named Hisar-e-Firoza after Delhi Sultan Firuz Shah Tughlaq (r. 1351–1388 CE), who founded the fortified city in 1354 CE; later shortened to Hisar.",
+      "named_after_post_867_person": false,
+      "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -46,12 +46,17 @@
       },
       "morphemes": [
         {
-          "form": "ḥiṣār",
-          "language": "Arabic/Persian",
-          "translation": "fortress, enclosure"
+          "form": "asi",
+          "language": "Sanskrit",
+          "translation": "sword"
+        },
+        {
+          "form": "gaṛh",
+          "language": "Hindi/Prakrit",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Derived from the Perso-Arabic word hisar (fort/enclosure), shortened from Hisar-e-Firoza ('Fort of Firuz'), founded by Firuz Shah Tughlaq in 1354 CE.",
+      "etymology_analysis": "Compound of Sanskrit asi ('sword') and Hindi/Prakrit garh ('fort'), literally 'Fort of Swords', the historic medieval fortress at Hansi in Hisar district, Haryana (epigraphically Asika).",
       "current_repo_state": {
         "name": "Hisar",
         "b_tarr": "Hisar",
@@ -63,7 +68,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Firoz_Shah_palace_complex",
+      "source_url": "https://en.wikipedia.org/wiki/Asigarh_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -458,7 +463,7 @@
     },
     "b_indraprastha": {
       "barony_key": "b_indraprastha",
-      "modern_name": "Delhi",
+      "modern_name": "Indraprastha",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_delhi",
@@ -466,9 +471,9 @@
         "county": "c_delhi",
         "holding_type": "castle"
       },
-      "first_mention_year": 1153,
-      "first_mention_attestation": "First contemporarily attested epigraphically as Dhillika in the 1170 CE Bijolia rock inscription (and 1164 CE Delhi-Siwalik pillar inscription; Tomara tradition dates its founding to 736 CE, though contemporary records begin in the 12th century CE).",
-      "is_historical_867": false,
+      "first_mention_year": -500,
+      "first_mention_attestation": "Attested as Indraprastha in the Mahabharata and as Indapatta in the Pali Buddhist canon (c. 5th–3rd century BCE) as the ancient capital of the Kuru kingdom on the Yamuna (identified with Purana Qila in Delhi).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -478,12 +483,17 @@
       },
       "morphemes": [
         {
-          "form": "ḍhillī",
-          "language": "Prakrit/Apabhramsa",
-          "translation": "loose, threshold/eminence (from Sanskrit Dhillika)"
+          "form": "indra",
+          "language": "Sanskrit",
+          "translation": "Indra (Vedic deity)"
+        },
+        {
+          "form": "prastha",
+          "language": "Sanskrit",
+          "translation": "plain, plateau, expanse"
         }
       ],
-      "etymology_analysis": "Evolved from Sanskrit/Prakrit Dhillika/Dhilli (popularly linked to 'dhila' meaning 'loose' in Tomara legend, or to dehali meaning 'threshold').",
+      "etymology_analysis": "Sanskrit Indraprastha ('Plain of Indra' or 'City of Indra'), the ancient Kuru capital on the Yamuna river attested centuries BCE in Sanskrit epic and Pali Buddhist literature.",
       "current_repo_state": {
         "name": "Delhi",
         "b_tarr": "Delhi",
@@ -495,16 +505,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/History_of_Delhi",
+      "source_url": "https://en.wikipedia.org/wiki/Indraprastha",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Indraprastha"
-        ],
-        "first_mention_year": -500,
-        "first_mention_source": "Mahabharata and Pali Buddhist canon (Indapatta), c. 5th–3rd century BCE",
-        "relationship": "same_site_earlier_name",
-        "notes": "Indraprastha is attested in ancient Sanskrit and Pali literature as the Kuru capital on the Yamuna at the site of Delhi (Purana Qila)."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_dhilika": {
@@ -887,7 +895,7 @@
     },
     "b_saharanpur": {
       "barony_key": "b_saharanpur",
-      "modern_name": "Sthanisvara",
+      "modern_name": "Saharanpur",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_delhi",
@@ -895,8 +903,62 @@
         "county": "c_sthanisvara",
         "holding_type": "castle"
       },
+      "first_mention_year": 1340,
+      "first_mention_attestation": "Founded c. 1340 CE during the reign of Delhi Sultan Muhammad bin Tughluq, who named the town Shah-Harunpur (later contracted to Saharanpur) in honor of the Chishti Sufi saint Shah Harun Chishti.",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named Shah-Harunpur (contracted to Saharanpur) after the 14th-century Sufi saint Shah Harun Chishti during Sultan Muhammad bin Tughluq's c. 1340 CE campaign.",
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "shāh hārūn",
+          "language": "Persian/Arabic",
+          "translation": "personal name of Sufi saint Shah Harun Chishti"
+        },
+        {
+          "form": "pur",
+          "language": "Sanskrit/Hindi",
+          "translation": "town, city"
+        }
+      ],
+      "etymology_analysis": "Contracted from Shah-Harunpur ('City of Shah Harun'), combining the personal name of the 14th-century Chishti saint Shah Harun with the Indo-Aryan settlement suffix -pur.",
+      "current_repo_state": {
+        "name": "Stanisware",
+        "b_tarr": "Stanisware",
+        "b_tarr_direct": "Stanisware",
+        "b_tarr_hist": "Stanisware",
+        "b_origin": "Stanisware (Sthanisvara)",
+        "b_anachronism": "",
+        "b_ipa": "[sta.nɪs.ˈwa.rə]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Saharanpur",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sthanisvara": {
+      "barony_key": "b_sthanisvara",
+      "modern_name": "Sthanisvara",
+      "hierarchy": {
+        "empire": "e_rajastan",
+        "kingdom": "k_delhi",
+        "duchy": "d_kuru",
+        "county": "c_sthanisvara",
+        "holding_type": "church"
+      },
       "first_mention_year": 635,
-      "first_mention_attestation": "Attested as Sthanvishvara / Sthanesvara in Banabhatta's Harshacharita (early 7th century CE) and visited by Chinese pilgrim Xuanzang c. 635 CE.",
+      "first_mention_attestation": "Attested as Sthanvishvara / Sthanisvara in Banabhatta's Harshacharita (early 7th century CE) and visited by Chinese Buddhist pilgrim Xuanzang c. 635 CE (as Sa-ta-ni-shi-fa-lo).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -909,74 +971,15 @@
         {
           "form": "sthāṇu",
           "language": "Sanskrit",
-          "translation": "pillar, Shiva as Sthanu"
+          "translation": "pillar, epithet of Shiva"
         },
         {
           "form": "īśvara",
           "language": "Sanskrit",
-          "translation": "lord, deity"
+          "translation": "lord"
         }
       ],
-      "etymology_analysis": "Sanskrit Sthanishvara ('Lord of the Place' or 'Shiva Sthanu-Ishvara'), capital of the Pushyabhuti dynasty (modern Thanesar).",
-      "current_repo_state": {
-        "name": "Stanisware",
-        "b_tarr": "Stanisware",
-        "b_tarr_direct": "Stanisware",
-        "b_tarr_hist": "Stanisware",
-        "b_origin": "Stanisware (Sthanisvara)",
-        "b_anachronism": "",
-        "b_ipa": "[sta.nɪs.ˈwa.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Harsha",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_sthanisvara": {
-      "barony_key": "b_sthanisvara",
-      "modern_name": "Güntherszelle",
-      "hierarchy": {
-        "empire": "e_rajastan",
-        "kingdom": "k_delhi",
-        "duchy": "d_kuru",
-        "county": "c_sthanisvara",
-        "holding_type": "church"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Fictional/disambiguated German-style name ('Günther's cell') in the mod repository; not historically attested.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Günther",
-          "language": "German",
-          "translation": "personal name Günther"
-        },
-        {
-          "form": "-s-",
-          "language": "German",
-          "translation": "genitive linking element"
-        },
-        {
-          "form": "Zelle",
-          "language": "German",
-          "translation": "monastic cell, hermitage"
-        }
-      ],
-      "etymology_analysis": "German compound meaning 'Günther's monastic cell', introduced in the repository to disambiguate the intra-county holding from Sthanisvara.",
+      "etymology_analysis": "Sanskrit Sthanvishvara / Sthanisvara ('Lord of the Place' or 'Abode of Shiva Sthanu-Ishvara'), capital of the Pushyabhuti dynasty and modern Thanesar in Haryana.",
       "current_repo_state": {
         "name": "GUntherszelle",
         "b_tarr": "GUntherszelle",
@@ -988,7 +991,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Thanesar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1471,7 +1474,7 @@
     },
     "b_agra": {
       "barony_key": "b_agra",
-      "modern_name": "Agraban",
+      "modern_name": "Agra",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_delhi",
@@ -1479,29 +1482,24 @@
         "county": "c_mathura",
         "holding_type": "castle"
       },
-      "first_mention_year": -300,
-      "first_mention_attestation": "Attested as Agravana (Agraban) in the Mahabharata as a sacred forest grove along the Yamuna; modern Agra was founded later in 1504 CE by Sikandar Lodi.",
-      "is_historical_867": true,
+      "first_mention_year": 1080,
+      "first_mention_attestation": "Earliest contemporary attestation under the name Agra occurs in the Persian divan of Ghaznavid poet Mas'ud Sa'd Salman (c. 1080–1081 CE), describing Sultan Ibrahim's campaign against the fortress of Agra; later refounded as the Lodi capital in 1504 CE by Sikandar Lodi.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "topographic_feature",
-        "name": "Agravana"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
           "form": "agra",
-          "language": "Sanskrit",
-          "translation": "front, foremost"
-        },
-        {
-          "form": "vana",
-          "language": "Sanskrit",
-          "translation": "forest, grove"
+          "language": "Sanskrit/Hindi",
+          "translation": "foremost, front; or linked to Agravana ('foremost forest') or Hindi agar ('salt-pan')"
         }
       ],
-      "etymology_analysis": "From Sanskrit Agravana ('foremost forest' or 'front of the forest'), the ancient grove on the Yamuna attested in the Mahabharata.",
+      "etymology_analysis": "First attested as Agra in late 11th-century Persian poetry (c. 1080 CE); traditionally linked either to the Mahabharata forest name Agravana ('foremost forest') or to Hindi agar ('salt-pan').",
       "current_repo_state": {
         "name": "Agraban",
         "b_tarr": "Agraban",
@@ -1515,12 +1513,14 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Agra",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Agravana"
+        ],
+        "first_mention_year": -300,
+        "first_mention_source": "Mahabharata (c. 4th–3rd century BCE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Agravana ('foremost forest') is attested in the Mahabharata as a sacred grove along the Yamuna traditionally associated with the site of modern Agra."
       }
     },
     "b_sripatha": {
@@ -1682,7 +1682,7 @@
     },
     "b_mandawar": {
       "barony_key": "b_mandawar",
-      "modern_name": "Katehar",
+      "modern_name": "Mandawar",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_delhi",
@@ -1690,8 +1690,8 @@
         "county": "c_katehar",
         "holding_type": "castle"
       },
-      "first_mention_year": 1250,
-      "first_mention_attestation": "Attested in Delhi Sultanate chronicles from the 13th century CE onward as Katehar (the region later called Rohilkhand in the 18th century CE).",
+      "first_mention_year": 1399,
+      "first_mention_attestation": "Attested under the name Mandawar during Timur's 1399 CE campaign across the upper Ganga plains and subsequently recorded as a pargana in the late 16th-century Ain-i-Akbari; unattested as Mandawar by 867 CE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1702,17 +1702,17 @@
       },
       "morphemes": [
         {
-          "form": "kāṭh",
-          "language": "Hindi",
-          "translation": "wood, timber"
+          "form": "maṇḍa",
+          "language": "Sanskrit/Prakrit",
+          "translation": "vernacular evolution from Matipura / Mandavara"
         },
         {
-          "form": "-hār",
-          "language": "Hindi",
-          "translation": "regional/tribal suffix (Katehriya Rajputs)"
+          "form": "wār",
+          "language": "Hindi/Prakrit",
+          "translation": "enclosure, settlement suffix"
         }
       ],
-      "etymology_analysis": "Regional name Katehar, associated with the Katehriya Rajputs who dominated the upper Ganga-Ramganga plains in the medieval period.",
+      "etymology_analysis": "Historic town in Bijnor district, Uttar Pradesh, identified archaeologically by Alexander Cunningham with the 7th-century city of Matipura; the vernacular name Mandawar is attested from the late medieval period.",
       "current_repo_state": {
         "name": "Katehar",
         "b_tarr": "Katehar",
@@ -1724,17 +1724,16 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Rohilkhand",
+      "source_url": "https://en.wikipedia.org/wiki/Mandawar,_Uttar_Pradesh",
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Panchala",
-          "North Panchala"
+          "Matipura"
         ],
-        "first_mention_year": -500,
-        "first_mention_source": "Vedic texts and Panini's Ashtadhyayi (c. 5th century BCE)",
-        "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "North Panchala (centered at Ahichchhatra) was the ancient pre-867 CE regional name for the Katehar/Rohilkhand territory."
+        "first_mention_year": 635,
+        "first_mention_source": "Xuanzang's Great Tang Records on the Western Regions (c. 634–635 CE, Mo-ti-pu-lo)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Ancient Matipura, visited and described by Xuanzang c. 634–635 CE, is identified by Alexander Cunningham with the old mound of Mandawar in Bijnor district."
       }
     },
     "b_bijnor": {
@@ -2271,7 +2270,7 @@
     },
     "b_dhamalpur": {
       "barony_key": "b_dhamalpur",
-      "modern_name": "Damalpur",
+      "modern_name": "Dhamalpur",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -2280,10 +2279,10 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1539,
-      "first_mention_attestation": "Attested in 1539 CE chronicles as Dhamalpur (modern Dhrol), the seat of Dhamal Chavda before its conquest by Jam Hardholji.",
+      "first_mention_attestation": "Attested in 1539 CE regional chronicles as Dhamalpur (modern Dhrol in Gujarat), the seat of Dhamal Chavda prior to its conquest and renaming by Jam Hardholji.",
       "is_historical_867": false,
       "named_after_post_867_person": true,
-      "eponym_details": "Named after Dhamal Chavda, the local Chavda Rajput chieftain who ruled Dhamalpur before 1539 CE.",
+      "eponym_details": "Named after Dhamal Chavda, the local Chavda Rajput chieftain who ruled Dhamalpur before his defeat by Jam Hardholji in 1539 CE.",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2301,7 +2300,7 @@
           "translation": "town, city"
         }
       ],
-      "etymology_analysis": "Compound of the chieftain's name Dhamal (Damal) and pur ('town'), later renamed Dhrol in 1539 CE.",
+      "etymology_analysis": "Compound of the chieftain's personal name Dhamal and the settlement suffix -pur ('town'), denoting the Chavda stronghold later renamed Dhrol in 1539 CE.",
       "current_repo_state": {
         "name": "Damalpur",
         "b_tarr": "Damalpur",
@@ -2644,7 +2643,7 @@
     },
     "b_kanthakota": {
       "barony_key": "b_kanthakota",
-      "modern_name": "Kutch",
+      "modern_name": "Kanthakota",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -2652,24 +2651,29 @@
         "county": "c_kutch",
         "holding_type": "castle"
       },
-      "first_mention_year": 70,
-      "first_mention_attestation": "Attested as Kachchha in Sanskrit/Prakrit sources and described in Strabo's Geographica (c. 1st century CE) and the Periplus of the Erythraean Sea (c. 70 CE).",
-      "is_historical_867": true,
+      "first_mention_year": 950,
+      "first_mention_attestation": "Historically attested as the hilltop fortress of Kanthadurg / Kanthakota (Kanthkot in Kutch, Gujarat), where Chaulukya king Mularaja took refuge c. 950 CE and Bhima I sheltered from Mahmud of Ghazni in 1024 CE (later Kutch tradition attributes initial fort walls to Samvat 900 / 843 CE, without contemporary pre-867 epigraphy).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kachchha"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "kaccha",
-          "language": "Sanskrit",
-          "translation": "marshy land, littoral, sea-coast"
+          "form": "kantha",
+          "language": "Sanskrit/Gujarati",
+          "translation": "ascetic Kanthadnath / throat or ridge"
+        },
+        {
+          "form": "koṭa",
+          "language": "Sanskrit/Prakrit",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Directly adopts the regional choronym Kachchha (Sanskrit kaccha, 'marshy/coastal land'), describing the seasonal salt-marsh peninsula of Kutch.",
+      "etymology_analysis": "Sanskrit Kanthakota (Gujarati Kanthkot, also Kanthadurg), traditionally named after the ascetic Kanthadnath combined with kota ('fort'), referring to the ancient hilltop stronghold in Bhachau, Kutch.",
       "current_repo_state": {
         "name": "Kutsch",
         "b_tarr": "Kutsch",
@@ -2681,7 +2685,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/History_of_Kutch",
+      "source_url": "https://en.wikipedia.org/wiki/Kanthkot_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3174,7 +3178,7 @@
     },
     "b_anahilapataka": {
       "barony_key": "b_anahilapataka",
-      "modern_name": "Sarasvata Mandala",
+      "modern_name": "Anahilapataka",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -3182,29 +3186,29 @@
         "county": "c_sarasvata_mandala",
         "holding_type": "castle"
       },
-      "first_mention_year": 950,
-      "first_mention_attestation": "The regional choronym Sarasvata Mandala (the Sarasvati river province centered on Anahilapataka) is epigraphically attested from the Chaulukya period (10th century CE onward), whereas the 746 CE founding of Anahilapataka by Vanaraja Chavda comes from later medieval prabandha tradition.",
-      "is_historical_867": false,
+      "first_mention_year": 746,
+      "first_mention_attestation": "Founded in 746 CE by Vanaraja Chavda as the capital of the Chavda dynasty of Gujarat (recorded in medieval Gujarati prabandha chronicles such as Merutunga's Prabandhachintamani and later Chaulukya inscriptions as Anahilapataka / Anahilavada, modern Patan).",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Sarasvata Mandala"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "sārasvata",
-          "language": "Sanskrit",
-          "translation": "pertaining to the Sarasvati River"
+          "form": "aṇahila",
+          "language": "Sanskrit/Prakrit",
+          "translation": "personal name of the 8th-century shepherd Anahila"
         },
         {
-          "form": "maṇḍala",
+          "form": "pāṭaka",
           "language": "Sanskrit",
-          "translation": "province, circle, territory"
+          "translation": "town, quarter, settlement"
         }
       ],
-      "etymology_analysis": "Sanskrit choronym Sarasvata-Mandala ('Province of the Sarasvati'), naming the northern Gujarat region around Patan/Anahilapataka.",
+      "etymology_analysis": "Sanskrit Anahilapataka ('Town of Anahila', also Anahilavada / Anhilwara, modern Patan), traditionally named by Vanaraja Chavda in 746 CE after his shepherd guide Anahila.",
       "current_repo_state": {
         "name": "Saraswate-Mandale",
         "b_tarr": "Saraswate-Mandale",
@@ -3545,7 +3549,7 @@
     },
     "b_akruresvara": {
       "barony_key": "b_akruresvara",
-      "modern_name": "Navasarika",
+      "modern_name": "Akruresvara",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -3553,8 +3557,62 @@
         "county": "c_navasarika",
         "holding_type": "castle"
       },
+      "first_mention_year": 629,
+      "first_mention_attestation": "Attested as Akrureshvara-vishaya (an administrative district) in the copper-plate land grants of Gurjara ruler Dadda II (629–643 CE), and subsequently in 8th–9th century CE Rashtrakuta copper-plate charters.",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "akrūra",
+          "language": "Sanskrit",
+          "translation": "gentle, not cruel (or legendary sage/shrine name)"
+        },
+        {
+          "form": "īśvara",
+          "language": "Sanskrit",
+          "translation": "lord (epithet of Shiva)"
+        }
+      ],
+      "etymology_analysis": "Sanskrit Akrureshvara ('Lord Akrura', modern Ankleshwar in Bharuch district, Gujarat), attested as an administrative center (vishaya) in 7th–9th century CE Gurjara and Rashtrakuta charters.",
+      "current_repo_state": {
+        "name": "Nawasarike",
+        "b_tarr": "Nawasarike",
+        "b_tarr_direct": "Nawasarike",
+        "b_tarr_hist": "Nawasarike",
+        "b_origin": "Nawasarike (Nawasarike (in-game: Navasarika))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Nawasarike).",
+        "b_ipa": "[na.wa.za.ˈrɪ.kə]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ankleshwar",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_navasarika": {
+      "barony_key": "b_navasarika",
+      "modern_name": "Navasarika",
+      "hierarchy": {
+        "empire": "e_rajastan",
+        "kingdom": "k_gujarat",
+        "duchy": "d_lata",
+        "county": "c_navasarika",
+        "holding_type": "city"
+      },
       "first_mention_year": 739,
-      "first_mention_attestation": "Attested as Navasarika in the 738–739 CE Navsari copper-plate inscription of Avanijanashraya Pulakeshin of the Gujarat Chalukyas.",
+      "first_mention_attestation": "Attested as Navasarika in the 738–739 CE Navsari copper-plate inscription of Avanijanashraya Pulakeshin of the Gujarat Chalukyas (and earlier Chalukya charters from the region beginning in 671 CE).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3571,65 +3629,11 @@
         },
         {
           "form": "sārikā",
-          "language": "Sanskrit",
-          "translation": "settlement/Sari (or Parsi 'New Sari')"
+          "language": "Sanskrit/Prakrit",
+          "translation": "settlement/city element (cf. Navasari)"
         }
       ],
-      "etymology_analysis": "Sanskrit Navasarika (modern Navsari), capital of the 7th–8th century CE Chalukyas of Navasarika in Lata (southern Gujarat).",
-      "current_repo_state": {
-        "name": "Nawasarike",
-        "b_tarr": "Nawasarike",
-        "b_tarr_direct": "Nawasarike",
-        "b_tarr_hist": "Nawasarike",
-        "b_origin": "Nawasarike (Nawasarike (in-game: Navasarika))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Nawasarike).",
-        "b_ipa": "[na.wa.za.ˈrɪ.kə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Chalukyas_of_Navasarika",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_navasarika": {
-      "barony_key": "b_navasarika",
-      "modern_name": "Norbertstat",
-      "hierarchy": {
-        "empire": "e_rajastan",
-        "kingdom": "k_gujarat",
-        "duchy": "d_lata",
-        "county": "c_navasarika",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; fictional disambiguated name coined in the repository for the city holding in Navasarika.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Norbert",
-          "language": "German",
-          "translation": "personal name Norbert"
-        },
-        {
-          "form": "-stat",
-          "language": "Middle High German",
-          "translation": "town, place, settlement"
-        }
-      ],
-      "etymology_analysis": "Synthetic German-style disambiguated holding name coined in the repository from the personal name Norbert and Middle High German -stat ('town, place'). The underlying historical site is Navasarika (modern Navsari).",
+      "etymology_analysis": "Sanskrit Navasarika (modern Navsari in southern Gujarat), capital of the 7th–8th century CE Early Chalukyas of Navasarika in Lata.",
       "current_repo_state": {
         "name": "Norbertstat",
         "b_tarr": "Norbertstat",
@@ -3643,14 +3647,12 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Chalukyas_of_Navasarika",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Navasarika"
-        ],
-        "first_mention_year": 738,
-        "first_mention_source": "Navsari copper-plate inscription of Avanijanashraya Pulakeshin (738–739 CE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "Navasarika (modern Navsari) was the capital of the Early Chalukyas of Navasarika before 867 CE."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_bharuch": {
@@ -4033,7 +4035,7 @@
     },
     "b_vamanasthali": {
       "barony_key": "b_vamanasthali",
-      "modern_name": "Bhumilka",
+      "modern_name": "Vamanasthali",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -4041,9 +4043,9 @@
         "county": "c_bhumilka",
         "holding_type": "castle"
       },
-      "first_mention_year": 735,
-      "first_mention_attestation": "Attested as Bhutambilika / Bhumilika in Saindhava dynasty copper-plate grants (c. 735–920 CE) as their capital in western Saurashtra.",
-      "is_historical_867": true,
+      "first_mention_year": 1289,
+      "first_mention_attestation": "Earliest surviving local epigraphic record is the Vanthali stone inscription of VS 1346 (1289–1290 CE), while Hemachandra's 12th-century Dvyashraya Kavya and bardic chronicles record Vamanasthali as the capital of 10th-century Abhira ruler Graharipu and the Chudasama dynasty (traditionally founded c. 875 CE).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -4053,17 +4055,17 @@
       },
       "morphemes": [
         {
-          "form": "bhumi",
+          "form": "vāmana",
           "language": "Sanskrit",
-          "translation": "earth, land, ground"
+          "translation": "Vamana (dwarf avatar of Vishnu)"
         },
         {
-          "form": "-ilika",
+          "form": "sthalī",
           "language": "Sanskrit",
-          "translation": "toponymic diminutive suffix"
+          "translation": "place, ground, site"
         }
       ],
-      "etymology_analysis": "Attested in Saindhava inscriptions as Bhutambilika and Bhumilika, later contracted to Bhumli and modern Ghumli; 'Bumilke' in the repository is a Germanized spelling of Bhumilka.",
+      "etymology_analysis": "Sanskrit Vamanasthali ('Abode/Place of Vamana', contracted to modern Vanthali in Junagadh district, Gujarat), medieval capital of the Chudasama dynasty in Saurashtra.",
       "current_repo_state": {
         "name": "Bumilke",
         "b_tarr": "Bumilke",
@@ -4075,7 +4077,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ghumli",
+      "source_url": "https://en.wikipedia.org/wiki/Vanthali",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4087,7 +4089,7 @@
     },
     "b_bhumilka": {
       "barony_key": "b_bhumilka",
-      "modern_name": "Barbaraszelle",
+      "modern_name": "Bhumilka",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_gujarat",
@@ -4095,9 +4097,9 @@
         "county": "c_bhumilka",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; fictional disambiguated name coined in the repository for the temple holding in Bhumilka.",
-      "is_historical_867": false,
+      "first_mention_year": 735,
+      "first_mention_attestation": "Attested as Bhutambilika / Bhumilika in Saindhava dynasty copper-plate grants (c. 735–920 CE) as their capital in western Saurashtra, Gujarat.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -4107,22 +4109,12 @@
       },
       "morphemes": [
         {
-          "form": "Barbara",
-          "language": "German",
-          "translation": "personal name Barbara"
-        },
-        {
-          "form": "-s-",
-          "language": "German",
-          "translation": "genitive linking element"
-        },
-        {
-          "form": "Zelle",
-          "language": "German",
-          "translation": "monastic cell, hermitage"
+          "form": "bhūtāmbilikā",
+          "language": "Sanskrit/Prakrit",
+          "translation": "ancient toponym contracted to Bhumilika / Ghumli"
         }
       ],
-      "etymology_analysis": "Synthetic German disambiguated holding name coined in the repository from the personal name Barbara and Zelle ('monastic cell'). The underlying historical site is Bhutambilika / Bhumilika (modern Ghumli).",
+      "etymology_analysis": "Contracted form of Sanskrit Bhutambilika / Bhumilika (later Bhumli and modern Ghumli in Devbhumi Dwarka district, Gujarat), attested from c. 735 CE as the Saindhava capital.",
       "current_repo_state": {
         "name": "Barbaraszelle",
         "b_tarr": "Barbaraszelle",
@@ -4136,15 +4128,12 @@
       },
       "source_url": "https://en.wikipedia.org/wiki/Ghumli",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Bhutambilika",
-          "Bhumilika"
-        ],
-        "first_mention_year": 735,
-        "first_mention_source": "Saindhava dynasty copper-plate grants (c. 735–920 CE)",
-        "relationship": "same_site_earlier_name",
-        "notes": "Bhutambilika / Bhumilika (modern Ghumli) was the Saindhava capital from c. 735 CE."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_shrinagar": {
@@ -5248,7 +5237,7 @@
     },
     "b_sinja": {
       "barony_key": "b_sinja",
-      "modern_name": "Jumla",
+      "modern_name": "Sinja",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_himalaya",
@@ -5256,8 +5245,8 @@
         "county": "c_jumla",
         "holding_type": "castle"
       },
-      "first_mention_year": 1050,
-      "first_mention_attestation": "Unattested in contemporary pre-867 CE sources; the Khasa Malla kingdom was established at Sinja/Jumla in the 11th–12th centuries CE, followed by the Kallala Kingdom of Jumla.",
+      "first_mention_year": 1150,
+      "first_mention_attestation": "Attested from the 12th–14th centuries CE in Khasa Malla royal records and Karnali cliff/pillar inscriptions as the capital valley (Sinja / Simja) of the medieval Khasa Malla kingdom in western Nepal.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5268,12 +5257,12 @@
       },
       "morphemes": [
         {
-          "form": "Jumla",
-          "language": "Nepali",
-          "translation": "mountain valley and kingdom name Jumla"
+          "form": "siñjā",
+          "language": "Nepali/Khas",
+          "translation": "historic valley and capital name (Sinja / Simja)"
         }
       ],
-      "etymology_analysis": "Jumla ('Dschumle' in the repository's Germanized spelling) is the historic valley and kingdom in Karnali, western Nepal, prominent from the Khasa Malla and Kallala eras.",
+      "etymology_analysis": "Sinja (also Simja), the historic Karnali valley in Jumla district, western Nepal, which served as the imperial capital of the Khasa Malla kingdom from the 12th to 14th centuries CE.",
       "current_repo_state": {
         "name": "Dschumle",
         "b_tarr": "Dschumle",
@@ -5285,7 +5274,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Jumla_District",
+      "source_url": "https://en.wikipedia.org/wiki/Sinja_Valley",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5297,7 +5286,7 @@
     },
     "b_jumla": {
       "barony_key": "b_jumla",
-      "modern_name": "Farabertstat",
+      "modern_name": "Jumla",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_himalaya",
@@ -5305,8 +5294,8 @@
         "county": "c_jumla",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; fictional disambiguated name coined in the repository for the city holding in Jumla.",
+      "first_mention_year": 1404,
+      "first_mention_attestation": "Attested historically as the center of the Kallala Kingdom of Jumla founded c. 1404 CE by Baliraja following the breakup of the Khasa Malla empire; unattested in contemporary pre-867 CE sources.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5317,17 +5306,12 @@
       },
       "morphemes": [
         {
-          "form": "Farabert",
-          "language": "German",
-          "translation": "personal name Farabert"
-        },
-        {
-          "form": "-stat",
-          "language": "Middle High German",
-          "translation": "town, place, settlement"
+          "form": "jumlā",
+          "language": "Nepali/Khas",
+          "translation": "historic mountain valley and town name in Karnali"
         }
       ],
-      "etymology_analysis": "Synthetic German disambiguated holding name coined in the repository from the personal name Farabert and Middle High German -stat ('town, place').",
+      "etymology_analysis": "Jumla is the historic high-altitude town and kingdom in the Karnali basin of western Nepal, prominent from the late Khasa Malla and Kallala eras onward.",
       "current_repo_state": {
         "name": "Farabertstat",
         "b_tarr": "Farabertstat",
@@ -5802,7 +5786,7 @@
     },
     "b_devalgarh": {
       "barony_key": "b_devalgarh",
-      "modern_name": "Garhwal",
+      "modern_name": "Devalgarh",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_himalaya",
@@ -5811,10 +5795,10 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1512,
-      "first_mention_attestation": "Attested from the early 16th century CE (1506–1517 CE), when Raja Ajay Pal unified the 52 forts (garhs) into the Garhwal Kingdom.",
+      "first_mention_attestation": "Historically documented in 1512 CE when Panwar king Ajay Pal transferred the capital of the unified Garhwal Kingdom to Devalgarh, a fortified seat traditionally founded by King Deval of Kangra.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after King Deval (traditionally a prince/ruler from Kangra) who founded the fortified seat in Pauri Garhwal prior to its adoption as capital by Garhwal king Ajay Pal in 1512 CE.",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -5822,17 +5806,17 @@
       },
       "morphemes": [
         {
-          "form": "garh",
-          "language": "Hindi",
-          "translation": "fort, stronghold"
+          "form": "deval",
+          "language": "Garhwali/Hindi",
+          "translation": "personal name King Deval (or temple, devala)"
         },
         {
-          "form": "-wal",
-          "language": "Hindi",
-          "translation": "keeper, land of"
+          "form": "gaṛh",
+          "language": "Garhwali/Hindi",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "From Garhwali/Hindi garh ('fort') + -wal ('land/keeper of'), referring to the 52 forts unified by Ajay Pal in the early 16th century CE ('Garwhal' in the repository is a transposition).",
+      "etymology_analysis": "Compound of the personal name Deval and Garhwali/Hindi garh ('fort'), referring to the historic Panwar Garhwal seat in Pauri Garhwal, Uttarakhand.",
       "current_repo_state": {
         "name": "Garwhal",
         "b_tarr": "Garwhal",
@@ -6018,7 +6002,7 @@
     },
     "b_champawat": {
       "barony_key": "b_champawat",
-      "modern_name": "Kali Kumaon",
+      "modern_name": "Champawat",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_himalaya",
@@ -6026,8 +6010,8 @@
         "county": "c_kali_kumaon",
         "holding_type": "castle"
       },
-      "first_mention_year": 1000,
-      "first_mention_attestation": "Attested from the early 11th century CE as the region surrounding Champawat, the first capital of the Chand dynasty of Kumaon.",
+      "first_mention_year": 1223,
+      "first_mention_attestation": "Earliest dated epigraphic record at Champawat is the 1223 CE Baleshwar Temple inscription of Krachalla Deva (while later Kumaoni vamshavali tradition attributes the founding of the Chand capital there to Som Chand in the 10th–11th century CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6038,17 +6022,17 @@
       },
       "morphemes": [
         {
-          "form": "Kali",
-          "language": "Hindi",
-          "translation": "Kali (Sharda) River"
+          "form": "champā",
+          "language": "Sanskrit/Kumaoni",
+          "translation": "Champa (flower/princess/deity Champavati)"
         },
         {
-          "form": "Kumaon",
-          "language": "Kumaoni",
-          "translation": "region of Kumaon (from Kurmanchal)"
+          "form": "-wat",
+          "language": "Sanskrit/Kumaoni",
+          "translation": "possessing, place of (from -vatī)"
         }
       ],
-      "etymology_analysis": "Compound of the Kali River (forming the eastern border) and Kumaon (from Sanskrit Kurmachal), distinguishing the Champawat heartland from the rest of Kumaon.",
+      "etymology_analysis": "From Sanskrit Champavati ('Place of Champa'), the first capital of the medieval Chand dynasty in Kumaon, Uttarakhand.",
       "current_repo_state": {
         "name": "Kali Kumaon",
         "b_tarr": "Kali Kumaon",
@@ -6126,7 +6110,7 @@
     },
     "b_kartikeyapura": {
       "barony_key": "b_kartikeyapura",
-      "modern_name": "Kumaon",
+      "modern_name": "Kartikeyapura",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_himalaya",
@@ -6134,9 +6118,9 @@
         "county": "c_kumaon",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested by the modern form Kumaon <= 867 CE; the Katyuri dynasty (c. 700–1100 CE) called their realm Kurmanchal and their capital Kartikeyapura (attested in 9th-century CE copper plates).",
-      "is_historical_867": false,
+      "first_mention_year": 853,
+      "first_mention_attestation": "Attested as Karttikeyapura in the Pandukeshwar copper-plate inscriptions of Katyuri ruler Lalitasuradeva (dated December 853 / September 854 CE) and other 8th–10th century CE Katyuri copper-plate charters.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -6146,17 +6130,17 @@
       },
       "morphemes": [
         {
-          "form": "Kurma",
+          "form": "kārttikeya",
           "language": "Sanskrit",
-          "translation": "tortoise avatar of Vishnu"
+          "translation": "Karttikeya (Hindu war deity, son of Shiva)"
         },
         {
-          "form": "achala",
+          "form": "pura",
           "language": "Sanskrit",
-          "translation": "mountain, hill"
+          "translation": "city, fortified town"
         }
       ],
-      "etymology_analysis": "Kumaon evolved from Sanskrit Kurmachala / Kurmanchal ('mountain of the Kurma avatar of Vishnu').",
+      "etymology_analysis": "Sanskrit Karttikeyapura ('City of Karttikeya'), the early medieval capital of the Katyuri dynasty in Uttarakhand (associated with Joshimath and Baijnath), attested in 9th-century copper plates.",
       "current_repo_state": {
         "name": "Kumaon",
         "b_tarr": "Kumaon",
@@ -6168,17 +6152,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kumaon_division",
+      "source_url": "https://en.wikipedia.org/wiki/Katyuri_kings",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Kartikeyapura",
-          "Kurmanchal"
-        ],
-        "first_mention_year": 850,
-        "first_mention_source": "Katyuri dynasty copper-plate inscriptions (9th century CE, e.g. Pandukeshwar plates)",
-        "relationship": "same_site_earlier_name",
-        "notes": "Kartikeyapura (modern Baijnath) and Kurmanchal were the Katyuri capital and state name in the 9th century CE prior to the later form Kumaon."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_almora": {
@@ -7541,7 +7522,7 @@
     },
     "b_srinagara": {
       "barony_key": "b_srinagara",
-      "modern_name": "Kashmir",
+      "modern_name": "Srinagara",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_kashmir",
@@ -7549,24 +7530,29 @@
         "county": "c_kasmira",
         "holding_type": "castle"
       },
-      "first_mention_year": -400,
-      "first_mention_attestation": "Attested as Kaśmīra in Pāṇini's Aṣṭādhyāyī (c. 5th–4th century BCE), Ptolemy's Geography as Kaspeiria (c. 150 CE), and the Nīlamata Purāṇa (6th–7th century CE).",
+      "first_mention_year": 631,
+      "first_mention_attestation": "Attested as the capital of Kashmir in Xuanzang's 631 CE travel account (Si-Yu-Ki) and detailed in Kalhana's Rajatarangini, which records both Ashoka's older capital Srinagari (Pandrethan) and Pravarasena II's 6th-century CE new capital Pravarapura that assumed the name Srinagara.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Kashmir"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Kaśmīra",
+          "form": "śrī",
           "language": "Sanskrit",
-          "translation": "Kashmir (traditionally linked to Kaśyapa + mīra)"
+          "translation": "prosperity, auspiciousness, Lakshmi"
+        },
+        {
+          "form": "nagara",
+          "language": "Sanskrit",
+          "translation": "city"
         }
       ],
-      "etymology_analysis": "Sanskrit Kaśmīra (modern Kashmir), traditionally etymologized as land desiccated by sage Kaśyapa or ka ('water') + śamīra ('desiccated').",
+      "etymology_analysis": "Sanskrit Srinagara ('City of Prosperity / Sri', modern Srinagar), the ancient capital of Kashmir on the Jhelum River, attested by Xuanzang in 631 CE and in Kalhana's Rajatarangini.",
       "current_repo_state": {
         "name": "Kasmire",
         "b_tarr": "Kasmire",
@@ -7578,7 +7564,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kashmir",
+      "source_url": "https://en.wikipedia.org/wiki/Srinagar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9864,7 +9850,7 @@
     },
     "b_faizabad": {
       "barony_key": "b_faizabad",
-      "modern_name": "Sarayu",
+      "modern_name": "Faizabad",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_kosala",
@@ -9872,29 +9858,29 @@
         "county": "c_ayodhya",
         "holding_type": "city"
       },
-      "first_mention_year": -1200,
-      "first_mention_attestation": "Attested as Sarayu in the Rigveda (4.30.18, 5.53.9, 10.64.9, c. 1500–1200 BCE) and in Vālmīki's Rāmāyaṇa.",
-      "is_historical_867": true,
+      "first_mention_year": 1730,
+      "first_mention_attestation": "Founded c. 1730 CE by Saadat Ali Khan I (Burhan-ul-Mulk), the first Nawab of Awadh, initially as a hunting lodge and cantonment called Bangla near Ayodhya, and expanded as the Awadhi capital named Faizabad under Safdar Jung and Shuja-ud-Daula.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Sarayu"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "sar-",
-          "language": "Sanskrit",
-          "translation": "to flow, stream"
+          "form": "faiẓ",
+          "language": "Arabic/Persian",
+          "translation": "bounty, grace, abundance"
         },
         {
-          "form": "-ayu",
-          "language": "Sanskrit",
-          "translation": "river/water suffix"
+          "form": "ābād",
+          "language": "Persian",
+          "translation": "inhabited place, city"
         }
       ],
-      "etymology_analysis": "Sanskrit Sarayū ('that which flows'), the sacred Rigvedic and Ramayana river flowing past Ayodhya.",
+      "etymology_analysis": "Perso-Arabic compound Faizabad ('Abode of Bounty/Grace'), founded c. 1730 CE by Nawab Saadat Ali Khan I on the Ghaghara (Sarayu) river beside Ayodhya.",
       "current_repo_state": {
         "name": "Sarajû",
         "b_tarr": "Sarajû",
@@ -9906,7 +9892,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sarju",
+      "source_url": "https://en.wikipedia.org/wiki/Faizabad",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11683,7 +11669,7 @@
     },
     "b_borgarh": {
       "barony_key": "b_borgarh",
-      "modern_name": "Narmada-Tal",
+      "modern_name": "Borgarh",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_malwa",
@@ -11692,7 +11678,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Modern German-adapted topographic compound ('Narmada-Tal', Narmada Valley) in the repository, unattested as a settlement/valley compound <= 867 CE; built on the Narmada River hydronym (c. 80 CE).",
+      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; refers to a regional fort/locality (Borgarh / Bhawargarh) in the Nimar–Malwa Satpura tract south of Dhar and the Narmada valley in Madhya Pradesh.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11703,17 +11689,17 @@
       },
       "morphemes": [
         {
-          "form": "Narmadā",
-          "language": "Sanskrit",
-          "translation": "giver of pleasure (river name)"
+          "form": "bor",
+          "language": "Hindi/Malvi",
+          "translation": "jujube/ber tree (or regional variant of bhawar)"
         },
         {
-          "form": "Tal",
-          "language": "German",
-          "translation": "valley"
+          "form": "gaṛh",
+          "language": "Hindi/Prakrit",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Mod adaptation replacing anachronistic Borgarh with the ancient Narmada River valley: Sanskrit Narmadā ('giver of pleasure', attested c. 80 CE in the Periplus) + German Tal ('valley').",
+      "etymology_analysis": "Indo-Aryan fort compound combining bor (Hindi/Malvi jujube tree or local variant) with garh ('fort'), denoting a hill fort/locality in western Madhya Pradesh.",
       "current_repo_state": {
         "name": "Narmadâ-Tâl",
         "b_tarr": "Narmadâ-Tâl",
@@ -11725,18 +11711,14 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Narmada_River",
+      "source_url": null,
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Narmada",
-          "Namnadius",
-          "Namadus"
-        ],
-        "first_mention_year": 80,
-        "first_mention_source": "Periplus Maris Erythraei (c. 80 CE, Namnadius) and Ptolemy's Geography (c. 150 CE, Namadus)",
-        "relationship": "stripped_post_867_modifier",
-        "notes": "The Narmada River hydronym is attested by c. 80 CE prior to the modern German-adapted valley compound Narmada-Tal."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_thalner": {
@@ -11898,7 +11880,7 @@
     },
     "b_amalner": {
       "barony_key": "b_amalner",
-      "modern_name": "Matthiasstat",
+      "modern_name": "Amalner",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_malwa",
@@ -11906,8 +11888,8 @@
         "county": "c_thalner",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Fictional/Germanized mod name ('Matthiasstat') replacing Amalner; unattested in any historical source.",
+      "first_mention_year": 1595,
+      "first_mention_attestation": "Recorded in late 16th-century Mughal administrative and revenue rolls of Khandesh (Ain-i-Akbari, c. 1595 CE); unattested in pre-867 CE historical sources.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11918,17 +11900,17 @@
       },
       "morphemes": [
         {
-          "form": "Matthias",
-          "language": "German",
-          "translation": "Matthias (personal name)"
+          "form": "amal",
+          "language": "Sanskrit/Marathi",
+          "translation": "pure, spotless (or administrative revenue jurisdiction)"
         },
         {
-          "form": "stat / Stadt",
-          "language": "German",
-          "translation": "town, stead"
+          "form": "ner",
+          "language": "Marathi",
+          "translation": "town, settlement (common Khandesh toponymic suffix)"
         }
       ],
-      "etymology_analysis": "German-language mod coinage ('Matthias's town') used in place of Amalner in Maharashtra; neither Matthiasstat nor Amalner is attested prior to 867 CE.",
+      "etymology_analysis": "Historic town on the Bori River in Jalgaon district (Khandesh), Maharashtra, combining amal with the regional Maharashtrian settlement suffix -ner.",
       "current_repo_state": {
         "name": "Matthiasstat",
         "b_tarr": "Matthiasstat",
@@ -11940,7 +11922,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Amalner",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -13055,7 +13037,7 @@
     },
     "b_shergarh": {
       "barony_key": "b_shergarh",
-      "modern_name": "Kabul",
+      "modern_name": "Shergarh",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -13063,24 +13045,29 @@
         "county": "c_purushapura",
         "holding_type": "city"
       },
-      "first_mention_year": -1500,
-      "first_mention_attestation": "Named after the Kabul River, attested as Kubhā in the Rigveda (c. 1500 BCE) and Cophen (Κωφήν) in Arrian's account of Alexander's campaign (327 BCE).",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "first_mention_year": 1540,
+      "first_mention_attestation": "Historic fort and town in Mardan district, Khyber Pakhtunkhwa, associated with the 16th-century Suri era of Sher Shah Suri (r. 1540–1545 CE); unattested in pre-867 CE written sources.",
+      "is_historical_867": false,
+      "named_after_post_867_person": true,
+      "eponym_details": "Associated with the 16th-century Suri ruler Sher Shah Suri (r. 1540–1545 CE), after whom numerous Suri-era strongholds across northern India and the northwest frontier were named Shergarh.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Kabul"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Kubhā / Kābul",
-          "language": "Sanskrit/Avestan",
-          "translation": "Kabul River"
+          "form": "sher",
+          "language": "Persian/Urdu/Pashto",
+          "translation": "lion; royal epithet of Sher Shah Suri"
+        },
+        {
+          "form": "gaṛh",
+          "language": "Hindi/Urdu",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Mod hydronymic replacement for anachronistic Shergarh (1540 CE), referring to the Kabul River (ancient Sanskrit/Avestan Kubhā, Greek Kōphēn).",
+      "etymology_analysis": "Compound of Persian/Urdu sher ('lion', also the title of Sher Shah Suri) and Indo-Aryan garh ('fort'), denoting the historic stronghold/town in Mardan district, Khyber Pakhtunkhwa.",
       "current_repo_state": {
         "name": "Kâbul",
         "b_tarr": "Kâbul",
@@ -13092,7 +13079,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kabul_River",
+      "source_url": "https://en.wikipedia.org/wiki/Shergarh,_Mardan",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -14276,7 +14263,7 @@
     },
     "b_bhirr": {
       "barony_key": "b_bhirr",
-      "modern_name": "Shorkot",
+      "modern_name": "Bhirr",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -14285,7 +14272,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested under the name Shorkot by 867 CE; the ancient mound of Shorkot was attested in 403 CE under the earlier name Śivipura (Sibipura).",
+      "first_mention_attestation": "Unattested as a proper settlement name by 867 CE; Punjabi/Saraiki bhirr ('ruined mound') denotes the ancient archaeological mound adjacent to Shorkot in Jhang district, Punjab, Pakistan.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14296,17 +14283,12 @@
       },
       "morphemes": [
         {
-          "form": "Shor",
-          "language": "Punjabi/Sanskrit",
-          "translation": "contraction of Śivipura / legendary founder Raja Shor"
-        },
-        {
-          "form": "koṭ",
-          "language": "Punjabi/Indo-Aryan",
-          "translation": "fort, stronghold"
+          "form": "bhiṛ",
+          "language": "Punjabi/Saraiki",
+          "translation": "ancient ruined mound, tell"
         }
       ],
-      "etymology_analysis": "Compound of Punjabi/Indo-Aryan koṭ ('fort') and Shor, likely a vernacularized survival of ancient Śivipura (Sibipura) or a legendary ruler. While the site is ancient, the name Shorkot is not attested by 867 CE.",
+      "etymology_analysis": "From Punjabi/Saraiki bhir / bhirr ('ruined mound'), referring locally to the towering ancient tell of Shorkot in Jhang district, Punjab, Pakistan.",
       "current_repo_state": {
         "name": "Schorkot",
         "b_tarr": "Schorkot",
@@ -14326,14 +14308,14 @@
           "Śivipura"
         ],
         "first_mention_year": 403,
-        "first_mention_source": "Shorkot copper-pot inscription dated Samvat 83 (Gupta era, 403 CE), recording a donation to Sarvastivada Buddhists at Śivipura.",
+        "first_mention_source": "Shorkot copper-pot inscription dated Gupta Samvat 83 (403 CE)",
         "relationship": "same_site_earlier_name",
-        "notes": "Identified archaeologically and epigraphically with the ancient Shorkot mound."
+        "notes": "The Shorkot Bhirr archaeological mound is identified epigraphically with ancient Śivipura (Sibipura), attested in 403 CE."
       }
     },
     "b_shorkot": {
       "barony_key": "b_shorkot",
-      "modern_name": "Sofiemarct",
+      "modern_name": "Shorkot",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -14342,7 +14324,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested; fictional/mod-specific disambiguated intra-county capital barony ('Chartered market borough established by Sofie').",
+      "first_mention_attestation": "Unattested under the name Shorkot by 867 CE; the ancient mound of Shorkot in Jhang district, Punjab, Pakistan was attested in 403 CE under the earlier name Śivipura (Sibipura).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14353,17 +14335,17 @@
       },
       "morphemes": [
         {
-          "form": "Sofie",
-          "language": "Germanic/European",
-          "translation": "personal name"
+          "form": "shor",
+          "language": "Punjabi/Prakrit",
+          "translation": "vernacular reflex of Śivipura or legendary local name"
         },
         {
-          "form": "marct",
-          "language": "Middle High German",
-          "translation": "market"
+          "form": "koṭ",
+          "language": "Punjabi/Sanskrit",
+          "translation": "fort, walled town"
         }
       ],
-      "etymology_analysis": "Mod-generated disambiguated capital barony combining the European personal name Sofie with Middle High German marct ('market'). Not a historical South Asian settlement.",
+      "etymology_analysis": "Compound of Punjabi/Indo-Aryan kot ('fort') and Shor, likely a vernacular evolution of ancient Śivipura (Sibipura); although the mound is ancient, the name Shorkot is not attested by 867 CE.",
       "current_repo_state": {
         "name": "Sofiemarct",
         "b_tarr": "Sofiemarct",
@@ -14375,14 +14357,17 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Shorkot",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Sibipura",
+          "Śivipura"
+        ],
+        "first_mention_year": 403,
+        "first_mention_source": "Shorkot copper-pot inscription dated Samvat 83 (Gupta era, 403 CE), recording a donation to Sarvastivada Buddhists at Śivipura.",
+        "relationship": "same_site_earlier_name",
+        "notes": "Identified archaeologically and epigraphically with the ancient Shorkot mound."
       }
     },
     "b_kamalia": {
@@ -14441,7 +14426,7 @@
     },
     "b_jalandhar": {
       "barony_key": "b_jalandhar",
-      "modern_name": "Trigarta",
+      "modern_name": "Jalandhar",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -14449,29 +14434,29 @@
         "county": "c_trigarta",
         "holding_type": "castle"
       },
-      "first_mention_year": -500,
-      "first_mention_attestation": "Attested as Trigarta in Pāṇini's Aṣṭādhyāyī (c. 5th century BCE) as a martial republic of six states, and later in the Mahabharata and Vishnu Purana.",
+      "first_mention_year": 635,
+      "first_mention_attestation": "Attested as the kingdom and city of Jalandhara in the Mahabharata and Puranas, and explicitly visited and documented by Chinese pilgrim Xuanzang c. 635 CE (as She-lan-ta-lo); earlier classical geography (Ptolemy, c. 150 CE) also describes the adjacent Kulindrine region.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Trigarta"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "tri",
+          "form": "jala",
           "language": "Sanskrit",
-          "translation": "three"
+          "translation": "water"
         },
         {
-          "form": "garta",
+          "form": "dhara",
           "language": "Sanskrit",
-          "translation": "river valley / pit / basin"
+          "translation": "holding, bearer (also linked to the Puranic asura Jalandhara)"
         }
       ],
-      "etymology_analysis": "From Sanskrit Trigarta ('land of the three rivers/valleys'—referring to the Sutlej, Beas, and Ravi basins), an ancient Indo-Aryan kingdom and region attested as early as Pāṇini (c. 500 BCE).",
+      "etymology_analysis": "Sanskrit Jalandhara ('Water-bearing tract' between the Sutlej and Beas rivers, also mythologized in the Padma Purana via the demon Jalandhara), an ancient urban center and kingdom of Punjab.",
       "current_repo_state": {
         "name": "Trigarte",
         "b_tarr": "Trigarte",
@@ -14483,7 +14468,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Trigarta",
+      "source_url": "https://en.wikipedia.org/wiki/Jalandhar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -14549,7 +14534,7 @@
     },
     "b_pathankot": {
       "barony_key": "b_pathankot",
-      "modern_name": "Chakki",
+      "modern_name": "Pathankot",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -14558,23 +14543,28 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; refers to the Chakki River, a tributary of the Beas near Pathankot.",
+      "first_mention_attestation": "Unattested under the modern compound name Pathankot by 867 CE; the medieval fortification name evolved from ancient Paithan (Pratishthana), an Audumbara urban and minting center attested on coins from c. 2nd–1st century BCE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Chakki River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Chakkī",
-          "language": "Punjabi/Dogri",
-          "translation": "river/stream name (Chakki Khad)"
+          "form": "paiṭhān",
+          "language": "Prakrit/Punjabi",
+          "translation": "from Sanskrit Pratishthana ('established seat')"
+        },
+        {
+          "form": "koṭ",
+          "language": "Punjabi/Sanskrit",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Hydronymic barony named after the Chakki River (Chakki Khad), a tributary of the Beas River flowing through Himachal Pradesh and Punjab near Pathankot. While the river itself is a natural feature, the name Chakki is not attested in written sources by 867 CE.",
+      "etymology_analysis": "Medieval contraction of Paithan-kot ('Fort of Paithan'), derived from ancient Sanskrit Pratishthana (giving rise to the Pathania clan name) plus Indo-Aryan kot ('fort').",
       "current_repo_state": {
         "name": "Tschakkî",
         "b_tarr": "Tschakkî",
@@ -14586,14 +14576,17 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Chakki_River",
+      "source_url": "https://en.wikipedia.org/wiki/Pathankot",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Pratishthana",
+          "Paithan"
+        ],
+        "first_mention_year": -100,
+        "first_mention_source": "Audumbara coinage (c. 2nd–1st century BCE) and ancient Sanskrit geographical tradition",
+        "relationship": "same_site_earlier_name",
+        "notes": "Pathankot was historically known as Pratishthana (Prakrit Paithan), an important Audumbara center prior to the later medieval addition of -kot."
       }
     },
     "b_kahlur": {
@@ -14814,7 +14807,7 @@
     },
     "b_loralai": {
       "barony_key": "b_loralai",
-      "modern_name": "Kalat",
+      "modern_name": "Loralai",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -14822,24 +14815,29 @@
         "county": "c_kalat",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested under the name Kalat by 867 CE; the region was attested in 662 CE as Qayqan (Qīqān), while the Arabic-derived name Kalāt/Qalāt ('fortress', as Kalāt-i-Sēva / Kalāt-i-Baloch) emerged later in the medieval period.",
+      "first_mention_year": 1886,
+      "first_mention_attestation": "Established as a British military garrison and administrative town in 1886 CE (with Loralai District formed in 1903 CE), named after the Loralai (Lora) River in northeastern Balochistan, Pakistan.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Loralai River"
       },
       "morphemes": [
         {
-          "form": "Qalʿat",
-          "language": "Arabic",
-          "translation": "fortress, citadel"
+          "form": "lora",
+          "language": "Pashto",
+          "translation": "mountain stream, torrent"
+        },
+        {
+          "form": "-lāī",
+          "language": "Pashto",
+          "translation": "toponymic/hydronymic suffix"
         }
       ],
-      "etymology_analysis": "From Arabic qalʿa / qalʿat ('fortress'), historically distinguished as Kalat-e Sewa (after the legendary Hindu Sewa dynasty) and later Kalat-e Baloch (15th century CE). Earlier 7th-century Arab sources knew the area as Qayqan (Qīqān).",
+      "etymology_analysis": "Directly adopts the Pashto hydronym of the Loralai River (from Pashto lora, 'mountain stream/torrent') in the Bori Valley of Balochistan.",
       "current_repo_state": {
         "name": "Kalat",
         "b_tarr": "Kalat",
@@ -14851,18 +14849,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kalat,_Balochistan",
+      "source_url": "https://en.wikipedia.org/wiki/Loralai",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Qīqān",
-          "Kaikān",
-          "Qayqan"
-        ],
-        "first_mention_year": 662,
-        "first_mention_source": "Early Arab conquest accounts of 662 CE (al-Harith ibn Murra al-Abdi campaign against the Jats of Qayqan, preserved in al-Baladhuri and the Chachnama).",
-        "relationship": "same_site_earlier_name",
-        "notes": "Kalat was historically known as Qīqān/Kaikān prior to the adoption of the Arabic toponym Qalʿat/Kalāt."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_kohlu": {
@@ -15694,7 +15688,7 @@
     },
     "b_pancapura": {
       "barony_key": "b_pancapura",
-      "modern_name": "Dipalpur",
+      "modern_name": "Pancapura",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -15702,8 +15696,8 @@
         "county": "c_dipalpur",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested under the name Dipalpur by 867 CE; while built on a Kushan-era mound (c. 40–172 CE) and traditionally attributed to Raja Deva Pala, no written accounts of Dipalpur survive before the Ghaznavid/Delhi Sultanate era.",
+      "first_mention_year": 1168,
+      "first_mention_attestation": "Attested as Pancapura (Panchapura / Panchapattana, identified by historians with the Sutlej–Beas frontier post at Dipalpur/Panjpur in Punjab) in 12th-century Chahamana inscriptions recording Kilhana's campaign under Prithviraja II (c. 1168 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -15714,17 +15708,17 @@
       },
       "morphemes": [
         {
-          "form": "Deva Pāla / Dīpāl",
-          "language": "Sanskrit/Punjabi",
-          "translation": "legendary founder Raja Deva Pala"
+          "form": "pañca",
+          "language": "Sanskrit",
+          "translation": "five"
         },
         {
-          "form": "-pur",
+          "form": "pura",
           "language": "Sanskrit",
-          "translation": "city, town"
+          "translation": "town, city"
         }
       ],
-      "etymology_analysis": "From Sanskrit/Punjabi Deva-pāla-pura ('City of Raja Deva Pala'), contracted to Dipalpur/Depalpur. Although the mound has Kushan-era occupation, no contemporary written attestation of Dipalpur exists by 867 CE.",
+      "etymology_analysis": "Sanskrit Pancapura ('Five Towns', also Panchapattana / vernacular Panjpur), attested in 12th-century Chahamana records for the strategic Punjab frontier town.",
       "current_repo_state": {
         "name": "Dipalpur",
         "b_tarr": "Dipalpur",
@@ -15748,7 +15742,7 @@
     },
     "b_dipalpur": {
       "barony_key": "b_dipalpur",
-      "modern_name": "Andreasstat",
+      "modern_name": "Dipalpur",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_punjab",
@@ -15756,8 +15750,8 @@
         "county": "c_dipalpur",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested; fictional/mod-specific disambiguated intra-county capital barony ('Municipal foundation chartered by Andreas').",
+      "first_mention_year": 1285,
+      "first_mention_attestation": "First concretely documented under the name Dipalpur in Delhi Sultanate chronicles of the late 13th century CE (notably Balban's and Prince Muhammad's 1285 CE frontier defense against the Mongols); although built on a Kushan-era mound and traditionally attributed to Raja Deva Pala, no pre-867 CE written attestations survive.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -15768,17 +15762,17 @@
       },
       "morphemes": [
         {
-          "form": "Andreas",
-          "language": "Greek/Germanic",
-          "translation": "personal name"
+          "form": "deva-pāla",
+          "language": "Sanskrit/Punjabi",
+          "translation": "traditional founder name Raja Deva Pala"
         },
         {
-          "form": "-stat",
-          "language": "Middle High German",
+          "form": "pur",
+          "language": "Sanskrit/Punjabi",
           "translation": "town, city"
         }
       ],
-      "etymology_analysis": "Mod-generated disambiguated capital barony combining the European personal name Andreas with Middle High German stat ('town'). Not a historical South Asian settlement.",
+      "etymology_analysis": "Contracted from Sanskrit/Punjabi Deva-pala-pura ('City of Raja Deva Pala'), denoting the historic fortified frontier city of Depalpur in Okara district, Punjab, Pakistan.",
       "current_repo_state": {
         "name": "Andreasstat",
         "b_tarr": "Andreasstat",
@@ -15790,7 +15784,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Dipalpur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -15964,7 +15958,7 @@
     },
     "b_shakambhari": {
       "barony_key": "b_shakambhari",
-      "modern_name": "Ajayameru",
+      "modern_name": "Shakambhari",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -15972,11 +15966,11 @@
         "county": "c_ajayameru",
         "holding_type": "castle"
       },
-      "first_mention_year": 1113,
-      "first_mention_attestation": "Earliest attested mention of Ajayameru (modern Ajmer) occurs in Palha's Pattavali copied in 1113 CE (1170 VS) at Dhara, and in Vigraharaja IV's Adhai Din Ka Jhonpra prashasti crediting Ajayaraja with its founding.",
+      "first_mention_year": 973,
+      "first_mention_attestation": "Earliest surviving contemporary epigraphic record of the Chahamanas of Shakambhari (modern Sambhar, Rajasthan) is the 973 CE Harsha stone inscription of Vigraharaja II, which traces the dynasty back to Guvaka I in the early 9th century CE (while the 1170 CE Bijolia inscription traces Vasudeva to the 6th–7th century CE).",
       "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Chahamana ruler Ajayaraja I or Ajayaraja II (11th–12th century CE; 'Invincible Hill of Ajaya').",
+      "named_after_post_867_person": false,
+      "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -15984,17 +15978,17 @@
       },
       "morphemes": [
         {
-          "form": "Ajaya",
+          "form": "śāka",
           "language": "Sanskrit",
-          "translation": "invincible / personal name (Ajayaraja)"
+          "translation": "herbs, vegetables"
         },
         {
-          "form": "meru",
+          "form": "bharī",
           "language": "Sanskrit",
-          "translation": "hill, mountain"
+          "translation": "bearer, nourisher (epithet of goddess Durga)"
         }
       ],
-      "etymology_analysis": "From Sanskrit Ajaya-meru ('Invincible Hill' or 'Hill of Ajaya'), founded by Chahamana king Ajayaraja (11th or early 12th century CE) on Taragarh Hill and later contracted to Ajmer.",
+      "etymology_analysis": "Sanskrit Shakambhari ('Herb-bearing' tutelary goddess of the Chahamanas), naming the Chahamana capital at modern Sambhar Salt Lake in Rajasthan.",
       "current_repo_state": {
         "name": "Adschajameru",
         "b_tarr": "Adschajameru",
@@ -16006,7 +16000,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ajmer",
+      "source_url": "https://en.wikipedia.org/wiki/Chahamanas_of_Shakambhari",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -16067,7 +16061,7 @@
     },
     "b_ajayameru": {
       "barony_key": "b_ajayameru",
-      "modern_name": "Wilhelminastat",
+      "modern_name": "Ajayameru",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -16075,11 +16069,11 @@
         "county": "c_ajayameru",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested; fictional/mod-specific disambiguated intra-county capital barony ('Municipal foundation chartered by Wilhelmina').",
+      "first_mention_year": 1113,
+      "first_mention_attestation": "Earliest attested mention of Ajayameru (modern Ajmer) occurs in Palha's Pattavali copied in 1113 CE (1170 VS) at Dhara, and in Vigraharaja IV's Adhai Din Ka Jhonpra prashasti crediting Chahamana king Ajayaraja II with its founding.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Chahamana ruler Ajayaraja II (early 12th century CE; 'Invincible Hill of Ajaya').",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -16087,17 +16081,17 @@
       },
       "morphemes": [
         {
-          "form": "Wilhelmina",
-          "language": "Germanic",
-          "translation": "personal name"
+          "form": "ajaya",
+          "language": "Sanskrit",
+          "translation": "invincible; personal name of king Ajayaraja"
         },
         {
-          "form": "-stat",
-          "language": "Middle High German",
-          "translation": "town, city"
+          "form": "meru",
+          "language": "Sanskrit",
+          "translation": "mountain, hill"
         }
       ],
-      "etymology_analysis": "Mod-generated disambiguated capital barony combining the European personal name Wilhelmina with Middle High German stat ('town'). Not a historical South Asian settlement.",
+      "etymology_analysis": "From Sanskrit Ajaya-meru ('Invincible Hill' or 'Hill of Ajaya'), founded by Chahamana king Ajayaraja II in the early 12th century CE on Taragarh Hill and later contracted to Ajmer.",
       "current_repo_state": {
         "name": "Wilhelminastat",
         "b_tarr": "Wilhelminastat",
@@ -16109,7 +16103,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Ajmer",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -16693,7 +16687,7 @@
     },
     "b_harshnath": {
       "barony_key": "b_harshnath",
-      "modern_name": "Vairata",
+      "modern_name": "Harshnath",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -16701,9 +16695,9 @@
         "county": "c_vairata",
         "holding_type": "castle"
       },
-      "first_mention_year": -500,
-      "first_mention_attestation": "Attested as Virāṭanagara (Vairāṭa/Bairat) in the 6th–5th century BCE Buddhist Anguttara Nikaya (as capital of Matsya Mahajanapada), in Ashoka's Bairat and Bhabru rock edicts (c. 250 BCE), and in Xuanzang's 7th-century CE account.",
-      "is_historical_867": true,
+      "first_mention_year": 973,
+      "first_mention_attestation": "Attested in the 973 CE (VS 1030) Harsha stone inscription of Chahamana king Vigraharaja II, recording grants to the Shiva (Harshnath) temple on Mount Harsha in Sikar district, Rajasthan.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -16713,12 +16707,17 @@
       },
       "morphemes": [
         {
-          "form": "Virāṭa / Vairāṭa",
+          "form": "harṣa",
           "language": "Sanskrit",
-          "translation": "epic king Virata of Matsya"
+          "translation": "joy, delight (name of the hill and Shiva epithet)"
+        },
+        {
+          "form": "nātha",
+          "language": "Sanskrit",
+          "translation": "lord, protector"
         }
       ],
-      "etymology_analysis": "From Sanskrit Virāṭanagara / Vairāṭa (modern Bairat/Viratnagar), the ancient capital of the Matsya kingdom, attested in early Buddhist texts, Mauryan Ashokan edicts (c. 250 BCE), and Xuanzang's travels.",
+      "etymology_analysis": "Sanskrit Harshanatha ('Lord of Joy'), referring to Lord Shiva as the tutelary deity (kuladevata) of the Shakambhari Chahamanas enshrined atop Harshagiri hill near Sikar.",
       "current_repo_state": {
         "name": "Wairate",
         "b_tarr": "Wairate",
@@ -16730,7 +16729,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Viratnagar",
+      "source_url": "https://en.wikipedia.org/wiki/Harshnath_Temple",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -16742,7 +16741,7 @@
     },
     "b_vairata": {
       "barony_key": "b_vairata",
-      "modern_name": "Alarichstat",
+      "modern_name": "Vairata",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -16750,9 +16749,9 @@
         "county": "c_vairata",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested; fictional/mod-specific disambiguated intra-county capital barony ('Municipal foundation chartered by Alarîch').",
-      "is_historical_867": false,
+      "first_mention_year": -500,
+      "first_mention_attestation": "Attested as Viratanagara (Vairata / Bairat) in the 6th–5th century BCE Buddhist Anguttara Nikaya and Mahabharata (as capital of Matsya Mahajanapada), in Ashoka's Bairat and Bhabru rock edicts (c. 250 BCE), and in Xuanzang's 634 CE travel account.",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -16762,17 +16761,17 @@
       },
       "morphemes": [
         {
-          "form": "Alarîch",
-          "language": "Germanic",
-          "translation": "personal name"
+          "form": "virāṭa",
+          "language": "Sanskrit",
+          "translation": "King Virata of the Matsya kingdom"
         },
         {
-          "form": "-stat",
-          "language": "Middle High German",
-          "translation": "town, city"
+          "form": "-a",
+          "language": "Sanskrit",
+          "translation": "vṛddhi-derived toponymic form (Vairata, 'of Virata')"
         }
       ],
-      "etymology_analysis": "Mod-generated disambiguated capital barony combining the Germanic personal name Alarîch with Middle High German stat ('town'). Not a historical South Asian settlement.",
+      "etymology_analysis": "Sanskrit Vairata (derived from Viratanagara, modern Bairat / Viratnagar in Rajasthan), the ancient capital of the Matsya kingdom attested in early Buddhist texts, Mauryan Ashokan edicts, and Xuanzang's travels.",
       "current_repo_state": {
         "name": "Alarîchstat",
         "b_tarr": "Alarîchstat",
@@ -16784,7 +16783,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Viratnagar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -17105,7 +17104,7 @@
     },
     "b_candravati": {
       "barony_key": "b_candravati",
-      "modern_name": "Godwad",
+      "modern_name": "Candravati",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -17113,29 +17112,29 @@
         "county": "c_godwad",
         "holding_type": "castle"
       },
-      "first_mention_year": 900,
-      "first_mention_attestation": "The region became known as Godwad (Godwar) from the 10th century CE onward, formerly ruled by the Gaur dynasty and from the early 10th century CE by the Paramaras of Abu.",
+      "first_mention_year": 1042,
+      "first_mention_attestation": "Flourished from the 10th to 13th centuries CE as the capital of the Paramaras of Mount Abu (Sirohi district, Rajasthan), with dated stone inscriptions of the Chandravati Paramara lineage surviving from the 11th century CE (e.g., Purnapala's 1042 CE inscription).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Godwad"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Gaur / Goḍ",
-          "language": "Rajasthani",
-          "translation": "Gaur dynasty/clan"
+          "form": "candra",
+          "language": "Sanskrit",
+          "translation": "moon"
         },
         {
-          "form": "-wāḍ / wāḍā",
-          "language": "Rajasthani/Sanskrit",
-          "translation": "region, enclosure, territory"
+          "form": "-vatī",
+          "language": "Sanskrit",
+          "translation": "possessing, endowed with (feminine suffix)"
         }
       ],
-      "etymology_analysis": "Regional choronym of southwestern Rajasthan derived from Gaur/Goḍ-wāḍ ('Territory of the Gaurs'), emerging from the 10th century CE onward.",
+      "etymology_analysis": "Sanskrit Chandravati ('Moonlit / Endowed with the Moon'), the medieval Paramara capital on the West Banas River near Mount Abu in southern Rajasthan.",
       "current_repo_state": {
         "name": "Godwat",
         "b_tarr": "Godwat",
@@ -17147,7 +17146,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gorwar",
+      "source_url": "https://en.wikipedia.org/wiki/Chandravati",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -18164,7 +18163,7 @@
     },
     "b_aghata": {
       "barony_key": "b_aghata",
-      "modern_name": "Medapata",
+      "modern_name": "Aghata",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_rajputana",
@@ -18172,8 +18171,8 @@
         "county": "c_medapata",
         "holding_type": "castle"
       },
-      "first_mention_year": 996,
-      "first_mention_attestation": "Earliest epigraphic mention of Medapata is the 996–997 CE (1053 VS) Hathundi (Bijapur) inscription.",
+      "first_mention_year": 953,
+      "first_mention_attestation": "Attested as Aghata / Aghatapura (modern Ahar in Udaipur, Rajasthan) in the 953 CE Sarneshwar temple inscription of Guhila ruler Allata and the 977 CE Atpur inscription of Shaktikumara.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -18184,17 +18183,12 @@
       },
       "morphemes": [
         {
-          "form": "meda",
+          "form": "āghāṭa",
           "language": "Sanskrit",
-          "translation": "Meda (ancient tribe)"
-        },
-        {
-          "form": "pāṭa",
-          "language": "Sanskrit",
-          "translation": "administrative territory, division"
+          "translation": "boundary, market-town/settlement name (Aghata / Ahar)"
         }
       ],
-      "etymology_analysis": "Sanskrit Medapāṭa ('territory/division of the Meda tribe'), which evolved into the vernacular regional name Mewar.",
+      "etymology_analysis": "Sanskrit Aghata / Aghatapura (contracted to vernacular Ahar in Udaipur, Rajasthan), the 10th-century CE capital and commercial center of the Guhila dynasty of Mewar.",
       "current_repo_state": {
         "name": "Medapate",
         "b_tarr": "Medapate",
@@ -18206,7 +18200,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mewar",
+      "source_url": "https://en.wikipedia.org/wiki/Ahar,_Rajasthan",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -18961,7 +18955,7 @@
     },
     "b_rajanpur": {
       "barony_key": "b_rajanpur",
-      "modern_name": "Rojhan",
+      "modern_name": "Rajanpur",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_sindh",
@@ -18969,11 +18963,11 @@
         "county": "c_rajanpur",
         "holding_type": "castle"
       },
-      "first_mention_year": 1834,
-      "first_mention_attestation": "Attested in 1834 CE historical records as the Mazari Baloch stronghold (Rojhan-Mazari) during Sikh-Mazari conflicts.",
+      "first_mention_year": 1732,
+      "first_mention_attestation": "Founded in 1732–1733 CE by Makhdum Sheikh Rajan Shah of Sitpur after he captured the estates from the Nahar rulers in southern Punjab, Pakistan.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Makhdum Sheikh Rajan Shah of Sitpur, who founded the town in 1732–1733 CE.",
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -18981,12 +18975,17 @@
       },
       "morphemes": [
         {
-          "form": "rojhān",
-          "language": "Balochi/Saraiki",
-          "translation": "Rojhan (settlement name)"
+          "form": "rājan",
+          "language": "Saraiki/Punjabi",
+          "translation": "personal name Makhdum Sheikh Rajan Shah"
+        },
+        {
+          "form": "pur",
+          "language": "Sanskrit/Punjabi",
+          "translation": "town, city"
         }
       ],
-      "etymology_analysis": "Local Balochi/Saraiki toponym for the Mazari tribal headquarters in Rajanpur District (replacing the anachronistic 1732 CE Rajanpur).",
+      "etymology_analysis": "Compound of the founder's personal name Rajan (Makhdum Sheikh Rajan Shah) and the Indo-Aryan settlement suffix -pur ('town'), founded in 1732–1733 CE.",
       "current_repo_state": {
         "name": "Rôdschan",
         "b_tarr": "Rôdschan",
@@ -18998,7 +18997,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Rojhan",
+      "source_url": "https://en.wikipedia.org/wiki/Rajanpur",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -19871,7 +19870,7 @@
     },
     "b_ranikot": {
       "barony_key": "b_ranikot",
-      "modern_name": "Sindhu",
+      "modern_name": "Ranikot",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_sindh",
@@ -19879,24 +19878,29 @@
         "county": "c_ranikot",
         "holding_type": "castle"
       },
-      "first_mention_year": -1500,
-      "first_mention_attestation": "Attested in the Rigveda (c. 1500 BCE) as Sindhu, the classical Sanskrit hydronym of the Indus River.",
-      "is_historical_867": true,
+      "first_mention_year": 1812,
+      "first_mention_attestation": "Ranikot Fort in Jamshoro district, Sindh, Pakistan was constructed or extensively rebuilt in its present monumental form c. 1812 CE under the Talpur Mirs (with earlier fortification phases attributed by archaeologists to the 17th century CE); unattested in pre-867 CE written sources.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Sindhu (Indus River)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "sindhu",
-          "language": "Sanskrit",
-          "translation": "river, stream (the Indus)"
+          "form": "rānī",
+          "language": "Sindhi/Hindi",
+          "translation": "queen (also associated with the Rani Nai seasonal stream)"
+        },
+        {
+          "form": "koṭ",
+          "language": "Sindhi/Sanskrit",
+          "translation": "fort, walled enclosure"
         }
       ],
-      "etymology_analysis": "Active name Sînt adapts classical Sanskrit Sindhu ('river', specifically the Indus River), replacing the anachronistic 17th-century Ranikot fortress.",
+      "etymology_analysis": "Sindhi compound Ranikot ('Queen's Fort' or 'Fort on the Rani Nai stream'), referring to the massive Talpur-era hill fortress in the Kirthar Range of Sindh.",
       "current_repo_state": {
         "name": "Sînt",
         "b_tarr": "Sînt",
@@ -19908,7 +19912,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Indus_River",
+      "source_url": "https://en.wikipedia.org/wiki/Ranikot_Fort",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -19971,7 +19975,7 @@
     },
     "b_khudabad": {
       "barony_key": "b_khudabad",
-      "modern_name": "Mehran",
+      "modern_name": "Khudabad",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_sindh",
@@ -19979,24 +19983,29 @@
         "county": "c_ranikot",
         "holding_type": "church"
       },
-      "first_mention_year": 846,
-      "first_mention_attestation": "Attested in 9th-century CE Arabic geographical works (such as Ibn Khordadbeh, c. 846 CE) as the Mihran/Mehran River (Indus).",
-      "is_historical_867": true,
+      "first_mention_year": 1701,
+      "first_mention_attestation": "Established as the capital of the Kalhora dynasty of Sindh c. 1700–1701 CE by Mian Yar Muhammad Kalhoro in modern Dadu district, Sindh, Pakistan.",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Mehran (Indus River)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "mehrān",
-          "language": "Arabic/Persian",
-          "translation": "Mehran (Indus River)"
+          "form": "khudā",
+          "language": "Persian",
+          "translation": "God"
+        },
+        {
+          "form": "ābād",
+          "language": "Persian",
+          "translation": "city, abode, inhabited place"
         }
       ],
-      "etymology_analysis": "Arabic/Persian hydronym for the lower Indus River in Sindh, replacing the anachronistic 1701 CE Kalhora capital Khudabad.",
+      "etymology_analysis": "Persian compound Khudabad ('City of God'), founded c. 1700–1701 CE by Mian Yar Muhammad Kalhoro as the capital of Kalhora Sindh.",
       "current_repo_state": {
         "name": "Mêhrân",
         "b_tarr": "Mêhrân",
@@ -20008,7 +20017,7 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Indus_River",
+      "source_url": "https://en.wikipedia.org/wiki/Khudabad",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -20179,7 +20188,7 @@
     },
     "b_amarkot": {
       "barony_key": "b_amarkot",
-      "modern_name": "Hakra",
+      "modern_name": "Amarkot",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_sindh",
@@ -20187,24 +20196,29 @@
         "county": "c_sonda",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "The name Hakra is a medieval/modern Sindhi-Punjabi hydronym unattested in pre-867 CE sources, though the paleochannel itself is ancient (often identified with Vedic Sarasvati).",
+      "first_mention_year": 1050,
+      "first_mention_attestation": "Traditionally founded in the 11th century CE (c. 1050 CE) as the desert fortress of Amarkot / Umerkot in Sindh, Pakistan (associated with Sodha Rajput ruler Rana Amar Singh or Soomra ruler Umer Soomro), and prominently documented in Mughal chronicles as the 1542 CE birthplace of Emperor Akbar.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after either Rana Amar Singh (11th-century Sodha Rajput founder of Amarkot) or Umer Soomro (medieval Soomra ruler of Sindh, giving the variant Umerkot).",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Hakra River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "hakṛā",
-          "language": "Sindhi/Punjabi",
-          "translation": "Hakra (paleochannel river name)"
+          "form": "amar",
+          "language": "Sanskrit/Sindhi",
+          "translation": "personal name Rana Amar Singh (or Sindhi Umer Soomro)"
+        },
+        {
+          "form": "koṭ",
+          "language": "Sindhi/Sanskrit",
+          "translation": "fort, stronghold"
         }
       ],
-      "etymology_analysis": "Sindhi/Punjabi hydronym for the dried paleochannel continuation of the Ghaggar River in Sindh/Bahawalpur, replacing the 11th-century Amarkot.",
+      "etymology_analysis": "Compound of the personal name Amar (Rana Amar Singh; variant Umer after Umer Soomro) and kot ('fort'), denoting the historic Thar desert stronghold of Umerkot in Sindh.",
       "current_repo_state": {
         "name": "Hakrâ",
         "b_tarr": "Hakrâ",
@@ -20216,16 +20230,14 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ghaggar-Hakra_River",
+      "source_url": "https://en.wikipedia.org/wiki/Umerkot",
       "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Sarasvati"
-        ],
-        "first_mention_year": -1500,
-        "first_mention_source": "Rigveda (c. 1500 BCE).",
-        "relationship": "same_site_earlier_name",
-        "notes": "The Ghaggar-Hakra river system is widely identified with the Rigvedic Sarasvati River."
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
       }
     },
     "b_badin": {
@@ -20377,7 +20389,7 @@
     },
     "b_jaisalmer": {
       "barony_key": "b_jaisalmer",
-      "modern_name": "Kakni",
+      "modern_name": "Jaisalmer",
       "hierarchy": {
         "empire": "e_rajastan",
         "kingdom": "k_sindh",
@@ -20385,24 +20397,29 @@
         "county": "c_ludrava",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; seasonal river (also called Masurdi) in Jaisalmer district.",
+      "first_mention_year": 1156,
+      "first_mention_attestation": "Founded in 1156 CE by Bhati Rajput ruler Rawal Jaisal on Trikuta Hill in the Thar Desert of Rajasthan, relocating the Bhati capital from Lodhruva.",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Rawal Jaisal, the Bhati Rajput chief who founded the city and hill fort in 1156 CE.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Kakni River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "kāknī",
+          "form": "jaisal",
           "language": "Rajasthani",
-          "translation": "Kakni (seasonal desert river)"
+          "translation": "personal name of Rawal Jaisal"
+        },
+        {
+          "form": "mer",
+          "language": "Sanskrit/Rajasthani",
+          "translation": "hill fort, mountain (from Meru)"
         }
       ],
-      "etymology_analysis": "Rajasthani hydronym for the small inland drainage river near Jaisalmer, replacing the anachronistic 1156 CE Jaisalmer.",
+      "etymology_analysis": "Compound of the founder's personal name Jaisal (Rawal Jaisal) and mer (from Sanskrit Meru, 'hill/mountain'), meaning 'Hill Fort of Jaisal', founded in 1156 CE.",
       "current_repo_state": {
         "name": "Kaknî",
         "b_tarr": "Kaknî",
@@ -20414,7 +20431,7 @@
         "holding_type": "castle",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kakni_River",
+      "source_url": "https://en.wikipedia.org/wiki/Jaisalmer",
       "older_name_by_867": {
         "exists": false,
         "names": [],

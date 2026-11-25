@@ -10,23 +10,23 @@
     },
     "summary_statistics": {
       "total_baronies": 106,
-      "historical_867_true": 1,
-      "historical_867_false": 105,
-      "first_mention_year_known": 55,
-      "first_mention_year_unknown": 51,
+      "historical_867_true": 0,
+      "historical_867_false": 106,
+      "first_mention_year_known": 50,
+      "first_mention_year_unknown": 56,
       "named_after_post_867_person": 2,
-      "named_after_hydronym": 15,
-      "named_after_any_natural_proper_name": 28,
-      "has_older_name_by_867_total": 1,
-      "has_older_name_by_867_for_anachronistic": 1,
+      "named_after_hydronym": 14,
+      "named_after_any_natural_proper_name": 24,
+      "has_older_name_by_867_total": 2,
+      "has_older_name_by_867_for_anachronistic": 2,
       "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 83
+      "wikipedia_source_attached": 88
     }
   },
   "baronies": {
     "b_barbacadle": {
       "barony_key": "b_barbacadle",
-      "modern_name": "Barbakâdle",
+      "modern_name": "Barbacadle",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -46,17 +46,12 @@
       },
       "morphemes": [
         {
-          "form": "Barba'adle",
+          "form": "Barbacadle (Barba'adle)",
           "language": "Somali",
           "translation": "settlement name in the Nugaal basin"
-        },
-        {
-          "form": "Barbakâdle",
-          "language": "Tarraconian (Germanic-style adaptation)",
-          "translation": "orthographic adaptation of Somali Barbacadle"
         }
       ],
-      "etymology_analysis": "Barbakâdle is a Tarraconian orthographic adaptation of Somali Barbacadle (Barba'adle), a minor settlement in the Nugaal region of northern Somalia. No contemporary pre-867 CE classical, Arab, or epigraphic attestation exists.",
+      "etymology_analysis": "Somali toponym Barbacadle (Barba'adle), a minor settlement in the Nugaal region of northern Somalia. No contemporary pre-867 CE classical, Arab, or epigraphic attestation exists.",
       "current_repo_state": {
         "name": "Barbakâdle",
         "b_tarr": "Barbakâdle",
@@ -80,7 +75,7 @@
     },
     "b_lower_nugaal": {
       "barony_key": "b_lower_nugaal",
-      "modern_name": "Nider-Nugâl",
+      "modern_name": "Lower Nugaal",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -89,7 +84,7 @@
         "holding_type": "city"
       },
       "first_mention_year": 1854,
-      "first_mention_attestation": "Unattested prior to 867 CE; the Nugaal Valley enters Western written records in the mid-19th century (1854 CE) and Somali oral-historical compilations of the early 20th century, with 'Nider-Nugâl' being a modern Tarraconian rendering of English 'Lower Nugaal' (Somali: Nugaal xaggeeda hoose).",
+      "first_mention_attestation": "Unattested prior to 867 CE; the Nugaal Valley enters Western written records in the mid-19th century (1854 CE) and Somali oral-historical compilations of the early 20th century, with 'Lower Nugaal' denoting the eastern coastal reach (Somali: Nugaal xaggeeda hoose).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -100,17 +95,17 @@
       },
       "morphemes": [
         {
-          "form": "Nider-",
-          "language": "Tarraconian (Germanic)",
-          "translation": "lower"
+          "form": "Lower",
+          "language": "English",
+          "translation": "lower, downstream"
         },
         {
-          "form": "Nugâl",
-          "language": "Somali (adapted)",
+          "form": "Nugaal",
+          "language": "Somali",
           "translation": "Nugaal seasonal river and valley"
         }
       ],
-      "etymology_analysis": "Nider-Nugâl is a Tarraconian directional compound translating English 'Lower Nugaal' (corresponding to Somali Nugaal xaggeeda hoose, the eastern coastal reach of the Nugaal Valley). As a directional/locator compound, it is excluded from natural_proper_name and lacks pre-867 CE written attestation.",
+      "etymology_analysis": "Directional compound combining English Lower with Somali Nugaal (corresponding to Somali Nugaal xaggeeda hoose, the eastern coastal reach of the Nugaal Valley). As a directional/locator compound, it is excluded from natural_proper_name and lacks pre-867 CE written attestation.",
       "current_repo_state": {
         "name": "Nider-Nugâl",
         "b_tarr": "Nider-Nugâl",
@@ -183,7 +178,7 @@
     },
     "b_mudug-south": {
       "barony_key": "b_mudug-south",
-      "modern_name": "Mudûch",
+      "modern_name": "Mudug-South",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -191,24 +186,29 @@
         "county": "c_mudug",
         "holding_type": "castle"
       },
-      "first_mention_year": 1880,
-      "first_mention_attestation": "Unattested prior to 867 CE; Mudug is documented in modern Somali history from the late 19th century (1880s CE, Sultanate of Hobyo) and as an administrative province in the 20th century.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested prior to 867 CE; modern directional subdivision of the Mudug region of north-central Somalia (Mudug itself is documented in Somali history from the 1880s CE under the Sultanate of Hobyo).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Mudug"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Mudûch",
-          "language": "Tarraconian (from Somali Mudug)",
+          "form": "Mudug",
+          "language": "Somali",
           "translation": "north-central Somali plateau region"
+        },
+        {
+          "form": "South",
+          "language": "English",
+          "translation": "southern direction"
         }
       ],
-      "etymology_analysis": "Mudûch is a Tarraconian orthographic adaptation of Somali Mudug, a traditional regional choronym in north-central Somalia. No pre-867 CE classical or medieval written attestation is recorded.",
+      "etymology_analysis": "Directional compound combining the Somali regional name Mudug with the English directional modifier South, denoting the southern portion of the Mudug plateau. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Mudûch",
         "b_tarr": "Mudûch",
@@ -232,7 +232,7 @@
     },
     "b_mudug-north": {
       "barony_key": "b_mudug-north",
-      "modern_name": "Nord-Mudûch",
+      "modern_name": "Mudug-North",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -241,7 +241,7 @@
         "holding_type": "city"
       },
       "first_mention_year": 1880,
-      "first_mention_attestation": "Unattested prior to 867 CE; Mudug is documented from the late 19th century (1880s CE), and 'Nord-Mudûch' is a modern Tarraconian directional compound for 'Mudug-North'.",
+      "first_mention_attestation": "Unattested prior to 867 CE; Mudug is documented from the late 19th century (1880s CE), and 'Mudug-North' is a modern directional subdivision for the northern portion of the region.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -252,17 +252,17 @@
       },
       "morphemes": [
         {
-          "form": "Nord-",
-          "language": "Tarraconian (Germanic)",
-          "translation": "north"
+          "form": "Mudug",
+          "language": "Somali",
+          "translation": "north-central Somali plateau region"
         },
         {
-          "form": "Mudûch",
-          "language": "Tarraconian (from Somali Mudug)",
-          "translation": "north-central Somali plateau region"
+          "form": "North",
+          "language": "English",
+          "translation": "northern direction"
         }
       ],
-      "etymology_analysis": "Nord-Mudûch is a Tarraconian directional compound adapting the in-game title 'Mudug-North' for the northern portion of the Mudug region. As a directional compound, it is excluded from natural_proper_name.",
+      "etymology_analysis": "Directional compound combining the Somali regional name Mudug with English North, denoting the northern portion of the Mudug plateau. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nord-Mudûch",
         "b_tarr": "Nord-Mudûch",
@@ -286,7 +286,7 @@
     },
     "b_lower_togdheer": {
       "barony_key": "b_lower_togdheer",
-      "modern_name": "Nugâl",
+      "modern_name": "Lower Togdheer",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -294,24 +294,34 @@
         "county": "c_nugaal",
         "holding_type": "castle"
       },
-      "first_mention_year": 1854,
-      "first_mention_attestation": "Unattested prior to 867 CE; the Nugaal Valley is first recorded in Western geographical literature in the mid-19th century (1854 CE) and in early 20th-century Somali Dervish-era accounts.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested prior to 867 CE; modern directional/locator compound denoting the lower course of the seasonal Togdheer River in Somaliland (itself first recorded in Western geographical literature by John Hanning Speke in 1854 CE as 'Tuk Der').",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Nugaal"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Nugâl",
-          "language": "Tarraconian (from Somali Nugaal)",
-          "translation": "seasonal river and drainage basin in northern Somalia"
+          "form": "Lower",
+          "language": "English",
+          "translation": "lower, downstream"
+        },
+        {
+          "form": "tog",
+          "language": "Somali",
+          "translation": "seasonal riverbed, wadi"
+        },
+        {
+          "form": "dheer",
+          "language": "Somali",
+          "translation": "long"
         }
       ],
-      "etymology_analysis": "Nugâl is a Tarraconian rendering of Somali Nugaal, the major seasonal river and valley system (Dooxo Nugaaleed) of northern Somalia. While the valley is ancient, the name Nugaal has no confirmed pre-867 CE written attestation.",
+      "etymology_analysis": "Directional compound combining English Lower with Somali Togdheer (from tog 'seasonal riverbed/wadi' + dheer 'long'), denoting the lower eastern reaches of the seasonal Togdheer watercourse draining toward the Nugaal Valley. As a directional/locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nugâl",
         "b_tarr": "Nugâl",
@@ -323,7 +333,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Nugal,_Somalia",
+      "source_url": "https://en.wikipedia.org/wiki/Togdheer_River",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -335,7 +345,7 @@
     },
     "b_upper_nugaal": {
       "barony_key": "b_upper_nugaal",
-      "modern_name": "Ober-Nugâl",
+      "modern_name": "Upper Nugaal",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -344,7 +354,7 @@
         "holding_type": "city"
       },
       "first_mention_year": 1854,
-      "first_mention_attestation": "Unattested prior to 867 CE; the Nugaal Valley appears in written records from the mid-19th century (1854 CE), and 'Ober-Nugâl' is a modern Tarraconian rendering of English 'Upper Nugaal'.",
+      "first_mention_attestation": "Unattested prior to 867 CE; the Nugaal Valley appears in written records from the mid-19th century (1854 CE), and 'Upper Nugaal' is a modern directional descriptor for its upper reaches.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -355,17 +365,17 @@
       },
       "morphemes": [
         {
-          "form": "Ober-",
-          "language": "Tarraconian (Germanic)",
-          "translation": "upper"
+          "form": "Upper",
+          "language": "English",
+          "translation": "upper, upstream"
         },
         {
-          "form": "Nugâl",
-          "language": "Tarraconian (from Somali Nugaal)",
+          "form": "Nugaal",
+          "language": "Somali",
           "translation": "seasonal river and valley"
         }
       ],
-      "etymology_analysis": "Ober-Nugâl is a Tarraconian directional compound translating English 'Upper Nugaal' for the upper reaches of the Nugaal Valley. As a locator compound, it is excluded from natural_proper_name.",
+      "etymology_analysis": "Directional compound combining English Upper with Somali Nugaal, denoting the upper reaches of the Nugaal Valley. As a locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Ober-Nugâl",
         "b_tarr": "Ober-Nugâl",
@@ -389,7 +399,7 @@
     },
     "b_ras_hafun": {
       "barony_key": "b_ras_hafun",
-      "modern_name": "Opone",
+      "modern_name": "Ras Hafun",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -397,24 +407,29 @@
         "county": "c_ras_hafun",
         "holding_type": "castle"
       },
-      "first_mention_year": 50,
-      "first_mention_attestation": "Attested c. 50 CE (1st century CE) as Opone (Ancient Greek: Ὀπώνη) in the Periplus of the Erythraean Sea (chapter 13).",
-      "is_historical_867": true,
+      "first_mention_year": 1250,
+      "first_mention_attestation": "Unattested under the name Ras Hafun prior to 867 CE; medieval Arabic geographers record the headland as Hafuni / Jafonni after 867 CE (tentatively in al-Mas'udi's 10th-century voyage and explicitly described as the seven-peaked promontory Hafuni by Ibn Sa'id al-Maghribi c. 1250 CE and Ahmad ibn Majid c. 1470 CE).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Ras Hafun"
       },
       "morphemes": [
         {
-          "form": "Opône",
-          "language": "Ancient Greek (via Tarraconian)",
-          "translation": "ancient Somali coast trade emporium"
+          "form": "ras (raas)",
+          "language": "Somali (from Arabic ra's)",
+          "translation": "cape, headland, promontory"
+        },
+        {
+          "form": "Hafun (Xaafuun)",
+          "language": "Somali",
+          "translation": "Hafun peninsula and coastal locality"
         }
       ],
-      "etymology_analysis": "Opône is the Tarraconian rendering of Ancient Greek Opone (Ὀπώνη), a major 1st-century CE Indian Ocean cinnamon and tortoiseshell emporium described in the Periplus of the Erythraean Sea and archaeologically identified with Ras Hafun.",
+      "etymology_analysis": "From Somali Raas Xaafuun (Arabic Ra's Hafun), combining raas ('cape, headland', from Arabic ra's) with the indigenous Somali toponym Xaafuun (Hafun) for the prominent peninsula forming the easternmost point of the African mainland. In antiquity, the promontory was known as the Greco-Roman trade emporium of Opone.",
       "current_repo_state": {
         "name": "Opône",
         "b_tarr": "Opône",
@@ -426,14 +441,17 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Opone",
+      "source_url": "https://en.wikipedia.org/wiki/Ras_Hafun",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Opone",
+          "Ὀπώνη"
+        ],
+        "first_mention_year": 50,
+        "first_mention_source": "Periplus of the Erythraean Sea (c. 50 CE, chapter 13)",
+        "relationship": "same_site_earlier_name",
+        "notes": "Archaeologically identified with the ancient 1st-century CE Indian Ocean emporium of Opone (Ancient Greek: Ὀπώνη), recorded in chapter 13 of the Periplus of the Erythraean Sea as a major port trading cinnamon, tortoiseshell, and aromatics."
       }
     },
     "b_gardafuul": {
@@ -549,7 +567,7 @@
     },
     "b_hiraab": {
       "barony_key": "b_hiraab",
-      "modern_name": "Hirâp",
+      "modern_name": "Hiraab",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -569,12 +587,12 @@
       },
       "morphemes": [
         {
-          "form": "Hirâp",
-          "language": "Tarraconian (from Somali Hiraab)",
+          "form": "Hiraab",
+          "language": "Somali",
           "translation": "Hawiye Somali clan confederation and imamate"
         }
       ],
-      "etymology_analysis": "Hirâp is a Tarraconian orthographic adaptation of Hiraab, a major sub-clan confederation of the Hawiye Somalis that established the Hiraab Imamate in central-southern Somalia in the late 16th–17th century CE.",
+      "etymology_analysis": "Somali clan ethnonym and polity name (Hiraab), denoting a major sub-clan confederation of the Hawiye Somalis that established the Hiraab Imamate in central-southern Somalia in the late 16th–17th century CE.",
       "current_repo_state": {
         "name": "Hirâp",
         "b_tarr": "Hirâp",
@@ -652,7 +670,7 @@
     },
     "b_shabelle-hiran": {
       "barony_key": "b_shabelle-hiran",
-      "modern_name": "Schabelle-Hiran",
+      "modern_name": "Shabelle-Hiran",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -661,7 +679,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 1900,
-      "first_mention_attestation": "Unattested prior to 867 CE; the compound 'Schabelle-Hiran' combines the Shabelle River and Hiran region names, neither of which is attested in pre-867 CE written sources.",
+      "first_mention_attestation": "Unattested prior to 867 CE; the compound 'Shabelle-Hiran' combines the Shabelle River and Hiran region names, neither of which is attested in pre-867 CE written sources.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -672,17 +690,17 @@
       },
       "morphemes": [
         {
-          "form": "Schabelle",
-          "language": "Tarraconian (from Somali Shabeelle)",
+          "form": "Shabelle (Shabeelle)",
+          "language": "Somali",
           "translation": "river of leopards"
         },
         {
-          "form": "Hiran",
-          "language": "Somali (Hiiraan)",
+          "form": "Hiran (Hiiraan)",
+          "language": "Somali",
           "translation": "central Somali region"
         }
       ],
-      "etymology_analysis": "Schabelle-Hiran is a modern hyphenated compound pairing the Shabelle River (Somali Shabeelle, from shabeel 'leopard') with the Hiran (Hiiraan) region of central Somalia. Neither component has pre-867 CE written attestation.",
+      "etymology_analysis": "Modern hyphenated compound pairing the Shabelle River (Somali Shabeelle, from shabeel 'leopard' + -le) with the Hiran (Hiiraan) region of central Somalia. Neither component has pre-867 CE written attestation.",
       "current_repo_state": {
         "name": "Schabelle-Hiran",
         "b_tarr": "Schabelle-Hiran",
@@ -755,7 +773,7 @@
     },
     "b_hobyo": {
       "barony_key": "b_hobyo",
-      "modern_name": "Berchbrunn",
+      "modern_name": "Hobyo",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -764,7 +782,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1200,
-      "first_mention_attestation": "Unattested prior to 867 CE; Hobyo was founded as a coastal outpost by the Ajuran Empire during the 13th century CE (c. 1200s CE). 'Berchbrunn' is a Tarraconian calque.",
+      "first_mention_attestation": "Unattested prior to 867 CE; Hobyo was founded as a coastal commercial outpost and watering station under the Ajuran Empire during the 13th century CE (c. 1200s CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -775,17 +793,17 @@
       },
       "morphemes": [
         {
-          "form": "Berch",
-          "language": "Tarraconian (Germanic)",
-          "translation": "mountain / hill"
+          "form": "hoo",
+          "language": "Somali",
+          "translation": "here, take"
         },
         {
-          "form": "Brunn",
-          "language": "Tarraconian (Germanic)",
-          "translation": "well / spring"
+          "form": "biyo",
+          "language": "Somali",
+          "translation": "water"
         }
       ],
-      "etymology_analysis": "Berchbrunn is a Tarraconian Germanic-style calque/replacement for Hobyo, a Somali port city founded in the 13th century CE under the Ajuran Empire whose Somali name is traditionally associated with fresh water/wells for caravans and sailors.",
+      "etymology_analysis": "From Somali Hobyo (also historically rendered Obbia), traditionally glossed as 'here, water' (from Somali hoo 'here/take' + biyo 'water'), referring to the abundant freshwater wells that made the coastal settlement an important stopover for caravans, mariners, and Hajj pilgrims from the 13th century CE onward.",
       "current_repo_state": {
         "name": "Berchbrunn",
         "b_tarr": "Berchbrunn",
@@ -863,7 +881,7 @@
     },
     "b_hobyo-north": {
       "barony_key": "b_hobyo-north",
-      "modern_name": "Nord-Hobyo",
+      "modern_name": "Hobyo-North",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -872,7 +890,7 @@
         "holding_type": "city"
       },
       "first_mention_year": 1200,
-      "first_mention_attestation": "Unattested prior to 867 CE; Hobyo dates to the 13th century CE (c. 1200s CE), and 'Nord-Hobyo' is a modern Tarraconian directional compound for 'Hobyo-North'.",
+      "first_mention_attestation": "Unattested prior to 867 CE; Hobyo dates to the 13th century CE (c. 1200s CE), and 'Hobyo-North' is a modern directional subdivision for the coast north of Hobyo.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -883,17 +901,17 @@
       },
       "morphemes": [
         {
-          "form": "Nord-",
-          "language": "Tarraconian (Germanic)",
-          "translation": "north"
-        },
-        {
           "form": "Hobyo",
           "language": "Somali",
           "translation": "coastal port city in Mudug"
+        },
+        {
+          "form": "North",
+          "language": "English",
+          "translation": "northern direction"
         }
       ],
-      "etymology_analysis": "Nord-Hobyo is a Tarraconian directional compound adapting the in-game title 'Hobyo-North' for the coast north of Hobyo. Neither the compound nor Hobyo itself is attested prior to 867 CE.",
+      "etymology_analysis": "Directional compound combining the Somali coastal town name Hobyo with English North, denoting the coast north of Hobyo. Neither the compound nor Hobyo itself is attested prior to 867 CE, and as a directional compound it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nord-Hobyo",
         "b_tarr": "Nord-Hobyo",
@@ -917,7 +935,7 @@
     },
     "b_mareeg": {
       "barony_key": "b_mareeg",
-      "modern_name": "Marêch",
+      "modern_name": "Mareeg",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -937,12 +955,12 @@
       },
       "morphemes": [
         {
-          "form": "Marêch",
-          "language": "Tarraconian (from Somali Mareeg)",
+          "form": "Mareeg",
+          "language": "Somali",
           "translation": "medieval Ajuran coastal town in Galguduud"
         }
       ],
-      "etymology_analysis": "Marêch is a Tarraconian orthographic adaptation of Somali Mareeg (also Meregh), a coastal settlement in Galguduud founded in the 13th century CE under the Ajuran Empire and later refounded in 1891 CE.",
+      "etymology_analysis": "Somali coastal toponym Mareeg (also spelled Meregh), a town in Galguduud founded in the 13th century CE under the Ajuran Empire and later refounded in 1891 CE.",
       "current_repo_state": {
         "name": "Marêch",
         "b_tarr": "Marêch",
@@ -1128,7 +1146,7 @@
     },
     "b_mogadishu": {
       "barony_key": "b_mogadishu",
-      "modern_name": "Mogadîschu",
+      "modern_name": "Mogadishu",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -1158,7 +1176,7 @@
           "translation": "king / ruler"
         }
       ],
-      "etymology_analysis": "Mogadîschu is the Tarraconian rendering of Mogadishu (Somali: Muqdisho), commonly etymologized from Persian Maq'ad-i-Shah ('Seat of the Shah') or Arabic/Somali forms. The 1st-century CE Periplus port of Sarapion is proposed by scholars as a predecessor, but its exact site (Mogadishu vs. Warsheikh) remains debated.",
+      "etymology_analysis": "English rendering of Mogadishu (Somali: Muqdisho, Arabic: Maqdishū), commonly etymologized from Persian Maq'ad-i-Shah ('Seat of the Shah') or local Arabic/Somali forms. The 1st-century CE Periplus port of Sarapion is proposed by scholars as a predecessor, but its exact site (Mogadishu vs. Warsheikh) remains debated.",
       "current_repo_state": {
         "name": "Mogadîschu",
         "b_tarr": "Mogadîschu",
@@ -1236,7 +1254,7 @@
     },
     "b_warsheikh": {
       "barony_key": "b_warsheikh",
-      "modern_name": "Warscheikh",
+      "modern_name": "Warsheikh",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_ajuraan",
@@ -1266,7 +1284,7 @@
           "translation": "Islamic scholar / elder"
         }
       ],
-      "etymology_analysis": "Warscheikh is a Tarraconian orthographic adaptation of Somali Warsheikh (Warshiikh), combining Somali war ('waterhole/pond') and sheikh ('Islamic elder'). While sometimes proposed alongside Mogadishu as a candidate for the 1st-century CE Periplus port of Sarapion, that identification is debated.",
+      "etymology_analysis": "Somali coastal toponym Warsheikh (Somali: Warshiikh), combining Somali war ('waterhole/pond') and sheikh ('Islamic elder', from Arabic shaykh). While sometimes proposed alongside Mogadishu as a candidate for the 1st-century CE Periplus port of Sarapion, that identification is debated.",
       "current_repo_state": {
         "name": "Warscheikh",
         "b_tarr": "Warscheikh",
@@ -1339,7 +1357,7 @@
     },
     "b_dumali": {
       "barony_key": "b_dumali",
-      "modern_name": "Bâle",
+      "modern_name": "Dumali",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1347,24 +1365,24 @@
         "county": "c_bali",
         "holding_type": "castle"
       },
-      "first_mention_year": 1200,
-      "first_mention_attestation": "Unattested prior to 867 CE; Bale (Bali) is first mentioned during the Zagwe dynasty (11th–13th centuries CE, c. 1200 CE) and in Emperor Amda Seyon's 1332 CE campaign and al-Umari's 14th-century account.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in pre-modern or medieval written sources; documented only in modern Ethiopian geographical and hydrographic gazetteers as the Dumal (Dumale) River and Haro Dumal locality in the Bale Zone.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
-        "type": "choronym",
-        "name": "Bale"
+        "type": "hydronym",
+        "name": "Dumal River"
       },
       "morphemes": [
         {
-          "form": "Bâle",
-          "language": "Tarraconian (from Oromo Baalee / Amharic Bali)",
-          "translation": "highland region and medieval sultanate in southeastern Ethiopia"
+          "form": "Dumali (Dumal / Dumale)",
+          "language": "Oromo / Cushitic",
+          "translation": "river and locality in the Bale highlands"
         }
       ],
-      "etymology_analysis": "Bâle is a Tarraconian orthographic rendering of Bale (also Bali; Oromo: Baalee), a historical highland region and medieval Muslim sultanate in southeastern Ethiopia (barony key b_dumali reflects the local Dumal river).",
+      "etymology_analysis": "Reflects the Dumal (also Dumale) River, a left-bank tributary of the Welmel River rising in the Bale Mountains of southeastern Ethiopia (associated with the local center of Haro Dumal in Berbere woreda).",
       "current_repo_state": {
         "name": "Bâle",
         "b_tarr": "Bâle",
@@ -1376,7 +1394,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bale_(historical_region)",
+      "source_url": "https://en.wikipedia.org/wiki/Berbere_(woreda)",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1388,7 +1406,7 @@
     },
     "b_bali-west": {
       "barony_key": "b_bali-west",
-      "modern_name": "West-Bâle",
+      "modern_name": "Bali-West",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1397,7 +1415,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 1200,
-      "first_mention_attestation": "Unattested prior to 867 CE; Bale (Bali) is first mentioned during the Zagwe dynasty (c. 1200 CE), and 'West-Bâle' is a modern Tarraconian directional compound for 'Bali-West'.",
+      "first_mention_attestation": "Unattested prior to 867 CE; Bale (Bali) is first mentioned during the Zagwe dynasty (c. 1200 CE), and 'Bali-West' is a modern directional subdivision for the western portion of Bale.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1408,17 +1426,17 @@
       },
       "morphemes": [
         {
-          "form": "West-",
-          "language": "Tarraconian (Germanic)",
-          "translation": "west"
+          "form": "Bali",
+          "language": "Amharic / Oromo",
+          "translation": "highland region in southeastern Ethiopia"
         },
         {
-          "form": "Bâle",
-          "language": "Tarraconian (from Oromo Baalee / Amharic Bali)",
-          "translation": "highland region in southeastern Ethiopia"
+          "form": "West",
+          "language": "English",
+          "translation": "western direction"
         }
       ],
-      "etymology_analysis": "West-Bâle is a Tarraconian directional compound adapting the in-game title 'Bali-West' for the western alpine reach of the Bale region. As a directional compound, it is excluded from natural_proper_name.",
+      "etymology_analysis": "Directional compound combining the Ethiopian regional name Bali (Bale; Oromo: Baalee) with English West, denoting the western alpine reach of the Bale region. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "West-Bâle",
         "b_tarr": "West-Bâle",
@@ -1442,7 +1460,7 @@
     },
     "b_bali-east": {
       "barony_key": "b_bali-east",
-      "modern_name": "Ursulastat",
+      "modern_name": "Bali-East",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1451,7 +1469,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted sub-barony of Bale/Bali).",
+      "first_mention_attestation": "Unattested in historical sources; modern directional subdivision of the Bale (Bali) region of southeastern Ethiopia (itself first attested post-867 CE during the Zagwe dynasty and in 1332 CE under Emperor Amda Seyon I).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1462,17 +1480,17 @@
       },
       "morphemes": [
         {
-          "form": "Ursula",
-          "language": "Latin / German",
-          "translation": "little female bear (personal name)"
+          "form": "Bali",
+          "language": "Amharic / Oromo",
+          "translation": "highland region in southeastern Ethiopia"
         },
         {
-          "form": "stat",
-          "language": "Old High German / Middle High German",
-          "translation": "place, town, stead"
+          "form": "East",
+          "language": "English",
+          "translation": "eastern direction"
         }
       ],
-      "etymology_analysis": "Mod-coined Germanic-adapted toponym combining the personal name Ursula (from Latin ursula, 'little she-bear') with -stat (from Old High German stat, 'place, town, settlement'), created as a constituent holding of Bale (Bali).",
+      "etymology_analysis": "Directional compound combining the Ethiopian regional name Bali (Bale; Oromo: Baalee) with the English directional modifier East, denoting the eastern reach of Bale. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Ursulastat",
         "b_tarr": "Ursulastat",
@@ -1484,7 +1502,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Bale_(historical_region)",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1496,7 +1514,7 @@
     },
     "b_bali": {
       "barony_key": "b_bali",
-      "modern_name": "Manfredstat",
+      "modern_name": "Bali",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1504,29 +1522,24 @@
         "county": "c_bali",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted disambiguated capital holding for Bale/Bali; the underlying region of Bale/Bali itself is first attested post-867 CE during the Zagwe dynasty, c. 12th–13th century CE, and in 1332 CE under Amda Seyon I).",
+      "first_mention_year": 1200,
+      "first_mention_attestation": "Unattested prior to 867 CE; Bale (Bali) is first mentioned in historical tradition during the Zagwe dynasty (12th–13th centuries CE, c. 1200 CE) and in dated 14th-century written records including the royal chronicle of Emperor Amda Seyon I (1332 CE) and al-Umari's geographical account.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Bale"
       },
       "morphemes": [
         {
-          "form": "Manfred",
-          "language": "Old High German / German",
-          "translation": "man of peace (personal name)"
-        },
-        {
-          "form": "stat",
-          "language": "Old High German / Middle High German",
-          "translation": "place, town, stead"
+          "form": "Bali (Baalee)",
+          "language": "Amharic / Oromo",
+          "translation": "highland region and medieval sultanate in southeastern Ethiopia"
         }
       ],
-      "etymology_analysis": "Mod-coined Germanic-adapted toponym combining the personal name Manfred (Old High German Manfrid, from man 'man' + fridu 'peace') with -stat ('place, town'), used as a disambiguated capital holding for the Bale (Bali) county. The historical region of Bale (Bali) in southern Ethiopia is itself first attested in the post-867 CE medieval period.",
+      "etymology_analysis": "From Amharic Bali (Oromo: Baalee, modern English: Bale), the historical highland region and medieval Muslim sultanate in southeastern Ethiopia located south of the Shebelle River.",
       "current_repo_state": {
         "name": "Manfredstat",
         "b_tarr": "Manfredstat",
@@ -1538,7 +1551,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Bale_(historical_region)",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1575,7 +1588,7 @@
           "translation": "Sidama ethnic group and historical region of southern Ethiopia"
         }
       ],
-      "etymology_analysis": "Adapted in the mod as Sidâme from Sidamo (Amharic ሲዳሞ), the historical exonym and provincial name derived from the Cushitic-speaking Sidama people of southern Ethiopia.",
+      "etymology_analysis": "From Sidamo (Amharic ሲዳሞ), the historical exonym and provincial name derived from the Cushitic-speaking Sidama people of southern Ethiopia.",
       "current_repo_state": {
         "name": "Sidâme",
         "b_tarr": "Sidâme",
@@ -1599,7 +1612,7 @@
     },
     "b_east_sidamo": {
       "barony_key": "b_east_sidamo",
-      "modern_name": "Ôst-Sidâme",
+      "modern_name": "East Sidamo",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1608,7 +1621,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted directional compound for eastern Sidamo).",
+      "first_mention_attestation": "Unattested in historical sources; modern directional subdivision of the Sidamo region of southern Ethiopia (itself attested from the 16th century CE onward).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1619,17 +1632,17 @@
       },
       "morphemes": [
         {
-          "form": "Ôst",
-          "language": "Old High German / Middle High German",
-          "translation": "east"
+          "form": "East",
+          "language": "English",
+          "translation": "eastern direction"
         },
         {
-          "form": "Sidâme",
-          "language": "Cushitic / Sidama (adapted)",
+          "form": "Sidamo",
+          "language": "Cushitic / Sidama",
           "translation": "Sidama / Sidamo people and territory"
         }
       ],
-      "etymology_analysis": "Mod-coined directional compound combining Germanic Ôst ('east') with Sidâme (adapted from Sidamo/Sidama, the Cushitic ethnonym and historical region of southern Ethiopia).",
+      "etymology_analysis": "Directional compound combining English East with Sidamo (from the Cushitic Sidama ethnonym and historical region of southern Ethiopia). As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Ôst-Sidâme",
         "b_tarr": "Ôst-Sidâme",
@@ -1653,7 +1666,7 @@
     },
     "b_lower_dawa": {
       "barony_key": "b_lower_dawa",
-      "modern_name": "Nider-Dawa",
+      "modern_name": "Lower Dawa",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1662,7 +1675,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted locator compound for the lower Dawa River).",
+      "first_mention_attestation": "Unattested in historical sources; modern locator compound denoting the lower course of the Dawa River.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1673,9 +1686,9 @@
       },
       "morphemes": [
         {
-          "form": "Nider",
-          "language": "Old High German / Middle High German",
-          "translation": "lower, nether"
+          "form": "Lower",
+          "language": "English",
+          "translation": "lower, downstream"
         },
         {
           "form": "Dawa",
@@ -1683,7 +1696,7 @@
           "translation": "Dawa River (regional hydronym)"
         }
       ],
-      "etymology_analysis": "Mod-coined locator compound combining Germanic Nider ('lower') with Dawa (the Dawa River, Somali Webiga Daawa, Oromo Laga Daawwaa, a major tributary of the Jubba River along the Ethiopia-Kenya-Somalia border).",
+      "etymology_analysis": "Locator compound combining English Lower with Dawa (the Dawa River, Somali Webiga Daawa, Oromo Laga Daawwaa, a major tributary of the Jubba River along the Ethiopia-Kenya-Somalia border). As a directional/locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nider-Dawa",
         "b_tarr": "Nider-Dawa",
@@ -1791,7 +1804,7 @@
           "translation": "God (archaic Cushitic term for deity)"
         }
       ],
-      "etymology_analysis": "From Somali Ceelwaaq (adapted in the mod as El-Wâch), literally 'God's well', composed of ceel ('well') and waaq (archaic Cushitic/Somali term for 'God'), referring to the border town between Kenya and Somalia.",
+      "etymology_analysis": "From Somali Ceelwaaq, literally 'God's well', composed of ceel ('well') and waaq (archaic Cushitic/Somali term for 'God'), referring to the border town between Kenya and Somalia.",
       "current_repo_state": {
         "name": "El-Wâch",
         "b_tarr": "El-Wâch",
@@ -1815,7 +1828,7 @@
     },
     "b_dawa_south": {
       "barony_key": "b_dawa_south",
-      "modern_name": "Sût-Dawa",
+      "modern_name": "Dawa-South",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1824,7 +1837,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted directional compound for the southern Dawa River basin).",
+      "first_mention_attestation": "Unattested in historical sources; modern directional compound denoting the southern Dawa River basin.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1835,17 +1848,17 @@
       },
       "morphemes": [
         {
-          "form": "Sût",
-          "language": "Old High German / Middle High German",
-          "translation": "south"
-        },
-        {
           "form": "Dawa",
           "language": "Somali / Oromo",
           "translation": "Dawa River (regional hydronym)"
+        },
+        {
+          "form": "South",
+          "language": "English",
+          "translation": "southern direction"
         }
       ],
-      "etymology_analysis": "Mod-coined directional compound combining Germanic Sût ('south') with Dawa (the Dawa River in southern Ethiopia, Kenya, and Somalia).",
+      "etymology_analysis": "Directional compound combining Dawa (the Dawa River in southern Ethiopia, Kenya, and Somalia) with English South. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Sût-Dawa",
         "b_tarr": "Sût-Dawa",
@@ -1938,8 +1951,8 @@
       },
       "morphemes": [
         {
-          "form": "Fudâlhi",
-          "language": "Oromo / Cushitic (adapted)",
+          "form": "Fudalhi (Fudalī)",
+          "language": "Oromo / Cushitic",
           "translation": "intermittent stream in southern Ethiopia"
         }
       ],
@@ -1967,7 +1980,7 @@
     },
     "b_upper_kutulo": {
       "barony_key": "b_upper_kutulo",
-      "modern_name": "Ober-Kutulo",
+      "modern_name": "Upper Kutulo",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -1976,7 +1989,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted locator compound for the upper Kutulo basin).",
+      "first_mention_attestation": "Unattested in historical sources; modern locator compound denoting the upper Kutulo seasonal drainage basin in northeastern Kenya.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1987,9 +2000,9 @@
       },
       "morphemes": [
         {
-          "form": "Ober",
-          "language": "Old High German / German",
-          "translation": "upper"
+          "form": "Upper",
+          "language": "English",
+          "translation": "upper, upstream"
         },
         {
           "form": "Kutulo",
@@ -1997,7 +2010,7 @@
           "translation": "settlement and seasonal drainage basin in northeastern Kenya"
         }
       ],
-      "etymology_analysis": "Mod-coined locator compound combining Germanic Ober ('upper') with Kutulo (the Kutulo / Lagh Kutulo basin in northeastern Kenya).",
+      "etymology_analysis": "Locator compound combining English Upper with Kutulo (the Kutulo / Lagh Kutulo basin in Wajir County, northeastern Kenya). As a locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Ober-Kutulo",
         "b_tarr": "Ober-Kutulo",
@@ -2105,7 +2118,7 @@
           "translation": "long (from dheer)"
         }
       ],
-      "etymology_analysis": "From Somali Lag Dheere / Lagh Dera (adapted in the mod as Lâch-Dêre), meaning 'long seasonal river', from lag ('seasonal watercourse, wadi') and dheer ('long'), referring to the intermittent lower course of the Ewaso Ng'iro extending into Somalia.",
+      "etymology_analysis": "From Somali Lag Dheere / Lagh Dera, meaning 'long seasonal river', from lag ('seasonal watercourse, wadi') and dheer ('long'), referring to the intermittent lower course of the Ewaso Ng'iro extending into Somalia.",
       "current_repo_state": {
         "name": "Lâch-Dêre",
         "b_tarr": "Lâch-Dêre",
@@ -2129,7 +2142,7 @@
     },
     "b_lower_jubba": {
       "barony_key": "b_lower_jubba",
-      "modern_name": "Gobweyn",
+      "modern_name": "Lower Jubba",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -2138,7 +2151,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-modern or medieval written sources (documented only in modern Somali geographical and administrative records as the village at the mouth of the Jubba River).",
+      "first_mention_attestation": "Unattested prior to 867 CE; modern directional and administrative regional name (Somali: Jubbada Hoose) derived from the Jubba River (itself first attested post-867 CE in medieval Arabic and 15th-century Ming accounts).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2149,17 +2162,17 @@
       },
       "morphemes": [
         {
-          "form": "goob",
-          "language": "Somali",
-          "translation": "place, site, arena"
+          "form": "Lower",
+          "language": "English",
+          "translation": "lower, downstream"
         },
         {
-          "form": "weyn",
-          "language": "Somali",
-          "translation": "big, great"
+          "form": "Jubba",
+          "language": "Somali / Arabic",
+          "translation": "Jubba River"
         }
       ],
-      "etymology_analysis": "From Somali Goobweyn (Goob Weyn), composed of goob ('place, site') and weyn ('big, great'), a village in Lower Juba, Somalia, located where the Jubba River empties into the Indian Ocean.",
+      "etymology_analysis": "English directional compound translating Somali Jubbada Hoose ('Lower Jubba'), denoting the downstream valley and coastal administrative region of the Jubba River in southern Somalia. As a directional/locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Gobweyn",
         "b_tarr": "Gobweyn",
@@ -2171,7 +2184,7 @@
         "holding_type": "church",
         "category": "indigenous_restitution"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Goob_Weyn",
+      "source_url": "https://en.wikipedia.org/wiki/Lower_Juba",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2183,7 +2196,7 @@
     },
     "b_lower_kutulo": {
       "barony_key": "b_lower_kutulo",
-      "modern_name": "Nider-Kutulo",
+      "modern_name": "Lower Kutulo",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -2192,7 +2205,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted locator compound for the lower Kutulo drainage).",
+      "first_mention_attestation": "Unattested in historical sources; modern locator compound denoting the lower Kutulo seasonal drainage basin in northeastern Kenya.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2203,9 +2216,9 @@
       },
       "morphemes": [
         {
-          "form": "Nider",
-          "language": "Old High German / Middle High German",
-          "translation": "lower, nether"
+          "form": "Lower",
+          "language": "English",
+          "translation": "lower, downstream"
         },
         {
           "form": "Kutulo",
@@ -2213,7 +2226,7 @@
           "translation": "settlement and seasonal drainage basin in northeastern Kenya"
         }
       ],
-      "etymology_analysis": "Mod-coined locator compound combining Germanic Nider ('lower') with Kutulo (the Kutulo / Lagh Kutulo drainage basin in northeastern Kenya).",
+      "etymology_analysis": "Locator compound combining English Lower with Kutulo (the Kutulo / Lagh Kutulo drainage basin in Wajir County, northeastern Kenya). As a locator compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nider-Kutulo",
         "b_tarr": "Nider-Kutulo",
@@ -2267,7 +2280,7 @@
           "translation": "engulfing (or Amharic bet 'house')"
         }
       ],
-      "etymology_analysis": "Toponym of disputed etymology for the town in northern Kenya (adapted in the mod as Marsabît): either from Cushitic Rendille mar-sabich ('rainy clouds engulfing [the mountain]') or from Amharic marsa bet ('Marsa's house'), after a Burji farmer brought from Mega, Ethiopia, in the colonial era.",
+      "etymology_analysis": "Toponym of disputed etymology for the town in northern Kenya: either from Cushitic Rendille mar-sabich ('rainy clouds engulfing [the mountain]') or from Amharic marsa bet ('Marsa's house'), after a Burji farmer brought from Mega, Ethiopia, in the colonial era.",
       "current_repo_state": {
         "name": "Marsabît",
         "b_tarr": "Marsabît",
@@ -2370,7 +2383,7 @@
           "translation": "historical Muslim principality on the Harar plateau"
         }
       ],
-      "etymology_analysis": "Historical Harari/Somali toponym (Harari Gidāyä, Somali Gidaaya; adapted in the mod as Gidâje) for a medieval Muslim principality on the Harar plateau in eastern Ethiopia, attested from the 14th century CE under Ifat and Adal.",
+      "etymology_analysis": "Historical Harari/Somali toponym (Harari Gidāyä, Somali Gidaaya) for a medieval Muslim principality on the Harar plateau in eastern Ethiopia, attested from the 14th century CE under Ifat and Adal.",
       "current_repo_state": {
         "name": "Gidâje",
         "b_tarr": "Gidâje",
@@ -2424,7 +2437,7 @@
           "translation": "having, characterized by (possessive suffix)"
         }
       ],
-      "etymology_analysis": "From Somali Webi Shabeelle (adapted in German/mod orthography as Schabelle), derived from shabeel ('leopard') + -le ('having/characterized by'), referring to the river's swift, unpredictable character.",
+      "etymology_analysis": "From Somali Webi Shabeelle, derived from shabeel ('leopard') + -le ('having/characterized by'), referring to the river's swift, unpredictable character.",
       "current_repo_state": {
         "name": "Schabelle",
         "b_tarr": "Schabelle",
@@ -2448,7 +2461,7 @@
     },
     "b_gidaya-north": {
       "barony_key": "b_gidaya-north",
-      "modern_name": "Nord-Gidâje",
+      "modern_name": "Gidaya-North",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -2457,7 +2470,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted directional compound for northern Gidaya).",
+      "first_mention_attestation": "Unattested in historical sources; modern directional subdivision of the medieval Harar-plateau principality of Gidaya (itself first attested in 1332 CE in the royal chronicle of Emperor Amda Seyon I).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2468,17 +2481,17 @@
       },
       "morphemes": [
         {
-          "form": "Nord",
-          "language": "Old High German / German",
-          "translation": "north"
+          "form": "Gidaya",
+          "language": "Harari / Ethio-Semitic",
+          "translation": "historical Muslim principality on the Harar plateau"
         },
         {
-          "form": "Gidâje",
-          "language": "Harari / Ethio-Semitic (adapted)",
-          "translation": "historical Muslim principality on the Harar plateau"
+          "form": "North",
+          "language": "English",
+          "translation": "northern direction"
         }
       ],
-      "etymology_analysis": "Mod-coined directional compound combining Germanic Nord ('north') with Gidâje (adapted from Gidaya, the medieval Muslim polity on the Harar plateau).",
+      "etymology_analysis": "Directional compound combining the historical Harar-plateau toponym Gidaya (Harari: Gidāyä, Somali: Gidaaya) with English North. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Nord-Gidâje",
         "b_tarr": "Nord-Gidâje",
@@ -2502,7 +2515,7 @@
     },
     "b_gidaya-east": {
       "barony_key": "b_gidaya-east",
-      "modern_name": "Adalhardstat",
+      "modern_name": "Gidaya-East",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -2511,7 +2524,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources (mod-coined Germanic-adapted sub-barony of Gidaya).",
+      "first_mention_attestation": "Unattested in historical sources; modern directional subdivision of the medieval Harar-plateau principality of Gidaya (itself first attested in 1332 CE in the royal chronicle of Emperor Amda Seyon I).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2522,17 +2535,17 @@
       },
       "morphemes": [
         {
-          "form": "Adalhard",
-          "language": "Old High German",
-          "translation": "noble-hard (personal name)"
+          "form": "Gidaya",
+          "language": "Harari / Ethio-Semitic",
+          "translation": "historical Muslim principality on the Harar plateau"
         },
         {
-          "form": "stat",
-          "language": "Old High German / Middle High German",
-          "translation": "place, town, stead"
+          "form": "East",
+          "language": "English",
+          "translation": "eastern direction"
         }
       ],
-      "etymology_analysis": "Mod-coined Germanic-adapted toponym combining the Old High German personal name Adalhard (from adal 'noble' + harti 'hard, strong') with -stat ('place, town'), created as a constituent holding of Gidaya.",
+      "etymology_analysis": "Directional compound combining the historical Harar-plateau toponym Gidaya (Harari: Gidāyä, Somali: Gidaaya) with the English directional modifier East. As a directional compound, it is excluded from natural_proper_name.",
       "current_repo_state": {
         "name": "Adalhardstat",
         "b_tarr": "Adalhardstat",
@@ -2544,7 +2557,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Gidaya",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2581,7 +2594,7 @@
           "translation": "town and woreda in the Somali Region of Ethiopia"
         }
       ],
-      "etymology_analysis": "From Somali Godey (Amharic ጎዴ, adapted in the mod as Gôde), a modern town in the Shabelle Zone of Ethiopia's Somali Region.",
+      "etymology_analysis": "From Somali Godey (Amharic ጎዴ), a modern town in the Shabelle Zone of Ethiopia's Somali Region.",
       "current_repo_state": {
         "name": "Gôde",
         "b_tarr": "Gôde",
@@ -2728,7 +2741,7 @@
           "translation": "major perennial river of southeastern Ethiopia"
         }
       ],
-      "etymology_analysis": "Indigenous Oromo/Somali hydronym (Somali Webiga Janaale, Amharic Genalē Wenz; adapted in the mod as Ganâle) for the perennial river in southeastern Ethiopia that joins the Dawa to form the Jubba.",
+      "etymology_analysis": "Indigenous Oromo/Somali hydronym (Somali Webiga Janaale, Amharic Genalē Wenz) for the perennial river in southeastern Ethiopia that joins the Dawa to form the Jubba.",
       "current_repo_state": {
         "name": "Ganâle",
         "b_tarr": "Ganâle",
@@ -2850,7 +2863,7 @@
     },
     "b_middle_shebelle": {
       "barony_key": "b_middle_shebelle",
-      "modern_name": "Middel-Schebelle",
+      "modern_name": "Middle-Shebelle",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_bale",
@@ -2859,7 +2872,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by this name <= 867 CE; the Shebelle River is first noted in medieval Arabic geography by al-Zuhri (1137 CE) as the inland river behind Mogadishu, while 'Middel-Schebelle' is a modern/mod-standardized regional descriptor.",
+      "first_mention_attestation": "Unattested by this name <= 867 CE; the Shebelle River is first noted in medieval Arabic geography by al-Zuhri (1137 CE) as the inland river behind Mogadishu, while 'Middle-Shebelle' (Somali: Shabeellaha Dhexe) is a modern regional and administrative descriptor.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2870,17 +2883,17 @@
       },
       "morphemes": [
         {
-          "form": "Middel-",
-          "language": "Germanic / Low German",
-          "translation": "middle"
+          "form": "Middle",
+          "language": "English",
+          "translation": "middle, central"
         },
         {
-          "form": "Schebelle (Shabeelle)",
+          "form": "Shebelle (Shabeelle)",
           "language": "Somali",
-          "translation": "leopard / Shabeelle region"
+          "translation": "leopard / Shabeelle river and region"
         }
       ],
-      "etymology_analysis": "Mod-standardized Germanicized directional compound of 'Middel-' (middle) and 'Schebelle' (from Somali Webi Shabeelle, 'River of Shabeelle' or 'Leopard River'). Because it is a directional/locator compound rather than a direct adoption of the river's proper name, natural_proper_name is false.",
+      "etymology_analysis": "English directional compound translating Somali Shabeellaha Dhexe ('Middle Shebelle'), combining Middle with Shebelle (from Somali Webi Shabeelle, 'River of Leopards'). Because it is a directional/locator compound rather than a direct adoption of the river's proper name, natural_proper_name is false.",
       "current_repo_state": {
         "name": "Middel-Schebelle",
         "b_tarr": "Middel-Schebelle",
@@ -2904,7 +2917,7 @@
     },
     "b_garissa": {
       "barony_key": "b_garissa",
-      "modern_name": "Tane",
+      "modern_name": "Garissa",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -2912,24 +2925,24 @@
         "county": "c_mto_tana",
         "holding_type": "castle"
       },
-      "first_mention_year": 1884,
-      "first_mention_attestation": "First recorded in European missionary accounts from 1884 CE, when United Methodist and German missionaries adapted the Lower Pokomo river name 'Tsana' as 'Tana'.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in pre-867 CE or pre-modern written sources; developed from a pastoralist watering and trading site on the Tana River into a British colonial administrative post in Kenya's Northern Frontier District in the early 20th century.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Tana River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Tane (Tana < Tsana / Chana)",
-          "language": "Pokomo (Bantu)",
-          "translation": "river"
+          "form": "Garissa (Gaarrisa)",
+          "language": "Somali / Cushitic",
+          "translation": "gathering or watering settlement along the Tana River"
         }
       ],
-      "etymology_analysis": "Directly adopts the hydronym of Kenya's Tana River (standardized as 'Tane'), derived from Lower Pokomo 'Tsana' or Upper Pokomo 'Chana' meaning 'river', adapted into 'Tana' by European missionaries in the late 19th century CE.",
+      "etymology_analysis": "Kenyan town on the Tana River (Somali: Gaarrisa), historically a watering and trading stop for nomadic pastoralists before becoming a British colonial administrative center and modern capital of Garissa County. Popular etymologies link the name either to a Somali root for gathering or to a local pre-colonial figure (Garisso/Karisa).",
       "current_repo_state": {
         "name": "Tane",
         "b_tarr": "Tane",
@@ -2939,6 +2952,60 @@
         "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Tane).",
         "b_ipa": "[ˈta.nə]",
         "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Garissa",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_mto_tana": {
+      "barony_key": "b_mto_tana",
+      "modern_name": "Mto Tana",
+      "hierarchy": {
+        "empire": "e_azania",
+        "kingdom": "k_zanj",
+        "duchy": "d_bonde_la_ufa",
+        "county": "c_mto_tana",
+        "holding_type": "city"
+      },
+      "first_mention_year": 1884,
+      "first_mention_attestation": "Unattested prior to 867 CE; the Tana River hydronym was first recorded in European missionary accounts in 1884 CE, when European (United Methodist and Lutheran) missionaries adapted the Lower Pokomo river name 'Tsana' as 'Tana' (Swahili: Mto Tana).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Mto Tana"
+      },
+      "morphemes": [
+        {
+          "form": "mto",
+          "language": "Swahili",
+          "translation": "river"
+        },
+        {
+          "form": "Tana (< Tsana / Chana)",
+          "language": "Pokomo (Bantu)",
+          "translation": "river"
+        }
+      ],
+      "etymology_analysis": "Swahili hydronym Mto Tana ('Tana River'), combining Swahili mto ('river') with Tana, adapted in the late 19th century CE from Lower Pokomo Tsana (Upper Pokomo Chana), meaning 'river', for Kenya's longest river.",
+      "current_repo_state": {
+        "name": "Thankulfstat",
+        "b_tarr": "Thankulfstat",
+        "b_tarr_direct": "Tane",
+        "b_tarr_hist": "Tane",
+        "b_origin": "Thankulfstat — Disambiguated capital foundation: Municipal foundation chartered by Thankulf",
+        "b_anachronism": "Disambiguated intra-county capital barony.",
+        "b_ipa": "[ˈtha.ŋkʊlf.stat]",
+        "holding_type": "city",
         "category": "capital_eponymous"
       },
       "source_url": "https://en.wikipedia.org/wiki/Tana_River_(Kenya)",
@@ -2951,63 +3018,9 @@
         "notes": null
       }
     },
-    "b_mto_tana": {
-      "barony_key": "b_mto_tana",
-      "modern_name": "Thankulfstat",
-      "hierarchy": {
-        "empire": "e_azania",
-        "kingdom": "k_zanj",
-        "duchy": "d_bonde_la_ufa",
-        "county": "c_mto_tana",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; 'Thankulfstat' is a fictional/mod-constructed disambiguated capital barony name replacing Mto Tana.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Thankulf",
-          "language": "East Germanic (mod anthroponym)",
-          "translation": "personal name Thankulf"
-        },
-        {
-          "form": "-stat",
-          "language": "Germanic",
-          "translation": "town / settlement"
-        }
-      ],
-      "etymology_analysis": "Mod-constructed disambiguated capital holding name combining an East Germanic-style personal name ('Thankulf') with the Germanic settlement suffix '-stat' ('town/place').",
-      "current_repo_state": {
-        "name": "Thankulfstat",
-        "b_tarr": "Thankulfstat",
-        "b_tarr_direct": "Tane",
-        "b_tarr_hist": "Tane",
-        "b_origin": "Thankulfstat — Disambiguated capital foundation: Municipal foundation chartered by Thankulf",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈtha.ŋkʊlf.stat]",
-        "holding_type": "city",
-        "category": "capital_eponymous"
-      },
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
     "b_taveta": {
       "barony_key": "b_taveta",
-      "modern_name": "Tawete",
+      "modern_name": "Taveta",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -3027,7 +3040,7 @@
       },
       "morphemes": [
         {
-          "form": "Tawete (Taveta < Watuweta)",
+          "form": "Taveta (< Watuweta)",
           "language": "Taveta / Dawida (Bantu)",
           "translation": "people of Tuweta / Taveta"
         }
@@ -3159,7 +3172,7 @@
     },
     "b_mombasa": {
       "barony_key": "b_mombasa",
-      "modern_name": "Mombase",
+      "modern_name": "Mombasa",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -3179,8 +3192,8 @@
       },
       "morphemes": [
         {
-          "form": "Manbasa / Mombase",
-          "language": "Arabic / Swahili",
+          "form": "Mombasa (Manbasa)",
+          "language": "Swahili / Arabic",
           "translation": "Mombasa (coastal port city)"
         }
       ],
@@ -3257,7 +3270,7 @@
     },
     "b_ewaso_ngiro": {
       "barony_key": "b_ewaso_ngiro",
-      "modern_name": "Ewaso-Ingirô",
+      "modern_name": "Ewaso Ng'iro",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -3615,7 +3628,7 @@
     },
     "b_gede": {
       "barony_key": "b_gede",
-      "modern_name": "Sabâki",
+      "modern_name": "Gede",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -3623,24 +3636,24 @@
         "county": "c_malindi",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; replaces the in-game name Gedi (archaeologically attested from the 11th century CE) with the modern Sabaki River hydronym.",
+      "first_mention_year": 1884,
+      "first_mention_attestation": "Unattested prior to 867 CE; archaeologically founded as a Swahili town in the 11th–13th centuries CE and abandoned in the 17th century CE, it is absent from contemporary medieval Arabic and Portuguese texts and was first documented in writing by Sir John Kirk in 1884 CE.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Sabaki River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Sabâki (Sabaki)",
-          "language": "Northeast Coast Bantu (Sabaki)",
-          "translation": "lower course of the Athi-Galana-Sabaki River"
+          "form": "Gede (Gedi)",
+          "language": "Oromo",
+          "translation": "precious"
         }
       ],
-      "etymology_analysis": "Directly adopts the hydronym of the Sabaki River (the lower course of Kenya's Athi-Galana-Sabaki River, which enters the Indian Ocean near Malindi), replacing the post-867 Swahili town of Gedi.",
+      "etymology_analysis": "Variant spelling of Gedi, a medieval walled Swahili coral-stone town near Malindi on the Kenyan coast (occupied c. 11th–17th centuries CE). The name Gedi/Gede is traditionally derived from the Oromo word for 'precious', applied after the town's abandonment; its original medieval Swahili name is unrecorded.",
       "current_repo_state": {
         "name": "Sabâki",
         "b_tarr": "Sabâki",
@@ -3652,7 +3665,7 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Athi-Galana-Sabaki_River",
+      "source_url": "https://en.wikipedia.org/wiki/Ruins_of_Gedi",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3664,7 +3677,7 @@
     },
     "b_ungwana": {
       "barony_key": "b_ungwana",
-      "modern_name": "Tâne",
+      "modern_name": "Ungwana",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -3672,24 +3685,29 @@
         "county": "c_malindi",
         "holding_type": "city"
       },
-      "first_mention_year": 1884,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; replaces the in-game name Ungwana (founded c. 10th century CE, also known as Hoja) with the Tana River hydronym, adapted from Pokomo 'Tsana' by European missionaries in 1884 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested prior to 867 CE; archaeologically founded as a Swahili coastal port near the Tana River mouth in the mid-10th century CE and abandoned in the early 17th century CE. Documented in 16th-century Portuguese chronicles as Hoja (attacked by Dom Francisco de Almeida in 1505 CE), while the Swahili name Ungwana is attested only in later local and archaeological records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Tana River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Tâne (Tana < Tsana / Chana)",
-          "language": "Pokomo (Bantu)",
-          "translation": "river"
+          "form": "u-",
+          "language": "Swahili",
+          "translation": "abstract noun prefix (class 11/14)"
+        },
+        {
+          "form": "-ngwana",
+          "language": "Swahili",
+          "translation": "freeborn, civilized, urban"
         }
       ],
-      "etymology_analysis": "Directly adopts the Tana River hydronym (standardized as 'Tâne'), derived from Pokomo 'Tsana'/'Chana' ('river'), replacing the medieval Swahili port of Ungwana (Hoja).",
+      "etymology_analysis": "Swahili toponym for the ruined medieval Swahili town near Kipini at the mouth of the Tana River in Kenya, derived from Swahili u-ngwana ('civilization, freeborn/urban status'). Flourishing from the mid-10th to early 17th centuries CE, it was recorded in 16th-century Portuguese accounts as Hoja (Oja).",
       "current_repo_state": {
         "name": "Tâne",
         "b_tarr": "Tâne",
@@ -3701,7 +3719,7 @@
         "holding_type": "city",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Tana_River_(Kenya)",
+      "source_url": "https://en.wikipedia.org/wiki/Ungwana",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3870,7 +3888,7 @@
     },
     "b_baydhabo": {
       "barony_key": "b_baydhabo",
-      "modern_name": "Baydhabô",
+      "modern_name": "Baydhabo",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -4071,7 +4089,7 @@
     },
     "b_marka": {
       "barony_key": "b_marka",
-      "modern_name": "Tschoryôley",
+      "modern_name": "Qoryoley",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -4091,12 +4109,12 @@
       },
       "morphemes": [
         {
-          "form": "Qoryooley (Tschoryôley)",
+          "form": "Qoryoley (Qoryooley)",
           "language": "Somali",
           "translation": "gunsmith / wood-worker (epithet of founder Ahmed Qoryoley)"
         }
       ],
-      "etymology_analysis": "Mod-standardized spelling ('Tschoryôley') of Somali 'Qoryooley', named after its pre-1960 CE founder Ahmed Qoryoley (the Somali term 'qoryooley' literally means 'gunsmith').",
+      "etymology_analysis": "Somali settlement name Qoryoley (Somali: Qoryooley), named after its pre-1960 CE founder Ahmed Qoryoley (the Somali term qoryooley literally means 'gunsmith' or 'wood-worker').",
       "current_repo_state": {
         "name": "Tschoryôley",
         "b_tarr": "Tschoryôley",
@@ -4169,7 +4187,7 @@
     },
     "b_jilib": {
       "barony_key": "b_jilib",
-      "modern_name": "JUrgenstat",
+      "modern_name": "Jilib",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -4178,7 +4196,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; 'JUrgenstat' is a fictional/mod-constructed disambiguated capital barony name replacing Jilib.",
+      "first_mention_attestation": "Unattested in pre-867 CE or medieval written sources; documented in modern Somali and Italian colonial records from the early 20th century CE (incorporated into Italian Somaliland in 1910 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -4189,17 +4207,12 @@
       },
       "morphemes": [
         {
-          "form": "Jürgen (JUrgen)",
-          "language": "Germanic (mod anthroponym)",
-          "translation": "personal name Jürgen"
-        },
-        {
-          "form": "-stat",
-          "language": "Germanic",
-          "translation": "town / settlement"
+          "form": "jilib",
+          "language": "Somali",
+          "translation": "knee; bend, curve, or small mound"
         }
       ],
-      "etymology_analysis": "Mod-constructed disambiguated capital holding name combining the Germanic personal name 'Jürgen' ('JUrgen') with the settlement suffix '-stat' ('town/place').",
+      "etymology_analysis": "Somali town on the Jubba River in Middle Juba, from Somali jilib ('knee', from Proto-Cushitic *gʷilb-), also applied topographically to a river bend or small mound (and in Somali social terminology to a sub-clan/lineage).",
       "current_repo_state": {
         "name": "JUrgenstat",
         "b_tarr": "JUrgenstat",
@@ -4211,7 +4224,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Jilib",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4351,8 +4364,8 @@
       },
       "morphemes": [
         {
-          "form": "Nord-",
-          "language": "German",
+          "form": "North",
+          "language": "English",
           "translation": "north"
         },
         {
@@ -4361,7 +4374,7 @@
           "translation": "Jubba River"
         }
       ],
-      "etymology_analysis": "A directional compound combining German Nord- ('north', adapting English 'North') with the river name Jubba, denoting the upper/northern reaches of the Jubba River.",
+      "etymology_analysis": "Directional compound combining English North with the river name Jubba, denoting the upper/northern reaches of the Jubba River.",
       "current_repo_state": {
         "name": "Nord-Jubba",
         "b_tarr": "Nord-Jubba",
@@ -4454,17 +4467,17 @@
       },
       "morphemes": [
         {
-          "form": "Nord-",
-          "language": "German",
+          "form": "North",
+          "language": "English",
           "translation": "north"
         },
         {
-          "form": "Marehân",
+          "form": "Marehan",
           "language": "Somali",
           "translation": "Marehan (Somali Darod sub-clan)"
         }
       ],
-      "etymology_analysis": "A directional compound combining German Nord- ('north', adapting English 'North') with the Somali clan ethnonym Marehan (Somali: Mareexaan).",
+      "etymology_analysis": "Directional compound combining English North with the Somali clan ethnonym Marehan (Somali: Mareexaan).",
       "current_repo_state": {
         "name": "Nord-Marehân",
         "b_tarr": "Nord-Marehân",
@@ -4645,7 +4658,7 @@
     },
     "b_pangani": {
       "barony_key": "b_pangani",
-      "modern_name": "Mrima",
+      "modern_name": "Pangani",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -4653,29 +4666,29 @@
         "county": "c_mrima",
         "holding_type": "castle"
       },
-      "first_mention_year": 1844,
-      "first_mention_attestation": "First documented in written lexical records by Johann Ludwig Krapf (collected 1844–1852 CE, published 1882 CE) as 'the land of Mrima'.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested under the name Pangani prior to 867 CE; while archaeological sites around Pangani Bay (such as nearby Muhembo) reflect Swahili coastal settlement from the medieval period (c. 15th century CE), the historic town of Pangani rose to prominence in the late 18th–19th centuries CE as a caravan port under Zanzibari influence.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
-        "type": "choronym",
-        "name": "Mrima"
+        "type": "hydronym",
+        "name": "Pangani River"
       },
       "morphemes": [
         {
-          "form": "m-",
+          "form": "panga",
           "language": "Swahili",
-          "translation": "noun class 3 prefix"
+          "translation": "arrange, set in order / rock ledge or clearing (folk etymology); river-basin root"
         },
         {
-          "form": "rima",
+          "form": "-ni",
           "language": "Swahili",
-          "translation": "hill, mountain, upland (variant of mlima)"
+          "translation": "locative suffix ('at, in')"
         }
       ],
-      "etymology_analysis": "From Swahili Mrima, a dialectal variant of mlima ('hill, mountain', from Bantu *-dɪ̀ma), referring to the hilly coastal region rising behind the littoral opposite Zanzibar.",
+      "etymology_analysis": "Swahili coastal toponym for the historic Tanzanian town situated at the mouth of the Pangani River (Mto Pangani), sharing its proper hydronym and incorporating the Swahili locative suffix -ni.",
       "current_repo_state": {
         "name": "Mrime",
         "b_tarr": "Mrime",
@@ -4687,14 +4700,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mrima",
+      "source_url": "https://en.wikipedia.org/wiki/Pangani",
       "older_name_by_867": {
         "exists": false,
         "names": [],
         "first_mention_year": null,
         "first_mention_source": null,
         "relationship": null,
-        "notes": null
+        "notes": "The Periplus of the Erythraean Sea (c. 50–60 CE) mentions the ancient emporium of Rhapta along the East African coast; while the Pangani/Ruvu estuary is one proposed candidate, Rhapta's location remains unconfirmed and debated with the Rufiji delta and other sites."
       }
     },
     "b_mkwaja": {
@@ -4802,7 +4815,7 @@
     },
     "b_unguja_ukuu": {
       "barony_key": "b_unguja_ukuu",
-      "modern_name": "Zanzibar",
+      "modern_name": "Unguja Ukuu",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -4810,29 +4823,29 @@
         "county": "c_zanzibar",
         "holding_type": "castle"
       },
-      "first_mention_year": 982,
-      "first_mention_attestation": "Attested in post-867 CE Islamic geographical literature: the specific Persian/Arabic compound Zanjibār appears in the Hudud al-Alam (982 CE) and later in al-Idrisi (1154 CE) and Yaqut al-Hamawi (13th century CE), following al-Mas'udi's 916 CE voyage (compiled c. 943–947 CE in Murūj al-Dhahab, which uses al-Zanj / Bilād al-Zanj).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by this name in pre-867 CE written sources; archaeologically documented as the earliest major urban Swahili trading settlement on Zanzibar (occupied c. 6th–10th centuries CE, flourishing in the 7th–9th centuries CE), with the Swahili toponym Unguja Ukuu recorded only in modern geographical and archaeological literature.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Zanzibar"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "zang",
-          "language": "Persian",
-          "translation": "black"
+          "form": "Unguja",
+          "language": "Swahili",
+          "translation": "Zanzibar Island (Unguja)"
         },
         {
-          "form": "-bâr",
-          "language": "Persian",
-          "translation": "coast, shore"
+          "form": "ukuu (kuu)",
+          "language": "Swahili",
+          "translation": "great, old, chief"
         }
       ],
-      "etymology_analysis": "From Arabic Zanjibār (زنجبار), borrowed from Persian Zangbâr (زنگبار), a compound of Zang ('black') and bâr ('coast, shore'), meaning 'Coast of the Blacks'.",
+      "etymology_analysis": "Swahili settlement name meaning 'Great Unguja' or 'Old Unguja', combining Unguja (the indigenous Swahili name for Zanzibar's main island) with ukuu/kuu ('great, old, principal'), reflecting its historical role as the island's earliest major Indian Ocean trading town.",
       "current_repo_state": {
         "name": "Sanzibar",
         "b_tarr": "Sanzibar",
@@ -4844,14 +4857,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Zanzibar",
+      "source_url": "https://en.wikipedia.org/wiki/Unguja_Ukuu",
       "older_name_by_867": {
         "exists": false,
         "names": [],
         "first_mention_year": null,
         "first_mention_source": null,
         "relationship": null,
-        "notes": "The Periplus of the Erythraean Sea (c. 60 CE) mentions Menuthias, which is debated among Unguja (Zanzibar), Pemba, and Mafia Island and is therefore not a confirmed pre-867 name for Zanzibar."
+        "notes": "The Periplus of the Erythraean Sea (c. 50–60 CE) mentions Menuthias, which is debated among Unguja (Zanzibar), Pemba, and Mafia Island and is therefore not a confirmed pre-867 name for Unguja Ukuu."
       }
     },
     "b_tumbatu": {
@@ -5430,7 +5443,7 @@
     },
     "b_pemba_island_tumbe": {
       "barony_key": "b_pemba_island_tumbe",
-      "modern_name": "Pemba",
+      "modern_name": "Tumbe",
       "hierarchy": {
         "empire": "e_azania",
         "kingdom": "k_zanj",
@@ -5438,24 +5451,24 @@
         "county": "c_pemba",
         "holding_type": "castle"
       },
-      "first_mention_year": 1224,
-      "first_mention_attestation": "Attested in 13th-century CE Arabic geography (Yaqut al-Hamawi, c. 1224 CE, as al-Jazira al-Khadra); archaeological settlement at Tumbe on Pemba dates to c. 600–950 CE without a surviving pre-867 CE written name.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by this name in pre-867 CE written sources; archaeologically documented as a major early Swahili trading settlement on northeastern Pemba Island occupied c. 600–1000 CE (yielding Early Tana Tradition pottery and Sasanian-Islamic imports), with the local toponym Tumbe recorded only in modern geographical and archaeological literature.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Pemba"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Pemba",
+          "form": "Tumbe",
           "language": "Swahili",
-          "translation": "Pemba Island (indigenous Swahili island name)"
+          "translation": "local settlement and archaeological site in Micheweni District, Pemba Island"
         }
       ],
-      "etymology_analysis": "Indigenous Swahili choronym for Pemba Island in the Zanzibar Archipelago (known in medieval Arabic sources as al-Jazira al-Khadra, 'the Green Island').",
+      "etymology_analysis": "Local Swahili toponym for the village and 7th–10th century CE archaeological site in northeastern Pemba Island (Micheweni District), Tanzania, one of the formative early Swahili Indian Ocean trade centers.",
       "current_repo_state": {
         "name": "Pembe",
         "b_tarr": "Pembe",
@@ -5467,14 +5480,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Pemba_Island",
+      "source_url": "https://en.wikipedia.org/wiki/Tumbe",
       "older_name_by_867": {
         "exists": false,
         "names": [],
         "first_mention_year": null,
         "first_mention_source": null,
         "relationship": null,
-        "notes": "The Periplus of the Erythraean Sea (c. 60 CE) mentions Menuthias, which is debated among Pemba, Unguja, and Mafia Island and is therefore not a confirmed pre-867 name for Pemba."
+        "notes": "The Periplus of the Erythraean Sea (c. 50–60 CE) mentions Menuthias, which is debated among Pemba, Unguja, and Mafia Island and is therefore not a confirmed pre-867 name for Tumbe."
       }
     },
     "b_pemba_island_ras_mkumbuu": {

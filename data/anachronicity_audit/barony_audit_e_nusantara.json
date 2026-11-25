@@ -12,15 +12,15 @@
       "total_baronies": 203,
       "historical_867_true": 1,
       "historical_867_false": 202,
-      "first_mention_year_known": 130,
-      "first_mention_year_unknown": 73,
+      "first_mention_year_known": 115,
+      "first_mention_year_unknown": 88,
       "named_after_post_867_person": 2,
       "named_after_hydronym": 9,
-      "named_after_any_natural_proper_name": 47,
+      "named_after_any_natural_proper_name": 41,
       "has_older_name_by_867_total": 1,
       "has_older_name_by_867_for_anachronistic": 1,
       "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 190
+      "wikipedia_source_attached": 191
     }
   },
   "baronies": {
@@ -237,7 +237,7 @@
     },
     "b_PHI_Surigao": {
       "barony_key": "b_PHI_Surigao",
-      "modern_name": "Kalagan",
+      "modern_name": "Surigao",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -245,8 +245,8 @@
         "county": "c_PHI_calagan",
         "holding_type": "church"
       },
-      "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE (Antonio Pigafetta's account of the Magellan expedition, recording the Surigao region as 'Calagan')",
+      "first_mention_year": 1543,
+      "first_mention_attestation": "1543 CE (recorded in early Spanish accounts of northeastern Mindanao / Caraga following the 1521 Magellan sighting and the 1543 Villalobos expedition; spelled Suligao / Surigao in 16th–17th century CE Spanish chronicles)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -257,17 +257,12 @@
       },
       "morphemes": [
         {
-          "form": "kalag",
-          "language": "Mansakan / Visayan",
-          "translation": "spirit or soul"
-        },
-        {
-          "form": "-an",
-          "language": "Mansakan / Visayan",
-          "translation": "characterized by (spirited, fierce, brave)"
+          "form": "sulig / surig",
+          "language": "Surigaonon / Visayan",
+          "translation": "spring or rushing water current (or from suroy 'to roam/visit')"
         }
       ],
-      "etymology_analysis": "From kalagan ('spirited', hence 'fierce' or 'brave', from kalag 'spirit/soul'), the ethnonym of the Kalagan people of northeastern Mindanao; recorded by Antonio Pigafetta in 1521 CE as Calagan (later Hispanicized as Caraga).",
+      "etymology_analysis": "Coastal toponym of northeastern Mindanao traditionally derived from Visayan/Surigaonon sulig ('to spring forth / strong current', referring to the Surigao Strait currents) or suroy ('to visit'). First documented in Spanish accounts of Mindanao in the mid-16th century CE.",
       "current_repo_state": {
         "name": "Kalagân",
         "b_tarr": "Kalagân",
@@ -279,7 +274,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Caraga",
+      "source_url": "https://en.wikipedia.org/wiki/Surigao_City",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -443,7 +438,7 @@
     },
     "b_PHI_Magugpo": {
       "barony_key": "b_PHI_Magugpo",
-      "modern_name": "Mandaya",
+      "modern_name": "Magugpo",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -452,7 +447,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; indigenous ethnonym documented in Spanish colonial records",
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Mandaya/Mansaka settlement name in Davao del Norte predating its 1941 CE municipal renaming to Tagum",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -463,17 +458,17 @@
       },
       "morphemes": [
         {
-          "form": "man-",
-          "language": "Mandaya / Mansakan",
-          "translation": "people or inhabitants of"
+          "form": "mago",
+          "language": "Mandaya / Mansaka",
+          "translation": "native forest tree species (mago tree)"
         },
         {
-          "form": "daya",
-          "language": "Mandaya / Mansakan",
-          "translation": "upstream or upland"
+          "form": "ugpo",
+          "language": "Mandaya / Mansaka",
+          "translation": "very tall, high"
         }
       ],
-      "etymology_analysis": "Ethnonym composed of the prefix man- ('people/inhabitants of') and daya ('upstream/upland'), meaning 'upstream people'. Excluded from natural_proper_name as a directional/locator compound.",
+      "etymology_analysis": "From Mandaya/Mansaka mago (a species of tall tree) and ugpo ('very high'), referring to a towering native tree at the original settlement site that later became Tagum City in Davao del Norte.",
       "current_repo_state": {
         "name": "Mandâje",
         "b_tarr": "Mandâje",
@@ -485,7 +480,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mandaya_language",
+      "source_url": "https://en.wikipedia.org/wiki/Tagum",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -595,7 +590,7 @@
     },
     "b_PHI_Malita": {
       "barony_key": "b_PHI_Malita",
-      "modern_name": "Sarangani",
+      "modern_name": "Malita",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -603,24 +598,24 @@
         "county": "c_PHI_sarangani",
         "holding_type": "church"
       },
-      "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE (noted by Antonio Pigafetta from the 1521 CE Magellan expedition and on his ca. 1525 CE chart; later reached in 1543 CE by the Ruy López de Villalobos expedition, who named it Antonia).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; coastal municipality in Davao Occidental formally organized in 1936 CE",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Sarangani Island / Sarangani Bay"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "sarangani",
-          "language": "Sangil / Blaan / Visayan",
-          "translation": "indigenous toponym for the island and bay in southern Mindanao"
+          "form": "maleta",
+          "language": "Spanish (folk etymology)",
+          "translation": "suitcase (adapted phonologically as Malita in local tradition)"
         }
       ],
-      "etymology_analysis": "Indigenous toponym for Sarangani Island and Sarangani Bay in southern Mindanao, documented in early 16th-century European charts and the 1543 CE Villalobos expedition.",
+      "etymology_analysis": "Municipality in Davao Occidental whose name is locally explained via a folk etymology from Spanish maleta ('suitcase'), linked to a late-19th/early-20th-century river-crossing incident involving settler Mariano Peralta.",
       "current_repo_state": {
         "name": "Sarangani",
         "b_tarr": "Sarangani",
@@ -632,7 +627,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sarangani",
+      "source_url": "https://en.wikipedia.org/wiki/Malita",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -742,7 +737,7 @@
     },
     "b_PHI_Bagua_Inged": {
       "barony_key": "b_PHI_Bagua_Inged",
-      "modern_name": "Cotabato",
+      "modern_name": "Bagua Inged",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -750,8 +745,8 @@
         "county": "c_PHI_cotabato",
         "holding_type": "church"
       },
-      "first_mention_year": 1914,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; Maguindanaon Kuta Watu / Spanish Cotabato documented in the colonial era (province established 1914 CE)",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; historic Maguindanaon settlement district in Cotabato along the Rio Grande de Mindanao",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -762,17 +757,17 @@
       },
       "morphemes": [
         {
-          "form": "kuta",
-          "language": "Maguindanaon (from Sanskrit/Malay kota)",
-          "translation": "fortress"
+          "form": "Bagua",
+          "language": "Maguindanaon",
+          "translation": "local district and settlement name in Cotabato"
         },
         {
-          "form": "watu",
-          "language": "Maguindanaon",
-          "translation": "stone"
+          "form": "inged",
+          "language": "Maguindanaon / Iranun",
+          "translation": "settlement, town, community, homeland"
         }
       ],
-      "etymology_analysis": "Hispanicized from Maguindanaon Kuta Watu (cognate with Malay Kota Batu), meaning 'stone fortress', referring to a stone fortification at the mouth of the Pulangi River.",
+      "etymology_analysis": "Maguindanaon compound combining Bagua (a historic district of Cotabato City) with inged ('settlement, town, or homeland'), denoting a traditional Maguindanaon community in the Pulangi delta.",
       "current_repo_state": {
         "name": "Kotabâtô",
         "b_tarr": "Kotabâtô",
@@ -784,7 +779,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Cotabato",
+      "source_url": "https://en.wikipedia.org/wiki/Cotabato_City",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -904,7 +899,7 @@
     },
     "b_PHI_Tubok": {
       "barony_key": "b_PHI_Tubok",
-      "modern_name": "Lanao",
+      "modern_name": "Tubok",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -912,24 +907,24 @@
         "county": "c_PHI_lanao",
         "holding_type": "church"
       },
-      "first_mention_year": 1639,
-      "first_mention_attestation": "1639 CE (Spanish expedition under Francisco Atienza y Báñez and Fr. Pedro Agustín San Pedro reaching Lake Lanao on April 4, 1639 CE)",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; historic coastal settlement (Tubok / Tuboc) in Malabang, Lanao del Sur, documented in modern and late-colonial Mindanao records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Lake Lanao"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "ranao",
-          "language": "Maranao",
-          "translation": "lake or body of water"
+          "form": "tubok / tuboc",
+          "language": "Maranao / Iranun",
+          "translation": "spring, bubbling water source, or point of emergence"
         }
       ],
-      "etymology_analysis": "Hispanicized from Maranao ranao ('lake'), referring directly to Lake Lanao and the surrounding Maranao ('lake-dweller') region.",
+      "etymology_analysis": "Vernacular Maranao/Iranun settlement name in coastal Malabang (Lanao del Sur) along Illana Bay, associated with a natural water spring or point of emergence on the corridor between the Maguindanao coast and Lake Lanao.",
       "current_repo_state": {
         "name": "Lanâu",
         "b_tarr": "Lanâu",
@@ -941,7 +936,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Lanao_(province)",
+      "source_url": "https://en.wikipedia.org/wiki/Malabang",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1105,7 +1100,7 @@
     },
     "b_PHI_Tamontaka": {
       "barony_key": "b_PHI_Tamontaka",
-      "modern_name": "Maguindanao",
+      "modern_name": "Tamontaka",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -1113,29 +1108,24 @@
         "county": "c_PHI_maguindanao",
         "holding_type": "church"
       },
-      "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE (recorded by Antonio Pigafetta as 'Maingdano' during the Magellan expedition; Sultanate of Maguindanao founded c. 1515 CE)",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; historic Maguindanaon riverine settlement on the southern branch of the Rio Grande de Mindanao, well documented in Spanish military and Jesuit mission records from 1861 CE onward",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Maguindanao"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "megi-",
+          "form": "Tamontaka",
           "language": "Maguindanaon",
-          "translation": "verbal/participial prefix (that which was)"
-        },
-        {
-          "form": "danao",
-          "language": "Maguindanaon",
-          "translation": "lake or inundation"
+          "translation": "historic riverine settlement name in the lower Pulangi delta"
         }
       ],
-      "etymology_analysis": "Derived from Maguindanaon danao ('lake/inundation'), meaning 'that which was inundated', originally referring to the floodplains of the Pulangi (Rio Grande de Mindanao) valley around Cotabato.",
+      "etymology_analysis": "Indigenous Maguindanaon toponym of a prominent settlement on the southern distributary (Tamontaka River) of the Rio Grande de Mindanao in Cotabato, later the site of a major 19th-century Jesuit mission (1861 CE).",
       "current_repo_state": {
         "name": "Maguindanâu",
         "b_tarr": "Maguindanâu",
@@ -1147,7 +1137,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Maguindanao",
+      "source_url": "https://en.wikipedia.org/wiki/Tamontaka_Church",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1311,7 +1301,7 @@
     },
     "b_PHI_Matangal": {
       "barony_key": "b_PHI_Matangal",
-      "modern_name": "Sulu",
+      "modern_name": "Matangal",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -1319,24 +1309,24 @@
         "county": "c_PHI_sulu",
         "holding_type": "church"
       },
-      "first_mention_year": 1304,
-      "first_mention_attestation": "1304 CE (Chen Dazhen's Dade Nanhai Zhi listing Sulu 蘇祿 among overseas countries/dependencies under Pon-i's suzerainty; also attested as Solot in the 1365 CE Javanese Nagarakretagama).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; traditional Yakan and Sama toponym for Mount Matangal, Matangal Point, and the island of Basilan in the Sulu Archipelago",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
-        "type": "choronym",
-        "name": "Sulu Archipelago"
+        "type": "topographic_feature",
+        "name": "Matangal Point / Mount Matangal"
       },
       "morphemes": [
         {
-          "form": "sulug",
-          "language": "Tausug",
-          "translation": "sea current (unelided form of Sūg)"
+          "form": "Matangal",
+          "language": "Yakan / Sama",
+          "translation": "name of Mount Matangal and eastern cape of Basilan Island"
         }
       ],
-      "etymology_analysis": "Hispanicized from Tausug Sulug (modern Sūg), meaning 'sea current', referring to the strong tidal currents of the Sulu Archipelago. First attested externally in 14th-century Chinese (1304 CE) and Javanese (1365 CE) sources.",
+      "etymology_analysis": "Indigenous Yakan/Sama toponym referring to Mount Matangal and Matangal Point on eastern Basilan, which served as a major maritime navigational landmark and an early pre-colonial name for Basilan Island.",
       "current_repo_state": {
         "name": "Sulu",
         "b_tarr": "Sulu",
@@ -1348,7 +1338,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Sulu",
+      "source_url": "https://en.wikipedia.org/wiki/Basilan",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1507,7 +1497,7 @@
     },
     "b_PHI_Bool": {
       "barony_key": "b_PHI_Bool",
-      "modern_name": "Bool-Cebu",
+      "modern_name": "Bool",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -1515,29 +1505,24 @@
         "county": "c_PHI_bool_and_cebu",
         "holding_type": "church"
       },
-      "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE (Cebu attested as 'Zubu' by Antonio Pigafetta in 1521 CE; Bohol/Bo-ol attested in 1565 CE during the Legazpi expedition)",
+      "first_mention_year": 1565,
+      "first_mention_attestation": "1565 CE (attested as Bo-ol / Bohol during Miguel López de Legazpi's 1565 CE expedition and blood compact with Datu Sikatuna; earlier sighted during Magellan's 1521 voyage)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Bohol (Bo-ol) Island"
       },
       "morphemes": [
         {
           "form": "bo-ol",
-          "language": "Visayan / Boholano",
-          "translation": "local fruit/tree name (origin of Bohol)"
-        },
-        {
-          "form": "sibu",
-          "language": "Cebuano",
-          "translation": "to trade (origin of Cebu)"
+          "language": "Boholano / Visayan",
+          "translation": "name of a native tree/fruit giving rise to the island and polity name Bohol"
         }
       ],
-      "etymology_analysis": "Compound toponym combining Bo-ol (Bohol, from a local tree/fruit) and Cebu (from Cebuano sibu 'to trade'). Excluded from natural_proper_name as a multi-island compound.",
+      "etymology_analysis": "Historic Visayan spelling (Bo-ol) of Bohol Island and its pre-colonial coastal polity in the central Visayas, traditionally derived from a native tree (bo-ol) growing near the early settlement of Bool (Tagbilaran).",
       "current_repo_state": {
         "name": "Boôl-Sebu",
         "b_tarr": "Boôl-Sebu",
@@ -1718,7 +1703,7 @@
     },
     "b_PHI_Binalbagan": {
       "barony_key": "b_PHI_Binalbagan",
-      "modern_name": "Buglas",
+      "modern_name": "Binalbagan",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -1726,24 +1711,29 @@
         "county": "c_PHI_buglas",
         "holding_type": "church"
       },
-      "first_mention_year": 1565,
-      "first_mention_attestation": "1565 CE (Spanish arrival in April 1565 CE documenting the indigenous name Buglas before renaming the island Negros)",
+      "first_mention_year": 1573,
+      "first_mention_attestation": "1573 CE (documented as one of the earliest native settlements and Spanish encomiendas/towns organized on Negros Island after Legazpi's 1565 arrival)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Buglas (Negros Island)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "buglas",
-          "language": "Old Visayan / Hiligaynon",
-          "translation": "cut off or severed (referring to the island's separation from Panay)"
+          "form": "balbag",
+          "language": "Hiligaynon / Visayan",
+          "translation": "to break, shatter, or split (or bamboo pole/log)"
+        },
+        {
+          "form": "-in-...-an",
+          "language": "Hiligaynon / Visayan",
+          "translation": "locative/patient circumfix"
         }
       ],
-      "etymology_analysis": "Pre-colonial indigenous name of Negros Island, from Old Visayan buglas ('cut off'), reflecting local origin accounts that the island was severed from Panay.",
+      "etymology_analysis": "Hiligaynon/Visayan toponym in Negros Occidental derived from the root balbag ('to break/shatter') with the circumfix -in-...-an; recorded among the oldest coastal settlements of Negros in 1573 CE.",
       "current_repo_state": {
         "name": "Buglas",
         "b_tarr": "Buglas",
@@ -1755,7 +1745,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Negros",
+      "source_url": "https://en.wikipedia.org/wiki/Binalbagan",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1919,7 +1909,7 @@
     },
     "b_PHI_Irong_Irong": {
       "barony_key": "b_PHI_Irong_Irong",
-      "modern_name": "Panay",
+      "modern_name": "Irong Irong",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -1928,23 +1918,23 @@
         "holding_type": "church"
       },
       "first_mention_year": 1569,
-      "first_mention_attestation": "1569 CE (Spanish relocation from Cebu to Panay by Miguel López de Legazpi in 1569 CE; letters of Guido de Lavezaris and Legazpi in June–July 1569 CE)",
+      "first_mention_attestation": "1569 CE (recorded in early Spanish accounts of Panay following Miguel López de Legazpi's relocation to the island in 1569 CE; ancestor of the name Iloilo)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Panay Island"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "panay",
-          "language": "Visayan / Capiznon",
-          "translation": "mouth of the river (applied by Spaniards to the island)"
+          "form": "irong",
+          "language": "Hiligaynon / Kinaray-a",
+          "translation": "nose (reduplicated irong-irong 'nose-like')"
         }
       ],
-      "etymology_analysis": "Indigenous island/town name meaning 'mouth of the river' (originally applied to Bamban in Capiz and extended to the whole island by the Spanish in 1569 CE).",
+      "etymology_analysis": "Reduplicated Hiligaynon/Kinaray-a form irong-irong ('nose-like'), describing the nose-shaped tongue of land formed by the Iloilo and Batiano rivers on southeastern Panay; later Spanish adaptation yielded 'Iloilo'.",
       "current_repo_state": {
         "name": "Panâi",
         "b_tarr": "Panâi",
@@ -1956,7 +1946,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Panay",
+      "source_url": "https://en.wikipedia.org/wiki/Iloilo_City",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2120,7 +2110,7 @@
     },
     "b_PHI_Catarman": {
       "barony_key": "b_PHI_Catarman",
-      "modern_name": "Samar",
+      "modern_name": "Catarman",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -2128,24 +2118,29 @@
         "county": "c_PHI_samar",
         "holding_type": "church"
       },
-      "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE (sighted by Ferdinand Magellan on March 16, 1521 CE and recorded as 'Zamal' in Antonio Pigafetta's journal)",
+      "first_mention_year": 1616,
+      "first_mention_attestation": "c. 1616 CE (organized as a Spanish colonial pueblo in Northern Samar in the early 17th century CE, c. 1616–1622, following Jesuit missionary arrival on Samar in 1596 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Samar Island"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "samal",
-          "language": "Waray / Visayan",
-          "translation": "indigenous name of Samar Island (recorded as Zamal in 1521 CE)"
+          "form": "ka-...-an",
+          "language": "Waray-Waray",
+          "translation": "locative circumfix"
+        },
+        {
+          "form": "tarom",
+          "language": "Waray-Waray",
+          "translation": "sharp, blade-like (referring to sharp coastal rocks or local flora)"
         }
       ],
-      "etymology_analysis": "Indigenous island name recorded by Antonio Pigafetta in 1521 CE as Zamal (later Samal and Samar).",
+      "etymology_analysis": "Waray-Waray toponym in Northern Samar formed from ka-...-an + tarom ('sharp'), traditionally linked to sharp rocks/reefs along the Catarman coast or river mouth; first formally organized in the early 17th century CE.",
       "current_repo_state": {
         "name": "Sâmar",
         "b_tarr": "Sâmar",
@@ -2157,7 +2152,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Samar",
+      "source_url": "https://en.wikipedia.org/wiki/Catarman,_Northern_Samar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2282,7 +2277,7 @@
     },
     "b_PHI_Baybay": {
       "barony_key": "b_PHI_Baybay",
-      "modern_name": "Tandaya",
+      "modern_name": "Baybay",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -2290,24 +2285,24 @@
         "county": "c_PHI_tandaya",
         "holding_type": "church"
       },
-      "first_mention_year": 1543,
-      "first_mention_attestation": "1543 CE (16th-century Spanish expedition records naming Leyte/Samar as 'Tandaya', noted by Villalobos in 1543 CE and in 1596 CE records)",
+      "first_mention_year": 1620,
+      "first_mention_attestation": "1620 CE (established as a Jesuit mission town on western Leyte c. 1620 CE; known as a native coastal settlement during 16th-century Spanish contact in the Visayas)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Tandaya (Leyte/Samar)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "tandaya",
-          "language": "Waray / Visayan",
-          "translation": "16th-century indigenous name for Leyte (and parts of Samar)"
+          "form": "baybay",
+          "language": "Cebuano / Waray-Waray",
+          "translation": "shore, beach, seashore"
         }
       ],
-      "etymology_analysis": "16th-century indigenous toponym for the island of Leyte (and sometimes applied to Samar) recorded by Spanish explorers from 1543 CE onward.",
+      "etymology_analysis": "From Visayan (Cebuano/Waray) baybay meaning 'shore' or 'seashore', describing the coastal settlement on the western shore of Leyte facing the Camotes Sea.",
       "current_repo_state": {
         "name": "Tandâje",
         "b_tarr": "Tandâje",
@@ -2319,7 +2314,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Leyte_(province)",
+      "source_url": "https://en.wikipedia.org/wiki/Baybay",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2434,7 +2429,7 @@
     },
     "b_PHI_Tukuran": {
       "barony_key": "b_PHI_Tukuran",
-      "modern_name": "Zamboanga",
+      "modern_name": "Tukuran",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_kabisay-an",
@@ -2442,8 +2437,8 @@
         "county": "c_PHI_zamboanga",
         "holding_type": "church"
       },
-      "first_mention_year": 1635,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; attested as 'Samboangan' in Spanish and European historical records from the 17th century CE (Fort Pilar founded 1635 CE)",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; strategic isthmus settlement in Zamboanga del Sur documented in late-19th-century CE Spanish military records (Fort Alfonso XIII, 1891 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2454,17 +2449,17 @@
       },
       "morphemes": [
         {
-          "form": "samboang",
-          "language": "Sinama / Subanen",
-          "translation": "mooring pole"
+          "form": "tukod",
+          "language": "Cebuano / Visayan",
+          "translation": "to build, prop up, construct"
         },
         {
           "form": "-an",
-          "language": "Sinama / Subanen",
+          "language": "Cebuano / Visayan",
           "translation": "locative suffix (place of)"
         }
       ],
-      "etymology_analysis": "Hispanicized from Sinama samboangan (Subanen sembwangan), meaning 'mooring place', from samboang ('mooring pole'). Well attested in 17th-century CE records (later folk-etymologized via Malay jambangan).",
+      "etymology_analysis": "Derived from Visayan/Cebuano tukod ('to build' or 'prop up') plus locative -an ('place of construction'), located on the narrow Zamboanga isthmus linking Illana Bay and Panguil Bay.",
       "current_repo_state": {
         "name": "Zamboange",
         "b_tarr": "Zamboange",
@@ -2476,7 +2471,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Zamboanga_City",
+      "source_url": "https://en.wikipedia.org/wiki/Tukuran",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2586,7 +2581,7 @@
     },
     "b_taiwan_new_1": {
       "barony_key": "b_taiwan_new_1",
-      "modern_name": "Pangcah",
+      "modern_name": "Kilai",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2595,7 +2590,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in pre-867 CE written sources; indigenous Amis autonym documented in modern ethnography",
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Sakizaya/Amis settlement and regional name Kiray / Kilai (transcribed in Chinese as 奇萊 Qilai) for the Hualien plain in eastern Taiwan, recorded in Qing-era gazetteers",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2606,12 +2601,12 @@
       },
       "morphemes": [
         {
-          "form": "pangcah",
-          "language": "Amis (Formosan)",
-          "translation": "human, people, or kinsmen"
+          "form": "Kiray / Kilai",
+          "language": "Sakizaya / Amis",
+          "translation": "indigenous name of the Sakizaya settlement and Hualien plain (奇萊)"
         }
       ],
-      "etymology_analysis": "Autonym of the northern Amis people of eastern Taiwan, meaning 'human' or 'people/kinsmen' in the Amis language.",
+      "etymology_analysis": "Indigenous Austronesian name (Sakizaya/Amis Kiray, Hokkien Kî-lâi, Mandarin Qílái 奇萊) for the Hualien plain in eastern Taiwan, used until the early 20th century before Japanese authorities replaced it with Karenkō (Hualien).",
       "current_repo_state": {
         "name": "Pangtzach",
         "b_tarr": "Pangtzach",
@@ -2623,7 +2618,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Amis_people",
+      "source_url": "https://en.wikipedia.org/wiki/Hualien_County",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2635,7 +2630,7 @@
     },
     "b_taiwan_new_2": {
       "barony_key": "b_taiwan_new_2",
-      "modern_name": "Taiwan New 2",
+      "modern_name": "Pangcah",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2644,7 +2639,7 @@
         "holding_type": "unoccupied"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical records; mod-generated placeholder barony key in c_amis (eastern Taiwan).",
+      "first_mention_attestation": "Unattested by 867 CE; indigenous autonym of the Amis people of eastern Taiwan, first recorded in modern ethnographic and Qing/Japanese-era documentation",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2655,17 +2650,12 @@
       },
       "morphemes": [
         {
-          "form": "Taiwan",
-          "language": "English / Hokkien (from Siraya Tayouan)",
-          "translation": "island of Taiwan"
-        },
-        {
-          "form": "new_2",
-          "language": "English (mod identifier)",
-          "translation": "second added placeholder holding"
+          "form": "pangcah",
+          "language": "Amis",
+          "translation": "human being, people of our kind"
         }
       ],
-      "etymology_analysis": "Placeholder barony key ('b_taiwan_new_2') created for the CK3 map in eastern Taiwan (c_amis) without a specific historical settlement name.",
+      "etymology_analysis": "Endonym of the northern and central Amis Austronesian people of eastern Taiwan (Hualien and Taitung), meaning 'human' or 'people of our kind', contrasting with the exonym Amis ('north').",
       "current_repo_state": {
         "name": "",
         "b_tarr": "",
@@ -2677,7 +2667,7 @@
         "holding_type": "unoccupied",
         "category": "unoccupied"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Amis_people",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2689,7 +2679,7 @@
     },
     "b_taiwan_new_3": {
       "barony_key": "b_taiwan_new_3",
-      "modern_name": "Taiwan New 3",
+      "modern_name": "Kavalan",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2697,8 +2687,8 @@
         "county": "c_amis",
         "holding_type": "unoccupied"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical records; mod-generated placeholder barony key in c_amis (eastern Taiwan).",
+      "first_mention_year": 1632,
+      "first_mention_attestation": "1632 CE (recorded as Cabaran / Cabarán in Spanish colonial documents of northern Taiwan from 1632 CE, later as Cabalang in Dutch VOC records and 噶瑪蘭 Gamalan in Qing sources)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2709,17 +2699,12 @@
       },
       "morphemes": [
         {
-          "form": "Taiwan",
-          "language": "English / Hokkien (from Siraya Tayouan)",
-          "translation": "island of Taiwan"
-        },
-        {
-          "form": "new_3",
-          "language": "English (mod identifier)",
-          "translation": "third added placeholder holding"
+          "form": "kbalan / kavalan",
+          "language": "Kavalan",
+          "translation": "people of the flatland, plains dwellers"
         }
       ],
-      "etymology_analysis": "Placeholder barony key ('b_taiwan_new_3') created for the CK3 map in eastern Taiwan (c_amis) without a specific historical settlement name.",
+      "etymology_analysis": "Indigenous Austronesian ethnonym and territorial name of the Kavalan people of northeastern Taiwan's Lanyang (Yilan) Plain, meaning 'people of the flatlands'; first documented in 1632 CE Spanish Formosa records.",
       "current_repo_state": {
         "name": "",
         "b_tarr": "",
@@ -2731,7 +2716,7 @@
         "holding_type": "unoccupied",
         "category": "unoccupied"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kavalan_people",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2743,7 +2728,7 @@
     },
     "b_taiwan_changhua": {
       "barony_key": "b_taiwan_changhua",
-      "modern_name": "Changhua",
+      "modern_name": "Poasoa",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2751,8 +2736,8 @@
         "county": "c_hoanya",
         "holding_type": "church"
       },
-      "first_mention_year": 1723,
-      "first_mention_attestation": "Established as Changhua County (彰化縣) in 1723 CE during the Qing Dynasty (Yongzheng reign); the earlier Babuza settlement was known as Poasoa / Banxian (半線) by 1694 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Babuza/Hoanya settlement name Poasoa (rendered in Hokkien/Chinese as 半線 Pòaⁿ-sòaⁿ / Banxian) in central-western Taiwan, documented in 17th-century Dutch VOC and early Qing sources prior to the 1723 CE renaming to Changhua",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2763,17 +2748,12 @@
       },
       "morphemes": [
         {
-          "form": "chāng (彰)",
-          "language": "Mandarin Chinese",
-          "translation": "manifest, make clear"
-        },
-        {
-          "form": "huà (化)",
-          "language": "Mandarin Chinese",
-          "translation": "transform, civilize (royal civilization)"
+          "form": "Poasoa",
+          "language": "Babuza / Hoanya",
+          "translation": "indigenous settlement name in Changhua (transcribed as 半線 Pòaⁿ-sòaⁿ)"
         }
       ],
-      "etymology_analysis": "Named 'Changhua' (彰化) by the Qing court in 1723 CE, meaning 'manifestation of royal civilization' (from 彰顯皇化), replacing the earlier Babuza indigenous name Poasoa (transliterated as Banxian, 半線). In-game repo state uses the county name Hoânje (Hoanya).",
+      "etymology_analysis": "Pre-Qing Plains Indigenous (Babuza/Hoanya) settlement name in west-central Taiwan, phonetically transliterated into Taiwanese Hokkien as Pòaⁿ-sòaⁿ (半線, Mandarin Banxian) before Qing authorities established Changhua County there in 1723 CE.",
       "current_repo_state": {
         "name": "Hoânje",
         "b_tarr": "Hoânje",
@@ -2785,7 +2765,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Changhua",
+      "source_url": "https://en.wikipedia.org/wiki/Changhua_City",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2851,7 +2831,7 @@
     },
     "b_taiwan_taipei": {
       "barony_key": "b_taiwan_taipei",
-      "modern_name": "Taipei",
+      "modern_name": "Hoba",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2859,8 +2839,8 @@
         "county": "c_hoanya",
         "holding_type": "unoccupied"
       },
-      "first_mention_year": 1875,
-      "first_mention_attestation": "Established as Taipeh Prefecture (臺北府) in 1875 CE during the Qing Dynasty; Han settlement in the Taipei Basin began in 1709 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Basay/Ketagalan toponym Hoba / Hobe for the Tamsui estuary in northern Taiwan, rendered in Hokkien/Chinese as 滬尾 (Hō͘-bé / Huwei) in Qing-era records from the 17th–18th centuries CE",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2871,17 +2851,12 @@
       },
       "morphemes": [
         {
-          "form": "Tái (臺/台)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "Taiwan"
-        },
-        {
-          "form": "běi (北)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "north"
+          "form": "Hoba / Hobe",
+          "language": "Basay / Ketagalan",
+          "translation": "river mouth, stream estuary"
         }
       ],
-      "etymology_analysis": "Literally 'Northern Taiwan' (臺北), coined in 1875 CE when the Qing administration separated northern Taiwan from Taiwan Prefecture to form Taipeh Prefecture.",
+      "etymology_analysis": "Indigenous Basay/Ketagalan place name meaning 'stream mouth' or 'estuary', designating the port area of modern Tamsui at the mouth of the Tamsui River in northern Taiwan and transcribed in Hokkien as 滬尾 (Hō͘-bé).",
       "current_repo_state": {
         "name": "",
         "b_tarr": "",
@@ -2893,7 +2868,7 @@
         "holding_type": "unoccupied",
         "category": "unoccupied"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Taipei",
+      "source_url": "https://en.wikipedia.org/wiki/Tamsui_District",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2954,7 +2929,7 @@
     },
     "b_taiwan_chiayi": {
       "barony_key": "b_taiwan_chiayi",
-      "modern_name": "Chiayi",
+      "modern_name": "Siraya",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -2962,8 +2937,8 @@
         "county": "c_siraya",
         "holding_type": "church"
       },
-      "first_mention_year": 1787,
-      "first_mention_attestation": "Renamed Kagee / Chiayi (嘉義) by the Qianlong Emperor in 1787 CE following the Lin Shuangwen rebellion; previously known as Tirosen (Zhuluo) since 1621 CE.",
+      "first_mention_year": 1624,
+      "first_mention_attestation": "1624 CE (documented in Dutch East India Company administrative and missionary accounts from 1624–1628 CE onward as the Plains Indigenous people and territory of southwestern Taiwan; earlier visited without the ethnonym by Chen Di in 1603 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2974,17 +2949,12 @@
       },
       "morphemes": [
         {
-          "form": "jiā (嘉)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "commend, praise"
-        },
-        {
-          "form": "yì (義)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "righteousness, loyalty"
+          "form": "Siraya",
+          "language": "Siraya",
+          "translation": "indigenous autonym ('people / inland people') of southwestern Taiwan"
         }
       ],
-      "etymology_analysis": "Conferred by the Qianlong Emperor in 1787 CE meaning 'commendable loyalty' for resisting the Lin Shuangwen rebellion, replacing the earlier Hoanya-derived name Tirosen (Zhuluo). In-game repo state uses the county name Sirâje (Siraya).",
+      "etymology_analysis": "Autonym of the Siraya Austronesian Plains Indigenous people inhabiting the southwestern Chianan Plain of Taiwan (modern Tainan and Chiayi regions), extensively recorded in 17th-century Dutch VOC sources.",
       "current_repo_state": {
         "name": "Sirâje",
         "b_tarr": "Sirâje",
@@ -2996,7 +2966,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Chiayi",
+      "source_url": "https://en.wikipedia.org/wiki/Siraya_people",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3008,7 +2978,7 @@
     },
     "b_taiwan_kaohsiung": {
       "barony_key": "b_taiwan_kaohsiung",
-      "modern_name": "Kaohsiung",
+      "modern_name": "Takau",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -3016,8 +2986,8 @@
         "county": "c_siraya",
         "holding_type": "unoccupied"
       },
-      "first_mention_year": 1920,
-      "first_mention_attestation": "Adopted the characters 高雄 (read 'Takao' in Japanese, 'Kaohsiung' in Mandarin) in 1920 CE during Japanese rule, replacing the 17th-century name Takao / Takau (打狗).",
+      "first_mention_year": 1603,
+      "first_mention_attestation": "1603 CE (attested as 打狗 Dagou / Takau in Chen Di's late Ming account Dongfan Ji of 1603 CE, and as Tancoia / Takow in 17th-century Dutch VOC records, before being renamed Kaohsiung in 1920 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3029,16 +2999,11 @@
       "morphemes": [
         {
           "form": "takau",
-          "language": "Siraya / Makatao",
-          "translation": "bamboo forest"
-        },
-        {
-          "form": "Takao / Gāoxióng (高雄)",
-          "language": "Japanese / Mandarin Chinese",
-          "translation": "high and heroic (ateji for Takao)"
+          "language": "Makatao / Siraya",
+          "translation": "bamboo forest (transcribed in Hokkien as 打狗 Tá-káu)"
         }
       ],
-      "etymology_analysis": "Originally 'Takau' (bamboo forest) in the Siraya/Makatao language, transcribed into Hokkien as 打狗 (Takao) in the 17th century and replaced in 1920 CE with the Japanese-selected characters 高雄 (Takao / Kaohsiung).",
+      "etymology_analysis": "Indigenous Makatao/Siraya toponym meaning 'bamboo forest', naming the historic harbor settlement of modern Kaohsiung in southwestern Taiwan; transcribed in Chinese as 打狗 (Takau/Dagou) from at least 1603 CE until 1920 CE.",
       "current_repo_state": {
         "name": "",
         "b_tarr": "",
@@ -3062,7 +3027,7 @@
     },
     "b_taiwan_pingtung": {
       "barony_key": "b_taiwan_pingtung",
-      "modern_name": "Pingtung",
+      "modern_name": "Akau",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_liuqiu",
@@ -3070,8 +3035,8 @@
         "county": "c_siraya",
         "holding_type": "unoccupied"
       },
-      "first_mention_year": 1920,
-      "first_mention_attestation": "Renamed Pingtung / Heitō (屏東) in 1920 CE during Japanese rule, after the Qing-era Pingtung Academy; earlier known as Akauw / Akau (阿猴) from 1646/1758 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Makatao village name Akau (transcribed in Hokkien/Chinese as 阿猴 A-kâu / Ahou) in southern Taiwan, documented in early Qing records from the late 17th–18th centuries CE prior to the 1920 CE renaming to Pingtung",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3082,17 +3047,12 @@
       },
       "morphemes": [
         {
-          "form": "píng (屏)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "screen (referring to Banping Mountain)"
-        },
-        {
-          "form": "dōng (東)",
-          "language": "Mandarin / Hokkien Chinese",
-          "translation": "east"
+          "form": "akau",
+          "language": "Makatao / Siraya",
+          "translation": "forest, wooded area (transcribed in Hokkien as 阿猴 A-kâu)"
         }
       ],
-      "etymology_analysis": "Named in 1920 CE after the Qing-era Pingtung Academy, meaning 'east of Banping Mountain' (半屏山之東), replacing the earlier Plains Indigenous name Akau (阿猴, meaning 'the forest').",
+      "etymology_analysis": "Indigenous Makatao settlement name meaning 'forest' in southern Taiwan, rendered in Taiwanese Hokkien as 阿猴 (A-kâu) during Qing rule before being renamed Pingtung in 1920 CE.",
       "current_repo_state": {
         "name": "",
         "b_tarr": "",
@@ -5617,7 +5577,7 @@
     },
     "b_IDO_Kodi": {
       "barony_key": "b_IDO_Kodi",
-      "modern_name": "Humba",
+      "modern_name": "Kodi",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -5625,24 +5585,24 @@
         "county": "c_IDO_humba",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "1365 CE, in the Old Javanese Nagarakretagama and Pararaton, which record the island as 'Sumba' (Javanese adaptation of native Humba).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; indigenous domain, district, and Austronesian ethnolinguistic group in western Sumba, documented in Dutch colonial and ethnographic sources from the 19th–20th centuries CE",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Sumba (Humba)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Humba",
-          "language": "Sumbanese",
-          "translation": "native name of Sumba Island"
+          "form": "Kodi",
+          "language": "Kodi / Sumbanese",
+          "translation": "indigenous domain and ethnonym of westernmost Sumba"
         }
       ],
-      "etymology_analysis": "Native Sumbanese endonym Humba (or Hubba), adapted into Old Javanese as Sumba during the 14th-century CE Majapahit era.",
+      "etymology_analysis": "Indigenous Sumbanese domain and ethnolinguistic name (also historically spelled Kudi) on the western tip of Sumba Island in East Nusa Tenggara, Indonesia.",
       "current_repo_state": {
         "name": "Humbe",
         "b_tarr": "Humbe",
@@ -5654,7 +5614,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sumba",
+      "source_url": "https://en.wikipedia.org/wiki/Kodi_language",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5764,7 +5724,7 @@
     },
     "b_IDO_Larantuka": {
       "barony_key": "b_IDO_Larantuka",
-      "modern_name": "Nusa Nipa",
+      "modern_name": "Larantuka",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -5772,29 +5732,29 @@
         "county": "c_IDO_nusa_nipa",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Vernacular Sikka oral-tradition name for Flores Island, documented in modern ethnography (Sareng Orin Bao, 1969 CE); no pre-867 CE written attestation.",
+      "first_mention_year": 1600,
+      "first_mention_attestation": "c. 1600 CE (documented as a major Portuguese/Topass trading and Dominican missionary center in East Flores by c. 1600 CE, following earlier 16th-century Portuguese presence in the Solor-Flores strait)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Flores (Nusa Nipa)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "nusa",
-          "language": "Sikka / Austronesian",
-          "translation": "island"
+          "form": "laran",
+          "language": "Lamaholot",
+          "translation": "road, path, way"
         },
         {
-          "form": "nipa",
-          "language": "Sikka",
-          "translation": "snake / dragon"
+          "form": "tuka",
+          "language": "Lamaholot",
+          "translation": "middle, center"
         }
       ],
-      "etymology_analysis": "From Sikka oral tradition nusa ('island') + nipa ('snake/dragon'), meaning 'Snake/Dragon Island', recorded in modern ethnography as an indigenous name for Flores.",
+      "etymology_analysis": "Lamaholot toponym of the historic kingdom and port town at the eastern tip of Flores Island, traditionally glossed from laran ('road/path') + tuka ('middle'), i.e. 'the middle way' or midpoint along the Flores-Solor strait.",
       "current_repo_state": {
         "name": "Nûsa Nîpe",
         "b_tarr": "Nûsa Nîpe",
@@ -5806,7 +5766,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Flores",
+      "source_url": "https://en.wikipedia.org/wiki/Larantuka",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6068,7 +6028,7 @@
     },
     "b_IDO_Kupang": {
       "barony_key": "b_IDO_Kupang",
-      "modern_name": "Sonbai",
+      "modern_name": "Kupang",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -6076,8 +6036,8 @@
         "county": "c_IDO_sonba_i",
         "holding_type": "church"
       },
-      "first_mention_year": 1649,
-      "first_mention_attestation": "1649 CE, in Portuguese and Dutch East India Company (VOC) diplomatic records of the Sonba'i realm in West Timor.",
+      "first_mention_year": 1613,
+      "first_mention_attestation": "1613 CE (first explicitly recorded in Dutch East India Company accounts in 1613 CE when Apollonius Schotte contacted the Raja of Kupang on western Timor)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6088,12 +6048,12 @@
       },
       "morphemes": [
         {
-          "form": "Sonba'i",
-          "language": "Uab Meto (Atoni)",
-          "translation": "traditional princedom/dynastic name of West Timor"
+          "form": "Koepan / Kupang",
+          "language": "Helong",
+          "translation": "indigenous Helong coastal polity and settlement name in West Timor"
         }
       ],
-      "etymology_analysis": "Name of the prestigious Atoni princedom (Sonba'i / Sonbai Besar) in West Timor, first documented in mid-17th-century CE European colonial sources.",
+      "etymology_analysis": "Historic Helong port and polity name on Kupang Bay in West Timor, traditionally associated with the pre-colonial Helong ruler Nai Koepan; first documented in European records by the Dutch VOC in 1613 CE.",
       "current_repo_state": {
         "name": "Sonbai",
         "b_tarr": "Sonbai",
@@ -6105,7 +6065,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sonbai_Besar",
+      "source_url": "https://en.wikipedia.org/wiki/Kupang",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6269,7 +6229,7 @@
     },
     "b_IDO_Dili": {
       "barony_key": "b_IDO_Dili",
-      "modern_name": "Wehale",
+      "modern_name": "Dili",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -6277,8 +6237,8 @@
         "county": "c_IDO_wehale",
         "holding_type": "church"
       },
-      "first_mention_year": 1522,
-      "first_mention_attestation": "1522 CE, in Antonio Pigafetta's account of the Magellan expedition, which confirms the importance of the Wewiku-Wehali kingdom on Timor.",
+      "first_mention_year": 1520,
+      "first_mention_attestation": "c. 1520 CE (recorded in early Portuguese accounts of northern Timor from c. 1520 CE onward, before becoming the capital of Portuguese Timor in 1769 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6289,17 +6249,12 @@
       },
       "morphemes": [
         {
-          "form": "we",
-          "language": "Tetum",
-          "translation": "water / spring"
-        },
-        {
-          "form": "hali",
-          "language": "Tetum",
-          "translation": "banyan tree"
+          "form": "Dili",
+          "language": "Tetum / Mambai",
+          "translation": "coastal settlement and port name in northern Timor"
         }
       ],
-      "etymology_analysis": "Tetum name of the ritual center and kingdom of Central Timor (Wehali / Wehale), first attested in European records in 1522 CE.",
+      "etymology_analysis": "Indigenous Timorese coastal port toponym on the northern shore of Timor, first noted in Portuguese maritime accounts around 1520 CE and established as the colonial capital in 1769 CE.",
       "current_repo_state": {
         "name": "Wehâle",
         "b_tarr": "Wehâle",
@@ -6311,7 +6266,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Wehali",
+      "source_url": "https://en.wikipedia.org/wiki/Dili",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -6916,7 +6871,7 @@
     },
     "b_MAL_Buru": {
       "barony_key": "b_MAL_Buru",
-      "modern_name": "Buru-Sula",
+      "modern_name": "Buru",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -6925,28 +6880,23 @@
         "holding_type": "church"
       },
       "first_mention_year": 1521,
-      "first_mention_attestation": "1521 CE, when Antonio Pigafetta recorded 'Buru' during the Magellan expedition (earlier 1365 CE Nagarakretagama calls Buru 'Hutan Kadali', also post-867 CE).",
+      "first_mention_attestation": "1521 CE (explicitly recorded as Buru by Antonio Pigafetta during the Magellan expedition; the earlier 1365 CE Nagarakretagama refers to the island as Hutan Kadali)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Buru Island"
       },
       "morphemes": [
         {
           "form": "Buru",
-          "language": "Buru",
-          "translation": "Buru Island"
-        },
-        {
-          "form": "Sula",
-          "language": "Sula",
-          "translation": "Sula Islands"
+          "language": "Buru / Malay",
+          "translation": "indigenous name of Buru Island in Maluku"
         }
       ],
-      "etymology_analysis": "Multi-island compound combining Buru (attested 1521 CE by Pigafetta; 1365 CE Nagarakretagama uses Hutan Kadali) and the Sula archipelago.",
+      "etymology_analysis": "Name of Buru Island in the Maluku archipelago, first explicitly recorded under the name Buru by Antonio Pigafetta in 1521 CE (earlier called Hutan Kadali in the 1365 CE Nagarakretagama).",
       "current_repo_state": {
         "name": "Buru-Sule",
         "b_tarr": "Buru-Sule",
@@ -7019,7 +6969,7 @@
     },
     "b_MAL_Waisai": {
       "barony_key": "b_MAL_Waisai",
-      "modern_name": "Raja Ampat",
+      "modern_name": "Waisai",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7027,8 +6977,8 @@
         "county": "c_SuMa_raja_ampat",
         "holding_type": "church"
       },
-      "first_mention_year": 1526,
-      "first_mention_attestation": "1526 CE, when Portuguese navigator Jorge de Menezes sighted and landed on the Raja Ampat Islands (following 15th-century CE Bacan contacts).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; coastal locality on southern Waigeo Island in Raja Ampat, West Papua, developed as the regency capital after 2003 CE",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7039,17 +6989,12 @@
       },
       "morphemes": [
         {
-          "form": "raja",
-          "language": "Malay (from Sanskrit rājā)",
-          "translation": "king"
-        },
-        {
-          "form": "ampat",
-          "language": "Malay",
-          "translation": "four"
+          "form": "Waisai",
+          "language": "Maya / Biak (Raja Ampat)",
+          "translation": "local coastal settlement name on Waigeo Island"
         }
       ],
-      "etymology_analysis": "Malay compound meaning 'Four Kings', derived from a local legend of four rulers over the principal islands (Waigeo, Misool, Salawati, Batanta).",
+      "etymology_analysis": "Local Raja Ampat coastal toponym on the southern shore of Waigeo Island in Southwest Papua, unattested prior to the modern administrative era.",
       "current_repo_state": {
         "name": "Râdschâ Ampât",
         "b_tarr": "Râdschâ Ampât",
@@ -7061,7 +7006,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Raja_Ampat_Islands",
+      "source_url": "https://en.wikipedia.org/wiki/Waisai",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7122,7 +7067,7 @@
     },
     "b_MAL_Ambwan": {
       "barony_key": "b_MAL_Ambwan",
-      "modern_name": "Seram",
+      "modern_name": "Ambwan",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7131,23 +7076,23 @@
         "holding_type": "church"
       },
       "first_mention_year": 1365,
-      "first_mention_attestation": "1365 CE, in the Old Javanese poem Nagarakretagama, which lists 'Sheran' (Seram Island).",
+      "first_mention_attestation": "1365 CE (explicitly attested as Ambwan in Canto 14, verse 5 of Mpu Prapanca's Old Javanese Kakawin Nagarakretagama, naming Ambon within Majapahit's eastern maritime network)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "choronym",
-        "name": "Seram"
+        "name": "Ambon (Ambwan) Island"
       },
       "morphemes": [
         {
-          "form": "Seran / Seram",
-          "language": "Old Javanese / Central Maluku",
-          "translation": "island name"
+          "form": "Ambwan",
+          "language": "Old Javanese / Ambonese Malay",
+          "translation": "historical form of Ambon (folk-etymologized via embun / ombong 'mist, dew')"
         }
       ],
-      "etymology_analysis": "Attested as Sheran/Seran in the 1365 CE Nagarakretagama (colonial Ceram); no pre-867 CE written attestation.",
+      "etymology_analysis": "Old Javanese form of Ambon Island in Maluku, attested in the 1365 CE Nagarakretagama (Canto 14.5) alongside Wandan (Banda) and Maloko (Maluku); locally connected by folk etymology to embun/ombong ('dew/mist').",
       "current_repo_state": {
         "name": "Sêram",
         "b_tarr": "Sêram",
@@ -7159,7 +7104,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Seram_Island",
+      "source_url": "https://en.wikipedia.org/wiki/Ambon_Island",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7269,7 +7214,7 @@
     },
     "b_wokam": {
       "barony_key": "b_wokam",
-      "modern_name": "Aru",
+      "modern_name": "Wokam",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7277,24 +7222,24 @@
         "county": "c_aru",
         "holding_type": "castle"
       },
-      "first_mention_year": 1512,
-      "first_mention_attestation": "1512–1515 CE, in Tomé Pires's Suma Oriental, the earliest direct historical reference to the Aru Islands.",
+      "first_mention_year": 1623,
+      "first_mention_attestation": "1623 CE (recorded in Dutch East India Company treaties negotiated by Jan Carstenszoon with the leaders of Wokam / Wokan Island in the Aru archipelago in 1623 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "choronym",
-        "name": "Aru Islands"
+        "name": "Wokam Island"
       },
       "morphemes": [
         {
-          "form": "Aru",
-          "language": "Aru",
-          "translation": "archipelago name"
+          "form": "Wokam",
+          "language": "Aru (Wokam)",
+          "translation": "indigenous name of Wokam Island and its historic coastal trading center"
         }
       ],
-      "etymology_analysis": "Indigenous name of the Aru archipelago in southeastern Maluku, first attested in external written sources in Tomé Pires's Suma Oriental (1512–1515 CE).",
+      "etymology_analysis": "Indigenous toponym of Wokam (Wokan) Island and its historic trading settlement in the northern Aru Islands, Maluku; first documented in Jan Carstenszoon's 1623 CE VOC treaty records.",
       "current_repo_state": {
         "name": "Aru",
         "b_tarr": "Aru",
@@ -7367,7 +7312,7 @@
     },
     "b_kaimana": {
       "barony_key": "b_kaimana",
-      "modern_name": "Sran",
+      "modern_name": "Kaimana",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7375,8 +7320,8 @@
         "county": "c_sran",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "1365 CE, in the Old Javanese Nagarakretagama, which lists 'Sran' (Kaimana / Bomberai Peninsula) among Majapahit's eastern tributaries.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; port town and historic petty kingdom on the Kowiai/Bomberai coast of West Papua, documented in 19th-century CE Dutch colonial records under Tidore suzerainty",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7387,12 +7332,12 @@
       },
       "morphemes": [
         {
-          "form": "Sran",
-          "language": "Kowiai / Papuan",
-          "translation": "indigenous kingdom in Kaimana (Sran Eman Muun)"
+          "form": "Kaimana",
+          "language": "Kowiai / Papuan-Austronesian",
+          "translation": "coastal port and local polity name in southern West Papua"
         }
       ],
-      "etymology_analysis": "Name of a local Papuan polity based in Kaimana (Sran Eman Muun), attested as Sran in the 1365 CE Nagarakretagama.",
+      "etymology_analysis": "Coastal port town and traditional petty kingdom (Kerajaan Komisi / Kaimana) on the southern Bird's Neck / Bomberai coast of West Papua, unattested prior to the early-modern/colonial era.",
       "current_repo_state": {
         "name": "Srân",
         "b_tarr": "Srân",
@@ -7404,7 +7349,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Western_New_Guinea",
+      "source_url": "https://en.wikipedia.org/wiki/Kaimana_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7710,7 +7655,7 @@
     },
     "b_soren": {
       "barony_key": "b_soren",
-      "modern_name": "Bintuni",
+      "modern_name": "Soren",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7719,7 +7664,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Modern/vernacular town and bay name (Dutch colonial Steenkool) in West Papua; no pre-modern written attestation.",
+      "first_mention_attestation": "Unattested by 867 CE; indigenous Biak-Numfor coastal toponym Soren in the western Bird's Head region of West Papua, the linguistic source of modern Sorong",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7730,12 +7675,12 @@
       },
       "morphemes": [
         {
-          "form": "Bintuni",
-          "language": "West Papuan",
-          "translation": "town and bay name"
+          "form": "soren",
+          "language": "Biak",
+          "translation": "deep and wavy ocean/sea"
         }
       ],
-      "etymology_analysis": "Vernacular West Papuan toponym (known as Steenkool during the Dutch colonial period) on Bintuni Bay, unattested prior to modern times.",
+      "etymology_analysis": "From the Biak-Numfor word soren ('deep and wavy ocean'), applied by seafaring Biak migrants to the western tip of the Bird's Head Peninsula in West Papua and later phonetically adapted by Maluku and European traders as Sorong.",
       "current_repo_state": {
         "name": "Bintûni",
         "b_tarr": "Bintûni",
@@ -7747,7 +7692,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bintuni",
+      "source_url": "https://en.wikipedia.org/wiki/Sorong",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7808,7 +7753,7 @@
     },
     "b_bintuni": {
       "barony_key": "b_bintuni",
-      "modern_name": "Metzkirchen",
+      "modern_name": "Bintuni",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_maluku",
@@ -7817,7 +7762,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in the Bird's Head Peninsula (Bintuni) context; the German toponym Merzkirchen (a likely orthographic source for 'Metzkirchen') is attested in Rhineland-Palatinate in modern parish records (1803 CE) and formed as a municipality in 1974 CE.",
+      "first_mention_attestation": "Unattested by 867 CE; vernacular West Papuan settlement and bay name on the Bird's Head Peninsula (known as Steenkool during the Dutch colonial period)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7828,17 +7773,12 @@
       },
       "morphemes": [
         {
-          "form": "Mertz- / Martes-",
-          "language": "German",
-          "translation": "St. Martin (from Latin Martinus, 4th century CE)"
-        },
-        {
-          "form": "kirchen",
-          "language": "German",
-          "translation": "church"
+          "form": "Bintuni",
+          "language": "West Papuan / Bintuni",
+          "translation": "local toponym on Bintuni Bay"
         }
       ],
-      "etymology_analysis": "In the repository data, b_bintuni (placed in Kepala Burung, West Papua) carries the stray German name 'Metzkirchen' ([ˈmɛts.kɪr.xən]), apparently a variant or transcription of Merzkirchen in Rhineland-Palatinate, Germany, which derives from Martinskirchen / Merteskirchen ('church of St. Martin'). Neither Metzkirchen nor Bintuni is contemporarily attested by 867 CE.",
+      "etymology_analysis": "Vernacular West Papuan toponym (known as Steenkool during the Dutch colonial period) on Bintuni Bay in the Bird's Head Peninsula, unattested prior to modern times.",
       "current_repo_state": {
         "name": "Metzkirchen",
         "b_tarr": "Metzkirchen",
@@ -7850,7 +7790,7 @@
         "holding_type": "church",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://de.wikipedia.org/wiki/Merzkirchen",
+      "source_url": "https://en.wikipedia.org/wiki/Bintuni",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7911,7 +7851,7 @@
     },
     "b_simajiri": {
       "barony_key": "b_simajiri",
-      "modern_name": "Uchina",
+      "modern_name": "Simajiri",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_ruucuu",
@@ -7920,7 +7860,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE; Shimajiri (島尻, Okinawan: Simajiri), the southern district of Okinawa Island, emerged during the Sanzan period (14th–15th centuries CE, Nanzan polity) and Ryukyu Kingdom administration.",
+      "first_mention_attestation": "Unattested by 867 CE; Okinawan Simajiri / Japanese Shimajiri (島尻), the southern district of Okinawa Island corresponding to the 14th–15th century CE Nanzan kingdom and attested in the 16th–17th century Omoro Sōshi",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7931,17 +7871,17 @@
       },
       "morphemes": [
         {
-          "form": "Uchi / Oki",
+          "form": "sima / shima",
           "language": "Okinawan / Japonic",
-          "translation": "offing, open sea"
+          "translation": "island, village community, district"
         },
         {
-          "form": "nā / nawa",
+          "form": "jiri / shiri",
           "language": "Okinawan / Japonic",
-          "translation": "rope or fishing ground"
+          "translation": "rear, end, southern extremity"
         }
       ],
-      "etymology_analysis": "Uchina (Okinawan: Uchinā; Japanese: Okinawa) is first attested in 753 CE via Jianzhen's voyage account as 阿児奈波 (Akinaha). The barony key b_simajiri references Shimajiri (southern Okinawa), while the repository name Utschinâ renders Okinawan Uchinā.",
+      "etymology_analysis": "Okinawan Simajiri (Japanese Shimajiri 島尻, literally 'island's rear/tail'), naming the southern region of Okinawa Island associated with the Sanzan-period kingdom of Nanzan (Shimajiri-Ōzato Castle) and recorded in the Omoro Sōshi.",
       "current_repo_state": {
         "name": "Utschinâ",
         "b_tarr": "Utschinâ",
@@ -7953,7 +7893,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Okinawa_Island",
+      "source_url": "https://en.wikipedia.org/wiki/Shimajiri_District,_Okinawa",
       "older_name_by_867": {
         "exists": true,
         "names": [
@@ -7962,7 +7902,7 @@
         "first_mention_year": 753,
         "first_mention_source": "Tōdaiwajō Tōseiden (779 CE, recording Jianzhen's 753 CE voyage to 阿児奈波 / Akinaha)",
         "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "Okinawa Island itself is attested as Akinaha (阿児奈波) in Jianzhen's 753 CE voyage account, prior to the post-867 Sanzan-period district name Shimajiri."
+        "notes": "Okinawa Island itself is attested as Akinaha (阿児奈波) in Jianzhen's 753 CE voyage account, prior to the post-867 Sanzan-period district name Simajiri (Shimajiri)."
       }
     },
     "b_nakajan": {
@@ -8075,7 +8015,7 @@
     },
     "b_SUL_Bhauu": {
       "barony_key": "b_SUL_Bhauu",
-      "modern_name": "Butun",
+      "modern_name": "Bhauu",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8083,8 +8023,8 @@
         "county": "c_SuMa_butun",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "1365 CE in the Old Javanese Nagarakretagama (Canto 14) as 'Butung', listed among the eastern territories claimed by Majapahit.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; Bhauu / Baubau is the historic royal port and fortified seat (Wolio) of the Sultanate of Buton on Buton Island, Southeast Sulawesi (Buton itself is first attested in 1365 CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8095,12 +8035,12 @@
       },
       "morphemes": [
         {
-          "form": "Butun / Buton",
-          "language": "Wolio / Austronesian",
-          "translation": "indigenous island and polity name (traditionally linked to the Barringtonia asiatica / putat tree)"
+          "form": "Bhauu / Baubau",
+          "language": "Wolio / Butonese",
+          "translation": "historic fortified port and settlement name on Buton Island"
         }
       ],
-      "etymology_analysis": "Butun (modern Indonesian: Buton) is first attested in writing in the 1365 CE Nagarakretagama as 'Butung'. Local tradition traces the pre-Islamic kingdom of Wolio on Buton to the late 13th or early 14th century CE, with no contemporary pre-867 attestation.",
+      "etymology_analysis": "Wolio/Butonese toponym (spelled Bhauu / Baubau) for the principal port and royal center adjacent to the Wolio fortress on Buton Island in Southeast Sulawesi, emerging in the early-modern Buton Sultanate era.",
       "current_repo_state": {
         "name": "Butun",
         "b_tarr": "Butun",
@@ -8112,7 +8052,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Buton",
+      "source_url": "https://en.wikipedia.org/wiki/Baubau",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8276,7 +8216,7 @@
     },
     "b_SUL_Rahambuu": {
       "barony_key": "b_SUL_Rahambuu",
-      "modern_name": "Konawe",
+      "modern_name": "Rahambuu",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8285,7 +8225,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Kingdom of Konawe (centered at Rahambuu/Unaaha) is known from Tolaki oral tradition and post-15th-century Islamic/Dutch colonial records.",
+      "first_mention_attestation": "Unattested by 867 CE; historic Tolaki / Western Bungku-Tolaki settlement, dialect, and local polity in Southeast Sulawesi associated with the Konawe/Mekongga sphere",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8296,12 +8236,12 @@
       },
       "morphemes": [
         {
-          "form": "Konawe",
-          "language": "Tolaki (Austronesian)",
-          "translation": "indigenous ethnonym and polity name (associated with the Konaweha River)"
+          "form": "Rahambuu",
+          "language": "Tolaki / Bungku-Tolaki",
+          "translation": "indigenous toponym and dialect group name in Southeast Sulawesi"
         }
       ],
-      "etymology_analysis": "Konawe (with capital at Rahambuu, modern Unaaha) was the principal Tolaki kingdom in Southeast Sulawesi. While local tradition places its origins around the 10th century CE or earlier, it lacks any contemporary written attestation by 867 CE.",
+      "etymology_analysis": "Indigenous Bungku-Tolaki toponym and dialect/polity designation in Southeast Sulawesi (Kolaka/Konawe cultural sphere), documented only in modern linguistic and historical sources.",
       "current_repo_state": {
         "name": "Konâwe",
         "b_tarr": "Konâwe",
@@ -8313,7 +8253,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kendari",
+      "source_url": "https://en.wikipedia.org/wiki/Rahambuu_language",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8477,7 +8417,7 @@
     },
     "b_SUL_Polean": {
       "barony_key": "b_SUL_Polean",
-      "modern_name": "Moronene",
+      "modern_name": "Polean",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8486,7 +8426,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE; the Moronene (Poleang/Rumbia) polity is known from oral tradition and 19th-century Dutch records (e.g., 1820 CE).",
+      "first_mention_attestation": "Unattested by 867 CE; Polean / Poleang is a historic Moronene territory and coastal district in Bombana, Southeast Sulawesi, documented in early-modern Buton and Dutch colonial records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8497,17 +8437,12 @@
       },
       "morphemes": [
         {
-          "form": "moro",
-          "language": "Moronene (Austronesian)",
-          "translation": "similar to, like"
-        },
-        {
-          "form": "nene",
-          "language": "Moronene (Austronesian)",
-          "translation": "resam fern (Dicranopteris linearis)"
+          "form": "Polean / Poleang",
+          "language": "Moronene",
+          "translation": "indigenous coastal territory and district name in Southeast Sulawesi"
         }
       ],
-      "etymology_analysis": "Moronene is an indigenous ethnonym and polity name in Bombana, Southeast Sulawesi (linked to Poleang, reflected in the key b_SUL_Polean). Etymologically it combines 'moro' ('like') and 'nene' ('resam fern').",
+      "etymology_analysis": "Moronene toponym (modern Poleang) in Bombana, Southeast Sulawesi, historically one of the principal Moronene domains linked to the Sultanate of Buton from the 17th century CE onward.",
       "current_repo_state": {
         "name": "Moronêne",
         "b_tarr": "Moronêne",
@@ -8519,7 +8454,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Southeast_Sulawesi",
+      "source_url": "https://en.wikipedia.org/wiki/Bombana_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8580,7 +8515,7 @@
     },
     "b_SUL_Tamboa": {
       "barony_key": "b_SUL_Tamboa",
-      "modern_name": "Tambuku",
+      "modern_name": "Tamboa",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8588,8 +8523,8 @@
         "county": "c_SuMa_tamboeko",
         "holding_type": "church"
       },
-      "first_mention_year": 1525,
-      "first_mention_attestation": "1525 CE in Spanish explorer Andrés de Urdaneta's account (recording the settlement of Tabuay), with the polity named Bungku / Tambuku / Tombuku in 16th-century Ternatean and Dutch VOC records.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; locality in Central Sulawesi within the Bungku / Tambuku coastal sphere, unrecorded in pre-colonial primary sources",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8600,12 +8535,12 @@
       },
       "morphemes": [
         {
-          "form": "Tambuku / Tobungku",
-          "language": "Bungku (Austronesian)",
-          "translation": "people/land of Bungku (prefix to- 'person/people' + Bungku)"
+          "form": "Tamboa",
+          "language": "Bungku-Tolaki / Central Sulawesi Austronesian",
+          "translation": "local toponym in Central Sulawesi"
         }
       ],
-      "etymology_analysis": "Tambuku (also Tombuku or Tobungku) is the historical Dutch and Ternatean exonym for the Kingdom of Bungku on Sulawesi's eastern coast, first recorded by Europeans in the 16th century CE.",
+      "etymology_analysis": "Local Austronesian toponym in eastern Central Sulawesi (Bungku/Tambuku region), lacking pre-modern primary source attestation.",
       "current_repo_state": {
         "name": "Tambûku",
         "b_tarr": "Tambûku",
@@ -8617,7 +8552,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Bungku",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8727,7 +8662,7 @@
     },
     "b_SUL_Amparita": {
       "barony_key": "b_SUL_Amparita",
-      "modern_name": "Ajatappareng",
+      "modern_name": "Amparita",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8735,8 +8670,8 @@
         "county": "c_SuMa_ajatappareng",
         "holding_type": "church"
       },
-      "first_mention_year": 1523,
-      "first_mention_attestation": "Unattested by 867 CE; the Ajatappareng confederation in South Sulawesi formed in the 16th century CE (sources cite c. 1523–1582 CE), with constituent chiefdoms dating from c. 1300 CE in Lontara chronicles.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; historic Bugis town in the Kingdom of Sidenreng (Sidenreng Rappang, South Sulawesi), documented in 17th-century CE Bugis lontara traditions as the sanctuary of the Tolotang community",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8747,17 +8682,12 @@
       },
       "morphemes": [
         {
-          "form": "aja",
-          "language": "Bugis (Austronesian)",
-          "translation": "west of"
-        },
-        {
-          "form": "tappareng",
-          "language": "Bugis (Austronesian)",
-          "translation": "the lakes (Lake Tempe and Lake Sidenreng)"
+          "form": "Amparita",
+          "language": "Bugis",
+          "translation": "historic Bugis settlement name in Sidenreng Rappang"
         }
       ],
-      "etymology_analysis": "Ajatappareng (rendered 'Adschatappareng' in the repository) is a Bugis compound meaning 'the lands west of the lakes', referring to the 16th-century confederation of five Bugis principalities west of Lakes Tempe and Sidenreng.",
+      "etymology_analysis": "Historic Bugis settlement name in Sidenreng Rappang (South Sulawesi), famed in Bugis oral and lontara history since the 17th century CE as the cultural center of the pre-Islamic Towani Tolotang community.",
       "current_repo_state": {
         "name": "Adschatappareng",
         "b_tarr": "Adschatappareng",
@@ -8769,7 +8699,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ajatappareng",
+      "source_url": "https://en.wikipedia.org/wiki/Sidenreng_Rappang_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8879,7 +8809,7 @@
     },
     "b_SUL_Tamala": {
       "barony_key": "b_SUL_Tamala",
-      "modern_name": "Sampaga",
+      "modern_name": "Tamala",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8888,7 +8818,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE; although a 2nd–7th century CE bronze Buddha statue was excavated at Sikendeng in Sampaga in 1921 CE, the toponym Sampaga itself is modern/early modern.",
+      "first_mention_attestation": "Unattested by 867 CE; coastal locality in the Mamuju / West Sulawesi region, unrecorded in pre-colonial primary sources",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8899,12 +8829,12 @@
       },
       "morphemes": [
         {
-          "form": "Sampaga",
-          "language": "Mandar / South Sulawesi (Austronesian)",
-          "translation": "local settlement and district name in Mamuju"
+          "form": "Tamala",
+          "language": "Mandar / West Sulawesi Austronesian",
+          "translation": "local coastal toponym in West Sulawesi"
         }
       ],
-      "etymology_analysis": "Sampaga (repository: Sampâge) is a district and village in Mamuju Regency, West Sulawesi, famous archaeologically for the 1921 CE discovery of a bronze Dipankara Buddha statue at Sikendeng. The place name itself has no written attestation by 867 CE.",
+      "etymology_analysis": "Local Austronesian toponym in the Mamuju region of West Sulawesi, lacking pre-modern historical attestation.",
       "current_repo_state": {
         "name": "Sampâge",
         "b_tarr": "Sampâge",
@@ -8916,7 +8846,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sampaga",
+      "source_url": "https://en.wikipedia.org/wiki/Mamuju_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8977,7 +8907,7 @@
     },
     "b_SUL_Makassar": {
       "barony_key": "b_SUL_Makassar",
-      "modern_name": "Siang",
+      "modern_name": "Makassar",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -8985,8 +8915,8 @@
         "county": "c_SuMa_siang",
         "holding_type": "church"
       },
-      "first_mention_year": 1540,
-      "first_mention_attestation": "1540 CE on a Portuguese map, followed by Antonio de Paiva's 1544 CE account ('Sciom' / 'Ciom'), as the major western South Sulawesi kingdom in Pangkajene.",
+      "first_mention_year": 1365,
+      "first_mention_attestation": "1365 CE (explicitly attested as Makasar in Canto 14, verse 3 of Mpu Prapanca's Old Javanese Kakawin Nagarakretagama as a major polity and port in South Sulawesi)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8997,12 +8927,12 @@
       },
       "morphemes": [
         {
-          "form": "Siang / kasiwiang",
-          "language": "Makassar / Bugis (Austronesian)",
-          "translation": "tribute or homage rendered to a sovereign"
+          "form": "Mangkasara'",
+          "language": "Makassarese",
+          "translation": "having a lofty/great spirit, or manifest/open (ethnonym and port name)"
         }
       ],
-      "etymology_analysis": "Siang (repository: Sîang) was a major Bugis-Makassar kingdom on the west coast of South Sulawesi from roughly the 10th to 16th centuries CE, first appearing in external written sources in Portuguese maps of 1540 CE and Antonio de Paiva's 1544 CE report. Christian Pelras derives Siang from 'kasiwiang' ('homage to a ruler').",
+      "etymology_analysis": "From Makassarese Mangkasara', the ethnonym and major port city of South Sulawesi (capital of the Gowa-Tallo maritime realm); first documented in the 1365 CE Old Javanese Nagarakretagama as Makasar.",
       "current_repo_state": {
         "name": "Sîang",
         "b_tarr": "Sîang",
@@ -9014,7 +8944,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Siang",
+      "source_url": "https://en.wikipedia.org/wiki/Makassar",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9173,7 +9103,7 @@
     },
     "b_SUL_Donggala": {
       "barony_key": "b_SUL_Donggala",
-      "modern_name": "Banawa",
+      "modern_name": "Donggala",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -9182,7 +9112,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE; the Kaili kingdom of Banawa (centered at Donggala) emerged in the medieval/early modern period (c. 13th–16th centuries CE) and is documented in 19th-century Dutch colonial records.",
+      "first_mention_attestation": "Unattested by 867 CE; historic port town of the Banawa kingdom on Palu Bay in Central Sulawesi, documented in 17th–19th century CE Kaili, Bugis, and Dutch VOC records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9193,12 +9123,12 @@
       },
       "morphemes": [
         {
-          "form": "Banawa",
-          "language": "Kaili (Austronesian)",
-          "translation": "indigenous Kaili kingdom and capital town name (modern Donggala)"
+          "form": "Donggala",
+          "language": "Kaili",
+          "translation": "historic port settlement name on Palu Bay"
         }
       ],
-      "etymology_analysis": "Banawa (repository: Banawe) is the historical Kaili kingdom and administrative capital of Donggala Regency in Central Sulawesi. It has no contemporary written attestation by 867 CE.",
+      "etymology_analysis": "Kaili toponym of the major historic trading port on the western shore of Palu Bay in Central Sulawesi, serving as the maritime gateway of the Banawa kingdom in the early-modern and colonial periods.",
       "current_repo_state": {
         "name": "Banawe",
         "b_tarr": "Banawe",
@@ -9815,7 +9745,7 @@
     },
     "b_SUL_Tojo": {
       "barony_key": "b_SUL_Tojo",
-      "modern_name": "North Banggai",
+      "modern_name": "Tojo",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -9824,7 +9754,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Synthetic modern directional barony name ('North Banggai') built on Banggai (attested as 'Banggawi' in Canto 14 of the 1365 CE Nagarakretagama), while the key's Tojo polity dates to the 18th-century Bare'e period.",
+      "first_mention_attestation": "Unattested by 867 CE; historic kingdom and coastal town on Tomini Bay in Tojo Una-Una, Central Sulawesi, traditionally founded in the 18th century CE and documented in 19th-century Dutch records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9835,17 +9765,12 @@
       },
       "morphemes": [
         {
-          "form": "Nord / Utara",
-          "language": "German / Indonesian",
-          "translation": "north (directional modifier)"
-        },
-        {
-          "form": "Banggai / Banggawi",
-          "language": "Saluan-Banggai (Austronesian)",
-          "translation": "indigenous island and kingdom name"
+          "form": "Tojo",
+          "language": "Bare'e / Pamona",
+          "translation": "historic kingdom and coastal town name on Tomini Bay"
         }
       ],
-      "etymology_analysis": "North Banggai (repository: Nord-Banggai / Banggai Utara) is a modern directional compound built on Banggai (attested 1365 CE as Banggawi), while the underlying key b_SUL_Tojo refers to the early modern Tojo (Todjo) kingdom.",
+      "etymology_analysis": "Name of the historic Tojo Kingdom and coastal settlement along the southern shore of Tomini Bay in Central Sulawesi (Tojo Una-Una), established in the 18th century CE.",
       "current_repo_state": {
         "name": "Nord-Banggai",
         "b_tarr": "Nord-Banggai",
@@ -9857,7 +9782,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Banggai",
+      "source_url": "https://en.wikipedia.org/wiki/Tojo_Una-Una_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9967,7 +9892,7 @@
     },
     "b_SUL_Poso": {
       "barony_key": "b_SUL_Poso",
-      "modern_name": "Mori",
+      "modern_name": "Poso",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -9975,24 +9900,24 @@
         "county": "c_SuMa_mori",
         "holding_type": "church"
       },
-      "first_mention_year": 1580,
-      "first_mention_attestation": "Unattested by 867 CE; the Kingdom of Mori (Tomori / Wita Mori) emerged in the late 16th century CE (first raja Marunduh I c. 1580–1620 CE per oral history) and was documented by the Dutch in the 19th century CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; coastal town, river, and lake name in Central Sulawesi, documented in 19th-century CE Dutch colonial and missionary records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Poso River / Lake Poso"
       },
       "morphemes": [
         {
-          "form": "Mori / Tomori",
-          "language": "Mori (Austronesian)",
-          "translation": "indigenous ethnonym and inland polity name around the Gulf of Tolo"
+          "form": "Poso",
+          "language": "Pamona / Bare'e",
+          "translation": "indigenous name of the Poso River, Lake Poso, and coastal town"
         }
       ],
-      "etymology_analysis": "Mori (also Tomori or Wita Mori) was an inland agricultural polity in North Morowali, Central Sulawesi, existing from the late 16th century until Dutch annexation in 1907 CE. It has no pre-867 written attestation.",
+      "etymology_analysis": "Pamona/Bare'e hydronym and settlement name in Central Sulawesi, shared by the Poso River, Lake Poso, and the port town at the river's mouth on Tomini Bay.",
       "current_repo_state": {
         "name": "Mori",
         "b_tarr": "Mori",
@@ -10004,7 +9929,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Mori",
+      "source_url": "https://en.wikipedia.org/wiki/Poso",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10114,7 +10039,7 @@
     },
     "b_SUL_Malangke": {
       "barony_key": "b_SUL_Malangke",
-      "modern_name": "Luwu",
+      "modern_name": "Malangke",
       "hierarchy": {
         "empire": "e_nusantara",
         "kingdom": "k_sulawesi",
@@ -10122,8 +10047,8 @@
         "county": "c_SuMa_luwu",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "1365 CE in the Old Javanese Nagarakretagama (Canto 14) as 'Luwuk', referring to the Kingdom of Luwu in South Sulawesi.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; archaeological and historical early capital of the Kingdom of Luwu in North Luwu, South Sulawesi, flourishing c. 14th–17th centuries CE and recorded in Bugis lontara chronicles",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -10134,12 +10059,12 @@
       },
       "morphemes": [
         {
-          "form": "Luwu / Luwuq / Luwuk",
-          "language": "Bugis (Austronesian)",
-          "translation": "indigenous name of the oldest Bugis kingdom (centered at Malangke before c. 1620 CE)"
+          "form": "Malangke",
+          "language": "Bugis / Luwu",
+          "translation": "historic royal capital toponym on the Gulf of Bone"
         }
       ],
-      "etymology_analysis": "Luwu (repository: Lûwuch) is the oldest Bugis kingdom in South Sulawesi, with its medieval capital at Malangke. While celebrated in the I La Galigo epic, its earliest contemporary written attestation is the 1365 CE Nagarakretagama ('Luwuk').",
+      "etymology_analysis": "Bugis toponym of the early maritime and iron-working capital of the Kedatuan Luwu on the northern shore of the Gulf of Bone (North Luwu, South Sulawesi), thriving from the 14th century CE until the capital moved to Palopo in the early 17th century CE.",
       "current_repo_state": {
         "name": "Lûwuch",
         "b_tarr": "Lûwuch",
@@ -10151,7 +10076,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Luwu",
+      "source_url": "https://en.wikipedia.org/wiki/Luwu",
       "older_name_by_867": {
         "exists": false,
         "names": [],

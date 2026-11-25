@@ -15,12 +15,12 @@
       "first_mention_year_known": 123,
       "first_mention_year_unknown": 103,
       "named_after_post_867_person": 1,
-      "named_after_hydronym": 36,
-      "named_after_any_natural_proper_name": 62,
-      "has_older_name_by_867_total": 15,
-      "has_older_name_by_867_for_anachronistic": 14,
+      "named_after_hydronym": 35,
+      "named_after_any_natural_proper_name": 60,
+      "has_older_name_by_867_total": 17,
+      "has_older_name_by_867_for_anachronistic": 16,
       "has_older_name_by_867_for_historical": 1,
-      "wikipedia_source_attached": 206
+      "wikipedia_source_attached": 208
     }
   },
   "baronies": {
@@ -549,7 +549,7 @@
     },
     "b_THAI_Chaiya": {
       "barony_key": "b_THAI_Chaiya",
-      "modern_name": "Takua Pa",
+      "modern_name": "Chaiya",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_hujung_medini",
@@ -558,7 +558,58 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE under the Thai name 'Takua Pa'; the ancient trans-peninsular port at this site was attested as Takola in the 2nd century CE",
+      "first_mention_attestation": "Unattested by 867 CE under the Thai name 'Chaiya'; the site was a major Srivijayan center attested in the 775 CE Wat Sema Mueang / Ligor-Chaiya stele (naming Śrīvijaya) and later as Grahi in the 1183 CE Grahi inscription",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Jaya / Śrīvijaya",
+          "language": "Sanskrit / Thai (or Malay cahaya)",
+          "translation": "victory (phonetic contraction of Śrīvijaya / Jaya, or from Malay cahaya 'light')"
+        }
+      ],
+      "etymology_analysis": "Thai Chaiya (ไชยา), historic Srivijayan and later Grahi center in Surat Thani Province, southern Thailand; widely derived either as a phonetic contraction of Sanskrit Śrīvijaya / Jaya ('victory') or from Malay cahaya ('light'). The 775 CE Ligor/Chaiya stele documents Srivijaya's royal shrines here.",
+      "current_repo_state": {
+        "name": "Takuâ Pâ",
+        "b_tarr": "Takuâ Pâ",
+        "b_tarr_direct": "Takuâ Pâ",
+        "b_tarr_hist": "Takuâ Pâ",
+        "b_origin": "Takuâ Pâ (Takua Pa)",
+        "b_anachronism": "",
+        "b_ipa": "[ta.kʊ.ˈaː paː]",
+        "holding_type": "church",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Chaiya_district",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Śrīvijaya"
+        ],
+        "first_mention_year": 775,
+        "first_mention_source": "Wat Sema Mueang / Ligor-Chaiya Inscription (697 Saka / 775 CE)",
+        "relationship": "immediate_predecessor_or_nearby_site",
+        "notes": "The 775 CE Sanskrit stele from Wat Hua Wiang / Wat Sema Mueang in the Chaiya area records a King of Śrīvijaya erecting three brick Buddhist shrines, establishing Chaiya as a major pre-867 Srivijayan outpost prior to its 1183 CE attestation as Grahi and later Thai name Chaiya."
+      }
+    },
+    "b_THAI_Takua_Pa": {
+      "barony_key": "b_THAI_Takua_Pa",
+      "modern_name": "Takua Pa",
+      "hierarchy": {
+        "empire": "e_srivijaya",
+        "kingdom": "k_hujung_medini",
+        "duchy": "d_MAL_langkasuka",
+        "county": "c_THAI_takua_pa",
+        "holding_type": "city"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE under the Thai name 'Takua Pa'; the ancient trans-peninsular port at this site was attested as Takola in the 2nd century CE (and a 9th-century Tamil inscription at Takua Pa records the Manigramam guild and Avani-naranam tank)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -579,17 +630,17 @@
           "translation": "forest, jungle"
         }
       ],
-      "etymology_analysis": "Thai Takua Pa literally means 'lead/tin forest', reflecting the region's tin and lead deposits (or a folk-etymological reshaping of ancient Takola).",
+      "etymology_analysis": "Thai Takua Pa literally means 'lead/tin forest', reflecting the region's alluvial tin and lead deposits (or a Thai folk-etymological reshaping of ancient Takola).",
       "current_repo_state": {
-        "name": "Takuâ Pâ",
-        "b_tarr": "Takuâ Pâ",
-        "b_tarr_direct": "Takuâ Pâ",
-        "b_tarr_hist": "Takuâ Pâ",
-        "b_origin": "Takuâ Pâ (Takua Pa)",
+        "name": "Reinholdstat",
+        "b_tarr": "Reinholdstat",
+        "b_tarr_direct": "Reinholdstat",
+        "b_tarr_hist": "Reinholdstat",
+        "b_origin": "Reinholdstat (constituent holding of Takuâ Pâ)",
         "b_anachronism": "",
-        "b_ipa": "[ta.kʊ.ˈaː paː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
+        "b_ipa": "[ˈrɛɪn.hɔld.stat]",
+        "holding_type": "city",
+        "category": "sub_barony_adaptation"
       },
       "source_url": "https://en.wikipedia.org/wiki/Takua_Pa_district",
       "older_name_by_867": {
@@ -602,60 +653,6 @@
         "first_mention_source": "Ptolemy, Geographike Hyphegesis (c. 150 CE)",
         "relationship": "same_site_earlier_name",
         "notes": "Takola / Takkola was an ancient port on the Kra Isthmus attested in Ptolemy (c. 150 CE), the Milinda Panha, and the 1030 CE Tanjore inscription (Talaittakkolam)."
-      }
-    },
-    "b_THAI_Takua_Pa": {
-      "barony_key": "b_THAI_Takua_Pa",
-      "modern_name": "Reinholdstat",
-      "hierarchy": {
-        "empire": "e_srivijaya",
-        "kingdom": "k_hujung_medini",
-        "duchy": "d_MAL_langkasuka",
-        "county": "c_THAI_takua_pa",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; 'Reinholdstat' is a non-historical/fictional Germanized name assigned to the Takua Pa barony slot",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Reinhold",
-          "language": "German",
-          "translation": "Germanic personal name (from ragin 'counsel' + wald 'rule')"
-        },
-        {
-          "form": "stat / stadt",
-          "language": "German",
-          "translation": "town, city"
-        }
-      ],
-      "etymology_analysis": "Non-historical Germanized compound ('Reinhold's town') with no basis in Thai or Malay toponymy; occupies the historical Takua Pa / Takola locality.",
-      "current_repo_state": {
-        "name": "Reinholdstat",
-        "b_tarr": "Reinholdstat",
-        "b_tarr_direct": "Reinholdstat",
-        "b_tarr_hist": "Reinholdstat",
-        "b_origin": "Reinholdstat (constituent holding of Takuâ Pâ)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈrɛɪn.hɔld.stat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
       }
     },
     "b_THAI_Ranang": {
@@ -758,7 +755,7 @@
     },
     "b_THAI_Ligor": {
       "barony_key": "b_THAI_Ligor",
-      "modern_name": "Tambralinga",
+      "modern_name": "Ligor",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_hujung_medini",
@@ -766,9 +763,9 @@
         "county": "c_THAI_tambralinga",
         "holding_type": "church"
       },
-      "first_mention_year": 200,
-      "first_mention_attestation": "c. 200 CE (attested as Tambalinga in the Pali Buddhist Niddesa; later Danliumei in Song Chinese records of 1001 CE and Madamalingam in the 1030 CE Tanjore inscription)",
-      "is_historical_867": true,
+      "first_mention_year": 1515,
+      "first_mention_attestation": "1515 CE (recorded as Ligor in Tomé Pires' Suma Oriental, c. 1512–1515 CE, reflecting the Malay maritime exonym for Nakhon Si Thammarat / Nagara Sri Dharmaraja; the same site was attested earlier as Tambralinga from c. 200 CE)",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -778,17 +775,12 @@
       },
       "morphemes": [
         {
-          "form": "tāmra",
-          "language": "Sanskrit",
-          "translation": "copper, copper-colored"
-        },
-        {
-          "form": "liṅga",
-          "language": "Sanskrit",
-          "translation": "phallus, emblem of Shiva"
+          "form": "Ligor / Lakhon",
+          "language": "Malay / Thai (from Sanskrit Nagara)",
+          "translation": "city, royal capital (Malay/Portuguese adaptation of Thai Lakhon / Sanskrit Nagara Sri Dharmaraja)"
         }
       ],
-      "etymology_analysis": "Sanskrit Tāmraliṅga ('copper-colored lingam'), an ancient Hindu-Buddhist kingdom on the Malay Peninsula centered at Nakhon Si Thammarat (Ligor), attested in the Pali Niddesa (c. 2nd–3rd century CE).",
+      "etymology_analysis": "Historical Malay and European exonym for Nakhon Si Thammarat in southern Thailand, derived via Malay phonetic adaptation of Thai Lakhon (itself a shortening of Sanskrit Nagara in Nagara Sri Dharmaraja); documented in Portuguese records from c. 1512–1515 CE.",
       "current_repo_state": {
         "name": "Tambralinge",
         "b_tarr": "Tambralinge",
@@ -800,14 +792,17 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Tambralinga",
+      "source_url": "https://en.wikipedia.org/wiki/Nakhon_Si_Thammarat",
       "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
+        "exists": true,
+        "names": [
+          "Tambralinga",
+          "Tambalinga"
+        ],
+        "first_mention_year": 200,
+        "first_mention_source": "Pali Buddhist Niddesa (c. 2nd–3rd century CE)",
+        "relationship": "same_site_earlier_name",
+        "notes": "The ancient Hindu-Buddhist kingdom centered at Nakhon Si Thammarat / Ligor was attested as Tambalinga in the Pali Niddesa (c. 200 CE), later as Danliumei in Song records (1001 CE) and Madamalingam in the 1030 CE Tanjore inscription."
       }
     },
     "b_THAI_Kanchanadit": {
@@ -964,7 +959,7 @@
     },
     "b_MAL_Beruas": {
       "barony_key": "b_MAL_Beruas",
-      "modern_name": "Gangga Negara",
+      "modern_name": "Beruas",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_hujung_medini",
@@ -972,8 +967,8 @@
         "county": "c_MAL_gangganegara",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary pre-867 CE records; 'Gangga Negara' is first recorded in the 17th-century Malay Annals (Sejarah Melayu), though Buddhist artifacts at Beruas date to the 5th–6th centuries CE",
+      "first_mention_year": 1515,
+      "first_mention_attestation": "1515 CE (attested as Bruas in Tomé Pires' Suma Oriental, c. 1512–1515 CE, and in the Sejarah Melayu / Malay Annals as a Malay riverine kingdom in Perak succeeding Gangga Negara)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -984,17 +979,12 @@
       },
       "morphemes": [
         {
-          "form": "Gaṅgā",
-          "language": "Sanskrit",
-          "translation": "the Ganges River"
-        },
-        {
-          "form": "nagara",
-          "language": "Sanskrit",
-          "translation": "city, state, kingdom"
+          "form": "beruas",
+          "language": "Malay",
+          "translation": "seashore mangosteen tree (Garcinia hombroniana)"
         }
       ],
-      "etymology_analysis": "Sanskrit Gaṅgānagara ('City on the Ganges'), a semi-legendary Hindu-Buddhist kingdom in Perak (centered around Beruas) first named in the Sejarah Melayu rather than contemporary <= 867 CE epigraphy.",
+      "etymology_analysis": "Named after the pokok beruas (seashore mangosteen, Garcinia hombroniana), a coastal tree native to Perak, Malaysia; historic Malay kingdom succeeding Gangga Negara and attested as Bruas by Tomé Pires (1512–1515 CE).",
       "current_repo_state": {
         "name": "Gangganegare",
         "b_tarr": "Gangganegare",
@@ -1006,7 +996,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gangga_Negara",
+      "source_url": "https://en.wikipedia.org/wiki/Beruas",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1464,7 +1454,7 @@
     },
     "b_MAL_Pekan": {
       "barony_key": "b_MAL_Pekan",
-      "modern_name": "Pahang",
+      "modern_name": "Pekan",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_hujung_medini",
@@ -1472,8 +1462,8 @@
         "county": "c_MAL_pahang",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "Explicitly attested as 'Pahang' in Canto 14 of the Old Javanese Kakawin Nagarakretagama (1365 CE), and earlier as Pong-fong (蓬豐) in Zhao Rugua's Zhu Fan Zhi (1225 CE).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; 'Pekan' ('the town') emerged in the 15th–16th centuries CE as the vernacular Malay name for the royal capital of Pahang (earlier known in Sanskrit as Pura / Inderapura)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1484,12 +1474,12 @@
       },
       "morphemes": [
         {
-          "form": "mahang / saamnbahang",
-          "language": "Malay / Old Khmer (proposed)",
-          "translation": "mahang tree (Macaranga) or tin"
+          "form": "pekan",
+          "language": "Malay",
+          "translation": "town, market town (vernacular equivalent of earlier Sanskrit Pura; also linked in local lore to bunga pekan, a white wild flower)"
         }
       ],
-      "etymology_analysis": "Named after the Pahang River; proposed etymologies include the mahang tree (Malay legend) or Khmer saamnbahang ('tin'). Attested in Liu Song Chinese records as Pohuang (449–450 CE).",
+      "etymology_analysis": "Malay pekan ('town, marketplace'), originating as Pekan Pahang ('the town of Pahang') to replace the earlier Sanskrit court name Pura / Inderapura following Malaccan expansion in the 15th century CE; royal seat of Pahang.",
       "current_repo_state": {
         "name": "Pahang",
         "b_tarr": "Pahang",
@@ -1501,7 +1491,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Old_Pahang_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Pekan,_Pahang",
       "older_name_by_867": {
         "exists": true,
         "names": [
@@ -1511,7 +1501,7 @@
         "first_mention_year": 449,
         "first_mention_source": "Song Shu (Book of Song), 449 CE embassy",
         "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "Old Pahang is identified by historians with the polity of Pohuang / Panhuang (婆皇) recorded in the Song Shu (449–450 CE), prior to the attestation of the name Pahang in 1365 CE."
+        "notes": "The lower Pahang polity around Pekan / Inderapura is identified by historians with Pohuang / Panhuang (婆皇) recorded in the Song Shu (449–450 CE), prior to the later Malay town name Pekan."
       }
     },
     "b_MAL_Inderapura": {
@@ -2465,7 +2455,7 @@
     },
     "b_SUM_Dharmasraya": {
       "barony_key": "b_SUM_Dharmasraya",
-      "modern_name": "Batanghari",
+      "modern_name": "Dharmasraya",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_malayadvipa",
@@ -2473,29 +2463,29 @@
         "county": "c_SUM_dharmasraya",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested by 867 CE under the name 'Batanghari'; the upper Batanghari basin was the seat of Dharmasraya (attested 1286 CE in the Padang Roco inscription)",
+      "first_mention_year": 1286,
+      "first_mention_attestation": "1286 CE (explicitly attested as Dharmāśraya in the 1208 Saka / 1286 CE Padang Roco inscription in West Sumatra under King Tribhuwanaraja Mauliwarmadewa; its Mauli dynasty is earlier attested in the 1183 CE Grahi inscription)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Batang Hari River"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "batang",
-          "language": "Malay",
-          "translation": "trunk, main stem, main river"
+          "form": "dharma",
+          "language": "Sanskrit",
+          "translation": "righteous law, Buddhist/Hindu cosmic order"
         },
         {
-          "form": "hari",
-          "language": "Malay",
-          "translation": "day (batang hari 'main river')"
+          "form": "āśraya",
+          "language": "Sanskrit",
+          "translation": "refuge, shelter, abode"
         }
       ],
-      "etymology_analysis": "Malay Batang Hari ('main river'), the longest river in Sumatra, flowing through the heartland of the ancient Melayu Kingdom and later Dharmasraya.",
+      "etymology_analysis": "Sanskrit Dharmāśraya ('abode/refuge of the Dharma'), capital of the medieval Melayu Kingdom under the Mauli dynasty in the upper Batanghari basin of West Sumatra, epigraphically attested in the 1286 CE Padang Roco inscription.",
       "current_repo_state": {
         "name": "Batangharî",
         "b_tarr": "Batangharî",
@@ -2517,7 +2507,7 @@
         "first_mention_year": 644,
         "first_mention_source": "New Book of Tang (644 CE embassy) and Yijing (671 CE)",
         "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "The Batanghari river basin was the core territory of the 7th-century CE Melayu Kingdom (Moluoyou 末羅瑜)."
+        "notes": "The upper Batanghari basin of Dharmasraya lay within the historic Melayu Kingdom (Moluoyou 末羅瑜), attested in Tang records from 644 CE and Yijing in 671 CE."
       }
     },
     "b_SUM_Gudahiri": {
@@ -8943,7 +8933,7 @@
     },
     "b_BOR_Sukadana": {
       "barony_key": "b_BOR_Sukadana",
-      "modern_name": "Tanjungpura",
+      "modern_name": "Sukadana",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_tanjungnagara",
@@ -8951,8 +8941,8 @@
         "county": "c_BOR_sukadana",
         "holding_type": "church"
       },
-      "first_mention_year": 1365,
-      "first_mention_attestation": "Attested as 'Tanjungpura' (and 'Tanjungnagara') in the Old Javanese Kakawin Nagarakretagama (1365 CE) as the principal Majapahit-claimed polity in Borneo.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; historic coastal port and royal capital of the Tanjungpura / Sukadana kingdom in West Kalimantan, emerging in the 15th–16th centuries CE and documented in the Hikayat Banjar and early 17th-century European trade records",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8963,17 +8953,17 @@
       },
       "morphemes": [
         {
-          "form": "tanjung",
-          "language": "Malay",
-          "translation": "cape or promontory"
+          "form": "suka",
+          "language": "Sanskrit / Malay",
+          "translation": "joy, pleasure, delight"
         },
         {
-          "form": "pura",
-          "language": "Sanskrit",
-          "translation": "city or fortress"
+          "form": "dana",
+          "language": "Sanskrit / Malay",
+          "translation": "gift, wealth, generosity"
         }
       ],
-      "etymology_analysis": "Hybrid Malay-Sanskrit compound meaning 'city on the cape/promontory' (from Malay 'tanjung' + Sanskrit 'pura'). The input's 'Tandschungpure' is a Germanized spelling of Tanjungpura.",
+      "etymology_analysis": "Sanskrit-Malay compound Sukadana ('joyful gift / place of generous wealth'), naming the historic diamond-trading port and successor capital of the Kingdom of Tanjungpura in West Kalimantan, Borneo.",
       "current_repo_state": {
         "name": "Tandschungpure",
         "b_tarr": "Tandschungpure",
@@ -8985,7 +8975,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Tanjungpura_Kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Sukadana,_North_Kayong",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9247,7 +9237,7 @@
     },
     "b_IDO_Bedulu": {
       "barony_key": "b_IDO_Bedulu",
-      "modern_name": "Balidwipa",
+      "modern_name": "Bedulu",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -9255,29 +9245,29 @@
         "county": "c_IDO_bali",
         "holding_type": "church"
       },
-      "first_mention_year": 914,
-      "first_mention_attestation": "Attested as 'Vāli-dvīpa' (Walidwipa) in the Belanjong pillar inscription of King Sri Kesari Warmadewa, dated 914 CE.",
+      "first_mention_year": 1365,
+      "first_mention_attestation": "1365 CE (explicitly attested as Bedahulu in Canto 14, verse 3 of Mpu Prapanca's Old Javanese Kakawin Nagarakretagama, naming the royal seat of Bali alongside Lwa Gajah)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Bali"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "bali / vāli",
-          "language": "Sanskrit / Old Balinese",
-          "translation": "offering, tribute, or strength"
+          "form": "beda",
+          "language": "Old Balinese / Old Javanese",
+          "translation": "different, changed"
         },
         {
-          "form": "dvīpa",
-          "language": "Sanskrit",
-          "translation": "island"
+          "form": "hulu",
+          "language": "Old Balinese / Old Javanese",
+          "translation": "head, upstream, royal center"
         }
       ],
-      "etymology_analysis": "Sanskritized island name 'Bali-dvipa' ('island of offerings' or 'island of strength'). The input's 'Balidwîpe' is a Germanized spelling of Balidwipa.",
+      "etymology_analysis": "Contracted from Old Balinese/Old Javanese Bedahulu (literally 'changed/different head', linked in Balinese folklore to the pig-headed king Maya Denawa / Sri Astasura, or 'upstream seat'), capital of the pre-Majapahit Balinese kingdom in Gianyar, attested in 1365 CE.",
       "current_repo_state": {
         "name": "Balidwîpe",
         "b_tarr": "Balidwîpe",
@@ -9289,7 +9279,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bali",
+      "source_url": "https://en.wikipedia.org/wiki/Bedulu",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9404,7 +9394,7 @@
     },
     "b_IDO_Bima": {
       "barony_key": "b_IDO_Bima",
-      "modern_name": "Lombok-Sumbawa",
+      "modern_name": "Bima",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -9413,7 +9403,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 1365,
-      "first_mention_attestation": "Both Lombok (as 'Lombok Mirah') and Sumbawa polities (Taliwang, Dompo, Bima, Sapi) are first attested together in Canto 14 of the Kakawin Nagarakretagama (1365 CE).",
+      "first_mention_attestation": "1365 CE (explicitly attested as Bhīma / Bima in Canto 14, verse 3 of Mpu Prapanca's Old Javanese Kakawin Nagarakretagama as a Majapahit-era polity on eastern Sumbawa)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9424,17 +9414,12 @@
       },
       "morphemes": [
         {
-          "form": "Lombok",
-          "language": "Old Javanese / Sasak",
-          "translation": "straight or honest"
-        },
-        {
-          "form": "Sumbawa",
-          "language": "Sumbawan / Sanskrit",
-          "translation": "island name (traditionally linked to Sambhava / Sembawa)"
+          "form": "Bhīma",
+          "language": "Sanskrit",
+          "translation": "the formidable/awesome one (name of the Mahabharata Pandava hero adopted into Sumbawan royal toponymy)"
         }
       ],
-      "etymology_analysis": "Modern hyphenated compound of the two Lesser Sunda islands Lombok and Sumbawa. The input's 'Lombôch-Sumbâwe' is a Germanized spelling.",
+      "etymology_analysis": "Exonym and royal polity name for eastern Sumbawa (locally known as Mbojo), derived from the Mahabharata hero Bhīma via Javanese Hindu-Buddhist cultural influence; first epigraphically/literarily attested in the 1365 CE Nagarakretagama.",
       "current_repo_state": {
         "name": "Lombôch-Sumbâwe",
         "b_tarr": "Lombôch-Sumbâwe",
@@ -9446,7 +9431,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sumbawa",
+      "source_url": "https://en.wikipedia.org/wiki/Bima",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9556,7 +9541,7 @@
     },
     "b_JAV_Sampang": {
       "barony_key": "b_JAV_Sampang",
-      "modern_name": "Madura",
+      "modern_name": "Sampang",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -9564,24 +9549,24 @@
         "county": "c_JAV_madura",
         "holding_type": "church"
       },
-      "first_mention_year": 1255,
-      "first_mention_attestation": "Attested as 'Madhura' in the Mula Malurung inscription (1255 CE) and the Kudadu inscription (1294 CE).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested by 867 CE; while Madura Island is attested in 1255 and 1365 CE, Sampang specifically enters written records in post-Majapahit Madurese and Javanese babad chronicles (16th–17th centuries CE)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Madura"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "madhura",
-          "language": "Sanskrit / Old Javanese",
-          "translation": "sweet or pleasant (from madhu 'honey')"
+          "form": "sampang / e'sempange",
+          "language": "Madurese",
+          "translation": "waypoint, place passed through"
         }
       ],
-      "etymology_analysis": "From Old Javanese 'madhura' (Sanskrit 'mādhura', sweet/pleasant, from 'madhu' honey). The input's 'Madûre' is a Germanized spelling.",
+      "etymology_analysis": "Madurese town and historic regency on the south-central coast of Madura Island, locally explained from Madurese e'sempange ('place passed through / waypoint') in folklore surrounding Prince Jokotole.",
       "current_repo_state": {
         "name": "Madûre",
         "b_tarr": "Madûre",
@@ -9593,7 +9578,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Madura",
+      "source_url": "https://en.wikipedia.org/wiki/Sampang_Regency",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -9708,7 +9693,7 @@
     },
     "b_JAV_Kahuripan": {
       "barony_key": "b_JAV_Kahuripan",
-      "modern_name": "Janggala",
+      "modern_name": "Kahuripan",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -9716,8 +9701,8 @@
         "county": "c_JAV_janggala",
         "holding_type": "castle"
       },
-      "first_mention_year": 1045,
-      "first_mention_attestation": "Created in 1045 CE (1041–1045 CE) when King Airlangga divided Kahuripan into Janggala and Panjalu (Kadiri), and attested in 12th-century inscriptions such as Hantang (1135 CE) and Talan (1136 CE).",
+      "first_mention_year": 1037,
+      "first_mention_attestation": "1037 CE (explicitly attested in King Airlangga's 959 Saka / 1037 CE Kamalagyan inscription documenting the capital at Kahuripan, and in the 1041 CE Pucangan / Calcutta Stone inscription)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -9728,12 +9713,17 @@
       },
       "morphemes": [
         {
-          "form": "janggala",
-          "language": "Sanskrit / Old Javanese",
-          "translation": "arid, open, or wasteland/jungle (Sanskrit jaṅgala)"
+          "form": "ka-...-an",
+          "language": "Old Javanese",
+          "translation": "abstract/locative circumfix"
+        },
+        {
+          "form": "hurip",
+          "language": "Old Javanese",
+          "translation": "life, living, vitality"
         }
       ],
-      "etymology_analysis": "From Sanskrit 'jaṅgala' (open/uncultivated land or jungle), adopted as the Old Javanese kingdom name Janggala. The input's 'Dschanggale' is a Germanized spelling.",
+      "etymology_analysis": "Old Javanese Kahuripan ('life' or 'livelihood', from ka-...-an + hurip 'to live'), founded by King Airlangga in East Java as the restored Mataram/Medang capital in the Brantas delta, attested epigraphically in 1037 CE.",
       "current_repo_state": {
         "name": "Dschanggale",
         "b_tarr": "Dschanggale",
@@ -10017,7 +10007,7 @@
     },
     "b_JAV_Dieng": {
       "barony_key": "b_JAV_Dieng",
-      "modern_name": "Kalingga",
+      "modern_name": "Dieng",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -10025,24 +10015,29 @@
         "county": "c_JAV_kalingga",
         "holding_type": "castle"
       },
-      "first_mention_year": 640,
-      "first_mention_attestation": "Attested in Chinese Tang dynasty annals (Jiu Tangshu / Xin Tangshu) as 'Heling' / 'Ho-ling' (訶陵) sending embassies from 640 CE onward, and by Yijing in 671 CE.",
+      "first_mention_year": 809,
+      "first_mention_attestation": "809 CE (attested as Old Javanese Dihyang / Di Hyang in the 731 Saka / 809 CE Dieng inscription and in the 861 CE Gunung Wule inscription referencing bhaṭāra i dihyang; Hindu candi temple construction on the plateau dates from the late 7th–8th century CE)",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Dieng Plateau"
       },
       "morphemes": [
         {
-          "form": "Kalingga",
-          "language": "Sanskrit / Old Javanese",
-          "translation": "named after the Kalinga region of eastern India"
+          "form": "di",
+          "language": "Old Javanese",
+          "translation": "place, at, abode"
+        },
+        {
+          "form": "hyang",
+          "language": "Old Javanese",
+          "translation": "gods, deities, ancestral spirits"
         }
       ],
-      "etymology_analysis": "Derived from Kalinga in eastern India (modern Odisha), adopted as the name of the 6th–7th-century Indianized kingdom on Java's north-central coast (rendered 'Heling' in Chinese). The input's 'Kalingge' is a Germanized spelling.",
+      "etymology_analysis": "Modern contraction of Old Javanese Dihyang / Di Hyang ('abode of the gods / place of the ancestors'), naming the sacred volcanic highland plateau in Central Java that hosts Java's oldest surviving Hindu stone temples and Old Javanese inscriptions from 809 CE onward.",
       "current_repo_state": {
         "name": "Kalingge",
         "b_tarr": "Kalingge",
@@ -10054,7 +10049,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kalingga_kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Dieng_Plateau",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10218,7 +10213,7 @@
     },
     "b_JAV_Keling": {
       "barony_key": "b_JAV_Keling",
-      "modern_name": "Giselasburch",
+      "modern_name": "Keling",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -10226,9 +10221,9 @@
         "county": "c_JAV_kalingga",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in Indonesian historical records; 'Giselasburch' is an anachronistic Germanicized modder name mapped to the CK3 barony b_JAV_Keling.",
-      "is_historical_867": false,
+      "first_mention_year": 640,
+      "first_mention_attestation": "640 CE (Javanese form of Kalingga, attested in Tang dynasty annals Jiu Tangshu and Xin Tangshu as Heling / Ho-ling 訶陵 sending embassies from 640 CE onward, and recorded by Yijing in 671 CE)",
+      "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -10238,17 +10233,12 @@
       },
       "morphemes": [
         {
-          "form": "Gisela",
-          "language": "Germanic",
-          "translation": "feminine personal name (pledge/hostage)"
-        },
-        {
-          "form": "-s-burch",
-          "language": "Middle Low German / Old Saxon",
-          "translation": "fortress or stronghold"
+          "form": "Keling / Kaliṅga",
+          "language": "Old Javanese / Sanskrit",
+          "translation": "named after the Kalinga region of eastern India (modern Odisha)"
         }
       ],
-      "etymology_analysis": "Fictional/modder-created Germanic compound ('Gisela's fortress') assigned to the Javanese barony b_JAV_Keling; has no historical attestation in Java.",
+      "etymology_analysis": "Javanese form of Sanskrit Kaliṅga (from Kalinga in eastern India), naming the early Indianized kingdom of Kalingga / Keling on north-central Java (modern Jepara/Keling area, later also associated with Kediri), attested in Tang Chinese annals as Heling (訶陵) from 640 CE.",
       "current_repo_state": {
         "name": "Giselasburch",
         "b_tarr": "Giselasburch",
@@ -10260,7 +10250,7 @@
         "holding_type": "castle",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kalingga_kingdom",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10272,7 +10262,7 @@
     },
     "b_JAV_Blambangan": {
       "barony_key": "b_JAV_Blambangan",
-      "modern_name": "Lumajang",
+      "modern_name": "Blambangan",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -10281,7 +10271,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 1365,
-      "first_mention_attestation": "Attested as 'Lumajang' in Canto 17–39 of the Old Javanese Kakawin Nagarakretagama (1365 CE), recounting King Hayam Wuruk's royal tour.",
+      "first_mention_attestation": "1365 CE (attested as Balambangan / Blambangan in the Old Javanese Kakawin Nagarakretagama of 1365 CE and in the Pararaton, naming easternmost Java)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -10292,12 +10282,17 @@
       },
       "morphemes": [
         {
-          "form": "Lumajang",
+          "form": "balambang / blambang",
           "language": "Old Javanese",
-          "translation": "East Javanese town and polity name"
+          "translation": "broad flat board, wide plain"
+        },
+        {
+          "form": "-an",
+          "language": "Old Javanese",
+          "translation": "locative suffix"
         }
       ],
-      "etymology_analysis": "East Javanese toponym attested in the 1365 CE Nagarakretagama (associated with the Lamajang Tigang Juru polity). The input's 'Lumadschang' is a Germanized spelling.",
+      "etymology_analysis": "Old Javanese toponym (Balambangan) for the easternmost Hindu-Javanese kingdom in the Banyuwangi/Oosthoek peninsula of East Java, attested in Mpu Prapanca's 1365 CE Nagarakretagama.",
       "current_repo_state": {
         "name": "Lumadschang",
         "b_tarr": "Lumadschang",
@@ -10309,7 +10304,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://id.wikipedia.org/wiki/Kakawin_Nagarakretagama",
+      "source_url": "https://en.wikipedia.org/wiki/Blambangan_Kingdom",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10939,7 +10934,7 @@
     },
     "b_JAV_Kawali": {
       "barony_key": "b_JAV_Kawali",
-      "modern_name": "Galuh",
+      "modern_name": "Kawali",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -10948,7 +10943,7 @@
         "holding_type": "church"
       },
       "first_mention_year": 1350,
-      "first_mention_attestation": "While later chronicles (16th-century Carita Parahyangan) place Galuh's founding in the 7th–8th century, contemporary epigraphic attestation of the Galuh/Kawali court dates from the 14th-century Kawali inscriptions (c. 1350–1400 CE).",
+      "first_mention_attestation": "c. 1350 CE (explicitly attested as Kawali in the 14th-century CE Old Sundanese Kawali / Astana Gede inscriptions in Ciamis, West Java, commemorating King Niskala Wastu Kancana's capital)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -10959,12 +10954,12 @@
       },
       "morphemes": [
         {
-          "form": "galuh",
-          "language": "Old Sundanese / Sanskrit",
-          "translation": "gemstone or princess"
+          "form": "kawali",
+          "language": "Old Sundanese / Old Javanese",
+          "translation": "cauldron, wide basin, or frying pan (referring to the valley basin or royal citadel)"
         }
       ],
-      "etymology_analysis": "From Old Sundanese/Old Javanese 'galuh' (gemstone), naming the eastern Sundanese kingdom of Galuh. The input's 'Galûh' is a Germanized spelling.",
+      "etymology_analysis": "Old Sundanese toponym of the Astana Gede / Kawali royal capital of the Sunda-Galuh kingdom in Ciamis, West Java, epigraphically attested in the 14th-century Kawali stone inscriptions (c. 1350–1400 CE).",
       "current_repo_state": {
         "name": "Galûh",
         "b_tarr": "Galûh",
@@ -10976,7 +10971,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Galuh_Kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Kawali_inscriptions",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11204,7 +11199,7 @@
     },
     "b_JAV_Pakuan_Pajajaran": {
       "barony_key": "b_JAV_Pakuan_Pajajaran",
-      "modern_name": "Sunda",
+      "modern_name": "Pakuan Pajajaran",
       "hierarchy": {
         "empire": "e_srivijaya",
         "kingdom": "k_yavakadvipa",
@@ -11212,8 +11207,8 @@
         "county": "c_JAV_sunda",
         "holding_type": "church"
       },
-      "first_mention_year": 932,
-      "first_mention_attestation": "First attested as 'Sunda' in the Kebon Kopi II (Rakryan Juru Pangambat) inscription dated 854 Saka (932 CE) in Bogor, West Java.",
+      "first_mention_year": 1533,
+      "first_mention_attestation": "1533 CE (explicitly attested as Pakwan Pajajaran in the 1455 Saka / 1533 CE Old Sundanese Batutulis inscription in Bogor, and referenced in late-15th/early-16th-century Sundanese manuscripts such as Bujangga Manik and Carita Parahyangan)",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11224,12 +11219,17 @@
       },
       "morphemes": [
         {
-          "form": "sunda",
-          "language": "Sanskrit / Old Sundanese",
-          "translation": "pure, clean, or luminous (Sanskrit śuddha / sundara)"
+          "form": "pakuan / pakwan",
+          "language": "Old Sundanese",
+          "translation": "royal palace/court, or place of paku trees/ferns"
+        },
+        {
+          "form": "pajajaran",
+          "language": "Old Sundanese",
+          "translation": "parallel, lined up (referring to parallel rivers Ciliwung and Cisadane or aligned pakujajar trees)"
         }
       ],
-      "etymology_analysis": "Name of the Sunda Kingdom and ethnic region of western Java, first epigraphically attested in 932 CE. The input's 'Sunde' is a Germanized spelling.",
+      "etymology_analysis": "Old Sundanese royal capital name (modern Bogor, West Java) of the Sunda Kingdom, combining pakwan ('royal court' or 'place of paku') with pajajaran ('parallel/aligned'); commemorated in King Surawisesa's 1533 CE Batutulis inscription.",
       "current_repo_state": {
         "name": "Sunde",
         "b_tarr": "Sunde",
@@ -11241,7 +11241,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kebon_Kopi_II_inscription",
+      "source_url": "https://en.wikipedia.org/wiki/Pakuan_Pajajaran",
       "older_name_by_867": {
         "exists": false,
         "names": [],

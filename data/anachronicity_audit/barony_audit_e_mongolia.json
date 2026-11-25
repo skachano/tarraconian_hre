@@ -14491,7 +14491,7 @@
     },
     "b_fic_mong_tarhanalin": {
       "barony_key": "b_fic_mong_tarhanalin",
-      "modern_name": "Dadaels",
+      "modern_name": "Tarhanalin",
       "hierarchy": {
         "empire": "e_mongolia",
         "kingdom": "k_otuken",
@@ -14500,7 +14500,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Synthetic CK3 barony (in-game: Dadaels; key: b_fic_mong_tarhanalin); no written documentary attestation <= 867 CE.",
+      "first_mention_attestation": "Synthetic Crusader Kings III barony (b_fic_mong_tarhanalin) in e_mongolia with no documented historical settlement attestation.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14511,17 +14511,17 @@
       },
       "morphemes": [
         {
-          "form": "dada",
-          "language": "Mongolian",
-          "translation": "Dada (toponym)"
+          "form": "tarhan (tarkhan)",
+          "language": "Mongolic / Turkic",
+          "translation": "free / tax-exempt noble (title)"
         },
         {
-          "form": "els",
-          "language": "Mongolian",
-          "translation": "sand / sand dunes"
+          "form": "alin",
+          "language": "Manchu / Tungusic",
+          "translation": "mountain"
         }
       ],
-      "etymology_analysis": "In-game name Dadaels combines Dada with Mongolian els ('sand, dunes'), while the barony key tarhanalin combines Mongol/Turkic tarkhan ('free/exempt noble') with Tungusic/Manchu alin ('mountain').",
+      "etymology_analysis": "Synthetic CK3 barony name (b_fic_mong_tarhanalin) combining the Mongolic/Turkic noble title 'tarkhan' ('free, exempt') with the Tungusic/Manchu toponymic element 'alin' ('mountain'); does not correspond to a historically attested settlement <= 867 CE.",
       "current_repo_state": {
         "name": "Dadaels",
         "b_tarr": "Dadaels",

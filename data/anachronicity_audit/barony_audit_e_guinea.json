@@ -15,8 +15,8 @@
       "first_mention_year_known": 60,
       "first_mention_year_unknown": 235,
       "named_after_post_867_person": 5,
-      "named_after_hydronym": 25,
-      "named_after_any_natural_proper_name": 31,
+      "named_after_hydronym": 24,
+      "named_after_any_natural_proper_name": 30,
       "has_older_name_by_867_total": 0,
       "has_older_name_by_867_for_anachronistic": 0,
       "has_older_name_by_867_for_historical": 0,
@@ -12946,7 +12946,7 @@
     },
     "b_benin_marshes": {
       "barony_key": "b_benin_marshes",
-      "modern_name": "Osse River",
+      "modern_name": "Benin Marshes",
       "hierarchy": {
         "empire": "e_guinea",
         "kingdom": "k_yorubaland",
@@ -12955,23 +12955,28 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "No dated written attestation <= 867 CE; earliest documentary record for Osse River is not established in available written sources.",
+      "first_mention_attestation": "No written attestation <= 867 CE; Benin Marshes is a modern English geographic descriptor for the coastal wetlands and riverine marshes of the Kingdom of Benin (Benin itself is first attested in European sources in the late 15th century CE, e.g., 1485–1486 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Osse"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Osse",
-          "language": "Edo / Bini",
-          "translation": "Osse (alternative name for the Ovia River in Edo State)"
+          "form": "Benin",
+          "language": "Edo / Yoruba",
+          "translation": "from Ubini / Ile-Ibinu, the Edo kingdom in southern Nigeria"
+        },
+        {
+          "form": "Marshes",
+          "language": "English",
+          "translation": "wetland / marshland"
         }
       ],
-      "etymology_analysis": "Auditing the in-game barony 'Benin marsches' (standardized in the repo to Osse, referring to the Osse/Ovia River delta in southwestern Nigeria). No written attestation exists <= 867 CE.",
+      "etymology_analysis": "Modern English descriptive compound combining Benin (derived from Edo Ubini / Yoruba Ile-Ibinu) with the generic topographic term 'marshes', referring to the coastal swamp belt of Edo State and the Niger Delta fringe in southern Nigeria. Excluded from natural_proper_name as a locator/descriptive compound.",
       "current_repo_state": {
         "name": "Osse",
         "b_tarr": "Osse",
@@ -12983,7 +12988,7 @@
         "holding_type": "church",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Ovia_River",
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Benin",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -14133,7 +14138,7 @@
     },
     "b_ajase_ipo": {
       "barony_key": "b_ajase_ipo",
-      "modern_name": "Igbomina",
+      "modern_name": "Ajase Ipo",
       "hierarchy": {
         "empire": "e_guinea",
         "kingdom": "k_yorubaland",
@@ -14142,7 +14147,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "No written attestation <= 867 CE. In-game name is Igbomina (mapped to b_ajase_ipo / Ajasse Ipo); documented in 19th-century Ilorin/Ibadan war accounts and the 1918 CE Ilorin Provincial Gazetteer.",
+      "first_mention_attestation": "No written attestation <= 867 CE; Ajase Ipo (Ajasse Ipo), a historic Igbomina Yoruba town in Kwara State, Nigeria, is documented in 19th-century Ilorin/Yoruba war accounts and British colonial gazetteers (e.g., the 1918 CE Ilorin Provincial Gazetteer).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14153,12 +14158,17 @@
       },
       "morphemes": [
         {
-          "form": "Ìgbómìnà",
+          "form": "Àjàṣẹ́",
           "language": "Yoruba",
-          "translation": "Igbomina (subgroup/region name)"
+          "translation": "settlement name (place of victory or refuge)"
+        },
+        {
+          "form": "Ìpó",
+          "language": "Yoruba",
+          "translation": "Ipo subgroup/territory of the Igbomina Yoruba, seat of the Olupo"
         }
       ],
-      "etymology_analysis": "Audited per in-game origin 'Igbomina' (barony_key b_ajase_ipo refers to Ajasse Ipo, an Igbomina town). Ìgbómìnà is a Central Yoruba subgroup in Kwara and Osun States.",
+      "etymology_analysis": "Yoruba settlement toponym (Àjàṣẹ́-Ìpó / Ajasse Ipo) in the Igbomina region of Kwara State, Nigeria, traditional seat of the Olupo and traced in oral tradition to migrations from Ile-Ife.",
       "current_repo_state": {
         "name": "Igbomine",
         "b_tarr": "Igbomine",
@@ -14170,7 +14180,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Igbomina",
+      "source_url": "https://en.wikipedia.org/wiki/Ajasse_Ipo",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -14687,7 +14697,7 @@
     },
     "b_ikare": {
       "barony_key": "b_ikare",
-      "modern_name": "Yagba",
+      "modern_name": "Ikare",
       "hierarchy": {
         "empire": "e_guinea",
         "kingdom": "k_yorubaland",
@@ -14696,7 +14706,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "No written attestation <= 867 CE. Audited per in-game origin 'Yagba' (barony_key b_ikare refers to Ikare Akoko); both Yagba and Ikare are documented only in colonial-era and modern records.",
+      "first_mention_attestation": "No written attestation <= 867 CE; Ikare (Ikare-Akoko), a major Akoko Yoruba town in Ondo State, Nigeria, is documented in late 19th-century and British colonial-era administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14707,12 +14717,12 @@
       },
       "morphemes": [
         {
-          "form": "Ìyàgbà",
+          "form": "Ìkàrẹ́",
           "language": "Yoruba",
-          "translation": "Yagba (Okun Yoruba subgroup/region)"
+          "translation": "Ikare (traditionally interpreted as a place of refuge or settlement)"
         }
       ],
-      "etymology_analysis": "Audited per in-game origin 'Yagba' (from Yoruba Ìyàgbà, an Okun Yoruba subgroup in Kogi State; barony_key b_ikare corresponds to Ikare Akoko).",
+      "etymology_analysis": "Yoruba settlement toponym (Ìkàrẹ́ / Ikare-Akoko) in Ondo State, southwestern Nigeria, traditionally interpreted as a place of refuge/settlement founded by migrants from Ile-Ife under Owa Ale Agbaode.",
       "current_repo_state": {
         "name": "Jagbe",
         "b_tarr": "Jagbe",
@@ -14724,7 +14734,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Okun_people",
+      "source_url": "https://en.wikipedia.org/wiki/Ikare",
       "older_name_by_867": {
         "exists": false,
         "names": [],

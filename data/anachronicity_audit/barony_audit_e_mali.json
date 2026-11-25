@@ -12,15 +12,15 @@
       "total_baronies": 251,
       "historical_867_true": 2,
       "historical_867_false": 249,
-      "first_mention_year_known": 77,
-      "first_mention_year_unknown": 174,
-      "named_after_post_867_person": 1,
-      "named_after_hydronym": 8,
-      "named_after_any_natural_proper_name": 31,
+      "first_mention_year_known": 73,
+      "first_mention_year_unknown": 178,
+      "named_after_post_867_person": 2,
+      "named_after_hydronym": 7,
+      "named_after_any_natural_proper_name": 18,
       "has_older_name_by_867_total": 1,
       "has_older_name_by_867_for_anachronistic": 1,
       "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 169
+      "wikipedia_source_attached": 170
     }
   },
   "baronies": {
@@ -188,7 +188,7 @@
     },
     "b_nioro": {
       "barony_key": "b_nioro",
-      "modern_name": "Kingui",
+      "modern_name": "Nioro",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -197,7 +197,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Kingui (the Pulaar name for the Diarra/Diawara kingdom centered around Nioro) is recorded in post-medieval Sahelian oral traditions and 19th-century colonial accounts.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Nioro (Nioro du Sahel) in northwestern Mali is traditionally said to have been founded in the post-medieval period and is documented in 19th-century written records as capital of Kaarta (1818–1854) and of El Hadj Umar Tall's Toucouleur Empire (captured 1855 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -208,12 +208,12 @@
       },
       "morphemes": [
         {
-          "form": "Kingi",
-          "language": "Pulaar",
-          "translation": "Kingui (regional name for the Diarra/Nioro territory)"
+          "form": "Ñóoró",
+          "language": "Soninke",
+          "translation": "Nioro (oasis trading town in Kingui)"
         }
       ],
-      "etymology_analysis": "Pulaar regional designation (Kingi / Kingui) applied to the Soninke Kingdom of Diarra (founded 11th century CE) in northwestern Mali around Nioro du Sahel.",
+      "etymology_analysis": "From Soninke Ñóoró (modern Nioro du Sahel), an oasis trading center in the Kingui region of northwestern Mali that rose to prominence as capital of the Bambara Kingdom of Kaarta and subsequently of the Toucouleur Empire.",
       "current_repo_state": {
         "name": "Kingui",
         "b_tarr": "Kingui",
@@ -225,7 +225,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Diarra",
+      "source_url": "https://en.wikipedia.org/wiki/Nioro_du_Sahel",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -237,7 +237,7 @@
     },
     "b_kingui": {
       "barony_key": "b_kingui",
-      "modern_name": "Elisabethstat",
+      "modern_name": "Kingui",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -246,7 +246,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historically; 'Elisabethstat' is a fictional German-style disambiguated municipal name generated in the repository for an intra-county holding.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kingui (Kingi, the Pulaar/Soninke regional name for the Diarra/Diawara kingdom centered around Nioro) is recorded in post-medieval Sahelian oral traditions and 19th-century colonial accounts.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -257,17 +257,12 @@
       },
       "morphemes": [
         {
-          "form": "Elisabeth",
-          "language": "German",
-          "translation": "Elisabeth (personal name)"
-        },
-        {
-          "form": "stat",
-          "language": "German (archaic)",
-          "translation": "town / city"
+          "form": "Kingi",
+          "language": "Pulaar / Soninke",
+          "translation": "Kingui (historical region around Diarra and Nioro)"
         }
       ],
-      "etymology_analysis": "Fictional repository compound combining the European personal name Elisabeth with archaic German stat ('town/city'), used as a synthetic disambiguation for a second holding in c_kingui.",
+      "etymology_analysis": "Pulaar and Soninke regional designation (Kingi / Kingui) applied to the Soninke Kingdom of Diarra (founded late 11th century CE) in northwestern Mali around Nioro du Sahel.",
       "current_repo_state": {
         "name": "Elisabethstat",
         "b_tarr": "Elisabethstat",
@@ -279,7 +274,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Diarra",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -438,7 +433,7 @@
     },
     "b_farabugu": {
       "barony_key": "b_farabugu",
-      "modern_name": "Kaarta",
+      "modern_name": "Farabugu",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -446,8 +441,8 @@
         "county": "c_kaarta",
         "holding_type": "castle"
       },
-      "first_mention_year": 1502,
-      "first_mention_attestation": "Unattested by 867 CE; Kaarta is first attested in Songhai/Timbuktu chronicle traditions for 1502 CE (when Askia Muhammad I sacked a royal residence in Kaarta), and rose as a Bambara kingdom in the 17th–18th centuries CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Farabougou (Farabugu), a rural settlement in Mali, is documented only in modern colonial and post-colonial administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -458,12 +453,17 @@
       },
       "morphemes": [
         {
-          "form": "Kaarta",
-          "language": "Bambara / Soninke",
-          "translation": "Kaarta (historical region and Bambara kingdom)"
+          "form": "Fara",
+          "language": "Bambara / Manding",
+          "translation": "rock / stony ground / marsh"
+        },
+        {
+          "form": "bugu",
+          "language": "Bambara / Manding",
+          "translation": "hamlet, camp, village"
         }
       ],
-      "etymology_analysis": "Historical region of western Mali between the upper Senegal and Niger basins, associated with the 17th–19th century Bambara Massassi Kingdom of Kaarta.",
+      "etymology_analysis": "Manding/Bambara settlement toponym (Farabougou) combining the common settlement element -bugu ('hamlet/camp') with fara ('rock/stone' or 'lowland marsh').",
       "current_repo_state": {
         "name": "Kârte",
         "b_tarr": "Kârte",
@@ -475,7 +475,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kaarta",
+      "source_url": "https://en.wikipedia.org/wiki/Farabougou",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -541,7 +541,7 @@
     },
     "b_diara": {
       "barony_key": "b_diara",
-      "modern_name": "Kaniaga",
+      "modern_name": "Diara",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -550,7 +550,56 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Kaniaga (Khaniaga) appears in post-medieval oral traditions of the Sosso Empire (12th–13th centuries CE) and 19th–20th century historiography.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Diarra (Jaara / Diara), the historic Soninke capital in northwestern Mali founded in the late 11th century CE after the decline of Ghana, is documented in post-medieval Sahelian oral traditions, 17th-century Timbuktu chronicles, and 19th-century European accounts.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Jaara",
+          "language": "Soninke",
+          "translation": "Diarra (historic Soninke capital in Kingui)"
+        }
+      ],
+      "etymology_analysis": "Soninke toponym (Jaara / Diarra / Diara), seat of the Soninke Kingdom of Diarra in northwestern Mali, established as a successor polity following the decline of the Ghana Empire.",
+      "current_repo_state": {
+        "name": "Kaniage",
+        "b_tarr": "Kaniage",
+        "b_tarr_direct": "Kaniage",
+        "b_tarr_hist": "Kaniage",
+        "b_origin": "Kaniage (Kaniage (in-game: Kaniaga))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kaniage).",
+        "b_ipa": "[ka.nɪ.ˈa.ɣə]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Diarra",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kaniaga": {
+      "barony_key": "b_kaniaga",
+      "modern_name": "Kaniaga",
+      "hierarchy": {
+        "empire": "e_mali",
+        "kingdom": "k_ghana",
+        "duchy": "d_kaniaga",
+        "county": "c_kaniaga",
+        "holding_type": "city"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kaniaga (Khaniaga) appears in post-medieval oral traditions of the Sosso Empire (12th–13th centuries CE) and 19th–20th century historiography.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -566,61 +615,7 @@
           "translation": "north / northern land (between upper Senegal and Niger bend)"
         }
       ],
-      "etymology_analysis": "Soninke/Malinke historical region name (Kaniaga / Khaniaga), derived from a Malinke term meaning 'north', applied to the region north of Manden where the Sosso Empire arose.",
-      "current_repo_state": {
-        "name": "Kaniage",
-        "b_tarr": "Kaniage",
-        "b_tarr_direct": "Kaniage",
-        "b_tarr_hist": "Kaniage",
-        "b_origin": "Kaniage (Kaniage (in-game: Kaniaga))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kaniage).",
-        "b_ipa": "[ka.nɪ.ˈa.ɣə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Kaniaga",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_kaniaga": {
-      "barony_key": "b_kaniaga",
-      "modern_name": "Brunhildestat",
-      "hierarchy": {
-        "empire": "e_mali",
-        "kingdom": "k_ghana",
-        "duchy": "d_kaniaga",
-        "county": "c_kaniaga",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested historically; 'Brunhildestat' is a fictional German-style disambiguated municipal name generated in the repository for an intra-county holding.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Brunhilde",
-          "language": "German",
-          "translation": "Brunhilde (personal name)"
-        },
-        {
-          "form": "stat",
-          "language": "German (archaic)",
-          "translation": "town / city"
-        }
-      ],
-      "etymology_analysis": "Fictional repository compound combining the Germanic personal name Brunhilde with archaic German stat ('town/city'), used as a synthetic disambiguation for a second holding in c_kaniaga.",
+      "etymology_analysis": "Soninke and Malinke historical region name (Kaniaga / Khaniaga), derived from a Malinke term meaning 'north', applied to the region north of Manden where the Sosso Empire arose.",
       "current_repo_state": {
         "name": "Brunhildestat",
         "b_tarr": "Brunhildestat",
@@ -632,7 +627,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kaniaga",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -840,7 +835,7 @@
     },
     "b_banamba": {
       "barony_key": "b_banamba",
-      "modern_name": "Sosso",
+      "modern_name": "Banamba",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -849,7 +844,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Sosso (Soso) kingdom flourished in the 12th–13th centuries CE and is recorded in the Epic of Sundiata and Ibn Khaldun's late 14th-century history.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Banamba, a town in the Koulikoro Region of western Mali, is documented in 19th-century pre-colonial and French colonial records (including the 1905–1906 Banamba slave exodus).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -860,12 +855,17 @@
       },
       "morphemes": [
         {
-          "form": "Sosso",
-          "language": "Soninke / Mande",
-          "translation": "horse (traditional etymology linked to Sosso horse-trade monopoly)"
+          "form": "Bana",
+          "language": "Bambara / Soninke",
+          "translation": "silk-cotton tree / ceiba (or local settlement root)"
+        },
+        {
+          "form": "ba",
+          "language": "Bambara",
+          "translation": "great / large"
         }
       ],
-      "etymology_analysis": "Name of the 12th–13th century Soninke kingdom of Sosso (Soso) and its capital near Boron in Koulikoro Region, Mali; traditionally linked to the Mande word for 'horse'.",
+      "etymology_analysis": "Indigenous Bambara/Soninke settlement name in the Koulikoro Region of western Mali, historically a Marka/Soninke commercial town north of the Niger River.",
       "current_repo_state": {
         "name": "Sosô",
         "b_tarr": "Sosô",
@@ -877,7 +877,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sosso_Empire",
+      "source_url": "https://en.wikipedia.org/wiki/Banamba",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1149,7 +1149,7 @@
     },
     "b_dia": {
       "barony_key": "b_dia",
-      "modern_name": "Macina",
+      "modern_name": "Dia",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1157,8 +1157,8 @@
         "county": "c_massina",
         "holding_type": "castle"
       },
-      "first_mention_year": 1477,
-      "first_mention_attestation": "Unattested by 867 CE; Macina (Massina) is attested in Timbuktu chronicles (Tarikh al-Sudan) for events from c. 1400–1477 CE onward (e.g., the Sultanate of Massina and Mossi raids in 1477 CE).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; although archaeological excavations at Dia-Shoma show urban occupation from the first millennium BCE, the town name Dia (Ja / Diaka) is first documented in post-867 medieval accounts, oral traditions, and 17th-century Timbuktu chronicles.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1169,12 +1169,12 @@
       },
       "morphemes": [
         {
-          "form": "Maasina",
-          "language": "Fula / Soninke",
-          "translation": "Macina (Inner Niger Delta region and polity)"
+          "form": "Dia",
+          "language": "Soninke / Bozo",
+          "translation": "ancient urban town on the Diaka distributary of the Inner Niger Delta"
         }
       ],
-      "etymology_analysis": "Fula/Soninke name (Maasina / Macina) for the Inner Niger Delta region and the c. 1400 CE Sultanate of Massina in central Mali.",
+      "etymology_analysis": "Ancient Mande/Soninke/Bozo settlement name (Dia / Ja) on the western margin of Mali's Inner Niger Delta, eponymous center of the Diakhanke clerical-merchant network and the adjacent Diaka distributary.",
       "current_repo_state": {
         "name": "Massine",
         "b_tarr": "Massine",
@@ -1186,7 +1186,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Massina",
+      "source_url": "https://en.wikipedia.org/wiki/Dia,_Mali",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1296,7 +1296,7 @@
     },
     "b_kolima": {
       "barony_key": "b_kolima",
-      "modern_name": "Méma",
+      "modern_name": "Kolima",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1305,23 +1305,23 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Méma appears in the oral Epic of Sundiata (13th century CE) and in 15th–17th century Timbuktu chronicles (conquered by Songhai in 1465 CE).",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kolima is an Iron Age and Stone Age archaeological mound complex and settlement in the Méma region (Niono area) of central Mali, documented only in modern archaeological and geographical surveys.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Méma"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Méma",
-          "language": "Soninke",
-          "translation": "Méma (alluvial plain and former Soninke kingdom)"
+          "form": "Kolima",
+          "language": "Soninke / Bambara",
+          "translation": "local settlement and archaeological site name in Méma"
         }
       ],
-      "etymology_analysis": "Soninke choronym for the alluvial basin west of Lake Debo and the Inner Niger Delta, and the Soninke constituent kingdom of the Ghana and Mali empires.",
+      "etymology_analysis": "Local toponym in the Méma alluvial basin of central Mali, associated with prehistoric and Iron Age habitation mounds investigated in modern archaeology.",
       "current_repo_state": {
         "name": "Meme",
         "b_tarr": "Meme",
@@ -1333,7 +1333,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/M%C3%A9ma",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1492,7 +1492,7 @@
     },
     "b_west_mema": {
       "barony_key": "b_west_mema",
-      "modern_name": "West-Méma",
+      "modern_name": "West Mema",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1501,7 +1501,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historically; 'West-Méma' is a modern directional compound created in the repository.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; West Mema is a modern directional compound referring to the western portion of the Méma region in central Mali.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1517,12 +1517,12 @@
           "translation": "western"
         },
         {
-          "form": "Méma",
+          "form": "Mema",
           "language": "Soninke",
           "translation": "Méma (alluvial plain in central Mali)"
         }
       ],
-      "etymology_analysis": "Modern directional compound combining English 'West' with the Soninke choronym Méma.",
+      "etymology_analysis": "Modern directional compound combining English 'West' with the Soninke regional choronym Méma. Excluded from natural_proper_name as a directional/locator compound.",
       "current_repo_state": {
         "name": "West-Meme",
         "b_tarr": "West-Meme",
@@ -1546,7 +1546,7 @@
     },
     "b_awdaghost": {
       "barony_key": "b_awdaghost",
-      "modern_name": "Hodh",
+      "modern_name": "Awdaghost",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1554,24 +1554,24 @@
         "county": "c_hodh",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Arabic geographical term al-Ḥawḍ ('the Basin') for this Mauritanian depression is post-medieval/modern.",
+      "first_mention_year": 872,
+      "first_mention_attestation": "c. 872 CE (first attested as Ghast/Awdaghust by al-Ya'qubi in his Ta'rikh c. 872 CE and Kitab al-Buldan c. 889–891 CE, and later described by Ibn Hawqal c. 977 CE and al-Bakri in 1068 CE — post-dating the 867 CE baseline).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Hodh"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "al-ḥawḍ",
-          "language": "Arabic",
-          "translation": "the basin / depression"
+          "form": "Awdaghost",
+          "language": "Sanhaja Berber",
+          "translation": "historic trans-Saharan caravan oasis city in southern Mauritania"
         }
       ],
-      "etymology_analysis": "From Arabic al-ḥawḍ ('basin', 'water trough'), designating the vast sedimentary depression (Hodh) of southeastern Mauritania.",
+      "etymology_analysis": "Sanhaja Berber toponym (Arabic Awdaghust / Ghast; French Aoudaghost) for the renowned medieval trans-Saharan caravan city in southern Mauritania (identified with the ruins of Tegdaoust), first recorded in Arabic historiography shortly after 867 CE.",
       "current_repo_state": {
         "name": "Hodh",
         "b_tarr": "Hodh",
@@ -1583,7 +1583,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Hodh_El_Gharbi_region",
+      "source_url": "https://en.wikipedia.org/wiki/Aoudaghost",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -1595,7 +1595,7 @@
     },
     "b_hodh_south": {
       "barony_key": "b_hodh_south",
-      "modern_name": "Zant-Ganiya",
+      "modern_name": "Hodh-South",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1604,7 +1604,7 @@
         "holding_type": "church"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historically; 'Zant-Ganiya' is a fictional disambiguated church holding name generated in the repository.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Hodh-South is a modern directional compound referring to the southern portion of the Hodh depression in Mauritania.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1615,17 +1615,17 @@
       },
       "morphemes": [
         {
-          "form": "Zant",
-          "language": "Germanic / Dutch",
-          "translation": "saint"
+          "form": "Hodh",
+          "language": "Arabic",
+          "translation": "basin / depression (al-ḥawḍ)"
         },
         {
-          "form": "Ganiya",
-          "language": "Repository",
-          "translation": "Ganiya (patron name)"
+          "form": "South",
+          "language": "English",
+          "translation": "southern"
         }
       ],
-      "etymology_analysis": "Fictional repository compound combining a Germanic/Dutch-style 'Zant' ('Saint') prefix with 'Ganiya' to disambiguate a church holding in c_hodh.",
+      "etymology_analysis": "Modern directional compound combining Arabic al-ḥawḍ ('basin', denoting the Hodh depression of southeastern Mauritania) with the English directional qualifier 'South'. Excluded from natural_proper_name as a directional/locator compound.",
       "current_repo_state": {
         "name": "Zant-Ganiya",
         "b_tarr": "Zant-Ganiya",
@@ -1649,7 +1649,7 @@
     },
     "b_hodh_west": {
       "barony_key": "b_hodh_west",
-      "modern_name": "West-Hodh",
+      "modern_name": "Hodh-West",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1658,7 +1658,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested historically as a medieval name; 'West-Hodh' is a modern directional compound (paralleling modern Hodh El Gharbi).",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Hodh-West is a modern directional compound paralleling modern Hodh El Gharbi in southeastern Mauritania.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1669,17 +1669,17 @@
       },
       "morphemes": [
         {
+          "form": "Hodh",
+          "language": "Arabic",
+          "translation": "basin / depression (al-ḥawḍ)"
+        },
+        {
           "form": "West",
           "language": "English",
           "translation": "western"
-        },
-        {
-          "form": "Hodh",
-          "language": "Arabic",
-          "translation": "basin / depression"
         }
       ],
-      "etymology_analysis": "Modern directional compound combining English 'West' with Arabic al-ḥawḍ ('basin').",
+      "etymology_analysis": "Modern directional compound combining Arabic al-ḥawḍ ('basin', denoting the Hodh depression of southeastern Mauritania) with the English directional qualifier 'West'. Excluded from natural_proper_name as a directional/locator compound.",
       "current_repo_state": {
         "name": "West-Hodh",
         "b_tarr": "West-Hodh",
@@ -1904,7 +1904,7 @@
     },
     "b_al-ghaba": {
       "barony_key": "b_al-ghaba",
-      "modern_name": "Awkar",
+      "modern_name": "Al-Ghaba",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -1912,24 +1912,29 @@
         "county": "c_awkar",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Awkar (Aouker) is documented in Mauritanian oral traditions of Wagadu and modern geography.",
+      "first_mention_year": 1068,
+      "first_mention_attestation": "1068 CE (described as al-Ghāba, 'the forest/grove', the walled royal quarter of the capital of the Ghana Empire, in al-Bakri's Kitab al-Masalik wa-l-Mamalik).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Awkar"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Awkar",
-          "language": "Berber / Soninke",
-          "translation": "Aouker (basin and dune region of southern Mauritania)"
+          "form": "al-",
+          "language": "Arabic",
+          "translation": "the (definite article)"
+        },
+        {
+          "form": "ghāba",
+          "language": "Arabic",
+          "translation": "forest, thicket, grove"
         }
       ],
-      "etymology_analysis": "Regional choronym (Awkar / Aouker) for the endorheic basin and dune landscape of southeastern Mauritania, core homeland of the Ghana/Wagadu Empire.",
+      "etymology_analysis": "Arabic descriptive name al-Ghāba ('the forest' or 'the grove'), applied by Andalusian geographer al-Bakri in 1068 CE to the royal residence quarter of Ghana's twin capital, named for the guarded sacred groves surrounding it that held royal tombs and shrines.",
       "current_repo_state": {
         "name": "Awkar",
         "b_tarr": "Awkar",
@@ -2156,7 +2161,7 @@
     },
     "b_kedama": {
       "barony_key": "b_kedama",
-      "modern_name": "Masin",
+      "modern_name": "Kedama",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_ghana",
@@ -2165,7 +2170,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Masin is unattested in medieval Arabic sources.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kédama (Kedama), a desert locality and archaeological site in southeastern Mauritania (Hodh / Dhar Tichitt–Oualata margin), is documented only in modern geographical and archaeological surveys.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2176,12 +2181,12 @@
       },
       "morphemes": [
         {
-          "form": "Masin",
-          "language": "Soninke / Hassaniya Arabic",
-          "translation": "Masin (local Wagadu toponym)"
+          "form": "Kedama",
+          "language": "Hassaniya Arabic / Berber",
+          "translation": "local desert well and archaeological locality in southeastern Mauritania"
         }
       ],
-      "etymology_analysis": "Local toponym in the Wagadu/Hodh region, unattested in pre-867 CE written sources.",
+      "etymology_analysis": "Local toponym (Kédama) in southeastern Mauritania near the Hodh depression and Dhar escarpments, without pre-modern written attestation.",
       "current_repo_state": {
         "name": "Masin",
         "b_tarr": "Masin",
@@ -2548,7 +2553,7 @@
     },
     "b_bilanga": {
       "barony_key": "b_bilanga",
-      "modern_name": "Gurma",
+      "modern_name": "Bilanga",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -2556,24 +2561,24 @@
         "county": "c_gurma",
         "holding_type": "castle"
       },
-      "first_mention_year": 1655,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Gurma (Gourma / Gulmu) appears in Songhai/Timbuktu chronicles (Tarikh al-Sudan, 17th century CE) and Mossi-Gourmantché oral traditions.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Bilanga, a town and department in Gnagna Province of eastern Burkina Faso, is documented only in colonial-era and modern administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Gurma"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Gourma",
-          "language": "Songhay / Gourmantché",
-          "translation": "right bank of the Niger River / Gourma region"
+          "form": "Bilanga",
+          "language": "Gourmanchéma / Mooré",
+          "translation": "settlement name in eastern Burkina Faso"
         }
       ],
-      "etymology_analysis": "Songhay/regional choronym (Gourma / Gurma) denoting the right-bank region south of the Niger Bend (modern eastern Burkina Faso and western Niger).",
+      "etymology_analysis": "Indigenous Gourmanché/Mossi settlement name in Gnagna Province, eastern Burkina Faso, unattested in pre-modern written sources.",
       "current_repo_state": {
         "name": "Gurme",
         "b_tarr": "Gurme",
@@ -2585,7 +2590,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gourma_Province",
+      "source_url": "https://en.wikipedia.org/wiki/Bilanga",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -2955,7 +2960,7 @@
     },
     "b_aribinda": {
       "barony_key": "b_aribinda",
-      "modern_name": "Kurumba",
+      "modern_name": "Aribinda",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -2963,8 +2968,8 @@
         "county": "c_kurumba",
         "holding_type": "castle"
       },
-      "first_mention_year": 1895,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Kurumba (Fulsé) people and Aribinda are documented in 19th-century colonial treaties (1895 CE) and 20th-century ethnography.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Aribinda (Arbinda), a town and department in Soum Province of northern Burkina Faso, is documented in late 19th-century European accounts and colonial administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -2975,12 +2980,12 @@
       },
       "morphemes": [
         {
-          "form": "Kurumba",
-          "language": "Koromfé / Songhay",
-          "translation": "Kurumba (indigenous people of northern Burkina Faso)"
+          "form": "Aribinda",
+          "language": "Kurumfe / Songhai",
+          "translation": "settlement name in northern Burkina Faso"
         }
       ],
-      "etymology_analysis": "Ethnonym of the Kurumba (Koromba / Fulsé), an ancient indigenous Gur-speaking population of northern Burkina Faso.",
+      "etymology_analysis": "Local Kurumba/Songhai settlement toponym (Arbinda / Aribinda) in the Sahel Region of northern Burkina Faso, unattested in medieval written sources.",
       "current_repo_state": {
         "name": "Kurumbe",
         "b_tarr": "Kurumbe",
@@ -2992,7 +2997,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://fr.wikipedia.org/wiki/Kurumba_(peuple_du_Burkina_Faso)",
+      "source_url": "https://en.wikipedia.org/wiki/Arbinda",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3102,7 +3107,7 @@
     },
     "b_kissi": {
       "barony_key": "b_kissi",
-      "modern_name": "Oudalan",
+      "modern_name": "Kissi",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3111,23 +3116,23 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Oudalan is documented in post-medieval Tuareg/Fula history and modern Burkinabé administrative geography.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kissi, a locality and Iron Age archaeological cemetery complex near the Mare de Kissi in Oudalan Province of northern Burkina Faso, is documented only in modern geographical and archaeological surveys.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Oudalan"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Oudalan",
-          "language": "Tamasheq / Fula",
-          "translation": "Oudalan (northernmost Sahelian region of Burkina Faso)"
+          "form": "Kissi",
+          "language": "Songhai / Tamasheq",
+          "translation": "local settlement and archaeological site name in Oudalan"
         }
       ],
-      "etymology_analysis": "Regional choronym for the Oudalan province in the Sahel Region of northeastern Burkina Faso, bordering Mali and Niger.",
+      "etymology_analysis": "Local toponym in Oudalan Province, northern Burkina Faso, known for Iron Age burial mounds excavated near the seasonal Mare de Kissi; the toponym itself has no pre-867 written attestation.",
       "current_repo_state": {
         "name": "Oudalan",
         "b_tarr": "Oudalan",
@@ -3139,7 +3144,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://fr.wikipedia.org/wiki/Oudalan_(province)",
+      "source_url": "https://en.wikipedia.org/wiki/Kissi,_Burkina_Faso",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3347,7 +3352,7 @@
     },
     "b_gurma-rharous": {
       "barony_key": "b_gurma-rharous",
-      "modern_name": "Ôver-Gurme",
+      "modern_name": "Gourma-Rharous",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3356,7 +3361,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; 'Ôver-Gurme' is a reconstructed/Germanicized rendering of 'Upper Gurma' (after the Gurma/Gourmantché region and Gourma-Rharous on the Niger Bend, documented in post-867 Songhai and colonial sources).",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Gourma-Rharous (also Gurma-Rharous or Rharous), a town on the right bank of the Niger Bend in Mali, is documented in post-medieval and French colonial records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3367,17 +3372,17 @@
       },
       "morphemes": [
         {
-          "form": "Ôver-",
-          "language": "Low German / Germanic (reconstructed prefix)",
-          "translation": "upper"
+          "form": "Gourma",
+          "language": "Songhai / Gourmanchéma",
+          "translation": "right/south bank of the Niger Bend (Gourma region)"
         },
         {
-          "form": "Gurme",
-          "language": "Gourmanchéma / Songhai (via German)",
-          "translation": "Gurma (right-bank Niger Bend region and people)"
+          "form": "Rharous",
+          "language": "Tamasheq / Songhai",
+          "translation": "local riverine settlement name on the Niger Bend"
         }
       ],
-      "etymology_analysis": "Compound directional toponym meaning 'Upper Gurma', combining a reconstructed Germanic directional prefix with Gurma (the ethnonym/choronym for the Gourmantché region south of the Niger Bend). Excluded from natural_proper_name as a directional/locator compound.",
+      "etymology_analysis": "Compound toponym combining Gourma (the Songhai regional designation for the right/south bank of the Niger Bend) with the local Tamasheq/Songhai settlement name Rharous. Excluded from natural_proper_name as a compound settlement locator.",
       "current_repo_state": {
         "name": "Ôver-Gurme",
         "b_tarr": "Ôver-Gurme",
@@ -3389,7 +3394,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gurma_people",
+      "source_url": "https://en.wikipedia.org/wiki/Gourma-Rharous",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3499,7 +3504,7 @@
     },
     "b_bandiagara": {
       "barony_key": "b_bandiagara",
-      "modern_name": "Bandiagare",
+      "modern_name": "Bandiagara",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3602,7 +3607,7 @@
     },
     "b_douentza": {
       "barony_key": "b_douentza",
-      "modern_name": "Gondô",
+      "modern_name": "Douentza",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3611,23 +3616,23 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; the Séno-Gondo plain is documented in modern ethnographic and geographical literature.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Douentza, a town in central Mali (Mopti / Douentza Region), is documented from 19th-century pre-colonial and French colonial administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Gondo"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Gondo",
-          "language": "Dogon / Fulfulde",
-          "translation": "sandy lowland plain southeast of the Bandiagara Escarpment"
+          "form": "Douentza",
+          "language": "Fulfulde / Dogon",
+          "translation": "settlement name at the foot of the Gandamia massif"
         }
       ],
-      "etymology_analysis": "Gondô (Gondo) is the regional choronym for the Gondo plain (part of the Séno-Gondo plain) stretching southeast from the Bandiagara Escarpment toward Burkina Faso.",
+      "etymology_analysis": "Indigenous settlement name in central Mali along the corridor between Mopti and Gao, without pre-modern written attestation.",
       "current_repo_state": {
         "name": "Gondô",
         "b_tarr": "Gondô",
@@ -3639,7 +3644,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Dogon_country",
+      "source_url": "https://en.wikipedia.org/wiki/Douentza",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3700,7 +3705,7 @@
     },
     "b_bankass": {
       "barony_key": "b_bankass",
-      "modern_name": "Senô",
+      "modern_name": "Bankass",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3709,23 +3714,23 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Séno (Seno) is documented in colonial and modern geographical/administrative records.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Bankass, a town in central Mali on the Séno plain within Dogon country, is documented only in colonial-era and modern administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Séno"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "séno",
-          "language": "Fulfulde",
-          "translation": "sandy plain / dune-covered plain"
+          "form": "Bankass",
+          "language": "Dogon / Fulfulde",
+          "translation": "settlement name on the Séno plain"
         }
       ],
-      "etymology_analysis": "Senô (Séno) comes from Fulfulde séno ('sandy plain'), serving as the regional choronym for the Séno-Gondo plain at the foot of the Bandiagara Escarpment.",
+      "etymology_analysis": "Indigenous settlement toponym on the Séno-Gondo plain in central Mali (Mopti / Bandiagara Region), unattested in medieval written sources.",
       "current_repo_state": {
         "name": "Senô",
         "b_tarr": "Senô",
@@ -3737,7 +3742,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Dogon_country",
+      "source_url": "https://en.wikipedia.org/wiki/Bankass",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -3798,7 +3803,7 @@
     },
     "b_seno-south": {
       "barony_key": "b_seno-south",
-      "modern_name": "Sût-Senô",
+      "modern_name": "Seno-South",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3807,7 +3812,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; 'Sût-Senô' is a reconstructed directional compound ('South Séno').",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Seno-South is a modern directional compound referring to the southern portion of the Séno sandy plain in central Mali.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -3818,17 +3823,17 @@
       },
       "morphemes": [
         {
-          "form": "Sût-",
-          "language": "Low German / Germanic (reconstructed prefix)",
-          "translation": "south"
+          "form": "Seno",
+          "language": "Fulfulde",
+          "translation": "sandy plain (séno)"
         },
         {
-          "form": "Senô",
-          "language": "Fulfulde",
-          "translation": "sandy plain (Séno)"
+          "form": "South",
+          "language": "English",
+          "translation": "southern"
         }
       ],
-      "etymology_analysis": "Directional compound meaning 'South Séno', combining a reconstructed Germanic directional prefix with Fulfulde séno ('sandy plain'). Excluded from natural_proper_name as a directional/locator compound.",
+      "etymology_analysis": "Modern directional compound combining Fulfulde séno ('sandy plain', referring to the Séno-Gondo plain) with the English directional qualifier 'South'. Excluded from natural_proper_name as a directional/locator compound.",
       "current_repo_state": {
         "name": "Sût-Senô",
         "b_tarr": "Sût-Senô",
@@ -3852,7 +3857,7 @@
     },
     "b_giti": {
       "barony_key": "b_giti",
-      "modern_name": "Jatenge",
+      "modern_name": "Giti",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_gurma",
@@ -3860,11 +3865,11 @@
         "county": "c_yatenga",
         "holding_type": "castle"
       },
-      "first_mention_year": 1655,
-      "first_mention_attestation": "Mid-17th century CE (1655 CE Tarikh al-Sudan and 17th-century Tarikh al-fattash recounting 15th–16th century CE Songhai-Mossi conflicts; Kingdom of Yatenga founded in the 16th century CE).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Giti (also linked with Rawatenga), an early Mossi locality in Yatenga, northern Burkina Faso, is known from post-medieval Mossi oral traditions and modern historical/ethnographic records.",
       "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Naaba Yadega (16th century CE), the Mossi prince who broke away from Ouagadougou to found the Kingdom of Yatenga (Mooré Yadega-tenga, 'land of Yadega').",
+      "named_after_post_867_person": false,
+      "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3872,17 +3877,12 @@
       },
       "morphemes": [
         {
-          "form": "Yadega",
+          "form": "Giti",
           "language": "Mooré",
-          "translation": "personal name of the 16th-century Mossi founder Naaba Yadega"
-        },
-        {
-          "form": "tenga",
-          "language": "Mooré",
-          "translation": "land, country, earth"
+          "translation": "local settlement name in Yatenga"
         }
       ],
-      "etymology_analysis": "Jatenge (Yatenga) derives from Mooré Yadega-tenga ('land of Yadega'), named after its 16th-century CE Mossi founder Naaba Yadega.",
+      "etymology_analysis": "Local Mossi/Mooré toponym in Yatenga, northern Burkina Faso, associated in oral tradition with early 15th–16th-century Mossi state formation under Naaba Rawa and Naaba Yadega.",
       "current_repo_state": {
         "name": "Jatenge",
         "b_tarr": "Jatenge",
@@ -3894,7 +3894,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Yatenga_Province",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4303,7 +4303,7 @@
     },
     "b_bena": {
       "barony_key": "b_bena",
-      "modern_name": "Bene",
+      "modern_name": "Bena",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -4312,7 +4312,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; documented in modern administrative and ethnographic records of the Bobo/Bwa region.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Bena (Béna / Béné), a locality in the Bobo/Bwa borderland between Mali and Burkina Faso, is documented only in modern administrative and ethnographic records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -4323,12 +4323,12 @@
       },
       "morphemes": [
         {
-          "form": "Béné",
+          "form": "Bena",
           "language": "Bobo / Bwamu",
-          "translation": "local settlement name in the Bobo/Bwa region"
+          "translation": "local settlement name in the Mali–Burkina Faso borderland"
         }
       ],
-      "etymology_analysis": "Bene (Béné / Bena) is a toponym in the Bobo/Bwa borderland between Mali and Burkina Faso without pre-modern written attestation.",
+      "etymology_analysis": "Indigenous Bobo/Bwa settlement toponym in the borderland between southeastern Mali and western Burkina Faso, without pre-modern written attestation.",
       "current_repo_state": {
         "name": "Bene",
         "b_tarr": "Bene",
@@ -4401,7 +4401,7 @@
     },
     "b_sikasso": {
       "barony_key": "b_sikasso",
-      "modern_name": "Sikassô",
+      "modern_name": "Sikasso",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -4431,7 +4431,7 @@
           "translation": "house, village, settlement"
         }
       ],
-      "etymology_analysis": "Sikassô (Sikasso) in southern Mali incorporates the Manding element -so ('house/village') and rose to prominence only in 1876 CE as the fortified capital of the Kénédougou Kingdom.",
+      "etymology_analysis": "Settlement name in southern Mali incorporating the Manding element -so ('house/village'); rose to prominence in 1876 CE as the fortified capital of the Kénédougou Kingdom.",
       "current_repo_state": {
         "name": "Sikassô",
         "b_tarr": "Sikassô",
@@ -4443,7 +4443,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/History_of_Mali",
+      "source_url": "https://en.wikipedia.org/wiki/Sikasso",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4558,7 +4558,7 @@
     },
     "b_soum": {
       "barony_key": "b_soum",
-      "modern_name": "Bindugu",
+      "modern_name": "Soum",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -4567,28 +4567,23 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Bindougou/Bendougou is documented in modern Malian geographical and administrative records.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Soum, a locality and province in northern Burkina Faso named after the seasonal Mare de Soum wetland, is documented only in colonial-era and modern administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Soum"
       },
       "morphemes": [
         {
-          "form": "Bin",
-          "language": "Bambara",
-          "translation": "grass, savanna"
-        },
-        {
-          "form": "dugu",
-          "language": "Bambara",
-          "translation": "land, village, country"
+          "form": "Soum",
+          "language": "Fulfulde / Kurumfe",
+          "translation": "seasonal pool/wetland (Mare de Soum) in northern Burkina Faso"
         }
       ],
-      "etymology_analysis": "Bindugu (Bindougou / Bendougou) is a Bambara toponym combining dugu ('land/village') with bin ('grass'), without pre-modern written attestation.",
+      "etymology_analysis": "Directly named after the Mare de Soum, a prominent seasonal lake and pastoral waterhole in northern Burkina Faso that gave its name to the surrounding locality and province.",
       "current_repo_state": {
         "name": "Bindugu",
         "b_tarr": "Bindugu",
@@ -4600,7 +4595,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://www.mindat.org/feature-2460148.html",
+      "source_url": "https://en.wikipedia.org/wiki/Soum_Province",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4710,7 +4705,7 @@
     },
     "b_segou": {
       "barony_key": "b_segou",
-      "modern_name": "Dodugu",
+      "modern_name": "Segou",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -4718,8 +4713,8 @@
         "county": "c_dodugu",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Do/Dodougou is attested in Mandinka oral traditions (Sunyata epic, 13th century CE) and modern historiography of pre-imperial Mali.",
+      "first_mention_year": 1796,
+      "first_mention_attestation": "1796 CE (recorded by Scottish explorer Mungo Park during his 1796 visit to Ségou on the Niger River; traditionally founded c. 1620 CE by Bozo fishermen and established as capital of the Bambara Empire in 1712 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -4730,17 +4725,12 @@
       },
       "morphemes": [
         {
-          "form": "Do",
-          "language": "Manding / Bambara",
-          "translation": "ancient Manden province of Do"
-        },
-        {
-          "form": "dugu",
-          "language": "Manding / Bambara",
-          "translation": "land, country"
+          "form": "Ségu",
+          "language": "Bambara / Bozo",
+          "translation": "Ségou (historic city on the Niger River)"
         }
       ],
-      "etymology_analysis": "Dodugu (Dodougou) means 'land of Do', referring to the northeastern constituent province of pre-imperial Manden (alongside Kri) ruled by the Konaté/Conté clan in Mandinka oral tradition.",
+      "etymology_analysis": "From Bambara Ségu (French Ségou), a major city on the Niger River in south-central Mali founded around 1620 CE by Bozo fishermen and famed as the capital of the 18th-century Bambara Empire.",
       "current_repo_state": {
         "name": "Dodugu",
         "b_tarr": "Dodugu",
@@ -4752,7 +4742,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Mali_Empire",
+      "source_url": "https://en.wikipedia.org/wiki/S%C3%A9gou",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -4960,7 +4950,7 @@
     },
     "b_jenne-jeno": {
       "barony_key": "b_jenne-jeno",
-      "modern_name": "Dschenne",
+      "modern_name": "Jenne-Jeno",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -4968,8 +4958,8 @@
         "county": "c_jenne",
         "holding_type": "castle"
       },
-      "first_mention_year": 1447,
-      "first_mention_attestation": "1447 CE (Antonio Malfante's Latin letter from Tuwat referring to 'Geni'; also 17th-century CE Tarikh al-Sudan; archaeological Jenné-Jeno dates from c. 250 BCE–900 CE without contemporary written attestation of the name).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; while archaeological excavations show the urban mound of Jenné-Jeno (Djenné-Djenno) was occupied from c. 250 BCE to c. 1400 CE, the name Jenné-Jeno ('ancient/old Djenné') is a modern Bozo and archaeological designation (modern Djenné itself is first attested in writing in 1447 CE by Antonio Malfante as 'Geni').",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -4980,12 +4970,17 @@
       },
       "morphemes": [
         {
-          "form": "Djenné",
-          "language": "Bozo / Songhai / Soninke",
-          "translation": "historic trading city on the Bani floodplain"
+          "form": "Jenné",
+          "language": "Bozo / Mande",
+          "translation": "Djenné (historic Inner Niger Delta urban center)"
+        },
+        {
+          "form": "Jeno",
+          "language": "Bozo",
+          "translation": "ancient / old"
         }
       ],
-      "etymology_analysis": "Dschenne (Germanized spelling of Djenné) is the famous Inland Niger Delta trading city; while its predecessor mound Jenné-Jeno was occupied from c. 250 BCE, the name Djenné ('Geni') is first attested in writing in 1447 CE.",
+      "etymology_analysis": "Bozo toponym (Djenné-Djenno / Jenné-Jeno) meaning 'ancient Djenné' or 'old Djenné', referring to the abandoned archaeological tell 3 km southeast of modern Djenné in Mali's Inner Niger Delta. Despite pre-867 urban occupation, the name itself is unattested in contemporary written sources <= 867 CE.",
       "current_repo_state": {
         "name": "Dschenne",
         "b_tarr": "Dschenne",
@@ -4997,14 +4992,14 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Djenn%C3%A9",
+      "source_url": "https://en.wikipedia.org/wiki/Djenn%C3%A9-Djenno",
       "older_name_by_867": {
         "exists": false,
         "names": [],
         "first_mention_year": null,
         "first_mention_source": null,
         "relationship": null,
-        "notes": "Jenné-Jeno was archaeologically occupied c. 250 BCE–900 CE, but no contemporary pre-867 written source records its name."
+        "notes": null
       }
     },
     "b_kaniana": {
@@ -5161,7 +5156,7 @@
     },
     "b_korienza": {
       "barony_key": "b_korienza",
-      "modern_name": "Kurmine",
+      "modern_name": "Korienza",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_jenne",
@@ -5169,8 +5164,8 @@
         "county": "c_kurmina",
         "holding_type": "castle"
       },
-      "first_mention_year": 1494,
-      "first_mention_attestation": "1494 CE (creation of the office of Kurmina-fari by Askia Mohammad I of the Songhai Empire, recorded in 17th-century Timbuktu chronicles Tarikh al-Sudan and Tarikh al-fattash).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Korientzé (Korienza), a town near Lake Korientzé in the Mopti Region of central Mali, is documented only in colonial-era and modern administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5181,12 +5176,12 @@
       },
       "morphemes": [
         {
-          "form": "Kurmina",
-          "language": "Songhai",
-          "translation": "western provinces of the Songhai Empire south of Timbuktu"
+          "form": "Korientzé",
+          "language": "Fulfulde / Songhai / Bozo",
+          "translation": "town in the Inner Niger Delta margin of Mopti Region"
         }
       ],
-      "etymology_analysis": "Kurmine (Kurmina) was the major western province of the Songhai Empire in the Inland Niger Delta / Niger Bend, governed by the Kurmina-fari from 1494 CE.",
+      "etymology_analysis": "Local settlement toponym (Korientzé / Korienza) in the Mopti Region of central Mali, seat of the rural commune of Korombana near Lake Korientzé.",
       "current_repo_state": {
         "name": "Kurmine",
         "b_tarr": "Kurmine",
@@ -5198,7 +5193,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kurmina-fari",
+      "source_url": "https://en.wikipedia.org/wiki/Korientz%C3%A9",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5357,7 +5352,7 @@
     },
     "b_niamina_jara": {
       "barony_key": "b_niamina_jara",
-      "modern_name": "Dschare",
+      "modern_name": "Niamina",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -5365,8 +5360,8 @@
         "county": "c_jara",
         "holding_type": "castle"
       },
-      "first_mention_year": 1732,
-      "first_mention_attestation": "1732 CE (recorded as 'Jagra' on Capt. John Leach's map of the River Gambia; Jarra was one of the Mandinka kingdoms on the south bank of the Gambia).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Niamina, a historic Mandinka province/kingdom on the south bank of the middle Gambia River, is documented in early modern European river-trade accounts and 19th-century British colonial records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5377,12 +5372,12 @@
       },
       "morphemes": [
         {
-          "form": "Jarra",
+          "form": "Niamina",
           "language": "Mandinka",
-          "translation": "historic Mandinka kingdom on the south bank of the Gambia River"
+          "translation": "historic Mandinka province on the Gambia River"
         }
       ],
-      "etymology_analysis": "Dschare (Germanized spelling of Jarra/Jara, formerly also written Jagra) was a Mandinka kingdom on the south bank of the Gambia River, first attested in 1732 CE cartography.",
+      "etymology_analysis": "Mandinka polity and district name (Niamina, today comprising Niamina East, Niamina West, and Niamina Dankunku in the Central River Region of The Gambia), attested only in post-medieval European and colonial sources.",
       "current_repo_state": {
         "name": "Dschare",
         "b_tarr": "Dschare",
@@ -5394,7 +5389,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Jarra",
+      "source_url": "https://en.wikipedia.org/wiki/Niamina_East",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5504,7 +5499,7 @@
     },
     "b_achum": {
       "barony_key": "b_achum",
-      "modern_name": "Gebe",
+      "modern_name": "Achum",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -5512,24 +5507,24 @@
         "county": "c_geba",
         "holding_type": "castle"
       },
-      "first_mention_year": 1506,
-      "first_mention_attestation": "16th century CE (established as a Portuguese trading post in the early 16th century CE along the Geba River, following mid-15th-century Portuguese coastal exploration).",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Achum, a locality near the Geba basin in Guinea-Bissau, is documented only in modern geographical records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Geba"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "bejébi",
-          "language": "Biafada",
-          "translation": "fresh water"
+          "form": "Achum",
+          "language": "Mandinka / Balanta",
+          "translation": "local settlement name near Geba in Guinea-Bissau"
         }
       ],
-      "etymology_analysis": "Gebe (Geba) is named after the Geba River; according to historical sources, 'Geba' derives from the Biafada term bejébi ('fresh water').",
+      "etymology_analysis": "Local settlement toponym in the Geba region of Guinea-Bissau without pre-modern written attestation.",
       "current_repo_state": {
         "name": "Gebe",
         "b_tarr": "Gebe",
@@ -5541,7 +5536,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Geba,_Guinea-Bissau",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -5700,7 +5695,7 @@
     },
     "b_kombo": {
       "barony_key": "b_kombo",
-      "modern_name": "Dschâm",
+      "modern_name": "Kombo",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -5708,8 +5703,8 @@
         "county": "c_jame",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kombo/Jame is documented in post-15th-century European coastal accounts and colonial Gambian records.",
+      "first_mention_year": 1621,
+      "first_mention_attestation": "1621 CE (documented by English explorer Richard Jobson in 1621 CE and Portuguese chronicler André Donelha in 1625 CE as a Mandinka kingdom on the south bank of the Gambia River mouth).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5720,12 +5715,12 @@
       },
       "morphemes": [
         {
-          "form": "Jame",
-          "language": "Mandinka / Jola",
-          "translation": "western coastal Gambian polity (Kombo / Jame)"
+          "form": "Kombo",
+          "language": "Mandinka",
+          "translation": "historic coastal kingdom on the south bank of the Gambia River"
         }
       ],
-      "etymology_analysis": "Dschâm (Germanized rendering of Jame, paired with Kombo in western Gambia) represents a coastal Senegambian polity under Mali/Kaabu influence, attested only in early modern and colonial sources.",
+      "etymology_analysis": "Indigenous Mandinka kingdom and region name (Kombo) on the Atlantic coast south of the Gambia River estuary, attested from early 17th-century European accounts.",
       "current_repo_state": {
         "name": "Dschâm",
         "b_tarr": "Dschâm",
@@ -5852,7 +5847,7 @@
     },
     "b_kasa": {
       "barony_key": "b_kasa",
-      "modern_name": "Kase",
+      "modern_name": "Kasa",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -5861,7 +5856,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1456,
-      "first_mention_attestation": "15th century CE (mid-15th-century Portuguese navigators trading with the Mansa of Kasa, giving the Casamance River its name).",
+      "first_mention_attestation": "1456 CE (mid-15th-century Portuguese navigators trading with the Mansa of Kasa, giving the Casamance River its name).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -5877,7 +5872,7 @@
           "translation": "pre-colonial kingdom in lower Casamance"
         }
       ],
-      "etymology_analysis": "Kase (Kasa / Kasanga) was the dominant 15th–16th-century CE kingdom in lower Casamance, whose ruler's title Kasa mansa ('King of Kasa') gave rise to the Portuguese/French name Casamance.",
+      "etymology_analysis": "Bainuk/Jola/Mandinka kingdom name (Kasa / Kasanga) in lower Casamance, whose ruler's title Kasa mansa ('King of Kasa') gave rise to the name Casamance.",
       "current_repo_state": {
         "name": "Kase",
         "b_tarr": "Kase",
@@ -6048,7 +6043,7 @@
     },
     "b_niumi": {
       "barony_key": "b_niumi",
-      "modern_name": "Niomi",
+      "modern_name": "Niumi",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -6056,8 +6051,8 @@
         "county": "c_niomi",
         "holding_type": "castle"
       },
-      "first_mention_year": 1550,
-      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Niumi (also Barra) is documented in early modern European trade and colonial Gambian records (16th–19th centuries CE).",
+      "first_mention_year": 1455,
+      "first_mention_attestation": "1455–1456 CE (recorded by Venetian explorer Alvise Cadamosto as 'Gnumimenssa', referring to the Niumi Mansa or King of Niumi, and shortly thereafter by Diogo Gomes as 'Nomyans').",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6070,10 +6065,10 @@
         {
           "form": "Niumi",
           "language": "Mandinka",
-          "translation": "historic kingdom at the mouth of the Gambia River (also Barra)"
+          "translation": "historic kingdom at the mouth of the Gambia River"
         }
       ],
-      "etymology_analysis": "Niomi (Niumi) was a Mandinka-Serer kingdom at the mouth of the Gambia River (known to the Portuguese as Barra), attested only in post-15th-century European and colonial sources.",
+      "etymology_analysis": "Mandinka-Serer kingdom name (Niumi, also known to European traders as Barra) at the northern mouth of the Gambia River, first attested in mid-15th-century European maritime accounts.",
       "current_repo_state": {
         "name": "Niomi",
         "b_tarr": "Niomi",
@@ -6146,7 +6141,7 @@
     },
     "b_saalum": {
       "barony_key": "b_saalum",
-      "modern_name": "Sâlûm",
+      "modern_name": "Saalum",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -6171,7 +6166,7 @@
           "translation": "historic Serer kingdom in central Senegal"
         }
       ],
-      "etymology_analysis": "Sâlûm (Serer Saalum / Saluum, French Saloum) was a pre-colonial Serer kingdom founded around 1494 CE in central Senegal, unattested in written sources <= 867 CE.",
+      "etymology_analysis": "Serer toponym (Saalum / Saluum, French Saloum) for the pre-colonial Serer kingdom founded around 1494 CE in central Senegal, unattested in written sources <= 867 CE.",
       "current_repo_state": {
         "name": "Sâlûm",
         "b_tarr": "Sâlûm",
@@ -6293,7 +6288,7 @@
     },
     "b_gabou": {
       "barony_key": "b_gabou",
-      "modern_name": "Kâbu",
+      "modern_name": "Gabou",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_kaabu",
@@ -6302,7 +6297,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": 1537,
-      "first_mention_attestation": "16th century CE (independent Kaabu federation c. 1537–1867 CE, following 13th-century CE Mali Empire conquest traditions and 15th–16th-century CE Portuguese accounts).",
+      "first_mention_attestation": "16th century CE (independent Kaabu/Gabú federation established c. 1537 CE, following 13th-century CE Mali Empire expansion traditions and 15th–16th-century CE Portuguese accounts).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -6313,12 +6308,12 @@
       },
       "morphemes": [
         {
-          "form": "Kaabu",
+          "form": "Gabou",
           "language": "Mandinka / Bainuk",
-          "translation": "Mandinka imperial province and federation (from Kangaba or Bainuk Kambutchi)"
+          "translation": "Kaabu / Gabú imperial province and federation"
         }
       ],
-      "etymology_analysis": "Kâbu (Kaabu / Gabú) was a Mandinka province of the Mali Empire (13th century CE) that became an independent federation in 1537 CE; proposed etymologies derive the name from Kangaba (Kaba), Mandinka kaa bung folo ('let's keep fighting'), or Bainuk Kambutchi ('the circumcised people').",
+      "etymology_analysis": "Variant spelling of Kaabu (Portuguese Gabú, French Gabou), a Mandinka western province of the Mali Empire (13th century CE) that became an independent federation in 1537 CE and gave its name to the modern city and region of Gabú in eastern Guinea-Bissau.",
       "current_repo_state": {
         "name": "Kâbu",
         "b_tarr": "Kâbu",
@@ -6685,7 +6680,7 @@
     },
     "b_yaresna": {
       "barony_key": "b_yaresna",
-      "modern_name": "Bambuk",
+      "modern_name": "Yaresna",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -6693,24 +6688,24 @@
         "county": "c_bambuk",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Bambuk (Bambouk) goldfields are indirectly associated with Ghiyaru in al-Bakri (1068 CE) and documented under the name Bambuk in later Mali-era and European sources.",
+      "first_mention_year": 1068,
+      "first_mention_attestation": "1068 CE (recorded as Yaresnā, a Muslim trading town on the upper Senegal / Falémé gold-trade route, in al-Bakri's Kitab al-Masalik wa-l-Mamalik).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Bambuk"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Bambuk",
-          "language": "Mandinka / Soninke",
-          "translation": "gold-bearing mountain region between the Falémé and Bafing rivers"
+          "form": "Yaresnā",
+          "language": "Soninke / Arabic transcription",
+          "translation": "historic trading town on the upper Senegal/Falémé"
         }
       ],
-      "etymology_analysis": "Regional choronym (Bambouk, Bambuk, Bambuhu) for the gold-rich territory in eastern Senegal and western Mali; rendered 'Bambuch' in the repository's German-influenced orthography.",
+      "etymology_analysis": "Medieval West African toponym (Arabic transcription Yaresnā, sometimes identified with Barīsā) for an important Muslim trading town near the upper Senegal and Falémé rivers linked to the Bambuk gold trade, first recorded by al-Bakri in 1068 CE.",
       "current_repo_state": {
         "name": "Bambuch",
         "b_tarr": "Bambuch",
@@ -6722,7 +6717,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Bambouk",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7126,7 +7121,7 @@
     },
     "b_badumbe": {
       "barony_key": "b_badumbe",
-      "modern_name": "Gangaran",
+      "modern_name": "Badumbe",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -7135,7 +7130,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Gangaran is known from Mali Empire traditions (13th century CE under Mansa Uli) and 19th-century CE French colonial records (1882 CE protectorate).",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Badoumbé (Badumbe), a village and former colonial post on the Bakoye River in Kayes Region, Mali, is documented in late 19th-century French colonial and Dakar–Niger railway records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7146,12 +7141,12 @@
       },
       "morphemes": [
         {
-          "form": "Gangaran",
-          "language": "Malinke",
-          "translation": "historical region along the Bafing and Bakoy rivers"
+          "form": "Badumbe",
+          "language": "Malinke / Kassonke",
+          "translation": "settlement on the Bakoye River in Bafoulabé Cercle"
         }
       ],
-      "etymology_analysis": "Malinke regional toponym in western Mali (around Badoumbé), annexed to the Mali Empire in the 13th century CE and placed under French protectorate in 1882 CE.",
+      "etymology_analysis": "Local Malinke/Kassonke settlement name (Badoumbé) on the left bank of the Bakoye River in western Mali, attested only in colonial-era and modern records.",
       "current_repo_state": {
         "name": "Gangaran",
         "b_tarr": "Gangaran",
@@ -7163,7 +7158,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://fr.wikipedia.org/wiki/Badoumb%C3%A9",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7430,7 +7425,7 @@
     },
     "b_upper_gambia": {
       "barony_key": "b_upper_gambia",
-      "modern_name": "Kantora",
+      "modern_name": "Upper Gambia",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -7439,7 +7434,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Kantora (Kantôra) is attested in later Mandinka oral traditions and European records as a province of Kaabu on the upper Gambia River.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Upper Gambia is a modern English geographic compound designating the upper reaches of the Gambia River (the river name Gambia itself is first attested in 15th-century Portuguese accounts, e.g., 1455 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7450,12 +7445,17 @@
       },
       "morphemes": [
         {
-          "form": "Kantora",
-          "language": "Mandinka",
-          "translation": "easternmost Mandinka province along the upper Gambia"
+          "form": "Upper",
+          "language": "English",
+          "translation": "upstream / higher reaches"
+        },
+        {
+          "form": "Gambia",
+          "language": "Portuguese / Mandinka / Serer",
+          "translation": "the Gambia River (from Kambra / Kambaa)"
         }
       ],
-      "etymology_analysis": "Mandinka territorial name for the easternmost district of the upper Gambia valley, historically a province of Kaabu.",
+      "etymology_analysis": "Modern English geographic compound combining 'Upper' with the hydronym Gambia (adopted via Portuguese from indigenous Senegambian river names such as Kambra/Kambaa). Excluded from natural_proper_name as a directional/locator compound.",
       "current_repo_state": {
         "name": "Kantôra",
         "b_tarr": "Kantôra",
@@ -7467,7 +7467,7 @@
         "holding_type": "city",
         "category": "indigenous_restitution"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kantora_District",
+      "source_url": "https://en.wikipedia.org/wiki/Gambia_River",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7533,7 +7533,7 @@
     },
     "b_kaade": {
       "barony_key": "b_kaade",
-      "modern_name": "Kokoli",
+      "modern_name": "Kaade",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -7542,7 +7542,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Kokoli (Landuma) is documented in post-15th-century CE European coastal and colonial ethnographic records of Guinea.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Kadé (Kaade), a historic settlement and district in the northwestern Fouta Djallon borderlands of Guinea, is documented in 19th-century Imamate of Futa Jallon and French colonial records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7553,12 +7553,12 @@
       },
       "morphemes": [
         {
-          "form": "Kokoli",
-          "language": "Landuma / Susu",
-          "translation": "exonym/ethnonym for the Landuma people of Upper Nunez"
+          "form": "Kaade",
+          "language": "Pular / Landuma / Badyara",
+          "translation": "settlement and province name in northwestern Guinea"
         }
       ],
-      "etymology_analysis": "Historical name (also spelled Cocoli or Kokoli) applied to the Landuma people and their territory in the Upper Nunez region of Guinea.",
+      "etymology_analysis": "Indigenous settlement and district name (Kadé / Kaade) in northwestern Guinea near the Fouta Djallon–Guinea-Bissau borderlands, historically subordinate to Labé.",
       "current_repo_state": {
         "name": "Kokoli",
         "b_tarr": "Kokoli",
@@ -7570,7 +7570,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Landuma_people",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -7925,7 +7925,7 @@
     },
     "b_labe": {
       "barony_key": "b_labe",
-      "modern_name": "Fouta Djallon",
+      "modern_name": "Labe",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -7933,29 +7933,24 @@
         "county": "c_futa_jalon",
         "holding_type": "castle"
       },
-      "first_mention_year": 1725,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Fouta Djallon (Futa Jallon) is documented from the 18th century CE onward following the Fulani jihad that established the Imamate of Futa Jallon in 1725-1727 CE.",
+      "first_mention_year": 1720,
+      "first_mention_attestation": "c. 1720s CE (founded in the 1720s by Fulani/Dialonke settlers and named after their chief Manga Labé, becoming a principal province of the Imamate of Futa Jallon).",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "Named after Manga Labé (early 18th century CE), the Fulani/Dialonke chief credited with founding the town in the 1720s.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "oronym",
-        "name": "Fouta Djallon"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Fuuta",
-          "language": "Pular",
-          "translation": "region inhabited by the Fulɓe (Fula)"
-        },
-        {
-          "form": "Jaloo",
-          "language": "Jallonke",
-          "translation": "mountain"
+          "form": "Labé",
+          "language": "Pular / Jalonke",
+          "translation": "personal name of 18th-century founder Manga Labé"
         }
       ],
-      "etymology_analysis": "From Pular Fuuta ('Fula-inhabited region') combined with old Jallonke Jaloo ('mountain'); rendered 'Futa-Dschalon' in the repository's German orthography.",
+      "etymology_analysis": "Named after Manga Labé, the chief who founded the town in the 1720s during the rise of the Islamic Imamate of Futa Jallon in north-central Guinea.",
       "current_repo_state": {
         "name": "Futa-Dschalon",
         "b_tarr": "Futa-Dschalon",
@@ -7967,7 +7962,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Fouta_Djallon",
+      "source_url": "https://en.wikipedia.org/wiki/Lab%C3%A9",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8136,7 +8131,7 @@
     },
     "b_falanko": {
       "barony_key": "b_falanko",
-      "modern_name": "Kisi",
+      "modern_name": "Falanko",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -8145,7 +8140,56 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Kissi (Kisi) people and region of Guinea, Sierra Leone, and Liberia are documented in European and colonial records from the early modern/19th-century CE periods onward.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Falanko, a settlement and stream locality in the Kissidougou area of southeastern Guinea, is documented only in modern geographical records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Falanko",
+          "language": "Kissi / Manding",
+          "translation": "local settlement name in the Kissidougou area"
+        }
+      ],
+      "etymology_analysis": "Local settlement toponym in the Kissi/Kissidougou area of Guinea's Forest Region, without pre-modern written attestation.",
+      "current_repo_state": {
+        "name": "Kisi",
+        "b_tarr": "Kisi",
+        "b_tarr_direct": "Kisi",
+        "b_tarr_hist": "Kisi",
+        "b_origin": "Kisi (Kisi (in-game: Kisi))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kisi).",
+        "b_ipa": "[ˈkɪ.zɪ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kisi": {
+      "barony_key": "b_kisi",
+      "modern_name": "Kisi",
+      "hierarchy": {
+        "empire": "e_mali",
+        "kingdom": "k_mali",
+        "duchy": "d_loma",
+        "county": "c_kisi",
+        "holding_type": "city"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; the Kissi (Kisi) people and territory spanning southeastern Guinea, Sierra Leone, and Liberia are documented in European and colonial records from the early modern and 19th-century CE periods onward.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8161,61 +8205,7 @@
           "translation": "ethnonym and territory of the Kissi people"
         }
       ],
-      "etymology_analysis": "Ethnonym and regional toponym of the Kissi (Kisi) people, a Mel-speaking group of Forest Guinea, northern Liberia, and eastern Sierra Leone.",
-      "current_repo_state": {
-        "name": "Kisi",
-        "b_tarr": "Kisi",
-        "b_tarr_direct": "Kisi",
-        "b_tarr_hist": "Kisi",
-        "b_origin": "Kisi (Kisi (in-game: Kisi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kisi).",
-        "b_ipa": "[ˈkɪ.zɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
-      "source_url": "https://en.wikipedia.org/wiki/Kissi_people",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
-    },
-    "b_kisi": {
-      "barony_key": "b_kisi",
-      "modern_name": "Gerhardstat",
-      "hierarchy": {
-        "empire": "e_mali",
-        "kingdom": "k_mali",
-        "duchy": "d_loma",
-        "county": "c_kisi",
-        "holding_type": "city"
-      },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; 'Gerhardstat' is a synthetic German-language disambiguated capital name created within the game repository.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
-      "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
-      },
-      "morphemes": [
-        {
-          "form": "Gerhard",
-          "language": "German",
-          "translation": "personal given name (fictional mod founder)"
-        },
-        {
-          "form": "stat",
-          "language": "German",
-          "translation": "town, city (archaic/dialectal form of Stadt)"
-        }
-      ],
-      "etymology_analysis": "Synthetic German-language compound ('town of Gerhard') used in the repository to disambiguate the city barony from the county/capital name Kisi; not a historical West African toponym.",
+      "etymology_analysis": "Ethnonym and territorial designation of the Kissi people of southeastern Guinea, eastern Sierra Leone, and northern Liberia.",
       "current_repo_state": {
         "name": "Gerhardstat",
         "b_tarr": "Gerhardstat",
@@ -8227,7 +8217,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Kissi_people",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8538,7 +8528,7 @@
     },
     "b_firiya": {
       "barony_key": "b_firiya",
-      "modern_name": "Solimana",
+      "modern_name": "Firiya",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -8546,8 +8536,8 @@
         "county": "c_solimana",
         "holding_type": "castle"
       },
-      "first_mention_year": 1800,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; Solimana (Solima) emerged as a Yalunka state in northern Sierra Leone and Guinea by c. 1800 CE, with its capital at Falaba.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Firiya (Firia), a historical Yalunka Kamara territory in the Guinea–Sierra Leone borderlands associated with the origins of Solimana, is documented in 19th-century oral traditions and colonial accounts.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8558,12 +8548,12 @@
       },
       "morphemes": [
         {
-          "form": "Solimana",
-          "language": "Yalunka",
-          "translation": "Yalunka state centered on Falaba"
+          "form": "Firiya",
+          "language": "Yalunka / Susu",
+          "translation": "historical Yalunka chiefdom/territory in the Guinea–Sierra Leone borderland"
         }
       ],
-      "etymology_analysis": "Yalunka state name (also spelled Solima or Solimane) established in the highlands of northern Sierra Leone and southern Guinea around 1800 CE.",
+      "etymology_analysis": "Indigenous Yalunka territorial name (Firiya / Firia) in the highlands north of Sierra Leone, recorded in regional oral history as the Kamara Yalunka land where Solimanga Samura settled prior to the rise of the Solimana state.",
       "current_repo_state": {
         "name": "Solimane",
         "b_tarr": "Solimane",
@@ -8575,7 +8565,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Falaba",
+      "source_url": null,
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8636,7 +8626,7 @@
     },
     "b_solimana": {
       "barony_key": "b_solimana",
-      "modern_name": "Trudeszelle",
+      "modern_name": "Solimana",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -8644,8 +8634,8 @@
         "county": "c_solimana",
         "holding_type": "church"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources; 'Trudeszelle' is a synthetic German-language disambiguated church-holding name created within the game repository.",
+      "first_mention_year": 1800,
+      "first_mention_attestation": "c. 1800 CE (Solimana / Solima emerged as a Yalunka state in northern Sierra Leone and southern Guinea around 1800 CE with its capital at Falaba, documented by British envoy Alexander Gordon Laing in 1822 CE; unattested in written sources <= 867 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8656,17 +8646,12 @@
       },
       "morphemes": [
         {
-          "form": "Trude",
-          "language": "German",
-          "translation": "personal given name (fictional mod founder)"
-        },
-        {
-          "form": "Zelle",
-          "language": "German",
-          "translation": "monastic cell, hermitage"
+          "form": "Solimana",
+          "language": "Yalunka",
+          "translation": "Yalunka state centered on Falaba"
         }
       ],
-      "etymology_analysis": "Synthetic German-language compound ('Trude's monastic cell') used in the repository to disambiguate the temple barony from the county/capital name Solimana; not a historical West African toponym.",
+      "etymology_analysis": "Yalunka state name (also spelled Solima or Solimane) established in the highlands of northern Sierra Leone and southern Guinea around 1800 CE.",
       "current_repo_state": {
         "name": "Trudeszelle",
         "b_tarr": "Trudeszelle",
@@ -8678,7 +8663,7 @@
         "holding_type": "church",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Solimana_(state)",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -8739,7 +8724,7 @@
     },
     "b_siguiri": {
       "barony_key": "b_siguiri",
-      "modern_name": "Bure",
+      "modern_name": "Siguiri",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_mali",
@@ -8748,23 +8733,28 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in contemporary written sources by 867 CE; the Bouré (Bure) goldfields near Siguiri in northeastern Guinea began major production in the 11th-12th centuries CE and are documented in Mali Empire history.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Siguiri, a historic Malinke gold-mining town on the upper Niger River in Guinea, is documented in 19th-century European and French colonial records (with a French military post built in 1888 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Bure"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Bure",
-          "language": "Malinke",
-          "translation": "gold-producing region along the Tinkisso and Niger rivers"
+          "form": "Sigui",
+          "language": "Maninka / Mandinka",
+          "translation": "buffalo"
+        },
+        {
+          "form": "ri",
+          "language": "Maninka / Mandinka",
+          "translation": "place / locative suffix"
         }
       ],
-      "etymology_analysis": "Indigenous Malinke choronym (Bouré/Bure) for the alluvial goldfields north and northwest of Siguiri in northeastern Guinea, which rose to prominence in the 11th-12th centuries CE.",
+      "etymology_analysis": "From Maninka/Mandinka Sigui-ri ('place of the buffalo'), a prominent Malinke gold-mining town on the upper Niger River in northeastern Guinea adjacent to the Bouré goldfields.",
       "current_repo_state": {
         "name": "Bure",
         "b_tarr": "Bure",
@@ -9901,7 +9891,7 @@
     },
     "b_birnin_lafiya": {
       "barony_key": "b_birnin_lafiya",
-      "modern_name": "Dendi",
+      "modern_name": "Birnin Lafiya",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_songhay",
@@ -9909,24 +9899,29 @@
         "county": "c_dendi",
         "holding_type": "castle"
       },
-      "first_mention_year": 1591,
-      "first_mention_attestation": "Attested in 17th-century CE Timbuktu chronicles (Tarikh al-Sudan, 1655 CE) describing the Songhay retreat to Dendi after 1591 CE; unattested in written sources by 867 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Birnin Lafiya (Birni-Lafia), a town on the Niger River in northern Benin (Karimama Commune, Alibori Department), is documented only in post-medieval and modern administrative records.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Dendi"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Dendi",
-          "language": "Songhay",
-          "translation": "downriver / downstream (southern Niger River region)"
+          "form": "Birnin",
+          "language": "Hausa",
+          "translation": "walled town / city of"
+        },
+        {
+          "form": "Lafiya",
+          "language": "Hausa (from Arabic al-ʿāfiya)",
+          "translation": "peace, health, well-being"
         }
       ],
-      "etymology_analysis": "Dêndi is a German-orthography rendering of Dendi, from the Songhay word meaning 'downriver' or 'downstream', referring to the Songhay-speaking region along the Niger River across modern Niger, Benin, and Nigeria where the Askia dynasty retreated after 1591 CE. Unattested by 867 CE.",
+      "etymology_analysis": "Hausa/Dendi compound toponym (Birni-Lafia / Birnin Lafiya) meaning 'walled city of peace/well-being', incorporating the Arabic loanword lafiya (al-ʿāfiya), situated on the right bank of the Niger River in northern Benin.",
       "current_repo_state": {
         "name": "Dêndi",
         "b_tarr": "Dêndi",
@@ -9938,7 +9933,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Dendi_(province)",
+      "source_url": "https://en.wikipedia.org/wiki/Birni-Lafia",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10048,7 +10043,7 @@
     },
     "b_rozi": {
       "barony_key": "b_rozi",
-      "modern_name": "Dyamare",
+      "modern_name": "Rozi",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_songhay",
@@ -10057,7 +10052,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Known from oral traditions of the Dallol Bosso / northern Mossi collected in the 20th century CE (e.g., Boubou Hama); unattested in written sources by 867 CE.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Rozi, remembered in Nigerien oral traditions as the last capital of the pre-colonial state of Dyamare in the Dallol Bosso valley of western Niger, is documented only in modern ethnographic and historical reconstructions.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -10068,12 +10063,12 @@
       },
       "morphemes": [
         {
-          "form": "Dyamare",
-          "language": "Zarma / Songhay",
-          "translation": "historical polity in the Dallol Bosso valley"
+          "form": "Rozi",
+          "language": "Zarma / Songhai",
+          "translation": "traditional capital of Dyamare in the Dallol Bosso"
         }
       ],
-      "etymology_analysis": "Dschamâre is a German-orthography rendering of Dyamare (Djamare), a historical polity remembered in Nigerien oral tradition as centered at Rozi in the Dallol Bosso. It is unattested in written sources by 867 CE.",
+      "etymology_analysis": "Local toponym in the Dallol Bosso / Niger valley region of western Niger, recorded in regional oral history as a historic seat of the Dyamare polity.",
       "current_repo_state": {
         "name": "Dschamâre",
         "b_tarr": "Dschamâre",
@@ -10195,7 +10190,7 @@
     },
     "b_zarmaganda": {
       "barony_key": "b_zarmaganda",
-      "modern_name": "Sarme",
+      "modern_name": "Zarmaganda",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_songhay",
@@ -10204,28 +10199,28 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Zarma migration to Zarmaganda is dated by oral tradition to the 16th century CE; unattested in written sources by 867 CE.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Zarmaganda ('land of the Zarma'), a highland plateau region in western Niger north of Niamey, is documented in post-medieval Zarma oral traditions and 19th–20th century colonial accounts.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "choronym",
-        "name": "Zarma (Sarme)"
+        "name": "Zarmaganda"
       },
       "morphemes": [
         {
-          "form": "Za",
-          "language": "Songhay",
-          "translation": "Za dynasty / ancestral clan"
+          "form": "Zarma",
+          "language": "Zarma-Songhai",
+          "translation": "ethnonym of the Zarma people"
         },
         {
-          "form": "-rma / hama",
-          "language": "Songhay",
-          "translation": "descendants / people of"
+          "form": "ganda",
+          "language": "Zarma-Songhai",
+          "translation": "land, country, territory"
         }
       ],
-      "etymology_analysis": "Sârme is an adapted/Germanized form of Zarma (Sarme), the ethnonym and region of the Zarma subgroup of the Songhay in western Niger (traditionally derived from Za Hama, 'descendants of Za'). Unattested in written sources by 867 CE.",
+      "etymology_analysis": "Zarma-Songhai regional choronym meaning 'land of the Zarma' (Zarma + ganda, 'land/country'), designating the dry plateau region in western Niger north of Niamey settled by Zarma migrations from the 16th century onward.",
       "current_repo_state": {
         "name": "Sârme",
         "b_tarr": "Sârme",
@@ -10237,7 +10232,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Zarma_people",
+      "source_url": "https://en.wikipedia.org/wiki/Zarmaganda",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -10934,7 +10929,7 @@
     },
     "b_timbuktu": {
       "barony_key": "b_timbuktu",
-      "modern_name": "Joliba",
+      "modern_name": "Timbuktu",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_songhay",
@@ -10942,29 +10937,29 @@
         "county": "c_tirakka",
         "holding_type": "castle"
       },
-      "first_mention_year": 1796,
-      "first_mention_attestation": "The Manding hydronym Joliba ('great river') was first recorded in European written sources in the late 18th century CE (e.g., Mungo Park 1796–1799 CE); unattested in written sources by 867 CE.",
+      "first_mention_year": 1353,
+      "first_mention_attestation": "1353 CE (first written mention by Moroccan traveler Ibn Battuta, who visited Timbuktu in 1353 CE during his 1352–1353 journey through the Mali Empire; also depicted on the Catalan Atlas of 1375 CE; traditionally founded c. 1100 CE as a seasonal Tuareg camp).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "hydronym",
-        "name": "Joliba (Niger River)"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Joli / Jeli",
-          "language": "Maninka (Mandé)",
-          "translation": "river / blood (stream)"
+          "form": "Tin",
+          "language": "Tamasheq / Berber",
+          "translation": "place of (feminine possessive prefix)"
         },
         {
-          "form": "-ba",
-          "language": "Maninka (Mandé)",
-          "translation": "great / big"
+          "form": "buktu",
+          "language": "Tamasheq / Berber",
+          "translation": "small dune / hollow (or legendary caretaker name Buktu in folk etymology)"
         }
       ],
-      "etymology_analysis": "Djôlibe is a German-orthography rendering of Joliba (Jeliba), the Manding/Malinke name for the Upper Niger River meaning 'great river' (used here as a non-anachronistic replacement for Timbuktu, founded c. 1100 CE). The hydronym Joliba is unattested in written sources by 867 CE.",
+      "etymology_analysis": "Tuareg/Berber toponym (Tin-Buktu / Tombouctou) for the famed caravan and scholarly city near the Niger Bend founded c. 1100 CE; scholarly proposals derive it from Tamasheq tin ('place of') plus buktu ('small dune') or a Zenaga Berber root meaning 'distant/hidden', while the 17th-century Tarikh al-Sudan preserves a folk etymology naming an elderly caretaker woman, Buktu.",
       "current_repo_state": {
         "name": "Djôlibe",
         "b_tarr": "Djôlibe",
@@ -10976,7 +10971,7 @@
         "holding_type": "castle",
         "category": "option_b_hydronym"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Niger_River",
+      "source_url": "https://en.wikipedia.org/wiki/Timbuktu",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11086,7 +11081,7 @@
     },
     "b_arawan_road": {
       "barony_key": "b_arawan_road",
-      "modern_name": "Sissostat",
+      "modern_name": "Arawan Road",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_songhay",
@@ -11095,7 +11090,7 @@
         "holding_type": "city"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Mod-created compound name; unattested in historical or pre-867 CE written sources.",
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Arawan Road is a modern English geographic descriptor for the trans-Saharan salt-caravan route running north from Timbuktu through the oasis of Araouane (founded in the 16th century CE) toward Taoudenni.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -11106,17 +11101,17 @@
       },
       "morphemes": [
         {
-          "form": "Sisso-",
-          "language": "Mandé (adapted)",
-          "translation": "Sisso / Sissoko (clan or personal element)"
+          "form": "Arawan",
+          "language": "Tamasheq / Arabic",
+          "translation": "Araouane (Saharan caravan oasis north of Timbuktu)"
         },
         {
-          "form": "-stat",
-          "language": "German (Tarraconian)",
-          "translation": "town / settlement"
+          "form": "Road",
+          "language": "English",
+          "translation": "caravan route / track"
         }
       ],
-      "etymology_analysis": "Sissostat is a synthetic German-style compound name (Sisso + -stat, 'town of Sisso') created for the Arawan road barony. It is not a historical settlement attested by 867 CE.",
+      "etymology_analysis": "Modern English descriptive compound referring to the trans-Saharan caravan track connecting Timbuktu to the Saharan oasis of Araouane (Arawan) and the Taoudenni salt mines, attested only from the early modern period onward.",
       "current_repo_state": {
         "name": "Sissostat",
         "b_tarr": "Sissostat",
@@ -11128,7 +11123,7 @@
         "holding_type": "city",
         "category": "sub_barony_adaptation"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Araouane",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11140,7 +11135,7 @@
     },
     "b_sine": {
       "barony_key": "b_sine",
-      "modern_name": "Baol",
+      "modern_name": "Sine",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_takrur",
@@ -11148,24 +11143,24 @@
         "county": "c_baol",
         "holding_type": "castle"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Oral tradition places the founding of Baol in the 11th century CE, with European written records beginning in the 15th–16th centuries CE; unattested in written sources by 867 CE.",
+      "first_mention_year": 1455,
+      "first_mention_attestation": "c. 1455 CE (first recorded in European written accounts by Venetian navigator Alvise Cadamosto and Portuguese explorers as 'Barbaçim', corrupting the Wolof title Bur-ba-Sine, 'King of Sine'; the Guelowar Kingdom of Sine was established c. 1335–1350 CE).",
       "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "named_after_post_867_person": true,
+      "eponym_details": "According to Serer dynastic tradition, the Kingdom of Sine (Siin) was named during the Guelowar era (c. 1350 CE) after Sine-o-Méo Manneh (Siin o Meo Maane), sister of Maysa Wali Manneh, the first Guelowar king of Sine.",
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Baol"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Baol / Bawol",
-          "language": "Wolof / Serer",
-          "translation": "historic central Senegalese region and kingdom"
+          "form": "Siin",
+          "language": "Serer",
+          "translation": "Sine (historic Serer kingdom in west-central Senegal)"
         }
       ],
-      "etymology_analysis": "Baôl is a Germanized spelling of Baol (Bawol), a historic region and kingdom in central Senegal. Traditional founding is dated to the 11th century CE and written attestations are post-867 CE.",
+      "etymology_analysis": "From Serer Siin (French/English Sine), a pre-colonial Serer kingdom in Senegal established under the Guelowar dynasty c. 1350 CE and traditionally named after Sine-o-Méo Manneh (sister of Maysa Wali Manneh); first recorded in European sources in the mid-15th century as Barbaçim (from Wolof Bur-ba-Sine).",
       "current_repo_state": {
         "name": "Baôl",
         "b_tarr": "Baôl",
@@ -11177,7 +11172,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Baol",
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Sine",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11477,7 +11472,7 @@
     },
     "b_bakel": {
       "barony_key": "b_bakel",
-      "modern_name": "Galam",
+      "modern_name": "Bakel",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_takrur",
@@ -11485,24 +11480,24 @@
         "county": "c_galam",
         "holding_type": "castle"
       },
-      "first_mention_year": 1650,
-      "first_mention_attestation": "The Soninke kingdom of Gajaaga (Galam) existed from before 1000 CE in oral tradition and was documented by European traders from the 17th century CE; the name Galam is unattested in written sources by 867 CE.",
+      "first_mention_year": null,
+      "first_mention_attestation": "Unattested in contemporary written sources <= 867 CE; Bakel, a Soninke trading town on the left bank of the upper Senegal River in eastern Senegal, is documented in early modern and 19th-century European trade records (French Fort Bakel was constructed in 1818 CE and visited by René Caillié in 1819 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": true,
-        "type": "choronym",
-        "name": "Galam"
+        "is_natural_name": false,
+        "type": null,
+        "name": null
       },
       "morphemes": [
         {
-          "form": "Galam",
-          "language": "Wolof",
-          "translation": "gold (exonym for the Soninke kingdom of Gajaaga)"
+          "form": "Bakel",
+          "language": "Soninke",
+          "translation": "trading town on the left bank of the upper Senegal River"
         }
       ],
-      "etymology_analysis": "Galâm is a Germanized spelling of Galam, the Wolof exonym (meaning 'gold') for the Soninke kingdom of Gajaaga on the upper Senegal River. It is unattested in written sources by 867 CE.",
+      "etymology_analysis": "Indigenous Soninke town name on the upper Senegal River in eastern Senegal within the historic Kingdom of Gajaaga (Galam), which became a major gum-arabic trading post and site of French Fort Bakel (built 1818 CE).",
       "current_repo_state": {
         "name": "Galâm",
         "b_tarr": "Galâm",
@@ -11514,7 +11509,7 @@
         "holding_type": "castle",
         "category": "capital_eponymous"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Gajaaga",
+      "source_url": "https://en.wikipedia.org/wiki/Bakel,_Senegal",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -11575,7 +11570,7 @@
     },
     "b_galam": {
       "barony_key": "b_galam",
-      "modern_name": "Hartmannstat",
+      "modern_name": "Galam",
       "hierarchy": {
         "empire": "e_mali",
         "kingdom": "k_takrur",
@@ -11583,29 +11578,24 @@
         "county": "c_galam",
         "holding_type": "city"
       },
-      "first_mention_year": null,
-      "first_mention_attestation": "Mod-invented German-style eponymous foundation ('Municipal foundation chartered by Hartmann'); unattested in historical or pre-867 CE written sources.",
+      "first_mention_year": 1650,
+      "first_mention_attestation": "c. 1650 CE (the Soninke kingdom of Gajaaga, known by the Wolof exonym Galam, existed from before 1000 CE in oral tradition and was documented by European traders from the 17th century CE; unattested in written sources <= 867 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
-        "is_natural_name": false,
-        "type": null,
-        "name": null
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Galam"
       },
       "morphemes": [
         {
-          "form": "Hartmann-",
-          "language": "German",
-          "translation": "personal name Hartmann (mod founder)"
-        },
-        {
-          "form": "-stat",
-          "language": "German",
-          "translation": "town / city"
+          "form": "Galam",
+          "language": "Wolof",
+          "translation": "gold (exonym for the Soninke kingdom and region of Gajaaga)"
         }
       ],
-      "etymology_analysis": "Hartmannstat is a synthetic German-style municipal foundation name (Hartmann + -stat, 'Hartmann's town') created to disambiguate the intra-county capital barony from Galam. It is not a historical settlement attested by 867 CE.",
+      "etymology_analysis": "Wolof exonym (meaning 'gold') applied to the historic Soninke kingdom and region of Gajaaga along the upper Senegal River, documented in European sources from the 17th century CE.",
       "current_repo_state": {
         "name": "Hartmannstat",
         "b_tarr": "Hartmannstat",
@@ -11617,7 +11607,7 @@
         "holding_type": "city",
         "category": "capital_eponymous"
       },
-      "source_url": null,
+      "source_url": "https://en.wikipedia.org/wiki/Gajaaga",
       "older_name_by_867": {
         "exists": false,
         "names": [],
