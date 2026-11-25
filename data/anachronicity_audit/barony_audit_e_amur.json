@@ -2,8 +2,12 @@
   "metadata": {
     "empire": "e_amur",
     "scope": "e_amur (all 100 baronies across k_amur and k_aynumosir)",
-    "schema_version": "1.1.0",
-    "baseline_year": 867,
+    "schema_version": "2.0.0",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
     "source_files": [
       "data/ck3_title_tree.json",
       "data/barony_holdings.json"
@@ -11,38 +15,51 @@
     "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
       "barony_key": "CK3 landed_titles barony identifier (b_*).",
-      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding (stripped of key prefixes and parenthetical notes).",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier extracted from modern_name; null if none.",
       "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
-      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
-      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
-      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "anachronism_type": "Mutually exclusive historicity category: attested_pre_867 | fictional_placeholder | post_867_eponym | renamed_post_867 | modern_anachronism | early_modern_foundation | high_late_medieval_attestation | unattested_indigenous_or_minor.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}: true iff first_mention_year is known and <= that bookmark year.",
+      "first_mention_year": "Integer year of earliest documented attestation for the audited name (negative values = BCE; null if unattested).",
+      "first_mention_attestation": "Summary of earliest documented textual or epigraphic attestation (or unattested status).",
+      "eponym": "Structured eponym object {year, post_867, type, details} when named after a person, saint, ruler, deity, or dynasty/tribe; null otherwise.",
       "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
-      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and translation.",
       "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
-      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
-      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
+      "historical_names": "List of distinct pre-867 attested names for the same site or immediate predecessor: [{name, native_script, language, attested_from, attested_to, source, relationship, notes}].",
+      "source_url": "Primary reference URL (Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 100,
       "historical_867_true": 1,
-      "historical_867_false": 99,
+      "historical_1066_true": 1,
+      "historical_1178_true": 1,
       "first_mention_year_known": 45,
       "first_mention_year_unknown": 55,
-      "named_after_post_867_person": 0,
+      "post_867_eponyms": 0,
+      "total_eponyms": 0,
       "named_after_hydronym": 31,
       "named_after_any_natural_proper_name": 37,
-      "has_older_name_by_867_total": 0,
-      "has_older_name_by_867_for_anachronistic": 0,
-      "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 53
+      "has_historical_names_total": 0,
+      "has_historical_names_for_post_867": 0,
+      "vanilla_ck3_name_differs_from_modern_name": 12,
+      "wikipedia_source_attached": 53,
+      "anachronism_type_counts": {
+        "attested_pre_867": 1,
+        "early_modern_foundation": 23,
+        "fictional_placeholder": 59,
+        "high_late_medieval_attestation": 4,
+        "modern_anachronism": 13
+      }
     }
   },
   "baronies": {
     "b_fic_eman_nimen": {
       "barony_key": "b_fic_eman_nimen",
-      "modern_name": "Fic Eman Nimen",
+      "vanilla_ck3_name": "Nimen",
+      "modern_name": "Nimen",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -50,11 +67,15 @@
         "county": "c_eman_nimen",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony in e_amur named after the Nimelen River (Russian: Нимелен), a major left tributary of the Amgun River in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -75,19 +96,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_nimen) adopting the name of the Nimelen River (Нимелен), the longest tributary of the Amgun River in Khabarovsk Krai. The repository's sinosphere_calque layer (Nîtôr) derives from a literal calque of the Chinese phonetic characters 尼门 ('nun' + 'gate'). No settlement named Nimen is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Nimelen",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nimelen"
     },
     "b_fic_eman_hara": {
       "barony_key": "b_fic_eman_hara",
-      "modern_name": "Fic Eman Hara",
+      "vanilla_ck3_name": "Hara",
+      "modern_name": "Hara",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -95,11 +111,15 @@
         "county": "c_eman_nimen",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony in e_amur corresponding to the Khara River (Russian: Хара), a tributary of the Arkhara in the Amur basin.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -120,19 +140,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_hara) reflecting the Khara River (Хара) hydronym in the Amur basin, from Mongolic *qara ('black', as in Khara Muren for the Amur). No historical settlement of this exact name is attested by 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%90%D1%80%D1%85%D0%B0%D1%80%D1%8B)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%90%D1%80%D1%85%D0%B0%D1%80%D1%8B)"
     },
     "b_fic_eman_oronmu": {
       "barony_key": "b_fic_eman_oronmu",
-      "modern_name": "Fic Eman Oronmu",
+      "vanilla_ck3_name": "Oronmu",
+      "modern_name": "Oronmu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -140,11 +155,15 @@
         "county": "c_eman_nimen",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_oronmu) created for the Amur region.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -165,19 +184,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_oronmu) with no attested historical settlement or specific named geographic feature. The name evokes Tungusic oron ('reindeer'), and the repository entry (BinnenHôchblûeiStilêr) is a calque of its Chinese phonetic transcription 奥隆穆.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_birija": {
       "barony_key": "b_fic_eman_birija",
-      "modern_name": "Fic Eman Birija",
+      "vanilla_ck3_name": "Birija",
+      "modern_name": "Birija",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -185,11 +199,15 @@
         "county": "c_eman_birija",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony in d_eman_bureya corresponding to the Bira River (Russian: Бира) in the Middle Amur / Jewish Autonomous Oblast.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -210,19 +228,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_birija) located in d_eman_bureya and named after the Bira River (Бира, from Jurchen/Manchu bira 'river'), a major left tributary of the Amur. No historical settlement named Birija is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Bira_(river)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bira_(river)"
     },
     "b_fic_eman_birigugda": {
       "barony_key": "b_fic_eman_birigugda",
-      "modern_name": "Fic Eman Birigugda",
+      "vanilla_ck3_name": "Birigugda",
+      "modern_name": "Birigugda",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -230,11 +243,15 @@
         "county": "c_eman_birija",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_birigugda) created for d_eman_bureya.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -255,19 +272,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_birigugda) with no attested historical settlement or specific named geographic feature. The repository entry (Bîdorpberch) is a calque of the Chinese rendering 比里山.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_turma": {
       "barony_key": "b_fic_eman_turma",
-      "modern_name": "Fic Eman Turma",
+      "vanilla_ck3_name": "Turma",
+      "modern_name": "Turma",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -275,11 +287,15 @@
         "county": "c_eman_turma",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony in d_eman_bureya corresponding to the Tyrma River (Russian: Тырма), the largest left tributary of the Bureya River in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -300,19 +316,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_turma) in d_eman_bureya named after the Tyrma River (Тырма), a major tributary of the Bureya River in Khabarovsk Krai (the modern settlement of Tyrma dates to the 20th century). No settlement of this name is attested by 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D1%8B%D1%80%D0%BC%D0%B0_(%D1%80%D0%B5%D0%BA%D0%B0)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D1%8B%D1%80%D0%BC%D0%B0_(%D1%80%D0%B5%D0%BA%D0%B0)"
     },
     "b_fic_eman_uroure": {
       "barony_key": "b_fic_eman_uroure",
-      "modern_name": "Fic Eman Uroure",
+      "vanilla_ck3_name": "Uroure",
+      "modern_name": "Uroure",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -320,11 +331,15 @@
         "county": "c_eman_turma",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_uroure) created for d_eman_bureya.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -345,19 +360,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_uroure) with no attested historical settlement or specific named geographic feature. The repository entry (SwartzLôLê) calques the Chinese phonetic characters 乌罗勒.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_molamu": {
       "barony_key": "b_fic_eman_molamu",
-      "modern_name": "Fic Eman Molamu",
+      "vanilla_ck3_name": "Molamu",
+      "modern_name": "Molamu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -365,11 +375,15 @@
         "county": "c_eman_turma",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_molamu) created for d_eman_bureya.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -390,19 +404,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_molamu) with no attested historical settlement or specific named geographic feature. The repository entry (MôLâStilêr) calques the Chinese phonetic characters 莫拉穆.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_amgun": {
       "barony_key": "b_fic_eman_amgun",
-      "modern_name": "Fic Eman Amgun",
+      "vanilla_ck3_name": "Amgun",
+      "modern_name": "Amgun",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -410,11 +419,15 @@
         "county": "c_eman_amgun",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony named directly after the Amgun River (Russian: Амгунь; Chinese: 興衮河), a major left tributary of the Lower Amur in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -435,19 +448,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_amgun) adopting the name of the Amgun River (Амгунь) in Khabarovsk Krai, which flows 723 km to join the Amur near Tyr (Nurgan). No historical settlement named Amgun is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Amgun",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Amgun"
     },
     "b_fic_eman_chlya": {
       "barony_key": "b_fic_eman_chlya",
-      "modern_name": "Fic Eman Chlya",
+      "vanilla_ck3_name": "Chlya",
+      "modern_name": "Chlya",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -455,11 +463,15 @@
         "county": "c_eman_amgun",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested prior to or by 867 CE; fictional mod barony named after Lake Chlya (Russian: Чля, first described by Russian explorer D. I. Orlov in 1851 CE) and the modern village of Chlya in Nikolayevsky District, Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -480,19 +492,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chlya) named after Lake Chlya (Чля) near the mouth of the Amur in Khabarovsk Krai (first mapped in 1851 CE; a modern village of Chlya sits on its northern shore). No settlement is attested by 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%BB%D1%8F_(%D0%BE%D0%B7%D0%B5%D1%80%D0%BE)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%BB%D1%8F_(%D0%BE%D0%B7%D0%B5%D1%80%D0%BE)"
     },
     "b_fic_eman_orel": {
       "barony_key": "b_fic_eman_orel",
-      "modern_name": "Fic Eman Orel",
+      "vanilla_ck3_name": "Orel",
+      "modern_name": "Orel",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -500,11 +507,15 @@
         "county": "c_eman_amgun",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony named directly after Lake Orel (Russian: Орель), a large freshwater lake near the left bank of the Lower Amur in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -525,19 +536,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_orel) named after Lake Orel (Орель) in Nikolayevsky District, Khabarovsk Krai, adjacent to Lake Chlya near the Amur estuary. No settlement named Orel is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Lake_Orel",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Lake_Orel"
     },
     "b_eman_nurgan": {
       "barony_key": "b_eman_nurgan",
+      "vanilla_ck3_name": "Nurgan",
       "modern_name": "Eman Nurgan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -545,11 +551,15 @@
         "county": "c_eman_nurgan",
         "holding_type": "castle"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1263,
       "first_mention_attestation": "First attested in 1263 CE when the Mongol Yuan dynasty established an eastern expedition headquarters at Nurgan (奴兒干, modern Tyr, Khabarovsk Krai) at the confluence of the Amur and Amgun rivers; later seat of the Ming Nurgan Regional Military Commission (1409 CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -570,19 +580,14 @@
         }
       ],
       "etymology_analysis": "Historical administrative outpost and settlement at modern Tyr, Khabarovsk Krai, derived from Jurchen nurugan ('painting'). First attested in 1263 CE under the Yuan dynasty (and prominently in 1409 CE under the Ming Nurgan Regional Military Commission), so it postdates the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Nurgan_Regional_Military_Commission",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nurgan_Regional_Military_Commission"
     },
     "b_fic_eman_kamer": {
       "barony_key": "b_fic_eman_kamer",
-      "modern_name": "Fic Eman Kamer",
+      "vanilla_ck3_name": "Kamer",
+      "modern_name": "Kamer",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -590,11 +595,15 @@
         "county": "c_eman_nurgan",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_kamer) created for c_eman_nurgan.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -615,19 +624,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_kamer) with no attested historical settlement or specific named geographic feature. The repository entry (ZêgePrûmener) calques the Chinese phonetic characters 凯梅尔.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_ekiti": {
       "barony_key": "b_fic_eman_ekiti",
-      "modern_name": "Fic Eman Ekiti",
+      "vanilla_ck3_name": "Ekiti",
+      "modern_name": "Ekiti",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -635,11 +639,15 @@
         "county": "c_eman_nurgan",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_ekiti) created for c_eman_nurgan.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -660,19 +668,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_ekiti) with no attested historical settlement or specific named geographic feature. The repository entry (StoupGruntStîel) calques the Chinese phonetic characters 埃基蒂.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_chagal": {
       "barony_key": "b_fic_eman_chagal",
-      "modern_name": "Fic Eman Chagal",
+      "vanilla_ck3_name": "Chagal",
+      "modern_name": "Chagal",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -680,11 +683,15 @@
         "county": "c_eman_nurgan",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_chagal) created for c_eman_nurgan.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -705,19 +712,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chagal) with no attested historical settlement or specific named geographic feature. The repository entry (TschâGâer) calques the Chinese phonetic characters 查嘎尔.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_tugur": {
       "barony_key": "b_fic_eman_tugur",
-      "modern_name": "Fic Eman Tugur",
+      "vanilla_ck3_name": "Tugur",
+      "modern_name": "Tugur",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -725,11 +727,15 @@
         "county": "c_eman_tugur",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1652,
       "first_mention_attestation": "Real settlement of Tugur (Russian: Тугур) at the mouth of the Tugur River first attested in 1652 CE when Russian Cossacks under Ivan Nagiba wintered there, establishing Tugursky Fortress in 1653 CE; no settlement is attested by 867 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -750,19 +756,14 @@
         }
       ],
       "etymology_analysis": "Mod barony (b_fic_eman_tugur) matching the real village of Tugur and the Tugur River (Тугур) flowing into Tugur Bay on the Sea of Okhotsk in Khabarovsk Krai. The settlement was first founded in 1652 CE (Tugursky Fortress in 1653 CE), postdating the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Tugur,_Khabarovsk_Krai",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Tugur,_Khabarovsk_Krai"
     },
     "b_fic_eman_usalgin": {
       "barony_key": "b_fic_eman_usalgin",
-      "modern_name": "Fic Eman Usalgin",
+      "vanilla_ck3_name": "Usalgin",
+      "modern_name": "Usalgin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -770,11 +771,15 @@
         "county": "c_eman_tugur",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony named directly after the Usalgin River (Russian: Усалгин) in Tuguro-Chumikansky District, Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -795,19 +800,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_usalgin) named after the Usalgin River (Усалгин), a 142 km river in Tuguro-Chumikansky District, Khabarovsk Krai, flowing into Nikolaya Bay of the Sea of Okhotsk. No historical settlement is attested by 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%BB%D0%B3%D0%B8%D0%BD",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%BB%D0%B3%D0%B8%D0%BD"
     },
     "b_fic_eman_ymila": {
       "barony_key": "b_fic_eman_ymila",
-      "modern_name": "Fic Eman Ymila",
+      "vanilla_ck3_name": "Ymila",
+      "modern_name": "Ymila",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -815,11 +815,15 @@
         "county": "c_eman_tugur",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_ymila) created for c_eman_tugur.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -840,19 +844,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_ymila) with no attested historical settlement or specific named geographic feature. The repository entry (ÎRîsLâ) calques the Chinese phonetic characters 伊米拉.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_kerin": {
       "barony_key": "b_fic_eman_kerin",
-      "modern_name": "Fic Eman Kerin",
+      "vanilla_ck3_name": "Kerin",
+      "modern_name": "Kerin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -860,11 +859,15 @@
         "county": "c_eman_kerin",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_kerin) created for d_eman_samagero.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -885,19 +888,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_kerin) with no attested historical settlement or specific named geographic feature. The repository entry (Snîdwalt) calques the Chinese phonetic characters 刻林.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_pilda": {
       "barony_key": "b_fic_eman_pilda",
-      "modern_name": "Fic Eman Pilda",
+      "vanilla_ck3_name": "Pilda",
+      "modern_name": "Pilda",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -905,11 +903,15 @@
         "county": "c_eman_kerin",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested as a historical settlement prior to or by 867 CE; fictional mod barony named directly after the Pilda River (Russian: Пильда), a 137 km river in Ulchsky District, Khabarovsk Krai flowing into Lake Udyl.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -930,19 +932,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_pilda) named after the Pilda River (Пильда) in Ulchsky District, Khabarovsk Krai, which flows into Lake Udyl in the Lower Amur basin. No historical settlement named Pilda is attested by 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0"
     },
     "b_fic_eman_khadul": {
       "barony_key": "b_fic_eman_khadul",
-      "modern_name": "Fic Eman Khadul",
+      "vanilla_ck3_name": "Khadul",
+      "modern_name": "Khadul",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -950,11 +947,15 @@
         "county": "c_eman_khadul",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_khadul) created for d_eman_samagero.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -975,19 +976,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_khadul) with no attested historical settlement or specific named geographic feature. The repository entry (Kaschstater) calques the Chinese phonetic characters 喀都尔.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_chayatin": {
       "barony_key": "b_fic_eman_chayatin",
-      "modern_name": "Fic Eman Chayatin",
+      "vanilla_ck3_name": "Chayatin",
+      "modern_name": "Chayatin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -995,11 +991,15 @@
         "county": "c_eman_khadul",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_chayatin) created for d_eman_samagero.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1020,19 +1020,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chayatin) with no attested historical settlement or specific named geographic feature. The repository entry (TschâEdelHôf) calques the Chinese phonetic characters 查雅廷.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_henkon": {
       "barony_key": "b_fic_eman_henkon",
-      "modern_name": "Fic Eman Henkon",
+      "vanilla_ck3_name": "Henkon",
+      "modern_name": "Henkon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1040,11 +1035,15 @@
         "county": "c_eman_khadul",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_henkon) created for d_eman_samagero.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1065,19 +1064,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_henkon) with no attested historical settlement or specific named geographic feature. The repository entry (SpôtErde) calques the Chinese phonetic characters 亨坤.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_tudali": {
       "barony_key": "b_fic_eman_tudali",
-      "modern_name": "Fic Eman Tudali",
+      "vanilla_ck3_name": "Tudali",
+      "modern_name": "Tudali",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1085,11 +1079,15 @@
         "county": "c_eman_tudali",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records; fictional mod barony (b_fic_eman_tudali) created for d_eman_samagero.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1110,19 +1108,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_tudali) with no attested historical settlement or specific named geographic feature. The repository entry (TôRêkdorp) calques the Chinese phonetic characters 图达里.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_evoron": {
       "barony_key": "b_fic_eman_evoron",
-      "modern_name": "Fic Eman Evoron",
+      "vanilla_ck3_name": "Evoron",
+      "modern_name": "Evoron",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1130,11 +1123,15 @@
         "county": "c_eman_tudali",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested prior to or by 867 CE; fictional mod barony named directly after Lake Evoron (Russian: Эворон) in Solnechny District, Khabarovsk Krai (modern settlement of Evoron dates to the late 1930s CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1155,19 +1152,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_evoron) named after Lake Evoron (Эворон) in the Gorin River basin of Khabarovsk Krai; the modern village and railway station of Evoron were established in the late 1930s CE. No settlement is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Evoron",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Evoron"
     },
     "b_fic_eman_bureya": {
       "barony_key": "b_fic_eman_bureya",
-      "modern_name": "Fic Eman Bureya",
+      "vanilla_ck3_name": "Bureya",
+      "modern_name": "Bureya",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1175,11 +1167,15 @@
         "county": "c_eman_tudali",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1913,
       "first_mention_attestation": "Founded in 1913 CE as a railway station on the Middle Amur Railway (Amur Oblast, Russia), named after the Bureya River; fictional CK3 mod barony.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1200,19 +1196,14 @@
         }
       ],
       "etymology_analysis": "Derived from the Bureya River (Russian Бурея, from Evenki birija 'river'); the modern urban-type settlement of Bureya in Amur Oblast was founded in 1913 CE as an Amur Railway station, so it is not historical as a settlement by 867 CE. In the repo, 布列亚 is calqued via character semantics as LînwandRîgeNider.",
-      "source_url": "https://en.wikipedia.org/wiki/Bureya,_Russia",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bureya,_Russia"
     },
     "b_fic_eman_yam_alin": {
       "barony_key": "b_fic_eman_yam_alin",
-      "modern_name": "Fic Eman Yam Alin",
+      "vanilla_ck3_name": "Yam Alin",
+      "modern_name": "Yam Alin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1220,11 +1211,15 @@
         "county": "c_eman_yam_alin",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Yam Alin is attested. Named after the Yam-Alin mountain range, first surveyed by Russian expeditions in 1849–1853 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "oronym",
@@ -1245,19 +1240,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony adopting the oronym Yam-Alin (Russian Ям-Алинь), a mountain range in Amur Oblast and Khabarovsk Krai first mapped in 1851 CE; not attested as a settlement by 867 CE. Repo form Abeêlberch calques the Chinese rendering 杨山 (poplar + mountain).",
-      "source_url": "https://en.wikipedia.org/wiki/Yam-Alin",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Yam-Alin"
     },
     "b_fic_eman_imelen": {
       "barony_key": "b_fic_eman_imelen",
-      "modern_name": "Fic Eman Imelen",
+      "vanilla_ck3_name": "Imelen",
+      "modern_name": "Imelen",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1265,11 +1255,15 @@
         "county": "c_eman_yam_alin",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Imelen is attested. Reflects the Manchu/Tungusic hydronym Imile/Imiien for the Nimelen River (attested in 18th-century CE Qing maps as Emile River).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1290,19 +1284,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after the Nimelen River (Manchu Imile bira, Qing Chinese 额密勒河, Russian Нимелен), a major tributary of the Amgun originating in the Yam-Alin range; unattested as a settlement by 867 CE. Repo form ÎPrûmenOrden calques the characters 伊梅伦.",
-      "source_url": "https://en.wikipedia.org/wiki/Nimelen",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nimelen"
     },
     "b_fic_eman_dusse_alin": {
       "barony_key": "b_fic_eman_dusse_alin",
-      "modern_name": "Fic Eman Dusse Alin",
+      "vanilla_ck3_name": "Dusse Alin",
+      "modern_name": "Dusse Alin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1310,11 +1299,15 @@
         "county": "c_eman_yam_alin",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Dusse Alin is attested. Named after the Dusse-Alin mountain range in Khabarovsk Krai, first roughly mapped in 1844 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "oronym",
@@ -1335,19 +1328,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony adopting the oronym Dusse-Alin (Russian Дуссе-Алинь), a mountain range in Khabarovsk Krai first mapped by Alexander von Middendorff in 1844 CE; unattested as a settlement by 867 CE. Repo form ScheffelVarweberch calques 斗色山.",
-      "source_url": "https://en.wikipedia.org/wiki/Dusse-Alin",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Dusse-Alin"
     },
     "b_fic_eman_choripi": {
       "barony_key": "b_fic_eman_choripi",
-      "modern_name": "Fic Eman Choripi",
+      "vanilla_ck3_name": "Choripi",
+      "modern_name": "Choripi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1355,11 +1343,15 @@
         "county": "c_eman_choripi",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1380,19 +1372,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form JeEmanwazzer calques 也曼水.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_uada_alin": {
       "barony_key": "b_fic_eman_uada_alin",
-      "modern_name": "Fic Eman Uada Alin",
+      "vanilla_ck3_name": "Uada Alin",
+      "modern_name": "Uada Alin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1400,11 +1387,15 @@
         "county": "c_eman_choripi",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1425,19 +1416,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony combining an invented stem Uada with Tungusic alin ('mountain'); no real mountain or settlement of this name is attested by 867 CE. Repo form SwartzBochtRêk calques 乌阿达.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_kuru": {
       "barony_key": "b_fic_eman_kuru",
-      "modern_name": "Fic Eman Kuru",
+      "vanilla_ck3_name": "Kuru",
+      "modern_name": "Kuru",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1445,11 +1431,15 @@
         "county": "c_eman_choripi",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Kuru is attested. Reflects the Manchu hydronym Kuru (Qing 库噜河) for the Kur River in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1470,19 +1460,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after the Kur River (Russian Кур, Manchu Kuru, Qing Chinese 库噜河), which joins the Urmi to form the Tunguska in Khabarovsk Krai; unattested as a settlement by 867 CE. Repo form AlSwartz calques 俱卢.",
-      "source_url": "https://en.wikipedia.org/wiki/Kur_(Khabarovsk_Krai)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Kur_(Khabarovsk_Krai)"
     },
     "b_fic_eman_bira": {
       "barony_key": "b_fic_eman_bira",
-      "modern_name": "Fic Eman Bira",
+      "vanilla_ck3_name": "Bira",
+      "modern_name": "Bira",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1490,11 +1475,15 @@
         "county": "c_eman_murkonno",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1894,
       "first_mention_attestation": "Founded in 1894 CE (or 1908 CE as an Amur Railway station) in the Jewish Autonomous Oblast, Russia, named after the Bira River; fictional CK3 mod barony.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1515,19 +1504,14 @@
         }
       ],
       "etymology_analysis": "Derived from the Bira River (Russian Бира, from Jurchen/Manchu bira 'river'); the modern urban-type settlement of Bira in the Jewish Autonomous Oblast was founded in 1894 CE, post-dating 867 CE. Repo form VasteLâ calques 必剌.",
-      "source_url": "https://en.wikipedia.org/wiki/Bira,_Russia",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bira,_Russia"
     },
     "b_fic_eman_pichan": {
       "barony_key": "b_fic_eman_pichan",
-      "modern_name": "Fic Eman Pichan",
+      "vanilla_ck3_name": "Pichan",
+      "modern_name": "Pichan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1535,11 +1519,15 @@
         "county": "c_eman_murkonno",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Pichan is attested in the Amur basin. Reflects 毕瞻 (Bizhan/Pichan), the Ming-Qing Chinese name for the Bidzhan River.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1560,19 +1548,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after the Bidzhan River (Russian Биджан, Manchu Bijan bira, Ming-Qing Chinese 毕瞻河), a left tributary of the Amur in the Jewish Autonomous Oblast; unattested as a settlement by 867 CE. Repo form VollSchouwe calques 毕瞻.",
-      "source_url": "https://en.wikipedia.org/wiki/Bidzhan",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bidzhan"
     },
     "b_fic_eman_khimin": {
       "barony_key": "b_fic_eman_khimin",
-      "modern_name": "Fic Eman Khimin",
+      "vanilla_ck3_name": "Khimin",
+      "modern_name": "Khimin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1580,11 +1563,15 @@
         "county": "c_eman_murkonno",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Khimin is attested. Reflects 奇穆尼 (Qimuni, Manchu Kimnin), the Qing-era hydronym for the Bira River attested on 1721–1728 CE Qing maps.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1605,19 +1592,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony adopting the Qing-era hydronym Kimnin / 奇穆尼 (Qimuni) for the Bira River in the Jewish Autonomous Oblast, attested on 1721 CE and 1728 CE Qing maps; unattested as a settlement by 867 CE. Repo form WunderStilêrNî calques 奇穆尼.",
-      "source_url": "https://zh.wikipedia.org/zh-cn/%E6%AF%94%E6%8B%89%E6%B2%B3_(%E9%BB%91%E9%BE%8D%E6%B1%9F%E6%94%AF%E6%B5%81)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://zh.wikipedia.org/zh-cn/%E6%AF%94%E6%8B%89%E6%B2%B3_(%E9%BB%91%E9%BE%8D%E6%B1%9F%E6%94%AF%E6%B5%81)"
     },
     "b_fic_eman_chulabira": {
       "barony_key": "b_fic_eman_chulabira",
-      "modern_name": "Fic Eman Chulabira",
+      "vanilla_ck3_name": "Chulabira",
+      "modern_name": "Chulabira",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1625,11 +1607,15 @@
         "county": "c_eman_murkonno",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1650,19 +1636,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony combining an invented element Chula with Manchu bira ('river'); no historical settlement or real river of this name is attested by 867 CE. Repo form TschûLâBîLâ calques 楚拉比拉.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_umilimo": {
       "barony_key": "b_fic_eman_umilimo",
-      "modern_name": "Fic Eman Umilimo",
+      "vanilla_ck3_name": "Umilimo",
+      "modern_name": "Umilimo",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1670,11 +1651,15 @@
         "county": "c_eman_urehokto",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1695,19 +1680,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SwartzRîsdorpMô calques 乌米里莫.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_kulikansiggu": {
       "barony_key": "b_fic_eman_kulikansiggu",
-      "modern_name": "Fic Eman Kulikansiggu",
+      "vanilla_ck3_name": "Kulikansiggu",
+      "modern_name": "Kulikansiggu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1715,11 +1695,15 @@
         "county": "c_eman_urehokto",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1740,19 +1724,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SchatzWênKâmWestAlt calques 库利坎西古.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_eman_molihewen": {
       "barony_key": "b_eman_molihewen",
+      "vanilla_ck3_name": "Molihewen",
       "modern_name": "Eman Molihewen",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1760,11 +1739,15 @@
         "county": "c_eman_molihewen",
         "holding_type": "castle"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1331,
       "first_mention_attestation": "Attested in the Yuan dynasty Jingshi Dadian (1331 CE) as Molihewen Station (末里合温站), a dog-sled post station in Liaoyang Province near modern Komsomolsk-on-Amur.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1785,19 +1768,14 @@
         }
       ],
       "etymology_analysis": "Historical Yuan-dynasty dog-sled post station (末里合温站) recorded in the 1331 CE Jingshi Dadian on the left bank of the lower Amur (near modern Komsomolsk-on-Amur / Melki), later Ming Malehenggu Station; post-dates 867 CE with no earlier written settlement name attested. Repo form EnddorpZâmenWorm calques 末里合温.",
-      "source_url": "https://zh.wikipedia.org/zh-cn/%E9%98%BF%E7%A9%86%E5%B0%94%E6%B2%B3%E7%95%94%E5%85%B1%E9%9D%92%E5%9F%8E",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://zh.wikipedia.org/zh-cn/%E9%98%BF%E7%A9%86%E5%B0%94%E6%B2%B3%E7%95%94%E5%85%B1%E9%9D%92%E5%9F%8E"
     },
     "b_fic_eman_shangkhor": {
       "barony_key": "b_fic_eman_shangkhor",
-      "modern_name": "Fic Eman Shangkhor",
+      "vanilla_ck3_name": "Shangkhor",
+      "modern_name": "Shangkhor",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1805,11 +1783,15 @@
         "county": "c_eman_molihewen",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in historical records as a settlement (positional compound meaning 'Upper Khor').",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1830,19 +1812,14 @@
         }
       ],
       "etymology_analysis": "Fictional directional/positional compound ('Upper Khor', 上科) created for the CK3 mod; not attested as a historical settlement by 867 CE. Repo form ÔverKô calques 上科.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_heishanan": {
       "barony_key": "b_fic_eman_heishanan",
-      "modern_name": "Fic Eman Heishanan",
+      "vanilla_ck3_name": "Heishanan",
+      "modern_name": "Heishanan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1850,11 +1827,15 @@
         "county": "c_eman_molihewen",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in historical or geographical records (directional compound meaning 'South of Black Sand').",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1881,19 +1862,14 @@
         }
       ],
       "etymology_analysis": "Fictional Sinosphere directional compound ('Black Sand South', 黑沙南) created for the CK3 mod; unattested as a historical settlement by 867 CE. Repo form SwartzsantSût calques 黑沙南.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_bolon": {
       "barony_key": "b_fic_eman_bolon",
-      "modern_name": "Fic Eman Bolon",
+      "vanilla_ck3_name": "Bolon",
+      "modern_name": "Bolon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1901,11 +1877,15 @@
         "county": "c_eman_molihewen",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Bolon is attested by 867 CE. Named after Lake Bolon in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1926,19 +1906,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after Lake Bolon (Russian Болонь), a large freshwater lake on the Amur floodplain in Khabarovsk Krai; unattested as a settlement by 867 CE. Repo form WelleHôchblûei calques 波隆.",
-      "source_url": "https://en.wikipedia.org/wiki/Lake_Bolon",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Lake_Bolon"
     },
     "b_fic_eman_urmi": {
       "barony_key": "b_fic_eman_urmi",
-      "modern_name": "Fic Eman Urmi",
+      "vanilla_ck3_name": "Urmi",
+      "modern_name": "Urmi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1946,11 +1921,15 @@
         "county": "c_eman_urmi",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Urmi is attested. Named after the Urmi River in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1971,19 +1950,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after the Urmi River (Russian Урми) in Khabarovsk Krai, which joins the Kur to form the Tunguska River; unattested as a settlement by 867 CE. Repo form SwartzerRîs calques 乌尔米.",
-      "source_url": "https://en.wikipedia.org/wiki/Urmi_(river)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Urmi_(river)"
     },
     "b_fic_eman_kirga": {
       "barony_key": "b_fic_eman_kirga",
-      "modern_name": "Fic Eman Kirga",
+      "vanilla_ck3_name": "Kirga",
+      "modern_name": "Kirga",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -1991,11 +1965,15 @@
         "county": "c_eman_urmi",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1940,
       "first_mention_attestation": "Real settlement Kirga (village and railway siding opened in 1940 CE) on the Kirga River in Birobidzhansky District, Jewish Autonomous Oblast, Russia; fictional CK3 mod barony.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -2016,19 +1994,14 @@
         }
       ],
       "etymology_analysis": "Named after the Kirga River (a left tributary of the Bira) and the modern village/railway siding of Kirga (Кирга, siding opened 1940 CE) in the Jewish Autonomous Oblast; not attested by 867 CE. Repo form WundererGâ calques 奇尔嘎.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%80%D0%B3%D0%B0_(%D0%95%D0%B2%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%80%D0%B3%D0%B0_(%D0%95%D0%B2%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
     },
     "b_eman_boli": {
       "barony_key": "b_eman_boli",
+      "vanilla_ck3_name": "Boli",
       "modern_name": "Eman Boli",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2036,11 +2009,15 @@
         "county": "c_eman_boli",
         "holding_type": "castle"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 722,
       "first_mention_attestation": "Old Book of Tang (Jiu Tangshu, vol. 199B) and New Book of Tang (Xin Tangshu, vol. 219), recording the 722 CE appointment of Heishui Mohe chieftain Nishuliji as Prefect of Boli Prefecture (勃利州) at modern Khabarovsk.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2055,19 +2032,14 @@
         }
       ],
       "etymology_analysis": "Historical Tang-dynasty prefecture (勃利州) established in 722 CE for the Heishui Mohe under chieftain Nishuliji at the Amur-Ussuri confluence (later known as Boli 伯力, modern Khabarovsk); directly attested prior to 867 CE. Repo form BôlWên calques 勃利.",
-      "source_url": "https://en.wikipedia.org/wiki/Khabarovsk",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Khabarovsk"
     },
     "b_fic_eman_nanshuian": {
       "barony_key": "b_fic_eman_nanshuian",
-      "modern_name": "Fic Eman Nanshuian",
+      "vanilla_ck3_name": "Nanshuian",
+      "modern_name": "Nanshuian",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2075,11 +2047,15 @@
         "county": "c_eman_boli",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records (directional compound meaning 'South Water Peace').",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2106,19 +2082,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional Sinosphere directional compound ('South Water Peace', 南水安) created for the CK3 mod; unattested as a historical settlement by 867 CE. Repo form SûtwazzerFrid calques 南水安.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_alimenan": {
       "barony_key": "b_fic_eman_alimenan",
-      "modern_name": "Fic Eman Alimenan",
+      "vanilla_ck3_name": "Alimenan",
+      "modern_name": "Alimenan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2126,11 +2097,15 @@
         "county": "c_eman_boli",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2151,19 +2126,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form BochtWênSchön calques 阿利美.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_khorhe": {
       "barony_key": "b_fic_eman_khorhe",
-      "modern_name": "Fic Eman Khorhe",
+      "vanilla_ck3_name": "Khorhe",
+      "modern_name": "Khorhe",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2171,11 +2141,15 @@
         "county": "c_eman_boli",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; no historical settlement named Khorhe is attested (settlement Khor was founded in 1897 CE). Named after the Khor River in Khabarovsk Krai.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -2196,19 +2170,14 @@
         }
       ],
       "etymology_analysis": "Fictional barony named after the Khor River (Russian Хор, Chinese 霍尔河), a right tributary of the Ussuri in Khabarovsk Krai; the nearby settlement of Khor was founded in 1897 CE, so it is not historical by 867 CE. Repo form KôGlantz calques 科赫.",
-      "source_url": "https://en.wikipedia.org/wiki/Khor_(river)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Khor_(river)"
     },
     "b_fic_eman_mohean": {
       "barony_key": "b_fic_eman_mohean",
-      "modern_name": "Fic Eman Mohean",
+      "vanilla_ck3_name": "Mohean",
+      "modern_name": "Mohean",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2216,11 +2185,15 @@
         "county": "c_eman_mohean",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2241,19 +2214,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony evoking the Mohe ethnonym with a generic suffix; no historical settlement or natural feature of this name is attested by 867 CE. Repo form MôMôch calques 莫罕.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_wuguijiang": {
       "barony_key": "b_fic_eman_wuguijiang",
-      "modern_name": "Fic Eman Wuguijiang",
+      "vanilla_ck3_name": "Wuguijiang",
+      "modern_name": "Wuguijiang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2261,11 +2229,15 @@
         "county": "c_eman_mohean",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Fictional CK3 mod barony; unattested in any historical or geographical records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2292,19 +2264,14 @@
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SwartzLûWeêrkeêr calques 乌鲁归.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_yemanshui": {
       "barony_key": "b_fic_eman_yemanshui",
-      "modern_name": "Fic Eman Yemanshui",
+      "vanilla_ck3_name": "Yemanshui",
+      "modern_name": "Yemanshui",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2312,11 +2279,15 @@
         "county": "c_eman_mohean",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in East Manchuria (Amur region); no historical settlement of this name exists in written records.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2343,19 +2314,14 @@
         }
       ],
       "etymology_analysis": "Fictional Crusader Kings mod barony (b_fic_eman_yemanshui) representing a Sinicized Tungusic-style toponym in the Amur region, rendered in-game as the Germanic calque JeEmanwazzer. Unattested in any historical source prior to or after 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_yerenhe": {
       "barony_key": "b_fic_eman_yerenhe",
-      "modern_name": "Fic Eman Yerenhe",
+      "vanilla_ck3_name": "Yerenhe",
+      "modern_name": "Yerenhe",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2363,11 +2329,15 @@
         "county": "c_eman_yerenhe",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in East Manchuria (Amur region); no historical settlement of this exact name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2394,19 +2364,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_yerenhe) named after the Ming-era Chinese ethnonym Yeren ('Wild Jurchens') combined with he ('river'), calqued in-game as Feltmanflôz. No real historical settlement of this name is attested.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_elejiang": {
       "barony_key": "b_fic_eman_elejiang",
-      "modern_name": "Fic Eman Elejiang",
+      "vanilla_ck3_name": "Elejiang",
+      "modern_name": "Elejiang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2414,11 +2379,15 @@
         "county": "c_eman_yerenhe",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in East Manchuria (Amur region); no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2439,19 +2408,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_elejiang) combining a pseudo-Tungusic Mandarin transcription Ele with jiang ('large river'), calqued in-game as StirneLêflôz. Unattested in historical records.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_bixinshang": {
       "barony_key": "b_fic_eman_bixinshang",
-      "modern_name": "Fic Eman Bixinshang",
+      "vanilla_ck3_name": "Bixinshang",
+      "modern_name": "Bixinshang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_amur",
@@ -2459,11 +2423,15 @@
         "county": "c_eman_yerenhe",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in East Manchuria (Amur region); no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2490,19 +2458,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_bixinshang) formed as an auspicious Mandarin directional compound ('Upper Bixin'), calqued in-game as VasteUpgancÔver. Unattested in historical sources.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_beihean": {
       "barony_key": "b_fic_eman_beihean",
-      "modern_name": "Fic Eman Beihean",
+      "vanilla_ck3_name": "Beihean",
+      "modern_name": "Beihean",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2510,11 +2473,15 @@
         "county": "c_eman_beihean",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2541,19 +2508,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_beihean) formed from a generic Mandarin directional-topographic phrase ('north riverbank'), calqued in-game as Nordflôzouwe. Unattested as a historical settlement.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_silbaki": {
       "barony_key": "b_fic_eman_silbaki",
-      "modern_name": "Fic Eman Silbaki",
+      "vanilla_ck3_name": "Silbaki",
+      "modern_name": "Silbaki",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2561,11 +2523,15 @@
         "county": "c_eman_beihean",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2586,19 +2552,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_silbaki) representing a pseudo-Tungusic toponym transcribed into Mandarin as 西尔巴基 and calqued in-game as WesterBâGrunt. Unattested in historical records.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_heishuiyang": {
       "barony_key": "b_fic_eman_heishuiyang",
-      "modern_name": "Fic Eman Heishuiyang",
+      "vanilla_ck3_name": "Heishuiyang",
+      "modern_name": "Heishuiyang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2606,11 +2567,15 @@
         "county": "c_eman_heishuiyang",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists there (distinct from the maritime Taiwan Strait term Heishuiyang).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2637,19 +2602,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_heishuiyang) in Sikhote-Alin, calqued in-game as Swartzwazzermêr from Mandarin 'black water ocean'. Unattested as a historical settlement in the Amur/Sikhote-Alin region.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_senkele": {
       "barony_key": "b_fic_eman_senkele",
-      "modern_name": "Fic Eman Senkele",
+      "vanilla_ck3_name": "Senkele",
+      "modern_name": "Senkele",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2657,11 +2617,15 @@
         "county": "c_eman_heishuiyang",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2682,19 +2646,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_senkele) rendered in Mandarin as 森克勒 and calqued in-game as WaltZêgeLê. Unattested in historical records.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_melersuki": {
       "barony_key": "b_fic_eman_melersuki",
-      "modern_name": "Fic Eman Melersuki",
+      "vanilla_ck3_name": "Melersuki",
+      "modern_name": "Melersuki",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2702,11 +2661,15 @@
         "county": "c_eman_heishuiyang",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2727,19 +2690,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_melersuki) representing a pseudo-Tungusic toponym transcribed into Mandarin as 梅勒苏基 and calqued in-game as PrûmenLêSûzGrunt. Unattested in historical records.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_wuguihai": {
       "barony_key": "b_fic_eman_wuguihai",
-      "modern_name": "Fic Eman Wuguihai",
+      "vanilla_ck3_name": "Wuguihai",
+      "modern_name": "Wuguihai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2747,11 +2705,15 @@
         "county": "c_eman_wuguihai",
         "holding_type": "castle"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2772,19 +2734,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_wuguihai) composed of Mandarin wugui ('tortoise') + hai ('sea'), calqued in-game as SwartzSchildpadmêr. Unattested in historical sources.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_shuishanpu": {
       "barony_key": "b_fic_eman_shuishanpu",
-      "modern_name": "Fic Eman Shuishanpu",
+      "vanilla_ck3_name": "Shuishanpu",
+      "modern_name": "Shuishanpu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2792,11 +2749,15 @@
         "county": "c_eman_wuguihai",
         "holding_type": "church"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2823,19 +2784,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_shuishanpu) formed as a generic Mandarin compound ('water mountain relay post'), calqued in-game as Wazzerberchpost. Unattested in historical records.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_fic_eman_xiaoheijiang": {
       "barony_key": "b_fic_eman_xiaoheijiang",
-      "modern_name": "Fic Eman Xiaoheijiang",
+      "vanilla_ck3_name": "Xiaoheijiang",
+      "modern_name": "Xiaoheijiang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2843,11 +2799,15 @@
         "county": "c_eman_wuguihai",
         "holding_type": "city"
       },
+      "anachronism_type": "fictional_placeholder",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested fictional mod barony in the Sikhote-Alin / Amur region; no historical settlement of this name exists there (unrelated to the Xiaohei River in Yunnan, China).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2874,19 +2834,14 @@
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_xiaoheijiang) in Sikhote-Alin, calqued in-game as KleinSwartzflôz from Mandarin 'Little Black River'. Unattested as a historical settlement in East Manchuria.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_kinasir": {
       "barony_key": "b_kinasir",
+      "vanilla_ck3_name": "Kinasir",
       "modern_name": "Kinasir",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2894,11 +2849,15 @@
         "county": "c_chupka",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1644,
       "first_mention_attestation": "First depicted and named as Kunasiri (クナシリ) on the Tokugawa shogunate's Shōhō Kuniezu (正保御国絵図) map of 1644 CE; Matsumae Domain later established Kunashiri-basho in 1754 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "topographic_feature",
@@ -2919,19 +2878,14 @@
         }
       ],
       "etymology_analysis": "From Ainu kina-sir ('grass island'), the indigenous name of Kunashir Island in the southern Kurils, rendered in Japanese as Kunashiri (国後島) and calqued in-game as Wêdeinsel. First attested in written Japanese cartography in 1644 CE, well after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Kunashir",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Kunashir"
     },
     "b_etuworop_sir": {
       "barony_key": "b_etuworop_sir",
+      "vanilla_ck3_name": "Etuworop-sir",
       "modern_name": "Etuworop Sir",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2939,11 +2893,15 @@
         "county": "c_chupka",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1644,
       "first_mention_attestation": "First recorded as Etohoro (エトホロ) on the Tokugawa shogunate's Shōhō Kuniezu (正保御国絵図) map of 1644 CE; Japanese castaways reached Iturup in 1661 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "topographic_feature",
@@ -2976,19 +2934,14 @@
         }
       ],
       "etymology_analysis": "From Ainu etu-oro-o-p ('place with a cape') plus sir ('island, land'), the indigenous name of Iturup (Etorofu, 択捉島), calqued in-game as KûrVanc via its ateji kanji 択捉. First attested in 1644 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Iturup",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Iturup"
     },
     "b_pior": {
       "barony_key": "b_pior",
+      "vanilla_ck3_name": "Pior",
       "modern_name": "Pior",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -2996,11 +2949,15 @@
         "county": "c_menas",
         "holding_type": "castle"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1872,
       "first_mention_attestation": "Established as Bihoro Village (ビホロ村) in 1872 CE (Meiji 5) under Abashiri/Abajiri District in Hokkaido; no pre-Meiji written attestation of the settlement is known.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3021,19 +2978,14 @@
         }
       ],
       "etymology_analysis": "From Ainu pi-poro ('place with many stones') or pe-horo ('place with abundant water'), modern Bihoro (美幌) in eastern Hokkaido, calqued in-game as Steinveitflôz. First attested as a formal settlement in 1872 CE, well after 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B9%8C%E7%94%BA",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B9%8C%E7%94%BA"
     },
     "b_opereperkep": {
       "barony_key": "b_opereperkep",
+      "vanilla_ck3_name": "Opereperkep",
       "modern_name": "Opereperkep",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3041,11 +2993,15 @@
         "county": "c_menas",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1883,
       "first_mention_attestation": "First settled as a modern Japanese/Ainu administrative locality in May 1883 CE when Yoda Benzō's Banseisha pioneers settled at Shimo-Obihiro (Operperkep).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3072,19 +3028,14 @@
         }
       ],
       "etymology_analysis": "From Ainu o-perperke-p ('place where the river mouth splits into many channels'), the original Ainu name of Obihiro (帯広), calqued in-game as BacheGavel. Unattested in written records until the Meiji settlement era (1883 CE), long after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Obihiro",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Obihiro"
     },
     "b_tokapusi": {
       "barony_key": "b_tokapusi",
+      "vanilla_ck3_name": "Tokapusi",
       "modern_name": "Tokapusi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3092,11 +3043,15 @@
         "county": "c_menas",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1669,
       "first_mention_attestation": "Attested in Edo-period records of Shakushain's Revolt (1669 CE) as the Tokachi region/river basin (トカチ), and later standardized as Tokachi Province in 1869 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -3117,19 +3072,14 @@
         }
       ],
       "etymology_analysis": "From Ainu tokapci / tokap-usi ('breast-like place', referring to the twin-branched mouth of the Tokachi River), modern Tokachi (十勝), calqued in-game as Milchbache. First attested in written records in 1669 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Tokachi_River",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Tokachi_River"
     },
     "b_kusuri": {
       "barony_key": "b_kusuri",
+      "vanilla_ck3_name": "Kusuri",
       "modern_name": "Kusuri",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3137,11 +3087,15 @@
         "county": "c_simenas",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1643,
       "first_mention_attestation": "First recorded in the Matsumae Kyūjiki (松前旧事記) in 1643 CE and on the Shōhō Ezu map of 1644 CE as Kusuri (クスリ), where Matsumae Domain operated the Kusuri-basho trading post.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3162,19 +3116,14 @@
         }
       ],
       "etymology_analysis": "From Ainu kusuri (variously interpreted as kus-ru 'passage/road' or kut-caro 'throat/river outlet', and folk-etymologized as 'medicine spring'), modern Kushiro (釧路), calqued in-game as Krûtbrunn. First attested in 1643 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Kushiro",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Kushiro"
     },
     "b_cipasir": {
       "barony_key": "b_cipasir",
+      "vanilla_ck3_name": "Cipasir",
       "modern_name": "Cipasir",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3182,11 +3131,15 @@
         "county": "c_simenas",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1872,
       "first_mention_attestation": "Formally established in written administrative records as Abashiri Village (アバシリ村) in 1872 CE (Meiji 5); derived from the Ainu name Cipasir / Apasiri.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3207,19 +3160,14 @@
         }
       ],
       "etymology_analysis": "From Ainu cipa-sir ('land/rock where the sacred altar is set') or a-pa-siri ('land we found'), the indigenous origin of Abashiri (網走), calqued in-game as MînSchouweFels. Attested only from 1872 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Abashiri",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Abashiri"
     },
     "b_nimuoro": {
       "barony_key": "b_nimuoro",
+      "vanilla_ck3_name": "Nimuoro",
       "modern_name": "Nimuoro",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3227,11 +3175,15 @@
         "county": "c_simenas",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1773,
       "first_mention_attestation": "Attested in 1773 CE (An'ei 2) when Matsumae Domain opened the Nemuro-basho trading post at Nemuro (Nimuoro), later visited by Adam Laxman in 1792 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3258,19 +3210,14 @@
         }
       ],
       "etymology_analysis": "From Ainu ni-mu-oro ('place where trees grow thick'), modern Nemuro (根室), calqued in-game as HoltzLêvendelant. First attested in written records in 1773 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Nemuro,_Hokkaido",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nemuro,_Hokkaido"
     },
     "b_sir_etok": {
       "barony_key": "b_sir_etok",
+      "vanilla_ck3_name": "Sir'etok",
       "modern_name": "Sir Etok",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3278,11 +3225,15 @@
         "county": "c_simenas",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1669,
       "first_mention_attestation": "Recorded in Edo-period accounts of Shakushain's Revolt (1669 CE) as the Shiretoko kotan/peninsula (シリエトク), which contributed warriors to the uprising.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "topographic_feature",
@@ -3303,19 +3254,14 @@
         }
       ],
       "etymology_analysis": "From Ainu sir-etok ('end of the earth' or 'protruding land'), the indigenous name of the Shiretoko Peninsula (知床半島), calqued in-game as LantVör. First attested in 1669 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Shiretoko_Peninsula",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Shiretoko_Peninsula"
     },
     "b_mopet": {
       "barony_key": "b_mopet",
+      "vanilla_ck3_name": "Mopet",
       "modern_name": "Mopet",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3323,11 +3269,15 @@
         "county": "c_soya",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1685,
       "first_mention_attestation": "Attested in 1685 CE (Jōkyō 2) as part of Matsumae Domain's Sōya-basho coastal jurisdiction along the Sea of Okhotsk; a dedicated Monbetsu guardhouse was opened in 1790 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -3348,19 +3298,14 @@
         }
       ],
       "etymology_analysis": "From Ainu mo-pet ('quiet river'), originally naming the Mobetsu River (藻鼈川) before transferring to the port settlement of Monbetsu (紋別), rendered in-game as Môtpet. First attested in 1685 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Monbetsu,_Hokkaido",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Monbetsu,_Hokkaido"
     },
     "b_soya": {
       "barony_key": "b_soya",
+      "vanilla_ck3_name": "Soya",
       "modern_name": "Soya",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3368,11 +3313,15 @@
         "county": "c_soya",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1685,
       "first_mention_attestation": "Attested in 1685 CE (Jōkyō 2) when Matsumae Domain established the Sōya-basho (宗谷場所) trading post at Sōya in northernmost Hokkaido.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3393,19 +3342,14 @@
         }
       ],
       "etymology_analysis": "From Ainu so-ya ('rocky shore'), modern Sōya (宗谷) near Wakkanai, calqued in-game as Stamdal from its ateji kanji 宗谷 ('ancestral hall + valley'). First attested in 1685 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Cape_S%C5%8Dya",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Cape_S%C5%8Dya"
     },
     "b_nay_or": {
       "barony_key": "b_nay_or",
+      "vanilla_ck3_name": "Nay'or",
       "modern_name": "Nay Or",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3413,11 +3357,15 @@
         "county": "c_soya",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1857,
       "first_mention_attestation": "First recorded in written exploration accounts by Matsuura Takeshirō during his 1857 CE (Ansei 4) survey of the Teshio River basin (Teshio Nisshi / Tennoho Nisshi).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3438,19 +3386,14 @@
         }
       ],
       "etymology_analysis": "From Ainu nay-oro ('in the midst of the stream/valley'), modern Nayoro (名寄) at the confluence of the Teshio and Nayoro rivers, calqued in-game as NâmeHôf from its ateji kanji 名寄. First attested in 1857 CE, post-867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E5%90%8D%E5%AF%84%E5%B8%82",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E5%90%8D%E5%AF%84%E5%B8%82"
     },
     "b_tes_uni": {
       "barony_key": "b_tes_uni",
+      "vanilla_ck3_name": "Tes'uni",
       "modern_name": "Tes Uni",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3458,11 +3401,15 @@
         "county": "c_soya",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "First recorded as Teshiho (テシホ) on the 1700 CE (Genroku 13) Matsumae map of Ezo submitted to the Tokugawa shogunate; the Teshio-basho trading post opened in 1786 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3489,19 +3436,14 @@
         }
       ],
       "etymology_analysis": "From Ainu tes-un-i ('place where fishing weirs exist', related to tes-o-pet 'river full of fishing weirs'), modern Teshio (天塩), calqued in-game as FischBou. First attested in 1700 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Teshio_River",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Teshio_River"
     },
     "b_kusunkotan": {
       "barony_key": "b_kusunkotan",
+      "vanilla_ck3_name": "Kusunkotan",
       "modern_name": "Kusunkotan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3509,11 +3451,15 @@
         "county": "c_kusunkotan",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1679,
       "first_mention_attestation": "Attested in 1679 CE (Enpō 7) when the Matsumae Domain established a trading post (Anajinya) at Kusunkotan (久春古丹) in southern Sakhalin.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3540,19 +3486,14 @@
         }
       ],
       "etymology_analysis": "From Ainu kus-un-kotan ('village on the opposite shore'), referring to the Sakhalin Ainu settlement facing Hokkaido across the La Pérouse Strait (later Japanese Ōdomari, modern Korsakov). Unattested in written records until 1679 CE, well after the 867 CE baseline.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%8F%A4%E4%B8%B9",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%8F%A4%E4%B8%B9"
     },
     "b_kusunnay": {
       "barony_key": "b_kusunnay",
+      "vanilla_ck3_name": "Kusunnay",
       "modern_name": "Kusunnay",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3560,11 +3501,15 @@
         "county": "c_kusunkotan",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1857,
       "first_mention_attestation": "Attested in 1857 CE (Ansei 4) in Japanese and Russian records when Satō Hiroemon built a station at Kushunnai (久春内) and Russian troops established the Kusnaysky post.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3591,19 +3536,14 @@
         }
       ],
       "etymology_analysis": "From Ainu kus-un-nay ('river flowing across/through the mountain pass' or 'river regularly traveled by boat'), referring to the narrowest east-west crossing of Sakhalin (modern Ilyinskoye). Unattested in written sources until 1857 CE, post-dating 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%86%85%E6%9D%91",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%86%85%E6%9D%91"
     },
     "b_pontukes": {
       "barony_key": "b_pontukes",
+      "vanilla_ck3_name": "Pontukes",
       "modern_name": "Pontukes",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3611,11 +3551,15 @@
         "county": "c_kusunkotan",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1905,
       "first_mention_attestation": "Attested in early 20th-century Japanese Karafuto records (post-1905 CE) as Pontokeshi (ポントケシ / 本斗), the Ainu name for the northern part of Honto (modern Nevelsk).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3642,19 +3586,14 @@
         }
       ],
       "etymology_analysis": "From Ainu pon-to-kes ('end of the small lake/marsh'), a locator compound referring to the coastal settlement at modern Nevelsk in southern Sakhalin. Unattested in written records prior to the modern Karafuto period (20th century CE).",
-      "source_url": "https://ja.wikipedia.org/wiki/%E6%9C%AC%E6%96%97%E7%94%BA",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E6%9C%AC%E6%96%97%E7%94%BA"
     },
     "b_pogibi": {
       "barony_key": "b_pogibi",
+      "vanilla_ck3_name": "Pogibi",
       "modern_name": "Pogibi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3662,11 +3601,15 @@
         "county": "c_pogibi",
         "holding_type": "castle"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1810,
       "first_mention_attestation": "Attested c. 1810 CE as Pokobē (ポコベー) in Mamiya Rinzō's Kita Ezo-shima Chizu (Map of Northern Ezo Island) following his 1808–1809 CE Sakhalin survey.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "topographic_feature",
@@ -3681,19 +3624,14 @@
         }
       ],
       "etymology_analysis": "From Nivkh Pokobi / Pogibi, the indigenous name of Cape Pogibi at the narrowest point of the Nevelskoy Strait in northwestern Sakhalin (rendered Hokobei / 鉾部 in Japanese). First recorded in written cartography c. 1810 CE, long after 867 CE.",
-      "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D0%B8%D0%B1%D0%B8_(%D1%81%D0%B5%D0%BB%D0%BE)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D0%B8%D0%B1%D0%B8_(%D1%81%D0%B5%D0%BB%D0%BE)"
     },
     "b_tym_sakhalin": {
       "barony_key": "b_tym_sakhalin",
+      "vanilla_ck3_name": "Tym",
       "modern_name": "Tym Sakhalin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3701,11 +3639,15 @@
         "county": "c_pogibi",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1852,
       "first_mention_attestation": "Attested in 1852 CE in Lieutenant N. K. Boshnyak's expedition report to Gennady Nevelskoy documenting the Tym River (Тымь) and its Nivkh settlements.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -3720,19 +3662,14 @@
         }
       ],
       "etymology_analysis": "From Nivkh Tymy ('spawning ground', adapted into Russian as Tym' and Ainu as Tuymi), directly adopting the hydronym of the Tym River in central-northern Sakhalin. Unattested in written records until 1852 CE, well after 867 CE.",
-      "source_url": "https://calendar.libsakh.ru/event/777/",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://calendar.libsakh.ru/event/777/"
     },
     "b_idoi": {
       "barony_key": "b_idoi",
+      "vanilla_ck3_name": "Idoi",
       "modern_name": "Idoi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3740,11 +3677,15 @@
         "county": "c_pogibi",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1810,
       "first_mention_attestation": "Attested c. 1810 CE as Idoi (イドイ) in Mamiya Rinzō's Kita Ezo-shima Chizu (Map of Northern Ezo Island), corresponding to the Otchishi / Doe settlement (modern Aleksandrovsk-Sakhalinsky).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3759,19 +3700,14 @@
         }
       ],
       "etymology_analysis": "Japanese cartographic rendering Idoi (イドイ) of the indigenous Ainu/Nivkh settlement at modern Aleksandrovsk-Sakhalinsky (also known as Otchishi or Nivkh Doe). First attested in Mamiya Rinzō's c. 1810 CE map, post-dating 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_tarayka": {
       "barony_key": "b_tarayka",
+      "vanilla_ck3_name": "Tarayka",
       "modern_name": "Tarayka",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3779,11 +3715,15 @@
         "county": "c_tarayka",
         "holding_type": "castle"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1810,
       "first_mention_attestation": "Attested c. 1810–1811 CE in Mamiya Rinzō's Kita Ezo-shima Chizu and Hokui Bunkai Yowa as Tarayka (タライカ / 多来加) on the Gulf of Patience.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3798,19 +3738,14 @@
         }
       ],
       "etymology_analysis": "From Tarayka (Japanese 多来加), the indigenous name of the eastern Sakhalin settlement and Ainu/Uilta/Nivkh contact zone near Lake Taraika (Nevskoye) and Poronaysk. First documented in Japanese surveys c. 1810 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Sakhalin_Ainu_language",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sakhalin_Ainu_language"
     },
     "b_eusutur": {
       "barony_key": "b_eusutur",
+      "vanilla_ck3_name": "Eusutur",
       "modern_name": "Eusutur",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3818,11 +3753,15 @@
         "county": "c_tarayka",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1905,
       "first_mention_attestation": "Attested in 1905 CE (Meiji 38) with the Japanese settlement and administrative naming of Esutoru (恵須取, modern Uglegorsk) in Karafuto.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3837,19 +3776,14 @@
         }
       ],
       "etymology_analysis": "From Sakhalin Ainu Esturi (adapted into Japanese as Esutoru / 恵須取, modern Uglegorsk), whose precise lexical meaning is unconfirmed. Unattested in written records until 1905 CE, long after 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E6%81%B5%E9%A0%88%E5%8F%96%E7%94%BA",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E6%81%B5%E9%A0%88%E5%8F%96%E7%94%BA"
     },
     "b_ketuni": {
       "barony_key": "b_ketuni",
+      "vanilla_ck3_name": "Ketuni",
       "modern_name": "Ketuni",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3857,11 +3791,15 @@
         "county": "c_tarayka",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1917,
       "first_mention_attestation": "Attested in 1917 CE in the Karafuto Hōrei Ruiju (樺太法令類聚) as Keton (気屯) within Shisuka District.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -3876,19 +3814,14 @@
         }
       ],
       "etymology_analysis": "From Nivkh Ketongiy ('upper river', referring to the Keton River tributary of the Poronai, rendered in Japanese as Keton / 気屯, modern Smirnykh). Unattested in written sources until 1917 CE, post-dating 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%B4%E3%83%95%E8%AA%9E",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%B4%E3%83%95%E8%AA%9E"
     },
     "b_ioci": {
       "barony_key": "b_ioci",
+      "vanilla_ck3_name": "Ioci",
       "modern_name": "Ioci",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3896,11 +3829,15 @@
         "county": "c_ioci",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1646,
       "first_mention_attestation": "Attested in 1646 CE (Shōhō 3) in Matsumae Kagehiro's Shinra no Kiroku as Yoichi (與依地 / 余市), marking the western limit of Wajin-Ainu coastal contact.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3915,19 +3852,14 @@
         }
       ],
       "etymology_analysis": "Commonly derived from Ainu i-ot-i ('place where [snakes] are many', using the taboo word i for snake), or i-o-ci ('place where hot springs flow into the river'). First attested in Shinra no Kiroku in 1646 CE, post-dating 867 CE.",
-      "source_url": "https://adeac.jp/sapporo-lib/text-list/d100010/ht300160",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://adeac.jp/sapporo-lib/text-list/d100010/ht300160"
     },
     "b_setanay": {
       "barony_key": "b_setanay",
+      "vanilla_ck3_name": "Setanay",
       "modern_name": "Setanay",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3935,11 +3867,15 @@
         "county": "c_ioci",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1646,
       "first_mention_attestation": "Attested in 1646 CE (Shōhō 3) in Matsumae Kagehiro's Shinra no Kiroku, which records the 16th-century Ainu chieftain Hashitain of Setanai (瀬田内 / 瀬棚).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3960,19 +3896,14 @@
         }
       ],
       "etymology_analysis": "From Ainu seta-nay ('dog river', shortened from seta-rupespe-nay, 'river that dogs swim across'). First attested in written records in 1646 CE (Shinra no Kiroku), well after 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E7%80%AC%E6%A3%9A%E7%94%BA",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E7%80%AC%E6%A3%9A%E7%94%BA"
     },
     "b_otarunay": {
       "barony_key": "b_otarunay",
+      "vanilla_ck3_name": "Otarunay",
       "modern_name": "Otarunay",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -3980,11 +3911,15 @@
         "county": "c_ioci",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in 1700 CE (Genroku 13) in the Matsumae-jima Gōchō (松前島郷帳) submitted by the Matsumae Domain to the Tokugawa shogunate.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4011,19 +3946,14 @@
         }
       ],
       "etymology_analysis": "From Ainu ota-or-un-nay ('river running through the sandy beach'), later shortened to Otaru (小樽). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Otaru",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Otaru"
     },
     "b_aptapet_ainu": {
       "barony_key": "b_aptapet_ainu",
+      "vanilla_ck3_name": "Aptapet",
       "modern_name": "Aptapet Ainu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4031,11 +3961,15 @@
         "county": "c_ioci",
         "holding_type": "unoccupied"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in 1700 CE (Genroku 13) in the Matsumae-jima Gōchō as Abuta (あふた), derived from the Ainu name Aptapet.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4056,19 +3990,14 @@
         }
       ],
       "etymology_analysis": "From Ainu apta-pet ('river where fishhooks were made and used for fishing'), modern Abuta (虻田). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "source_url": "https://www.rinya.maff.go.jp/hokkaido/policy/system/rekumori/yagai_sports/34-nakayama_ski/index.html",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://www.rinya.maff.go.jp/hokkaido/policy/system/rekumori/yagai_sports/34-nakayama_ski/index.html"
     },
     "b_iskar_hokkaido": {
       "barony_key": "b_iskar_hokkaido",
+      "vanilla_ck3_name": "Iskar",
       "modern_name": "Iskar Hokkaido",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4076,11 +4005,15 @@
         "county": "c_iskar",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1644,
       "first_mention_attestation": "Attested in 1644 CE (Shōhō 1) on the Shōhō Okuniezu (正保御国絵図) and in 1700 CE in the Matsumae-jima Gōchō as Ishikari (いしかり).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4101,19 +4034,14 @@
         }
       ],
       "etymology_analysis": "From Ainu Iskar-pet ('winding river' or 'beautifully made river'), directly adopting the hydronym of the Ishikari River (石狩川). First attested in written cartography in 1644 CE, post-dating 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E7%9F%B3%E7%8B%A9%E5%9B%BD",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E7%9F%B3%E7%8B%A9%E5%9B%BD"
     },
     "b_rurmo_otpe": {
       "barony_key": "b_rurmo_otpe",
+      "vanilla_ck3_name": "Rurmo'otpe",
       "modern_name": "Rurmo Otpe",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4121,11 +4049,15 @@
         "county": "c_iskar",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1661,
       "first_mention_attestation": "Attested in 1661 CE (Kanbun 1) on a domain map as Tsuruotsube (つるをつへ) and in 1700 CE in the Matsumae-jima Gōchō, reflecting Ainu Rur-mo-ot-pe (modern Rumoi).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4158,19 +4090,14 @@
         }
       ],
       "etymology_analysis": "From Ainu rur-mo-ot-pe ('river with calm, constant tides'), directly adopting the hydronym of the Rumoi River (留萌川). First attested in written records in 1661 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/History_of_Rumoi,_Hokkaido",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/History_of_Rumoi,_Hokkaido"
     },
     "b_cup_pet": {
       "barony_key": "b_cup_pet",
+      "vanilla_ck3_name": "Cup'pet",
       "modern_name": "Cup Pet",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4178,11 +4105,15 @@
         "county": "c_iskar",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1797,
       "first_mention_attestation": "Attested in 1797 CE (Kansei 9) in Matsumae retainer Takahashi Hiromitsu's Matsumae-chi narabini Tōzai Ezo-chi Meisaiki as Chikubetsu (チクベツ / 忠別川).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4203,19 +4134,14 @@
         }
       ],
       "etymology_analysis": "From Ainu Cup-pet ('sun river' or 'eastern river', also interpreted as ci-up-pet 'river with waves'), directly adopting the hydronym of the Chūbetsu River (忠別川) in Asahikawa. First attested in written records in 1797 CE, post-dating 867 CE.",
-      "source_url": "https://adeac.jp/asahikawa-city/timeline/tm000001",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://adeac.jp/asahikawa-city/timeline/tm000001"
     },
     "b_sorapci": {
       "barony_key": "b_sorapci",
+      "vanilla_ck3_name": "Sorapci",
       "modern_name": "Sorapci",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4223,11 +4149,15 @@
         "county": "c_iskar",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1859,
       "first_mention_attestation": "Attested in 1859 CE (Ansei 6) in Matsuura Takeshirō's Tōzai Ezo Sansen Chiri Torishirabe-zu (東西蝦夷山川地理取調図) as Sorapuchi (ソラプチ / 空知川).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4254,19 +4184,14 @@
         }
       ],
       "etymology_analysis": "From Ainu so-rap-ci ('cascading waterfalls'), directly adopting the hydronym of the Sorachi River (空知川). First attested in written surveys in 1859 CE by Matsuura Takeshirō, long after 867 CE.",
-      "source_url": "https://www.town.kamifurano.hokkaido.jp/hp/saguru/100nen/2.05.01.htm",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://www.town.kamifurano.hokkaido.jp/hp/saguru/100nen/2.05.01.htm"
     },
     "b_sar": {
       "barony_key": "b_sar",
+      "vanilla_ck3_name": "Sar",
       "modern_name": "Sar",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4274,11 +4199,15 @@
         "county": "c_sum",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in 1700 CE (Genroku 13) in the Matsumae-jima Gōchō (松前島郷帳) as Saru (さる).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4293,19 +4222,14 @@
         }
       ],
       "etymology_analysis": "From Ainu sar ('reed plain / marshland'), referring to the lower Saru River (沙流川) valley in Hidaka. First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "source_url": "https://ja.wikisource.org/wiki/%E6%9D%BE%E5%89%8D%E5%B3%B6%E9%83%B7%E5%B8%B3",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikisource.org/wiki/%E6%9D%BE%E5%89%8D%E5%B3%B6%E9%83%B7%E5%B8%B3"
     },
     "b_iput": {
       "barony_key": "b_iput",
+      "vanilla_ck3_name": "Iput",
       "modern_name": "Iput",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4313,11 +4237,15 @@
         "county": "c_sum",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in 1700 CE (Genroku 13) in the Matsumae-jima Gōchō (松前島郷帳) in the entry 'Ishikari yori Ifutsu Ezo kyosho' (いしかりよりいふつ蝦夷居所).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4338,19 +4266,14 @@
         }
       ],
       "etymology_analysis": "From Ainu i-put ('entrance/river mouth leading to an important place'), referring to the confluence area near modern Ebetsu (江別). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "source_url": "https://www.hkd.mlit.go.jp/sp/tiiki_sinkou/kluhh40000002h2u.html",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://www.hkd.mlit.go.jp/sp/tiiki_sinkou/kluhh40000002h2u.html"
     },
     "b_sipicar": {
       "barony_key": "b_sipicar",
+      "vanilla_ck3_name": "Sipicar",
       "modern_name": "Sipicar",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4358,11 +4281,15 @@
         "county": "c_sum",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1669,
       "first_mention_attestation": "Attested in 1669 CE (Kanbun 9) in Tokugawa shogunate, Matsumae, and Tsugaru records of Shakushain's Revolt as Shibuchari / Shibechari (シブチャリ / シベチャリ).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4383,19 +4310,14 @@
         }
       ],
       "etymology_analysis": "From Ainu sipe-ican / sipe-icar ('salmon spawning ground'), directly adopting the historical hydronym of the Shibechari River (modern Shizunai River). First attested in written records in 1669 CE during Shakushain's Revolt, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Shizunai_River",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Shizunai_River"
     },
     "b_moruran": {
       "barony_key": "b_moruran",
+      "vanilla_ck3_name": "Moruran",
       "modern_name": "Moruran",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4403,11 +4325,15 @@
         "county": "c_sum",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in late 16th-century Matsumae trading-post accounts and documented in 1700 CE (Genroku 13) in the Matsumae-jima Gōchō as Mororan / Moruran (Muroran).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4434,19 +4360,14 @@
         }
       ],
       "etymology_analysis": "From Ainu mo-ruerani ('bottom of a little slope'), modern Muroran (室蘭). Unattested in written records until the late 16th–1700 CE Matsumae period, well after 867 CE.",
-      "source_url": "https://www.city.muroran.lg.jp/content/?content=1984",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://www.city.muroran.lg.jp/content/?content=1984"
     },
     "b_matomai": {
       "barony_key": "b_matomai",
+      "vanilla_ck3_name": "Matomai",
       "modern_name": "Matomai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4454,11 +4375,15 @@
         "county": "c_uskes",
         "holding_type": "castle"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1356,
       "first_mention_attestation": "Attested in 1356 CE (Enbun 1) in the Suwa Daimyōjin Ekotoba (諏訪大明神絵詞) as Matōmainu (万堂宇満伊犬), identified as the early Wajin-Ainu port of Matsumae.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4485,19 +4410,14 @@
         }
       ],
       "etymology_analysis": "From Ainu mat-oma-i ('place where women live' or 'place in front of the cove/bay'), rendered in Japanese as Matsumae (松前). First attested in 1356 CE in the Suwa Daimyōjin Ekotoba, post-dating 867 CE.",
-      "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050"
     },
     "b_uskes": {
       "barony_key": "b_uskes",
+      "vanilla_ck3_name": "Uskes",
       "modern_name": "Uskes",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4505,11 +4425,15 @@
         "county": "c_uskes",
         "holding_type": "city"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1356,
       "first_mention_attestation": "Attested in 1356 CE (Enbun 1) in the Suwa Daimyōjin Ekotoba (諏訪大明神絵詞) as Usorikeshi (宇曽利鶴子), and later as Usukeshi (宇須岸) in Shinra no Kiroku (modern Hakodate).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4530,19 +4454,14 @@
         }
       ],
       "etymology_analysis": "From Ainu usor-kes / us-kes ('end of the bay'), an Ainu locator compound for the fishing settlement at modern Hakodate (函館). First attested in 1356 CE in the Suwa Daimyōjin Ekotoba, post-dating 867 CE.",
-      "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050"
     },
     "b_kayaunpesh": {
       "barony_key": "b_kayaunpesh",
+      "vanilla_ck3_name": "Kayaunpesh",
       "modern_name": "Kayaunpesh",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4550,11 +4469,15 @@
         "county": "c_uskes",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1700,
       "first_mention_attestation": "Attested in 1700 CE (Genroku 13) in Edo-period Matsumae records as Kayabe (茅部), derived from Ainu Kaya-un-pe / Kaya-un-pes.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4581,19 +4504,14 @@
         }
       ],
       "etymology_analysis": "From Ainu kaya-un-pes ('cliff with sails', referring to sail-shaped coastal rock formations in Kayabe, southern Oshima Peninsula). Unattested in written records until the Edo period (c. 1700 CE), post-dating 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E8%8C%85%E9%83%A8%E9%83%A1",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E8%8C%85%E9%83%A8%E9%83%A1"
     },
     "b_kumausi": {
       "barony_key": "b_kumausi",
+      "vanilla_ck3_name": "Kumausi",
       "modern_name": "Kumausi",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_amur",
         "kingdom": "k_aynumosir",
@@ -4601,11 +4519,15 @@
         "county": "c_uskes",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1615,
       "first_mention_attestation": "Attested in early 17th-century Matsumae records (1615 CE / Genna 1 foundation of Ainuma Hachiman Shrine and 1616 CE legend of Kigan Kumaishi) as Kumaishi (熊石).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4632,15 +4554,8 @@
         }
       ],
       "etymology_analysis": "From Ainu kuma-us-i ('place with many fish-drying racks'), located at the historical northern boundary of Wajinchi in Oshima/Hiyama (modern Yakumo). First attested in early 17th-century Matsumae records (1615 CE), post-dating 867 CE.",
-      "source_url": "https://ja.wikipedia.org/wiki/%E7%86%8A%E7%9F%B3%E7%94%BA",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://ja.wikipedia.org/wiki/%E7%86%8A%E7%9F%B3%E7%94%BA"
     }
   }
 }

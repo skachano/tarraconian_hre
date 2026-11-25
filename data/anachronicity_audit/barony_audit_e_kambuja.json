@@ -2,8 +2,12 @@
   "metadata": {
     "empire": "e_kambuja",
     "scope": "e_kambuja (all 107 baronies across k_champa, k_chenla, k_funan)",
-    "schema_version": "1.1.0",
-    "baseline_year": 867,
+    "schema_version": "2.0.0",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
     "source_files": [
       "data/ck3_title_tree.json",
       "data/barony_holdings.json"
@@ -11,38 +15,53 @@
     "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
       "barony_key": "CK3 landed_titles barony identifier (b_*).",
-      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding (stripped of key prefixes and parenthetical notes).",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier extracted from modern_name; null if none.",
       "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
-      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
-      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
-      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "anachronism_type": "Mutually exclusive historicity category: attested_pre_867 | fictional_placeholder | post_867_eponym | renamed_post_867 | modern_anachronism | early_modern_foundation | high_late_medieval_attestation | unattested_indigenous_or_minor.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}: true iff first_mention_year is known and <= that bookmark year.",
+      "first_mention_year": "Integer year of earliest documented attestation for the audited name (negative values = BCE; null if unattested).",
+      "first_mention_attestation": "Summary of earliest documented textual or epigraphic attestation (or unattested status).",
+      "eponym": "Structured eponym object {year, post_867, type, details} when named after a person, saint, ruler, deity, or dynasty/tribe; null otherwise.",
       "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
-      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and translation.",
       "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
-      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
-      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
+      "historical_names": "List of distinct pre-867 attested names for the same site or immediate predecessor: [{name, native_script, language, attested_from, attested_to, source, relationship, notes}].",
+      "source_url": "Primary reference URL (Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 107,
       "historical_867_true": 6,
-      "historical_867_false": 101,
+      "historical_1066_true": 13,
+      "historical_1178_true": 18,
       "first_mention_year_known": 85,
       "first_mention_year_unknown": 22,
-      "named_after_post_867_person": 2,
+      "post_867_eponyms": 2,
+      "total_eponyms": 2,
       "named_after_hydronym": 3,
       "named_after_any_natural_proper_name": 4,
-      "has_older_name_by_867_total": 7,
-      "has_older_name_by_867_for_anachronistic": 7,
-      "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 98
+      "has_historical_names_total": 7,
+      "has_historical_names_for_post_867": 7,
+      "vanilla_ck3_name_differs_from_modern_name": 9,
+      "wikipedia_source_attached": 98,
+      "anachronism_type_counts": {
+        "attested_pre_867": 6,
+        "early_modern_foundation": 12,
+        "high_late_medieval_attestation": 12,
+        "modern_anachronism": 47,
+        "post_867_eponym": 2,
+        "renamed_post_867": 7,
+        "unattested_indigenous_or_minor": 21
+      }
     }
   },
   "baronies": {
     "b_dong_duong": {
       "barony_key": "b_dong_duong",
+      "vanilla_ck3_name": "Dong Duong",
       "modern_name": "Dong Duong",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -50,11 +69,15 @@
         "county": "c_indrapura",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Vietnamese village name applied to the ruins of Indrapura, which was founded in 875 CE by Cham king Indravarman II (post-867 CE); no pre-modern attestation of the Vietnamese name Đồng Dương is documented.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -75,19 +98,14 @@
         }
       ],
       "etymology_analysis": "Đồng Dương is the modern Vietnamese name of the village in Quảng Nam where the Cham capital and Buddhist monastery of Indrapura stood. Indrapura itself was founded in 875 CE by Indravarman II, after the 867 CE baseline, so neither the modern Vietnamese name nor the Sanskrit city name is attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Champa)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Champa)"
     },
     "b_my_son": {
       "barony_key": "b_my_son",
+      "vanilla_ck3_name": "My Son",
       "modern_name": "My Son",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -95,11 +113,15 @@
         "county": "c_indrapura",
         "holding_type": "church"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Vietnamese name ('Beautiful Mountain') applied to the ancient Cham sanctuary site; no pre-modern written attestation of the Vietnamese name Mỹ Sơn is documented (the sanctuary itself is attested from c. 400 CE as Bhadreśvara).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -120,21 +142,25 @@
         }
       ],
       "etymology_analysis": "Mỹ Sơn is a modern Sino-Vietnamese descriptive name meaning 'Beautiful Mountain' applied to the Cham temple valley in Quảng Nam. While the sanctuary was active from the late 4th century CE, the Vietnamese name Mỹ Sơn is post-867 CE; its contemporary pre-867 CE Sanskrit name in Bhadravarman I's inscriptions (c. 400 CE) was Bhadreśvara.",
-      "source_url": "https://en.wikipedia.org/wiki/M%E1%BB%B9_S%C6%A1n_Sanctuary",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Bhadreśvara"
-        ],
-        "first_mention_year": 400,
-        "first_mention_source": "Sanskrit stele of King Bhadravarman I (r. 380–413 CE) at Mỹ Sơn dedicating the valley to Śiva Bhadreśvara.",
-        "relationship": "same_site_earlier_name",
-        "notes": "Bhadreśvara is attested in late 4th–5th century CE Sanskrit inscriptions at the site; Mỹ Sơn is the modern Vietnamese name."
-      }
+      "historical_names": [
+        {
+          "name": "Bhadreśvara",
+          "native_script": null,
+          "language": null,
+          "attested_from": 400,
+          "attested_to": null,
+          "source": "Sanskrit stele of King Bhadravarman I (r. 380–413 CE) at Mỹ Sơn dedicating the valley to Śiva Bhadreśvara.",
+          "relationship": "same_site_earlier_name",
+          "notes": "Bhadreśvara is attested in late 4th–5th century CE Sanskrit inscriptions at the site; Mỹ Sơn is the modern Vietnamese name."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/M%E1%BB%B9_S%C6%A1n_Sanctuary"
     },
     "b_quang_ngai": {
       "barony_key": "b_quang_ngai",
+      "vanilla_ck3_name": "Quang Ngai",
       "modern_name": "Quang Ngai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -142,11 +168,15 @@
         "county": "c_indrapura",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1832,
       "first_mention_attestation": "Established as Quảng Ngãi province in 1832 CE under Emperor Minh Mạng (derived from the earlier Vietnamese prefecture name Quảng Nghĩa following the 1471 CE annexation of northern Champa).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -167,19 +197,14 @@
         }
       ],
       "etymology_analysis": "Quảng Ngãi is a Sino-Vietnamese administrative name meaning 'Broad Righteousness' (a regional phonetic variant of Quảng Nghĩa). The region was annexed by Đại Việt in 1471 CE and organized as Quảng Ngãi province in 1832 CE, well after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ng%C3%A3i_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ng%C3%A3i_province"
     },
     "b_ma_linh": {
       "barony_key": "b_ma_linh",
+      "vanilla_ck3_name": "Ma Linh",
       "modern_name": "Ma Linh",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -187,11 +212,15 @@
         "county": "c_ma_linh",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
       "first_mention_year": 1069,
       "first_mention_attestation": "First attested in 1069 CE in Vietnamese annals (Đại Việt sử ký toàn thư), when Cham king Rudravarman III ceded the three northern districts of Địa Lý, Ma Linh, and Bố Chính to Đại Việt.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -212,19 +241,14 @@
         }
       ],
       "etymology_analysis": "Ma Linh (later renamed Minh Linh by Đại Việt) is a Sino-Vietnamese district name recorded in 1069 CE when Champa ceded its northernmost territories in modern Quảng Trị to Đại Việt; it has no attestation by 867 CE.",
-      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)"
     },
     "b_dia_ly": {
       "barony_key": "b_dia_ly",
+      "vanilla_ck3_name": "Dia Ly",
       "modern_name": "Dia Ly",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -232,11 +256,15 @@
         "county": "c_ma_linh",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
       "first_mention_year": 1069,
       "first_mention_attestation": "First attested in 1069 CE in Vietnamese annals (Đại Việt sử ký toàn thư), when Cham king Rudravarman III ceded Địa Lý, Ma Linh, and Bố Chính to Đại Việt.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -257,19 +285,14 @@
         }
       ],
       "etymology_analysis": "Địa Lý is a Sino-Vietnamese district name first attested in 1069 CE when Champa ceded it (along with Ma Linh and Bố Chính) to Đại Việt under Lý Thánh Tông, and was subsequently renamed Lâm Bình.",
-      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)"
     },
     "b_bo_chinh": {
       "barony_key": "b_bo_chinh",
+      "vanilla_ck3_name": "Bo Chinh",
       "modern_name": "Bo Chinh",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -277,11 +300,15 @@
         "county": "c_ma_linh",
         "holding_type": "city"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
       "first_mention_year": 1069,
       "first_mention_attestation": "First attested in 1069 CE in Vietnamese annals (Đại Việt sử ký toàn thư), when Cham king Rudravarman III ceded Địa Lý, Ma Linh, and Bố Chính to Đại Việt.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -302,19 +329,14 @@
         }
       ],
       "etymology_analysis": "Bố Chính is a Sino-Vietnamese administrative name first attested in 1069 CE in the settlement of the Đại Việt–Champa war, when Champa ceded the northern frontier districts to Đại Việt.",
-      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)"
     },
     "b_simhapura": {
       "barony_key": "b_simhapura",
+      "vanilla_ck3_name": "Simhapura",
       "modern_name": "Simhapura",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -322,11 +344,15 @@
         "county": "c_simhapura",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 657,
       "first_mention_attestation": "The Sanskrit toponym Siṃhapura is epigraphically attested in 7th-century CE Champa inscriptions under Prakāśadharma / Vikrāntavarman I (e.g., Mỹ Sơn stele C. 96, 657 CE), while the underlying capital at Trà Kiệu dates back to King Bhadravarman I (r. c. 380–413 CE).",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -347,19 +373,14 @@
         }
       ],
       "etymology_analysis": "Siṃhapura ('Lion City') is a Sanskrit royal city name for the early Champa capital at Trà Kiệu in Quảng Nam. Although Trà Kiệu's urban and epigraphic occupation (Đông Yên Châu, early Mỹ Sơn steles) begins under Bhadravarman I (c. 380–413 CE), the toponym Siṃhapura itself is attested in 7th-century CE Champa epigraphy (such as C. 96, 657 CE), well before 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Tr%C3%A0_Ki%E1%BB%87u",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Tr%C3%A0_Ki%E1%BB%87u"
     },
     "b_tan_xuyen": {
       "barony_key": "b_tan_xuyen",
+      "vanilla_ck3_name": "Tan Xuyen",
       "modern_name": "Tan Xuyen",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -367,11 +388,15 @@
         "county": "c_simhapura",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Vietnamese Sino-Vietnamese toponym ('New Stream') with no documented attestation by 867 CE or in Champa-era epigraphy.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -392,19 +417,14 @@
         }
       ],
       "etymology_analysis": "Tân Xuyên is a Sino-Vietnamese compound meaning 'New Stream', reflecting post-annexation Vietnamese settlement naming in central Vietnam rather than any Cham or pre-867 CE toponym.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_hve": {
       "barony_key": "b_hve",
+      "vanilla_ck3_name": "Hve",
       "modern_name": "Hve",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -412,11 +432,15 @@
         "county": "c_simhapura",
         "holding_type": "city"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1307,
       "first_mention_attestation": "Variant spelling of Huế, derived from Châu Hóa, established in 1307 CE after Champa ceded Châu Ô and Châu Lý to Đại Việt in 1306 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -431,22 +455,35 @@
         }
       ],
       "etymology_analysis": "Hve is a variant orthography of Huế, which developed from the Sino-Vietnamese name Châu Hóa (part of Thuận Hóa), created in 1307 CE after the 1306 CE marriage cession. By 867 CE, the earlier Cham city in the Huế area was Kandarpapura (Kandapurpura).",
-      "source_url": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Kandarpapura",
-          "Kandapurpura"
-        ],
-        "first_mention_year": 635,
-        "first_mention_source": "Undated Sanskrit inscription from Dinh Thị (C. 111, reading śrī kandarppapureśvarāya) and 7th-century Champa dynastic records associating Kandarpapura with King Kandarpadharma (r. c. 629–640 CE).",
-        "relationship": "same_site_earlier_name",
-        "notes": "The ancient Champa center Kandarpapura (Kandapurpura) near modern Huế is associated with King Kandarpadharma (r. c. 629–640 CE), who consolidated northern rule after the 605 CE Sui invasion; the Dinh Thị stele (C. 111) itself is undated. The Vietnamese name Huế (Hve) emerged after 1307 CE."
-      }
+      "historical_names": [
+        {
+          "name": "Kandarpapura",
+          "native_script": null,
+          "language": null,
+          "attested_from": 635,
+          "attested_to": 1307,
+          "source": "Undated Sanskrit inscription from Dinh Thị (C. 111, reading śrī kandarppapureśvarāya) and 7th-century Champa dynastic records associating Kandarpapura with King Kandarpadharma (r. c. 629–640 CE).",
+          "relationship": "same_site_earlier_name",
+          "notes": "The ancient Champa center Kandarpapura (Kandapurpura) near modern Huế is associated with King Kandarpadharma (r. c. 629–640 CE), who consolidated northern rule after the 605 CE Sui invasion; the Dinh Thị stele (C. 111) itself is undated. The Vietnamese name Huế (Hve) emerged after 1307 CE."
+        },
+        {
+          "name": "Kandapurpura",
+          "native_script": null,
+          "language": null,
+          "attested_from": 635,
+          "attested_to": 1307,
+          "source": "Undated Sanskrit inscription from Dinh Thị (C. 111, reading śrī kandarppapureśvarāya) and 7th-century Champa dynastic records associating Kandarpapura with King Kandarpadharma (r. c. 629–640 CE).",
+          "relationship": "same_site_earlier_name",
+          "notes": "The ancient Champa center Kandarpapura (Kandapurpura) near modern Huế is associated with King Kandarpadharma (r. c. 629–640 CE), who consolidated northern rule after the 605 CE Sui invasion; the Dinh Thị stele (C. 111) itself is undated. The Vietnamese name Huế (Hve) emerged after 1307 CE."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF"
     },
     "b_kauthara": {
       "barony_key": "b_kauthara",
+      "vanilla_ck3_name": "Kauthara",
       "modern_name": "Kauthara",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -454,11 +491,15 @@
         "county": "c_kauthara",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 781,
       "first_mention_attestation": "Contemporarily attested in the 781–784 CE Sanskrit stele of Cham king Satyavarman at Po Nagar (Nha Trang), recording the 774 CE raid on Kauthara.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -473,19 +514,14 @@
         }
       ],
       "etymology_analysis": "Kauthara (Sanskrit Kauṭhara) was one of the core southern principalities of Champa, centered around Nha Trang in Khánh Hòa. It is contemporarily attested in the Po Nagar Sanskrit inscriptions of 781–784 CE, prior to 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Po_Nagar",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Po_Nagar"
     },
     "b_aya_ru": {
       "barony_key": "b_aya_ru",
+      "vanilla_ck3_name": "Aya Ru",
       "modern_name": "Aya Ru",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -493,11 +529,15 @@
         "county": "c_kauthara",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Cham regional name (Aia Ru / Êa Riu) for the Phú Yên area, attested in later Cham historical traditions (post-1471 CE) with no contemporary <= 867 CE epigraphic attestation.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -518,19 +558,14 @@
         }
       ],
       "etymology_analysis": "Aya Ru (Cham Aia Ru) combines Cham aia ('water, river') with the proper name Ru, referring to the riverine region of modern Phú Yên. It appears in later Cham accounts of Champa's post-1471 CE regions and is unattested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)"
     },
     "b_nhan": {
       "barony_key": "b_nhan",
+      "vanilla_ck3_name": "Nhan",
       "modern_name": "Nhan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -538,11 +573,15 @@
         "county": "c_kauthara",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Refers to Tháp Nhạn (Nhạn Tower) in Tuy Hòa, Phú Yên, a Cham temple built around the 11th century CE and later given the Vietnamese name Nhạn (exact date of the Vietnamese toponym unattested).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -557,19 +596,14 @@
         }
       ],
       "etymology_analysis": "Nhan (Vietnamese Nhạn) is the modern Vietnamese name of the Cham temple tower (Tháp Nhạn) on Nhạn Hill in Phú Yên, constructed in the 11th century CE and thus post-867 CE in both construction and Vietnamese naming.",
-      "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_Nh%E1%BA%A1n",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_Nh%E1%BA%A1n"
     },
     "b_panduranga": {
       "barony_key": "b_panduranga",
+      "vanilla_ck3_name": "Panduranga",
       "modern_name": "Panduranga",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -577,11 +611,15 @@
         "county": "c_panduranga",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 817,
       "first_mention_attestation": "Explicitly attested as Pāṇḍuraṅga in the 817 CE Po Nagar Sanskrit inscription (following the polity's emergence in 757 CE and the 787 CE raid).",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -602,19 +640,14 @@
         }
       ],
       "etymology_analysis": "Pāṇḍuraṅga is the Sanskritized form of the Cham toponym Panrāṅ (modern Vietnamese Phan Rang), the southernmost principality of Champa. It is contemporarily attested in the 817 CE Po Nagar inscription, well before 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)"
     },
     "b_malithit": {
       "barony_key": "b_malithit",
+      "vanilla_ck3_name": "Malithit",
       "modern_name": "Malithit",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -622,11 +655,15 @@
         "county": "c_panduranga",
         "holding_type": "city"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Cham vernacular toponym (Hamu Lithit) for the Phan Thiết area in Bình Thuận, recorded in modern Cham-Vietnamese local historiography with no <= 867 CE attestation.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -647,19 +684,14 @@
         }
       ],
       "etymology_analysis": "Malithit derives from Cham Hamu Lithit ('coastal wet-rice field'), an indigenous Cham name for the Phan Thiết area in southern Panduranga. It has no contemporary epigraphic or chronicle attestation by 867 CE.",
-      "source_url": "https://vi.wikipedia.org/wiki/Phan_Thi%E1%BA%BFt_(th%C3%A0nh_ph%E1%BB%91)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Phan_Thi%E1%BA%BFt_(th%C3%A0nh_ph%E1%BB%91)"
     },
     "b_binh_tuy": {
       "barony_key": "b_binh_tuy",
+      "vanilla_ck3_name": "Binh Tuy",
       "modern_name": "Binh Tuy",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -667,11 +699,15 @@
         "county": "c_panduranga",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Bình Tuy province was established on 22 October 1956 CE by the Republic of Vietnam (western Bình Thuận).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -692,19 +728,14 @@
         }
       ],
       "etymology_analysis": "Bình Tuy is a Sino-Vietnamese administrative name meaning 'Pacified and Tranquil', created as a province of South Vietnam in 1956 CE and entirely absent from 9th-century CE records.",
-      "source_url": "https://en.wikipedia.org/wiki/B%C3%ACnh_Tuy_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/B%C3%ACnh_Tuy_province"
     },
     "b_vijaya": {
       "barony_key": "b_vijaya",
+      "vanilla_ck3_name": "Vijaya",
       "modern_name": "Vijaya",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -712,11 +743,15 @@
         "county": "c_vijaya",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 982,
       "first_mention_attestation": "Attested from the late 10th century CE (982–1000 CE) when the Champa capital shifted south from Indrapura to Vijaya (Đồ Bàn) in Bình Định.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -731,19 +766,14 @@
         }
       ],
       "etymology_analysis": "Vijaya ('Victory') is a Sanskrit royal capital name for the Cham center in Bình Định (Đồ Bàn / Chà Bàn). It rose to prominence and became Champa's capital around 982–1000 CE, after the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Vijaya_(Champa)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Vijaya_(Champa)"
     },
     "b_tay_son": {
       "barony_key": "b_tay_son",
+      "vanilla_ck3_name": "Tay Son",
       "modern_name": "Tay Son",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -751,11 +781,15 @@
         "county": "c_vijaya",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1771,
       "first_mention_attestation": "Attested from 1771 CE as the Bình Định district and eponymous base of the Tây Sơn uprising and dynasty.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -776,19 +810,14 @@
         }
       ],
       "etymology_analysis": "Tây Sơn is a Sino-Vietnamese directional compound meaning 'Western Mountains', referring to the upland district in Bình Định where the Tây Sơn movement began in 1771 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_S%C6%A1n_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_S%C6%A1n_district"
     },
     "b_banh_it": {
       "barony_key": "b_banh_it",
+      "vanilla_ck3_name": "Banh It",
       "modern_name": "Banh It",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_champa",
@@ -796,11 +825,15 @@
         "county": "c_vijaya",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Bánh Ít Cham temple towers in Bình Định were built around the late 11th to 12th century CE and later given the Vietnamese folk name Bánh Ít (exact date of the Vietnamese toponym unattested).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -821,19 +854,14 @@
         }
       ],
       "etymology_analysis": "Bánh Ít is a modern Vietnamese folk name comparing the silhouette of the 11th–12th century CE Cham brick towers in Tuy Phước, Bình Định to a traditional pyramid-shaped rice cake.",
-      "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_B%C3%A1nh_%C3%8Dt",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_B%C3%A1nh_%C3%8Dt"
     },
     "b_canasapura": {
       "barony_key": "b_canasapura",
+      "vanilla_ck3_name": "Canasapura",
       "modern_name": "Canasapura",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -841,11 +869,15 @@
         "county": "c_canasha",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 650,
       "first_mention_attestation": "Attested as Śrī Cānāśa on Face A of the Bo Ika inscription (K. 400) at Muang Sema, palaeographically dated to the 7th century CE (c. 650 CE) by George Cœdès (predating Face B of 868 CE).",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -866,19 +898,14 @@
         }
       ],
       "etymology_analysis": "Canasapura (Sanskrit Śrī Cānāśa / Canāśapura) was an early polity on the Khorat Plateau (around Muang Sema in Nakhon Ratchasima). Face A of the Bo Ika stele (K. 400) attests Śrī Cānāśa prior to Face B's 868 CE date, and the 937 CE Śrī Canāśa inscription also records an 859 CE dedication.",
-      "source_url": "https://en.wikipedia.org/wiki/Canasapura",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Canasapura"
     },
     "b_phimai": {
       "barony_key": "b_phimai",
+      "vanilla_ck3_name": "Bhimapura",
       "modern_name": "Phimai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -886,11 +913,15 @@
         "county": "c_canasha",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
       "first_mention_year": 1082,
       "first_mention_attestation": "Thai name Phimai derives from Khmer/Sanskrit Vimāyapura, first attested in the 1082 CE inscription at Prasat Phanom Wan (and the 1191 CE Preah Khan inscription).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -905,19 +936,14 @@
         }
       ],
       "etymology_analysis": "Phimai is the Thai phonetic adaptation of Sanskrit Vimāyapura ('City of Vimāya'), an Angkorian regional center attested from 1082 CE. Although the area had Dvaravati-period Buddhist occupation, the name Phimai/Vimāyapura is post-867 CE (and the 7th-century CE Bhīmapura identification remains tentative).",
-      "source_url": "https://en.wikipedia.org/wiki/Phimai_Historical_Park",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Phimai_Historical_Park"
     },
     "b_chaiyaphum": {
       "barony_key": "b_chaiyaphum",
+      "vanilla_ck3_name": "Chaiyaphum",
       "modern_name": "Chaiyaphum",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -925,11 +951,15 @@
         "county": "c_canasha",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1656,
       "first_mention_attestation": "Named among five towns under Nakhon Ratchasima during the reign of King Narai (1656–1688 CE), and resettled in 1817 CE under Chao Phraya Lae.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -950,19 +980,14 @@
         }
       ],
       "etymology_analysis": "Chaiyaphum is a Sanskrit-derived Thai toponym meaning 'Land of Victory', first recorded in the 17th century CE during the Ayutthaya period and refounded in 1817 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Chaiyaphum_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Chaiyaphum_province"
     },
     "b_ku_kaeo": {
       "barony_key": "b_ku_kaeo",
+      "vanilla_ck3_name": "Ku Kaeo",
       "modern_name": "Ku Kaeo",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -970,11 +995,15 @@
         "county": "c_ku_kaeo",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1994,
       "first_mention_attestation": "Established as a minor district (king amphoe) in Udon Thani province on 30 April 1994 CE (upgraded to full district in 2007 CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -995,19 +1024,14 @@
         }
       ],
       "etymology_analysis": "Ku Kaeo is a Northeastern Thai (Isan) name meaning 'Crystal Shrine', referencing a local ancient brick monument; the administrative district was created in 1994 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ku_Kaeo_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ku_Kaeo_district"
     },
     "b_nong_bua": {
       "barony_key": "b_nong_bua",
+      "vanilla_ck3_name": "Nong Bua",
       "modern_name": "Nong Bua",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1015,11 +1039,15 @@
         "county": "c_ku_kaeo",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Common Thai/Lao settlement toponym ('Lotus Marsh') in northeastern Thailand with no <= 867 CE written attestation.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1040,19 +1068,14 @@
         }
       ],
       "etymology_analysis": "Nong Bua is a descriptive Thai/Lao toponym meaning 'Lotus Marsh' or 'Lotus Pond', widespread across northeastern Thailand and unattested in 9th-century CE records.",
-      "source_url": "https://en.wikipedia.org/wiki/Nong_Bua",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nong_Bua"
     },
     "b_nong_bua_lam_phu": {
       "barony_key": "b_nong_bua_lam_phu",
+      "vanilla_ck3_name": "Nong Bua Lam Phu",
       "modern_name": "Nong Bua Lam Phu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1060,11 +1083,15 @@
         "county": "c_ku_kaeo",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1767,
       "first_mention_attestation": "Recorded in 1767 CE during clashes between Lao princes Phra Wo and Phra Ta and Vientiane forces; established as a separate Thai province in 1993 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1091,19 +1118,14 @@
         }
       ],
       "etymology_analysis": "Nong Bua Lam Phu is a Thai/Lao toponym ('Lotus Marsh of Lam Phu') attested from the late Ayutthaya/early Thonburi era (1767 CE) and elevated to provincial status in 1993 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Nong_Bua_Lamphu_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nong_Bua_Lamphu_province"
     },
     "b_nong_khai": {
       "barony_key": "b_nong_khai",
+      "vanilla_ck3_name": "Nong Khai",
       "modern_name": "Nong Khai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1111,11 +1133,15 @@
         "county": "c_ku_kaeo",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1827,
       "first_mention_attestation": "Founded in 1827–1828 CE during the reign of King Rama III following the defeat of Chao Anouvong of Vientiane.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1136,19 +1162,14 @@
         }
       ],
       "etymology_analysis": "Nong Khai is a Thai/Lao toponym meaning 'Reed Marsh', named after a large pond near the Mekong River when the town was established in 1827–1828 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Nong_Khai",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Nong_Khai"
     },
     "b_loei": {
       "barony_key": "b_loei",
+      "vanilla_ck3_name": "Loei",
       "modern_name": "Loei",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1156,11 +1177,15 @@
         "county": "c_ku_kaeo",
         "holding_type": "castle"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1907,
       "first_mention_attestation": "Created as Loei province in 1907 CE by King Chulalongkorn (Rama V), following earlier Tai/Lao settlement in the Ayutthaya period.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1175,19 +1200,14 @@
         }
       ],
       "etymology_analysis": "Loei is a Thai provincial and town name in upper northeastern Thailand, formally organized as a province in 1907 CE; it has no contemporary attestation by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Loei_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Loei_province"
     },
     "b_muang_fa_daet": {
       "barony_key": "b_muang_fa_daet",
+      "vanilla_ck3_name": "Muang Fa Daet",
       "modern_name": "Muang Fa Daet",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1195,11 +1215,15 @@
         "county": "c_muang_fa_daet",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Thai/Isan name applied to the Dvaravati-period archaeological site in Kalasin (7th–11th century CE); no contemporary <= 867 CE epigraphic attestation of the name Muang Fa Daet exists.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1220,19 +1244,14 @@
         }
       ],
       "etymology_analysis": "Muang Fa Daet (Mueang Fa Daet Song Yang) is a modern Thai/Isan name given to a major Dvaravati-era moated Buddhist site in Kalasin province. While the site was occupied from the 7th–11th centuries CE, the Thai name itself is post-867 CE and no contemporary <= 867 CE toponym is epigraphically attested for the site.",
-      "source_url": "https://en.wikipedia.org/wiki/Mueang_Fa_Daet_Song_Yang",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Mueang_Fa_Daet_Song_Yang"
     },
     "b_maha_sarakham": {
       "barony_key": "b_maha_sarakham",
+      "vanilla_ck3_name": "Maha Sarakham",
       "modern_name": "Maha Sarakham",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1240,11 +1259,15 @@
         "county": "c_muang_fa_daet",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1865,
       "first_mention_attestation": "Founded in 1865 CE as a satellite town of Roi Et; declared a separate province by Bangkok in 1868 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1265,19 +1288,14 @@
         }
       ],
       "etymology_analysis": "Thai formal toponym derived from Sanskrit-Pali elements mahā ('great') and sāra-grāma ('essence/valuable village'). The town was founded in 1865 CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Maha_Sarakham_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Maha_Sarakham_province"
     },
     "b_khon_kaen": {
       "barony_key": "b_khon_kaen",
+      "vanilla_ck3_name": "Khon Kaen",
       "modern_name": "Khon Kaen",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1285,11 +1303,15 @@
         "county": "c_muang_fa_daet",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1797,
       "first_mention_attestation": "Established as a settlement in 1783 CE by Rajakruluang and officially incorporated as Khon Kaen in 1797 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1310,19 +1332,14 @@
         }
       ],
       "etymology_analysis": "Thai/Isan toponym believed to derive from kham kaen ('tamarind heartwood'), referring to a local reliquary (Phra That Kham Kaen); officially named Khon Kaen in 1797 CE, long after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Khon_Kaen_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Khon_Kaen_province"
     },
     "b_mukdahan": {
       "barony_key": "b_mukdahan",
+      "vanilla_ck3_name": "Mukdahan",
       "modern_name": "Mukdahan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1330,11 +1347,15 @@
         "county": "c_mukdahan",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1770,
       "first_mention_attestation": "Founded as Mueang Mukdahan in 1770 CE (1767–1770 CE) by Prince Kinnari at the mouth of Muk Creek.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1355,19 +1376,14 @@
         }
       ],
       "etymology_analysis": "Thai toponym derived from Kaeo Mukdahan ('crystal/pearl' gem), associated with the mouth of Huai Muk ('Muk Creek'). Founded in 1770 CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Mukdahan",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Mukdahan"
     },
     "b_sakhon_nakhon": {
       "barony_key": "b_sakhon_nakhon",
+      "vanilla_ck3_name": "Sakhon Nakhon",
       "modern_name": "Sakhon Nakhon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1375,11 +1391,15 @@
         "county": "c_mukdahan",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1830,
       "first_mention_attestation": "Earlier known as Mueang Nong Han Luang (11th century CE Khmer-era legend) and Sakhon Thawapi; renamed Sakon Nakhon in 1830 CE under King Rama III.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1400,19 +1420,14 @@
         }
       ],
       "etymology_analysis": "Thai Sanskritized compound from sakala ('entire, whole') and nagara ('city'), meaning 'city of cities'. Renamed Sakon Nakhon in 1830 CE; its Khmer-era predecessor Nong Han Luang is placed in the 11th century CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Sakon_Nakhon_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sakon_Nakhon_province"
     },
     "b_bueng_kan": {
       "barony_key": "b_bueng_kan",
+      "vanilla_ck3_name": "Bueng Kan",
       "modern_name": "Bueng Kan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1420,11 +1435,15 @@
         "county": "c_mukdahan",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Established as a sanitary district in 1956 CE and separated from Nong Khai as Thailand's 76th province in 2011 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1445,19 +1464,14 @@
         }
       ],
       "etymology_analysis": "Descriptive Thai-Sanskrit compound combining bueng ('marsh, swamp') and kan (from Sanskrit kāla, 'black'). Modern administrative settlement attested from 1956 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Bueng_Kan",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bueng_Kan"
     },
     "b_ubon_ratchathani": {
       "barony_key": "b_ubon_ratchathani",
+      "vanilla_ck3_name": "Ubon Ratchathani",
       "modern_name": "Ubon Ratchathani",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1465,11 +1479,15 @@
         "county": "c_ubon_ratchathani",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1792,
       "first_mention_attestation": "Founded in the late 18th century CE by Thao Kham Phong and formally granted provincial status in 1792 CE under King Rama I.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1490,19 +1508,14 @@
         }
       ],
       "etymology_analysis": "Thai Sanskritized toponym from utpala ('lotus') and rājadhānī ('royal city'), meaning 'royal city of the lotus flower'. Founded in the late 18th century CE and elevated to a province in 1792 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani_province"
     },
     "b_ubon_ratchathani_northwest": {
       "barony_key": "b_ubon_ratchathani_northwest",
+      "vanilla_ck3_name": "Pha Taem",
       "modern_name": "Ubon Ratchathani Northwest",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1510,11 +1523,15 @@
         "county": "c_ubon_ratchathani",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Synthetic modern directional barony name based on Ubon Ratchathani (founded late 18th century CE); unattested in historical sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1535,19 +1552,14 @@
         }
       ],
       "etymology_analysis": "Synthetic directional compound appending English 'Northwest' to Ubon Ratchathani (1792 CE); not a historical settlement name and unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani"
     },
     "b_phon_sai": {
       "barony_key": "b_phon_sai",
+      "vanilla_ck3_name": "Phon Sai",
       "modern_name": "Phon Sai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1555,11 +1567,15 @@
         "county": "c_ubon_ratchathani",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1976,
       "first_mention_attestation": "Established as minor district (king amphoe) Phon Sai on 16 November 1976 CE, split off from Suwannaphum district.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1580,19 +1596,14 @@
         }
       ],
       "etymology_analysis": "Isan/Thai descriptive topographic compound from phon ('mound, hillock') and sai ('sand'). Attested as an administrative district only from 1976 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Phon_Sai_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Phon_Sai_district"
     },
     "b_salo_tai": {
       "barony_key": "b_salo_tai",
+      "vanilla_ck3_name": "Salo Tai",
       "modern_name": "Salo Tai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1600,11 +1611,15 @@
         "county": "c_salo_tai",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Lao village toponym (Ban Salo Tai); no contemporary <= 867 CE epigraphic or chronicle attestation found.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1625,19 +1640,14 @@
         }
       ],
       "etymology_analysis": "Lao village toponym with directional qualifier tai ('south, lower'). Unattested in historical records <= 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_ban_nathan": {
       "barony_key": "b_ban_nathan",
+      "vanilla_ck3_name": "Ban Nathan",
       "modern_name": "Ban Nathan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1645,11 +1655,15 @@
         "county": "c_salo_tai",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1971,
       "first_mention_attestation": "Attested in 1971 CE military records (Operation Xieng Dong, April 1971 CE); unattested in <= 867 CE sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1676,19 +1690,14 @@
         }
       ],
       "etymology_analysis": "Lao village compound ban ('village') + na ('rice field') + than ('sugar palm'), meaning 'sugar-palm ricefield village'. Unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Operation_Xieng_Dong",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Operation_Xieng_Dong"
     },
     "b_hinboun": {
       "barony_key": "b_hinboun",
+      "vanilla_ck3_name": "Hinboun",
       "modern_name": "Hinboun",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1696,11 +1705,15 @@
         "county": "c_salo_tai",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Lao district (Muang Hinboun) in Khammouane Province named after the Nam Hinboun river; unattested in <= 867 CE sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -1721,19 +1734,14 @@
         }
       ],
       "etymology_analysis": "Lao toponym directly adopting the hydronym of the Nam Hinboun (Hinboun River) in Khammouane Province. Unattested in contemporary epigraphy or chronicles <= 867 CE.",
-      "source_url": "https://fr.wikipedia.org/wiki/Province_de_Khammouane",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://fr.wikipedia.org/wiki/Province_de_Khammouane"
     },
     "b_borikham": {
       "barony_key": "b_borikham",
+      "vanilla_ck3_name": "Borikhan",
       "modern_name": "Borikham",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1741,11 +1749,15 @@
         "county": "c_salo_tai",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1876,
       "first_mention_attestation": "Created in 1876 CE as Muong Borikhane when Siamese forces resettled Phuan families under Chao Sysouvanh.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1766,19 +1778,14 @@
         }
       ],
       "etymology_analysis": "Lao-Siamese compound from Sanskrit purī ('city, town') and Tai kham ('gold') or Sanskrit-Pali parikamma. Named Muong Borikhane in 1876 CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Borikhane_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Borikhane_district"
     },
     "b_sanasomboon": {
       "barony_key": "b_sanasomboon",
+      "vanilla_ck3_name": "Sanasomboon",
       "modern_name": "Sanasomboon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1786,11 +1793,15 @@
         "county": "c_sanasomboon",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Lao district (Sanasomboun District) in Champasak Province; unattested in <= 867 CE epigraphic or chronicle sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1811,19 +1822,14 @@
         }
       ],
       "etymology_analysis": "Lao Sanskritized auspicious compound meaning 'abundant victory/prosperity'. Modern district name unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Sanasomboun_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sanasomboun_district"
     },
     "b_attapeu": {
       "barony_key": "b_attapeu",
+      "vanilla_ck3_name": "Attapeu",
       "modern_name": "Attapeu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1831,11 +1837,15 @@
         "county": "c_sanasomboon",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1877,
       "first_mention_attestation": "Recorded in 1877 CE by French explorer François Jules Harmand; unattested in <= 867 CE written sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1856,19 +1866,14 @@
         }
       ],
       "etymology_analysis": "Lao adaptation of a local Mon-Khmer toponym (traditionally glossed as 'buffalo dung' from it kabue). First documented in 19th-century European accounts (1877 CE), unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Attapeu",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Attapeu"
     },
     "b_salavan": {
       "barony_key": "b_salavan",
+      "vanilla_ck3_name": "Salavan",
       "modern_name": "Salavan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1876,11 +1881,15 @@
         "county": "c_sanasomboon",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1828,
       "first_mention_attestation": "Earlier known as Saravan; renamed Salavan by the Siamese in 1828 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1901,19 +1910,14 @@
         }
       ],
       "etymology_analysis": "Lao toponym from Sanskrit śālavana ('forest of sal trees'). Renamed from Saravan to Salavan in 1828 CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Salavan_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Salavan_province"
     },
     "b_mouang_camphon": {
       "barony_key": "b_mouang_camphon",
+      "vanilla_ck3_name": "Mouang Camphon",
       "modern_name": "Mouang Camphon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1921,11 +1925,15 @@
         "county": "c_sanasomboon",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1834,
       "first_mention_attestation": "Attested in 1834 CE during the Siamese-Vietnamese War when Siamese forces attacked Phu Thai communities including Muang Champhone.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1946,19 +1954,14 @@
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining mouang ('town, district') with Champhone. First attested in 1834 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Champhone_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Champhone_district"
     },
     "b_vien_chan": {
       "barony_key": "b_vien_chan",
+      "vanilla_ck3_name": "Vien Chan",
       "modern_name": "Vien Chan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -1966,11 +1969,15 @@
         "county": "c_vien_chan",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
       "first_mention_year": 1159,
       "first_mention_attestation": "First attested as Văn Đan (Vientiane) on the Vietnamese inscription of Duke Đỗ Anh Vũ dated 1159 CE (referring to events of 1135 CE); became an administrative city of Lan Xang in 1354 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -1991,19 +1998,14 @@
         }
       ],
       "etymology_analysis": "Lao compound viang ('walled city') + chan (from Sanskrit candana 'sandalwood' or candra 'moon'). First attested in contemporary epigraphy in 1159 CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Vientiane",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Vientiane"
     },
     "b_ban_pang": {
       "barony_key": "b_ban_pang",
+      "vanilla_ck3_name": "Ban Pang",
       "modern_name": "Ban Pang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -2011,11 +2013,15 @@
         "county": "c_vien_chan",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Generic Lao/Tai village name (Ban Pang); unattested in <= 867 CE epigraphic or chronicle sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2036,19 +2042,14 @@
         }
       ],
       "etymology_analysis": "Lao/Tai settlement name combining ban ('village') and pang ('camp, clearing'). Unattested <= 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_vang_vieng": {
       "barony_key": "b_vang_vieng",
+      "vanilla_ck3_name": "Vang Vieng",
       "modern_name": "Vang Vieng",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -2056,11 +2057,15 @@
         "county": "c_vien_chan",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1890,
       "first_mention_attestation": "First settled around 1353 CE as Muang Song; renamed Vang Vieng during French colonial rule in the 1890s CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2081,19 +2086,14 @@
         }
       ],
       "etymology_analysis": "Lao compound from vang ('deep river pool/bend' or 'palace') and vieng ('walled town'). Settled c. 1353 CE as Muang Song and renamed Vang Vieng in the 1890s CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Vang_Vieng",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Vang_Vieng"
     },
     "b_muang_fuang": {
       "barony_key": "b_muang_fuang",
+      "vanilla_ck3_name": "Muang Fuang",
       "modern_name": "Muang Fuang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -2101,11 +2101,15 @@
         "county": "c_vien_chan",
         "holding_type": "city"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Lao district (Feuang / Muang Fuang) in Vientiane Province; unattested in <= 867 CE sources.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2126,19 +2130,14 @@
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining muang ('town, district') with fuang/feuang. Unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Feuang_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Feuang_district"
     },
     "b_muang_khoun": {
       "barony_key": "b_muang_khoun",
+      "vanilla_ck3_name": "Muang Khoun",
       "modern_name": "Muang Khoun",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_chenla",
@@ -2146,11 +2145,15 @@
         "county": "c_vien_chan",
         "holding_type": "city"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Formerly Xiang Khouang, capital of Muang Phuan (subsumed into Lan Xang in the 14th century CE under King Fa Ngum); rebuilt and renamed Muang Khoun in the 20th century CE, with no exact attested year for the modern name.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2171,19 +2174,14 @@
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining muang ('town, principality') and khoun (from Xiang Khouang or 'lord'). Muang Phuan/Xiang Khouang is attested from the 14th century CE, post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Khoune_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Khoune_district"
     },
     "b_angkor": {
       "barony_key": "b_angkor",
+      "vanilla_ck3_name": "Angkor",
       "modern_name": "Angkor",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2191,11 +2189,15 @@
         "county": "c_angkor",
         "holding_type": "church"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1501,
       "first_mention_attestation": "The Khmer vernacular name Angkor (as Angkor Thom) is attested from the 16th century CE (following Yaśodharapura, founded 889 CE by Yasovarman I).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2210,22 +2212,35 @@
         }
       ],
       "etymology_analysis": "Khmer vernacular form ângkôr, evolved from nokor < Sanskrit nagara ('city'). The name Angkor is attested from the 16th century CE (post-Angkorian period), while Yaśodharapura was founded in 889 CE; both postdate 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Angkor",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Hariharalaya",
-          "Mahendraparvata"
-        ],
-        "first_mention_year": 802,
-        "first_mention_source": "Khmer epigraphy and royal foundations under Jayavarman II (802–835 CE)",
-        "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "Jayavarman II declared universal monarchy at Mahendraparvata (Phnom Kulen) in 802 CE and established his capital at Hariharalaya (Roluos) until 835 CE, prior to Yasovarman I founding Yaśodharapura (Angkor) in 889 CE."
-      }
+      "historical_names": [
+        {
+          "name": "Hariharalaya",
+          "native_script": null,
+          "language": null,
+          "attested_from": 802,
+          "attested_to": 1501,
+          "source": "Khmer epigraphy and royal foundations under Jayavarman II (802–835 CE)",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Jayavarman II declared universal monarchy at Mahendraparvata (Phnom Kulen) in 802 CE and established his capital at Hariharalaya (Roluos) until 835 CE, prior to Yasovarman I founding Yaśodharapura (Angkor) in 889 CE."
+        },
+        {
+          "name": "Mahendraparvata",
+          "native_script": null,
+          "language": null,
+          "attested_from": 802,
+          "attested_to": 1501,
+          "source": "Khmer epigraphy and royal foundations under Jayavarman II (802–835 CE)",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Jayavarman II declared universal monarchy at Mahendraparvata (Phnom Kulen) in 802 CE and established his capital at Hariharalaya (Roluos) until 835 CE, prior to Yasovarman I founding Yaśodharapura (Angkor) in 889 CE."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Angkor"
     },
     "b_krung_poi_pet": {
       "barony_key": "b_krung_poi_pet",
+      "vanilla_ck3_name": "Krung Poi Pet",
       "modern_name": "Krung Poi Pet",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2233,11 +2248,15 @@
         "county": "c_angkor",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1979,
       "first_mention_attestation": "Modern Cambodian border town (Poipet) that emerged in the late 20th century (refugee/border hub from 1979 CE and 1998 census).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2258,19 +2277,14 @@
         }
       ],
       "etymology_analysis": "Khmer municipal title krung ('city') prefixed to the modern border-town name Poipet, which developed in the late 20th century CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Poipet",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Poipet"
     },
     "b_tribhuvanamaheshvara": {
       "barony_key": "b_tribhuvanamaheshvara",
+      "vanilla_ck3_name": "Tribhuvanamaheshvara",
       "modern_name": "Tribhuvanamaheshvara",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2278,11 +2292,15 @@
         "county": "c_angkor",
         "holding_type": "city"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 967,
       "first_mention_attestation": "Original Sanskrit name of the Banteay Srei temple, consecrated on 22 April 967 CE during the reign of Rajendravarman II.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2303,19 +2321,14 @@
         }
       ],
       "etymology_analysis": "Sanskrit compound meaning 'Great Lord of the Threefold World', an epithet of Shiva and the original dedicatory name of Banteay Srei consecrated in 967 CE, a century after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Banteay_Srei",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Banteay_Srei"
     },
     "b_dong_si_mahosot": {
       "barony_key": "b_dong_si_mahosot",
+      "vanilla_ck3_name": "Dong Si Mahosot",
       "modern_name": "Dong Si Mahosot",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2323,11 +2336,15 @@
         "county": "c_dong_si_mahosot",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1993,
       "first_mention_attestation": "Modern Thai name applied to the ancient Dvaravati moated site in Prachinburi; the district (formerly Khok Pip, 1970 CE) was officially renamed Si Mahosot on 3 June 1993 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2354,19 +2371,14 @@
         }
       ],
       "etymology_analysis": "Modern Thai compound dong ('forest') + Si Mahosot (from Pali Mahosadha), applied to a Dvaravati-period archaeological site occupied from at least the 6th century CE; the Thai name itself is modern (1993 CE district renaming) and unattested <= 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Si_Mahosot_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Si_Mahosot_district"
     },
     "b_surin": {
       "barony_key": "b_surin",
+      "vanilla_ck3_name": "Surin",
       "modern_name": "Surin",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2374,11 +2386,20 @@
         "county": "c_dong_si_mahosot",
         "holding_type": "city"
       },
+      "anachronism_type": "post_867_eponym",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1786,
       "first_mention_attestation": "Founded in 1763 CE as Mueang Prathai Saman; renamed Surin in 1786 CE after its first governor Phraya Surin Phakdi Si Narong Changwang (Chiang Pum).",
-      "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Phraya Surin Phakdi Si Narong Changwang (Chiang Pum), an 18th-century local ruler appointed first governor of the town under King Rama I in 1786 CE.",
+      "eponym": {
+        "year": 1786,
+        "post_867": true,
+        "type": "ruler_or_person",
+        "details": "Named after Phraya Surin Phakdi Si Narong Changwang (Chiang Pum), an 18th-century local ruler appointed first governor of the town under King Rama I in 1786 CE."
+      },
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2399,19 +2420,14 @@
         }
       ],
       "etymology_analysis": "Thai Sanskritized title Surin (from sura + indra, 'Lord Indra'), bestowed on 18th-century ruler Chiang Pum (Phraya Surin Phakdi) and applied to the town in 1786 CE, far post-867 CE.",
-      "source_url": "https://de.wikipedia.org/wiki/Surin",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://de.wikipedia.org/wiki/Surin"
     },
     "b_khorat": {
       "barony_key": "b_khorat",
+      "vanilla_ck3_name": "Khorat",
       "modern_name": "Khorat",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2419,11 +2435,15 @@
         "county": "c_dong_si_mahosot",
         "holding_type": "church"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1656,
       "first_mention_attestation": "Shortened Thai form of Khorakhapura / Nakhon Ratchasima, built during the reign of King Narai of Ayutthaya (1656–1688 CE) by merging Mueang Sema and Mueang Khorakhapura.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2438,22 +2458,35 @@
         }
       ],
       "etymology_analysis": "Thai shortened form of Khorakhapura / Nakhon Ratchasima (derived from Khmer Angkor Raj). Built under King Narai in the 17th century CE, far post-867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Nakhon_Ratchasima",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Canasapura",
-          "Sri Canasa"
-        ],
-        "first_mention_year": 650,
-        "first_mention_source": "Bo Ika inscription (K. 400, Face A, dated 7th century CE by George Cœdès) at Mueang Sema",
-        "relationship": "immediate_predecessor_or_nearby_site",
-        "notes": "Mueang Sema (32 km west of modern Khorat) was the seat of Sri Canasa / Canasapura, attested on Face A of the Bo Ika inscription (K. 400, 7th century CE; Face B dated 868 CE), before King Narai merged Mueang Sema and Mueang Khorakhapura into Nakhon Ratchasima."
-      }
+      "historical_names": [
+        {
+          "name": "Canasapura",
+          "native_script": null,
+          "language": null,
+          "attested_from": 650,
+          "attested_to": 1656,
+          "source": "Bo Ika inscription (K. 400, Face A, dated 7th century CE by George Cœdès) at Mueang Sema",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Mueang Sema (32 km west of modern Khorat) was the seat of Sri Canasa / Canasapura, attested on Face A of the Bo Ika inscription (K. 400, 7th century CE; Face B dated 868 CE), before King Narai merged Mueang Sema and Mueang Khorakhapura into Nakhon Ratchasima."
+        },
+        {
+          "name": "Sri Canasa",
+          "native_script": null,
+          "language": null,
+          "attested_from": 650,
+          "attested_to": 1656,
+          "source": "Bo Ika inscription (K. 400, Face A, dated 7th century CE by George Cœdès) at Mueang Sema",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Mueang Sema (32 km west of modern Khorat) was the seat of Sri Canasa / Canasapura, attested on Face A of the Bo Ika inscription (K. 400, 7th century CE; Face B dated 868 CE), before King Narai merged Mueang Sema and Mueang Khorakhapura into Nakhon Ratchasima."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Nakhon_Ratchasima"
     },
     "b_prea_vihear": {
       "barony_key": "b_prea_vihear",
+      "vanilla_ck3_name": "Prea Vihear",
       "modern_name": "Prea Vihear",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2461,11 +2494,15 @@
         "county": "c_prea_vihear",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 1024,
       "first_mention_attestation": "Inscription K.381 (1024 CE) at the Preah Vihear temple complex records donations to the mountain sanctuary deity Shikhareshvara, while the modern Khmer name Preah Vihear is post-Angkorian.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2486,19 +2523,14 @@
         }
       ],
       "etymology_analysis": "Preah Vihear combines Khmer preah ('holy, sacred') with vihear (from Sanskrit vihāra, 'monastery, temple'). Although shrine construction on the Dângrêk cliff began in the 9th century CE, the earliest dated epigraphic attestation at the site is K.381 (1024 CE) naming the deity Shikhareshvara, and the modern Khmer toponym Preah Vihear is not contemporarily attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Preah_Vihear",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Preah_Vihear"
     },
     "b_lingapura": {
       "barony_key": "b_lingapura",
+      "vanilla_ck3_name": "Shrestrapura",
       "modern_name": "Lingapura",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2506,11 +2538,15 @@
         "county": "c_prea_vihear",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 928,
       "first_mention_attestation": "Khmer inscriptions at Koh Ker during the reign of Jayavarman IV (928–941 CE) attest the capital city under the Sanskrit name Lingapura alongside Old Khmer Chok Gargyar.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2531,19 +2567,14 @@
         }
       ],
       "etymology_analysis": "Lingapura derives from Sanskrit liṅga ('emblem of Shiva') and pura ('city'). Established as the Angkorian imperial capital by Jayavarman IV in 928 CE (modern Koh Ker), it postdates the 867 CE baseline; the current repository label 'Schrestrapura' conflates it with Shresthapura at Wat Phou in Laos.",
-      "source_url": "https://en.wikipedia.org/wiki/Koh_Ker",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Koh_Ker"
     },
     "b_choam_khsant": {
       "barony_key": "b_choam_khsant",
+      "vanilla_ck3_name": "Choam Khsant",
       "modern_name": "Choam Khsant",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2551,11 +2582,15 @@
         "county": "c_prea_vihear",
         "holding_type": "city"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in contemporary inscriptions or chronicles by 867 CE; documented only as a modern Cambodian district and commune in Preah Vihear Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2576,19 +2611,14 @@
         }
       ],
       "etymology_analysis": "Choam Khsant is a modern Khmer compound from choam ('marsh, swamp') and khsant ('peaceful, calm'). There is no contemporary epigraphic or historical attestation of this toponym by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Choam_Khsant_District",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Choam_Khsant_District"
     },
     "b_si_sa_ket": {
       "barony_key": "b_si_sa_ket",
+      "vanilla_ck3_name": "Si Sa Ket",
       "modern_name": "Si Sa Ket",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2596,11 +2626,15 @@
         "county": "c_prea_vihear",
         "holding_type": "castle"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1786,
       "first_mention_attestation": "Established as the town of Sisaket in 1786 CE during the Rattanakosin period, subject to the Ayutthaya-era town of Khukhan.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2621,19 +2655,14 @@
         }
       ],
       "etymology_analysis": "Si Sa Ket (Sisaket) is a Thai administrative toponym incorporating Sanskritic elements (śrī 'auspicious') that originated with the founding of the town in 1786 CE, long after the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Sisaket_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sisaket_province"
     },
     "b_sambhupura": {
       "barony_key": "b_sambhupura",
+      "vanilla_ck3_name": "Sambhupura",
       "modern_name": "Sambhupura",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2641,11 +2670,15 @@
         "county": "c_sambhupura",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 803,
       "first_mention_attestation": "Pre-Angkorian inscription K.124 (803 CE) at Sambor in Kratie Province explicitly names Śambhupura and its rulers Indraloka and three successive queens.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2666,19 +2699,14 @@
         }
       ],
       "etymology_analysis": "Sambhupura (Sanskrit Śambhupura, 'city of Śambhu/Shiva') was a major Chenla-era Mekong River polity centered at modern Sambor in Kratie Province. It is contemporarily attested by inscription K.124 in 803 CE (with nearby inscription K.134 dating to 781 CE), making it historical by the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Chenla",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Chenla"
     },
     "b_hanchei": {
       "barony_key": "b_hanchei",
+      "vanilla_ck3_name": "Hanchei",
       "modern_name": "Hanchei",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2686,11 +2714,15 @@
         "county": "c_sambhupura",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1900,
       "first_mention_attestation": "First documented under the modern Khmer name Hanchei (Han Chéi) in Étienne Aymonier's Le Cambodge (1900 CE); the 6th–7th century CE temple bears Sanskrit inscription K.81 without this modern name.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2705,19 +2737,14 @@
         }
       ],
       "etymology_analysis": "Hanchei (Wat Hanchey) is a modern Khmer toponym applied to a Chenla-era brick sanctuary in Kampong Cham Province containing the late 6th- to early 7th-century CE Sanskrit inscription K.81 of Bhavavarman I. Because Hanchei itself is a modern Khmer name not attested by 867 CE, it is anachronistic for the 867 CE baseline.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_preah_khan": {
       "barony_key": "b_preah_khan",
+      "vanilla_ck3_name": "Preah Khan",
       "modern_name": "Preah Khan",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2725,11 +2752,15 @@
         "county": "c_sambhupura",
         "holding_type": "city"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 1006,
       "first_mention_attestation": "Preah Khan of Kompong Svay is attributed by scholars to an 11th-century CE foundation, probably under King Suryavarman I (reigned 1006–1050 CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2750,19 +2781,14 @@
         }
       ],
       "etymology_analysis": "Preah Khan means 'sacred sword' in Khmer. The monumental temple complex at Kompong Svay dates to the 11th century CE (Suryavarman I, r. 1006–1050 CE) and postdates the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Preah_Khan_Kompong_Svay",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Preah_Khan_Kompong_Svay"
     },
     "b_angkor_borey": {
       "barony_key": "b_angkor_borey",
+      "vanilla_ck3_name": "Angkor Borey",
       "modern_name": "Angkor Borey",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2770,11 +2796,15 @@
         "county": "c_angkor_borey",
         "holding_type": "church"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1900,
       "first_mention_attestation": "The modern Khmer name Angkor Borei is documented in early 20th-century French archaeological inventories (e.g., Aymonier 1900 CE) for the ancient Funan-era urban site.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2795,21 +2825,25 @@
         }
       ],
       "etymology_analysis": "Angkor Borey ('city of cities') is a modern Khmer name derived from Sanskrit nagara and purī, applied retrospectively to an ancient Funan and Chenla urban center in Takéo Province. While the site itself was active from 200 BCE and is identified in Khmer historiography with Naravaranagara (Chinese Na-fu-na), the modern Khmer name Angkor Borei is post-867.",
-      "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Naravaranagara"
-        ],
-        "first_mention_year": 636,
-        "first_mention_source": "Sui Shu (Book of Sui, 636 CE) recording Na-fu-na (那弗那, reconstructed as Naravaranagara), identified in Khmer historiography (Cœdès, Jacques, Vickery) with Angkor Borei.",
-        "relationship": "same_site_earlier_name",
-        "notes": "In standard Khmer epigraphic historiography (Cœdès, Jacques, Vickery), Angkor Borei corresponds to Naravaranagara (Chinese Na-fu-na, attested in 7th-century Chinese chronicles after Funan's southern relocation), whereas Vyādhapura sits at Ba Phnum / Banteay Prei Nokor; Angkor Borei also yielded the 611 CE Khmer inscription K. 600."
-      }
+      "historical_names": [
+        {
+          "name": "Naravaranagara",
+          "native_script": null,
+          "language": null,
+          "attested_from": 636,
+          "attested_to": 1900,
+          "source": "Sui Shu (Book of Sui, 636 CE) recording Na-fu-na (那弗那, reconstructed as Naravaranagara), identified in Khmer historiography (Cœdès, Jacques, Vickery) with Angkor Borei.",
+          "relationship": "same_site_earlier_name",
+          "notes": "In standard Khmer epigraphic historiography (Cœdès, Jacques, Vickery), Angkor Borei corresponds to Naravaranagara (Chinese Na-fu-na, attested in 7th-century Chinese chronicles after Funan's southern relocation), whereas Vyādhapura sits at Ba Phnum / Banteay Prei Nokor; Angkor Borei also yielded the 611 CE Khmer inscription K. 600."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da"
     },
     "b_maha_rosei": {
       "barony_key": "b_maha_rosei",
+      "vanilla_ck3_name": "Maha Rosei",
       "modern_name": "Maha Rosei",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2817,11 +2851,15 @@
         "county": "c_angkor_borey",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1902,
       "first_mention_attestation": "Cataloged as Asram Maha Rosei in early 20th-century French archaeological surveys (1902 CE) for the 7th-century CE basalt shrine on Phnom Da.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2842,19 +2880,14 @@
         }
       ],
       "etymology_analysis": "Maha Rosei (from Asram Maha Rosei, 'hermitage of the great sage') is a modern Khmer designation combining Sanskrit-derived mahā ('great') and ṛṣi ('ascetic'). Although the basalt temple dates to the 7th century CE, the modern Khmer name is not contemporarily attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da"
     },
     "b_bayang": {
       "barony_key": "b_bayang",
+      "vanilla_ck3_name": "Bayang",
       "modern_name": "Bayang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2862,11 +2895,15 @@
         "county": "c_angkor_borey",
         "holding_type": "city"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1900,
       "first_mention_attestation": "Documented under the modern Khmer name Phnom Bayang in Étienne Aymonier's Le Cambodge (1900 CE); the hill temple itself was sanctified in 604 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2881,21 +2918,25 @@
         }
       ],
       "etymology_analysis": "Bayang (Phnom Bayang) is a modern Khmer toponym applied to a 7th-century CE brick hill sanctuary in southern Takéo Province. The modern name is post-867, though the sanctuary is contemporarily attested in 604 CE under its Sanskrit religious designation Śivapada.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Sivapada"
-        ],
-        "first_mention_year": 604,
-        "first_mention_source": "Sanskrit stele inscription K.13 (604 CE, 624 CE) at Phnom Bayang",
-        "relationship": "same_site_earlier_name",
-        "notes": "Inscription K.13 records the establishment and restoration of a Śivapada ('footprint of Shiva') on the mountain in 604 and 624 CE."
-      }
+      "historical_names": [
+        {
+          "name": "Sivapada",
+          "native_script": null,
+          "language": null,
+          "attested_from": 604,
+          "attested_to": 1900,
+          "source": "Sanskrit stele inscription K.13 (604 CE, 624 CE) at Phnom Bayang",
+          "relationship": "same_site_earlier_name",
+          "notes": "Inscription K.13 records the establishment and restoration of a Śivapada ('footprint of Shiva') on the mountain in 604 and 624 CE."
+        }
+      ],
+      "source_url": null
     },
     "b_phnom_penh": {
       "barony_key": "b_phnom_penh",
+      "vanilla_ck3_name": "Chaturmukha",
       "modern_name": "Phnom Penh",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2903,11 +2944,20 @@
         "county": "c_angkor_borey",
         "holding_type": "castle"
       },
+      "anachronism_type": "post_867_eponym",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1372,
       "first_mention_attestation": "Founded in 1372 CE according to Cambodian chronicle tradition around Wat Phnom, later becoming the royal capital Chaktomuk in 1434 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": true,
-      "eponym_details": "Named after Lady Penh (Daun Penh), the wealthy 14th-century widow in Cambodian chronicle tradition who founded Wat Phnom in 1372 CE.",
+      "eponym": {
+        "year": 1372,
+        "post_867": true,
+        "type": "ruler_or_person",
+        "details": "Named after Lady Penh (Daun Penh), the wealthy 14th-century widow in Cambodian chronicle tradition who founded Wat Phnom in 1372 CE."
+      },
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2928,19 +2978,14 @@
         }
       ],
       "etymology_analysis": "Phnom Penh literally means 'Penh's Hill' in Khmer, referring to the 1372 CE foundation of Wat Phnom by Lady Penh (Daun Penh). Its later royal title Krong Chaktomuk ('city of four faces', reflected in the repository's 'Tschaturmukha') dates to 1434 CE, well after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Phnom_Penh",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Phnom_Penh"
     },
     "b_botum_sakor": {
       "barony_key": "b_botum_sakor",
+      "vanilla_ck3_name": "Botum Sakor",
       "modern_name": "Botum Sakor",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2948,11 +2993,15 @@
         "county": "c_botum_sakor",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1993,
       "first_mention_attestation": "Designated in modern Cambodian administration as Botum Sakor District and Botum Sakor National Park (established 1993 CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -2973,19 +3022,14 @@
         }
       ],
       "etymology_analysis": "Botum Sakor derives from Khmer renderings of Sanskrit padma ('lotus') and sāgara ('ocean'). It is a modern administrative district and national park name (1993 CE) in Koh Kong Province with no attestation by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Botum_Sakor_District",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Botum_Sakor_District"
     },
     "b_kompong_saom": {
       "barony_key": "b_kompong_saom",
+      "vanilla_ck3_name": "Kompong Saom",
       "modern_name": "Kompong Saom",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -2993,11 +3037,15 @@
         "county": "c_botum_sakor",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1479,
       "first_mention_attestation": "The region of Kompong Saom is mentioned in the 18th–19th-century Cambodian Royal Chronicles in reference to the 1479 CE civil war under King Dhammaraja.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3018,19 +3066,14 @@
         }
       ],
       "etymology_analysis": "Kompong Saom combines Khmer kompong ('port, landing', from Malay kampung) with saom (from Sanskrit saumya / Soma, 'moon' or an epithet of Shiva). First referenced in Cambodian chronicles for 1479 CE and developed into Sihanoukville in 1955 CE, it postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Sihanoukville",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sihanoukville"
     },
     "b_kum_pak_khlang": {
       "barony_key": "b_kum_pak_khlang",
+      "vanilla_ck3_name": "Kum Pak Phlang",
       "modern_name": "Kum Pak Khlang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3038,11 +3081,15 @@
         "county": "c_botum_sakor",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in historical records by 867 CE; documented only as a modern Cambodian commune (Khum Pak Khlang) in Koh Kong Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3063,19 +3110,14 @@
         }
       ],
       "etymology_analysis": "Kum Pak Khlang reflects the modern Cambodian administrative designation Khum Pak Khlang (with khum meaning 'commune') in Mondol Seima District, Koh Kong Province. It has no contemporary attestation by 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_mueang_phra_rot": {
       "barony_key": "b_mueang_phra_rot",
+      "vanilla_ck3_name": "Mueang Phra Rot",
       "modern_name": "Mueang Phra Rot",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3083,11 +3125,15 @@
         "county": "c_mueang_phra_rot",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Modern Thai folk-legendary name applied to a Dvaravati-period moated archaeological site in Phanat Nikhom District, occupied from at least the 6th century CE but lacking any attested contemporary name.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3108,19 +3154,14 @@
         }
       ],
       "etymology_analysis": "Mueang Phra Rot ('city of Phra Rot') is a modern Thai designation linking a Dvaravati-period moated site in Chonburi Province to the folk legend of Phra Rot (Nang Sib Song). Because the Thai name is modern and no contemporary pre-867 CE name is attested for the site, it is anachronistic for 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Phanat_Nikhom_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Phanat_Nikhom_district"
     },
     "b_rayong": {
       "barony_key": "b_rayong",
+      "vanilla_ck3_name": "Rayong",
       "modern_name": "Rayong",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3128,11 +3169,15 @@
         "county": "c_mueang_phra_rot",
         "holding_type": "city"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1767,
       "first_mention_attestation": "Attested in late Ayutthaya-period Thai chronicles in 1767 CE, when General Phraya Tak (later King Taksin) marched to Rayong to raise a naval force.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3147,19 +3192,14 @@
         }
       ],
       "etymology_analysis": "Rayong derives from the indigenous Chong word for Pterocarpus macrocarpus (Thai pradu), a tree common to the coastal region. Its historical attestation begins in the late Ayutthaya period (1767 CE), postdating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Rayong",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Rayong"
     },
     "b_chachoengsoo": {
       "barony_key": "b_chachoengsoo",
+      "vanilla_ck3_name": "Chachoengsoo",
       "modern_name": "Chachoengsoo",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3167,11 +3207,15 @@
         "county": "c_mueang_phra_rot",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1549,
       "first_mention_attestation": "Chachoengsao was established as a town in 1549 CE during the reign of King Maha Chakkrapat of Ayutthaya as a military recruitment center.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3192,19 +3236,14 @@
         }
       ],
       "etymology_analysis": "Chachoengsoo (Chachoengsao) is a Thai adaptation of Old Khmer cdiṅ jrau ('deep river'), referring to the Bang Pakong River. Founded as an Ayutthaya town in 1549 CE, it postdates the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Chachoengsao",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Chachoengsao"
     },
     "b_trat": {
       "barony_key": "b_trat",
+      "vanilla_ck3_name": "Trat",
       "modern_name": "Trat",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3212,11 +3251,15 @@
         "county": "c_mueang_phra_rot",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1767,
       "first_mention_attestation": "Trat served as an Ayutthaya-period seaport and is explicitly recorded in 1767 CE when Taksin captured Chanthaburi and Trat following the fall of Ayutthaya.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3231,19 +3274,14 @@
         }
       ],
       "etymology_analysis": "Trat derives from Thai krat, the local name for the Dipterocarpus intricatus tree used for broom-making. Attested as a seaport of the Ayutthaya Kingdom by 1767 CE, it postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Trat",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Trat"
     },
     "b_pursat": {
       "barony_key": "b_pursat",
+      "vanilla_ck3_name": "Pursat",
       "modern_name": "Pursat",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3251,11 +3289,15 @@
         "county": "c_pursat",
         "holding_type": "church"
       },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1516,
       "first_mention_attestation": "Attested in Cambodian Royal Chronicles for 1516 CE, when King Ang Chan I was crowned at Pursat (Poŭthĭsăt) and ruled there until 1528 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3270,19 +3312,14 @@
         }
       ],
       "etymology_analysis": "Pursat (Khmer Poŭthĭsăt) derives from Sanskrit bodhisattva and also denotes a local tree species. Its earliest historical attestation is in the post-Angkorian period (1516 CE), after the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Pursat",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Pursat"
     },
     "b_kampong_chhnang": {
       "barony_key": "b_kampong_chhnang",
+      "vanilla_ck3_name": "Kampong Chhnang",
       "modern_name": "Kampong Chhnang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3290,11 +3327,15 @@
         "county": "c_pursat",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in contemporary inscriptions or chronicles by 867 CE; documented only as a post-Angkorian/modern Khmer provincial and city name.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3315,19 +3356,14 @@
         }
       ],
       "etymology_analysis": "Kampong Chhnang literally means 'port of pottery' in Khmer. Although the province contains prehistoric (Samrong Sen, c. 1500 BCE) and Dvaravati-era archaeological remains, the Khmer toponym Kampong Chhnang is not attested by 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Kampong_Chhnang_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Kampong_Chhnang_province"
     },
     "b_sa_kaeo": {
       "barony_key": "b_sa_kaeo",
+      "vanilla_ck3_name": "Sa Kaeo",
       "modern_name": "Sa Kaeo",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3335,11 +3371,15 @@
         "county": "c_pursat",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1993,
       "first_mention_attestation": "Sa Kaeo became an independent Thai province in 1993 CE when six districts were separated from Prachinburi Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3360,19 +3400,14 @@
         }
       ],
       "etymology_analysis": "Sa Kaeo means 'crystal pond' in Thai, named after two sacred ponds (Sa Kaeo Sa Khwan) near the modern town. Despite 7th-century CE inscriptions in the wider province (such as K.505 at Khao Rang, 639 CE), the Thai toponym Sa Kaeo is modern and postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Sa_Kaeo_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Sa_Kaeo_province"
     },
     "b_battambang": {
       "barony_key": "b_battambang",
+      "vanilla_ck3_name": "Battambang",
       "modern_name": "Battambang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3380,11 +3415,15 @@
         "county": "c_pursat",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Post-Angkorian Khmer town name (established as a trade center by the 18th century CE, exact earliest attestation of the toponym Battambang unverified); 11th-century Angkorian inscriptions nearby (e.g., Vat Baset, 1036 and 1042 CE) instead refer to Pūrvāśrama in the province (viṣaya) of Malyang.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3405,19 +3444,14 @@
         }
       ],
       "etymology_analysis": "Battambang combines Khmer băt ('lost') and dǎmbâng ('staff'), referencing the local legend of Ta Dambang Kranhung. As a post-Angkorian toponym established by the 18th century CE (whereas 11th-century inscriptions nearby attest Pūrvāśrama in Malyang), it postdates the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Battambang",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Battambang"
     },
     "b_baigaur": {
       "barony_key": "b_baigaur",
+      "vanilla_ck3_name": "Baigaur",
       "modern_name": "Baigaur",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3425,11 +3459,15 @@
         "county": "c_baigaur",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 1001,
       "first_mention_attestation": "Established as a Cham settlement named Baigaur in the 11th century CE on the site of modern Ho Chi Minh City before being renamed Prey Nokor by the Khmer.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3444,19 +3482,14 @@
         }
       ],
       "etymology_analysis": "Baigaur is recorded as the 11th-century CE Cham name for the settlement that later became Khmer Prey Nokor and Vietnamese Saigon (Ho Chi Minh City). Because its foundation dates to the 11th century CE, it postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
     },
     "b_go_cong": {
       "barony_key": "b_go_cong",
+      "vanilla_ck3_name": "Go Cong",
       "modern_name": "Go Cong",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3464,11 +3497,15 @@
         "county": "c_baigaur",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1806,
       "first_mention_attestation": "Recorded as Gò Công (塸工) in Lê Quang Định's Hoàng Việt nhất thống dư địa chí (1806 CE) in Định Tường after Cambodia ceded the region of Lôi Lạt to the Nguyễn Lords in 1757 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3489,19 +3526,14 @@
         }
       ],
       "etymology_analysis": "Gò Công is a Vietnamese toponym meaning 'peacock mound' (or derived via folk etymology from local terrain). Attested only after Vietnamese settlement in the Mekong Delta in the late 18th to early 19th century CE (1806 CE), it postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/G%C3%B2_C%C3%B4ng",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/G%C3%B2_C%C3%B4ng"
     },
     "b_phuoc_tuy": {
       "barony_key": "b_phuoc_tuy",
+      "vanilla_ck3_name": "Phuoc Tuy",
       "modern_name": "Phuoc Tuy",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3509,11 +3541,15 @@
         "county": "c_baigaur",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1837,
       "first_mention_attestation": "Established as Phước Tuy Prefecture (phủ Phước Tuy) by the Nguyễn dynasty in 1837 CE, and later as Phước Tuy Province in 1956 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3534,19 +3570,14 @@
         }
       ],
       "etymology_analysis": "Phước Tuy is a Sino-Vietnamese auspicious administrative name combining phước ('blessing') and tuy ('pacify'). Created as a Nguyễn prefecture in 1837 CE, it postdates the 867 CE baseline.",
-      "source_url": "https://vi.wikipedia.org/wiki/Ph%C6%B0%E1%BB%9Bc_Tuy",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/Ph%C6%B0%E1%BB%9Bc_Tuy"
     },
     "b_dinh_tuong": {
       "barony_key": "b_dinh_tuong",
+      "vanilla_ck3_name": "Dinh Tuong",
       "modern_name": "Dinh Tuong",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3554,11 +3585,15 @@
         "county": "c_baigaur",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1808,
       "first_mention_attestation": "Established as trấn Định Tường in 1808 CE under Emperor Gia Long, and elevated to Định Tường Province in 1832 CE under Emperor Minh Mạng.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3579,19 +3614,14 @@
         }
       ],
       "etymology_analysis": "Định Tường is a Sino-Vietnamese auspicious administrative name meaning 'stabilize auspiciousness'. First coined in 1808 CE under the Nguyễn dynasty, it postdates 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_T%C6%B0%E1%BB%9Dng_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_T%C6%B0%E1%BB%9Dng_province"
     },
     "b_binh_dai": {
       "barony_key": "b_binh_dai",
+      "vanilla_ck3_name": "Binh Dai",
       "modern_name": "Binh Dai",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3599,11 +3629,15 @@
         "county": "c_binh_dai",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1950,
       "first_mention_attestation": "Established as Bình Đại District (quận Bình Đại) after 1950 CE when the former An Hóa District in Mỹ Tho Province was renamed.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3624,19 +3658,14 @@
         }
       ],
       "etymology_analysis": "Bình Đại is a Sino-Vietnamese toponym meaning 'great peace'. Adopted as a district name after 1950 CE on An Hóa island in the Mekong Delta, it postdates the 867 CE baseline.",
-      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_%C4%90%E1%BA%A1i_(huy%E1%BB%87n)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_%C4%90%E1%BA%A1i_(huy%E1%BB%87n)"
     },
     "b_ba_tri": {
       "barony_key": "b_ba_tri",
+      "vanilla_ck3_name": "Ba Tri",
       "modern_name": "Ba Tri",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3644,11 +3673,15 @@
         "county": "c_binh_dai",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1820,
       "first_mention_attestation": "Recorded in Trịnh Hoài Đức's Gia Định thành thông chí (c. 1820 CE) and later established as a district of Bến Tre province in 1912 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3669,19 +3702,14 @@
         }
       ],
       "etymology_analysis": "Vietnamese adaptation of an earlier Khmer toponym (often reconstructed as Prêk Bàti Phsar Trei, 'creek/market of fish') in the Mekong Delta; first attested in early 19th-century Nguyễn-era gazetteers (c. 1820 CE) and formally organized as a district in 1912 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ba_Tri_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ba_Tri_district"
     },
     "b_thanh_phu": {
       "barony_key": "b_thanh_phu",
+      "vanilla_ck3_name": "Thanh Phu",
       "modern_name": "Thanh Phu",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3689,11 +3717,15 @@
         "county": "c_binh_dai",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1912,
       "first_mention_attestation": "Established as one of the four original districts of Bến Tre province in 1912 CE under French colonial administration.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3714,19 +3746,14 @@
         }
       ],
       "etymology_analysis": "Auspicious Sino-Vietnamese administrative name meaning 'prosperous and wealthy', first attested as a district of Bến Tre province in 1912 CE, long after the 867 CE baseline.",
-      "source_url": "https://en.wikipedia.org/wiki/Th%E1%BA%A1nh_Ph%C3%BA_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Th%E1%BA%A1nh_Ph%C3%BA_district"
     },
     "b_ca_mau": {
       "barony_key": "b_ca_mau",
+      "vanilla_ck3_name": "Ca Mau",
       "modern_name": "Ca Mau",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3734,11 +3761,15 @@
         "county": "c_ca_mau",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1820,
       "first_mention_attestation": "Recorded in Trịnh Hoài Đức's Gia Định thành thông chí (c. 1820 CE); French colonial administrative division (hạt) of Cà Mau established in 1867 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3759,19 +3790,14 @@
         }
       ],
       "etymology_analysis": "Vietnamese phonetic adaptation of Khmer Tuĕk Khmau ('black water'), describing the dark tannin-stained waters of the U Minh mangrove swamps; first documented in early 19th-century Vietnamese gazetteers (c. 1820 CE), well after 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_province"
     },
     "b_soc_trang": {
       "barony_key": "b_soc_trang",
+      "vanilla_ck3_name": "Soc Trang",
       "modern_name": "Soc Trang",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3779,11 +3805,15 @@
         "county": "c_ca_mau",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1899,
       "first_mention_attestation": "Established as Sóc Trăng Province by decree of the Governor-General of French Indochina on 20 December 1899 CE (effective 1 January 1900 CE).",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3804,19 +3834,14 @@
         }
       ],
       "etymology_analysis": "Vietnamese transliteration (via Sốc Kha Lang) of Khmer Srok Khleang ('land of depositories' or 'place to store silver'); attested as a colonial administrative unit in 1899 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/S%C3%B3c_Tr%C4%83ng_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/S%C3%B3c_Tr%C4%83ng_province"
     },
     "b_oc_eo": {
       "barony_key": "b_oc_eo",
+      "vanilla_ck3_name": "Oc Eo",
       "modern_name": "Oc Eo",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3824,11 +3849,15 @@
         "county": "c_ca_mau",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1942,
       "first_mention_attestation": "Modern Vietnamese site name documented when Louis Malleret began archaeological excavations at Óc Eo in 1942 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3849,19 +3878,14 @@
         }
       ],
       "etymology_analysis": "Modern Vietnamese name (from Khmer O Keo, 'glass canal') applied in the 20th century (1942 CE) to a major Funan-period port site (2nd century BCE to 12th century CE) without a confirmed local pre-867 toponym (though some scholars hypothetically identify it with Ptolemy's Cattigara, c. 150 CE, whose location remains debated against northern Vietnam/Jiaozhi and other South China Sea sites).",
-      "source_url": "https://en.wikipedia.org/wiki/%C3%93c_Eo",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/%C3%93c_Eo"
     },
     "b_pleiku": {
       "barony_key": "b_pleiku",
+      "vanilla_ck3_name": "Pleiku",
       "modern_name": "Pleiku",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3869,11 +3893,15 @@
         "county": "c_pleiku",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1905,
       "first_mention_attestation": "First officially attested as 'Pleiku' on 4 July 1905 CE in a French colonial administrative decree.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3894,19 +3922,14 @@
         }
       ],
       "etymology_analysis": "Derived from Jarai Plơi Kơdưr ('upper/northern village'), adapted into French and Vietnamese administrative usage as Pleiku in 1905 CE, post-dating 867 CE.",
-      "source_url": "https://www.britannica.com/place/Pleiku",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://www.britannica.com/place/Pleiku"
     },
     "b_phu_bon": {
       "barony_key": "b_phu_bon",
+      "vanilla_ck3_name": "Phu Bon",
       "modern_name": "Phu Bon",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3914,11 +3937,15 @@
         "county": "c_pleiku",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1962,
       "first_mention_attestation": "Established as Phú Bổn Province of the Republic of Vietnam in September 1962 CE by dividing Pleiku Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3939,19 +3966,14 @@
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name coined in 1962 CE as a phonetic adaptation of Bahnar Krông Bông (the major river of the area), post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ph%C3%BA_B%E1%BB%95n_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ph%C3%BA_B%E1%BB%95n_province"
     },
     "b_plei_doch": {
       "barony_key": "b_plei_doch",
+      "vanilla_ck3_name": "Plei Doch",
       "modern_name": "Plei Doch",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -3959,11 +3981,15 @@
         "county": "c_pleiku",
         "holding_type": "church"
       },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in pre-modern or 867 CE historical sources; modern Jarai village name in Gia Lai Province, Vietnam.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -3984,19 +4010,14 @@
         }
       ],
       "etymology_analysis": "Jarai village toponym (plei 'village' + doch), unattested in written historical records prior to modern gazetteers and post-dating 867 CE.",
-      "source_url": null,
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": null
     },
     "b_ratanakiri": {
       "barony_key": "b_ratanakiri",
+      "vanilla_ck3_name": "Ratanakiri",
       "modern_name": "Ratanakiri",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4004,11 +4025,15 @@
         "county": "c_ratanakiri",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1959,
       "first_mention_attestation": "Created as Ratanakiri Province of Cambodia in 1959 CE from the eastern portion of Stung Treng Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4029,19 +4054,14 @@
         }
       ],
       "etymology_analysis": "Modern Sanskritic-Khmer administrative name ('crystal/gem mountains') coined when the province was established in 1959 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ratanakiri_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ratanakiri_province"
     },
     "b_ea_sup": {
       "barony_key": "b_ea_sup",
+      "vanilla_ck3_name": "Ea Sup",
       "modern_name": "Ea Sup",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4049,11 +4069,15 @@
         "county": "c_ratanakiri",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1977,
       "first_mention_attestation": "Established as Ea Súp District of Đắk Lắk Province on 30 August 1977 CE by Government Decision No. 230-CP.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "hydronym",
@@ -4074,19 +4098,14 @@
         }
       ],
       "etymology_analysis": "Named directly after the local stream Ea Suǒp (Vietnamese: Ea Súp), itself a Jarai/Êđê adaptation of Lao Nặm Chuốp ('peaceful water'); the district was established in 1977 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ea_S%C3%BAp_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ea_S%C3%BAp_district"
     },
     "b_mondulkiri": {
       "barony_key": "b_mondulkiri",
+      "vanilla_ck3_name": "Mondulkiri",
       "modern_name": "Mondulkiri",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4094,11 +4113,15 @@
         "county": "c_ratanakiri",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1961,
       "first_mention_attestation": "Established as Mondulkiri Province of Cambodia in 1961 CE from the eastern part of Kratié Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4119,19 +4142,14 @@
         }
       ],
       "etymology_analysis": "Modern Sanskritic-Khmer administrative name ('central mountains') coined upon the creation of the province in 1961 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Mondulkiri_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Mondulkiri_province"
     },
     "b_stung_treng": {
       "barony_key": "b_stung_treng",
+      "vanilla_ck3_name": "Stung Treng",
       "modern_name": "Stung Treng",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4139,11 +4157,15 @@
         "county": "c_stung_treng",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1907,
       "first_mention_attestation": "Granted provincial status as Stung Treng Province in 1907 CE under the French Protectorate of Cambodia.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4164,19 +4186,14 @@
         }
       ],
       "etymology_analysis": "Khmer descriptive toponym meaning 'river of reeds', attested as a Cambodian provincial unit in 1907 CE (formerly administered as Lao/Siamese Xieng Teng in the 19th century), post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Stung_Treng_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Stung_Treng_province"
     },
     "b_sambor": {
       "barony_key": "b_sambor",
+      "vanilla_ck3_name": "Sambor",
       "modern_name": "Sambor",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4184,11 +4201,15 @@
         "county": "c_stung_treng",
         "holding_type": "church"
       },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1886,
       "first_mention_attestation": "Modern Khmer name Sambor (Sambour) documented in French colonial administration and surveys from 1886 CE at the ancient site of Śambhupura.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4203,22 +4224,35 @@
         }
       ],
       "etymology_analysis": "Modern Khmer name Sâmbour ('abundant'), phonetically adapted from the pre-Angkorian Sanskrit capital Śambhupura ('city of Śambhu [Shiva]'), which is contemporarily attested in 803 CE (K. 124) and 781 CE (K. 134).",
-      "source_url": "https://en.wikipedia.org/wiki/Indrani_of_Sambhupura",
-      "older_name_by_867": {
-        "exists": true,
-        "names": [
-          "Śambhupura",
-          "Sambhupura"
-        ],
-        "first_mention_year": 803,
-        "first_mention_source": "Inscription K. 124 (803/804 CE) at Sambor, Kratié",
-        "relationship": "same_site_earlier_name",
-        "notes": "Modern Khmer Sambor occupies the site of pre-Angkorian Śambhupura, attested in inscription K. 124 (803/804 CE) under Queen Jyeṣṭhāryā and referenced in K. 134 (781 CE)."
-      }
+      "historical_names": [
+        {
+          "name": "Śambhupura",
+          "native_script": null,
+          "language": null,
+          "attested_from": 803,
+          "attested_to": 1886,
+          "source": "Inscription K. 124 (803/804 CE) at Sambor, Kratié",
+          "relationship": "same_site_earlier_name",
+          "notes": "Modern Khmer Sambor occupies the site of pre-Angkorian Śambhupura, attested in inscription K. 124 (803/804 CE) under Queen Jyeṣṭhāryā and referenced in K. 134 (781 CE)."
+        },
+        {
+          "name": "Sambhupura",
+          "native_script": null,
+          "language": null,
+          "attested_from": 803,
+          "attested_to": 1886,
+          "source": "Inscription K. 124 (803/804 CE) at Sambor, Kratié",
+          "relationship": "same_site_earlier_name",
+          "notes": "Modern Khmer Sambor occupies the site of pre-Angkorian Śambhupura, attested in inscription K. 124 (803/804 CE) under Queen Jyeṣṭhāryā and referenced in K. 134 (781 CE)."
+        }
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Indrani_of_Sambhupura"
     },
     "b_pakse": {
       "barony_key": "b_pakse",
+      "vanilla_ck3_name": "Pakse",
       "modern_name": "Pakse",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4226,11 +4260,15 @@
         "county": "c_stung_treng",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1905,
       "first_mention_attestation": "Founded as an administrative outpost by the French colonial administration in 1905 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4251,19 +4289,14 @@
         }
       ],
       "etymology_analysis": "Lao toponym meaning 'mouth of the Xe [Don] river', referring to its location at the confluence of the Xe Don and Mekong rivers; founded in 1905 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Pakse",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Pakse"
     },
     "b_kracheh_nokor": {
       "barony_key": "b_kracheh_nokor",
+      "vanilla_ck3_name": "Kracheh Nokor",
       "modern_name": "Kracheh Nokor",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4271,11 +4304,15 @@
         "county": "c_kracheh_nokor",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1907,
       "first_mention_attestation": "Kratié (Khmer: Krâchéh) received provincial status in 1907 CE under the French Protectorate of Cambodia.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4296,19 +4333,14 @@
         }
       ],
       "etymology_analysis": "Compound of Khmer krâchéh (a local tree species) and nokor ('city/kingdom', from Sanskrit nagara); attested as a modern provincial center in 1907 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Krati%C3%A9_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Krati%C3%A9_province"
     },
     "b_tay_ninh": {
       "barony_key": "b_tay_ninh",
+      "vanilla_ck3_name": "Tay Ninh",
       "modern_name": "Tay Ninh",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4316,11 +4348,15 @@
         "county": "c_kracheh_nokor",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1836,
       "first_mention_attestation": "Officially named Tây Ninh in 1836 CE during the reign of Nguyễn Emperor Minh Mạng.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4341,19 +4377,14 @@
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name meaning 'peace in the west', bestowed by Emperor Minh Mạng in 1836 CE (the area was previously known in post-Angkorian Khmer as Rong Domrey), post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province"
     },
     "b_binh_long_3": {
       "barony_key": "b_binh_long_3",
+      "vanilla_ck3_name": "Phnum Prech",
       "modern_name": "Binh Long 3",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4361,11 +4392,15 @@
         "county": "c_kracheh_nokor",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Bình Long Province was established on 22 October 1956 CE by Republic of Vietnam Decree No. 143-NV.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4386,19 +4421,14 @@
         }
       ],
       "etymology_analysis": "Numbered barony variant derived from Bình Long, a Sino-Vietnamese provincial name ('peaceful and prosperous') created in 1956 CE, long after 867 CE.",
-      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)"
     },
     "b_vyadhapura": {
       "barony_key": "b_vyadhapura",
+      "vanilla_ck3_name": "Vyadhapura",
       "modern_name": "Vyadhapura",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4406,11 +4436,15 @@
         "county": "c_vyadhapura",
         "holding_type": "church"
       },
+      "anachronism_type": "attested_pre_867",
+      "is_historical_at": {
+        "867": true,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 656,
       "first_mention_attestation": "Attested in the pre-Angkorian Sanskrit/Khmer inscription K. 109 (dated 10 February 656 CE), recording Vyādhapura as an ancient Funan center near Ba Phnum, Cambodia.",
-      "is_historical_867": true,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4431,19 +4465,14 @@
         }
       ],
       "etymology_analysis": "Sanskrit name meaning 'City of the Hunter', associated with the Funan kingdom near Ba Phnum and contemporarily attested in pre-Angkorian epigraphy (K. 109, 656 CE), prior to 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Vyadhapura",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Vyadhapura"
     },
     "b_indrapura_khmer": {
       "barony_key": "b_indrapura_khmer",
+      "vanilla_ck3_name": "Indrapura",
       "modern_name": "Indrapura Khmer",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4451,11 +4480,15 @@
         "county": "c_vyadhapura",
         "holding_type": "church"
       },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
       "first_mention_year": 1052,
       "first_mention_attestation": "Attested only retrospectively in the Sdok Kok Thom stele inscription (K. 235, dated 1052 CE), which describes Jayavarman II ruling at Indrapura c. 781 CE; no contemporary <= 867 CE inscription attests the name.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4482,19 +4515,14 @@
         }
       ],
       "etymology_analysis": "Sanskrit toponym meaning 'City of Indra' (with 'Khmer' added to distinguish it from Cham Indrapura). Although the 1052 CE Sdok Kok Thom inscription places Jayavarman II there c. 781 CE, no contemporary <= 867 CE epigraphic attestation exists.",
-      "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Khmer)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Khmer)"
     },
     "b_svay_rieng": {
       "barony_key": "b_svay_rieng",
+      "vanilla_ck3_name": "Svay Rieng",
       "modern_name": "Svay Rieng",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4502,11 +4530,15 @@
         "county": "c_vyadhapura",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1907,
       "first_mention_attestation": "Granted provincial status as Svay Rieng Province in 1907 CE under the French Protectorate of Cambodia.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4527,19 +4559,14 @@
         }
       ],
       "etymology_analysis": "Khmer toponym meaning 'row of mangoes', attested as a Cambodian provincial unit in 1907 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Svay_Rieng_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Svay_Rieng_province"
     },
     "b_kien_phong": {
       "barony_key": "b_kien_phong",
+      "vanilla_ck3_name": "Kien Phong",
       "modern_name": "Kien Phong",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4547,11 +4574,15 @@
         "county": "c_vyadhapura",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Established as Kiến Phong Province on 22 October 1956 CE by Republic of Vietnam Decree No. 143-NV, renaming Phong Thạnh Province.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4572,19 +4603,14 @@
         }
       ],
       "etymology_analysis": "Sino-Vietnamese provincial name meaning 'build prosperity', created by Republic of Vietnam administrative decree in 1956 CE, post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Ki%E1%BA%BFn_Phong_province",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Ki%E1%BA%BFn_Phong_province"
     },
     "b_binh_long": {
       "barony_key": "b_binh_long",
+      "vanilla_ck3_name": "Binh Long",
       "modern_name": "Binh Long",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4592,11 +4618,15 @@
         "county": "c_binh_long",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Established as Bình Long Province on 22 October 1956 CE by Republic of Vietnam Decree No. 143-NV.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4617,19 +4647,14 @@
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name meaning 'peaceful and prosperous', created in 1956 CE, post-dating 867 CE.",
-      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)"
     },
     "b_binh_long_2": {
       "barony_key": "b_binh_long_2",
+      "vanilla_ck3_name": "Daknong",
       "modern_name": "Binh Long 2",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4637,11 +4662,15 @@
         "county": "c_binh_long",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1956,
       "first_mention_attestation": "Bình Long Province was established on 22 October 1956 CE by Republic of Vietnam Decree No. 143-NV.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4662,19 +4691,14 @@
         }
       ],
       "etymology_analysis": "Numbered barony variant derived from Bình Long, a Sino-Vietnamese provincial name ('peaceful and prosperous') created in 1956 CE, long after 867 CE.",
-      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)"
     },
     "b_xuan_loc": {
       "barony_key": "b_xuan_loc",
+      "vanilla_ck3_name": "Xuan Loc",
       "modern_name": "Xuan Loc",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4682,11 +4706,15 @@
         "county": "c_binh_long",
         "holding_type": "city"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1973,
       "first_mention_attestation": "Attested as Xuân Lộc District in 1973 CE administrative records of Long Khánh / Tân Phú and as the site of the Battle of Xuân Lộc in April 1975 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4707,19 +4735,14 @@
         }
       ],
       "etymology_analysis": "Auspicious Sino-Vietnamese toponym meaning 'spring blessing/prosperity', attested in 20th-century administrative records (1973 CE), post-dating 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Xu%C3%A2n_L%E1%BB%99c_district",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Xu%C3%A2n_L%E1%BB%99c_district"
     },
     "b_koh_ker": {
       "barony_key": "b_koh_ker",
+      "vanilla_ck3_name": "Koh Ker",
       "modern_name": "Koh Ker",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4727,11 +4750,15 @@
         "county": "c_koh_ker",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1880,
       "first_mention_attestation": "Modern Khmer name Koh Ker documented in late 19th-century French expeditions (c. 1880 CE); the ancient city itself was built by Jayavarman IV starting in 921 CE under the names Liṅgapura and Chok Gargyar.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": false,
         "type": null,
@@ -4752,19 +4779,14 @@
         }
       ],
       "etymology_analysis": "Modern Khmer name ('island of glory') applied to the 10th-century Angkorian capital of Jayavarman IV (consecrated 921 CE as Liṅgapura / Chok Gargyar); both the modern name and the 921 CE capital post-date 867 CE.",
-      "source_url": "https://en.wikipedia.org/wiki/Koh_Ker",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://en.wikipedia.org/wiki/Koh_Ker"
     },
     "b_phnom_dek": {
       "barony_key": "b_phnom_dek",
+      "vanilla_ck3_name": "Phnom Dek",
       "modern_name": "Phnom Dek",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_kambuja",
         "kingdom": "k_funan",
@@ -4772,11 +4794,15 @@
         "county": "c_koh_ker",
         "holding_type": "church"
       },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
       "first_mention_year": 1882,
       "first_mention_attestation": "First documented in French colonial geological surveys by Saladin and Fuchs in 1882 CE.",
-      "is_historical_867": false,
-      "named_after_post_867_person": false,
-      "eponym_details": null,
+      "eponym": null,
       "natural_proper_name": {
         "is_natural_name": true,
         "type": "oronym",
@@ -4797,15 +4823,8 @@
         }
       ],
       "etymology_analysis": "Khmer oronym literally meaning 'Iron Mountain', referring to the major iron-ore hill in Preah Vihear / northern Kampong Thom; although archaeometallurgical smelting dates to the 9th–20th centuries CE, the toponym is first documented in 1882 CE, post-dating 867 CE.",
-      "source_url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/AP/2017_56_1_Hendricksonetal.pdf",
-      "older_name_by_867": {
-        "exists": false,
-        "names": [],
-        "first_mention_year": null,
-        "first_mention_source": null,
-        "relationship": null,
-        "notes": null
-      }
+      "historical_names": [],
+      "source_url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/AP/2017_56_1_Hendricksonetal.pdf"
     }
   }
 }
