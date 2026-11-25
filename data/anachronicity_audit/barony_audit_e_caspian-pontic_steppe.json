@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_caspian-pontic_steppe",
     "scope": "e_caspian-pontic_steppe (all baronies across k_caspian_steppe, k_caucasus, k_pontic_steppe, k_qara_dala, and x_script_5503)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if unattested or not established in available sources).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 CE start date; false if anachronistic or unattested <= 867 CE (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 CE.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 CE exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 203,
@@ -57,23 +64,17 @@
         {
           "form": "bas",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "head, main, chief"
         },
         {
           "form": "agha",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "elder brother, senior"
         }
       ],
       "etymology_analysis": "Turkic/Kazakh compound from bas ('head, main') and agha ('elder brother, senior'), used as a clan or personal name and later steppe toponym; no written attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Basâge",
-        "b_tarr_direct": "Basâge",
-        "b_tarr_hist": "Basâge",
-        "b_origin": "Basâge (Basâge (in-game: Basagha))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Basâge).",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -108,18 +109,11 @@
         {
           "form": "temir",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "iron"
         }
       ],
       "etymology_analysis": "Named after the Temir River (from Turkic/Kazakh temir, 'iron'), a tributary of the Emba; the modern town was founded in 1870 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%B8%D1%80_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
       "older_name_by_867": {
         "exists": false,
@@ -154,23 +148,17 @@
         {
           "form": "aq",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "white, clear, flowing"
         },
         {
           "form": "su",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "water, river"
         }
       ],
       "etymology_analysis": "Turkic/Kazakh hydronym Aqsu (aq 'white, clear' + su 'water, river'), referring to clear steppe streams; settlements bearing this name in West Kazakhstan and Aktobe regions are modern and unattested by 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%81%D1%83_(%D0%91%D1%83%D1%80%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -205,23 +193,17 @@
         {
           "form": "jaqsy",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "good, noble"
         },
         {
           "form": "bai",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "rich, wealthy man, lord"
         }
       ],
       "etymology_analysis": "From Kazakh Jaqsybai (jaqsy 'good' + bai 'wealthy man, lord'), a traditional Kazakh anthroponym and local hydronym in West Kazakhstan; the modern village took the name in 1992 CE, with no pre-867 CE attestation.",
-      "current_repo_state": {
-        "b_tarr": "Dschaksibâi",
-        "b_tarr_direct": "Dschaksibâi",
-        "b_tarr_hist": "Dschaksibâi",
-        "b_origin": "Dschaksibâi (Dschaksibâi (in-game: Jaksybai))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dschaksibâi).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%96%D0%B0%D0%BA%D1%81%D1%8B%D0%B1%D0%B0%D0%B9",
       "older_name_by_867": {
         "exists": false,
@@ -256,23 +238,17 @@
         {
           "form": "isan / esen",
           "language": "Turkic / Kazakh",
+          "language_code": "tur",
           "translation": "healthy, safe, well"
         },
         {
           "form": "bai",
           "language": "Turkic / Kazakh",
+          "language_code": "tur",
           "translation": "rich, wealthy man, lord"
         }
       ],
       "etymology_analysis": "Turkic personal name compound Isanbai/Esenbai (isen/esen 'healthy, safe' + bai 'lord, wealthy man'), applied to steppe tracts and settlements; no attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -307,23 +283,17 @@
         {
           "form": "mana",
           "language": "Turkic / Kazakh",
+          "language_code": "tur",
           "translation": "watch, guard, or personal name"
         },
         {
           "form": "tau",
           "language": "Turkic / Kazakh",
+          "language_code": "tur",
           "translation": "mountain, hill"
         }
       ],
       "etymology_analysis": "Turkic/Kazakh oronym and clan name ending in tau ('mountain, hill'); attested in modern Kazakh genealogy and steppe toponymy, with no pre-867 CE written record.",
-      "current_repo_state": {
-        "b_tarr": "Manatau",
-        "b_tarr_direct": "Manatau",
-        "b_tarr_hist": "Manatau",
-        "b_origin": "Manatau (Manatau (in-game: Manatau))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Manatau).",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -358,23 +328,17 @@
         {
           "form": "qyz",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "maiden, girl"
         },
         {
           "form": "emshek / imchik",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "breast"
         }
       ],
       "etymology_analysis": "Kazakh/Turkic descriptive oronym Qyzemshek ('maiden's breast'), applied to twin-peaked hills across the Kazakh steppe including Shyngyrlau District in West Kazakhstan; unattested in pre-867 CE sources.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://kk.wikipedia.org/wiki/%D2%9A%D1%8B%D0%B7%D0%B5%D0%BC%D1%88%D0%B5%D0%BA_(%D1%82%D0%B0%D1%83,_%D0%91%D0%B0%D1%82%D1%8B%D1%81_%D2%9A%D0%B0%D0%B7%D0%B0%D2%9B%D1%81%D1%82%D0%B0%D0%BD_%D0%BE%D0%B1%D0%BB%D1%8B%D1%81%D1%8B)",
       "older_name_by_867": {
         "exists": false,
@@ -409,23 +373,17 @@
         {
           "form": "jamba / zhamba",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "side, flank, or silver ingot (yamba)"
         },
         {
           "form": "-lar",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "plural suffix"
         }
       ],
       "etymology_analysis": "Turkic pluralized toponym in -lar, likely from a Kipchak/Kazakh clan or personal name; no historical attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Dschambalâr",
-        "b_tarr_direct": "Dschambalâr",
-        "b_tarr_hist": "Dschambalâr",
-        "b_origin": "Dschambalâr (Dschambalâr (in-game: Jambalar))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dschambalâr).",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -460,23 +418,17 @@
         {
           "form": "yala / yal",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "shore, slope, or wage"
         },
         {
           "form": "-chi",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "agentive suffix"
         }
       ],
       "etymology_analysis": "Turkic agentive noun in -chi; unattested in pre-867 CE historical records.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -511,18 +463,11 @@
         {
           "form": "maza / mazi",
           "language": "Mordvin / Tatar",
+          "language_code": "urj",
           "translation": "shallow, beautiful, or calm"
         }
       ],
       "etymology_analysis": "Named after the Maza River in the Middle Volga region (from Mordvin mazi 'beautiful' / maza 'shallow', or Tatar maza 'calm'); the settlement formed in 1580 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B7%D0%B0_(%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -557,23 +502,17 @@
         {
           "form": "maloi / maly",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "lesser, small"
         },
         {
           "form": "irgiz / yrghyz",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "flowing, winding river"
         }
       ],
       "etymology_analysis": "Russian-Turkic hybrid hydronym combining Russian maloi ('lesser') with the Turkic river name Irgiz (Yrghyz); the Russian-qualified form is post-867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%98%D1%80%D0%B3%D0%B8%D0%B7",
       "older_name_by_867": {
         "exists": false,
@@ -608,18 +547,11 @@
         {
           "form": "bäčänäk / bečenek",
           "language": "Old Turkic",
+          "language_code": "otk",
           "translation": "brother-in-law (or tribal ethnonym)"
         }
       ],
       "etymology_analysis": "Turkic ethnonym (Bäčänäk / Bečenek) for the nomadic confederation inhabiting the Volga-Ural steppe in the 8th–9th centuries CE, attested in an 8th-century Tibetan/Uyghur report and 9th–10th century Byzantine/Latin chronicles.",
-      "current_repo_state": {
-        "b_tarr": "Petschenêgen",
-        "b_tarr_direct": "Petschenêgen",
-        "b_tarr_hist": "Petschenêgen",
-        "b_origin": "Petschenêgen (Petschenêgen (in-game: Pecheneg))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Petschenêgen).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pechenegs",
       "older_name_by_867": {
         "exists": false,
@@ -654,28 +586,23 @@
         {
           "form": "ilek / elik",
           "language": "Turkic (Bashkir / Kazakh)",
+          "language_code": "tur",
           "translation": "wild goat, roe deer"
         },
         {
           "form": "-skoi",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "adjectival suffix"
         },
         {
           "form": "gorodok",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "small town, fort"
         }
       ],
       "etymology_analysis": "Russian-Turkic name meaning 'fortified town on the Ilek', combining the Turkic hydronym Ilek (from ilek/elik 'roe deer') with Russian gorodok ('small town/fort'); founded in 1737 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BB%D0%B5%D0%BA_(%D0%9E%D1%80%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -710,23 +637,17 @@
         {
           "form": "kämä",
           "language": "Bashkir / Turkic",
+          "language_code": "bak",
           "translation": "boat"
         },
         {
           "form": "-lek",
           "language": "Bashkir / Turkic",
+          "language_code": "bak",
           "translation": "place/abundance suffix"
         }
       ],
       "etymology_analysis": "Hydronym in Saratov and Samara Oblasts, derived either from Bashkir kämälek ('river of boats', kämä + -lek) or an Indo-Iranian root kem ('water'); not attested in pre-867 CE sources.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BB%D0%B8%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -761,18 +682,11 @@
         {
           "form": "zhaltyr",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "shining, glittering, mirror-like (lake)"
         }
       ],
       "etymology_analysis": "Kazakh hydronym Zhaltyr ('shining, glittering'), referring to open, treeless, mirror-like steppe lakes in West Kazakhstan; no pre-867 CE written attestation.",
-      "current_repo_state": {
-        "b_tarr": "Rôt-Jaîch",
-        "b_tarr_direct": "Rôt-Jaîch",
-        "b_tarr_hist": "Rôt-Jaîch",
-        "b_origin": "Rôt-Jaîch (Rôt-Jaîch (in-game: Qyzylyaitsk))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Rôt-Jaîch).",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -807,23 +721,17 @@
         {
           "form": "kalmyk",
           "language": "Russian (from Turkic Qalmaq)",
+          "language_code": "rus",
           "translation": "Kalmyk (Oirat Mongol)"
         },
         {
           "form": "-ovsky",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive/adjectival suffix"
         }
       ],
       "etymology_analysis": "Russian adjectival form from the ethnonym Kalmyk (Oirat Mongols who migrated to the Volga-Ural steppe in the 17th century CE); the fortress was built in the 1730s–1740s CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B9%D0%BF%D0%B0%D0%BA_(%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE-%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -858,23 +766,17 @@
         {
           "form": "yaik",
           "language": "Russian (from Turkic Jayıq)",
+          "language_code": "rus",
           "translation": "Yaik (Ural) River"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "town/settlement suffix"
         }
       ],
       "etymology_analysis": "Russian town name Yaitsk / Yaitsky Gorodok derived from the Yaik (Ural) River (Turkic Jayıq, related to Ptolemy's 2nd-century CE Daïx); the Cossack settlement was founded in 1584 CE.",
-      "current_repo_state": {
-        "b_tarr": "Jaîch",
-        "b_tarr_direct": "Jaîch",
-        "b_tarr_hist": "Jaîch",
-        "b_origin": "Jaîch (Ural / Daïx / Jaîk (in-game: Yaitsk))",
-        "b_anachronism": "Yaik (Daïx in Ptolemy, Turkic Jaîk) was renamed 'Ural' in 1775 by Catherine II. Resolves to ancient hydronym Jaîk.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%80%D0%B0%D0%BB%D1%8C%D1%81%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -909,23 +811,17 @@
         {
           "form": "tas",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "stone"
         },
         {
           "form": "qala",
           "language": "Kazakh (from Arabic qal'a)",
+          "language_code": "kaz",
           "translation": "fortress, town"
         }
       ],
       "etymology_analysis": "Kazakh Tasqala ('stone fortress/town'), a calque of its earlier Russian name Kamenskaya; modern settlement with no pre-867 CE written attestation.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%81%D0%BA%D0%B0%D0%BB%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -960,18 +856,11 @@
         {
           "form": "chervlyonaya",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "crimson, red (from Chervlyony Yar)"
         }
       ],
       "etymology_analysis": "Russian Cossack stanitsa name Chervlyonaya ('crimson/red'), transferred from Chervlyony Yar in the Ryazan region; founded no earlier than 1567 CE.",
-      "current_repo_state": {
-        "b_tarr": "Tzerlône",
-        "b_tarr_direct": "Ankêt",
-        "b_tarr_hist": "Tzerlône",
-        "b_origin": "Tzerlône (Tzerlône (in-game: Anket))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1142 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%B2%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F",
       "older_name_by_867": {
         "exists": false,
@@ -1006,18 +895,11 @@
         {
           "form": "cisterki",
           "language": "Slavic / uncertain",
+          "language_code": "sla",
           "translation": "uncertain (unattested toponym)"
         }
       ],
       "etymology_analysis": "Unattested toponym in Ciscaucasia; no historical record of this name exists on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1052,23 +934,17 @@
         {
           "form": "dar",
           "language": "Middle Persian",
+          "language_code": "pal",
           "translation": "gate, door"
         },
         {
           "form": "band",
           "language": "Middle Persian",
+          "language_code": "pal",
           "translation": "closed, barrier, bond"
         }
       ],
       "etymology_analysis": "From Middle Persian Darband ('closed/barred gate'), referring to the Sasanian fortification built in 438 CE across the narrow Caspian coastal pass.",
-      "current_repo_state": {
-        "b_tarr": "Derbent",
-        "b_tarr_direct": "Derbent",
-        "b_tarr_hist": "Derbent",
-        "b_origin": "Derbent (Derbent)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Derbent",
       "older_name_by_867": {
         "exists": true,
@@ -1107,18 +983,11 @@
         {
           "form": "ghumuq / kumukh",
           "language": "Lak",
+          "language_code": "cau",
           "translation": "Kumukh (indigenous Lak toponym)"
         }
       ],
       "etymology_analysis": "Indigenous Lak toponym (Ghumuq / Kumukh), attested from the 6th century CE as the political and cultural center of the Lak people in Dagestan.",
-      "current_repo_state": {
-        "b_tarr": "Kumukh",
-        "b_tarr_direct": "Kumukh",
-        "b_tarr_hist": "Kumukh",
-        "b_origin": "Kumukh (constituent holding of Derbent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kumukh",
       "older_name_by_867": {
         "exists": false,
@@ -1153,18 +1022,11 @@
         {
           "form": "balanjar / baranjar",
           "language": "Old Turkic / Khazar",
+          "language_code": "otk",
           "translation": "tribal/city name (Baranjar)"
         }
       ],
       "etymology_analysis": "Early medieval Khazar/Baranjar city name attested in 7th–8th century CE Arabic and Caucasus sources, serving as the first Khazar capital until the 720s CE.",
-      "current_repo_state": {
-        "b_tarr": "Balanjar",
-        "b_tarr_direct": "Balanjar",
-        "b_tarr_hist": "Balanjar",
-        "b_origin": "Balanjar (constituent holding of Derbent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Balanjar",
       "older_name_by_867": {
         "exists": false,
@@ -1199,18 +1061,11 @@
         {
           "form": "quba / qubba",
           "language": "Arabic / Persian",
+          "language_code": "ara",
           "translation": "dome, cupola (or local toponym)"
         }
       ],
       "etymology_analysis": "Attested from the 11th–12th century CE (Bade-Firuz Qubat, Arabic Cuba/Kubba); originated from the village of Gudial and became seat of the Quba Khanate in the 18th century CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Quba",
       "older_name_by_867": {
         "exists": false,
@@ -1245,23 +1100,17 @@
         {
           "form": "sam",
           "language": "Khazar / Turkic or Middle Persian",
+          "language_code": "tat",
           "translation": "high, outer, farthest"
         },
         {
           "form": "andar / dar",
           "language": "Middle Persian / Hunnic",
+          "language_code": "pal",
           "translation": "gate, or tribal suffix (-ander)"
         }
       ],
       "etymology_analysis": "Either from Middle Persian ('farthest gate') or the Hunnic tribal name Zabender (attested c. 598 CE); served as the second Khazar capital in the 720s–750s CE.",
-      "current_repo_state": {
-        "b_tarr": "Samandâr",
-        "b_tarr_direct": "Samandâr",
-        "b_tarr_hist": "Samandâr",
-        "b_origin": "Samandâr — Historical Option A seat of c_samander",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samandar_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -1296,23 +1145,17 @@
         {
           "form": "durdzuk",
           "language": "Georgian / Armenian exonym",
+          "language_code": "kat",
           "translation": "Vainakh (Chechen-Ingush) people"
         },
         {
           "form": "-ia",
           "language": "Latinized choronym suffix",
+          "language_code": "lat",
           "translation": "land of"
         }
       ],
       "etymology_analysis": "Latinized choronym from the medieval Georgian and Armenian exonym Durdzuk/Dourtsk for the Vainakh peoples of the North Caucasus, attested from the 7th century CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Durdzuks",
       "older_name_by_867": {
         "exists": false,
@@ -1347,23 +1190,17 @@
         {
           "form": "sam",
           "language": "Khazar / Turkic",
+          "language_code": "tat",
           "translation": "high, top, main"
         },
         {
           "form": "balut",
           "language": "Caucasian / Khazar",
+          "language_code": "cau",
           "translation": "oak or local toponymic element"
         }
       ],
       "etymology_analysis": "Khazar-era Caucasian town name containing the Khazar prefix sam- ('high, top, main'), associated with 7th–8th century CE Khazar rule in the Caucasus.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khazars",
       "older_name_by_867": {
         "exists": false,
@@ -1398,23 +1235,17 @@
         {
           "form": "sam",
           "language": "Khazar / Turkic",
+          "language_code": "tat",
           "translation": "high, top, main"
         },
         {
           "form": "iran",
           "language": "Iranian / Caucasian",
+          "language_code": "fas",
           "translation": "local/tribal element"
         }
       ],
       "etymology_analysis": "Khazar-era Caucasian town name with the Khazar prefix sam- ('high, top, main'), associated with 7th–8th century CE Khazar presence in the Caucasus.",
-      "current_repo_state": {
-        "b_tarr": "Samirân",
-        "b_tarr_direct": "Samirân",
-        "b_tarr_hist": "Samirân",
-        "b_origin": "Samirân (Samiran)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khazars",
       "older_name_by_867": {
         "exists": false,
@@ -1449,18 +1280,11 @@
         {
           "form": "qyzlar / kizlyar",
           "language": "Turkic (Kumyk)",
+          "language_code": "tur",
           "translation": "girls (or red cliff/branch of the Terek)"
         }
       ],
       "etymology_analysis": "From Turkic/Kumyk Qızlar (literally 'girls', or associated with a Terek River branch meaning 'red cliff'); first documented in 1609 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kizlyar",
       "older_name_by_867": {
         "exists": false,
@@ -1495,23 +1319,17 @@
         {
           "form": "qabard / kabard",
           "language": "Kabardian / Circassian",
+          "language_code": "cau",
           "translation": "Kabardian (Circassian subgroup)"
         },
         {
           "form": "-ei",
           "language": "Circassian",
+          "language_code": "cau",
           "translation": "place/land suffix"
         }
       ],
       "etymology_analysis": "Choronym Kabardey (variant Cabartei), denoting the Eastern Circassian principality that emerged in the Central/North Caucasus in the 1440s CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kabardia",
       "older_name_by_867": {
         "exists": false,
@@ -1546,18 +1364,11 @@
         {
           "form": "azaq",
           "language": "Kipchak Turkic",
+          "language_code": "tat",
           "translation": "lowland, mouth (of a river)"
         }
       ],
       "etymology_analysis": "From Kipchak Turkic Azaq ('lowland' or 'river mouth'), applied after the 1067 CE Kipchak conquest and later adapted into Russian Azov.",
-      "current_repo_state": {
-        "b_tarr": "Asâch",
-        "b_tarr_direct": "Asouwe",
-        "b_tarr_hist": "Asâch",
-        "b_origin": "Asâch (Asâch (in-game: Azak (Azov))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Azov",
       "older_name_by_867": {
         "exists": true,
@@ -1594,18 +1405,11 @@
         {
           "form": "manach / manych",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "bitter, brackish"
         }
       ],
       "etymology_analysis": "From the Manych River (West/East Manych in the Kuma-Manych Depression), derived from Turkic manach ('bitter/brackish', referring to its saline lakes); anciently known as Lik.",
-      "current_repo_state": {
-        "b_tarr": "Manych",
-        "b_tarr_direct": "Manych",
-        "b_tarr_hist": "Manych",
-        "b_origin": "Manych (constituent holding of Asâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Manych",
       "older_name_by_867": {
         "exists": false,
@@ -1640,23 +1444,17 @@
         {
           "form": "Chamch-",
           "language": "Uncertain / Slavicized",
+          "language_code": "und",
           "translation": "unclear root"
         },
         {
           "form": "-ev",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive/patronymic suffix"
         }
       ],
       "etymology_analysis": "Unattested historical toponym; structurally resembles a Russian possessive/surname-derived settlement name ending in -ev.",
-      "current_repo_state": {
-        "b_tarr": "Chamcheuwe",
-        "b_tarr_direct": "Chamcheuwe",
-        "b_tarr_hist": "Chamcheuwe",
-        "b_origin": "Chamcheuwe (constituent holding of Asâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1691,23 +1489,17 @@
         {
           "form": "ägri",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "curved, crooked"
         },
         {
           "form": "-lyk",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "place/quality suffix"
         }
       ],
       "etymology_analysis": "Variant of Yegorlyk (Bolshoy Yegorlyk River), from Turkic ägri ('curved') + -lyk, later folk-etymologized in Russian under the influence of the personal name Yegor.",
-      "current_repo_state": {
-        "b_tarr": "Yergolyk",
-        "b_tarr_direct": "Yergolyk",
-        "b_tarr_hist": "Yergolyk",
-        "b_origin": "Yergolyk (constituent holding of Asâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yegorlyk",
       "older_name_by_867": {
         "exists": false,
@@ -1742,18 +1534,11 @@
         {
           "form": "yasen / yaseni",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "ash trees"
         }
       ],
       "etymology_analysis": "Russian plural yaseni ('ash trees'), referring to the Yaseni River and coastal spit on the Sea of Azov in Kuban.",
-      "current_repo_state": {
-        "b_tarr": "Chumâr",
-        "b_tarr_direct": "Chumâr",
-        "b_tarr_hist": "Chumâr",
-        "b_origin": "Chumâr (Khumar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%AF%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F",
       "older_name_by_867": {
         "exists": false,
@@ -1788,23 +1573,17 @@
         {
           "form": "chelbas",
           "language": "Turkic (Nogai)",
+          "language_code": "tur",
           "translation": "shallow water / steppe basin (disputed)"
         },
         {
           "form": "-skaya",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "adjectival settlement suffix"
         }
       ],
       "etymology_analysis": "Russian adjectival form from the Chelbas River (likely Turkic/Nogai chelbas, 'shallow water' or 'steppe river').",
-      "current_repo_state": {
-        "b_tarr": "Chelbaska",
-        "b_tarr_direct": "Chelbaska",
-        "b_tarr_hist": "Chelbaska",
-        "b_origin": "Chelbaska (constituent holding of Chumâr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D0%B1%D0%B0%D1%81",
       "older_name_by_867": {
         "exists": false,
@@ -1839,18 +1618,11 @@
         {
           "form": "tikhon / tikhon'kaya",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "quiet, calm (or personal name Tikhon from Greek Tychon)"
         }
       ],
       "etymology_analysis": "In the Kuban context near Chelbaska, corresponds to the Tikhon'kiy / Tikhoretsk area on the Tikhon'kaya ('quiet') River, though the bare form Tikhon also matches the Slavicized Greek personal name Tychon.",
-      "current_repo_state": {
-        "b_tarr": "Tikhon",
-        "b_tarr_direct": "Tikhon",
-        "b_tarr_hist": "Tikhon",
-        "b_origin": "Tikhon (constituent holding of Chumâr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D1%85%D0%BE%D1%80%D0%B5%D1%86%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -1885,23 +1657,17 @@
         {
           "form": "tamə",
           "language": "Adyghe",
+          "language_code": "cau",
           "translation": "wing, shoulder"
         },
         {
           "form": "t'arqʷo",
           "language": "Adyghe",
+          "language_code": "cau",
           "translation": "fork, branching"
         }
       ],
       "etymology_analysis": "Old East Slavic Tъmutorokanь, adapted from Byzantine Greek Tamatarcha / Khazar Tamantarkhan (possibly from Adyghe tamə + t'arqʷo, 'branching wing', describing the Taman Peninsula).",
-      "current_repo_state": {
-        "b_tarr": "Tamâtarche",
-        "b_tarr_direct": "Tamatarchân",
-        "b_tarr_hist": "Tamâtarche",
-        "b_origin": "Tamâtarche (Tamâtarche (in-game: Tmutarakan))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tmutarakan",
       "older_name_by_867": {
         "exists": true,
@@ -1938,18 +1704,11 @@
         {
           "form": "Papagia",
           "language": "Byzantine Greek (from North Caucasian)",
+          "language_code": "grc",
           "translation": "land/region of Papagia"
         }
       ],
       "etymology_analysis": "Recorded in Byzantine Greek as Papagia (Παπαγία) in De Administrando Imperio (c. 950 CE) for a polity in the northwestern Caucasus beyond Zichia.",
-      "current_repo_state": {
-        "b_tarr": "Papagia",
-        "b_tarr_direct": "Papagia",
-        "b_tarr_hist": "Papagia",
-        "b_origin": "Papagia (constituent holding of Tamâtarche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://archive.org/stream/cfhb-11.1-nicetae-choniatae-historia/CFHB%2001_Constantine%20VII_De%20Administrando%20Imperio_djvu.txt",
       "older_name_by_867": {
         "exists": false,
@@ -1984,18 +1743,11 @@
         {
           "form": "qoban",
           "language": "Turkic (Kipchak/Karachay)",
+          "language_code": "tur",
           "translation": "rising, overflowing river"
         }
       ],
       "etymology_analysis": "From the Kuban River, whose Turkic name Qoban ('rising/overflowing') replaced the ancient Greek Hypanis and medieval Circassian Psyzh.",
-      "current_repo_state": {
-        "b_tarr": "Kuban",
-        "b_tarr_direct": "Kuban",
-        "b_tarr_hist": "Kuban",
-        "b_origin": "Kuban (constituent holding of Tamâtarche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kuban_(river)",
       "older_name_by_867": {
         "exists": false,
@@ -2030,18 +1782,11 @@
         {
           "form": "solyony",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "salty, saline"
         }
       ],
       "etymology_analysis": "Russian adjective solyony ('salty'), naming a settlement near saline lakes/estuaries on the Taman Peninsula.",
-      "current_repo_state": {
-        "b_tarr": "Soleny",
-        "b_tarr_direct": "Soleny",
-        "b_tarr_hist": "Soleny",
-        "b_origin": "Soleny (constituent holding of Tamâtarche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D1%91%D0%BD%D1%8B%D0%B9_(%D0%A2%D0%B5%D0%BC%D1%80%D1%8E%D0%BA%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -2076,23 +1821,17 @@
         {
           "form": "Atkara / Etkara",
           "language": "Turkic / Mordvin",
+          "language_code": "tur",
           "translation": "river name (etymology uncertain)"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "town suffix"
         }
       ],
       "etymology_analysis": "Named after the Atkara (Etkara) River at its confluence with the Medveditsa, with the Russian town-forming suffix -sk added in 1780 CE.",
-      "current_repo_state": {
-        "b_tarr": "Atkâre",
-        "b_tarr_direct": "Atkâre",
-        "b_tarr_hist": "Atkâre",
-        "b_origin": "Atkâre (Atkara)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Atkarsk",
       "older_name_by_867": {
         "exists": false,
@@ -2127,23 +1866,17 @@
         {
           "form": "pesok",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "sand"
         },
         {
           "form": "-anka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "hydronymic/toponymic suffix"
         }
       ],
       "etymology_analysis": "Russian hydronymic formation from pesok ('sand') + -anka, referring to the sandy-bedded Peschanka River.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%81%D1%87%D0%B0%D0%BD%D0%BA%D0%B0_(%D0%90%D1%82%D0%BA%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -2178,18 +1911,11 @@
         {
           "form": "tersa",
           "language": "Turkic / Iranian (disputed)",
+          "language_code": "tur",
           "translation": "river name (possibly 'reverse/steep')"
         }
       ],
       "etymology_analysis": "Named after the Tersa River (a right tributary of the Medveditsa in Saratov and Volgograd oblasts); the hydronym is likely of Turkic or steppe substrate origin.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%80%D1%81%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B8%D1%86%D1%8B)",
       "older_name_by_867": {
         "exists": false,
@@ -2224,18 +1950,11 @@
         {
           "form": "penza",
           "language": "Moksha (Mordvinic)",
+          "language_code": "urj",
           "translation": "end of a swampy river / border"
         }
       ],
       "etymology_analysis": "Named after the Penza River, whose hydronym derives from Moksha Mordvinic penza ('end of a swampy river' or 'boundary').",
-      "current_repo_state": {
-        "b_tarr": "Pense",
-        "b_tarr_direct": "Pense",
-        "b_tarr_hist": "Pense",
-        "b_origin": "Pense (Penza)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Penza",
       "older_name_by_867": {
         "exists": false,
@@ -2270,23 +1989,17 @@
         {
           "form": "sara",
           "language": "Mordvinic (Moksha/Erzya)",
+          "language_code": "urj",
           "translation": "swamp, marshy river"
         },
         {
           "form": "-nsk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "town suffix"
         }
       ],
       "etymology_analysis": "Derived from the Saranka River (from Mordvinic sara, 'swampy/sedge-covered river') with the Russian urban suffix -nsk.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Saransk",
       "older_name_by_867": {
         "exists": false,
@@ -2321,18 +2034,11 @@
         {
           "form": "inzara",
           "language": "Moksha (Mordvinic)",
+          "language_code": "urj",
           "translation": "great river / marshy river"
         }
       ],
       "etymology_analysis": "From the Insar (Moksha: Inzara) River, a Mordvinic hydronym meaning 'great/wide marshy river'.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%81%D0%B0%D1%80_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
       "older_name_by_867": {
         "exists": false,
@@ -2367,23 +2073,17 @@
         {
           "form": "Chechkei-",
           "language": "Uncertain / Turkic-Mordvinic",
+          "language_code": "und",
           "translation": "unclear personal/tribal root"
         },
         {
           "form": "-ev",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive/patronymic suffix"
         }
       ],
       "etymology_analysis": "Unattested historical toponym; structurally a Russian possessive/surname-style formation (-ev) on a Mordvinic or Turkic stem.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2418,23 +2118,17 @@
         {
           "form": "Petr-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Peter (personal name)"
         },
         {
           "form": "-ovsk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive town suffix"
         }
       ],
       "etymology_analysis": "Russian possessive town name Petr-ov-sk, 'city of Peter', named after Tsar Peter the Great upon its 1698 CE foundation.",
-      "current_repo_state": {
-        "b_tarr": "Medwedîtze",
-        "b_tarr_direct": "Petrouwe",
-        "b_tarr_hist": "Medwedîtze",
-        "b_origin": "Medwedîtze (Medwedîtze (in-game: Medveditsa (Petrovsk))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Petrovsk,_Saratov_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -2469,18 +2163,11 @@
         {
           "form": "Treliaka",
           "language": "Uncertain",
+          "language_code": "und",
           "translation": "unattested toponym"
         }
       ],
       "etymology_analysis": "Unattested in historical or modern Russian gazetteers; likely a game-coined or garbled regional name.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2515,23 +2202,17 @@
         {
           "form": "olha / olsha",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "alder tree"
         },
         {
           "form": "-anka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "hydronymic/toponymic suffix"
         }
       ],
       "etymology_analysis": "Variant of Alshanka / Olshanka, a Russian hydronym and settlement name derived from olkha ('alder') referring to alder-lined streams.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%9E%D0%BB%D1%8C%D1%88%D0%B0%D0%BD%D0%BA%D0%B0_(%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -2566,23 +2247,17 @@
         {
           "form": "sary",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "yellow"
         },
         {
           "form": "tau",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "mountain, hill"
         }
       ],
       "etymology_analysis": "Russified from Turkic Sary-tau ('Yellow Mountain', referring to Sokolova Gora); stands near the 13th–14th century Golden Horde city of Ukek (Uvek).",
-      "current_repo_state": {
-        "b_tarr": "Goltberch",
-        "b_tarr_direct": "Goltberch",
-        "b_tarr_hist": "Goltberch",
-        "b_origin": "Goltberch (Saratau)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Saratov",
       "older_name_by_867": {
         "exists": false,
@@ -2617,23 +2292,17 @@
         {
           "form": "khan",
           "language": "Turkic / Mongolic",
+          "language_code": "tur",
           "translation": "khan, ruler"
         },
         {
           "form": "balyk",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "city, town"
         }
       ],
       "etymology_analysis": "Turkic/Mongolic compound Khan-balyq ('City of the Khan'), historically the Yuan capital (Beijing) and used here as a generic Turko-Mongol steppe city name.",
-      "current_repo_state": {
-        "b_tarr": "Hanbalik",
-        "b_tarr_direct": "Hanbalik",
-        "b_tarr_hist": "Hanbalik",
-        "b_origin": "Hanbalik (constituent holding of Goltberch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BD%D0%B1%D0%B0%D0%BB%D1%8B%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -2668,18 +2337,11 @@
         {
           "form": "uza",
           "language": "Mordvinic / Finno-Ugric (disputed)",
+          "language_code": "urj",
           "translation": "river name"
         }
       ],
       "etymology_analysis": "Named after the Uza River (a left tributary of the Sura in Penza and Saratov oblasts), a pre-Russian Finno-Ugric or Turkic hydronym.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%A1%D1%83%D1%80%D1%8B)",
       "older_name_by_867": {
         "exists": false,
@@ -2714,18 +2376,11 @@
         {
           "form": "Kerkinitis",
           "language": "Ancient Greek (possibly pre-Greek/Scythian substrate)",
+          "language_code": "grc",
           "translation": "settlement name (modern Yevpatoria)"
         }
       ],
       "etymology_analysis": "Ancient Greek Κερκινίτις (Kerkinitis), attested from c. 500 BCE on the site of modern Yevpatoria (later Khazar Güzliev and Crimean Tatar Kezlev).",
-      "current_repo_state": {
-        "b_tarr": "Kalôs-Limên",
-        "b_tarr_direct": "Kalôs-Limên",
-        "b_tarr_hist": "Kalôs-Limên",
-        "b_origin": "Kalôs-Limên — Historical Option A seat of c_kalos_limen",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yevpatoria",
       "older_name_by_867": {
         "exists": false,
@@ -2760,23 +2415,17 @@
         {
           "form": "kalos",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "beautiful, fair, charming"
         },
         {
           "form": "limen",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "harbor, port"
         }
       ],
       "etymology_analysis": "Ancient Greek Καλός Λιμήν (Kalos Limen, 'Beautiful/Charming Harbor'), founded by Greek colonists in the 4th century BCE near modern Chornomorske.",
-      "current_repo_state": {
-        "b_tarr": "Güsliouwe",
-        "b_tarr_direct": "Güsliouwe",
-        "b_tarr_hist": "Kalôs-Limên",
-        "b_origin": "Güsliouwe — Disambiguated capital seat from sub-barony Kalôs-Limên",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kalos_Limen",
       "older_name_by_867": {
         "exists": false,
@@ -2811,18 +2460,11 @@
         {
           "form": "kъrch / korch",
           "language": "Old East Slavic / Turkic (disputed)",
+          "language_code": "orv",
           "translation": "strait, neck, or blacksmith/stump"
         }
       ],
       "etymology_analysis": "Modern Kerch derives from Old East Slavic Korchev (11th century CE), replacing earlier Greek Panticapaeum and Byzantine Bosporus.",
-      "current_repo_state": {
-        "b_tarr": "Pantikapêe",
-        "b_tarr_direct": "Kêrtsch",
-        "b_tarr_hist": "Pantikapêe",
-        "b_origin": "Pantikapêe (Pantikapêe (in-game: Kerch))",
-        "b_anachronism": "Resolved via verified historical center Pantikapêe documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kerch",
       "older_name_by_867": {
         "exists": true,
@@ -2860,23 +2502,17 @@
         {
           "form": "chersos",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "dry land, mainland"
         },
         {
           "form": "nesos",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "island"
         }
       ],
       "etymology_analysis": "Ancient Greek Χερσόνησος (Chersonesos, 'peninsula', literally 'land-island'), founded in the 6th century BCE on the outskirts of modern Sevastopol.",
-      "current_repo_state": {
-        "b_tarr": "Chersonesus",
-        "b_tarr_direct": "Chersonesus",
-        "b_tarr_hist": "Chersonesus",
-        "b_origin": "Chersonesus (constituent holding of Pantikapêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chersonesus",
       "older_name_by_867": {
         "exists": false,
@@ -2911,23 +2547,17 @@
         {
           "form": "theos",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "god"
         },
         {
           "form": "dosis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "gift, giving"
         }
       ],
       "etymology_analysis": "Ancient Greek Θεοδοσία (Theodosia, 'God-given'), founded in the 6th century BCE by Milesian Greeks; later medieval Caffa / Kefe and modern Feodosia.",
-      "current_repo_state": {
-        "b_tarr": "Theodosia",
-        "b_tarr_direct": "Theodosia",
-        "b_tarr_hist": "Theodosia",
-        "b_origin": "Theodosia (constituent holding of Pantikapêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Feodosia",
       "older_name_by_867": {
         "exists": false,
@@ -2962,23 +2592,17 @@
         {
           "form": "aq",
           "language": "Crimean Tatar",
+          "language_code": "tat",
           "translation": "white (also 'west' in Turkic directional cosmology)"
         },
         {
           "form": "mescit",
           "language": "Crimean Tatar (from Arabic masjid)",
+          "language_code": "tat",
           "translation": "mosque"
         }
       ],
       "etymology_analysis": "Crimean Tatar Aqmescit ('White Mosque' or 'Western Mosque'), founded in the Crimean Khanate era and incorporated into Simferopol in 1784 CE.",
-      "current_repo_state": {
-        "b_tarr": "Neâpolis",
-        "b_tarr_direct": "Neâpolis",
-        "b_tarr_hist": "Neâpolis",
-        "b_origin": "Ancient 3rd-century BC royal capital Scythian Neapolis on the Salgir River (in-game: Aqmescit)",
-        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas (Scythian Neapolis).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Simferopol",
       "older_name_by_867": {
         "exists": true,
@@ -3016,23 +2640,17 @@
         {
           "form": "pere-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "across"
         },
         {
           "form": "kop",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "digging, trench"
         }
       ],
       "etymology_analysis": "East Slavic Perekop ('dug-across'), a calque of the ancient Greek Taphros ('trench') describing the defensive ditch across the Crimean isthmus.",
-      "current_repo_state": {
-        "b_tarr": "Tâfros",
-        "b_tarr_direct": "Tâfros",
-        "b_tarr_hist": "Tâfros",
-        "b_origin": "Ancient Greek trench and fortress Taphros on the Isthmus of Crimea (in-game: Tâfros)",
-        "b_anachronism": "Authentic Classical Antiquity Greek Fortress.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Perekop",
       "older_name_by_867": {
         "exists": true,
@@ -3069,23 +2687,17 @@
         {
           "form": "cañı / can",
           "language": "Crimean Tatar",
+          "language_code": "tat",
           "translation": "new (or spirit)"
         },
         {
           "form": "köy",
           "language": "Crimean Tatar",
+          "language_code": "tat",
           "translation": "village"
         }
       ],
       "etymology_analysis": "From Crimean Tatar Canköy (< cañı köy, 'new village'; alternatively can köy, 'spirit village', or linked to the Circassian Zhaney tribe).",
-      "current_repo_state": {
-        "b_tarr": "Syrcu",
-        "b_tarr_direct": "Syrcu",
-        "b_tarr_hist": "Syrcu",
-        "b_origin": "Syrcu (constituent holding of Tâfros)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dzhankoi",
       "older_name_by_867": {
         "exists": false,
@@ -3120,23 +2732,17 @@
         {
           "form": "golden",
           "language": "English",
+          "language_code": "eng",
           "translation": "golden"
         },
         {
           "form": "hills",
           "language": "English",
+          "language_code": "eng",
           "translation": "hills"
         }
       ],
       "etymology_analysis": "English translation of a descriptive oronymic name ('Golden Hills') used in Crusader Kings III for a county/barony in the Don valley.",
-      "current_repo_state": {
-        "b_tarr": "Gûldenberch-am-Dôn",
-        "b_tarr_direct": "Gûldenberch-am-Dôn",
-        "b_tarr_hist": "Gûldenberch-am-Dôn",
-        "b_origin": "Gûldenberch-am-Dôn (Golden Hills)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3171,23 +2777,17 @@
         {
           "form": "siyah",
           "language": "Turkic (from Persian)",
+          "language_code": "tur",
           "translation": "black, dark"
         },
         {
           "form": "tepe",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "hill, mound"
         }
       ],
       "etymology_analysis": "Turkic compound siyah ('black', from Persian) + tepe ('hill, kurgan'), an unattested descriptive hill name in the Don valley.",
-      "current_repo_state": {
-        "b_tarr": "Siyahtepe",
-        "b_tarr_direct": "Siyahtepe",
-        "b_tarr_hist": "Siyahtepe",
-        "b_origin": "Siyahtepe (constituent holding of Gûldenberch-am-Dôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3222,23 +2822,17 @@
         {
           "form": "ust-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "mouth of (a river)"
         },
         {
           "form": "Donvokhi",
           "language": "Russian / Uncertain",
+          "language_code": "rus",
           "translation": "Don + unclear element"
         }
       ],
       "etymology_analysis": "Compound beginning with Russian ust- ('river mouth') and Don, followed by an unattested/corrupted element -vokhi.",
-      "current_repo_state": {
-        "b_tarr": "Ust-Donvokhi",
-        "b_tarr_direct": "Ust-Donvokhi",
-        "b_tarr_hist": "Ust-Donvokhi",
-        "b_origin": "Ust-Donvokhi (constituent holding of Gûldenberch-am-Dôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3273,23 +2867,17 @@
         {
           "form": "kazar / khazar",
           "language": "Russian (from Turkic Khazar)",
+          "language_code": "rus",
           "translation": "Khazar"
         },
         {
           "form": "-ki",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "plural/diminutive toponymic suffix"
         }
       ],
       "etymology_analysis": "Modern Russian designation for a Khazar-era archaeological settlement north of Sarkel, derived from the ethnonym Khazar (or Russian kazarka, 'brent goose').",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kazarki",
       "older_name_by_867": {
         "exists": false,
@@ -3324,23 +2912,17 @@
         {
           "form": "Kazan",
           "language": "Russian (from Tatar Kazan)",
+          "language_code": "rus",
           "translation": "Kazan (or Our Lady of Kazan)"
         },
         {
           "form": "-skaya",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "adjectival stanitsa suffix"
         }
       ],
       "etymology_analysis": "Russian adjectival stanitsa name Kazanskaya, associated with the Kazan Icon of the Mother of God or settlers from the Kazan region.",
-      "current_repo_state": {
-        "b_tarr": "Bogutschâr",
-        "b_tarr_direct": "Kasanskaje",
-        "b_tarr_hist": "Bogutschâr",
-        "b_origin": "Bogutschâr (Bogutschâr (in-game: Kazanskaya))",
-        "b_anachronism": "Don Cossack stanitsa of Kazanskaya founded in 1647.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_(%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -3375,18 +2957,11 @@
         {
           "form": "Boguchar / Bouchar",
           "language": "Uncertain (possibly Turkic)",
+          "language_code": "und",
           "translation": "river name (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Named after the Boguchar (earlier Bouchar / Bogucharka) River, a tributary of the Don; the hydronym's exact origin is uncertain.",
-      "current_repo_state": {
-        "b_tarr": "Kokschastat",
-        "b_tarr_direct": "Kokschastat",
-        "b_tarr_hist": "Kokschastat",
-        "b_origin": "Kokschastat (constituent holding of Bogutschâr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Boguchar",
       "older_name_by_867": {
         "exists": false,
@@ -3421,23 +2996,17 @@
         {
           "form": "Miller",
           "language": "German / Russian",
+          "language_code": "deu",
           "translation": "surname Miller"
         },
         {
           "form": "-ovo",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive settlement suffix"
         }
       ],
       "etymology_analysis": "Russian possessive settlement name Miller-ovo ('Miller's estate'), named after its 1786 CE founder Ivan Miller.",
-      "current_repo_state": {
-        "b_tarr": "Kalitwe",
-        "b_tarr_direct": "Millerôwe",
-        "b_tarr_hist": "Kalitwe",
-        "b_origin": "Kalitwe (Kalitwe (in-game: South Kazanskaya (Millerovo))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80%D0%BE%D0%B2%D0%BE",
       "older_name_by_867": {
         "exists": false,
@@ -3472,23 +3041,17 @@
         {
           "form": "pod-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "under, at the foot of"
         },
         {
           "form": "gor-nye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "hills, mountains (adj.)"
         }
       ],
       "etymology_analysis": "Russian locational adjective podgornye ('below/at the foot of the hills'), a descriptive settlement name rather than a bare natural feature.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3523,23 +3086,17 @@
         {
           "form": "sary",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "yellow, muddy"
         },
         {
           "form": "su / syn",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "water, river (or island)"
         }
       ],
       "etymology_analysis": "From Turkic Sary-su ('yellow/muddy water', referring to the Tsaritsa River) or Sary-chin ('yellow island'), later folk-etymologized in Russian as Tsaritsyn (modern Volgograd).",
-      "current_repo_state": {
-        "b_tarr": "Sarîssin",
-        "b_tarr_direct": "Sarîssin",
-        "b_tarr_hist": "Sarîssin",
-        "b_origin": "Sarîssin (Sarysyn)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4",
       "older_name_by_867": {
         "exists": false,
@@ -3574,23 +3131,17 @@
         {
           "form": "Frol",
           "language": "Russian (from Latin Florus)",
+          "language_code": "rus",
           "translation": "personal name Frol"
         },
         {
           "form": "-ovo",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive settlement suffix"
         }
       ],
       "etymology_analysis": "Russian possessive settlement name Frol-ovo ('Frolov's khutor'), first attested in 1859 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Frolovo",
       "older_name_by_867": {
         "exists": false,
@@ -3625,23 +3176,17 @@
         {
           "form": "kamysh",
           "language": "Russian (from Turkic qamyş)",
+          "language_code": "rus",
           "translation": "reed, bulrush"
         },
         {
           "form": "-in",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Named after the Kamyshinka River, from Russian kamysh ('reed', borrowed from Turkic qamyş) + -in.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kamyshin",
       "older_name_by_867": {
         "exists": false,
@@ -3676,18 +3221,11 @@
         {
           "form": "yelan'",
           "language": "Russian (from Turkic alan)",
+          "language_code": "rus",
           "translation": "open glade, meadow plain"
         }
       ],
       "etymology_analysis": "Derived from the Russian dialectal topographic term yelan' ('extensive glade or meadow plain', borrowed from Turkic alan/yalan), also borne by the Yelan River; settled in the late 17th century CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%95%D0%BB%D0%B0%D0%BD%D1%8C_(%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -3722,23 +3260,17 @@
         {
           "form": "Balash-",
           "language": "Russian (from Turkic balash)",
+          "language_code": "rus",
           "translation": "personal surname Bolashev/Balashov"
         },
         {
           "form": "-ov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "Possessive Russian toponym formed from the surname of its 17th-century CE founder, Grigory Bolashev (ultimately from Turkic balash, 'child').",
-      "current_repo_state": {
-        "b_tarr": "Balaschouwe",
-        "b_tarr_direct": "Balaschouwe",
-        "b_tarr_hist": "Balaschouwe",
-        "b_origin": "Balaschouwe (Balachev)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%BE%D0%B2_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
       "older_name_by_867": {
         "exists": false,
@@ -3773,18 +3305,11 @@
         {
           "form": "Khopyor",
           "language": "Pre-Slavic / Turkic or Iranian",
+          "language_code": "und",
           "translation": "river name (etymology disputed)"
         }
       ],
       "etymology_analysis": "Named directly after the Khopyor River, the largest left tributary of the Don; first attested in Russian sources in 1389 CE, with no documented attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Khoper",
-        "b_tarr_direct": "Khoper",
-        "b_tarr_hist": "Khoper",
-        "b_origin": "Khoper (constituent holding of Balaschouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khopyor",
       "older_name_by_867": {
         "exists": false,
@@ -3819,23 +3344,17 @@
         {
           "form": "vyaz",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "elm tree"
         },
         {
           "form": "-ovka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Russian settlement name derived from vyaz ('elm') with the toponymic suffix -ovka, after the local Vyazovka stream; founded in 1700 CE.",
-      "current_repo_state": {
-        "b_tarr": "Chopjôr",
-        "b_tarr_direct": "Chopjôr",
-        "b_tarr_hist": "Chopjôr",
-        "b_origin": "Ancient pre-867 Khopyor River basin (in-game: Viazovka)",
-        "b_anachronism": "18th-century village Viazovka fails Burden of Proof on Antiquity; resolved to ancient Khopyor hydronym.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%92%D1%8F%D0%B7%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%A2%D0%B0%D1%82%D0%B8%D1%89%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -3870,18 +3389,11 @@
         {
           "form": "Khopyor",
           "language": "Pre-Slavic / Turkic or Iranian",
+          "language_code": "und",
           "translation": "river name (etymology disputed)"
         }
       ],
       "etymology_analysis": "Hydronymic title referring to the Khopyor River, first attested in 1389 CE; unattested in surviving written sources on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Chopjôr",
-        "b_tarr_direct": "Chopjôr",
-        "b_tarr_hist": "Chopjôr",
-        "b_origin": "Chopjôr (Khopyor)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khopyor",
       "older_name_by_867": {
         "exists": false,
@@ -3916,18 +3428,11 @@
         {
           "form": "bychok",
           "language": "Old Russian dialectal",
+          "language_code": "rus",
           "translation": "promontory or hillock at a river confluence"
         }
       ],
       "etymology_analysis": "From the Old Russian dialectal topographic term bychok denoting a hillock or promontory at the confluence of two rivers (here the Bychok and Tolucheyevka); settled c. 1718–1720 CE.",
-      "current_repo_state": {
-        "b_tarr": "Bychok",
-        "b_tarr_direct": "Bychok",
-        "b_tarr_hist": "Bychok",
-        "b_origin": "Bychok (constituent holding of Chopjôr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%87%D0%BE%D0%BA_(%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -3962,23 +3467,17 @@
         {
           "form": "kriv-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "crooked, curved"
         },
         {
           "form": "-usha",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "hydronymic/topographic suffix"
         }
       ],
       "etymology_analysis": "Originally Krivusha (later Kriusha, rendered in-game as Kriucha), named after a sharp bend in the river channel; founded in the early 19th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Kriucha",
-        "b_tarr_direct": "Kriucha",
-        "b_tarr_hist": "Kriucha",
-        "b_origin": "Kriucha (constituent holding of Chopjôr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kriusha",
       "older_name_by_867": {
         "exists": false,
@@ -4013,23 +3512,17 @@
         {
           "form": "Man-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "personal name or local river root"
         },
         {
           "form": "-ina",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "possessive/toponymic suffix"
         }
       ],
       "etymology_analysis": "East Slavic possessive settlement name (sloboda Manina, modern Manino) established in the 1740s CE along the Manina River.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B8%D0%BD%D0%BE_(%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -4064,23 +3557,17 @@
         {
           "form": "Tulu-chay",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "full river"
         },
         {
           "form": "-evo",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Russian adaptation (Tolucheyevo / Tulucheyevka, rendered in-game as Tuluchezeva) of the Turkic hydronym Tulu-chay ('full river'); settled in 1716 CE.",
-      "current_repo_state": {
-        "b_tarr": "Tulutschêswe",
-        "b_tarr_direct": "Tulutschêswe",
-        "b_tarr_hist": "Tulutschêswe",
-        "b_origin": "Tulutschêswe (Tuluchezeva)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%B5%D0%B2%D0%BE",
       "older_name_by_867": {
         "exists": false,
@@ -4115,18 +3602,11 @@
         {
           "form": "Lejlotka",
           "language": "Unidentified",
+          "language_code": "und",
           "translation": "obscure/corrupted steppe settlement name"
         }
       ],
       "etymology_analysis": "Obscure toponym in the Khopyor-Tolucheyevka basin with no attested pre-867 CE form or verified etymology.",
-      "current_repo_state": {
-        "b_tarr": "Lejlotka",
-        "b_tarr_direct": "Lejlotka",
-        "b_tarr_hist": "Lejlotka",
-        "b_origin": "Lejlotka (constituent holding of Tulutschêswe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4161,23 +3641,17 @@
         {
           "form": "trost'",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "reed"
         },
         {
           "form": "Khopyor",
           "language": "Pre-Slavic",
+          "language_code": "und",
           "translation": "Khopyor River"
         }
       ],
       "etymology_analysis": "Compound rendering of Trostyanka-on-the-Khopyor (from Russian trost' 'reed' and the Khopyor River), a village in Balashov District attested in the late 18th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Trotzkhoper",
-        "b_tarr_direct": "Trotzkhoper",
-        "b_tarr_hist": "Trotzkhoper",
-        "b_origin": "Trotzkhoper (constituent holding of Tulutschêswe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_(%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -4212,18 +3686,11 @@
         {
           "form": "Cherkasy",
           "language": "East Slavic / Turkic",
+          "language_code": "sla",
           "translation": "Circassians (ethnonym)"
         }
       ],
       "etymology_analysis": "Derived from the East Slavic ethnonym Cherkasy (originally referring to Circassians or steppe Cossack groups); first attested in the late 13th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Rôden",
-        "b_tarr_direct": "Rôden",
-        "b_tarr_hist": "Rôden",
-        "b_origin": "Rôden — Historical Option A seat of c_cherkassy",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cherkasy",
       "older_name_by_867": {
         "exists": false,
@@ -4258,18 +3725,11 @@
         {
           "form": "Sacacatce",
           "language": "Unidentified",
+          "language_code": "und",
           "translation": "obscure/corrupted toponym"
         }
       ],
       "etymology_analysis": "Unidentified holding name in the Cherkasy county with no verified pre-867 CE attestation or documented etymology.",
-      "current_repo_state": {
-        "b_tarr": "Sacacatce",
-        "b_tarr_direct": "Sacacatce",
-        "b_tarr_hist": "Sacacatce",
-        "b_origin": "Sacacatce (constituent holding of Rôden)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4304,18 +3764,11 @@
         {
           "form": "Kashan",
           "language": "Unidentified",
+          "language_code": "und",
           "translation": "obscure steppe toponym"
         }
       ],
       "etymology_analysis": "Unidentified holding name in the Cherkasy county with no verified pre-867 CE attestation in the Pontic steppe.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4350,28 +3803,23 @@
         {
           "form": "pervo-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "first"
         },
         {
           "form": "may",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "May (May Day)"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "city suffix"
         }
       ],
       "etymology_analysis": "Soviet-era commemorative name coined in 1919 CE from pervomay ('May Day', 1 May); the earliest predecessor settlement at the confluence (Orlyk/Olviopol) dates to 1676 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pervomaisk,_Mykolaiv_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -4406,18 +3854,11 @@
         {
           "form": "Kherson",
           "language": "Russian (from Ancient Greek Chersonesos)",
+          "language_code": "rus",
           "translation": "peninsular shore"
         }
       ],
       "etymology_analysis": "Named in 1778 CE under Catherine the Great's 'Greek Project' after the ancient Crimean colony of Chersonesus (Greek Khersónēsos, 'peninsula').",
-      "current_repo_state": {
-        "b_tarr": "Borysthenes",
-        "b_tarr_direct": "Ingûl",
-        "b_tarr_hist": "Borysthenes",
-        "b_origin": "Borysthenes ( (in-game: Ingul))",
-        "b_anachronism": "Kherson founded 1778. Ancient mouth of the Borysthenes (Dnieper) and Kievan Rus emporium of Oleshye.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kherson",
       "older_name_by_867": {
         "exists": false,
@@ -4452,23 +3893,17 @@
         {
           "form": "Kazan-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Kazan (Icon of the Mother of God)"
         },
         {
           "form": "-ka",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Founded in 1800 CE and named after the Kazan Icon of the Mother of God, a post-867 CE Russian Orthodox devotion.",
-      "current_repo_state": {
-        "b_tarr": "Ingul",
-        "b_tarr_direct": "Ingul",
-        "b_tarr_hist": "Ingul",
-        "b_origin": "Ingul (constituent holding of Borysthenes)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kazanka,_Ukraine",
       "older_name_by_867": {
         "exists": false,
@@ -4503,23 +3938,17 @@
         {
           "form": "vozneseniye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Ascension (of Christ)"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "city suffix"
         }
       ],
       "etymology_analysis": "Imperial Russian toponym from 1795 CE named in honor of the Feast of the Ascension (Vozneseniye), replacing the earlier Cossack settlement of Sokoly.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Voznesensk",
       "older_name_by_867": {
         "exists": false,
@@ -4554,23 +3983,17 @@
         {
           "form": "beri-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "take (imperative)"
         },
         {
           "form": "-slav",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "glory"
         }
       ],
       "etymology_analysis": "Slavicized imperial name ('take glory') bestowed in 1784 CE upon the former Lithuanian customs post (late 14th century CE) and Ottoman fortress of Kazikermen.",
-      "current_repo_state": {
-        "b_tarr": "Nîder-Nieper",
-        "b_tarr_direct": "Nîder-Nieper",
-        "b_tarr_hist": "Nîder-Nieper",
-        "b_origin": "Nîder-Nieper (Nîder-Nieper (in-game: Lower Dniepr))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Nîder-Nieper).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Beryslav",
       "older_name_by_867": {
         "exists": false,
@@ -4605,23 +4028,17 @@
         {
           "form": "Nike",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "victory"
         },
         {
           "form": "polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Classicalizing name ('City of Victory', Greek Nikopolis) given in 1782 CE to the former Zaporozhian Cossack crossing and Sich at Mykytyn Rih.",
-      "current_repo_state": {
-        "b_tarr": "Mîkîtîn-Rîch",
-        "b_tarr_direct": "Mîkîtîn-Rîch",
-        "b_tarr_hist": "Mîkîtîn-Rîch",
-        "b_origin": "Ancient pre-867 Dnieper river crossing / Horn of Mykyta (in-game: Nikopol)",
-        "b_anachronism": "1782 Russian imperial city Nikopol fails Burden of Proof on Antiquity; resolved to ancient Dnieper crossing.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nikopol,_Ukraine",
       "older_name_by_867": {
         "exists": false,
@@ -4656,18 +4073,11 @@
         {
           "form": "Ochakiv",
           "language": "Ukrainian (from Ottoman Turkish Özi / Achi-Kale)",
+          "language_code": "ukr",
           "translation": "adaptation of Tatar/Ottoman fortress name"
         }
       ],
       "etymology_analysis": "East Slavic adaptation of the 15th–16th century CE Crimean Tatar and Ottoman fortress name (Kara-Kerman / Özü / Achi-Kale), built near the ancient Greek colony of Alektor.",
-      "current_repo_state": {
-        "b_tarr": "Hîlêe",
-        "b_tarr_direct": "Swartzburch",
-        "b_tarr_hist": "Hîlêe",
-        "b_origin": "Hîlêe (Olbîe (in-game: Kara-Kerman))",
-        "b_anachronism": "Odessa founded 1794. Ancient classical Greek region of Hylaea and 14th-c. port of Khadjibey.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ochakiv",
       "older_name_by_867": {
         "exists": true,
@@ -4704,23 +4114,17 @@
         {
           "form": "Tyras",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Dniester River"
         },
         {
           "form": "polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Neo-classical compound ('City on the Tyras/Dniester') coined at its 1792 CE Russian foundation.",
-      "current_repo_state": {
-        "b_tarr": "Tyras",
-        "b_tarr_direct": "Tyras",
-        "b_tarr_hist": "Tyras",
-        "b_origin": "Tyras (constituent holding of Hîlêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tiraspol",
       "older_name_by_867": {
         "exists": false,
@@ -4755,18 +4159,11 @@
         {
           "form": "Odessa",
           "language": "Russian (from Ancient Greek Odessos)",
+          "language_code": "rus",
           "translation": "adaptation of classical Pontic city name"
         }
       ],
       "etymology_analysis": "Founded in 1794 CE by Catherine the Great and named after the ancient Greek colony of Odessos (originally Varna, mistakenly placed here in 18th-century antiquarianism).",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Odesa",
       "older_name_by_867": {
         "exists": true,
@@ -4804,18 +4201,11 @@
         {
           "form": "Olbia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "happy, prosperous, blessed"
         }
       ],
       "etymology_analysis": "Ancient Greek colony (Olbia Pontike) founded in the 7th century BCE by Milesian colonists on the Southern Bug (Hypanis) estuary; clearly attested long before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pontic_Olbia",
       "older_name_by_867": {
         "exists": false,
@@ -4850,18 +4240,11 @@
         {
           "form": "Bakhmut",
           "language": "Turkic / Nogai",
+          "language_code": "tur",
           "translation": "stream/river name (possibly from personal name Mahmut or Turkic horse term)"
         }
       ],
       "etymology_analysis": "Named after the Bakhmut (Bakhmutka) River, a tributary of the Seversky Donets; the settlement originated as a 16th-century CE frontier post (1571 CE).",
-      "current_repo_state": {
-        "b_tarr": "Tôr-Salz",
-        "b_tarr_direct": "Tôr-Salz",
-        "b_tarr_hist": "Tôr-Salz",
-        "b_origin": "Tôr-Salz — Historical Option A seat of c_bakhmut",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bakhmut",
       "older_name_by_867": {
         "exists": false,
@@ -4896,18 +4279,11 @@
         {
           "form": "Tor",
           "language": "East Slavic / Turkic",
+          "language_code": "sla",
           "translation": "Tor (Torets) River"
         }
       ],
       "etymology_analysis": "Historical name (until 1784 CE) of Sloviansk, taken from the Tor (Kazennyi Torets) River; the fortress was founded in 1645 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sloviansk",
       "older_name_by_867": {
         "exists": false,
@@ -4942,23 +4318,17 @@
         {
           "form": "volk-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "wolf"
         },
         {
           "form": "-cha",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "adjectival/hydronymic suffix"
         }
       ],
       "etymology_analysis": "East Slavic hydronym ('Wolf River', Ukrainian Vovcha, Russian Volchya), a major tributary of the Samara River; unattested in sources <= 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vovcha",
       "older_name_by_867": {
         "exists": false,
@@ -4993,23 +4363,17 @@
         {
           "form": "loz-",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "vine, willow"
         },
         {
           "form": "-ova",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "adjectival suffix"
         }
       ],
       "etymology_analysis": "Named after the Lozova River (from Ukrainian loza 'willow/vine'); the modern city was founded as a railway station in 1869 CE.",
-      "current_repo_state": {
-        "b_tarr": "Oril",
-        "b_tarr_direct": "Losouwe",
-        "b_tarr_hist": "Oril",
-        "b_origin": "Oril (Aeril (in-game: Lozova))",
-        "b_anachronism": "Lozova founded 1869. Ancient Cuman river corridor of the Oril.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lozova",
       "older_name_by_867": {
         "exists": false,
@@ -5044,23 +4408,17 @@
         {
           "form": "Pokrov-",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "Intercession (of the Theotokos)"
         },
         {
           "form": "-sk",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "city suffix"
         }
       ],
       "etymology_analysis": "Founded in 1875 CE as Grishino railway station and renamed Pokrovsk in 2016 CE after the Orthodox feast of Pokrova (Intercession).",
-      "current_repo_state": {
-        "b_tarr": "Samatkân",
-        "b_tarr_direct": "Samatkân",
-        "b_tarr_hist": "Samatkân",
-        "b_origin": "Ancient pre-867 Samatka stream in the Donets steppe (in-game: Pokrovsk)",
-        "b_anachronism": "1875 railway station Grishino fails Burden of Proof on Antiquity; resolved to ancient Samatka stream.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -5095,18 +4453,11 @@
         {
           "form": "Samar",
           "language": "Turkic / Iranian",
+          "language_code": "tur",
           "translation": "Samara River"
         }
       ],
       "etymology_analysis": "Named after the Samara River (a left tributary of the Dnieper); the Cossack town of Samar is first attested in 1576 CE (renamed Novomoskovsk in 1794 CE, restored to Samar in 2024 CE).",
-      "current_repo_state": {
-        "b_tarr": "Samâr",
-        "b_tarr_direct": "Samâr",
-        "b_tarr_hist": "Samâr",
-        "b_origin": "Samâr (Samâr (in-game: Samar))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Samâr).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samar,_Ukraine",
       "older_name_by_867": {
         "exists": false,
@@ -5141,23 +4492,17 @@
         {
           "form": "Karl-",
           "language": "German",
+          "language_code": "deu",
           "translation": "Karl (personal name)"
         },
         {
           "form": "-ivka",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Ukrainian possessive settlement name formed from the personal name Karl, replacing the 1670s CE Cossack settlement of Orchyk.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Karlivka",
       "older_name_by_867": {
         "exists": false,
@@ -5192,18 +4537,11 @@
         {
           "form": "Khark-",
           "language": "Ukrainian / disputed",
+          "language_code": "ukr",
           "translation": "Kharkiv River (or folk eponym Kharko)"
         }
       ],
       "etymology_analysis": "Variant rendering of Kharkiv (founded 1654 CE), named after the Kharkiv River (though folk tradition links it to a 17th-century CE Cossack named Kharko).",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kharkiv",
       "older_name_by_867": {
         "exists": false,
@@ -5238,28 +4576,23 @@
         {
           "form": "Boho-",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "God"
         },
         {
           "form": "dukh-",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "spirit"
         },
         {
           "form": "-iv",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "Ukrainian Christian toponym meaning 'of the Spirit of God' (Boho-dukh-iv), founded as a Cossack sloboda and fort in 1662 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bohodukhiv",
       "older_name_by_867": {
         "exists": false,
@@ -5294,18 +4627,11 @@
         {
           "form": "Çabaqsar",
           "language": "Turkic (Tatar)",
+          "language_code": "tur",
           "translation": "historical Turkic name of Cheboksary"
         }
       ],
       "etymology_analysis": "First attested in Russian chronicles in 1469 CE, likely adapted from the Turkic name Çabaqsar (local Chuvash name Šupaškar); archaeological predecessor Veda Suvar dates to the 13th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Ziwîl-Wolge",
-        "b_tarr_direct": "Tscheboksâr",
-        "b_tarr_hist": "Ziwîl-Wolge",
-        "b_origin": "Ziwîl-Wolge (Ziwîl-Wolge (in-game: Cheboksary))",
-        "b_anachronism": "Cheboksary first attested in written Russian chronicles in 1469 (though a Volga Bulgarian-Chuvash settlement Šupaškar existed from the late 13th c.).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cheboksary",
       "older_name_by_867": {
         "exists": false,
@@ -5340,18 +4666,11 @@
         {
           "form": "Vărmar",
           "language": "Chuvash",
+          "language_code": "chv",
           "translation": "forest, woodland"
         }
       ],
       "etymology_analysis": "Russian adaptation of Chuvash Vărmar ('forest, woodland', cf. Turkic orman), first attested in 1775 CE as Malyye Urmary.",
-      "current_repo_state": {
-        "b_tarr": "Urmary",
-        "b_tarr_direct": "Urmary",
-        "b_tarr_hist": "Urmary",
-        "b_origin": "Urmary (constituent holding of Ziwîl-Wolge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%80%D0%BC%D0%B0%D1%80%D1%8B",
       "older_name_by_867": {
         "exists": false,
@@ -5386,18 +4705,11 @@
         {
           "form": "Săval / Tsivil",
           "language": "Chuvash / Turkic",
+          "language_code": "chv",
           "translation": "overflow, stream (from Turkic yay- 'spread/flow')"
         }
       ],
       "etymology_analysis": "Named after the Tsivil River (Chuvash Săval, 'stream/overflow'); the Muscovite fortress of Tsivilsk was founded in 1584–1589 CE.",
-      "current_repo_state": {
-        "b_tarr": "Tzyvil",
-        "b_tarr_direct": "Tzyvil",
-        "b_tarr_hist": "Tzyvil",
-        "b_origin": "Tzyvil (constituent holding of Ziwîl-Wolge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D0%B2%D0%B8%D0%BB%D1%8C%D1%81%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -5432,18 +4744,11 @@
         {
           "form": "Alatyr",
           "language": "Turkic or Finno-Ugric",
+          "language_code": "tur",
           "translation": "Alatyr River"
         }
       ],
       "etymology_analysis": "Named after the Alatyr River (a tributary of the Sura); founded as a Russian fortified outpost in 1552 CE on the site of an earlier Mordvin village.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alatyr,_Chuvash_Republic",
       "older_name_by_867": {
         "exists": false,
@@ -5478,23 +4783,17 @@
         {
           "form": "lachyk",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "hut/booth (or lachin 'falcon')"
         },
         {
           "form": "uba",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "kurgan, burial mound, camp"
         }
       ],
       "etymology_analysis": "Turkic compound toponym (lachyk + uba 'mound/camp') in the Mordvinia-Tambov steppe borderland, unattested in sources <= 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Latschîch-Ûbe",
-        "b_tarr_direct": "Latschîch-Ûbe",
-        "b_tarr_hist": "Latschîch-Ûbe",
-        "b_origin": "Latschîch-Ûbe (Lachyk-Uba)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5529,23 +4828,17 @@
         {
           "form": "Morsha",
           "language": "Finno-Ugric / Russian",
+          "language_code": "urj",
           "translation": "village name (possibly from anthroponym Morsha)"
         },
         {
           "form": "-nsk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "city suffix"
         }
       ],
       "etymology_analysis": "Formed in 1779 CE from the earlier village name Morsha (first attested 1623 CE) with the Russian town suffix -nsk.",
-      "current_repo_state": {
-        "b_tarr": "Morchantzich",
-        "b_tarr_direct": "Morchantzich",
-        "b_tarr_hist": "Morchantzich",
-        "b_origin": "Morchantzich (constituent holding of Latschîch-Ûbe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%88%D0%B0%D0%BD%D1%81%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -5580,18 +4873,11 @@
         {
           "form": "Raksha",
           "language": "Finno-Ugric / Russian",
+          "language_code": "urj",
           "translation": "settlement name in Tambov Oblast"
         }
       ],
       "etymology_analysis": "Village of Raksha in Morshansky District, Tambov Oblast, founded in the mid-17th century CE and first documented in 1678 CE.",
-      "current_repo_state": {
-        "b_tarr": "Raksche",
-        "b_tarr_direct": "Raksche",
-        "b_tarr_hist": "Raksche",
-        "b_origin": "Raksche (Rakcha)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%BA%D1%88%D0%B0_(%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -5626,23 +4912,17 @@
         {
           "form": "Shach-",
           "language": "Finno-Ugric",
+          "language_code": "urj",
           "translation": "Shacha River"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "city suffix"
         }
       ],
       "etymology_analysis": "Named after the Shacha River (a pre-Slavic Finno-Ugric hydronym); founded as a Russian defensive fortress in 1553 CE.",
-      "current_repo_state": {
-        "b_tarr": "Chatzk",
-        "b_tarr_direct": "Chatzk",
-        "b_tarr_hist": "Chatzk",
-        "b_origin": "Chatzk (constituent holding of Raksche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%86%D0%BA_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
       "older_name_by_867": {
         "exists": false,
@@ -5677,23 +4957,17 @@
         {
           "form": "Khort-",
           "language": "East Slavic (or Turkic/Iranian)",
+          "language_code": "sla",
           "translation": "possibly Slavic deity Khors or Turkic khort"
         },
         {
           "form": "-ytsia",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "topographic suffix"
         }
       ],
       "etymology_analysis": "Dnieper island first attested as St. George Island c. 950 CE and as Khortitsa in 1103 CE (both post-867 CE); etymology is debated between the Slavic deity Khors and Turkic/Iranian roots.",
-      "current_repo_state": {
-        "b_tarr": "Jîlki-Sû",
-        "b_tarr_direct": "Chortîtze",
-        "b_tarr_hist": "Jîlki-Sû",
-        "b_origin": "Jîlki-Sû (Jîlki-Sû (in-game: Yilki Su (Khortytsia))",
-        "b_anachronism": "Resolved via verified historical center Jîlki-Sû documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khortytsia",
       "older_name_by_867": {
         "exists": false,
@@ -5728,23 +5002,17 @@
         {
           "form": "Maria",
           "language": "Russian / Greek",
+          "language_code": "rus",
           "translation": "Maria (personal name)"
         },
         {
           "form": "-pol",
           "language": "Ancient Greek (πόλις)",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Greek-styled compound 'City of Maria', bestowed in 1779–1780 CE when Crimean Greeks were resettled to the former Zaporozhian Cossack fortress of Domakha at the mouth of the Kalmius River.",
-      "current_repo_state": {
-        "b_tarr": "Kalmjûs",
-        "b_tarr_direct": "Kalmjûs",
-        "b_tarr_hist": "Kalmjûs",
-        "b_origin": "Ancient pre-867 Kalmius River estuary on the Sea of Azov (in-game: South Kalka)",
-        "b_anachronism": "1778 foundation Mariupol / colonial descriptor South Kalka fails Burden of Proof on Antiquity; resolved to ancient Kalmius rivermouth.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mariupol",
       "older_name_by_867": {
         "exists": false,
@@ -5779,23 +5047,17 @@
         {
           "form": "Kutur",
           "language": "Nogai / Turkic",
+          "language_code": "tur",
           "translation": "personal/clan name Kutur"
         },
         {
           "form": "-ogly",
           "language": "Turkic (oğlu)",
+          "language_code": "tur",
           "translation": "son of"
         }
       ],
       "etymology_analysis": "Nogai Tatar settlement name meaning 'son of Kutur', attested in the early 19th century CE before the Russian port of Berdyansk was built there in 1827 CE.",
-      "current_repo_state": {
-        "b_tarr": "Kutur-Ogly",
-        "b_tarr_direct": "Kutur-Ogly",
-        "b_tarr_hist": "Kutur-Ogly",
-        "b_origin": "Kutur-Ogly (constituent holding of Jîlki-Sû)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%91%D0%B5%D1%80%D0%B4%D1%8F%D0%BD%D1%81%D0%BA%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -5830,23 +5092,17 @@
         {
           "form": "Donets",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "little Don (Seversky Donets River)"
         },
         {
           "form": "-k",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the Seversky Donets River ('Little Don'); the city was founded in 1869 CE as Yuzovka (after Welsh industrialist John Hughes) and renamed Donetsk in 1961 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Donetsk",
       "older_name_by_867": {
         "exists": false,
@@ -5881,23 +5137,17 @@
         {
           "form": "ol'kha / olesh-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "alder tree"
         },
         {
           "form": "-ye",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "collective/locative suffix"
         }
       ],
       "etymology_analysis": "From East Slavic *ol'shye ('alder grove'), referring to the forested wetlands of the Lower Dnieper; first attested in the Primary Chronicle under 1084 CE as a Kievan Rus' port.",
-      "current_repo_state": {
-        "b_tarr": "Oleschje",
-        "b_tarr_direct": "Oleschje",
-        "b_tarr_hist": "Oleschje",
-        "b_origin": "Oleschje — Historical Option A seat of c_oleshye",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oleshia",
       "older_name_by_867": {
         "exists": false,
@@ -5932,23 +5182,17 @@
         {
           "form": "Kakhov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Kakhovsky (surname)"
         },
         {
           "form": "-ka",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Named in 1791 CE after Russian governor Vasily Kakhovsky; built on the site of the Crimean Tatar fortress Islam-Kermen (founded 1492 CE, also called Aslan-Gorod in Russian sources).",
-      "current_repo_state": {
-        "b_tarr": "Aslan-Gort",
-        "b_tarr_direct": "Aslan-Gort",
-        "b_tarr_hist": "Aslan-Gort",
-        "b_origin": "Aslan-Gort (constituent holding of Oleschje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kakhovka",
       "older_name_by_867": {
         "exists": false,
@@ -5983,23 +5227,17 @@
         {
           "form": "kyzyl / kyz",
           "language": "Turkic (Nogai)",
+          "language_code": "tur",
           "translation": "red (or maiden)"
         },
         {
           "form": "yar",
           "language": "Turkic (Nogai)",
+          "language_code": "tur",
           "translation": "ravine, steep bank"
         }
       ],
       "etymology_analysis": "Turkic topographic name meaning 'red ravine' (or 'maiden's ravine' in local Nogai legend), referring to the Kiziyar gully in modern Melitopol, settled in the late 18th–19th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Kyzyl Jar",
-        "b_tarr_direct": "Kyzyl Jar",
-        "b_tarr_hist": "Kyzyl Jar",
-        "b_origin": "Kyzyl Jar (constituent holding of Oleschje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%B7%D0%B8%D1%8F%D1%80",
       "older_name_by_867": {
         "exists": false,
@@ -6034,23 +5272,17 @@
         {
           "form": "kozel",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "goat / surname Kozlov"
         },
         {
           "form": "-ov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "Russian possessive toponym derived from *kozel* ('goat') or a local pioneer/tract name Kozlov; founded as a monastery in 1627 CE and fortified town in 1635 CE.",
-      "current_repo_state": {
-        "b_tarr": "Wâlt-Worônesch",
-        "b_tarr_direct": "Koslouwe",
-        "b_tarr_hist": "Wâlt-Worônesch",
-        "b_origin": "Wâlt-Worônesch (Wâlt-Worônesch (in-game: Kozlov))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Michurinsk",
       "older_name_by_867": {
         "exists": false,
@@ -6085,23 +5317,17 @@
         {
           "form": "Oranien",
           "language": "German",
+          "language_code": "deu",
           "translation": "Orange (House of Orange)"
         },
         {
           "form": "-burg",
           "language": "German",
+          "language_code": "deu",
           "translation": "fortress, town"
         }
       ],
       "etymology_analysis": "Transferred in 1702 CE by Peter the Great from the German town of Oranienburg in Brandenburg; later Russianized to Ranenburg and renamed Chaplygin in 1948 CE.",
-      "current_repo_state": {
-        "b_tarr": "Rjâsa",
-        "b_tarr_direct": "Rjâsa",
-        "b_tarr_hist": "Rjâsa",
-        "b_origin": "Ancient pre-867 Stanovaya Ryasa River basin (in-game: Oranienburg)",
-        "b_anachronism": "1638 fortress of Peter the Great fails Burden of Proof on Antiquity; resolved to ancient Ryasa hydronym.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chaplygin,_Lipetsk_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -6136,23 +5362,17 @@
         {
           "form": "sara",
           "language": "Mordvin (Erzya/Moksha)",
+          "language_code": "urj",
           "translation": "sedge marsh, wetland"
         },
         {
           "form": "-n",
           "language": "Mordvin / Russian",
+          "language_code": "urj",
           "translation": "attributive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the Saranka River (Mordvin *sara* 'sedge marsh'); the Russian frontier fort Saransky ostrozhek (modern Saransk) was founded in 1641 CE.",
-      "current_repo_state": {
-        "b_tarr": "Sarân",
-        "b_tarr_direct": "Sarân",
-        "b_tarr_hist": "Sarân",
-        "b_origin": "Sarân (Saran)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Saransk",
       "older_name_by_867": {
         "exists": false,
@@ -6187,23 +5407,17 @@
         {
           "form": "vor / vur",
           "language": "Proto-Finno-Ugric / Permic",
+          "language_code": "urj",
           "translation": "forest"
         },
         {
           "form": "-ona",
           "language": "Finno-Ugric",
+          "language_code": "urj",
           "translation": "hydronymic suffix"
         }
       ],
       "etymology_analysis": "Hydronym of the Vorona River (tributary of the Khopyor), likely from a Finno-Ugric root *vor/*vur ('forest'), folk-etymologized in Russian as *vorona* ('crow').",
-      "current_repo_state": {
-        "b_tarr": "Vorona",
-        "b_tarr_direct": "Vorona",
-        "b_tarr_hist": "Vorona",
-        "b_origin": "Vorona (constituent holding of Sarân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BF%D1%80%D0%B0)",
       "older_name_by_867": {
         "exists": false,
@@ -6238,18 +5452,11 @@
         {
           "form": "Kashma",
           "language": "Finno-Ugric (Mordvin/Meshchera)",
+          "language_code": "urj",
           "translation": "unexplained substrate hydronym"
         }
       ],
       "etymology_analysis": "Substrate hydronym of the Kashma River (right tributary of the Tsna in Tambov Oblast), of pre-Russian Finno-Ugric origin, unattested in written sources before the Russian colonization of the Tsna basin.",
-      "current_repo_state": {
-        "b_tarr": "Kachma",
-        "b_tarr_direct": "Kachma",
-        "b_tarr_hist": "Kachma",
-        "b_origin": "Kachma (constituent holding of Sarân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%88%D0%BC%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -6284,23 +5491,17 @@
         {
           "form": "Serdob-",
           "language": "Substrate (Mordvin/Iranian)",
+          "language_code": "und",
           "translation": "Serdoba River"
         },
         {
           "form": "-sk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "town suffix"
         }
       ],
       "etymology_analysis": "Russian town name formed with *-sk* from the Serdoba River; founded in 1698 CE as a frontier sloboda by Penza border guards.",
-      "current_repo_state": {
-        "b_tarr": "Serdôtzich",
-        "b_tarr_direct": "Serdôtzich",
-        "b_tarr_hist": "Serdôtzich",
-        "b_origin": "Serdôtzich (Serdosk)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Serdobsk",
       "older_name_by_867": {
         "exists": false,
@@ -6335,23 +5536,17 @@
         {
           "form": "Kirsan",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Kirsan (personal name)"
         },
         {
           "form": "-ov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "Possessive settlement name derived from the 17th-century pioneer Kirsan Zubakin; originally Kirsanovo, elevated to town status as Kirsanov in 1779 CE.",
-      "current_repo_state": {
-        "b_tarr": "Vernakuzo",
-        "b_tarr_direct": "Vernakuzo",
-        "b_tarr_hist": "Vernakuzo",
-        "b_origin": "Vernakuzo (constituent holding of Serdôtzich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kirsanov",
       "older_name_by_867": {
         "exists": false,
@@ -6386,23 +5581,17 @@
         {
           "form": "Durov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Durov (surname)"
         },
         {
           "form": "-ka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "village suffix"
         }
       ],
       "etymology_analysis": "Russian estate village name derived from the landowner surname Durov (specifically Maria Durova in Kozlov uyezd, Tambov region).",
-      "current_repo_state": {
-        "b_tarr": "Durôwke",
-        "b_tarr_direct": "Durôwke",
-        "b_tarr_hist": "Durôwke",
-        "b_origin": "Durôwke (Durovka)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%94%D1%83%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -6437,18 +5626,11 @@
         {
           "form": "Kolychev",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Kolychev (noble surname)"
         }
       ],
       "etymology_analysis": "Possessive settlement name from the Russian noble surname Kolychev, reflecting post-medieval Russian gentry landholding in the Tambov-Voronezh frontier.",
-      "current_repo_state": {
-        "b_tarr": "Kolycheuwe",
-        "b_tarr_direct": "Kolycheuwe",
-        "b_tarr_hist": "Kolycheuwe",
-        "b_origin": "Kolycheuwe (constituent holding of Durôwke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6483,23 +5665,17 @@
         {
           "form": "rep-",
           "language": "Russian (репа)",
+          "language_code": "rus",
           "translation": "turnip"
         },
         {
           "form": "-noye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "neuter adjectival suffix"
         }
       ],
       "etymology_analysis": "Russian agricultural toponym meaning 'turnip place', founded in the late 18th century CE in Uvarovsky District, Tambov Oblast.",
-      "current_repo_state": {
-        "b_tarr": "Repnoye",
-        "b_tarr_direct": "Repnoye",
-        "b_tarr_hist": "Repnoye",
-        "b_origin": "Repnoye (constituent holding of Durôwke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D0%BD%D0%BE%D0%B5_(%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -6534,18 +5710,11 @@
         {
           "form": "Matyra",
           "language": "Substrate (Finno-Ugric / Iranian)",
+          "language_code": "und",
           "translation": "river name"
         }
       ],
       "etymology_analysis": "Shortened/variant form of the Matyra River hydronym (a major left tributary of the Voronezh River in Tambov and Lipetsk oblasts), of pre-Slavic substrate origin but unattested in writing prior to the 17th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Mâtje",
-        "b_tarr_direct": "Mâtje",
-        "b_tarr_hist": "Mâtje",
-        "b_origin": "Mâtje (Matya)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%8B%D1%80%D0%B0_(%D1%80%D0%B5%D0%BA%D0%B0)",
       "older_name_by_867": {
         "exists": false,
@@ -6580,23 +5749,17 @@
         {
           "form": "plav",
           "language": "Russian dialectal (плав)",
+          "language_code": "rus",
           "translation": "quagmire, marsh"
         },
         {
           "form": "-itsa",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "hydronymic suffix"
         }
       ],
       "etymology_analysis": "Hydronym of the Plavitsa River (left tributary of the Matyra), from Russian dialectal *plav* ('bog, quagmire'), giving its name to several 17th–19th century CE villages.",
-      "current_repo_state": {
-        "b_tarr": "Plavitza",
-        "b_tarr_direct": "Plavitza",
-        "b_tarr_hist": "Plavitza",
-        "b_origin": "Plavitza (constituent holding of Mâtje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%B2%D0%B8%D1%86%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%9C%D0%B0%D1%82%D1%8B%D1%80%D1%8B)",
       "older_name_by_867": {
         "exists": false,
@@ -6631,18 +5794,11 @@
         {
           "form": "tombale / tombaks",
           "language": "Mordvin (Moksha/Erzya)",
+          "language_code": "urj",
           "translation": "the other side / swampy, whirlpool"
         }
       ],
       "etymology_analysis": "Derived from a pre-Russian Mordvin (Moksha/Erzya) word meaning 'the remote/other side' or 'swampy/deep pool' (referring to the Lesnoy Tambov river), adopted for the 1636 CE Russian fortress.",
-      "current_repo_state": {
-        "b_tarr": "Znedal-Tambouwe",
-        "b_tarr_direct": "Tambouwe",
-        "b_tarr_hist": "Znedal-Tambouwe",
-        "b_origin": "Znedal-Tambouwe (Znedal-Tambouwe (in-game: Tambov))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tambov",
       "older_name_by_867": {
         "exists": false,
@@ -6677,18 +5833,11 @@
         {
           "form": "Szava",
           "language": "Hungarian / Mordvin substrate",
+          "language_code": "hun",
           "translation": "uncertain"
         }
       ],
       "etymology_analysis": "Game-adopted form in the Tambov region, likely reflecting the Savala River (tributary of the Khopyor) or the Shacha River (attested 1627 CE, from Mordvin *shachims* 'fertile').",
-      "current_repo_state": {
-        "b_tarr": "Schava",
-        "b_tarr_direct": "Schava",
-        "b_tarr_hist": "Schava",
-        "b_origin": "Schava (constituent holding of Znedal-Tambouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B2%D0%B0%D0%BB%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -6723,23 +5872,17 @@
         {
           "form": "kuzey",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "north"
         },
         {
           "form": "torg",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "market, trading post"
         }
       ],
       "etymology_analysis": "Modern synthetic hybrid of Turkic *kuzey* ('north') and Slavic *torg* ('market'), created for the game's Lower Don / Azov region with no historical attestation.",
-      "current_repo_state": {
-        "b_tarr": "Kuseîtorch",
-        "b_tarr_direct": "Kuseîtorch",
-        "b_tarr_hist": "Kuseîtorch",
-        "b_origin": "Kuseîtorch (Kuzeyrtorg)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6774,23 +5917,17 @@
         {
           "form": "Ivan",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Ivan (John)"
         },
         {
           "form": "-ovskoye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive neuter settlement suffix"
         }
       ],
       "etymology_analysis": "Standard Russian possessive village name formed from the personal name Ivan (John), characteristic of 18th–19th century CE Russian/Cossack colonization along the Lower Don.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6825,18 +5962,11 @@
         {
           "form": "Tana",
           "language": "Italian (from Greek Tanais)",
+          "language_code": "ita",
           "translation": "Tana (emporium on the Don)"
         }
       ],
       "etymology_analysis": "Medieval Italian (Venetian/Genoese) name for the 14th-century CE trading colony at modern Azov, derived from the ancient Greek name *Tanais* for the Don River and its delta city.",
-      "current_repo_state": {
-        "b_tarr": "Tâne",
-        "b_tarr_direct": "Tâne",
-        "b_tarr_hist": "Tâne",
-        "b_origin": "Tâne (Tana)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tanais",
       "older_name_by_867": {
         "exists": true,
@@ -6873,23 +6003,17 @@
         {
           "form": "tagan",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "tripod, brazier stand"
         },
         {
           "form": "rog",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "horn, cape, promontory"
         }
       ],
       "etymology_analysis": "Compound of Turkic *tagan* ('tripod/brazier stand', referring to a beacon) and Russian *rog* ('cape/promontory'); founded as a Russian naval base in 1698 CE.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taganrog",
       "older_name_by_867": {
         "exists": true,
@@ -6926,28 +6050,23 @@
         {
           "form": "kara",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "black"
         },
         {
           "form": "tau",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "mountain, hill"
         },
         {
           "form": "yak",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "bank, side"
         }
       ],
       "etymology_analysis": "Turkic toponym (*kara-tau-yak*, 'black-mountain bank') for a small Don tributary and bluff, adapted into Russian as *Korotoyak* when the fortress was built in 1647 CE.",
-      "current_repo_state": {
-        "b_tarr": "Karatâjach",
-        "b_tarr_direct": "Karatâjach",
-        "b_tarr_hist": "Karatâjach",
-        "b_origin": "Karatâjach (Karatayak)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D1%82%D0%BE%D1%8F%D0%BA_(%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -6982,23 +6101,17 @@
         {
           "form": "Pavel",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "Paul (St. Paul)"
         },
         {
           "form": "-ovsk",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive town suffix"
         }
       ],
       "etymology_analysis": "Founded in 1709 CE on the Osered River and renamed Pavlovsk in 1711–1715 CE after St. Paul's fortress (whose garrison was transferred there from the Mius).",
-      "current_repo_state": {
-        "b_tarr": "Oseret",
-        "b_tarr_direct": "Oseret",
-        "b_tarr_hist": "Oseret",
-        "b_origin": "Osered River basin (pre-867 hydronym with intervocalic -s- [z] and final devoicing -t, replacing 1709/1711 Pavlovsk) (in-game: Oseret)",
-        "b_anachronism": "Osered fortress founded in 1709 by Peter the Great on the Don, renamed Pavlovsk in 1711. Resolved via Option B to the pre-867 Osered River hydronym (Oseret).",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pavlovsk,_Voronezh_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -7033,23 +6146,17 @@
         {
           "form": "bobr",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "beaver"
         },
         {
           "form": "-ov",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "Russian settlement name derived from *bobr* ('beaver'), founded in 1698 CE on the Bityug River as Bobrovskaya Sloboda and renamed Bobrov in 1779 CE.",
-      "current_repo_state": {
-        "b_tarr": "Babrouwe",
-        "b_tarr_direct": "Babrouwe",
-        "b_tarr_hist": "Babrouwe",
-        "b_origin": "Babrouwe (constituent holding of Karatâjach)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bobrov,_Bobrovsky_District,_Voronezh_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -7084,18 +6191,11 @@
         {
           "form": "xurs",
           "language": "Alanic / Ossetian",
+          "language_code": "oss",
           "translation": "sun"
         }
       ],
       "etymology_analysis": "Unattested Alanic/Ossetian-inspired toponym (cf. Ossetian *xurs* 'sun') placed in the medieval Alanic-Slavic Saltovo-Mayaki zone of the Don basin.",
-      "current_repo_state": {
-        "b_tarr": "Chûrse",
-        "b_tarr_direct": "Chûrse",
-        "b_tarr_hist": "Chûrse",
-        "b_origin": "Chûrse (Khursa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7130,23 +6230,17 @@
         {
           "form": "xorz",
           "language": "Alanic / Ossetian",
+          "language_code": "oss",
           "translation": "good"
         },
         {
           "form": "don",
           "language": "Alanic / Ossetian",
+          "language_code": "oss",
           "translation": "river, water"
         }
       ],
       "etymology_analysis": "Unattested Alanic/Ossetian-inspired compound (cf. Ossetian *xorz* 'good' + *don* 'river') placed in the Don basin.",
-      "current_repo_state": {
-        "b_tarr": "Khorysdan",
-        "b_tarr_direct": "Khorysdan",
-        "b_tarr_hist": "Khorysdan",
-        "b_origin": "Khorysdan (constituent holding of Chûrse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7181,18 +6275,11 @@
         {
           "form": "Oskol",
           "language": "Substrate (Turkic / Iranian)",
+          "language_code": "und",
           "translation": "Oskol River"
         }
       ],
       "etymology_analysis": "Named directly after the Oskol River; first attested in the Ipatiev Chronicle under 1185 CE and refounded as a Russian fortress in 1593 CE (now Stary Oskol).",
-      "current_repo_state": {
-        "b_tarr": "Oskôl",
-        "b_tarr_direct": "Oskôl",
-        "b_tarr_hist": "Oskôl",
-        "b_origin": "Oskôl (Oskol)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Stary_Oskol",
       "older_name_by_867": {
         "exists": false,
@@ -7227,23 +6314,17 @@
         {
           "form": "chally",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "stony / brushwood / meadow"
         },
         {
           "form": "kala",
           "language": "Turkic (from Arabic qal'a)",
+          "language_code": "tur",
           "translation": "fortress"
         }
       ],
       "etymology_analysis": "Turkic-styled fortress name ('Chally Fortress') without pre-867 CE historical attestation in the Oskol basin.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7278,23 +6359,17 @@
         {
           "form": "voron-",
           "language": "East Slavic (ворон / вороной)",
+          "language_code": "sla",
           "translation": "raven / black"
         },
         {
           "form": "-ezh",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "hydronymic/possessive suffix"
         }
       ],
       "etymology_analysis": "Named after the Voronezh River (probably from Slavic *voron* 'raven/black' or a Finno-Ugric substrate); first attested in chronicles under 1177 CE, with a modern fortress built in 1586 CE.",
-      "current_repo_state": {
-        "b_tarr": "Worônesch",
-        "b_tarr_direct": "Worônesch",
-        "b_tarr_hist": "Worônesch",
-        "b_origin": "Worônesch (Voronež (in-game: Voronezh))",
-        "b_anachronism": "Voronezh river is attested in 1177 chronicle; 9th-c. Borshevo Slavic gords lined the banks. Russian fortress founded 1586.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Voronezh",
       "older_name_by_867": {
         "exists": false,
@@ -7329,18 +6404,11 @@
         {
           "form": "Usman",
           "language": "Substrate (Iranian/Turkic)",
+          "language_code": "und",
           "translation": "Usman River"
         }
       ],
       "etymology_analysis": "Named directly after the Usman River (likely of Iranian or Turkic substrate origin); the Russian fortress was founded in 1645 CE and granted town status in 1779 CE.",
-      "current_repo_state": {
-        "b_tarr": "Usman",
-        "b_tarr_direct": "Usman",
-        "b_tarr_hist": "Usman",
-        "b_origin": "Usman (constituent holding of Worônesch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Usman,_Russia",
       "older_name_by_867": {
         "exists": false,
@@ -7375,23 +6443,17 @@
         {
           "form": "lipa",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "linden tree"
         },
         {
           "form": "-etsk",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "From East Slavic *lipa* ('linden tree'), meaning 'Linden town'; a medieval predecessor was destroyed in 1284 CE and the modern city was founded in 1703 CE.",
-      "current_repo_state": {
-        "b_tarr": "Lipettzich",
-        "b_tarr_direct": "Lipettzich",
-        "b_tarr_hist": "Lipettzich",
-        "b_origin": "Lipettzich (constituent holding of Worônesch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lipetsk",
       "older_name_by_867": {
         "exists": false,
@@ -7426,18 +6488,11 @@
         {
           "form": "Dnipro",
           "language": "Ukrainian (from Scythian/Sarmatian *Dānu apara)",
+          "language_code": "ukr",
           "translation": "Dnieper River"
         }
       ],
       "etymology_analysis": "Named after the Dnieper (Dnipro) River in 2016 CE; the modern city was founded as Yekaterinoslav in 1787 CE on the site of earlier 16th–17th century CE Cossack settlements.",
-      "current_repo_state": {
-        "b_tarr": "Nieper-Furt",
-        "b_tarr_direct": "Bûri-Tschai",
-        "b_tarr_hist": "Nieper-Furt",
-        "b_origin": "Nieper-Furt (Nieper-Furt (in-game: Buri-chai))",
-        "b_anachronism": "Resolved via verified historical center Nieper-Furt documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dnipro",
       "older_name_by_867": {
         "exists": false,
@@ -7472,18 +6527,11 @@
         {
           "form": "Salmacatce",
           "language": "Uncertain",
+          "language_code": "und",
           "translation": "unidentified"
         }
       ],
       "etymology_analysis": "Unattested toponym placed in the Lower Dnieper (Dnipro) county in-game with no verified pre-867 CE attestation.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7518,23 +6566,17 @@
         {
           "form": "Lada / Ladyga",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "personal name or deity/substrate"
         },
         {
           "form": "-yn",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "East Slavic possessive settlement name on the Southern Bug, first documented in the 13th–14th centuries CE (1240/1363 CE).",
-      "current_repo_state": {
-        "b_tarr": "Hîpanis",
-        "b_tarr_direct": "Ladîschin",
-        "b_tarr_hist": "Hîpanis",
-        "b_origin": "Hîpanis (Sût-Bôch (in-game: Ladyzyn))",
-        "b_anachronism": "Ladyzhyn attested 1240. Ancient river Hypanis (Southern Bug).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ladyzhyn",
       "older_name_by_867": {
         "exists": false,
@@ -7569,18 +6611,11 @@
         {
           "form": "Bârzula",
           "language": "Romanian / Moldovan",
+          "language_code": "ron",
           "translation": "from Bârzu (personal name/toponym)"
         }
       ],
       "etymology_analysis": "Romanian/Moldovan settlement name (Bârzula) first attested in Ottoman records in 1772 CE; renamed Kotovsk in 1935 CE and Podilsk in 2016 CE.",
-      "current_repo_state": {
-        "b_tarr": "Jahorlîch",
-        "b_tarr_direct": "Jahorlîch",
-        "b_tarr_hist": "Jahorlîch",
-        "b_origin": "Ancient pre-867 Yagorlyk River basin (in-game: Birzula)",
-        "b_anachronism": "18th-century settlement Birzula fails Burden of Proof on Antiquity; resolved to ancient Yagorlyk hydronym.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Podilsk",
       "older_name_by_867": {
         "exists": false,
@@ -7615,23 +6650,17 @@
         {
           "form": "Lyubash",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "Lyubash (personal name, from *lyub-* 'love')"
         },
         {
           "form": "-ivka",
           "language": "Ukrainian",
+          "language_code": "ukr",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Ukrainian settlement name formed with *-ivka* from the personal name Lyubash/Lyubasha, founded in the 18th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Chychykliya",
-        "b_tarr_direct": "Chychykliya",
-        "b_tarr_hist": "Chychykliya",
-        "b_origin": "Chychykliya (constituent holding of Hîpanis)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Liubashivka",
       "older_name_by_867": {
         "exists": false,
@@ -7666,18 +6695,11 @@
         {
           "form": "yar-y",
           "language": "Ukrainian (яри)",
+          "language_code": "ukr",
           "translation": "ravines, gullies (plural)"
         }
       ],
       "etymology_analysis": "Ukrainian plural topographic term *yary* ('ravines, gullies', borrowed from Turkic *yar*), used for a small khutor in the Uman area.",
-      "current_repo_state": {
-        "b_tarr": "Jatran",
-        "b_tarr_direct": "Umân",
-        "b_tarr_hist": "Jatran",
-        "b_origin": "Jatran (Jatran (in-game: Uman))",
-        "b_anachronism": "Uman attested 1616. Ancient steppe river reach of the Yatran.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
       "older_name_by_867": {
         "exists": false,
@@ -7712,18 +6734,11 @@
         {
           "form": "buk-y",
           "language": "Ukrainian (буки)",
+          "language_code": "ukr",
           "translation": "beech trees (plural)"
         }
       ],
       "etymology_analysis": "Ukrainian plural noun *buky* ('beech trees'), referring to beech groves along the Hirskyi Tikych River; attested since the late 16th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Buky",
-        "b_tarr_direct": "Buky",
-        "b_tarr_hist": "Buky",
-        "b_origin": "Buky (constituent holding of Jatran)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D1%83%D0%BA%D0%B8_(%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -7758,18 +6773,11 @@
         {
           "form": "Uman",
           "language": "Uncertain (Turkic / Slavic)",
+          "language_code": "und",
           "translation": "Umanka River"
         }
       ],
       "etymology_analysis": "Named after the Umanka River; first attested in historical documents in 1616 CE as a Polish-Lithuanian border fort against Tatar raids.",
-      "current_repo_state": {
-        "b_tarr": "Umân",
-        "b_tarr_direct": "Umân",
-        "b_tarr_hist": "Jatran",
-        "b_origin": "Umân — Disambiguated capital seat from sub-barony Jatran",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uman",
       "older_name_by_867": {
         "exists": false,
@@ -7804,23 +6812,17 @@
         {
           "form": "at",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "horse"
         },
         {
           "form": "bazar",
           "language": "Kazakh (from Persian bāzār)",
+          "language_code": "kaz",
           "translation": "market, bazaar"
         }
       ],
       "etymology_analysis": "Derived from Kazakh at ('horse') + bazar ('market'), referring to the site's early role as a steppe horse-trading fairground.",
-      "current_repo_state": {
-        "b_tarr": "Atbasar",
-        "b_tarr_direct": "Atbasar",
-        "b_tarr_hist": "Atbasar",
-        "b_origin": "Atbasar (Atbasar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Atbasar",
       "older_name_by_867": {
         "exists": false,
@@ -7855,18 +6857,11 @@
         {
           "form": "Qorğaljyn",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "marshy lake / steppe basin (exact Turkic root debated)"
         }
       ],
       "etymology_analysis": "Represents a historical/Russianized spelling (Chargaldzin / Kurgaldzhin) of Kazakh Qorğaljyn, the name of Lake Korgalzhyn and the surrounding depression in Akmola Region.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Korgalzhyn_(lake)",
       "older_name_by_867": {
         "exists": false,
@@ -7901,23 +6896,17 @@
         {
           "form": "jalğyz",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "lone, solitary"
         },
         {
           "form": "tau",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "From Kazakh jalğyz ('lone, solitary') + tau ('mountain'), referring to the isolated peak and adjacent lake Zhaksy-Zhalgyztau in North Kazakhstan / Akmola.",
-      "current_repo_state": {
-        "b_tarr": "Dschangîstouwe",
-        "b_tarr_direct": "Dschangîstouwe",
-        "b_tarr_hist": "Dschangîstouwe",
-        "b_origin": "Dschangîstouwe (Jangyztau)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zhaksy-Zhalgyztau_(lake)",
       "older_name_by_867": {
         "exists": false,
@@ -7952,23 +6941,17 @@
         {
           "form": "bor / bur",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "chalk, muddy sediment"
         },
         {
           "form": "-lyq / -luk",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "place characterized by"
         }
       ],
       "etymology_analysis": "Turkic compound hydronym from bor/bur ('chalk/muddy sediment') + suffix -lyq/-luk, meaning 'muddy water / chalky sediment', applied to tributaries of the Ishim River.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D1%83%D1%80%D0%BB%D1%83%D0%BA",
       "older_name_by_867": {
         "exists": false,
@@ -8001,14 +6984,6 @@
       },
       "morphemes": [],
       "etymology_analysis": "No verified local settlement or historical toponym 'Kafa' exists in the Kokshetau/Akmola region; likely a cartographic or game-data corruption (possibly of Kazakh Qopa, 'reed-filled lake', the lake beside Kokshetau).",
-      "current_repo_state": {
-        "b_tarr": "Kafe",
-        "b_tarr_direct": "Kafe",
-        "b_tarr_hist": "Kafe",
-        "b_origin": "Kafe (Kafa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8043,23 +7018,17 @@
         {
           "form": "kökşe",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "bluish, sky-colored"
         },
         {
           "form": "tau",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Russianized form (Kokchetav) of Kazakh Kökşetau ('bluish/smoky-blue mountain'), named after Mount Kokshe in the Kokshetau Uplands.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kokshetau",
       "older_name_by_867": {
         "exists": false,
@@ -8094,23 +7063,17 @@
         {
           "form": "qos",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "pair, twin / camp"
         },
         {
           "form": "tanai",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "uncertain (possibly tribal or personal name)"
         }
       ],
       "etymology_analysis": "From Kazakh Qostanai (Russianized as Kustanay until 1997 CE). Its exact root is debated between a compound with qos ('twin/pair') and a local personal/tribal name.",
-      "current_repo_state": {
-        "b_tarr": "Kostanay",
-        "b_tarr_direct": "Kostanay",
-        "b_tarr_hist": "Kostanay",
-        "b_origin": "Kostanay (Kostanay)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kostanay",
       "older_name_by_867": {
         "exists": false,
@@ -8145,18 +7108,11 @@
         {
           "form": "or",
           "language": "Turkic (Kazakh/Bashkir)",
+          "language_code": "tur",
           "translation": "ditch, trench, moat"
         }
       ],
       "etymology_analysis": "Derived from the Turkic hydronym Or (Kazakh Or, Bashkir Ur/Ür, meaning 'ditch, trench, channel'), a left tributary of the Ural River rising in the Mugodzhar Hills.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9E%D1%80%D1%8C",
       "older_name_by_867": {
         "exists": false,
@@ -8191,18 +7147,11 @@
         {
           "form": "kurgan",
           "language": "Russian (from Turkic qorğan)",
+          "language_code": "rus",
           "translation": "burial mound, tumulus, fortification"
         }
       ],
       "etymology_analysis": "Named after a large ancient artificial burial mound (kurgan, from Turkic qorğan) located near the original 17th-century CE Russian frontier settlement of Tsaryovo Gorodishche.",
-      "current_repo_state": {
-        "b_tarr": "Kurgan",
-        "b_tarr_direct": "Kurgan",
-        "b_tarr_hist": "Kurgan",
-        "b_origin": "Kurgan (Kurgan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kurgan,_Kurgan_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -8237,23 +7186,17 @@
         {
           "form": "Ukav-",
           "language": "Russian / Turkic substrate",
+          "language_code": "rus",
           "translation": "uncertain stem"
         },
         {
           "form": "-skaya",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "feminine adjectival settlement suffix"
         }
       ],
       "etymology_analysis": "Bears the Russian feminine adjectival suffix -skaya typical of 18th–19th-century CE Siberian/Trans-Ural settlements, though no verified historical settlement named Ukavskaya is documented.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8288,23 +7231,17 @@
         {
           "form": "baklan",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "cormorant (via the Baklanka River)"
         },
         {
           "form": "-skoye / -sky",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "adjectival settlement suffix"
         }
       ],
       "etymology_analysis": "Russian adjectival settlement name derived from the Baklanka River (at its confluence with the Miass River), from Russian baklan ('cormorant').",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BA%D0%BB%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
       "older_name_by_867": {
         "exists": false,
@@ -8339,23 +7276,17 @@
         {
           "form": "saba / sabak",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "leather vessel / perch (fish) or reed"
         },
         {
           "form": "kül / köl",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Turkic hydronym ending in kül/köl ('lake'), with the first element likely Turkic saba ('leather skin/vessel') or a dialectal fish/plant term.",
-      "current_repo_state": {
-        "b_tarr": "Sabakkul",
-        "b_tarr_direct": "Sabakkul",
-        "b_tarr_hist": "Sabakkul",
-        "b_origin": "Sabakkul (Sabakyul)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8390,23 +7321,17 @@
         {
           "form": "Tobol",
           "language": "Turkic (Kazakh Tobyl)",
+          "language_code": "tur",
           "translation": "meadowsweet (spiraea) / river name"
         },
         {
           "form": "bis",
           "language": "Latin / Turkic",
+          "language_code": "lat",
           "translation": "twice / second (or Kazakh bes, 'five')"
         }
       ],
       "etymology_analysis": "Derived from the Tobol River (Kazakh Tobyl, traditionally linked to Turkic tobulğu, 'meadowsweet') with the qualifier bis ('second' or 'five').",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tobolsk",
       "older_name_by_867": {
         "exists": false,
@@ -8441,18 +7366,11 @@
         {
           "form": "Obağan / Ubagan",
           "language": "Turkic (Kazakh)",
+          "language_code": "tur",
           "translation": "river name (linked to oba 'mound' or Kazakh folklore 'Übbe', water spirit)"
         }
       ],
       "etymology_analysis": "Variant of Kazakh Obağan (Russianized as Ubagan/Abugan), a 376-km right tributary of the Tobol flowing through Lake Kushmurun.",
-      "current_repo_state": {
-        "b_tarr": "Abugan",
-        "b_tarr_direct": "Abugan",
-        "b_tarr_hist": "Abugan",
-        "b_origin": "Abugan (Abugan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ubagan",
       "older_name_by_867": {
         "exists": false,
@@ -8485,14 +7403,6 @@
       },
       "morphemes": [],
       "etymology_analysis": "No verified historical or linguistic attestation; likely a transcription error or garbled map label.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8527,23 +7437,17 @@
         {
           "form": "qara",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "black, dark (or spring-fed)"
         },
         {
           "form": "su",
           "language": "Kazakh / Turkic",
+          "language_code": "kaz",
           "translation": "water, river"
         }
       ],
       "etymology_analysis": "Common Turkic hydronym from qara ('black') + su ('water'), denoting slow-moving, dark, or spring-fed steppe streams.",
-      "current_repo_state": {
-        "b_tarr": "Karasu",
-        "b_tarr_direct": "Karasu",
-        "b_tarr_hist": "Karasu",
-        "b_origin": "Karasu (Karasu)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B0%D1%81%D1%83_(%D0%9A%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -8578,18 +7482,11 @@
         {
           "form": "qaq",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "rainwater puddle, shallow steppe salt lake"
         }
       ],
       "etymology_analysis": "From Kazakh qaq ('shallow steppe basin/salt lake collecting meltwater'), referring to Lake Kak in North Kazakhstan.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://relocarta.ru/places/ozero-kak",
       "older_name_by_867": {
         "exists": false,
@@ -8624,23 +7521,17 @@
         {
           "form": "qus",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "bird (or archaic qūş/qos, 'pair/twin')"
         },
         {
           "form": "mūryn",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "beak, nose, promontory/peninsula"
         }
       ],
       "etymology_analysis": "Kazakh Qūsmūryn (Russianized Kushmurun), literally 'bird's beak' (or 'twin promontory'), referring to the elongated lake and its protruding peninsulas in Kostanay Region.",
-      "current_repo_state": {
-        "b_tarr": "Kusch-Murun",
-        "b_tarr_direct": "Kusch-Murun",
-        "b_tarr_hist": "Kusch-Murun",
-        "b_origin": "Kusch-Murun (Kush-Murun)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kushmurun",
       "older_name_by_867": {
         "exists": false,
@@ -8675,23 +7566,17 @@
         {
           "form": "äulie",
           "language": "Kazakh (from Arabic awliyāʾ)",
+          "language_code": "kaz",
           "translation": "holy, saintly"
         },
         {
           "form": "köl",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "From Kazakh äulie ('holy', borrowed from Arabic awliyāʾ) + köl ('lake'), meaning 'Holy Lake', named after the nearby Lake Auliekol.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%90%D1%83%D0%BB%D0%B8%D0%B5%D0%BA%D0%BE%D0%BB%D1%8C",
       "older_name_by_867": {
         "exists": false,
@@ -8726,23 +7611,17 @@
         {
           "form": "qamyşly",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "reedy, full of reeds"
         },
         {
           "form": "kül / köl",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Turkic hydronym from qamyşly ('reedy', from qamyş 'reed') + kül/köl ('lake'), meaning 'reedy lake'.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8777,23 +7656,17 @@
         {
           "form": "jeti",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "seven"
         },
         {
           "form": "köl / qara",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "lake / black hill"
         }
       ],
       "etymology_analysis": "From Kazakh jeti ('seven') + köl ('lake') or qara ('black'), rendered in Russian/German cartography as Jitikul / Dschetiköl / Dzhetygara (modern Zhitikara).",
-      "current_repo_state": {
-        "b_tarr": "Dschetiköl",
-        "b_tarr_direct": "Dschetiköl",
-        "b_tarr_hist": "Dschetiköl",
-        "b_origin": "Dschetiköl (Dschetiköl (in-game: Jitikul))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dschetiköl).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%96%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%D1%80%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -8828,23 +7701,17 @@
         {
           "form": "Danten-",
           "language": "Turkic (Kazakh)",
+          "language_code": "tur",
           "translation": "uncertain local stem"
         },
         {
           "form": "kul / köl",
           "language": "Turkic (Kazakh)",
+          "language_code": "tur",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Turkic hydronym containing the element kul/köl ('lake') with an obscure first element Danten-.",
-      "current_repo_state": {
-        "b_tarr": "Dantenkul",
-        "b_tarr_direct": "Dantenkul",
-        "b_tarr_hist": "Dantenkul",
-        "b_origin": "Dantenkul (constituent holding of Dschetiköl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8879,23 +7746,17 @@
         {
           "form": "qos",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "pair, twin"
         },
         {
           "form": "oba",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "mound, hill, barrow"
         }
       ],
       "etymology_analysis": "From Kazakh qos ('pair, twin') + oba ('mound, hill'), a common steppe toponym referring to twin hills or mounds.",
-      "current_repo_state": {
-        "b_tarr": "Kos Ube",
-        "b_tarr_direct": "Kos Ube",
-        "b_tarr_hist": "Kos Ube",
-        "b_origin": "Kos Ube (Kos Ube (in-game: Kos Uba))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kos Ube).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://www.mindat.org/feature-609221.html",
       "older_name_by_867": {
         "exists": false,
@@ -8930,18 +7791,11 @@
         {
           "form": "airyq",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "fork, branch, mountain pass/gorge"
         }
       ],
       "etymology_analysis": "From Kazakh airyq ('fork, branching valley, mountain pass'), naming Mount Airyk in the Mugodzhar Hills and nearby localities in Aktobe Region.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://silkadv.com/en/content/mugodzhary-mountains",
       "older_name_by_867": {
         "exists": false,
@@ -8976,23 +7830,17 @@
         {
           "form": "qos",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "pair, twin"
         },
         {
           "form": "biryuk / börük",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "wolf / cap / solitary"
         }
       ],
       "etymology_analysis": "Turkic/Kazakh compound with qos ('pair, twin') and biryuk/börük (possibly 'wolf' or a Russianized form of a Kazakh stem).",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -9027,23 +7875,17 @@
         {
           "form": "qoshqar",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "ram"
         },
         {
           "form": "bai",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "rich man, noble"
         }
       ],
       "etymology_analysis": "Likely a transcription of Kazakh Qoshqarbai (qoshqar 'ram' + bai 'rich/noble'), a traditional Kazakh personal or clan-associated toponym.",
-      "current_repo_state": {
-        "b_tarr": "Kosch Kurbay",
-        "b_tarr_direct": "Kosch Kurbay",
-        "b_tarr_hist": "Kosch Kurbay",
-        "b_origin": "Kosch Kurbay (Kosh Kurbay)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -9078,23 +7920,17 @@
         {
           "form": "jarly",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "steep-banked, ravined"
         },
         {
           "form": "būtaq",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "branch, stream tributary"
         }
       ],
       "etymology_analysis": "From Kazakh jarly ('having steep banks/cliffs') + būtaq ('branch, tributary stream'), a descriptive hydronym in western Kazakhstan.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -9129,23 +7965,17 @@
         {
           "form": "qara",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "black, dark"
         },
         {
           "form": "būtaq",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "branch, tributary stream"
         }
       ],
       "etymology_analysis": "From Kazakh Qarabūtaq (qara 'black' + būtaq 'branch/tributary'), named after the Karabutak River in Aktobe Region.",
-      "current_repo_state": {
-        "b_tarr": "Mugaldschar-Berch",
-        "b_tarr_direct": "Mugaldschar-Berch",
-        "b_tarr_hist": "Mugaldschar-Berch",
-        "b_origin": "Ancient Turkic Mugalzhar mountain range in western Kazakhstan (in-game: Mugodschar Hills)",
-        "b_anachronism": "Colonial English descriptor Mugodschar Hills fails Burden of Proof on Antiquity; standardized to Mugaldschar-Berch.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Siege_of_Ak-Mechet",
       "older_name_by_867": {
         "exists": false,
@@ -9180,23 +8010,17 @@
         {
           "form": "qūm",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "sand"
         },
         {
           "form": "sai",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "ravine, gully, dry riverbed"
         }
       ],
       "etymology_analysis": "From Kazakh Qūmsai (qūm 'sand' + sai 'ravine/gully'), literally 'sandy ravine'.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://www.researchgate.net/publication/363663631_The_historically_abundant_Great_Bustard_Otis_tarda_tarda_is_almost_extirpated_from_western_Kazakhstan",
       "older_name_by_867": {
         "exists": false,
@@ -9231,23 +8055,17 @@
         {
           "form": "chir / sher",
           "language": "Turkic / Persian",
+          "language_code": "tur",
           "translation": "lion / lamp / cliff (uncertain)"
         },
         {
           "form": "qala",
           "language": "Kazakh (from Arabic qalʿa)",
+          "language_code": "kaz",
           "translation": "fortress, town"
         }
       ],
       "etymology_analysis": "Contains the Turkic/Arabic element qala ('fortress, town') preceded by an uncertain modifier chir/sher.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -9282,23 +8100,17 @@
         {
           "form": "jeti",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "seven"
         },
         {
           "form": "köl",
           "language": "Kazakh",
+          "language_code": "kaz",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "From Kazakh Jeti-köl (jeti 'seven' + köl 'lake'), meaning 'Seven Lakes'.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%96%D0%B5%D1%82%D1%8B%D0%BA%D0%BE%D0%BB%D1%8C",
       "older_name_by_867": {
         "exists": false,
@@ -9333,23 +8145,17 @@
         {
           "form": "Petro-",
           "language": "Russian (from Greek Petros)",
+          "language_code": "rus",
           "translation": "Peter"
         },
         {
           "form": "-pavl / -pavlovsk",
           "language": "Russian (from Latin Paulus)",
+          "language_code": "rus",
           "translation": "Paul"
         }
       ],
       "etymology_analysis": "Kazakh form Petropavl of Russian Petropavlovsk, named after Saints Peter and Paul from the 1752 CE Russian fortress; locally also known in Kazakh as Qyzyljar ('red cliff').",
-      "current_repo_state": {
-        "b_tarr": "Kyzyldschar",
-        "b_tarr_direct": "Kyzyldschar",
-        "b_tarr_hist": "Kyzyldschar",
-        "b_origin": "Kyzyldschar (Kyzylzhar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Petropavl",
       "older_name_by_867": {
         "exists": false,
@@ -9384,23 +8190,17 @@
         {
           "form": "uk / aq",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "arrow / white (uncertain)"
         },
         {
           "form": "tuz",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "salt"
         }
       ],
       "etymology_analysis": "Russian village name derived from the nearby Uktuz lakes, incorporating Turkic tuz ('salt') with an uncertain first element uk-/aq-.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D0%BA%D1%82%D1%83%D0%B7",
       "older_name_by_867": {
         "exists": false,
@@ -9435,23 +8235,17 @@
         {
           "form": "Mamlyut / Mavlyut",
           "language": "Tatar / Kazakh (from Arabic Mawlūd)",
+          "language_code": "tat",
           "translation": "personal name Mavlyut"
         },
         {
           "form": "-ka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "diminutive/settlement suffix"
         }
       ],
       "etymology_analysis": "Derived from the personal name of its 1786 CE founder, Mavlyut, adapted in Russian with the suffix -ka as Mamlyutka (Kazakh: Mämlüt).",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mamlyut",
       "older_name_by_867": {
         "exists": false,
@@ -9486,18 +8280,11 @@
         {
           "form": "Vargashi",
           "language": "Russian / Turkic substrate",
+          "language_code": "rus",
           "translation": "local village/surname toponym"
         }
       ],
       "etymology_analysis": "Named after the nearby Trans-Ural village of Vargashi when the Trans-Siberian Railway station opened in 1896 CE.",
-      "current_repo_state": {
-        "b_tarr": "Wargaschi",
-        "b_tarr_direct": "Wargaschi",
-        "b_tarr_hist": "Wargaschi",
-        "b_origin": "Wargaschi (Vargashi)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vargashi_(urban-type_settlement)",
       "older_name_by_867": {
         "exists": false,
@@ -9532,23 +8319,17 @@
         {
           "form": "most",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "bridge"
         },
         {
           "form": "-ovskoye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "neuter adjectival settlement suffix"
         }
       ],
       "etymology_analysis": "Russian adjectival name from most ('bridge') + -ovskoye, adopted in 1958 CE in place of its earlier name Marayskoye.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%92%D0%B0%D1%80%D0%B3%D0%B0%D1%88%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
       "older_name_by_867": {
         "exists": false,
@@ -9583,23 +8364,17 @@
         {
           "form": "shchuka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "pike (fish)"
         },
         {
           "form": "-ye",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "neuter possessive/adjectival suffix"
         }
       ],
       "etymology_analysis": "Russian hydronymic settlement name from shchuka ('pike'), meaning 'Pike [Lake]', after adjacent Lake Shchuchye.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shchuchye,_Shchuchansky_District,_Kurgan_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -9634,23 +8409,17 @@
         {
           "form": "hajji",
           "language": "Arabic / Turkic",
+          "language_code": "ara",
           "translation": "pilgrim to Mecca"
         },
         {
           "form": "tarkhan",
           "language": "Mongol / Turkic",
+          "language_code": "tur",
           "translation": "tax-exempt noble"
         }
       ],
       "etymology_analysis": "Russian adaptation of Golden Horde Hajji Tarkhan (attested 1333 CE by Ibn Battuta), located 12 km from modern Astrakhan (founded 1558 CE).",
-      "current_repo_state": {
-        "b_tarr": "Atîl-Chasarân",
-        "b_tarr_direct": "Atîl-Chasarân",
-        "b_tarr_hist": "Atîl-Chasarân",
-        "b_origin": "Atîl-Chasarân — Historical Option A seat of c_astrakhan",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Astrakhan",
       "older_name_by_867": {
         "exists": true,
@@ -9688,18 +8457,11 @@
         {
           "form": "sara / sarai",
           "language": "Mongolian / Persian-Turkic",
+          "language_code": "mon",
           "translation": "palace, court (or yellow)"
         }
       ],
       "etymology_analysis": "Shortened or variant form of Sarai (from Persian sarāy 'palace, court'), the 13th-century CE Golden Horde capital on the Akhtuba/Lower Volga; unattested on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Sara",
-        "b_tarr_direct": "Sara",
-        "b_tarr_hist": "Sara",
-        "b_origin": "Sara (constituent holding of Atîl-Chasarân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sarai_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -9734,23 +8496,17 @@
         {
           "form": "khazar",
           "language": "Turkic / Persian-Arabic",
+          "language_code": "tur",
           "translation": "Khazar"
         },
         {
           "form": "-an",
           "language": "Persian",
+          "language_code": "fas",
           "translation": "plural/locative suffix ('city/land of the Khazars')"
         }
       ],
       "etymology_analysis": "Persian/Arabic plural-locative formation Khazaran ('[city of] the Khazars'), denoting the commercial half of the Khazar capital Atil in the Volga Delta.",
-      "current_repo_state": {
-        "b_tarr": "Khazaran",
-        "b_tarr_direct": "Khazaran",
-        "b_tarr_hist": "Khazaran",
-        "b_origin": "Khazaran (constituent holding of Atîl-Chasarân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/List_of_Khazar_cities",
       "older_name_by_867": {
         "exists": false,
@@ -9785,23 +8541,17 @@
         {
           "form": "bek",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "lord, chieftain"
         },
         {
           "form": "sima",
           "language": "uncertain",
+          "language_code": "und",
           "translation": "uncertain"
         }
       ],
       "etymology_analysis": "Likely a Turkic compound incorporating bek ('lord, chieftain'), used for a Lower Volga holding; no historical attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Beksîme",
-        "b_tarr_direct": "Beksîme",
-        "b_tarr_hist": "Beksîme",
-        "b_origin": "Beksîme (Beksima)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -9836,18 +8586,11 @@
         {
           "form": "Sarepta",
           "language": "Biblical Latin/Greek (from Hebrew Zarephath)",
+          "language_code": "lat",
           "translation": "biblical town, adapted to the nearby Sarpa River"
         }
       ],
       "etymology_analysis": "Named in 1765 CE by Moravian Brethren settlers after biblical Sarepta (1 Kings 17:9–10), echoing the nearby Sarpa River.",
-      "current_repo_state": {
-        "b_tarr": "Sarepta",
-        "b_tarr_direct": "Sarepta",
-        "b_tarr_hist": "Sarepta",
-        "b_origin": "Sarepta (constituent holding of Beksîme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Old_Sarepta",
       "older_name_by_867": {
         "exists": false,
@@ -9882,23 +8625,17 @@
         {
           "form": "yenotai",
           "language": "Turkic (or personal name)",
+          "language_code": "tur",
           "translation": "side of the mountain (yan + tau) or personal name"
         },
         {
           "form": "-evka",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "Russian settlement suffix -evka attached to Yenotai (either from Turkic yan 'side' + tau 'mountain', referring to the high Volga bank, or a local personal name); founded in 1742 CE.",
-      "current_repo_state": {
-        "b_tarr": "Yenotayevka",
-        "b_tarr_direct": "Yenotayevka",
-        "b_tarr_hist": "Yenotayevka",
-        "b_origin": "Yenotayevka (constituent holding of Beksîme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%95%D0%BD%D0%BE%D1%82%D0%B0%D0%B5%D0%B2%D0%BA%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -9933,23 +8670,17 @@
         {
           "form": "sar / šar",
           "language": "Khazar (Oghur Turkic)",
+          "language_code": "tat",
           "translation": "white"
         },
         {
           "form": "kel / kil",
           "language": "Khazar (Oghur Turkic)",
+          "language_code": "tat",
           "translation": "house, fortress"
         }
       ],
       "etymology_analysis": "Khazar (Oghur Turkic) Šarkel ('white house/fortress'), referring to its white limestone-and-brick walls built in the 830s CE; later translated into East Slavic as Belaya Vezha.",
-      "current_repo_state": {
-        "b_tarr": "Sarkêl",
-        "b_tarr_direct": "Sarkêl",
-        "b_tarr_hist": "Sarkêl",
-        "b_origin": "Sarkêl (Sarkel)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sarkel",
       "older_name_by_867": {
         "exists": false,
@@ -9984,23 +8715,17 @@
         {
           "form": "aq",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "white, clear"
         },
         {
           "form": "sai",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "gully, ravine, stream"
         }
       ],
       "etymology_analysis": "Turkic hydronym Aqsai ('white/clear gully or stream', from aq 'white' + sai 'ravine/stream'); the Cossack settlement is first recorded in 1569 CE.",
-      "current_repo_state": {
-        "b_tarr": "Aksay",
-        "b_tarr_direct": "Aksay",
-        "b_tarr_hist": "Aksay",
-        "b_origin": "Aksay (constituent holding of Sarkêl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aksay,_Rostov_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -10035,23 +8760,17 @@
         {
           "form": "semi-",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "seven"
         },
         {
           "form": "kara-kor / karakary",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "black hill/ridge or 'seven black fortresses' (folk etymology)"
         }
       ],
       "etymology_analysis": "Russian-Turkic compound (semi- 'seven' + Turkic qara 'black' / qor 'fortification' or personal/clan name); the Cossack stanitsa is known from 1672 CE, near an unnamed 8th–9th century CE Khazar fortress.",
-      "current_repo_state": {
-        "b_tarr": "Semikarakary",
-        "b_tarr_direct": "Semikarakary",
-        "b_tarr_hist": "Semikarakary",
-        "b_origin": "Semikarakary (constituent holding of Sarkêl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Semikarakorsk",
       "older_name_by_867": {
         "exists": false,

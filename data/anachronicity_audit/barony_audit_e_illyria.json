@@ -1,20 +1,28 @@
 {
   "metadata": {
+    "empire": "e_illyria",
     "scope": "e_illyria (all 165 baronies across k_croatia, k_epirus, k_sicily, and k_venice)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json"
+      "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 165,
@@ -56,18 +64,11 @@
         {
           "form": "jajce",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "egg (referring to the egg-shaped hill of the fortress)"
         }
       ],
       "etymology_analysis": "From South Slavic *jajce* ('egg'), after the egg-shaped hill on which the fortress stands; first attested in 1396 AD.",
-      "current_repo_state": {
-        "b_tarr": "Plîwe",
-        "b_tarr_direct": "Nidermarch",
-        "b_tarr_hist": "Plîwe",
-        "b_origin": "Plîwe (Pliva (in-game: Donji Kraji))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Jajce",
       "older_name_by_867": {
         "exists": false,
@@ -102,23 +103,17 @@
         {
           "form": "ključ",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "key (strategic pass/fortress)"
         },
         {
           "form": "na Sani",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "on the Sana river"
         }
       ],
       "etymology_analysis": "From Slavic *ključ* ('key'), denoting its strategic control of the Sana valley; first mentioned in 1322 AD.",
-      "current_repo_state": {
-        "b_tarr": "Kljutsch-an-der-Sâne",
-        "b_tarr_direct": "Kljutsch-an-der-Sâne",
-        "b_tarr_hist": "Kljutsch-an-der-Sâne",
-        "b_origin": "Kljutsch-an-der-Sâne (constituent holding of Plîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Klju%C4%8D,_Una-Sana_Canton",
       "older_name_by_867": {
         "exists": false,
@@ -153,18 +148,11 @@
         {
           "form": "greben",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "ridge / rocky crag"
         }
       ],
       "etymology_analysis": "From South Slavic *greben* ('ridge/crag'), referring to the rocky ridge above the Vrbas gorge; first attested in 1192 AD.",
-      "current_repo_state": {
-        "b_tarr": "Greben",
-        "b_tarr_direct": "Greben",
-        "b_tarr_hist": "Greben",
-        "b_origin": "Greben (constituent holding of Plîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Greben_(Krupa_na_Vrbasu)",
       "older_name_by_867": {
         "exists": false,
@@ -199,23 +187,17 @@
         {
           "form": "Kotor",
           "language": "South Slavic / Dalmatian",
+          "language_code": "sla",
           "translation": "fortified enclosure"
         },
         {
           "form": "varoš",
           "language": "Hungarian (város) via South Slavic",
+          "language_code": "hun",
           "translation": "town / suburb"
         }
       ],
       "etymology_analysis": "From medieval fortress *Kotor* (first attested 1322 AD) plus Hungarian-derived *varoš* ('town').",
-      "current_repo_state": {
-        "b_tarr": "Kotor-Wârosch",
-        "b_tarr_direct": "Kotor-Wârosch",
-        "b_tarr_hist": "Kotor-Wârosch",
-        "b_origin": "Kotor-Wârosch (constituent holding of Plîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Kotor_Varo%C5%A1",
       "older_name_by_867": {
         "exists": false,
@@ -250,18 +232,11 @@
         {
           "form": "sokol",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "falcon"
         }
       ],
       "etymology_analysis": "From South Slavic *sokol* ('falcon'), a common medieval Bosnian hillfort name; first attested in 1363 AD.",
-      "current_repo_state": {
-        "b_tarr": "Sokol",
-        "b_tarr_direct": "Sokol",
-        "b_tarr_hist": "Sokol",
-        "b_origin": "Sokol (constituent holding of Plîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sokograd_(Pliva)",
       "older_name_by_867": {
         "exists": false,
@@ -296,18 +271,11 @@
         {
           "form": "bih / bik / bihač",
           "language": "South Slavic / uncertain",
+          "language_code": "sla",
           "translation": "uncertain; possibly royal estate or island settlement"
         }
       ],
       "etymology_analysis": "First mentioned on 26 February 1260 in a charter of King Béla IV as a town on the Island of St. Ladislav in the Una river.",
-      "current_repo_state": {
-        "b_tarr": "Pesêt",
-        "b_tarr_direct": "Pesêt",
-        "b_tarr_hist": "Pesêt",
-        "b_origin": "Pesêt (Pset)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Biha%C4%87",
       "older_name_by_867": {
         "exists": false,
@@ -342,18 +310,11 @@
         {
           "form": "krupa",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "grain / groats or steep rocky bank / hail"
         }
       ],
       "etymology_analysis": "Medieval fortress Krupa on the Una river, first attested in the 13th century (replacing earlier župa Pset).",
-      "current_repo_state": {
-        "b_tarr": "Krupa",
-        "b_tarr_direct": "Krupa",
-        "b_tarr_hist": "Krupa",
-        "b_origin": "Krupa (constituent holding of Pesêt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bosanska_Krupa",
       "older_name_by_867": {
         "exists": false,
@@ -388,18 +349,11 @@
         {
           "form": "Pset / Pesenta",
           "language": "Early South Slavic / uncertain",
+          "language_code": "sla",
           "translation": "early medieval Croatian župa name"
         }
       ],
       "etymology_analysis": "Early medieval Croatian župa Pset (*Pesenta*), first attested in *De Administrando Imperio* (c. 949 AD). Post-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Irmeleszelle",
-        "b_tarr_direct": "Pesêt",
-        "b_tarr_hist": "Pesêt",
-        "b_origin": "Irmeleszelle — Disambiguated capital foundation: Monastic cell and hermitage established by Irmele",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Pset",
       "older_name_by_867": {
         "exists": false,
@@ -434,18 +388,11 @@
         {
           "form": "visok",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "high / elevated"
         }
       ],
       "etymology_analysis": "From South Slavic *visok* ('high'), referring to the hilltop fortress on Visočica hill; first attested in 1355 AD.",
-      "current_repo_state": {
-        "b_tarr": "Râme",
-        "b_tarr_direct": "Râme",
-        "b_tarr_hist": "Râme",
-        "b_origin": "Râme (Rama)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Visoko_during_the_Middle_Ages",
       "older_name_by_867": {
         "exists": false,
@@ -480,18 +427,11 @@
         {
           "form": "prozor",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "window / lookout / pass"
         }
       ],
       "etymology_analysis": "From South Slavic *prozor* ('window/lookout'), first attested in 1366 AD under Ban Tvrtko I.",
-      "current_repo_state": {
-        "b_tarr": "Prozor",
-        "b_tarr_direct": "Prozor",
-        "b_tarr_hist": "Prozor",
-        "b_origin": "Prozor (constituent holding of Râme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Prozor-Rama",
       "older_name_by_867": {
         "exists": false,
@@ -526,18 +466,11 @@
         {
           "form": "branduk / braniti",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "to defend / defense post"
         }
       ],
       "etymology_analysis": "Derived from Slavic *braniti* ('to defend') / *branduk*; first attested in 1410 AD.",
-      "current_repo_state": {
-        "b_tarr": "Vranduk",
-        "b_tarr_direct": "Vranduk",
-        "b_tarr_hist": "Vranduk",
-        "b_origin": "Vranduk (constituent holding of Râme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://bs.wikipedia.org/wiki/Tvr%C4%91ava_Vranduk",
       "older_name_by_867": {
         "exists": false,
@@ -572,23 +505,17 @@
         {
           "form": "bob",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "broad bean (or personal name Bob)"
         },
         {
           "form": "-ovac",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place suffix"
         }
       ],
       "etymology_analysis": "Royal Bosnian fortress built under Ban Stjepan II Kotromanić, first attested in 1349 AD.",
-      "current_repo_state": {
-        "b_tarr": "Bobovac",
-        "b_tarr_direct": "Bobovac",
-        "b_tarr_hist": "Bobovac",
-        "b_origin": "Bobovac (constituent holding of Râme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bobovac",
       "older_name_by_867": {
         "exists": false,
@@ -623,23 +550,17 @@
         {
           "form": "trava",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "grass / meadow"
         },
         {
           "form": "-nik",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place/agent suffix ('grassy meadow' or 'grass-tax collector')"
         }
       ],
       "etymology_analysis": "From South Slavic *trava* ('grass'), either 'grassy valley' or 'tax collector of travarina'; first attested in 1463 AD.",
-      "current_repo_state": {
-        "b_tarr": "Travnik",
-        "b_tarr_direct": "Travnik",
-        "b_tarr_hist": "Travnik",
-        "b_origin": "Travnik (constituent holding of Râme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Travnik",
       "older_name_by_867": {
         "exists": false,
@@ -674,23 +595,17 @@
         {
           "form": "vrh",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "peak / upper reaches / source"
         },
         {
           "form": "Bosna",
           "language": "Illyrian / South Slavic",
+          "language_code": "ine",
           "translation": "Bosna river (from *Bathinus / Bosona)"
         }
       ],
       "etymology_analysis": "Slavic *Vrh-Bosna* ('upper reaches/peak of the Bosna'), first attested in 1244 AD.",
-      "current_repo_state": {
-        "b_tarr": "Bosône",
-        "b_tarr_direct": "Oberbosne",
-        "b_tarr_hist": "Bosône",
-        "b_origin": "Bosône (Bosône (in-game: Vrhbosna))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Vrhbosna",
       "older_name_by_867": {
         "exists": false,
@@ -725,18 +640,11 @@
         {
           "form": "olovo",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "lead (metal)"
         }
       ],
       "etymology_analysis": "From South Slavic *olovo* ('lead'), named after its rich lead ore deposits; first attested in 1382 AD as Latin *Plumbum*.",
-      "current_repo_state": {
-        "b_tarr": "Olovo",
-        "b_tarr_direct": "Olovo",
-        "b_tarr_hist": "Olovo",
-        "b_origin": "Olovo (constituent holding of Bosône)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Olovo",
       "older_name_by_867": {
         "exists": false,
@@ -771,18 +679,11 @@
         {
           "form": "Kušlat",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "fortress name, possibly from Kušlatović family or Turkish/Slavic root"
         }
       ],
       "etymology_analysis": "Medieval rock fortress above the Jadar–Drinjača confluence, first attested in 1346 AD.",
-      "current_repo_state": {
-        "b_tarr": "Kuclat",
-        "b_tarr_direct": "Kuclat",
-        "b_tarr_hist": "Kuclat",
-        "b_origin": "Kuclat (constituent holding of Bosône)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ku%C5%A1lat",
       "older_name_by_867": {
         "exists": false,
@@ -817,23 +718,17 @@
         {
           "form": "srebro",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "silver"
         },
         {
           "form": "-nica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place suffix ('silver mine/place')"
         }
       ],
       "etymology_analysis": "From South Slavic *srebro* ('silver'), first attested in 1376 AD (near Roman silver-mining settlement *Domavia* / *Argentaria*).",
-      "current_repo_state": {
-        "b_tarr": "Srebrenica",
-        "b_tarr_direct": "Srebrenica",
-        "b_tarr_hist": "Srebrenica",
-        "b_origin": "Srebrenica (constituent holding of Bosône)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Srebrenica",
       "older_name_by_867": {
         "exists": true,
@@ -870,23 +765,17 @@
         {
           "form": "rog",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "horn / spur"
         },
         {
           "form": "-atica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from Slavic *rog* ('horn/spur') or personal name; first attested in 1425 AD near Borač Castle.",
-      "current_repo_state": {
-        "b_tarr": "Rogatica",
-        "b_tarr_direct": "Rogatica",
-        "b_tarr_hist": "Rogatica",
-        "b_origin": "Rogatica (constituent holding of Bosône)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Rogatica",
       "older_name_by_867": {
         "exists": false,
@@ -921,18 +810,11 @@
         {
           "form": "Crepsa / Cherso",
           "language": "Liburnian / Illyrian / Latin",
+          "language_code": "lat",
           "translation": "ancient island and town name"
         }
       ],
       "etymology_analysis": "From ancient Liburnian/Latin *Crepsa* (attested by Pliny the Elder, 77 AD), yielding Croatian *Cres* and Italian *Cherso*.",
-      "current_repo_state": {
-        "b_tarr": "Kersch",
-        "b_tarr_direct": "Kersch",
-        "b_tarr_hist": "Kersch",
-        "b_origin": "Kersch (Charso)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cres",
       "older_name_by_867": {
         "exists": false,
@@ -967,18 +849,11 @@
         {
           "form": "Curicum / Kurik",
           "language": "Liburnian / Illyrian / Latin",
+          "language_code": "lat",
           "translation": "ancient Liburnian island/town name"
         }
       ],
       "etymology_analysis": "From Liburnian/Roman *Curicum* (1st century AD), becoming *Vecla* in Dalmatian and *Krk* in Croatian.",
-      "current_repo_state": {
-        "b_tarr": "Kunigundestat",
-        "b_tarr_direct": "Kunigundestat",
-        "b_tarr_hist": "Kunigundestat",
-        "b_origin": "Kunigundestat (constituent holding of Kersch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Krk",
       "older_name_by_867": {
         "exists": false,
@@ -1013,18 +888,11 @@
         {
           "form": "Senia",
           "language": "Illyrian / Liburnian / Latin",
+          "language_code": "ine",
           "translation": "ancient coastal town name"
         }
       ],
       "etymology_analysis": "Ancient Liburnian/Roman *Senia* (attested from 4th c. BC / 1st c. AD), Slavicized as *Senj* in the 7th–9th centuries.",
-      "current_repo_state": {
-        "b_tarr": "Gatzke",
-        "b_tarr_direct": "Gatzke",
-        "b_tarr_hist": "Gatzke",
-        "b_origin": "Gatzke (Gacka)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Senj",
       "older_name_by_867": {
         "exists": false,
@@ -1059,18 +927,11 @@
         {
           "form": "brinja",
           "language": "South Slavic (Chakavian)",
+          "language_code": "sla",
           "translation": "juniper / pine"
         }
       ],
       "etymology_analysis": "From Chakavian *brinja* ('juniper'); medieval Frankopan town below Sokolac castle, first attested in 1343 AD (near Roman *Monetium*).",
-      "current_repo_state": {
-        "b_tarr": "Brinje",
-        "b_tarr_direct": "Brinje",
-        "b_tarr_hist": "Brinje",
-        "b_origin": "Brinje (constituent holding of Gatzke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Brinje",
       "older_name_by_867": {
         "exists": true,
@@ -1107,18 +968,11 @@
         {
           "form": "rijeka",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "river (Rječina)"
         }
       ],
       "etymology_analysis": "Croatian *Rijeka* / Italian *Fiume* ('river', referring to the Rječina), attested from the 13th century (1281 AD). Preceded by Roman/early medieval *Tarsatica* (Trsat, besieged by Franks in 799 AD).",
-      "current_repo_state": {
-        "b_tarr": "Rijeka",
-        "b_tarr_direct": "Rijeka",
-        "b_tarr_hist": "Rijeka",
-        "b_origin": "Rijeka (constituent holding of Gatzke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rijeka",
       "older_name_by_867": {
         "exists": true,
@@ -1156,18 +1010,11 @@
         {
           "form": "Kasezi",
           "language": "Early Croatian",
+          "language_code": "hbs",
           "translation": "a medieval Croatian noble/social group (kasegi) in Lika"
         }
       ],
       "etymology_analysis": "CK3 b_kaseg represents Kasezi (medieval Gospić, attested 1263 AD) in Lika (župa Lika attested 949 AD in DAI).",
-      "current_repo_state": {
-        "b_tarr": "Lîke",
-        "b_tarr_direct": "Lîke",
-        "b_tarr_hist": "Lîke",
-        "b_origin": "Lîke (Lika)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gospi%C4%87",
       "older_name_by_867": {
         "exists": false,
@@ -1202,18 +1049,11 @@
         {
           "form": "Bag",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "medieval port name (possibly from Vegia)"
         }
       ],
       "etymology_analysis": "First attested as *Bag* in 1387 AD (later *Karlobag*); preceded in antiquity by Liburnian/Roman *Vegium* (Pliny/Ptolemy).",
-      "current_repo_state": {
-        "b_tarr": "Bag",
-        "b_tarr_direct": "Bag",
-        "b_tarr_hist": "Bag",
-        "b_origin": "Bag (constituent holding of Lîke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Karlobag",
       "older_name_by_867": {
         "exists": true,
@@ -1250,18 +1090,11 @@
         {
           "form": "Udbina",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "hilltop stronghold (earlier Civitas Corbaviae)"
         }
       ],
       "etymology_analysis": "Earlier known as *Civitas Corbaviae* (seat of Bishop of Krbava from 1185 AD); first attested under the name *Udbina* in 1493 AD.",
-      "current_repo_state": {
-        "b_tarr": "Udbina",
-        "b_tarr_direct": "Udbina",
-        "b_tarr_hist": "Udbina",
-        "b_origin": "Udbina (constituent holding of Lîke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Udbina",
       "older_name_by_867": {
         "exists": false,
@@ -1296,23 +1129,17 @@
         {
           "form": "drežnik / drijes",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "forest / wooded ridge"
         },
         {
           "form": "grad",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "fortress / town"
         }
       ],
       "etymology_analysis": "Medieval frontier fortress above the Korana river, first attested in 1185 AD.",
-      "current_repo_state": {
-        "b_tarr": "Dreschnîch",
-        "b_tarr_direct": "Dreschnîch",
-        "b_tarr_hist": "Dreschnîch",
-        "b_origin": "Dreschnîch (constituent holding of Lîke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Dre%C5%BEnik_Grad",
       "older_name_by_867": {
         "exists": false,
@@ -1347,18 +1174,11 @@
         {
           "form": "Modruš",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "blue-ish / dark hill or personal name"
         }
       ],
       "etymology_analysis": "Medieval seat of the Frankopan family (Tržan Castle), first attested in 1193 AD.",
-      "current_repo_state": {
-        "b_tarr": "Zeng",
-        "b_tarr_direct": "Modrusch",
-        "b_tarr_hist": "Zeng",
-        "b_origin": "Zeng (Senj (in-game: Modruš))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Modru%C5%A1",
       "older_name_by_867": {
         "exists": false,
@@ -1393,18 +1213,11 @@
         {
           "form": "Okić",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "fortress on a prominent peak (possibly from *ok- 'eye/lookout')"
         }
       ],
       "etymology_analysis": "Hilltop castle in the Samobor Hills, first attested in 1193 AD.",
-      "current_repo_state": {
-        "b_tarr": "Okic",
-        "b_tarr_direct": "Okic",
-        "b_tarr_hist": "Okic",
-        "b_origin": "Okic (constituent holding of Zeng)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Oki%C4%87-grad",
       "older_name_by_867": {
         "exists": false,
@@ -1439,23 +1252,17 @@
         {
           "form": "dub",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "oak tree"
         },
         {
           "form": "-ovac",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "place suffix ('oak forest')"
         }
       ],
       "etymology_analysis": "Named after the oak forest (*dubova šuma*) that surrounded it; first attested in the late 14th century (1387 AD).",
-      "current_repo_state": {
-        "b_tarr": "Dubovac",
-        "b_tarr_direct": "Dubovac",
-        "b_tarr_hist": "Dubovac",
-        "b_origin": "Dubovac (constituent holding of Zeng)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Dubovac_(Karlovac)",
       "older_name_by_867": {
         "exists": false,
@@ -1490,18 +1297,11 @@
         {
           "form": "top- / toplice",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "warm / thermal springs"
         }
       ],
       "etymology_analysis": "Named after its volcanic thermal springs; medieval name Topusko attested from 1192 AD, on the site of Roman *Ad Fines*.",
-      "current_repo_state": {
-        "b_tarr": "Topusko",
-        "b_tarr_direct": "Topusko",
-        "b_tarr_hist": "Topusko",
-        "b_origin": "Topusko (constituent holding of Zeng)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Topusko",
       "older_name_by_867": {
         "exists": true,
@@ -1538,18 +1338,11 @@
         {
           "form": "Vsinj / Fsini",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "uncertain; possibly from Roman *Osinium* or Slavic root"
         }
       ],
       "etymology_analysis": "First attested as *Fsini*/*Vsinj* in 1341 AD, gradually replacing *Cetina* (attested 949 AD in DAI). Near Roman colony *Aequum* (45 AD).",
-      "current_repo_state": {
-        "b_tarr": "Zetîne",
-        "b_tarr_direct": "Zetîne",
-        "b_tarr_hist": "Zetîne",
-        "b_origin": "Zetîne (Cetina)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Sinj",
       "older_name_by_867": {
         "exists": true,
@@ -1586,18 +1379,11 @@
         {
           "form": "aspálathos (ἀσπάλαθος)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "spiny broom plant"
         }
       ],
       "etymology_analysis": "From Greek *Aspálathos* (3rd c. BC) and Latin *Spalatum*, later centered on Diocletian's Palace (305 AD).",
-      "current_repo_state": {
-        "b_tarr": "Spalât",
-        "b_tarr_direct": "Spalât",
-        "b_tarr_hist": "Spalât",
-        "b_origin": "Spalât (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Split,_Croatia",
       "older_name_by_867": {
         "exists": false,
@@ -1632,18 +1418,11 @@
         {
           "form": "Salona",
           "language": "Illyrian / Delmataean / Latin",
+          "language_code": "ine",
           "translation": "ancient coastal emporium name"
         }
       ],
       "etymology_analysis": "Direct phonological descendant of ancient Delmataean/Roman *Salona* (attested 2nd century BC; capital of Roman Dalmatia).",
-      "current_repo_state": {
-        "b_tarr": "Solin",
-        "b_tarr_direct": "Solin",
-        "b_tarr_hist": "Solin",
-        "b_origin": "Solin (constituent holding of Zetîne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Solin",
       "older_name_by_867": {
         "exists": false,
@@ -1678,18 +1457,11 @@
         {
           "form": "Ninia / Tinum",
           "language": "Illyrian / Slavic",
+          "language_code": "ine",
           "translation": "Illyrian Ninia or Slavic *tьn- ('cleared forest')"
         }
       ],
       "etymology_analysis": "Attested by Strabo (7 BC) as *Ninia*; medieval Croatian royal stronghold (*Tinum* / *Knin*).",
-      "current_repo_state": {
-        "b_tarr": "Knîn",
-        "b_tarr_direct": "Knîn",
-        "b_tarr_hist": "Knîn",
-        "b_origin": "Knîn (Knin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Knin",
       "older_name_by_867": {
         "exists": false,
@@ -1724,18 +1496,11 @@
         {
           "form": "Berbera / Varvaria",
           "language": "Liburnian / Latin / Slavic",
+          "language_code": "lat",
           "translation": "Slavicized from Roman Municipium Varvariae"
         }
       ],
       "etymology_analysis": "Slavicized from Roman *Municipium Varvariae* (1st c. AD); the Slavic form *Berbera* (Bribir) is first attested in *De Administrando Imperio* (c. 949 AD).",
-      "current_repo_state": {
-        "b_tarr": "Bribir",
-        "b_tarr_direct": "Bribir",
-        "b_tarr_hist": "Bribir",
-        "b_origin": "Bribir (constituent holding of Knîn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Bribir_(Skradin)",
       "older_name_by_867": {
         "exists": true,
@@ -1773,18 +1538,11 @@
         {
           "form": "šiba",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "switch / twig (palisade of twigs)"
         }
       ],
       "etymology_analysis": "First attested on Christmas 1066 AD in a charter of King Petar Krešimir IV; traditionally linked to *šiba* ('twig/palisade') or Illyrian root.",
-      "current_repo_state": {
-        "b_tarr": "Schibenîk",
-        "b_tarr_direct": "Schibenîk",
-        "b_tarr_hist": "Schibenîk",
-        "b_origin": "Schibenîk (constituent holding of Knîn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C5%A0ibenik",
       "older_name_by_867": {
         "exists": false,
@@ -1819,18 +1577,11 @@
         {
           "form": "Iadera / Jadra",
           "language": "Pre-Indo-European / Liburnian",
+          "language_code": "und",
           "translation": "hydrographic term"
         }
       ],
       "etymology_analysis": "From Pre-Indo-European / Liburnian *Iadera* (attested 384 BC), yielding Dalmatian *Jadra* / Italian *Zara* / Croatian *Zadar*.",
-      "current_repo_state": {
-        "b_tarr": "Zâre",
-        "b_tarr_direct": "Zâre",
-        "b_tarr_hist": "Zâre",
-        "b_origin": "Zâre (Zadar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zadar",
       "older_name_by_867": {
         "exists": false,
@@ -1865,18 +1616,11 @@
         {
           "form": "Ainona / Aenona",
           "language": "Liburnian / Latin",
+          "language_code": "lat",
           "translation": "ancient Liburnian port town"
         }
       ],
       "etymology_analysis": "From Liburnian *Ainona* / Roman *Aenona* (4th century BC), becoming Croatian *Nin* and the first Croatian bishopric (9th c. AD).",
-      "current_repo_state": {
-        "b_tarr": "Nin",
-        "b_tarr_direct": "Nin",
-        "b_tarr_hist": "Nin",
-        "b_origin": "Nin (constituent holding of Zâre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Nin",
       "older_name_by_867": {
         "exists": false,
@@ -1911,28 +1655,23 @@
         {
           "form": "bio / bijel",
           "language": "Croatian (Ikavian)",
+          "language_code": "hbs",
           "translation": "white"
         },
         {
           "form": "grad",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "town / city"
         },
         {
           "form": "na Moru",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "on the sea"
         }
       ],
       "etymology_analysis": "Croatian 'White Town on the Sea' (Latin *Alba Maritima*); first attested c. 949 AD in *De Administrando Imperio* as *Belgradon*.",
-      "current_repo_state": {
-        "b_tarr": "Wîtzenburch",
-        "b_tarr_direct": "Wîtzenburch",
-        "b_tarr_hist": "Wîtzenburch",
-        "b_origin": "Biograd na Moru (Slavic bio-grad, 'White Town on the Sea') (in-game: Wîtzenburch)",
-        "b_anachronism": "Descriptive South Slavic toponym calqued to Tarraconian Wîtzenburch.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Biograd_na_Moru",
       "older_name_by_867": {
         "exists": false,
@@ -1967,23 +1706,17 @@
         {
           "form": "obrov",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "trench / moat / embankment"
         },
         {
           "form": "-ac",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "place suffix"
         }
       ],
       "etymology_analysis": "From Croatian *obrov* ('trench/earthwork'); first attested in 1337 AD as *Obrouec*.",
-      "current_repo_state": {
-        "b_tarr": "Obrovac",
-        "b_tarr_direct": "Obrovac",
-        "b_tarr_hist": "Obrovac",
-        "b_origin": "Obrovac (constituent holding of Zâre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Obrovac,_Croatia",
       "older_name_by_867": {
         "exists": false,
@@ -2018,18 +1751,11 @@
         {
           "form": "soli",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "salts (plural of sol, referring to salt springs/deposits)"
         }
       ],
       "etymology_analysis": "Medieval Slavic 'Soli' ('salts', rendered in Greek as 'Salines' in 950 AD) refers to the rich subterranean salt deposits and brine springs at the site. Under Ottoman rule from the 16th century, it was translated into Ottoman Turkish 'Tuzla' ('saltworks / place of salt').",
-      "current_repo_state": {
-        "b_tarr": "Sôli",
-        "b_tarr_direct": "Sôli",
-        "b_tarr_hist": "Sôli",
-        "b_origin": "Sôli — Historical Option A seat of c_soli",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tuzla",
       "older_name_by_867": {
         "exists": false,
@@ -2064,23 +1790,17 @@
         {
           "form": "bijel-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "white (from Proto-Slavic *bělъ, referring to white sandy Drina deposits or a personal/estate root)"
         },
         {
           "form": "-jina",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic/possessive suffix"
         }
       ],
       "etymology_analysis": "Derived from the South Slavic root 'bijel-' ('white', either referring to the light-colored sandy alluvial soil of the Drina/Semberija plain or an early Slavic personal name/estate *Bělinъ) with the toponymic suffix '-jina'.",
-      "current_repo_state": {
-        "b_tarr": "Bijeljina",
-        "b_tarr_direct": "Bijeljina",
-        "b_tarr_hist": "Bijeljina",
-        "b_origin": "Bijeljina (constituent holding of Sôli)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bijeljina",
       "older_name_by_867": {
         "exists": false,
@@ -2115,23 +1835,17 @@
         {
           "form": "zvon",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "bell (from Proto-Slavic *zvonъ)"
         },
         {
           "form": "-ik",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "noun/place suffix (zvonik = 'bell tower', later epenthetic -r- > Zvornik)"
         }
       ],
       "etymology_analysis": "Originally attested as 'Zvonik' ('bell tower', reportedly after the bell tower of a Franciscan monastery or a prominent watchtower), later undergoing epenthesis of '-r-' (folk-etymologically or phonetically) to 'Zvornik' by 1519.",
-      "current_repo_state": {
-        "b_tarr": "Zvornik",
-        "b_tarr_direct": "Zvornik",
-        "b_tarr_hist": "Zvornik",
-        "b_origin": "Zvornik (constituent holding of Sôli)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zvornik",
       "older_name_by_867": {
         "exists": false,
@@ -2166,23 +1880,17 @@
         {
           "form": "srebr-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "silver (from Proto-Slavic *sьrebro)"
         },
         {
           "form": "-enik",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "adjectival/toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'srebro' ('silver') + '-enik', denoting a fortified town or settlement associated with silver mining, minting, or silvery limestone cliffs.",
-      "current_repo_state": {
-        "b_tarr": "Usôre",
-        "b_tarr_direct": "Ousere",
-        "b_tarr_hist": "Usôre",
-        "b_origin": "Usôre (Salines / Soli (in-game: Usora))",
-        "b_anachronism": "Banate of Usora first attested 1225, named after the Usora River. Contains silver castle Srebrenik.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Srebrenik",
       "older_name_by_867": {
         "exists": false,
@@ -2217,18 +1925,11 @@
         {
           "form": "Usora",
           "language": "Pre-Slavic / South Slavic",
+          "language_code": "und",
           "translation": "eponymous river name (likely of pre-Slavic/Illyrian hydronymic origin, Latinized as Vozora)"
         }
       ],
       "etymology_analysis": "Named after the Usora River (a left tributary of the Bosna), which gave its name to the medieval Bosnian land (zemlja) and župa of Usora, first documented as 'Vozora' in 1244.",
-      "current_repo_state": {
-        "b_tarr": "Ousere",
-        "b_tarr_direct": "Ousere",
-        "b_tarr_hist": "Usôre",
-        "b_origin": "Ousere — Disambiguated capital seat from sub-barony Usôre",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Usora_(zemlja)",
       "older_name_by_867": {
         "exists": false,
@@ -2263,23 +1964,17 @@
         {
           "form": "magla",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "fog, mist (from Proto-Slavic *mьgla)"
         },
         {
           "form": "-aj",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'magla' ('fog, mist'), referring to the frequent river mists rising from the Bosna valley around the steep fortress rock.",
-      "current_repo_state": {
-        "b_tarr": "Maglaj",
-        "b_tarr_direct": "Maglaj",
-        "b_tarr_hist": "Maglaj",
-        "b_origin": "Maglaj (constituent holding of Usôre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Maglaj",
       "older_name_by_867": {
         "exists": false,
@@ -2314,18 +2009,11 @@
         {
           "form": "Tolisa",
           "language": "Pre-Slavic / South Slavic",
+          "language_code": "und",
           "translation": "eponymous river name (right tributary of the Sava)"
         }
       ],
       "etymology_analysis": "Named after the Tolisa River, a right tributary of the Sava in Bosnian Posavina; the territory around the river is first recorded as 'Terra Tolis' in 1244.",
-      "current_repo_state": {
-        "b_tarr": "Tolisa",
-        "b_tarr_direct": "Tolisa",
-        "b_tarr_hist": "Tolisa",
-        "b_origin": "Tolisa (constituent holding of Usôre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://bs.wikipedia.org/wiki/Tolisa_(Ora%C5%A1je)",
       "older_name_by_867": {
         "exists": false,
@@ -2360,28 +2048,23 @@
         {
           "form": "vod-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "water (from Proto-Slavic *voda)"
         },
         {
           "form": "-ica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "diminutive/stream suffix (Vodica = 'small water/stream')"
         },
         {
           "form": "-evo",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "possessive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'vodica' ('small stream/water', from 'voda' + '-ica') with the possessive/toponymic suffix '-evo', reflecting the Vodičevo stream and medieval župa Vodica.",
-      "current_repo_state": {
-        "b_tarr": "Psêt",
-        "b_tarr_direct": "Psêt",
-        "b_tarr_hist": "Psêt",
-        "b_origin": "Psêt — Historical Option A seat of c_vodica",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gornje_Vodi%C4%8Devo",
       "older_name_by_867": {
         "exists": false,
@@ -2416,23 +2099,17 @@
         {
           "form": "dub",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "oak tree (from Proto-Slavic *dǫbъ)"
         },
         {
           "form": "-ica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'dub' ('oak tree') + '-ica', denoting an oak forest or settlement by oak woods (the modern prefix 'Kozarska' refers to Mount Kozara, replacing 'Bosanska' after 1992).",
-      "current_repo_state": {
-        "b_tarr": "Dubica",
-        "b_tarr_direct": "Dubica",
-        "b_tarr_hist": "Dubica",
-        "b_origin": "Dubica (constituent holding of Pesêt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dubica,_Bosnia_and_Herzegovina",
       "older_name_by_867": {
         "exists": false,
@@ -2467,23 +2144,17 @@
         {
           "form": "banja",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "of the ban (possessive adjective from title 'ban', or 'bath/spa' in folk etymology)"
         },
         {
           "form": "luka",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "meadow, valley, floodplain"
         }
       ],
       "etymology_analysis": "Interpreted as 'the Ban's meadow' (from the medieval South Slavic/Croatian-Bosnian title 'ban' + 'luka' meaning 'river meadow/valley'), though popular etymology also links it to 'banja' ('thermal bath').",
-      "current_repo_state": {
-        "b_tarr": "Werbas",
-        "b_tarr_direct": "Werbas",
-        "b_tarr_hist": "Werbas",
-        "b_origin": "Werbas (Vrbas)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Banja_Luka",
       "older_name_by_867": {
         "exists": false,
@@ -2518,23 +2189,17 @@
         {
           "form": "grad",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "fortified town, fortress (from Proto-Slavic *gordъ)"
         },
         {
           "form": "-iška",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic/adjectival suffix (from -išče/-ište)"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'grad' ('fortress, town') + '-iška', referring to the site of an earlier fortified settlement (the Roman river port and station Servitium).",
-      "current_repo_state": {
-        "b_tarr": "Gradischke",
-        "b_tarr_direct": "Gradischke",
-        "b_tarr_hist": "Gradischke",
-        "b_origin": "Gradischke (constituent holding of Werbas)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gradi%C5%A1ka,_Bosnia_and_Herzegovina",
       "older_name_by_867": {
         "exists": true,
@@ -2573,18 +2238,11 @@
         {
           "form": "Glaž",
           "language": "South Slavic / Germanic loan",
+          "language_code": "sla",
           "translation": "medieval fort/župa name of uncertain origin (possibly from *glaž 'glass' or Slavic *glazъ)"
         }
       ],
       "etymology_analysis": "Medieval Bosnian/Slavonian fortified town and župa seat on the border of Usora whose exact location and etymology remain uncertain (possibly linked to Kajkavian/Slavic 'glaž' or a personal/topographic root).",
-      "current_repo_state": {
-        "b_tarr": "Glasch",
-        "b_tarr_direct": "Glasch",
-        "b_tarr_hist": "Glasch",
-        "b_origin": "Glasch (constituent holding of Werbas)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Gla%C5%BE",
       "older_name_by_867": {
         "exists": false,
@@ -2619,18 +2277,11 @@
         {
           "form": "Lausa / Rausium",
           "language": "Dalmatian Romance / Greek",
+          "language_code": "ell",
           "translation": "rocky island, cliff (from Greek λᾶας / Romance *lausa, giving Rausium > Ragusium > Ragusa)"
         }
       ],
       "etymology_analysis": "Founded in the 7th century on a rocky islet ('Lausa') by refugees from Epidaurum; 'Lausa' evolved via rhotacism/hypercorrection to 'Rausium', 'Ragusium', and 'Ragusa'. The Slavic name 'Dubrovnik' (first recorded 1189) derives from Proto-Slavic *dǫbrava ('oak grove').",
-      "current_repo_state": {
-        "b_tarr": "Ragûs",
-        "b_tarr_direct": "Ragûs",
-        "b_tarr_hist": "Ragûs",
-        "b_origin": "Ragûs — Historical Option A seat of c_ragusa",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dubrovnik",
       "older_name_by_867": {
         "exists": false,
@@ -2665,18 +2316,11 @@
         {
           "form": "stagnum",
           "language": "Latin / Dalmatian Romance",
+          "language_code": "lat",
           "translation": "still water, lagoon, pond (giving Stamnum > Ston in South Slavic)"
         }
       ],
       "etymology_analysis": "Derived from Latin 'stagnum' ('still water, lagoon', referring to the shallow salt-pan bay at the Pelješac isthmus), adapted into Dalmatian Romance and South Slavic as 'Stamnum' > 'Ston'.",
-      "current_repo_state": {
-        "b_tarr": "Ston",
-        "b_tarr_direct": "Ston",
-        "b_tarr_hist": "Ston",
-        "b_origin": "Ston (constituent holding of Ragûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ston",
       "older_name_by_867": {
         "exists": false,
@@ -2711,28 +2355,23 @@
         {
           "form": "po-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "verbal/locative prefix"
         },
         {
           "form": "žeg-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "burn, scorch (related to požar 'forest fire' / žega 'heat')"
         },
         {
           "form": "-a",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "feminine noun ending"
         }
       ],
       "etymology_analysis": "Derived from South Slavic *požega (related to 'požar' 'forest fire' / 'žega' 'intense heat'), likely referring to slash-and-burn forest clearing in the Požega Valley.",
-      "current_repo_state": {
-        "b_tarr": "Intsêrum",
-        "b_tarr_direct": "Intsêrum",
-        "b_tarr_hist": "Intsêrum",
-        "b_origin": "Intsêrum — Historical Option A seat of c_pozega",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Po%C5%BEega,_Croatia",
       "older_name_by_867": {
         "exists": true,
@@ -2770,23 +2409,17 @@
         {
           "form": "kut",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "corner, nook, secluded place (from Proto-Slavic *kǫtъ)"
         },
         {
           "form": "-ina",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'kut' ('corner, secluded nook') + '-ina', or from the eponymous Kutinica stream, denoting a tucked-away settlement at the edge of Moslavina.",
-      "current_repo_state": {
-        "b_tarr": "Kutina",
-        "b_tarr_direct": "Kutina",
-        "b_tarr_hist": "Kutina",
-        "b_origin": "Kutina (constituent holding of Intsêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kutina",
       "older_name_by_867": {
         "exists": false,
@@ -2821,18 +2454,11 @@
         {
           "form": "brod",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "river ford, shallow crossing (from Proto-Slavic *brodъ)"
         }
       ],
       "etymology_analysis": "From Old Slavic 'brodъ' ('river ford'), referring to the strategic shallow crossing over the Sava River; the adjective 'Slavonski' was added in 1934.",
-      "current_repo_state": {
-        "b_tarr": "Brod",
-        "b_tarr_direct": "Brod",
-        "b_tarr_hist": "Brod",
-        "b_origin": "Brod (constituent holding of Intsêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Slavonski_Brod",
       "older_name_by_867": {
         "exists": true,
@@ -2870,23 +2496,17 @@
         {
           "form": "Vuko-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "Vuka River (historically Vuk/Vlko, 'wolf')"
         },
         {
           "form": "-vár",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "fortress, castle"
         }
       ],
       "etymology_analysis": "Means 'fortress on the Vuka River': originally Slavic 'Vukovo' / 'Vlkovo' (from the Vuka River, ancient 'Ulca'), later combined with Hungarian 'vár' ('fortress') to form 'Vukovár' / 'Vukovar'.",
-      "current_repo_state": {
-        "b_tarr": "Wukowe",
-        "b_tarr_direct": "Wukowâr",
-        "b_tarr_hist": "Wukowe",
-        "b_origin": "Wukowe (Wukowe / Wolfburch (in-game: Vukovár))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vukovar",
       "older_name_by_867": {
         "exists": false,
@@ -2921,23 +2541,17 @@
         {
           "form": "o-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "prefix"
         },
         {
           "form": "sijek / seka",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "ebb tide, dry elevated ground (from 'oseka')"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'oseka' ('ebb tide, dry elevated ridge'), referring to the raised ground along the Drava River that protected the settlement from marshland flooding.",
-      "current_repo_state": {
-        "b_tarr": "Osijek",
-        "b_tarr_direct": "Osijek",
-        "b_tarr_hist": "Osijek",
-        "b_origin": "Osijek (constituent holding of Wukowe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Osijek",
       "older_name_by_867": {
         "exists": true,
@@ -2975,23 +2589,17 @@
         {
           "form": "orah",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "walnut tree (from Proto-Slavic *orěxъ)"
         },
         {
           "form": "-ovica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'orah' ('walnut tree') + '-ovica', denoting a place or valley abundant in walnut trees.",
-      "current_repo_state": {
-        "b_tarr": "Orahovica",
-        "b_tarr_direct": "Orahovica",
-        "b_tarr_hist": "Orahovica",
-        "b_origin": "Orahovica (constituent holding of Wukowe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Orahovica",
       "older_name_by_867": {
         "exists": false,
@@ -3026,23 +2634,17 @@
         {
           "form": "krap",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "carp (fish, from Proto-Slavic *korpъ)"
         },
         {
           "form": "-ina",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic/hydronymic suffix"
         }
       ],
       "etymology_analysis": "Named after the local river (Krapina / Krapinčica), derived from South Slavic 'krap' ('carp') + '-ina'.",
-      "current_repo_state": {
-        "b_tarr": "Sâgorje",
-        "b_tarr_direct": "Sâgorje",
-        "b_tarr_hist": "Sâgorje",
-        "b_origin": "Sâgorje (Zagorje)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Krapina",
       "older_name_by_867": {
         "exists": false,
@@ -3077,18 +2679,11 @@
         {
           "form": "Garestin",
           "language": "Medieval Latin / Slavic",
+          "language_code": "lat",
           "translation": "early medieval name of Varaždin (origin debated; later replaced by Varaždin from Hungarian Varasd: város 'city' + -d)"
         }
       ],
       "etymology_analysis": "'Garestin' (Guarestin) was the earliest recorded medieval name of Varaždin (1181), of uncertain/debated origin, before being superseded by 'Varaždin' (via Hungarian 'Varasd', from 'város' 'city' + diminutive '-d').",
-      "current_repo_state": {
-        "b_tarr": "Garestin",
-        "b_tarr_direct": "Garestin",
-        "b_tarr_hist": "Garestin",
-        "b_origin": "Garestin (constituent holding of Sâgorje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vara%C5%BEdin",
       "older_name_by_867": {
         "exists": false,
@@ -3123,23 +2718,17 @@
         {
           "form": "križ",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "cross (from Latin crux)"
         },
         {
           "form": "-evci",
           "language": "Croatian",
+          "language_code": "hbs",
           "translation": "plural/inhabitant toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from Croatian 'križ' ('cross', referring to a church/monastery of the Holy Cross or a crossroads) + plural toponymic suffix '-evci'.",
-      "current_repo_state": {
-        "b_tarr": "Krizevci",
-        "b_tarr_direct": "Krizevci",
-        "b_tarr_hist": "Krizevci",
-        "b_origin": "Krizevci (constituent holding of Sâgorje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kri%C5%BEevci",
       "older_name_by_867": {
         "exists": false,
@@ -3174,23 +2763,17 @@
         {
           "form": "kopriv-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "stinging nettle (from Proto-Slavic *kopriva)"
         },
         {
           "form": "-nica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic/hydronymic suffix"
         }
       ],
       "etymology_analysis": "Named after the local Koprivnica stream, derived from South Slavic 'kopriva' ('stinging nettle') + '-nica'.",
-      "current_repo_state": {
-        "b_tarr": "Koprivnica",
-        "b_tarr_direct": "Koprivnica",
-        "b_tarr_hist": "Koprivnica",
-        "b_origin": "Koprivnica (constituent holding of Sâgorje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Koprivnica",
       "older_name_by_867": {
         "exists": false,
@@ -3225,18 +2808,11 @@
         {
           "form": "ver- / vir-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "spring, whirlpool, or gate/faith (evolved via Wereuche > Verőce > Virovitica)"
         }
       ],
       "etymology_analysis": "Attested in 1234 as 'Wereuche' (reflecting Slavic *Věrevьce / *Virjevcь, Hungarian 'Verőce'), later expanded with '-itica' to 'Virovitica'.",
-      "current_repo_state": {
-        "b_tarr": "Verevce",
-        "b_tarr_direct": "Verevce",
-        "b_tarr_hist": "Verevce",
-        "b_origin": "Verevce (constituent holding of Sâgorje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Virovitica",
       "older_name_by_867": {
         "exists": false,
@@ -3271,23 +2847,17 @@
         {
           "form": "za-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "behind, beyond"
         },
         {
           "form": "greb / breg",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "embankment, hill, or riverbank (via metathesis *zabreg > zagreb)"
         }
       ],
       "etymology_analysis": "Derived from Proto-Slavic *zagrebъ ('embankment, behind the ridge/hill') or via metathesis from *zabregъ ('behind the Sava riverbank').",
-      "current_repo_state": {
-        "b_tarr": "Sagreb",
-        "b_tarr_direct": "Sagreb",
-        "b_tarr_hist": "Sagreb",
-        "b_origin": "Diocesan hillfort Gradec / Kaptol of Zagreb (attested 1094 AD) (in-game: Zagreb)",
-        "b_anachronism": "Post-867 diocesan hillfort (founded 1094 AD by Ladislaus I; Gradec 1242); secondary holding disambiguated from Option A seat Sissek.",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zagreb",
       "older_name_by_867": {
         "exists": true,
@@ -3324,18 +2894,11 @@
         {
           "form": "Čazma / Česma",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "river name (Česma, tributary of the Lonja)"
         }
       ],
       "etymology_analysis": "Named after the nearby Česma River (medieval 'Chasma' / 'Čazma').",
-      "current_repo_state": {
-        "b_tarr": "Cazma",
-        "b_tarr_direct": "Cazma",
-        "b_tarr_hist": "Cazma",
-        "b_origin": "Cazma (constituent holding of Sissech)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C4%8Cazma",
       "older_name_by_867": {
         "exists": false,
@@ -3370,23 +2933,17 @@
         {
           "form": "samo-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "alone, solitary (from *samъ)"
         },
         {
           "form": "bor",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "pine tree, pine forest"
         }
       ],
       "etymology_analysis": "Compound of South Slavic 'samo-' ('solitary, only') + 'bor' ('pine tree/forest'), meaning 'solitary pine' or 'pure pine forest'.",
-      "current_repo_state": {
-        "b_tarr": "Samobor",
-        "b_tarr_direct": "Samobor",
-        "b_tarr_hist": "Samobor",
-        "b_origin": "Samobor (constituent holding of Sissech)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samobor",
       "older_name_by_867": {
         "exists": false,
@@ -3421,18 +2978,11 @@
         {
           "form": "Siscia",
           "language": "Illyrian / Celtic / Latin",
+          "language_code": "ine",
           "translation": "ancient town name (direct phonological ancestor of Croatian Sisak)"
         }
       ],
       "etymology_analysis": "Pre-Roman Celtic-Illyrian 'Segestica' / 'Siscia' (35 BC), which served as the Roman provincial capital of Pannonia Savia and early medieval Slavic seat of Duke Ljudevit (819–822 AD), evolving directly into Croatian 'Sisak'.",
-      "current_repo_state": {
-        "b_tarr": "Sissek",
-        "b_tarr_direct": "Sissek",
-        "b_tarr_hist": "Sissek",
-        "b_origin": "Roman Siscia / 9th-century seat of Duke Ljudevit Posavski (in-game: Sissek)",
-        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Roman Civitas.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sisak",
       "older_name_by_867": {
         "exists": false,
@@ -3467,18 +3017,11 @@
         {
           "form": "Muccurum / Mokro",
           "language": "Illyrian-Latin / South Slavic",
+          "language_code": "lat",
           "translation": "ancient settlement name adapted into Slavic as 'Mokro' (folk-etymologized with 'mokro' = wet) and 'Makar' > 'Makarska'"
         }
       ],
       "etymology_analysis": "Late Antique 'Muccurum' / 'Macrum' (533 AD) was phonologically adapted by South Slavs as 'Mokro' (the administrative center of Narentine Paganija) and 'Makar', giving modern 'Makarska'.",
-      "current_repo_state": {
-        "b_tarr": "Pagânje",
-        "b_tarr_direct": "Pagânje",
-        "b_tarr_hist": "Pagânje",
-        "b_origin": "Pagânje (Paganija)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Makarska",
       "older_name_by_867": {
         "exists": false,
@@ -3513,18 +3056,11 @@
         {
           "form": "Oneum / Almissum",
           "language": "Illyrian / Latin / Dalmatian Romance",
+          "language_code": "ine",
           "translation": "cliff/hill settlement (PIE *almissa 'cliff' or Illyrian-Greek Onaion) -> Slavic Omiš"
         }
       ],
       "etymology_analysis": "Roman-Illyrian 'Oneum' / 'Onaeum' (77 AD) and Late Latin 'Almissum' / 'Olmissium' evolved phonologically through Dalmatian Romance into Croatian 'Omiš'.",
-      "current_repo_state": {
-        "b_tarr": "Omîsch",
-        "b_tarr_direct": "Omîsch",
-        "b_tarr_hist": "Omîsch",
-        "b_origin": "Omîsch (constituent holding of Pagânje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Omi%C5%A1",
       "older_name_by_867": {
         "exists": false,
@@ -3559,18 +3095,11 @@
         {
           "form": "Pharos",
           "language": "Ancient Greek / Illyrian",
+          "language_code": "grc",
           "translation": "island/colony name (from Paros or Illyrian 'fara'), adapted via Dalmatian 'Fara' > Slavic 'Hvar'"
         }
       ],
       "etymology_analysis": "Greek 'Pharos' (384 BC) passed through Latin 'Pharus' and Dalmatian Romance 'Fara' into Croatian 'Hvar' via the regular South Slavic substitution /f/ > /xv/ (> /hv/).",
-      "current_repo_state": {
-        "b_tarr": "Hvar",
-        "b_tarr_direct": "Hvar",
-        "b_tarr_hist": "Hvar",
-        "b_origin": "Hvar (constituent holding of Pagânje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hvar",
       "older_name_by_867": {
         "exists": false,
@@ -3605,18 +3134,11 @@
         {
           "form": "blag-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "mild, gentle, blessed (referring to the mild climate)"
         }
       ],
       "etymology_analysis": "The medieval Slavic name 'Blagaj' derives from 'blag' ('mild, gentle'), referring to the mild Mediterranean-influenced microclimate at the Buna River spring; in c. 950 AD it was recorded as 'Bona'.",
-      "current_repo_state": {
-        "b_tarr": "Chulm",
-        "b_tarr_direct": "Chulm",
-        "b_tarr_hist": "Chulm",
-        "b_origin": "Chulm (Zachlumia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Blagaj,_Mostar",
       "older_name_by_867": {
         "exists": false,
@@ -3651,23 +3173,17 @@
         {
           "form": "neves-",
           "language": "South Slavic / Pre-Slavic",
+          "language_code": "sla",
           "translation": "uncertain (folk-etymologized as 'ne-veselo' or from a pre-Slavic/personal root *Nevesin)"
         },
         {
           "form": "-inje",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "possessive/toponymic suffix"
         }
       ],
       "etymology_analysis": "First attested in 1219; the name is formed with the South Slavic toponymic suffix '-inje', likely from an early Slavic personal name *Nevesinъ or a pre-Slavic substratum root.",
-      "current_repo_state": {
-        "b_tarr": "Nevesinje",
-        "b_tarr_direct": "Nevesinje",
-        "b_tarr_hist": "Nevesinje",
-        "b_origin": "Nevesinje (constituent holding of Chulm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nevesinje",
       "older_name_by_867": {
         "exists": false,
@@ -3702,18 +3218,11 @@
         {
           "form": "drij- / drěvo",
           "language": "Old South Slavic",
+          "language_code": "sla",
           "translation": "wood, boat, ferry (referring to the river port/ferry on the Neretva)"
         }
       ],
       "etymology_analysis": "Medieval 'Drijeva' / 'Drijevo' derives from Old South Slavic *drěvo ('wood, wooden boat/ferry'), reflecting its role as a major Neretva river port and customs market; later renamed 'Gabela' (from Italian/Arabic 'gabella' = customs tax).",
-      "current_repo_state": {
-        "b_tarr": "Drijeva",
-        "b_tarr_direct": "Drijeva",
-        "b_tarr_hist": "Drijeva",
-        "b_origin": "Drijeva (constituent holding of Chulm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Drijeva",
       "older_name_by_867": {
         "exists": true,
@@ -3750,18 +3259,11 @@
         {
           "form": "ključ",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "key (metaphorical for a strategic mountain pass/stronghold controlling access)"
         }
       ],
       "etymology_analysis": "From South Slavic 'ključ' ('key'), a common medieval fortress name denoting a strategic stronghold that 'locks' or controls a mountain pass or trade route (here the Dubrovnik–Gacko–Drina route).",
-      "current_repo_state": {
-        "b_tarr": "Kljuc",
-        "b_tarr_direct": "Kljuc",
-        "b_tarr_hist": "Kljuc",
-        "b_origin": "Kljuc (constituent holding of Chulm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://bs.wikipedia.org/wiki/Klju%C4%8D_(Gacko)",
       "older_name_by_867": {
         "exists": false,
@@ -3796,23 +3298,17 @@
         {
           "form": "most",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "bridge"
         },
         {
           "form": "-ar",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "agentive suffix (mostari = 'bridge-keepers')"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'mostari' ('bridge-keepers', from 'most' 'bridge' + '-ar'), referring to the guards who tended the wooden suspension bridge over the Neretva before the Ottoman stone bridge.",
-      "current_repo_state": {
-        "b_tarr": "Mostar",
-        "b_tarr_direct": "Mostar",
-        "b_tarr_hist": "Mostar",
-        "b_origin": "Mostar (constituent holding of Chulm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mostar",
       "older_name_by_867": {
         "exists": false,
@@ -3847,18 +3343,11 @@
         {
           "form": "Hliv- / Chlěb-",
           "language": "Old South Slavic",
+          "language_code": "sla",
           "translation": "early Slavic form *Chlěvьno / *Chlebiana (possibly from *chlěvъ 'shelter/stable' or pre-Slavic root)"
         }
       ],
       "etymology_analysis": "Medieval 'Hlivno' (892 AD 'Cleuna', c. 950 'Chlebiana') lost its initial 'h-' in standard Bosnian/Croatian to become 'Livno'.",
-      "current_repo_state": {
-        "b_tarr": "Lîwne",
-        "b_tarr_direct": "Sawerschje",
-        "b_tarr_hist": "Lîwne",
-        "b_origin": "Lîwne (Lîwne / Delmîn (in-game: Završje))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Livno",
       "older_name_by_867": {
         "exists": true,
@@ -3895,18 +3384,11 @@
         {
           "form": "Dlam- / Delm-",
           "language": "Illyrian / South Slavic",
+          "language_code": "ine",
           "translation": "from Illyrian *dalma / *delma ('sheep/pasture'), yielding Dlamoč > Glamoč"
         }
       ],
       "etymology_analysis": "Evolved from medieval 'Dlamoč' (1078) via dissimilation/alteration of 'dl-' > 'gl-' to 'Glamoč'; the root is linked to the Illyrian root *dalma/*delma ('sheep, pasture').",
-      "current_repo_state": {
-        "b_tarr": "Glamotsch",
-        "b_tarr_direct": "Glamotsch",
-        "b_tarr_hist": "Glamotsch",
-        "b_origin": "Glamotsch (constituent holding of Lîwne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glamo%C4%8D",
       "older_name_by_867": {
         "exists": true,
@@ -3944,23 +3426,17 @@
         {
           "form": "Delm-",
           "language": "Illyrian",
+          "language_code": "ine",
           "translation": "sheep, pasture (*dalma / *d'lmno)"
         },
         {
           "form": "-inium",
           "language": "Latin / Illyrian",
+          "language_code": "lat",
           "translation": "toponymic suffix (Delminium > *Delminio > Dumno > Duvno)"
         }
       ],
       "etymology_analysis": "Illyrian-Roman 'Delminium' (from Illyrian *delma 'sheep/pasture') evolved phonologically via Late Antique *Delminio into South Slavic 'Dumno' and 'Duvno' (renamed 'Tomislavgrad' in 1928).",
-      "current_repo_state": {
-        "b_tarr": "Duvno",
-        "b_tarr_direct": "Duvno",
-        "b_tarr_hist": "Duvno",
-        "b_origin": "Duvno (constituent holding of Lîwne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tomislavgrad",
       "older_name_by_867": {
         "exists": false,
@@ -3995,23 +3471,17 @@
         {
           "form": "Emotha / Imota",
           "language": "Illyrian / South Slavic",
+          "language_code": "ine",
           "translation": "pre-Slavic/Illyrian regional name"
         },
         {
           "form": "-ski",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "adjectival suffix (Imotski < Imota)"
         }
       ],
       "etymology_analysis": "Derived from the pre-Slavic/Illyrian toponym 'Emotha' / 'Imota' (first recorded c. 950 AD as the Croatian župa of Imota) with the South Slavic adjectival suffix '-ski'.",
-      "current_repo_state": {
-        "b_tarr": "Imotzki",
-        "b_tarr_direct": "Imotzki",
-        "b_tarr_hist": "Imotzki",
-        "b_origin": "Imotzki (constituent holding of Lîwne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Imotski",
       "older_name_by_867": {
         "exists": false,
@@ -4046,18 +3516,11 @@
         {
           "form": "Gacko",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "uncertain (possibly from *gatъ 'dyke/causeway' + -sko, or linked in folk/older historiography to Goths)"
         }
       ],
       "etymology_analysis": "First attested in 1276; its name is formed with the Slavic neuter suffix '-sko' (often derived from *gatъ 'embankment/causeway' across the karst polje, or in older tradition from the Goths).",
-      "current_repo_state": {
-        "b_tarr": "Selengôre",
-        "b_tarr_direct": "Selengôre",
-        "b_tarr_hist": "Selengôre",
-        "b_origin": "Selengôre (Zelengora)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gacko",
       "older_name_by_867": {
         "exists": false,
@@ -4092,23 +3555,17 @@
         {
           "form": "konj",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "horse (from Proto-Slavic *konjь)"
         },
         {
           "form": "-ić",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "diminutive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'konj' ('horse') + '-ić', likely referring to a horse-changing station/caravan stop on the Neretva trade route between Herzegovina and central Bosnia.",
-      "current_repo_state": {
-        "b_tarr": "Konjic",
-        "b_tarr_direct": "Konjic",
-        "b_tarr_hist": "Konjic",
-        "b_origin": "Konjic (constituent holding of Selengôre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Konjic",
       "older_name_by_867": {
         "exists": false,
@@ -4143,18 +3600,11 @@
         {
           "form": "obal / obli",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "round, rounded (with -jъ topographic suffix)"
         }
       ],
       "etymology_analysis": "Derived from South Slavic 'obal' ('round, rounded'), describing the rounded hill or ridge on which the medieval fortress of Obalj (seat of župa Zagorje) stood.",
-      "current_repo_state": {
-        "b_tarr": "Obalj",
-        "b_tarr_direct": "Obalj",
-        "b_tarr_hist": "Obalj",
-        "b_origin": "Obalj (constituent holding of Selengôre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://hr.wikipedia.org/wiki/Obalj_(utvrda)",
       "older_name_by_867": {
         "exists": false,
@@ -4189,23 +3639,17 @@
         {
           "form": "βοῦς (boûs)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "ox, bull"
         },
         {
           "form": "τιτρώσκω (titrṓskō) / τρωτός (trōtós)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "wounded"
         }
       ],
       "etymology_analysis": "From Ancient Greek Βουθρωτόν (Bouthrōtón), Latinized as Buthrotum and evolving into Albanian Butrint. Classical tradition (Virgil, Servius) derives it from 'wounded bull' (boûs + trōtós), referring to a sacrificial bull that escaped and swam ashore.",
-      "current_repo_state": {
-        "b_tarr": "Butrînt",
-        "b_tarr_direct": "Butrînt",
-        "b_tarr_hist": "Butrînt",
-        "b_origin": "Butrînt (Buthrotum)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Butrint",
       "older_name_by_867": {
         "exists": false,
@@ -4240,18 +3684,11 @@
         {
           "form": "κορυφή (koryphḗ) / κορυφαί (koryphaí)",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "peak, summit, crest"
         }
       ],
       "etymology_analysis": "The Western name Corfu derives via Venetian/Italian Corfù from Byzantine Greek Κορυφώ (Koryphṓ, 'city of the peaks'), referring to the twin peaks of the Palaio Frourio (Old Fortress) peninsula.",
-      "current_repo_state": {
-        "b_tarr": "Corfu",
-        "b_tarr_direct": "Corfu",
-        "b_tarr_hist": "Corfu",
-        "b_origin": "Corfu (constituent holding of Butrînt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Corfu",
       "older_name_by_867": {
         "exists": true,
@@ -4289,23 +3726,17 @@
         {
           "form": "Κέφαλος (Képhalos)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Cephalus (mythological hero)"
         },
         {
           "form": "-ηνία (-ēnía)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "territory suffix"
         }
       ],
       "etymology_analysis": "From Ancient Greek Κεφαλληνία (Kephallēnía), named in Greek mythology after the Athenian hero Cephalus (or from the ethnonym Kephallēnes, meaning 'headlanders' or 'people of the head/promontory').",
-      "current_repo_state": {
-        "b_tarr": "Tzephalônje",
-        "b_tarr_direct": "Tzephalônje",
-        "b_tarr_hist": "Tzephalônje",
-        "b_origin": "Tzephalônje (Cephalonia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cephalonia",
       "older_name_by_867": {
         "exists": false,
@@ -4340,23 +3771,17 @@
         {
           "form": "*Zák-",
           "language": "Pre-Greek / Pelasgian",
+          "language_code": "und",
           "translation": "uncertain root"
         },
         {
           "form": "-υνθος (-ynthos)",
           "language": "Pre-Greek / Pelasgian",
+          "language_code": "und",
           "translation": "pre-Greek toponymic suffix"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ζάκυνθος (Zákynthos), a Pre-Greek (Pelasgian) toponym characterized by the -nthos suffix (comparable to Korinthos, Erymanthos); Greek myth attributed it to an eponymous Arcadian hero Zakynthos.",
-      "current_repo_state": {
-        "b_tarr": "Zakynthos",
-        "b_tarr_direct": "Zakynthos",
-        "b_tarr_hist": "Zakynthos",
-        "b_origin": "Zakynthos (constituent holding of Tzephalônje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/History_of_Zakynthos",
       "older_name_by_867": {
         "exists": false,
@@ -4391,23 +3816,17 @@
         {
           "form": "Ἀντίπατρος (Antípatros)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Antipater (Macedonian general/regent)"
         },
         {
           "form": "-εια (-eia)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city/foundation suffix"
         }
       ],
       "etymology_analysis": "Antipatreia was founded/named in the Hellenistic period after Antipater (or his son Cassander's family); in the 9th century AD under the First Bulgarian Empire it received the Slavic name Beligrad ('White City'), which became Ottoman/Albanian Berat.",
-      "current_repo_state": {
-        "b_tarr": "Antipatrîe",
-        "b_tarr_direct": "Antipatrîe",
-        "b_tarr_hist": "Antipatrîe",
-        "b_origin": "Antipatrîe (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Berat",
       "older_name_by_867": {
         "exists": false,
@@ -4442,18 +3861,11 @@
         {
           "form": "Skreparion / Skrapar",
           "language": "Albanian / Byzantine Greek",
+          "language_code": "sqi",
           "translation": "uncertain; possibly linked to regional rocky/karst terrain or pre-Slavic root"
         }
       ],
       "etymology_analysis": "First attested in 1336 as Skreparion in John VI Kantakouzenos's chronicle (Ottoman İskarapar). The etymology is uncertain, though it refers to the mountainous region and fortress along the Osum canyon.",
-      "current_repo_state": {
-        "b_tarr": "Skrapar",
-        "b_tarr_direct": "Skrapar",
-        "b_tarr_hist": "Skrapar",
-        "b_origin": "Skrapar (constituent holding of Belgrat-an-Osum)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Skrapar",
       "older_name_by_867": {
         "exists": false,
@@ -4488,23 +3900,17 @@
         {
           "form": "ἀργυρόν (argyrón)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "silver"
         },
         {
           "form": "κάστρον (kástron)",
           "language": "Medieval Greek (from Latin castrum)",
+          "language_code": "grc",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "From Medieval Greek Ἀργυρόκαστρον (Argyrókastron, 'Silver Castle'), adapted into Albanian as Gjirokastër (Gheg Gjinokastër). Folk etymology linking it to Princess Argjiro is unhistorical.",
-      "current_repo_state": {
-        "b_tarr": "Argyrokastron",
-        "b_tarr_direct": "Argyrokastron",
-        "b_tarr_hist": "Argyrokastron",
-        "b_origin": "Argyrokastron (constituent holding of Belgrat-an-Osum)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gjirokast%C3%ABr",
       "older_name_by_867": {
         "exists": false,
@@ -4539,23 +3945,17 @@
         {
           "form": "κλεισοῦρα (kleisoûra)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "narrow mountain pass, defile, gorge"
         },
         {
           "form": "clausura",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "enclosure, narrow pass"
         }
       ],
       "etymology_analysis": "From Medieval Greek κλεισοῦρα (kleisoûra, 'narrow pass/gorge') via Latin clausura, referring to the strategic Këlcyrë Gorge carved by the Vjosë River between Mount Trebeshinë and Mount Nemërçkë.",
-      "current_repo_state": {
-        "b_tarr": "Kelcyre",
-        "b_tarr_direct": "Kelcyre",
-        "b_tarr_hist": "Kelcyre",
-        "b_origin": "Kelcyre (constituent holding of Belgrat-an-Osum)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/K%C3%ABlcyr%C3%AB",
       "older_name_by_867": {
         "exists": false,
@@ -4590,23 +3990,17 @@
         {
           "form": "valea",
           "language": "Aromanian",
+          "language_code": "ron",
           "translation": "valley"
         },
         {
           "form": "mari / mare",
           "language": "Aromanian",
+          "language_code": "ron",
           "translation": "great, large"
         }
       ],
       "etymology_analysis": "Oronym of the Valamara massif in southeastern Albania (between the Shkumbin and Devoll rivers). Corresponding to Aromanian Valea Mari ('Great Valley'), reflecting Aromanian pastoral presence in the Pindus-Korçë highlands.",
-      "current_repo_state": {
-        "b_tarr": "Valamara",
-        "b_tarr_direct": "Valamara",
-        "b_tarr_hist": "Valamara",
-        "b_origin": "Valamara (constituent holding of Belgrat-an-Osum)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Valamara",
       "older_name_by_867": {
         "exists": false,
@@ -4641,18 +4035,11 @@
         {
           "form": "krua (*krāna)",
           "language": "Albanian (from Proto-Albanian)",
+          "language_code": "sqi",
           "translation": "water spring, fountain"
         }
       ],
       "etymology_analysis": "Derived from Albanian krua (Proto-Albanian *krāna, 'spring, fountain'), rendered in Medieval Greek as Κροαί (Kroai). First attested in 879 AD, just after the 867 AD baseline.",
-      "current_repo_state": {
-        "b_tarr": "Arbanûn",
-        "b_tarr_direct": "Arbanûn",
-        "b_tarr_hist": "Arbanûn",
-        "b_origin": "Arbanûn (Arbanon)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kruj%C3%AB",
       "older_name_by_867": {
         "exists": true,
@@ -4689,18 +4076,11 @@
         {
           "form": "mat",
           "language": "Albanian (Proto-Albanian)",
+          "language_code": "sqi",
           "translation": "elevated place, mountain/shore"
         }
       ],
       "etymology_analysis": "Hydronym and region name derived from Proto-Albanian *mat ('elevated place', later shifting to 'riverbank/shore'). Attested in Late Antiquity as Mathis by Vibius Sequester.",
-      "current_repo_state": {
-        "b_tarr": "Mat",
-        "b_tarr_direct": "Mat",
-        "b_tarr_hist": "Mat",
-        "b_origin": "Mat (constituent holding of Arbanûn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mat_(region)",
       "older_name_by_867": {
         "exists": false,
@@ -4735,18 +4115,11 @@
         {
           "form": "λισσός (lissós)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "smooth, sheer (cliff/rock)"
         }
       ],
       "etymology_analysis": "From Ancient Greek Λισσός (Lissós, 'smooth/sheer rock') and Latin Lissus, which evolved through regular Albanian sound changes into archaic Lesh and modern Lezhë.",
-      "current_repo_state": {
-        "b_tarr": "Ledsche",
-        "b_tarr_direct": "Ledsche",
-        "b_tarr_hist": "Ledsche",
-        "b_origin": "Ledsche (constituent holding of Arbanûn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lezh%C3%AB",
       "older_name_by_867": {
         "exists": false,
@@ -4781,18 +4154,11 @@
         {
           "form": "Scampa / Hiscampis",
           "language": "Illyrian / Latin",
+          "language_code": "ine",
           "translation": "crag, rock, or Roman station name (cf. Albanian shkëmb 'rock')"
         }
       ],
       "etymology_analysis": "Hiscampis (Scampis) was the Late Roman/Early Byzantine fortress and bishopric on the Via Egnatia (possibly related to Illyrian/Albanian shkëmb 'rock/cliff'). Refounded in 1466 by Mehmed II as Ottoman İl-basan ('the fortress' > Elbasan).",
-      "current_repo_state": {
-        "b_tarr": "Hiskampis",
-        "b_tarr_direct": "Hiskampis",
-        "b_tarr_hist": "Hiskampis",
-        "b_origin": "Hiskampis (constituent holding of Arbanûn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Elbasan",
       "older_name_by_867": {
         "exists": false,
@@ -4827,18 +4193,11 @@
         {
           "form": "αὐλών (aulṓn)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "channel, strait, glen"
         }
       ],
       "etymology_analysis": "From Ancient Greek Αὐλών (Aulṓn, 'channel/strait', referring to the Strait of Otranto), Latinized as Aulona, evolving into Medieval/Italian Valona and Albanian Vlorë.",
-      "current_repo_state": {
-        "b_tarr": "Valône",
-        "b_tarr_direct": "Valône",
-        "b_tarr_hist": "Valône",
-        "b_origin": "Valône (Avlonas)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vlor%C3%AB",
       "older_name_by_867": {
         "exists": false,
@@ -4873,18 +4232,11 @@
         {
           "form": "Χίμαιρα (Chímaira) / χείμαρρος (cheímarros)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Chimaera (mythological) or winter-flowing torrent"
         }
       ],
       "etymology_analysis": "From Ancient Greek Χίμαιρα (Chímaira, Latin Chimaera), evolving into Albanian Himarë. Linguists connect it either to χείμαρρος ('mountain torrent') or an ancient coastal/hydronymic root.",
-      "current_repo_state": {
-        "b_tarr": "Himara",
-        "b_tarr_direct": "Himara",
-        "b_tarr_hist": "Himara",
-        "b_origin": "Himara (constituent holding of Valône)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Himar%C3%AB",
       "older_name_by_867": {
         "exists": false,
@@ -4919,18 +4271,11 @@
         {
           "form": "Δήβορος (Dḗvoros) / *dъbrъ",
           "language": "Illyrian / Ancient Greek / South Slavic",
+          "language_code": "ine",
           "translation": "deep valley, gorge (or pre-Slavic toponym)"
         }
       ],
       "etymology_analysis": "Attested in Antiquity as Greek Δῆβορος / Latin Deborus (Ptolemy), continued as Byzantine Greek Δίβρη (Divre), South Slavic Debar, and Albanian Dibër (often associated with Slavic *dъbrъ 'valley/gorge' or a Paleo-Balkan root).",
-      "current_repo_state": {
-        "b_tarr": "Debâr",
-        "b_tarr_direct": "Debâr",
-        "b_tarr_hist": "Debâr",
-        "b_origin": "Debâr (Debar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Debar",
       "older_name_by_867": {
         "exists": false,
@@ -4965,23 +4310,17 @@
         {
           "form": "ἐπισκοπή (episkopḗ)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "bishopric, episcopal see"
         },
         {
           "form": "peshkop",
           "language": "Albanian (from Latin episcopus)",
+          "language_code": "sqi",
           "translation": "bishop"
         }
       ],
       "etymology_analysis": "Derived from Medieval Greek ἐπισκοπή (episkopḗ, 'bishopric') and Albanian peshkop ('bishop', from Vulgar Latin *pescopus < episcopus), commemorating its 1020 AD elevation as an episcopal seat.",
-      "current_repo_state": {
-        "b_tarr": "Peschkopi",
-        "b_tarr_direct": "Peschkopi",
-        "b_tarr_hist": "Peschkopi",
-        "b_origin": "Peschkopi (constituent holding of Debâr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Peshkopi",
       "older_name_by_867": {
         "exists": false,
@@ -5016,18 +4355,11 @@
         {
           "form": "Kukës / Kukësi",
           "language": "Albanian",
+          "language_code": "sqi",
           "translation": "uncertain; possibly from a personal/clan name or local root"
         }
       ],
       "etymology_analysis": "First attested in late 16th-century Ottoman defters (1571–1591) as a small settlement at the confluence of the White and Black Drin; its etymology remains uncertain.",
-      "current_repo_state": {
-        "b_tarr": "Kukes",
-        "b_tarr_direct": "Kukes",
-        "b_tarr_hist": "Kukes",
-        "b_origin": "Kukes (constituent holding of Debâr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kuk%C3%ABs",
       "older_name_by_867": {
         "exists": false,
@@ -5062,23 +4394,17 @@
         {
           "form": "δυσ- (dys-)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "bad, difficult"
         },
         {
           "form": "ῥαχία (rhachía)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "rocky shore, ridge, spine"
         }
       ],
       "etymology_analysis": "From Ancient Greek Δυρράχιον (Dyrrháchion, 'difficult ridge/rocky shore'), Latinized as Dyrrhachium, evolving into Venetian Durazzo and Albanian Durrës.",
-      "current_repo_state": {
-        "b_tarr": "Duratz",
-        "b_tarr_direct": "Duratz",
-        "b_tarr_hist": "Duratz",
-        "b_origin": "Duratz (Dyrrachion)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Durr%C3%ABs",
       "older_name_by_867": {
         "exists": true,
@@ -5115,18 +4441,11 @@
         {
           "form": "Savra / Savër",
           "language": "Albanian / South Slavic",
+          "language_code": "sqi",
           "translation": "uncertain; local plain toponym near Lushnjë"
         }
       ],
       "etymology_analysis": "Savra (modern village Savër near Lushnjë) is first attested in 1385 AD as the site of the Battle of Savra; Lushnjë itself is first recorded in the 1431–1432 Ottoman defter.",
-      "current_repo_state": {
-        "b_tarr": "Savra",
-        "b_tarr_direct": "Savra",
-        "b_tarr_hist": "Savra",
-        "b_origin": "Savra (constituent holding of Duratz)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Battle_of_Savra",
       "older_name_by_867": {
         "exists": false,
@@ -5161,23 +4480,17 @@
         {
           "form": "ναῦς (naûs)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "ship"
         },
         {
           "form": "πήγνυμι (pḗgnymi)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "to fasten, build"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ναύπακτος (Naúpaktos, 'shipyard/boatyard', from naûs 'ship' + pēg- 'to fasten'), later Venetian Lepanto and restored in modern Greece as Nafpaktos.",
-      "current_repo_state": {
-        "b_tarr": "Naupakt",
-        "b_tarr_direct": "Naupakt",
-        "b_tarr_hist": "Naupakt",
-        "b_origin": "Naupakt (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nafpaktos",
       "older_name_by_867": {
         "exists": false,
@@ -5212,18 +4525,11 @@
         {
           "form": "Προύσα (Proúsa)",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "Prusa (Bursa in Bithynia)"
         }
       ],
       "etymology_analysis": "Named after the Monastery of Panagia Prousiotissa, whose icon was traditionally brought from Prusa (Bursa) in Bithynia during Iconoclasm (829–842 AD); the village itself is attested only in the early modern/modern period.",
-      "current_repo_state": {
-        "b_tarr": "Prousos",
-        "b_tarr_direct": "Prousos",
-        "b_tarr_hist": "Prousos",
-        "b_origin": "Prousos (constituent holding of Etôljen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CE%BF%CF%85%CF%83%CF%8C%CF%82_%CE%95%CF%85%CF%81%CF%85%CF%84%CE%B1%CE%BD%CE%AF%CE%B1%CF%82",
       "older_name_by_867": {
         "exists": false,
@@ -5258,18 +4564,11 @@
         {
           "form": "Λοιδορίκιον (Loidoríkion)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "uncertain; possibly linked to ancient Dorians (Doris) or a medieval personal/Slavic name"
         }
       ],
       "etymology_analysis": "First attested in Leo VI's Notitia Episcopatuum (901–907 AD) as a suffragan bishopric of Larissa. Local tradition links it to the ancient Dorians of Doris, though its exact medieval etymology is debated.",
-      "current_repo_state": {
-        "b_tarr": "Lidoriki",
-        "b_tarr_direct": "Lidoriki",
-        "b_tarr_hist": "Lidoriki",
-        "b_origin": "Lidoriki (constituent holding of Etôljen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://el.wikipedia.org/wiki/%CE%9B%CE%B9%CE%B4%CF%89%CF%81%CE%AF%CE%BA%CE%B9_%CE%A6%CF%89%CE%BA%CE%AF%CE%B4%CE%B1%CF%82",
       "older_name_by_867": {
         "exists": false,
@@ -5304,23 +4603,17 @@
         {
           "form": "Ἰωάννης (Iōánnēs)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "John (Saint John the Baptist or a founder/settler John)"
         },
         {
           "form": "-ινα (-ina)",
           "language": "Medieval Greek / South Slavic",
+          "language_code": "grc",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the personal name Ioannes (attributed to a monastery of St. John the Baptist or a local founder) with the -ina suffix. First recorded in 879 AD, 12 years after the 867 AD baseline (Procopius's 6th-c. Euroea is a debated nearby predecessor).",
-      "current_repo_state": {
-        "b_tarr": "Epîr",
-        "b_tarr_direct": "Epîr",
-        "b_tarr_hist": "Epîr",
-        "b_origin": "Epîr (Epeiros)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ioannina",
       "older_name_by_867": {
         "exists": false,
@@ -5355,23 +4648,17 @@
         {
           "form": "konjь",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "horse"
         },
         {
           "form": "-ica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Most commonly derived from South Slavic *Konica ('horse place', from konjь 'horse' + -ica), though alternative theories link it to an ancient Epirote settlement Knossos/Konissos or a local lord Konis.",
-      "current_repo_state": {
-        "b_tarr": "Konitza",
-        "b_tarr_direct": "Konitza",
-        "b_tarr_hist": "Konitza",
-        "b_origin": "Konitza (constituent holding of Epîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Konitsa",
       "older_name_by_867": {
         "exists": false,
@@ -5406,18 +4693,11 @@
         {
           "form": "bělъ / Bela",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "white"
         }
       ],
       "etymology_analysis": "Of Slavic origin (cf. bělъ 'white'), attested from the mid-10th century as Bela (Βελᾶ), when the bishopric of ancient Photice was transferred to the fortified hill near modern Vella Monastery.",
-      "current_repo_state": {
-        "b_tarr": "Vella",
-        "b_tarr_direct": "Vella",
-        "b_tarr_hist": "Vella",
-        "b_origin": "Vella (constituent holding of Epîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bela_(Epirus)",
       "older_name_by_867": {
         "exists": true,
@@ -5454,18 +4734,11 @@
         {
           "form": "γράβα (gráva)",
           "language": "Epirote Greek / Balkan",
+          "language_code": "ell",
           "translation": "cave, hollow, gorge"
         }
       ],
       "etymology_analysis": "From Epirote Greek γράβα (gráva, 'cave/hollow'). Used as the name of the settlement of Igoumenitsa in Ottoman and early modern times until it was renamed Igoumenitsa in 1938.",
-      "current_repo_state": {
-        "b_tarr": "Grava",
-        "b_tarr_direct": "Grava",
-        "b_tarr_hist": "Grava",
-        "b_origin": "Grava (constituent holding of Epîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Igoumenitsa",
       "older_name_by_867": {
         "exists": false,
@@ -5500,23 +4773,17 @@
         {
           "form": "mečьka / medvědь",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "bear"
         },
         {
           "form": "-ovo",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place suffix"
         }
       ],
       "etymology_analysis": "Generally derived from South Slavic *Mečkovo / *Medvedovo ('place of bears') or from Aromanian/Slavic roots; first attested in 1380 AD in the Chronicle of Ioannina.",
-      "current_repo_state": {
-        "b_tarr": "Pînt",
-        "b_tarr_direct": "Metzôve",
-        "b_tarr_hist": "Pînt",
-        "b_origin": "Pînt (Ioannina (in-game: Metzovo))",
-        "b_anachronism": "Metsovo first attested 1380 AD in the Chronicle of Ioannina. Ancient regional designation is Mount Pindus (Pindos).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Metsovo",
       "older_name_by_867": {
         "exists": false,
@@ -5551,18 +4818,11 @@
         {
           "form": "*gordьcь / *gradьcь",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "little fortress, small fortified town"
         }
       ],
       "etymology_analysis": "From South Slavic *gradьcь / *gordьcь ('small fortress/town', diminutive of gradъ), borrowed into Medieval Greek as Γαρδίκι (Gardíki). Common medieval toponym in Epirus and western Thessaly (e.g., Gardiki, Trikala).",
-      "current_repo_state": {
-        "b_tarr": "Gardiki",
-        "b_tarr_direct": "Gardiki",
-        "b_tarr_hist": "Gardiki",
-        "b_origin": "Gardiki (constituent holding of Pînt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gardiki,_Trikala",
       "older_name_by_867": {
         "exists": false,
@@ -5597,23 +4857,17 @@
         {
           "form": "brestъ (брест)",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "elm tree"
         },
         {
           "form": "-enica (-еница)",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place suffix"
         }
       ],
       "etymology_analysis": "From South Slavic *Brestenica (Брестеница, 'elm place', from brestъ 'elm'), Hellenized as Βρεστενίτσα (Vrestenitsa), and later renamed Piges ('springs').",
-      "current_repo_state": {
-        "b_tarr": "Vrestenitza",
-        "b_tarr_direct": "Vrestenitza",
-        "b_tarr_hist": "Vrestenitza",
-        "b_origin": "Vrestenitza (constituent holding of Pînt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://el.wikipedia.org/wiki/%CE%A0%CE%B7%CE%B3%CE%AD%CF%82_%CE%86%CF%81%CF%84%CE%B1%CF%82",
       "older_name_by_867": {
         "exists": false,
@@ -5648,23 +4902,17 @@
         {
           "form": "ἀ- (a-)",
           "language": "Greek",
+          "language_code": "ell",
           "translation": "un-, not"
         },
         {
           "form": "γράφω (gráphō)",
           "language": "Greek",
+          "language_code": "ell",
           "translation": "to write, register"
         }
       ],
       "etymology_analysis": "From Greek Ἄγραφα (Ágrapha, literally 'unwritten'), referring to the remote Pindus mountain region omitted from Ottoman tax registers because the Ottomans could not subjugate its inhabitants.",
-      "current_repo_state": {
-        "b_tarr": "Agrafa",
-        "b_tarr_direct": "Agrafa",
-        "b_tarr_hist": "Agrafa",
-        "b_origin": "Agrafa (constituent holding of Pînt)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Agrafa",
       "older_name_by_867": {
         "exists": false,
@@ -5699,18 +4947,11 @@
         {
           "form": "Arta (Ἄρτα)",
           "language": "Medieval Greek / uncertain",
+          "language_code": "grc",
           "translation": "debated: possibly from Arachthos river, Latin artus ('narrow'), or Slavic balta ('swamp')"
         }
       ],
       "etymology_analysis": "First attested in 1082 AD as Arta; its etymology is debated (variously linked to a corruption of the Arachthos River, Latin artus 'narrow', or Slavic balta 'marsh').",
-      "current_repo_state": {
-        "b_tarr": "Nikôpel",
-        "b_tarr_direct": "Nikôpel",
-        "b_tarr_hist": "Nikôpel",
-        "b_origin": "Nikôpel (Nicopolis)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arta,_Greece",
       "older_name_by_867": {
         "exists": true,
@@ -5747,18 +4988,11 @@
         {
           "form": "Sivista (Σιβίστα)",
           "language": "South Slavic / Greek",
+          "language_code": "sla",
           "translation": "uncertain; possibly Slavic *Sivica / *Šivica + toponymic suffix"
         }
       ],
       "etymology_analysis": "Small mountain settlement in Agrafa (Evrytania) near the Achelous River / Lake Kremasta. Its name is likely of medieval Slavic or local origin, unattested before the Ottoman/modern era.",
-      "current_repo_state": {
-        "b_tarr": "Sivista",
-        "b_tarr_direct": "Sivista",
-        "b_tarr_hist": "Sivista",
-        "b_origin": "Sivista (constituent holding of Nikôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://agrafa.gr/sivista/",
       "older_name_by_867": {
         "exists": false,
@@ -5793,23 +5027,17 @@
         {
           "form": "Ἄγγελος (Ángelos)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "Angelos (imperial/despot dynasty)"
         },
         {
           "form": "κάστρον (kástron)",
           "language": "Medieval Greek (from Latin castrum)",
+          "language_code": "grc",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "From Medieval Greek Ἀγγελόκαστρον (Angelókastron, 'Castle of Angelos'), built in the 13th century by the Despots of Epirus of the Angelos-Komnenos-Doukas house.",
-      "current_repo_state": {
-        "b_tarr": "Angelokastron",
-        "b_tarr_direct": "Angelokastron",
-        "b_tarr_hist": "Angelokastron",
-        "b_origin": "Angelokastron (constituent holding of Nikôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://el.wikipedia.org/wiki/%CE%91%CE%B3%CE%B3%CE%B5%CE%BB%CF%8C%CE%BA%CE%B1%CF%83%CF%84%CF%81%CE%BF_%CE%91%CE%B9%CF%84%CF%89%CE%BB%CE%BF%CE%B1%CE%BA%CE%B1%CF%81%CE%BD%CE%B1%CE%BD%CE%AF%CE%B1%CF%82",
       "older_name_by_867": {
         "exists": true,
@@ -5847,23 +5075,17 @@
         {
           "form": "voda",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "water"
         },
         {
           "form": "-ica",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "place suffix"
         }
       ],
       "etymology_analysis": "Prevailingly derived from South Slavic *Vodica / *Vodenica (from voda 'water', referring to the abundant coastal waters/springs on the Ambracian Gulf), first attested in the early 10th century.",
-      "current_repo_state": {
-        "b_tarr": "Vonitza",
-        "b_tarr_direct": "Vonitza",
-        "b_tarr_hist": "Vonitza",
-        "b_origin": "Vonitza (constituent holding of Nikôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vonitsa",
       "older_name_by_867": {
         "exists": true,
@@ -5900,23 +5122,17 @@
         {
           "form": "bene",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "well / good"
         },
         {
           "form": "ventum",
           "language": "Latin (reinterpreted from Oscan Maloenton)",
+          "language_code": "lat",
           "translation": "wind / event (propitious)"
         }
       ],
       "etymology_analysis": "Originally Samnite/Oscan Malies/Maloenton (Latinized as Maleventum), auspiciously renamed Beneventum by the Romans in 268 BC upon founding a Latin colony.",
-      "current_repo_state": {
-        "b_tarr": "Benevent",
-        "b_tarr_direct": "Benevent",
-        "b_tarr_hist": "Benevent",
-        "b_origin": "Benevent (Benevento)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Benevento",
       "older_name_by_867": {
         "exists": true,
@@ -5954,18 +5170,11 @@
         {
           "form": "Allifae",
           "language": "Oscan / Samnite",
+          "language_code": "lat",
           "translation": "ancient Samnite settlement name (possibly related to *albh- 'white' or personal name)"
         }
       ],
       "etymology_analysis": "From Oscan/Samnite Allifae, attested during the Second Samnite War (326 BC) and later a Roman municipium.",
-      "current_repo_state": {
-        "b_tarr": "Alife",
-        "b_tarr_direct": "Alife",
-        "b_tarr_hist": "Alife",
-        "b_origin": "Alife (constituent holding of Benevent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alife",
       "older_name_by_867": {
         "exists": false,
@@ -6000,23 +5209,17 @@
         {
           "form": "Aiser-",
           "language": "Oscan / Italic",
+          "language_code": "lat",
           "translation": "sacred / divine (cf. Oscan aisusis) or hydronymic root"
         },
         {
           "form": "-nia",
           "language": "Latin / Italic",
+          "language_code": "lat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From Samnite/Roman Aesernia (Latin colony 263 BC), likely connected to Italic *ais- ('sacred') or a local Samnite place name.",
-      "current_repo_state": {
-        "b_tarr": "Isernia",
-        "b_tarr_direct": "Isernia",
-        "b_tarr_hist": "Isernia",
-        "b_origin": "Isernia (constituent holding of Benevent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isernia",
       "older_name_by_867": {
         "exists": false,
@@ -6051,18 +5254,11 @@
         {
           "form": "Melphes / Melfia",
           "language": "Italic / Latin",
+          "language_code": "lat",
           "translation": "local stream name (cf. Pliny's Melphes)"
         }
       ],
       "etymology_analysis": "Named after the nearby Melfia stream (linked to Pliny's Melphes). First documented as a fortified town in 1018 AD under Byzantine Catepan Basil Boioannes.",
-      "current_repo_state": {
-        "b_tarr": "Melfi",
-        "b_tarr_direct": "Melfi",
-        "b_tarr_hist": "Melfi",
-        "b_origin": "Melfi (constituent holding of Benevent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Melfi",
       "older_name_by_867": {
         "exists": false,
@@ -6097,23 +5293,17 @@
         {
           "form": "Arius / Arianus",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman personal/gentilic name"
         },
         {
           "form": "-anum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "estate suffix ('estate of Arius')"
         }
       ],
       "etymology_analysis": "Predial toponym from Latin *praedium Arianum* ('estate of Arius'). Earliest written mention as *castrum Ariani* dates to 892 AD.",
-      "current_repo_state": {
-        "b_tarr": "Ariano",
-        "b_tarr_direct": "Ariano",
-        "b_tarr_hist": "Ariano",
-        "b_origin": "Ariano (constituent holding of Benevent)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ariano_Irpino",
       "older_name_by_867": {
         "exists": false,
@@ -6148,18 +5338,11 @@
         {
           "form": "Luceria",
           "language": "Daunian / Oscan / Latin",
+          "language_code": "lat",
           "translation": "ancient Daunian city (linked by ancient etymology to lucus 'sacred grove' or Etruscan/Illyrian root)"
         }
       ],
       "etymology_analysis": "Ancient Daunian city of Luceria, colonized by Rome in 314 BC.",
-      "current_repo_state": {
-        "b_tarr": "Lutzêre",
-        "b_tarr_direct": "Lutzêre",
-        "b_tarr_hist": "Lutzêre",
-        "b_origin": "Lutzêre — Historical Option A seat of c_foggia",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lucera",
       "older_name_by_867": {
         "exists": false,
@@ -6194,23 +5377,17 @@
         {
           "form": "Lar-",
           "language": "Frentanian / Italic",
+          "language_code": "lat",
           "translation": "pre-Roman / Oscan settlement name (cf. Etruscan/Italic lar 'lord/hearth')"
         },
         {
           "form": "-inum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From ancient Frentanian/Roman Larinum, attested in Livy during the Second Punic War (217 BC).",
-      "current_repo_state": {
-        "b_tarr": "Larino",
-        "b_tarr_direct": "Larino",
-        "b_tarr_hist": "Larino",
-        "b_origin": "Larino (constituent holding of Lutzêre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Larino",
       "older_name_by_867": {
         "exists": false,
@@ -6245,18 +5422,11 @@
         {
           "form": "Vesta / Apeste",
           "language": "Latin / Medieval Italian",
+          "language_code": "lat",
           "translation": "uncertain; traditionally linked to a temple of Vesta or Apeste"
         }
       ],
       "etymology_analysis": "First attested in 1002 AD during Doge Pietro II Orseolo's naval expedition. Traditional etymology links it to Roman Vesta.",
-      "current_repo_state": {
-        "b_tarr": "Vieste",
-        "b_tarr_direct": "Vieste",
-        "b_tarr_hist": "Vieste",
-        "b_origin": "Vieste (constituent holding of Lutzêre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Vieste",
       "older_name_by_867": {
         "exists": false,
@@ -6291,23 +5461,17 @@
         {
           "form": "con-",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "together"
         },
         {
           "form": "sentia / -entia",
           "language": "Italic / Latin",
+          "language_code": "lat",
           "translation": "agreement / confluence (of rivers Crati and Busento)"
         }
       ],
       "etymology_analysis": "Ancient Bruttian capital Consentia (4th century BC), Latinized as 'agreement' or confluence of the Crati and Busento rivers.",
-      "current_repo_state": {
-        "b_tarr": "Kosentz",
-        "b_tarr_direct": "Kosentz",
-        "b_tarr_hist": "Kosentz",
-        "b_origin": "Kosentz (Cosenza)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cosenza",
       "older_name_by_867": {
         "exists": false,
@@ -6342,23 +5506,17 @@
         {
           "form": "castrum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "fortress / fortified settlement"
         },
         {
           "form": "villarum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "of the villas / rural estates (genitive plural of villa)"
         }
       ],
       "etymology_analysis": "From Medieval Latin 'Castrum Villarum' ('fortress of the villas/villages'), denoting the hilltop stronghold in Cosenza, Calabria, Italy, first attested in 11th-century Norman sources.",
-      "current_repo_state": {
-        "b_tarr": "Kassân",
-        "b_tarr_direct": "Kassân",
-        "b_tarr_hist": "Kassân",
-        "b_origin": "Ancient Byzantine/Italo-Greek episcopal see Cassanum / Cassano all'Ionio (in-game: Kassân)",
-        "b_anachronism": "Pre-867 Byzantine see restored over 1064 Norman fortress Castrum Villarum.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Castrovillari",
       "older_name_by_867": {
         "exists": false,
@@ -6393,23 +5551,17 @@
         {
           "form": "bel",
           "language": "Italian",
+          "language_code": "ita",
           "translation": "beautiful"
         },
         {
           "form": "vedere",
           "language": "Italian",
+          "language_code": "ita",
           "translation": "view / vista"
         }
       ],
       "etymology_analysis": "Descriptive Italian topographic name meaning 'beautiful view'. Earliest local attestation is the 1091 AD portal inscription on the Chiesetta del Rosario.",
-      "current_repo_state": {
-        "b_tarr": "Belvedere",
-        "b_tarr_direct": "Belvedere",
-        "b_tarr_hist": "Belvedere",
-        "b_origin": "Belvedere (constituent holding of Kosentz)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Belvedere_Marittimo",
       "older_name_by_867": {
         "exists": false,
@@ -6444,18 +5596,11 @@
         {
           "form": "Rhēgion (Ῥήγιον)",
           "language": "Ancient Greek / Oscan",
+          "language_code": "grc",
           "translation": "royal (from Italic *rēg- 'king') or 'breach/cleft' (from rhēgnymi 'to break')"
         }
       ],
       "etymology_analysis": "Founded c. 730 BC as Greek Rhegion; either from Greek *rhēgnymi* ('to break', referring to the Strait of Messina) or Italic *rēg-* ('royal').",
-      "current_repo_state": {
-        "b_tarr": "Retsch",
-        "b_tarr_direct": "Retsch",
-        "b_tarr_hist": "Retsch",
-        "b_origin": "Retsch (Reggio Calabria)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Reggio_Calabria",
       "older_name_by_867": {
         "exists": false,
@@ -6490,18 +5635,11 @@
         {
           "form": "Skylletion (Σκυλλήτιον)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "rocky headland / Scylla-place"
         }
       ],
       "etymology_analysis": "From Ancient Greek Skylletion and Roman Scolacium / Scylacium, attested from the Classical Greek period.",
-      "current_repo_state": {
-        "b_tarr": "Squilluce",
-        "b_tarr_direct": "Squilluce",
-        "b_tarr_hist": "Squilluce",
-        "b_origin": "Squilluce (constituent holding of Retsch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Squillace",
       "older_name_by_867": {
         "exists": false,
@@ -6536,18 +5674,11 @@
         {
           "form": "tropaia (τροπαῖα)",
           "language": "Ancient/Byzantine Greek",
+          "language_code": "grc",
           "translation": "alternating sea-land wind or 'trophies'"
         }
       ],
       "etymology_analysis": "From Greek *tropaia* ('alternating wind' or 'trophies'), attested as an early Byzantine coastal stronghold and bishopric by the 6th–7th century AD.",
-      "current_repo_state": {
-        "b_tarr": "Tropea",
-        "b_tarr_direct": "Tropea",
-        "b_tarr_hist": "Tropea",
-        "b_origin": "Tropea (constituent holding of Retsch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Tropea",
       "older_name_by_867": {
         "exists": false,
@@ -6582,23 +5713,17 @@
         {
           "form": "Roscius",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman personal name Roscius"
         },
         {
           "form": "-anum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "estate suffix ('estate of Roscius')"
         }
       ],
       "etymology_analysis": "From Latin *Roscianum* ('estate of Roscius'), recorded in the 3rd-century Antonine Itinerary and by Procopius as a strong Byzantine fortress.",
-      "current_repo_state": {
-        "b_tarr": "Rossân",
-        "b_tarr_direct": "Rossân",
-        "b_tarr_hist": "Rossân",
-        "b_origin": "Rossân (Rossano)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Rossano_(Corigliano-Rossano)",
       "older_name_by_867": {
         "exists": false,
@@ -6633,18 +5758,11 @@
         {
           "form": "Krotōn (Κρότων)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "castor-oil plant / mythological eponym Kroton"
         }
       ],
       "etymology_analysis": "Founded c. 710 BC by Achaean Greeks as Kroton (Latin Croto/Crotona).",
-      "current_repo_state": {
-        "b_tarr": "Crotone",
-        "b_tarr_direct": "Crotone",
-        "b_tarr_hist": "Crotone",
-        "b_origin": "Crotone (constituent holding of Rossân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Crotone",
       "older_name_by_867": {
         "exists": false,
@@ -6679,23 +5797,17 @@
         {
           "form": "kata-",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "below / under"
         },
         {
           "form": "antzaros / -arion",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "terrace / fortification"
         }
       ],
       "etymology_analysis": "Founded by the Byzantines in the early 10th century (attested c. 903 AD as Katantzárion / Arabic Qaṭanṣār).",
-      "current_repo_state": {
-        "b_tarr": "Catanzaro",
-        "b_tarr_direct": "Catanzaro",
-        "b_tarr_hist": "Catanzaro",
-        "b_origin": "Catanzaro (constituent holding of Rossân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Catanzaro",
       "older_name_by_867": {
         "exists": false,
@@ -6730,18 +5842,11 @@
         {
           "form": "Capua",
           "language": "Etruscan / Oscan / Latin",
+          "language_code": "ett",
           "translation": "uncertain; traditionally linked to Capys or Etruscan 'falcon' (capys)"
         }
       ],
       "etymology_analysis": "Modern Capua was founded in 856 AD on the site of Roman Casilinum (attested 216 BC), inheriting the name of ancient Capua (5 km southeast).",
-      "current_repo_state": {
-        "b_tarr": "Capûe",
-        "b_tarr_direct": "Capûe",
-        "b_tarr_hist": "Capûe",
-        "b_origin": "Capûe (Capua)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Capua",
       "older_name_by_867": {
         "exists": true,
@@ -6778,18 +5883,11 @@
         {
           "form": "kaiata / Caieta",
           "language": "Doric Greek / Latin",
+          "language_code": "ell",
           "translation": "hollow / gulf (Strabo) or nurse of Aeneas"
         }
       ],
       "etymology_analysis": "Ancient Caieta, linked by Strabo to Doric Greek *kaiata* ('hollow/cove'); fortified as a Byzantine castrum by the 6th century AD.",
-      "current_repo_state": {
-        "b_tarr": "Gaeta",
-        "b_tarr_direct": "Gaeta",
-        "b_tarr_hist": "Gaeta",
-        "b_origin": "Gaeta (constituent holding of Capûe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Gaeta",
       "older_name_by_867": {
         "exists": false,
@@ -6824,23 +5922,17 @@
         {
           "form": "cascum",
           "language": "Oscan",
+          "language_code": "lat",
           "translation": "ancient / old"
         },
         {
           "form": "-inum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From Roman Casinum (from Oscan *cascum*, 'ancient' per Varro). Abbey of Montecassino founded above it c. 529 AD.",
-      "current_repo_state": {
-        "b_tarr": "Cassino",
-        "b_tarr_direct": "Cassino",
-        "b_tarr_hist": "Cassino",
-        "b_origin": "Cassino (constituent holding of Capûe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Cassino",
       "older_name_by_867": {
         "exists": false,
@@ -6875,23 +5967,17 @@
         {
           "form": "nea (νέα)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "new"
         },
         {
           "form": "polis (πόλις)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "From Ancient Greek Neapolis (Νεάπολις, 'New City'), founded in the 5th century BC alongside older Parthenope.",
-      "current_repo_state": {
-        "b_tarr": "Neâpel",
-        "b_tarr_direct": "Neâpel",
-        "b_tarr_hist": "Neâpel",
-        "b_origin": "Neâpel (Napoli)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Naples",
       "older_name_by_867": {
         "exists": true,
@@ -6928,18 +6014,11 @@
         {
           "form": "Amarfia / Melphes",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman gens Amarfia or refugees from Melfi"
         }
       ],
       "etymology_analysis": "Attested in 596 AD in a letter of Pope Gregory I; derived from the Roman gens Amarfia or legendary refugees from Melfi.",
-      "current_repo_state": {
-        "b_tarr": "Amalfi",
-        "b_tarr_direct": "Amalfi",
-        "b_tarr_hist": "Amalfi",
-        "b_origin": "Amalfi (constituent holding of Neâpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Amalfi",
       "older_name_by_867": {
         "exists": false,
@@ -6974,18 +6053,11 @@
         {
           "form": "Averze",
           "language": "Medieval Latin / Lombard",
+          "language_code": "lat",
           "translation": "local place name (Sancti Pauli ad Averze)"
         }
       ],
       "etymology_analysis": "Founded in 1030 AD by the Norman leader Rainulf Drengot around the rural hamlet *Sancti Pauli ad Averze*.",
-      "current_repo_state": {
-        "b_tarr": "Aversa",
-        "b_tarr_direct": "Aversa",
-        "b_tarr_hist": "Aversa",
-        "b_origin": "Aversa (constituent holding of Neâpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Aversa",
       "older_name_by_867": {
         "exists": false,
@@ -7020,18 +6092,11 @@
         {
           "form": "Camarda",
           "language": "Medieval Greek / Romance",
+          "language_code": "grc",
           "translation": "hut / vaulted shelter (cf. Greek kamara) or local place name"
         }
       ],
       "etymology_analysis": "Medieval village of Camarda (renamed Bernalda in 1470), first attested in a document of 1099 AD.",
-      "current_repo_state": {
-        "b_tarr": "Kamarde",
-        "b_tarr_direct": "Kamarde",
-        "b_tarr_hist": "Kamarde",
-        "b_origin": "Kamarde (Camarda)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Bernalda",
       "older_name_by_867": {
         "exists": false,
@@ -7066,23 +6131,17 @@
         {
           "form": "Hostilius",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman gens Hostilia"
         },
         {
           "form": "-anum",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "estate suffix ('estate of Hostilius')"
         }
       ],
       "etymology_analysis": "From Latin *Hostilianum* ('estate of Hostilius'). First documented in 1070 AD when donated to the Bishop of Tricarico.",
-      "current_repo_state": {
-        "b_tarr": "Stigliano",
-        "b_tarr_direct": "Stigliano",
-        "b_tarr_hist": "Stigliano",
-        "b_origin": "Stigliano (constituent holding of Kamarde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Stigliano",
       "older_name_by_867": {
         "exists": false,
@@ -7117,23 +6176,17 @@
         {
           "form": "sal-",
           "language": "Pre-Roman / Etruscan / Italic",
+          "language_code": "und",
           "translation": "salt / sea / river (Irno)"
         },
         {
           "form": "-ernum",
           "language": "Italic",
+          "language_code": "lat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From Roman Salernum (colony founded 194 BC), incorporating the pre-Roman root *sal-* ('sea/salt').",
-      "current_repo_state": {
-        "b_tarr": "Salern",
-        "b_tarr_direct": "Salern",
-        "b_tarr_hist": "Salern",
-        "b_origin": "Salern (Salerno)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salerno",
       "older_name_by_867": {
         "exists": false,
@@ -7168,18 +6221,11 @@
         {
           "form": "marathos (μάραθος)",
           "language": "Ancient/Byzantine Greek",
+          "language_code": "grc",
           "translation": "wild fennel ('place of wild fennel')"
         }
       ],
       "etymology_analysis": "From Greek *marathos* ('wild fennel'), first attested in writing as *Marathia* in 1079 AD.",
-      "current_repo_state": {
-        "b_tarr": "Maratea",
-        "b_tarr_direct": "Maratea",
-        "b_tarr_hist": "Maratea",
-        "b_origin": "Maratea (constituent holding of Salern)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Maratea",
       "older_name_by_867": {
         "exists": false,
@@ -7214,18 +6260,11 @@
         {
           "form": "potentia",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "power / might"
         }
       ],
       "etymology_analysis": "From Latin *Potentia* ('power'), established as a Roman municipium in Lucania in the 2nd century BC.",
-      "current_repo_state": {
-        "b_tarr": "Potenza",
-        "b_tarr_direct": "Potenza",
-        "b_tarr_hist": "Potenza",
-        "b_origin": "Potenza (constituent holding of Salern)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Potenza",
       "older_name_by_867": {
         "exists": false,
@@ -7260,23 +6299,17 @@
         {
           "form": "poly- (πολύ)",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "many"
         },
         {
           "form": "kastron (κάστρον)",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "castle / fortress"
         }
       ],
       "etymology_analysis": "Byzantine Greek *Polykastron* ('many castles'), renamed in the 7th century AD on the site of ancient Greek Pyxous (471 BC) and Roman Buxentum.",
-      "current_repo_state": {
-        "b_tarr": "Policastro",
-        "b_tarr_direct": "Policastro",
-        "b_tarr_hist": "Policastro",
-        "b_origin": "Policastro (constituent holding of Salern)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Policastro_Bussentino",
       "older_name_by_867": {
         "exists": true,
@@ -7314,18 +6347,11 @@
         {
           "form": "Mestrius",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman personal name (gentilicium), or alternatively hydronym Mestria"
         }
       ],
       "etymology_analysis": "According to Dante Olivieri, Mestre derives from the Roman personal name Mestrius (compare Mestrino near Padua and Mestrianis in Pannonia). Alternative hypotheses derive it from a local river Mestria or a pre-Roman root.",
-      "current_repo_state": {
-        "b_tarr": "Venêtjen",
-        "b_tarr_direct": "Venêtjen",
-        "b_tarr_hist": "Venêtjen",
-        "b_origin": "Venêtjen (Veneto)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Mestre",
       "older_name_by_867": {
         "exists": true,
@@ -7362,23 +6388,17 @@
         {
           "form": "fossa",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "ditch, canal, channel"
         },
         {
           "form": "Clodia",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Clodian (feminine of Roman gentilicium Clodius)"
         }
       ],
       "etymology_analysis": "Derived from the Latin hydronym Fossa Clodia (attested by Pliny the Elder), referring to a Roman navigable canal in the southern Venetian lagoon; phonologically evolved through Clodia > Cluza > Clugia > Chiozza > Chioggia.",
-      "current_repo_state": {
-        "b_tarr": "Kjôdscha",
-        "b_tarr_direct": "Kjôdscha",
-        "b_tarr_hist": "Kjôdscha",
-        "b_origin": "Kjôdscha (constituent holding of Venêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chioggia",
       "older_name_by_867": {
         "exists": false,
@@ -7413,23 +6433,17 @@
         {
           "form": "Maior",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "greater"
         },
         {
           "form": "Meduacus",
           "language": "Venetic/Latin",
+          "language_code": "lat",
           "translation": "ancient name of the Brenta river"
         }
       ],
       "etymology_analysis": "Dante Olivieri derives Madamaucum/Metamaucum from Maior Meduacus, the ancient name of the Brenta river that emptied into the lagoon nearby, evolving through Mamedòc- and Mademòc- into Malamocco (an older hypothesis by Bellemo proposed Greek μετὰ Μεδόα).",
-      "current_repo_state": {
-        "b_tarr": "Malamacco",
-        "b_tarr_direct": "Malamacco",
-        "b_tarr_hist": "Malamacco",
-        "b_origin": "Malamacco (constituent holding of Venêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Malamocco",
       "older_name_by_867": {
         "exists": false,
@@ -7464,23 +6478,17 @@
         {
           "form": "Venet-",
           "language": "Venetic/Latin",
+          "language_code": "lat",
           "translation": "ethnonym of the Adriatic Veneti"
         },
         {
           "form": "-ia",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "territorial suffix (land of)"
         }
       ],
       "etymology_analysis": "Named after the ancient Adriatic Veneti; originally the choronym Venetia for the mainland region (6 AD), then applied under Byzantine rule to the coastal lagoon (Venetia maritima / Venetikà) and in the plural Venetiae to the island city itself.",
-      "current_repo_state": {
-        "b_tarr": "Venedîch",
-        "b_tarr_direct": "Venedîch",
-        "b_tarr_hist": "Venedîch",
-        "b_origin": "Venedîch (Venezia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Venezia",
       "older_name_by_867": {
         "exists": false,
@@ -7515,28 +6523,23 @@
         {
           "form": "pat-",
           "language": "Proto-Indo-European/Venetic",
+          "language_code": "lat",
           "translation": "open, flat plain (or linked to Padus, Po river)"
         },
         {
           "form": "-av-",
           "language": "Venetic",
+          "language_code": "lat",
           "translation": "river/water suffix (compare Timavus)"
         },
         {
           "form": "-ium",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "settlement suffix"
         }
       ],
       "etymology_analysis": "From Roman Patavium (which shifted in Late Antiquity to Padua / Italian Padova). Likely formed from the IE root *pat- ('open plain') or the river name Padus, with the Venetic riverine suffix -av- (referring to the Brenta/Medoacus) and Latin -ium.",
-      "current_repo_state": {
-        "b_tarr": "Pâdouwe",
-        "b_tarr_direct": "Pâdouwe",
-        "b_tarr_hist": "Pâdouwe",
-        "b_origin": "Pâdouwe (Padua)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Padova",
       "older_name_by_867": {
         "exists": false,
@@ -7571,23 +6574,17 @@
         {
           "form": "Leo",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Roman personal name Leo"
         },
         {
           "form": "-īcus",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "predial suffix indicating estate/belonging"
         }
       ],
       "etymology_analysis": "A Roman predial toponym formed from the Latin personal name Leo plus the belonging suffix -īcus (Leonicus > Lunico > Lonigo). Although Roman settlers were present in the area from the 2nd century BC, the toponym is first attested in 1046 AD.",
-      "current_repo_state": {
-        "b_tarr": "Lonigo",
-        "b_tarr_direct": "Lonigo",
-        "b_tarr_hist": "Lonigo",
-        "b_origin": "Lonigo (constituent holding of Pâdouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Lonigo",
       "older_name_by_867": {
         "exists": false,
@@ -7622,23 +6619,17 @@
         {
           "form": "Motta",
           "language": "Medieval Latin",
+          "language_code": "lat",
           "translation": "small hill, mound"
         },
         {
           "form": "Aeniana",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "mansio / waystation name (or predial from Montanius + -ana)"
         }
       ],
       "etymology_analysis": "Traditionally derived from the Latin toponym Motta Aeniana (medieval Latin motta 'small elevation' + aeniana 'mansio') or a Roman predial form Montaniana; first attested as a castrum in 996 AD.",
-      "current_repo_state": {
-        "b_tarr": "Montagnana",
-        "b_tarr_direct": "Montagnana",
-        "b_tarr_hist": "Montagnana",
-        "b_origin": "Montagnana (constituent holding of Pâdouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Montagnana",
       "older_name_by_867": {
         "exists": false,
@@ -7673,23 +6664,17 @@
         {
           "form": "At-",
           "language": "Venetic/Pre-Roman",
+          "language_code": "lat",
           "translation": "root of Athesis (Adige river)"
         },
         {
           "form": "-este",
           "language": "Venetic",
+          "language_code": "lat",
           "translation": "locative/toponymic suffix"
         }
       ],
       "etymology_analysis": "From Latin Ateste, a Venetic toponym derived from the hydronym Athesis (the Adige river, which flowed past the town until the 589 AD Rotta della Cucca) plus the locative suffix -este.",
-      "current_repo_state": {
-        "b_tarr": "Este",
-        "b_tarr_direct": "Este",
-        "b_tarr_hist": "Este",
-        "b_origin": "Este (constituent holding of Pâdouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Este_(Italia)",
       "older_name_by_867": {
         "exists": false,
@@ -7724,18 +6709,11 @@
         {
           "form": "Hrodico",
           "language": "Germanic (Lombard)",
+          "language_code": "deu",
           "translation": "Germanic personal name (modern scholarly etymology; folk etymology linked to Greek rhodon 'rose')"
         }
       ],
       "etymology_analysis": "First attested as Rodigo in 838 AD (later Rudi, Ruuigo); modern scholarship connects it to the Germanic personal name Hrodico, whereas Renaissance erudites derived Rhodigium from Greek rhodon ('rose').",
-      "current_repo_state": {
-        "b_tarr": "Rovîch",
-        "b_tarr_direct": "Rovîch",
-        "b_tarr_hist": "Rovîch",
-        "b_origin": "Rovîch (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Rovigo",
       "older_name_by_867": {
         "exists": false,
@@ -7770,23 +6748,17 @@
         {
           "form": "adur / atri-",
           "language": "Venetic/Illyrian or Etruscan",
+          "language_code": "lat",
           "translation": "water, sea (or Etruscan 'atrium'/eastern port)"
         },
         {
           "form": "-a",
           "language": "Latin/Greek",
+          "language_code": "lat",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Ancient Etruscan-Venetic-Greek emporion that gave its name to the Adriatic Sea. Attested from the 6th century BC, its name is linked either to the ancient Po delta branch Adria or to a Venetic/Illyrian root adur ('water, sea').",
-      "current_repo_state": {
-        "b_tarr": "Adria",
-        "b_tarr_direct": "Adria",
-        "b_tarr_hist": "Adria",
-        "b_origin": "Adria (constituent holding of Polêsin)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Adria",
       "older_name_by_867": {
         "exists": false,
@@ -7821,23 +6793,17 @@
         {
           "form": "tarvos",
           "language": "Gaulish (Celtic)",
+          "language_code": "cel",
           "translation": "bull"
         },
         {
           "form": "-is-ium",
           "language": "Gaulish/Latin",
+          "language_code": "cel",
           "translation": "Celtic toponymic formant -is- + Latin neuter ending -ium"
         }
       ],
       "etymology_analysis": "From Roman Tarvisium, most probably of Celtic origin: Gaulish tarvos ('bull') + the characteristic Gallic toponymic formant -is- + Latin -ium (a folk etymology instead links it to Latin ter-visi 'three hills').",
-      "current_repo_state": {
-        "b_tarr": "Trevîs",
-        "b_tarr_direct": "Trevîs",
-        "b_tarr_hist": "Trevîs",
-        "b_origin": "Trevîs (Treviso)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Treviso",
       "older_name_by_867": {
         "exists": false,
@@ -7872,18 +6838,11 @@
         {
           "form": "Ceneta",
           "language": "Celtic / Pre-Roman",
+          "language_code": "cel",
           "translation": "pre-Roman (likely Celtic) toponym of uncertain meaning"
         }
       ],
       "etymology_analysis": "Attested from the 6th century AD as Ceneta/Keneta, suggesting a pre-Roman (likely Celtic) origin of uncertain etymology; merged with Serravalle in 1866 to form Vittorio Veneto.",
-      "current_repo_state": {
-        "b_tarr": "Ceneta",
-        "b_tarr_direct": "Ceneta",
-        "b_tarr_hist": "Ceneta",
-        "b_origin": "Ceneta (constituent holding of Trevîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Ceneda",
       "older_name_by_867": {
         "exists": false,
@@ -7918,23 +6877,17 @@
         {
           "form": "weik-",
           "language": "Venetic (from PIE)",
+          "language_code": "lat",
           "translation": "settlement, village (cognate with Latin vicus)"
         },
         {
           "form": "-et-ia",
           "language": "Venetic/Latin",
+          "language_code": "lat",
           "translation": "Venetic -et- suffix (as in Veneti) + Latin -ia"
         }
       ],
       "etymology_analysis": "A Venetic formation from PIE *weik- ('settlement, village', cognate with Latin vicus) with the Venetic suffix -et- (seen in Veneti), yielding Roman Vicetia / Vicentia > medieval Vicencia > Vicenza.",
-      "current_repo_state": {
-        "b_tarr": "Vicenza",
-        "b_tarr_direct": "Vicenza",
-        "b_tarr_hist": "Vicenza",
-        "b_origin": "Vicenza (constituent holding of Trevîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Vicenza",
       "older_name_by_867": {
         "exists": false,
@@ -7969,18 +6922,11 @@
         {
           "form": "Verona",
           "language": "Celtic / Venetic / Etruscan (uncertain)",
+          "language_code": "cel",
           "translation": "uncertain; possibly Celtic *werona 'enclosed territory' or water/alder root"
         }
       ],
       "etymology_analysis": "The exact etymology of Verona is uncertain; linguistic hypotheses link it to a Venetic or Celtic formation (e.g., Celtic *werona 'enclosed/defended territory' or *wern 'alder'), or an Indo-European water root.",
-      "current_repo_state": {
-        "b_tarr": "Berne",
-        "b_tarr_direct": "Berne",
-        "b_tarr_hist": "Berne",
-        "b_origin": "Berne (Verona)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Verona",
       "older_name_by_867": {
         "exists": false,
@@ -8015,18 +6961,11 @@
         {
           "form": "Luxino / Lixino",
           "language": "Medieval Latin / Veronese",
+          "language_code": "lat",
           "translation": "land used and prepared for mountain pastures (or from Veronese le sime 'peaks' / lisso 'log chute')"
         }
       ],
       "etymology_analysis": "Attested from 814 AD as Luxino (and later Lixino, Lesinio, Lissinorum, Lissinia), denoting highland pastureland; alternatively linked to Veronese le sime ('the peaks') or Venetian lisso ('timber slide').",
-      "current_repo_state": {
-        "b_tarr": "Lessinia",
-        "b_tarr_direct": "Lessinia",
-        "b_tarr_hist": "Lessinia",
-        "b_origin": "Lessinia (constituent holding of Berne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lessinia",
       "older_name_by_867": {
         "exists": false,
@@ -8061,18 +7000,11 @@
         {
           "form": "warda",
           "language": "Lombard (Germanic)",
+          "language_code": "ita",
           "translation": "guard, watchtower, place of observation"
         }
       ],
       "etymology_analysis": "Derived from the Lombard/Germanic word warda ('place of guard, watchtower'), referring to the early medieval fortress on the Rocca di Garda; the settlement's name later replaced classical Benacus for Lake Garda.",
-      "current_repo_state": {
-        "b_tarr": "Garda",
-        "b_tarr_direct": "Garda",
-        "b_tarr_hist": "Garda",
-        "b_origin": "Garda (constituent holding of Berne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://it.wikipedia.org/wiki/Rocca_di_Garda",
       "older_name_by_867": {
         "exists": false,

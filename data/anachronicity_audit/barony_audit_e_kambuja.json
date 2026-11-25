@@ -1,18 +1,28 @@
 {
   "metadata": {
+    "empire": "e_kambuja",
     "scope": "e_kambuja (all 107 baronies across k_champa, k_chenla, k_funan)",
-    "version": "1.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "true if the barony name is contemporarily attested as a settlement/fortress/administrative unit by <= 867 CE; false if first attested post-867 CE, only claimed in late retrospective inscriptions/chronicles, or unattested.",
-      "older_name_by_867": "Tracks attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name.",
-      "natural_proper_name": "true only when the toponym directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds)."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 107,
@@ -54,26 +64,17 @@
         {
           "form": "Đồng",
           "language": "Vietnamese / Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "field / bronze"
         },
         {
           "form": "Dương",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "sun / bright / poplar"
         }
       ],
       "etymology_analysis": "Đồng Dương is the modern Vietnamese name of the village in Quảng Nam where the Cham capital and Buddhist monastery of Indrapura stood. Indrapura itself was founded in 875 CE by Indravarman II, after the 867 CE baseline, so neither the modern Vietnamese name nor the Sanskrit city name is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Indrapure",
-        "b_tarr": "Indrapure",
-        "b_tarr_direct": "Indrapure",
-        "b_tarr_hist": "Indrapure",
-        "b_origin": "Indrapure (Indrapura)",
-        "b_anachronism": "",
-        "b_ipa": "[ɪn.dra.ˈpʊ.rə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Champa)",
       "older_name_by_867": {
         "exists": false,
@@ -108,26 +109,17 @@
         {
           "form": "Mỹ",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "beautiful"
         },
         {
           "form": "Sơn",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Mỹ Sơn is a modern Sino-Vietnamese descriptive name meaning 'Beautiful Mountain' applied to the Cham temple valley in Quảng Nam. While the sanctuary was active from the late 4th century CE, the Vietnamese name Mỹ Sơn is post-867 CE; its contemporary pre-867 CE Sanskrit name in Bhadravarman I's inscriptions (c. 400 CE) was Bhadreśvara.",
-      "current_repo_state": {
-        "name": "My Son",
-        "b_tarr": "My Son",
-        "b_tarr_direct": "My Son",
-        "b_tarr_hist": "My Son",
-        "b_origin": "My Son (constituent holding of Indrapure)",
-        "b_anachronism": "",
-        "b_ipa": "[mɪ sɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%E1%BB%B9_S%C6%A1n_Sanctuary",
       "older_name_by_867": {
         "exists": true,
@@ -164,26 +156,17 @@
         {
           "form": "Quảng",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "broad / expansive"
         },
         {
           "form": "Ngãi",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "righteousness (dialectal variant of Nghĩa)"
         }
       ],
       "etymology_analysis": "Quảng Ngãi is a Sino-Vietnamese administrative name meaning 'Broad Righteousness' (a regional phonetic variant of Quảng Nghĩa). The region was annexed by Đại Việt in 1471 CE and organized as Quảng Ngãi province in 1832 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Quang Ngai",
-        "b_tarr": "Quang Ngai",
-        "b_tarr_direct": "Quang Ngai",
-        "b_tarr_hist": "Quang Ngai",
-        "b_origin": "Quang Ngai (constituent holding of Indrapure)",
-        "b_anachronism": "",
-        "b_ipa": "[kwaŋ ŋaɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ng%C3%A3i_province",
       "older_name_by_867": {
         "exists": false,
@@ -218,26 +201,17 @@
         {
           "form": "Ma",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "hemp / phonetic transcription"
         },
         {
           "form": "Linh",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "spirit / sacred"
         }
       ],
       "etymology_analysis": "Ma Linh (later renamed Minh Linh by Đại Việt) is a Sino-Vietnamese district name recorded in 1069 CE when Champa ceded its northernmost territories in modern Quảng Trị to Đại Việt; it has no attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Mâ Lîn",
-        "b_tarr": "Mâ Lîn",
-        "b_tarr_direct": "Mâ Lîn",
-        "b_tarr_hist": "Mâ Lîn",
-        "b_origin": "Mâ Lîn (Ma Linh)",
-        "b_anachronism": "",
-        "b_ipa": "[maː liːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
       "older_name_by_867": {
         "exists": false,
@@ -272,26 +246,17 @@
         {
           "form": "Địa",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "land / earth"
         },
         {
           "form": "Lý",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "principle / administrative division"
         }
       ],
       "etymology_analysis": "Địa Lý is a Sino-Vietnamese district name first attested in 1069 CE when Champa ceded it (along with Ma Linh and Bố Chính) to Đại Việt under Lý Thánh Tông, and was subsequently renamed Lâm Bình.",
-      "current_repo_state": {
-        "name": "Dia Ly",
-        "b_tarr": "Dia Ly",
-        "b_tarr_direct": "Dia Ly",
-        "b_tarr_hist": "Dia Ly",
-        "b_origin": "Dia Ly (constituent holding of Mâ Lîn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdɪ.a lɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
       "older_name_by_867": {
         "exists": false,
@@ -326,26 +291,17 @@
         {
           "form": "Bố",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "spread / proclaim"
         },
         {
           "form": "Chính",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "governance / upright"
         }
       ],
       "etymology_analysis": "Bố Chính is a Sino-Vietnamese administrative name first attested in 1069 CE in the settlement of the Đại Việt–Champa war, when Champa ceded the northern frontier districts to Đại Việt.",
-      "current_repo_state": {
-        "name": "Bo Chinh",
-        "b_tarr": "Bo Chinh",
-        "b_tarr_direct": "Bo Chinh",
-        "b_tarr_hist": "Bo Chinh",
-        "b_origin": "Bo Chinh (constituent holding of Mâ Lîn)",
-        "b_anachronism": "",
-        "b_ipa": "[bɔ xɪnh]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Chi%C3%AAm_(1069)",
       "older_name_by_867": {
         "exists": false,
@@ -380,26 +336,17 @@
         {
           "form": "Siṃha",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "lion"
         },
         {
           "form": "pura",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city / fortress"
         }
       ],
       "etymology_analysis": "Siṃhapura ('Lion City') is a Sanskrit royal city name for the early Champa capital at Trà Kiệu in Quảng Nam. Although Trà Kiệu's urban and epigraphic occupation (Đông Yên Châu, early Mỹ Sơn steles) begins under Bhadravarman I (c. 380–413 CE), the toponym Siṃhapura itself is attested in 7th-century CE Champa epigraphy (such as C. 96, 657 CE), well before 867 CE.",
-      "current_repo_state": {
-        "name": "Simhapure",
-        "b_tarr": "Simhapure",
-        "b_tarr_direct": "Simhapure",
-        "b_tarr_hist": "Simhapure",
-        "b_origin": "Simhapure (Simhapura)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪm.ha.ˈpʊ.rə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tr%C3%A0_Ki%E1%BB%87u",
       "older_name_by_867": {
         "exists": false,
@@ -434,26 +381,17 @@
         {
           "form": "Tân",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "new"
         },
         {
           "form": "Xuyên",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "stream / river"
         }
       ],
       "etymology_analysis": "Tân Xuyên is a Sino-Vietnamese compound meaning 'New Stream', reflecting post-annexation Vietnamese settlement naming in central Vietnam rather than any Cham or pre-867 CE toponym.",
-      "current_repo_state": {
-        "name": "Tan Xuyen",
-        "b_tarr": "Tan Xuyen",
-        "b_tarr_direct": "Tan Xuyen",
-        "b_tarr_hist": "Tan Xuyen",
-        "b_origin": "Tan Xuyen (constituent holding of Simhapure)",
-        "b_anachronism": "",
-        "b_ipa": "[tan ˈksʊ.jɛn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -488,21 +426,11 @@
         {
           "form": "Huế (Hve)",
           "language": "Vietnamese (from Sino-Vietnamese Hóa 化)",
+          "language_code": "vie",
           "translation": "transformation / civilization (local phonetic shift of Hóa)"
         }
       ],
       "etymology_analysis": "Hve is a variant orthography of Huế, which developed from the Sino-Vietnamese name Châu Hóa (part of Thuận Hóa), created in 1307 CE after the 1306 CE marriage cession. By 867 CE, the earlier Cham city in the Huế area was Kandarpapura (Kandapurpura).",
-      "current_repo_state": {
-        "name": "Hve",
-        "b_tarr": "Hve",
-        "b_tarr_direct": "Hve",
-        "b_tarr_hist": "Hve",
-        "b_origin": "Hve (constituent holding of Simhapure)",
-        "b_anachronism": "",
-        "b_ipa": "[hvɛ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hu%E1%BA%BF",
       "older_name_by_867": {
         "exists": true,
@@ -540,21 +468,11 @@
         {
           "form": "Kauṭhara",
           "language": "Sanskrit (Cham regional toponym)",
+          "language_code": "san",
           "translation": "Kauthara principality (Sanskritized Cham regional name)"
         }
       ],
       "etymology_analysis": "Kauthara (Sanskrit Kauṭhara) was one of the core southern principalities of Champa, centered around Nha Trang in Khánh Hòa. It is contemporarily attested in the Po Nagar Sanskrit inscriptions of 781–784 CE, prior to 867 CE.",
-      "current_repo_state": {
-        "name": "Kautâre",
-        "b_tarr": "Kautâre",
-        "b_tarr_direct": "Kautâre",
-        "b_tarr_hist": "Kautâre",
-        "b_origin": "Kautâre (Kauthara)",
-        "b_anachronism": "",
-        "b_ipa": "[kɔʊ.ˈtaː.rə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Po_Nagar",
       "older_name_by_867": {
         "exists": false,
@@ -589,26 +507,17 @@
         {
           "form": "Aya (Aia)",
           "language": "Cham",
+          "language_code": "nic",
           "translation": "water / river"
         },
         {
           "form": "Ru",
           "language": "Cham",
+          "language_code": "nic",
           "translation": "Ru (proper river/regional name)"
         }
       ],
       "etymology_analysis": "Aya Ru (Cham Aia Ru) combines Cham aia ('water, river') with the proper name Ru, referring to the riverine region of modern Phú Yên. It appears in later Cham accounts of Champa's post-1471 CE regions and is unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Aya Ru",
-        "b_tarr": "Aya Ru",
-        "b_tarr_direct": "Aya Ru",
-        "b_tarr_hist": "Aya Ru",
-        "b_origin": "Aya Ru (constituent holding of Kautâre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈa.ja rʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)",
       "older_name_by_867": {
         "exists": false,
@@ -643,21 +552,11 @@
         {
           "form": "Nhạn",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "swallow / wild goose"
         }
       ],
       "etymology_analysis": "Nhan (Vietnamese Nhạn) is the modern Vietnamese name of the Cham temple tower (Tháp Nhạn) on Nhạn Hill in Phú Yên, constructed in the 11th century CE and thus post-867 CE in both construction and Vietnamese naming.",
-      "current_repo_state": {
-        "name": "Nhan",
-        "b_tarr": "Nhan",
-        "b_tarr_direct": "Nhan",
-        "b_tarr_hist": "Nhan",
-        "b_origin": "Nhan (constituent holding of Kautâre)",
-        "b_anachronism": "",
-        "b_ipa": "[nhan]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_Nh%E1%BA%A1n",
       "older_name_by_867": {
         "exists": false,
@@ -692,26 +591,17 @@
         {
           "form": "Pāṇḍu",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "pale / white"
         },
         {
           "form": "raṅga",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "color / stage (Sanskritization of Cham Panrāṅ)"
         }
       ],
       "etymology_analysis": "Pāṇḍuraṅga is the Sanskritized form of the Cham toponym Panrāṅ (modern Vietnamese Phan Rang), the southernmost principality of Champa. It is contemporarily attested in the 817 CE Po Nagar inscription, well before 867 CE.",
-      "current_repo_state": {
-        "name": "Pandurange",
-        "b_tarr": "Pandurange",
-        "b_tarr_direct": "Pandurange",
-        "b_tarr_hist": "Pandurange",
-        "b_origin": "Pandurange (Panduranga)",
-        "b_anachronism": "",
-        "b_ipa": "[pan.dʊ.ˈra.ŋɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Panduranga_(Champa)",
       "older_name_by_867": {
         "exists": false,
@@ -746,26 +636,17 @@
         {
           "form": "Hamu (Ma-)",
           "language": "Cham",
+          "language_code": "nic",
           "translation": "wet-rice field / hamlet"
         },
         {
           "form": "Lithit",
           "language": "Cham",
+          "language_code": "nic",
           "translation": "near the sea / coastal"
         }
       ],
       "etymology_analysis": "Malithit derives from Cham Hamu Lithit ('coastal wet-rice field'), an indigenous Cham name for the Phan Thiết area in southern Panduranga. It has no contemporary epigraphic or chronicle attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Malithit",
-        "b_tarr": "Malithit",
-        "b_tarr_direct": "Malithit",
-        "b_tarr_hist": "Malithit",
-        "b_origin": "Malithit (constituent holding of Pandurange)",
-        "b_anachronism": "",
-        "b_ipa": "[ma.lɪt.ˈhɪt]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Phan_Thi%E1%BA%BFt_(th%C3%A0nh_ph%E1%BB%91)",
       "older_name_by_867": {
         "exists": false,
@@ -800,26 +681,17 @@
         {
           "form": "Bình",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "peace / pacified"
         },
         {
           "form": "Tuy",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "tranquil / pacify"
         }
       ],
       "etymology_analysis": "Bình Tuy is a Sino-Vietnamese administrative name meaning 'Pacified and Tranquil', created as a province of South Vietnam in 1956 CE and entirely absent from 9th-century CE records.",
-      "current_repo_state": {
-        "name": "Binh Tuy",
-        "b_tarr": "Binh Tuy",
-        "b_tarr_direct": "Binh Tuy",
-        "b_tarr_hist": "Binh Tuy",
-        "b_origin": "Binh Tuy (constituent holding of Pandurange)",
-        "b_anachronism": "",
-        "b_ipa": "[bɪnh ˈtʊ.ɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%ACnh_Tuy_province",
       "older_name_by_867": {
         "exists": false,
@@ -854,21 +726,11 @@
         {
           "form": "Vijaya",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "victory / victorious"
         }
       ],
       "etymology_analysis": "Vijaya ('Victory') is a Sanskrit royal capital name for the Cham center in Bình Định (Đồ Bàn / Chà Bàn). It rose to prominence and became Champa's capital around 982–1000 CE, after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Widschaje",
-        "b_tarr": "Widschaje",
-        "b_tarr_direct": "Widschaje",
-        "b_tarr_hist": "Widschaje",
-        "b_origin": "Widschaje (Vijaya)",
-        "b_anachronism": "",
-        "b_ipa": "[wɪ.ˈdʒa.jɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vijaya_(Champa)",
       "older_name_by_867": {
         "exists": false,
@@ -903,26 +765,17 @@
         {
           "form": "Tây",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "west"
         },
         {
           "form": "Sơn",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Tây Sơn is a Sino-Vietnamese directional compound meaning 'Western Mountains', referring to the upland district in Bình Định where the Tây Sơn movement began in 1771 CE.",
-      "current_repo_state": {
-        "name": "Tay Son",
-        "b_tarr": "Tay Son",
-        "b_tarr_direct": "Tay Son",
-        "b_tarr_hist": "Tay Son",
-        "b_origin": "Tay Son (constituent holding of Widschaje)",
-        "b_anachronism": "",
-        "b_ipa": "[taɪ sɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_S%C6%A1n_district",
       "older_name_by_867": {
         "exists": false,
@@ -957,26 +810,17 @@
         {
           "form": "Bánh",
           "language": "Vietnamese",
+          "language_code": "vie",
           "translation": "cake / pastry"
         },
         {
           "form": "Ít",
           "language": "Vietnamese",
+          "language_code": "vie",
           "translation": "pyramid-shaped glutinous rice dumpling"
         }
       ],
       "etymology_analysis": "Bánh Ít is a modern Vietnamese folk name comparing the silhouette of the 11th–12th century CE Cham brick towers in Tuy Phước, Bình Định to a traditional pyramid-shaped rice cake.",
-      "current_repo_state": {
-        "name": "Banh It",
-        "b_tarr": "Banh It",
-        "b_tarr_direct": "Banh It",
-        "b_tarr_hist": "Banh It",
-        "b_origin": "Banh It (constituent holding of Widschaje)",
-        "b_anachronism": "",
-        "b_ipa": "[banh ɪt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Th%C3%A1p_B%C3%A1nh_%C3%8Dt",
       "older_name_by_867": {
         "exists": false,
@@ -1011,26 +855,17 @@
         {
           "form": "Cānāśa",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "Canasa (polity name)"
         },
         {
           "form": "pura",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city / fortress"
         }
       ],
       "etymology_analysis": "Canasapura (Sanskrit Śrī Cānāśa / Canāśapura) was an early polity on the Khorat Plateau (around Muang Sema in Nakhon Ratchasima). Face A of the Bo Ika stele (K. 400) attests Śrī Cānāśa prior to Face B's 868 CE date, and the 937 CE Śrī Canāśa inscription also records an 859 CE dedication.",
-      "current_repo_state": {
-        "name": "Tschanasche",
-        "b_tarr": "Tschanasche",
-        "b_tarr_direct": "Tschanasche",
-        "b_tarr_hist": "Tschanasche",
-        "b_origin": "Tschanasche (Canasha)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃa.ˈna.ʃə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Canasapura",
       "older_name_by_867": {
         "exists": false,
@@ -1065,21 +900,11 @@
         {
           "form": "Phimai",
           "language": "Thai (from Sanskrit Vimāyapura)",
+          "language_code": "tha",
           "translation": "city of Vimāya (phonetic adaptation of Vimāya)"
         }
       ],
       "etymology_analysis": "Phimai is the Thai phonetic adaptation of Sanskrit Vimāyapura ('City of Vimāya'), an Angkorian regional center attested from 1082 CE. Although the area had Dvaravati-period Buddhist occupation, the name Phimai/Vimāyapura is post-867 CE (and the 7th-century CE Bhīmapura identification remains tentative).",
-      "current_repo_state": {
-        "name": "Bhimapura",
-        "b_tarr": "Bhimapura",
-        "b_tarr_direct": "Bhimapura",
-        "b_tarr_hist": "Bhimapura",
-        "b_origin": "Bhimapura (constituent holding of Tschanasche)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbhɪ.ma.pʊ.ra]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phimai_Historical_Park",
       "older_name_by_867": {
         "exists": false,
@@ -1114,26 +939,17 @@
         {
           "form": "Chaiya",
           "language": "Thai (from Sanskrit jaya)",
+          "language_code": "tha",
           "translation": "victory"
         },
         {
           "form": "Phum",
           "language": "Thai (from Sanskrit bhūmi)",
+          "language_code": "tha",
           "translation": "land / earth"
         }
       ],
       "etymology_analysis": "Chaiyaphum is a Sanskrit-derived Thai toponym meaning 'Land of Victory', first recorded in the 17th century CE during the Ayutthaya period and refounded in 1817 CE.",
-      "current_repo_state": {
-        "name": "Tschaiyaphum",
-        "b_tarr": "Tschaiyaphum",
-        "b_tarr_direct": "Tschaiyaphum",
-        "b_tarr_hist": "Tschaiyaphum",
-        "b_origin": "Tschaiyaphum (constituent holding of Tschanasche)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃaɪ.jap.hʊm]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chaiyaphum_province",
       "older_name_by_867": {
         "exists": false,
@@ -1168,26 +984,17 @@
         {
           "form": "Ku",
           "language": "Northeastern Thai / Isan",
+          "language_code": "tha",
           "translation": "ancient brick shrine / stupa"
         },
         {
           "form": "Kaeo",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "crystal / gem"
         }
       ],
       "etymology_analysis": "Ku Kaeo is a Northeastern Thai (Isan) name meaning 'Crystal Shrine', referencing a local ancient brick monument; the administrative district was created in 1994 CE.",
-      "current_repo_state": {
-        "name": "Ku Kêo",
-        "b_tarr": "Ku Kêo",
-        "b_tarr_direct": "Ku Kêo",
-        "b_tarr_hist": "Ku Kêo",
-        "b_origin": "Ku Kêo (Ku Kaeo)",
-        "b_anachronism": "",
-        "b_ipa": "[kʊ ˈkeː.ɔ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ku_Kaeo_district",
       "older_name_by_867": {
         "exists": false,
@@ -1222,26 +1029,17 @@
         {
           "form": "Nong",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "marsh / pond"
         },
         {
           "form": "Bua",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "lotus"
         }
       ],
       "etymology_analysis": "Nong Bua is a descriptive Thai/Lao toponym meaning 'Lotus Marsh' or 'Lotus Pond', widespread across northeastern Thailand and unattested in 9th-century CE records.",
-      "current_repo_state": {
-        "name": "Nong Bua",
-        "b_tarr": "Nong Bua",
-        "b_tarr_direct": "Nong Bua",
-        "b_tarr_hist": "Nong Bua",
-        "b_origin": "Nong Bua (constituent holding of Ku Kêo)",
-        "b_anachronism": "",
-        "b_ipa": "[nɔŋ ˈbʊ.a]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nong_Bua",
       "older_name_by_867": {
         "exists": false,
@@ -1276,31 +1074,23 @@
         {
           "form": "Nong",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "marsh / pond"
         },
         {
           "form": "Bua",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "lotus"
         },
         {
           "form": "Lam Phu",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "cork tree (Sonneratia) / Lam Phu village"
         }
       ],
       "etymology_analysis": "Nong Bua Lam Phu is a Thai/Lao toponym ('Lotus Marsh of Lam Phu') attested from the late Ayutthaya/early Thonburi era (1767 CE) and elevated to provincial status in 1993 CE.",
-      "current_repo_state": {
-        "name": "Nong Bua Lam Phu",
-        "b_tarr": "Nong Bua Lam Phu",
-        "b_tarr_direct": "Nong Bua Lam Phu",
-        "b_tarr_hist": "Nong Bua Lam Phu",
-        "b_origin": "Nong Bua Lam Phu (constituent holding of Ku Kêo)",
-        "b_anachronism": "",
-        "b_ipa": "[nɔŋ ˈbʊ.a lam phʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nong_Bua_Lamphu_province",
       "older_name_by_867": {
         "exists": false,
@@ -1335,26 +1125,17 @@
         {
           "form": "Nong",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "marsh / pond"
         },
         {
           "form": "Khai",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "reed / marsh plant"
         }
       ],
       "etymology_analysis": "Nong Khai is a Thai/Lao toponym meaning 'Reed Marsh', named after a large pond near the Mekong River when the town was established in 1827–1828 CE.",
-      "current_repo_state": {
-        "name": "Nong Khai",
-        "b_tarr": "Nong Khai",
-        "b_tarr_direct": "Nong Khai",
-        "b_tarr_hist": "Nong Khai",
-        "b_origin": "Nong Khai (constituent holding of Ku Kêo)",
-        "b_anachronism": "",
-        "b_ipa": "[nɔŋ khaɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nong_Khai",
       "older_name_by_867": {
         "exists": false,
@@ -1389,21 +1170,11 @@
         {
           "form": "Loei",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "beyond / further"
         }
       ],
       "etymology_analysis": "Loei is a Thai provincial and town name in upper northeastern Thailand, formally organized as a province in 1907 CE; it has no contemporary attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Loei",
-        "b_tarr": "Loei",
-        "b_tarr_direct": "Loei",
-        "b_tarr_hist": "Loei",
-        "b_origin": "Loei (constituent holding of Ku Kêo)",
-        "b_anachronism": "",
-        "b_ipa": "[lɔ.ˈɛɪ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Loei_province",
       "older_name_by_867": {
         "exists": false,
@@ -1438,26 +1209,17 @@
         {
           "form": "Muang (Mueang)",
           "language": "Thai / Lao",
+          "language_code": "tha",
           "translation": "walled town / polity"
         },
         {
           "form": "Fa Daet",
           "language": "Thai / Isan",
+          "language_code": "tha",
           "translation": "glaring sky"
         }
       ],
       "etymology_analysis": "Muang Fa Daet (Mueang Fa Daet Song Yang) is a modern Thai/Isan name given to a major Dvaravati-era moated Buddhist site in Kalasin province. While the site was occupied from the 7th–11th centuries CE, the Thai name itself is post-867 CE and no contemporary <= 867 CE toponym is epigraphically attested for the site.",
-      "current_repo_state": {
-        "name": "Muang Fa Dêt",
-        "b_tarr": "Muang Fa Dêt",
-        "b_tarr_direct": "Muang Fa Dêt",
-        "b_tarr_hist": "Muang Fa Dêt",
-        "b_origin": "Muang Fa Dêt (Muang Fa Daet)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ fa deːt]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mueang_Fa_Daet_Song_Yang",
       "older_name_by_867": {
         "exists": false,
@@ -1492,26 +1254,17 @@
         {
           "form": "maha",
           "language": "Thai (from Sanskrit mahā)",
+          "language_code": "tha",
           "translation": "great"
         },
         {
           "form": "sarakham",
           "language": "Thai (from Sanskrit sāra + grāma)",
+          "language_code": "tha",
           "translation": "essence village or prosperous abode"
         }
       ],
       "etymology_analysis": "Thai formal toponym derived from Sanskrit-Pali elements mahā ('great') and sāra-grāma ('essence/valuable village'). The town was founded in 1865 CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Maha Sarakhêm",
-        "b_tarr": "Maha Sarakhêm",
-        "b_tarr_direct": "Maha Sarakhêm",
-        "b_tarr_hist": "Maha Sarakhêm",
-        "b_origin": "Maha Sarakhêm (constituent holding of Muang Fa Dêt)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ha sa.rak.ˈheːm]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Maha_Sarakham_province",
       "older_name_by_867": {
         "exists": false,
@@ -1546,26 +1299,17 @@
         {
           "form": "khon",
           "language": "Thai/Isan",
+          "language_code": "tha",
           "translation": "stump or log (corruption of kham, tamarind)"
         },
         {
           "form": "kaen",
           "language": "Thai/Isan",
+          "language_code": "tha",
           "translation": "heartwood or core"
         }
       ],
       "etymology_analysis": "Thai/Isan toponym believed to derive from kham kaen ('tamarind heartwood'), referring to a local reliquary (Phra That Kham Kaen); officially named Khon Kaen in 1797 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Khon Kaen",
-        "b_tarr": "Khon Kaen",
-        "b_tarr_direct": "Khon Kaen",
-        "b_tarr_hist": "Khon Kaen",
-        "b_origin": "Khon Kaen (constituent holding of Muang Fa Dêt)",
-        "b_anachronism": "",
-        "b_ipa": "[khɔn ˈka.ɛn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khon_Kaen_province",
       "older_name_by_867": {
         "exists": false,
@@ -1600,26 +1344,17 @@
         {
           "form": "muk",
           "language": "Thai (from Sanskrit muktā)",
+          "language_code": "tha",
           "translation": "pearl or mother-of-pearl"
         },
         {
           "form": "dahan",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "dividing or advancing front (from Kaeo Mukdahan)"
         }
       ],
       "etymology_analysis": "Thai toponym derived from Kaeo Mukdahan ('crystal/pearl' gem), associated with the mouth of Huai Muk ('Muk Creek'). Founded in 1770 CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Nông Hân Lûang",
-        "b_tarr": "Nông Hân Lûang",
-        "b_tarr_direct": "Mukdahân",
-        "b_tarr_hist": "Nông Hân Lûang",
-        "b_origin": "Nông Hân Lûang (Nông Hân Lûang (in-game: Mukdahan))",
-        "b_anachronism": "Mukdahan was founded in 1770 AD by Chao Kinnaree; resolves via Option A to ancient Chenla seat Nong Han Luang (Nông Hân Lûang).",
-        "b_ipa": "[noːŋ haːn ˈluː.aŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mukdahan",
       "older_name_by_867": {
         "exists": false,
@@ -1654,26 +1389,17 @@
         {
           "form": "sakhon",
           "language": "Thai (from Sanskrit sakala)",
+          "language_code": "tha",
           "translation": "entire or whole"
         },
         {
           "form": "nakhon",
           "language": "Thai (from Sanskrit nagara)",
+          "language_code": "tha",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Thai Sanskritized compound from sakala ('entire, whole') and nagara ('city'), meaning 'city of cities'. Renamed Sakon Nakhon in 1830 CE; its Khmer-era predecessor Nong Han Luang is placed in the 11th century CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Sakhon Nakhon",
-        "b_tarr": "Sakhon Nakhon",
-        "b_tarr_direct": "Sakhon Nakhon",
-        "b_tarr_hist": "Sakhon Nakhon",
-        "b_origin": "Sakhon Nakhon (constituent holding of Nông Hân Lûang)",
-        "b_anachronism": "",
-        "b_ipa": "[sak.ˈhɔn nak.ˈhɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sakon_Nakhon_province",
       "older_name_by_867": {
         "exists": false,
@@ -1708,26 +1434,17 @@
         {
           "form": "bueng",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "marsh or swamp"
         },
         {
           "form": "kan",
           "language": "Thai (from Sanskrit kāla)",
+          "language_code": "tha",
           "translation": "black"
         }
       ],
       "etymology_analysis": "Descriptive Thai-Sanskrit compound combining bueng ('marsh, swamp') and kan (from Sanskrit kāla, 'black'). Modern administrative settlement attested from 1956 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Bueng Kan",
-        "b_tarr": "Bueng Kan",
-        "b_tarr_direct": "Bueng Kan",
-        "b_tarr_hist": "Bueng Kan",
-        "b_origin": "Bueng Kan (constituent holding of Nông Hân Lûang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbʊ.ɛŋ kan]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bueng_Kan",
       "older_name_by_867": {
         "exists": false,
@@ -1762,26 +1479,17 @@
         {
           "form": "ubon",
           "language": "Thai (from Sanskrit utpala)",
+          "language_code": "tha",
           "translation": "lotus"
         },
         {
           "form": "ratchathani",
           "language": "Thai (from Sanskrit rājadhānī)",
+          "language_code": "tha",
           "translation": "royal capital city"
         }
       ],
       "etymology_analysis": "Thai Sanskritized toponym from utpala ('lotus') and rājadhānī ('royal city'), meaning 'royal city of the lotus flower'. Founded in the late 18th century CE and elevated to a province in 1792 CE.",
-      "current_repo_state": {
-        "name": "Mûndal",
-        "b_tarr": "Mûndal",
-        "b_tarr_direct": "Ubon Râdschatanî",
-        "b_tarr_hist": "Mûndal",
-        "b_origin": "Mûndal (Mûndal (in-game: Ubon Ratchathani))",
-        "b_anachronism": "Resolved via verified historical center Mûndal documented in tarraconian_titles_1059.md.",
-        "b_ipa": "[ˈmuːn.dal]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani_province",
       "older_name_by_867": {
         "exists": false,
@@ -1816,26 +1524,17 @@
         {
           "form": "ubon ratchathani",
           "language": "Thai (from Sanskrit utpala + rājadhānī)",
+          "language_code": "tha",
           "translation": "royal city of the lotus"
         },
         {
           "form": "northwest",
           "language": "English",
+          "language_code": "eng",
           "translation": "northwestern compass direction"
         }
       ],
       "etymology_analysis": "Synthetic directional compound appending English 'Northwest' to Ubon Ratchathani (1792 CE); not a historical settlement name and unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Pha Taem",
-        "b_tarr": "Pha Taem",
-        "b_tarr_direct": "Pha Taem",
-        "b_tarr_hist": "Pha Taem",
-        "b_origin": "Pha Taem (constituent holding of Mûndal)",
-        "b_anachronism": "",
-        "b_ipa": "[pha ˈta.ɛm]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani",
       "older_name_by_867": {
         "exists": false,
@@ -1870,26 +1569,17 @@
         {
           "form": "phon",
           "language": "Isan/Lao",
+          "language_code": "lao",
           "translation": "mound or hillock"
         },
         {
           "form": "sai",
           "language": "Thai/Isan",
+          "language_code": "tha",
           "translation": "sand"
         }
       ],
       "etymology_analysis": "Isan/Thai descriptive topographic compound from phon ('mound, hillock') and sai ('sand'). Attested as an administrative district only from 1976 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Phon Sai",
-        "b_tarr": "Phon Sai",
-        "b_tarr_direct": "Phon Sai",
-        "b_tarr_hist": "Phon Sai",
-        "b_origin": "Phon Sai (constituent holding of Mûndal)",
-        "b_anachronism": "",
-        "b_ipa": "[phɔn saɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phon_Sai_district",
       "older_name_by_867": {
         "exists": false,
@@ -1924,26 +1614,17 @@
         {
           "form": "salo",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "local village name (Salo)"
         },
         {
           "form": "tai",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "south or lower"
         }
       ],
       "etymology_analysis": "Lao village toponym with directional qualifier tai ('south, lower'). Unattested in historical records <= 867 CE.",
-      "current_repo_state": {
-        "name": "Salo Tai",
-        "b_tarr": "Salo Tai",
-        "b_tarr_direct": "Salo Tai",
-        "b_tarr_hist": "Salo Tai",
-        "b_origin": "Salo Tai (Salo Tai)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsa.lɔ taɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1978,31 +1659,23 @@
         {
           "form": "ban",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "village"
         },
         {
           "form": "na",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "rice paddy"
         },
         {
           "form": "than",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "sugar palm"
         }
       ],
       "etymology_analysis": "Lao village compound ban ('village') + na ('rice field') + than ('sugar palm'), meaning 'sugar-palm ricefield village'. Unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Ban Nathan",
-        "b_tarr": "Ban Nathan",
-        "b_tarr_direct": "Ban Nathan",
-        "b_tarr_hist": "Ban Nathan",
-        "b_origin": "Ban Nathan (constituent holding of Salo Tai)",
-        "b_anachronism": "",
-        "b_ipa": "[ban nat.ˈhan]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Operation_Xieng_Dong",
       "older_name_by_867": {
         "exists": false,
@@ -2037,26 +1710,17 @@
         {
           "form": "hin",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "stone or rock"
         },
         {
           "form": "boun",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "merit or local river name element"
         }
       ],
       "etymology_analysis": "Lao toponym directly adopting the hydronym of the Nam Hinboun (Hinboun River) in Khammouane Province. Unattested in contemporary epigraphy or chronicles <= 867 CE.",
-      "current_repo_state": {
-        "name": "Hinboun",
-        "b_tarr": "Hinboun",
-        "b_tarr_direct": "Hinboun",
-        "b_tarr_hist": "Hinboun",
-        "b_origin": "Hinboun (constituent holding of Salo Tai)",
-        "b_anachronism": "",
-        "b_ipa": "[hɪn.ˈbɔʊn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Province_de_Khammouane",
       "older_name_by_867": {
         "exists": false,
@@ -2091,26 +1755,17 @@
         {
           "form": "bori",
           "language": "Lao/Thai (from Sanskrit purī)",
+          "language_code": "lao",
           "translation": "walled town or city"
         },
         {
           "form": "kham",
           "language": "Lao/Thai",
+          "language_code": "lao",
           "translation": "gold"
         }
       ],
       "etymology_analysis": "Lao-Siamese compound from Sanskrit purī ('city, town') and Tai kham ('gold') or Sanskrit-Pali parikamma. Named Muong Borikhane in 1876 CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Borikhan",
-        "b_tarr": "Borikhan",
-        "b_tarr_direct": "Borikhan",
-        "b_tarr_hist": "Borikhan",
-        "b_origin": "Borikhan (constituent holding of Salo Tai)",
-        "b_anachronism": "",
-        "b_ipa": "[bɔ.rɪk.ˈhan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Borikhane_district",
       "older_name_by_867": {
         "exists": false,
@@ -2145,26 +1800,17 @@
         {
           "form": "sana",
           "language": "Lao (from Sanskrit jaya/jana)",
+          "language_code": "lao",
           "translation": "victory or people"
         },
         {
           "form": "somboon",
           "language": "Lao (from Sanskrit sampūrṇa)",
+          "language_code": "lao",
           "translation": "abundant or complete"
         }
       ],
       "etymology_analysis": "Lao Sanskritized auspicious compound meaning 'abundant victory/prosperity'. Modern district name unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Sanasombûn",
-        "b_tarr": "Sanasombûn",
-        "b_tarr_direct": "Sanasombûn",
-        "b_tarr_hist": "Sanasombûn",
-        "b_origin": "Sanasombûn (Sanasomboon)",
-        "b_anachronism": "",
-        "b_ipa": "[sa.na.zɔm.ˈbuːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sanasomboun_district",
       "older_name_by_867": {
         "exists": false,
@@ -2199,26 +1845,17 @@
         {
           "form": "at",
           "language": "Lao (from local Mon-Khmer)",
+          "language_code": "lao",
           "translation": "excrement or dung (folk etymology)"
         },
         {
           "form": "tapeu",
           "language": "Lao (from local Mon-Khmer)",
+          "language_code": "lao",
           "translation": "water buffalo"
         }
       ],
       "etymology_analysis": "Lao adaptation of a local Mon-Khmer toponym (traditionally glossed as 'buffalo dung' from it kabue). First documented in 19th-century European accounts (1877 CE), unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Attapeu",
-        "b_tarr": "Attapeu",
-        "b_tarr_direct": "Attapeu",
-        "b_tarr_hist": "Attapeu",
-        "b_origin": "Attapeu (constituent holding of Sanasombûn)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ta.ˈpɔʏ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Attapeu",
       "older_name_by_867": {
         "exists": false,
@@ -2253,26 +1890,17 @@
         {
           "form": "sala",
           "language": "Lao (from Sanskrit śāla)",
+          "language_code": "lao",
           "translation": "sal tree (Shorea robusta)"
         },
         {
           "form": "van",
           "language": "Lao (from Sanskrit vana)",
+          "language_code": "lao",
           "translation": "forest or grove"
         }
       ],
       "etymology_analysis": "Lao toponym from Sanskrit śālavana ('forest of sal trees'). Renamed from Saravan to Salavan in 1828 CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Sê-Dôn",
-        "b_tarr": "Sê-Dôn",
-        "b_tarr_direct": "Sê-Dôn",
-        "b_tarr_hist": "Sê-Dôn",
-        "b_origin": "Ancient pre-867 Se Don River basin in southern Laos (in-game: Salavan)",
-        "b_anachronism": "Late medieval provincial outpost fails Burden of Proof on Antiquity; resolved to ancient Se Don river basin.",
-        "b_ipa": "[seː doːn]",
-        "holding_type": "city",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salavan_province",
       "older_name_by_867": {
         "exists": false,
@@ -2307,26 +1935,17 @@
         {
           "form": "mouang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "town or district"
         },
         {
           "form": "camphon",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "local name Champhone"
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining mouang ('town, district') with Champhone. First attested in 1834 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Mouang Camphon",
-        "b_tarr": "Mouang Camphon",
-        "b_tarr_direct": "Mouang Camphon",
-        "b_tarr_hist": "Mouang Camphon",
-        "b_origin": "Mouang Camphon (constituent holding of Sanasombûn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔʊ.aŋ kamp.ˈhɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Champhone_district",
       "older_name_by_867": {
         "exists": false,
@@ -2361,26 +1980,17 @@
         {
           "form": "vien",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "walled city"
         },
         {
           "form": "chan",
           "language": "Lao (from Sanskrit candana/candra)",
+          "language_code": "lao",
           "translation": "sandalwood or moon"
         }
       ],
       "etymology_analysis": "Lao compound viang ('walled city') + chan (from Sanskrit candana 'sandalwood' or candra 'moon'). First attested in contemporary epigraphy in 1159 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Wieng Tschan",
-        "b_tarr": "Wieng Tschan",
-        "b_tarr_direct": "Wieng Tschan",
-        "b_tarr_hist": "Wieng Tschan",
-        "b_origin": "Wieng Tschan (Vien Chan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwɪ.ɛŋ tʃan]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vientiane",
       "older_name_by_867": {
         "exists": false,
@@ -2415,26 +2025,17 @@
         {
           "form": "ban",
           "language": "Lao/Tai",
+          "language_code": "lao",
           "translation": "village"
         },
         {
           "form": "pang",
           "language": "Lao/Tai",
+          "language_code": "lao",
           "translation": "camp or hillside clearing"
         }
       ],
       "etymology_analysis": "Lao/Tai settlement name combining ban ('village') and pang ('camp, clearing'). Unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Ban Pang",
-        "b_tarr": "Ban Pang",
-        "b_tarr_direct": "Ban Pang",
-        "b_tarr_hist": "Ban Pang",
-        "b_origin": "Ban Pang (constituent holding of Wieng Tschan)",
-        "b_anachronism": "",
-        "b_ipa": "[ban paŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2469,26 +2070,17 @@
         {
           "form": "vang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "river bend or palace"
         },
         {
           "form": "vieng",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "walled town"
         }
       ],
       "etymology_analysis": "Lao compound from vang ('deep river pool/bend' or 'palace') and vieng ('walled town'). Settled c. 1353 CE as Muang Song and renamed Vang Vieng in the 1890s CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Vang Vieng",
-        "b_tarr": "Vang Vieng",
-        "b_tarr_direct": "Vang Vieng",
-        "b_tarr_hist": "Vang Vieng",
-        "b_origin": "Vang Vieng (constituent holding of Wieng Tschan)",
-        "b_anachronism": "",
-        "b_ipa": "[vaŋ ˈvɪ.ɛŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vang_Vieng",
       "older_name_by_867": {
         "exists": false,
@@ -2523,26 +2115,17 @@
         {
           "form": "muang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "town or district"
         },
         {
           "form": "fuang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "prosperous or local name Feuang"
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining muang ('town, district') with fuang/feuang. Unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Muang Fuang",
-        "b_tarr": "Muang Fuang",
-        "b_tarr_direct": "Muang Fuang",
-        "b_tarr_hist": "Muang Fuang",
-        "b_origin": "Muang Fuang (constituent holding of Wieng Tschan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ ˈfʊ.aŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Feuang_district",
       "older_name_by_867": {
         "exists": false,
@@ -2577,26 +2160,17 @@
         {
           "form": "muang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "town or principality"
         },
         {
           "form": "khoun",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "lord or shortened form of Khouang"
         }
       ],
       "etymology_analysis": "Lao administrative toponym combining muang ('town, principality') and khoun (from Xiang Khouang or 'lord'). Muang Phuan/Xiang Khouang is attested from the 14th century CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Muang Khoun",
-        "b_tarr": "Muang Khoun",
-        "b_tarr_direct": "Muang Khoun",
-        "b_tarr_hist": "Muang Khoun",
-        "b_origin": "Muang Khoun (constituent holding of Wieng Tschan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ khɔʊn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khoune_district",
       "older_name_by_867": {
         "exists": false,
@@ -2631,21 +2205,11 @@
         {
           "form": "angkor",
           "language": "Khmer (from Sanskrit nagara)",
+          "language_code": "khm",
           "translation": "capital city or kingdom"
         }
       ],
       "etymology_analysis": "Khmer vernacular form ângkôr, evolved from nokor < Sanskrit nagara ('city'). The name Angkor is attested from the 16th century CE (post-Angkorian period), while Yaśodharapura was founded in 889 CE; both postdate 867 CE.",
-      "current_repo_state": {
-        "name": "Angkôr",
-        "b_tarr": "Angkôr",
-        "b_tarr_direct": "Angkôr",
-        "b_tarr_hist": "Angkôr",
-        "b_origin": "Angkôr (Angkor)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ˈŋkoːr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Angkor",
       "older_name_by_867": {
         "exists": true,
@@ -2683,26 +2247,17 @@
         {
           "form": "krung",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "city or municipality"
         },
         {
           "form": "poi pet",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "local border town name Poipet"
         }
       ],
       "etymology_analysis": "Khmer municipal title krung ('city') prefixed to the modern border-town name Poipet, which developed in the late 20th century CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Krung Poi Pet",
-        "b_tarr": "Krung Poi Pet",
-        "b_tarr_direct": "Krung Poi Pet",
-        "b_tarr_hist": "Krung Poi Pet",
-        "b_origin": "Krung Poi Pet (constituent holding of Angkôr)",
-        "b_anachronism": "",
-        "b_ipa": "[krʊŋ ˈpɔ.ɪ pɛt]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Poipet",
       "older_name_by_867": {
         "exists": false,
@@ -2737,26 +2292,17 @@
         {
           "form": "tribhuvana",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "threefold world"
         },
         {
           "form": "maheshvara",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "great lord (epithet of Shiva)"
         }
       ],
       "etymology_analysis": "Sanskrit compound meaning 'Great Lord of the Threefold World', an epithet of Shiva and the original dedicatory name of Banteay Srei consecrated in 967 CE, a century after 867 CE.",
-      "current_repo_state": {
-        "name": "Tribhuvanamaheschvara",
-        "b_tarr": "Tribhuvanamaheschvara",
-        "b_tarr_direct": "Tribhuvanamaheschvara",
-        "b_tarr_hist": "Tribhuvanamaheschvara",
-        "b_origin": "Tribhuvanamaheschvara (constituent holding of Angkôr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtrɪb.hʊ.va.na.ma.hɛʃ.va.ra]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Banteay_Srei",
       "older_name_by_867": {
         "exists": false,
@@ -2791,31 +2337,23 @@
         {
           "form": "dong",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "forest or grove"
         },
         {
           "form": "si",
           "language": "Thai (from Sanskrit śrī)",
+          "language_code": "tha",
           "translation": "glorious or auspicious"
         },
         {
           "form": "mahosot",
           "language": "Thai (from Pali Mahosadha)",
+          "language_code": "tha",
           "translation": "great medicine or sage Mahosadha"
         }
       ],
       "etymology_analysis": "Modern Thai compound dong ('forest') + Si Mahosot (from Pali Mahosadha), applied to a Dvaravati-period archaeological site occupied from at least the 6th century CE; the Thai name itself is modern (1993 CE district renaming) and unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Dong Si Mahosot",
-        "b_tarr": "Dong Si Mahosot",
-        "b_tarr_direct": "Dong Si Mahosot",
-        "b_tarr_hist": "Dong Si Mahosot",
-        "b_origin": "Dong Si Mahosot (Dong Si Mahosot)",
-        "b_anachronism": "",
-        "b_ipa": "[dɔŋ sɪ ma.hɔ.ˈzɔt]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Si_Mahosot_district",
       "older_name_by_867": {
         "exists": false,
@@ -2850,26 +2388,17 @@
         {
           "form": "sur",
           "language": "Thai (from Sanskrit sura)",
+          "language_code": "tha",
           "translation": "god or deity"
         },
         {
           "form": "in",
           "language": "Thai (from Sanskrit indra)",
+          "language_code": "tha",
           "translation": "Indra"
         }
       ],
       "etymology_analysis": "Thai Sanskritized title Surin (from sura + indra, 'Lord Indra'), bestowed on 18th-century ruler Chiang Pum (Phraya Surin Phakdi) and applied to the town in 1786 CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Surin",
-        "b_tarr": "Surin",
-        "b_tarr_direct": "Surin",
-        "b_tarr_hist": "Surin",
-        "b_origin": "Surin (constituent holding of Dong Si Mahosot)",
-        "b_anachronism": "",
-        "b_ipa": "[sʊ.ˈrɪn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://de.wikipedia.org/wiki/Surin",
       "older_name_by_867": {
         "exists": false,
@@ -2904,21 +2433,11 @@
         {
           "form": "khorat",
           "language": "Thai (from Khmer angkor + rāj)",
+          "language_code": "tha",
           "translation": "royal city (shortened from Khorakhapura / Nakhon Ratchasima)"
         }
       ],
       "etymology_analysis": "Thai shortened form of Khorakhapura / Nakhon Ratchasima (derived from Khmer Angkor Raj). Built under King Narai in the 17th century CE, far post-867 CE.",
-      "current_repo_state": {
-        "name": "Khorat",
-        "b_tarr": "Khorat",
-        "b_tarr_direct": "Khorat",
-        "b_tarr_hist": "Khorat",
-        "b_origin": "Khorat (constituent holding of Dong Si Mahosot)",
-        "b_anachronism": "",
-        "b_ipa": "[khɔ.ˈrat]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nakhon_Ratchasima",
       "older_name_by_867": {
         "exists": true,
@@ -2956,26 +2475,17 @@
         {
           "form": "preah",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "holy, sacred"
         },
         {
           "form": "vihear",
           "language": "Khmer (from Sanskrit vihāra)",
+          "language_code": "khm",
           "translation": "temple, sanctuary"
         }
       ],
       "etymology_analysis": "Preah Vihear combines Khmer preah ('holy, sacred') with vihear (from Sanskrit vihāra, 'monastery, temple'). Although shrine construction on the Dângrêk cliff began in the 9th century CE, the earliest dated epigraphic attestation at the site is K.381 (1024 CE) naming the deity Shikhareshvara, and the modern Khmer toponym Preah Vihear is not contemporarily attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Prêa Wihâr",
-        "b_tarr": "Prêa Wihâr",
-        "b_tarr_direct": "Prêa Wihâr",
-        "b_tarr_hist": "Prêa Wihâr",
-        "b_origin": "Prêa Wihâr (Prea Vihear)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpreː.a wɪ.ˈhaːr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Preah_Vihear",
       "older_name_by_867": {
         "exists": false,
@@ -3010,26 +2520,17 @@
         {
           "form": "liṅga",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "phallus, emblem of Shiva"
         },
         {
           "form": "pura",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city, fortress"
         }
       ],
       "etymology_analysis": "Lingapura derives from Sanskrit liṅga ('emblem of Shiva') and pura ('city'). Established as the Angkorian imperial capital by Jayavarman IV in 928 CE (modern Koh Ker), it postdates the 867 CE baseline; the current repository label 'Schrestrapura' conflates it with Shresthapura at Wat Phou in Laos.",
-      "current_repo_state": {
-        "name": "Schrestrapura",
-        "b_tarr": "Schrestrapura",
-        "b_tarr_direct": "Schrestrapura",
-        "b_tarr_hist": "Schrestrapura",
-        "b_origin": "Schrestrapura (constituent holding of Prêa Wihâr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃrɛs.tra.pʊ.ra]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Koh_Ker",
       "older_name_by_867": {
         "exists": false,
@@ -3064,26 +2565,17 @@
         {
           "form": "choam",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "marsh, swamp"
         },
         {
           "form": "khsant",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "peaceful, tranquil"
         }
       ],
       "etymology_analysis": "Choam Khsant is a modern Khmer compound from choam ('marsh, swamp') and khsant ('peaceful, calm'). There is no contemporary epigraphic or historical attestation of this toponym by 867 CE.",
-      "current_repo_state": {
-        "name": "Tschoam Khsant",
-        "b_tarr": "Tschoam Khsant",
-        "b_tarr_direct": "Tschoam Khsant",
-        "b_tarr_hist": "Tschoam Khsant",
-        "b_origin": "Tschoam Khsant (constituent holding of Prêa Wihâr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃɔ.am khsant]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Choam_Khsant_District",
       "older_name_by_867": {
         "exists": false,
@@ -3118,26 +2610,17 @@
         {
           "form": "si",
           "language": "Thai (from Sanskrit śrī)",
+          "language_code": "tha",
           "translation": "auspicious, glorious"
         },
         {
           "form": "sa ket",
           "language": "Thai (from Sanskrit keśa/ketu)",
+          "language_code": "tha",
           "translation": "hair, crest"
         }
       ],
       "etymology_analysis": "Si Sa Ket (Sisaket) is a Thai administrative toponym incorporating Sanskritic elements (śrī 'auspicious') that originated with the founding of the town in 1786 CE, long after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Si Sa Ket",
-        "b_tarr": "Si Sa Ket",
-        "b_tarr_direct": "Si Sa Ket",
-        "b_tarr_hist": "Si Sa Ket",
-        "b_origin": "Si Sa Ket (constituent holding of Prêa Wihâr)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪ sa kɛt]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sisaket_province",
       "older_name_by_867": {
         "exists": false,
@@ -3172,26 +2655,17 @@
         {
           "form": "śambhu",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "Shiva (the benevolent one)"
         },
         {
           "form": "pura",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city, settlement"
         }
       ],
       "etymology_analysis": "Sambhupura (Sanskrit Śambhupura, 'city of Śambhu/Shiva') was a major Chenla-era Mekong River polity centered at modern Sambor in Kratie Province. It is contemporarily attested by inscription K.124 in 803 CE (with nearby inscription K.134 dating to 781 CE), making it historical by the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Sambupure",
-        "b_tarr": "Sambupure",
-        "b_tarr_direct": "Sambupure",
-        "b_tarr_hist": "Sambupure",
-        "b_origin": "Sambupure (Sambhupura)",
-        "b_anachronism": "",
-        "b_ipa": "[sam.bʊ.ˈpʊ.rə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chenla",
       "older_name_by_867": {
         "exists": false,
@@ -3226,21 +2700,11 @@
         {
           "form": "hanchei",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "modern Khmer hill-temple toponym"
         }
       ],
       "etymology_analysis": "Hanchei (Wat Hanchey) is a modern Khmer toponym applied to a Chenla-era brick sanctuary in Kampong Cham Province containing the late 6th- to early 7th-century CE Sanskrit inscription K.81 of Bhavavarman I. Because Hanchei itself is a modern Khmer name not attested by 867 CE, it is anachronistic for the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Hanchei",
-        "b_tarr": "Hanchei",
-        "b_tarr_direct": "Hanchei",
-        "b_tarr_hist": "Hanchei",
-        "b_origin": "Hanchei (constituent holding of Sambupure)",
-        "b_anachronism": "",
-        "b_ipa": "[han.ˈxɛɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3275,26 +2739,17 @@
         {
           "form": "preah",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "holy, sacred"
         },
         {
           "form": "khan",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "sword"
         }
       ],
       "etymology_analysis": "Preah Khan means 'sacred sword' in Khmer. The monumental temple complex at Kompong Svay dates to the 11th century CE (Suryavarman I, r. 1006–1050 CE) and postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Preah Khan",
-        "b_tarr": "Preah Khan",
-        "b_tarr_direct": "Preah Khan",
-        "b_tarr_hist": "Preah Khan",
-        "b_origin": "Preah Khan (constituent holding of Sambupure)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈprɛ.ah khan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Preah_Khan_Kompong_Svay",
       "older_name_by_867": {
         "exists": false,
@@ -3329,26 +2784,17 @@
         {
           "form": "angkor",
           "language": "Khmer (from Sanskrit nagara)",
+          "language_code": "khm",
           "translation": "capital city"
         },
         {
           "form": "borey",
           "language": "Khmer (from Sanskrit purī)",
+          "language_code": "khm",
           "translation": "walled city, town"
         }
       ],
       "etymology_analysis": "Angkor Borey ('city of cities') is a modern Khmer name derived from Sanskrit nagara and purī, applied retrospectively to an ancient Funan and Chenla urban center in Takéo Province. While the site itself was active from 200 BCE and is identified in Khmer historiography with Naravaranagara (Chinese Na-fu-na), the modern Khmer name Angkor Borei is post-867.",
-      "current_repo_state": {
-        "name": "Angkôr Borêi",
-        "b_tarr": "Angkôr Borêi",
-        "b_tarr_direct": "Angkôr Borêi",
-        "b_tarr_hist": "Angkôr Borêi",
-        "b_origin": "Angkôr Borêi (Angkor Borey)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ˈŋkoːr ˈbɔ.reː.ɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da",
       "older_name_by_867": {
         "exists": true,
@@ -3385,26 +2831,17 @@
         {
           "form": "maha",
           "language": "Khmer (from Sanskrit mahā)",
+          "language_code": "khm",
           "translation": "great"
         },
         {
           "form": "rosei",
           "language": "Khmer (from Sanskrit ṛṣi)",
+          "language_code": "khm",
           "translation": "sage, ascetic"
         }
       ],
       "etymology_analysis": "Maha Rosei (from Asram Maha Rosei, 'hermitage of the great sage') is a modern Khmer designation combining Sanskrit-derived mahā ('great') and ṛṣi ('ascetic'). Although the basalt temple dates to the 7th century CE, the modern Khmer name is not contemporarily attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Maha Rosei",
-        "b_tarr": "Maha Rosei",
-        "b_tarr_direct": "Maha Rosei",
-        "b_tarr_hist": "Maha Rosei",
-        "b_origin": "Maha Rosei (constituent holding of Angkôr Borêi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ha rɔ.ˈzɛɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Angkor_Borei_and_Phnom_Da",
       "older_name_by_867": {
         "exists": false,
@@ -3439,21 +2876,11 @@
         {
           "form": "bayang",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "modern Khmer hill-sanctuary name"
         }
       ],
       "etymology_analysis": "Bayang (Phnom Bayang) is a modern Khmer toponym applied to a 7th-century CE brick hill sanctuary in southern Takéo Province. The modern name is post-867, though the sanctuary is contemporarily attested in 604 CE under its Sanskrit religious designation Śivapada.",
-      "current_repo_state": {
-        "name": "Bayang",
-        "b_tarr": "Bayang",
-        "b_tarr_direct": "Bayang",
-        "b_tarr_hist": "Bayang",
-        "b_origin": "Bayang (constituent holding of Angkôr Borêi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.jaŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": true,
@@ -3490,26 +2917,17 @@
         {
           "form": "phnom",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "hill, mountain"
         },
         {
           "form": "penh",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "personal name Penh (Lady Penh)"
         }
       ],
       "etymology_analysis": "Phnom Penh literally means 'Penh's Hill' in Khmer, referring to the 1372 CE foundation of Wat Phnom by Lady Penh (Daun Penh). Its later royal title Krong Chaktomuk ('city of four faces', reflected in the repository's 'Tschaturmukha') dates to 1434 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Tschaturmukha",
-        "b_tarr": "Tschaturmukha",
-        "b_tarr_direct": "Tschaturmukha",
-        "b_tarr_hist": "Tschaturmukha",
-        "b_origin": "Tschaturmukha (constituent holding of Angkôr Borêi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃa.tʊr.mʊk.ha]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phnom_Penh",
       "older_name_by_867": {
         "exists": false,
@@ -3544,26 +2962,17 @@
         {
           "form": "botum",
           "language": "Khmer (from Sanskrit padma)",
+          "language_code": "khm",
           "translation": "lotus"
         },
         {
           "form": "sakor",
           "language": "Khmer (from Sanskrit sāgara)",
+          "language_code": "khm",
           "translation": "ocean, sea"
         }
       ],
       "etymology_analysis": "Botum Sakor derives from Khmer renderings of Sanskrit padma ('lotus') and sāgara ('ocean'). It is a modern administrative district and national park name (1993 CE) in Koh Kong Province with no attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Botum Sakôr",
-        "b_tarr": "Botum Sakôr",
-        "b_tarr_direct": "Botum Sakôr",
-        "b_tarr_hist": "Botum Sakôr",
-        "b_origin": "Botum Sakôr (Botum Sakor)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɔ.tʊm sa.ˈkoːr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Botum_Sakor_District",
       "older_name_by_867": {
         "exists": false,
@@ -3598,26 +3007,17 @@
         {
           "form": "kompong",
           "language": "Khmer (from Malay kampung)",
+          "language_code": "khm",
           "translation": "port, river landing"
         },
         {
           "form": "saom",
           "language": "Khmer (from Sanskrit saumya)",
+          "language_code": "khm",
           "translation": "moon, Shiva"
         }
       ],
       "etymology_analysis": "Kompong Saom combines Khmer kompong ('port, landing', from Malay kampung) with saom (from Sanskrit saumya / Soma, 'moon' or an epithet of Shiva). First referenced in Cambodian chronicles for 1479 CE and developed into Sihanoukville in 1955 CE, it postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Kompong Saom",
-        "b_tarr": "Kompong Saom",
-        "b_tarr_direct": "Kompong Saom",
-        "b_tarr_hist": "Kompong Saom",
-        "b_origin": "Kompong Saom (constituent holding of Botum Sakôr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔm.pɔŋ ˈsa.ɔm]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sihanoukville",
       "older_name_by_867": {
         "exists": false,
@@ -3652,26 +3052,17 @@
         {
           "form": "kum",
           "language": "Khmer (khum)",
+          "language_code": "khm",
           "translation": "commune, subdistrict"
         },
         {
           "form": "pak khlang",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "local commune toponym"
         }
       ],
       "etymology_analysis": "Kum Pak Khlang reflects the modern Cambodian administrative designation Khum Pak Khlang (with khum meaning 'commune') in Mondol Seima District, Koh Kong Province. It has no contemporary attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Kum Pak Phlang",
-        "b_tarr": "Kum Pak Phlang",
-        "b_tarr_direct": "Kum Pak Phlang",
-        "b_tarr_hist": "Kum Pak Phlang",
-        "b_origin": "Kum Pak Phlang (constituent holding of Botum Sakôr)",
-        "b_anachronism": "",
-        "b_ipa": "[kʊm pak phlaŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3706,26 +3097,17 @@
         {
           "form": "mueang",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "city, principality"
         },
         {
           "form": "phra rot",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "Phra Rot (legendary prince)"
         }
       ],
       "etymology_analysis": "Mueang Phra Rot ('city of Phra Rot') is a modern Thai designation linking a Dvaravati-period moated site in Chonburi Province to the folk legend of Phra Rot (Nang Sib Song). Because the Thai name is modern and no contemporary pre-867 CE name is attested for the site, it is anachronistic for 867 CE.",
-      "current_repo_state": {
-        "name": "Muang Pra Rôt",
-        "b_tarr": "Muang Pra Rôt",
-        "b_tarr_direct": "Muang Pra Rôt",
-        "b_tarr_hist": "Muang Pra Rôt",
-        "b_origin": "Muang Pra Rôt (Mueang Phra Rot)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ pra roːt]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phanat_Nikhom_district",
       "older_name_by_867": {
         "exists": false,
@@ -3760,21 +3142,11 @@
         {
           "form": "rayong",
           "language": "Chong",
+          "language_code": "khm",
           "translation": "Burma padauk tree (Pterocarpus macrocarpus)"
         }
       ],
       "etymology_analysis": "Rayong derives from the indigenous Chong word for Pterocarpus macrocarpus (Thai pradu), a tree common to the coastal region. Its historical attestation begins in the late Ayutthaya period (1767 CE), postdating 867 CE.",
-      "current_repo_state": {
-        "name": "Rayong",
-        "b_tarr": "Rayong",
-        "b_tarr_direct": "Rayong",
-        "b_tarr_hist": "Rayong",
-        "b_origin": "Rayong (constituent holding of Muang Pra Rôt)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈra.jɔŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rayong",
       "older_name_by_867": {
         "exists": false,
@@ -3809,26 +3181,17 @@
         {
           "form": "chachoeng (cdiṅ)",
           "language": "Thai (from Old Khmer)",
+          "language_code": "tha",
           "translation": "river, stream"
         },
         {
           "form": "sao (jrau)",
           "language": "Thai (from Old Khmer)",
+          "language_code": "tha",
           "translation": "deep"
         }
       ],
       "etymology_analysis": "Chachoengsoo (Chachoengsao) is a Thai adaptation of Old Khmer cdiṅ jrau ('deep river'), referring to the Bang Pakong River. Founded as an Ayutthaya town in 1549 CE, it postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Tschachoengsoo",
-        "b_tarr": "Tschachoengsoo",
-        "b_tarr_direct": "Tschachoengsoo",
-        "b_tarr_hist": "Tschachoengsoo",
-        "b_origin": "Tschachoengsoo (constituent holding of Muang Pra Rôt)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃa.xɔ.ɛŋ.sɔ.ɔ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chachoengsao",
       "older_name_by_867": {
         "exists": false,
@@ -3863,21 +3226,11 @@
         {
           "form": "trat",
           "language": "Thai (from krat)",
+          "language_code": "tha",
           "translation": "Dipterocarpus intricatus tree"
         }
       ],
       "etymology_analysis": "Trat derives from Thai krat, the local name for the Dipterocarpus intricatus tree used for broom-making. Attested as a seaport of the Ayutthaya Kingdom by 1767 CE, it postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Trat",
-        "b_tarr": "Trat",
-        "b_tarr_direct": "Trat",
-        "b_tarr_hist": "Trat",
-        "b_origin": "Trat (constituent holding of Muang Pra Rôt)",
-        "b_anachronism": "",
-        "b_ipa": "[trat]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Trat",
       "older_name_by_867": {
         "exists": false,
@@ -3912,21 +3265,11 @@
         {
           "form": "pursat",
           "language": "Khmer (from Sanskrit bodhisattva)",
+          "language_code": "khm",
           "translation": "bodhisattva; local tree name"
         }
       ],
       "etymology_analysis": "Pursat (Khmer Poŭthĭsăt) derives from Sanskrit bodhisattva and also denotes a local tree species. Its earliest historical attestation is in the post-Angkorian period (1516 CE), after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Pursât",
-        "b_tarr": "Pursât",
-        "b_tarr_direct": "Pursât",
-        "b_tarr_hist": "Pursât",
-        "b_origin": "Pursât (Pursat)",
-        "b_anachronism": "",
-        "b_ipa": "[pʊr.ˈsaːt]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pursat",
       "older_name_by_867": {
         "exists": false,
@@ -3961,26 +3304,17 @@
         {
           "form": "kampong",
           "language": "Khmer (from Malay kampung)",
+          "language_code": "khm",
           "translation": "port, river landing"
         },
         {
           "form": "chhnang",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "pottery, clay pot"
         }
       ],
       "etymology_analysis": "Kampong Chhnang literally means 'port of pottery' in Khmer. Although the province contains prehistoric (Samrong Sen, c. 1500 BCE) and Dvaravati-era archaeological remains, the Khmer toponym Kampong Chhnang is not attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Kampong Chhnang",
-        "b_tarr": "Kampong Chhnang",
-        "b_tarr_direct": "Kampong Chhnang",
-        "b_tarr_hist": "Kampong Chhnang",
-        "b_origin": "Kampong Chhnang (constituent holding of Pursât)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkam.pɔŋ xhnaŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kampong_Chhnang_province",
       "older_name_by_867": {
         "exists": false,
@@ -4015,26 +3349,17 @@
         {
           "form": "sa",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "pond, pool"
         },
         {
           "form": "kaeo",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "crystal, gem"
         }
       ],
       "etymology_analysis": "Sa Kaeo means 'crystal pond' in Thai, named after two sacred ponds (Sa Kaeo Sa Khwan) near the modern town. Despite 7th-century CE inscriptions in the wider province (such as K.505 at Khao Rang, 639 CE), the Thai toponym Sa Kaeo is modern and postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Sa Kaô",
-        "b_tarr": "Sa Kaô",
-        "b_tarr_direct": "Sa Kaô",
-        "b_tarr_hist": "Sa Kaô",
-        "b_origin": "Sa Kaô (constituent holding of Pursât)",
-        "b_anachronism": "",
-        "b_ipa": "[sa ka.ˈoː]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sa_Kaeo_province",
       "older_name_by_867": {
         "exists": false,
@@ -4069,26 +3394,17 @@
         {
           "form": "bat",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "lost"
         },
         {
           "form": "dambang",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "staff, stick"
         }
       ],
       "etymology_analysis": "Battambang combines Khmer băt ('lost') and dǎmbâng ('staff'), referencing the local legend of Ta Dambang Kranhung. As a post-Angkorian toponym established by the 18th century CE (whereas 11th-century inscriptions nearby attest Pūrvāśrama in Malyang), it postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Battambang",
-        "b_tarr": "Battambang",
-        "b_tarr_direct": "Battambang",
-        "b_tarr_hist": "Battambang",
-        "b_origin": "Battambang (constituent holding of Pursât)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.tam.baŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Battambang",
       "older_name_by_867": {
         "exists": false,
@@ -4123,21 +3439,11 @@
         {
           "form": "baigaur",
           "language": "Cham",
+          "language_code": "nic",
           "translation": "Cham settlement name for Saigon"
         }
       ],
       "etymology_analysis": "Baigaur is recorded as the 11th-century CE Cham name for the settlement that later became Khmer Prey Nokor and Vietnamese Saigon (Ho Chi Minh City). Because its foundation dates to the 11th century CE, it postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Baigaur",
-        "b_tarr": "Baigaur",
-        "b_tarr_direct": "Baigaur",
-        "b_tarr_hist": "Baigaur",
-        "b_origin": "Baigaur (Baigaur)",
-        "b_anachronism": "",
-        "b_ipa": "[baɪ.ˈɣɔʊr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
       "older_name_by_867": {
         "exists": false,
@@ -4172,26 +3478,17 @@
         {
           "form": "gò",
           "language": "Vietnamese",
+          "language_code": "vie",
           "translation": "mound, hillock"
         },
         {
           "form": "công",
           "language": "Vietnamese",
+          "language_code": "vie",
           "translation": "peacock"
         }
       ],
       "etymology_analysis": "Gò Công is a Vietnamese toponym meaning 'peacock mound' (or derived via folk etymology from local terrain). Attested only after Vietnamese settlement in the Mekong Delta in the late 18th to early 19th century CE (1806 CE), it postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Go Cong",
-        "b_tarr": "Go Cong",
-        "b_tarr_direct": "Go Cong",
-        "b_tarr_hist": "Go Cong",
-        "b_origin": "Go Cong (constituent holding of Baigaur)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡɔ kɔŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/G%C3%B2_C%C3%B4ng",
       "older_name_by_867": {
         "exists": false,
@@ -4226,26 +3523,17 @@
         {
           "form": "phước",
           "language": "Sino-Vietnamese (福)",
+          "language_code": "vie",
           "translation": "blessing, good fortune"
         },
         {
           "form": "tuy",
           "language": "Sino-Vietnamese (綏)",
+          "language_code": "vie",
           "translation": "pacify, console"
         }
       ],
       "etymology_analysis": "Phước Tuy is a Sino-Vietnamese auspicious administrative name combining phước ('blessing') and tuy ('pacify'). Created as a Nguyễn prefecture in 1837 CE, it postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Phuoc Tuy",
-        "b_tarr": "Phuoc Tuy",
-        "b_tarr_direct": "Phuoc Tuy",
-        "b_tarr_hist": "Phuoc Tuy",
-        "b_origin": "Phuoc Tuy (constituent holding of Baigaur)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈphʊ.ɔk ˈtʊ.ɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/Ph%C6%B0%E1%BB%9Bc_Tuy",
       "older_name_by_867": {
         "exists": false,
@@ -4280,26 +3568,17 @@
         {
           "form": "định",
           "language": "Sino-Vietnamese (定)",
+          "language_code": "vie",
           "translation": "settle, stabilize"
         },
         {
           "form": "tường",
           "language": "Sino-Vietnamese (祥)",
+          "language_code": "vie",
           "translation": "auspicious, good omen"
         }
       ],
       "etymology_analysis": "Định Tường is a Sino-Vietnamese auspicious administrative name meaning 'stabilize auspiciousness'. First coined in 1808 CE under the Nguyễn dynasty, it postdates 867 CE.",
-      "current_repo_state": {
-        "name": "Dinh Tuong",
-        "b_tarr": "Dinh Tuong",
-        "b_tarr_direct": "Dinh Tuong",
-        "b_tarr_hist": "Dinh Tuong",
-        "b_origin": "Dinh Tuong (constituent holding of Baigaur)",
-        "b_anachronism": "",
-        "b_ipa": "[dɪnh ˈtʊ.ɔŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_T%C6%B0%E1%BB%9Dng_province",
       "older_name_by_867": {
         "exists": false,
@@ -4334,26 +3613,17 @@
         {
           "form": "bình",
           "language": "Sino-Vietnamese (平)",
+          "language_code": "vie",
           "translation": "peace, level"
         },
         {
           "form": "đại",
           "language": "Sino-Vietnamese (大)",
+          "language_code": "vie",
           "translation": "great, large"
         }
       ],
       "etymology_analysis": "Bình Đại is a Sino-Vietnamese toponym meaning 'great peace'. Adopted as a district name after 1950 CE on An Hóa island in the Mekong Delta, it postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Bîndai",
-        "b_tarr": "Bîndai",
-        "b_tarr_direct": "Bîndai",
-        "b_tarr_hist": "Bîndai",
-        "b_origin": "Bîndai (Binh Dai)",
-        "b_anachronism": "",
-        "b_ipa": "[biːn.ˈdaɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_%C4%90%E1%BA%A1i_(huy%E1%BB%87n)",
       "older_name_by_867": {
         "exists": false,
@@ -4388,26 +3658,17 @@
         {
           "form": "Ba",
           "language": "Vietnamese (from Khmer)",
+          "language_code": "vie",
           "translation": "market / creek element (from Khmer bàti / phsar)"
         },
         {
           "form": "Tri",
           "language": "Vietnamese (from Khmer)",
+          "language_code": "vie",
           "translation": "fish (from Khmer trei)"
         }
       ],
       "etymology_analysis": "Vietnamese adaptation of an earlier Khmer toponym (often reconstructed as Prêk Bàti Phsar Trei, 'creek/market of fish') in the Mekong Delta; first attested in early 19th-century Nguyễn-era gazetteers (c. 1820 CE) and formally organized as a district in 1912 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Ba Tri",
-        "b_tarr": "Ba Tri",
-        "b_tarr_direct": "Ba Tri",
-        "b_tarr_hist": "Ba Tri",
-        "b_origin": "Ba Tri (constituent holding of Bîndai)",
-        "b_anachronism": "",
-        "b_ipa": "[ba trɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ba_Tri_district",
       "older_name_by_867": {
         "exists": false,
@@ -4442,26 +3703,17 @@
         {
           "form": "Thạnh",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "prosperous, flourishing (盛)"
         },
         {
           "form": "Phú",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "wealthy, abundant (富)"
         }
       ],
       "etymology_analysis": "Auspicious Sino-Vietnamese administrative name meaning 'prosperous and wealthy', first attested as a district of Bến Tre province in 1912 CE, long after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Thanh Phu",
-        "b_tarr": "Thanh Phu",
-        "b_tarr_direct": "Thanh Phu",
-        "b_tarr_hist": "Thanh Phu",
-        "b_origin": "Thanh Phu (constituent holding of Bîndai)",
-        "b_anachronism": "",
-        "b_ipa": "[thanh phʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Th%E1%BA%A1nh_Ph%C3%BA_district",
       "older_name_by_867": {
         "exists": false,
@@ -4496,26 +3748,17 @@
         {
           "form": "tuĕk (ទឹក)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "water"
         },
         {
           "form": "khmau (ខ្មៅ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "black"
         }
       ],
       "etymology_analysis": "Vietnamese phonetic adaptation of Khmer Tuĕk Khmau ('black water'), describing the dark tannin-stained waters of the U Minh mangrove swamps; first documented in early 19th-century Vietnamese gazetteers (c. 1820 CE), well after 867 CE.",
-      "current_repo_state": {
-        "name": "Kamou",
-        "b_tarr": "Kamou",
-        "b_tarr_direct": "Kamou",
-        "b_tarr_hist": "Kamou",
-        "b_origin": "Kamou (Ca Mau)",
-        "b_anachronism": "",
-        "b_ipa": "[ka.ˈmɔʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_province",
       "older_name_by_867": {
         "exists": false,
@@ -4550,26 +3793,17 @@
         {
           "form": "srok (ស្រុក)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "district, land"
         },
         {
           "form": "khleang (ឃ្លាំង)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "storehouse, depository"
         }
       ],
       "etymology_analysis": "Vietnamese transliteration (via Sốc Kha Lang) of Khmer Srok Khleang ('land of depositories' or 'place to store silver'); attested as a colonial administrative unit in 1899 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Soc Trang",
-        "b_tarr": "Soc Trang",
-        "b_tarr_direct": "Soc Trang",
-        "b_tarr_hist": "Soc Trang",
-        "b_origin": "Soc Trang (constituent holding of Kamou)",
-        "b_anachronism": "",
-        "b_ipa": "[sɔk traŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/S%C3%B3c_Tr%C4%83ng_province",
       "older_name_by_867": {
         "exists": false,
@@ -4604,26 +3838,17 @@
         {
           "form": "o",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "canal, creek"
         },
         {
           "form": "keo",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "glass, crystal"
         }
       ],
       "etymology_analysis": "Modern Vietnamese name (from Khmer O Keo, 'glass canal') applied in the 20th century (1942 CE) to a major Funan-period port site (2nd century BCE to 12th century CE) without a confirmed local pre-867 toponym (though some scholars hypothetically identify it with Ptolemy's Cattigara, c. 150 CE, whose location remains debated against northern Vietnam/Jiaozhi and other South China Sea sites).",
-      "current_repo_state": {
-        "name": "Oc ô",
-        "b_tarr": "Oc ô",
-        "b_tarr_direct": "Oc ô",
-        "b_tarr_hist": "Oc ô",
-        "b_origin": "Oc ô (constituent holding of Kamou)",
-        "b_anachronism": "",
-        "b_ipa": "[ɔk oː]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C3%93c_Eo",
       "older_name_by_867": {
         "exists": false,
@@ -4658,26 +3883,17 @@
         {
           "form": "plơi",
           "language": "Jarai",
+          "language_code": "map",
           "translation": "village"
         },
         {
           "form": "kơdưr",
           "language": "Jarai",
+          "language_code": "map",
           "translation": "upper, northern"
         }
       ],
       "etymology_analysis": "Derived from Jarai Plơi Kơdưr ('upper/northern village'), adapted into French and Vietnamese administrative usage as Pleiku in 1905 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Plêiku",
-        "b_tarr": "Plêiku",
-        "b_tarr_direct": "Plêiku",
-        "b_tarr_hist": "Plêiku",
-        "b_origin": "Plêiku (Pleiku)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpleː.ɪ.kʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://www.britannica.com/place/Pleiku",
       "older_name_by_867": {
         "exists": false,
@@ -4712,26 +3928,17 @@
         {
           "form": "Phú",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "rich, abundant (富)"
         },
         {
           "form": "Bổn",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "root, origin (本)"
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name coined in 1962 CE as a phonetic adaptation of Bahnar Krông Bông (the major river of the area), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Phu Bon",
-        "b_tarr": "Phu Bon",
-        "b_tarr_direct": "Phu Bon",
-        "b_tarr_hist": "Phu Bon",
-        "b_origin": "Phu Bon (constituent holding of Plêiku)",
-        "b_anachronism": "",
-        "b_ipa": "[phʊ bɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ph%C3%BA_B%E1%BB%95n_province",
       "older_name_by_867": {
         "exists": false,
@@ -4766,26 +3973,17 @@
         {
           "form": "plei",
           "language": "Jarai",
+          "language_code": "map",
           "translation": "village"
         },
         {
           "form": "doch",
           "language": "Jarai",
+          "language_code": "map",
           "translation": "small / local settlement identifier"
         }
       ],
       "etymology_analysis": "Jarai village toponym (plei 'village' + doch), unattested in written historical records prior to modern gazetteers and post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Marientâl",
-        "b_tarr": "Marientâl",
-        "b_tarr_direct": "Marientâl",
-        "b_tarr_hist": "Marientâl",
-        "b_origin": "Marientâl (constituent holding of Plêiku)",
-        "b_anachronism": "",
-        "b_ipa": "[ma.rɪ.ɛn.ˈtaːl]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4820,26 +4018,17 @@
         {
           "form": "roătănă (រតនៈ)",
           "language": "Khmer (from Sanskrit ratna)",
+          "language_code": "khm",
           "translation": "gem, crystal"
         },
         {
           "form": "kĭri (គិរី)",
           "language": "Khmer (from Sanskrit giri)",
+          "language_code": "khm",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Modern Sanskritic-Khmer administrative name ('crystal/gem mountains') coined when the province was established in 1959 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Ratanakiri",
-        "b_tarr": "Ratanakiri",
-        "b_tarr_direct": "Ratanakiri",
-        "b_tarr_hist": "Ratanakiri",
-        "b_origin": "Ratanakiri (Ratanakiri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈra.ta.na.kɪ.rɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ratanakiri_province",
       "older_name_by_867": {
         "exists": false,
@@ -4874,26 +4063,17 @@
         {
           "form": "ea",
           "language": "Jarai / Êđê",
+          "language_code": "map",
           "translation": "water, stream"
         },
         {
           "form": "súp",
           "language": "Jarai (from Lao chuốp)",
+          "language_code": "map",
           "translation": "peaceful, auspicious"
         }
       ],
       "etymology_analysis": "Named directly after the local stream Ea Suǒp (Vietnamese: Ea Súp), itself a Jarai/Êđê adaptation of Lao Nặm Chuốp ('peaceful water'); the district was established in 1977 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Ea Sup",
-        "b_tarr": "Ea Sup",
-        "b_tarr_direct": "Ea Sup",
-        "b_tarr_hist": "Ea Sup",
-        "b_origin": "Ea Sup (constituent holding of Ratanakiri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɛ.a sʊp]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ea_S%C3%BAp_district",
       "older_name_by_867": {
         "exists": false,
@@ -4928,26 +4108,17 @@
         {
           "form": "mǒndǒl (មណ្ឌល)",
           "language": "Khmer (from Sanskrit maṇḍala)",
+          "language_code": "khm",
           "translation": "center, circle"
         },
         {
           "form": "kĭri (គិរី)",
           "language": "Khmer (from Sanskrit giri)",
+          "language_code": "khm",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Modern Sanskritic-Khmer administrative name ('central mountains') coined upon the creation of the province in 1961 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Mondulkiri",
-        "b_tarr": "Mondulkiri",
-        "b_tarr_direct": "Mondulkiri",
-        "b_tarr_hist": "Mondulkiri",
-        "b_origin": "Mondulkiri (constituent holding of Ratanakiri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔn.dʊl.kɪ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mondulkiri_province",
       "older_name_by_867": {
         "exists": false,
@@ -4982,26 +4153,17 @@
         {
           "form": "stoeng (ស្ទឹង)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "river, stream"
         },
         {
           "form": "treng (ត្រែង)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "reed"
         }
       ],
       "etymology_analysis": "Khmer descriptive toponym meaning 'river of reeds', attested as a Cambodian provincial unit in 1907 CE (formerly administered as Lao/Siamese Xieng Teng in the 19th century), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Stung Treng",
-        "b_tarr": "Stung Treng",
-        "b_tarr_direct": "Stung Treng",
-        "b_tarr_hist": "Stung Treng",
-        "b_origin": "Stung Treng (Stung Treng)",
-        "b_anachronism": "",
-        "b_ipa": "[stʊŋ trɛŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Stung_Treng_province",
       "older_name_by_867": {
         "exists": false,
@@ -5036,21 +4198,11 @@
         {
           "form": "Sâmbour (សំបូរ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "abundant, rich (phonetic adaptation of Sanskrit Śambhupura)"
         }
       ],
       "etymology_analysis": "Modern Khmer name Sâmbour ('abundant'), phonetically adapted from the pre-Angkorian Sanskrit capital Śambhupura ('city of Śambhu [Shiva]'), which is contemporarily attested in 803 CE (K. 124) and 781 CE (K. 134).",
-      "current_repo_state": {
-        "name": "Sambor",
-        "b_tarr": "Sambor",
-        "b_tarr_direct": "Sambor",
-        "b_tarr_hist": "Sambor",
-        "b_origin": "Sambor (constituent holding of Stung Treng)",
-        "b_anachronism": "",
-        "b_ipa": "[sam.ˈbɔr]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Indrani_of_Sambhupura",
       "older_name_by_867": {
         "exists": true,
@@ -5088,26 +4240,17 @@
         {
           "form": "pak (ປາກ)",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "mouth (of a river)"
         },
         {
           "form": "xe (ເຊ)",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "river (Xe Don)"
         }
       ],
       "etymology_analysis": "Lao toponym meaning 'mouth of the Xe [Don] river', referring to its location at the confluence of the Xe Don and Mekong rivers; founded in 1905 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Pakse",
-        "b_tarr": "Pakse",
-        "b_tarr_direct": "Pakse",
-        "b_tarr_hist": "Pakse",
-        "b_origin": "Pakse (constituent holding of Stung Treng)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpak.sə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pakse",
       "older_name_by_867": {
         "exists": false,
@@ -5142,26 +4285,17 @@
         {
           "form": "krâchéh (ក្រចេះ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "species of tree (kratié tree)"
         },
         {
           "form": "nokor (នគរ)",
           "language": "Khmer (from Sanskrit nagara)",
+          "language_code": "khm",
           "translation": "city, kingdom"
         }
       ],
       "etymology_analysis": "Compound of Khmer krâchéh (a local tree species) and nokor ('city/kingdom', from Sanskrit nagara); attested as a modern provincial center in 1907 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Kratscheh Nokôr",
-        "b_tarr": "Kratscheh Nokôr",
-        "b_tarr_direct": "Kratscheh Nokôr",
-        "b_tarr_hist": "Kratscheh Nokôr",
-        "b_origin": "Kratscheh Nokôr (Kracheh Nokor)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkra.tʃɛh nɔ.ˈkoːr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Krati%C3%A9_province",
       "older_name_by_867": {
         "exists": false,
@@ -5196,26 +4330,17 @@
         {
           "form": "Tây",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "west (西)"
         },
         {
           "form": "Ninh",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "peace, stability (寧)"
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name meaning 'peace in the west', bestowed by Emperor Minh Mạng in 1836 CE (the area was previously known in post-Angkorian Khmer as Rong Domrey), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Tay Ninh",
-        "b_tarr": "Tay Ninh",
-        "b_tarr_direct": "Tay Ninh",
-        "b_tarr_hist": "Tay Ninh",
-        "b_origin": "Tay Ninh (constituent holding of Kratscheh Nokôr)",
-        "b_anachronism": "",
-        "b_ipa": "[taɪ nɪnh]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2y_Ninh_province",
       "older_name_by_867": {
         "exists": false,
@@ -5250,26 +4375,17 @@
         {
           "form": "Bình",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "peaceful, level (平)"
         },
         {
           "form": "Long",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "prosperous, grand (隆)"
         }
       ],
       "etymology_analysis": "Numbered barony variant derived from Bình Long, a Sino-Vietnamese provincial name ('peaceful and prosperous') created in 1956 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Phnum Prech",
-        "b_tarr": "Phnum Prech",
-        "b_tarr_direct": "Phnum Prech",
-        "b_tarr_hist": "Phnum Prech",
-        "b_origin": "Phnum Prech (constituent holding of Kratscheh Nokôr)",
-        "b_anachronism": "",
-        "b_ipa": "[phnʊm prɛç]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
       "older_name_by_867": {
         "exists": false,
@@ -5304,26 +4420,17 @@
         {
           "form": "vyādha (व्याध)",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "hunter"
         },
         {
           "form": "pura (पुर)",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city, fortress"
         }
       ],
       "etymology_analysis": "Sanskrit name meaning 'City of the Hunter', associated with the Funan kingdom near Ba Phnum and contemporarily attested in pre-Angkorian epigraphy (K. 109, 656 CE), prior to 867 CE.",
-      "current_repo_state": {
-        "name": "Wjâdapure",
-        "b_tarr": "Wjâdapure",
-        "b_tarr_direct": "Wjâdapure",
-        "b_tarr_hist": "Wjâdapure",
-        "b_origin": "Wjâdapure (Vyadhapura)",
-        "b_anachronism": "",
-        "b_ipa": "[wjaː.da.ˈpʊ.rə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vyadhapura",
       "older_name_by_867": {
         "exists": false,
@@ -5358,31 +4465,23 @@
         {
           "form": "Indra (इन्द्र)",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "Indra (Hindu deity)"
         },
         {
           "form": "pura (पुर)",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "city, fortress"
         },
         {
           "form": "Khmer",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "Cambodian (disambiguator)"
         }
       ],
       "etymology_analysis": "Sanskrit toponym meaning 'City of Indra' (with 'Khmer' added to distinguish it from Cham Indrapura). Although the 1052 CE Sdok Kok Thom inscription places Jayavarman II there c. 781 CE, no contemporary <= 867 CE epigraphic attestation exists.",
-      "current_repo_state": {
-        "name": "Indrapura",
-        "b_tarr": "Indrapura",
-        "b_tarr_direct": "Indrapura",
-        "b_tarr_hist": "Indrapura",
-        "b_origin": "Indrapura (constituent holding of Wjâdapure)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɪn.dra.pʊ.ra]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Indrapura_(Khmer)",
       "older_name_by_867": {
         "exists": false,
@@ -5417,26 +4516,17 @@
         {
           "form": "svay (ស្វាយ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "mango"
         },
         {
           "form": "rieng (រៀង)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "aligned, in a row"
         }
       ],
       "etymology_analysis": "Khmer toponym meaning 'row of mangoes', attested as a Cambodian provincial unit in 1907 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Svay Rieng",
-        "b_tarr": "Svay Rieng",
-        "b_tarr_direct": "Svay Rieng",
-        "b_tarr_hist": "Svay Rieng",
-        "b_origin": "Svay Rieng (constituent holding of Wjâdapure)",
-        "b_anachronism": "",
-        "b_ipa": "[svaɪ ˈrɪ.ɛŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Svay_Rieng_province",
       "older_name_by_867": {
         "exists": false,
@@ -5471,26 +4561,17 @@
         {
           "form": "Kiến",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "build, establish (建)"
         },
         {
           "form": "Phong",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "abundant, prosperous (豐)"
         }
       ],
       "etymology_analysis": "Sino-Vietnamese provincial name meaning 'build prosperity', created by Republic of Vietnam administrative decree in 1956 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Kien Phong",
-        "b_tarr": "Kien Phong",
-        "b_tarr_direct": "Kien Phong",
-        "b_tarr_hist": "Kien Phong",
-        "b_origin": "Kien Phong (constituent holding of Wjâdapure)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɪ.ɛn phɔŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ki%E1%BA%BFn_Phong_province",
       "older_name_by_867": {
         "exists": false,
@@ -5525,26 +4606,17 @@
         {
           "form": "Bình",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "peaceful, level (平)"
         },
         {
           "form": "Long",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "prosperous, grand (隆)"
         }
       ],
       "etymology_analysis": "Sino-Vietnamese administrative name meaning 'peaceful and prosperous', created in 1956 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Bînlông",
-        "b_tarr": "Bînlông",
-        "b_tarr_direct": "Bînlông",
-        "b_tarr_hist": "Bînlông",
-        "b_origin": "Bînlông (Binh Long)",
-        "b_anachronism": "",
-        "b_ipa": "[biːn.ˈloːŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
       "older_name_by_867": {
         "exists": false,
@@ -5579,26 +4651,17 @@
         {
           "form": "Bình",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "peaceful, level (平)"
         },
         {
           "form": "Long",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "prosperous, grand (隆)"
         }
       ],
       "etymology_analysis": "Numbered barony variant derived from Bình Long, a Sino-Vietnamese provincial name ('peaceful and prosperous') created in 1956 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Daknong",
-        "b_tarr": "Daknong",
-        "b_tarr_direct": "Daknong",
-        "b_tarr_hist": "Daknong",
-        "b_origin": "Daknong (constituent holding of Bînlông)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdak.nɔŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://vi.wikipedia.org/wiki/B%C3%ACnh_Long_(t%E1%BB%89nh)",
       "older_name_by_867": {
         "exists": false,
@@ -5633,26 +4696,17 @@
         {
           "form": "Xuân",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "spring (春)"
         },
         {
           "form": "Lộc",
           "language": "Sino-Vietnamese",
+          "language_code": "vie",
           "translation": "blessing, prosperity (祿)"
         }
       ],
       "etymology_analysis": "Auspicious Sino-Vietnamese toponym meaning 'spring blessing/prosperity', attested in 20th-century administrative records (1973 CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Xuan Loc",
-        "b_tarr": "Xuan Loc",
-        "b_tarr_direct": "Xuan Loc",
-        "b_tarr_hist": "Xuan Loc",
-        "b_origin": "Xuan Loc (constituent holding of Bînlông)",
-        "b_anachronism": "",
-        "b_ipa": "[ksʊ.ˈan lɔk]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Xu%C3%A2n_L%E1%BB%99c_district",
       "older_name_by_867": {
         "exists": false,
@@ -5687,26 +4741,17 @@
         {
           "form": "kaôh (កោះ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "island"
         },
         {
           "form": "kértĕ (កេរ្តិ៍)",
           "language": "Khmer (from Sanskrit kīrti)",
+          "language_code": "khm",
           "translation": "glory, fame, heritage"
         }
       ],
       "etymology_analysis": "Modern Khmer name ('island of glory') applied to the 10th-century Angkorian capital of Jayavarman IV (consecrated 921 CE as Liṅgapura / Chok Gargyar); both the modern name and the 921 CE capital post-date 867 CE.",
-      "current_repo_state": {
-        "name": "Koh Kêr",
-        "b_tarr": "Koh Kêr",
-        "b_tarr_direct": "Koh Kêr",
-        "b_tarr_hist": "Koh Kêr",
-        "b_origin": "Koh Kêr (Koh Ker)",
-        "b_anachronism": "",
-        "b_ipa": "[kɔh keːr]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Koh_Ker",
       "older_name_by_867": {
         "exists": false,
@@ -5741,26 +4786,17 @@
         {
           "form": "phnom (ភ្នំ)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "mountain, hill"
         },
         {
           "form": "dek (ដែក)",
           "language": "Khmer",
+          "language_code": "khm",
           "translation": "iron"
         }
       ],
       "etymology_analysis": "Khmer oronym literally meaning 'Iron Mountain', referring to the major iron-ore hill in Preah Vihear / northern Kampong Thom; although archaeometallurgical smelting dates to the 9th–20th centuries CE, the toponym is first documented in 1882 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Phnom Dek",
-        "b_tarr": "Phnom Dek",
-        "b_tarr_direct": "Phnom Dek",
-        "b_tarr_hist": "Phnom Dek",
-        "b_origin": "Phnom Dek (constituent holding of Koh Kêr)",
-        "b_anachronism": "",
-        "b_ipa": "[phnɔm dɛk]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/AP/2017_56_1_Hendricksonetal.pdf",
       "older_name_by_867": {
         "exists": false,

@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_africa",
     "scope": "e_africa (all baronies across k_maghreb and k_tahert)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 146,
@@ -57,23 +64,17 @@
         {
           "form": "teni",
           "language": "Guanche / Berber",
+          "language_code": "ber",
           "translation": "mountain"
         },
         {
           "form": "ife",
           "language": "Guanche / Berber",
+          "language_code": "ber",
           "translation": "white"
         }
       ],
       "etymology_analysis": "Derived from a Guanche (Berber-related) term, commonly interpreted as 'white mountain' (teni + ife) in reference to snow-capped Mount Teide; a 17th-century tradition also linked it to a legendary ruler Tinerfe.",
-      "current_repo_state": {
-        "b_tarr": "Atschinêch",
-        "b_tarr_direct": "Atschinêch",
-        "b_tarr_hist": "Atschinêch",
-        "b_origin": "Atschinêch (Achinech)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tenerife",
       "older_name_by_867": {
         "exists": true,
@@ -110,23 +111,17 @@
         {
           "form": "Gran",
           "language": "Spanish",
+          "language_code": "spa",
           "translation": "great / grand"
         },
         {
           "form": "Canaria",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "of dogs (from canis) or Canarii tribe"
         }
       ],
       "etymology_analysis": "Compound of Spanish Gran ('great') and Latin Canaria, attested by Pliny the Elder (from canis, 'dog', or the North African Canarii people).",
-      "current_repo_state": {
-        "b_tarr": "Tamaran",
-        "b_tarr_direct": "Tamaran",
-        "b_tarr_hist": "Tamaran",
-        "b_origin": "Tamaran (constituent holding of Atschinêch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gran_Canaria",
       "older_name_by_867": {
         "exists": true,
@@ -163,23 +158,17 @@
         {
           "form": "fuerte",
           "language": "Spanish",
+          "language_code": "spa",
           "translation": "strong / fort"
         },
         {
           "form": "ventura",
           "language": "Spanish",
+          "language_code": "spa",
           "translation": "fortune / wind (folk etymology)"
         }
       ],
       "etymology_analysis": "First recorded as Forte Ventura on the 1339 Dulcert chart, from Spanish fuerte ('strong') and ventura ('fortune', or associated with strong coastal winds / Fortunatae Insulae).",
-      "current_repo_state": {
-        "b_tarr": "Maschorâte",
-        "b_tarr_direct": "Maschorâte",
-        "b_tarr_hist": "Maschorâte",
-        "b_origin": "Maschorâte (Maxorata)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fuerteventura",
       "older_name_by_867": {
         "exists": true,
@@ -217,18 +206,11 @@
         {
           "form": "Lanzarote",
           "language": "Spanish / Italian",
+          "language_code": "spa",
           "translation": "from Lancelotto (Malocello)"
         }
       ],
       "etymology_analysis": "Derived from the given name of Genoese navigator Lancelotto Malocello, who landed on the island c. 1312 and appears on Dulcert's 1339 map.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lanzarote",
       "older_name_by_867": {
         "exists": false,
@@ -263,18 +245,11 @@
         {
           "form": "madeira",
           "language": "Portuguese",
+          "language_code": "por",
           "translation": "wood / timber"
         }
       ],
       "etymology_analysis": "From Portuguese madeira ('wood, timber'), given by 15th-century Portuguese explorers for the island's dense primeval forests.",
-      "current_repo_state": {
-        "b_tarr": "Madêre",
-        "b_tarr_direct": "Madêre",
-        "b_tarr_hist": "Madêre",
-        "b_origin": "Madêre (Madeira)",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Madêre).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Madeira",
       "older_name_by_867": {
         "exists": true,
@@ -311,18 +286,11 @@
         {
           "form": "Fas",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "pickaxe (Arabic fa's) or Berber afas ('ruins' / 'right bank')"
         }
       ],
       "etymology_analysis": "Traditionally linked to Arabic fa's ('pickaxe', from a legend of Idris I finding a gold pickaxe) or to Berber afas ('ruins' / 'right bank') or the nearby Fazaz region.",
-      "current_repo_state": {
-        "b_tarr": "Fês",
-        "b_tarr_direct": "Fês",
-        "b_tarr_hist": "Fês",
-        "b_origin": "Fês (Fes)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fez,_Morocco",
       "older_name_by_867": {
         "exists": false,
@@ -357,18 +325,11 @@
         {
           "form": "Wargha",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Ouergha (river name)"
         }
       ],
       "etymology_analysis": "From the Berber hydronym Asif n Wergha (Arabic Wadi Wargha), the major northern tributary of the Sebou River.",
-      "current_repo_state": {
-        "b_tarr": "Wargha",
-        "b_tarr_direct": "Wargha",
-        "b_tarr_hist": "Wargha",
-        "b_origin": "Wargha (constituent holding of Fês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ouergha_River",
       "older_name_by_867": {
         "exists": false,
@@ -403,18 +364,11 @@
         {
           "form": "Warzigh",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "obscure local toponym"
         }
       ],
       "etymology_analysis": "Obscure Moroccan toponym in the Fes region; no verified medieval attestation or etymology is documented.",
-      "current_repo_state": {
-        "b_tarr": "Warschigh",
-        "b_tarr_direct": "Warschigh",
-        "b_tarr_hist": "Warschigh",
-        "b_origin": "Warschigh (constituent holding of Fês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -449,23 +403,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Aliya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "high / lofty"
         }
       ],
       "etymology_analysis": "Arabic al-'Aliya ('the High/Lofty'), founded by Idris II in 809 AD across the river from Madinat Fas and attested on Idrisid dirhams.",
-      "current_repo_state": {
-        "b_tarr": "Al Aliya",
-        "b_tarr_direct": "Al Aliya",
-        "b_tarr_hist": "Al Aliya",
-        "b_origin": "Al Aliya (constituent holding of Fês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fez,_Morocco",
       "older_name_by_867": {
         "exists": false,
@@ -500,18 +448,11 @@
         {
           "form": "Subu",
           "language": "Libyco-Berber / Latin",
+          "language_code": "ber",
           "translation": "Sebou (river name)"
         }
       ],
       "etymology_analysis": "Ancient hydronym attested as Latin Sububus (Pliny) and Greek Subur (Ptolemy), preserved in Berber Asif n Sbu and Arabic Subu (Sebou).",
-      "current_repo_state": {
-        "b_tarr": "Subu",
-        "b_tarr_direct": "Subu",
-        "b_tarr_hist": "Subu",
-        "b_origin": "Subu (constituent holding of Fês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sebou",
       "older_name_by_867": {
         "exists": false,
@@ -546,18 +487,11 @@
         {
           "form": "Sala",
           "language": "Phoenician / Berber",
+          "language_code": "heb",
           "translation": "rock / cliff (or ancient settlement name)"
         }
       ],
       "etymology_analysis": "Pre-Roman Punic/Berber settlement name Sala, Romanized as Sala Colonia (Chellah) and preserved in Arabic Sala (modern Salé).",
-      "current_repo_state": {
-        "b_tarr": "Gârp",
-        "b_tarr_direct": "Gârp",
-        "b_tarr_hist": "Gârp",
-        "b_origin": "Gârp (Gharb)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chellah",
       "older_name_by_867": {
         "exists": false,
@@ -592,23 +526,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Basra",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "named after Basra in Iraq"
         }
       ],
       "etymology_analysis": "Founded by the Idrisids c. 796–800 AD and deliberately named after the port city of Basra in Iraq.",
-      "current_repo_state": {
-        "b_tarr": "Al-Basra",
-        "b_tarr_direct": "Al-Basra",
-        "b_tarr_hist": "Al-Basra",
-        "b_origin": "Al-Basra (constituent holding of Gârp)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Basra,_Morocco",
       "older_name_by_867": {
         "exists": false,
@@ -643,18 +571,11 @@
         {
           "form": "Izerhan",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Zerhoun (mountain name)"
         }
       ],
       "etymology_analysis": "Berber form of Mount Zerhoun (Zarhun), the massif overlooking Volubilis where the town of Moulay Idriss Zerhoun developed.",
-      "current_repo_state": {
-        "b_tarr": "Izerhan",
-        "b_tarr_direct": "Izerhan",
-        "b_tarr_hist": "Izerhan",
-        "b_origin": "Izerhan (constituent holding of Gârp)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Zerhoun",
       "older_name_by_867": {
         "exists": false,
@@ -689,18 +610,11 @@
         {
           "form": "Watit",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Idrisid mint town"
         }
       ],
       "etymology_analysis": "Idrisid minting center attested on silver dirhams struck in 202 AH (818 AD) during the reign of Idris II.",
-      "current_repo_state": {
-        "b_tarr": "Watit",
-        "b_tarr_direct": "Watit",
-        "b_tarr_hist": "Watit",
-        "b_origin": "Watit (constituent holding of Gârp)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://islamicart.museumwnf.org/database_item.php?id=object;ISL;ma;Mus01_F;2;fr",
       "older_name_by_867": {
         "exists": false,
@@ -735,18 +649,11 @@
         {
           "form": "Walila",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "adaptation of Latin Volubilis"
         }
       ],
       "etymology_analysis": "Medieval Berber-Arabic name (Walila) for the ancient Mauretanian-Roman city of Volubilis.",
-      "current_repo_state": {
-        "b_tarr": "Walila",
-        "b_tarr_direct": "Walila",
-        "b_tarr_hist": "Walila",
-        "b_origin": "Walila (constituent holding of Gârp)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Volubilis",
       "older_name_by_867": {
         "exists": true,
@@ -783,23 +690,17 @@
         {
           "form": "Ribat",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortified frontier monastery/citadel"
         },
         {
           "form": "al-Fath",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "of Victory / Conquest"
         }
       ],
       "etymology_analysis": "Arabic Ribat al-Fath ('Fortress of Victory'), founded in 1150 AD by the Almohads as a staging camp for campaigns in al-Andalus; shortened to Rabat.",
-      "current_repo_state": {
-        "b_tarr": "Ribat al-Fath",
-        "b_tarr_direct": "Ribat al-Fath",
-        "b_tarr_hist": "Ribat al-Fath",
-        "b_origin": "Ribat al-Fath (constituent holding of Gârp)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rabat",
       "older_name_by_867": {
         "exists": false,
@@ -834,18 +735,11 @@
         {
           "form": "Miknas",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "from Miknasa (Imeknasen, 'fighters/warriors')"
         }
       ],
       "etymology_analysis": "Named after the Zenata Berber tribe of the Miknasa (Imeknasen, from Berber root KNS 'to fight'), who settled the site in the 10th century.",
-      "current_repo_state": {
-        "b_tarr": "Meknês",
-        "b_tarr_direct": "Meknês",
-        "b_tarr_hist": "Meknês",
-        "b_origin": "Meknês (Meknes)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Meknes",
       "older_name_by_867": {
         "exists": false,
@@ -880,18 +774,11 @@
         {
           "form": "Baht",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Beht (river name)"
         }
       ],
       "etymology_analysis": "Hydronym of the Oued Beht, a major tributary of the Sebou River rising in the Middle Atlas.",
-      "current_repo_state": {
-        "b_tarr": "Baht",
-        "b_tarr_direct": "Baht",
-        "b_tarr_hist": "Baht",
-        "b_origin": "Baht (constituent holding of Meknês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Oued_Beht",
       "older_name_by_867": {
         "exists": false,
@@ -926,18 +813,11 @@
         {
           "form": "Asfru",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "solution / clearing (or Ahel Sefrou tribe)"
         }
       ],
       "etymology_analysis": "Named after the Berber Ahel Sefrou tribe or Amazigh Asfru ('solution/clearing'); already a notable town when Idris II stayed there in 806–807 AD.",
-      "current_repo_state": {
-        "b_tarr": "Sefrou",
-        "b_tarr_direct": "Sefrou",
-        "b_tarr_hist": "Sefrou",
-        "b_origin": "Sefrou (constituent holding of Meknês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sefrou",
       "older_name_by_867": {
         "exists": false,
@@ -972,18 +852,11 @@
         {
           "form": "Tagragra",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "flat stony plateau / enclosure"
         }
       ],
       "etymology_analysis": "Amazigh toponym common in North Africa; unattested as a settlement in the Meknes region before 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Tagragra",
-        "b_tarr_direct": "Tagragra",
-        "b_tarr_hist": "Tagragra",
-        "b_origin": "Tagragra (constituent holding of Meknês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1018,18 +891,11 @@
         {
           "form": "Missour",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "prosperous / favored (from al-yusr)"
         }
       ],
       "etymology_analysis": "Associated in local tradition with Arabic al-yusr ('prosperity, ease'); the modern town grew around a French post established in 1917.",
-      "current_repo_state": {
-        "b_tarr": "Mulûje",
-        "b_tarr_direct": "Mulûje",
-        "b_tarr_hist": "Mulûje",
-        "b_origin": "Mulûje (Muluya)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Missour",
       "older_name_by_867": {
         "exists": false,
@@ -1064,18 +930,11 @@
         {
           "form": "Tikoutamine",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Amazigh toponym"
         }
       ],
       "etymology_analysis": "Berber village name in Boulemane Province (Middle Moulouya); unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Tikoutamine",
-        "b_tarr_direct": "Tikoutamine",
-        "b_tarr_hist": "Tikoutamine",
-        "b_origin": "Tikoutamine (constituent holding of Mulûje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1110,23 +969,17 @@
         {
           "form": "El-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Ksabi",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "of reeds / qasba-related"
         }
       ],
       "etymology_analysis": "Ksabi Moulouya, a rural settlement in Boulemane Province on the Moulouya River; unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "El-Ksabi",
-        "b_tarr_direct": "El-Ksabi",
-        "b_tarr_hist": "El-Ksabi",
-        "b_origin": "El-Ksabi (constituent holding of Mulûje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D9%82%D8%B5%D8%A7%D8%A8%D9%8A_%D9%85%D9%84%D9%88%D9%8A%D8%A9",
       "older_name_by_867": {
         "exists": false,
@@ -1161,18 +1014,11 @@
         {
           "form": "Taza",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "from tizi ('mountain pass / hill between mountains')"
         }
       ],
       "etymology_analysis": "Derived from Amazigh tizi ('pass/col between mountains'); founded as a fortified ribat (Ribat Taza) in the early 10th century by the Miknasa.",
-      "current_repo_state": {
-        "b_tarr": "Tâse",
-        "b_tarr_direct": "Tâse",
-        "b_tarr_hist": "Tâse",
-        "b_origin": "Tâse — Historical Option A seat of c_taza",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taza",
       "older_name_by_867": {
         "exists": false,
@@ -1207,18 +1053,11 @@
         {
           "form": "Nador",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "lookout / watchtower (or Has Nador tribe)"
         }
       ],
       "etymology_analysis": "Founded in the 19th century, named after the local Berber clan Has Nador (or Arabic al-nāẓūr, 'lookout').",
-      "current_repo_state": {
-        "b_tarr": "Nador",
-        "b_tarr_direct": "Nador",
-        "b_tarr_hist": "Nador",
-        "b_origin": "Nador (constituent holding of Tâse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nador",
       "older_name_by_867": {
         "exists": false,
@@ -1253,18 +1092,11 @@
         {
           "form": "Asfi",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "light / bright (or estuary/mouth)"
         }
       ],
       "etymology_analysis": "Berber toponym Asfi (Europeanized as Safi), first attested in Islamic geographical sources by al-Bakri (11th century) and al-Idrisi (12th century).",
-      "current_repo_state": {
-        "b_tarr": "Asfî",
-        "b_tarr_direct": "Asfî",
-        "b_tarr_hist": "Asfî",
-        "b_origin": "Asfî (Asfi)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Safi,_Morocco",
       "older_name_by_867": {
         "exists": false,
@@ -1299,18 +1131,11 @@
         {
           "form": "Aghuz",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "port / coastal settlement at the Tensift mouth"
         }
       ],
       "etymology_analysis": "Medieval coastal port at the mouth of the Tensift River (al-Bakri's Quz, later Aguz / Souira Guedima), attested from the 11th century.",
-      "current_repo_state": {
-        "b_tarr": "Aghuz",
-        "b_tarr_direct": "Aghuz",
-        "b_tarr_hist": "Aghuz",
-        "b_origin": "Aghuz (constituent holding of Asfî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Souira_Guedima",
       "older_name_by_867": {
         "exists": false,
@@ -1345,23 +1170,17 @@
         {
           "form": "Igir",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "ridge / cape / shoulder"
         },
         {
           "form": "adyatuf",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "obscure element"
         }
       ],
       "etymology_analysis": "Berber compound beginning with igir/ighir ('ridge, promontory'); unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Igiradyatuf",
-        "b_tarr_direct": "Igiradyatuf",
-        "b_tarr_hist": "Igiradyatuf",
-        "b_origin": "Igiradyatuf (constituent holding of Asfî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1396,18 +1215,11 @@
         {
           "form": "Mrira",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Mrirt (medieval mining settlement)"
         }
       ],
       "etymology_analysis": "Medieval settlement (modern M'rirt) near the Tighza/Jbel Aouam mines, attested by a 201 AH (816–817 AD) coin reading 'at Mrira'.",
-      "current_repo_state": {
-        "b_tarr": "Fasâtz",
-        "b_tarr_direct": "Fasâtz",
-        "b_tarr_hist": "Fasâtz",
-        "b_origin": "Fasâtz (Fazaz)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/M%27rirt",
       "older_name_by_867": {
         "exists": false,
@@ -1442,23 +1254,17 @@
         {
           "form": "El",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Borouj",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "towers / fortresses (al-buruj)"
         }
       ],
       "etymology_analysis": "From Arabic al-buruj ('the towers'), capital of the Beni Meskine tribe in Settat Province; unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "El Borouj",
-        "b_tarr_direct": "El Borouj",
-        "b_tarr_hist": "El Borouj",
-        "b_origin": "El Borouj (constituent holding of Fasâtz)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/El_Borouj",
       "older_name_by_867": {
         "exists": false,
@@ -1493,28 +1299,23 @@
         {
           "form": "Tit",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "spring / eye"
         },
         {
           "form": "an",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "of"
         },
         {
           "form": "Wagurramt",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "female saint / maraboute (tagurramt)"
         }
       ],
       "etymology_analysis": "Berber toponym meaning 'spring of the saintly woman'; unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Tit-an-Wagurramt",
-        "b_tarr_direct": "Tit-an-Wagurramt",
-        "b_tarr_hist": "Tit-an-Wagurramt",
-        "b_origin": "Tit-an-Wagurramt (constituent holding of Fasâtz)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1549,23 +1350,17 @@
         {
           "form": "Amur",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "land / country"
         },
         {
           "form": "n Akush",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "of God"
         }
       ],
       "etymology_analysis": "Commonly derived from Amazigh Amur n Akush ('Land of God'); founded c. 1070 AD by the Almoravids as their imperial capital.",
-      "current_repo_state": {
-        "b_tarr": "Achmât",
-        "b_tarr_direct": "Achmât",
-        "b_tarr_hist": "Achmât",
-        "b_origin": "Achmât — Historical Option A seat of c_marrakesh",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Marrakesh",
       "older_name_by_867": {
         "exists": false,
@@ -1600,23 +1395,17 @@
         {
           "form": "Ait",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "people / tribe of"
         },
         {
           "form": "Iyat",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "clan name"
         }
       ],
       "etymology_analysis": "Berber tribal/clan name ('People of Iyat'); unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Aitiyat",
-        "b_tarr_direct": "Aitiyat",
-        "b_tarr_hist": "Aitiyat",
-        "b_origin": "Aitiyat (constituent holding of Achmât)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1651,18 +1440,11 @@
         {
           "form": "Aghmat",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "pre-Islamic Berber town name"
         }
       ],
       "etymology_analysis": "Important early medieval Berber commercial town in the Haouz plain, attested in 9th-century Arabic historiography (al-Baladhuri) and Idrisid history.",
-      "current_repo_state": {
-        "b_tarr": "Aghmat",
-        "b_tarr_direct": "Aghmat",
-        "b_tarr_hist": "Aghmat",
-        "b_origin": "Aghmat (constituent holding of Achmât)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aghmat",
       "older_name_by_867": {
         "exists": false,
@@ -1697,23 +1479,17 @@
         {
           "form": "Ribat",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortified Sufi retreat/monastery"
         },
         {
           "form": "Shakir",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Shakir (personal name)"
         }
       ],
       "etymology_analysis": "Named after a Sufi ribat (modern Sidi Chiker); while later tradition links it to a 7th-century companion of Uqba ibn Nafi, contemporary historical attestation begins in the 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Ribat-Schakir",
-        "b_tarr_direct": "Ribat-Schakir",
-        "b_tarr_hist": "Ribat-Schakir",
-        "b_origin": "Ribat-Schakir (constituent holding of Achmât)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Abu_Muhammad_Salih_al-Majiri",
       "older_name_by_867": {
         "exists": false,
@@ -1748,18 +1524,11 @@
         {
           "form": "Boulaouane",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "place name on the Oum Er-Rbia"
         }
       ],
       "etymology_analysis": "Town and fortress overlooking the Oum Er-Rbia River, built around 1710 by Alaouite Sultan Moulay Ismail.",
-      "current_repo_state": {
-        "b_tarr": "Boulawan",
-        "b_tarr_direct": "Boulawan",
-        "b_tarr_hist": "Boulawan",
-        "b_origin": "Boulawan (constituent holding of Achmât)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kasbah_Boulaouane",
       "older_name_by_867": {
         "exists": false,
@@ -1794,18 +1563,11 @@
         {
           "form": "tadla",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "sheaf of wheat"
         }
       ],
       "etymology_analysis": "From Amazigh tadla ('sheaf of wheat'), referring to the fertile cereal-producing plain; attested as an Idrisid province in the early 9th century.",
-      "current_repo_state": {
-        "b_tarr": "Tadle",
-        "b_tarr_direct": "Tadle",
-        "b_tarr_hist": "Tadle",
-        "b_origin": "Tadle (Tadla)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tadla",
       "older_name_by_867": {
         "exists": false,
@@ -1840,18 +1602,11 @@
         {
           "form": "Dai",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "medieval Tadla town"
         }
       ],
       "etymology_analysis": "Medieval mining and urban center in Tadla (near modern Beni Mellal), recorded by al-Bakri as an Idrisid principality from 828 AD.",
-      "current_repo_state": {
-        "b_tarr": "Dai",
-        "b_tarr_direct": "Dai",
-        "b_tarr_hist": "Dai",
-        "b_origin": "Dai (constituent holding of Tadle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tadla",
       "older_name_by_867": {
         "exists": false,
@@ -1886,18 +1641,11 @@
         {
           "form": "Wazeqqur",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Amazigh toponym"
         }
       ],
       "etymology_analysis": "Obscure Berber toponym in the Tadla region; unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Wazeqqur",
-        "b_tarr_direct": "Wazeqqur",
-        "b_tarr_hist": "Wazeqqur",
-        "b_origin": "Wazeqqur (constituent holding of Tadle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1932,23 +1680,17 @@
         {
           "form": "Waw-",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "possessive/locative prefix (wa-n / u-)"
         },
         {
           "form": "mana",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local element"
         }
       ],
       "etymology_analysis": "Modern rural commune (Ouaoumana) in Khénifra Province; unattested in historical sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Wawmana",
-        "b_tarr_direct": "Wawmana",
-        "b_tarr_hist": "Wawmana",
-        "b_origin": "Wawmana (constituent holding of Tadle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Ouaoumana",
       "older_name_by_867": {
         "exists": false,
@@ -1983,18 +1725,11 @@
         {
           "form": "Afza",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "limestone / rock (afza/afzu)"
         }
       ],
       "etymology_analysis": "Medieval Tadla settlement mentioned by al-Idrisi (12th century) near Bzou/Dai; Berber afza refers to limestone rock.",
-      "current_repo_state": {
-        "b_tarr": "Afza",
-        "b_tarr_direct": "Afza",
-        "b_tarr_hist": "Afza",
-        "b_origin": "Afza (constituent holding of Tadle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ca.wikipedia.org/wiki/Tadla-Azilal",
       "older_name_by_867": {
         "exists": false,
@@ -2029,23 +1764,17 @@
         {
           "form": "Ayt",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "people / sons / clan of"
         },
         {
           "form": "Attab",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Attab (eponymous ancestor)"
         }
       ],
       "etymology_analysis": "Berber tribal ethnonym meaning 'descendants/clan of Attab', applied to an agricultural valley in the Central High Atlas.",
-      "current_repo_state": {
-        "b_tarr": "Ait i Tab",
-        "b_tarr_direct": "Ait i Tab",
-        "b_tarr_hist": "Ait i Tab",
-        "b_origin": "Ait i Tab (constituent holding of Tadle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ait_Attab",
       "older_name_by_867": {
         "exists": false,
@@ -2080,18 +1809,11 @@
         {
           "form": "Anfa",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "hill / promontory"
         }
       ],
       "etymology_analysis": "Berber toponym meaning 'hill' (Latinized as Anfus in Roman times), referring to the coastal elevation of old Casablanca; later replaced by Casablanca / ad-Dar al-Bayda after the 1755 earthquake.",
-      "current_repo_state": {
-        "b_tarr": "Schellâ",
-        "b_tarr_direct": "Tamasne",
-        "b_tarr_hist": "Schellâ",
-        "b_origin": "Schellâ (Chellah, Salé (in-game: Tamasna))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anfa",
       "older_name_by_867": {
         "exists": false,
@@ -2126,23 +1848,17 @@
         {
           "form": "Fadl / Fayd",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "favor / bounty"
         },
         {
           "form": "Allah",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "God"
         }
       ],
       "etymology_analysis": "Arabic toponym Fadala (from Fadl Allah 'favor of God' or Fayd Allah 'bounty of God'), renamed Mohammedia in 1959-1960 after King Mohammed V.",
-      "current_repo_state": {
-        "b_tarr": "Fadala",
-        "b_tarr_direct": "Fadala",
-        "b_tarr_hist": "Fadala",
-        "b_origin": "Fadala (constituent holding of Schellâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mohammedia",
       "older_name_by_867": {
         "exists": false,
@@ -2177,18 +1893,11 @@
         {
           "form": "azemmur",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "wild olive tree"
         }
       ],
       "etymology_analysis": "From Berber azemmur ('wild olive tree'), adopted into Arabic as Azammur.",
-      "current_repo_state": {
-        "b_tarr": "Azzamur",
-        "b_tarr_direct": "Azzamur",
-        "b_tarr_hist": "Azzamur",
-        "b_origin": "Azzamur (constituent holding of Schellâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Azemmour",
       "older_name_by_867": {
         "exists": true,
@@ -2226,18 +1935,11 @@
         {
           "form": "Mazighen",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber ethnonym / rainwater cisterns (disputed)"
         }
       ],
       "etymology_analysis": "Medieval Berber-Arabic coastal name Mazighan (Portuguese Mazagao, later renamed El Jadida in 1820).",
-      "current_repo_state": {
-        "b_tarr": "Mazaghan",
-        "b_tarr_direct": "Mazaghan",
-        "b_tarr_hist": "Mazaghan",
-        "b_origin": "Mazaghan (constituent holding of Schellâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Jadida",
       "older_name_by_867": {
         "exists": true,
@@ -2274,23 +1976,17 @@
         {
           "form": "tin",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "she who is / place of"
         },
         {
           "form": "mellal",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "white"
         }
       ],
       "etymology_analysis": "Berber toponym Tinmal / Tinmallal meaning 'the white one', founded by Ibn Tumart in the High Atlas in 1124.",
-      "current_repo_state": {
-        "b_tarr": "Nafîs",
-        "b_tarr_direct": "Tinmalâl",
-        "b_tarr_hist": "Nafîs",
-        "b_origin": "Nafîs (Nafîs (in-game: Tinmallal))",
-        "b_anachronism": "Tinmel founded 1124. Pre-867 Berber valley of the Oued N'fis.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tinmel",
       "older_name_by_867": {
         "exists": false,
@@ -2325,18 +2021,11 @@
         {
           "form": "Tasghimut",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "fortified plateau / local Berber toponym"
         }
       ],
       "etymology_analysis": "Berber toponym for the rocky plateau fortress near Aghmat built by the Almoravids in the 1120s and taken by the Almohads in 1132.",
-      "current_repo_state": {
-        "b_tarr": "Tasgimut",
-        "b_tarr_direct": "Tasgimut",
-        "b_tarr_hist": "Tasgimut",
-        "b_origin": "Tasgimut (constituent holding of Nafîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tasgh%C3%AEm%C3%BBt",
       "older_name_by_867": {
         "exists": false,
@@ -2371,18 +2060,11 @@
         {
           "form": "Nafis",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "N'fis river / valley"
         }
       ],
       "etymology_analysis": "Berber hydronym and settlement name for the Oued N'fis valley and town in the High Atlas foothills south of Marrakesh.",
-      "current_repo_state": {
-        "b_tarr": "Albrechtstat",
-        "b_tarr_direct": "Albrechtstat",
-        "b_tarr_hist": "Albrechtstat",
-        "b_origin": "Albrechtstat (constituent holding of Nafîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Idris_II",
       "older_name_by_867": {
         "exists": false,
@@ -2417,18 +2099,11 @@
         {
           "form": "Sabta",
           "language": "Arabic (from Latin Septem)",
+          "language_code": "ara",
           "translation": "seven (from the seven hills)"
         }
       ],
       "etymology_analysis": "Arabic adaptation of Latin Septem (short for Septem Fratres, 'Seven Brothers', referring to the seven hills of Ceuta).",
-      "current_repo_state": {
-        "b_tarr": "Sêute",
-        "b_tarr_direct": "Sêute",
-        "b_tarr_hist": "Sêute",
-        "b_origin": "Sêute (Ceuta)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ceuta",
       "older_name_by_867": {
         "exists": true,
@@ -2467,18 +2142,11 @@
         {
           "form": "tittawin",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "eyes / springs (plural of titt)"
         }
       ],
       "etymology_analysis": "Berber plural noun tittawin meaning 'eyes' or 'water springs', Arabized as Titwan / Tetouan.",
-      "current_repo_state": {
-        "b_tarr": "Tittawan",
-        "b_tarr_direct": "Tittawan",
-        "b_tarr_hist": "Tittawan",
-        "b_origin": "Tittawan (constituent holding of Sêute)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A9touan",
       "older_name_by_867": {
         "exists": true,
@@ -2515,18 +2183,11 @@
         {
           "form": "Ighmaren / Ghumara",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Ghomara (Masmuda tribal confederation and region)"
         }
       ],
       "etymology_analysis": "Ethnonym and regional choronym of the Ghomara (Berber Ighmaren), a Masmuda Berber confederation inhabiting the western Rif.",
-      "current_repo_state": {
-        "b_tarr": "Ghumira",
-        "b_tarr_direct": "Ghumira",
-        "b_tarr_hist": "Ghumira",
-        "b_origin": "Ghumira (constituent holding of Sêute)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ghomara",
       "older_name_by_867": {
         "exists": false,
@@ -2561,18 +2222,11 @@
         {
           "form": "m-l-l / amlal",
           "language": "Berber (Riffian)",
+          "language_code": "ber",
           "translation": "white"
         }
       ],
       "etymology_analysis": "Arabic Malilya (Spanish Melilla), likely derived from the Berber root M-L-L ('white').",
-      "current_repo_state": {
-        "b_tarr": "Melîlje",
-        "b_tarr_direct": "Melîlje",
-        "b_tarr_hist": "Melîlje",
-        "b_origin": "Melîlje (Melilla)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Melilla",
       "older_name_by_867": {
         "exists": true,
@@ -2610,18 +2264,11 @@
         {
           "form": "Nakur / Nekor",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Nekor river"
         }
       ],
       "etymology_analysis": "Named after the Nekor River in the Rif; capital of the Salihid Emirate of Nekor (raided by Vikings in 859 AD).",
-      "current_repo_state": {
-        "b_tarr": "Nakur",
-        "b_tarr_direct": "Nakur",
-        "b_tarr_hist": "Nakur",
-        "b_origin": "Nakur (constituent holding of Melîlje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nekor",
       "older_name_by_867": {
         "exists": false,
@@ -2656,18 +2303,11 @@
         {
           "form": "Tingi",
           "language": "Berber / Punic",
+          "language_code": "ber",
           "translation": "marsh or high location"
         }
       ],
       "etymology_analysis": "From ancient Berber/Punic Tingi (Latin Tingis, Arabic Tanja, English Tangier/Tangiers).",
-      "current_repo_state": {
-        "b_tarr": "Tandscher",
-        "b_tarr_direct": "Tandscher",
-        "b_tarr_hist": "Tandscher",
-        "b_origin": "Tandscher (Tangiers)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tangier",
       "older_name_by_867": {
         "exists": true,
@@ -2705,18 +2345,11 @@
         {
           "form": "Asila / Arzila",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "adaptation of ancient Zilis"
         }
       ],
       "etymology_analysis": "Idrisid-era coastal town whose name Asila (and Spanish/Portuguese Arzila) derives from the nearby ancient Phoenician-Roman settlement of Zilis/Zilil.",
-      "current_repo_state": {
-        "b_tarr": "Asila",
-        "b_tarr_direct": "Asila",
-        "b_tarr_hist": "Asila",
-        "b_origin": "Asila (constituent holding of Tandscher)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Asilah",
       "older_name_by_867": {
         "exists": true,
@@ -2755,23 +2388,17 @@
         {
           "form": "al-qasr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the castle / fortress"
         },
         {
           "form": "al-kabir",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the great / big"
         }
       ],
       "etymology_analysis": "Arabic descriptive name 'the Great Castle' (Spanish Alcazarquivir), succeeding earlier medieval names Suq Kutama and Qasr Abd al-Karim.",
-      "current_repo_state": {
-        "b_tarr": "Grôzcastel",
-        "b_tarr_direct": "Grôzcastel",
-        "b_tarr_hist": "Grôzcastel",
-        "b_origin": "Ksar el-Kebir / Qasr al-Kabir (Arabic 'The Great Castle / Citadel') (in-game: Grôzcastel)",
-        "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Grôzcastel.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ksar_el-Kebir",
       "older_name_by_867": {
         "exists": true,
@@ -2808,18 +2435,11 @@
         {
           "form": "Tahlit",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "uncertain local Berber toponym"
         }
       ],
       "etymology_analysis": "Local Moroccan toponym with no documented pre-modern attestation.",
-      "current_repo_state": {
-        "b_tarr": "Tahlit",
-        "b_tarr_direct": "Tahlit",
-        "b_tarr_hist": "Tahlit",
-        "b_origin": "Tahlit (constituent holding of Tandscher)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2854,18 +2474,11 @@
         {
           "form": "agadir",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "wall / fortified granary"
         }
       ],
       "etymology_analysis": "From Tashelhit Berber agadir ('wall' or 'fortified collective granary'); full name Agadir Ighir.",
-      "current_repo_state": {
-        "b_tarr": "Masse",
-        "b_tarr_direct": "Agadîr",
-        "b_tarr_hist": "Masse",
-        "b_origin": "Masse (Masse (in-game: Agadir))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Agadir",
       "older_name_by_867": {
         "exists": false,
@@ -2900,18 +2513,11 @@
         {
           "form": "Masst / Massa",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "Massa river (classical Masatat)"
         }
       ],
       "etymology_analysis": "Pre-Islamic Berber hydronym and tribal name (Pliny's Masatat / Masates), preserved in the Oued Massa and the medieval ribat/port of Massa.",
-      "current_repo_state": {
-        "b_tarr": "Thomasstat",
-        "b_tarr_direct": "Thomasstat",
-        "b_tarr_hist": "Thomasstat",
-        "b_origin": "Thomasstat (constituent holding of Masse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://journals.openedition.org/encyclopedieberbere/4804",
       "older_name_by_867": {
         "exists": false,
@@ -2946,18 +2552,11 @@
         {
           "form": "tazagurt",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "twin peaks (singular of tizigirt)"
         }
       ],
       "etymology_analysis": "Berber oronym Tazagurt ('twin peaks') naming the double-peaked Mount Zagora, later Arabized as Zagora.",
-      "current_repo_state": {
-        "b_tarr": "Drâdal",
-        "b_tarr_direct": "Drâdal",
-        "b_tarr_hist": "Drâdal",
-        "b_origin": "Drâdal (Draa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mount_Zagora",
       "older_name_by_867": {
         "exists": false,
@@ -2992,23 +2591,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "talha",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "acacia tree (gum arabic tree)"
         }
       ],
       "etymology_analysis": "Arabic descriptive botanical toponym meaning 'the acacia tree'.",
-      "current_repo_state": {
-        "b_tarr": "Al-Talha",
-        "b_tarr_direct": "Al-Talha",
-        "b_tarr_hist": "Al-Talha",
-        "b_origin": "Al-Talha (constituent holding of Drâdal)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3043,18 +2636,11 @@
         {
           "form": "aqqa",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "dates / date pit"
         }
       ],
       "etymology_analysis": "From Tamazight aqqa meaning 'dates' or 'date kernel', reflecting the oasis's palm groves.",
-      "current_repo_state": {
-        "b_tarr": "Aqqa",
-        "b_tarr_direct": "Aqqa",
-        "b_tarr_hist": "Aqqa",
-        "b_origin": "Aqqa (constituent holding of Drâdal)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Akka,_Morocco",
       "older_name_by_867": {
         "exists": false,
@@ -3089,18 +2675,11 @@
         {
           "form": "Tagmadart",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber oasis/district name in the Draa"
         }
       ],
       "etymology_analysis": "Berber toponym in the Draa Valley (also Tagumadert), associated with the origins of the Saadian dynasty.",
-      "current_repo_state": {
-        "b_tarr": "Tagmadart",
-        "b_tarr_direct": "Tagmadart",
-        "b_tarr_hist": "Tagmadart",
-        "b_origin": "Tagmadart (constituent holding of Drâdal)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tagmadert",
       "older_name_by_867": {
         "exists": false,
@@ -3135,18 +2714,11 @@
         {
           "form": "Tidri",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Berber toponym"
         }
       ],
       "etymology_analysis": "Berber settlement name in the Middle Draa oasis zone (Foum Tidri).",
-      "current_repo_state": {
-        "b_tarr": "Tidri",
-        "b_tarr_direct": "Tidri",
-        "b_tarr_hist": "Tidri",
-        "b_origin": "Tidri (constituent holding of Drâdal)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://brill.com/view/journals/jaa/15/2/article-p141_141.xml?language=en",
       "older_name_by_867": {
         "exists": false,
@@ -3181,18 +2753,11 @@
         {
           "form": "ifni",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "basin / plain surrounded by hills"
         }
       ],
       "etymology_analysis": "From Tashelhit Berber ifni ('basin' or 'lagoon/plain'), later prefixed with Sidi ('saint/lord').",
-      "current_repo_state": {
-        "b_tarr": "Ifnî",
-        "b_tarr_direct": "Ifnî",
-        "b_tarr_hist": "Ifnî",
-        "b_origin": "Ifnî (Ifni)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sidi_Ifni",
       "older_name_by_867": {
         "exists": false,
@@ -3227,23 +2792,17 @@
         {
           "form": "Nul",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Nul (Oued Noun / oasis settlement)"
         },
         {
           "form": "Lamta",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Lamta (Sanhaja Berber tribe)"
         }
       ],
       "etymology_analysis": "Named after the oasis/wadi of Nul (Noun) and the Lamta Berber tribe, famous in medieval trade for Lamta shields.",
-      "current_repo_state": {
-        "b_tarr": "Nul Lamta",
-        "b_tarr_direct": "Nul Lamta",
-        "b_tarr_hist": "Nul Lamta",
-        "b_origin": "Nul Lamta (constituent holding of Ifnî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://nul-lamta.wdro.net/",
       "older_name_by_867": {
         "exists": false,
@@ -3278,18 +2837,11 @@
         {
           "form": "Taghmut",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "local Berber toponym"
         }
       ],
       "etymology_analysis": "Local Tashelhit Berber toponym in the Anti-Atlas mountains.",
-      "current_repo_state": {
-        "b_tarr": "Taghmut",
-        "b_tarr_direct": "Taghmut",
-        "b_tarr_hist": "Taghmut",
-        "b_origin": "Taghmut (constituent holding of Ifnî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3324,18 +2876,11 @@
         {
           "form": "Assa",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Assa (oasis settlement)"
         }
       ],
       "etymology_analysis": "Berber oasis toponym in southern Morocco, known historically for its 13th-century religious zawiya and ksar.",
-      "current_repo_state": {
-        "b_tarr": "Assa",
-        "b_tarr_direct": "Assa",
-        "b_tarr_hist": "Assa",
-        "b_origin": "Assa (constituent holding of Ifnî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Assa",
       "older_name_by_867": {
         "exists": false,
@@ -3370,18 +2915,11 @@
         {
           "form": "Tagawst",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Tagaost / Taghaost (oasis town)"
         }
       ],
       "etymology_analysis": "Berber toponym in the Oued Noun / Guelmim plain (also spelled Tagaost or Taghaost) that served as a major caravan terminus from the 13th to 17th centuries.",
-      "current_repo_state": {
-        "b_tarr": "Tagawst",
-        "b_tarr_direct": "Tagawst",
-        "b_tarr_hist": "Tagawst",
-        "b_origin": "Tagawst (constituent holding of Ifnî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://referenceworks.brill.com/display/entries/EJIO/SIM-0020780.xml",
       "older_name_by_867": {
         "exists": false,
@@ -3416,18 +2954,11 @@
         {
           "form": "Iligh",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "Iligh (capital of Tazerwalt)"
         }
       ],
       "etymology_analysis": "Tashelhit Berber toponym for the 17th-century maraboutic capital of Tazerwalt in the Anti-Atlas.",
-      "current_repo_state": {
-        "b_tarr": "Iligh",
-        "b_tarr_direct": "Iligh",
-        "b_tarr_hist": "Iligh",
-        "b_origin": "Iligh (constituent holding of Ifnî)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Tazeroualt",
       "older_name_by_867": {
         "exists": false,
@@ -3462,18 +2993,11 @@
         {
           "form": "Tarudant",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "Taroudant (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Berber toponym (Arabic Tarudant) for the chief town of the Sous valley from the 11th century onward.",
-      "current_repo_state": {
-        "b_tarr": "Tarudânt",
-        "b_tarr_direct": "Tarudânt",
-        "b_tarr_hist": "Tarudânt",
-        "b_origin": "Tarudânt (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taroudant",
       "older_name_by_867": {
         "exists": false,
@@ -3508,18 +3032,11 @@
         {
           "form": "igiliz",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "mountain spur / rocky crest"
         }
       ],
       "etymology_analysis": "From Tashelhit Berber igiliz ('mountain spur' or 'summit'), describing the fortified rocky outcrop in the Anti-Atlas.",
-      "current_repo_state": {
-        "b_tarr": "Igilliz",
-        "b_tarr_direct": "Igilliz",
-        "b_tarr_hist": "Igilliz",
-        "b_origin": "Igilliz (constituent holding of Sûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Igiliz",
       "older_name_by_867": {
         "exists": false,
@@ -3554,18 +3071,11 @@
         {
           "form": "Sirwan / Siroua",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "Siroua mountain massif"
         }
       ],
       "etymology_analysis": "Berber oronym (Jbel Siroua / Sirwan) for the volcanic massif linking the High Atlas and Anti-Atlas.",
-      "current_repo_state": {
-        "b_tarr": "Sirwan",
-        "b_tarr_direct": "Sirwan",
-        "b_tarr_hist": "Sirwan",
-        "b_origin": "Sirwan (constituent holding of Sûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Dr%C3%A2a",
       "older_name_by_867": {
         "exists": false,
@@ -3600,18 +3110,11 @@
         {
           "form": "Sijilmasa",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Sijilmasa (etymology debated)"
         }
       ],
       "etymology_analysis": "Medieval Islamic city name (Arabic Sijilmasa), founded in 757 AD as the premier northern entrepot of the western trans-Saharan trade.",
-      "current_repo_state": {
-        "b_tarr": "Sidschilmâsse",
-        "b_tarr_direct": "Sidschilmâsse",
-        "b_tarr_hist": "Sidschilmâsse",
-        "b_origin": "Sidschilmâsse (Sijilmasa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sijilmasa",
       "older_name_by_867": {
         "exists": false,
@@ -3646,18 +3149,11 @@
         {
           "form": "tafilalt",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "earthenware water jug"
         }
       ],
       "etymology_analysis": "Berber word tafilalt meaning 'earthenware jug' used to store water, applied to the oasis region from the late Middle Ages.",
-      "current_repo_state": {
-        "b_tarr": "Tafilalt",
-        "b_tarr_direct": "Tafilalt",
-        "b_tarr_hist": "Tafilalt",
-        "b_origin": "Tafilalt (constituent holding of Sidschilmâsse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tafilalt",
       "older_name_by_867": {
         "exists": false,
@@ -3692,18 +3188,11 @@
         {
           "form": "Taouz",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Berber toponym"
         }
       ],
       "etymology_analysis": "Berber oasis toponym on the lower Oued Ziz with no pre-modern documentary attestation.",
-      "current_repo_state": {
-        "b_tarr": "Taouz",
-        "b_tarr_direct": "Taouz",
-        "b_tarr_hist": "Taouz",
-        "b_origin": "Taouz (constituent holding of Sidschilmâsse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.mindat.org/loc-2395.html",
       "older_name_by_867": {
         "exists": false,
@@ -3738,18 +3227,11 @@
         {
           "form": "Tudgha / Todgha",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "Todgha river / oasis"
         }
       ],
       "etymology_analysis": "Berber hydronym and oasis name (Arabic Tudgha) in southeastern Morocco, active as an early Islamic silver-mining and minting center in the 8th century.",
-      "current_repo_state": {
-        "b_tarr": "Tudgâ",
-        "b_tarr_direct": "Tudgâ",
-        "b_tarr_hist": "Tudgâ",
-        "b_origin": "Tudgâ (Tudgha)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Todgha_Gorge",
       "older_name_by_867": {
         "exists": false,
@@ -3784,18 +3266,11 @@
         {
           "form": "Tasagdalt / Tasagdah",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "stone fortress / plateau (identified with Gara Medouar)"
         }
       ],
       "etymology_analysis": "Berber toponym (Tasagdalt) recorded in early 10th-century Midrarid history, identified by archaeologists with the fortified massif of Gara Medouar.",
-      "current_repo_state": {
-        "b_tarr": "Tasagdah",
-        "b_tarr_direct": "Tasagdah",
-        "b_tarr_hist": "Tasagdah",
-        "b_origin": "Tasagdah (constituent holding of Tudgâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gara_Medouar",
       "older_name_by_867": {
         "exists": false,
@@ -3830,23 +3305,17 @@
         {
           "form": "war",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "without"
         },
         {
           "form": "zazat",
           "language": "Berber (Tashelhit)",
+          "language_code": "ber",
           "translation": "noise / confusion"
         }
       ],
       "etymology_analysis": "Tashelhit Berber compound War-zazat ('without noise'), originally naming a quiet widening of the Oued Ouarzazate riverbed before becoming a town name.",
-      "current_repo_state": {
-        "b_tarr": "Warschazat",
-        "b_tarr_direct": "Warschazat",
-        "b_tarr_hist": "Warschazat",
-        "b_origin": "Warschazat (constituent holding of Tudgâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ouarzazate",
       "older_name_by_867": {
         "exists": false,
@@ -3881,18 +3350,11 @@
         {
           "form": "Ziz",
           "language": "Berber (Tamazight)",
+          "language_code": "ber",
           "translation": "Ziz (river name)"
         }
       ],
       "etymology_analysis": "Berber hydronym (Asif n Ziz, Arabic Wadi Ziz) for the major river feeding the Tafilalt oasis.",
-      "current_repo_state": {
-        "b_tarr": "Sîtz",
-        "b_tarr_direct": "Sîtz",
-        "b_tarr_hist": "Sîtz",
-        "b_origin": "Sîtz (Ziz)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ziz_River",
       "older_name_by_867": {
         "exists": false,
@@ -3927,18 +3389,11 @@
         {
           "form": "Ghazwan",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Ghazwan (Arabic personal/tribal name)"
         }
       ],
       "etymology_analysis": "Arabic personal/tribal name used as a barony title without documented pre-867 or medieval attestation in the Ziz valley.",
-      "current_repo_state": {
-        "b_tarr": "Ghazwan",
-        "b_tarr_direct": "Ghazwan",
-        "b_tarr_hist": "Ghazwan",
-        "b_origin": "Ghazwan (constituent holding of Sîtz)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3973,23 +3428,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Jaza'ir",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "islands"
         }
       ],
       "etymology_analysis": "From Arabic al-Jaza'ir ('the islands'), referring to the four offshore islets in the Bay of Algiers (full medieval name al-Jaza'ir Bani Mazghanna), via Catalan Alguer and French Alger.",
-      "current_repo_state": {
-        "b_tarr": "Alschîr",
-        "b_tarr_direct": "Alschîr",
-        "b_tarr_hist": "Alschîr",
-        "b_origin": "Historic Zirid island fortress al-Jazā'ir (Algiers) (in-game: Alschîr)",
-        "b_anachronism": "Authentic Ancient Island Fortress.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Algiers",
       "older_name_by_867": {
         "exists": true,
@@ -4027,23 +3476,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Madiya",
           "language": "Arabic (from Latin/Berber)",
+          "language_code": "ara",
           "translation": "Medea (adaptation of Roman ad Medias / Lamdia)"
         }
       ],
       "etymology_analysis": "Arabic al-Madiya (French Medea), adapted from the Roman way-station ad Medias ('halfway' between Tirinadi and Sufnsar) or the ancient settlement/tribe name Lamdia/Lambdia.",
-      "current_repo_state": {
-        "b_tarr": "Mêdêa",
-        "b_tarr_direct": "Mêdêa",
-        "b_tarr_hist": "Mêdêa",
-        "b_origin": "Mêdêa (constituent holding of Aldschêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%A9d%C3%A9a",
       "older_name_by_867": {
         "exists": true,
@@ -4082,23 +3525,17 @@
         {
           "form": "ta-",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "feminine prefix"
         },
         {
           "form": "delles / adles",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "diss grass / reed (or dark/shaded)"
         }
       ],
       "etymology_analysis": "Berber toponym Tadallis / Tedelles (modern Dellys), likely formed with feminine prefix ta- and adles (a riverside reed/grass, Ampelodesmos mauritanicus).",
-      "current_repo_state": {
-        "b_tarr": "Tadallis",
-        "b_tarr_direct": "Tadallis",
-        "b_tarr_hist": "Tadallis",
-        "b_origin": "Tadallis (constituent holding of Aldschêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dellys",
       "older_name_by_867": {
         "exists": true,
@@ -4136,23 +3573,17 @@
         {
           "form": "m-",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "place/possessor prefix"
         },
         {
           "form": "itij",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "sun / shining"
         }
       ],
       "etymology_analysis": "From Berber Mettijet / Mattija, traditionally derived from Berber itij ('sun, shining'), meaning 'the sunny (plain)'.",
-      "current_repo_state": {
-        "b_tarr": "Mattija",
-        "b_tarr_direct": "Mattija",
-        "b_tarr_hist": "Mattija",
-        "b_origin": "Mattija (constituent holding of Aldschêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mitidja",
       "older_name_by_867": {
         "exists": false,
@@ -4187,18 +3618,11 @@
         {
           "form": "TNS",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "camping / encampment"
         }
       ],
       "etymology_analysis": "Arabic Tanas (French Tenes), from Berber root TNS meaning 'to camp' or 'encampment', applied to the 9th-century Andalusian foundation.",
-      "current_repo_state": {
-        "b_tarr": "Tênes",
-        "b_tarr_direct": "Tênes",
-        "b_tarr_hist": "Tênes",
-        "b_origin": "Tênes (Tanas)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A9n%C3%A8s",
       "older_name_by_867": {
         "exists": true,
@@ -4236,18 +3660,11 @@
         {
           "form": "Sharshal",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "adaptation of Caesarea (or Berber Shersher 'waterfall')"
         }
       ],
       "etymology_analysis": "Arabic Sharshal (French Cherchell), either a phonological evolution of Latin Caesarea or derived from Berber achercher/shersher ('waterfall').",
-      "current_repo_state": {
-        "b_tarr": "Scharschal",
-        "b_tarr_direct": "Scharschal",
-        "b_tarr_hist": "Scharschal",
-        "b_origin": "Scharschal (constituent holding of Tênes)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cherchell",
       "older_name_by_867": {
         "exists": true,
@@ -4286,18 +3703,11 @@
         {
           "form": "Miliyana",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "Miliana (possibly from Latin Malliana)"
         }
       ],
       "etymology_analysis": "Arabic Miliyana (French Miliana), founded by Buluggin ibn Ziri in the 10th century on the ruins of Roman Zucchabar; name possibly connected to a Latin gentilicium Malliana.",
-      "current_repo_state": {
-        "b_tarr": "Miliyana",
-        "b_tarr_direct": "Miliyana",
-        "b_tarr_hist": "Miliyana",
-        "b_origin": "Miliyana (constituent holding of Tênes)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Miliana",
       "older_name_by_867": {
         "exists": true,
@@ -4334,18 +3744,11 @@
         {
           "form": "Bgayet / Bijaya",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "land of the Bajaya tribe"
         }
       ],
       "etymology_analysis": "From Arabic Bijaya / Kabyle Bgayet, named after the Bajaya Berber tribe (who inhabited the region prior to the Hammadid expansion in 1067).",
-      "current_repo_state": {
-        "b_tarr": "Sâlde",
-        "b_tarr_direct": "Sâlde",
-        "b_tarr_hist": "Sâlde",
-        "b_origin": "Sâlde — Historical Option A seat of c_bejaia",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%A9ja%C3%AFa",
       "older_name_by_867": {
         "exists": true,
@@ -4383,18 +3786,11 @@
         {
           "form": "Jijel",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "from ancient Igilgili"
         }
       ],
       "etymology_analysis": "Arabic Jijil / Kabyle Jijel, a medieval phonological contraction of the Punic-Roman toponym Igilgili.",
-      "current_repo_state": {
-        "b_tarr": "Jijel",
-        "b_tarr_direct": "Jijel",
-        "b_tarr_hist": "Jijel",
-        "b_origin": "Jijel (constituent holding of Sâlde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jijel",
       "older_name_by_867": {
         "exists": true,
@@ -4431,18 +3827,11 @@
         {
           "form": "Satif",
           "language": "Arabic (from Latin/Berber)",
+          "language_code": "ara",
           "translation": "black land (from Berber zdif / Latin Sitifis)"
         }
       ],
       "etymology_analysis": "Arabic Satif (French Setif), adapted from Latin Sitifis, which itself derives from a Numidian-Berber root zdif meaning 'black (fertile) lands'.",
-      "current_repo_state": {
-        "b_tarr": "Satîf",
-        "b_tarr_direct": "Satîf",
-        "b_tarr_hist": "Satîf",
-        "b_origin": "Satîf (Satif)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/S%C3%A9tif",
       "older_name_by_867": {
         "exists": true,
@@ -4479,23 +3868,17 @@
         {
           "form": "Mila",
           "language": "Arabic (from Latin Milevum)",
+          "language_code": "ara",
           "translation": "Mila"
         },
         {
           "form": "Satif",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Setif (county/regional disambiguator)"
         }
       ],
       "etymology_analysis": "Combines Mila (from ancient Milevum, fortified by Justinian in the 6th century and conquered by Umayyads c. 675 AD) with Satif as a regional qualifier.",
-      "current_repo_state": {
-        "b_tarr": "Mila Satif",
-        "b_tarr_direct": "Mila Satif",
-        "b_tarr_hist": "Mila Satif",
-        "b_origin": "Mila Satif (constituent holding of Satîf)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mila_(city)",
       "older_name_by_867": {
         "exists": true,
@@ -4533,18 +3916,11 @@
         {
           "form": "Ikjan",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Ikjan (Kutama Berber toponym)"
         }
       ],
       "etymology_analysis": "Berber (Kutama) toponym Ikjan (Ikedjane), a fortified mountain settlement near Beni Aziz that served as the first Fatimid base in 902–909 AD.",
-      "current_repo_state": {
-        "b_tarr": "Ikjan",
-        "b_tarr_direct": "Ikjan",
-        "b_tarr_hist": "Ikjan",
-        "b_origin": "Ikjan (constituent holding of Satîf)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ikjan",
       "older_name_by_867": {
         "exists": false,
@@ -4579,28 +3955,23 @@
         {
           "form": "Qal'at",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress / citadel"
         },
         {
           "form": "Bani",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "sons of / clan of"
         },
         {
           "form": "Hammad",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Hammad (ibn Buluggin)"
         }
       ],
       "etymology_analysis": "Arabic Qal'at Bani Hammad ('Citadel of the Sons of Hammad'), the fortified palatine capital built by Hammad ibn Buluggin in 1007–1008 AD.",
-      "current_repo_state": {
-        "b_tarr": "Tschalaa Bhammad",
-        "b_tarr_direct": "Tschalaa Bhammad",
-        "b_tarr_hist": "Tschalaa Bhammad",
-        "b_origin": "Tschalaa Bhammad (constituent holding of Satîf)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qal%27at_Bani_Hammad",
       "older_name_by_867": {
         "exists": false,
@@ -4635,18 +4006,11 @@
         {
           "form": "Arigh / Righ",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Righa (Zenata tribe) or salt flat"
         }
       ],
       "etymology_analysis": "From Berber Arigh / Wadi Righ, named after the Zenata Berber tribe of the Righa (fraction of the Maghraoua), or per Yaqut al-Hamawi a Berber word for a salt marsh (sabkha).",
-      "current_repo_state": {
-        "b_tarr": "Arîch",
-        "b_tarr_direct": "Arîch",
-        "b_tarr_hist": "Arîch",
-        "b_origin": "Arîch (Arigh)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Oued_Righ",
       "older_name_by_867": {
         "exists": false,
@@ -4681,18 +4045,11 @@
         {
           "form": "Ajlu",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "local oasis toponym"
         }
       ],
       "etymology_analysis": "Local Saharan oasis toponym in the Oued Righ basin with no documented pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Ajlu",
-        "b_tarr_direct": "Ajlu",
-        "b_tarr_hist": "Ajlu",
-        "b_origin": "Ajlu (constituent holding of Arîch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4727,18 +4084,11 @@
         {
           "form": "Tugurt",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "the gate / gateway"
         }
       ],
       "etymology_analysis": "From Berber Tugurt (Tifinagh: ⵜⵓⴳⵓⵔⵜ), meaning 'the gate' or 'the gateway', referring to its strategic position at the entrance of the Oued Righ oasis chain.",
-      "current_repo_state": {
-        "b_tarr": "Tuggurt",
-        "b_tarr_direct": "Tuggurt",
-        "b_tarr_hist": "Tuggurt",
-        "b_origin": "Tuggurt (constituent holding of Arîch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Touggourt",
       "older_name_by_867": {
         "exists": false,
@@ -4773,18 +4123,11 @@
         {
           "form": "Tagherdayt",
           "language": "Berber (Tumzabt)",
+          "language_code": "ber",
           "translation": "castle / fortified hilltop (or cave of Daia)"
         }
       ],
       "etymology_analysis": "Arabic Ghardaia, from Tumzabt Berber Tagherdayt, linked either to Berber tagherda ('castle/fortress') or popular tradition 'cave (ghar) of Daia'.",
-      "current_repo_state": {
-        "b_tarr": "Gardâje",
-        "b_tarr_direct": "Gardâje",
-        "b_tarr_hist": "Gardâje",
-        "b_origin": "Gardâje (Ghardaia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gharda%C3%AFa",
       "older_name_by_867": {
         "exists": false,
@@ -4819,23 +4162,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Qulay'a",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "little fortress (diminutive of qal'a)"
         }
       ],
       "etymology_analysis": "Arabic al-Qulay'a (French El Goléa), diminutive of qal'a ('fortress'), meaning 'the little fortress', referring to the 10th-century Zenata hilltop ksar.",
-      "current_repo_state": {
-        "b_tarr": "Al-Qulaya",
-        "b_tarr_direct": "Al-Qulaya",
-        "b_tarr_hist": "Al-Qulaya",
-        "b_origin": "Al-Qulaya (constituent holding of Gardâje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Menia",
       "older_name_by_867": {
         "exists": false,
@@ -4870,23 +4207,17 @@
         {
           "form": "ta-",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "feminine prefix"
         },
         {
           "form": "dmayt",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "palm of the hand / dwarf palm"
         }
       ],
       "etymology_analysis": "Berber Tadmayt / Tademait, meaning 'palm (of the hand)' or 'dwarf palm', applied to the hyper-arid Saharan plateau south of El Menia.",
-      "current_repo_state": {
-        "b_tarr": "Tedmaît",
-        "b_tarr_direct": "Tedmaît",
-        "b_tarr_hist": "Tedmaît",
-        "b_origin": "Tedmaît (constituent holding of Gardâje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tadema%C3%AFt",
       "older_name_by_867": {
         "exists": false,
@@ -4921,18 +4252,11 @@
         {
           "form": "al-Aghwat",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "the gardens (Arabic pl. of ghouta) or saw-toothed mountain / Laghouat tribe (Berber)"
         }
       ],
       "etymology_analysis": "Arabic al-Aghwat (French Laghouat), interpreted either as Arabic plural of ghouta ('oasis gardens') or as an Arabization of Berber Leghwat / agwath (Zenata tribe or serrated mountains).",
-      "current_repo_state": {
-        "b_tarr": "Lagwât",
-        "b_tarr_direct": "Lagwât",
-        "b_tarr_hist": "Lagwât",
-        "b_origin": "Lagwât (Laghwat)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Laghouat",
       "older_name_by_867": {
         "exists": false,
@@ -4967,18 +4291,11 @@
         {
           "form": "tilghemt",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "she-camel"
         }
       ],
       "etymology_analysis": "From Berber tilghemt ('she-camel', feminine of alghom), a Saharan toponym in Laghouat Province with no pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Tilghemt",
-        "b_tarr_direct": "Tilghemt",
-        "b_tarr_hist": "Tilghemt",
-        "b_origin": "Tilghemt (constituent holding of Lagwât)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Hassi_R%27Mel",
       "older_name_by_867": {
         "exists": false,
@@ -5013,18 +4330,11 @@
         {
           "form": "Wargren / Warjlan",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "the barricaded / Banu Wargla tribe"
         }
       ],
       "etymology_analysis": "From Berber Wargren / Warjlan (Arabic Warqalah, French Ouargla), named after the Zenata Banu Wargla tribe or meaning 'he who is barricaded'.",
-      "current_repo_state": {
-        "b_tarr": "Wargle",
-        "b_tarr_direct": "Wargle",
-        "b_tarr_hist": "Wargle",
-        "b_origin": "Wargle (Wargla)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ouargla",
       "older_name_by_867": {
         "exists": false,
@@ -5059,23 +4369,17 @@
         {
           "form": "ta-",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "feminine prefix"
         },
         {
           "form": "ghyart",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber toponym / clan name"
         }
       ],
       "etymology_analysis": "Berber toponym Taghyart associated with medieval Ibadi communities of the Sahara/Nafusa; not attested prior to 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Taghyart",
-        "b_tarr_direct": "Taghyart",
-        "b_tarr_hist": "Taghyart",
-        "b_origin": "Taghyart (constituent holding of Wargle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5110,18 +4414,11 @@
         {
           "form": "Sadrata",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Sedrata (Zenata Berber tribe)"
         }
       ],
       "etymology_analysis": "Named after the Sedrata (Isedraten), a Zenata Berber tribe around Ouargla that sheltered Rustamid Ibadi refugees after 909 AD.",
-      "current_repo_state": {
-        "b_tarr": "Sadrata",
-        "b_tarr_direct": "Sadrata",
-        "b_tarr_hist": "Sadrata",
-        "b_origin": "Sadrata (constituent holding of Wargle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sedrata",
       "older_name_by_867": {
         "exists": false,
@@ -5156,18 +4453,11 @@
         {
           "form": "Karima / Krima",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "local toponym near Ouargla"
         }
       ],
       "etymology_analysis": "Modern/local Saharan toponym (Garat Krima) south of Ouargla with no documented attestation <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Karima",
-        "b_tarr_direct": "Karima",
-        "b_tarr_hist": "Karima",
-        "b_origin": "Karima (constituent holding of Wargle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5202,23 +4492,17 @@
         {
           "form": "Ashir / Acir",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "claws / mountain spur"
         },
         {
           "form": "Yashir",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "original Zirid citadel site at Achir"
         }
       ],
       "etymology_analysis": "Berber toponym Achir/Ashir (Acir), paired with Yashir, the original 935–936 AD palatial citadel built by Ziri ibn Manad in the Titteri Mountains.",
-      "current_repo_state": {
-        "b_tarr": "Aschîr",
-        "b_tarr_direct": "Aschîr",
-        "b_tarr_hist": "Aschîr",
-        "b_origin": "Aschîr (Ashir)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Achir",
       "older_name_by_867": {
         "exists": false,
@@ -5253,23 +4537,17 @@
         {
           "form": "Bu",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "possessor / place of"
         },
         {
           "form": "Sa'ada",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "happiness"
         }
       ],
       "etymology_analysis": "From Arabic Bu Sa'ada ('place of happiness'), an oasis caravan town on the northern edge of the Sahara.",
-      "current_repo_state": {
-        "b_tarr": "Bousaada",
-        "b_tarr_direct": "Bousaada",
-        "b_tarr_hist": "Bousaada",
-        "b_origin": "Bousaada (constituent holding of Aschîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bou_Sa%C3%A2da",
       "older_name_by_867": {
         "exists": false,
@@ -5304,23 +4582,17 @@
         {
           "form": "Ashir",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Achir (Zirid capital)"
         },
         {
           "form": "Banya / Buniya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "structure / building (citadel)"
         }
       ],
       "etymology_analysis": "Combines the Zirid capital name Ashir with Banya (Arabic buniya, 'structure/edifice'), the second palatial complex founded by Buluggin ibn Ziri in 974–978 AD.",
-      "current_repo_state": {
-        "b_tarr": "Aschir Banya",
-        "b_tarr_direct": "Aschir Banya",
-        "b_tarr_hist": "Aschir Banya",
-        "b_origin": "Aschir Banya (constituent holding of Aschîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zirid_dynasty",
       "older_name_by_867": {
         "exists": false,
@@ -5355,23 +4627,17 @@
         {
           "form": "sers",
           "language": "Berber (Zenati)",
+          "language_code": "ber",
           "translation": "to descend"
         },
         {
           "form": "-u",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "demonstrative suffix"
         }
       ],
       "etymology_analysis": "From Zenati Berber sers ('descend') + demonstrative suffix -u, meaning 'descending land' or 'plateau'.",
-      "current_repo_state": {
-        "b_tarr": "Sersou",
-        "b_tarr_direct": "Sersou",
-        "b_tarr_hist": "Sersou",
-        "b_origin": "Sersou (constituent holding of Aschîr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Sersou",
       "older_name_by_867": {
         "exists": false,
@@ -5406,18 +4672,11 @@
         {
           "form": "Ifiyyey / Figig",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "mountain pass (or Zenati Berber oasis toponym)"
         }
       ],
       "etymology_analysis": "From Zenati Berber Ifiyyey / Figig (Arabic Figuig), variously linked to a Berber toponym or Arabic fajj ('mountain pass').",
-      "current_repo_state": {
-        "b_tarr": "Figîch",
-        "b_tarr_direct": "Figîch",
-        "b_tarr_hist": "Figîch",
-        "b_origin": "Figîch (Figuig)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Figuig",
       "older_name_by_867": {
         "exists": false,
@@ -5452,23 +4711,17 @@
         {
           "form": "Ayn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "spring / water source"
         },
         {
           "form": "Safra",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "yellow"
         }
       ],
       "etymology_analysis": "From Arabic Ayn al-Safra ('yellow spring'), referring to the desert spring at the oasis.",
-      "current_repo_state": {
-        "b_tarr": "Ainsefra",
-        "b_tarr_direct": "Ainsefra",
-        "b_tarr_hist": "Ainsefra",
-        "b_origin": "Ainsefra (constituent holding of Figîch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/A%C3%AFn_Sefra",
       "older_name_by_867": {
         "exists": false,
@@ -5503,18 +4756,11 @@
         {
           "form": "Mecheria",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "place of dryness / arid land"
         }
       ],
       "etymology_analysis": "From an Arabic term meaning 'place of dryness' or 'arid land', describing the semi-arid High Plateaus steppe where the 1881 post was built.",
-      "current_repo_state": {
-        "b_tarr": "Mecheria",
-        "b_tarr_direct": "Mecheria",
-        "b_tarr_hist": "Mecheria",
-        "b_origin": "Mecheria (constituent holding of Figîch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%A9cheria",
       "older_name_by_867": {
         "exists": false,
@@ -5549,18 +4795,11 @@
         {
           "form": "Tahert / Tihert",
           "language": "Berber (Zenata)",
+          "language_code": "ber",
           "translation": "lioness (or halting place / station)"
         }
       ],
       "etymology_analysis": "Berber toponym Tahert/Tihert (modern Tiaret), traditionally glossed as 'lioness' or 'station', adopted by the Rustamid imamate in 761 AD near the Roman-Byzantine site of Tingartia.",
-      "current_repo_state": {
-        "b_tarr": "Tâhert",
-        "b_tarr_direct": "Tâhert",
-        "b_tarr_hist": "Tâhert",
-        "b_origin": "Tâhert (Tahert)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tiaret",
       "older_name_by_867": {
         "exists": true,
@@ -5597,23 +4836,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "'Ubbad",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "worshippers / ascetics (plural of 'abid)"
         }
       ],
       "etymology_analysis": "Arabic al-'Ubbad ('the worshippers/devotees'), a historic village on the outskirts of Tlemcen that grew into a major Sufi pilgrimage center around the tomb of Abu Madyan (d. 1198).",
-      "current_repo_state": {
-        "b_tarr": "Al Ubbat",
-        "b_tarr_direct": "Al Ubbat",
-        "b_tarr_hist": "Al Ubbat",
-        "b_origin": "Al Ubbat (constituent holding of Tâhert)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Abu_Madyan",
       "older_name_by_867": {
         "exists": false,
@@ -5648,23 +4881,17 @@
         {
           "form": "Qal'at",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress / citadel"
         },
         {
           "form": "ibn / Bani Salama",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "son / tribe of Salama"
         }
       ],
       "etymology_analysis": "Arabic compound Qal'at Bani Salama ('Fortress of the Banu Salama'), a hilltop stronghold near Taoughzout south of Frenda in Tiaret Province.",
-      "current_repo_state": {
-        "b_tarr": "Tschalaa Bsalama",
-        "b_tarr_direct": "Tschalaa Bsalama",
-        "b_tarr_hist": "Tschalaa Bsalama",
-        "b_origin": "Tschalaa Bsalama (constituent holding of Tâhert)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qal%CA%BFat_ibn_Salama",
       "older_name_by_867": {
         "exists": false,
@@ -5699,18 +4926,11 @@
         {
           "form": "Askedal / Tasqadalt",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber fortified settlement toponym"
         }
       ],
       "etymology_analysis": "Berber toponym Askedal (Tasqadalt), recorded in medieval Arabic geographical works alongside Madinat al-Jabal and Qal'at Hawwara in the Tell Atlas of western Algeria.",
-      "current_repo_state": {
-        "b_tarr": "Askedal",
-        "b_tarr_direct": "Askedal",
-        "b_tarr_hist": "Askedal",
-        "b_origin": "Askedal (constituent holding of Tâhert)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://asjp.cerist.dz/en/article/33228",
       "older_name_by_867": {
         "exists": false,
@@ -5745,23 +4965,17 @@
         {
           "form": "Hisn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress / stronghold"
         },
         {
           "form": "Lawata",
           "language": "Berber (ethnonym)",
+          "language_code": "ber",
           "translation": "Lawata Berber tribe"
         }
       ],
       "etymology_analysis": "Arabic-Berber compound Hisn Lawata ('Fortress of the Lawata'), referring to a stronghold of the Lawata Berber confederation in the Tahert region.",
-      "current_repo_state": {
-        "b_tarr": "Lawâtaburch",
-        "b_tarr_direct": "Lawâtaburch",
-        "b_tarr_hist": "Lawâtaburch",
-        "b_origin": "Hisn Lawata (Berber Lawata tribal fortress) (in-game: Lawâtaburch)",
-        "b_anachronism": "Descriptive Berber fortress toponym calqued to Tarraconian Lawâtaburch.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://ablibrary.net/book_content/b/1476/306",
       "older_name_by_867": {
         "exists": false,
@@ -5796,18 +5010,11 @@
         {
           "form": "Yellel / Yalala (ilel)",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "sea / lake"
         }
       ],
       "etymology_analysis": "From Berber ilel ('sea, lake'), designating the medieval town of Yellel in Relizane Province, built on the Roman site of Ballene Praesidium.",
-      "current_repo_state": {
-        "b_tarr": "Jalâle",
-        "b_tarr_direct": "Jalâle",
-        "b_tarr_hist": "Jalâle",
-        "b_origin": "Jalâle (Yalala)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Yellel",
       "older_name_by_867": {
         "exists": true,
@@ -5844,23 +5051,17 @@
         {
           "form": "Qal'at",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress / citadel"
         },
         {
           "form": "Hawwara (Bhuwara)",
           "language": "Berber (ethnonym)",
+          "language_code": "ber",
           "translation": "Hawwara Berber tribe"
         }
       ],
       "etymology_analysis": "Arabic-Berber Qal'at Hawwara ('Fortress of the Hawwara'), later renamed Kalaa des Beni Rached; founded by the Hawwara tribe in the Mina valley under Rustamid suzerainty.",
-      "current_repo_state": {
-        "b_tarr": "Tschalaa Bhuwara",
-        "b_tarr_direct": "Tschalaa Bhuwara",
-        "b_tarr_hist": "Tschalaa Bhuwara",
-        "b_origin": "Tschalaa Bhuwara (constituent holding of Jalâle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Houaras",
       "older_name_by_867": {
         "exists": false,
@@ -5895,23 +5096,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Jabal (Gabal)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Arabic al-Jabal ('the Mountain'), a descriptive oronymic designation applied in medieval sources to the mountain stronghold near Relizane.",
-      "current_repo_state": {
-        "b_tarr": "Al Gabal",
-        "b_tarr_direct": "Al Gabal",
-        "b_tarr_hist": "Al Gabal",
-        "b_origin": "Al Gabal (constituent holding of Jalâle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://asjp.cerist.dz/en/article/33228",
       "older_name_by_867": {
         "exists": false,
@@ -5946,18 +5141,11 @@
         {
           "form": "Hunayn / Honaine",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "medieval coastal port toponym"
         }
       ],
       "etymology_analysis": "Medieval Maghrebi port name Hunayn (Honaine), developed as Tlemcen's maritime outlet under the Almohads on the site of Roman Gypsaria.",
-      "current_repo_state": {
-        "b_tarr": "Hunjân",
-        "b_tarr_direct": "Hunjân",
-        "b_tarr_hist": "Hunjân",
-        "b_origin": "Hunjân (Hunyan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Honaine",
       "older_name_by_867": {
         "exists": true,
@@ -5995,23 +5183,17 @@
         {
           "form": "Arsh- / Rus-",
           "language": "Punic / Berber",
+          "language_code": "heb",
           "translation": "cape / promontory (rus)"
         },
         {
           "form": "-gul / -gun",
           "language": "Punic / Berber",
+          "language_code": "heb",
           "translation": "hill or garden (or adaptation of Siga)"
         }
       ],
       "etymology_analysis": "Medieval Arabized form Arshgul (modern Rachgoun), derived from Punic-Berber Rus-gun / Rus-Siga, occupying the site of ancient Siga at the mouth of the Tafna.",
-      "current_repo_state": {
-        "b_tarr": "Arsgul",
-        "b_tarr_direct": "Arsgul",
-        "b_tarr_hist": "Arsgul",
-        "b_origin": "Arsgul (constituent holding of Hunjân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Rachgoun",
       "older_name_by_867": {
         "exists": true,
@@ -6049,18 +5231,11 @@
         {
           "form": "Nadruma",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber toponym of the Trara region"
         }
       ],
       "etymology_analysis": "Berber toponym Nadruma (Nedroma), capital of the Trara mountains, first attested in 1068 AD and fortified under the Almoravids and Almohads.",
-      "current_repo_state": {
-        "b_tarr": "Nadruma",
-        "b_tarr_direct": "Nadruma",
-        "b_tarr_hist": "Nadruma",
-        "b_origin": "Nadruma (constituent holding of Hunjân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nedroma",
       "older_name_by_867": {
         "exists": false,
@@ -6095,18 +5270,11 @@
         {
           "form": "Wahran",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "two lions (plural of wahra, lion)"
         }
       ],
       "etymology_analysis": "From Berber Wahran ('two lions', plural of wahra), Arabized as Wahran and Frenchified as Oran, founded in 903 AD near the vanished Roman settlement of Unica Colonia.",
-      "current_repo_state": {
-        "b_tarr": "Wahrân",
-        "b_tarr_direct": "Wahrân",
-        "b_tarr_hist": "Wahrân",
-        "b_origin": "Wahrân — Historical Option A seat of c_orania",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oran",
       "older_name_by_867": {
         "exists": true,
@@ -6143,23 +5311,17 @@
         {
           "form": "Marsa",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "port / harbor / anchorage"
         },
         {
           "form": "Farrukh",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "personal or tribal name Farrukh"
         }
       ],
       "etymology_analysis": "Arabic Marsa Farrukh ('Port of Farrukh'), a coastal anchorage on the western Algerian littoral that served as a maritime outlet for Rustamid Tahert.",
-      "current_repo_state": {
-        "b_tarr": "Marsafarukh",
-        "b_tarr_direct": "Marsafarukh",
-        "b_tarr_hist": "Marsafarukh",
-        "b_origin": "Marsafarukh (constituent holding of Wahrân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://asjp.cerist.dz/en/downArticle/227/3/3/27384",
       "older_name_by_867": {
         "exists": false,
@@ -6194,18 +5356,11 @@
         {
           "form": "Arzao / Arzew",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber coastal toponym"
         }
       ],
       "etymology_analysis": "Berber toponym Arzao (modern Arzew), first recorded in 1068 AD by al-Bakri at the site of the ruined Roman port of Portus Magnus.",
-      "current_repo_state": {
-        "b_tarr": "Arschew",
-        "b_tarr_direct": "Arschew",
-        "b_tarr_hist": "Arschew",
-        "b_origin": "Arschew (constituent holding of Wahrân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arzew",
       "older_name_by_867": {
         "exists": true,
@@ -6242,18 +5397,11 @@
         {
           "form": "Tilimsan / Tlemsin",
           "language": "Berber (Zenata)",
+          "language_code": "ber",
           "translation": "springs / water sources (or telem + sin)"
         }
       ],
       "etymology_analysis": "Berber toponym Tilimsan ('springs'), emerging in the 8th-9th centuries alongside Agadir (790 AD) on the ruins of Roman Pomaria, later merged with Almoravid Tagrart (1082 AD).",
-      "current_repo_state": {
-        "b_tarr": "Tremissên",
-        "b_tarr_direct": "Tremissên",
-        "b_tarr_hist": "Tremissên",
-        "b_origin": "Tremissên (Tlemcen)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tlemcen",
       "older_name_by_867": {
         "exists": true,
@@ -6291,18 +5439,11 @@
         {
           "form": "Mu'askar",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "military camp / place where soldiers gather"
         }
       ],
       "etymology_analysis": "Arabic Mu'askar ('encampment / garrison', later Frenchified as Mascara), founded in the 10th century by the Banu Ifran.",
-      "current_repo_state": {
-        "b_tarr": "Muaskar",
-        "b_tarr_direct": "Muaskar",
-        "b_tarr_hist": "Muaskar",
-        "b_origin": "Muaskar (constituent holding of Tremissên)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mascara,_Algeria",
       "older_name_by_867": {
         "exists": false,
@@ -6337,23 +5478,17 @@
         {
           "form": "Qasr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "castle / fortified palace"
         },
         {
           "form": "Ibn Sinan",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "son of Sinan (personal name)"
         }
       ],
       "etymology_analysis": "Arabic compound Qasr Ibn Sinan ('Castle of Ibn Sinan'), located near Aïn Témouchent and attested by al-Bakri in 1068 AD.",
-      "current_repo_state": {
-        "b_tarr": "Tschasr-Ibn-Sinan",
-        "b_tarr_direct": "Tschasr-Ibn-Sinan",
-        "b_tarr_hist": "Tschasr-Ibn-Sinan",
-        "b_origin": "Tschasr-Ibn-Sinan (constituent holding of Tremissên)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/A%C3%AFn_T%C3%A9mouchent",
       "older_name_by_867": {
         "exists": false,
@@ -6388,23 +5523,17 @@
         {
           "form": "'Ayn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "spring / water source"
         },
         {
           "form": "Tekbalet",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Berber toponym"
         }
       ],
       "etymology_analysis": "Arabic-Berber compound 'Ayn Tekbalet ('Spring of Tekbalet'), a modern locality in northwestern Algeria known for its ancient alabaster/travertine quarries.",
-      "current_repo_state": {
-        "b_tarr": "Aintekbalet",
-        "b_tarr_direct": "Aintekbalet",
-        "b_tarr_hist": "Aintekbalet",
-        "b_origin": "Aintekbalet (constituent holding of Tremissên)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.oum.ox.ac.uk/corsi/stones/view/329.html",
       "older_name_by_867": {
         "exists": false,
@@ -6439,23 +5568,17 @@
         {
           "form": "Tafraoua",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "trough / basin"
         },
         {
           "form": "Sebdou",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "local Berber toponym"
         }
       ],
       "etymology_analysis": "Hyphenated pairing of Berber Tafraoua ('basin/trough') and Sebdou, two names for the same town in Tlemcen Province.",
-      "current_repo_state": {
-        "b_tarr": "Tafraoua-Sebdou",
-        "b_tarr_direct": "Tafraoua-Sebdou",
-        "b_tarr_hist": "Tafraoua-Sebdou",
-        "b_origin": "Tafraoua-Sebdou (constituent holding of Tremissên)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sebdou",
       "older_name_by_867": {
         "exists": false,
@@ -6490,18 +5613,11 @@
         {
           "form": "Wajda (Oujda)",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "toponym of the Angad plain (traditionally linked to Arabic wajad 'to find' or Berber root)"
         }
       ],
       "etymology_analysis": "Wajda (modern Oujda) in northeastern Morocco, founded in 994 AD by Ziri ibn Atiyya as a Zenata stronghold near the Algerian border.",
-      "current_repo_state": {
-        "b_tarr": "Wadschde",
-        "b_tarr_direct": "Wadschde",
-        "b_tarr_hist": "Wadschde",
-        "b_origin": "Wadschde (Wajda)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oujda",
       "older_name_by_867": {
         "exists": false,
@@ -6536,18 +5652,11 @@
         {
           "form": "Za / Saa",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "name of the Oued Za river"
         }
       ],
       "etymology_analysis": "Named after the Oued Za river (a tributary of the Moulouya) in eastern Morocco; the medieval fortified town of Madinat Za preceded modern Taourirt.",
-      "current_repo_state": {
-        "b_tarr": "Saa",
-        "b_tarr_direct": "Saa",
-        "b_tarr_hist": "Saa",
-        "b_origin": "Saa (constituent holding of Wadschde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://fr.wikipedia.org/wiki/Taourirt_(Maroc)",
       "older_name_by_867": {
         "exists": false,
@@ -6582,18 +5691,11 @@
         {
           "form": "Debdou",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "funnel (Amazigh topographic term)"
         }
       ],
       "etymology_analysis": "Berber toponym Debdou (glossed as 'funnel' in Amazigh), a town in eastern Morocco prominent from the Marinid era onward.",
-      "current_repo_state": {
-        "b_tarr": "Debdou",
-        "b_tarr_direct": "Debdou",
-        "b_tarr_hist": "Debdou",
-        "b_origin": "Debdou (constituent holding of Wadschde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.eurasiareview.com/09022023-debdou-the-moroccan-city-of-enlightened-judaism-analysis/",
       "older_name_by_867": {
         "exists": false,
@@ -6628,18 +5730,11 @@
         {
           "form": "Bilizma / Belezma",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "regional toponym of the Belezma plain and massif"
         }
       ],
       "etymology_analysis": "Berber-Arabic toponym Bilizma (Belezma) in the Aurès-Batna region, first documented by al-Ya'qubi in the late 9th century.",
-      "current_repo_state": {
-        "b_tarr": "Bilîsme",
-        "b_tarr_direct": "Bilîsme",
-        "b_tarr_hist": "Bilîsme",
-        "b_origin": "Bilîsme (Bilizma)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arab_migrations_to_the_Maghreb",
       "older_name_by_867": {
         "exists": true,
@@ -6676,18 +5771,11 @@
         {
           "form": "Bagai / Baghaya",
           "language": "Berber (Numidian)",
+          "language_code": "ber",
           "translation": "ancient Numidian-Berber toponym"
         }
       ],
       "etymology_analysis": "Arabic Baghaya is the direct phonetic continuation of ancient Numidian-Roman Bagai (Byzantine Bagaè), a major fortified city north of the Aurès Mountains.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bagai",
       "older_name_by_867": {
         "exists": false,
@@ -6722,18 +5810,11 @@
         {
           "form": "Biskra",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "Arabicized evolution of Roman-Berber Vescera"
         }
       ],
       "etymology_analysis": "Biskra evolved phonetically from ancient Roman-Berber Vescera (which remained in use through the 7th-century Battle of Vescera in 683 AD).",
-      "current_repo_state": {
-        "b_tarr": "Biskre",
-        "b_tarr_direct": "Biskre",
-        "b_tarr_hist": "Biskre",
-        "b_origin": "Biskre (Biskra)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Biskra",
       "older_name_by_867": {
         "exists": true,
@@ -6771,18 +5852,11 @@
         {
           "form": "Badias / Badis",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "ancient Berber oasis toponym (Latinized as Ad Badias)"
         }
       ],
       "etymology_analysis": "Arabic Badis (Bades) directly continues the ancient Berber-Roman frontier fort name Badias / Ad Badias in the eastern Zab.",
-      "current_repo_state": {
-        "b_tarr": "Badis",
-        "b_tarr_direct": "Badis",
-        "b_tarr_hist": "Badis",
-        "b_origin": "Badis (constituent holding of Biskre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%AF%D8%B3_(%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1)",
       "older_name_by_867": {
         "exists": false,
@@ -6817,23 +5891,17 @@
         {
           "form": "Sidi",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "my lord / saint (honorific)"
         },
         {
           "form": "Uqba",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "personal name (Uqba ibn Nafi)"
         }
       ],
       "etymology_analysis": "Arabic honorific toponym Sidi Uqba ('Lord/Saint Uqba'), commemorating the tomb and 686 AD mosque of Umayyad general Uqba ibn Nafi near Biskra.",
-      "current_repo_state": {
-        "b_tarr": "Sidi Uqba",
-        "b_tarr_direct": "Sidi Uqba",
-        "b_tarr_hist": "Sidi Uqba",
-        "b_origin": "Sidi Uqba (constituent holding of Biskre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sidi_Okba_Mosque",
       "older_name_by_867": {
         "exists": false,
@@ -6868,18 +5936,11 @@
         {
           "form": "Waghlana / Waghlanat",
           "language": "Berber",
+          "language_code": "ber",
           "translation": "Berber oasis toponym (modern Ourlal / Ourlana)"
         }
       ],
       "etymology_analysis": "Berber oasis toponym Waghlana (plural/feminine variant Waghlanat), attested in 11th-century Zirid/Hammadid-era history near Biskra.",
-      "current_repo_state": {
-        "b_tarr": "Waghlanat",
-        "b_tarr_direct": "Waghlanat",
-        "b_tarr_hist": "Waghlanat",
-        "b_origin": "Waghlanat (constituent holding of Biskre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Banu_Khazrun",
       "older_name_by_867": {
         "exists": false,
@@ -6914,18 +5975,11 @@
         {
           "form": "Tubna / Tobna",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "Arabicized form of ancient Thubunae"
         }
       ],
       "etymology_analysis": "Arabic Tubna (Tobna) derives from ancient Numidian-Roman Thubunae / Tubunae, serving as the early Islamic capital of the Zab.",
-      "current_repo_state": {
-        "b_tarr": "Hodne",
-        "b_tarr_direct": "Hodne",
-        "b_tarr_hist": "Hodne",
-        "b_origin": "Hodne (Hodna)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tobna",
       "older_name_by_867": {
         "exists": true,
@@ -6963,18 +6017,11 @@
         {
           "form": "al-Masila",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "watercourse / torrent bed"
         }
       ],
       "etymology_analysis": "Arabic al-Masila (modern M'Sila), founded c. 924 AD as a Fatimid stronghold in the western Hodna to replace older Tobna.",
-      "current_repo_state": {
-        "b_tarr": "Masila",
-        "b_tarr_direct": "Masila",
-        "b_tarr_hist": "Masila",
-        "b_origin": "Masila (constituent holding of Hodne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%27Sila,_Algeria",
       "older_name_by_867": {
         "exists": false,
@@ -7009,18 +6056,11 @@
         {
           "form": "Maqra / Magra",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "Arabicized form of ancient Macri"
         }
       ],
       "etymology_analysis": "Arabic Maqra (modern Magra) continues the ancient Roman-Berber settlement name Macri on the Hodna road.",
-      "current_repo_state": {
-        "b_tarr": "Magra",
-        "b_tarr_direct": "Magra",
-        "b_tarr_hist": "Magra",
-        "b_origin": "Magra (constituent holding of Hodne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Magra,_Algeria",
       "older_name_by_867": {
         "exists": true,
@@ -7057,18 +6097,11 @@
         {
           "form": "N'Gaous / Niqawus",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Arabicized Berber adaptation of ancient Nicives / Nicivibus"
         }
       ],
       "etymology_analysis": "Berber-Arabic N'Gaous (Niqawus) derives from the ancient Numidian-Roman city name Nicives / Nicivibus.",
-      "current_repo_state": {
-        "b_tarr": "Ngaous",
-        "b_tarr_direct": "Ngaous",
-        "b_tarr_hist": "Ngaous",
-        "b_origin": "Ngaous (constituent holding of Hodne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/N%27Gaous",
       "older_name_by_867": {
         "exists": true,

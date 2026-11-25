@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_wendish_empire",
     "scope": "e_wendish_empire (all baronies across k_esthonia and k_lithuania)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 104,
@@ -57,18 +64,11 @@
         {
           "form": "narva",
           "language": "Proto-Finnic / Veps",
+          "language_code": "fin",
           "translation": "threshold, rapids, waterfall (cf. Veps narvāne 'doorsill/rapid')"
         }
       ],
       "etymology_analysis": "Named after the Narva River (attested 1221 CE). The hydronym is most commonly linked by Finnic linguists (e.g., Lauri Kettunen) to a Finnic/Vepsian root narva meaning 'threshold' or 'rapids', referring to the Narva waterfalls; alternative hypotheses propose a Germanic (*narwaz 'narrow') or Slavic origin.",
-      "current_repo_state": {
-        "b_tarr": "Narwe",
-        "b_tarr_direct": "Narwe",
-        "b_tarr_hist": "Narwe",
-        "b_origin": "Narva (ancient river crossing settlement on the Narva River) (in-game: Narwe)",
-        "b_anachronism": "Constituent capital seat disambiguated from ancient Estonian stronghold Tarvanpää.",
-        "category": "capital_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Narva",
       "older_name_by_867": {
         "exists": false,
@@ -103,23 +103,17 @@
         {
           "form": "Wesen / Wisent",
           "language": "Middle Low German",
+          "language_code": "nds",
           "translation": "aurochs, European bison"
         },
         {
           "form": "bergh",
           "language": "Middle Low German",
+          "language_code": "nds",
           "translation": "hill, mountain, stronghold"
         }
       ],
       "etymology_analysis": "Middle Low German adaptation and partial calque of the Estonian hillfort name Tarvanpää ('aurochs's head', attested 1226 CE), combining wesen ('aurochs/bison') with bergh ('hill/fortress').",
-      "current_repo_state": {
-        "b_tarr": "Tarvanpää",
-        "b_tarr_direct": "Tarvanpää",
-        "b_tarr_hist": "Tarvanpää",
-        "b_origin": "Ancient Estonian stronghold Tarvanpää ('Bull's Head', attested 1226) (in-game: Tarvanpää)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rakvere",
       "older_name_by_867": {
         "exists": false,
@@ -154,23 +148,17 @@
         {
           "form": "põltsa / *põldus",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "field-rich, cultivated (from põld 'field')"
         },
         {
           "form": "maa",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "land, territory"
         }
       ],
       "etymology_analysis": "Estonian Põltsamaa derives from põld ('field', reconstructed *põldus / *põltoisa 'rich in fields') + maa ('land'), meaning 'land of fields'. Known in German as Oberpahlen ('upper Pahlen/pale') and in Russian chronicles as Polchev.",
-      "current_repo_state": {
-        "b_tarr": "Poltsamaa",
-        "b_tarr_direct": "Poltsamaa",
-        "b_tarr_hist": "Poltsamaa",
-        "b_origin": "Poltsamaa (constituent holding of Nârwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/P%C3%B5ltsamaa",
       "older_name_by_867": {
         "exists": false,
@@ -205,23 +193,17 @@
         {
           "form": "kure",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "crane (genitive of kurg) or large bird"
         },
         {
           "form": "saare",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "island (genitive of saar)"
         }
       ],
       "etymology_analysis": "Estonian Kuressaare combines kure ('crane', genitive of kurg) and saar ('island'), either from an older name of Saaremaa or as a folk reinterpretation of the eagle (German Arensburg, Latin arx aquilae) on the coat of arms of the Bishopric of Ösel-Wiek.",
-      "current_repo_state": {
-        "b_tarr": "Sâremâ",
-        "b_tarr_direct": "Sâremâ",
-        "b_tarr_hist": "Sâremâ",
-        "b_origin": "Sâremâ — Historical Option A seat of c_osel",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kuressaare",
       "older_name_by_867": {
         "exists": false,
@@ -256,23 +238,17 @@
         {
           "form": "Maasi",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "Maasi (local village name)"
         },
         {
           "form": "linn / linna",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "castle, fortress, stronghold"
         }
       ],
       "etymology_analysis": "Estonian Maasilinn(a) means 'fortress of Maasi' (from the nearby village of Maasi + linn 'fortress'). In German it was called Soneburg ('atonement/punishment castle') because it was built as a punitive stronghold after the St. George's Night Uprising (1343–1345 CE).",
-      "current_repo_state": {
-        "b_tarr": "Maasilinna",
-        "b_tarr_direct": "Maasilinna",
-        "b_tarr_hist": "Maasilinna",
-        "b_origin": "Maasilinna (constituent holding of Sâremâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Maasi_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -307,18 +283,11 @@
         {
           "form": "muhk / muhu",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "bump, mound, or boggy land (disputed; cf. Swedish Moon)"
         }
       ],
       "etymology_analysis": "Island name attested in 1227 CE as Mone. Linguists have connected Estonian Muhu to muhk ('mound/elevation') or muhu ('boggy ground'), or alternatively to the historical Swedish name Moon ('white sand', borrowed into German as Mohn/Moon).",
-      "current_repo_state": {
-        "b_tarr": "Moon",
-        "b_tarr_direct": "Moon",
-        "b_tarr_hist": "Moon",
-        "b_origin": "Moon (constituent holding of Sâremâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Muhu",
       "older_name_by_867": {
         "exists": false,
@@ -353,23 +322,17 @@
         {
           "form": "hiis / hiiu",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "sacred grove, burial site (later 'giant')"
         },
         {
           "form": "maa",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "land, island"
         }
       ],
       "etymology_analysis": "Estonian Hiiumaa combines hiis (genitive hiiu, originally 'sacred grove' or 'burial place', cf. Finnish Hiidenmaa) and maa ('land'). The older 1228 CE Latin/Germanic attestation Dageida (Swedish Dagö) reflects Old Gutnish Dagaiþ ('day isthmus').",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hiiumaa",
       "older_name_by_867": {
         "exists": false,
@@ -404,18 +367,11 @@
         {
           "form": "Revala / Rävala",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "name of the ancient Estonian coastal county (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Reval (Latin Revalia, Old Norse Rafala) is the German and Scandinavian name for Tallinn, taken from the surrounding ancient Estonian county of Revala (Rävala) after the 1219 CE Danish conquest. The Estonian name Tallinn derives from Taani-linna ('Danish castle').",
-      "current_repo_state": {
-        "b_tarr": "Lindanisa",
-        "b_tarr_direct": "Lindanisa",
-        "b_tarr_hist": "Lindanisa",
-        "b_origin": "Ancient Finnic/Estonian settlement Lindanisa (attested before 1219 Danish crusade fortress) (in-game: Lindanisa)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tallinn",
       "older_name_by_867": {
         "exists": false,
@@ -450,23 +406,17 @@
         {
           "form": "hari / harju",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "ridge, crest (cf. Finnish harju 'esker, ridge')"
         },
         {
           "form": "maa",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "land, region"
         }
       ],
       "etymology_analysis": "Ancient Estonian province name (Latin Harria, German Harrien). Most scholars connect Harju to Estonian (mäe)hari ('mountain/hill ridge', cf. Finnish harju 'ridge') + maa ('land').",
-      "current_repo_state": {
-        "b_tarr": "Harjumaa",
-        "b_tarr_direct": "Harjumaa",
-        "b_tarr_hist": "Harjumaa",
-        "b_origin": "Harjumaa (constituent holding of Rêwale)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Harju_County",
       "older_name_by_867": {
         "exists": false,
@@ -501,18 +451,11 @@
         {
           "form": "järv / järva",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "lake, wetland (loaned from Baltic *jaura 'marsh, boggy land')"
         }
       ],
       "etymology_analysis": "Ancient Estonian province name (Latin Jervia/Gerwia, German Jerwen). Derived from Estonian järv ('lake'), which Enn Tarvel traces to a Baltic loanword *jaura ('marshy/wetland area'), reflecting the region's historic bogs.",
-      "current_repo_state": {
-        "b_tarr": "Järva",
-        "b_tarr_direct": "Järva",
-        "b_tarr_hist": "Järva",
-        "b_origin": "Järva (constituent holding of Rêwale)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/J%C3%A4rva_County",
       "older_name_by_867": {
         "exists": false,
@@ -547,23 +490,17 @@
         {
           "form": "haab",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "aspen tree"
         },
         {
           "form": "salu",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "(forested) island, grove"
         }
       ],
       "etymology_analysis": "German and Swedish Hapsal is an adaptation of Estonian Haapsalu, compounded from haab ('aspen') and salu (archaically '(forested) island', modern 'grove'), meaning 'aspen grove/island'.",
-      "current_repo_state": {
-        "b_tarr": "Rîdale",
-        "b_tarr_direct": "Rîdale",
-        "b_tarr_hist": "Rîdale",
-        "b_origin": "Rîdale — Historical Option A seat of c_wiek",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Haapsalu",
       "older_name_by_867": {
         "exists": false,
@@ -598,18 +535,11 @@
         {
           "form": "Lihula / Leale",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "uncertain (possibly from liha or lehu 'mud', or an ancient hillfort name)"
         }
       ],
       "etymology_analysis": "Leal (1211 CE Leale) is the Germanized form of Estonian Lihula, an ancient Estonian hillfort and parish center whose etymology remains uncertain.",
-      "current_repo_state": {
-        "b_tarr": "Lihula",
-        "b_tarr_direct": "Lihula",
-        "b_tarr_hist": "Lihula",
-        "b_origin": "Lihula (constituent holding of Rîdale)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lihula",
       "older_name_by_867": {
         "exists": false,
@@ -644,23 +574,17 @@
         {
           "form": "tarvas",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "aurochs"
         },
         {
           "form": "-tu",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "toponymic suffix ('place abounding in')"
         }
       ],
       "etymology_analysis": "Estonian Tartu (and German Dorpat) evolved from ancient Estonian *Tarvatu (attested in Latin as Tarbatum/Darbete), meaning 'place abounding in aurochs' (tarvas + -tu). In 1030 CE, Yaroslav the Wise briefly named the fort Yuryev after his baptismal name.",
-      "current_repo_state": {
-        "b_tarr": "Tarbâte",
-        "b_tarr_direct": "Tarbâte",
-        "b_tarr_hist": "Tarbâte",
-        "b_origin": "Tarbâte — Historical Option A seat of c_dorpat",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tartu",
       "older_name_by_867": {
         "exists": false,
@@ -695,23 +619,17 @@
         {
           "form": "vastne / vahtsõ",
           "language": "South Estonian / Võro",
+          "language_code": "est",
           "translation": "new"
         },
         {
           "form": "liin / liina",
           "language": "South Estonian / Võro",
+          "language_code": "est",
           "translation": "castle, fortress, town"
         }
       ],
       "etymology_analysis": "South Estonian Vastseliina (Võro Vahtsõliina) literally means 'new castle', corresponding to German Neuhausen and Latin Novum castrum, distinguishing the 1342 CE fortress from older Kirumpää Castle.",
-      "current_repo_state": {
-        "b_tarr": "Vastseliina",
-        "b_tarr_direct": "Vastseliina",
-        "b_tarr_hist": "Vastseliina",
-        "b_origin": "Vastseliina (constituent holding of Tarbâte)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vastseliina",
       "older_name_by_867": {
         "exists": false,
@@ -746,18 +664,11 @@
         {
           "form": "Walko / Valga",
           "language": "Estonian / Finnic (uncertain)",
+          "language_code": "est",
           "translation": "uncertain (possibly 'white/light' or Slavic volok 'portage')"
         }
       ],
       "etymology_analysis": "Attested in 1286 CE as Walko (German Walk, Latvian Valka, Estonian Valga). The etymology is uncertain; proposals include a Finnic root valk- ('white/light'), Latvian valks ('stream'), or Russian volok ('boat portage').",
-      "current_repo_state": {
-        "b_tarr": "Walko",
-        "b_tarr_direct": "Walko",
-        "b_tarr_hist": "Walko",
-        "b_origin": "Walko (constituent holding of Tarbâte)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Valga,_Estonia",
       "older_name_by_867": {
         "exists": false,
@@ -792,18 +703,11 @@
         {
           "form": "Perona / Pärnu",
           "language": "Finnic / Pre-Finnic substrate (disputed)",
+          "language_code": "fin",
           "translation": "river name (cf. Veps pern 'steep riverbank' or Estonian pärn 'linden')"
         }
       ],
       "etymology_analysis": "Derived from the river name Perona (1260 CE, German Pernau). While folk etymology links it to Estonian pärn ('linden tree'), linguists also propose a pre-Finnic substrate hydronym, a Baltic origin, or Vepsian pern ('steep riverbank').",
-      "current_repo_state": {
-        "b_tarr": "Sakâle",
-        "b_tarr_direct": "Sakâle",
-        "b_tarr_hist": "Sakâle",
-        "b_origin": "Sakâle (Sakâle (in-game: Sakala (Livs))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/P%C3%A4rnu",
       "older_name_by_867": {
         "exists": false,
@@ -838,23 +742,17 @@
         {
           "form": "vili",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "grain, crop, fertility"
         },
         {
           "form": "-ndi",
           "language": "Estonian",
+          "language_code": "est",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Estonian Viljandi (early 13th-century Viliende, German Fellin) is derived from Estonian vili ('grain, crop, fruit') with the suffix -ndi. An alleged 1154 CE mention (FLMWS) in al-Idrisi is widely rejected by Estonian scholars.",
-      "current_repo_state": {
-        "b_tarr": "Fellin",
-        "b_tarr_direct": "Fellin",
-        "b_tarr_hist": "Fellin",
-        "b_origin": "Fellin (constituent holding of Sakâle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Viljandi",
       "older_name_by_867": {
         "exists": false,
@@ -889,23 +787,17 @@
         {
           "form": "aline / aliste",
           "language": "Estonian / Finnic",
+          "language_code": "est",
           "translation": "lower, low-lying"
         },
         {
           "form": "-kund / -gunde",
           "language": "Estonian / Finnic",
+          "language_code": "est",
           "translation": "district, parish, community"
         }
       ],
       "etymology_analysis": "Ancient Estonian parish (muinaskihelkond) in southern Sakala, recorded in 1211 CE as Alistegunde (modern Estonian Alistekund, later Halliste). Combines *aline ('lower') with the Finnic territorial suffix -kund ('district/parish').",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://et.wikipedia.org/wiki/Alistekund",
       "older_name_by_867": {
         "exists": false,
@@ -940,18 +832,11 @@
         {
           "form": "Rīja / Rie",
           "language": "Livonian / Latvian (disputed)",
+          "language_code": "est",
           "translation": "threshing barn, granary/warehouse (or Rīdzene stream / ringa 'loop')"
         }
       ],
       "etymology_analysis": "Founded in 1201 CE at an earlier Livonian trading port (portus antiquus). The name Riga most reliably derives from Livonian/Latvian rīja ('granary/warehouse' along the Daugava), or alternatively from the Rīdzene (Riege) tributary or Livonian ringa ('loop').",
-      "current_repo_state": {
-        "b_tarr": "Gauje",
-        "b_tarr_direct": "Metzepôle",
-        "b_tarr_hist": "Gauje",
-        "b_origin": "Gauje (Gauja (in-game: Metsepole (Vidzeme))",
-        "b_anachronism": "Vidzeme is a late medieval division ('Middle Land'). Ancient pre-867 reach is the river Gauja.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Riga",
       "older_name_by_867": {
         "exists": false,
@@ -986,23 +871,17 @@
         {
           "form": "lemb / leme",
           "language": "Livonian",
+          "language_code": "est",
           "translation": "broad, wide"
         },
         {
           "form": "sel / sele",
           "language": "Livonian",
+          "language_code": "est",
           "translation": "island/ridge in a forest swamp"
         }
       ],
       "etymology_analysis": "Livonian settlement name Lemisele (also Lembsele, German Lemsal/Lemsahl, modern Latvian Limbaži), meaning 'wide isle in a forest swamp' in Livonian.",
-      "current_repo_state": {
-        "b_tarr": "Lemsal",
-        "b_tarr_direct": "Lemsal",
-        "b_tarr_hist": "Lemsal",
-        "b_origin": "Lemsal (constituent holding of Gauje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Limba%C5%BEi",
       "older_name_by_867": {
         "exists": false,
@@ -1037,23 +916,17 @@
         {
           "form": "Salaca",
           "language": "Latvian (from Livonian Saletsa)",
+          "language_code": "lav",
           "translation": "Salaca River"
         },
         {
           "form": "grīva",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "river mouth, estuary"
         }
       ],
       "etymology_analysis": "Latvian Salacgrīva literally means 'mouth of the Salaca River' (German Salismünde), combining the river name Salaca (from Livonian Saletsa) with Latvian grīva ('river mouth').",
-      "current_repo_state": {
-        "b_tarr": "Salatzi",
-        "b_tarr_direct": "Salatzi",
-        "b_tarr_hist": "Salatzi",
-        "b_origin": "Salatzi (constituent holding of Gauje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salacgr%C4%ABva",
       "older_name_by_867": {
         "exists": false,
@@ -1088,23 +961,17 @@
         {
           "form": "grob-",
           "language": "Curonian / Baltic",
+          "language_code": "lav",
           "translation": "hornbeam (cf. Lithuanian skroblas) or ditch/trench"
         },
         {
           "form": "-iņa",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "toponymic/diminutive suffix"
         }
       ],
       "etymology_analysis": "Germanized as Grobin from a Curonian/Baltic root, often linked to Baltic *grab-/*skrobl- ('hornbeam') or *grāvis ('ditch, moat'), adapted into Latvian as Grobiņa.",
-      "current_repo_state": {
-        "b_tarr": "Sêburch",
-        "b_tarr_direct": "Grôbin",
-        "b_tarr_hist": "Sêburch",
-        "b_origin": "Sêburch (Sêburch (in-game: Grobin))",
-        "b_anachronism": "Resolved via verified historical center Sêburch documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Grobi%C5%86a",
       "older_name_by_867": {
         "exists": true,
@@ -1141,23 +1008,17 @@
         {
           "form": "band-",
           "language": "Curonian / Baltic",
+          "language_code": "lav",
           "translation": "herd, cattle, or allotted plot of land (cf. Latvian banda)"
         },
         {
           "form": "-ava",
           "language": "Baltic",
+          "language_code": "prg",
           "translation": "territorial/locative suffix"
         }
       ],
       "etymology_analysis": "Curonian regional name (Latinized as Bandowe) derived from Baltic *banda ('herd, cattle' or 'allotted land') with the Baltic toponymic suffix -ava.",
-      "current_repo_state": {
-        "b_tarr": "Bandava",
-        "b_tarr_direct": "Bandava",
-        "b_tarr_hist": "Bandava",
-        "b_origin": "Bandava (constituent holding of Sêburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bandava",
       "older_name_by_867": {
         "exists": false,
@@ -1192,23 +1053,17 @@
         {
           "form": "duvi / donis",
           "language": "Curonian",
+          "language_code": "lav",
           "translation": "two (or 'gift / sacred')"
         },
         {
           "form": "ezars / azaran",
           "language": "Curonian",
+          "language_code": "lav",
           "translation": "lake (or zars 'branch')"
         }
       ],
       "etymology_analysis": "Curonian land name (Dovsare, Duizare), analyzed by Kazimieras Būga as Curonian *duvi + *ezars ('two lakes' or 'branched lake', referring to Lake Pape) or West Baltic *donis + *azaran ('sacred/gift lake').",
-      "current_repo_state": {
-        "b_tarr": "Duvzare",
-        "b_tarr_direct": "Duvzare",
-        "b_tarr_hist": "Duvzare",
-        "b_origin": "Duvzare (constituent holding of Sêburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://lt.wikipedia.org/wiki/Duvzar%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -1243,23 +1098,17 @@
         {
           "form": "cekl- / kekl-",
           "language": "Curonian",
+          "language_code": "lav",
           "translation": "clearing, scrubland, or corner/region (uncertain Baltic root)"
         },
         {
           "form": "-is",
           "language": "Curonian / Baltic",
+          "language_code": "lav",
           "translation": "masculine noun ending"
         }
       ],
       "etymology_analysis": "Curonian regional name (Latin: Ceclis; Lithuanian: Ceklis / Keklys) of Baltic origin, first recorded in 1252–1253 CE partition acts of southern Courland.",
-      "current_repo_state": {
-        "b_tarr": "Ceklis",
-        "b_tarr_direct": "Ceklis",
-        "b_tarr_hist": "Ceklis",
-        "b_origin": "Ceklis (constituent holding of Sêburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://lt.wikipedia.org/wiki/Ceklis",
       "older_name_by_867": {
         "exists": false,
@@ -1294,23 +1143,17 @@
         {
           "form": "sēļ-",
           "language": "Latvian / Selonian",
+          "language_code": "lav",
           "translation": "Selonians (Baltic tribe)"
         },
         {
           "form": "pils",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "castle, hillfort"
         }
       ],
       "etymology_analysis": "Compound of the ethnonym Sēļi (Selonians) and Latvian pils ('castle, hillfort'), meaning 'castle of the Selonians' (German: Selburg).",
-      "current_repo_state": {
-        "b_tarr": "Sêlônjen",
-        "b_tarr_direct": "Sêlpils",
-        "b_tarr_hist": "Sêlônjen",
-        "b_origin": "Sêlônjen (Sêlônjen (in-game: Selpils))",
-        "b_anachronism": "Resolved via verified historical center Sêlônjen documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/S%C4%93lpils_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -1345,23 +1188,17 @@
         {
           "form": "akn-",
           "language": "Baltic",
+          "language_code": "prg",
           "translation": "hydronymic root (cf. Lithuanian Aknysta)"
         },
         {
           "form": "-īste / -ysta",
           "language": "Baltic",
+          "language_code": "prg",
           "translation": "hydronymic/toponymic suffix"
         }
       ],
       "etymology_analysis": "Baltic toponym (Latvian Aknīste, Lithuanian Aknysta, German Oknist) derived from a local Baltic hydronym.",
-      "current_repo_state": {
-        "b_tarr": "Oknist",
-        "b_tarr_direct": "Oknist",
-        "b_tarr_hist": "Oknist",
-        "b_origin": "Oknist (constituent holding of Sêlônjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Akn%C4%ABste",
       "older_name_by_867": {
         "exists": false,
@@ -1396,23 +1233,17 @@
         {
           "form": "pilt-",
           "language": "Baltic / Livonian",
+          "language_code": "prg",
           "translation": "earthwork, embankment, or castle (cf. Baltic *pil- 'fort')"
         },
         {
           "form": "-ene",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Toponym (Latvian Piltene, Livonian Piltõn, German Pilten) associated with Baltic *pil- ('fort, castle, earthwork') or Finnic/Livonian coastal trading-post terminology.",
-      "current_repo_state": {
-        "b_tarr": "Wanemâne",
-        "b_tarr_direct": "Wanemâne",
-        "b_tarr_hist": "Wanemâne",
-        "b_origin": "Wanemâne (Wanemâne (in-game: Vanemane))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Piltene",
       "older_name_by_867": {
         "exists": false,
@@ -1447,23 +1278,17 @@
         {
           "form": "dund- / don-",
           "language": "Livonian / Curonian",
+          "language_code": "est",
           "translation": "reed, marshy corner, or Finnic/Baltic root"
         },
         {
           "form": "-aga / -ange",
           "language": "Curonian / Livonian",
+          "language_code": "lav",
           "translation": "locative/toponymic suffix"
         }
       ],
       "etymology_analysis": "First attested in 1245 CE as Donedange (Livonian: Dūoņig; German: Dondangen), reflecting Curonian-Livonian contact in northern Courland.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://lv.wikipedia.org/wiki/Dundaga",
       "older_name_by_867": {
         "exists": false,
@@ -1498,23 +1323,17 @@
         {
           "form": "kand-",
           "language": "Curonian / Finnic",
+          "language_code": "lav",
           "translation": "stump, edge, or bend (cf. Baltic *kand- / Livonian kāndav)"
         },
         {
           "form": "-ava",
           "language": "Baltic",
+          "language_code": "prg",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Attested in 1230 CE as villa Candowe (German: Kandau, Livonian: Kāndav), a Curonian hillfort center in Vanema formed with the Baltic suffix -ava.",
-      "current_repo_state": {
-        "b_tarr": "Kandouwe",
-        "b_tarr_direct": "Kandouwe",
-        "b_tarr_hist": "Kandouwe",
-        "b_origin": "Ancient Curonian hillfort Candeve (attested 1230 in treaty of Balduin von Alna) (in-game: Kandava)",
-        "b_anachronism": "Authentic Curonian hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kandava",
       "older_name_by_867": {
         "exists": false,
@@ -1549,23 +1368,17 @@
         {
           "form": "Ike-",
           "language": "Livonian",
+          "language_code": "est",
           "translation": "personal name Ike (meaning 'age, lifetime')"
         },
         {
           "form": "-scola / -kīla",
           "language": "Livonian",
+          "language_code": "est",
           "translation": "ford/islet (or 'village' in older folk etymology)"
         }
       ],
       "etymology_analysis": "Germanized as Üxküll (modern Latvian Ikšķile) from Livonian Ykescola/Ykescole. Urmas Sutrop derives it from a Livonian term meaning the Daugava ford or islet belonging to the son of local ruler Ike (rejecting the older folk etymology ikš-ķile 'one village').",
-      "current_repo_state": {
-        "b_tarr": "Semgallen",
-        "b_tarr_direct": "Semgallen",
-        "b_tarr_hist": "Semgallen",
-        "b_origin": "Semgallen (Semgallen (in-game: Semigallia))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ik%C5%A1%C4%B7ile",
       "older_name_by_867": {
         "exists": false,
@@ -1600,23 +1413,17 @@
         {
           "form": "duob-",
           "language": "Semigallian / Baltic",
+          "language_code": "lav",
           "translation": "pit, hollow, delve"
         },
         {
           "form": "-ele / -elene",
           "language": "Semigallian / Baltic",
+          "language_code": "lav",
           "translation": "diminutive/locative suffix ('dimple, dip')"
         }
       ],
       "etymology_analysis": "Reconstructed as Semigallian *Dobelene (German: Doblen), derived from Baltic duobe ('pit, hollow') and duobele ('dip, dimple'), meaning a settlement in a hollow or depression.",
-      "current_repo_state": {
-        "b_tarr": "Dobeln",
-        "b_tarr_direct": "Dobeln",
-        "b_tarr_hist": "Dobeln",
-        "b_origin": "Dobeln (constituent holding of Semgallen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dobele",
       "older_name_by_867": {
         "exists": false,
@@ -1651,23 +1458,17 @@
         {
           "form": "mit- / mīt",
           "language": "Latvian / Middle Low German",
+          "language_code": "lav",
           "translation": "to exchange/trade (or German Mitte 'middle')"
         },
         {
           "form": "-au / -ava",
           "language": "Middle Low German / Latvian",
+          "language_code": "nds",
           "translation": "meadow/riverbank (Aue) or toponymic suffix"
         }
       ],
       "etymology_analysis": "German name Mitau (used until 1917 CE) is explained either from Latvian mīt ('to trade/exchange', i.e. trading place) or German Mitte in der Aue ('middle of the Aa/Lielupe river-meadow'); the modern Latvian name Jelgava derives from Livonian jālgab ('town on the river').",
-      "current_repo_state": {
-        "b_tarr": "Jêlgawa",
-        "b_tarr_direct": "Jêlgawa",
-        "b_tarr_hist": "Jêlgawa",
-        "b_origin": "Ancient Semigallian Lielupe river crossing (replacing 1265 Livonian castle Mitau) (in-game: Mitau)",
-        "b_anachronism": "1265 Livonian castle Mitau fails Burden of Proof on Antiquity; restored to native Jelgava.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jelgava",
       "older_name_by_867": {
         "exists": false,
@@ -1702,23 +1503,17 @@
         {
           "form": "bausk-",
           "language": "Latvian / Semigallian",
+          "language_code": "lav",
           "translation": "poor meadow or swelling/hillock (or German Bausch)"
         },
         {
           "form": "-a",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "feminine noun ending"
         }
       ],
       "etymology_analysis": "First attested with the 1443 CE Livonian Order castle (German: Bauske). Linguist Jānis Endzelīns linked Latvian bauska to an archaic word for a poor/marshy meadow, while other hypotheses connect it to German Bausch ('bend, hillock').",
-      "current_repo_state": {
-        "b_tarr": "Bôwse",
-        "b_tarr_direct": "Bôwse",
-        "b_tarr_hist": "Bôwse",
-        "b_origin": "Ancient Semigallian Mūša/Mēmele river confluence (replacing 1443 Livonian castle Bauska) (in-game: Bauska)",
-        "b_anachronism": "1443 Livonian castle Bauska fails Burden of Proof on Antiquity; restored to native Semigallian stem.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bauska",
       "older_name_by_867": {
         "exists": false,
@@ -1753,23 +1548,17 @@
         {
           "form": "neuen-",
           "language": "German",
+          "language_code": "deu",
           "translation": "new"
         },
         {
           "form": "-burg",
           "language": "German",
+          "language_code": "deu",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "Middle Low German Nuwenburg / High German Neuenburg ('new castle'), built by the Livonian Order in the late 14th century CE and calqued into Latvian as Jaunpils ('new castle').",
-      "current_repo_state": {
-        "b_tarr": "Jaunepel",
-        "b_tarr_direct": "Jaunepel",
-        "b_tarr_hist": "Jaunepel",
-        "b_origin": "Curonian hillfort Jaunpils (replacing 14th-century Livonian castle Neuenburg) (in-game: Neuenburg)",
-        "b_anachronism": "14th-century Livonian castle Neuenburg fails Burden of Proof on Antiquity; restored to Curonian hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jaunpils_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -1804,23 +1593,17 @@
         {
           "form": "olūksn-",
           "language": "Latgalian",
+          "language_code": "lav",
           "translation": "forest spring, brook"
         },
         {
           "form": "-e",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "feminine noun ending"
         }
       ],
       "etymology_analysis": "Derived from the Latgalian word olūksna ('spring in a forest'), attested in 1284 CE in East Slavic as Olysta/Alyst; later renamed Marienburg by the Livonian Order in 1342 CE.",
-      "current_repo_state": {
-        "b_tarr": "Alûksne",
-        "b_tarr_direct": "Alûksne",
-        "b_tarr_hist": "Alûksne",
-        "b_origin": "Alûksne — Historical Option A seat of c_aluksne",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al%C5%ABksne",
       "older_name_by_867": {
         "exists": false,
@@ -1855,23 +1638,17 @@
         {
           "form": "gulb-",
           "language": "Latvian / Latgalian",
+          "language_code": "lav",
           "translation": "swan (gulbis)"
         },
         {
           "form": "-ene",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Latgalian/Latvian toponym (attested as Gulbana in 1224 CE) derived from gulbis ('swan'), which was later translated into German as Schwanenburg ('swan castle') when the Archbishop of Riga built a stone castle in 1340 CE.",
-      "current_repo_state": {
-        "b_tarr": "Schwanenburch",
-        "b_tarr_direct": "Schwanenburch",
-        "b_tarr_hist": "Schwanenburch",
-        "b_origin": "Schwanenburch (constituent holding of Alûksne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gulbene",
       "older_name_by_867": {
         "exists": false,
@@ -1906,23 +1683,17 @@
         {
           "form": "gers- / gerc-",
           "language": "Latgalian / East Slavic",
+          "language_code": "lav",
           "translation": "fortified town/citadel (cf. Slavic *gorodec or Baltic root)"
         },
         {
           "form": "-ika",
           "language": "Latvian / Latinized",
+          "language_code": "lav",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Medieval Latgalian principality and hillfort attested as Gerzika/Gercike in 1203 CE (Old East Slavic Герсике), variously linked to Baltic roots or a Slavic adaptation *Gorodishche/*Zargrad.",
-      "current_repo_state": {
-        "b_tarr": "Gêrsike",
-        "b_tarr_direct": "Gêrsike",
-        "b_tarr_hist": "Gêrsike",
-        "b_origin": "Gêrsike (Gersika / Gêrsike (in-game: Jersika))",
-        "b_anachronism": "Gersika (Jersika) on the Daugava was the ancient Latgalian hillfort documented in the Livonian Chronicle. Resolved to Gêrsike.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Principality_of_Jersika",
       "older_name_by_867": {
         "exists": false,
@@ -1957,23 +1728,17 @@
         {
           "form": "Jēkab-",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "Jacob (personal name of Duke Jacob Kettler)"
         },
         {
           "form": "-pils",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "castle, town"
         }
       ],
       "etymology_analysis": "Literally 'Castle/Town of Jacob' (originally German Jakobstadt / Latvian Jēkabmiests), named in 1670 CE after Duke Jacob Kettler of Courland.",
-      "current_repo_state": {
-        "b_tarr": "Sêlburch",
-        "b_tarr_direct": "Sêlburch",
-        "b_tarr_hist": "Sêlburch",
-        "b_origin": "Ancient Selonian Daugava crossing and hillfort Sēlpils (replacing 1670 town Jakobstadt) (in-game: Jekabpils)",
-        "b_anachronism": "1670 ducal town Jakobstadt fails Burden of Proof on Antiquity; restored to ancient Selonian Sēlpils.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/J%C4%93kabpils",
       "older_name_by_867": {
         "exists": false,
@@ -2008,23 +1773,17 @@
         {
           "form": "Daugav-",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "Daugava River"
         },
         {
           "form": "-pils",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "castle, fort"
         }
       ],
       "etymology_analysis": "Latvian compound 'Daugava Castle' (from the Daugava River + pils 'castle'), calquing the 1275 CE German name Dünaburg / Dinaburg ('Düna/Daugava Castle').",
-      "current_repo_state": {
-        "b_tarr": "Dôugowe",
-        "b_tarr_direct": "Dôugowe",
-        "b_tarr_hist": "Dôugowe",
-        "b_origin": "Daugava River basin (pre-867 Baltic hydronym, replacing 1275 Livonian Dinaburg castle) (in-game: Dôugowe)",
-        "b_anachronism": "Dinaburg castle built in 1275 by Livonian Order Master Ernst von Ratzeburg; ancient Latgalian principality seat was Jersika. Resolved via Option B to the ancient Daugava River hydronym (Dôugowe).",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Daugavpils",
       "older_name_by_867": {
         "exists": false,
@@ -2059,23 +1818,17 @@
         {
           "form": "rēz-",
           "language": "Latgalian / Baltic",
+          "language_code": "lav",
           "translation": "cut, channel, or stream (from the Rēzekne River)"
         },
         {
           "form": "-ekne",
           "language": "Latgalian / Latvian",
+          "language_code": "lav",
           "translation": "hydronymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the Rēzekne River valley (Latgalian: Rēzne), first documented in 1285 CE (German: Rositten, Polish: Rzeżyca).",
-      "current_repo_state": {
-        "b_tarr": "Rêsne",
-        "b_tarr_direct": "Rêsne",
-        "b_tarr_hist": "Rêsne",
-        "b_origin": "Ancient Latgalian Rēzekne hillfort on the Rēzekne river (replacing 1285 Livonian castle Rositten) (in-game: Rezekne)",
-        "b_anachronism": "1285 Livonian castle Rositten fails Burden of Proof on Antiquity; restored to native Latgalian hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/R%C4%93zekne",
       "older_name_by_867": {
         "exists": false,
@@ -2110,23 +1863,17 @@
         {
           "form": "kuke- / kok-",
           "language": "Latgalian / Selonian",
+          "language_code": "lav",
           "translation": "tree, wood, or bend (or river name)"
         },
         {
           "form": "-nois / -nese",
           "language": "Latgalian / Livonian",
+          "language_code": "lav",
           "translation": "headland, cape (cf. Livonian *nīna / Baltic *-nese)"
         }
       ],
       "etymology_analysis": "Latgalian and Selonian settlement originally attested as Kukenois in 1205 CE, Germanized as Kokenhusen and modernized in Latvian as Koknese.",
-      "current_repo_state": {
-        "b_tarr": "Kokenhûsen",
-        "b_tarr_direct": "Kokenhûsen",
-        "b_tarr_hist": "Kokenhûsen",
-        "b_origin": "Kokenhûsen (Kokenhûsen (in-game: Kokenois))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Koknese",
       "older_name_by_867": {
         "exists": false,
@@ -2161,23 +1908,17 @@
         {
           "form": "cesv- / cess-",
           "language": "Latgalian",
+          "language_code": "lav",
           "translation": "Baltic root (possibly personal or hydronymic)"
         },
         {
           "form": "-aine / -owe",
           "language": "Latvian / Latgalian",
+          "language_code": "lav",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Ancient Latgalian hillfort attested in 1209 CE as Urbs Zcessowe (German: Seßwegen, modern Latvian: Cesvaine).",
-      "current_repo_state": {
-        "b_tarr": "Sessouwe",
-        "b_tarr_direct": "Sessouwe",
-        "b_tarr_hist": "Sessouwe",
-        "b_origin": "Ancient Latgalian hillfort Cessowe (attested 1209) (replacing Sesswegen) (in-game: Cesvaine)",
-        "b_anachronism": "Authentic 1209 Latgalian hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cesvaine",
       "older_name_by_867": {
         "exists": false,
@@ -2212,23 +1953,17 @@
         {
           "form": "lenne- / liel-",
           "language": "Baltic / German",
+          "language_code": "prg",
           "translation": "broad, great (or Baltic *lēn- / *liel-)"
         },
         {
           "form": "-warden / -vārde",
           "language": "German / Baltic",
+          "language_code": "deu",
           "translation": "guard, ford, or enclosure (cf. Latvian vārti 'gate')"
         }
       ],
       "etymology_analysis": "Attested in 1201 CE as Lennewarden in the Chronicle of Henry of Livonia, a Germanized form of the local Baltic/Livonian Daugava hillfort name (modern Latvian: Lielvārde).",
-      "current_repo_state": {
-        "b_tarr": "Lênewarde",
-        "b_tarr_direct": "Lênewarde",
-        "b_tarr_hist": "Lênewarde",
-        "b_origin": "Ancient Livonian Daugava hillfort Lielvārde (in-game: Lennewarden)",
-        "b_anachronism": "Authentic ancient Livonian Daugava hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lielv%C4%81rde",
       "older_name_by_867": {
         "exists": false,
@@ -2263,23 +1998,17 @@
         {
           "form": "Waldemar / Vladimir",
           "language": "Old German / East Slavic",
+          "language_code": "deu",
           "translation": "personal name ('famous ruler')"
         },
         {
           "form": "-a",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "feminine toponymic ending"
         }
       ],
       "etymology_analysis": "Latvian adaptation of German Wolmar / Waldemer (East Slavic Volodimirec), derived from the personal name of either Prince Vladimir Mstislavich of Pskov (early 13th century CE) or King Valdemar II of Denmark.",
-      "current_repo_state": {
-        "b_tarr": "Tâlawe",
-        "b_tarr_direct": "Tâlawe",
-        "b_tarr_hist": "Tâlawe",
-        "b_origin": "Tâlawe (Talava)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Valmiera",
       "older_name_by_867": {
         "exists": false,
@@ -2314,23 +2043,17 @@
         {
           "form": "Wend-",
           "language": "German / Livonian",
+          "language_code": "deu",
           "translation": "Vends (tribe that settled at Riekstu Hill)"
         },
         {
           "form": "-en",
           "language": "German",
+          "language_code": "deu",
           "translation": "dative plural locative suffix"
         }
       ],
       "etymology_analysis": "German Wenden (Livonian: Venden), named after the Vends who inhabited the hillfort at Riekstu Hill in the 11th–12th centuries CE; the Latvian name Cēsis has an independent Baltic origin.",
-      "current_repo_state": {
-        "b_tarr": "Wenden",
-        "b_tarr_direct": "Wenden",
-        "b_tarr_hist": "Wenden",
-        "b_origin": "Wenden (constituent holding of Tâlawe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/C%C4%93sis",
       "older_name_by_867": {
         "exists": false,
@@ -2365,23 +2088,17 @@
         {
           "form": "raun-",
           "language": "Latvian / Baltic",
+          "language_code": "lav",
           "translation": "Rauna River (cf. Baltic *raun- 'stream, furrow')"
         },
         {
           "form": "-a",
           "language": "Latvian",
+          "language_code": "lav",
           "translation": "feminine noun ending"
         }
       ],
       "etymology_analysis": "Named after the Rauna River, around which the medieval archbishopric castle of Rownenborgh / Ronneburg was built.",
-      "current_repo_state": {
-        "b_tarr": "Rôwne",
-        "b_tarr_direct": "Rôwne",
-        "b_tarr_hist": "Rôwne",
-        "b_origin": "Ancient Latgalian Rauna river hillfort (replacing 1262 Archbishop castle Ronneburg) (in-game: Rauna)",
-        "b_anachronism": "1262 Archbishop castle Ronneburg fails Burden of Proof on Antiquity; restored to native Rauna hillfort.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://lv.wikipedia.org/wiki/Rauna",
       "older_name_by_867": {
         "exists": false,
@@ -2416,23 +2133,17 @@
         {
           "form": "Braslav-",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "personal name *Braslavъ (Bryachislav)"
         },
         {
           "form": "-jь",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "possessive anthroponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the East Slavic personal name *Braslavъ (associated with Bryachislav of Polotsk) with the possessive suffix -jь, yielding Braslaw/Braslav.",
-      "current_repo_state": {
-        "b_tarr": "Bratzlâw",
-        "b_tarr_direct": "Bratzlâw",
-        "b_tarr_hist": "Bratzlâw",
-        "b_origin": "Bratzlâw — Historical Option A seat of c_braslau",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Braslaw",
       "older_name_by_867": {
         "exists": false,
@@ -2467,23 +2178,17 @@
         {
           "form": "ut-",
           "language": "Lithuanian / Baltic",
+          "language_code": "lit",
           "translation": "hydronymic root (cf. Utenėlė / Utena stream)"
         },
         {
           "form": "-ena",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "hydronymic/toponymic suffix"
         }
       ],
       "etymology_analysis": "Lithuanian toponym derived from a local Baltic hydronym (the Utena / Utenėlė stream), first attested in 1261 CE.",
-      "current_repo_state": {
-        "b_tarr": "Utena",
-        "b_tarr_direct": "Utena",
-        "b_tarr_hist": "Utena",
-        "b_origin": "Utena (constituent holding of Braslouwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Utena,_Lithuania",
       "older_name_by_867": {
         "exists": false,
@@ -2518,23 +2223,17 @@
         {
           "form": "kern-",
           "language": "Lithuanian / Baltic",
+          "language_code": "lit",
           "translation": "bushy/scrubby place or swamp-edge (cf. Lithuanian kerna)"
         },
         {
           "form": "-avė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Lithuanian toponym (attested as Kernowe in 1279 CE), formed from a Baltic root (cf. Lithuanian kerna 'thicket, scrub') with the suffix -avė.",
-      "current_repo_state": {
-        "b_tarr": "Kernâwe",
-        "b_tarr_direct": "Kernâwe",
-        "b_tarr_hist": "Kernâwe",
-        "b_origin": "Kernâwe (Kernâwe (in-game: Kernave))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kernav%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -2569,23 +2268,17 @@
         {
           "form": "viln-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "wave, surge (vilnis, via the Vilnia River)"
         },
         {
           "form": "-ius",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "masculine noun ending"
         }
       ],
       "etymology_analysis": "Masculine oikonym derived from the feminine hydronym of the Vilnia River, itself from Lithuanian vilnis ('wave, surge').",
-      "current_repo_state": {
-        "b_tarr": "Wîlnje",
-        "b_tarr_direct": "Wîlnje",
-        "b_tarr_hist": "Wîlnje",
-        "b_origin": "Vilnia River basin (pre-867 Baltic/Slavic hydronym, replacing 1323 capital of Vilnius) (in-game: Wîlnje)",
-        "b_anachronism": "First attested in 1323 in the letters of Grand Duke Gediminas; ancient regional capitals were Kernavė and Voruta. Resolved via Option B to the pre-867 Vilnia River hydronym (Wîlnje).",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vilnius",
       "older_name_by_867": {
         "exists": false,
@@ -2620,23 +2313,17 @@
         {
           "form": "vilk-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "wolf (vilkas)"
         },
         {
           "form": "-mergė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "to submerge/dip (verb stem merg-/merk-; folk-etymologized as merga 'maiden')"
         }
       ],
       "etymology_analysis": "Derived from the Vilkmergė (now Vilkmergėlė) River hydronym, combining vilk- ('wolf') with the verb stem merg-/merk- ('to submerge, dip'), later folk-etymologized as 'wolf-maiden' and renamed Ukmergė in the 20th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Vilkmerge",
-        "b_tarr_direct": "Vilkmerge",
-        "b_tarr_hist": "Vilkmerge",
-        "b_origin": "Vilkmerge (constituent holding of Kernâwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ukmerg%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -2671,23 +2358,17 @@
         {
           "form": "krev-",
           "language": "East Slavic / Baltic",
+          "language_code": "sla",
           "translation": "Krivichs (East Slavic tribe) or Baltic *kreivas ('crooked')"
         },
         {
           "form": "-a",
           "language": "Belarusian / Lithuanian",
+          "language_code": "bel",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Toponym (Belarusian Крэва, Lithuanian Krėva, Polish Krewo) derived from the ethnonym of the Krivichs tribe (or a Baltic root).",
-      "current_repo_state": {
-        "b_tarr": "Kreva",
-        "b_tarr_direct": "Kreva",
-        "b_tarr_hist": "Kreva",
-        "b_origin": "Kreva (constituent holding of Kernâwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kreva",
       "older_name_by_867": {
         "exists": false,
@@ -2722,23 +2403,17 @@
         {
           "form": "trak-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "glade, forest clearing (trakas)"
         },
         {
           "form": "-ai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "masculine plural toponymic ending"
         }
       ],
       "etymology_analysis": "Plural of Lithuanian trakas ('glade, forest clearing'), first attested in 1337 CE as Tracken.",
-      "current_repo_state": {
-        "b_tarr": "Merkinê",
-        "b_tarr_direct": "Merkinê",
-        "b_tarr_hist": "Merkinê",
-        "b_origin": "Merkinê — Historical Option A seat of c_trakai",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Trakai",
       "older_name_by_867": {
         "exists": false,
@@ -2773,23 +2448,17 @@
         {
           "form": "kaun-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "fighting/pugnacious (kaunus) or low/marshy place"
         },
         {
           "form": "-as",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "masculine noun ending"
         }
       ],
       "etymology_analysis": "Lithuanian toponym first attested in 1361 CE, most commonly derived from a hypothesized personal name *Kaunas (related to kaunus 'who likes to fight') or a Baltic topographic root.",
-      "current_repo_state": {
-        "b_tarr": "Santake",
-        "b_tarr_direct": "Santake",
-        "b_tarr_hist": "Santake",
-        "b_origin": "Santaka (sacred confluence of the Nemunas and Neris rivers with Rule 2 final vowel reduction, replacing 1361 Kaunas) (in-game: Santake)",
-        "b_anachronism": "First attested in 1361 in the Teutonic chronicle Chronica nova Prutenica. Restored to the ancient Baltic sacred confluence site Santake.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kaunas",
       "older_name_by_867": {
         "exists": false,
@@ -2824,23 +2493,17 @@
         {
           "form": "merk-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "to soak, steep (merkti, via the Merkys River)"
         },
         {
           "form": "-inė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from the Merkys River hydronym (from Lithuanian merkti 'to soak') with the toponymic suffix -inė.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Merkin%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -2875,23 +2538,17 @@
         {
           "form": "alyt- / alit-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "hydronymic stem from the Alytupis stream"
         },
         {
           "form": "-en / -us",
           "language": "German / Lithuanian",
+          "language_code": "deu",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Germanized form Aliten (Polish: Olita, Lithuanian: Alytus) derived from the local Lithuanian hydronym Alytupis.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alytus",
       "older_name_by_867": {
         "exists": false,
@@ -2926,23 +2583,17 @@
         {
           "form": "valk-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "puddle, marshy stream (valka)"
         },
         {
           "form": "-ininkai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "plural inhabitant/agentive suffix ('dwellers by the marsh/stream')"
         }
       ],
       "etymology_analysis": "Lithuanian inhabitant-type toponym (Polish: Olkieniki) formed with the suffix -ininkai from valka ('small marshy stream, puddle'), denoting people living by the stream/island.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Valkininkai",
       "older_name_by_867": {
         "exists": false,
@@ -2977,28 +2628,23 @@
         {
           "form": "pa-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "along, by (locative prefix)"
         },
         {
           "form": "Nemun-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "Nemunas River"
         },
         {
           "form": "-ė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "feminine toponymic ending"
         }
       ],
       "etymology_analysis": "Lithuanian prepositional compound pa- ('along, by') + Nemunas ('Nemunas River'), meaning 'settlement along the Nemunas', adopted in 1923 CE to replace German Übermemel ('across the Memel').",
-      "current_repo_state": {
-        "b_tarr": "Jatwîgen",
-        "b_tarr_direct": "Jatwîgen",
-        "b_tarr_hist": "Jatwîgen",
-        "b_origin": "Jatwîgen (Jatwîgen (in-game: Yatvyagi))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Panemun%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -3033,23 +2679,17 @@
         {
           "form": "vilk-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "wolf (vilkas, via the Vilkauja River)"
         },
         {
           "form": "-aviškis",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic suffix (earlier Vilkaujiškis)"
         }
       ],
       "etymology_analysis": "Derived from the Vilkauja River (originally Vilkaujiškis, simplified to Vilkaviškis), ultimately from Lithuanian vilkas ('wolf').",
-      "current_repo_state": {
-        "b_tarr": "Vilkaviskis",
-        "b_tarr_direct": "Vilkaviskis",
-        "b_tarr_hist": "Vilkaviskis",
-        "b_origin": "Vilkaviskis (constituent holding of Jatwîgen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vilkavi%C5%A1kis",
       "older_name_by_867": {
         "exists": false,
@@ -3084,28 +2724,23 @@
         {
           "form": "su-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "near, by (prepositional prefix)"
         },
         {
           "form": "valk-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "creek, marsh (valka)"
         },
         {
           "form": "-ai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "masculine plural ending (Polonized as Suwałki)"
         }
       ],
       "etymology_analysis": "From Lithuanian su- ('near') + valka ('creek, marsh'), meaning 'place near a small stream or swampy area', Polonized as Suwałki.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Suwa%C5%82ki",
       "older_name_by_867": {
         "exists": false,
@@ -3140,23 +2775,17 @@
         {
           "form": "sein-",
           "language": "Yotvingian",
+          "language_code": "prg",
           "translation": "hay (West Baltic s- and diphthong ei, cognate with Lithuanian šienas)"
         },
         {
           "form": "-y",
           "language": "Polish",
+          "language_code": "pol",
           "translation": "plural/toponymic ending"
         }
       ],
       "etymology_analysis": "Polonized from the Yotvingian river name Sejna (modern Marycha; Lithuanian Seinai), preserving West Baltic s- and diphthong ei (cognate with Lithuanian šienas 'hay').",
-      "current_repo_state": {
-        "b_tarr": "Sejny",
-        "b_tarr_direct": "Sejny",
-        "b_tarr_hist": "Sejny",
-        "b_origin": "Sejny (constituent holding of Jatwîgen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sejny",
       "older_name_by_867": {
         "exists": false,
@@ -3191,23 +2820,17 @@
         {
           "form": "Allen-",
           "language": "German (from Old Prussian)",
+          "language_code": "deu",
           "translation": "Alle/Łyna River (Old Prussian Alna 'hind')"
         },
         {
           "form": "-stein",
           "language": "German",
+          "language_code": "deu",
           "translation": "stone, castle"
         }
       ],
       "etymology_analysis": "German compound meaning 'castle on the Alle River', combining the Germanized name of the Old Prussian river Alna ('hind', modern Łyna) with -stein ('stone, castle'); later Polonized as Olsztyn.",
-      "current_repo_state": {
-        "b_tarr": "Alna",
-        "b_tarr_direct": "Alna",
-        "b_tarr_hist": "Alna",
-        "b_origin": "Old Prussian hydronym Alna ('Trout River', Alle / Olsztyn) (in-game: Alna)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Olsztyn",
       "older_name_by_867": {
         "exists": false,
@@ -3242,28 +2865,23 @@
         {
           "form": "Ortulf / Ortolf",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "personal name Ortolf (von Trier)"
         },
         {
           "form": "-s-",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "genitive linking element"
         },
         {
           "form": "burg",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "fortress, castle"
         }
       ],
       "etymology_analysis": "Derived from Ortulfsburg, named after Teutonic Komtur Ortolf von Trier in the 1350s CE, which gradually morphed into German Ortelsburg (Polish: Szczytno).",
-      "current_repo_state": {
-        "b_tarr": "Pessûne",
-        "b_tarr_direct": "Pessûne",
-        "b_tarr_hist": "Pessûne",
-        "b_origin": "Old Prussian Galindian lake settlement (replacing 1360 Teutonic castle Ortelsburg) (in-game: Ortelsburg)",
-        "b_anachronism": "1360 Teutonic castle Ortelsburg fails Burden of Proof on Antiquity; restored to Old Prussian Galindian stem.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Szczytno",
       "older_name_by_867": {
         "exists": false,
@@ -3298,28 +2916,23 @@
         {
           "form": "Nida / Neide",
           "language": "Old Prussian / Polish",
+          "language_code": "prg",
           "translation": "Nida river name"
         },
         {
           "form": "-en-",
           "language": "German",
+          "language_code": "deu",
           "translation": "linking element"
         },
         {
           "form": "burg",
           "language": "German",
+          "language_code": "deu",
           "translation": "fortress, castle"
         }
       ],
       "etymology_analysis": "German Neidenburg (variant Niedenburg) combines the local river name Nida/Neide with German -burg ('castle'), built by the Teutonic Order in the late 14th century CE near an Old Prussian fort.",
-      "current_repo_state": {
-        "b_tarr": "Neidenburch",
-        "b_tarr_direct": "Neidenburch",
-        "b_tarr_hist": "Neidenburch",
-        "b_origin": "Neidenburch (constituent holding of Galindjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nidzica",
       "older_name_by_867": {
         "exists": false,
@@ -3354,18 +2967,11 @@
         {
           "form": "Lötzen / Lec",
           "language": "German / Old Prussian",
+          "language_code": "deu",
           "translation": "adapted Baltic settlement name (cf. Polish Łuczany)"
         }
       ],
       "etymology_analysis": "German Lötzen (adapted from Old Prussian/Polish Lec / Łuczany) was first documented in 1340 CE when the Teutonic Knights built a castle on the isthmus between Lakes Kisajno and Niegocin.",
-      "current_repo_state": {
-        "b_tarr": "Angerâpe",
-        "b_tarr_direct": "Sudouwen",
-        "b_tarr_hist": "Angerâpe",
-        "b_origin": "Angerâpe (Angerâpe (in-game: Sudovian (Angerburg))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gi%C5%BCycko",
       "older_name_by_867": {
         "exists": false,
@@ -3400,18 +3006,11 @@
         {
           "form": "Luka / Luks",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "waterlily (or river name)"
         }
       ],
       "etymology_analysis": "German Lyck (Polish: Ełk, earlier Łek/Łęg) is derived either from the Old Prussian hydronym Luks (from luka, 'waterlily') or from Polish łęg ('meadow'), first documented in 1398 CE.",
-      "current_repo_state": {
-        "b_tarr": "Lêke",
-        "b_tarr_direct": "Lêke",
-        "b_tarr_hist": "Lêke",
-        "b_origin": "Ancient Old Prussian/Yotvingian Ełk River basin (replacing 1398 Teutonic castle Lyck) (in-game: Lyck)",
-        "b_anachronism": "1398 Teutonic castle Lyck fails Burden of Proof on Antiquity; restored to Old Prussian river stem Lêke.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/E%C5%82k",
       "older_name_by_867": {
         "exists": false,
@@ -3446,23 +3045,17 @@
         {
           "form": "anger",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "eel"
         },
         {
           "form": "burg",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "German Angerburg ('eel castle') is a hybrid toponym combining the Old Prussian word anger ('eel', also reflected in the Angrapa River) with German burg ('castle'), first recorded as Angirburg in 1335 CE.",
-      "current_repo_state": {
-        "b_tarr": "Sudouwen",
-        "b_tarr_direct": "Sudouwen",
-        "b_tarr_hist": "Angerâpe",
-        "b_origin": "Sudouwen — Disambiguated capital seat from sub-barony Angerâpe",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/W%C4%99gorzewo",
       "older_name_by_867": {
         "exists": false,
@@ -3497,23 +3090,17 @@
         {
           "form": "īl- / il-",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "mud, silt"
         },
         {
           "form": "-au / -awa",
           "language": "German / Baltic",
+          "language_code": "deu",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "German (Deutsch) Eylau (Polish: Iława) derives from an Old Prussian settlement name Ylavia (from Baltic *il- 'mud, silt'), first documented in 1305 CE when the Teutonic Order founded the town.",
-      "current_repo_state": {
-        "b_tarr": "Sassenlant",
-        "b_tarr_direct": "Sassenlant",
-        "b_tarr_hist": "Sassenlant",
-        "b_origin": "Sassenlant — Historical Option A seat of c_osterode",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/I%C5%82awa",
       "older_name_by_867": {
         "exists": false,
@@ -3548,23 +3135,17 @@
         {
           "form": "bród",
           "language": "Polish",
+          "language_code": "pol",
           "translation": "ford, river crossing"
         },
         {
           "form": "-nica",
           "language": "Polish",
+          "language_code": "pol",
           "translation": "toponymic noun suffix"
         }
       ],
       "etymology_analysis": "Polish Brodnica derives from bród ('ford' across the Drwęca River) with the suffix -nica, first recorded in 1263 CE (later granted town rights in 1298 CE under the German name Strasburg).",
-      "current_repo_state": {
-        "b_tarr": "Drwêntza",
-        "b_tarr_direct": "Drwêntza",
-        "b_tarr_hist": "Drwêntza",
-        "b_origin": "Drwęca River crossing (replacing 1298 Teutonic castle Strasburg) (in-game: Brodnica)",
-        "b_anachronism": "1298 Teutonic castle Strasburg fails Burden of Proof on Antiquity; resolved to ancient Drwęca hydronym.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Brodnica",
       "older_name_by_867": {
         "exists": false,
@@ -3599,23 +3180,17 @@
         {
           "form": "ost-",
           "language": "German",
+          "language_code": "deu",
           "translation": "east"
         },
         {
           "form": "-rode",
           "language": "German",
+          "language_code": "deu",
           "translation": "forest clearing"
         }
       ],
       "etymology_analysis": "Named Osterode by the Teutonic Knights in 1270 CE after Osterode am Harz in Lower Saxony (from German ost 'east' + rode 'clearing'), Polonized later as Ostróda.",
-      "current_repo_state": {
-        "b_tarr": "Sassen-in-Prûssen",
-        "b_tarr_direct": "Osterôde",
-        "b_tarr_hist": "Sassen-in-Prûssen",
-        "b_origin": "Sassen-in-Prûssen (Sassen-in-Prûssen (in-game: Sasna (Osterode))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ostr%C3%B3da",
       "older_name_by_867": {
         "exists": false,
@@ -3650,18 +3225,11 @@
         {
           "form": "chełm",
           "language": "Old Polish",
+          "language_code": "pol",
           "translation": "hill"
         }
       ],
       "etymology_analysis": "German Kulm (Culm) is a Germanization of Polish Chełmno, derived from Old Polish chełm ('hill'), first attested in a document dated 1065 CE.",
-      "current_repo_state": {
-        "b_tarr": "Kulm",
-        "b_tarr_direct": "Kulm",
-        "b_tarr_hist": "Kulm",
-        "b_origin": "Kulm — Historical Option A seat of c_torun",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Che%C5%82mno",
       "older_name_by_867": {
         "exists": false,
@@ -3696,23 +3264,17 @@
         {
           "form": "tor",
           "language": "Old Slavic",
+          "language_code": "sla",
           "translation": "beaten path, track"
         },
         {
           "form": "-uń",
           "language": "Old Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Toruń (German: Thorn) is thought to derive from Old Slavic tor ('beaten path'), meaning 'roadside settlement', first mentioned in writing in 1226 CE as Thorun.",
-      "current_repo_state": {
-        "b_tarr": "Tôrun",
-        "b_tarr_direct": "Tôrun",
-        "b_tarr_hist": "Kulm",
-        "b_origin": "Tôrun — Disambiguated capital seat from sub-barony Kulm",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Toru%C5%84",
       "older_name_by_867": {
         "exists": false,
@@ -3747,18 +3309,11 @@
         {
           "form": "briese / brzeźno",
           "language": "German / Polish",
+          "language_code": "deu",
           "translation": "birch (tree/place)"
         }
       ],
       "etymology_analysis": "German Briesen corresponds to Polish Wąbrzeźno (attested in Latinized form as Wambresia in 1251 CE), derived from Slavic *brěza ('birch').",
-      "current_repo_state": {
-        "b_tarr": "Wonbrscheschno",
-        "b_tarr_direct": "Wonbrscheschno",
-        "b_tarr_hist": "Wonbrscheschno",
-        "b_origin": "Ancient Slavic/Prussian settlement Wąbrzeźno (in-game: Briesen)",
-        "b_anachronism": "Pre-867 native toponym restored over Teutonic Order Briesen.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/W%C4%85brze%C5%BAno",
       "older_name_by_867": {
         "exists": false,
@@ -3793,23 +3348,17 @@
         {
           "form": "Lutter / Lauten",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "from personal name (Otto von) Lutterberg"
         },
         {
           "form": "burg",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "German Lautenburg (Polish: Lidzbark) was founded in 1301 CE and named after Teutonic Komtur Otto von Lutterberg, evolving from Lutterberg to Lautenburg.",
-      "current_repo_state": {
-        "b_tarr": "Alne",
-        "b_tarr_direct": "Bartenstein",
-        "b_tarr_hist": "Alne",
-        "b_origin": "Alne (Bartlant (in-game: Bartia (Bartenstein))",
-        "b_anachronism": "Teutonic Order exonym Bartenstein built 1240. Province held directly by Old Prussians -> Roman Empire; resolves to ancient river Alna (*Alle*).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lidzbark",
       "older_name_by_867": {
         "exists": false,
@@ -3844,23 +3393,17 @@
         {
           "form": "Barten",
           "language": "German / Old Prussian",
+          "language_code": "deu",
           "translation": "Bartians (Old Prussian tribe / Bartia)"
         },
         {
           "form": "stein",
           "language": "German",
+          "language_code": "deu",
           "translation": "stone, stone castle"
         }
       ],
       "etymology_analysis": "German Bartenstein ('stone [castle] of the Bartians') combines the Old Prussian tribal name Bartia/Barten with German stein ('stone'), adopted in 1332 CE for the settlement earlier documented as Rosenthal (1326 CE) beside the c. 1241 CE castle.",
-      "current_repo_state": {
-        "b_tarr": "Barte",
-        "b_tarr_direct": "Barte",
-        "b_tarr_hist": "Barte",
-        "b_origin": "Old Prussian tribal territory and river basin of Bartia (replacing 1326 Teutonic castle Bartenstein) (in-game: Barte)",
-        "b_anachronism": "Teutonic Order castle Bartenstein built in 1326 in Bartia. Resolved via Option B to the authentic Old Prussian regional stem Barte.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bartoszyce",
       "older_name_by_867": {
         "exists": false,
@@ -3895,23 +3438,17 @@
         {
           "form": "Inster",
           "language": "Old Prussian / German",
+          "language_code": "prg",
           "translation": "Inster (Instruch) river"
         },
         {
           "form": "burg",
           "language": "German",
+          "language_code": "deu",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "German Insterburg ('castle on the Inster') combines the Old Prussian hydronym Inster (Instruch) with German burg ('castle'), founded in 1337 CE by Grand Master Dietrich von Altenburg.",
-      "current_repo_state": {
-        "b_tarr": "Instre",
-        "b_tarr_direct": "Instre",
-        "b_tarr_hist": "Instre",
-        "b_origin": "Old Prussian Inster River confluence (replacing 1336 Teutonic castle Insterburg) (in-game: Insterburg)",
-        "b_anachronism": "1336 Teutonic castle Insterburg fails Burden of Proof on Antiquity; restored to Old Prussian Inster.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chernyakhovsk",
       "older_name_by_867": {
         "exists": false,
@@ -3946,28 +3483,23 @@
         {
           "form": "Rast-",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "adapted Old Prussian toponymic stem"
         },
         {
           "form": "-en-",
           "language": "German",
+          "language_code": "deu",
           "translation": "linking element"
         },
         {
           "form": "burg",
           "language": "German",
+          "language_code": "deu",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "German Rastenburg (Polish: Rastembork, renamed Kętrzyn in 1946 CE) combines an Old Prussian place stem with German burg ('castle'), first established in 1329 CE.",
-      "current_repo_state": {
-        "b_tarr": "Raste",
-        "b_tarr_direct": "Raste",
-        "b_tarr_hist": "Raste",
-        "b_origin": "Old Prussian tribal settlement Raste (replacing 1329 Teutonic castle Rastenburg) (in-game: Rastenburg)",
-        "b_anachronism": "1329 Teutonic castle Rastenburg fails Burden of Proof on Antiquity; restored to Old Prussian Raste.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/K%C4%99trzyn",
       "older_name_by_867": {
         "exists": false,
@@ -4002,28 +3534,23 @@
         {
           "form": "König",
           "language": "German",
+          "language_code": "deu",
           "translation": "king (Ottokar II of Bohemia)"
         },
         {
           "form": "-s-",
           "language": "German",
+          "language_code": "deu",
           "translation": "genitive linking element"
         },
         {
           "form": "berg",
           "language": "German",
+          "language_code": "deu",
           "translation": "hill, mountain"
         }
       ],
       "etymology_analysis": "German Königsberg ('King's Mountain') was founded in 1255 CE on the site of the Old Prussian settlement Twangste and named in honour of King Ottokar II of Bohemia.",
-      "current_repo_state": {
-        "b_tarr": "Twangste",
-        "b_tarr_direct": "Twangste",
-        "b_tarr_hist": "Twangste",
-        "b_origin": "Old Prussian sacred grove and hillfort Twangste (attested before 1255 Teutonic Order castle) (in-game: Twangste)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/K%C3%B6nigsberg",
       "older_name_by_867": {
         "exists": false,
@@ -4058,23 +3585,17 @@
         {
           "form": "lab-",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "good, marshy/riverine stem"
         },
         {
           "form": "-iau / -owe",
           "language": "German / Old Prussian",
+          "language_code": "deu",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "German Labiau (Lithuanian: Labguva) derives from the Old Prussian toponym Labegowe / Labigow, first attested in 1258 CE when the Teutonic Order built a wooden castle on the Deyma River.",
-      "current_repo_state": {
-        "b_tarr": "Kaup",
-        "b_tarr_direct": "Kaup",
-        "b_tarr_hist": "Kaup",
-        "b_origin": "Kaup (constituent holding of Twangste)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Polessk",
       "older_name_by_867": {
         "exists": false,
@@ -4109,18 +3630,11 @@
         {
           "form": "Ylfing / Elbing",
           "language": "Germanic / Old Prussian",
+          "language_code": "deu",
           "translation": "river name Elbląg"
         }
       ],
       "etymology_analysis": "Polish Elbląg derives from German Elbing, named after the Elbląg River (first recorded as Ylfing by Wulfstan in the late 9th century CE, c. 890 CE); the Teutonic Order founded the citadel in 1237 CE near the older Prussian emporium of Truso.",
-      "current_repo_state": {
-        "b_tarr": "Trûsô",
-        "b_tarr_direct": "Trûsô",
-        "b_tarr_hist": "Trûsô",
-        "b_origin": "Trûsô — Historical Option A seat of c_malbork",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Elbl%C4%85g",
       "older_name_by_867": {
         "exists": false,
@@ -4155,23 +3669,17 @@
         {
           "form": "Marien",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "of (the Virgin) Mary"
         },
         {
           "form": "burg",
           "language": "Middle High German",
+          "language_code": "gmh",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "German Marienburg ('Mary's Castle', Polish: Malbork) was founded in 1274 CE by the Teutonic Knights on the Nogat River and named after their patron saint, the Virgin Mary.",
-      "current_repo_state": {
-        "b_tarr": "Malbork",
-        "b_tarr_direct": "Malbork",
-        "b_tarr_hist": "Malbork",
-        "b_origin": "Prussian/Slavic settlement Malbork on the Nogat (attested before 1274 Teutonic fortress) (in-game: Malbork)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Malbork",
       "older_name_by_867": {
         "exists": false,
@@ -4206,23 +3714,17 @@
         {
           "form": "gruda",
           "language": "Old Polish",
+          "language_code": "pol",
           "translation": "clod, lump, dry/elevated ground"
         },
         {
           "form": "-ądz",
           "language": "Old Polish",
+          "language_code": "pol",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "German Graudenz is adapted from Polish Grudziądz, derived from Slavic gruda ('clod, elevated ground'), first documented in 1065 CE as Grudenczh.",
-      "current_repo_state": {
-        "b_tarr": "Kwidzîn",
-        "b_tarr_direct": "Kwidzîn",
-        "b_tarr_hist": "Kwidzîn",
-        "b_origin": "Old Prussian tribal settlement Kwidzîn / Queden on the Liwa (replacing 1233 Teutonic castle Marienwerder) (in-game: Graudenz)",
-        "b_anachronism": "1233 Teutonic castle Marienwerder fails Burden of Proof on Antiquity; restored to native Old Prussian Kwidzîn.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Grudzi%C4%85dz",
       "older_name_by_867": {
         "exists": false,
@@ -4257,23 +3759,17 @@
         {
           "form": "Wisł-",
           "language": "Polish",
+          "language_code": "pol",
           "translation": "Vistula river"
         },
         {
           "form": "-ana",
           "language": "Polish",
+          "language_code": "pol",
           "translation": "adjectival feminine suffix"
         }
       ],
       "etymology_analysis": "Polish Wiślana ('Vistulan', as in Mierzeja Wiślana / Vistula Spit) is an adjectival derivative of Wisła (Vistula), representing the Vistula delta/spit settlement area around Sztutowo (German: Stutthof, attested in the early 13th century CE).",
-      "current_repo_state": {
-        "b_tarr": "Wîselwerder",
-        "b_tarr_direct": "Wîselwerder",
-        "b_tarr_hist": "Wîselwerder",
-        "b_origin": "Vistula Spit and Nogat river delta (replacing Stutthof) (in-game: Wislana)",
-        "b_anachronism": "Late estate Stutthof fails Burden of Proof on Antiquity; resolved to Vistula delta hydronym Wîselwerder.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sztutowo",
       "older_name_by_867": {
         "exists": false,
@@ -4308,23 +3804,17 @@
         {
           "form": "lauk-",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "field, clearing"
         },
         {
           "form": "-itten",
           "language": "Old Prussian / German",
+          "language_code": "prg",
           "translation": "plural/toponymic suffix"
         }
       ],
       "etymology_analysis": "German Laukitten (attested 1407 CE as Lawkyten; Lithuanian: Laukyčiai) derives from Old Prussian lauks ('field'), a settlement name in Natangia.",
-      "current_repo_state": {
-        "b_tarr": "Natângjen",
-        "b_tarr_direct": "Natângjen",
-        "b_tarr_hist": "Natângjen",
-        "b_origin": "Natângjen (Natângjen (in-game: Natangia))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://de.wikipedia.org/wiki/Bolschedoroschnoje",
       "older_name_by_867": {
         "exists": false,
@@ -4359,28 +3849,23 @@
         {
           "form": "Pater",
           "language": "German / Latin",
+          "language_code": "deu",
           "translation": "priest, father (of a forest chapel)"
         },
         {
           "form": "-s-",
           "language": "German",
+          "language_code": "deu",
           "translation": "genitive linking element"
         },
         {
           "form": "walde",
           "language": "German",
+          "language_code": "deu",
           "translation": "forest, woods"
         }
       ],
       "etymology_analysis": "German Paterswalde ('Priest's Forest') refers to a medieval forest pilgrimage chapel near the village founded around 1363 CE (initially called Allendorf).",
-      "current_repo_state": {
-        "b_tarr": "Tapiouwe",
-        "b_tarr_direct": "Tapiouwe",
-        "b_tarr_hist": "Tapiouwe",
-        "b_origin": "Old Prussian Pregolya river settlement Tapiow (replacing 1258 Teutonic castle Tapiau) (in-game: Paterswalde)",
-        "b_anachronism": "1258 Teutonic castle Tapiau fails Burden of Proof on Antiquity; restored to Old Prussian Tapiow.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://de.wikipedia.org/wiki/Kirche_Paterswalde",
       "older_name_by_867": {
         "exists": false,
@@ -4415,33 +3900,29 @@
         {
           "form": "Ost-",
           "language": "German",
+          "language_code": "deu",
           "translation": "east (East Prussian disambiguator)"
         },
         {
           "form": "Land",
           "language": "German",
+          "language_code": "deu",
           "translation": "land"
         },
         {
           "form": "-s-",
           "language": "German",
+          "language_code": "deu",
           "translation": "linking element"
         },
         {
           "form": "berg",
           "language": "German",
+          "language_code": "deu",
           "translation": "hill, mountain"
         }
       ],
       "etymology_analysis": "German Landsberg in Ostpreußen (Ostlandsberg, Polish: Górowo Iławeckie) was founded in 1335 CE by the Teutonic Knights in Natangia, using the standard German compound Land + Berg.",
-      "current_repo_state": {
-        "b_tarr": "Welouwe",
-        "b_tarr_direct": "Welouwe",
-        "b_tarr_hist": "Welouwe",
-        "b_origin": "Old Prussian Pregolya/Lava fortress Welow (replacing 1255 Teutonic castle Wehlau) (in-game: Ostlandsberg)",
-        "b_anachronism": "1255 Teutonic castle Wehlau fails Burden of Proof on Antiquity; restored to Old Prussian Welow.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/G%C3%B3rowo_I%C5%82aweckie",
       "older_name_by_867": {
         "exists": false,
@@ -4476,18 +3957,11 @@
         {
           "form": "Wormditt",
           "language": "Old Prussian / German",
+          "language_code": "prg",
           "translation": "adapted Old Prussian settlement name (folk-etymologized to German Wurm 'worm/dragon')"
         }
       ],
       "etymology_analysis": "German Wormditt (Polish: Orneta) is an adaptation of an Old Prussian settlement name first mentioned in 1308 CE, later folk-etymologized in German to Wurm ('worm, dragon') on the town crest.",
-      "current_repo_state": {
-        "b_tarr": "Warmjen",
-        "b_tarr_direct": "Warmjen",
-        "b_tarr_hist": "Warmjen",
-        "b_origin": "Warmjen — Historical Option A seat of c_wormditt",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Orneta",
       "older_name_by_867": {
         "exists": false,
@@ -4522,23 +3996,17 @@
         {
           "form": "Maur- / Mohr-",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "lake/settlement stem (Mawrin / Lake Marąg)"
         },
         {
           "form": "-ungen",
           "language": "German",
+          "language_code": "deu",
           "translation": "Germanized toponymic suffix"
         }
       ],
       "etymology_analysis": "German Mohrungen (Polish: Morąg) was named in 1327 CE after the nearby lake (Marąg) and the earlier Old Prussian settlement Mawrin/Maurin.",
-      "current_repo_state": {
-        "b_tarr": "Marînge",
-        "b_tarr_direct": "Marînge",
-        "b_tarr_hist": "Marînge",
-        "b_origin": "Old Prussian Lake Marąg basin (replacing 1302 Teutonic castle Mohrungen) (in-game: Mohrungen)",
-        "b_anachronism": "1302 Teutonic castle Mohrungen fails Burden of Proof on Antiquity; restored to Old Prussian Lake Marąg.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mor%C4%85g",
       "older_name_by_867": {
         "exists": false,
@@ -4573,28 +4041,23 @@
         {
           "form": "Braun / Bruno",
           "language": "German",
+          "language_code": "deu",
           "translation": "personal name Bruno (von Schauenburg)"
         },
         {
           "form": "-s-",
           "language": "German",
+          "language_code": "deu",
           "translation": "genitive linking element"
         },
         {
           "form": "berg",
           "language": "German",
+          "language_code": "deu",
           "translation": "hill, mountain"
         }
       ],
       "etymology_analysis": "German Braunsberg (earlier Brunsberg, Polish: Braniewo) was named after Bruno von Schauenburg, Bishop of Olomouc, in the mid-13th century CE.",
-      "current_repo_state": {
-        "b_tarr": "Passarîa",
-        "b_tarr_direct": "Passarîa",
-        "b_tarr_hist": "Passarîa",
-        "b_origin": "Old Prussian Pasłęka River basin in Warmia (replacing 1240 Teutonic castle Braunsberg) (in-game: Braunsberg)",
-        "b_anachronism": "1240 Teutonic castle Braunsberg fails Burden of Proof on Antiquity; restored to Old Prussian Pasłęka.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Braniewo",
       "older_name_by_867": {
         "exists": false,
@@ -4629,18 +4092,11 @@
         {
           "form": "Memel",
           "language": "German / Baltic",
+          "language_code": "deu",
           "translation": "German name for the Neman River"
         }
       ],
       "etymology_analysis": "German Memel (shortened from Memelburg, founded 1252 CE; Lithuanian: Klaipėda) takes its name from the Memel (Neman) River.",
-      "current_repo_state": {
-        "b_tarr": "Mêmele",
-        "b_tarr_direct": "Mêmele",
-        "b_tarr_hist": "Mêmele",
-        "b_origin": "Mêmele — Historical Option A seat of c_memel",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Klaip%C4%97da",
       "older_name_by_867": {
         "exists": false,
@@ -4675,23 +4131,17 @@
         {
           "form": "tauras",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "aurochs"
         },
         {
           "form": "ragas",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "horn"
         }
       ],
       "etymology_analysis": "Lithuanian Tauragė (German: Tauroggen) is a compound of tauras ('aurochs') and ragas ('horn'), first documented in 1507 CE.",
-      "current_repo_state": {
-        "b_tarr": "Jûra",
-        "b_tarr_direct": "Jûra",
-        "b_tarr_hist": "Jûra",
-        "b_origin": "Jūra River basin (replacing 1507 village Tauragė) (in-game: Taurage)",
-        "b_anachronism": "1507 settlement Tauragė fails Burden of Proof on Antiquity; resolved to ancient Jūra hydronym.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taurag%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -4726,23 +4176,17 @@
         {
           "form": "pal-",
           "language": "Curonian / Baltic",
+          "language_code": "lav",
           "translation": "marsh, lowland"
         },
         {
           "form": "-anga",
           "language": "Curonian",
+          "language_code": "lav",
           "translation": "Curonian toponymic suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Palanga (German: Polangen) is of Curonian origin, combining the Baltic root pal- ('marsh, lowland') with the characteristic Curonian suffix -ng-, first mentioned in 1161 CE.",
-      "current_repo_state": {
-        "b_tarr": "Palânge",
-        "b_tarr_direct": "Palânge",
-        "b_tarr_hist": "Palânge",
-        "b_origin": "Palânge (Palânge (in-game: Palanga))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Palanga",
       "older_name_by_867": {
         "exists": false,
@@ -4777,23 +4221,17 @@
         {
           "form": "med-",
           "language": "Lithuanian / Samogitian",
+          "language_code": "lit",
           "translation": "forest, woods (medis/medė)"
         },
         {
           "form": "-ininkai / -eniken",
           "language": "Lithuanian / German",
+          "language_code": "lit",
           "translation": "inhabitants/toponymic suffix"
         }
       ],
       "etymology_analysis": "German Medeniken is an adaptation of Lithuanian/Samogitian Medininkai (later renamed Varniai), derived from medė/medis ('forest, woods'), first attested in 1320 CE.",
-      "current_repo_state": {
-        "b_tarr": "Medeniken",
-        "b_tarr_direct": "Medeniken",
-        "b_tarr_hist": "Medeniken",
-        "b_origin": "Medeniken (constituent holding of Palânge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Varniai",
       "older_name_by_867": {
         "exists": false,
@@ -4828,18 +4266,11 @@
         {
           "form": "telš- / telkšoti",
           "language": "Samogitian / Lithuanian",
+          "language_code": "lit",
           "translation": "to be flooded with water, splash (Telšė rivulet)"
         }
       ],
       "etymology_analysis": "Lithuanian Telšiai (Samogitian: Telšē) is named after the Telšė rivulet flowing into Lake Mastis, derived from the Baltic root telš-/telkšoti ('to splash, be flooded'), first mentioned in 1398 CE.",
-      "current_repo_state": {
-        "b_tarr": "Telsiai",
-        "b_tarr_direct": "Telsiai",
-        "b_tarr_hist": "Telsiai",
-        "b_origin": "Telsiai (constituent holding of Palânge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tel%C5%A1iai",
       "older_name_by_867": {
         "exists": false,
@@ -4874,23 +4305,17 @@
         {
           "form": "ras-",
           "language": "Lithuanian / Baltic",
+          "language_code": "lit",
           "translation": "dew, wet/marshy ground (or personal/tribal name)"
         },
         {
           "form": "-einiai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic plural suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Raseiniai is first attested in 1253 CE in Mindaugas's charters (as Rushigen, Rossyen, Rasseyne) in Samogitia.",
-      "current_repo_state": {
-        "b_tarr": "Rassêinen",
-        "b_tarr_direct": "Rassêinen",
-        "b_tarr_hist": "Rassêinen",
-        "b_origin": "Rassêinen (Rassêinen (in-game: Raseiniai))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Raseiniai",
       "older_name_by_867": {
         "exists": false,
@@ -4925,23 +4350,17 @@
         {
           "form": "Jürg / Georg",
           "language": "German",
+          "language_code": "deu",
           "translation": "George (Saint George)"
         },
         {
           "form": "burg / barkas",
           "language": "German / Lithuanian",
+          "language_code": "deu",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "Lithuanian Jurbarkas is adapted from German Georgenburg / Jurgenburg ('George's Castle'), first documented in 1259 CE as a Teutonic Order fortress on the Nemunas.",
-      "current_repo_state": {
-        "b_tarr": "Jurbarch",
-        "b_tarr_direct": "Jurbarch",
-        "b_tarr_hist": "Jurbarch",
-        "b_origin": "Nemunas river crossing (replacing 1259 Teutonic castle Georgenburg) (in-game: Jurbarkas)",
-        "b_anachronism": "1259 Teutonic castle Georgenburg fails Burden of Proof on Antiquity; restored to native Nemunas crossing.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jurbarkas",
       "older_name_by_867": {
         "exists": false,
@@ -4976,23 +4395,17 @@
         {
           "form": "vėlė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "soul of the dead"
         },
         {
           "form": "-uona",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Veliuona is associated with vėlė ('soul of the dead') and the Lithuanian goddess Veliona; the castle was first recorded in 1291 CE as Junigeda and by 1319 CE as Veliuona.",
-      "current_repo_state": {
-        "b_tarr": "Veliuona",
-        "b_tarr_direct": "Veliuona",
-        "b_tarr_hist": "Veliuona",
-        "b_origin": "Veliuona (constituent holding of Rassêinen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Veliuona",
       "older_name_by_867": {
         "exists": false,
@@ -5027,23 +4440,17 @@
         {
           "form": "Kėd-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "personal or settlement stem"
         },
         {
           "form": "-ainiai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "toponymic plural suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Kėdainiai (earlier Kidan, Keidany) was first mentioned in the 1372 CE Livonian Chronicle of Hermann de Wartberge.",
-      "current_repo_state": {
-        "b_tarr": "Kedainiai",
-        "b_tarr_direct": "Kedainiai",
-        "b_tarr_hist": "Kedainiai",
-        "b_origin": "Kedainiai (constituent holding of Rassêinen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/K%C4%97dainiai",
       "older_name_by_867": {
         "exists": false,
@@ -5078,18 +4485,11 @@
         {
           "form": "ragas",
           "language": "Old Prussian",
+          "language_code": "prg",
           "translation": "spur, horn"
         }
       ],
       "etymology_analysis": "German Ragnit (Lithuanian: Ragainė) takes its name from a local tributary of the Neman, derived from Old Prussian ragas ('spur, horn'), first attested in 1288 CE.",
-      "current_repo_state": {
-        "b_tarr": "Schalouwen",
-        "b_tarr_direct": "Schalouwen",
-        "b_tarr_hist": "Schalouwen",
-        "b_origin": "Schalouwen (Schalouwen (in-game: Scalovia))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Neman,_Russia",
       "older_name_by_867": {
         "exists": false,
@@ -5124,18 +4524,11 @@
         {
           "form": "tilž- / tils-",
           "language": "Old Prussian / Lithuanian",
+          "language_code": "prg",
           "translation": "wet, marshy stream (Tilse / Tilžė river)"
         }
       ],
       "etymology_analysis": "German Tilsit (Lithuanian: Tilžė) derives from the local Tilse/Tilžė stream at its confluence with the Neman (from Baltic *tilž- 'wet, marshy'), first documented with the 1288 CE Teutonic castle.",
-      "current_repo_state": {
-        "b_tarr": "Tîlse",
-        "b_tarr_direct": "Tîlse",
-        "b_tarr_hist": "Tîlse",
-        "b_origin": "Old Prussian Tilse River confluence with the Nemunas (replacing 1288 Teutonic castle Tilsit) (in-game: Tilsit)",
-        "b_anachronism": "1288 Teutonic castle Tilsit fails Burden of Proof on Antiquity; restored to Old Prussian Tilse.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sovetsk,_Kaliningrad_Oblast",
       "older_name_by_867": {
         "exists": false,
@@ -5170,23 +4563,17 @@
         {
           "form": "Šiaul-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "stem related to šiaurė ('north') or Saulė ('sun')"
         },
         {
           "form": "-iai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "plural toponymic suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Šiauliai (German: Schaulen) was first recorded in written sources as Soule in 1236 CE in Livonian Order chronicles describing the Battle of Saule.",
-      "current_repo_state": {
-        "b_tarr": "Schaulen",
-        "b_tarr_direct": "Schaulen",
-        "b_tarr_hist": "Schaulen",
-        "b_origin": "Schaulen (Schaulen (in-game: Siauliai))",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C5%A0iauliai",
       "older_name_by_867": {
         "exists": false,
@@ -5221,23 +4608,17 @@
         {
           "form": "upė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "river"
         },
         {
           "form": "-ytė",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "diminutive suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Upytė is a diminutive of upė ('river'), meaning 'little river/stream', first mentioned in a 1254 CE Livonian chronicle.",
-      "current_repo_state": {
-        "b_tarr": "Upyte",
-        "b_tarr_direct": "Upyte",
-        "b_tarr_hist": "Upyte",
-        "b_origin": "Upyte (constituent holding of Schaulen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Upyt%C4%97",
       "older_name_by_867": {
         "exists": false,
@@ -5272,23 +4653,17 @@
         {
           "form": "berž- / birž-",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "birch (beržas) / birch grove"
         },
         {
           "form": "-ai",
           "language": "Lithuanian",
+          "language_code": "lit",
           "translation": "plural suffix"
         }
       ],
       "etymology_analysis": "Lithuanian Biržai (German: Birsen) derives from beržas ('birch'), denoting a birch grove or cleared forest tract, first attested in 1455 CE.",
-      "current_repo_state": {
-        "b_tarr": "Birschai",
-        "b_tarr_direct": "Birschai",
-        "b_tarr_hist": "Birschai",
-        "b_origin": "Birschai (constituent holding of Schaulen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bir%C5%BEai",
       "older_name_by_867": {
         "exists": false,

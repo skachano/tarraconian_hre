@@ -1,12 +1,28 @@
 {
   "metadata": {
     "empire": "e_carpathia",
+    "scope": "e_carpathia (112 baronies across k_dacia, k_moldavia)",
+    "schema_version": "1.1.0",
     "baseline_year": 867,
-    "schema_version": "1.0",
+    "source_files": [
+      "data/ck3_title_tree.json",
+      "data/barony_holdings.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "True if the barony name is contemporarily attested as a settlement, fortress, or administrative unit by <= 867 CE.",
-      "natural_proper_name": "True if the barony name directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds).",
-      "older_name_by_867": "Records attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 112,
@@ -48,21 +64,11 @@
         {
           "form": "Calafatis / calafat",
           "language": "Byzantine Greek / Romanian",
+          "language_code": "grc",
           "translation": "caulking / place where ships are tarred"
         }
       ],
       "etymology_analysis": "According to historian Nicolae Iorga, the toponym derives from Byzantine Greek Kalafatis (referring to caulkers or a personal name), meaning 'place where ships are tarred', reflecting its medieval role as a Danube ship-repair and customs port.",
-      "current_repo_state": {
-        "name": "Drobête",
-        "b_tarr": "Drobête",
-        "b_tarr_direct": "Drobête",
-        "b_tarr_hist": "Drobête",
-        "b_origin": "Drobête — Historical Option A seat of c_calafat",
-        "b_anachronism": "",
-        "b_ipa": "[drɔ.ˈbeː.tə]",
-        "holding_type": "castle",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Calafat",
       "older_name_by_867": {
         "exists": false,
@@ -97,21 +103,11 @@
         {
           "form": "Cujmir",
           "language": "South Slavic / Romanian",
+          "language_code": "sla",
           "translation": "rural settlement toponym"
         }
       ],
       "etymology_analysis": "Romanian rural toponym of Oltenia (Mehedinți County), likely of South Slavic or regional anthroponymic origin, unattested in written records before the modern/early modern era.",
-      "current_repo_state": {
-        "name": "Cujmir",
-        "b_tarr": "Cujmir",
-        "b_tarr_direct": "Cujmir",
-        "b_tarr_hist": "Cujmir",
-        "b_origin": "Cujmir (constituent holding of Drobête)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊj.mɪr]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cujmir",
       "older_name_by_867": {
         "exists": false,
@@ -146,21 +142,11 @@
         {
           "form": "streha",
           "language": "Slavic / Old Romanian",
+          "language_code": "sla",
           "translation": "eaves, shelter, refuge"
         }
       ],
       "etymology_analysis": "Toponym from South Slavic / Romanian streha ('eaves, shelter'), reflecting its medieval role as a fortified boyar court and refuge in the Motru River valley.",
-      "current_repo_state": {
-        "name": "Strehaia",
-        "b_tarr": "Strehaia",
-        "b_tarr_direct": "Strehaia",
-        "b_tarr_hist": "Strehaia",
-        "b_origin": "Strehaia (constituent holding of Drobête)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈstrɛ.ha.ja]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Strehaia",
       "older_name_by_867": {
         "exists": false,
@@ -195,21 +181,11 @@
         {
           "form": "Segarcea",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "local settlement name"
         }
       ],
       "etymology_analysis": "Wallachian settlement name in Dolj County attested from the 16th century; local tradition links it to fertile agricultural land, though its exact linguistic origin is uncertain.",
-      "current_repo_state": {
-        "name": "Segarcea",
-        "b_tarr": "Segarcea",
-        "b_tarr_direct": "Segarcea",
-        "b_tarr_hist": "Segarcea",
-        "b_origin": "Segarcea (constituent holding of Drobête)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɛ.ɣar.tsɛ.a]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Segarcea",
       "older_name_by_867": {
         "exists": false,
@@ -244,26 +220,17 @@
         {
           "form": "kralj / krajina",
           "language": "Old Church Slavonic",
+          "language_code": "chu",
           "translation": "king / borderland"
         },
         {
           "form": "-ova",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "possessive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived either from Old Slavonic kral ('king', borrowed into Romanian as crai) or krajina ('border, edge') with the Slavic toponymic suffix -ova.",
-      "current_repo_state": {
-        "name": "Pelendâwe",
-        "b_tarr": "Pelendâwe",
-        "b_tarr_direct": "Pelendâwe",
-        "b_tarr_hist": "Pelendâwe",
-        "b_origin": "Pelendâwe — Historical Option A seat of c_craiova",
-        "b_anachronism": "",
-        "b_ipa": "[pɛ.lɛn.ˈdaː.wə]",
-        "holding_type": "castle",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Craiova",
       "older_name_by_867": {
         "exists": true,
@@ -300,21 +267,11 @@
         {
           "form": "corabie",
           "language": "Romanian (from Greek karabion / Slavic korabljĭ)",
+          "language_code": "ron",
           "translation": "ship, sailing vessel"
         }
       ],
       "etymology_analysis": "Named after Romanian corabie ('ship, vessel'), reflecting its establishment as a Danube grain-export port.",
-      "current_repo_state": {
-        "name": "Corabia",
-        "b_tarr": "Corabia",
-        "b_tarr_direct": "Corabia",
-        "b_tarr_hist": "Corabia",
-        "b_origin": "Corabia (constituent holding of Pelendâwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔ.ra.bɪ.a]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Corabia",
       "older_name_by_867": {
         "exists": true,
@@ -351,26 +308,17 @@
         {
           "form": "Drăgaș",
           "language": "Romanian / Slavic",
+          "language_code": "ron",
           "translation": "personal name (from drag, 'dear')"
         },
         {
           "form": "-ani",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "collective/inhabitant suffix"
         }
       ],
       "etymology_analysis": "Formed from the personal name Drăgaș (ultimately Slavic drag, 'dear') plus the Romanian collective/toponymic suffix -ani ('people/descendants of Drăgaș').",
-      "current_repo_state": {
-        "name": "Dragaschân",
-        "b_tarr": "Dragaschân",
-        "b_tarr_direct": "Dragaschân",
-        "b_tarr_hist": "Dragaschân",
-        "b_origin": "Dragaschân (constituent holding of Pelendâwe)",
-        "b_anachronism": "",
-        "b_ipa": "[dra.ɣa.ˈʃaːn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dr%C4%83g%C4%83%C8%99ani",
       "older_name_by_867": {
         "exists": true,
@@ -407,21 +355,11 @@
         {
           "form": "severno / Severinus",
           "language": "Old Church Slavonic / Latin",
+          "language_code": "chu",
           "translation": "northern / Saint Severinus of Noricum"
         }
       ],
       "etymology_analysis": "Medieval Severin derives either from Old Church Slavonic severno ('northern', i.e. north of the Danube) or from Saint Severinus of Noricum (d. 482 CE), patron saint of the medieval colony; 'Drobeta' was prefixed in 1972 from the ancient Roman city.",
-      "current_repo_state": {
-        "name": "Îsentôr",
-        "b_tarr": "Îsentôr",
-        "b_tarr_direct": "Îsentôr",
-        "b_tarr_hist": "Îsentôr",
-        "b_origin": "Îsentôr (Severin)",
-        "b_anachronism": "",
-        "b_ipa": "[iː.zən.ˈtoːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Drobeta-Turnu_Severin",
       "older_name_by_867": {
         "exists": true,
@@ -458,21 +396,11 @@
         {
           "form": "Ursoua / Orșova",
           "language": "Slavic / Hungarian / Romanian",
+          "language_code": "sla",
           "translation": "medieval river-port toponym"
         }
       ],
       "etymology_analysis": "Medieval toponym attested from 1150 as Ursoua (later Hungarian Orsova, Romanian Orșova), possibly via Slavic adaptation near the Cerna-Danube confluence.",
-      "current_repo_state": {
-        "name": "Orschowe",
-        "b_tarr": "Orschowe",
-        "b_tarr_direct": "Orschowe",
-        "b_tarr_hist": "Orschowe",
-        "b_origin": "Orschowe (constituent holding of Îsentôr)",
-        "b_anachronism": "",
-        "b_ipa": "[ɔr.ˈʃɔ.wə]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Or%C8%99ova",
       "older_name_by_867": {
         "exists": true,
@@ -510,21 +438,11 @@
         {
           "form": "Miháld / Mehadia",
           "language": "Hungarian / Romanian",
+          "language_code": "hun",
           "translation": "from Mihály ('Michael') + -d, or Ad Mediam"
         }
       ],
       "etymology_analysis": "Most linguists derive Mehadia from medieval Hungarian Miháld (personal name Mihály + -d suffix, attested 1323), while an alternative hypothesis links it to Roman Ad Mediam.",
-      "current_repo_state": {
-        "name": "Mehadia",
-        "b_tarr": "Mehadia",
-        "b_tarr_direct": "Mehadia",
-        "b_tarr_hist": "Mehadia",
-        "b_origin": "Mehadia (constituent holding of Îsentôr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɛ.ha.dɪ.a]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mehadia",
       "older_name_by_867": {
         "exists": true,
@@ -562,26 +480,17 @@
         {
           "form": "Karán",
           "language": "Old Hungarian / Turkic",
+          "language_code": "hun",
           "translation": "Kavarán / tribal or local name"
         },
         {
           "form": "Sebes",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "swift (referring to the Sebeș River)"
         }
       ],
       "etymology_analysis": "Compound of Karán (derived by Frigyes Pesty from Old Hungarian Kavarán, or from a pre-Hungarian root) and Sebes ('swift', from the Sebeș River at its confluence with the Timiș).",
-      "current_repo_state": {
-        "name": "Karânsebes",
-        "b_tarr": "Karânsebes",
-        "b_tarr_direct": "Karânsebes",
-        "b_tarr_hist": "Karânsebes",
-        "b_origin": "Karânsebes (constituent holding of Îsentôr)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.raːn.sɛ.bɛs]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Caransebe%C8%99",
       "older_name_by_867": {
         "exists": true,
@@ -618,26 +527,17 @@
         {
           "form": "târgu",
           "language": "Romanian (from Slavic trŭgŭ)",
+          "language_code": "ron",
           "translation": "market town"
         },
         {
           "form": "Jiu",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "Jiu River"
         }
       ],
       "etymology_analysis": "Romanian compound meaning 'Market on the Jiu', combining târg ('market', from Slavic trŭgŭ) with the Jiu River.",
-      "current_repo_state": {
-        "name": "Schîu",
-        "b_tarr": "Schîu",
-        "b_tarr_direct": "Tergu-Schîu",
-        "b_tarr_hist": "Schîu",
-        "b_origin": "Schîu (Schîu (in-game: Târgu Jiu))",
-        "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-        "b_ipa": "[ˈʃiː.ʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2rgu_Jiu",
       "older_name_by_867": {
         "exists": false,
@@ -672,26 +572,17 @@
         {
           "form": "baia",
           "language": "Romanian (from Hungarian bánya)",
+          "language_code": "ron",
           "translation": "mine"
         },
         {
           "form": "de aramă",
           "language": "Romanian (from Latin aeramen)",
+          "language_code": "ron",
           "translation": "of copper"
         }
       ],
       "etymology_analysis": "Romanian descriptive toponym meaning 'Copper Mine', from baie ('mine') and aramă ('copper').",
-      "current_repo_state": {
-        "name": "Baia-de-Arama",
-        "b_tarr": "Baia-de-Arama",
-        "b_tarr_direct": "Baia-de-Arama",
-        "b_tarr_hist": "Baia-de-Arama",
-        "b_origin": "Baia-de-Arama (constituent holding of Schîu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.ja dɛ ˈa.ra.ma]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baia_de_Aram%C4%83",
       "older_name_by_867": {
         "exists": false,
@@ -726,26 +617,17 @@
         {
           "form": "bara-su / Bârsa",
           "language": "Turkic / Slavic",
+          "language_code": "tur",
           "translation": "white water / Bârsa River"
         },
         {
           "form": "-ov",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived either from Turkic barasu ('white water') with Slavic suffix -ov, or from the local Bârsa River adapted into Slavic as Barsov/Brașov; Latin Corona and German Kronstadt mean 'Crown City'.",
-      "current_repo_state": {
-        "name": "Brâschow",
-        "b_tarr": "Brâschow",
-        "b_tarr_direct": "Brâschow",
-        "b_tarr_hist": "Brâschow",
-        "b_origin": "Brașov / Corona (ancient Dacian and medieval citadel) (in-game: Brâschow)",
-        "b_anachronism": "Constituent capital seat disambiguated from Bálványos.",
-        "b_ipa": "[ˈbraː.ʃɔw]",
-        "holding_type": "castle",
-        "category": "capital_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bra%C8%99ov",
       "older_name_by_867": {
         "exists": true,
@@ -782,26 +664,17 @@
         {
           "form": "bálvány",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "idol, pagan statue"
         },
         {
           "form": "-os",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "having / characterized by"
         }
       ],
       "etymology_analysis": "Hungarian bálványos ('idolatrous, having idols'), referring in local tradition to the Apor lords holding out there as pagans after Hungary's Christianization.",
-      "current_repo_state": {
-        "name": "Balwanjosch",
-        "b_tarr": "Balwanjosch",
-        "b_tarr_direct": "Balwanjosch",
-        "b_tarr_hist": "Balwanjosch",
-        "b_origin": "Bálványos (ancient pagan fortress in the Harghita mountains) (in-game: Balwanjosch)",
-        "b_anachronism": "Ancient Hungarian pagan fortress Bálványos.",
-        "b_ipa": "[ˈbal.wa.ɲɔʃ]",
-        "holding_type": "city",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%A1lv%C3%A1nyos_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -836,26 +709,17 @@
         {
           "form": "Sepsi",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Sepsiszék (Székely seat)"
         },
         {
           "form": "Szentgyörgy",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Saint George"
         }
       ],
       "etymology_analysis": "Hungarian Sepsiszentgyörgy combines the Székely seat name Sepsi with Szentgyörgy ('Saint George'), translated into Romanian as Sfântu Gheorghe.",
-      "current_repo_state": {
-        "name": "Sepsischentgyörgy",
-        "b_tarr": "Sepsischentgyörgy",
-        "b_tarr_direct": "Sepsischentgyörgy",
-        "b_tarr_hist": "Sepsischentgyörgy",
-        "b_origin": "Sepsischentgyörgy (constituent holding of Balwanjosch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɛp.sɪ.ʃɛntɡ.jøːr.ɡɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sf%C3%A2ntu_Gheorghe",
       "older_name_by_867": {
         "exists": false,
@@ -890,26 +754,17 @@
         {
           "form": "kvas",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "sour, bitter (referring to mineral springs)"
         },
         {
           "form": "-na",
           "language": "Slavic / Hungarian",
+          "language_code": "sla",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Widely derived from Slavic kvas ('sour, bitter'), referring to the town's effervescent mineral water springs.",
-      "current_repo_state": {
-        "name": "Kovâschna",
-        "b_tarr": "Kovâschna",
-        "b_tarr_direct": "Kovâschna",
-        "b_tarr_hist": "Kovâschna",
-        "b_origin": "Kovâschna (constituent holding of Balwanjosch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔ.vaːʃ.na]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Covasna",
       "older_name_by_867": {
         "exists": false,
@@ -944,21 +799,11 @@
         {
           "form": "bystrica",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "fast-moving water, swift stream"
         }
       ],
       "etymology_analysis": "Named after the Bistrița River, from Slavic bystrica ('fast-moving water'); Hungarian Beszterce and German Bistritz are adaptations of the same hydronym.",
-      "current_repo_state": {
-        "name": "Dobôke",
-        "b_tarr": "Dobôke",
-        "b_tarr_direct": "Dobôke",
-        "b_tarr_hist": "Dobôke",
-        "b_origin": "Dobôke — Historical Option A seat of c_beszterce",
-        "b_anachronism": "",
-        "b_ipa": "[dɔ.ˈboː.kə]",
-        "holding_type": "castle",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bistri%C8%9Ba",
       "older_name_by_867": {
         "exists": false,
@@ -993,21 +838,11 @@
         {
           "form": "ruda / rudna",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "ore-bearing, mining place"
         }
       ],
       "etymology_analysis": "From Slavic ruda ('ore, metal') / rudna ('ore-bearing'), reflecting its medieval silver and lead mines.",
-      "current_repo_state": {
-        "name": "Radna",
-        "b_tarr": "Radna",
-        "b_tarr_direct": "Radna",
-        "b_tarr_hist": "Radna",
-        "b_origin": "Radna (constituent holding of Dobôke)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈrad.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rodna",
       "older_name_by_867": {
         "exists": false,
@@ -1042,21 +877,11 @@
         {
           "form": "Dés",
           "language": "Hungarian (from Latin Desiderius)",
+          "language_code": "hun",
           "translation": "personal name Dés"
         }
       ],
       "etymology_analysis": "Romanian Dej is borrowed from Hungarian Dés, itself derived from the personal name Desiderius.",
-      "current_repo_state": {
-        "name": "Des",
-        "b_tarr": "Des",
-        "b_tarr_direct": "Des",
-        "b_tarr_hist": "Des",
-        "b_origin": "Des (constituent holding of Dobôke)",
-        "b_anachronism": "",
-        "b_ipa": "[dɛs]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dej",
       "older_name_by_867": {
         "exists": false,
@@ -1091,21 +916,11 @@
         {
           "form": "szék",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "seat, judicial/administrative seat"
         }
       ],
       "etymology_analysis": "Romanian Sic derives from Hungarian Szék ('seat, chair/administrative seat'), an important medieval salt-mining town.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sic,_Cluj",
       "older_name_by_867": {
         "exists": false,
@@ -1140,26 +955,17 @@
         {
           "form": "Lápos",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Lăpuș River / marshy"
         },
         {
           "form": "bánya",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "mine"
         }
       ],
       "etymology_analysis": "Hungarian Láposbánya means 'Lăpuș Mine' (after the Lăpuș River and local gold/iron mines); modern Romanian Băiuț is a diminutive of baie ('mine').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C4%83iu%C8%9B",
       "older_name_by_867": {
         "exists": false,
@@ -1194,26 +1000,17 @@
         {
           "form": "Fehér / Alba / Băl",
           "language": "Hungarian / Latin / Slavic",
+          "language_code": "hun",
           "translation": "white"
         },
         {
           "form": "vár / grad",
           "language": "Hungarian / Slavic",
+          "language_code": "hun",
           "translation": "fortress, castle"
         }
       ],
       "etymology_analysis": "Hungarian Fehérvár (later Gyulafehérvár), Slavic Bălgrad, German Weißenburg, and Latin Alba all mean 'White Citadel', referring to the white stone ruins of Roman Apulum.",
-      "current_repo_state": {
-        "name": "Bêlgrat-in-Erdel",
-        "b_tarr": "Bêlgrat-in-Erdel",
-        "b_tarr_direct": "Wîtzenburch",
-        "b_tarr_hist": "Bêlgrat-in-Erdel",
-        "b_origin": "Bêlgrat-in-Erdel (Bêlgrat-in-Erdel (in-game: Fehér))",
-        "b_anachronism": "Resolved via verified historical center Bêlgrat-in-Erdel documented in tarraconian_titles_1059.md.",
-        "b_ipa": "[beːl.ˈɡrat ɪn ɛr.ˈdəl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alba_Iulia",
       "older_name_by_867": {
         "exists": true,
@@ -1251,26 +1048,17 @@
         {
           "form": "Küküllő",
           "language": "Hungarian (from Turkic *kükül)",
+          "language_code": "hun",
           "translation": "Târnava / Küküllő River (blackthorn river)"
         },
         {
           "form": "vár",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "Hungarian Küküllővár means 'Castle on the Küküllő (Târnava) River'; Romanian Cetatea de Baltă ('Marsh Fortress') refers to its marshy valley setting.",
-      "current_repo_state": {
-        "name": "Küküllovâr",
-        "b_tarr": "Küküllovâr",
-        "b_tarr_direct": "Küküllovâr",
-        "b_tarr_hist": "Küküllovâr",
-        "b_origin": "Küküllovâr (constituent holding of Bêlgrat-in-Erdel)",
-        "b_anachronism": "",
-        "b_ipa": "[kyː.kyː.ʎɔ.ˈvaːr]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cetatea_de_Balt%C4%83",
       "older_name_by_867": {
         "exists": false,
@@ -1305,26 +1093,17 @@
         {
           "form": "Abrud / Obruth",
           "language": "Dacian / Romanian / Hungarian",
+          "language_code": "ron",
           "translation": "Abrud River (hypothetical Dacian 'gold')"
         },
         {
           "form": "bánya",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "mine"
         }
       ],
       "etymology_analysis": "Named after the Abrud River (attested 1271 as Obruth, possibly from a Dacian root for gold); Hungarian Abrudbánya adds bánya ('mine').",
-      "current_repo_state": {
-        "name": "Abrudbânya",
-        "b_tarr": "Abrudbânya",
-        "b_tarr_direct": "Abrudbânya",
-        "b_tarr_hist": "Abrudbânya",
-        "b_origin": "Abrudbânya (constituent holding of Bêlgrat-in-Erdel)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈa.brʊd.baː.ɲa]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Abrud",
       "older_name_by_867": {
         "exists": true,
@@ -1361,26 +1140,17 @@
         {
           "form": "Nagy-",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "great, big"
         },
         {
           "form": "Szeben / Sibin",
           "language": "Bulgar-Turkic / Hungarian",
+          "language_code": "tat",
           "translation": "Sibiu / Cibin River"
         }
       ],
       "etymology_analysis": "Sibiu / Hungarian Nagyszeben ('Great Sibiu') derives from Bulgar-Turkic Sibin (< Sebin); the German name Hermannstadt means 'Hermann's town', after the 12th-century Saxon colonist leader Hermann of Nuremberg.",
-      "current_repo_state": {
-        "name": "Hermannstat",
-        "b_tarr": "Hermannstat",
-        "b_tarr_direct": "Hermannstat",
-        "b_tarr_hist": "Hermannstat",
-        "b_origin": "Transylvanian Saxon chartered city Hermannstadt / Sibiu (attested 1191 AD) (in-game: Hermannstadt)",
-        "b_anachronism": "Post-867 chartered Transylvanian Saxon city (founded c. 1191 AD under King Béla III; site of Roman Cedonia).",
-        "b_ipa": "[ˈhɛr.man.stat]",
-        "holding_type": "church",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sibiu",
       "older_name_by_867": {
         "exists": true,
@@ -1417,26 +1187,17 @@
         {
           "form": "Al-",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "lower"
         },
         {
           "form": "vinc",
           "language": "Hungarian (from Latin Vincentius)",
+          "language_code": "hun",
           "translation": "personal name Vince / Vinț"
         }
       ],
       "etymology_analysis": "Hungarian Alvinc ('Lower Vinc') and Romanian Vințu de Jos ('Lower Vinț') distinguish it from Felvinc (Unirea), derived from the personal name Vincentius.",
-      "current_repo_state": {
-        "name": "Alvinc",
-        "b_tarr": "Alvinc",
-        "b_tarr_direct": "Alvinc",
-        "b_tarr_hist": "Alvinc",
-        "b_origin": "Alvinc (constituent holding of Bêlgrat-in-Erdel)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈal.vɪŋk]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vin%C8%9Bu_de_Jos",
       "older_name_by_867": {
         "exists": false,
@@ -1471,26 +1232,17 @@
         {
           "form": "Szász-",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Saxon"
         },
         {
           "form": "Kézd / Kyzd",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "early Székely/Saxon settlement name"
         }
       ],
       "etymology_analysis": "Hungarian Szászkézd ('Saxon Kézd') reflects the replacement of earlier Székely settlers (Kézd) by Transylvanian Saxons (Keisd), adapted into Romanian as Saschiz.",
-      "current_repo_state": {
-        "name": "Schâschkêzd",
-        "b_tarr": "Schâschkêzd",
-        "b_tarr_direct": "Schâschkêzd",
-        "b_tarr_hist": "Schâschkêzd",
-        "b_origin": "Schâschkêzd (constituent holding of Bêlgrat-in-Erdel)",
-        "b_anachronism": "",
-        "b_ipa": "[ʃaːʃ.ˈkeːtsd]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Saschiz",
       "older_name_by_867": {
         "exists": false,
@@ -1525,21 +1277,11 @@
         {
           "form": "fagar šu / fag / fogoly",
           "language": "Pecheneg / Romanian / Hungarian",
+          "language_code": "tat",
           "translation": "ash-tree water / beech grove / partridge"
         }
       ],
       "etymology_analysis": "Proposed etymologies include Pecheneg fagar šu ('ash-tree water'), Romanian *făgar ('beech forest', from fag), or Hungarian fogoly ('partridge').",
-      "current_repo_state": {
-        "name": "Belgrâd-Albe",
-        "b_tarr": "Belgrâd-Albe",
-        "b_tarr_direct": "Belgrâd-Albe",
-        "b_tarr_hist": "Belgrâd-Albe",
-        "b_origin": "Belgrâd-Albe — Historical Option A seat of c_fogaras",
-        "b_anachronism": "",
-        "b_ipa": "[bɛl.ˈɡraːd ˈal.bɛ]",
-        "holding_type": "castle",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/F%C4%83g%C4%83ra%C8%99",
       "older_name_by_867": {
         "exists": false,
@@ -1574,26 +1316,17 @@
         {
           "form": "Törcs / Törz",
           "language": "Hungarian / German",
+          "language_code": "hun",
           "translation": "pass / gate (or Dietrich)"
         },
         {
           "form": "vár",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "Hungarian Törcsvár and German Törzburg refer to the fortified mountain-pass castle (built by Saxons in 1377 on the site of the 1212 Teutonic Dietrichstein); Romanian Bran means 'gate/border'.",
-      "current_repo_state": {
-        "name": "Törcsvâr",
-        "b_tarr": "Törcsvâr",
-        "b_tarr_direct": "Törcsvâr",
-        "b_tarr_hist": "Törcsvâr",
-        "b_origin": "Törcsvâr (constituent holding of Belgrâd-Albe)",
-        "b_anachronism": "",
-        "b_ipa": "[tøːrks.ˈvaːr]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bran,_Bra%C8%99ov",
       "older_name_by_867": {
         "exists": false,
@@ -1628,26 +1361,17 @@
         {
           "form": "Vajda-",
           "language": "Hungarian (from Slavic voivoda)",
+          "language_code": "hun",
           "translation": "voivode (referring to John Hunyadi)"
         },
         {
           "form": "Hunyad",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "castle/estate name"
         }
       ],
-      "etymology_analysis": "Romanian Hunedoara is an adaptation of Hungarian Hunyadvár ('Hunyad Castle'), while Hungarian Vajdahunyad ('Voivode Hunyad') directly honors John Hunyadi, Voivode of Transylvania. (Note: current_repo_state.name uses Wîssenburch, the Historical Option A seat of c_hunyad corresponding to German Weißenburg / Alba Iulia, while this entry audits the barony key settlement Hunedoara/Vajdahunyad.)",
-      "current_repo_state": {
-        "name": "Wîssenburch",
-        "b_tarr": "Wîssenburch",
-        "b_tarr_direct": "Wîssenburch",
-        "b_tarr_hist": "Wîssenburch",
-        "b_origin": "Wîssenburch — Historical Option A seat of c_hunyad",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwiː.sən.bʊrx]",
-        "holding_type": "castle",
-        "category": "option_a_seat"
-      },
+      "etymology_analysis": "Romanian Hunedoara is an adaptation of Hungarian Hunyadvár ('Hunyad Castle'), while Hungarian Vajdahunyad ('Voivode Hunyad') directly honors John Hunyadi, Voivode of Transylvania.",
       "source_url": "https://en.wikipedia.org/wiki/Hunedoara",
       "older_name_by_867": {
         "exists": false,
@@ -1682,21 +1406,11 @@
         {
           "form": "Harszoc / Hátszeg",
           "language": "Hungarian / Romanian",
+          "language_code": "hun",
           "translation": "back corner / mountain-enclosed basin"
         }
       ],
       "etymology_analysis": "Attested in 1247 as Latinized terra Harszoc (later Hatzak 1276, Hungarian Hátszeg, Romanian Hațeg), traditionally interpreted in Hungarian as hát ('back') + szeg ('corner').",
-      "current_repo_state": {
-        "name": "Harschoc",
-        "b_tarr": "Harschoc",
-        "b_tarr_direct": "Harschoc",
-        "b_tarr_hist": "Harschoc",
-        "b_origin": "Harschoc (constituent holding of Wîssenburch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhar.ʃɔk]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ha%C8%9Beg",
       "older_name_by_867": {
         "exists": true,
@@ -1733,21 +1447,11 @@
         {
           "form": "dava / dewa",
           "language": "Dacian / Proto-Indo-European",
+          "language_code": "ron",
           "translation": "fortress, settlement"
         }
       ],
       "etymology_analysis": "First attested in 1269 as castrum Dewa; proposed etymologies include Dacian dava ('fortress'), PIE *dhewa ('settlement'), or Slavic/Hungarian roots.",
-      "current_repo_state": {
-        "name": "Deva",
-        "b_tarr": "Deva",
-        "b_tarr_direct": "Deva",
-        "b_tarr_hist": "Deva",
-        "b_origin": "Deva (constituent holding of Wîssenburch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdɛ.va]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Deva,_Romania",
       "older_name_by_867": {
         "exists": false,
@@ -1782,26 +1486,17 @@
         {
           "form": "Székely-",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Székely"
         },
         {
           "form": "udvarhely",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "courtyard place, royal/seat court"
         }
       ],
       "etymology_analysis": "Hungarian Székelyudvarhely means 'Székely Courtyard Place' (Udvarhely attested 1334; Székely- prefixed by 1615); Romanian Odorheiu Secuiesc adapts the Hungarian name.",
-      "current_repo_state": {
-        "name": "Kökellô",
-        "b_tarr": "Kökellô",
-        "b_tarr_direct": "Sêklerlant",
-        "b_tarr_hist": "Kökellô",
-        "b_origin": "Kökellô (Küküllö (in-game: Székelyföld))",
-        "b_anachronism": "Székelys only moved to eastern Transylvania in 12th c.; resolves to 11th-c. ispánság of Küküllő (*Kokel*).",
-        "b_ipa": "[køː.kɛ.ˈʎoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Odorheiu_Secuiesc",
       "older_name_by_867": {
         "exists": false,
@@ -1836,26 +1531,17 @@
         {
           "form": "Maros",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Mureș River"
         },
         {
           "form": "vásárhely",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "marketplace"
         }
       ],
       "etymology_analysis": "Hungarian Marosvásárhely ('Mureș Marketplace') and Romanian Târgu Mureș ('Mureș Market') both refer to the medieval Székely market town on the Mureș River.",
-      "current_repo_state": {
-        "name": "Marosvâsârhely",
-        "b_tarr": "Marosvâsârhely",
-        "b_tarr_direct": "Marosvâsârhely",
-        "b_tarr_hist": "Marosvâsârhely",
-        "b_origin": "Marosvâsârhely (constituent holding of Kökellô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.rɔs.vaː.zaːr.hɛ.lɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2rgu_Mure%C8%99",
       "older_name_by_867": {
         "exists": false,
@@ -1890,26 +1576,17 @@
         {
           "form": "Csík",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Ciuc / Csík basin"
         },
         {
           "form": "szereda",
           "language": "Hungarian (from Slavic *srěda)",
+          "language_code": "hun",
           "translation": "Wednesday (market day)"
         }
       ],
       "etymology_analysis": "Hungarian Csíkszereda and Romanian Miercurea Ciuc both mean 'Wednesday [Market] of Ciuc', referring to the weekly Wednesday market held in the Csík basin.",
-      "current_repo_state": {
-        "name": "Csîkschereda",
-        "b_tarr": "Csîkschereda",
-        "b_tarr_direct": "Csîkschereda",
-        "b_tarr_hist": "Csîkschereda",
-        "b_origin": "Csîkschereda (constituent holding of Kökellô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈksiːk.ʃɛ.rɛ.da]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Miercurea_Ciuc",
       "older_name_by_867": {
         "exists": false,
@@ -1944,26 +1621,17 @@
         {
           "form": "Gyergyó",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Gyergyó / Gheorgheni basin"
         },
         {
           "form": "Szentmiklós",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Saint Nicholas"
         }
       ],
       "etymology_analysis": "Hungarian Gyergyószentmiklós combines the regional basin name Gyergyó with Szentmiklós ('Saint Nicholas'), the patron saint of its medieval church.",
-      "current_repo_state": {
-        "name": "Gyergyôschentmiklôs",
-        "b_tarr": "Gyergyôschentmiklôs",
-        "b_tarr_direct": "Gyergyôschentmiklôs",
-        "b_tarr_hist": "Gyergyôschentmiklôs",
-        "b_origin": "Gyergyôschentmiklôs (constituent holding of Kökellô)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡjɛrɡ.joː.ʃənt.mɪ.ˈkloːs]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gheorgheni",
       "older_name_by_867": {
         "exists": false,
@@ -1998,21 +1666,11 @@
         {
           "form": "Torda / Turda",
           "language": "Hungarian / Slavic",
+          "language_code": "hun",
           "translation": "personal/clan name Torda"
         }
       ],
       "etymology_analysis": "Attested in 1075 as castrum Turda (Hungarian Torda, Romanian Turda), derived from an early Hungarian personal or clan name Torda.",
-      "current_repo_state": {
-        "name": "Tôrde",
-        "b_tarr": "Tôrde",
-        "b_tarr_direct": "Tôrenburch",
-        "b_tarr_hist": "Tôrde",
-        "b_origin": "Tôrde (Tôrde (in-game: Torda))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "b_ipa": "[ˈtoːr.də]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Turda",
       "older_name_by_867": {
         "exists": true,
@@ -2050,26 +1708,17 @@
         {
           "form": "Bánffy",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Bánffy (noble family name)"
         },
         {
           "form": "hunyad",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "settlement name (from Hunad, uncertain origin)"
         }
       ],
       "etymology_analysis": "Hungarian compound combining the Bánffy noble family name (landlords from 1330 CE) with the earlier settlement name Hunyad (attested 1332 CE as Villa Hunad; Romanian Huedin).",
-      "current_repo_state": {
-        "name": "Bânffyhunyad",
-        "b_tarr": "Bânffyhunyad",
-        "b_tarr_direct": "Bânffyhunyad",
-        "b_tarr_hist": "Bânffyhunyad",
-        "b_origin": "Bânffyhunyad (constituent holding of Tôrde)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbaːn.fɪ.hʊ.ɲad]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Huedin",
       "older_name_by_867": {
         "exists": false,
@@ -2104,26 +1753,17 @@
         {
           "form": "Kolozs (Clus)",
           "language": "Hungarian / Medieval Latin",
+          "language_code": "hun",
           "translation": "enclosed place/valley (from Latin clusa / Slavic ključ) or personal name Miklós"
         },
         {
           "form": "vár",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "castle, fortress"
         }
       ],
       "etymology_analysis": "Hungarian Kolozsvár (first recorded 1246 CE as Kulusuar) combines Kolozs (linked to Latin clusa 'enclosed place' or Slavic ključ, or personal name Miklós) with vár ('castle'). Built on the site of ancient Dacian-Roman Napoca.",
-      "current_repo_state": {
-        "name": "Kolozsvâr",
-        "b_tarr": "Kolozsvâr",
-        "b_tarr_direct": "Kolozsvâr",
-        "b_tarr_hist": "Kolozsvâr",
-        "b_origin": "Kolozsvâr (constituent holding of Tôrde)",
-        "b_anachronism": "",
-        "b_ipa": "[kɔ.lɔts.ˈvaːr]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cluj-Napoca",
       "older_name_by_867": {
         "exists": true,
@@ -2162,26 +1802,17 @@
         {
           "form": "Szász",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "Saxon (Transylvanian Saxon)"
         },
         {
           "form": "régen (Regun)",
           "language": "Hungarian / German",
+          "language_code": "hun",
           "translation": "settlement name (attested 1228 CE as Regun)"
         }
       ],
       "etymology_analysis": "Hungarian Szászrégen ('Saxon Reghin', German Sächsisch-Regen) prefixes Szász ('Saxon', referring to Transylvanian Saxon settlers) to the medieval settlement name Regun (attested 1228 CE).",
-      "current_repo_state": {
-        "name": "Schâschrêgen",
-        "b_tarr": "Schâschrêgen",
-        "b_tarr_direct": "Schâschrêgen",
-        "b_tarr_hist": "Schâschrêgen",
-        "b_origin": "Schâschrêgen (constituent holding of Tôrde)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃaːʃ.reː.ɣən]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Reghin",
       "older_name_by_867": {
         "exists": false,
@@ -2216,26 +1847,17 @@
         {
           "form": "Aranyos",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "golden (from arany 'gold', referring to the Arieș River)"
         },
         {
           "form": "bánya",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "mine"
         }
       ],
       "etymology_analysis": "Hungarian Aranyosbánya ('Gold-river Mine', Romanian Baia de Arieș) combines Aranyos ('golden', the Hungarian name of the Arieș River, attested 1075 CE) with bánya ('mine'), reflecting its medieval gold mining charter of 1325 CE.",
-      "current_repo_state": {
-        "name": "Aranyosbânya",
-        "b_tarr": "Aranyosbânya",
-        "b_tarr_direct": "Aranyosbânya",
-        "b_tarr_hist": "Aranyosbânya",
-        "b_origin": "Aranyosbânya (constituent holding of Tôrde)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈa.ra.ɲɔs.baː.ɲa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baia_de_Arie%C8%99",
       "older_name_by_867": {
         "exists": false,
@@ -2270,26 +1892,17 @@
         {
           "form": "târg (tŭrgŭ)",
           "language": "South Slavic / Romanian",
+          "language_code": "sla",
           "translation": "market, marketplace"
         },
         {
           "form": "-oviște (-ovište)",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "locative/settlement suffix (place of)"
         }
       ],
       "etymology_analysis": "From South Slavic *tŭrgovište ('marketplace, market town'), combining tŭrgŭ ('market') and the locative suffix -ovište.",
-      "current_repo_state": {
-        "name": "Ardschêsch",
-        "b_tarr": "Ardschêsch",
-        "b_tarr_direct": "Langenvelt",
-        "b_tarr_hist": "Ardschêsch",
-        "b_origin": "Ardschêsch (Ardschêsch (in-game: Târgoviște (Câmpulung))",
-        "b_anachronism": "Târgoviște (`b_targoviste`) first attested in 1396 (Schiltberger); Câmpulung (`b_campulung`) attested c. 1215–. Resolved via Argeș / Curtea de Argeș (`b_arges`, Argeș River & early Vlach-Slavic voivodal seat in the sub-Carpathian basin). $.",
-        "b_ipa": "[ar.ˈdʒeːʃ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2rgovi%C8%99te",
       "older_name_by_867": {
         "exists": false,
@@ -2324,26 +1937,17 @@
         {
           "form": "câmp(u)",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "field, plain (from Latin campus)"
         },
         {
           "form": "lung",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "long (from Latin longus)"
         }
       ],
       "etymology_analysis": "Romanian Câmpulung ('Long Field', calqued in Medieval Latin as Longus-Campus / Longo-Campo, Old Church Slavonic Dlăgopole, and German Langenau).",
-      "current_repo_state": {
-        "name": "Langenvelt",
-        "b_tarr": "Langenvelt",
-        "b_tarr_direct": "Langenvelt",
-        "b_tarr_hist": "Ardschêsch",
-        "b_origin": "Langenvelt — Disambiguated capital seat from sub-barony Ardschêsch",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈla.ŋɛn.vɛlt]",
-        "holding_type": "city",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/C%C3%A2mpulung",
       "older_name_by_867": {
         "exists": false,
@@ -2378,21 +1982,11 @@
         {
           "form": "Argeș",
           "language": "Thracian / Dacian",
+          "language_code": "ine",
           "translation": "bright, white, shining (from PIE *h₂erǵ- 'white, shining')"
         }
       ],
       "etymology_analysis": "Named after the Argeș River (related to Thracian/Dacian *Argesos, recorded by Herodotus in the 5th century BCE as Ordesos); the fortified town of Argeș (later Curtea de Argeș) is first attested in 1330 CE.",
-      "current_repo_state": {
-        "name": "Argesch",
-        "b_tarr": "Argesch",
-        "b_tarr_direct": "Argesch",
-        "b_tarr_hist": "Argesch",
-        "b_origin": "Argesch (constituent holding of Ardschêsch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈar.ɡɛʃ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Curtea_de_Arge%C8%99",
       "older_name_by_867": {
         "exists": false,
@@ -2427,26 +2021,17 @@
         {
           "form": "Pit- (Pitea)",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name or root (Pitea)"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "patronymic/settlement suffix (village/descendants of)"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym formed from a personal name (Pitea) and the collective/settlement suffix -ești.",
-      "current_repo_state": {
-        "name": "Pitesti",
-        "b_tarr": "Pitesti",
-        "b_tarr_direct": "Pitesti",
-        "b_tarr_hist": "Pitesti",
-        "b_origin": "Pitesti (constituent holding of Ardschêsch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɪ.tɛs.tɪ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pite%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -2481,21 +2066,11 @@
         {
           "form": "Polovragi",
           "language": "Romanian (Dacian or Slavic substrate)",
+          "language_code": "ron",
           "translation": "settlement name of uncertain origin"
         }
       ],
       "etymology_analysis": "Toponym of uncertain origin, variously linked in scholarship to Slavic or Dacian substrate elements.",
-      "current_repo_state": {
-        "name": "Polowrâdschi",
-        "b_tarr": "Polowrâdschi",
-        "b_tarr_direct": "Polowrâdschi",
-        "b_tarr_hist": "Polowrâdschi",
-        "b_origin": "Polowrâdschi (Polovragi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɔ.lɔw.raː.dʒɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Polovragi",
       "older_name_by_867": {
         "exists": false,
@@ -2530,21 +2105,11 @@
         {
           "form": "Govora",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "murmuring spring/stream (from Slavic govoriti 'to speak, murmur')"
         }
       ],
       "etymology_analysis": "Derived from South Slavic *govoriti ('to speak, murmur'), referring to the murmuring mineral springs (or Thracian-Dacian 'valley with springs').",
-      "current_repo_state": {
-        "name": "Govora",
-        "b_tarr": "Govora",
-        "b_tarr_direct": "Govora",
-        "b_tarr_hist": "Govora",
-        "b_origin": "Govora (constituent holding of Polowrâdschi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡɔ.vɔ.ra]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C4%83ile_Govora",
       "older_name_by_867": {
         "exists": false,
@@ -2579,26 +2144,17 @@
         {
           "form": "Filiaș",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal or family name (associated with the Filișanu boyar family)"
         },
         {
           "form": "-i",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "plural settlement suffix"
         }
       ],
       "etymology_analysis": "Romanian plural settlement name derived from the personal/clan name Filiaș (associated with the Filișanu boyars).",
-      "current_repo_state": {
-        "name": "Filjasch",
-        "b_tarr": "Filjasch",
-        "b_tarr_direct": "Filjasch",
-        "b_tarr_hist": "Filjasch",
-        "b_origin": "Filjasch (constituent holding of Polowrâdschi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfɪ.ʎaʃ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Filia%C8%99i",
       "older_name_by_867": {
         "exists": false,
@@ -2633,26 +2189,17 @@
         {
           "form": "tabla",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "board, stamped customs plaque"
         },
         {
           "form": "buții",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "of the barrel (genitive of bute 'barrel')"
         }
       ],
       "etymology_analysis": "Romanian compound meaning 'the plaque/board of the barrel', referring to the stamped customs plaques applied to merchant barrels passing through the Wallachia–Transylvania border checkpoint.",
-      "current_repo_state": {
-        "name": "Tâbla-Bûtzi",
-        "b_tarr": "Tâbla-Bûtzi",
-        "b_tarr_direct": "Tâbla-Bûtzi",
-        "b_tarr_hist": "Tâbla-Bûtzi",
-        "b_origin": "Tâbla-Bûtzi (Tabla Buții)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtaː.bla ˈbuː.tsɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2687,26 +2234,17 @@
         {
           "form": "Zor",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name (shortened form of Lazor)"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "patronymic/settlement suffix (village of)"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym from the personal name Zor (hypocoristic of Lazor) + settlement suffix -ești.",
-      "current_repo_state": {
-        "name": "Zorescht",
-        "b_tarr": "Zorescht",
-        "b_tarr_direct": "Zorescht",
-        "b_tarr_hist": "Zorescht",
-        "b_origin": "Zorescht (constituent holding of Tâbla-Bûtzi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtsɔ.rɛʃt]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2741,26 +2279,17 @@
         {
           "form": "dumbravă",
           "language": "Romanian (from Slavic dǫbrava)",
+          "language_code": "ron",
           "translation": "oak grove, woodland"
         },
         {
           "form": "-eni",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "inhabitants/settlement suffix"
         }
       ],
       "etymology_analysis": "Romanian settlement name from dumbravă ('oak grove', borrowed from Slavic *dǫbrava) + inhabitants suffix -eni.",
-      "current_repo_state": {
-        "name": "Dumbrawên",
-        "b_tarr": "Dumbrawên",
-        "b_tarr_direct": "Dumbrawên",
-        "b_tarr_hist": "Dumbrawên",
-        "b_origin": "Dumbrawên (constituent holding of Tâbla-Bûtzi)",
-        "b_anachronism": "",
-        "b_ipa": "[dʊm.bra.ˈweːn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dumbr%C4%83veni,_Vrancea",
       "older_name_by_867": {
         "exists": false,
@@ -2795,26 +2324,17 @@
         {
           "form": "Cetatea",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "the fortress, citadel (from Latin civitas)"
         },
         {
           "form": "Albă",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "white (from Latin alba)"
         }
       ],
       "etymology_analysis": "Romanian Cetatea Albă ('White Citadel', parallel to Slavic Bilhorod / Belgorod 'White City' and Turkish Akkerman) arose in the High Middle Ages on the ruins of the ancient Greek colony Tyras.",
-      "current_repo_state": {
-        "name": "Moukaster",
-        "b_tarr": "Moukaster",
-        "b_tarr_direct": "Moukaster",
-        "b_tarr_hist": "Moukaster",
-        "b_origin": "Moukaster (Moukaster (in-game: Cetatea Albă))",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔʊ.kas.tər]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bilhorod-Dnistrovskyi",
       "older_name_by_867": {
         "exists": true,
@@ -2851,21 +2371,11 @@
         {
           "form": "Tighina",
           "language": "Romanian (from Cuman/Turkic)",
+          "language_code": "ron",
           "translation": "medieval settlement name (from Cuman Tyagyanyakyacha; later renamed Bender from Persian bandar 'port')"
         }
       ],
       "etymology_analysis": "First attested in 1408 CE under the Cuman-origin name Tyagyanyakyacha, evolving into Romanian Tighina (Genoese Teghenaccio) before Ottoman conquest in 1538 CE renamed it Bender (Persian bandar 'port').",
-      "current_repo_state": {
-        "name": "Tighina",
-        "b_tarr": "Tighina",
-        "b_tarr_direct": "Tighina",
-        "b_tarr_hist": "Tighina",
-        "b_origin": "Tighina (constituent holding of Moukaster)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɪɡ.hɪ.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bender,_Moldova",
       "older_name_by_867": {
         "exists": false,
@@ -2900,21 +2410,11 @@
         {
           "form": "Chilia (Kellia)",
           "language": "Medieval Greek",
+          "language_code": "grc",
           "translation": "granaries, storehouses (κελλία)"
         }
       ],
       "etymology_analysis": "From Byzantine Greek κελλία (kellia, 'granaries, storehouses'), first recorded in 1241 CE.",
-      "current_repo_state": {
-        "name": "Kilîe",
-        "b_tarr": "Kilîe",
-        "b_tarr_direct": "Kilîe",
-        "b_tarr_hist": "Kilîe",
-        "b_origin": "Kilîe (Kilîe (in-game: Chilia))",
-        "b_anachronism": "",
-        "b_ipa": "[kɪ.ˈliː.ɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kiliia",
       "older_name_by_867": {
         "exists": false,
@@ -2949,26 +2449,17 @@
         {
           "form": "Obluc-",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "water-rounded stone, pebble (from oblutak)"
         },
         {
           "form": "-ița",
           "language": "Romanian / Slavic",
+          "language_code": "ron",
           "translation": "diminutive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Romanian Oblucița (Bulgarian Obluchitsa) derives from South Slavic *oblutak ('water-rounded stone/pebble') + -ița, arising post-867 on the site of the ancient Celtic-Roman fortress Noviodunum.",
-      "current_repo_state": {
-        "name": "Oblucitza",
-        "b_tarr": "Oblucitza",
-        "b_tarr_direct": "Oblucitza",
-        "b_tarr_hist": "Oblucitza",
-        "b_origin": "Oblucitza (constituent holding of Kilîe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɔ.blʊ.tsɪ.tsa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isaccea",
       "older_name_by_867": {
         "exists": true,
@@ -3005,21 +2496,11 @@
         {
           "form": "Artsyz (Arcis)",
           "language": "French (via German/Russian)",
+          "language_code": "fra",
           "translation": "named after the French town of Arcis-sur-Aube (site of an 1814 battle)"
         }
       ],
       "etymology_analysis": "Founded in 1816 CE by German colonists in Bessarabia and named in 1819 CE after Arcis-sur-Aube in France, site of an 1814 Napoleonic battle.",
-      "current_repo_state": {
-        "name": "Artsyzian",
-        "b_tarr": "Artsyzian",
-        "b_tarr_direct": "Artsyzian",
-        "b_tarr_hist": "Artsyzian",
-        "b_origin": "Artsyzian (constituent holding of Kilîe)",
-        "b_anachronism": "",
-        "b_ipa": "[ar.tsɪ.tsɪ.ˈan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Artsyz",
       "older_name_by_867": {
         "exists": false,
@@ -3054,26 +2535,17 @@
         {
           "form": "lopuš (lăpuș)",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "burdock, butterbur (Petasites / Arctium)"
         },
         {
           "form": "-na",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "adjectival/hydronymic suffix"
         }
       ],
       "etymology_analysis": "Named after the Lăpușna River (attested 1430 CE), from South Slavic *lopuš ('burdock, butterbur') + -na.",
-      "current_repo_state": {
-        "name": "Lapuschne",
-        "b_tarr": "Lapuschne",
-        "b_tarr_direct": "Lapuschne",
-        "b_tarr_hist": "Lapuschne",
-        "b_origin": "Lapuschne (Hydronym & Botanical: Named after the Lăpușna River (in-game: Lăpușna))",
-        "b_anachronism": "`b_lapusna`, `b_chisinau`. Resolved via **Hydronym & Botanical:** Named after the **Lăpușna River** (from Slavic *lopušna* \"burdock / butterbur river\")..",
-        "b_ipa": "[la.ˈpʊʃ.nə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/L%C4%83pu%C8%99na,_H%C3%AEnce%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -3108,21 +2580,11 @@
         {
           "form": "chișla / kis",
           "language": "Old Romanian / Turkic / Hungarian",
+          "language_code": "ron",
           "translation": "spring/watering place (from Old Romanian chișla nouă 'new spring' or Hungarian Kisjenő)"
         }
       ],
       "etymology_analysis": "Debated etymology: either from Old Romanian chișla nouă ('new spring', with Turkic/Pecheneg kıșla) or from Hungarian Kisjenő ('Little Jenő').",
-      "current_repo_state": {
-        "name": "Chischineu",
-        "b_tarr": "Chischineu",
-        "b_tarr_direct": "Chischineu",
-        "b_tarr_hist": "Chischineu",
-        "b_origin": "Chischineu (constituent holding of Lapuschne)",
-        "b_anachronism": "",
-        "b_ipa": "[xɪ.ʃɪ.ˈnɔʏ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chi%C8%99in%C4%83u",
       "older_name_by_867": {
         "exists": false,
@@ -3157,21 +2619,11 @@
         {
           "form": "Tigheci (Chigheci)",
           "language": "Romanian (possibly Turkic/Cuman substrate)",
+          "language_code": "ron",
           "translation": "name of the Tigheci forest and river"
         }
       ],
       "etymology_analysis": "Named after the Codrii Tigheciului ('Tigheci Forest') and Tigheci River; settlement first attested in 1436 CE as Chigheci.",
-      "current_repo_state": {
-        "name": "Tigêtsch",
-        "b_tarr": "Tigêtsch",
-        "b_tarr_direct": "Tigêtsch",
-        "b_tarr_hist": "Tigêtsch",
-        "b_origin": "Tigêtsch (Topographic / Forest Region: Named after the Codrii Tigheciului (in-game: Tigheci))",
-        "b_anachronism": "Named after the famous medieval defensive forest *Codrii Tigheciului* between the Prut and steppe.",
-        "b_ipa": "[tɪ.ˈɣeːtʃ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tigheci",
       "older_name_by_867": {
         "exists": false,
@@ -3206,21 +2658,11 @@
         {
           "form": "Cahul (Kagul)",
           "language": "Russian / Turkic",
+          "language_code": "rus",
           "translation": "named after the 1770 Battle of Kagul (from the Kagul River/Lake)"
         }
       ],
       "etymology_analysis": "First attested in 1502 CE as Șcheia and in 1716 CE as Frumoasa; renamed Cahul in 1835 CE after the 1770 Battle of Kagul.",
-      "current_repo_state": {
-        "name": "Cahul",
-        "b_tarr": "Cahul",
-        "b_tarr_direct": "Cahul",
-        "b_tarr_hist": "Cahul",
-        "b_origin": "Cahul (constituent holding of Tigêtsch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.hʊl]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cahul",
       "older_name_by_867": {
         "exists": false,
@@ -3255,21 +2697,11 @@
         {
           "form": "Dorohoi",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "settlement name (from Slavic dorog 'dear' or doroga 'road')"
         }
       ],
       "etymology_analysis": "East Slavic-origin toponym (linked to *dorog 'dear' or *doroga 'road'), first attested as a Moldavian customs and market town in 1408 CE.",
-      "current_repo_state": {
-        "name": "Schischje",
-        "b_tarr": "Schischje",
-        "b_tarr_direct": "Dorohôi",
-        "b_tarr_hist": "Schischje",
-        "b_origin": "Schischje (Jijia (in-game: Dorohoi))",
-        "b_anachronism": "Dorohoi town attested 1408 AD. Pre-867 river corridor of the Jijia.",
-        "b_ipa": "[ˈʃɪʃ.jɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dorohoi",
       "older_name_by_867": {
         "exists": false,
@@ -3304,21 +2736,11 @@
         {
           "form": "Hârlău",
           "language": "Romanian (possibly Hungarian/Slavic)",
+          "language_code": "ron",
           "translation": "settlement name of uncertain origin"
         }
       ],
       "etymology_analysis": "Moldavian princely court town first attested in 1384 CE; etymology uncertain (possibly Hungarian Horló or Slavic).",
-      "current_repo_state": {
-        "name": "Hârlau",
-        "b_tarr": "Hârlau",
-        "b_tarr_direct": "Hârlau",
-        "b_tarr_hist": "Hârlau",
-        "b_origin": "Hârlau (constituent holding of Schischje)",
-        "b_anachronism": "",
-        "b_ipa": "[haːr.ˈlɔʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/H%C3%A2rl%C4%83u",
       "older_name_by_867": {
         "exists": false,
@@ -3353,26 +2775,17 @@
         {
           "form": "Khot- (Hot-)",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "personal name Khot / Khoten (from Slavic *xotěti 'to desire')"
         },
         {
           "form": "-yn (-in)",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "possessive suffix"
         }
       ],
       "etymology_analysis": "East Slavic possessive toponym from personal name Khot/Khoten + -yn, first chronicled in 1001 CE.",
-      "current_repo_state": {
-        "name": "Nîster",
-        "b_tarr": "Nîster",
-        "b_tarr_direct": "Nîster",
-        "b_tarr_hist": "Nîster",
-        "b_origin": "Dniester River basin (ancient Danastris / Slavic Dnestr, replacing high medieval Khotyn fortress) (in-game: Nîster)",
-        "b_anachronism": "Medieval fortress on the Dniester first attested in 1002/1250. Resolved via Option B to the ancient Dniester River hydronym (Nîster).",
-        "b_ipa": "[ˈniːs.tər]",
-        "holding_type": "castle",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khotyn",
       "older_name_by_867": {
         "exists": false,
@@ -3407,21 +2820,11 @@
         {
           "form": "Țețina (Cecina)",
           "language": "Slavic / Romanian",
+          "language_code": "sla",
           "translation": "fortress name (from Slavic personal name Čeča / Cecina)"
         }
       ],
       "etymology_analysis": "Medieval fortress guarding the Prut crossing near Chernivtsi, attested in 1325 CE.",
-      "current_repo_state": {
-        "name": "Tzetzina",
-        "b_tarr": "Tzetzina",
-        "b_tarr_direct": "Tzetzina",
-        "b_tarr_hist": "Tzetzina",
-        "b_origin": "Tzetzina (constituent holding of Chotîn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtsɛ.tsɪ.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chernivtsi",
       "older_name_by_867": {
         "exists": false,
@@ -3456,26 +2859,17 @@
         {
           "form": "Chern- (Cern-)",
           "language": "East Slavic",
+          "language_code": "sla",
           "translation": "black (from the 12th-century 'black city' Chern')"
         },
         {
           "form": "-ivtsi (-ăuți)",
           "language": "East Slavic / Romanian",
+          "language_code": "sla",
           "translation": "inhabitants/settlement suffix"
         }
       ],
       "etymology_analysis": "Derived from the 12th-century Galician fortress Chern' ('black city', after its dark oak-and-earth walls) + East Slavic/Romanian settlement suffix -ivtsi / -ăuți.",
-      "current_repo_state": {
-        "name": "Cernauti",
-        "b_tarr": "Cernauti",
-        "b_tarr_direct": "Cernauti",
-        "b_tarr_hist": "Cernauti",
-        "b_origin": "Cernauti (constituent holding of Chotîn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtsɛr.nɔʊ.tɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chernivtsi",
       "older_name_by_867": {
         "exists": false,
@@ -3510,26 +2904,17 @@
         {
           "form": "Piatra",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "stone, rock (from Latin petra)"
         },
         {
           "form": "Neamț",
           "language": "Romanian (from Slavic němьcь)",
+          "language_code": "ron",
           "translation": "German (referring to the Neamț region/river)"
         }
       ],
       "etymology_analysis": "Romanian Piatra ('Stone', translating earlier Slavic Kamena) combined with Neamț (from Slavic *němьcь 'German', referring to the region). Built near the ancient Dacian citadel Petrodava.",
-      "current_repo_state": {
-        "name": "Nêmetz",
-        "b_tarr": "Nêmetz",
-        "b_tarr_direct": "Nêmetz",
-        "b_tarr_hist": "Nêmetz",
-        "b_origin": "Nêmetz (Tribal/Ethnic Exonym & Hydronym: From Slavic Němьcь (in-game: Neamț))",
-        "b_anachronism": "Pre-867 river corridor of the Neamț.",
-        "b_ipa": "[ˈneː.mɛts]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Piatra_Neam%C8%9B",
       "older_name_by_867": {
         "exists": true,
@@ -3566,26 +2951,17 @@
         {
           "form": "Târg(u)",
           "language": "Romanian (from Slavic tŭrgŭ)",
+          "language_code": "ron",
           "translation": "market, market town"
         },
         {
           "form": "Neamț",
           "language": "Romanian (from Slavic němьcь)",
+          "language_code": "ron",
           "translation": "German (referring to the Neamț River / German colonists)"
         }
       ],
       "etymology_analysis": "Romanian târg ('market') + Neamț (from Slavic *němьcь 'German', referring to the Neamț River and possible 13th-century Saxon/Teutonic settlers).",
-      "current_repo_state": {
-        "name": "Târgu Neamtz",
-        "b_tarr": "Târgu Neamtz",
-        "b_tarr_direct": "Târgu Neamtz",
-        "b_tarr_hist": "Târgu Neamtz",
-        "b_origin": "Târgu Neamtz (constituent holding of Nêmetz)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtaːr.ɡʊ ˈnɛ.amts]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2rgu_Neam%C8%9B",
       "older_name_by_867": {
         "exists": false,
@@ -3620,21 +2996,11 @@
         {
           "form": "Roman",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name of Voivode Roman I Mușat"
         }
       ],
       "etymology_analysis": "Named after Moldavian Voivode Roman I Mușat, who founded the town and issued its first charter in 1392 CE.",
-      "current_repo_state": {
-        "name": "Roman",
-        "b_tarr": "Roman",
-        "b_tarr_direct": "Roman",
-        "b_tarr_hist": "Roman",
-        "b_origin": "Roman (constituent holding of Nêmetz)",
-        "b_anachronism": "",
-        "b_ipa": "[rɔ.ˈman]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Roman,_Romania",
       "older_name_by_867": {
         "exists": false,
@@ -3669,21 +3035,11 @@
         {
           "form": "Suceava",
           "language": "Romanian (from Hungarian szűcs 'furrier' or pre-medieval hydronym)",
+          "language_code": "ron",
           "translation": "name of the Suceava River and city"
         }
       ],
       "etymology_analysis": "Named after the Suceava River; the medieval fortress and Moldavian capital is first attested in 1388 CE.",
-      "current_repo_state": {
-        "name": "Sutschouwe",
-        "b_tarr": "Sutschouwe",
-        "b_tarr_direct": "Sutschouwe",
-        "b_tarr_hist": "Sutschouwe",
-        "b_origin": "Sutschouwe (Hydronym (in-game: Suceava))",
-        "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-        "b_ipa": "[sʊ.ˈtʃɔʊ.wə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Suceava",
       "older_name_by_867": {
         "exists": false,
@@ -3718,21 +3074,11 @@
         {
           "form": "Baia",
           "language": "Romanian (from Hungarian bánya / Slavic banja)",
+          "language_code": "ron",
           "translation": "mine, quarry"
         }
       ],
       "etymology_analysis": "From Hungarian bánya / Slavic banja ('mine, quarry'), early Moldavian capital (Civitas Moldaviae / Stadt Molde) attested from 1334 CE.",
-      "current_repo_state": {
-        "name": "Baia",
-        "b_tarr": "Baia",
-        "b_tarr_direct": "Baia",
-        "b_tarr_hist": "Baia",
-        "b_origin": "Baia (constituent holding of Sutschouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.ja]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baia",
       "older_name_by_867": {
         "exists": false,
@@ -3767,26 +3113,17 @@
         {
           "form": "Vatra",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "hearth, settlement core"
         },
         {
           "form": "Dornei",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "of the Dorna River (genitive of Dorna)"
         }
       ],
       "etymology_analysis": "Romanian compound meaning 'Hearth/Core of the Dorna (River)', first attested in 1592 CE.",
-      "current_repo_state": {
-        "name": "Vatra Dornei",
-        "b_tarr": "Vatra Dornei",
-        "b_tarr_direct": "Vatra Dornei",
-        "b_tarr_hist": "Vatra Dornei",
-        "b_origin": "Vatra Dornei (constituent holding of Sutschouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈva.tra dɔr.ˈnɛɪ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vatra_Dornei",
       "older_name_by_867": {
         "exists": false,
@@ -3821,31 +3158,23 @@
         {
           "form": "câmp(u)",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "field, plain (from Latin campus)"
         },
         {
           "form": "lung",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "long (from Latin longus)"
         },
         {
           "form": "Moldovenesc",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "Moldavian (to distinguish from Câmpulung Muscel)"
         }
       ],
       "etymology_analysis": "Romanian Câmpulung ('Long Field') + Moldovenesc ('Moldavian'), first attested in 1411 CE.",
-      "current_repo_state": {
-        "name": "Câmpulung Moldovenesc",
-        "b_tarr": "Câmpulung Moldovenesc",
-        "b_tarr_direct": "Câmpulung Moldovenesc",
-        "b_tarr_hist": "Câmpulung Moldovenesc",
-        "b_origin": "Câmpulung Moldovenesc (constituent holding of Sutschouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkaːm.pʊ.lʊŋ ˈmɔl.dɔ.vɛ.nɛsk]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/C%C3%A2mpulung_Moldovenesc",
       "older_name_by_867": {
         "exists": false,
@@ -3880,21 +3209,11 @@
         {
           "form": "Siret",
           "language": "Thracian / Dacian (via Slavic/Romanian)",
+          "language_code": "ine",
           "translation": "name of the Siret River (ancient Hierasus / Seretos)"
         }
       ],
       "etymology_analysis": "Named after the Siret River; the medieval town of Siret is first attested in 1339 CE.",
-      "current_repo_state": {
-        "name": "Siret",
-        "b_tarr": "Siret",
-        "b_tarr_direct": "Siret",
-        "b_tarr_hist": "Siret",
-        "b_origin": "Siret (constituent holding of Sutschouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪ.ˈrɛt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Siret",
       "older_name_by_867": {
         "exists": false,
@@ -3929,26 +3248,17 @@
         {
           "form": "Constant-",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Constans / Constantia (4th-century CE imperial name)"
         },
         {
           "form": "-iana (-ța)",
           "language": "Latin / Romanian",
+          "language_code": "lat",
           "translation": "adjectival settlement suffix"
         }
       ],
       "etymology_analysis": "Romanian Constanța evolves directly from Late Roman/Byzantine Constantiana (attested by Procopius c. 550 CE), named in honor of Constantia (half-sister of Constantine the Great) or Constantius II on the site of ancient Greek Tomis.",
-      "current_repo_state": {
-        "name": "Tômis",
-        "b_tarr": "Tômis",
-        "b_tarr_direct": "Konstantze",
-        "b_tarr_hist": "Tômis",
-        "b_origin": "Tômis (Tômis (in-game: Constanta))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "b_ipa": "[ˈtoː.mɪs]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Constan%C8%9Ba",
       "older_name_by_867": {
         "exists": true,
@@ -3986,26 +3296,17 @@
         {
           "form": "Tul-",
           "language": "Ottoman Turkish / Turkic",
+          "language_code": "tur",
           "translation": "uncertain root (possibly Turkic/Tatar personal or tribal name)"
         },
         {
           "form": "-cea (-ca)",
           "language": "Ottoman Turkish",
+          "language_code": "tur",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Ottoman-era name Tulcea (attested 1506 CE), likely of Turkic origin, built on the site of ancient Dacian-Roman Aegyssus.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tulcea",
       "older_name_by_867": {
         "exists": true,
@@ -4042,21 +3343,11 @@
         {
           "form": "Sulina",
           "language": "Byzantine Greek / Slavic",
+          "language_code": "grc",
           "translation": "channel, pipe (Greek solen) or salt marsh (Slavic *solina)"
         }
       ],
       "etymology_analysis": "Derived from the Sulina distributary of the Danube Delta, variously linked to Byzantine Greek solen ('channel, pipe') or South Slavic *solina ('salt marsh/saline water').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sulina",
       "older_name_by_867": {
         "exists": false,
@@ -4091,21 +3382,11 @@
         {
           "form": "Mangalia",
           "language": "Ottoman Turkish / Tatar",
+          "language_code": "tur",
           "translation": "adaptation of Byzantine Greek Pangalia ('most beautiful')"
         }
       ],
       "etymology_analysis": "Likely a Tatar/Ottoman phonetic adaptation of medieval Byzantine Greek Pangalia ('the most beautiful'), which succeeded the ancient Greek name Callatis.",
-      "current_repo_state": {
-        "name": "Mangalia",
-        "b_tarr": "Mangalia",
-        "b_tarr_direct": "Mangalia",
-        "b_tarr_hist": "Mangalia",
-        "b_origin": "Mangalia (constituent holding of Tômis)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ŋa.lɪ.a]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mangalia",
       "older_name_by_867": {
         "exists": true,
@@ -4144,26 +3425,17 @@
         {
           "form": "Melsas / Mena",
           "language": "Thracian",
+          "language_code": "ine",
           "translation": "legendary Thracian founder Melsas"
         },
         {
           "form": "-bria",
           "language": "Thracian",
+          "language_code": "ine",
           "translation": "town, fortified settlement"
         }
       ],
       "etymology_analysis": "Hellenized from Thracian *Melsambria / *Menabria, combining a personal/tribal element (traditionally founder Melsas) with Thracian -bria ('town, polis').",
-      "current_repo_state": {
-        "name": "Mesembrîe",
-        "b_tarr": "Mesembrîe",
-        "b_tarr_direct": "Mesembrîe",
-        "b_tarr_hist": "Mesembrîe",
-        "b_origin": "Mesembrîe (Mesembria)",
-        "b_anachronism": "",
-        "b_ipa": "[mɛ.zɛm.ˈbriː.ɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nesebar",
       "older_name_by_867": {
         "exists": false,
@@ -4198,21 +3470,11 @@
         {
           "form": "Varna",
           "language": "Proto-Slavic / Proto-Indo-European",
+          "language_code": "sla",
           "translation": "black (Slavic *varn-) or water/river (*uer-)"
         }
       ],
       "etymology_analysis": "Disputed origin: variously derived from Proto-Indo-European *uer- ('water, river'), Proto-Slavic *varn- ('black'), Iranian *var ('fortress, camp'), or Old Norse/Varangian värn ('defense').",
-      "current_repo_state": {
-        "name": "Varna",
-        "b_tarr": "Varna",
-        "b_tarr_direct": "Varna",
-        "b_tarr_hist": "Varna",
-        "b_origin": "Varna (constituent holding of Mesembrîe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈvar.na]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Varna,_Bulgaria",
       "older_name_by_867": {
         "exists": true,
@@ -4250,21 +3512,11 @@
         {
           "form": "Karvuna / Kavarna",
           "language": "Bulgarian / Greek",
+          "language_code": "tat",
           "translation": "medieval adaptation of ancient Krounoi ('springs'), later influenced by Varna"
         }
       ],
       "etymology_analysis": "Karvuna replaced ancient Greek Krounoi (at neighboring Balchik) after the 7th-century Bulgarian conquest; the 15th-century name Kavarna likely arose by phonetic contamination between Karvuna and Varna.",
-      "current_repo_state": {
-        "name": "Karvuna",
-        "b_tarr": "Karvuna",
-        "b_tarr_direct": "Karvuna",
-        "b_tarr_hist": "Karvuna",
-        "b_origin": "Karvuna (constituent holding of Mesembrîe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkar.vʊ.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kavarna",
       "older_name_by_867": {
         "exists": true,
@@ -4302,21 +3554,11 @@
         {
           "form": "Bârlad",
           "language": "Romanian / Turkic or Slavic",
+          "language_code": "ron",
           "translation": "hydronym of the Bârlad River"
         }
       ],
       "etymology_analysis": "Named after the Bârlad River (historically associated with the medieval Berladnici); proposed etymologies include Slavic or Cuman/Turkic roots.",
-      "current_repo_state": {
-        "name": "Berlat",
-        "b_tarr": "Berlat",
-        "b_tarr_direct": "Berlat",
-        "b_tarr_hist": "Berlat",
-        "b_origin": "Berlat (Hydronym: Named after the Bârlad River (in-game: Bârlad))",
-        "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-        "b_ipa": "[bɛr.ˈlat]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%A2rlad",
       "older_name_by_867": {
         "exists": false,
@@ -4351,26 +3593,17 @@
         {
           "form": "Vasl-",
           "language": "Cuman / Turkic or Slavic",
+          "language_code": "tat",
           "translation": "river root"
         },
         {
           "form": "-ui",
           "language": "Cuman / Turkic",
+          "language_code": "tat",
           "translation": "water, stream (or Romanian hydronymic ending)"
         }
       ],
       "etymology_analysis": "Named after the Vaslui (Vasluieț) River; the -ui ending is characteristic of Cuman/Pecheneg hydronyms in Moldavia ('water, river').",
-      "current_repo_state": {
-        "name": "Vaslui",
-        "b_tarr": "Vaslui",
-        "b_tarr_direct": "Vaslui",
-        "b_tarr_hist": "Vaslui",
-        "b_origin": "Vaslui (constituent holding of Berlat)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈvas.lʊ.ɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vaslui",
       "older_name_by_867": {
         "exists": false,
@@ -4405,21 +3638,11 @@
         {
           "form": "Huși",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "from Hussites or personal name Husul"
         }
       ],
       "etymology_analysis": "Traditionally derived either from 15th-century Hussite refugees who settled in Moldavia or from a Moldavian boyar named Husul attested in 1495–1502 CE.",
-      "current_repo_state": {
-        "name": "Huschi",
-        "b_tarr": "Huschi",
-        "b_tarr_direct": "Huschi",
-        "b_tarr_hist": "Huschi",
-        "b_origin": "Huschi (constituent holding of Berlat)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhʊ.ʃɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hu%C8%99i",
       "older_name_by_867": {
         "exists": false,
@@ -4454,21 +3677,11 @@
         {
           "form": "Galați",
           "language": "Cuman / Slavic (disputed)",
+          "language_code": "tat",
           "translation": "from Cuman galat ('fortress', via Arabic qal'at) or Little Halych / Slavic gal-"
         }
       ],
       "etymology_analysis": "Disputed etymology: most scholars link Galați to Cuman galat ('fortress', from Persian/Arabic qal'at) or to 13th-century Galician-Volhynian influence ('Little Halych').",
-      "current_repo_state": {
-        "name": "Barbôs",
-        "b_tarr": "Barbôs",
-        "b_tarr_direct": "Barbôs",
-        "b_tarr_hist": "Barbôs",
-        "b_origin": "Ancient Roman camp Barboși on the Danube (replacing 1445 Galați) (in-game: Barbôs)",
-        "b_anachronism": "First attested in 1445 AD. Restored to the ancient Roman frontier castrum Barboși (Barbôs) on the lower Danube.",
-        "b_ipa": "[bar.ˈboːs]",
-        "holding_type": "castle",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gala%C8%9Bi",
       "older_name_by_867": {
         "exists": true,
@@ -4506,21 +3719,11 @@
         {
           "form": "Tecuci",
           "language": "Slavic / Pecheneg-Cuman (disputed)",
+          "language_code": "sla",
           "translation": "flowing water (Slavic tek-) or border/end (Turkic tehek-uciu)"
         }
       ],
       "etymology_analysis": "Named after the Tecuci stream; Iorgu Iordan and Ion Bogdan derive it from Slavic tek- ('to flow'), while Alexandru Philippide proposed a Pecheneg-Cuman compound meaning 'border/end of the land'.",
-      "current_repo_state": {
-        "name": "Tecuci",
-        "b_tarr": "Tecuci",
-        "b_tarr_direct": "Tecuci",
-        "b_tarr_hist": "Tecuci",
-        "b_origin": "Tecuci (constituent holding of Galatz)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɛ.kʊ.tsɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tecuci",
       "older_name_by_867": {
         "exists": false,
@@ -4555,26 +3758,17 @@
         {
           "form": "Focș-",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal/family name Focșa"
         },
         {
           "form": "-ani",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "inhabitants of, people of"
         }
       ],
       "etymology_analysis": "Romanian collective toponym in -ani, traditionally linked to a putative Focșa family from the era of Stephen the Great.",
-      "current_repo_state": {
-        "name": "Focschani",
-        "b_tarr": "Focschani",
-        "b_tarr_direct": "Focschani",
-        "b_tarr_hist": "Focschani",
-        "b_origin": "Focschani (constituent holding of Galatz)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfɔk.ʃa.nɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Foc%C8%99ani",
       "older_name_by_867": {
         "exists": false,
@@ -4609,21 +3803,11 @@
         {
           "form": "Iași",
           "language": "Romanian / Alanic (Jász)",
+          "language_code": "ron",
           "translation": "Alans / Iazyges (Jász)"
         }
       ],
       "etymology_analysis": "Derived from the ethnonym of the Alanic Jász (medieval Iranian/Alanic tribe; cf. Hungarian Jászvásár 'Jász market'), or less likely from the ancient Sarmatian Iazyges.",
-      "current_repo_state": {
-        "name": "Jâsch",
-        "b_tarr": "Jâsch",
-        "b_tarr_direct": "Jâsch",
-        "b_tarr_hist": "Jâsch",
-        "b_origin": "Jâsch (Tribal Ethnonym: Named after the Jász / Alans / Iazyges (in-game: Iași))",
-        "b_anachronism": "Anachronistic title evaluated in 1059 Chancellery audit",
-        "b_ipa": "[jaːʃ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ia%C8%99i",
       "older_name_by_867": {
         "exists": false,
@@ -4658,26 +3842,17 @@
         {
           "form": "Ungh-",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "corner, bend (from Latin angulus)"
         },
         {
           "form": "-eni",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "inhabitants of"
         }
       ],
       "etymology_analysis": "Romanian toponym in -eni from unghi ('corner, bend'), referring to a bend in the Prut River.",
-      "current_repo_state": {
-        "name": "Ungheni",
-        "b_tarr": "Ungheni",
-        "b_tarr_direct": "Ungheni",
-        "b_tarr_hist": "Ungheni",
-        "b_origin": "Ungheni (constituent holding of Jâsch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʊŋ.hɛ.nɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ungheni",
       "older_name_by_867": {
         "exists": false,
@@ -4712,26 +3887,17 @@
         {
           "form": "Făl-",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal/clan name (Fălea / Fălă)"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/estate of"
         }
       ],
       "etymology_analysis": "Standard Romanian patronymic/clan toponym formed with the plural suffix -ești.",
-      "current_repo_state": {
-        "name": "Feleschti",
-        "b_tarr": "Feleschti",
-        "b_tarr_direct": "Feleschti",
-        "b_tarr_hist": "Feleschti",
-        "b_origin": "Feleschti (constituent holding of Jâsch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfɛ.lɛʃ.tɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/F%C4%83le%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -4766,21 +3932,11 @@
         {
           "form": "Őrhely",
           "language": "Hungarian",
+          "language_code": "hun",
           "translation": "guard post, watch-place (őr 'guard' + hely 'place')"
         }
       ],
       "etymology_analysis": "Borrowed into Romanian as Orhei from Hungarian Őrhely ('guard post, watchtower'), reflecting medieval frontier fortifications along the Răut River.",
-      "current_repo_state": {
-        "name": "Rêut",
-        "b_tarr": "Rêut",
-        "b_tarr_direct": "Rêut",
-        "b_tarr_hist": "Rêut",
-        "b_origin": "Răut River basin (pre-867 hydronym, replacing medieval Orhei) (in-game: Rêut)",
-        "b_anachronism": "Medieval town on the Răut River. Resolved via Option B to the pre-867 Răut River hydronym (Rêut).",
-        "b_ipa": "[reː.ˈʊt]",
-        "holding_type": "castle",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Orhei",
       "older_name_by_867": {
         "exists": false,
@@ -4815,21 +3971,11 @@
         {
           "form": "Tuzara",
           "language": "Turkic / Romanian",
+          "language_code": "tur",
           "translation": "salt-related toponym (cf. Turkic tuz 'salt')"
         }
       ],
       "etymology_analysis": "Medieval Moldavian village name on the Bâc River, likely of Turkic (Cuman/Tatar) origin from tuz ('salt').",
-      "current_repo_state": {
-        "name": "Tuzara",
-        "b_tarr": "Tuzara",
-        "b_tarr_direct": "Tuzara",
-        "b_tarr_hist": "Tuzara",
-        "b_origin": "Tuzara (constituent holding of Rêut)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʊ.tsa.ra]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4864,21 +4010,11 @@
         {
           "form": "Soroca",
           "language": "East Slavic / Romanian",
+          "language_code": "sla",
           "translation": "magpie (Slavic soroka) or Romanian soroc ('term, appointed place')"
         }
       ],
       "etymology_analysis": "Uncertain origin; commonly compared to East Slavic soroka ('magpie') or Romanian soroc ('appointed term/station').",
-      "current_repo_state": {
-        "name": "Nîstervurt",
-        "b_tarr": "Nîstervurt",
-        "b_tarr_direct": "Nîstervurt",
-        "b_tarr_hist": "Nîstervurt",
-        "b_origin": "Dniester River crossing (replacing late medieval Soroca fortress) (in-game: Nîstervurt)",
-        "b_anachronism": "Late medieval Dniester fortress. Resolved via Option B to the ancient Dniester River crossing (Nîstervurt).",
-        "b_ipa": "[ˈniːs.tɛr.vʊrt]",
-        "holding_type": "castle",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Soroca",
       "older_name_by_867": {
         "exists": false,
@@ -4913,21 +4049,11 @@
         {
           "form": "bălți",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "puddles, marshes (plural of baltă)"
         }
       ],
       "etymology_analysis": "Plural of Romanian baltă ('puddle, marsh', a Dacian/Balkan substrate word), referring to the marshy confluence of the Răuțel and Răut rivers.",
-      "current_repo_state": {
-        "name": "Beltzi",
-        "b_tarr": "Beltzi",
-        "b_tarr_direct": "Beltzi",
-        "b_tarr_hist": "Beltzi",
-        "b_origin": "Beltzi (constituent holding of Nîstervurt)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɛl.tsɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C4%83l%C8%9Bi",
       "older_name_by_867": {
         "exists": false,
@@ -4962,26 +4088,17 @@
         {
           "form": "Stoian",
           "language": "Romanian (from Slavic)",
+          "language_code": "ron",
           "translation": "personal name Stoian"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/estate of"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym formed from the personal name Stoian (of South Slavic origin, 'steadfast') plus the collective/estate suffix -ești.",
-      "current_repo_state": {
-        "name": "Jalômnetze",
-        "b_tarr": "Jalômnetze",
-        "b_tarr_direct": "Jalômnetze",
-        "b_tarr_hist": "Jalômnetze",
-        "b_origin": "Ialomița River basin (ancient Slavic/Dacian hydronym, replacing Stoenești) (in-game: Jalômnetze)",
-        "b_anachronism": "Late medieval Wallachian village. Resolved via Option B to the pre-867 Ialomița River hydronym (Jalômnetze).",
-        "b_ipa": "[ja.loːm.ˈnɛ.tsə]",
-        "holding_type": "castle",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Stoene%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -5016,21 +4133,11 @@
         {
           "form": "Bakó / Bako",
           "language": "Hungarian / Turkic",
+          "language_code": "hun",
           "translation": "medieval personal name Bakó (of Cuman/Pecheneg or Hungarian origin)"
         }
       ],
       "etymology_analysis": "Probably derived from a medieval personal name of Hungarian or Cuman/Pecheneg origin (Bakó, attested in Old Church Slavonic as Bako/Bakova), or alternatively from Proto-Slavic *byk ('ox, bull').",
-      "current_repo_state": {
-        "name": "Baceu",
-        "b_tarr": "Baceu",
-        "b_tarr_direct": "Baceu",
-        "b_tarr_hist": "Baceu",
-        "b_origin": "Baceu (constituent holding of Jalômnetze)",
-        "b_anachronism": "",
-        "b_ipa": "[ba.ˈtsɔʏ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bac%C4%83u",
       "older_name_by_867": {
         "exists": false,
@@ -5065,26 +4172,17 @@
         {
           "form": "Brăil-",
           "language": "Romanian / Slavic",
+          "language_code": "ron",
           "translation": "anthroponymic or Indo-European root (disputed)"
         },
         {
           "form": "-a",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "feminine toponymic ending"
         }
       ],
       "etymology_analysis": "Origin uncertain; widely considered to derive from an anthroponym (or Slavic *Brailov, cf. Greek Proilavon), though older theories proposed an Indo-European root *bhreg- ('steep bank').",
-      "current_repo_state": {
-        "name": "Dinogêtje",
-        "b_tarr": "Dinogêtje",
-        "b_tarr_direct": "Braîle",
-        "b_tarr_hist": "Dinogêtje",
-        "b_origin": "Dinogêtje (Dinogêtje (in-game: Brăila))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "b_ipa": "[dɪ.nɔ.ˈɣeːt.jɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Br%C4%83ila",
       "older_name_by_867": {
         "exists": false,
@@ -5119,26 +4217,17 @@
         {
           "form": "Râmnic",
           "language": "Slavic",
+          "language_code": "sla",
           "translation": "fishpond, fish-river (from *rybnik)"
         },
         {
           "form": "Sărat",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "salty (from Latin salatus)"
         }
       ],
       "etymology_analysis": "Named after the Râmnicul Sărat River: Râmnic comes from Slavic *rybnik ('fishpond, fish-bearing stream') and Sărat ('salty') distinguishes it from Râmnicu Vâlcea.",
-      "current_repo_state": {
-        "name": "Râmnicu Serat",
-        "b_tarr": "Râmnicu Serat",
-        "b_tarr_direct": "Râmnicu Serat",
-        "b_tarr_hist": "Râmnicu Serat",
-        "b_origin": "Râmnicu Serat (constituent holding of Dinogêtje)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈraːm.nɪ.kʊ sɛ.ˈrat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/R%C3%A2mnicu_S%C4%83rat",
       "older_name_by_867": {
         "exists": false,
@@ -5173,26 +4262,17 @@
         {
           "form": "Bucur",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name Bucur (cf. bucurie 'joy')"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/settlement of"
         }
       ],
       "etymology_analysis": "Romanian collective toponym in -ești from the personal name Bucur (traditionally linked to a legendary shepherd Bucur).",
-      "current_repo_state": {
-        "name": "Jalomitz",
-        "b_tarr": "Jalomitz",
-        "b_tarr_direct": "Jalomitz",
-        "b_tarr_hist": "Jalomitz",
-        "b_origin": "Jalomitz (Ialomita)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈja.lɔ.mɪts]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bucharest",
       "older_name_by_867": {
         "exists": false,
@@ -5227,26 +4307,17 @@
         {
           "form": "târg",
           "language": "Romanian (from Slavic)",
+          "language_code": "ron",
           "translation": "market town (Slavic *tŭrgŭ)"
         },
         {
           "form": "-șor",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "diminutive suffix ('little')"
         }
       ],
       "etymology_analysis": "Diminutive of Romanian târg ('market town', from South Slavic), meaning 'little market'.",
-      "current_repo_state": {
-        "name": "Târgschor",
-        "b_tarr": "Târgschor",
-        "b_tarr_direct": "Târgschor",
-        "b_tarr_hist": "Târgschor",
-        "b_origin": "Târgschor (constituent holding of Jalomitz)",
-        "b_anachronism": "",
-        "b_ipa": "[taːrɡ.ˈʃɔr]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%A2rg%C8%99or",
       "older_name_by_867": {
         "exists": false,
@@ -5281,21 +4352,11 @@
         {
           "form": "Buzău",
           "language": "Thracian / Dacian",
+          "language_code": "ine",
           "translation": "from ancient river name Mousaios / Thracian *Bouzeos"
         }
       ],
       "etymology_analysis": "Named after the Buzău River, identified with the ancient Mousaios (Mouseos) attested in 376 CE (proposed by Vasile Pârvan as a Greek transcription of Thracian *Bouzeos).",
-      "current_repo_state": {
-        "name": "Busouwe",
-        "b_tarr": "Busouwe",
-        "b_tarr_direct": "Busouwe",
-        "b_tarr_hist": "Busouwe",
-        "b_origin": "Busouwe (Buzău)",
-        "b_anachronism": "",
-        "b_ipa": "[bʊ.ˈzɔʊ.wə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Buz%C4%83u",
       "older_name_by_867": {
         "exists": true,
@@ -5333,21 +4394,11 @@
         {
           "form": "slobozie",
           "language": "Romanian (from Slavic)",
+          "language_code": "ron",
           "translation": "tax-exempt newly colonized village (from Slavic slobod 'free')"
         }
       ],
       "etymology_analysis": "From Romanian slobozie ('tax-free settlement'), itself borrowed from Slavic slobod ('free'), referring to tax exemptions granted to repopulate the Bărăgan Plain.",
-      "current_repo_state": {
-        "name": "Slobozia",
-        "b_tarr": "Slobozia",
-        "b_tarr_direct": "Slobozia",
-        "b_tarr_hist": "Slobozia",
-        "b_origin": "Slobozia (constituent holding of Busouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈslɔ.bɔ.tsɪ.a]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Slobozia",
       "older_name_by_867": {
         "exists": true,
@@ -5384,26 +4435,17 @@
         {
           "form": "Ploi-",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name Ploaie / Ploae (lit. 'rain')"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/estate of"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym in -ești, traditionally derived from a founder's personal name Ploaie (Moș Ploae).",
-      "current_repo_state": {
-        "name": "Ploiesti",
-        "b_tarr": "Ploiesti",
-        "b_tarr_direct": "Ploiesti",
-        "b_tarr_hist": "Ploiesti",
-        "b_origin": "Ploiesti (constituent holding of Busouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈplɔ.jɛs.tɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ploie%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -5438,21 +4480,11 @@
         {
           "form": "călărași",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "mounted couriers, horsemen (plural of călăraș, from cal 'horse')"
         }
       ],
       "etymology_analysis": "Named after the călărași (mounted royal couriers) stationed at Lichirești along the post route between Bucharest and Istanbul.",
-      "current_repo_state": {
-        "name": "Sonneninsel",
-        "b_tarr": "Sonneninsel",
-        "b_tarr_direct": "Kalarasch",
-        "b_tarr_hist": "Sonneninsel",
-        "b_origin": "Sonneninsel (Sonneninsel (in-game: Călărași))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "b_ipa": "[sɔ.nɛ.nɪn.ˈsəl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/C%C4%83l%C4%83ra%C8%99i",
       "older_name_by_867": {
         "exists": false,
@@ -5487,21 +4519,11 @@
         {
           "form": "Radovan",
           "language": "South Slavic / Romanian",
+          "language_code": "sla",
           "translation": "personal name Radovan ('joyful')"
         }
       ],
       "etymology_analysis": "Derived from the South Slavic/Romanian personal name Radovan.",
-      "current_repo_state": {
-        "name": "Radovanu",
-        "b_tarr": "Radovanu",
-        "b_tarr_direct": "Radovanu",
-        "b_tarr_hist": "Radovanu",
-        "b_origin": "Radovanu (constituent holding of Sonneninsel)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈra.dɔ.va.nʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Radovanu",
       "older_name_by_867": {
         "exists": false,
@@ -5536,26 +4558,17 @@
         {
           "form": "Fet-",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal/family name Fătu / Fetea"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/estate of"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym formed with the plural suffix -ești.",
-      "current_repo_state": {
-        "name": "Feteschti",
-        "b_tarr": "Feteschti",
-        "b_tarr_direct": "Feteschti",
-        "b_tarr_hist": "Feteschti",
-        "b_origin": "Feteschti (constituent holding of Sonneninsel)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfɛ.tɛʃ.tɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fete%C8%99ti",
       "older_name_by_867": {
         "exists": false,
@@ -5590,21 +4603,11 @@
         {
           "form": "Giurgiu",
           "language": "Romanian (from Italian / Greek)",
+          "language_code": "ron",
           "translation": "George (after Genoa's patron saint San Giorgio)"
         }
       ],
       "etymology_analysis": "Old Romanian form of George, named after Saint George (San Giorgio), patron saint of Genoa, by 14th-century Genoese merchants.",
-      "current_repo_state": {
-        "name": "Dafne-an-der-Tuonouwe",
-        "b_tarr": "Dafne-an-der-Tuonouwe",
-        "b_tarr_direct": "Zant-Jörgen",
-        "b_tarr_hist": "Dafne-an-der-Tuonouwe",
-        "b_origin": "Dafne-an-der-Tuonouwe (Dafne-an-der-Tuonouwe (in-game: Giurgiu))",
-        "b_anachronism": "Resolved via verified historical center Dafne-an-der-Tuonouwe documented in tarraconian_titles_1059.md.",
-        "b_ipa": "[ˈdaf.nə an dɛr tʊ.ɔ.ˈnɔʊ.wə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Giurgiu",
       "older_name_by_867": {
         "exists": true,
@@ -5641,21 +4644,11 @@
         {
           "form": "Turnu",
           "language": "Romanian (from Latin turris)",
+          "language_code": "ron",
           "translation": "the tower"
         }
       ],
       "etymology_analysis": "From Romanian turn ('tower', from Latin turris), referring to the medieval fortress (later paired with Măgurele 'hillocks' in 1836).",
-      "current_repo_state": {
-        "name": "Turnu",
-        "b_tarr": "Turnu",
-        "b_tarr_direct": "Turnu",
-        "b_tarr_hist": "Turnu",
-        "b_origin": "Turnu (constituent holding of Dafne-an-der-Tuonouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʊr.nʊ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Turnu_M%C4%83gurele",
       "older_name_by_867": {
         "exists": true,
@@ -5692,26 +4685,17 @@
         {
           "form": "Rușii / Roșiorii",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "the Russians / the Redcoats (cavalry)"
         },
         {
           "form": "de Vede",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "on the Vedea River"
         }
       ],
       "etymology_analysis": "Originally Rușii de Vede ('the Russians on the Vedea'), later reshaped as Roșiorii de Vede ('the Redcoat cavalry on the Vedea').",
-      "current_repo_state": {
-        "name": "Rusii de Vede",
-        "b_tarr": "Rusii de Vede",
-        "b_tarr_direct": "Rusii de Vede",
-        "b_tarr_hist": "Rusii de Vede",
-        "b_origin": "Rusii de Vede (constituent holding of Dafne-an-der-Tuonouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈrʊ.zɪ.ɪ dɛ ˈvɛ.də]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ro%C8%99iorii_de_Vede",
       "older_name_by_867": {
         "exists": false,
@@ -5746,21 +4730,11 @@
         {
           "form": "Comana",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "from personal/clan name Coman (Cuman)"
         }
       ],
       "etymology_analysis": "Derived from the Romanian personal name Coman (reflecting medieval Cuman presence in Wallachia).",
-      "current_repo_state": {
-        "name": "Comana",
-        "b_tarr": "Comana",
-        "b_tarr_direct": "Comana",
-        "b_tarr_hist": "Comana",
-        "b_origin": "Comana (constituent holding of Dafne-an-der-Tuonouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔ.ma.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Comana,_Giurgiu",
       "older_name_by_867": {
         "exists": false,
@@ -5795,26 +4769,17 @@
         {
           "form": "glava",
           "language": "South Slavic",
+          "language_code": "sla",
           "translation": "head, spring/source"
         },
         {
           "form": "-cioc",
           "language": "Romanian / Slavic",
+          "language_code": "ron",
           "translation": "diminutive/toponymic suffix"
         }
       ],
       "etymology_analysis": "Named after the Glavacioc River, from South Slavic glava ('head, source').",
-      "current_repo_state": {
-        "name": "Glavacioc",
-        "b_tarr": "Glavacioc",
-        "b_tarr_direct": "Glavacioc",
-        "b_tarr_hist": "Glavacioc",
-        "b_origin": "Glavacioc (constituent holding of Dafne-an-der-Tuonouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡla.va.tsɪ.ɔk]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glavacioc",
       "older_name_by_867": {
         "exists": false,
@@ -5849,26 +4814,17 @@
         {
           "form": "Costea",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "personal name Costea (from Constantine)"
         },
         {
           "form": "-ești",
           "language": "Romanian",
+          "language_code": "ron",
           "translation": "descendants/estate of"
         }
       ],
       "etymology_analysis": "Romanian patronymic toponym formed from the personal name Costea plus the suffix -ești.",
-      "current_repo_state": {
-        "name": "Costeschti",
-        "b_tarr": "Costeschti",
-        "b_tarr_direct": "Costeschti",
-        "b_tarr_hist": "Costeschti",
-        "b_origin": "Costeschti (constituent holding of Dafne-an-der-Tuonouwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔs.tɛʃ.tɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,

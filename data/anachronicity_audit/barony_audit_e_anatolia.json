@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_anatolia",
     "scope": "e_anatolia (all baronies across k_anatolia and k_georgia)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 125,
@@ -57,23 +64,17 @@
         {
           "form": "πολύς (polýs)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "much, many"
         },
         {
           "form": "βοτός / βόσις (botós)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "pasture, grazing, cattle-feeding"
         }
       ],
       "etymology_analysis": "From Ancient Greek Πολύβοτος (Polýbotos), literally 'rich in pasture / feeding many cattle', referring to the wide grasslands of the Phrygian plateau near Bolvadin used for imperial stock-raising farms (metata).",
-      "current_repo_state": {
-        "b_tarr": "Polîbot",
-        "b_tarr_direct": "Heil-Galâtjen",
-        "b_tarr_hist": "Polîbot",
-        "b_origin": "Polîbot (Polîbot (in-game: Galatia Salutaris))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Polybotus",
       "older_name_by_867": {
         "exists": false,
@@ -108,18 +109,11 @@
         {
           "form": "Γέρμα (Germa) / *gwherm-",
           "language": "Phrygian / Anatolian (cf. Greek θέρμα)",
+          "language_code": "ine",
           "translation": "warm, hot springs"
         }
       ],
       "etymology_analysis": "Ancient Galatian/Phrygian toponym Γέρμα (Germa), cognate with Greek θέρμα ('hot springs') and Thracian-Phrygian *germo- ('warm'), later Romanized as Germokoloneia.",
-      "current_repo_state": {
-        "b_tarr": "Germa",
-        "b_tarr_direct": "Germa",
-        "b_tarr_hist": "Germa",
-        "b_origin": "Germa (constituent holding of Polîbot)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Germa_(Galatia)",
       "older_name_by_867": {
         "exists": false,
@@ -154,18 +148,11 @@
         {
           "form": "Τυριάειον / Τύραιον (Tyriaeion / Tyraion)",
           "language": "Anatolian / Phrygian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "fortified town / place of towers (cf. τύρσις)"
         }
       ],
       "etymology_analysis": "Hellenized form Τυριάειον (Tyriaeion, also spelled Tyraion) of a pre-Greek Anatolian/Phrygian toponym, possibly related to Mediterranean/Anatolian *tursis ('tower, fortified settlement').",
-      "current_repo_state": {
-        "b_tarr": "Tyraion",
-        "b_tarr_direct": "Tyraion",
-        "b_tarr_hist": "Tyraion",
-        "b_origin": "Tyraion (constituent holding of Polîbot)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tyriaeum",
       "older_name_by_867": {
         "exists": false,
@@ -200,18 +187,11 @@
         {
           "form": "Ἴσαυρα (Isaura)",
           "language": "Luwian / Isaurian (Anatolian)",
+          "language_code": "ine",
           "translation": "indigenous Anatolian ethnonym/toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ἴσαυρα (Isaura), the fortified capital of the Isaurians (probably a Luwian-speaking Anatolian people), later distinguished as Isaura Palaea ('Old Isaura') and Isaura Nea.",
-      "current_repo_state": {
-        "b_tarr": "Isaurjen",
-        "b_tarr_direct": "Isaurjen",
-        "b_tarr_hist": "Isaurjen",
-        "b_origin": "Isaurjen (Isauria)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isaura_Palaea",
       "older_name_by_867": {
         "exists": false,
@@ -246,23 +226,17 @@
         {
           "form": "Laran- (cf. Laranda)",
           "language": "Unattested / Pseudo-Latin",
+          "language_code": "und",
           "translation": "likely corrupted from Luwian Laranda"
         },
         {
           "form": "-alia",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "place/plural suffix"
         }
       ],
       "etymology_analysis": "Unattested in classical or medieval sources; almost certainly a Paradox/CK3 corruption of Laranda (Luwian/Greek Λάρανδα, modern Karaman) in Lycaonia/Isauria.",
-      "current_repo_state": {
-        "b_tarr": "Laranalia",
-        "b_tarr_direct": "Laranalia",
-        "b_tarr_hist": "Laranalia",
-        "b_origin": "Laranalia (constituent holding of Isaurjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -297,18 +271,11 @@
         {
           "form": "Δέρβη (Derbē)",
           "language": "Anatolian / Lycaonian (or Iranian *darband)",
+          "language_code": "ine",
           "translation": "narrow pass / gate (cf. Persian darband) or indigenous toponym"
         }
       ],
       "etymology_analysis": "Greek Δέρβη (Derbē); often linked to Iranian/Persian darband ('barred gate, narrow mountain pass', reflected in Turkish Derbent) or a local Anatolian toponym.",
-      "current_repo_state": {
-        "b_tarr": "Derbe",
-        "b_tarr_direct": "Derbe",
-        "b_tarr_hist": "Derbe",
-        "b_origin": "Derbe (constituent holding of Isaurjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Derbe",
       "older_name_by_867": {
         "exists": false,
@@ -343,18 +310,11 @@
         {
           "form": "Βάρατα / Βαράτη (Barata / Barate)",
           "language": "Anatolian / Greek",
+          "language_code": "ine",
           "translation": "indigenous Lycaonian toponym (or Greek βάραθρον 'chasm/pit')"
         }
       ],
       "etymology_analysis": "From Ancient Greek Βάρατα / Βαράτη (Barata / Barate), an indigenous Lycaonian settlement name (sometimes spelled Barathra in itineraries by folk-etymological assimilation to Greek βάραθρον).",
-      "current_repo_state": {
-        "b_tarr": "Barata",
-        "b_tarr_direct": "Barata",
-        "b_tarr_hist": "Barata",
-        "b_origin": "Barata (constituent holding of Isaurjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Barate",
       "older_name_by_867": {
         "exists": false,
@@ -389,18 +349,11 @@
         {
           "form": "Ἰκόνιον (Ikónion)",
           "language": "Ancient Greek (from Hittite Ikkuwaniya / Phrygian)",
+          "language_code": "grc",
           "translation": "Hellenized from Anatolian Ikkuwaniya; folk-etymologized as 'little image' (εἰκόνιον)"
         }
       ],
       "etymology_analysis": "Greek Ἰκόνιον (Ikónion), Latin Iconium, adapted from the Bronze Age Anatolian/Hittite name Ikkuwaniya (folk-etymologized in Greek from εἰκών/εἰκόνιον, 'image', via the Perseus/Gorgon legend).",
-      "current_repo_state": {
-        "b_tarr": "Ikônjen",
-        "b_tarr_direct": "Lîkaônjen",
-        "b_tarr_hist": "Ikônjen",
-        "b_origin": "Ikônjen (Ikônjen (in-game: Lycaonia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Konya",
       "older_name_by_867": {
         "exists": false,
@@ -435,18 +388,11 @@
         {
           "form": "Λύστρα (Lýstra)",
           "language": "Anatolian / Lycaonian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "indigenous Anatolian settlement name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Λύστρα (Lýstra), Latin Lustra/Lystra, an indigenous Lycaonian toponym of pre-Roman origin elevated to a Roman colonia under Augustus.",
-      "current_repo_state": {
-        "b_tarr": "Lystra",
-        "b_tarr_direct": "Lystra",
-        "b_tarr_hist": "Lystra",
-        "b_origin": "Lystra (constituent holding of Ikônjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lystra",
       "older_name_by_867": {
         "exists": false,
@@ -481,18 +427,11 @@
         {
           "form": "Πάππα (Páppa)",
           "language": "Anatolian / Pisidian",
+          "language_code": "ine",
           "translation": "indigenous Pisidian toponym (possibly from Lallwort/kinship or local root)"
         }
       ],
       "etymology_analysis": "Pre-Roman Pisidian toponym Πάππα (Páppa), later combined with the imperial dynastic title Tiberiopolis (Τιβεριούπολις) under Tiberius.",
-      "current_repo_state": {
-        "b_tarr": "Pappa",
-        "b_tarr_direct": "Pappa",
-        "b_tarr_hist": "Pappa",
-        "b_origin": "Pappa (constituent holding of Ikônjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tiberiopolis",
       "older_name_by_867": {
         "exists": false,
@@ -527,23 +466,17 @@
         {
           "form": "κατα- (kata-)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "completely, thoroughly"
         },
         {
           "form": "κεκαυμένη (kekauménē)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "burnt (perf. pass. part. fem. of καίω 'burn')"
         }
       ],
       "etymology_analysis": "From Ancient Greek Κατακεκαυμένη (Katakekauménē, 'the Burnt Land / Burnt Country'), a choronym referring to the black volcanic lava fields of Kula in Lydia (also used as an epithet for Laodicea Combusta / Katakekaumene in Lycaonia).",
-      "current_repo_state": {
-        "b_tarr": "Katakekaumene",
-        "b_tarr_direct": "Katakekaumene",
-        "b_tarr_hist": "Katakekaumene",
-        "b_origin": "Katakekaumene (constituent holding of Ikônjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Katakekaumene",
       "older_name_by_867": {
         "exists": false,
@@ -578,18 +511,11 @@
         {
           "form": "Αἰζανοί (Aizanoí)",
           "language": "Ancient Greek / Phrygian",
+          "language_code": "grc",
           "translation": "mythologically linked to Azan, son of Arcas"
         }
       ],
       "etymology_analysis": "From Ancient Greek Αἰζανοί (Aizanoí), Latinized as Aezani; an indigenous Phrygian settlement name folk-etymologized in Greek tradition from the mythical Arcadian/Phrygian ancestor Azan.",
-      "current_repo_state": {
-        "b_tarr": "Aisanoî",
-        "b_tarr_direct": "Aisanoî",
-        "b_tarr_hist": "Aisanoî",
-        "b_origin": "Aizanoi (ancient Phrygian sanctuary city with Temple of Zeus) (in-game: Aisanoî)",
-        "b_anachronism": "Ancient Greco-Roman civitas Aizanoi.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aizanoi",
       "older_name_by_867": {
         "exists": false,
@@ -624,18 +550,11 @@
         {
           "form": "Νακόλεια / Νακώλεια (Nakoleia)",
           "language": "Phrygian / Anatolian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "indigenous Phrygian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Νακώλεια / Νακόλεια (Nakóleia), Latinized as Nacolea/Nacolia, an indigenous Phrygian city name.",
-      "current_repo_state": {
-        "b_tarr": "Nakoleia",
-        "b_tarr_direct": "Nakoleia",
-        "b_tarr_hist": "Nakoleia",
-        "b_origin": "Nakoleia (constituent holding of Sînnade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nakoleia",
       "older_name_by_867": {
         "exists": false,
@@ -670,23 +589,17 @@
         {
           "form": "Μίδας (Mídas)",
           "language": "Phrygian / Ancient Greek",
+          "language_code": "ine",
           "translation": "Midas (Phrygian royal name)"
         },
         {
           "form": "-ειον (-eion)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "place belonging to"
         }
       ],
       "etymology_analysis": "From Ancient Greek Μιδάειον (Midáeion), Latinized as Midaeum, meaning 'city/place of Midas', after an ancient Phrygian king.",
-      "current_repo_state": {
-        "b_tarr": "Midaeum",
-        "b_tarr_direct": "Midaeum",
-        "b_tarr_hist": "Midaeum",
-        "b_origin": "Midaeum (constituent holding of Sînnade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Midaeium",
       "older_name_by_867": {
         "exists": false,
@@ -721,23 +634,17 @@
         {
           "form": "Δόκιμος (Dókimos)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Docimus (Macedonian general)"
         },
         {
           "form": "-ειον (-eion)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "place/foundation of"
         }
       ],
       "etymology_analysis": "From Ancient Greek Δοκίμειον / Δοκίμια (Dokímeion / Dokímia), named after its late 4th-century BCE Macedonian founder Docimus.",
-      "current_repo_state": {
-        "b_tarr": "Docimium",
-        "b_tarr_direct": "Docimium",
-        "b_tarr_hist": "Docimium",
-        "b_origin": "Docimium (constituent holding of Sînnade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Docimium",
       "older_name_by_867": {
         "exists": false,
@@ -772,18 +679,11 @@
         {
           "form": "Σύνναδα (Sýnnada)",
           "language": "Phrygian / Anatolian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "indigenous Phrygian city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Σύνναδα (Sýnnada), an ancient Phrygian/Anatolian toponym (etymology uncertain; legendarily linked to Acamas and Macedonian colonists).",
-      "current_repo_state": {
-        "b_tarr": "Sînnade",
-        "b_tarr_direct": "Sînnade",
-        "b_tarr_hist": "Sînnade",
-        "b_origin": "Synnada (metropolis of Phrygia Pacatiana) (in-game: Sînnade)",
-        "b_anachronism": "Ancient Hellenistic and Roman provincial metropolis Synnada.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Synnada",
       "older_name_by_867": {
         "exists": false,
@@ -818,23 +718,17 @@
         {
           "form": "Φιλόμηλος (Philómēlos)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Philomelos (personal name, 'lover of apples/sheep/song')"
         },
         {
           "form": "-ιον (-ion)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "place/city of"
         }
       ],
       "etymology_analysis": "From Ancient Greek Φιλομήλιον (Philomēlion), Latinized as Philomelium, a Hellenistic foundation named after a Macedonian/Pergamene founder Philomelos.",
-      "current_repo_state": {
-        "b_tarr": "Philomêljon",
-        "b_tarr_direct": "Philomêljon",
-        "b_tarr_hist": "Philomêljon",
-        "b_origin": "Philomelion (classical civitas in Phrygia Paroreios) (in-game: Philomêljon)",
-        "b_anachronism": "Ancient Hellenistic/Roman civitas Philomelion.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ak%C5%9Fehir",
       "older_name_by_867": {
         "exists": false,
@@ -869,18 +763,11 @@
         {
           "form": "Ἀμόριον (Amórion)",
           "language": "Phrygian / Anatolian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "indigenous Phrygian toponym (possibly related to Aura/Amorra)"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ἀμόριον (Amórion), Latinized as Amorium, an Anatolian/Phrygian toponym of pre-Roman origin (Arabic ʿAmmūriya).",
-      "current_repo_state": {
-        "b_tarr": "Amôrjen",
-        "b_tarr_direct": "Amôrjen",
-        "b_tarr_hist": "Amôrjen",
-        "b_origin": "Amorion (major Byzantine fortress and theme capital) (in-game: Amôrjen)",
-        "b_anachronism": "Ancient Byzantine thematic capital Amorion.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Amorium",
       "older_name_by_867": {
         "exists": false,
@@ -915,23 +802,17 @@
         {
           "form": "Ἀντίοχος (Antíochos)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Antiochus (Seleucid royal name)"
         },
         {
           "form": "-εια (-eia)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city of"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ἀντιόχεια τῆς Πισιδίας (Antiócheia tēs Pisidías), named after Antiochus (father of Seleucus I Nicator or Antiochus I Soter) in the 3rd century BCE.",
-      "current_repo_state": {
-        "b_tarr": "Antiochia",
-        "b_tarr_direct": "Antiochia",
-        "b_tarr_hist": "Antiochia",
-        "b_origin": "Antiochia (constituent holding of Amôrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Antioch_of_Pisidia",
       "older_name_by_867": {
         "exists": false,
@@ -966,23 +847,17 @@
         {
           "form": "νέα (néa)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "new"
         },
         {
           "form": "πόλις (pólis)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "From Ancient Greek Νεάπολις (Neápolis), literally 'New City', a common Hellenistic/Roman foundation name in Pisidia.",
-      "current_repo_state": {
-        "b_tarr": "Neapolis",
-        "b_tarr_direct": "Neapolis",
-        "b_tarr_hist": "Neapolis",
-        "b_origin": "Neapolis (constituent holding of Amôrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Neapolis_(Pisidia)",
       "older_name_by_867": {
         "exists": false,
@@ -1017,23 +892,17 @@
         {
           "form": "σῴζω / Σωτήρ (sōzō / Sōtēr)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "save / Savior"
         },
         {
           "form": "πόλις (pólis)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "From Ancient Greek Σωζόπολις (Sōzópolis, 'City of the Savior / Redemption'), a late antique Christian renaming of the Seleucid city of Apollonia in Pisidia.",
-      "current_repo_state": {
-        "b_tarr": "Sôsôpel",
-        "b_tarr_direct": "Sôsôpel",
-        "b_tarr_hist": "Sôsôpel",
-        "b_origin": "Ancient Byzantine episcopal fortress Sozopolis in Pisidia (in-game: Sôsôpel)",
-        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Civitas.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sozopolis_(Pisidia)",
       "older_name_by_867": {
         "exists": true,
@@ -1071,18 +940,11 @@
         {
           "form": "Salda",
           "language": "Turkish (uncertain/obscure origin)",
+          "language_code": "tur",
           "translation": "local toponym of Lake Salda and Salda village"
         }
       ],
       "etymology_analysis": "Modern Turkish village and lake name (Salda, Yeşilova, Burdur) of post-867 attestation; the nearby classical settlement on Lake Salda was Takina.",
-      "current_repo_state": {
-        "b_tarr": "Salda",
-        "b_tarr_direct": "Salda",
-        "b_tarr_hist": "Salda",
-        "b_origin": "Salda (constituent holding of Sagalâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Salda",
       "older_name_by_867": {
         "exists": true,
@@ -1119,18 +981,11 @@
         {
           "form": "Σαγαλασσός (Sagalassós)",
           "language": "Pisidian / Luwian (Anatolian)",
+          "language_code": "ine",
           "translation": "indigenous Pisidian city name with Luwian -assos suffix"
         }
       ],
       "etymology_analysis": "From Ancient Greek Σαγαλασσός (Sagalassós), Latin Sagalassus; contains the characteristic Anatolian/Luwian toponymic suffix -(a)ssos.",
-      "current_repo_state": {
-        "b_tarr": "Sagalâs",
-        "b_tarr_direct": "Sagalâs",
-        "b_tarr_hist": "Sagalâs",
-        "b_origin": "Ancient Pisidian mountain metropolis Sagalassos (in-game: Sagalâs)",
-        "b_anachronism": "Authentic Classical Antiquity / Pre-867 Historical Polis.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sagalassos",
       "older_name_by_867": {
         "exists": false,
@@ -1165,18 +1020,11 @@
         {
           "form": "Πάρλαϊς / Παράλαϊς (Parlais / Paralais)",
           "language": "Pisidian / Anatolian",
+          "language_code": "ine",
           "translation": "indigenous Pisidian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Πάρλαϊς (Párlaïs, Ptolemy: Παράλαϊς), a pre-Roman Pisidian settlement elevated to a Roman colonia under Augustus.",
-      "current_repo_state": {
-        "b_tarr": "Parlais",
-        "b_tarr_direct": "Parlais",
-        "b_tarr_hist": "Parlais",
-        "b_origin": "Parlais (constituent holding of Sagalâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Parlais",
       "older_name_by_867": {
         "exists": false,
@@ -1211,18 +1059,11 @@
         {
           "form": "Σέλγη (Selgē) / Estwediiys",
           "language": "Pisidian / Anatolian",
+          "language_code": "ine",
           "translation": "indigenous Pisidian city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Σέλγη (Sélgē), an ancient Pisidian city (appearing on early epichoric coins as Estwediiys or similar local forms; etymology pre-Greek/Anatolian).",
-      "current_repo_state": {
-        "b_tarr": "Sêlge",
-        "b_tarr_direct": "Sêlge",
-        "b_tarr_hist": "Sêlge",
-        "b_origin": "Sêlge (Selge)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Selge",
       "older_name_by_867": {
         "exists": false,
@@ -1257,18 +1098,11 @@
         {
           "form": "Ἄδαδα (Adada)",
           "language": "Pisidian / Anatolian",
+          "language_code": "ine",
           "translation": "indigenous Pisidian city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ἄδαδα (Adada), an indigenous Pisidian toponym of pre-Hellenistic Anatolian origin.",
-      "current_repo_state": {
-        "b_tarr": "Adada",
-        "b_tarr_direct": "Adada",
-        "b_tarr_hist": "Adada",
-        "b_origin": "Adada (constituent holding of Sêlge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Adada_(Pisidia)",
       "older_name_by_867": {
         "exists": false,
@@ -1303,18 +1137,11 @@
         {
           "form": "Kaklouma",
           "language": "Pisidian / Anatolian (Greek-adapted)",
+          "language_code": "ell",
           "translation": "indigenous Pisidian settlement name"
         }
       ],
       "etymology_analysis": "Roman-era Pisidian toponym recorded in the Barrington Atlas (Map 65, *Kaklouma, tentatively located at Dalayman near Tityassos); indigenous Anatolian origin.",
-      "current_repo_state": {
-        "b_tarr": "Kaklouma",
-        "b_tarr_direct": "Kaklouma",
-        "b_tarr_hist": "Kaklouma",
-        "b_origin": "Kaklouma (constituent holding of Sêlge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "http://assets.press.princeton.edu/B_ATLAS/BATL065_.pdf",
       "older_name_by_867": {
         "exists": false,
@@ -1349,18 +1176,11 @@
         {
           "form": "Οὐάσαδα (Ouasada / Vasada)",
           "language": "Anatolian / Lycaonian",
+          "language_code": "ine",
           "translation": "indigenous Anatolian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Οὐάσαδα (Ouásada), Latinized as Vasada, an indigenous Lycaonian/Isaurian city name.",
-      "current_repo_state": {
-        "b_tarr": "Ouasada",
-        "b_tarr_direct": "Ouasada",
-        "b_tarr_hist": "Ouasada",
-        "b_origin": "Ouasada (constituent holding of Sêlge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vasada",
       "older_name_by_867": {
         "exists": false,
@@ -1395,18 +1215,11 @@
         {
           "form": "Μισθία (Misthia / Mistea)",
           "language": "Anatolian / Lycaonian",
+          "language_code": "ine",
           "translation": "indigenous Lycaonian/Pisidian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Μισθία (Misthía / Mistea), an indigenous Anatolian toponym near Lake Beyşehir, also styled Claudiocaesarea in the 1st century CE.",
-      "current_repo_state": {
-        "b_tarr": "Mistea",
-        "b_tarr_direct": "Mistea",
-        "b_tarr_hist": "Mistea",
-        "b_origin": "Mistea (constituent holding of Sêlge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mistea",
       "older_name_by_867": {
         "exists": false,
@@ -1441,18 +1254,11 @@
         {
           "form": "Τύανα (Tyana) < Tuwana < Tūwanuwa",
           "language": "Hittite / Luwian -> Ancient Greek",
+          "language_code": "ine",
           "translation": "indigenous Anatolian Bronze Age city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Τύανα (Týana), derived from Iron Age Luwian Tuwana and Bronze Age Hittite Tūwanuwa.",
-      "current_repo_state": {
-        "b_tarr": "Tîane",
-        "b_tarr_direct": "Kappadôkjen",
-        "b_tarr_hist": "Tîane",
-        "b_origin": "Tîane (Tîane (in-game: Cappadocia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tyana",
       "older_name_by_867": {
         "exists": true,
@@ -1490,18 +1296,11 @@
         {
           "form": "Komitanassos",
           "language": "Anatolian / Luwian-Phrygian",
+          "language_code": "ine",
           "translation": "indigenous Cappadocian/Lycaonian toponym with Anatolian -assos suffix"
         }
       ],
       "etymology_analysis": "From Greek Κομιτανασσός (Komitanassós), Latin Comitanassus, an Anatolian settlement name exhibiting the characteristic -assos toponymic suffix.",
-      "current_repo_state": {
-        "b_tarr": "Comitanassus",
-        "b_tarr_direct": "Comitanassus",
-        "b_tarr_hist": "Comitanassus",
-        "b_origin": "Comitanassus (constituent holding of Tîane)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Comitanassus",
       "older_name_by_867": {
         "exists": false,
@@ -1536,18 +1335,11 @@
         {
           "form": "Γαρσάουρα (Garsaura)",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "indigenous Cappadocian town name"
         }
       ],
       "etymology_analysis": "Indigenous Cappadocian toponym Γαρσάουρα (Garsáoura / Garsaura), later renamed Archelaïs by Archelaus of Cappadocia and Colonia under Claudius.",
-      "current_repo_state": {
-        "b_tarr": "Garsaura",
-        "b_tarr_direct": "Garsaura",
-        "b_tarr_hist": "Garsaura",
-        "b_origin": "Garsaura (constituent holding of Tîane)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aksaray",
       "older_name_by_867": {
         "exists": false,
@@ -1582,18 +1374,11 @@
         {
           "form": "Ναζιανζός (Nazianzós)",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "indigenous Cappadocian toponym (with -anzos/-anda suffix)"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ναζιανζός (Nazianzós), also attested as Nandianulus; an indigenous Cappadocian toponym of pre-Roman Anatolian origin.",
-      "current_repo_state": {
-        "b_tarr": "Nazianzus",
-        "b_tarr_direct": "Nazianzus",
-        "b_tarr_hist": "Nazianzus",
-        "b_origin": "Nazianzus (constituent holding of Tîane)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nazianzus",
       "older_name_by_867": {
         "exists": false,
@@ -1628,18 +1413,11 @@
         {
           "form": "Κύβιστρα (Kýbistra) < Ḫubišna",
           "language": "Hittite / Luwian -> Ancient Greek",
+          "language_code": "ine",
           "translation": "indigenous Anatolian city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Κύβιστρα (Kýbistra), Latin Cybistra, derived from the Bronze and Iron Age Anatolian name Ḫubišna / Ḫabušna.",
-      "current_repo_state": {
-        "b_tarr": "Cybistra",
-        "b_tarr_direct": "Cybistra",
-        "b_tarr_hist": "Cybistra",
-        "b_origin": "Cybistra (constituent holding of Tîane)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cybistra",
       "older_name_by_867": {
         "exists": true,
@@ -1677,18 +1455,11 @@
         {
           "form": "Παρνασσός (Parnassós)",
           "language": "Anatolian / Luwian (Greek-adapted)",
+          "language_code": "ine",
           "translation": "indigenous Anatolian toponym with -assos suffix"
         }
       ],
       "etymology_analysis": "From Ancient Greek Παρνασσός (Parnassós), an Anatolian toponym with the Luwian -assos suffix (homonymous with Mount Parnassus in Greece, possibly from Luwian parna- 'house/temple').",
-      "current_repo_state": {
-        "b_tarr": "Parnâs",
-        "b_tarr_direct": "Nîder-Galâtjen",
-        "b_tarr_hist": "Parnâs",
-        "b_origin": "Parnâs (Parnâs (in-game: Lower Galatia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Parnassus_(Cappadocia)",
       "older_name_by_867": {
         "exists": false,
@@ -1723,18 +1494,11 @@
         {
           "form": "Ἄσπονα (Áspona)",
           "language": "Galatian / Anatolian (Greek-adapted)",
+          "language_code": "ell",
           "translation": "indigenous Galatian/Anatolian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Ἄσπονα / Ἄσπωνα (Áspona), a Late Roman and Byzantine city and road station in Galatia Prima.",
-      "current_repo_state": {
-        "b_tarr": "Aspona",
-        "b_tarr_direct": "Aspona",
-        "b_tarr_hist": "Aspona",
-        "b_origin": "Aspona (constituent holding of Parnâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aspona",
       "older_name_by_867": {
         "exists": false,
@@ -1769,18 +1533,11 @@
         {
           "form": "Κίννα (Kínna / Cinna)",
           "language": "Anatolian / Galatian",
+          "language_code": "ine",
           "translation": "indigenous Anatolian toponym"
         }
       ],
       "etymology_analysis": "From Ancient Greek Κίννα (Kínna), Latinized as Cinna, a Galatian/Cappadocian town occupying the site of Hittite Zallara.",
-      "current_repo_state": {
-        "b_tarr": "Kinna",
-        "b_tarr_direct": "Kinna",
-        "b_tarr_hist": "Kinna",
-        "b_origin": "Kinna (constituent holding of Parnâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cinna_(Galatia)",
       "older_name_by_867": {
         "exists": true,
@@ -1817,18 +1574,11 @@
         {
           "form": "Χαρσιανόν (Charsianón)",
           "language": "Byzantine Greek",
+          "language_code": "grc",
           "translation": "fortress of Charsios (or Cappadocian/Armenian-Greek derivative)"
         }
       ],
       "etymology_analysis": "From Byzantine Greek Χαρσιανόν (κάστρον) (Charsianón kástron), a major Cappadocian fortress and later Byzantine theme, traditionally derived from a personal name Charsios.",
-      "current_repo_state": {
-        "b_tarr": "Charsjanôn",
-        "b_tarr_direct": "Charsjanôn",
-        "b_tarr_hist": "Charsjanôn",
-        "b_origin": "Charsjanôn (Charsianon)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Charsianon",
       "older_name_by_867": {
         "exists": false,
@@ -1863,18 +1613,11 @@
         {
           "form": "Θέρμα / Θέρμαι (Thérma / Thérmai)",
           "language": "Ancient Greek / Latin",
+          "language_code": "grc",
           "translation": "hot springs, thermal baths"
         }
       ],
       "etymology_analysis": "From Greek Θέρμαι Βασιλικαί / Latin Basilica Therma ('Imperial Thermal Baths'), referring to the 2nd-century Roman thermal spa complex in Cappadocia (modern Sarıkaya, Yozgat).",
-      "current_repo_state": {
-        "b_tarr": "Therma",
-        "b_tarr_direct": "Therma",
-        "b_tarr_hist": "Therma",
-        "b_origin": "Therma (constituent holding of Charsjanôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Basilica_Therma",
       "older_name_by_867": {
         "exists": false,
@@ -1909,18 +1652,11 @@
         {
           "form": "Εὔαισσα / Εὐαϊσσός (Euaissa)",
           "language": "Anatolian / Byzantine Greek",
+          "language_code": "ine",
           "translation": "indigenous Cappadocian toponym with -ssa suffix"
         }
       ],
       "etymology_analysis": "From Byzantine Greek Εὔαισσα (Euaissa), a Cappadocian town attested in late antique/Byzantine sources, likely of pre-Greek Anatolian origin.",
-      "current_repo_state": {
-        "b_tarr": "Euaissa",
-        "b_tarr_direct": "Euaissa",
-        "b_tarr_hist": "Euaissa",
-        "b_origin": "Euaissa (constituent holding of Charsjanôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Euaissa",
       "older_name_by_867": {
         "exists": false,
@@ -1955,18 +1691,11 @@
         {
           "form": "Μωκισσός (Mōkissós) / Mocissus",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "indigenous Cappadocian city name"
         }
       ],
       "etymology_analysis": "From Ancient Greek Μωκισσός (Mōkissós), Latin Mocissus/Mocisus, an indigenous Cappadocian toponym (with -ssos suffix), later elevated as Justinianopolis.",
-      "current_repo_state": {
-        "b_tarr": "Mocissus",
-        "b_tarr_direct": "Mocissus",
-        "b_tarr_hist": "Mocissus",
-        "b_origin": "Mocissus (constituent holding of Charsjanôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mokissos",
       "older_name_by_867": {
         "exists": false,
@@ -2001,23 +1730,17 @@
         {
           "form": "Soand-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "pre-Greek local toponymic stem"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "neuter plural / feminine toponymic ending"
         }
       ],
       "etymology_analysis": "Soanda (Ancient Greek: Σόανδα, also Soandon / Suenda) is a Hellenized pre-Greek Anatolian/Cappadocian settlement name located near Uşaklı Höyük / Soğanlı in Cappadocia.",
-      "current_repo_state": {
-        "b_tarr": "Soanda",
-        "b_tarr_direct": "Soanda",
-        "b_tarr_hist": "Soanda",
-        "b_origin": "Soanda (constituent holding of Charsjanôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Soanda",
       "older_name_by_867": {
         "exists": false,
@@ -2052,23 +1775,17 @@
         {
           "form": "Aspon-",
           "language": "Galatian / Anatolian",
+          "language_code": "ine",
           "translation": "pre-Greek local toponymic root"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Aspona (Ancient Greek: Ἄσπονα / Ἄσπωνα) is an ancient Galatian-Cappadocian city and road station on the Ancyra–Caesarea highway, corresponding to modern Sarıhüyük.",
-      "current_repo_state": {
-        "b_tarr": "Aspona",
-        "b_tarr_direct": "Aspona",
-        "b_tarr_hist": "Aspona",
-        "b_origin": "Aspona (constituent holding of Charsjanôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aspona",
       "older_name_by_867": {
         "exists": false,
@@ -2103,23 +1820,17 @@
         {
           "form": "Kaisar-",
           "language": "Ancient Greek (from Latin Caesar)",
+          "language_code": "grc",
           "translation": "Caesar / Augustus"
         },
         {
           "form": "-eia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city/foundation of"
         }
       ],
       "etymology_analysis": "Kaisereia (Greek: Καισάρεια, Latin: Caesarea) means 'City of Caesar', bestowed by King Archelaus of Cappadocia c. 12–9 BCE on the ancient Cappadocian capital previously known as Mazaca and Eusebeia.",
-      "current_repo_state": {
-        "b_tarr": "Kaisarêe",
-        "b_tarr_direct": "Kaisarêe",
-        "b_tarr_hist": "Kaisarêe",
-        "b_origin": "Kaisarêe (Kaisereia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Caesarea_(Cappadocia)",
       "older_name_by_867": {
         "exists": true,
@@ -2157,23 +1868,17 @@
         {
           "form": "Herp-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "local pre-Greek settlement root"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Herpha (Ancient Greek: Ἧρπα, also Herpa/Erpha) is a Hellenized Anatolian toponym for an ancient Cappadocian town at a crossing of the Carmalas (Zamantı) River.",
-      "current_repo_state": {
-        "b_tarr": "Herpha",
-        "b_tarr_direct": "Herpha",
-        "b_tarr_hist": "Herpha",
-        "b_origin": "Herpha (constituent holding of Kaisarêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Herpha",
       "older_name_by_867": {
         "exists": false,
@@ -2208,23 +1913,17 @@
         {
           "form": "Armax-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "local pre-Greek root"
         },
         {
           "form": "-a",
           "language": "Latin / Ancient Greek",
+          "language_code": "lat",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Armaxa (also Armaza) is a Roman-era Cappadocian town and itinerary station near modern Gemerek, preserving an indigenous Anatolian toponym.",
-      "current_repo_state": {
-        "b_tarr": "Armaxa",
-        "b_tarr_direct": "Armaxa",
-        "b_tarr_hist": "Armaxa",
-        "b_origin": "Armaxa (constituent holding of Kaisarêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Armaxa",
       "older_name_by_867": {
         "exists": false,
@@ -2259,23 +1958,17 @@
         {
           "form": "Arasax-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "pre-Greek local toponymic stem"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Arasaxa (also Arassaxa / Arathia) is an ancient Cappadocian town and Roman road station east of Caesarea near modern Akmescit/Zerezek.",
-      "current_repo_state": {
-        "b_tarr": "Dietwinszelle",
-        "b_tarr_direct": "Dietwinszelle",
-        "b_tarr_hist": "Dietwinszelle",
-        "b_origin": "Dietwinszelle (constituent holding of Kaisarêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arasaxa",
       "older_name_by_867": {
         "exists": false,
@@ -2310,23 +2003,17 @@
         {
           "form": "Kyzistr-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "pre-Greek Anatolian stem"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Kyzistra (Cyzistra, Ancient Greek: Κύζιστρα) is an ancient Cappadocian town near Zengibar Kalesi, bearing an indigenous Anatolian suffix (-stra/-istra).",
-      "current_repo_state": {
-        "b_tarr": "Kîsistre",
-        "b_tarr_direct": "Kîsistre",
-        "b_tarr_hist": "Kîsistre",
-        "b_origin": "Kîsistre (Kyzistra)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cyzistra",
       "older_name_by_867": {
         "exists": false,
@@ -2361,23 +2048,17 @@
         {
           "form": "Zēl-",
           "language": "Pontic / Anatolian",
+          "language_code": "ine",
           "translation": "local sanctuary/settlement root"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Zeila (classical Zela, Ancient Greek: Ζῆλα, modern Zile) was an ancient Pontic temple-city dedicated to Anaitis, attested from the 1st century BCE.",
-      "current_repo_state": {
-        "b_tarr": "Zeila",
-        "b_tarr_direct": "Zeila",
-        "b_tarr_hist": "Zeila",
-        "b_origin": "Zeila (constituent holding of Kîsistre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zile",
       "older_name_by_867": {
         "exists": false,
@@ -2412,23 +2093,17 @@
         {
           "form": "Telm-",
           "language": "Luwian / Lycian",
+          "language_code": "ine",
           "translation": "local Anatolian root (cf. Lycian Telebehi)"
         },
         {
           "form": "-essos",
           "language": "Luwian / Pre-Greek Anatolian",
+          "language_code": "ine",
           "translation": "Anatolian toponymic suffix (-ašša / -essos)"
         }
       ],
       "etymology_analysis": "Telmessos (Τελμησσός) is the Greek adaptation of Lycian Telebehi and Hittite-Luwian Kuwalapašša, featuring the characteristic Anatolian -ssos suffix.",
-      "current_repo_state": {
-        "b_tarr": "Halikarnâs",
-        "b_tarr_direct": "Kârjen",
-        "b_tarr_hist": "Halikarnâs",
-        "b_origin": "Halikarnâs (Halikarnâs (in-game: Caria))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Telmessos",
       "older_name_by_867": {
         "exists": true,
@@ -2466,23 +2141,17 @@
         {
           "form": "Kibyr-",
           "language": "Anatolian / Pisidian-Lycian",
+          "language_code": "ine",
           "translation": "local pre-Greek root"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Cibyra (Ancient Greek: Κίβυρα, Cibyra Magna) is an indigenous Anatolian city name on the border of Caria, Lycia, and Pisidia near modern Gölhisar.",
-      "current_repo_state": {
-        "b_tarr": "Cibyra",
-        "b_tarr_direct": "Cibyra",
-        "b_tarr_hist": "Cibyra",
-        "b_origin": "Cibyra (constituent holding of Halikarnâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cibyra",
       "older_name_by_867": {
         "exists": false,
@@ -2517,23 +2186,17 @@
         {
           "form": "Knid-",
           "language": "Ancient Greek / Pre-Greek Carian",
+          "language_code": "grc",
           "translation": "nettle / local Carian toponymic stem"
         },
         {
           "form": "-os",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "masculine/toponymic ending"
         }
       ],
       "etymology_analysis": "Cridus is a corrupt Latinized/game-data rendering of Cnidus (Ancient Greek: Κνίδος, Knidos), the famous ancient Greek city on the Datça peninsula in Caria.",
-      "current_repo_state": {
-        "b_tarr": "Cridus",
-        "b_tarr_direct": "Cridus",
-        "b_tarr_hist": "Cridus",
-        "b_origin": "Cridus (constituent holding of Halikarnâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Knidos",
       "older_name_by_867": {
         "exists": false,
@@ -2568,23 +2231,17 @@
         {
           "form": "Aphrodis-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "pertaining to Aphrodite"
         },
         {
           "form": "-ias",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "place/city suffix"
         }
       ],
       "etymology_analysis": "Aphrodisias (Ancient Greek: Ἀφροδισιάς) means 'City of Aphrodite', named for the prominent cult of the Aphrodite of Aphrodisias in Caria.",
-      "current_repo_state": {
-        "b_tarr": "Aphrodisias",
-        "b_tarr_direct": "Aphrodisias",
-        "b_tarr_hist": "Aphrodisias",
-        "b_origin": "Aphrodisias (constituent holding of Halikarnâs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aphrodisias",
       "older_name_by_867": {
         "exists": false,
@@ -2619,23 +2276,17 @@
         {
           "form": "Krēmn-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "steep cliff, precipice (κρημνός)"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "neuter plural city suffix"
         }
       ],
       "etymology_analysis": "Cremna (Ancient Greek: Κρῆμνα) derives from Greek krēmnos ('cliff, precipice'), describing the fortified Pisidian city's defensive plateau above the Cestrus (Aksu) River.",
-      "current_repo_state": {
-        "b_tarr": "Mîre",
-        "b_tarr_direct": "Lîkjen",
-        "b_tarr_hist": "Mîre",
-        "b_origin": "Mîre (Mîre (in-game: Lycia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cremna",
       "older_name_by_867": {
         "exists": false,
@@ -2670,23 +2321,17 @@
         {
           "form": "Attal-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Attalus (Pergamene royal name)"
         },
         {
           "form": "-eia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city/foundation of"
         }
       ],
       "etymology_analysis": "Attaleia (Ancient Greek: Ἀττάλεια, modern Antalya) means 'City of Attalus', named for its Pergamene founder King Attalus II.",
-      "current_repo_state": {
-        "b_tarr": "Attaleia",
-        "b_tarr_direct": "Attaleia",
-        "b_tarr_hist": "Attaleia",
-        "b_origin": "Attaleia (constituent holding of Mîre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Antalya",
       "older_name_by_867": {
         "exists": false,
@@ -2721,23 +2366,17 @@
         {
           "form": "Phasel-",
           "language": "Pre-Greek Anatolian / Lycian",
+          "language_code": "und",
           "translation": "pre-Greek local toponymic root"
         },
         {
           "form": "-is",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "feminine city suffix"
         }
       ],
       "etymology_analysis": "Phaselis (Ancient Greek: Φασηλίς) is a pre-Greek Anatolian coastal toponym adopted by Rhodian colonists in the 7th century BCE.",
-      "current_repo_state": {
-        "b_tarr": "Phaselis",
-        "b_tarr_direct": "Phaselis",
-        "b_tarr_hist": "Phaselis",
-        "b_origin": "Phaselis (constituent holding of Mîre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phaselis",
       "older_name_by_867": {
         "exists": false,
@@ -2772,23 +2411,17 @@
         {
           "form": "Limyr-",
           "language": "Ancient Greek (from Lycian Zẽmuri)",
+          "language_code": "grc",
           "translation": "adaptation of indigenous Lycian Zẽmuri"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Limyra (Ancient Greek: Λίμυρα) is the Greek rendering of the indigenous Lycian city name Zẽmuri, located on the Limyrus River in southern Lycia.",
-      "current_repo_state": {
-        "b_tarr": "Limyra",
-        "b_tarr_direct": "Limyra",
-        "b_tarr_hist": "Limyra",
-        "b_origin": "Limyra (constituent holding of Mîre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Limyra",
       "older_name_by_867": {
         "exists": false,
@@ -2823,23 +2456,17 @@
         {
           "form": "Myr-",
           "language": "Lycian / Anatolian",
+          "language_code": "ine",
           "translation": "indigenous Lycian root (cf. river Myros)"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Myra (Ancient Greek: Μύρα) is an indigenous Lycian city name associated with the river Myros (Demre Çay), Hellenized by the 3rd century BCE.",
-      "current_repo_state": {
-        "b_tarr": "Hardwinsburch",
-        "b_tarr_direct": "Hardwinsburch",
-        "b_tarr_hist": "Hardwinsburch",
-        "b_origin": "Hardwinsburch (constituent holding of Mîre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myra",
       "older_name_by_867": {
         "exists": false,
@@ -2874,23 +2501,17 @@
         {
           "form": "Olbas-",
           "language": "Luwian / Pisidian",
+          "language_code": "ine",
           "translation": "indigenous Anatolian stem"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Olbasa (Ancient Greek: Ὄλβασα) is an ancient Pisidian town near modern Belenli bearing a pre-Greek Anatolian/Pisidian toponym.",
-      "current_repo_state": {
-        "b_tarr": "Olbasa",
-        "b_tarr_direct": "Olbasa",
-        "b_tarr_hist": "Olbasa",
-        "b_origin": "Olbasa (constituent holding of Mîre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Olbasa_(Pisidia)",
       "older_name_by_867": {
         "exists": false,
@@ -2925,23 +2546,17 @@
         {
           "form": "Adr-",
           "language": "Luwian / Isaurian",
+          "language_code": "ine",
           "translation": "indigenous Anatolian root"
         },
         {
           "form": "-assos",
           "language": "Luwian / Pre-Greek Anatolian",
+          "language_code": "ine",
           "translation": "Anatolian toponymic suffix"
         }
       ],
       "etymology_analysis": "Adrassos (Adrassus, Ancient Greek: Ἀδρασσός) is an ancient Isaurian/Cilician settlement name with the characteristic Luwian-Anatolian -assos suffix.",
-      "current_repo_state": {
-        "b_tarr": "Attalêe",
-        "b_tarr_direct": "Pamfîljen",
-        "b_tarr_hist": "Attalêe",
-        "b_origin": "Attalêe (Attalêe (in-game: Pamphylia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://topostext.org/place/367331UAdr",
       "older_name_by_867": {
         "exists": false,
@@ -2976,23 +2591,17 @@
         {
           "form": "Anem-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "wind (ἄνεμος)"
         },
         {
           "form": "-ourion",
           "language": "Ancient Greek / Latin (-urium)",
+          "language_code": "grc",
           "translation": "promontory/place suffix"
         }
       ],
       "etymology_analysis": "Anemurium (Ancient Greek: Ἀνεμούριον, 'Windy Cape') derives from Greek anemos ('wind'), referring to the exposed southernmost cape of Asia Minor.",
-      "current_repo_state": {
-        "b_tarr": "Anemurium",
-        "b_tarr_direct": "Anemurium",
-        "b_tarr_hist": "Anemurium",
-        "b_origin": "Anemurium (constituent holding of Attalêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anemurium",
       "older_name_by_867": {
         "exists": false,
@@ -3027,23 +2636,17 @@
         {
           "form": "Selin-",
           "language": "Ancient Greek (adapting Anatolian/Neo-Babylonian Sallunê)",
+          "language_code": "grc",
           "translation": "wild celery (σέλινον) / folk-etymologized local river-town name"
         },
         {
           "form": "-ous",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "abounding in (toponymic suffix)"
         }
       ],
       "etymology_analysis": "Selinus (Ancient Greek: Σελινούς) was a port-town at the mouth of the Selinus river, attested in 557 BCE as Neo-Babylonian Sallunê and temporarily renamed Trajanopolis after Emperor Trajan's death there in 117 AD.",
-      "current_repo_state": {
-        "b_tarr": "Selinus",
-        "b_tarr_direct": "Selinus",
-        "b_tarr_hist": "Selinus",
-        "b_origin": "Selinus (constituent holding of Attalêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Selinus_(Cilicia)",
       "older_name_by_867": {
         "exists": true,
@@ -3081,23 +2684,17 @@
         {
           "form": "Korak-",
           "language": "Luwian",
+          "language_code": "ine",
           "translation": "from Luwian Korakassa ('point / protruding city')"
         },
         {
           "form": "-ēsion",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Korakesion (Latin: Coracesium, modern Alanya) derives from Luwian Korakassa meaning 'point/protruding city', describing its rocky Mediterranean promontory.",
-      "current_repo_state": {
-        "b_tarr": "Korakesion",
-        "b_tarr_direct": "Korakesion",
-        "b_tarr_hist": "Korakesion",
-        "b_origin": "Korakesion (constituent holding of Attalêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alanya",
       "older_name_by_867": {
         "exists": false,
@@ -3132,18 +2729,11 @@
         {
           "form": "Sidē",
           "language": "Sidetic / Ancient Greek",
+          "language_code": "grc",
           "translation": "pomegranate (σίδη)"
         }
       ],
       "etymology_analysis": "Side (Ancient Greek: Σίδη) means 'pomegranate' in the indigenous Sidetic/Anatolian-Greek tradition, an emblem that appears on the city's ancient coinage.",
-      "current_repo_state": {
-        "b_tarr": "Side",
-        "b_tarr_direct": "Side",
-        "b_tarr_hist": "Side",
-        "b_origin": "Side (constituent holding of Attalêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Side,_Turkey",
       "older_name_by_867": {
         "exists": false,
@@ -3178,23 +2768,17 @@
         {
           "form": "Tarša",
           "language": "Hittite / Luwian",
+          "language_code": "ine",
           "translation": "indigenous Bronze Age city name in Kizzuwatna"
         },
         {
           "form": "-os",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Tarsus (Hittite: Tarša, Greek: Ταρσός) is a Bronze Age Cilician/Kizzuwatnan city name preserved continuously through Assyrian, Persian, Hellenistic, Roman, and Byzantine periods.",
-      "current_repo_state": {
-        "b_tarr": "Tarsûs",
-        "b_tarr_direct": "Kilîkjen",
-        "b_tarr_hist": "Tarsûs",
-        "b_origin": "Tarsûs (Tarsûs (in-game: Cilicia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tarsus,_Mersin",
       "older_name_by_867": {
         "exists": false,
@@ -3229,23 +2813,17 @@
         {
           "form": "Adan-",
           "language": "Luwian / Hittite",
+          "language_code": "ine",
           "translation": "Bronze Age city stem (Adaniya), possibly related to PIE *danu ('river')"
         },
         {
           "form": "-a",
           "language": "Ancient Greek / Hittite (-iya)",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Adana (Hittite: Adaniya, Greek: Ἄδανα) is attested since at least 1335 BCE in Hittite records of Kizzuwatna.",
-      "current_repo_state": {
-        "b_tarr": "Adana",
-        "b_tarr_direct": "Adana",
-        "b_tarr_hist": "Adana",
-        "b_origin": "Adana (constituent holding of Tarsûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Adana",
       "older_name_by_867": {
         "exists": false,
@@ -3280,23 +2858,17 @@
         {
           "form": "Mall-",
           "language": "Ancient Greek / Cilician",
+          "language_code": "grc",
           "translation": "local Cilician toponymic root"
         },
         {
           "form": "-os",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Mallus (Ancient Greek: Μαλλός, Latin: Mallus) was an ancient Greek-Cilician city near the mouth of the Pyramus (Ceyhan) River, traditionally linked to Mopsus and Amphilochus.",
-      "current_repo_state": {
-        "b_tarr": "Mallus",
-        "b_tarr_direct": "Mallus",
-        "b_tarr_hist": "Mallus",
-        "b_origin": "Mallus (constituent holding of Tarsûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mallus_(Cilicia)",
       "older_name_by_867": {
         "exists": false,
@@ -3331,23 +2903,17 @@
         {
           "form": "Anazarb-",
           "language": "Cilician / Anatolian",
+          "language_code": "ine",
           "translation": "local pre-Greek root (later folk-etymologized in Arabic as 'Ain Zarba)"
         },
         {
           "form": "-us",
           "language": "Latin (from Greek -os)",
+          "language_code": "lat",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Anazaribus is a variant of Anazarbus (Ancient Greek: Ἀναζαρβός), the capital of Late Roman Cilicia Secunda, later known as Justinopolis and Arabic 'Ain Zarba.",
-      "current_repo_state": {
-        "b_tarr": "Anazaribus",
-        "b_tarr_direct": "Anazaribus",
-        "b_tarr_hist": "Anazaribus",
-        "b_origin": "Anazaribus (constituent holding of Tarsûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anazarbus",
       "older_name_by_867": {
         "exists": false,
@@ -3382,23 +2948,17 @@
         {
           "form": "Faustin-",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Faustina (Empress Faustina the Younger)"
         },
         {
           "form": "-o-polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city of"
         }
       ],
       "etymology_analysis": "Faustionopolis is a minor spelling variant of Faustinopolis (Φαυστινόπολις), 'City of Faustina', elevated from the village of Halala in 176 AD.",
-      "current_repo_state": {
-        "b_tarr": "Faustionopolis",
-        "b_tarr_direct": "Faustionopolis",
-        "b_tarr_hist": "Faustionopolis",
-        "b_origin": "Faustionopolis (constituent holding of Tarsûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Faustinopolis",
       "older_name_by_867": {
         "exists": true,
@@ -3435,23 +2995,17 @@
         {
           "form": "Padu-",
           "language": "Luwian / Cappadocian",
+          "language_code": "ine",
           "translation": "local Anatolian root"
         },
         {
           "form": "-andus",
           "language": "Luwian / Pre-Greek Anatolian",
+          "language_code": "ine",
           "translation": "Anatolian toponymic suffix (-anda / -andos)"
         }
       ],
       "etymology_analysis": "Podandus (Padyandus, Ancient Greek: Παδυανδός / Πόδανδος, modern Pozantı) is an ancient Cappadocian-Cilician pass town bearing the Anatolian -anda/-andos suffix.",
-      "current_repo_state": {
-        "b_tarr": "Podandus",
-        "b_tarr_direct": "Podandus",
-        "b_tarr_hist": "Podandus",
-        "b_origin": "Podandus (constituent holding of Tarsûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Padyandus",
       "older_name_by_867": {
         "exists": false,
@@ -3486,23 +3040,17 @@
         {
           "form": "Lyk-",
           "language": "Ancient Greek / Anatolian",
+          "language_code": "grc",
           "translation": "wolf (λύκος) or Anatolian stem"
         },
         {
           "form": "-andos",
           "language": "Anatolian / Greek",
+          "language_code": "ine",
           "translation": "Anatolian toponymic suffix"
         }
       ],
       "etymology_analysis": "Lykandos (Greek: Λυκανδός, Latin: Lycandus, Armenian: Djahan) is first attested in the early 10th century (c. 903–908 AD) as a Byzantine-Armenian frontier fortress and theme established by Melias.",
-      "current_repo_state": {
-        "b_tarr": "Lîkant",
-        "b_tarr_direct": "Lîkant",
-        "b_tarr_hist": "Lîkant",
-        "b_origin": "Lîkant (Lycandus)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lykandos",
       "older_name_by_867": {
         "exists": false,
@@ -3537,23 +3085,17 @@
         {
           "form": "Koman-",
           "language": "Luwian / Hittite",
+          "language_code": "ine",
           "translation": "likely from Hittite-Luwian Kummanni (sacred city)"
         },
         {
           "form": "-a",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "neuter plural city suffix (τὰ Κόμανα)"
         }
       ],
       "etymology_analysis": "Comana (Ancient Greek: τὰ Κόμανα τῆς Καππαδοκίας) was a major temple-city of Cappadocia/Cataonia at modern Şarköy, likely continuing the Bronze Age name Kummanni.",
-      "current_repo_state": {
-        "b_tarr": "Comana",
-        "b_tarr_direct": "Comana",
-        "b_tarr_hist": "Comana",
-        "b_origin": "Comana (constituent holding of Lîkant)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Comana_(Cappadocia)",
       "older_name_by_867": {
         "exists": false,
@@ -3588,23 +3130,17 @@
         {
           "form": "Arab-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "pre-Greek local root"
         },
         {
           "form": "-issos",
           "language": "Luwian / Pre-Greek Anatolian",
+          "language_code": "ine",
           "translation": "Anatolian toponymic suffix"
         }
       ],
       "etymology_analysis": "Arabissus (Ancient Greek: Ἀραβισσός, modern Afşin) is an indigenous Anatolian toponym with the -issos suffix, birthplace of Byzantine Emperor Maurice (539 AD).",
-      "current_repo_state": {
-        "b_tarr": "Arabissus",
-        "b_tarr_direct": "Arabissus",
-        "b_tarr_hist": "Arabissus",
-        "b_origin": "Arabissus (constituent holding of Lîkant)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arabissus",
       "older_name_by_867": {
         "exists": false,
@@ -3639,23 +3175,17 @@
         {
           "form": "Koukous-",
           "language": "Anatolian / Cappadocian",
+          "language_code": "ine",
           "translation": "pre-Greek local stem"
         },
         {
           "form": "-os",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Cocussus (Ancient Greek: Κουκουσός, Latin: Cucusus, modern Göksun) is an ancient Cataonian/Cappadocian town name of pre-Greek Anatolian origin.",
-      "current_repo_state": {
-        "b_tarr": "Cocussus",
-        "b_tarr_direct": "Cocussus",
-        "b_tarr_hist": "Cocussus",
-        "b_origin": "Cocussus (constituent holding of Lîkant)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/G%C3%B6ksun",
       "older_name_by_867": {
         "exists": false,
@@ -3690,23 +3220,17 @@
         {
           "form": "Seleuk-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Seleucus (dynastic personal name)"
         },
         {
           "form": "-eia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city/foundation of"
         }
       ],
       "etymology_analysis": "Seleucia (Ancient Greek: Σελεύκεια, modern Silifke) means 'City of Seleucus', founded by Seleucus I Nicator in Rough Cilicia.",
-      "current_repo_state": {
-        "b_tarr": "Seleukîe",
-        "b_tarr_direct": "Seleukîe",
-        "b_tarr_hist": "Seleukîe",
-        "b_origin": "Seleukîe (Seleucia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Silifke",
       "older_name_by_867": {
         "exists": false,
@@ -3741,23 +3265,17 @@
         {
           "form": "Kōryk-",
           "language": "Ancient Greek / Anatolian",
+          "language_code": "grc",
           "translation": "leather sack/wallet (κώρυκος) or Hellenized local Cilician root"
         },
         {
           "form": "-os",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Corycus (Ancient Greek: Κώρυκος, modern Kızkalesi) was an ancient port city in Rough Cilicia adjacent to the Corycian Cave.",
-      "current_repo_state": {
-        "b_tarr": "Corycus",
-        "b_tarr_direct": "Corycus",
-        "b_tarr_hist": "Corycus",
-        "b_origin": "Corycus (constituent holding of Seleukîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Corycus",
       "older_name_by_867": {
         "exists": false,
@@ -3792,23 +3310,17 @@
         {
           "form": "Claudi-",
           "language": "Latin",
+          "language_code": "lat",
           "translation": "Claudius (Roman Emperor)"
         },
         {
           "form": "-o-polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city of"
         }
       ],
       "etymology_analysis": "Claudiopolis (Ancient Greek: Κλαυδιόπολις, modern Mut) means 'City of Claudius', a Roman colony and Isaurian bishopric in the Calycadnus valley.",
-      "current_repo_state": {
-        "b_tarr": "Claudiopolis",
-        "b_tarr_direct": "Claudiopolis",
-        "b_tarr_hist": "Claudiopolis",
-        "b_origin": "Claudiopolis (constituent holding of Seleukîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Claudiopolis_(Cilicia)",
       "older_name_by_867": {
         "exists": false,
@@ -3843,23 +3355,17 @@
         {
           "form": "Sol-",
           "language": "Ancient Greek / Pre-Greek",
+          "language_code": "grc",
           "translation": "local Cilician-Greek city stem (also source of the word 'solecism')"
         },
         {
           "form": "-oi",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "masculine plural city ending"
         }
       ],
       "etymology_analysis": "Soloi (Soli, Ancient Greek: Σόλοι) was a major Cilician port city founded c. 700 BCE, famous as the source of the Greek term soloikismos ('solecism').",
-      "current_repo_state": {
-        "b_tarr": "Soloi",
-        "b_tarr_direct": "Soloi",
-        "b_tarr_hist": "Soloi",
-        "b_origin": "Soloi (constituent holding of Seleukîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Soli_(Cilicia)",
       "older_name_by_867": {
         "exists": false,
@@ -3894,23 +3400,17 @@
         {
           "form": "Tall",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "hill, mound (تل)"
         },
         {
           "form": "Ḥamdūn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Hamdun (personal name; rendered 'Hamid' in-game)"
         }
       ],
       "etymology_analysis": "Tall Hamid represents Arabic Tall Ḥamdūn ('Hill/Mound of Hamdun'), an 8th-century Abbasid fortress in Plain Cilicia later known in Armenian as T'il Hamdun and in Turkish as Toprakkale.",
-      "current_repo_state": {
-        "b_tarr": "Anasârbe",
-        "b_tarr_direct": "Tal-Hamît",
-        "b_tarr_hist": "Anasârbe",
-        "b_origin": "Anasârbe (Anasârbe (in-game: Tall Hamid))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Toprakkale,_Osmaniye",
       "older_name_by_867": {
         "exists": false,
@@ -3945,28 +3445,23 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Hārūn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Harun (Caliph Harun al-Rashid)"
         },
         {
           "form": "-iyya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "feminine nisba / foundation suffix"
         }
       ],
       "etymology_analysis": "Al-Haruniya (Arabic: الهارونية, al-Hārūniyya) means 'The Harunian [Fortress]', founded in 799 AD during the reign of Abbasid Caliph Harun al-Rashid.",
-      "current_repo_state": {
-        "b_tarr": "Al-Haruniya",
-        "b_tarr_direct": "Al-Haruniya",
-        "b_tarr_hist": "Al-Haruniya",
-        "b_origin": "Al-Haruniya (constituent holding of Anasârbe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/D%C3%BCzi%C3%A7i",
       "older_name_by_867": {
         "exists": false,
@@ -4001,18 +3496,11 @@
         {
           "form": "Ayas",
           "language": "Armenian / Medieval Turkish",
+          "language_code": "hye",
           "translation": "medieval contraction of Greek Aigeai (Αἰγέαι)"
         }
       ],
       "etymology_analysis": "Ayas is the medieval Armenian and Turkish name (also Italian Laiazzo) derived from Ancient Greek Aigeai (Latin: Aegeae), the ancient Cilician port at modern Yumurtalık.",
-      "current_repo_state": {
-        "b_tarr": "Ayas",
-        "b_tarr_direct": "Ayas",
-        "b_tarr_hist": "Ayas",
-        "b_origin": "Ayas (constituent holding of Anasârbe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yumurtal%C4%B1k",
       "older_name_by_867": {
         "exists": true,
@@ -4050,23 +3538,17 @@
         {
           "form": "tskhum-",
           "language": "Svan / Georgian",
+          "language_code": "kat",
           "translation": "hornbeam tree (ცხუმი)"
         },
         {
           "form": "-i",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "nominative suffix"
         }
       ],
       "etymology_analysis": "Derived from Georgian Tskhomi/Tskhumi (ცხომი/ცხუმი), generally linked to Svan tskhum ('hornbeam tree').",
-      "current_repo_state": {
-        "b_tarr": "Zechûm",
-        "b_tarr_direct": "Abchâsjen",
-        "b_tarr_hist": "Zechûm",
-        "b_origin": "Zechûm (Zechûm (in-game: Abkhazia))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sukhumi",
       "older_name_by_867": {
         "exists": true,
@@ -4104,23 +3586,17 @@
         {
           "form": "Nikops-",
           "language": "Greek / Adyghe",
+          "language_code": "ell",
           "translation": "obscure; possibly linked to Adyghe Nygepsykho or Greek Nikopsis (Νικόψις)"
         },
         {
           "form": "-ia",
           "language": "Latin / Greek",
+          "language_code": "lat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Attested in Greek as Nikopsis (Νικόψις) and in Georgian as Nikopsia/Napsa; exact root etymology is uncertain, possibly connected to the Nechepsukho river.",
-      "current_repo_state": {
-        "b_tarr": "Nicopsia",
-        "b_tarr_direct": "Nicopsia",
-        "b_tarr_hist": "Nicopsia",
-        "b_origin": "Nicopsia (constituent holding of Zechûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nicopsis",
       "older_name_by_867": {
         "exists": true,
@@ -4158,23 +3634,17 @@
         {
           "form": "Pityus / Bichvint-",
           "language": "Greek / Georgian",
+          "language_code": "ell",
           "translation": "pine (from Greek pitys, πίτυς, 'pine tree')"
         },
         {
           "form": "-a",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic ending"
         }
       ],
       "etymology_analysis": "Both Georgian Bichvinta and Russian/Greek Pitsunda/Pityus descend from Greek pitys ('pine tree'), referring to the pine groves on the cape.",
-      "current_repo_state": {
-        "b_tarr": "Bichvinta",
-        "b_tarr_direct": "Bichvinta",
-        "b_tarr_hist": "Bichvinta",
-        "b_origin": "Bichvinta (constituent holding of Zechûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pitsunda",
       "older_name_by_867": {
         "exists": true,
@@ -4212,23 +3682,17 @@
         {
           "form": "Anakop-",
           "language": "Abkhaz / Georgian / Greek",
+          "language_code": "cau",
           "translation": "citadel/settlement name (Georgian ანაკოფია)"
         },
         {
           "form": "-ia",
           "language": "Greek / Georgian",
+          "language_code": "ell",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Recorded in Georgian as Anakopia (ანაკოფია) and in Greek as Anakouphe; pre-867 fortress and capital of Abasgia/Abkhazia.",
-      "current_repo_state": {
-        "b_tarr": "Hermannsburch",
-        "b_tarr_direct": "Hermannsburch",
-        "b_tarr_hist": "Hermannsburch",
-        "b_origin": "Hermannsburch (constituent holding of Zechûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anakopia_Fortress",
       "older_name_by_867": {
         "exists": false,
@@ -4263,23 +3727,17 @@
         {
           "form": "bathus",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "deep (βαθύς, referring to the deep natural harbor)"
         },
         {
           "form": "-mi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "Georgian adaptation suffix"
         }
       ],
       "etymology_analysis": "Derived from Ancient Greek bathys ('deep', from Bathys Limen, 'deep harbor'), adapted into Georgian as Batumi.",
-      "current_repo_state": {
-        "b_tarr": "Batûmi",
-        "b_tarr_direct": "Gûrjen",
-        "b_tarr_hist": "Batûmi",
-        "b_origin": "Batûmi (Batûmi (in-game: Guria))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/History_of_Batumi",
       "older_name_by_867": {
         "exists": true,
@@ -4317,18 +3775,11 @@
         {
           "form": "Phasis / Poti",
           "language": "Colchian / Greek / Georgian",
+          "language_code": "ell",
           "translation": "derived from the ancient name of the Rioni River (Phasis)"
         }
       ],
       "etymology_analysis": "Poti (ფოთი) derives from Ancient Greek Phasis (Φᾶσις), the classical name of both the Rioni River and the Milesian colony at its mouth.",
-      "current_repo_state": {
-        "b_tarr": "Poti",
-        "b_tarr_direct": "Poti",
-        "b_tarr_hist": "Poti",
-        "b_origin": "Poti (constituent holding of Batûmi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Poti",
       "older_name_by_867": {
         "exists": true,
@@ -4365,23 +3816,17 @@
         {
           "form": "vard-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "rose (ვარდი)"
         },
         {
           "form": "-tsikhe",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "fortress, castle (ციხე)"
         }
       ],
       "etymology_analysis": "Georgian Vard-tsikhe ('Rose Fortress') is a direct calque or parallel of its 6th-century Greek name Rhodopolis ('Rose City').",
-      "current_repo_state": {
-        "b_tarr": "Vartsikhe",
-        "b_tarr_direct": "Vartsikhe",
-        "b_tarr_hist": "Vartsikhe",
-        "b_origin": "Vartsikhe (constituent holding of Batûmi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Vartsikhe",
       "older_name_by_867": {
         "exists": true,
@@ -4419,18 +3864,11 @@
         {
           "form": "Shorapn- / Sarapana",
           "language": "Georgian / Greek",
+          "language_code": "kat",
           "translation": "ancient Colchian-Iberian frontier fortress name"
         }
       ],
       "etymology_analysis": "Georgian Shorapani (შორაპანი), rendered in Classical Greek as Sarapana/Sarapanis; an ancient strategic fortress guarding the road between Colchis and Iberia.",
-      "current_repo_state": {
-        "b_tarr": "Schorapann",
-        "b_tarr_direct": "Schorapann",
-        "b_tarr_hist": "Schorapann",
-        "b_origin": "Schorapann (constituent holding of Batûmi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shorapani",
       "older_name_by_867": {
         "exists": true,
@@ -4468,23 +3906,17 @@
         {
           "form": "Kut-",
           "language": "Colchian / Georgian",
+          "language_code": "kat",
           "translation": "ancient Colchian root (cf. Greek Kytaia / Kotais)"
         },
         {
           "form": "-aisi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From ancient Colchian *Kuta- / Greek Kytaia (Κυταία) and Kotais (Κόταις), modern Georgian Kutaisi (ქუთაისი).",
-      "current_repo_state": {
-        "b_tarr": "Kutaîssi",
-        "b_tarr_direct": "Odîschi",
-        "b_tarr_hist": "Kutaîssi",
-        "b_origin": "Kutaîssi (Kutaîssi (in-game: Odishi))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kutaisi",
       "older_name_by_867": {
         "exists": true,
@@ -4523,18 +3955,11 @@
         {
           "form": "Gudakva / Gudava",
           "language": "Georgian / Mingrelian",
+          "language_code": "kat",
           "translation": "early medieval coastal bishopric and settlement"
         }
       ],
       "etymology_analysis": "Early medieval Georgian Gudakva (modern Gudava in Gali Municipality), identified with Byzantine Ziganis/Ziganeos in Georgian manuscript scholia.",
-      "current_repo_state": {
-        "b_tarr": "Gudakva",
-        "b_tarr_direct": "Gudakva",
-        "b_tarr_hist": "Gudakva",
-        "b_origin": "Gudakva (constituent holding of Kutaîssi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gudava_Saint_Barbara_Church",
       "older_name_by_867": {
         "exists": true,
@@ -4572,18 +3997,11 @@
         {
           "form": "Seti",
           "language": "Svan",
+          "language_code": "kat",
           "translation": "traditional Svan name of Mestia (სეტი)"
         }
       ],
       "etymology_analysis": "Seti (სეტი) is the historical Svan name of the central community of Upper Svaneti, renamed Mestia in 1953/1968.",
-      "current_repo_state": {
-        "b_tarr": "Seti",
-        "b_tarr_direct": "Seti",
-        "b_tarr_hist": "Seti",
-        "b_origin": "Seti (constituent holding of Kutaîssi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mestia",
       "older_name_by_867": {
         "exists": false,
@@ -4618,23 +4036,17 @@
         {
           "form": "zugu",
           "language": "Mingrelian",
+          "language_code": "kat",
           "translation": "hill (ზუგუ)"
         },
         {
           "form": "didi",
           "language": "Mingrelian / Georgian",
+          "language_code": "kat",
           "translation": "big, great (დიდი)"
         }
       ],
       "etymology_analysis": "From Mingrelian zugu ('hill') + didi ('big'), meaning 'big hill', referring to the hill in the eastern part of the town.",
-      "current_repo_state": {
-        "b_tarr": "Zugdidi",
-        "b_tarr_direct": "Zugdidi",
-        "b_tarr_hist": "Zugdidi",
-        "b_origin": "Zugdidi (constituent holding of Kutaîssi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zugdidi",
       "older_name_by_867": {
         "exists": false,
@@ -4669,18 +4081,11 @@
         {
           "form": "Tsageri",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "historical Lechkhumi town and bishopric name (ცაგერი)"
         }
       ],
       "etymology_analysis": "Georgian toponym Tsageri (ცაგერი), medieval ecclesiastical and administrative center of Lechkhumi.",
-      "current_repo_state": {
-        "b_tarr": "Zageri",
-        "b_tarr_direct": "Zageri",
-        "b_tarr_hist": "Zageri",
-        "b_origin": "Zageri (constituent holding of Kutaîssi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tsageri",
       "older_name_by_867": {
         "exists": false,
@@ -4715,23 +4120,17 @@
         {
           "form": "Kasris-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "of Kasri (genitive of Kasri, gorge/area in Dvaleti)"
         },
         {
           "form": "kari",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "gate, pass (კარი)"
         }
       ],
       "etymology_analysis": "Georgian Kasris-kari ('Gate of Kasri'), a fortified mountain pass blocking the Kasri gorge in historical Dvaleti.",
-      "current_repo_state": {
-        "b_tarr": "Swanêtjen",
-        "b_tarr_direct": "Swanêtjen",
-        "b_tarr_hist": "Swanêtjen",
-        "b_origin": "Swanêtjen (Svaneti)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://georgianencyclopedia.ge/ka/form/16915",
       "older_name_by_867": {
         "exists": false,
@@ -4766,18 +4165,11 @@
         {
           "form": "Ambrolauri",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "settlement name in Racha (ამბროლაური)"
         }
       ],
       "etymology_analysis": "Georgian toponym Ambrolauri (ამბროლაური), first attested in the 17th century as a royal residence in Racha.",
-      "current_repo_state": {
-        "b_tarr": "Ambrolauri",
-        "b_tarr_direct": "Ambrolauri",
-        "b_tarr_hist": "Ambrolauri",
-        "b_origin": "Ambrolauri (constituent holding of Swanêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ambrolauri",
       "older_name_by_867": {
         "exists": false,
@@ -4812,18 +4204,11 @@
         {
           "form": "Kvara",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "fortress name in Racha (კვარა / კუარა)"
         }
       ],
       "etymology_analysis": "Kvara (კვარა / კუარა), a high-medieval fortress near Skhvava in Racha.",
-      "current_repo_state": {
-        "b_tarr": "Kvara",
-        "b_tarr_direct": "Kvara",
-        "b_tarr_hist": "Kvara",
-        "b_origin": "Kvara (constituent holding of Swanêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ka.wikipedia.org/wiki/%E1%83%99%E1%83%95%E1%83%90%E1%83%A0%E1%83%90%E1%83%A1_%E1%83%AA%E1%83%98%E1%83%AE%E1%83%94",
       "older_name_by_867": {
         "exists": false,
@@ -4858,23 +4243,17 @@
         {
           "form": "Zaqa-",
           "language": "Avar / Caucasian",
+          "language_code": "cau",
           "translation": "uncertain; possibly linked to Sakas or local Avar/Tsakhur toponymy"
         },
         {
           "form": "-tala",
           "language": "Azerbaijani / Turkic",
+          "language_code": "aze",
           "translation": "glade, clearing, plain (also Tala River)"
         }
       ],
       "etymology_analysis": "Located on the Tala River in historical Hereti/Saingilo; the modern town name Zaqatala is attested from the 17th–19th centuries.",
-      "current_repo_state": {
-        "b_tarr": "Herêtjen",
-        "b_tarr_direct": "Herêtjen",
-        "b_tarr_hist": "Herêtjen",
-        "b_origin": "Herêtjen (Hereti)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zaqatala_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -4909,18 +4288,11 @@
         {
           "form": "Gis / Ghisi",
           "language": "Caucasian Albanian / Georgian",
+          "language_code": "sqi",
           "translation": "ancient settlement and church center (Georgian გიში, Azerbaijani Kiş)"
         }
       ],
       "etymology_analysis": "From Caucasian Albanian Gis (Armenian Գիս, Georgian Gishi/Ghisi გიში, Azerbaijani Kiş), an ancient religious center in Hereti.",
-      "current_repo_state": {
-        "b_tarr": "Ghisi",
-        "b_tarr_direct": "Ghisi",
-        "b_tarr_hist": "Ghisi",
-        "b_origin": "Ghisi (constituent holding of Herêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ki%C5%9F,_Shaki",
       "older_name_by_867": {
         "exists": true,
@@ -4957,23 +4329,17 @@
         {
           "form": "dedoplis-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "of the queen (genitive of დედოფალი, dedopali)"
         },
         {
           "form": "tsqaro",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "spring, water source (წყარო)"
         }
       ],
       "etymology_analysis": "Georgian Dedoplis-tsqaro ('Queen's spring'), named for the spring near Khornabuji associated with Queen Tamar.",
-      "current_repo_state": {
-        "b_tarr": "Dedoplitzkhara",
-        "b_tarr_direct": "Dedoplitzkhara",
-        "b_tarr_hist": "Dedoplitzkhara",
-        "b_origin": "Dedoplitzkhara (constituent holding of Herêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dedoplistsqaro",
       "older_name_by_867": {
         "exists": false,
@@ -5008,23 +4374,17 @@
         {
           "form": "Nukh-",
           "language": "Azerbaijani / Caucasian",
+          "language_code": "aze",
           "translation": "Nukha (village name near Shaki)"
         },
         {
           "form": "-pata",
           "language": "Uncertain / Game adaptation",
+          "language_code": "und",
           "translation": "settlement/toponymic suffix"
         }
       ],
       "etymology_analysis": "CK3/medievalized rendering of Nukha, the name borne by Shaki (Azerbaijan) from 1772 to 1968.",
-      "current_repo_state": {
-        "b_tarr": "Nukhpata",
-        "b_tarr_direct": "Nukhpata",
-        "b_tarr_hist": "Nukhpata",
-        "b_origin": "Nukhpata (constituent holding of Herêtjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shaki,_Azerbaijan",
       "older_name_by_867": {
         "exists": true,
@@ -5062,23 +4422,17 @@
         {
           "form": "tela",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "elm tree (თელა)"
         },
         {
           "form": "-vi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Derived from Georgian tela ('elm tree'), attested in Ptolemy's 2nd-century Geography as Teleda.",
-      "current_repo_state": {
-        "b_tarr": "Metzchête",
-        "b_tarr_direct": "Kachêtjen",
-        "b_tarr_hist": "Metzchête",
-        "b_origin": "Metzchête (Metzchête (in-game: Kakheti))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Telavi",
       "older_name_by_867": {
         "exists": true,
@@ -5115,18 +4469,11 @@
         {
           "form": "Nekresi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "ancient town and monastery name in Kakheti (ნეკრესი; input variant Nektesi)"
         }
       ],
       "etymology_analysis": "Georgian Nekresi (ნეკრესი; spelled Nektesi in the CK3 input), an ancient Iberian town and 6th-century monastic center in Kakheti.",
-      "current_repo_state": {
-        "b_tarr": "Nektesi",
-        "b_tarr_direct": "Nektesi",
-        "b_tarr_hist": "Nektesi",
-        "b_origin": "Nektesi (constituent holding of Metzchête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nekresi",
       "older_name_by_867": {
         "exists": false,
@@ -5161,18 +4508,11 @@
         {
           "form": "Mtskheta",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "ancient capital of Iberia (მცხეთა), linked to ethnonym Meskhi or legendary Mtskhetos"
         }
       ],
       "etymology_analysis": "Ancient Iberian capital Mtskheta (მცხეთა), traditionally derived from mythical Mtskhetos or the Meskhi tribe.",
-      "current_repo_state": {
-        "b_tarr": "Mtskheta",
-        "b_tarr_direct": "Mtskheta",
-        "b_tarr_hist": "Mtskheta",
-        "b_origin": "Mtskheta (constituent holding of Metzchête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mtskheta",
       "older_name_by_867": {
         "exists": false,
@@ -5207,18 +4547,11 @@
         {
           "form": "Gavazi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "historical village in Kakheti (გავაზი)"
         }
       ],
       "etymology_analysis": "Georgian toponym Gavazi (გავაზი), site of an early Christian tetraconch church (4th–5th c.) and 9th-century battle recorded in Matiane Kartlisa.",
-      "current_repo_state": {
-        "b_tarr": "Gavazi",
-        "b_tarr_direct": "Gavazi",
-        "b_tarr_hist": "Gavazi",
-        "b_origin": "Gavazi (constituent holding of Metzchête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://georgianencyclopedia.ge/en/form_eng/544",
       "older_name_by_867": {
         "exists": false,
@@ -5253,23 +4586,17 @@
         {
           "form": "Khorna-",
           "language": "Old Iranian / Georgian",
+          "language_code": "fas",
           "translation": "sun (cf. Iranian khvar / xwar) or tribal name"
         },
         {
           "form": "-buji",
           "language": "Old Iranian / Georgian",
+          "language_code": "fas",
           "translation": "support, refuge (possibly Iranian *būj-)"
         }
       ],
       "etymology_analysis": "Georgian Khornabuji (ხორნაბუჯი; input Kharnabuji), often explained as an Old Iranian loanword meaning 'support/refuge of the sun'.",
-      "current_repo_state": {
-        "b_tarr": "Kharnabuji",
-        "b_tarr_direct": "Kharnabuji",
-        "b_tarr_hist": "Kharnabuji",
-        "b_origin": "Kharnabuji (constituent holding of Metzchête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khornabuji_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -5304,18 +4631,11 @@
         {
           "form": "Ujarma",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "early medieval fortress-town in Outer Kakheti (უჯარმა)"
         }
       ],
       "etymology_analysis": "Georgian Ujarma (უჯარმა), an early medieval fortress-town guarding the Iori River canyon since the 3rd–4th centuries CE.",
-      "current_repo_state": {
-        "b_tarr": "Ujarma",
-        "b_tarr_direct": "Ujarma",
-        "b_tarr_hist": "Ujarma",
-        "b_origin": "Ujarma (constituent holding of Metzchête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ujarma_fortress",
       "older_name_by_867": {
         "exists": false,
@@ -5350,18 +4670,11 @@
         {
           "form": "Lori",
           "language": "Armenian / Georgian",
+          "language_code": "hye",
           "translation": "fortress and province name (Armenian Լոռի, Georgian ლორე)"
         }
       ],
       "etymology_analysis": "Armenian Lori (Լոռի, Georgian Lore ლორე), founded in the early 11th century as the capital of the Kingdom of Tashir-Dzoraget (Lori).",
-      "current_repo_state": {
-        "b_tarr": "Lôri",
-        "b_tarr_direct": "Lôri",
-        "b_tarr_hist": "Lôri",
-        "b_origin": "Lôri (Lori)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lori_Fortress",
       "older_name_by_867": {
         "exists": false,
@@ -5396,23 +4709,17 @@
         {
           "form": "Boln-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "ancient settlement root in Kvemo Kartli"
         },
         {
           "form": "-isi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Georgian Bolnisi (ბოლნისი), an early Christian episcopal center in Kvemo Kartli attested by the 5th-century Bolnisi Sioni inscriptions.",
-      "current_repo_state": {
-        "b_tarr": "Bolnisi",
-        "b_tarr_direct": "Bolnisi",
-        "b_tarr_hist": "Bolnisi",
-        "b_origin": "Bolnisi (constituent holding of Lôri)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bolnisi",
       "older_name_by_867": {
         "exists": false,
@@ -5447,18 +4754,11 @@
         {
           "form": "Kayan",
           "language": "Armenian",
+          "language_code": "hye",
           "translation": "station, stronghold (Կայան)"
         }
       ],
       "etymology_analysis": "From Armenian kayan ('station/post/stronghold'), referring to the 13th-century fortress Kayan Berd near Haghpat.",
-      "current_repo_state": {
-        "b_tarr": "Kayan",
-        "b_tarr_direct": "Kayan",
-        "b_tarr_hist": "Kayan",
-        "b_origin": "Kayan (constituent holding of Lôri)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kayan_Berd",
       "older_name_by_867": {
         "exists": false,
@@ -5493,23 +4793,17 @@
         {
           "form": "tbil- / tpil-",
           "language": "Old Georgian",
+          "language_code": "kat",
           "translation": "warm (თბილი / ტფილი, referring to the warm sulfur springs)"
         },
         {
           "form": "-isi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "place/toponymic suffix"
         }
       ],
       "etymology_analysis": "From Old Georgian Tpilisi ('warm place'), named after the area's natural warm sulfur springs.",
-      "current_repo_state": {
-        "b_tarr": "Tiflîs",
-        "b_tarr_direct": "Tiflîs",
-        "b_tarr_hist": "Tiflîs",
-        "b_origin": "Tiflîs (Tbilisi)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/History_of_Tbilisi",
       "older_name_by_867": {
         "exists": true,
@@ -5546,23 +4840,17 @@
         {
           "form": "daba / dman-",
           "language": "Old Georgian",
+          "language_code": "kat",
           "translation": "hamlet (Vakhushti derives Dmanisi from Old Georgian daba)"
         },
         {
           "form": "-isi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Georgian Dmanisi (დმანისი), explained by Prince Vakhushti as derived from Old Georgian daba ('a hamlet').",
-      "current_repo_state": {
-        "b_tarr": "Dmanisi",
-        "b_tarr_direct": "Dmanisi",
-        "b_tarr_hist": "Dmanisi",
-        "b_origin": "Dmanisi (constituent holding of Tiflîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dmanisi_historic_site",
       "older_name_by_867": {
         "exists": false,
@@ -5597,23 +4885,17 @@
         {
           "form": "ru",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "irrigation canal, stream (რუ)"
         },
         {
           "form": "tavi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "head, source (თავი)"
         }
       ],
       "etymology_analysis": "From Georgian ru ('canal/stream') + tavi ('head/source'), referring to the headworks of an irrigation canal from the Kura River.",
-      "current_repo_state": {
-        "b_tarr": "Rustavi",
-        "b_tarr_direct": "Rustavi",
-        "b_tarr_hist": "Rustavi",
-        "b_origin": "Rustavi (constituent holding of Tiflîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rustavi",
       "older_name_by_867": {
         "exists": false,
@@ -5648,18 +4930,11 @@
         {
           "form": "Archabis / Arkabi",
           "language": "Laz / Greek",
+          "language_code": "kat",
           "translation": "ancient Laz/Tzanni coastal settlement name"
         }
       ],
       "etymology_analysis": "Greek Archabis (Ἀρχάβις), corresponding to Laz Arkabi (არქაბი) and modern Turkish Arhavi.",
-      "current_repo_state": {
-        "b_tarr": "Pêtre-in-Lâsjen",
-        "b_tarr_direct": "Akâmpse",
-        "b_tarr_hist": "Pêtre-in-Lâsjen",
-        "b_origin": "Pêtre-in-Lâsjen (Pêtre-in-Lâsjen (in-game: Acampse))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arhavi",
       "older_name_by_867": {
         "exists": false,
@@ -5694,18 +4969,11 @@
         {
           "form": "Petra",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "rock, crag (Πέτρα), referring to the rocky coastal promontory"
         }
       ],
       "etymology_analysis": "Greek Petra (Πέτρα, 'rock'), named by Justinian I's builders for the rocky promontory at Tsikhisdziri.",
-      "current_repo_state": {
-        "b_tarr": "Petra",
-        "b_tarr_direct": "Petra",
-        "b_tarr_hist": "Petra",
-        "b_origin": "Petra (constituent holding of Pêtre-in-Lâsjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Petra,_Lazica",
       "older_name_by_867": {
         "exists": false,
@@ -5740,23 +5008,17 @@
         {
           "form": "uplis-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "of the lord (genitive of უფალი, upali)"
         },
         {
           "form": "tsikhe",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "fortress (ციხე)"
         }
       ],
       "etymology_analysis": "Georgian Uplistsikhe (უფლისციხე), literally 'the Lord's fortress'.",
-      "current_repo_state": {
-        "b_tarr": "Uplischîche",
-        "b_tarr_direct": "Kartlî",
-        "b_tarr_hist": "Upliszîche",
-        "b_origin": "Uplischîche (Upliszîche (in-game: Kartli))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uplistsikhe",
       "older_name_by_867": {
         "exists": false,
@@ -5791,23 +5053,17 @@
         {
           "form": "krtskhila",
           "language": "Old Georgian",
+          "language_code": "kat",
           "translation": "hornbeam tree (ქრცხილა)"
         },
         {
           "form": "-vani / -vali",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "place/land suffix"
         }
       ],
       "etymology_analysis": "Derived from Old Georgian Krtskhinvali (ქრცხინვალი), meaning 'land of hornbeams'.",
-      "current_repo_state": {
-        "b_tarr": "Zkhinvali",
-        "b_tarr_direct": "Zkhinvali",
-        "b_tarr_hist": "Zkhinvali",
-        "b_origin": "Zkhinvali (constituent holding of Upliszîche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tskhinvali",
       "older_name_by_867": {
         "exists": false,
@@ -5842,23 +5098,17 @@
         {
           "form": "gor-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "hill, heap, mountain (გორა)"
         },
         {
           "form": "-i",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "nominative suffix"
         }
       ],
       "etymology_analysis": "From Georgian gora (გორა, 'heap, hill, mountain'), referring to the prominent rocky hill on which Gori Fortress stands.",
-      "current_repo_state": {
-        "b_tarr": "Gori",
-        "b_tarr_direct": "Gori",
-        "b_tarr_hist": "Gori",
-        "b_origin": "Gori (constituent holding of Upliszîche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gori,_Georgia",
       "older_name_by_867": {
         "exists": false,
@@ -5893,23 +5143,17 @@
         {
           "form": "Artan-",
           "language": "Georgian / Laz / Armenian",
+          "language_code": "kat",
           "translation": "related to Ardahan/Artaani (or Armenian ard 'field')"
         },
         {
           "form": "-uji",
           "language": "Laz / Georgian",
+          "language_code": "kat",
           "translation": "edge, end (Laz uji)"
         }
       ],
       "etymology_analysis": "Georgian Artanuji (არტანუჯი; Turkish Ardanuç), derived from Laz/Armenian elements meaning 'edge of Ardahan/field'.",
-      "current_repo_state": {
-        "b_tarr": "Artanûdschi",
-        "b_tarr_direct": "Klardschêt",
-        "b_tarr_hist": "Artanûdschi",
-        "b_origin": "Artanûdschi (Artanûdschi (in-game: Klarjeti))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ardanu%C3%A7",
       "older_name_by_867": {
         "exists": false,
@@ -5944,18 +5188,11 @@
         {
           "form": "Tmogvi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "fortress name in Samtskhe-Javakheti (თმოგვი)"
         }
       ],
       "etymology_analysis": "Georgian Tmogvi (თმოგვი; Armenian Tmkaberd), a clifftop fortress first attested in 914 CE.",
-      "current_repo_state": {
-        "b_tarr": "Tmogvi",
-        "b_tarr_direct": "Tmogvi",
-        "b_tarr_hist": "Tmogvi",
-        "b_origin": "Tmogvi (constituent holding of Artanûdschi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tmogvi",
       "older_name_by_867": {
         "exists": false,
@@ -5990,23 +5227,17 @@
         {
           "form": "akhal-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "new (ახალი)"
         },
         {
           "form": "-tsikhe",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "fortress, castle (ციხე)"
         }
       ],
       "etymology_analysis": "Georgian Akhal-tsikhe (ახალციხე), literally 'New Fortress', replacing the earlier name Lomsia in the 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Akhaltsikhe",
-        "b_tarr_direct": "Akhaltsikhe",
-        "b_tarr_hist": "Akhaltsikhe",
-        "b_origin": "Akhaltsikhe (constituent holding of Artanûdschi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Akhaltsikhe",
       "older_name_by_867": {
         "exists": true,
@@ -6043,18 +5274,11 @@
         {
           "form": "Artaani",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "historical town and district name (არტაანი; Turkish Ardahan)"
         }
       ],
       "etymology_analysis": "Georgian Artaani (არტაანი), from which Ottoman/Turkish Ardahan was borrowed.",
-      "current_repo_state": {
-        "b_tarr": "Walterstat",
-        "b_tarr_direct": "Walterstat",
-        "b_tarr_hist": "Walterstat",
-        "b_origin": "Walterstat (constituent holding of Artanûdschi)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ardahan",
       "older_name_by_867": {
         "exists": false,
@@ -6089,18 +5313,11 @@
         {
           "form": "Tortomi",
           "language": "Georgian / Armenian",
+          "language_code": "kat",
           "translation": "town and valley name in Tao (Georgian თორთომი, Armenian Թորթում)"
         }
       ],
       "etymology_analysis": "Georgian Tortomi (თორთომი) / Armenian Tortum (Թորթում), modern Turkish Tortum.",
-      "current_repo_state": {
-        "b_tarr": "Taô",
-        "b_tarr_direct": "Taô",
-        "b_tarr_hist": "Taô",
-        "b_origin": "Taô (Tao)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tortum",
       "older_name_by_867": {
         "exists": false,
@@ -6135,23 +5352,17 @@
         {
           "form": "Taos-",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "of Tao (genitive of ტაო)"
         },
         {
           "form": "kari",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "gate, pass (კარი)"
         }
       ],
       "etymology_analysis": "Georgian Taoskari (ტაოსკარი), literally 'Gate of Tao', marking the boundary between Klarjeti and Tao.",
-      "current_repo_state": {
-        "b_tarr": "Taoskari",
-        "b_tarr_direct": "Taoskari",
-        "b_tarr_hist": "Taoskari",
-        "b_origin": "Taoskari (constituent holding of Taô)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C3%87ataksu,_Olur",
       "older_name_by_867": {
         "exists": false,
@@ -6186,23 +5397,17 @@
         {
           "form": "Olt-",
           "language": "Georgian / Armenian",
+          "language_code": "kat",
           "translation": "ancient Tao/Tayk settlement root (Armenian Olti / Urartian Utu?)"
         },
         {
           "form": "-isi",
           "language": "Georgian",
+          "language_code": "kat",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "Georgian Oltisi (ოლთისი; Armenian Olti, Turkish Oltu), a fortified town in Tao.",
-      "current_repo_state": {
-        "b_tarr": "Oltisi",
-        "b_tarr_direct": "Oltisi",
-        "b_tarr_hist": "Oltisi",
-        "b_origin": "Oltisi (constituent holding of Taô)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oltu",
       "older_name_by_867": {
         "exists": false,

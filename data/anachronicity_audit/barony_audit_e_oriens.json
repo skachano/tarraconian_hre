@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_oriens",
     "scope": "e_oriens (all baronies across k_syria)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 62,
@@ -57,18 +64,11 @@
         {
           "form": "Halab",
           "language": "Amorite / Arabic",
+          "language_code": "ara",
           "translation": "white (or milking, per folk etymology; ancient Semitic toponym)"
         }
       ],
       "etymology_analysis": "Ancient Semitic toponym attested in 3rd-millennium BCE Eblaite and Mesopotamian cuneiform sources (Halab/Khalpe), preserved continuously into Arabic Halab; renamed Beroea in the Hellenistic period.",
-      "current_repo_state": {
-        "b_tarr": "Hâlap",
-        "b_tarr_direct": "Halep",
-        "b_tarr_hist": "Hâlap",
-        "b_origin": "Hâlap (Hâlap (in-game: Aleppo))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aleppo",
       "older_name_by_867": {
         "exists": true,
@@ -105,23 +105,17 @@
         {
           "form": "Tall",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mound, hill"
         },
         {
           "form": "Afrin",
           "language": "Arabic / Kurdish (from Latin Ufrenus / Greek Oinoparas)",
+          "language_code": "ara",
           "translation": "Afrin (river name)"
         }
       ],
       "etymology_analysis": "Compound toponym meaning 'Mound of Afrin', named after the Afrin River (Assyrian Apre, Seleucid Oinoparas, Roman Ufrenus); the modern settlement of Afrin was founded as a market town only in the 19th century.",
-      "current_repo_state": {
-        "b_tarr": "Tall Afrin",
-        "b_tarr_direct": "Tall Afrin",
-        "b_tarr_hist": "Tall Afrin",
-        "b_origin": "Tall Afrin (constituent holding of Hâlap)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Afrin,_Syria",
       "older_name_by_867": {
         "exists": false,
@@ -156,18 +150,11 @@
         {
           "form": "Azaz",
           "language": "Arabic (from Hurrian Azazuwa / Aramaic Hzz / Assyrian Hazazu)",
+          "language_code": "ara",
           "translation": "ancient settlement name"
         }
       ],
       "etymology_analysis": "Pre-classical toponym attested as Hurrian Azazuwa, Old Aramaic Hzz, and Neo-Assyrian Hazazu, continuing as Medieval Greek Azazion and Arabic A'zaz / Azaz (attested under Abbasid rule via Ishaq al-Mawsili, 767-850 CE).",
-      "current_repo_state": {
-        "b_tarr": "Azaz",
-        "b_tarr_direct": "Azaz",
-        "b_tarr_hist": "Azaz",
-        "b_origin": "Azaz (constituent holding of Hâlap)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Azaz",
       "older_name_by_867": {
         "exists": true,
@@ -206,18 +193,11 @@
         {
           "form": "Manbug",
           "language": "Aramaic",
+          "language_code": "arc",
           "translation": "site of the spring"
         }
       ],
       "etymology_analysis": "Derived from Aramaic Manbug ('site of the spring'), attested on pre-Hellenistic coinage; rendered in Syriac as Mabbog, Greek as Bambyce and Hierapolis, and Arabic as Manbij.",
-      "current_repo_state": {
-        "b_tarr": "Manbij",
-        "b_tarr_direct": "Manbij",
-        "b_tarr_hist": "Manbij",
-        "b_origin": "Manbij (constituent holding of Hâlap)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Manbij",
       "older_name_by_867": {
         "exists": true,
@@ -256,18 +236,11 @@
         {
           "form": "Buza'a",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "medieval Arabicized toponym (from Roman Beselatha)"
         }
       ],
       "etymology_analysis": "Medieval Arabic toponym (Buza'a / Bizaah) attested from the 12th century (1119 CE), evolving from the Roman-era settlement name Beselatha.",
-      "current_repo_state": {
-        "b_tarr": "Buza'a",
-        "b_tarr_direct": "Buza'a",
-        "b_tarr_hist": "Buza'a",
-        "b_origin": "Buza'a (constituent holding of Hâlap)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bizaah",
       "older_name_by_867": {
         "exists": true,
@@ -304,23 +277,17 @@
         {
           "form": "Qen",
           "language": "Syriac",
+          "language_code": "syr",
           "translation": "nest"
         },
         {
           "form": "nesrin",
           "language": "Syriac",
+          "language_code": "syr",
           "translation": "eagles"
         }
       ],
       "etymology_analysis": "From Syriac Qennesrin ('Nest of Eagles'), Arabicized as Qinnasrin upon the Muslim conquest in 637 CE; previously known in Hellenistic and Roman times as Chalcis ad Belum.",
-      "current_repo_state": {
-        "b_tarr": "Chalkîs-in-Sîrjen",
-        "b_tarr_direct": "Kinnasrîn",
-        "b_tarr_hist": "Chalkîs-in-Sîrjen",
-        "b_origin": "Chalkîs-in-Sîrjen (Chalkîs-in-Sîrjen (in-game: Qinnasrin))",
-        "b_anachronism": "Resolved via verified historical center Chalkîs-in-Sîrjen documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qinnasrin",
       "older_name_by_867": {
         "exists": true,
@@ -358,18 +325,11 @@
         {
           "form": "Artah",
           "language": "Arabic / Syriac",
+          "language_code": "ara",
           "translation": "medieval fortress/town name"
         }
       ],
       "etymology_analysis": "Medieval town and fortress east of the Iron Bridge on the Antioch-Aleppo road, first prominently attested in 966 CE during the Byzantine reconquest of northern Syria.",
-      "current_repo_state": {
-        "b_tarr": "Artah",
-        "b_tarr_direct": "Artah",
-        "b_tarr_hist": "Artah",
-        "b_origin": "Artah (constituent holding of Chalkîs-in-Sîrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Artah",
       "older_name_by_867": {
         "exists": false,
@@ -404,23 +364,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Riha / Ariha",
           "language": "Arabic (from West Semitic)",
+          "language_code": "ara",
           "translation": "fragrant"
         }
       ],
       "etymology_analysis": "Ancient Northwest Syrian town (Ariha / Riha, rendered Ar-Rikha), attested in Roman/Byzantine times (240-350 CE) and captured by the Rashidun Caliphate in 636 CE as part of Jund Qinnasrin.",
-      "current_repo_state": {
-        "b_tarr": "Ar-Rikha",
-        "b_tarr_direct": "Ar-Rikha",
-        "b_tarr_hist": "Ar-Rikha",
-        "b_origin": "Ar-Rikha (constituent holding of Chalkîs-in-Sîrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ariha,_Idlib",
       "older_name_by_867": {
         "exists": false,
@@ -455,18 +409,11 @@
         {
           "form": "Sura / Suriya",
           "language": "Latin / Greek / Arabic",
+          "language_code": "lat",
           "translation": "ancient Euphrates fortress name"
         }
       ],
       "etymology_analysis": "Arabicized form (Suriya) of the ancient Roman/Byzantine Euphrates fortress city of Sura, attested since the 1st-3rd centuries CE on the Strata Diocletiana.",
-      "current_repo_state": {
-        "b_tarr": "Sûrje",
-        "b_tarr_direct": "Sûrje",
-        "b_tarr_hist": "Sûrje",
-        "b_origin": "Sûrje (Suriya)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sura,_Syria",
       "older_name_by_867": {
         "exists": true,
@@ -503,18 +450,11 @@
         {
           "form": "Khunasira",
           "language": "Arabic (possibly from Akkadian Hunsiru)",
+          "language_code": "ara",
           "translation": "rat, mouse (possible Akkadian root)"
         }
       ],
       "etymology_analysis": "Attested by Pliny the Elder as Chenneseri and in early Islamic sources as Khunasira (residence and burial place of Umayyad Caliph Umar II, r. 717-720); known as Anasartha in the Byzantine era.",
-      "current_repo_state": {
-        "b_tarr": "Khunasira",
-        "b_tarr_direct": "Khunasira",
-        "b_tarr_hist": "Khunasira",
-        "b_origin": "Khunasira (constituent holding of Sûrje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khanasir",
       "older_name_by_867": {
         "exists": true,
@@ -552,23 +492,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Rusafa",
           "language": "Arabic (from Akkadian Rasappa)",
+          "language_code": "ara",
           "translation": "paved way / ancient Assyrian camp name"
         }
       ],
       "etymology_analysis": "Continuously attested from 9th-century BCE Neo-Assyrian Rasappa (Biblical Rezeph, Ptolemy Rhesapha, Roman Rosafa) into Arabic al-Rusafa; renamed Sergiopolis in the Byzantine era.",
-      "current_repo_state": {
-        "b_tarr": "Sergjôpel",
-        "b_tarr_direct": "Russâfe",
-        "b_tarr_hist": "Sergjôpel",
-        "b_origin": "Sergjôpel (Sergjôpel (in-game: Syrrusafa))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Resafa",
       "older_name_by_867": {
         "exists": true,
@@ -608,18 +542,11 @@
         {
           "form": "Siffin",
           "language": "Arabic / Aramaic",
+          "language_code": "ara",
           "translation": "Byzantine-era village name on the Euphrates"
         }
       ],
       "etymology_analysis": "Ruined Byzantine-era village on the right bank of the Euphrates near Raqqa, famously attested in 657 CE as the site of the Battle of Siffin during the First Fitna.",
-      "current_repo_state": {
-        "b_tarr": "Siffin",
-        "b_tarr_direct": "Siffin",
-        "b_tarr_hist": "Siffin",
-        "b_origin": "Siffin (constituent holding of Sergjôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Battle_of_Siffin",
       "older_name_by_867": {
         "exists": false,
@@ -654,23 +581,17 @@
         {
           "form": "Alexandr-",
           "language": "Greek / Latin",
+          "language_code": "ell",
           "translation": "Alexander (the Great)"
         },
         {
           "form": "-etta",
           "language": "Romance (Italian/French)",
+          "language_code": "fra",
           "translation": "little (diminutive suffix)"
         }
       ],
       "etymology_analysis": "Diminutive Romance form ('little Alexandria') coined by medieval Western pilgrims in the Crusader era, derived from the ancient Hellenistic foundation Alexandria ad Issum (333 BCE).",
-      "current_repo_state": {
-        "b_tarr": "Alexandrêtte",
-        "b_tarr_direct": "Alexandrêtte",
-        "b_tarr_hist": "Alexandrêtte",
-        "b_origin": "Alexandrêtte (Alexandretta)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C4%B0skenderun",
       "older_name_by_867": {
         "exists": true,
@@ -708,18 +629,11 @@
         {
           "form": "Qurus",
           "language": "Arabic (from Greek Kyrrhos)",
+          "language_code": "ara",
           "translation": "Cyrrhus (named after Macedonian Cyrrhus)"
         }
       ],
       "etymology_analysis": "Arabicized form (Qurus / Qorosh, attested from the 637 CE Arab conquest) of Greek Kyrrhos (Latin Cyrrhus), founded shortly after 300 BCE by Seleucus I Nicator and named after Cyrrhus in Macedonia.",
-      "current_repo_state": {
-        "b_tarr": "Qurus",
-        "b_tarr_direct": "Qurus",
-        "b_tarr_hist": "Qurus",
-        "b_origin": "Qurus (constituent holding of Alexandrêtte)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cyrrhus",
       "older_name_by_867": {
         "exists": true,
@@ -757,18 +671,11 @@
         {
           "form": "Baghras",
           "language": "Arabic (from Greek Pagrae)",
+          "language_code": "ara",
           "translation": "fortress name in the Amanus Mountains"
         }
       ],
       "etymology_analysis": "Arabicized form (Baghras) of the ancient fortress name Pagrae, attested by Strabo and Pliny the Elder guarding the Syrian Gates in the Amanus Mountains.",
-      "current_repo_state": {
-        "b_tarr": "Baghras",
-        "b_tarr_direct": "Baghras",
-        "b_tarr_hist": "Baghras",
-        "b_origin": "Baghras (constituent holding of Alexandrêtte)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bagras",
       "older_name_by_867": {
         "exists": true,
@@ -805,18 +712,11 @@
         {
           "form": "Antiocheia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city of Antiochus"
         }
       ],
       "etymology_analysis": "Founded in 300 BCE by Seleucus I Nicator and named Antiocheia after his father Antiochus; capital of the Seleucid Empire and later Roman Syria.",
-      "current_repo_state": {
-        "b_tarr": "Antiôchje",
-        "b_tarr_direct": "Antiôchje",
-        "b_tarr_hist": "Antiôchje",
-        "b_origin": "Antiôchje (Antiocheia)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Antioch",
       "older_name_by_867": {
         "exists": false,
@@ -851,23 +751,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Suwaydiya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the black one (diminutive, in reference to local roe deer)"
         }
       ],
       "etymology_analysis": "Arabic name al-Suwaydiyya ('the black one', referring to local roe deer), first attested in the late 10th century (al-Muqaddasi, 985 CE) as the medieval port of Antioch, succeeding Byzantine Port Saint Symeon and ancient Seleucia Pieria.",
-      "current_repo_state": {
-        "b_tarr": "As-Suwaydiya",
-        "b_tarr_direct": "As-Suwaydiya",
-        "b_tarr_hist": "As-Suwaydiya",
-        "b_origin": "As-Suwaydiya (constituent holding of Antiôchje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samanda%C4%9F",
       "older_name_by_867": {
         "exists": true,
@@ -904,18 +798,11 @@
         {
           "form": "Laodikeia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city of Laodice (mother of Seleucus I)"
         }
       ],
       "etymology_analysis": "Founded in the 4th century BCE as Laodikeia on the Coast by Seleucus I Nicator in honor of his mother Laodice; preserved in Arabic as al-Ladhiqiyya and Europeanized as Latakia.",
-      "current_repo_state": {
-        "b_tarr": "Latakia",
-        "b_tarr_direct": "Latakia",
-        "b_tarr_hist": "Latakia",
-        "b_origin": "Latakia (constituent holding of Antiôchje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Latakia",
       "older_name_by_867": {
         "exists": true,
@@ -953,18 +840,11 @@
         {
           "form": "Gb'ly / Jabala",
           "language": "Ugaritic / Arabic",
+          "language_code": "ara",
           "translation": "ancient coastal city name"
         }
       ],
       "etymology_analysis": "Bronze Age coastal city attested in Ugaritic archives c. 1200 BCE as Gb'ly (Gibala), later Classical Gabala and Arabic Jabala / Jableh.",
-      "current_repo_state": {
-        "b_tarr": "Jabala",
-        "b_tarr_direct": "Jabala",
-        "b_tarr_hist": "Jabala",
-        "b_origin": "Jabala (constituent holding of Antiôchje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jableh",
       "older_name_by_867": {
         "exists": true,
@@ -1002,23 +882,17 @@
         {
           "form": "Ba'al",
           "language": "Phoenician / Semitic",
+          "language_code": "heb",
           "translation": "lord, deity Ba'al"
         },
         {
           "form": "bek / bakk",
           "language": "Phoenician / Semitic",
+          "language_code": "heb",
           "translation": "Bekaa / city or shrine of"
         }
       ],
       "etymology_analysis": "Ancient Semitic/Phoenician name (b'lbk, Arabic Ba'labakk) associated with the god Ba'al and the Beqaa Valley; renamed Heliopolis ('Sun City') after 334 BCE before the indigenous name resurfaced in Arabic.",
-      "current_repo_state": {
-        "b_tarr": "Heljôpel",
-        "b_tarr_direct": "Bâlbech",
-        "b_tarr_hist": "Heljôpel",
-        "b_origin": "Heljôpel (Heljôpel; or calqued Ritterburch for Hisn al-Akrad (in-game: Baalbek))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baalbek",
       "older_name_by_867": {
         "exists": true,
@@ -1055,23 +929,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Zabadani",
           "language": "Arabic (from Aramaic)",
+          "language_code": "ara",
           "translation": "Aramaic-derived toponym"
         }
       ],
       "etymology_analysis": "Derived from an Aramaic toponym attested via the Hellenistic ethnonym Zabadaioi in the Anti-Lebanon / Qalamoun region during the 1st century BCE.",
-      "current_repo_state": {
-        "b_tarr": "Az-Zabadani",
-        "b_tarr_direct": "Az-Zabadani",
-        "b_tarr_hist": "Az-Zabadani",
-        "b_origin": "Az-Zabadani (constituent holding of Heljôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al-Zabadani",
       "older_name_by_867": {
         "exists": false,
@@ -1106,23 +974,17 @@
         {
           "form": "Ayn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "spring"
         },
         {
           "form": "al-Jarr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "running water / Gerrha"
         }
       ],
       "etymology_analysis": "Umayyad palace-city founded in 709-710 CE by al-Walid I / al-Abbas on virgin soil; Anjar derives from Arabic Ayn al-Jarr ('spring of running water').",
-      "current_repo_state": {
-        "b_tarr": "Anjar",
-        "b_tarr_direct": "Anjar",
-        "b_tarr_hist": "Anjar",
-        "b_origin": "Anjar (constituent holding of Heljôpel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anjar,_Lebanon",
       "older_name_by_867": {
         "exists": false,
@@ -1157,18 +1019,11 @@
         {
           "form": "Damascus",
           "language": "Latin / Greek (from Semitic Dimasqa / Dimašq)",
+          "language_code": "lat",
           "translation": "ancient city name of uncertain pre-Semitic or Semitic origin"
         }
       ],
       "etymology_analysis": "Attested in 15th-century BCE Egyptian (tjmsqw) and 14th-century BCE Akkadian Amarna (Dimasqa) records, continuing through Aramaic Damasq, Greek Damaskos, Latin Damascus, and Arabic Dimashq.",
-      "current_repo_state": {
-        "b_tarr": "Damasch",
-        "b_tarr_direct": "Damasch",
-        "b_tarr_hist": "Damasch",
-        "b_origin": "Damasch (Damascus)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Damascus",
       "older_name_by_867": {
         "exists": false,
@@ -1203,18 +1058,11 @@
         {
           "form": "Nawa",
           "language": "Arabic (from Aramaic/Hebrew Naveh)",
+          "language_code": "ara",
           "translation": "dwelling, pasture"
         }
       ],
       "etymology_analysis": "Principal town of early Islamic Hauran, continuing the Roman-Byzantine Jewish and Christian center attested as Neve / Naveh from the 3rd century CE.",
-      "current_repo_state": {
-        "b_tarr": "Nawa",
-        "b_tarr_direct": "Nawa",
-        "b_tarr_hist": "Nawa",
-        "b_origin": "Nawa (constituent holding of Damasch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nawa,_Daraa",
       "older_name_by_867": {
         "exists": true,
@@ -1252,18 +1100,11 @@
         {
           "form": "Darayya",
           "language": "Arabic (from Aramaic / Greek Daron)",
+          "language_code": "ara",
           "translation": "houses / settlement"
         }
       ],
       "etymology_analysis": "Ancient settlement 8 km southwest of Damascus, identified with Daron on Diocletianic boundary stones erected around 300 CE and continuing into Arabic as Darayya.",
-      "current_repo_state": {
-        "b_tarr": "Darayya",
-        "b_tarr_direct": "Darayya",
-        "b_tarr_hist": "Darayya",
-        "b_origin": "Darayya (constituent holding of Damasch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Darayya",
       "older_name_by_867": {
         "exists": true,
@@ -1300,18 +1141,11 @@
         {
           "form": "Zurra / Zur'a",
           "language": "Arabic (from Canaanite/Greek Zorava)",
+          "language_code": "ara",
           "translation": "Arabicized form of Zorava"
         }
       ],
       "etymology_analysis": "Medieval Arabic form (Zur'a / Zura', rendered Zurra) of ancient Zorava (modern Izraa), attested in medieval Arabic geographies and Ottoman tax registers (Madinat Zura', 1596).",
-      "current_repo_state": {
-        "b_tarr": "Zurra",
-        "b_tarr_direct": "Zurra",
-        "b_tarr_hist": "Zurra",
-        "b_origin": "Zurra (constituent holding of Damasch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Izraa",
       "older_name_by_867": {
         "exists": true,
@@ -1348,18 +1182,11 @@
         {
           "form": "Busra",
           "language": "Arabic / Nabataean / Semitic",
+          "language_code": "ara",
           "translation": "fortress, stronghold"
         }
       ],
       "etymology_analysis": "Ancient Semitic toponym attested in 14th-century BCE Egyptian records, serving as the northern Nabataean capital and Roman provincial capital Bostra before continuing as Arabic Busra.",
-      "current_repo_state": {
-        "b_tarr": "Bôstre",
-        "b_tarr_direct": "Haurân",
-        "b_tarr_hist": "Bôstre",
-        "b_origin": "Bôstre (Bôstre (in-game: Hauran))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bosra",
       "older_name_by_867": {
         "exists": true,
@@ -1396,18 +1223,11 @@
         {
           "form": "Sarkhad",
           "language": "Arabic (from Nabataean / Hebrew Salcah)",
+          "language_code": "ara",
           "translation": "ancient Bashan/Hauran city name"
         }
       ],
       "etymology_analysis": "Medieval Arabic variant (Sarkhad / Salkhad) of the ancient Hauran/Bashan city Salcah, attested in the Hebrew Bible, Nabataean inscriptions (57 CE), and the 6th-century Madaba Map.",
-      "current_repo_state": {
-        "b_tarr": "Sarkhad",
-        "b_tarr_direct": "Sarkhad",
-        "b_tarr_hist": "Sarkhad",
-        "b_origin": "Sarkhad (constituent holding of Bôstre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salkhad",
       "older_name_by_867": {
         "exists": true,
@@ -1444,28 +1264,23 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Suwayda",
           "language": "Arabic (from Nabataean Suada)",
+          "language_code": "ara",
           "translation": "little black one (Arabicized from Suada)"
         },
         {
           "form": "Hauran",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Hauran (region disambiguator)"
         }
       ],
       "etymology_analysis": "Disambiguated form of As-Suwayda (in the Hauran region), derived from Nabataean Suada (hellenized as Dionysias Soada in 149 CE) and attested in Arabic geographical literature by Yaqut al-Hamawi in the 1220s.",
-      "current_repo_state": {
-        "b_tarr": "As-Suwaida-Hauran",
-        "b_tarr_direct": "As-Suwaida-Hauran",
-        "b_tarr_hist": "As-Suwaida-Hauran",
-        "b_origin": "As-Suwaida-Hauran (constituent holding of Bôstre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Suwayda",
       "older_name_by_867": {
         "exists": true,
@@ -1503,18 +1318,11 @@
         {
           "form": "Juwair",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "unattested toponym (possibly diminutive of jar 'neighbor' or jawr)"
         }
       ],
       "etymology_analysis": "Toponym used in game geography for a desert/steppe county northeast of Damascus alongside al-Qastal, without a documented historical attestation on or before 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Dschuwêir",
-        "b_tarr_direct": "Dschuwêir",
-        "b_tarr_hist": "Dschuwêir",
-        "b_origin": "Dschuwêir (Juwair)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1549,23 +1357,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the (definite article)"
         },
         {
           "form": "Qastal",
           "language": "Arabic (from Latin castellum)",
+          "language_code": "ara",
           "translation": "fortress, water-distribution castle"
         }
       ],
       "etymology_analysis": "Arabicized from Latin castellum ('fortress'), referring to a caravan stop in the Qalamoun Mountains between Damascus and Homs; first explicitly documented by Yaqut al-Hamawi in the early 13th century.",
-      "current_repo_state": {
-        "b_tarr": "Al-Tschastal",
-        "b_tarr_direct": "Al-Tschastal",
-        "b_tarr_hist": "Al-Tschastal",
-        "b_origin": "Al-Tschastal (constituent holding of Dschuwêir)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al-Qastal,_Damascus",
       "older_name_by_867": {
         "exists": false,
@@ -1600,23 +1402,17 @@
         {
           "form": "Marj",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "meadow, plain"
         },
         {
           "form": "Rāhiṭ",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Rahit (personal/tribal name or 'running/flowing')"
         }
       ],
       "etymology_analysis": "Arabic 'Marj Rahit' ('Meadow of Rahit'), a plain in the Ghouta east of Damascus famous as the site of the 684 CE Umayyad victory.",
-      "current_repo_state": {
-        "b_tarr": "Marj-Rahit",
-        "b_tarr_direct": "Marj-Rahit",
-        "b_tarr_hist": "Marj-Rahit",
-        "b_origin": "Marj-Rahit (constituent holding of Dschuwêir)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Battle_of_Marj_Rahit_(684)",
       "older_name_by_867": {
         "exists": false,
@@ -1651,23 +1447,17 @@
         {
           "form": "ʿAyn",
           "language": "Arabic/Aramaic",
+          "language_code": "ara",
           "translation": "spring, eye"
         },
         {
           "form": "tāb / ṭayyib",
           "language": "Arabic/Hittite (debated)",
+          "language_code": "ara",
           "translation": "good/praise (or Hittite khantap 'king's land')"
         }
       ],
       "etymology_analysis": "Medieval Arabic 'Aintab ('Aīntāb), possibly from Semitic 'ayn ('spring') + tāb/ṭayyib ('good') or Aramaic 'ayin debo ('spring of the wolf'), or Hittite khantap. Later Ottoman Ayıntap and Republican Gaziantep (1921/1928).",
-      "current_repo_state": {
-        "b_tarr": "Dolîche",
-        "b_tarr_direct": "Aintâp",
-        "b_tarr_hist": "Dolîche",
-        "b_origin": "Dolîche (Dolîche (in-game: Aintab))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gaziantep",
       "older_name_by_867": {
         "exists": true,
@@ -1704,23 +1494,17 @@
         {
           "form": "Tall",
           "language": "Arabic/Syriac",
+          "language_code": "ara",
           "translation": "mound, hill (tell)"
         },
         {
           "form": "Bashīr",
           "language": "Arabic/Syriac",
+          "language_code": "ara",
           "translation": "bringer of good news / Bashir"
         }
       ],
       "etymology_analysis": "Arabic/Syriac 'Tall Bashir' ('Mound of Bashir'), adapted by Crusaders as Turbessel and in Armenian as T'lpashar.",
-      "current_repo_state": {
-        "b_tarr": "Tall Baschir",
-        "b_tarr_direct": "Tall Baschir",
-        "b_tarr_hist": "Tall Baschir",
-        "b_origin": "Tall Baschir (constituent holding of Dolîche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/G%C3%BCndo%C4%9Fan,_O%C4%9Fuzeli",
       "older_name_by_867": {
         "exists": true,
@@ -1758,18 +1542,11 @@
         {
           "form": "Jarābulus",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "from Greek Europos / Hierapolis (via Djerabis)"
         }
       ],
       "etymology_analysis": "18th-century Arabic toponym Djerabis/Jarabulus, derived from Greco-Roman Europos (at nearby Carchemish) or influenced by Hierapolis (Manbij).",
-      "current_repo_state": {
-        "b_tarr": "Jarabulus",
-        "b_tarr_direct": "Jarabulus",
-        "b_tarr_hist": "Jarabulus",
-        "b_origin": "Jarabulus (constituent holding of Dolîche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jarabulus",
       "older_name_by_867": {
         "exists": true,
@@ -1807,23 +1584,17 @@
         {
           "form": "Dulūk",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Duluk (from Greek Doliche)"
         },
         {
           "form": "Teluch / Tlukʿ",
           "language": "Armenian",
+          "language_code": "hye",
           "translation": "Teluch (from Greek Doliche)"
         }
       ],
       "etymology_analysis": "Compound of the Arabic form Duluk and the Armenian form Tluk' (Crusader Tulupa), both derived from Ancient Greek Doliche.",
-      "current_repo_state": {
-        "b_tarr": "Duluk-Teluch",
-        "b_tarr_direct": "Duluk-Teluch",
-        "b_tarr_hist": "Duluk-Teluch",
-        "b_origin": "Duluk-Teluch (constituent holding of Dolîche)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Doliche_(Commagene)",
       "older_name_by_867": {
         "exists": true,
@@ -1861,18 +1632,11 @@
         {
           "form": "Édessa (Ἔδεσσα)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Edessa (reputedly 'tower in the water', Phrygian/Macedonian)"
         }
       ],
       "etymology_analysis": "Ancient Greek Edessa, transferred by Seleucus I Nicator from Edessa in Macedonia to the Syriac settlement of Urhay/Orhay.",
-      "current_repo_state": {
-        "b_tarr": "Edesse",
-        "b_tarr_direct": "Edesse",
-        "b_tarr_hist": "Edesse",
-        "b_origin": "Edesse (Edessa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Edessa",
       "older_name_by_867": {
         "exists": true,
@@ -1910,23 +1674,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Bīrah",
           "language": "Arabic (from Aramaic/Syriac Bīrthā)",
+          "language_code": "ara",
           "translation": "fortress"
         }
       ],
       "etymology_analysis": "Arabic al-Bira, directly borrowed from Aramaic/Syriac Birtha ('fortress'); later Turkish Birecik with diminutive suffix -cik.",
-      "current_repo_state": {
-        "b_tarr": "Al-Bira",
-        "b_tarr_direct": "Al-Bira",
-        "b_tarr_hist": "Al-Bira",
-        "b_origin": "Al-Bira (constituent holding of Edesse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Birecik",
       "older_name_by_867": {
         "exists": true,
@@ -1964,18 +1722,11 @@
         {
           "form": "Mar'ash / Marqas",
           "language": "Arabic (from Neo-Assyrian Marqas)",
+          "language_code": "ara",
           "translation": "Marash"
         }
       ],
       "etymology_analysis": "Arabic Mar'ash (Turkish Maraş, Armenian Marash), continuing Neo-Assyrian Marqas (capital of Gurgum); renamed Kahramanmaraş in 1973.",
-      "current_repo_state": {
-        "b_tarr": "Germanikêe",
-        "b_tarr_direct": "Marâsch",
-        "b_tarr_hist": "Germanikêe",
-        "b_origin": "Germanikêe (Germanikêe (in-game: Marash))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kahramanmara%C5%9F",
       "older_name_by_867": {
         "exists": true,
@@ -2015,23 +1766,17 @@
         {
           "form": "Qal'at",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress, citadel"
         },
         {
           "form": "ar-Rūm",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "of the Romans (Byzantines)"
         }
       ],
       "etymology_analysis": "Arabic Qal'at ar-Rum ('Citadel of the Romans'), calqued from/parallel to Armenian Hromgla and Turkish Rumkale.",
-      "current_repo_state": {
-        "b_tarr": "Rômerburch",
-        "b_tarr_direct": "Rômerburch",
-        "b_tarr_hist": "Rômerburch",
-        "b_origin": "Qal'at ar-Rum / Hromgla (Arabic/Armenian 'Citadel of the Romans' on the Euphrates) (in-game: Rômerburch)",
-        "b_anachronism": "Descriptive Near Eastern fortress toponym calqued to Tarraconian Rômerburch.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rumkale",
       "older_name_by_867": {
         "exists": false,
@@ -2066,18 +1811,11 @@
         {
           "form": "Kaysūm / Kaysūn",
           "language": "Arabic/Syriac (from Roman Kessos)",
+          "language_code": "ara",
           "translation": "Kaisum"
         }
       ],
       "etymology_analysis": "Early medieval Arabic Kaysum/Kaysun (Armenian K'esun), evolving from the Roman road station name Kessos.",
-      "current_repo_state": {
-        "b_tarr": "Kaisum",
-        "b_tarr_direct": "Kaisum",
-        "b_tarr_hist": "Kaisum",
-        "b_origin": "Kaisum (constituent holding of Germanikêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%C3%87ak%C4%B1rh%C3%BCy%C3%BCk,_Besni",
       "older_name_by_867": {
         "exists": true,
@@ -2114,23 +1852,17 @@
         {
           "form": "Sāma-",
           "language": "Old/Middle Persian",
+          "language_code": "pal",
           "translation": "Sames (royal name)"
         },
         {
           "form": "-šiyāti / -šād",
           "language": "Old/Middle Persian",
+          "language_code": "pal",
           "translation": "joy, happiness"
         }
       ],
       "etymology_analysis": "Hellenized Greek Samosata from Iranian *Sāmašiyāti- ('Joy of Sames'), an Orontid royal foundation on the upper Euphrates.",
-      "current_repo_state": {
-        "b_tarr": "Samosâte",
-        "b_tarr_direct": "Samosâte",
-        "b_tarr_hist": "Samosâte",
-        "b_origin": "Samosâte (Samosata)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samsat",
       "older_name_by_867": {
         "exists": true,
@@ -2167,18 +1899,11 @@
         {
           "form": "Bahasnā",
           "language": "Arabic/Syriac",
+          "language_code": "ara",
           "translation": "Bahasna (modern Turkish Besni)"
         }
       ],
       "etymology_analysis": "Medieval Arabic/Syriac toponym Bahasna, later shortened in Turkish/Kurdish to Besni/Bêsnî.",
-      "current_repo_state": {
-        "b_tarr": "Bahasna",
-        "b_tarr_direct": "Bahasna",
-        "b_tarr_hist": "Bahasna",
-        "b_origin": "Bahasna (constituent holding of Samosâte)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Besni",
       "older_name_by_867": {
         "exists": false,
@@ -2213,18 +1938,11 @@
         {
           "form": "Ḥamāh / Ḥămāṯ",
           "language": "Arabic/Aramaic/Biblical Hebrew",
+          "language_code": "ara",
           "translation": "fortress (Syriac ħəmɑθ)"
         }
       ],
       "etymology_analysis": "Semitic toponym Hamath ('fortress'), attested since the Iron Age, renamed Epiphania in the Hellenistic period, and restored as Arabic Hama after 638 CE.",
-      "current_repo_state": {
-        "b_tarr": "Epifanêe",
-        "b_tarr_direct": "Hâme",
-        "b_tarr_hist": "Epifanêe",
-        "b_origin": "Epifanêe (Epifanêe (in-game: Hama))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hama",
       "older_name_by_867": {
         "exists": true,
@@ -2262,18 +1980,11 @@
         {
           "form": "Salamiyya",
           "language": "Arabic (from Greek Salaminias/Salamias)",
+          "language_code": "ara",
           "translation": "Salamiya"
         }
       ],
       "etymology_analysis": "Arabic Salamiyya, adapted from the Byzantine town name Salaminias / Salamias.",
-      "current_repo_state": {
-        "b_tarr": "Salamiya",
-        "b_tarr_direct": "Salamiya",
-        "b_tarr_hist": "Salamiya",
-        "b_origin": "Salamiya (constituent holding of Epifanêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salamiyah",
       "older_name_by_867": {
         "exists": true,
@@ -2311,23 +2022,17 @@
         {
           "form": "Kafr",
           "language": "Arabic (from Aramaic kefar)",
+          "language_code": "ara",
           "translation": "village"
         },
         {
           "form": "Ṭāb",
           "language": "Arabic/Aramaic",
+          "language_code": "ara",
           "translation": "good"
         }
       ],
       "etymology_analysis": "Aramaic-Arabic compound Kafr Tab ('Good Village'), Latinized by the Crusaders as Capharda.",
-      "current_repo_state": {
-        "b_tarr": "Kafartab",
-        "b_tarr_direct": "Kafartab",
-        "b_tarr_hist": "Kafartab",
-        "b_origin": "Kafartab (constituent holding of Epifanêe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kafartab",
       "older_name_by_867": {
         "exists": false,
@@ -2362,18 +2067,11 @@
         {
           "form": "Ḥimṣ",
           "language": "Arabic (from Semitic/Greek Emesa)",
+          "language_code": "ara",
           "translation": "Homs/Hims"
         }
       ],
       "etymology_analysis": "Arabic Hims (modern Homs), derived from the classical name Emesa (1st century BCE).",
-      "current_repo_state": {
-        "b_tarr": "Emêse",
-        "b_tarr_direct": "Homs",
-        "b_tarr_hist": "Emêse",
-        "b_origin": "Emêse (Emêse (in-game: Homs))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Homs",
       "older_name_by_867": {
         "exists": true,
@@ -2410,23 +2108,17 @@
         {
           "form": "Rafāniya",
           "language": "Arabic (from Greek Raphanea)",
+          "language_code": "ara",
           "translation": "Raphanea"
         },
         {
           "form": "Krak",
           "language": "Old French (from Syriac karəḵā)",
+          "language_code": "fro",
           "translation": "walled city, fortress"
         }
       ],
       "etymology_analysis": "Modern/game composite combining the nearby Roman-Byzantine city of Raphanea (al-Rafaniyya) with the 12th-century Crusader fortress Krak des Chevaliers.",
-      "current_repo_state": {
-        "b_tarr": "Rafanîje",
-        "b_tarr_direct": "Rafanîje",
-        "b_tarr_hist": "Rafanîje",
-        "b_origin": "Ancient Roman and Byzantine civitas Raphanea (in-game: Rafaniya-Krak)",
-        "b_anachronism": "1142 Hospitaller fortress Krak des Chevaliers fails Burden of Proof on Antiquity; restored to ancient Raphanea.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Raphanea",
       "older_name_by_867": {
         "exists": true,
@@ -2464,18 +2156,11 @@
         {
           "form": "Jūsiya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Jusiya"
         }
       ],
       "etymology_analysis": "Medieval Arabic toponym Jusiya (modern Jusiyah / al-Jousieh), located south of Homs near al-Qusayr.",
-      "current_repo_state": {
-        "b_tarr": "Jusiya",
-        "b_tarr_direct": "Jusiya",
-        "b_tarr_hist": "Jusiya",
-        "b_origin": "Jusiya (constituent holding of Emêse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jund_Qinnasrin",
       "older_name_by_867": {
         "exists": false,
@@ -2510,18 +2195,11 @@
         {
           "form": "Shayzar / Senzar",
           "language": "Arabic (from Bronze Age Semitic Senzar/Sezar)",
+          "language_code": "ara",
           "translation": "Shayzar"
         }
       ],
       "etymology_analysis": "Arabic Shayzar preserves the Bronze Age Semitic name Senzar/Sezar, which briefly yielded to Hellenistic Larissa before reverting under Rome and Islam.",
-      "current_repo_state": {
-        "b_tarr": "Larîsse-in-Sîrjen",
-        "b_tarr_direct": "Scheisâr",
-        "b_tarr_hist": "Larîsse-in-Sîrjen",
-        "b_origin": "Larîsse-in-Sîrjen (Larîsse-in-Sîrjen (in-game: Shayzar))",
-        "b_anachronism": "Resolved via verified historical center Larîsse-in-Sîrjen documented in tarraconian_titles_1059.md.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shaizar",
       "older_name_by_867": {
         "exists": true,
@@ -2561,18 +2239,11 @@
         {
           "form": "Maṣyaf",
           "language": "Arabic (from Assyrian Manṣuate)",
+          "language_code": "ara",
           "translation": "raised platform (via Manṣuwatu / minaṣṣatu)"
         }
       ],
       "etymology_analysis": "Arabic Masyaf (pronounced Maṣyaf/Maṣyat/Maṣyad), evolved from Assyrian Mansuate ('raised platform'), referring to the promontory of the fortress.",
-      "current_repo_state": {
-        "b_tarr": "Masyaf",
-        "b_tarr_direct": "Masyaf",
-        "b_tarr_hist": "Masyaf",
-        "b_origin": "Masyaf (constituent holding of Larîsse-in-Sîrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Masyaf",
       "older_name_by_867": {
         "exists": true,
@@ -2610,18 +2281,11 @@
         {
           "form": "Bayrūt / Bēʾrūt",
           "language": "Arabic (from Phoenician bʾrt / bīʾrōt)",
+          "language_code": "ara",
           "translation": "wells"
         }
       ],
       "etymology_analysis": "Arabic Bayrut (English Beirut) from Phoenician bēʾrūt ('wells'), Hellenized as Berytos and Latinized as Berytus.",
-      "current_repo_state": {
-        "b_tarr": "Beirût",
-        "b_tarr_direct": "Beirût",
-        "b_tarr_hist": "Beirût",
-        "b_origin": "Beirût (Beirut)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Beirut",
       "older_name_by_867": {
         "exists": true,
@@ -2659,18 +2323,11 @@
         {
           "form": "Ṣaydā / Ṣīdūn",
           "language": "Arabic (from Phoenician ṣdn)",
+          "language_code": "ara",
           "translation": "fishery, fishing town"
         }
       ],
       "etymology_analysis": "Arabic Saida (Ṣaydā), continuing Classical Arabic Ṣaydūn and Phoenician Ṣīdūn ('fishery'), known in English via Greek/Latin as Sidon.",
-      "current_repo_state": {
-        "b_tarr": "Saida",
-        "b_tarr_direct": "Saida",
-        "b_tarr_hist": "Saida",
-        "b_origin": "Saida (constituent holding of Beirût)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sidon",
       "older_name_by_867": {
         "exists": true,
@@ -2707,23 +2364,17 @@
         {
           "form": "Tri-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "three"
         },
         {
           "form": "-polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Greek Tripolis ('three cities', referring to the confederation of Sidon, Tyre, and Aradus), borrowed into Arabic as Tarabulus.",
-      "current_repo_state": {
-        "b_tarr": "Trîpel-in-Sîrjen",
-        "b_tarr_direct": "Trîpel-in-Sîrjen",
-        "b_tarr_hist": "Trîpel-in-Sîrjen",
-        "b_origin": "Trîpel-in-Sîrjen (Tripoli)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tripoli,_Lebanon",
       "older_name_by_867": {
         "exists": true,
@@ -2760,23 +2411,17 @@
         {
           "form": "Ant-",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "facing, opposite"
         },
         {
           "form": "Arados",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Aradus (island of Arwad)"
         }
       ],
       "etymology_analysis": "Crusader form Antartus (also Tortosa), adapted from Arabic Anṭarṭūs/Ṭarṭūs, itself from Ancient Greek Antarados ('the town facing Aradus').",
-      "current_repo_state": {
-        "b_tarr": "Antartus",
-        "b_tarr_direct": "Antartus",
-        "b_tarr_hist": "Antartus",
-        "b_origin": "Antartus (constituent holding of Trîpel-in-Sîrjen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tartus",
       "older_name_by_867": {
         "exists": true,
@@ -2813,18 +2458,11 @@
         {
           "form": "Tadmur / Tadmar",
           "language": "Arabic/Aramaic/Amorite",
+          "language_code": "ara",
           "translation": "Tadmur (ancient Semitic name of Palmyra)"
         }
       ],
       "etymology_analysis": "Arabic Tadmur preserves the Bronze Age Semitic name Ta-ad-mi-ir/Tadmar, which was adapted in Greco-Roman antiquity as Palmyra.",
-      "current_repo_state": {
-        "b_tarr": "Tadmûr",
-        "b_tarr_direct": "Palmîre",
-        "b_tarr_hist": "Tadmûr",
-        "b_origin": "Tadmûr (Tadmûr (in-game: Palmyra))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Palmyra",
       "older_name_by_867": {
         "exists": true,
@@ -2861,18 +2499,11 @@
         {
           "form": "Ārāk / Aracha",
           "language": "Arabic (from Aramaic/Roman Aracha)",
+          "language_code": "ara",
           "translation": "Arak"
         }
       ],
       "etymology_analysis": "Arabic Arak, continuing Roman-era Aracha on the desert road between Palmyra and Sura.",
-      "current_repo_state": {
-        "b_tarr": "Arak",
-        "b_tarr_direct": "Arak",
-        "b_tarr_hist": "Arak",
-        "b_origin": "Arak (constituent holding of Tadmûr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arak,_Syria",
       "older_name_by_867": {
         "exists": true,
@@ -2909,23 +2540,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Qaryatayn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "two villages (dual of qarya)"
         }
       ],
       "etymology_analysis": "Arabic al-Qaryatayn ('the two villages'), an oasis town in the Syrian Desert between Homs and Palmyra.",
-      "current_repo_state": {
-        "b_tarr": "Karjatân",
-        "b_tarr_direct": "Karjatân",
-        "b_tarr_hist": "Karjatân",
-        "b_origin": "Karjatân (Qaryatan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al-Qaryatayn",
       "older_name_by_867": {
         "exists": true,
@@ -2962,18 +2587,11 @@
         {
           "form": "Judr",
           "language": "Arabic (uncertain)",
+          "language_code": "ara",
           "translation": "uncertain (possibly from jadr/jidar 'wall')"
         }
       ],
       "etymology_analysis": "Unverified medieval/game barony name in the Qaryatayn district; no pre-867 or medieval attestation located.",
-      "current_repo_state": {
-        "b_tarr": "Judr",
-        "b_tarr_direct": "Judr",
-        "b_tarr_hist": "Judr",
-        "b_origin": "Judr (constituent holding of Karjatân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3008,23 +2626,17 @@
         {
           "form": "as-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Sukhnah",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "warm, hot (feminine, referring to the warm sulphur springs)"
         }
       ],
       "etymology_analysis": "Arabic al-Sukhnah ('the Warm [Springs]'), named after the nearby thermal sulphur springs in the Syrian Desert oasis.",
-      "current_repo_state": {
-        "b_tarr": "Sûchne",
-        "b_tarr_direct": "Sûchne",
-        "b_tarr_hist": "Sûchne",
-        "b_origin": "Sûchne (Sukhna)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al-Sukhnah,_Syria",
       "older_name_by_867": {
         "exists": false,
@@ -3059,23 +2671,17 @@
         {
           "form": "Dayr",
           "language": "Arabic (from Syriac dayrā)",
+          "language_code": "ara",
           "translation": "monastery"
         },
         {
           "form": "ar-Rummān",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the pomegranates"
         }
       ],
       "etymology_analysis": "Arabic Dayr al-Rumman ('Monastery of the Pomegranates'), a medieval name for the Euphrates settlement later known as Deir ez-Zor.",
-      "current_repo_state": {
-        "b_tarr": "Dair Ar-Ruman",
-        "b_tarr_direct": "Dair Ar-Ruman",
-        "b_tarr_hist": "Dair Ar-Ruman",
-        "b_origin": "Dair Ar-Ruman (constituent holding of Sûchne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%AF%D9%8A%D8%B1_%D8%A7%D9%84%D8%B2%D9%88%D8%B1",
       "older_name_by_867": {
         "exists": true,
@@ -3113,18 +2719,11 @@
         {
           "form": "ʿUrd",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Urd (oasis/district between Palmyra and Aleppo)"
         }
       ],
       "etymology_analysis": "Medieval Arabic toponym 'Urd, associated with the oasis of al-Taybah northeast of al-Sukhnah in the Syrian Desert.",
-      "current_repo_state": {
-        "b_tarr": "Urd",
-        "b_tarr_direct": "Urd",
-        "b_tarr_hist": "Urd",
-        "b_origin": "Urd (constituent holding of Sûchne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al-Taybah,_Homs_Governorate",
       "older_name_by_867": {
         "exists": false,

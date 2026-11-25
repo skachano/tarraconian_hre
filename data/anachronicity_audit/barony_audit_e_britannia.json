@@ -1,21 +1,28 @@
 {
   "metadata": {
+    "empire": "e_britannia",
     "scope": "e_britannia (all baronies across k_ireland and k_scotland)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 132,
@@ -57,28 +64,23 @@
         {
           "form": "droim",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "ridge"
         },
         {
           "form": "dhá",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "two"
         },
         {
           "form": "ethiar / thiar",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "demons (air-demons)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Droim Dhá Ethiar (modern Droim Dhá Thiar), 'ridge of the two (air) demons', referring to the ridge above the River Bonet.",
-      "current_repo_state": {
-        "b_tarr": "Grôzkirchen",
-        "b_tarr_direct": "Grôzkirchen",
-        "b_tarr_hist": "Grôzkirchen",
-        "b_origin": "Grôzkirchen (Breifne)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dromahair",
       "older_name_by_867": {
         "exists": true,
@@ -116,23 +118,17 @@
         {
           "form": "béal",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "mouth, opening, ford"
         },
         {
           "form": "cú / cumhang",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "narrow (stretch of water) or hound (Bélchú)"
         }
       ],
       "etymology_analysis": "From Irish Béal Cú, either 'mouth of the narrow [stretch of water]' between Upper and Lower Lough MacNean, or folk-etymologized from the Ulster Cycle warrior Bélchú of Breifne.",
-      "current_repo_state": {
-        "b_tarr": "Belcoo",
-        "b_tarr_direct": "Belcoo",
-        "b_tarr_hist": "Belcoo",
-        "b_origin": "Belcoo (constituent holding of Grôzkirchen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Belcoo",
       "older_name_by_867": {
         "exists": false,
@@ -167,23 +163,17 @@
         {
           "form": "an",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "the"
         },
         {
           "form": "longphort",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fortress, fortified house, ship-camp"
         }
       ],
       "etymology_analysis": "Anglicization of Irish An Longfort (earlier Longphort Uí Fhearghail, 'stronghold of O'Farrell'), from Old Irish longphort (ultimately Latin longus + portus).",
-      "current_repo_state": {
-        "b_tarr": "Longvurt",
-        "b_tarr_direct": "Longvurt",
-        "b_tarr_hist": "Longvurt",
-        "b_origin": "Longvurt (constituent holding of Grôzkirchen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Longford",
       "older_name_by_867": {
         "exists": false,
@@ -218,23 +208,17 @@
         {
           "form": "an",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "the"
         },
         {
           "form": "cabhán",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "hollow, depression"
         }
       ],
       "etymology_analysis": "Anglicization of Irish An Cabhán, 'the hollow', describing the low-lying basin where the O'Reillys established their town and friary in the early 14th century.",
-      "current_repo_state": {
-        "b_tarr": "Cavan",
-        "b_tarr_direct": "Cavan",
-        "b_tarr_hist": "Cavan",
-        "b_origin": "Cavan (constituent holding of Grôzkirchen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cavan",
       "older_name_by_867": {
         "exists": false,
@@ -269,23 +253,17 @@
         {
           "form": "áth / ard",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "ford / high"
         },
         {
           "form": "darach / achadh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of oaks / field"
         }
       ],
       "etymology_analysis": "Unattested as a baronial settlement by 867 AD; likely reflects either Irish Áth Darach ('ford of oaks') or a metathesized form of Ardagh (Ardachadh, 'high field').",
-      "current_repo_state": {
-        "b_tarr": "Adragh",
-        "b_tarr_direct": "Adragh",
-        "b_tarr_hist": "Adragh",
-        "b_origin": "Adragh (constituent holding of Grôzkirchen)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -320,18 +298,11 @@
         {
           "form": "gaillimh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "stony (river)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Gaillimh (from Dún Bhun na Gaillimhe, 'fort at the mouth of the Gaillimh'), named after the River Gaillimh (now the Corrib), meaning 'stony river'.",
-      "current_repo_state": {
-        "b_tarr": "Gâlewe",
-        "b_tarr_direct": "Gâlewe",
-        "b_tarr_hist": "Gâlewe",
-        "b_origin": "Historic Corrib river fortress and burgh Galway (Dún Gaillimhe, attested 1124 AD) (in-game: Galway)",
-        "b_anachronism": "Post-867 river fortress (built 1124 AD by Tairrdelbach Ua Conchobair) established on ancient hydronym Gaillimh (Tier 2).",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Galway",
       "older_name_by_867": {
         "exists": false,
@@ -366,28 +337,23 @@
         {
           "form": "baile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "town"
         },
         {
           "form": "átha",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the ford"
         },
         {
           "form": "an rí / na ríogh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the king(s)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Baile Átha an Rí (earlier Áth na Ríogh, 'ford of the kings'), referring to a crossing on the Clarin River in the territory of the Soghan kings.",
-      "current_repo_state": {
-        "b_tarr": "Athenry",
-        "b_tarr_direct": "Athenry",
-        "b_tarr_hist": "Athenry",
-        "b_origin": "Athenry (constituent holding of Tuâm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Athenry",
       "older_name_by_867": {
         "exists": false,
@@ -422,23 +388,17 @@
         {
           "form": "tuaim",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "mound, burial mound"
         },
         {
           "form": "dá ghualann",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of two shoulders"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Tuaim (earlier Tuaim Dá Ghualann, 'burial mound of two shoulders'), cognate with Latin tumulus, referring to an ancient burial mound.",
-      "current_repo_state": {
-        "b_tarr": "Tuâm",
-        "b_tarr_direct": "Tuâm",
-        "b_tarr_hist": "Tuâm",
-        "b_origin": "Ancient monastic foundation and metropolitan archiepiscopal see of Tuam (in-game: Tuâm)",
-        "b_anachronism": "Authentic Pre-867 Monastic See (founded c. 501 AD).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tuam",
       "older_name_by_867": {
         "exists": false,
@@ -473,23 +433,17 @@
         {
           "form": "da / do",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "hypocoristic saintly prefix ('my')"
         },
         {
           "form": "Chainnóc",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "Cainnech (diminutive)"
         }
       ],
       "etymology_analysis": "Appears to be an Old Irish saintly hypocoristic name (Da-Chainnóc, 'my little Cainnech'), but unattested as a documented settlement in Connacht.",
-      "current_repo_state": {
-        "b_tarr": "Da Chainoc",
-        "b_tarr_direct": "Da Chainoc",
-        "b_tarr_hist": "Da Chainoc",
-        "b_origin": "Da Chainoc (constituent holding of Tuâm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -524,18 +478,11 @@
         {
           "form": "crúachu / crúachan",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "mound, stack, rounded hill"
         }
       ],
       "etymology_analysis": "Old Irish Crúachu (genitive Crúachan, modern Ráth Cruachan / Rathcroghan), the traditional royal capital of Connacht, derived from Old Irish crúach ('mound, hill').",
-      "current_repo_state": {
-        "b_tarr": "Kruachû",
-        "b_tarr_direct": "Majô",
-        "b_tarr_hist": "Kruachû",
-        "b_origin": "Kruachû (Kruachû (in-game: Mayo))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rathcroghan",
       "older_name_by_867": {
         "exists": false,
@@ -570,23 +517,17 @@
         {
           "form": "caisleán",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "castle"
         },
         {
           "form": "an Bharraigh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the Barry (de Barra)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Caisleán an Bharraigh ('Barry's Castle'), named for the 13th-century Anglo-Norman de Barra stronghold on the Castlebar River.",
-      "current_repo_state": {
-        "b_tarr": "Benedictastat",
-        "b_tarr_direct": "Benedictastat",
-        "b_tarr_hist": "Benedictastat",
-        "b_origin": "Benedictastat — Municipal foundation chartered by Benedicta",
-        "b_anachronism": "Post-867 foundation lacking pre-867 attestation under Burden of Proof on Antiquity (1235 Norman castle built by Gerald de Barry); resolved via Option C based on save ruler Benedicta of House Kestenholz-Metz.",
-        "category": "option_c_foundation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Castlebar",
       "older_name_by_867": {
         "exists": false,
@@ -621,23 +562,17 @@
         {
           "form": "slige",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "shell"
         },
         {
           "form": "-ach",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "abounding in"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Sligeach ('abounding in shells'), originally the name of the Garavogue River estuary due to its rich shellfish beds and shell middens.",
-      "current_repo_state": {
-        "b_tarr": "Sligo",
-        "b_tarr_direct": "Sligo",
-        "b_tarr_hist": "Sligo",
-        "b_origin": "Sligo (constituent holding of Kruachû)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sligo",
       "older_name_by_867": {
         "exists": false,
@@ -672,23 +607,17 @@
         {
           "form": "cill / cell",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "church"
         },
         {
           "form": "ala / alaid",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "mottled, speckled"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cill Ala (Old Irish Cell Alaid), 'the mottled/speckled church', an early Patrician episcopal foundation in north Mayo.",
-      "current_repo_state": {
-        "b_tarr": "Killala",
-        "b_tarr_direct": "Killala",
-        "b_tarr_hist": "Killala",
-        "b_origin": "Killala (constituent holding of Kruachû)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Killala",
       "older_name_by_867": {
         "exists": false,
@@ -723,23 +652,17 @@
         {
           "form": "veisa",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "mudflat, stagnant pool"
         },
         {
           "form": "fjǫrðr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "fjord, inlet"
         }
       ],
       "etymology_analysis": "From Old Norse Veisafjǫrðr ('inlet of the mudflats') via Yola/Middle English Weiseforthe, replacing the older Irish name Loch Garman.",
-      "current_repo_state": {
-        "b_tarr": "Ferns",
-        "b_tarr_direct": "Leinster",
-        "b_tarr_hist": "Ferns",
-        "b_origin": "Ferns (Ferns (in-game: Leinster))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wexford",
       "older_name_by_867": {
         "exists": true,
@@ -776,23 +699,17 @@
         {
           "form": "inis",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "island, river-meadow"
         },
         {
           "form": "Córthaidh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Corthaidh / of the rocks"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Inis Córthaidh, 'island of Corthaidh' or 'island of rocks', situated on the River Slaney.",
-      "current_repo_state": {
-        "b_tarr": "Enniscorthy",
-        "b_tarr_direct": "Enniscorthy",
-        "b_tarr_hist": "Enniscorthy",
-        "b_origin": "Enniscorthy (constituent holding of Ferns)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Enniscorthy",
       "older_name_by_867": {
         "exists": false,
@@ -827,18 +744,11 @@
         {
           "form": "fearna",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "alder-trees, alder-grove"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Fearna (short for Fearna Mór Maedhóg), meaning 'alder-grove', seat of a major 6th-century monastery and the Kings of Leinster.",
-      "current_repo_state": {
-        "b_tarr": "Kunigundekirchen",
-        "b_tarr_direct": "Kunigundekirchen",
-        "b_tarr_hist": "Kunigundekirchen",
-        "b_origin": "Kunigundekirchen (constituent holding of Ferns)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ferns,_County_Wexford",
       "older_name_by_867": {
         "exists": false,
@@ -873,23 +783,17 @@
         {
           "form": "cethrae / ceathar",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "cattle / four"
         },
         {
           "form": "-lach",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "collective suffix ('place of')"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Ceatharlach (historically Caherlagh/Caterlagh), likely from Old Irish cethrae ('cattle, herds') + -lach ('place of cattle'), though folk-etymologized as Ceatharloch ('four lakes').",
-      "current_repo_state": {
-        "b_tarr": "Carlow",
-        "b_tarr_direct": "Carlow",
-        "b_tarr_hist": "Carlow",
-        "b_origin": "Carlow (constituent holding of Ferns)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Carlow",
       "older_name_by_867": {
         "exists": false,
@@ -924,18 +828,11 @@
         {
           "form": "gabrán / gabhrán",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "place of goats or personal name Gabrán"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Gabhrán (anciently Bealach Ghabhráin, 'Gabrán's pass'), a pre-Norman royal residence of the Kings of Ossory.",
-      "current_repo_state": {
-        "b_tarr": "Ossorîe",
-        "b_tarr_direct": "Ossorîe",
-        "b_tarr_hist": "Ossorîe",
-        "b_origin": "Ossorîe (Ossory)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gowran",
       "older_name_by_867": {
         "exists": false,
@@ -970,23 +867,17 @@
         {
           "form": "cill",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "church"
         },
         {
           "form": "Chainnigh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Cainnech (St. Canice)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cill Chainnigh ('church of St. Cainnech/Canice'), named after the 6th-century abbot St. Cainnech of Aghaboe; first attested as a place-name in 1085.",
-      "current_repo_state": {
-        "b_tarr": "Kilkenny",
-        "b_tarr_direct": "Kilkenny",
-        "b_tarr_hist": "Kilkenny",
-        "b_origin": "Kilkenny (constituent holding of Ossorîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kilkenny",
       "older_name_by_867": {
         "exists": false,
@@ -1021,28 +912,23 @@
         {
           "form": "baile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "town"
         },
         {
           "form": "átha",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the ford"
         },
         {
           "form": "Í / Aoi",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Ae (legendary chieftain)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Baile Átha Í ('town of the ford of Ae'), named after a legendary 2nd-century chieftain killed at the River Barrow crossing.",
-      "current_repo_state": {
-        "b_tarr": "Athy",
-        "b_tarr_direct": "Athy",
-        "b_tarr_hist": "Athy",
-        "b_origin": "Athy (constituent holding of Ossorîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Athy",
       "older_name_by_867": {
         "exists": false,
@@ -1077,23 +963,17 @@
         {
           "form": "carraig",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "rock"
         },
         {
           "form": "na Siúire",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the River Suir"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Carraig (Carraig na Siúire, 'rock of the Suir'), an Anglo-Norman island settlement on the River Suir.",
-      "current_repo_state": {
-        "b_tarr": "Carrick",
-        "b_tarr_direct": "Carrick",
-        "b_tarr_hist": "Carrick",
-        "b_origin": "Carrick (constituent holding of Ossorîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Carrick-on-Suir",
       "older_name_by_867": {
         "exists": false,
@@ -1128,28 +1008,23 @@
         {
           "form": "baile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "town"
         },
         {
           "form": "átha",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the ford"
         },
         {
           "form": "Luain",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Luan"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Baile Átha Luain ('town of Luan's ford'), a strategic crossing on the River Shannon south of Lough Ree.",
-      "current_repo_state": {
-        "b_tarr": "Âth-Lôen",
-        "b_tarr_direct": "Âth-Lôen",
-        "b_tarr_hist": "Âth-Lôen",
-        "b_origin": "Historic Shannon bridge fortress Athlone (Áth Luain, attested 1120 AD) (in-game: Athlone)",
-        "b_anachronism": "Post-867 Shannon bridge castle (built 1120 AD) established at ancient ford Áth Luain (Tier 2).",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Athlone",
       "older_name_by_867": {
         "exists": false,
@@ -1184,18 +1059,11 @@
         {
           "form": "biorra / biror",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "watery place, plain of water, watercress"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Biorra ('plain of water' or 'watery place'), an ancient monastic centre in Éile.",
-      "current_repo_state": {
-        "b_tarr": "Birr",
-        "b_tarr_direct": "Birr",
-        "b_tarr_hist": "Birr",
-        "b_origin": "Birr (constituent holding of Uisnech)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Birr,_County_Offaly",
       "older_name_by_867": {
         "exists": false,
@@ -1230,18 +1098,11 @@
         {
           "form": "uisnech",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "place of the hearth/cinders or angular place"
         }
       ],
       "etymology_analysis": "Old Irish Uisnech (modern Uisneach), the sacred central hill of Ireland, derived by Eric Hamp from Proto-Celtic *us-tin-ako- ('place of cinders/hearth').",
-      "current_repo_state": {
-        "b_tarr": "Uisnech",
-        "b_tarr_direct": "Uisnech",
-        "b_tarr_hist": "Uisnech",
-        "b_origin": "Ancient sacred royal hill and navel of Ireland (Aill na Mireann) (in-game: Uisnech)",
-        "b_anachronism": "Authentic Prehistoric Sacred Royal Hill.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hill_of_Uisneach",
       "older_name_by_867": {
         "exists": false,
@@ -1276,23 +1137,17 @@
         {
           "form": "dubh",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "black, dark"
         },
         {
           "form": "linn",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "pool"
         }
       ],
       "etymology_analysis": "Anglicization of Middle Irish Duiblinn ('black pool'), referring to the dark tidal pool at the confluence of the Poddle and Liffey.",
-      "current_repo_state": {
-        "b_tarr": "Swartzpûl",
-        "b_tarr_direct": "Swartzpûl",
-        "b_tarr_hist": "Swartzpûl",
-        "b_origin": "Swartzpûl (Dublin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dublin",
       "older_name_by_867": {
         "exists": true,
@@ -1330,23 +1185,17 @@
         {
           "form": "víkinga",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "of the Vikings"
         },
         {
           "form": "ló",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "meadow"
         }
       ],
       "etymology_analysis": "From Old Norse Víkingaló ('Vikings' meadow') via Middle English Wykinglo, distinct from the Irish name Cill Mhantáin.",
-      "current_repo_state": {
-        "b_tarr": "Wîkingelô",
-        "b_tarr_direct": "Wîkingelô",
-        "b_tarr_hist": "Wîkingelô",
-        "b_origin": "Wicklow (Old Norse Víkingaló, meadow of the vikings) calqued to Tarraconian Wîkingelô (in-game: Wicklow)",
-        "b_anachronism": "Norse coastal haven toponym calqued to Tarraconian Wîkingelô.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wicklow",
       "older_name_by_867": {
         "exists": false,
@@ -1381,23 +1230,17 @@
         {
           "form": "cill / cell",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "church"
         },
         {
           "form": "dara",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of the oak"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cill Dara ('church of the oak'), named for the oak tree beside which St. Brigid established her 5th-century monastery.",
-      "current_repo_state": {
-        "b_tarr": "Eichenkirchen",
-        "b_tarr_direct": "Eichenkirchen",
-        "b_tarr_hist": "Eichenkirchen",
-        "b_origin": "Kildare / Cill Dara (Old Irish Cill Dara, 'Church of the Oak Grove') (in-game: Eichenkirchen)",
-        "b_anachronism": "Descriptive Celtic ecclesiastical toponym calqued to Tarraconian Eichenkirchen.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kildare",
       "older_name_by_867": {
         "exists": false,
@@ -1432,23 +1275,17 @@
         {
           "form": "áth",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "ford"
         },
         {
           "form": "truimm",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of the elder trees"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Áth Truimm (modern Baile Átha Troim), 'ford of the elder trees', on the River Boyne.",
-      "current_repo_state": {
-        "b_tarr": "Trim",
-        "b_tarr_direct": "Trim",
-        "b_tarr_hist": "Trim",
-        "b_origin": "Trim (constituent holding of Swartzpûl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Trim,_County_Meath",
       "older_name_by_867": {
         "exists": false,
@@ -1483,23 +1320,17 @@
         {
           "form": "droichead",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "bridge"
         },
         {
           "form": "átha",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the ford"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Droichead Átha ('bridge at the ford'), referring to the bridge across the River Boyne.",
-      "current_repo_state": {
-        "b_tarr": "Drogheda",
-        "b_tarr_direct": "Drogheda",
-        "b_tarr_hist": "Drogheda",
-        "b_origin": "Drogheda (constituent holding of Swartzpûl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Drogheda",
       "older_name_by_867": {
         "exists": false,
@@ -1534,23 +1365,17 @@
         {
           "form": "trá / tráigh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "strand, shore"
         },
         {
           "form": "Lí",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the River Lee"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Trá Lí (formerly Tráigh Lí), 'strand of the River Lee', at the head of Tralee Bay.",
-      "current_repo_state": {
-        "b_tarr": "Tralî",
-        "b_tarr_direct": "Tralî",
-        "b_tarr_hist": "Tralî",
-        "b_origin": "Tralee / Trá Lí (constituent capital seat of Desmond) (in-game: Tralî)",
-        "b_anachronism": "Constituent capital seat of Desmond disambiguated from historical city seat Korch.",
-        "category": "capital_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tralee",
       "older_name_by_867": {
         "exists": false,
@@ -1585,18 +1410,11 @@
         {
           "form": "corcach / corcaigh",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "marsh"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Corcaigh (Old Irish Corcach, 'marsh'), referring to the marshy island in the River Lee where St. Finbarr founded his monastery.",
-      "current_repo_state": {
-        "b_tarr": "Korch",
-        "b_tarr_direct": "Korch",
-        "b_tarr_hist": "Korch",
-        "b_origin": "Cork / Corcach Mór na Mumhan (ancient monastic city founded c. 606 AD by St Finbarr) (in-game: Korch)",
-        "b_anachronism": "Ancient monastic episcopal city Corcach Mór na Mumhan (attested 606 AD).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cork_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -1631,23 +1449,17 @@
         {
           "form": "cionn / ceann",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "head, headland"
         },
         {
           "form": "tSáile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the brine / salt water"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cionn tSáile ('head of the brine'), describing its position at the tidal mouth of the River Bandon.",
-      "current_repo_state": {
-        "b_tarr": "Kinsale",
-        "b_tarr_direct": "Kinsale",
-        "b_tarr_hist": "Kinsale",
-        "b_origin": "Kinsale (constituent holding of Korch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kinsale",
       "older_name_by_867": {
         "exists": false,
@@ -1682,23 +1494,17 @@
         {
           "form": "baile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "town, homestead"
         },
         {
           "form": "an tí mhóir",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the big house"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Baile an Tí Mhóir ('town of the big house'), referring to the O'Driscoll stronghold of Dún na Séad.",
-      "current_repo_state": {
-        "b_tarr": "Baltimore",
-        "b_tarr_direct": "Baltimore",
-        "b_tarr_hist": "Baltimore",
-        "b_origin": "Baltimore (constituent holding of Korch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baltimore,_County_Cork",
       "older_name_by_867": {
         "exists": false,
@@ -1733,18 +1539,11 @@
         {
           "form": "inis",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "island, river-meadow"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Inis (short for Inis Cluana Rámhfhada, 'island of the long rowing meadow') between two channels of the River Fergus.",
-      "current_repo_state": {
-        "b_tarr": "Inis",
-        "b_tarr_direct": "Inis",
-        "b_tarr_hist": "Inis",
-        "b_origin": "Inis — Historical Option A seat of c_ennis",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ennis",
       "older_name_by_867": {
         "exists": false,
@@ -1779,23 +1578,17 @@
         {
           "form": "ceann",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "head"
         },
         {
           "form": "coradh",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the weir"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Ceann Coradh ('head of the weir'), referring to an ancient fishing weir across the Shannon at Killaloe.",
-      "current_repo_state": {
-        "b_tarr": "Kincora",
-        "b_tarr_direct": "Kincora",
-        "b_tarr_hist": "Kincora",
-        "b_origin": "Kincora (constituent holding of Inis)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kincora",
       "older_name_by_867": {
         "exists": false,
@@ -1830,23 +1623,17 @@
         {
           "form": "veðr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "ram, wether"
         },
         {
           "form": "fjǫrðr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "fjord, inlet"
         }
       ],
       "etymology_analysis": "From Old Norse Veðrafjǫrðr ('ram/wether fjord' or 'windy fjord'), adopted in English as Waterford, replacing the Irish name Port Láirge.",
-      "current_repo_state": {
-        "b_tarr": "Wâtervort",
-        "b_tarr_direct": "Ormont",
-        "b_tarr_hist": "Wâtervort",
-        "b_origin": "Wâtervort (Wâtervort (in-game: Ormond))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Waterford",
       "older_name_by_867": {
         "exists": true,
@@ -1883,23 +1670,17 @@
         {
           "form": "imleach",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "border, marshy margin of a lake"
         },
         {
           "form": "iubhair",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of the yew tree"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Imleach Iubhair ('border of the lake of yews'), an ancient pre-Patrician and Eóganachta ecclesiastical centre.",
-      "current_repo_state": {
-        "b_tarr": "Emly",
-        "b_tarr_direct": "Emly",
-        "b_tarr_hist": "Emly",
-        "b_origin": "Emly (constituent holding of Wâtervort)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Emly",
       "older_name_by_867": {
         "exists": true,
@@ -1936,23 +1717,17 @@
         {
           "form": "cluain",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "meadow, pasture"
         },
         {
           "form": "meala",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of honey"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cluain Meala ('honey meadow'), referring to the fertile valley along the River Suir.",
-      "current_repo_state": {
-        "b_tarr": "Clonmel",
-        "b_tarr_direct": "Clonmel",
-        "b_tarr_hist": "Clonmel",
-        "b_origin": "Clonmel (constituent holding of Wâtervort)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Clonmel",
       "older_name_by_867": {
         "exists": false,
@@ -1987,18 +1762,11 @@
         {
           "form": "Hlymrekr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "Norse adaptation of Irish Luimneach ('bare/marshy spot')"
         }
       ],
       "etymology_analysis": "From Old Norse Hlymrekr, an adaptation of Irish Luimneach (originally referring to the Shannon estuary, Loch Luimnigh, and King's Island).",
-      "current_repo_state": {
-        "b_tarr": "Limerich",
-        "b_tarr_direct": "Limerich",
-        "b_tarr_hist": "Limerich",
-        "b_origin": "Limerich (Thomond)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Limerick",
       "older_name_by_867": {
         "exists": true,
@@ -2036,23 +1804,17 @@
         {
           "form": "an t-",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "the"
         },
         {
           "form": "aonach",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fair, assembly"
         }
       ],
       "etymology_analysis": "Anglicization of Irish An tAonach (full name Aonach Urmhumhan, 'the Fair of Ormond'), from the traditional East Munster fair held there.",
-      "current_repo_state": {
-        "b_tarr": "Nenagh",
-        "b_tarr_direct": "Nenagh",
-        "b_tarr_hist": "Nenagh",
-        "b_origin": "Nenagh (constituent holding of Limerich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nenagh",
       "older_name_by_867": {
         "exists": false,
@@ -2087,23 +1849,17 @@
         {
           "form": "ros",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "wood, wooded height"
         },
         {
           "form": "Cré",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of Cré (personal/legendary name)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Ros Cré ('Cré's wood'), an important early monastic town on the ancient Slighe Dála road.",
-      "current_repo_state": {
-        "b_tarr": "Roscrea",
-        "b_tarr_direct": "Roscrea",
-        "b_tarr_hist": "Roscrea",
-        "b_origin": "Roscrea (constituent holding of Limerich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Roscrea",
       "older_name_by_867": {
         "exists": false,
@@ -2138,23 +1894,17 @@
         {
           "form": "cill",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "church"
         },
         {
           "form": "Mocheallóg",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of St. Mocheallóg ('my young Ceallach')"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Cill Mocheallóg ('church of St. Mocheallóg'), named after the 7th-century saint whose church stood on Kilmallock Hill.",
-      "current_repo_state": {
-        "b_tarr": "Kilmallock",
-        "b_tarr_direct": "Kilmallock",
-        "b_tarr_hist": "Kilmallock",
-        "b_origin": "Kilmallock (constituent holding of Limerich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kilmallock",
       "older_name_by_867": {
         "exists": false,
@@ -2189,23 +1939,17 @@
         {
           "form": "dún",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fort"
         },
         {
           "form": "na nGall",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the foreigners (Vikings)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Dún na nGall ('fort of the foreigners'), referring to a Viking encampment at the mouth of the River Eske.",
-      "current_repo_state": {
-        "b_tarr": "Ailêch",
-        "b_tarr_direct": "Ailêch",
-        "b_tarr_hist": "Ailêch",
-        "b_origin": "Ailêch (Ailech)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Donegal_(town)",
       "older_name_by_867": {
         "exists": false,
@@ -2240,23 +1984,17 @@
         {
           "form": "ráth",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "ringfort, earthen enclosure"
         },
         {
           "form": "bhoth",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of the huts"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Ráth Bhoth ('fort of the huts'), referring to the monastic cells within an earthen enclosure.",
-      "current_repo_state": {
-        "b_tarr": "Raphoe",
-        "b_tarr_direct": "Raphoe",
-        "b_tarr_hist": "Raphoe",
-        "b_origin": "Raphoe (constituent holding of Ailêch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Raphoe",
       "older_name_by_867": {
         "exists": false,
@@ -2291,23 +2029,17 @@
         {
           "form": "fathain",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "little green / field"
         },
         {
           "form": "Mura",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of St. Mura"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Fathain Mura ('little green/field of St. Mura'), an early Christian monastery on Lough Swilly.",
-      "current_repo_state": {
-        "b_tarr": "Fahan",
-        "b_tarr_direct": "Fahan",
-        "b_tarr_hist": "Fahan",
-        "b_origin": "Fahan (constituent holding of Ailêch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fahan",
       "older_name_by_867": {
         "exists": false,
@@ -2342,18 +2074,11 @@
         {
           "form": "daire / doire",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "oak-grove, oak-wood"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Daire (modern Doire), 'oak-grove', originally Daire Calgaich ('oak-grove of Calgach') and later Doire Colmcille.",
-      "current_repo_state": {
-        "b_tarr": "Derry",
-        "b_tarr_direct": "Derry",
-        "b_tarr_hist": "Derry",
-        "b_origin": "Derry (constituent holding of Ailêch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Derry",
       "older_name_by_867": {
         "exists": false,
@@ -2388,23 +2113,17 @@
         {
           "form": "dún",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fort"
         },
         {
           "form": "Dealgan",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Dealga (Fir Bolg chieftain)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Dún Dealgan ('fort of Dealga'), adopted by 12th-century Normans at Castletown Mount.",
-      "current_repo_state": {
-        "b_tarr": "Dundalk",
-        "b_tarr_direct": "Dundalk",
-        "b_tarr_hist": "Dundalk",
-        "b_origin": "Ancient fortified ford Dún Dealgan of the Castletown River (in-game: Dundalk)",
-        "b_anachronism": "Authentic Pre-867 Prehistoric Irish Fortress.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dundalk",
       "older_name_by_867": {
         "exists": true,
@@ -2442,23 +2161,17 @@
         {
           "form": "ard",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "height, hill"
         },
         {
           "form": "Mhacha",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of Macha (goddess)"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Ard Mhacha ('Macha's height'), named after the goddess Macha like nearby Eamhain Mhacha (Navan Fort).",
-      "current_repo_state": {
-        "b_tarr": "Armâch",
-        "b_tarr_direct": "Armâch",
-        "b_tarr_hist": "Armâch",
-        "b_origin": "Ancient ecclesiastical capital of Ireland and primary see of St Patrick (Ard Mhacha) (in-game: Armâch)",
-        "b_anachronism": "Authentic Pre-867 Episcopal See (founded 445 AD).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Armagh",
       "older_name_by_867": {
         "exists": false,
@@ -2493,28 +2206,23 @@
         {
           "form": "baile",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "town"
         },
         {
           "form": "átha",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of the ford"
         },
         {
           "form": "Fhirdhia",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Ferdia"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Baile Átha Fhirdhia (earlier Atherdee, from Áth Fhirdia 'ford of Ferdia'), named after the Ulster Cycle duel between Cú Chulainn and Ferdia.",
-      "current_repo_state": {
-        "b_tarr": "Ardee",
-        "b_tarr_direct": "Ardee",
-        "b_tarr_hist": "Ardee",
-        "b_origin": "Ardee (constituent holding of Armâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ardee",
       "older_name_by_867": {
         "exists": false,
@@ -2549,18 +2257,11 @@
         {
           "form": "clochar",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "stony place, rocky ground"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Clochar ('stony place'), seat of the ancient kingdom of Airgíalla and the Diocese of Clogher.",
-      "current_repo_state": {
-        "b_tarr": "Clogher",
-        "b_tarr_direct": "Clogher",
-        "b_tarr_hist": "Clogher",
-        "b_origin": "Clogher (constituent holding of Armâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Clogher",
       "older_name_by_867": {
         "exists": false,
@@ -2595,23 +2296,17 @@
         {
           "form": "dún",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fort"
         },
         {
           "form": "Geanainn",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Geanann"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Dún Geanainn ('Geanann's fort'), chief seat of the O'Neills of Tír Eoghain from the 14th century.",
-      "current_repo_state": {
-        "b_tarr": "Dungannon",
-        "b_tarr_direct": "Dungannon",
-        "b_tarr_hist": "Dungannon",
-        "b_origin": "Dungannon (constituent holding of Armâch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dungannon",
       "older_name_by_867": {
         "exists": false,
@@ -2646,23 +2341,17 @@
         {
           "form": "dún",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "fort"
         },
         {
           "form": "Pádraig",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Patrick (St. Patrick)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Dún Pádraig ('Patrick's fort'), a post-medieval name replacing Dún dá Lethglas / Down.",
-      "current_repo_state": {
-        "b_tarr": "Dûnpatrich",
-        "b_tarr_direct": "Ulster",
-        "b_tarr_hist": "Dûnpatrich",
-        "b_origin": "Dûnpatrich (Dûnpatrich (in-game: Ulster))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Downpatrick",
       "older_name_by_867": {
         "exists": true,
@@ -2700,23 +2389,17 @@
         {
           "form": "sliabh",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "mountain, hill"
         },
         {
           "form": "Mis",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "of Mis (personal/legendary name)"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Sliabh Mis ('Mis's mountain'), a volcanic plug in County Antrim associated with St. Patrick's captivity.",
-      "current_repo_state": {
-        "b_tarr": "Slemisch",
-        "b_tarr_direct": "Slemisch",
-        "b_tarr_hist": "Slemisch",
-        "b_origin": "Slemisch (constituent holding of Dûnpatrich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Slemish",
       "older_name_by_867": {
         "exists": false,
@@ -2751,23 +2434,17 @@
         {
           "form": "carraig",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "rock"
         },
         {
           "form": "Fhearghais",
           "language": "Irish",
+          "language_code": "gle",
           "translation": "of Fergus (Fergus Mór)"
         }
       ],
       "etymology_analysis": "Anglicization of Irish Carraig Fhearghais ('Fergus's rock'), named after Fergus Mór, legendary king of Dál Riata.",
-      "current_repo_state": {
-        "b_tarr": "Karrech-Vergûs",
-        "b_tarr_direct": "Karrech-Vergûs",
-        "b_tarr_hist": "Karrech-Vergûs",
-        "b_origin": "Ancient Gaelic rock and bay of Fergus (in-game: Carrickfergus)",
-        "b_anachronism": "1177 Anglo-Norman castle of John de Courcy fails Burden of Proof on Antiquity; resolved to ancient Gaelic Carraig Fhearghais.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Carrickfergus",
       "older_name_by_867": {
         "exists": false,
@@ -2802,23 +2479,17 @@
         {
           "form": "benn",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "point, horn, peak"
         },
         {
           "form": "-chor",
           "language": "Old Irish",
+          "language_code": "sga",
           "translation": "curve / place of"
         }
       ],
       "etymology_analysis": "Anglicization of Old Irish Bennchor (modern Beannchar), meaning 'place of points' or 'horned curve', referring to the shoreline of Bangor Bay.",
-      "current_repo_state": {
-        "b_tarr": "Bangor",
-        "b_tarr_direct": "Bangor",
-        "b_tarr_hist": "Bangor",
-        "b_origin": "Bangor (constituent holding of Dûnpatrich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bangor,_County_Down",
       "older_name_by_867": {
         "exists": false,
@@ -2853,23 +2524,17 @@
         {
           "form": "dun",
           "language": "Scottish Gaelic / Celtic",
+          "language_code": "gla",
           "translation": "fort"
         },
         {
           "form": "Daig",
           "language": "Old Celtic / Gaelic",
+          "language_code": "cel",
           "translation": "personal name (genitive, from 'fire')"
         }
       ],
       "etymology_analysis": "From Gaelic Dùn Dèagh, combining dùn ('fort') with the genitive of a personal name Daig (derived from an Old Celtic root meaning 'fire'). The medieval Latin form Taodunum ('Tay-fort') and Dei donum ('gift of God') are later learned adaptations.",
-      "current_repo_state": {
-        "b_tarr": "Angus",
-        "b_tarr_direct": "Angus",
-        "b_tarr_hist": "Angus",
-        "b_origin": "Angus (Angus)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dundee",
       "older_name_by_867": {
         "exists": false,
@@ -2904,23 +2569,17 @@
         {
           "form": "ceathramh",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "quarterland, fourth part"
         },
         {
           "form": "Mhoire",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "of (the Virgin) Mary"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic Ceathramh Mhoire, meaning 'quarterland of Mary', referring to an administrative land division dedicated to the Virgin Mary.",
-      "current_repo_state": {
-        "b_tarr": "Kirriemuir",
-        "b_tarr_direct": "Kirriemuir",
-        "b_tarr_hist": "Kirriemuir",
-        "b_origin": "Kirriemuir (constituent holding of Angus)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kirriemuir",
       "older_name_by_867": {
         "exists": false,
@@ -2955,18 +2614,11 @@
         {
           "form": "Marr / Mar",
           "language": "Pictish / Scottish Gaelic",
+          "language_code": "cel",
           "translation": "province/region name (uncertain origin)"
         }
       ],
       "etymology_analysis": "Ancient provincial choronym (Gaelic Màrr) of uncertain origin; proposed derivations include a Brittonic personal name Mar, a cognate of Welsh mawr ('great', cf. Cantref Mawr), or an Old Norse/Celtic root.",
-      "current_repo_state": {
-        "b_tarr": "Mar",
-        "b_tarr_direct": "Mar",
-        "b_tarr_hist": "Mar",
-        "b_origin": "Mar (constituent holding of Angus)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Marr,_Scotland",
       "older_name_by_867": {
         "exists": false,
@@ -3001,23 +2653,17 @@
         {
           "form": "dùn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fort"
         },
         {
           "form": "Chailleann",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "of the Caledonians"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic Dùn Chailleann ('fort of the Caledonians'), preserving the ancient ethnonym of the Caledonii; early documents record forms such as Duncalden.",
-      "current_repo_state": {
-        "b_tarr": "Athol",
-        "b_tarr_direct": "Athol",
-        "b_tarr_hist": "Athol",
-        "b_origin": "Athol (Atholl)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dunkeld",
       "older_name_by_867": {
         "exists": false,
@@ -3052,23 +2698,17 @@
         {
           "form": "aber",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "river mouth, confluence"
         },
         {
           "form": "Peallaidh",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "shaggy (name of a water-sprite / stream)"
         }
       ],
       "etymology_analysis": "From Pictish aber ('river mouth') combined with the stream name Peallaidh (Gaelic Obar Pheallaidh, 'mouth of the Peallaidh'), possibly referring to a water-sprite.",
-      "current_repo_state": {
-        "b_tarr": "Aberfeldy",
-        "b_tarr_direct": "Aberfeldy",
-        "b_tarr_hist": "Aberfeldy",
-        "b_origin": "Aberfeldy (constituent holding of Athol)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aberfeldy,_Perth_and_Kinross",
       "older_name_by_867": {
         "exists": false,
@@ -3103,23 +2743,17 @@
         {
           "form": "dùn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fort, fortified hill"
         },
         {
           "form": "ferm / Fheàrmlinn",
           "language": "Scottish Gaelic / Pictish",
+          "language_code": "gla",
           "translation": "crooked pool/burn (uncertain)"
         }
       ],
       "etymology_analysis": "From Gaelic dùn ('fortified hill') combined with an uncertain second element, possibly referring to the Tower Burn or a crooked pool/bend near the Lyne Burn.",
-      "current_repo_state": {
-        "b_tarr": "Fîfe",
-        "b_tarr_direct": "Fîfe",
-        "b_tarr_hist": "Fîfe",
-        "b_origin": "Fîfe (Fife)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dunfermline",
       "older_name_by_867": {
         "exists": false,
@@ -3154,28 +2788,23 @@
         {
           "form": "*caer",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "fort"
         },
         {
           "form": "*caled",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "hard (or personal name Caled)"
         },
         {
           "form": "-in",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "place of"
         }
       ],
       "etymology_analysis": "From Pictish *caer ('fort'), *caled ('hard' or a personal name), and the locative suffix -in ('place of'), meaning 'place of the hard fort' or 'place of Caled's fort'; later influenced by Scots 'kirk'.",
-      "current_repo_state": {
-        "b_tarr": "Kircaldy",
-        "b_tarr_direct": "Kircaldy",
-        "b_tarr_hist": "Kircaldy",
-        "b_origin": "Kircaldy (constituent holding of Fîfe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kirkcaldy",
       "older_name_by_867": {
         "exists": false,
@@ -3210,23 +2839,17 @@
         {
           "form": "St.",
           "language": "English / Scots",
+          "language_code": "eng",
           "translation": "Saint"
         },
         {
           "form": "Andrews",
           "language": "English / Scots (from Greek Andreas)",
+          "language_code": "eng",
           "translation": "Andrew (possessive)"
         }
       ],
       "etymology_analysis": "English/Scots hagiographic name referring to Saint Andrew the Apostle, whose relics were venerated at the cathedral priory; it superseded the earlier Gaelic name Cennrígmonaid / Kilrymont in the High Middle Ages.",
-      "current_repo_state": {
-        "b_tarr": "Zant-Andrews",
-        "b_tarr_direct": "Zant-Andrews",
-        "b_tarr_hist": "Zant-Andrews",
-        "b_origin": "Zant-Andrews (constituent holding of Fîfe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/St_Andrews",
       "older_name_by_867": {
         "exists": true,
@@ -3264,28 +2887,23 @@
         {
           "form": "St.",
           "language": "Scots / English",
+          "language_code": "sco",
           "translation": "Saint"
         },
         {
           "form": "John",
           "language": "Scots / English (from Hebrew Yohanan)",
+          "language_code": "sco",
           "translation": "John (the Baptist)"
         },
         {
           "form": "toun",
           "language": "Scots",
+          "language_code": "sco",
           "translation": "town, settlement"
         }
       ],
       "etymology_analysis": "Scots hagiographic name ('St John's Toun', contracted to St Johnston) derived from the parish church dedicated to St John the Baptist; used colloquially alongside Perth until the mid-17th century.",
-      "current_repo_state": {
-        "b_tarr": "Zant-Jônstat",
-        "b_tarr_direct": "Zant-Jônstat",
-        "b_tarr_hist": "Zant-Jônstat",
-        "b_origin": "Historic royal burgh St Johnston / Perth on the Tay (chartered 1124 AD) (in-game: Perth)",
-        "b_anachronism": "Post-867 royal burgh (chartered 1124 AD by David I); secondary holding disambiguated from Option A seat Skône.",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Perth,_Scotland",
       "older_name_by_867": {
         "exists": true,
@@ -3322,23 +2940,17 @@
         {
           "form": "Cupar / Cupre",
           "language": "Pictish / Gaelic",
+          "language_code": "cel",
           "translation": "uncertain (possibly 'confluence' or 'enclosed ridge')"
         },
         {
           "form": "Angus",
           "language": "Scottish Gaelic (Aonghas)",
+          "language_code": "gla",
           "translation": "Angus (province name distinguishing it from Cupar in Fife)"
         }
       ],
       "etymology_analysis": "First recorded in Latin charters as Cupre (c. 1160), of uncertain Pictish or Gaelic origin; 'Angus' was later added to distinguish it from Cupar in Fife.",
-      "current_repo_state": {
-        "b_tarr": "Skône",
-        "b_tarr_direct": "Skône",
-        "b_tarr_hist": "Skône",
-        "b_origin": "Ancient coronation moot and abbey of the Kings of Alba (Scone) (in-game: Skône)",
-        "b_anachronism": "Authentic Pre-867 Royal Moot (attested 843 AD).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Coupar_Angus",
       "older_name_by_867": {
         "exists": false,
@@ -3373,18 +2985,11 @@
         {
           "form": "Craoibh",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "tree (dative of craobh; or crubha 'haunch/shoulder of a hill')"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic Craoibh (dative of craobh, 'tree'), or alternatively crubha ('haunch', referring to the hill slope).",
-      "current_repo_state": {
-        "b_tarr": "Crieff",
-        "b_tarr_direct": "Crieff",
-        "b_tarr_hist": "Crieff",
-        "b_origin": "Crieff (constituent holding of Skôn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Crieff",
       "older_name_by_867": {
         "exists": false,
@@ -3419,23 +3024,17 @@
         {
           "form": "aber",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "river mouth, confluence"
         },
         {
           "form": "Don / Devona",
           "language": "Celtic / Brittonic",
+          "language_code": "cel",
           "translation": "River Don (from Celtic river-goddess Devona)"
         }
       ],
       "etymology_analysis": "From Pictish aber ('river mouth') and the Celtic river name Don/Devona ('mouth of the River Don', originally referring to Old Aberdeen).",
-      "current_repo_state": {
-        "b_tarr": "Dônmunde",
-        "b_tarr_direct": "Dônmunde",
-        "b_tarr_hist": "Dônmunde",
-        "b_origin": "Dônmunde (Mearns)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aberdeen",
       "older_name_by_867": {
         "exists": false,
@@ -3470,23 +3069,17 @@
         {
           "form": "cenn / cinn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "head, end"
         },
         {
           "form": "cardden",
           "language": "Pictish / Brittonic",
+          "language_code": "cel",
           "translation": "thicket, brake, copse"
         }
       ],
       "etymology_analysis": "Hybrid Gaelic-Pictish toponym from Gaelic cenn ('head, end') and Pictish *cardden ('thicket, copse', cf. Welsh cardden), meaning 'end of the thicket'; served as the medieval county town of The Mearns (Kincardineshire).",
-      "current_repo_state": {
-        "b_tarr": "Kincardine",
-        "b_tarr_direct": "Kincardine",
-        "b_tarr_hist": "Kincardine",
-        "b_origin": "Kincardine (constituent holding of Dônmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kincardine,_Aberdeenshire",
       "older_name_by_867": {
         "exists": false,
@@ -3521,23 +3114,17 @@
         {
           "form": "bealach",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "mountain pass"
         },
         {
           "form": "dair / leitir",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "oak / sloping hillside"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic Bealadair, usually interpreted as 'pass of the oak/water' or 'town on the sloping hillside' (bealach + leitir/dair), taking its name from the Pass of Ballater.",
-      "current_repo_state": {
-        "b_tarr": "Ballater",
-        "b_tarr_direct": "Ballater",
-        "b_tarr_hist": "Ballater",
-        "b_origin": "Ballater (constituent holding of Dônmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ballater",
       "older_name_by_867": {
         "exists": false,
@@ -3572,23 +3159,17 @@
         {
           "form": "srib",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "stream, current"
         },
         {
           "form": "linn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "pool"
         }
       ],
       "etymology_analysis": "Early forms Strivelin(g) / Stirveling; Thomas Owen Clancy (2017) derives it from Gaelic srib-linn ('pool in the river'), though earlier scholars proposed a Brittonic origin.",
-      "current_repo_state": {
-        "b_tarr": "Strathêrn",
-        "b_tarr_direct": "Strathêrn",
-        "b_tarr_hist": "Strathêrn",
-        "b_origin": "Strathêrn (Strathearn)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Stirling",
       "older_name_by_867": {
         "exists": true,
@@ -3625,23 +3206,17 @@
         {
           "form": "*caleto-",
           "language": "Brittonic",
+          "language_code": "cym",
           "translation": "hard (or Gaelic cala 'ferry/harbour')"
         },
         {
           "form": "*dubro-",
           "language": "Brittonic",
+          "language_code": "cym",
           "translation": "water (or Gaelic sraid 'street')"
         }
       ],
       "etymology_analysis": "Uncertain origin: either Brittonic *caleto-dubro- ('hard water', a Calder-type river name) or Gaelic calasraid ('ferry-street' / 'harbour-street'), possibly transferred from Callendar near Falkirk.",
-      "current_repo_state": {
-        "b_tarr": "Callander",
-        "b_tarr_direct": "Callander",
-        "b_tarr_hist": "Callander",
-        "b_origin": "Callander (constituent holding of Strathêrn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Callander",
       "older_name_by_867": {
         "exists": false,
@@ -3676,23 +3251,17 @@
         {
           "form": "clach / *clog",
           "language": "Scottish Gaelic / Brittonic",
+          "language_code": "gla",
           "translation": "stone, rock, crag"
         },
         {
           "form": "Manann / Manau",
           "language": "Brittonic / Gaelic",
+          "language_code": "cym",
           "translation": "regional/ethnic name Manau (Gododdin territory)"
         }
       ],
       "etymology_analysis": "From Gaelic clach (or Brittonic *clog, 'stone/rock') and Manau (genitive Manann), the early medieval Brittonic region at the head of the Firth of Forth; means 'stone of Manau'.",
-      "current_repo_state": {
-        "b_tarr": "Clackmannan",
-        "b_tarr_direct": "Clackmannan",
-        "b_tarr_hist": "Clackmannan",
-        "b_origin": "Clackmannan (constituent holding of Strathêrn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Clackmannan",
       "older_name_by_867": {
         "exists": false,
@@ -3727,18 +3296,11 @@
         {
           "form": "Annan / Anant",
           "language": "Cumbric / Brittonic",
+          "language_code": "cym",
           "translation": "river name (possibly 'she who enriches' or related to Celtic deity Anu)"
         }
       ],
       "etymology_analysis": "Named directly after the River Annan, an ancient Brittonic/Cumbric hydronym (recorded in Estrahanent, 1124).",
-      "current_repo_state": {
-        "b_tarr": "Annandâl",
-        "b_tarr_direct": "Annandâl",
-        "b_tarr_hist": "Annandâl",
-        "b_origin": "Annandâl (Annandale)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Annan,_Dumfries_and_Galloway",
       "older_name_by_867": {
         "exists": false,
@@ -3773,23 +3335,17 @@
         {
           "form": "dùn / druim",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fort / ridge"
         },
         {
           "form": "phris / prēs",
           "language": "Scottish Gaelic / Cumbric",
+          "language_code": "gla",
           "translation": "thicket, brushwood"
         }
       ],
       "etymology_analysis": "From Gaelic Dùn Phris ('fort of the thicket') or Dron/Druim Phris ('ridge of the thicket'), with the second element cognate with Cumbric prēs ('brushwood').",
-      "current_repo_state": {
-        "b_tarr": "Dumfries",
-        "b_tarr_direct": "Dumfries",
-        "b_tarr_hist": "Dumfries",
-        "b_origin": "Dumfries (constituent holding of Annandâl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dumfries",
       "older_name_by_867": {
         "exists": false,
@@ -3824,18 +3380,11 @@
         {
           "form": "Cyil / Cuil",
           "language": "Cumbric / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "district name (traditionally linked to Coel Hen, or Gaelic coille 'wood' / cùil 'nook')"
         }
       ],
       "etymology_analysis": "Ancient comital district of Ayrshire, first recorded as campus Cyil in 750 AD; traditionally associated with the legendary Brittonic king Coel Hen.",
-      "current_repo_state": {
-        "b_tarr": "Kîl",
-        "b_tarr_direct": "Kîl",
-        "b_tarr_hist": "Kîl",
-        "b_origin": "Kîl — Historical Option A seat of c_ayrshire",
-        "b_anachronism": "",
-        "category": "option_a_seat"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kyle,_Ayrshire",
       "older_name_by_867": {
         "exists": false,
@@ -3870,23 +3419,17 @@
         {
           "form": "srath",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "wide valley, strath"
         },
         {
           "form": "Ghriobhaidh / Gryffe",
           "language": "Scottish Gaelic / Cumbric",
+          "language_code": "gla",
           "translation": "River Gryffe"
         }
       ],
       "etymology_analysis": "From Gaelic Srath Ghriobhaidh ('strath/valley of the River Gryffe'), recorded as Stragrif in 1169; 'Strathgryte' is a scribal variant of Strathgryfe.",
-      "current_repo_state": {
-        "b_tarr": "Strathgryte",
-        "b_tarr_direct": "Strathgryte",
-        "b_tarr_hist": "Strathgryte",
-        "b_origin": "Strathgryte (constituent holding of Kîl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Strathgryffe",
       "older_name_by_867": {
         "exists": false,
@@ -3921,23 +3464,17 @@
         {
           "form": "Cunegan",
           "language": "Celtic / Gaelic (or Old English cyning 'king')",
+          "language_code": "cel",
           "translation": "uncertain (possibly 'rabbit' or 'king')"
         },
         {
           "form": "-ham",
           "language": "Old English / Scots",
+          "language_code": "ang",
           "translation": "homestead, village (later assimilation)"
         }
       ],
       "etymology_analysis": "Historic Ayrshire district first recorded as Cunegan in 1153, of uncertain Celtic origin (possibly Gaelic coineagan), later assimilated to the Old English/Scots suffix -ham ('homestead').",
-      "current_repo_state": {
-        "b_tarr": "Cunningheim",
-        "b_tarr_direct": "Cunningheim",
-        "b_tarr_hist": "Cunningheim",
-        "b_origin": "Cunningham (Gaelic/Scots Cunnyngham) calqued to Tarraconian Cunningheim (in-game: Cunningham)",
-        "b_anachronism": "Scoto-Saxon toponym calqued to Tarraconian Cunningheim.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cunninghame",
       "older_name_by_867": {
         "exists": false,
@@ -3972,23 +3509,17 @@
         {
           "form": "magh / minni",
           "language": "Scottish Gaelic / Cumbric",
+          "language_code": "gla",
           "translation": "plain / heath"
         },
         {
           "form": "baile / poll",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "settlement / pool"
         }
       ],
       "etymology_analysis": "First attested in 1193; likely from Gaelic magh-baile ('plain-settlement') or Cumbric/Gaelic elements meaning 'heath-pool' (early forms Minnibole).",
-      "current_repo_state": {
-        "b_tarr": "Karrich",
-        "b_tarr_direct": "Karrich",
-        "b_tarr_hist": "Karrich",
-        "b_origin": "Karrich (Carrick)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Maybole",
       "older_name_by_867": {
         "exists": false,
@@ -4023,23 +3554,17 @@
         {
           "form": "gwyrdd / garbh",
           "language": "Brythonic / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "green / rough"
         },
         {
           "form": "afon / abhainn",
           "language": "Brythonic / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Named after the River Girvan, from Brythonic *gwyrdd-afon ('green river') or Gaelic garbh-abhainn ('rough river').",
-      "current_repo_state": {
-        "b_tarr": "Girvan",
-        "b_tarr_direct": "Girvan",
-        "b_tarr_hist": "Girvan",
-        "b_origin": "Girvan (constituent holding of Karrich)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Girvan",
       "older_name_by_867": {
         "exists": false,
@@ -4074,23 +3599,17 @@
         {
           "form": "cill",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "church, chapel"
         },
         {
           "form": "Chùithbeirt",
           "language": "Scottish Gaelic (from Old English Cuthberht)",
+          "language_code": "gla",
           "translation": "of Cuthbert"
         }
       ],
       "etymology_analysis": "From Gaelic Cille Chùithbeirt ('chapel of Cuthbert'), early rendered Kilcudbrit; later Norse-Gaelic influence replaced cill with kirk to produce Kirkcudbright.",
-      "current_repo_state": {
-        "b_tarr": "Galwêje",
-        "b_tarr_direct": "Galwêje",
-        "b_tarr_hist": "Galwêje",
-        "b_origin": "Galwêje (Galloway)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kirkcudbright",
       "older_name_by_867": {
         "exists": false,
@@ -4125,23 +3644,17 @@
         {
           "form": "sean",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "old"
         },
         {
           "form": "cathair",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fort, stone enclosure"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic An t-Seanchair (sean + cathair), meaning 'the old fort'.",
-      "current_repo_state": {
-        "b_tarr": "Sanquhar",
-        "b_tarr_direct": "Sanquhar",
-        "b_tarr_hist": "Sanquhar",
-        "b_origin": "Sanquhar (constituent holding of Galwêje)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sanquhar",
       "older_name_by_867": {
         "exists": false,
@@ -4176,23 +3689,17 @@
         {
           "form": "wīc / Wicga / vík",
           "language": "Old English / Old Norse",
+          "language_code": "ang",
           "translation": "dwelling / personal name Wicga / bay"
         },
         {
           "form": "tūn",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "farmstead, settlement"
         }
       ],
       "etymology_analysis": "From Old English wīc-tūn ('dwelling place') or Wicga's tūn ('Wicga's farm'), or possibly Old Norse vík ('bay') + Old English tūn ('town on the bay').",
-      "current_repo_state": {
-        "b_tarr": "Wigtûn",
-        "b_tarr_direct": "Wigtûn",
-        "b_tarr_hist": "Wigtûn",
-        "b_origin": "Wigtown (Old English Wicga's tūn) calqued to Tarraconian Wigtûn (in-game: Wigtown)",
-        "b_anachronism": "Northumbrian Old English tūn calqued to Tarraconian Wigtûn.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wigtown",
       "older_name_by_867": {
         "exists": false,
@@ -4227,23 +3734,17 @@
         {
           "form": "dùn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fort"
         },
         {
           "form": "Breatann",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "of the Britons"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic Dùn Breatann ('fort of the Britons'), which replaced the earlier Cumbric name Alcluith / Alt Clut in the High Middle Ages.",
-      "current_repo_state": {
-        "b_tarr": "Alklût",
-        "b_tarr_direct": "Lennox",
-        "b_tarr_hist": "Alklût",
-        "b_origin": "Alklût (Alklût (in-game: Lennox))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dumbarton",
       "older_name_by_867": {
         "exists": true,
@@ -4281,23 +3782,17 @@
         {
           "form": "glas",
           "language": "Brittonic / Cumbric",
+          "language_code": "cym",
           "translation": "grey-green, grey-blue"
         },
         {
           "form": "*cöü",
           "language": "Brittonic / Cumbric",
+          "language_code": "cym",
           "translation": "hollow"
         }
       ],
       "etymology_analysis": "From Cumbric *glas-cöü ('green hollow', Gaelic Glaschu), first attested as Glasgu in 1116.",
-      "current_repo_state": {
-        "b_tarr": "Lennox",
-        "b_tarr_direct": "Lennox",
-        "b_tarr_hist": "Alklût",
-        "b_origin": "Lennox — Disambiguated capital seat from sub-barony Alklût",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glasgow",
       "older_name_by_867": {
         "exists": false,
@@ -4332,23 +3827,17 @@
         {
           "form": "mynydd / *monid",
           "language": "Brittonic",
+          "language_code": "cym",
           "translation": "mountain, moor"
         },
         {
           "form": "Teith",
           "language": "Brittonic / Celtic",
+          "language_code": "cym",
           "translation": "River Teith"
         }
       ],
       "etymology_analysis": "From a Brittonic cognate of Welsh mynydd ('moor/upland') combined with the river name Teith ('moor of the Teith').",
-      "current_repo_state": {
-        "b_tarr": "Meneith",
-        "b_tarr_direct": "Meneith",
-        "b_tarr_hist": "Meneith",
-        "b_origin": "Meneith (constituent holding of Alklût)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Menteith",
       "older_name_by_867": {
         "exists": false,
@@ -4383,23 +3872,17 @@
         {
           "form": "din / dùn",
           "language": "Cumbric / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "fort"
         },
         {
           "form": "bar / barra",
           "language": "Cumbric / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "summit, point, headland"
         }
       ],
       "etymology_analysis": "From Cumbric din-bar ('summit fort'), attested as Dynbaer in the 7th/8th-century Vita Sancti Wilfrithi and later Gaelicised as Dùn Barra.",
-      "current_repo_state": {
-        "b_tarr": "Dunbâr",
-        "b_tarr_direct": "Dunbâr",
-        "b_tarr_hist": "Dunbâr",
-        "b_origin": "Dunbâr (Dunbar)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dunbar",
       "older_name_by_867": {
         "exists": false,
@@ -4434,23 +3917,17 @@
         {
           "form": "bere",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "barley"
         },
         {
           "form": "wīc",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "farm, outlying grange"
         }
       ],
       "etymology_analysis": "From Old English bere-wīc ('barley farm' or 'outlying grain-farm of a manor'), first recorded as Berewich in 1167.",
-      "current_repo_state": {
-        "b_tarr": "Berwîch",
-        "b_tarr_direct": "Berwîch",
-        "b_tarr_hist": "Berwîch",
-        "b_origin": "Berwick-upon-Tweed (Old English Bere-wīc, barley farm/granary) calqued to Tarraconian Berwîch (in-game: Berwick)",
-        "b_anachronism": "Northumbrian Old English toponym calqued to Tarraconian Berwîch.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Berwick-upon-Tweed",
       "older_name_by_867": {
         "exists": false,
@@ -4485,18 +3962,11 @@
         {
           "form": "lanerc",
           "language": "Brittonic / Cumbric",
+          "language_code": "cym",
           "translation": "clear space, glade"
         }
       ],
       "etymology_analysis": "From Cumbric/Brittonic lanerc ('clear space, glade'; cf. Welsh llannerch).",
-      "current_repo_state": {
-        "b_tarr": "Lânark",
-        "b_tarr_direct": "Lânark",
-        "b_tarr_hist": "Lânark",
-        "b_origin": "Ancient Strathclyde burgh Lanark on the Clyde (chartered 1140 AD; site of Roman fort Castledykes) (in-game: Lanark)",
-        "b_anachronism": "Post-867 royal burgh (chartered 1140 AD by David I); secondary holding disambiguated from Option A seat Kadjo.",
-        "category": "secondary_holding_disambiguation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lanark",
       "older_name_by_867": {
         "exists": false,
@@ -4531,18 +4001,11 @@
         {
           "form": "Cadzow / Cadihou",
           "language": "Cumbric / Brittonic",
+          "language_code": "cym",
           "translation": "uncertain (possibly 'battle-hollow' or personal name)"
         }
       ],
       "etymology_analysis": "Pre-1455 name of Hamilton (Middle Scots Cadȝow, pronounced 'Cadyou', with the letter yogh); a Brittonic/Strathclyde name attested in David I's charters from 1139.",
-      "current_repo_state": {
-        "b_tarr": "Kadjo",
-        "b_tarr_direct": "Kadjo",
-        "b_tarr_hist": "Kadjo",
-        "b_origin": "Ancient Strathclyde Brythonic comital center Cadzow (Cadyou) (in-game: Kadjo)",
-        "b_anachronism": "Authentic Pre-867 Strathclyde Royal Center.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hamilton,_South_Lanarkshire",
       "older_name_by_867": {
         "exists": false,
@@ -4577,18 +4040,11 @@
         {
           "form": "Bigir / Biggar",
           "language": "Scottish Gaelic / Cumbric",
+          "language_code": "gla",
           "translation": "uncertain (possibly 'soft/boggy land' or 'small fort')"
         }
       ],
       "etymology_analysis": "First attested c. 1160 (Bigir 1164); the name is of Celtic (Gaelic or Cumbric) origin, though its exact etymology is uncertain.",
-      "current_repo_state": {
-        "b_tarr": "Biggar",
-        "b_tarr_direct": "Biggar",
-        "b_tarr_hist": "Biggar",
-        "b_origin": "Biggar (constituent holding of Klîdesdal)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Biggar,_South_Lanarkshire",
       "older_name_by_867": {
         "exists": false,
@@ -4623,28 +4079,23 @@
         {
           "form": "lynn",
           "language": "Cumbric / Old Welsh",
+          "language_code": "cym",
           "translation": "lake, loch"
         },
         {
           "form": "llaith",
           "language": "Cumbric / Old Welsh",
+          "language_code": "cym",
           "translation": "moist, damp"
         },
         {
           "form": "cau",
           "language": "Cumbric / Old Welsh",
+          "language_code": "cym",
           "translation": "hollow"
         }
       ],
       "etymology_analysis": "From Cumbric/Old Welsh lynn llaith cau ('lake in the moist hollow'), originally referring to Linlithgow Loch itself.",
-      "current_repo_state": {
-        "b_tarr": "Aberkôrn",
-        "b_tarr_direct": "Aberkôrn",
-        "b_tarr_hist": "Aberkôrn",
-        "b_origin": "Ancient Northumbrian episcopal see Abercorn on the Forth (attested 681 AD) (in-game: Aberkôrn)",
-        "b_anachronism": "Authentic Pre-867 Northumbrian Episcopal See (attested 681 AD).",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Linlithgow",
       "older_name_by_867": {
         "exists": false,
@@ -4679,23 +4130,17 @@
         {
           "form": "Queen's",
           "language": "Scots / English",
+          "language_code": "sco",
           "translation": "of the Queen (Margaret)"
         },
         {
           "form": "ferry",
           "language": "Scots / English",
+          "language_code": "sco",
           "translation": "ferry crossing"
         }
       ],
       "etymology_analysis": "English/Scots translation of Medieval Latin Portus Regine / Passagium Regine ('the Queen's Ferry'), named for Queen Margaret (d. 1093).",
-      "current_repo_state": {
-        "b_tarr": "Queensferry",
-        "b_tarr_direct": "Queensferry",
-        "b_tarr_hist": "Queensferry",
-        "b_origin": "Queensferry (constituent holding of Aberkôrn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/South_Queensferry",
       "older_name_by_867": {
         "exists": false,
@@ -4730,23 +4175,17 @@
         {
           "form": "faw",
           "language": "Scots (from Old English fag)",
+          "language_code": "sco",
           "translation": "speckled, variegated"
         },
         {
           "form": "kirk",
           "language": "Scots",
+          "language_code": "sco",
           "translation": "church"
         }
       ],
       "etymology_analysis": "Scots calque (Fawkirk, later anglicised to Falkirk) of Gaelic An Eaglais Bhreac / Brittonic Egglesbreth ('speckled church', Latin Varia Capella).",
-      "current_repo_state": {
-        "b_tarr": "Fawkirk",
-        "b_tarr_direct": "Fawkirk",
-        "b_tarr_hist": "Fawkirk",
-        "b_origin": "Ancient Brythonic/Gaelic church site Egglesbreth on the Antonine Wall (in-game: Fawkirk)",
-        "b_anachronism": "Authentic Pre-867 Roman Wall Site.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Falkirk",
       "older_name_by_867": {
         "exists": false,
@@ -4781,23 +4220,17 @@
         {
           "form": "Edin",
           "language": "Cumbric (from Eidyn)",
+          "language_code": "cym",
           "translation": "Eidyn (regional name, meaning unknown)"
         },
         {
           "form": "burgh",
           "language": "Northumbrian Old English / Scots (burh)",
+          "language_code": "lat",
           "translation": "fort, fortified town"
         }
       ],
       "etymology_analysis": "Partial translation of Cumbric Din Eidyn ('fort of Eidyn'), in which Northumbrian Old English/Scots speakers replaced din ('fort') with burh ('fortress/burgh').",
-      "current_repo_state": {
-        "b_tarr": "Êdinburch",
-        "b_tarr_direct": "Lôthjen",
-        "b_tarr_hist": "Êdinburch",
-        "b_origin": "Êdinburch (Êdinburch (in-game: Lothian))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Edinburgh",
       "older_name_by_867": {
         "exists": true,
@@ -4834,28 +4267,23 @@
         {
           "form": "Hadda",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "personal name Hadda"
         },
         {
           "form": "-inga-",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "people/followers of"
         },
         {
           "form": "tūn",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "enclosure, farmstead, settlement"
         }
       ],
       "etymology_analysis": "Old English *Haddingatūn*, meaning 'farmstead/settlement of Hadda's people', dating linguistically to the 6th-7th century Bernician settlement of Lothian, though first documented as 'Hadintun' in 1139.",
-      "current_repo_state": {
-        "b_tarr": "Haddington",
-        "b_tarr_direct": "Haddington",
-        "b_tarr_hist": "Haddington",
-        "b_origin": "Haddington (constituent holding of Êdinburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Haddington",
       "older_name_by_867": {
         "exists": false,
@@ -4890,23 +4318,17 @@
         {
           "form": "Gala",
           "language": "Brittonic / Old English",
+          "language_code": "cym",
           "translation": "river name (Gala Water)"
         },
         {
           "form": "shiels",
           "language": "Scots",
+          "language_code": "sco",
           "translation": "huts, temporary shelters (from OE *scēla / ON skáli)"
         }
       ],
       "etymology_analysis": "Compound of the river name Gala (Gala Water) and Scots 'shiels' (sheilings, huts or shelters by the river), first attested in the early 15th century (1416).",
-      "current_repo_state": {
-        "b_tarr": "Galaschiels",
-        "b_tarr_direct": "Galaschiels",
-        "b_tarr_hist": "Galaschiels",
-        "b_origin": "Galaschiels (constituent holding of Êdinburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Galashiels",
       "older_name_by_867": {
         "exists": false,
@@ -4941,23 +4363,17 @@
         {
           "form": "pen",
           "language": "Brittonic",
+          "language_code": "cym",
           "translation": "head, hill, summit (cf. Welsh pen)"
         },
         {
           "form": "cog",
           "language": "Brittonic",
+          "language_code": "cym",
           "translation": "cuckoo (cf. Welsh cog)"
         }
       ],
       "etymology_analysis": "From Brittonic *Pen-y-cog ('hill of the cuckoo'), surviving into Scottish Gaelic as Ceann na Cuthaige; first recorded as 'Penicok' in 1296.",
-      "current_repo_state": {
-        "b_tarr": "Penicuick",
-        "b_tarr_direct": "Penicuick",
-        "b_tarr_hist": "Penicuick",
-        "b_origin": "Penicuick (constituent holding of Êdinburch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Penicuik",
       "older_name_by_867": {
         "exists": false,
@@ -4992,23 +4408,17 @@
         {
           "form": "calc",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "chalk, limestone"
         },
         {
           "form": "hōh",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "heel, spur of land, outcrop (Scots heugh)"
         }
       ],
       "etymology_analysis": "From Old English *calc-hōh ('chalky outcrop/hill-spur'), recorded as 'Calkou' in 1128 (echoed in modern Chalkheugh Terrace). A speculative identification with the Brittonic kingdom/region Calchfynydd lacks contemporary <=867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Tewjôtdâl",
-        "b_tarr_direct": "Tewjôtdâl",
-        "b_tarr_hist": "Tewjôtdâl",
-        "b_origin": "Tewjôtdâl (Teviotdale)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kelso,_Scottish_Borders",
       "older_name_by_867": {
         "exists": false,
@@ -5043,23 +4453,17 @@
         {
           "form": "Ged",
           "language": "Brittonic / Old English",
+          "language_code": "cym",
           "translation": "river name (Jed Water)"
         },
         {
           "form": "worþ / weorþ",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "enclosed settlement, homestead (later replaced by -burgh)"
         }
       ],
       "etymology_analysis": "Originally Old English *Gedwearde / *Gedworð ('enclosed settlement on the River Jed'), founded under Bishop Ecgred of Lindisfarne (830-845 AD); '-burgh' later replaced '-worth', though 'Jeddart/Jethart' preserves the earlier form.",
-      "current_repo_state": {
-        "b_tarr": "Jedburch",
-        "b_tarr_direct": "Jedburch",
-        "b_tarr_hist": "Jedburch",
-        "b_origin": "Jedburch (constituent holding of Tewjôtdâl)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jedburgh",
       "older_name_by_867": {
         "exists": false,
@@ -5094,23 +4498,17 @@
         {
           "form": "sele",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "hall, manor"
         },
         {
           "form": "cirice",
           "language": "Old English",
+          "language_code": "ang",
           "translation": "church (Scots kirk)"
         }
       ],
       "etymology_analysis": "From Old English *sele-cirice ('church by the hall/manor'), attested from c. 1113 in charters of David I.",
-      "current_repo_state": {
-        "b_tarr": "Selkirchen",
-        "b_tarr_direct": "Selkirchen",
-        "b_tarr_hist": "Selkirchen",
-        "b_origin": "Selkirk (Old English Sele-cyrice, hall-church) calqued to Tarraconian Selkirchen (in-game: Selkirk)",
-        "b_anachronism": "Northumbrian Old English church toponym calqued to Selkirchen.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Selkirk,_Scottish_Borders",
       "older_name_by_867": {
         "exists": false,
@@ -5145,18 +4543,11 @@
         {
           "form": "Banbh / Bean-naomh",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "uncertain; possibly 'holy woman' (bean-naomh) or 'piglet' (banbh), or related to Banbha"
         }
       ],
       "etymology_analysis": "Recorded as 'Banb' in the 12th-century Book of Deer; W. J. Watson and others link it to Gaelic *bean-naomh* ('holy woman', reflected in the burgh's Virgin Mary arms) or *Banbha*, rather than *banbh* ('piglet').",
-      "current_repo_state": {
-        "b_tarr": "Bûchan",
-        "b_tarr_direct": "Bûchan",
-        "b_tarr_hist": "Bûchan",
-        "b_origin": "Bûchan (Buchan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Banff,_Aberdeenshire",
       "older_name_by_867": {
         "exists": false,
@@ -5191,23 +4582,17 @@
         {
           "form": "mòr",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "great, large"
         },
         {
           "form": "tulach / lag",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "hillock / hollow (Mòrthlach)"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Mòrthlach*, denoting a large hollow or hillock. Although a Class II Pictish stone and tradition of St Moluag (c. 566) exist at the church site, the name itself is first reliably documented in the 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Mortlach",
-        "b_tarr_direct": "Mortlach",
-        "b_tarr_hist": "Mortlach",
-        "b_origin": "Mortlach (constituent holding of Bûchan)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mortlach_Parish_Church",
       "older_name_by_867": {
         "exists": false,
@@ -5242,23 +4627,17 @@
         {
           "form": "Peter",
           "language": "English / Scots",
+          "language_code": "eng",
           "translation": "Saint Peter"
         },
         {
           "form": "head",
           "language": "Scots / English",
+          "language_code": "sco",
           "translation": "headland, promontory"
         }
       ],
       "etymology_analysis": "Founded in 1593 as a planned fishing port on the headland ('head') of the parish dedicated to St Peter; earlier 1560 grants call the site 'Peterugie' or 'Inverugie of St Peter'.",
-      "current_repo_state": {
-        "b_tarr": "Inverûgje",
-        "b_tarr_direct": "Inverûgje",
-        "b_tarr_hist": "Inverûgje",
-        "b_origin": "Mouth of the River Ugie / Deer Abbey catchment (pre-867 Celtic toponym, replacing 1593 Peterhead) (in-game: Inverûgje)",
-        "b_anachronism": "Planned fishing port founded in 1593 by George Keith, 5th Earl Marischal. Resolved via Option B to the ancient mouth of the River Ugie (Inverûgje).",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Peterhead",
       "older_name_by_867": {
         "exists": false,
@@ -5293,23 +4672,17 @@
         {
           "form": "þjórr / Þór",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "bull (translating Celtic *tarvos) or the god Thor"
         },
         {
           "form": "á",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "river, water"
         }
       ],
       "etymology_analysis": "From Old Norse *Þjórsá* ('bull river', likely a Norse translation of an earlier Celtic *Tarvodubron* 'bull water', or reinterpreted as 'Thor's river'), anglicized as Thurso. First documented in Norse saga traditions of the 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Katanês",
-        "b_tarr_direct": "Katanês",
-        "b_tarr_hist": "Katanês",
-        "b_origin": "Katanês (Caithness)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thurso",
       "older_name_by_867": {
         "exists": false,
@@ -5344,18 +4717,11 @@
         {
           "form": "vík",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "bay, inlet, creek"
         }
       ],
       "etymology_analysis": "From Old Norse *vík* ('bay, inlet'), referring to Wick Bay. Although 8th-century Christian missions (St Fergus) and Viking activity occurred in the area, the Norse name 'Wick' is first attested in 12th-century saga and charter sources.",
-      "current_repo_state": {
-        "b_tarr": "Wick",
-        "b_tarr_direct": "Wick",
-        "b_tarr_hist": "Wick",
-        "b_origin": "Wick (constituent holding of Katanês)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wick,_Caithness",
       "older_name_by_867": {
         "exists": false,
@@ -5390,23 +4756,17 @@
         {
           "form": "inbhir",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "river mouth, confluence"
         },
         {
           "form": "Nis / Nesa",
           "language": "Pictish / Celtic",
+          "language_code": "cel",
           "translation": "River Ness (attested as 'Nesa' in Adomnán c. 700)"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Inbhir Nis* ('mouth of the River Ness'). While Adomnán's *Vita Columbae* (c. 700) attests the River Ness (*Nesa*) and King Bridei's fortress nearby, the settlement name 'Inverness' (*Invernis*) is first documented in 12th-century charters of David I.",
-      "current_repo_state": {
-        "b_tarr": "Nessmunde",
-        "b_tarr_direct": "Nessmunde",
-        "b_tarr_hist": "Nessmunde",
-        "b_origin": "Nessmunde (Inverness)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Inverness",
       "older_name_by_867": {
         "exists": false,
@@ -5441,23 +4801,17 @@
         {
           "form": "bàidhte",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "drowned, submerged"
         },
         {
           "form": "-anach",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "place/district suffix"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Bàideanach* ('the drowned land'), referring to the floodplains of the upper River Spey and Insh Marshes. First recorded as 'Badenach' c. 1229.",
-      "current_repo_state": {
-        "b_tarr": "Badenoch",
-        "b_tarr_direct": "Badenoch",
-        "b_tarr_hist": "Badenoch",
-        "b_origin": "Badenoch (constituent holding of Nessmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Badenoch",
       "older_name_by_867": {
         "exists": false,
@@ -5492,23 +4846,17 @@
         {
           "form": "gleann",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "glen, valley"
         },
         {
           "form": "Fhionnain",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "genitive of Fionnan (River Finnan / St Finnan)"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Gleann Fhionnain* ('glen of the Finnan' or 'St Finnan's glen'), only entering prominent historical record in the 18th century (1745 Jacobite rising).",
-      "current_repo_state": {
-        "b_tarr": "Glenfinnan",
-        "b_tarr_direct": "Glenfinnan",
-        "b_tarr_hist": "Glenfinnan",
-        "b_origin": "Glenfinnan (constituent holding of Nessmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glenfinnan",
       "older_name_by_867": {
         "exists": false,
@@ -5543,23 +4891,17 @@
         {
           "form": "aird / air",
           "language": "Old Irish / Pictish",
+          "language_code": "sga",
           "translation": "point, promontory, or beside"
         },
         {
           "form": "cardden",
           "language": "Pictish / Brittonic",
+          "language_code": "cel",
           "translation": "thicket, wood (cf. Old Welsh cardden)"
         }
       ],
       "etymology_analysis": "Derived from the 7th-century form *Airdchartdan* attested in Adomnán's *Vita Columbae*, a hybrid of Old Irish *aird* ('point/promontory') and Brittonic/Pictish *cardden* ('thicket/wood'), later evolving to Urquhart.",
-      "current_repo_state": {
-        "b_tarr": "Urquhart",
-        "b_tarr_direct": "Urquhart",
-        "b_tarr_hist": "Urquhart",
-        "b_origin": "Urquhart (constituent holding of Nessmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Urquhart_Castle",
       "older_name_by_867": {
         "exists": false,
@@ -5594,23 +4936,17 @@
         {
           "form": "gleann",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "glen, valley"
         },
         {
           "form": "Eilg",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "genitive of Ealg (poetic name for Ireland, or 'noble/worthy')"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Gleann Eilg*, containing *gleann* ('valley') and *Eilg* (poetic Gaelic name for Ireland or 'noble'). First attested in a charter of 1282.",
-      "current_repo_state": {
-        "b_tarr": "Glenelg",
-        "b_tarr_direct": "Glenelg",
-        "b_tarr_hist": "Glenelg",
-        "b_origin": "Glenelg (constituent holding of Nessmunde)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glenelg,_Highland",
       "older_name_by_867": {
         "exists": false,
@@ -5645,23 +4981,17 @@
         {
           "form": "ealg / àille",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "Ireland / worthy, or beauty"
         },
         {
           "form": "-inn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "diminutive / locative suffix"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Eilginn*, probably from *ealg* ('Ireland', 'worthy') or *àille* ('beauty') with diminutive *-inn*. First recorded in a charter of David I in 1151.",
-      "current_repo_state": {
-        "b_tarr": "Murêwe",
-        "b_tarr_direct": "Murêwe",
-        "b_tarr_hist": "Murêwe",
-        "b_origin": "Murêwe (Moray)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Elgin,_Moray",
       "older_name_by_867": {
         "exists": false,
@@ -5696,18 +5026,11 @@
         {
           "form": "cēt / coed",
           "language": "Brittonic / Pictish",
+          "language_code": "cym",
           "translation": "wood, forest (cf. Welsh coed)"
         }
       ],
       "etymology_analysis": "From a Brittonic/Pictish word meaning 'wood' (cognate with Welsh *coed*), or linked to the Pictish province *Cé*. First documented c. 1180 as 'Kethmalruff' (reflecting an earlier dedication to St Maol Rubha, d. 722).",
-      "current_repo_state": {
-        "b_tarr": "Keith",
-        "b_tarr_direct": "Keith",
-        "b_tarr_hist": "Keith",
-        "b_origin": "Keith (constituent holding of Murêwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Keith,_Moray",
       "older_name_by_867": {
         "exists": false,
@@ -5742,23 +5065,17 @@
         {
           "form": "garbh",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "rough, rugged"
         },
         {
           "form": "-each",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "place/collective suffix"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Gairbheach* ('place of roughness'), first attested as 'Garviach' in a royal charter dated 1178-1182.",
-      "current_repo_state": {
-        "b_tarr": "Garioch",
-        "b_tarr_direct": "Garioch",
-        "b_tarr_hist": "Garioch",
-        "b_origin": "Garioch (constituent holding of Murêwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Garioch",
       "older_name_by_867": {
         "exists": false,
@@ -5793,23 +5110,17 @@
         {
           "form": "þing",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "assembly, parliament"
         },
         {
           "form": "vǫllr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "field, plain"
         }
       ],
       "etymology_analysis": "From Old Norse *Þingvǫllr* ('assembly field'), marking a Viking-Age Norse assembly site, though first entering the written historical record in Alexander II's burgh charter of 1226.",
-      "current_repo_state": {
-        "b_tarr": "Ros-in-Albe",
-        "b_tarr_direct": "Ros-in-Albe",
-        "b_tarr_hist": "Ros-in-Albe",
-        "b_origin": "Ros-in-Albe (Ross)",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ros-in-Albe).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dingwall",
       "older_name_by_867": {
         "exists": false,
@@ -5844,23 +5155,17 @@
         {
           "form": "geàrr",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "short"
         },
         {
           "form": "loch",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "loch, sea-inlet"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Geàrrloch* ('short loch'), referring to Loch Gairloch; first attested in charter records in 1366.",
-      "current_repo_state": {
-        "b_tarr": "Gairloch",
-        "b_tarr_direct": "Gairloch",
-        "b_tarr_hist": "Gairloch",
-        "b_origin": "Gairloch (constituent holding of Ros-in-Albe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gairloch",
       "older_name_by_867": {
         "exists": false,
@@ -5895,18 +5200,11 @@
         {
           "form": "*ta-",
           "language": "Proto-Indo-European / Celtic",
+          "language_code": "cel",
           "translation": "to flow (river name River Tain)"
         }
       ],
       "etymology_analysis": "Derived from the nearby River Tain (from an Indo-European/Celtic root meaning 'flow'). Its Gaelic name *Baile Dhubhthaich* ('Duthac's town') honours St Duthac (d. 1065). First attested in 1066.",
-      "current_repo_state": {
-        "b_tarr": "Tain",
-        "b_tarr_direct": "Tain",
-        "b_tarr_hist": "Tain",
-        "b_origin": "Tain (constituent holding of Ros-in-Albe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tain",
       "older_name_by_867": {
         "exists": false,
@@ -5941,23 +5239,17 @@
         {
           "form": "apor / aber",
           "language": "Pictish",
+          "language_code": "cel",
           "translation": "river mouth, confluence"
         },
         {
           "form": "Crosan",
           "language": "Scottish Gaelic / Pictish",
+          "language_code": "gla",
           "translation": "River Crossan (from cros, 'cross')"
         }
       ],
       "etymology_analysis": "Anglicization (by folk etymology) of Pictish *Aporcrosan* ('confluence of the River Crossan'), attested in the Irish Annals from 673 AD (also 722, 802 AD). Modern Gaelic name is *A' Chomraich* ('The Sanctuary').",
-      "current_repo_state": {
-        "b_tarr": "Applecross",
-        "b_tarr_direct": "Applecross",
-        "b_tarr_hist": "Applecross",
-        "b_origin": "Applecross (constituent holding of Ros-in-Albe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Applecross",
       "older_name_by_867": {
         "exists": false,
@@ -5992,23 +5284,17 @@
         {
           "form": "dorn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "fist (fist-sized pebble)"
         },
         {
           "form": "-ach",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "place abounding in"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Dòrnach* ('pebbly place', i.e. stones the size of a fist). Although archaeological evidence shows 8th-11th century activity, the name is first documented in the early 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Sûderlant",
-        "b_tarr_direct": "Sûderlant",
-        "b_tarr_hist": "Sûderlant",
-        "b_origin": "Sûderlant (Sutherland)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dornoch",
       "older_name_by_867": {
         "exists": false,
@@ -6043,23 +5329,17 @@
         {
           "form": "dýr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "deer, animal (or Gaelic dubh-rinn, 'black promontory')"
         },
         {
           "form": "nes",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "headland, promontory"
         }
       ],
       "etymology_analysis": "Likely from Old Norse *Dýrnes* ('deer headland'), or Old Norse *-nes* appended to Gaelic *Dubh Rinn* ('black promontory'). Attested from the 13th century.",
-      "current_repo_state": {
-        "b_tarr": "Durness",
-        "b_tarr_direct": "Durness",
-        "b_tarr_hist": "Durness",
-        "b_origin": "Durness (constituent holding of Sûderlant)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Durness",
       "older_name_by_867": {
         "exists": false,
@@ -6094,23 +5374,17 @@
         {
           "form": "áss",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "ridge, rocky ridge"
         },
         {
           "form": "endi",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "end"
         }
       ],
       "etymology_analysis": "Probably from Old Norse *Ásendi* ('ridge end', Gaelicized as *Asainn* / *Asainte*), first documented in a royal charter of c. 1343.",
-      "current_repo_state": {
-        "b_tarr": "Assynt",
-        "b_tarr_direct": "Assynt",
-        "b_tarr_hist": "Assynt",
-        "b_origin": "Assynt (constituent holding of Sûderlant)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Assynt",
       "older_name_by_867": {
         "exists": false,
@@ -6145,23 +5419,17 @@
         {
           "form": "castle",
           "language": "Middle English",
+          "language_code": "enm",
           "translation": "castle (Castle Rushen)"
         },
         {
           "form": "town",
           "language": "Middle English",
+          "language_code": "enm",
           "translation": "town, settlement"
         }
       ],
       "etymology_analysis": "English 'Castletown' (Manx *Balley y Chashtal*), named after Castle Rushen (built/first mentioned 1265), replacing the older district/town name *Rushen* (*Russin*).",
-      "current_repo_state": {
-        "b_tarr": "Mân-Insel",
-        "b_tarr_direct": "Mân-Insel",
-        "b_tarr_hist": "Mân-Insel",
-        "b_origin": "Mân-Insel (Isle of Man)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Castletown,_Isle_of_Man",
       "older_name_by_867": {
         "exists": false,
@@ -6196,23 +5464,17 @@
         {
           "form": "hrams",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "wild garlic, ramsons (Allium ursinum)"
         },
         {
           "form": "á",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "river"
         }
       ],
       "etymology_analysis": "From Old Norse *Hramsá* ('wild garlic river', Manx *Rhumsaa*), first recorded in the 13th-century *Chronicles of Mann* in accounts of 11th-12th century Norse rulers.",
-      "current_repo_state": {
-        "b_tarr": "Ramsey",
-        "b_tarr_direct": "Ramsey",
-        "b_tarr_hist": "Ramsey",
-        "b_origin": "Ramsey (constituent holding of Mân-Insel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ramsey,_Isle_of_Man",
       "older_name_by_867": {
         "exists": false,
@@ -6247,23 +5509,17 @@
         {
           "form": "cill",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "church, monastic cell"
         },
         {
           "form": "Mhàrtainn",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "of Saint Martin"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Cille Mhàrtainn* ('church of Saint Martin'). While 9th-10th century carved crosses survive at the church and nearby Dunadd is attested in 683 AD, the name 'Kilmartin' is only documented from the late medieval period.",
-      "current_repo_state": {
-        "b_tarr": "Dâlrîade",
-        "b_tarr_direct": "Argîl",
-        "b_tarr_hist": "Dâlrîade",
-        "b_origin": "Dâlrîade (Dâlrîade (in-game: Argyll))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kilmartin",
       "older_name_by_867": {
         "exists": true,
@@ -6301,23 +5557,17 @@
         {
           "form": "gleann",
           "language": "Scottish Gaelic",
+          "language_code": "gla",
           "translation": "glen, valley"
         },
         {
           "form": "Comhann",
           "language": "Scottish Gaelic / pre-Gaelic",
+          "language_code": "gla",
           "translation": "River Coe (meaning uncertain; possibly personal name Comhan)"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Gleann Comhann* ('glen of the River Coe'). The river name *Comhann* may predate Gaelic, though the settlement/glen name is first attested in the 14th century.",
-      "current_repo_state": {
-        "b_tarr": "Glencoe",
-        "b_tarr_direct": "Glencoe",
-        "b_tarr_hist": "Glencoe",
-        "b_origin": "Glencoe (constituent holding of Dâlrîade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Glen_Coe",
       "older_name_by_867": {
         "exists": false,
@@ -6352,18 +5602,11 @@
         {
           "form": "Lumonoy / Laomainn",
           "language": "Brittonic / Scottish Gaelic",
+          "language_code": "cym",
           "translation": "beacon (cf. Early Welsh llumon, 'beacon', referring to Ben Lomond)"
         }
       ],
       "etymology_analysis": "Attested as *stagnum Lumonoy* in the 9th-century *Historia Brittonum* (c. 828-830), deriving from Brittonic *llumon* ('beacon', reflected in Gaelic *Laomainn* for Ben Lomond / Loch Lomond).",
-      "current_repo_state": {
-        "b_tarr": "Lomond",
-        "b_tarr_direct": "Lomond",
-        "b_tarr_hist": "Lomond",
-        "b_origin": "Lomond (constituent holding of Dâlrîade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Loch_Lomond",
       "older_name_by_867": {
         "exists": false,
@@ -6398,23 +5641,17 @@
         {
           "form": "àird / artda",
           "language": "Old Irish / Scottish Gaelic",
+          "language_code": "sga",
           "translation": "height, headland, promontory"
         },
         {
           "form": "muirchol / murchon",
           "language": "Old Irish / Scottish Gaelic",
+          "language_code": "sga",
           "translation": "sea-hounds (otters or whales/porpoises)"
         }
       ],
       "etymology_analysis": "Attested as *Artda Muirchol* in Adomnán's *Vita Columbae* (c. 700 AD), meaning 'headland of the sea-hounds' (modern Gaelic *Àird nam Murchan*, anglicized as Ardnamurchan/Ardnamurchon).",
-      "current_repo_state": {
-        "b_tarr": "Ardnamurchon",
-        "b_tarr_direct": "Ardnamurchon",
-        "b_tarr_hist": "Ardnamurchon",
-        "b_origin": "Ardnamurchon (constituent holding of Dâlrîade)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ardnamurchan",
       "older_name_by_867": {
         "exists": false,
@@ -6449,18 +5686,11 @@
         {
           "form": "Ilea / Ìle",
           "language": "Pre-Gaelic (unknown)",
+          "language_code": "gla",
           "translation": "island name of unknown pre-Gaelic origin"
         }
       ],
       "etymology_analysis": "Attested as *Ilea* in Adomnán's *Vita Columbae* (c. 700 AD), *Ile* in early Irish records, and *Íl* in Old Norse; the root is pre-Gaelic and of unknown origin.",
-      "current_repo_state": {
-        "b_tarr": "Îone",
-        "b_tarr_direct": "Inner-Hebrîden",
-        "b_tarr_hist": "Îone",
-        "b_origin": "Îone (Îone (in-game: Inner Hebrides))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Islay",
       "older_name_by_867": {
         "exists": false,
@@ -6495,18 +5725,11 @@
         {
           "form": "Arainn / aran",
           "language": "Scottish Gaelic / Brittonic",
+          "language_code": "gla",
           "translation": "possibly 'high place' (cf. Middle Welsh aran) or 'kidney-shaped'"
         }
       ],
       "etymology_analysis": "Scottish Gaelic *Eilean Arainn*; scholars debate a Brittonic derivation (*aran*, 'high place') versus Gaelic *Árainn*. First attested in the 13th-century *Agallamh na Senórach*.",
-      "current_repo_state": {
-        "b_tarr": "Arran",
-        "b_tarr_direct": "Arran",
-        "b_tarr_hist": "Arran",
-        "b_origin": "Arran (constituent holding of Îone)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isle_of_Arran",
       "older_name_by_867": {
         "exists": false,
@@ -6541,18 +5764,11 @@
         {
           "form": "*malo-",
           "language": "Proto-Celtic / Pre-Celtic",
+          "language_code": "cel",
           "translation": "rising, prominent, headland"
         }
       ],
       "etymology_analysis": "Attested as *Maleos* in Ptolemy (2nd century AD) and *Malea* in Adomnán's *Vita Columbae* (c. 700 AD), yielding Scottish Gaelic *Muile* and English *Mull*.",
-      "current_repo_state": {
-        "b_tarr": "Zant-Theodorîch",
-        "b_tarr_direct": "Zant-Theodorîch",
-        "b_tarr_hist": "Zant-Theodorîch",
-        "b_origin": "Zant-Theodorîch (constituent holding of Îone)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isle_of_Mull",
       "older_name_by_867": {
         "exists": true,
@@ -6590,18 +5806,11 @@
         {
           "form": "*skitis / *skēth-",
           "language": "Pre-Gaelic / Celtic",
+          "language_code": "gla",
           "translation": "possibly 'winged' or 'notched' (Scia / Scith / Old Norse Skíð)"
         }
       ],
       "etymology_analysis": "Attested as *Scith* in the Annals of Ulster (668/701 AD), *Scia* in Adomnán (c. 700), and *Skíð* in Old Norse; likely from a pre-Gaelic or early Celtic root meaning 'winged' or 'notched'.",
-      "current_repo_state": {
-        "b_tarr": "Ljôdhas",
-        "b_tarr_direct": "Ûter-Hebrîden",
-        "b_tarr_hist": "Ljôdhas",
-        "b_origin": "Ljôdhas (Ljôdhas (in-game: Outer Hebrides))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1122 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isle_of_Skye",
       "older_name_by_867": {
         "exists": false,
@@ -6636,23 +5845,17 @@
         {
           "form": "ljóð / ljóðr",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "song / people (or Gaelic leogach, 'marshy')"
         },
         {
           "form": "hús",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "house"
         }
       ],
       "etymology_analysis": "Anglicized from Scottish Gaelic *Leòdhas*, which corresponds to Old Norse *Ljóðhús* ('song house' or 'house of people', possibly a Norse folk-etymological adaptation of a pre-Norse name like *leogach*, 'marshy'). First attested in 13th-century Norse sagas.",
-      "current_repo_state": {
-        "b_tarr": "Lewis",
-        "b_tarr_direct": "Lewis",
-        "b_tarr_hist": "Lewis",
-        "b_origin": "Lewis (constituent holding of Ljôdhas)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Isle_of_Lewis",
       "older_name_by_867": {
         "exists": false,
@@ -6687,23 +5890,17 @@
         {
           "form": "í",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "in"
         },
         {
           "form": "vist",
           "language": "Old Norse",
+          "language_code": "non",
           "translation": "abode, dwelling"
         }
       ],
       "etymology_analysis": "From Scottish Gaelic *Uibhist*, corresponding to Old Norse *Ívist* ('abode, dwelling'), likely a Norse adaptation of an older pre-Norse or Gaelic name. First attested in 13th-century Norse sagas (and as 'Ywst' in 1549).",
-      "current_repo_state": {
-        "b_tarr": "Uists",
-        "b_tarr_direct": "Uists",
-        "b_tarr_hist": "Uists",
-        "b_origin": "Uists (constituent holding of Ljôdhas)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uist",
       "older_name_by_867": {
         "exists": false,

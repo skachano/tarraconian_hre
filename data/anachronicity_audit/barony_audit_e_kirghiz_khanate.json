@@ -1,12 +1,28 @@
 {
   "metadata": {
     "empire": "e_kirghiz_khanate",
+    "scope": "e_kirghiz_khanate (88 baronies across k_naimania)",
+    "schema_version": "1.1.0",
     "baseline_year": 867,
-    "schema_version": "1.0",
+    "source_files": [
+      "data/ck3_title_tree.json",
+      "data/barony_holdings.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "True if the barony name is contemporarily attested as a settlement, fortress, or administrative unit by <= 867 CE.",
-      "natural_proper_name": "True if the barony name directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds).",
-      "older_name_by_867": "Records attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 88,
@@ -48,26 +64,17 @@
         {
           "form": "Ойгон (Oigon)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "dense / thick / forested (or lake name)"
         },
         {
           "form": "нуур (nuur)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Ойгон нуур (Oigon nuur), referring to the saltwater lake in Zavkhan Province.",
-      "current_repo_state": {
-        "name": "Oigôn",
-        "b_tarr": "Oigôn",
-        "b_tarr_direct": "Oigôn",
-        "b_tarr_hist": "Oigôn",
-        "b_origin": "Oigôn (Oigon)",
-        "b_anachronism": "",
-        "b_ipa": "[ɔ.ɪ.ˈɣoːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oigon_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -102,26 +109,17 @@
         {
           "form": "цэцэн (tsetsen)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "wise / sage"
         },
         {
           "form": "хайрхан (khairkhan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sacred mountain (honorific)"
         }
       ],
       "etymology_analysis": "Mongolian honorific oronym Цэцэн хайрхан (Tsetsen Khairkhan, 'Wise Sacred Mountain'), associated with Tsetsen-Uul sum in Zavkhan Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tsetsen-Uul,_Zavkhan",
       "older_name_by_867": {
         "exists": false,
@@ -156,26 +154,17 @@
         {
           "form": "тарвага (tarvaga)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "marmot"
         },
         {
           "form": "-тай (-tai)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "comitative suffix ('having / abounding in')"
         }
       ],
       "etymology_analysis": "Mongolian oronym Тарвагатай (Tarvagatai, 'abounding in marmots'), naming the Tarvagatai Nuruu range of the Khangai Mountains.",
-      "current_repo_state": {
-        "name": "Tarwagatâi",
-        "b_tarr": "Tarwagatâi",
-        "b_tarr_direct": "Tarwagatâi",
-        "b_tarr_hist": "Tarwagatâi",
-        "b_origin": "Tarwagatâi (Tarvagatai)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtar.wa.ɣa.taː.ɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tarvagatai_Nuruu_National_Park",
       "older_name_by_867": {
         "exists": false,
@@ -210,26 +199,17 @@
         {
           "form": "гал (gal)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "fire"
         },
         {
           "form": "-т (-t)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "possessive/attributive suffix ('with / having')"
         }
       ],
       "etymology_analysis": "Mongolian place name Галт (Galt, literally 'with fire / fiery'), a sum in southern Khövsgöl Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Galt,_Kh%C3%B6vsg%C3%B6l",
       "older_name_by_867": {
         "exists": false,
@@ -264,26 +244,17 @@
         {
           "form": "тариа (taria)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "grain / crop"
         },
         {
           "form": "-т (-t)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "possessive/attributive suffix ('with / having')"
         }
       ],
       "etymology_analysis": "Mongolian toponym Тариат (Tariat, 'having grain/crops'), a sum in Arkhangai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tariat",
       "older_name_by_867": {
         "exists": false,
@@ -318,21 +289,11 @@
         {
           "form": "Тэлмэн (Telmen)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "gentle-paced / ambling (horse gait, or proper lake name)"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Тэлмэн нуур (Telmen nuur), naming the saltwater lake in Zavkhan Province.",
-      "current_repo_state": {
-        "name": "Telmên",
-        "b_tarr": "Telmên",
-        "b_tarr_direct": "Telmên",
-        "b_tarr_hist": "Telmên",
-        "b_origin": "Telmên (Telmen)",
-        "b_anachronism": "",
-        "b_ipa": "[tɛl.ˈmeːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Telmen_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -367,26 +328,17 @@
         {
           "form": "их (ikh)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "great / big"
         },
         {
           "form": "уул (uul)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Mongolian compound Их-Уул (Ikh-Uul, 'Great Mountain'), a modern sum in Zavkhan Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ikh-Uul,_Zavkhan",
       "older_name_by_867": {
         "exists": false,
@@ -421,21 +373,11 @@
         {
           "form": "шарга (sharga)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "cream-colored / pale yellow (esp. horse coat)"
         }
       ],
       "etymology_analysis": "Mongolian toponym Шарга (Sharga, 'pale yellow / bay'), naming the sum and adjacent Shargyn Gobi basin in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "Scharge",
-        "b_tarr": "Scharge",
-        "b_tarr_direct": "Scharge",
-        "b_tarr_hist": "Scharge",
-        "b_origin": "Scharge (Sharga)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃar.ɡə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sharga,_Govi-Altai",
       "older_name_by_867": {
         "exists": false,
@@ -470,36 +412,29 @@
         {
           "form": "бумба (bumba)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "ritual vase / dome"
         },
         {
           "form": "-г (-g)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "attributive suffix"
         },
         {
           "form": "хайрхан (khairkhan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sacred mountain (honorific)"
         },
         {
           "form": "уул (uul)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Mongolian oronym Бумбаг Хайрхан уул (Bumbag Khairkhan Uul), combining 'vase/dome-shaped' with the honorific mountain title khairkhan and uul ('mountain').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -534,21 +469,11 @@
         {
           "form": "цээл (tseel)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "deep / clear / expansive (water or open space)"
         }
       ],
       "etymology_analysis": "Mongolian toponym Цээл (Tseel, 'deep/clear/expansive'), a sum in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "Zêl",
-        "b_tarr": "Zêl",
-        "b_tarr_direct": "Zêl",
-        "b_tarr_hist": "Zêl",
-        "b_origin": "Zêl (Tseel)",
-        "b_anachronism": "",
-        "b_ipa": "[tseːl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tseel,_Govi-Altai",
       "older_name_by_867": {
         "exists": false,
@@ -583,26 +508,17 @@
         {
           "form": "алаг (alag)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "variegated / mottled / piebald"
         },
         {
           "form": "хайрхан (khairkhan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sacred mountain (honorific)"
         }
       ],
       "etymology_analysis": "Mongolian oronym Алаг хайрхан (Alag Khairkhan, 'Variegated Sacred Mountain'), referring to the 3,783 m peak in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -637,26 +553,17 @@
         {
           "form": "аж (aj)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "life / livelihood / being"
         },
         {
           "form": "богд (bogd)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "saint / sacred / holy"
         }
       ],
       "etymology_analysis": "Mongolian oronym Аж Богд (Aj Bogd), a major branch range of the Mongolian Altai in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd",
       "older_name_by_867": {
         "exists": false,
@@ -691,26 +598,17 @@
         {
           "form": "нүцгэн (nütsgen)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "bare / naked / treeless"
         },
         {
           "form": "уул (uul)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Mongolian oronym Нүцгэн уул (Nütsgen Uul, 'Bare Mountain'), referring to a treeless desert/steppe mountain.",
-      "current_repo_state": {
-        "name": "Zarmân",
-        "b_tarr": "Zarmân",
-        "b_tarr_direct": "Zarmân",
-        "b_tarr_hist": "Zarmân",
-        "b_origin": "Zarmân (Zarman)",
-        "b_anachronism": "",
-        "b_ipa": "[tsar.ˈmaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -745,26 +643,17 @@
         {
           "form": "ээж (eej)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mother"
         },
         {
           "form": "хайрхан (khairkhan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sacred mountain (honorific)"
         }
       ],
       "etymology_analysis": "Mongolian honorific oronym Ээж хайрхан (Eej Khairkhan, 'Mother Sacred Mountain'), a natural monument in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -799,21 +688,11 @@
         {
           "form": "Зарман (Zarman)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Zarman (oasis / desert basin name)"
         }
       ],
       "etymology_analysis": "Mongolian topographic name Зарман (Zarman), designating the Zarman semi-desert oasis basin in Govi-Altai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -848,31 +727,23 @@
         {
           "form": "тофа (tofa)",
           "language": "Tofalar",
+          "language_code": "tyv",
           "translation": "Tofa (endonym of the Tofalar people)"
         },
         {
           "form": "-лар (-lar)",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "plural suffix"
         },
         {
           "form": "-ия (-iya)",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "territorial/country suffix"
         }
       ],
       "etymology_analysis": "Modern Russian choronym Тофалария (Tofalaria), formed from the Turkic ethnonym Tofalar (Tofa + plural -lar) with the Russian territorial suffix -iya.",
-      "current_repo_state": {
-        "name": "Burugu Âllâr",
-        "b_tarr": "Burugu Âllâr",
-        "b_tarr_direct": "Burugu Âllâr",
-        "b_tarr_hist": "Burugu Âllâr",
-        "b_origin": "Burugu Âllâr (Burugu Aallar)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbʊ.rʊ.ɣʊ aː.ˈʎaːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tofalaria",
       "older_name_by_867": {
         "exists": true,
@@ -909,21 +780,11 @@
         {
           "form": "Миричун (Mirichun)",
           "language": "Sayan Turkic / Samoyedic substrate",
+          "language_code": "tur",
           "translation": "Mirichun (river and karst area name)"
         }
       ],
       "etymology_analysis": "Siberian hydronym Миричун (Mirichun), a river and karst district in the Eastern Sayan highlands of Nizhneudinsky District, Irkutsk Oblast.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -958,26 +819,17 @@
         {
           "form": "их (ikh)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "great / big"
         },
         {
           "form": "оргил (orgil)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "peak / summit"
         }
       ],
       "etymology_analysis": "Mongolian descriptive compound Их Оргил (Ikh Orgil, 'Great Peak').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1012,26 +864,17 @@
         {
           "form": "Кандат (Kandat)",
           "language": "Yeniseian / Samoyedic substrate",
+          "language_code": "qwe",
           "translation": "Kandat (Siberian river/mountain name)"
         },
         {
           "form": "уул (uul)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Hybrid toponym combining the Siberian substrate name Kandat (attested in the Kandat River of Krasnoyarsk Krai) with Mongolian uul ('mountain').",
-      "current_repo_state": {
-        "name": "Tschagdy Âllâr",
-        "b_tarr": "Tschagdy Âllâr",
-        "b_tarr_direct": "Tschagdy Âllâr",
-        "b_tarr_hist": "Tschagdy Âllâr",
-        "b_origin": "Tschagdy Âllâr (Chagdy Aallar)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃaɡ.dɪ aː.ˈʎaːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1066,21 +909,11 @@
         {
           "form": "Казыр (Kazyr)",
           "language": "Sayan Turkic",
+          "language_code": "tur",
           "translation": "fierce / rapid / steep (from Turkic qazïr)"
         }
       ],
       "etymology_analysis": "Sayan Turkic hydronym Казыр (Kazyr, 'fierce / rapid'), describing the turbulent mountain river that joins the Amyl to form the Tuba.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kazyr",
       "older_name_by_867": {
         "exists": false,
@@ -1115,21 +948,11 @@
         {
           "form": "Казас (Kazas)",
           "language": "Shor / Yeniseian substrate",
+          "language_code": "alt",
           "translation": "Kazas (Shor river and settlement name)"
         }
       ],
       "etymology_analysis": "Southern Siberian toponym Казас (Kazas), naming a historical Shor settlement and tributary in Mountainous Shoria.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1164,21 +987,11 @@
         {
           "form": "Ергаки (Ergaki)",
           "language": "Sayan Turkic",
+          "language_code": "tur",
           "translation": "fingers / jagged peaks (cf. Tuvan ergek 'thumb/finger')"
         }
       ],
       "etymology_analysis": "Sayan Turkic oronym Ергаки (Ergaki), traditionally linked to Tuvan ergek ('thumb / finger'), referring to the jagged granite spires of the Western Sayan range.",
-      "current_repo_state": {
-        "name": "Songû Âllâr",
-        "b_tarr": "Songû Âllâr",
-        "b_tarr_direct": "Songû Âllâr",
-        "b_tarr_hist": "Songû Âllâr",
-        "b_origin": "Songû Âllâr (Songuu Aallar)",
-        "b_anachronism": "",
-        "b_ipa": "[sɔ.ˈŋuː aː.ˈʎaːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ergaki",
       "older_name_by_867": {
         "exists": false,
@@ -1213,26 +1026,17 @@
         {
           "form": "өргөгдөн (örgögdön)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "uplifted / elevated (pass. of örgö- 'to raise')"
         },
         {
           "form": "rok",
           "language": "English / Russian",
+          "language_code": "eng",
           "translation": "rock / crag (or CK3 suffix)"
         }
       ],
       "etymology_analysis": "Compound toponym combining Mongolian örgögdön ('uplifted/elevated') with rok ('rock').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1267,26 +1071,17 @@
         {
           "form": "балдырган (baldyrgan)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "hogweed / angelica (Heracleum)"
         },
         {
           "form": "-ныг (-nyg)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "attributive suffix ('abounding in')"
         }
       ],
       "etymology_analysis": "Tuvan oronym Балдырганныг (Baldyrgannyg, 'abounding in hogweed/angelica'), naming the Baldyrgannyg mountain ridge in southern Siberia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1321,26 +1116,17 @@
         {
           "form": "кара (kara)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "black"
         },
         {
           "form": "хөл (khöl)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Tuvan hydronym Кара-Хөл (Kara-Khöl, 'Black Lake'), referring to the dark reflection of the surrounding mountains on the lake's waters.",
-      "current_repo_state": {
-        "name": "Kara-Chôl",
-        "b_tarr": "Kara-Chôl",
-        "b_tarr_direct": "Kara-Chôl",
-        "b_tarr_hist": "Kara-Chôl",
-        "b_origin": "Kara-Chôl (Kara Khol)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.ra xoːl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1375,26 +1161,17 @@
         {
           "form": "цагаан (tsagaan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "white / clear / bare"
         },
         {
           "form": "газар (gazar)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "land / place / ground"
         }
       ],
       "etymology_analysis": "Mongolian descriptive compound Цагаан газар (Tsagaan gazar, 'white/open land', meaning a flat, treeless steppe).",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1429,26 +1206,17 @@
         {
           "form": "кату (katu)",
           "language": "Altai Turkic",
+          "language_code": "zha",
           "translation": "hard / steep / harsh"
         },
         {
           "form": "ярык (yaryk)",
           "language": "Altai Turkic",
+          "language_code": "zha",
           "translation": "cleft / gorge / crevice"
         }
       ],
       "etymology_analysis": "Altai Turkic topographic name Кату-Ярык (Katu-Yaryk, 'Steep Gorge / Hard Cleft'), naming the dramatic pass into the Chulyshman valley.",
-      "current_repo_state": {
-        "name": "Katu-Jarîch",
-        "b_tarr": "Katu-Jarîch",
-        "b_tarr_direct": "Katu-Jarîch",
-        "b_tarr_hist": "Katu-Jarîch",
-        "b_origin": "Katu-Jarîch (Katu-Yaryk)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.tʊ ja.ˈriːç]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1483,26 +1251,17 @@
         {
           "form": "алтын (altyn)",
           "language": "Altai Turkic",
+          "language_code": "zha",
           "translation": "golden"
         },
         {
           "form": "кӧл (köl)",
           "language": "Altai Turkic",
+          "language_code": "zha",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Altai Turkic hydronym Алтын Кӧл (Altyn-Köl, 'Golden Lake'), the indigenous name for Lake Teletskoye in the Altai Mountains.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Teletskoye",
       "older_name_by_867": {
         "exists": false,
@@ -1537,21 +1296,11 @@
         {
           "form": "дархад (darkhad)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "craftsmen / tax-exempt people (pl. of darkhan)"
         }
       ],
       "etymology_analysis": "Mongolian toponym Дархад (Darkhad), plural of darkhan ('smith / tax-exempt'), naming the Darkhad people and the Darkhad Valley in Khövsgöl Province.",
-      "current_repo_state": {
-        "name": "Darchad-Tal",
-        "b_tarr": "Darchad-Tal",
-        "b_tarr_direct": "Darchad-Tal",
-        "b_tarr_hist": "Darchad-Tal",
-        "b_origin": "Darchad-Tal (Darkhad Valley)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdar.xad tal]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Darkhad_Valley",
       "older_name_by_867": {
         "exists": false,
@@ -1586,26 +1335,17 @@
         {
           "form": "Хорьдол (Khoridol)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Khoridol (mountain range name)"
         },
         {
           "form": "сарьдаг (saridag)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "bare alpine peak / tundra ridge"
         }
       ],
       "etymology_analysis": "Mongolian oronym Хорьдол Сарьдаг (Khoridol Saridag), combining the proper name Khoridol with saridag ('high bare mountain peak').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khoridol_Saridag_mountains",
       "older_name_by_867": {
         "exists": false,
@@ -1640,26 +1380,17 @@
         {
           "form": "цагаан (tsagaan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "white"
         },
         {
           "form": "нуур (nuur)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian compound Цагааннуур (Tsagaannuur, 'White Lake'), naming the sum in Khövsgöl Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tsagaannuur,_Kh%C3%B6vsg%C3%B6l",
       "older_name_by_867": {
         "exists": false,
@@ -1694,26 +1425,17 @@
         {
           "form": "төмөр (tömör)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "iron"
         },
         {
           "form": "булаг (bulag)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "spring / water source"
         }
       ],
       "etymology_analysis": "Mongolian compound Төмөрбулаг (Tömörbulag, 'Iron Spring'), naming the sum in Khövsgöl Province.",
-      "current_repo_state": {
-        "name": "Tömörbulach",
-        "b_tarr": "Tömörbulach",
-        "b_tarr_direct": "Tömörbulach",
-        "b_tarr_hist": "Tömörbulach",
-        "b_origin": "Tömörbulach (Tömörbulag)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtøː.møːr.bʊ.lax]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%B6m%C3%B6rbulag,_Kh%C3%B6vsg%C3%B6l",
       "older_name_by_867": {
         "exists": false,
@@ -1748,26 +1470,17 @@
         {
           "form": "kara",
           "language": "Turkic",
+          "language_code": "tur",
           "translation": "black"
         },
         {
           "form": "tes",
           "language": "Turkic / Mongolian",
+          "language_code": "tur",
           "translation": "Tes (river/element, cf. Tes River)"
         }
       ],
       "etymology_analysis": "Apparent Turkic-Mongolic compound (kara 'black' + tes, possibly referencing the Tes/Tez River basin), unattested as a historical settlement.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1802,31 +1515,23 @@
         {
           "form": "сан (san)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "treasury / storehouse"
         },
         {
           "form": "-гийн (-giin)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "genitive suffix"
         },
         {
           "form": "далай (dalai)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "ocean / vast lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Сангийн далай (Sangiin Dalai, 'Treasury Ocean/Lake'), naming the large saltwater lake in northern Mongolia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sangiin_Dalai_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -1861,31 +1566,23 @@
         {
           "form": "доод (dood)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lower"
         },
         {
           "form": "цагаан (tsagaan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "white"
         },
         {
           "form": "нуур (nuur)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Доод Цагаан нуур (Dood Tsagaan Nuur, 'Lower White Lake'), using the locator qualifier dood ('lower').",
-      "current_repo_state": {
-        "name": "Ulantâige",
-        "b_tarr": "Ulantâige",
-        "b_tarr_direct": "Ulantâige",
-        "b_tarr_hist": "Ulantâige",
-        "b_origin": "Ulantâige (Ulantaiga)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊ.lan.taː.ˈɪ.ɣə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dood_Tsagaan_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -1920,26 +1617,17 @@
         {
           "form": "улаан (ulaan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "red"
         },
         {
           "form": "тайга (taiga)",
           "language": "Mongolian / Turkic",
+          "language_code": "mon",
           "translation": "taiga / boreal mountain forest"
         }
       ],
       "etymology_analysis": "Mongolian oronym Улаан Тайга (Ulaan Taiga, 'Red Taiga'), naming the mountain range bordering the Darkhad Valley and Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ulaan_Taiga",
       "older_name_by_867": {
         "exists": false,
@@ -1974,21 +1662,11 @@
         {
           "form": "бөмбөгөр (bömbögör)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "dome / rounded / globular"
         }
       ],
       "etymology_analysis": "Mongolian descriptive toponym Бөмбөгөр (Bömbögör, 'Dome / Rounded'), naming the sum in Bayankhongor Province.",
-      "current_repo_state": {
-        "name": "Bombögör",
-        "b_tarr": "Bombögör",
-        "b_tarr_direct": "Bombögör",
-        "b_tarr_hist": "Bombögör",
-        "b_origin": "Bombögör (Bombögör)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɔm.bøː.ɣøːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%B6mb%C3%B6g%C3%B6r,_Bayankhongor",
       "older_name_by_867": {
         "exists": false,
@@ -2023,31 +1701,23 @@
         {
           "form": "бөөн (böön)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mass / cluster / whole"
         },
         {
           "form": "цагаан (tsagaan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "white"
         },
         {
           "form": "нуур (nuur)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Бөөн Цагаан нуур (Böön Tsagaan Nuur, 'Mass White Lake'), naming the largest lake in the Valley of the Lakes.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/B%C3%B6%C3%B6n_Tsagaan_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -2082,21 +1752,11 @@
         {
           "form": "хутаг (khutag)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "blessing / sanctity / good fortune"
         }
       ],
       "etymology_analysis": "Mongolian toponym Хутаг (Khutag, 'blessing / sanctity').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2131,26 +1791,17 @@
         {
           "form": "говь (govi)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Gobi / gravel desert"
         },
         {
           "form": "гашуун (gashuun)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "bitter / brackish (water)"
         }
       ],
       "etymology_analysis": "Mongolian descriptive compound Говь Гашуун (Govi Gashuun, 'Gobi Brackish [Spring/Basin]').",
-      "current_repo_state": {
-        "name": "Gurwan Sêchân",
-        "b_tarr": "Gurwan Sêchân",
-        "b_tarr_direct": "Gurwan Sêchân",
-        "b_tarr_hist": "Gurwan Sêchân",
-        "b_origin": "Gurwan Sêchân (Gurwan Sêchân (in-game: Gurvan Saikhan))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Gurwan Sêchân).",
-        "b_ipa": "[ɡʊr.ˈwan seː.ˈçaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2185,31 +1836,23 @@
         {
           "form": "говь (govi)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Gobi / desert"
         },
         {
           "form": "гурван (gurvan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "three"
         },
         {
           "form": "сайхан (saikhan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "beautiful / beauty"
         }
       ],
       "etymology_analysis": "Mongolian oronym Говь Гурвансайхан (Govi Gurvansaikhan, 'Three Beauties of the Gobi'), referring to the eastern, middle, and western Saikhan subranges.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gobi_Gurvansaikhan_National_Park",
       "older_name_by_867": {
         "exists": false,
@@ -2244,26 +1887,17 @@
         {
           "form": "хатан (khatan)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "queen / noble lady"
         },
         {
           "form": "суудал (suudal)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "seat / throne"
         }
       ],
       "etymology_analysis": "Mongolian oronym Хатан Суудал (Khatan Suudal, 'Queen's Seat'), naming the volcanic outcrop and surrounding steppe in southern Mongolia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2298,26 +1932,17 @@
         {
           "form": "их (ikh)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "great / big"
         },
         {
           "form": "богд (bogd)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "saint / sacred / holy"
         }
       ],
       "etymology_analysis": "Mongolian honorific oronym Их Богд (Ikh Bogd, 'Great Saint'), naming the 3,957 m summit of the Gobi-Altai Mountains.",
-      "current_repo_state": {
-        "name": "Ich Bogd",
-        "b_tarr": "Ich Bogd",
-        "b_tarr_direct": "Ich Bogd",
-        "b_tarr_hist": "Ich Bogd",
-        "b_origin": "Ich Bogd (Ich Bogd (in-game: Ikh Bogd))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ich Bogd).",
-        "b_ipa": "[ɪç bɔɡd]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ikh_Bogd",
       "older_name_by_867": {
         "exists": false,
@@ -2352,26 +1977,17 @@
         {
           "form": "Түй (Tüi)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Tüi (river name)"
         },
         {
           "form": "-н (-n)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "genitive/attributive suffix"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Туйн гол (Tuin Gol), naming the river flowing past Bayankhongor into Orog Lake.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2406,26 +2022,17 @@
         {
           "form": "Orog (Орог)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "orog (a proper lake name, possibly linked to Mongolian orog 'grayish/dun' or 'place/bed')"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Orog nuur (Classical Mongolian: oroɣ naɣur), referring to the endorheic saline lake in Bogd sum, Bayankhongor Province, fed by the Tuin River.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Orog_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -2460,26 +2067,17 @@
         {
           "form": "Khasagt (Хасагт)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "having wagons/carts or related to the Khoshot/Kazakh ethnonym"
         },
         {
           "form": "khairkhan (хайрхан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "gracious/sacred (honorific term for a sacred mountain)"
         }
       ],
       "etymology_analysis": "Mongolian oronym Khasagt Khairkhan (Хасагт хайрхан), combining Khasagt with the reverential mountain epithet khairkhan ('gracious/sacred mountain').",
-      "current_repo_state": {
-        "name": "Chasagt Chêrchân",
-        "b_tarr": "Chasagt Chêrchân",
-        "b_tarr_direct": "Chasagt Chêrchân",
-        "b_tarr_hist": "Chasagt Chêrchân",
-        "b_origin": "Chasagt Chêrchân (Khasagt Khairkhan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈxa.zaɡt xeːr.ˈxaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khasagt_Khairkhan",
       "older_name_by_867": {
         "exists": false,
@@ -2514,26 +2112,17 @@
         {
           "form": "Gegeen (Гэгээн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "bright, luminous, holy"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Modern Mongolian name Gegeen nuur ('bright/holy lake'), given to the artificial reservoir formed in 2008 by the Taishir hydroelectric dam.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gegeen_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -2568,26 +2157,17 @@
         {
           "form": "Taigan (Тайган)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "taigan (proper name, possibly related to Turkic/Mongolic taiga 'mountain forest' or taigan 'sighthound')"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Taigan nuur, a saline tectonic lake in Govi-Altai Province, western Mongolia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2622,26 +2202,17 @@
         {
           "form": "Ongi (Онги)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Ongi (proper river name)"
         },
         {
           "form": "gol (гол)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Ongi gol (Онги гол), flowing from the southeastern Khangai Mountains through Övörkhangai and Dundgovi provinces.",
-      "current_repo_state": {
-        "name": "Ongî",
-        "b_tarr": "Ongî",
-        "b_tarr_direct": "Ongî",
-        "b_tarr_hist": "Ongî",
-        "b_origin": "Ongî (Ongî (in-game: Ongi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ongî).",
-        "b_ipa": "[ɔ.ˈŋiː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ongi_River",
       "older_name_by_867": {
         "exists": false,
@@ -2676,31 +2247,23 @@
         {
           "form": "Taatsiin (Таацын)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "of the Taats (genitive of Taats, the feeding river)"
         },
         {
           "form": "Tsagaan (Цагаан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "white"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Taatsiin Tsagaan nuur ('White Lake of the Taats [River]'), a saline lake in the Valley of the Lakes in Övörkhangai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taatsiin_Tsagaan_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -2735,26 +2298,17 @@
         {
           "form": "Myangan (Мянган)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "thousand"
         },
         {
           "form": "yamaat (ямаат)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "having goats (yamaa 'goat' + -t possessive suffix)"
         }
       ],
       "etymology_analysis": "Mongolian oronym Myangan Yamaat ('Having a Thousand Goats'), the highest summit (3,620 m) of the Baga Bogd massif in the Gobi-Altai range.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2789,26 +2343,17 @@
         {
           "form": "Tövkhön (Төвхөн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "tövkhön (proper name, from töv 'center/upright' + diminutive -khön)"
         },
         {
           "form": "khiid (хийд)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "monastery"
         }
       ],
       "etymology_analysis": "Mongolian monastery name Tövkhön khiid (Төвхөн хийд), established in 1653 CE in Övörkhangai Province as Zanabazar's mountain retreat.",
-      "current_repo_state": {
-        "name": "Tövchön",
-        "b_tarr": "Tövchön",
-        "b_tarr_direct": "Tövchön",
-        "b_tarr_hist": "Tövchön",
-        "b_origin": "Tövchön (Tövchön (in-game: Tövkhön))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Tövchön).",
-        "b_ipa": "[ˈtøːv.xøːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%B6vkh%C3%B6n_Monastery",
       "older_name_by_867": {
         "exists": false,
@@ -2843,26 +2388,17 @@
         {
           "form": "Guchin (Гучин)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "thirty"
         },
         {
           "form": "us (ус)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "water"
         }
       ],
       "etymology_analysis": "Mongolian toponym Guchin-Us (Гучин-Ус), literally 'Thirty Waters', referring to a sum (district) in southern Övörkhangai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Guchin-Us,_%C3%96v%C3%B6rkhangai",
       "older_name_by_867": {
         "exists": false,
@@ -2897,26 +2433,17 @@
         {
           "form": "Arvai (Арвай)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "barley"
         },
         {
           "form": "kheer (хээр)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "steppe, plain"
         }
       ],
       "etymology_analysis": "Mongolian settlement name Arvaikheer (Арвайхээр, 'Barley Steppe'; rendered in-game/CK3 as Avraikheer), the capital of Övörkhangai Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arvaikheer",
       "older_name_by_867": {
         "exists": false,
@@ -2951,31 +2478,23 @@
         {
           "form": "Khuisiin (Хүйсийн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "of the navel/center (genitive of khüis)"
         },
         {
           "form": "naiman (найман)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "eight"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake(s)"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Khuisiin Naiman Nuur (Хүйсийн Найман нуур, 'Eight Lakes of the Navel/Center'), a group of eight volcanic lakes in the Khangai Mountains.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khangai_Nuruu_National_Park",
       "older_name_by_867": {
         "exists": false,
@@ -3010,26 +2529,17 @@
         {
           "form": "Khem (Хем)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "river (specifically the Yenisei, Old Turkic Käm)"
         },
         {
           "form": "-chik (-чик)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "diminutive suffix ('little river')"
         }
       ],
       "etymology_analysis": "Tuvan hydronym Khemchik (Хемчик, 'Little Khem / Little Yenisei'), formed from Tuvan khem ('river', cognate with Old Turkic Käm) plus the diminutive suffix -chik.",
-      "current_repo_state": {
-        "name": "Midden-Tannu",
-        "b_tarr": "Midden-Tannu",
-        "b_tarr_direct": "Midden-Tannu",
-        "b_tarr_hist": "Midden-Tannu",
-        "b_origin": "Midden-Tannu (Central Tannu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɪ.dən ˈta.nʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khemchik",
       "older_name_by_867": {
         "exists": false,
@@ -3064,21 +2574,11 @@
         {
           "form": "Sagly (Саглы)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "Sagly (toponym in Ovyursky Kozhuun, Western Tannu-Ola)"
         }
       ],
       "etymology_analysis": "Tuvan toponym Sagly (Саглы), designating a village, river, and the highest summit (3,061 m) of the Western Tannu-Ola range in Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sagly-Bazhy_culture",
       "older_name_by_867": {
         "exists": false,
@@ -3113,26 +2613,17 @@
         {
           "form": "Kara (Кара)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "black"
         },
         {
           "form": "Tangdy (Таңды)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "high mountain (Tannu-Ola)"
         }
       ],
       "etymology_analysis": "Tuvan compound Kara-Tangdy ('Black Tannu-Ola'), combining kara ('black') and Tangdy ('high mountain', the Tuvan name of the Tannu-Ola range).",
-      "current_repo_state": {
-        "name": "Ôst-Tannu",
-        "b_tarr": "Ôst-Tannu",
-        "b_tarr_direct": "Ôst-Tannu",
-        "b_tarr_hist": "Ôst-Tannu",
-        "b_origin": "Ôst-Tannu (Eastern Tannu)",
-        "b_anachronism": "",
-        "b_ipa": "[oːst ˈta.nʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3167,21 +2658,11 @@
         {
           "form": "Despen (Дэспэн)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "Despen (proper name of a peak and river in Eastern Tannu-Ola)"
         }
       ],
       "etymology_analysis": "Tuvan oronym and hydronym Despen, designating the highest point (2,591 m) of the Eastern Tannu-Ola mountains and its adjacent river valley in Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3216,26 +2697,17 @@
         {
           "form": "Türgen (Түргэн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "swift, rapid"
         },
         {
           "form": "uul (уул)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Mongolian oronym Türgen Uul (Түргэн уул, 'Swift Mountain'), a glaciated massif (3,965 m) in western Uvs Province.",
-      "current_repo_state": {
-        "name": "West-Tannu",
-        "b_tarr": "West-Tannu",
-        "b_tarr_direct": "West-Tannu",
-        "b_tarr_hist": "West-Tannu",
-        "b_origin": "West-Tannu (Western Tannu)",
-        "b_anachronism": "",
-        "b_ipa": "[wɛst ˈta.nʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake_Basin",
       "older_name_by_867": {
         "exists": false,
@@ -3270,26 +2742,17 @@
         {
           "form": "Möngün (Мөңгүн)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "silver"
         },
         {
           "form": "taiga (тайга)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "snow-capped mountain / taiga"
         }
       ],
       "etymology_analysis": "Tuvan oronym Möngün-Taiga (Мөңгүн-Тайга, 'Silver Mountain'), referring to the glaciated massif in southwestern Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mongun-Taiga",
       "older_name_by_867": {
         "exists": false,
@@ -3324,26 +2787,17 @@
         {
           "form": "Khindiktig (Хиндиктиг)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "having a navel (khindik 'navel' + -tig, referring to its central island)"
         },
         {
           "form": "khol (хөл)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Tuvan hydronym Khindiktig-Khol (Хиндиктиг-Хөл, 'Lake with a Navel'), named for the prominent mountain island in the center of the lake.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3378,26 +2832,17 @@
         {
           "form": "Tesiin (Тэсийн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "of the Tes (genitive of Tes, attested in Old Turkic as Tez)"
         },
         {
           "form": "gol (гол)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Tesiin gol (Тэсийн гол; Tuvan: Tes-Khem), continuing the Old Turkic river name Tez attested in 8th-century Uyghur runiform inscriptions.",
-      "current_repo_state": {
-        "name": "Tesîn-Gôl",
-        "b_tarr": "Tesîn-Gôl",
-        "b_tarr_direct": "Tesîn-Gôl",
-        "b_tarr_hist": "Tesîn-Gôl",
-        "b_origin": "Tesîn-Gôl (Tesiin Gol)",
-        "b_anachronism": "",
-        "b_ipa": "[tɛ.ˈziːn ɡoːl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tes_River",
       "older_name_by_867": {
         "exists": false,
@@ -3432,21 +2877,11 @@
         {
           "form": "Bayan (Баян)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "rich, abundant"
         }
       ],
       "etymology_analysis": "Mongolian toponymic element Bayan ('rich, abundant'), used in CK3 for a barony in the Uvs / Tesiin Gol region.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3481,26 +2916,17 @@
         {
           "form": "Altan (Алтан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "golden"
         },
         {
           "form": "els (элс)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sand"
         }
       ],
       "etymology_analysis": "Mongolian topographic name Altan Els (Алтан элс, 'Golden Sands'), a protected sand dune region in the Uvs Lake Basin.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake_Basin",
       "older_name_by_867": {
         "exists": false,
@@ -3535,26 +2961,17 @@
         {
           "form": "Ulaan (Улаан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "red"
         },
         {
           "form": "gom (гом)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "valley, hollow"
         }
       ],
       "etymology_analysis": "Mongolian settlement name Ulaangom (Улаангом, 'Red Valley'), the capital of Uvs Province.",
-      "current_repo_state": {
-        "name": "Ulângôm",
-        "b_tarr": "Ulângôm",
-        "b_tarr_direct": "Ulângôm",
-        "b_tarr_hist": "Ulângôm",
-        "b_origin": "Ulângôm (Ulaangom)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊ.laː.ˈŋoːm]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ulaangom",
       "older_name_by_867": {
         "exists": false,
@@ -3589,21 +3006,11 @@
         {
           "form": "Türgen (Түргэн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "swift, rapid"
         }
       ],
       "etymology_analysis": "Mongolian toponym Türgen (Түргэн, 'Swift'), designating a sum (district) in Uvs Province named after the nearby Türgen Uul / Türgen River.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/T%C3%BCrgen,_Uvs",
       "older_name_by_867": {
         "exists": false,
@@ -3638,21 +3045,11 @@
         {
           "form": "Khyargas (Хяргас)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Kyrgyz (ethnonym)"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Khyargas (nuur) (Хяргас нуур), derived from the ethnonym Kyrgyz (Kirghiz), reflecting historical Kyrgyz presence in western Mongolia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khyargas_Nuur",
       "older_name_by_867": {
         "exists": false,
@@ -3687,26 +3084,17 @@
         {
           "form": "Uvs (Увс)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Uvs / Ubsu (from Mongolic übsün/subsen, bitter/saline sediment)"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Uvs nuur (Увс нуур; Classical Mongolian: ubsu naɣur), traditionally derived from a Mongolic word for the bitter sediment left in fermented mare's milk (airag), referring to the lake's high salinity.",
-      "current_repo_state": {
-        "name": "Uws-Nûr",
-        "b_tarr": "Uws-Nûr",
-        "b_tarr_direct": "Uws-Nûr",
-        "b_tarr_hist": "Uws-Nûr",
-        "b_origin": "Uws-Nûr (Uvs Nuur)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊws nuːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -3741,26 +3129,17 @@
         {
           "form": "Khan (Хан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "khan, king, royal"
         },
         {
           "form": "khökhii (хөхий)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "blue, sky-colored (from khökh 'blue')"
         }
       ],
       "etymology_analysis": "Mongolian oronym Khan Khökhii (Хан хөхий), a sacred mountain range separating the Uvs Lake and Khyargas Lake basins in Uvs Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khan_Kh%C3%B6khii",
       "older_name_by_867": {
         "exists": false,
@@ -3795,26 +3174,17 @@
         {
           "form": "Khan (Хан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "khan, king, royal"
         },
         {
           "form": "khökhiin (хөхийн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "of the blue/sky-colored (genitive of khökhii)"
         }
       ],
       "etymology_analysis": "Genitive form (Khan Khökhiin, Хан хөхийн) of the Mongolian oronym Khan Khökhii, used in phrases such as Khan Khökhiin nuruu ('Khan Khökhii Range').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khan_Kh%C3%B6khii",
       "older_name_by_867": {
         "exists": false,
@@ -3849,21 +3219,11 @@
         {
           "form": "Gosudar (государь)",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "sovereign, monarch, lord"
         }
       ],
       "etymology_analysis": "Russian title gosudar ('sovereign/lord'), appearing in early modern Russian-Siberian archival contexts and used as a barony key in CK3.",
-      "current_repo_state": {
-        "name": "Kantegîr",
-        "b_tarr": "Kantegîr",
-        "b_tarr_direct": "Kantegîr",
-        "b_tarr_hist": "Kantegîr",
-        "b_origin": "Kantegîr (Kantegir)",
-        "b_anachronism": "",
-        "b_ipa": "[kan.tɛ.ˈɣiːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3898,26 +3258,17 @@
         {
           "form": "Kan (Хан)",
           "language": "Khakas",
+          "language_code": "alt",
           "translation": "khan, ruler"
         },
         {
           "form": "tegir (тигір)",
           "language": "Khakas",
+          "language_code": "alt",
           "translation": "sky, heaven (cognate with Old Turkic täŋri)"
         }
       ],
       "etymology_analysis": "Russian adaptation (Кантегир) of Khakas Khan-Tigir (Хан-Тигір, 'Khan-Sky' or 'Heavenly Khan'), a mountain river in the Western Sayan flowing into the Yenisei.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kantegir",
       "older_name_by_867": {
         "exists": false,
@@ -3952,26 +3303,17 @@
         {
           "form": "Sayan (Саян)",
           "language": "Turkic/Samoyedic",
+          "language_code": "tur",
           "translation": "Sayan (mountain range name, linked to the Soyan/Sayan tribe)"
         },
         {
           "form": "-chu",
           "language": "CK3/Mongolic",
+          "language_code": "und",
           "translation": "derivational suffix"
         }
       ],
       "etymology_analysis": "CK3 toponym Sayanchu, derived from the Sayan Mountains (Russian Sayany, Tuvan Sayan) in southern Siberia.",
-      "current_repo_state": {
-        "name": "Sajantschû",
-        "b_tarr": "Sajantschû",
-        "b_tarr_direct": "Sajantschû",
-        "b_tarr_hist": "Sajantschû",
-        "b_origin": "Sajantschû (Sayanchu)",
-        "b_anachronism": "",
-        "b_ipa": "[sa.jan.ˈtʃuː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4006,26 +3348,17 @@
         {
           "form": "Sut (Сүт)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "milk"
         },
         {
           "form": "khol (хөл)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Tuvan hydronym Süt-Khöl (Сүт-Хөл, 'Milk Lake'), a sacred alpine lake in the Western Sayan / Sut-Kholsky Kozhuun of Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4060,21 +3393,11 @@
         {
           "form": "stoyanka (стоянка)",
           "language": "Russian",
+          "language_code": "rus",
           "translation": "camp, halting place, archaeological station"
         }
       ],
       "etymology_analysis": "Russian common noun stoyanka ('camp, station'), commonly used in Siberian archaeology and topography for campsites and Paleolithic stations in the Western Sayan.",
-      "current_repo_state": {
-        "name": "Stojanke",
-        "b_tarr": "Stojanke",
-        "b_tarr_direct": "Stojanke",
-        "b_tarr_hist": "Stojanke",
-        "b_origin": "Stojanke (Stoyanka)",
-        "b_anachronism": "",
-        "b_ipa": "[stɔ.ˈja.ŋkɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4109,21 +3432,11 @@
         {
           "form": "Urbun (Урбун)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "Urbun (proper name of a river and locality in Tuva)"
         }
       ],
       "etymology_analysis": "Tuvan hydronym Urbun (Урбун), a mountain tributary of the Upper Yenisei in the Sayano-Shushensky Nature Reserve region of Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4158,26 +3471,17 @@
         {
           "form": "Ulaan (Улаан)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "red"
         },
         {
           "form": "gol (гол)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Mongolic hydronym Ulaan gol ('Red River'), attested in modern Russian cartography of the Sayan region as Ulan-Gol.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4212,21 +3516,11 @@
         {
           "form": "Arzhaan (Аржаан)",
           "language": "Tuvan",
+          "language_code": "tyv",
           "translation": "mineral/medicinal spring (ultimately from Sanskrit rasāyana via Mongolic arshaan)"
         }
       ],
       "etymology_analysis": "CK3 rendering (Arja) of Tuvan Arzhaan (Аржаан, 'medicinal spring'), the name of a village and famous early Saka kurgan complex in Tuva.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arzhan_culture",
       "older_name_by_867": {
         "exists": false,
@@ -4261,26 +3555,17 @@
         {
           "form": "Khar (Хар)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "black"
         },
         {
           "form": "us (ус)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "water"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Khar-Us nuur (Хар-Ус нуур, 'Black Water Lake'), located in Khovd Province in the Great Lakes Depression of western Mongolia.",
-      "current_repo_state": {
-        "name": "Char-Ûs",
-        "b_tarr": "Char-Ûs",
-        "b_tarr_direct": "Char-Ûs",
-        "b_tarr_hist": "Char-Ûs",
-        "b_origin": "Char-Ûs (Khar Us)",
-        "b_anachronism": "",
-        "b_ipa": "[xar uːs]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khar-Us_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -4315,21 +3600,11 @@
         {
           "form": "Dörgön (Дөргөн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Dörgön (proper lake name, also Russianized as Durgun)"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Dörgön nuur (Дөргөн нуур; Russianized as Durgun), a saline lake in the Great Lakes Depression of western Mongolia.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/D%C3%B6rg%C3%B6n_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -4364,26 +3639,17 @@
         {
           "form": "Elsen (Элсэн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sandy (attributive of els 'sand')"
         },
         {
           "form": "tasarkhai (тасархай)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "torn-off piece, isolated fragment"
         }
       ],
       "etymology_analysis": "Mongolian topographic name Elsen Tasarkhai (Элсэн тасархай, 'Isolated Fragment of Sand'), referring to a strip of sand dunes amidst steppe.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4418,26 +3684,17 @@
         {
           "form": "Ulias (Улиас)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "poplar tree"
         },
         {
           "form": "-tai (-тай)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "possessive suffix ('having, place with')"
         }
       ],
       "etymology_analysis": "Mongolian settlement name Uliastai (Улиастай, 'Place with Poplars'), founded in 1733 CE as the Qing military headquarters in western Mongolia.",
-      "current_repo_state": {
-        "name": "Uljastâi",
-        "b_tarr": "Uljastâi",
-        "b_tarr_direct": "Uljastâi",
-        "b_tarr_hist": "Uljastâi",
-        "b_origin": "Uljastâi (Uliastai)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʊ.ʎas.taː.ɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uliastai",
       "older_name_by_867": {
         "exists": false,
@@ -4472,31 +3729,23 @@
         {
           "form": "Ulaagchinii (Улаагчны)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "of the red-coated/bay mare (genitive of ulaagchin)"
         },
         {
           "form": "khar (хар)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "black"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Ulaagchinii Khar nuur (Улаагчны Хар нуур), a freshwater lake in Zavkhan Province bordered by sand dunes.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ulaagchinii_Khar_Nuur_National_Park",
       "older_name_by_867": {
         "exists": false,
@@ -4531,26 +3780,17 @@
         {
           "form": "Otgon (Отгон)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "youngest"
         },
         {
           "form": "tenger (тэнгэр)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "sky, heaven"
         }
       ],
       "etymology_analysis": "Mongolian oronym Otgontenger (Отгонтэнгэр, 'Youngest Sky'), the highest and only glaciated peak (4,021 m) of the Khangai Mountains in Zavkhan Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Otgontenger",
       "older_name_by_867": {
         "exists": false,
@@ -4585,26 +3825,17 @@
         {
           "form": "Airag (Айраг)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "fermented mare's milk (kumis)"
         },
         {
           "form": "nuur (нуур)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "lake"
         }
       ],
       "etymology_analysis": "Mongolian hydronym Airag nuur (Айраг нуур, 'Airag Lake'), a freshwater lake in the Great Lakes Depression connected to Khyargas Lake.",
-      "current_repo_state": {
-        "name": "Urgamâl",
-        "b_tarr": "Urgamâl",
-        "b_tarr_direct": "Urgamâl",
-        "b_tarr_hist": "Urgamâl",
-        "b_origin": "Urgamâl (Urgamal)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊr.ɡa.ˈmaːl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Airag_Lake",
       "older_name_by_867": {
         "exists": false,
@@ -4639,21 +3870,11 @@
         {
           "form": "Urgamal (Ургамал)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "plant, vegetation (from urga- 'to grow')"
         }
       ],
       "etymology_analysis": "Mongolian toponym Urgamal (Ургамал, 'Plant/Vegetation'), a sum (district) in western Zavkhan Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Urgamal,_Zavkhan",
       "older_name_by_867": {
         "exists": false,
@@ -4688,26 +3909,17 @@
         {
           "form": "Setsen (Сэцэн)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "wise, sage"
         },
         {
           "form": "Sart (Сарт)",
           "language": "Mongolian",
+          "language_code": "mon",
           "translation": "Sart / Sartuul (clan/ethnonym)"
         }
       ],
       "etymology_analysis": "Mongolian banner/clan name Setsen Sart (from Qing-era Tsetsen Sartuulyn khoshuu, 'Wise Sartuul Banner'), associated with Zavkhan Province.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sartuul",
       "older_name_by_867": {
         "exists": false,

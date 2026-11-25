@@ -1,20 +1,28 @@
 {
   "metadata": {
+    "empire": "e_aegyptus",
     "scope": "e_aegyptus (all 125 baronies across k_blemmyia and k_egypt)",
-    "version": "1.0.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json"
+      "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if not extracted from retrieved summary and flagged for manual check).",
-      "is_historical_867": "Boolean: true if the barony title name is historically authentic for the 867 AD start date; false if anachronistic or unattested <= 867 (candidate for Step 2 resolution).",
-      "named_after_post_867_person": "Boolean: true if the title name incorporates a person/dynasty/settler after 867 AD.",
-      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or other natural topographic feature.",
-      "morphemes": "List of constituent roots/morphemes with source language and English translation.",
-      "older_name_by_867": "Object indicating whether a distinct older name STRICTLY ATTESTED <= 867 AD exists for the settlement (or its immediate predecessor site / base name without a post-867 modifier). Every exists=true entry carries first_mention_year <= 867."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 125,
@@ -43,7 +51,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern Sudanese town in Red Sea State; the Tarraconian save placed 'Baklîn' / Baqlin in this slot).",
+      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern Sudanese town in Red Sea State).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -56,18 +64,11 @@
         {
           "form": "Sinkat",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "Sinkat (Red Sea Hills town)"
         }
       ],
       "etymology_analysis": "Modern Beja town name in Sudan's Red Sea Hills, unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Baklîn",
-        "b_tarr_direct": "Baklîn",
-        "b_tarr_hist": "Baklîn",
-        "b_origin": "Baklîn (Baqlin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sinkat",
       "older_name_by_867": {
         "exists": false,
@@ -102,23 +103,17 @@
         {
           "form": "North / Nord-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "north"
         },
         {
           "form": "Baqlin / Baklîn",
           "language": "Beja / Medieval Arabic",
+          "language_code": "bej",
           "translation": "Baqlin (Beja kingdom)"
         }
       ],
       "etymology_analysis": "Modern directional compound built on the medieval Beja kingdom name Baqlīn (first attested 872 AD by al-Ya'qubi).",
-      "current_repo_state": {
-        "b_tarr": "Nord-Baklîn",
-        "b_tarr_direct": "Nord-Baklîn",
-        "b_tarr_hist": "Nord-Baklîn",
-        "b_origin": "Northern territory of the pre-867 Beja Baqlin kingdom (in-game: North Baqlin)",
-        "b_anachronism": "Colonial English descriptor North Baqlin fails Burden of Proof on Antiquity; standardized to Nord-Baklîn.",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Belgin",
       "older_name_by_867": {
         "exists": false,
@@ -153,23 +148,17 @@
         {
           "form": "West / West-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "west"
         },
         {
           "form": "Baqlin / Baklîn",
           "language": "Beja / Medieval Arabic",
+          "language_code": "bej",
           "translation": "Baqlin (Beja kingdom)"
         }
       ],
       "etymology_analysis": "Modern directional compound built on the medieval Beja kingdom name Baqlīn (first attested 872 AD by al-Ya'qubi).",
-      "current_repo_state": {
-        "b_tarr": "West-Baklîn",
-        "b_tarr_direct": "West-Baklîn",
-        "b_tarr_hist": "West-Baklîn",
-        "b_origin": "Western hills of the pre-867 Beja Baqlin kingdom (in-game: West Baqlin)",
-        "b_anachronism": "Colonial English descriptor West Baqlin fails Burden of Proof on Antiquity; standardized to West-Baklîn.",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Belgin",
       "older_name_by_867": {
         "exists": false,
@@ -204,23 +193,17 @@
         {
           "form": "East",
           "language": "English",
+          "language_code": "eng",
           "translation": "eastern"
         },
         {
           "form": "Baqlin",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Baqlīn (medieval Beja kingdom)"
         }
       ],
       "etymology_analysis": "CK3 directional English-Arabic/Beja compound ('East Baqlin') for the eastern sub-barony of c_baqlin.",
-      "current_repo_state": {
-        "b_tarr": "Hedwigstat",
-        "b_tarr_direct": "Hedwigstat",
-        "b_tarr_hist": "Hedwigstat",
-        "b_origin": "Hedwigstat (constituent holding of Baklîn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -242,7 +225,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern/CK3 Beja locality name; the Tarraconian save placed 'Dscharîn' in this slot).",
+      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern Beja locality name).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -255,18 +238,11 @@
         {
           "form": "Dherbe",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "Beja locality name"
         }
       ],
       "etymology_analysis": "Modern/CK3 Beja locality name in eastern Sudan, unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Dscharîn",
-        "b_tarr_direct": "Dscharîn",
-        "b_tarr_hist": "Dscharîn",
-        "b_origin": "Dscharîn (Djarin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -301,18 +277,11 @@
         {
           "form": "Djarin",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Jārīn (medieval Beja kingdom)"
         }
       ],
       "etymology_analysis": "Arabic rendering (Jārīn / Djarin) of an indigenous Beja kingdom name attested in al-Ya'qubi's Tarikh (872 AD).",
-      "current_repo_state": {
-        "b_tarr": "Zant-GUnther",
-        "b_tarr_direct": "Dscharîn",
-        "b_tarr_hist": "Dscharîn",
-        "b_origin": "Zant-GUnther — Disambiguated capital foundation: Patron saint collegiate foundation dedicated by GUnther",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Jarin",
       "older_name_by_867": {
         "exists": false,
@@ -347,23 +316,17 @@
         {
           "form": "khawr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "seasonal watercourse, gully, stream"
         },
         {
           "form": "Baraka",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Baraka (river/valley name; folk-etymologized as Arabic 'blessing')"
         }
       ],
       "etymology_analysis": "Arabic khawr ('seasonal watercourse') + indigenous river/region name Baraka (earliest Arabic form Barakāt in al-Ya'qubi, 872 AD, post-867).",
-      "current_repo_state": {
-        "b_tarr": "Khawr Baraka",
-        "b_tarr_direct": "Khawr Baraka",
-        "b_tarr_hist": "Khawr Baraka",
-        "b_origin": "Khawr Baraka (constituent holding of Dscharîn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://journals.openedition.org/cy/1685",
       "older_name_by_867": {
         "exists": false,
@@ -398,18 +361,11 @@
         {
           "form": "Kassalā",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "settlement named after Jebel Kassala (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Modern Sudanese city founded in 1834 (or 1840) by Turco-Egyptian forces near Jebel Kassala; unattested in medieval or pre-867 sources.",
-      "current_repo_state": {
-        "b_tarr": "Kassâle",
-        "b_tarr_direct": "Kassâle",
-        "b_tarr_hist": "Kassâle",
-        "b_origin": "Kassâle (Kassala)",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kassâle).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kassala",
       "older_name_by_867": {
         "exists": false,
@@ -444,23 +400,17 @@
         {
           "form": "Middle / Middel-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "middle"
         },
         {
           "form": "Atbara",
           "language": "Arabic / Nubian",
+          "language_code": "ara",
           "translation": "Atbarah River"
         }
       ],
       "etymology_analysis": "Modern directional/basin-segment descriptor attached to the Atbara River (Arabic Nahr 'Atbarah); the river itself is attested in classical antiquity as Astaboras / Astabaras.",
-      "current_repo_state": {
-        "b_tarr": "Middel-Atbara",
-        "b_tarr_direct": "Middel-Atbara",
-        "b_tarr_hist": "Middel-Atbara",
-        "b_origin": "Middle reach of the pre-867 Atbara River basin in Kassala (in-game: Middle Atbara)",
-        "b_anachronism": "Colonial English descriptor Middle Atbara fails Burden of Proof on Antiquity; standardized to Middel-Atbara.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Atbarah_River",
       "older_name_by_867": {
         "exists": true,
@@ -498,23 +448,17 @@
         {
           "form": "to-",
           "language": "Beja (Tu-Bedawie)",
+          "language_code": "bej",
           "translation": "feminine definite article ('the')"
         },
         {
           "form": "Lus",
           "language": "Unknown / Beja-style",
+          "language_code": "und",
           "translation": "unattested element"
         }
       ],
       "etymology_analysis": "Unattested toponym using the Beja feminine prefix to- with an opaque or invented second element Lus.",
-      "current_repo_state": {
-        "b_tarr": "To Lus",
-        "b_tarr_direct": "To Lus",
-        "b_tarr_hist": "To Lus",
-        "b_origin": "To Lus (constituent holding of Kassâle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -549,18 +493,11 @@
         {
           "form": "Qiṭā'a / Qatā",
           "language": "Beja / Medieval Arabic",
+          "language_code": "bej",
           "translation": "indigenous Beja polity name (or Arabic qit'a 'section/tract')"
         }
       ],
       "etymology_analysis": "Medieval Arabic rendering (Qiṭā'a / Qatā) of a Beja kingdom name (rendered 'Katâ' in raw data), first attested by al-Ya'qubi in 872 AD (post-867).",
-      "current_repo_state": {
-        "b_tarr": "Katâ",
-        "b_tarr_direct": "Katâ",
-        "b_tarr_hist": "Katâ",
-        "b_origin": "Katâ (Qataa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Qita%27a",
       "older_name_by_867": {
         "exists": false,
@@ -595,18 +532,11 @@
         {
           "form": "Marya",
           "language": "Tigre",
+          "language_code": "tir",
           "translation": "ethnonym of a Tigre-speaking pastoralist group"
         }
       ],
       "etymology_analysis": "Ethnonym of the Marya people of western Eritrea (Anseba valley), unattested before 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Marya",
-        "b_tarr_direct": "Marya",
-        "b_tarr_hist": "Marya",
-        "b_origin": "Marya (constituent holding of Katâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Marya",
       "older_name_by_867": {
         "exists": false,
@@ -641,18 +571,11 @@
         {
           "form": "al-Shuwāk",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "thorny scrub / acacia thorns (pl. of shawk) or local place name"
         }
       ],
       "etymology_analysis": "Modern Sudanese Arabic town name (al-Shuwāk, standardized as 'Schowach' in raw data) with no pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Schowach",
-        "b_tarr_direct": "Schowach",
-        "b_tarr_hist": "Schowach",
-        "b_origin": "Schowach (Showak)",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Schowach).",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Showak",
       "older_name_by_867": {
         "exists": false,
@@ -687,18 +610,11 @@
         {
           "form": "al-Qāsh / Gash",
           "language": "Sudanese Arabic / Beja",
+          "language_code": "ara",
           "translation": "Gash River (lower Mereb)"
         }
       ],
       "etymology_analysis": "Hydronym of the seasonal Gash River (upper course Mereb River) reaching Kassala; unattested in sources <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Gasch",
-        "b_tarr_direct": "Gasch",
-        "b_tarr_hist": "Gasch",
-        "b_origin": "Gasch (constituent holding of Schowach)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mereb_River",
       "older_name_by_867": {
         "exists": false,
@@ -733,23 +649,17 @@
         {
           "form": "South",
           "language": "English",
+          "language_code": "eng",
           "translation": "southern"
         },
         {
           "form": "Showak",
           "language": "Arabic / Beja",
+          "language_code": "ara",
           "translation": "Showak (eastern Sudanese town)"
         }
       ],
       "etymology_analysis": "CK3 directional compound ('South Showak') for the southern sub-barony of c_showak.",
-      "current_repo_state": {
-        "b_tarr": "Minggamidkirchen",
-        "b_tarr_direct": "Minggamidkirchen",
-        "b_tarr_hist": "Minggamidkirchen",
-        "b_origin": "Minggamidkirchen (constituent holding of Schowach)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -784,18 +694,11 @@
         {
           "form": "Wälqayt",
           "language": "Tigrinya / Amharic / Ge'ez",
+          "language_code": "tir",
           "translation": "regional toponym in northwestern Ethiopia (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Toponym in northwestern Ethiopia (Tigray/Amhara borderland) firmly attested from the 15th century (reign of Baeda Maryam I); an earlier Aksumite inscription (Hatsani Daniel, 8th–9th c.) mentions WYLQ, whose identification with Welkait is tentative.",
-      "current_repo_state": {
-        "b_tarr": "Wolkaît",
-        "b_tarr_direct": "Wolkaît",
-        "b_tarr_hist": "Wolkaît",
-        "b_origin": "Wolkaît (Wolqayt)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Welkait",
       "older_name_by_867": {
         "exists": false,
@@ -830,23 +733,17 @@
         {
           "form": "Wad",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "son of / settlement or wadi"
         },
         {
           "form": "Abū Naḥl",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "father of bees (personal/tribal name or 'place of bees')"
         }
       ],
       "etymology_analysis": "Modern Sudanese Arabic toponym ('Wad Abu Nahl') in Al-Qadarif State with no medieval or pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Wad Abu Nahl",
-        "b_tarr_direct": "Wad Abu Nahl",
-        "b_tarr_hist": "Wad Abu Nahl",
-        "b_origin": "Wad Abu Nahl (constituent holding of Wolkaît)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -881,18 +778,11 @@
         {
           "form": "Wägära",
           "language": "Amharic / Ge'ez",
+          "language_code": "amh",
           "translation": "highland district north of Gondar (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Historic Ethiopian highland province north of Gondar, first attested in the 14th-century chronicles of Amda Seyon I (post-867).",
-      "current_repo_state": {
-        "b_tarr": "Wegera",
-        "b_tarr_direct": "Wegera",
-        "b_tarr_hist": "Wegera",
-        "b_origin": "Wegera (constituent holding of Wolkaît)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Amda_Seyon_I%27s_expansions",
       "older_name_by_867": {
         "exists": false,
@@ -927,18 +817,11 @@
         {
           "form": "al-ʿAllāqī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the Allaqi (possibly from Arabic 'alaq / 'alāqa or Arabized Beja/Egyptian substrate)"
         }
       ],
       "etymology_analysis": "Arabic hydronym/toponym for the major Eastern Desert gold-mining wadi, attested in 855 AD during the Abbasid-Beja conflict (<= 867 AD), with an earlier Pharaonic name Akuyati.",
-      "current_repo_state": {
-        "b_tarr": "Allâki",
-        "b_tarr_direct": "Allâki",
-        "b_tarr_hist": "Allâki",
-        "b_origin": "Allâki (Allaqi)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wadi_Allaqi",
       "older_name_by_867": {
         "exists": true,
@@ -976,18 +859,11 @@
         {
           "form": "Deraheib / al-Dirayhib",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "desert mining settlement ruins (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Modern local name for the ruins of the 9th–12th century Islamic mining city of al-'Allaqi in upper Wadi Allaqi; identified by CeRDO archaeologists with Ptolemaic Berenice Panchrysos.",
-      "current_repo_state": {
-        "b_tarr": "Derahib",
-        "b_tarr_direct": "Derahib",
-        "b_tarr_hist": "Derahib",
-        "b_origin": "Derahib (constituent holding of Allâki)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.cambridge.org/core/journals/antiquity/article/palaeoparasitological-evidence-from-the-medieval-cemetery-of-deraheib-in-the-nubian-desert-sudan/6B5913641CC42C42F2A197E457B78801",
       "older_name_by_867": {
         "exists": true,
@@ -1024,18 +900,11 @@
         {
           "form": "Ḥaymūr / Haimur",
           "language": "Arabic / Beja",
+          "language_code": "ara",
           "translation": "local mine and wadi name (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Historic gold mine in the central Wadi Allaqi belt with Pharaonic and early Islamic workings, but the toponym Haimur itself is unattested before 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Haimur",
-        "b_tarr_direct": "Haimur",
-        "b_tarr_hist": "Haimur",
-        "b_origin": "Haimur (constituent holding of Allâki)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.cambridge.org/core/journals/geological-magazine/article/oreforming-mechanism-and-its-relationship-with-deformational-and-metamorphic-episodes-at-haimur-gold-mine-nubian-shield-egypt/4B951A9EC49F309AAE5CAB033D4C7472",
       "older_name_by_867": {
         "exists": false,
@@ -1070,18 +939,11 @@
         {
           "form": "ʿAydhāb",
           "language": "Arabic / Beja",
+          "language_code": "ara",
           "translation": "medieval Red Sea port name (etymology uncertain)"
         }
       ],
       "etymology_analysis": "Important early Islamic Red Sea port in the Halaib Triangle, attested in 855 AD (<= 867 AD) in al-Baladhuri's account of the Abbasid expedition against the Beja.",
-      "current_repo_state": {
-        "b_tarr": "Aidâp",
-        "b_tarr_direct": "Aidâp",
-        "b_tarr_hist": "Aidâp",
-        "b_origin": "Aidâp (Aydhab)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/%CA%BFAydhab",
       "older_name_by_867": {
         "exists": false,
@@ -1116,23 +978,17 @@
         {
           "form": "Lower / Nider-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "lower"
         },
         {
           "form": "Odib / Aidâp",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Wadi Odib / 'Aydhab"
         }
       ],
       "etymology_analysis": "CK3-invented English directional descriptor ('Lower Odib', standardized as 'Nider-Aidâp') referring to the lower Wadi Odib coastal plain; unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Nider-Aidâp",
-        "b_tarr_direct": "Nider-Aidâp",
-        "b_tarr_hist": "Nider-Aidâp",
-        "b_origin": "Lower coastal plain of the pre-867 Wadi Odib near Aidhab (in-game: Lower Odib)",
-        "b_anachronism": "Colonial English descriptor Lower Odib fails Burden of Proof on Antiquity; standardized to Nider-Aidâp.",
-        "category": "option_b_hydronym"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1154,7 +1010,7 @@
         "holding_type": "castle"
       },
       "first_mention_year": null,
-      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern Sudanese town/gold-mining site in Red Sea State; the Tarraconian save placed 'Nakîs' / Naqis in this slot).",
+      "first_mention_attestation": "Unattested in historical sources <= 867 AD (modern Sudanese town/gold-mining site in Red Sea State).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1167,18 +1023,11 @@
         {
           "form": "Gebeit",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "Gebeit (Red Sea Hills town)"
         }
       ],
       "etymology_analysis": "Modern Beja town and mining locality in Sudan's Red Sea Hills, unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Nakîs",
-        "b_tarr_direct": "Nakîs",
-        "b_tarr_hist": "Nakîs",
-        "b_origin": "Nakîs (Naqis)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1213,23 +1062,17 @@
         {
           "form": "Wādī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "dry valley, seasonal watercourse"
         },
         {
           "form": "Odib",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "indigenous wadi name"
         }
       ],
       "etymology_analysis": "Arabic wādī + indigenous Beja toponym Odib in northeastern Sudan; unattested in medieval or pre-867 sources.",
-      "current_repo_state": {
-        "b_tarr": "Wadi Odib",
-        "b_tarr_direct": "Wadi Odib",
-        "b_tarr_hist": "Wadi Odib",
-        "b_origin": "Wadi Odib (constituent holding of Nakîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1264,23 +1107,17 @@
         {
           "form": "North / Nord-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "north"
         },
         {
           "form": "Naqis / Nakîs",
           "language": "Beja / Medieval Arabic",
+          "language_code": "bej",
           "translation": "Naqis (Beja kingdom)"
         }
       ],
       "etymology_analysis": "Modern directional compound built on the medieval Beja kingdom name Naqīs (first attested 872 AD by al-Ya'qubi).",
-      "current_repo_state": {
-        "b_tarr": "Nord-Nakîs",
-        "b_tarr_direct": "Nord-Nakîs",
-        "b_tarr_hist": "Nord-Nakîs",
-        "b_origin": "Northern gold-mining district of the pre-867 Wadi Allaqi (in-game: North Naqis)",
-        "b_anachronism": "Colonial English descriptor North Naqis fails Burden of Proof on Antiquity; standardized to Nord-Nakîs.",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Beja_kingdoms",
       "older_name_by_867": {
         "exists": false,
@@ -1315,23 +1152,17 @@
         {
           "form": "South",
           "language": "English",
+          "language_code": "eng",
           "translation": "southern"
         },
         {
           "form": "Naqis",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Naqīs (medieval Beja kingdom)"
         }
       ],
       "etymology_analysis": "CK3 directional compound ('South Naqis') for the southern sub-barony of c_naqis.",
-      "current_repo_state": {
-        "b_tarr": "Berchtestat",
-        "b_tarr_direct": "Berchtestat",
-        "b_tarr_hist": "Berchtestat",
-        "b_origin": "Berchtestat (constituent holding of Nakîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1366,23 +1197,17 @@
         {
           "form": "Khawr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "seasonal watercourse / wadi"
         },
         {
           "form": "Nubt",
           "language": "Beja / Arabic",
+          "language_code": "bej",
           "translation": "Nubt"
         }
       ],
       "etymology_analysis": "Arabic-Beja hydronym ('Wadi Nubt') for an archaeological valley in Sudan's Red Sea Hills; unattested by name <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Amûrdal",
-        "b_tarr_direct": "Amûrdal",
-        "b_tarr_hist": "Amûrdal",
-        "b_origin": "Amûrdal (Wadi Amur)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://nomadicempires.history.ox.ac.uk/?p=308",
       "older_name_by_867": {
         "exists": false,
@@ -1417,23 +1242,17 @@
         {
           "form": "Wadi",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "dry riverbed / seasonal watercourse"
         },
         {
           "form": "Amur",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "Amur"
         }
       ],
       "etymology_analysis": "Arabic-Beja hydronym ('Wadi Amur') for a seasonal watercourse in Sudan's Red Sea Hills; unattested by name <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Karlmunster",
-        "b_tarr_direct": "Amûrdal",
-        "b_tarr_hist": "Amûrdal",
-        "b_origin": "Karlmunster — Disambiguated capital foundation: Collegiate minster church established by Karl",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1468,23 +1287,17 @@
         {
           "form": "Upper / Ober-",
           "language": "English / German",
+          "language_code": "eng",
           "translation": "upper"
         },
         {
           "form": "Amur",
           "language": "Beja",
+          "language_code": "bej",
           "translation": "Wadi Amur"
         }
       ],
       "etymology_analysis": "Modern directional descriptor ('Upper Amur', standardized as 'Ober-Amûr') for the upper reach of Wadi Amur; unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Ober-Amûr",
-        "b_tarr_direct": "Ober-Amûr",
-        "b_tarr_hist": "Ober-Amûr",
-        "b_origin": "Upper basin reach of the pre-867 Wadi Amur in Nubia (in-game: Upper Amur)",
-        "b_anachronism": "Colonial English descriptor Upper Amur fails Burden of Proof on Antiquity; standardized to Ober-Amûr.",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://nomadicempires.history.ox.ac.uk/?p=308",
       "older_name_by_867": {
         "exists": false,
@@ -1519,18 +1332,11 @@
         {
           "form": "swn.t",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "trade, market"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian Swenet (swn.t, 'trade/market'), reflecting its role as the southern frontier trading post at the First Cataract; passed via Greek Syene and Coptic Souan (ⲥⲟⲩⲁⲛ) into Arabic Aswān.",
-      "current_repo_state": {
-        "b_tarr": "Aswân",
-        "b_tarr_direct": "Aswân",
-        "b_tarr_hist": "Aswân",
-        "b_origin": "Aswân (Aswan)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aswan",
       "older_name_by_867": {
         "exists": false,
@@ -1565,18 +1371,11 @@
         {
           "form": "ḏbꜣ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "retribution, perch/town"
         }
       ],
       "etymology_analysis": "Arabic Udfū (Idfu) derives directly through Sahidic Coptic Tbō (ⲧⲃⲱ) and Bohairic Atbō (ⲁⲧⲃⲱ) from Ancient Egyptian Djeba (ḏbꜣ).",
-      "current_repo_state": {
-        "b_tarr": "Udfu",
-        "b_tarr_direct": "Udfu",
-        "b_tarr_hist": "Udfu",
-        "b_origin": "Udfu (constituent holding of Aswân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Edfu",
       "older_name_by_867": {
         "exists": false,
@@ -1611,18 +1410,11 @@
         {
           "form": "zarnīkh",
           "language": "Arabic (from Persian)",
+          "language_code": "ara",
           "translation": "arsenic, orpiment"
         }
       ],
       "etymology_analysis": "Arabic Zarnīkh (زرنيخ, 'arsenic/orpiment', ultimately from Persian zarnīkh 'gold-colored'), a village in Esna district (Luxor Governorate) locally associated with mineral deposits.",
-      "current_repo_state": {
-        "b_tarr": "Zarnikh",
-        "b_tarr_direct": "Zarnikh",
-        "b_tarr_hist": "Zarnikh",
-        "b_origin": "Zarnikh (constituent holding of Aswân)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%B2%D8%B1%D9%86%D9%8A%D8%AE_(%D8%A5%D8%B3%D9%86%D8%A7)",
       "older_name_by_867": {
         "exists": false,
@@ -1657,23 +1449,17 @@
         {
           "form": "Gharb",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "west"
         },
         {
           "form": "Aswān",
           "language": "Arabic (from Egyptian Swenet)",
+          "language_code": "ara",
           "translation": "Aswan (trade)"
         }
       ],
       "etymology_analysis": "Modern Arabic directional compound Gharb Aswān ('West Aswan'). In antiquity, the adjacent First Cataract island and west-bank nexus was Elephantine (Egyptian ꜣbw).",
-      "current_repo_state": {
-        "b_tarr": "Elefantîne",
-        "b_tarr_direct": "Elefantîne",
-        "b_tarr_hist": "Elefantîne",
-        "b_origin": "Ancient Pharaonic and Roman island fortress Elephantine on the Nile (in-game: West Aswan)",
-        "b_anachronism": "Modern administrative sector West Aswan fails Burden of Proof on Antiquity; restored to classical island fortress Elephantine.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Elephantine",
       "older_name_by_867": {
         "exists": true,
@@ -1711,18 +1497,11 @@
         {
           "form": "zꜣwtj",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "guardian"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian zꜣwtj ('guardian' of the northern approach of Upper Egypt), through Coptic Siōout (ⲥⲓⲟⲟⲩⲧ) into Arabic Suyūṭ / Asyūṭ.",
-      "current_repo_state": {
-        "b_tarr": "Asjût",
-        "b_tarr_direct": "Asjût",
-        "b_tarr_hist": "Asjût",
-        "b_origin": "Asjût (Asyut)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Asyut",
       "older_name_by_867": {
         "exists": false,
@@ -1757,23 +1536,17 @@
         {
           "form": "p-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "the (masculine singular article)"
         },
         {
           "form": "auēt",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "assembly, monastery"
         }
       ],
       "etymology_analysis": "Arabic Bāwīṭ derives directly from Coptic Pavēt / Paouēt (ⲡⲁⲩⲏⲧ, 'the assembly/monastery'), referring to the major Coptic monastery founded by Apa Apollo c. 385 CE.",
-      "current_repo_state": {
-        "b_tarr": "Bawit",
-        "b_tarr_direct": "Bawit",
-        "b_tarr_hist": "Bawit",
-        "b_origin": "Bawit (constituent holding of Asjût)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bawit",
       "older_name_by_867": {
         "exists": false,
@@ -1808,23 +1581,17 @@
         {
           "form": "ḫnt",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "shrine, forecourt"
         },
         {
           "form": "mnw",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Min (god of fertility)"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian Khent-Min ('shrine of Min'), yielding Greek Khemmis, Akhmimic Coptic Khmin (ⳉⲙⲓⲙ), and Arabic Akhmīm / Ikhmīm.",
-      "current_repo_state": {
-        "b_tarr": "Ikhmin",
-        "b_tarr_direct": "Ikhmin",
-        "b_tarr_hist": "Ikhmin",
-        "b_origin": "Ikhmin (constituent holding of Asjût)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Akhmim",
       "older_name_by_867": {
         "exists": false,
@@ -1859,23 +1626,17 @@
         {
           "form": "p-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "the"
         },
         {
           "form": "soi",
           "language": "Coptic (from Egyptian)",
+          "language_code": "cop",
           "translation": "beam / place name Psoi"
         }
       ],
       "etymology_analysis": "Medieval Arabic Ibshāya (أبشاية, attested 846 CE) derives phonologically from Coptic Psoi (ⲡⲥⲟⲓ), the indigenous name of Ptolemais Hermiou (modern El Mansha).",
-      "current_repo_state": {
-        "b_tarr": "Ibschaya",
-        "b_tarr_direct": "Ibschaya",
-        "b_tarr_hist": "Ibschaya",
-        "b_origin": "Ibschaya (constituent holding of Asjût)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ptolemais_Hermiou",
       "older_name_by_867": {
         "exists": false,
@@ -1910,23 +1671,17 @@
         {
           "form": "pr",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "house, estate"
         },
         {
           "form": "mḏd",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Medjed (meaning uncertain)"
         }
       ],
       "etymology_analysis": "Arabic al-Bahnasā (attested by 846 CE) evolved phonologically from Coptic Pemdje (ⲡⲉⲙϫⲉ), itself from Ancient Egyptian Per-Medjed (known in Greek as Oxyrhynchus).",
-      "current_repo_state": {
-        "b_tarr": "Bahnasâ",
-        "b_tarr_direct": "Bahnasâ",
-        "b_tarr_hist": "Bahnasâ",
-        "b_origin": "Bahnasâ (Bahnasa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Oxyrhynchus",
       "older_name_by_867": {
         "exists": false,
@@ -1961,23 +1716,17 @@
         {
           "form": "ḥnn",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "child"
         },
         {
           "form": "nswt",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "king"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian Henen-nesut ('Child of the King'), passing through Coptic Hnes (ϩⲛⲏⲥ) into early Egyptian Arabic Ahnās (modern Ihnasya el-Madina).",
-      "current_repo_state": {
-        "b_tarr": "Brunostat",
-        "b_tarr_direct": "Brunostat",
-        "b_tarr_hist": "Brunostat",
-        "b_origin": "Brunostat (constituent holding of Bahnasâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Heracleopolis_Magna",
       "older_name_by_867": {
         "exists": false,
@@ -2012,23 +1761,17 @@
         {
           "form": "Baṭn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "interior, hollow, depression"
         },
         {
           "form": "Ihrīt",
           "language": "Arabic (possibly Coptic substrate)",
+          "language_code": "ara",
           "translation": "Ihrit (toponym)"
         }
       ],
       "etymology_analysis": "Medieval Arabic Ihrīt / Baṭn Ihrīt (attested c. 1200 CE) is the name of the village and ruins (Kharabet Ihrit) on the site of ancient Theadelphia.",
-      "current_repo_state": {
-        "b_tarr": "Ihrit",
-        "b_tarr_direct": "Ihrit",
-        "b_tarr_hist": "Ihrit",
-        "b_origin": "Ihrit (constituent holding of Bahnasâ)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kharabet_Ihrit",
       "older_name_by_867": {
         "exists": true,
@@ -2065,18 +1808,11 @@
         {
           "form": "gsꜣ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Gesa (ancient town name)"
         }
       ],
       "etymology_analysis": "Arabic Qūṣ derives through Coptic Kōs (ⲕⲱⲥ / ⲕⲱⲥ ⲃⲉⲣⲃⲓⲣ) from Ancient Egyptian Gesa (gsꜣ), known in Greco-Roman times as Apollinopolis Parva.",
-      "current_repo_state": {
-        "b_tarr": "Kûs",
-        "b_tarr_direct": "Kûs",
-        "b_tarr_hist": "Kûs",
-        "b_origin": "Kûs (Qus)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qus",
       "older_name_by_867": {
         "exists": false,
@@ -2111,23 +1847,17 @@
         {
           "form": "ḥwt",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "mansion, temple estate"
         },
         {
           "form": "sḫm",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "sistrum, power"
         }
       ],
       "etymology_analysis": "Abbreviated from Ancient Egyptian Hut-Sekhem ('Mansion of the Sistrum') to Hu, passing through Coptic Hō/Hou (ϩⲱ/ϩⲟⲩ) into Arabic Hū (Huw).",
-      "current_repo_state": {
-        "b_tarr": "Huw",
-        "b_tarr_direct": "Huw",
-        "b_tarr_hist": "Huw",
-        "b_origin": "Huw (constituent holding of Kûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hu,_Egypt",
       "older_name_by_867": {
         "exists": false,
@@ -2162,23 +1892,17 @@
         {
           "form": "p-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "the"
         },
         {
           "form": "boou",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "place/village name Pbow"
         }
       ],
       "etymology_analysis": "Arabic Fāw (Fāw Qiblī, 'Southern Faw') derives directly from Coptic Pbow / Pboou (ⲡⲃⲟⲟⲩ), site of the major 4th-century Pachomian monastery.",
-      "current_repo_state": {
-        "b_tarr": "Faw",
-        "b_tarr_direct": "Faw",
-        "b_tarr_hist": "Faw",
-        "b_origin": "Faw (constituent holding of Kûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pbow",
       "older_name_by_867": {
         "exists": false,
@@ -2213,18 +1937,11 @@
         {
           "form": "Kainē",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "new (city)"
         }
       ],
       "etymology_analysis": "Arabic Qinā derives directly from Greco-Roman Kainē / Kainēpolis (Καινή πόλις, 'New City'), later also called Maximianopolis.",
-      "current_repo_state": {
-        "b_tarr": "Tschina",
-        "b_tarr_direct": "Tschina",
-        "b_tarr_hist": "Tschina",
-        "b_origin": "Tschina (constituent holding of Kûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qena",
       "older_name_by_867": {
         "exists": false,
@@ -2259,23 +1976,17 @@
         {
           "form": "jwn.w",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "pillar-city (Heliopolis)"
         },
         {
           "form": "mnṯ.w",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Montu (war god)"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian Iuny-Montu ('Heliopolis of Montu'), passing through Coptic Ermont / Rmont (ⲉⲣⲙⲟⲛⲧ / ⲣ̄ⲙⲟⲛⲧ) into Arabic Armant.",
-      "current_repo_state": {
-        "b_tarr": "Armant",
-        "b_tarr_direct": "Armant",
-        "b_tarr_hist": "Armant",
-        "b_origin": "Armant (constituent holding of Kûs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Armant,_Egypt",
       "older_name_by_867": {
         "exists": false,
@@ -2310,18 +2021,11 @@
         {
           "form": "ḫmnw",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "eight (the Ogdoad deities)"
         }
       ],
       "etymology_analysis": "Derived from Ancient Egyptian Khemenu ('Eight', referring to the Ogdoad), through Coptic Shmūn (ϣⲙⲟⲩⲛ) into Arabic al-Ushmūnayn (with Arabic dual ending -ayn).",
-      "current_repo_state": {
-        "b_tarr": "Uschmûn",
-        "b_tarr_direct": "Uschmûn",
-        "b_tarr_hist": "Uschmûn",
-        "b_origin": "Uschmûn (Ushmun)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hermopolis",
       "older_name_by_867": {
         "exists": false,
@@ -2356,23 +2060,17 @@
         {
           "form": "Antinoos",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Antinous (deified youth)"
         },
         {
           "form": "polis",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city"
         }
       ],
       "etymology_analysis": "Founded by Hadrian in 130 CE as Antinoöpolis in honor of Antinous; passed through Coptic Antinōou (ⲁⲛⲧⲓⲛⲱⲟⲩ) into early Arabic Anṣinā (modern Sheikh Ibada).",
-      "current_repo_state": {
-        "b_tarr": "Ansina",
-        "b_tarr_direct": "Ansina",
-        "b_tarr_hist": "Ansina",
-        "b_origin": "Ansina (constituent holding of Uschmûn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Antino%C3%B6polis",
       "older_name_by_867": {
         "exists": false,
@@ -2407,23 +2105,17 @@
         {
           "form": "man-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "place of"
         },
         {
           "form": "balot",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "pelts, skins"
         }
       ],
       "etymology_analysis": "Arabic Manfalūṭ derives from Coptic Manbalot (ⲙⲁⲛⲃⲁⲗⲟⲧ, 'place of pelts/skins').",
-      "current_repo_state": {
-        "b_tarr": "Manfalut",
-        "b_tarr_direct": "Manfalut",
-        "b_tarr_hist": "Manfalut",
-        "b_origin": "Manfalut (constituent holding of Uschmûn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Manfalut",
       "older_name_by_867": {
         "exists": false,
@@ -2458,23 +2150,17 @@
         {
           "form": "al-wāḥāt",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the oases"
         },
         {
           "form": "al-baḥriyya",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the northern (lit. seaward)"
         }
       ],
       "etymology_analysis": "Modern Arabic geographical name al-Wāḥāt al-Baḥriyya ('the Northern Oases'); earlier known in Egyptian as Djesdjes and Wahet-Mehtyt, in Roman times as Oasis Parva, and in early Islamic times as Wāḥ al-Bahnasā.",
-      "current_repo_state": {
-        "b_tarr": "Bahrîe",
-        "b_tarr_direct": "Bahrîe",
-        "b_tarr_hist": "Bahrîe",
-        "b_origin": "Bahrîe (Bahriya)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bahariya_Oasis",
       "older_name_by_867": {
         "exists": true,
@@ -2514,23 +2200,17 @@
         {
           "form": "p-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "the"
         },
         {
           "form": "auēt",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "assembly, monastery"
         }
       ],
       "etymology_analysis": "Arabic al-Bāwīṭī derives from Coptic Paouēt (ⲡⲁⲩⲏⲧ, 'assembly/monastery'). Although 26th Dynasty tombs exist nearby at Qarat Qasr Salim, no dated pre-867 attestation of the settlement name Bawiti is established.",
-      "current_repo_state": {
-        "b_tarr": "Bawiti",
-        "b_tarr_direct": "Bawiti",
-        "b_tarr_hist": "Bawiti",
-        "b_origin": "Bawiti (constituent holding of Bahrîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bawiti",
       "older_name_by_867": {
         "exists": false,
@@ -2565,23 +2245,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "ḥārra",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "quarter, lane, or hot (spring)"
         }
       ],
       "etymology_analysis": "Arabic al-Ḥārra, a modern village in the eastern part of Bahariya Oasis.",
-      "current_repo_state": {
-        "b_tarr": "Al-Harra",
-        "b_tarr_direct": "Al-Harra",
-        "b_tarr_hist": "Al-Harra",
-        "b_origin": "Al-Harra (constituent holding of Bahrîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AD%D8%A7%D8%B1%D8%A9_(%D8%A7%D9%84%D9%88%D8%A7%D8%AD%D8%A7%D8%AA_%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9)",
       "older_name_by_867": {
         "exists": false,
@@ -2616,18 +2290,11 @@
         {
           "form": "Mt",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Mut (mother goddess)"
         }
       ],
       "etymology_analysis": "Arabic Mūṭ (موط) derives from Greco-Roman Mōthis (Μῶθις) and Ancient Egyptian Mt, named after the goddess Mut.",
-      "current_repo_state": {
-        "b_tarr": "Dachle",
-        "b_tarr_direct": "Dachle",
-        "b_tarr_hist": "Dachle",
-        "b_origin": "Dachle (Dakhla)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mut,_Egypt",
       "older_name_by_867": {
         "exists": false,
@@ -2662,18 +2329,11 @@
         {
           "form": "Tunayda",
           "language": "Arabic (possibly Egyptian substrate)",
+          "language_code": "ara",
           "translation": "Tineida / Tunayda (village name)"
         }
       ],
       "etymology_analysis": "Village at the eastern entrance of Dakhla Oasis, first attested in medieval Arabic cadastral sources (Ibn Mammati c. 1200 CE) as Ḥayz Tunayda.",
-      "current_repo_state": {
-        "b_tarr": "Tunayda",
-        "b_tarr_direct": "Tunayda",
-        "b_tarr_hist": "Tunayda",
-        "b_origin": "Tunayda (constituent holding of Dachle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%AA%D9%86%D9%8A%D8%AF%D8%A9",
       "older_name_by_867": {
         "exists": false,
@@ -2708,23 +2368,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "qaṣr",
           "language": "Arabic (from Latin castrum)",
+          "language_code": "ara",
           "translation": "fortress, castle"
         }
       ],
       "etymology_analysis": "Arabic al-Qaṣr ('the Fortress', from Latin castrum), founded by the Ayyubids in the late 12th century on the ruins of a Roman fort.",
-      "current_repo_state": {
-        "b_tarr": "Al-Tschasr-Dakhla",
-        "b_tarr_direct": "Al-Tschasr-Dakhla",
-        "b_tarr_hist": "Al-Tschasr-Dakhla",
-        "b_origin": "Al-Tschasr-Dakhla (constituent holding of Dachle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dakhla_Oasis",
       "older_name_by_867": {
         "exists": true,
@@ -2761,18 +2415,11 @@
         {
           "form": "al-Farāfra",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the bubbling/fizzy (springs), broken plural of farfar"
         }
       ],
       "etymology_analysis": "Arabic al-Farāfra (medieval al-Farfarūn, attested c. 1200 CE), derived from farfar ('fizzy/bubbling') referring to its springs; in Pharaonic times it was called Ta-ihet ('Land of the Cow').",
-      "current_repo_state": {
-        "b_tarr": "Farâfre",
-        "b_tarr_direct": "Farâfre",
-        "b_tarr_hist": "Farâfre",
-        "b_origin": "Farâfre (Farafra)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Farafra,_Egypt",
       "older_name_by_867": {
         "exists": true,
@@ -2809,23 +2456,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "khārija",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "outer"
         }
       ],
       "etymology_analysis": "Arabic al-Khārija ('the outer') is a semantic calque of Greek hē Exōterō ('the outer [oasis]'), replacing earlier Egyptian Hebet / Hibis and Coptic Ouah en-Hib.",
-      "current_repo_state": {
-        "b_tarr": "Chârge",
-        "b_tarr_direct": "Chârge",
-        "b_tarr_hist": "Chârge",
-        "b_origin": "Chârge (Kharga)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kharga_Oasis",
       "older_name_by_867": {
         "exists": true,
@@ -2865,23 +2506,17 @@
         {
           "form": "pa-",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "the one of"
         },
         {
           "form": "rēs",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "south"
         }
       ],
       "etymology_analysis": "Arabic Bārīs derives from Coptic Parēs (ⲡⲁⲣⲏⲥ, 'the one of the south'), located at the southern end of Kharga Oasis near the Roman temple of Dush (ancient Kysis).",
-      "current_repo_state": {
-        "b_tarr": "Baris",
-        "b_tarr_direct": "Baris",
-        "b_tarr_hist": "Baris",
-        "b_origin": "Baris (constituent holding of Chârge)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baris,_Egypt",
       "older_name_by_867": {
         "exists": true,
@@ -2919,23 +2554,17 @@
         {
           "form": "Aléxandros",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Alexander (the Great)"
         },
         {
           "form": "-eia",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "city/place suffix"
         }
       ],
       "etymology_analysis": "Named after its founder Alexander the Great in 331 BCE (Greek Alexándreia, Arabic al-Iskandariyya).",
-      "current_repo_state": {
-        "b_tarr": "Alexandrîe",
-        "b_tarr_direct": "Alexandrîe",
-        "b_tarr_hist": "Alexandrîe",
-        "b_origin": "Alexandrîe (Alexandria)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Alexandria",
       "older_name_by_867": {
         "exists": false,
@@ -2970,23 +2599,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "ḥammām",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "bathhouse (or pigeons, ḥamām)"
         }
       ],
       "etymology_analysis": "Arabic al-Ḥammām ('the bath' or 'the pigeons', associated locally with Roman baths/cisterns or wild pigeons). The ancient Greek town of Cheimo lay in its vicinity.",
-      "current_repo_state": {
-        "b_tarr": "Al-Hamam",
-        "b_tarr_direct": "Al-Hamam",
-        "b_tarr_hist": "Al-Hamam",
-        "b_origin": "Al-Hamam (constituent holding of Alexandrîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Hamam",
       "older_name_by_867": {
         "exists": true,
@@ -3023,23 +2646,17 @@
         {
           "form": "wādī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "valley"
         },
         {
           "form": "al-naṭrūn",
           "language": "Arabic (from Greek nitron / Egyptian nṯrj)",
+          "language_code": "ara",
           "translation": "natron"
         }
       ],
       "etymology_analysis": "Arabic Wādī al-Naṭrūn ('Valley of Natron'), referring to its alkaline natron lakes; known in antiquity as Sekhet-hemat ('Field of Salt'), in Coptic as Shihēt (Ϣⲓϩⲏⲧ), and in Greek as Scetis.",
-      "current_repo_state": {
-        "b_tarr": "Wadi Natrun",
-        "b_tarr_direct": "Wadi Natrun",
-        "b_tarr_hist": "Wadi Natrun",
-        "b_origin": "Wadi Natrun (constituent holding of Alexandrîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wadi_El_Natrun",
       "older_name_by_867": {
         "exists": true,
@@ -3079,18 +2696,11 @@
         {
           "form": "Sīwa",
           "language": "Berber / Arabic",
+          "language_code": "ber",
           "translation": "Siwa (possibly from Berber tribal name swh or asiwan 'falcon')"
         }
       ],
       "etymology_analysis": "Arabic Sīwa (from Berber Isiwan / Sali, etymology debated: Berber tribal name swh, asiwan 'falcon', or Coptic soouh 'oasis') replaced earlier Islamic Santariyya and classical Ammonium.",
-      "current_repo_state": {
-        "b_tarr": "Sîwe",
-        "b_tarr_direct": "Sîwe",
-        "b_tarr_hist": "Sîwe",
-        "b_origin": "Sîwe (Siwa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Siwa_Oasis",
       "older_name_by_867": {
         "exists": true,
@@ -3129,23 +2739,17 @@
         {
           "form": "ʿayn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "spring, water source"
         },
         {
           "form": "al-gharbī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the western"
         }
       ],
       "etymology_analysis": "Arabic ʿAyn al-Gharbī ('the Western Spring'), a generic descriptive hydronym unattested in pre-867 historical records.",
-      "current_repo_state": {
-        "b_tarr": "Ain Al-Gharbi",
-        "b_tarr_direct": "Ain Al-Gharbi",
-        "b_tarr_hist": "Ain Al-Gharbi",
-        "b_origin": "Ain Al-Gharbi (constituent holding of Sîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3180,18 +2784,11 @@
         {
           "form": "al-qāra",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the isolated rocky hill / mesa"
         }
       ],
       "etymology_analysis": "Arabic al-Qāra ('the hillock/mesa'), referring to the rocky hilltop fortress of Qārat Umm al-Ṣaghīr northeast of Siwa.",
-      "current_repo_state": {
-        "b_tarr": "Tschara",
-        "b_tarr_direct": "Tschara",
-        "b_tarr_hist": "Tschara",
-        "b_origin": "Tschara (constituent holding of Sîwe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qara_Oasis",
       "older_name_by_867": {
         "exists": false,
@@ -3226,18 +2823,11 @@
         {
           "form": "as-sallūm",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the graded ascent, ladder"
         }
       ],
       "etymology_analysis": "Arabic as-Sallūm (from ʿAqaba as-Sallūm, 'graded ascent', attested in the 12th century), semantically mirroring Greek Katabathmós ('descent').",
-      "current_repo_state": {
-        "b_tarr": "Sullûm",
-        "b_tarr_direct": "Sullûm",
-        "b_tarr_hist": "Sullûm",
-        "b_origin": "Sullûm (Sullum)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sallum",
       "older_name_by_867": {
         "exists": true,
@@ -3276,23 +2866,17 @@
         {
           "form": "qaṣr",
           "language": "Arabic (from Latin castrum)",
+          "language_code": "ara",
           "translation": "fortress, palace"
         },
         {
           "form": "ash-shams",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the sun"
         }
       ],
       "etymology_analysis": "Arabic Qaṣr ash-Shams ('Castle of the Sun'), unattested as a historical settlement in the Sallum region <= 867 CE.",
-      "current_repo_state": {
-        "b_tarr": "Tschasr Asch-Schams",
-        "b_tarr_direct": "Tschasr Asch-Schams",
-        "b_tarr_hist": "Tschasr Asch-Schams",
-        "b_origin": "Tschasr Asch-Schams (constituent holding of Sullûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3327,23 +2911,17 @@
         {
           "form": "kanāʾis",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "churches"
         },
         {
           "form": "al-ḥadīd",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the iron"
         }
       ],
       "etymology_analysis": "Arabic Kanāʾis al-Ḥadīd ('Churches of Iron'), unattested in pre-867 historical sources.",
-      "current_repo_state": {
-        "b_tarr": "Kanais Al-Hadid",
-        "b_tarr_direct": "Kanais Al-Hadid",
-        "b_tarr_hist": "Kanais Al-Hadid",
-        "b_origin": "Kanais Al-Hadid (constituent holding of Sullûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3378,18 +2956,11 @@
         {
           "form": "Bāḍiʿ (باضع)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "medieval Red Sea port on the island of al-Rīḥ (Er Rih); of uncertain/pre-Islamic or Arabic root"
         }
       ],
       "etymology_analysis": "Bāḍiʿ was the earliest Arab-established port on the Sudanese Red Sea coast (on the island of Er Rih near the Gulf of Aqiq), flourishing c. 600–1100 AD and attested in early Islamic historiography from 637 AD onward. The etymology of Bāḍiʿ is uncertain, possibly from an Arabic root or a local Beja/Red Sea coastal name.",
-      "current_repo_state": {
-        "b_tarr": "Bâdi",
-        "b_tarr_direct": "Bâdi",
-        "b_tarr_hist": "Bâdi",
-        "b_origin": "Bâdi (Badi)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Badi,_Sudan",
       "older_name_by_867": {
         "exists": false,
@@ -3424,18 +2995,11 @@
         {
           "form": "Ka'abir",
           "language": "Uncertain",
+          "language_code": "und",
           "translation": "unattested toponym in the Badi–Aqiq region (possibly a corruption or variant of a Beja clan or local Arabic name, cf. Kubir noted by al-Ya'qubi)"
         }
       ],
       "etymology_analysis": "No historical settlement named Ka'abir is attested in the Badi/Aqiq region of the Sudanese Red Sea coast. It is left empty in barony_resolutions.json as an unoccupied holding and lacks pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3470,18 +3034,11 @@
         {
           "form": "Ṭūkar (طوكر)",
           "language": "Beja / Sudanese Arabic",
+          "language_code": "bej",
           "translation": "town in the Khor Baraka delta, Red Sea State, Sudan"
         }
       ],
       "etymology_analysis": "Tokar is a modern agricultural town in the Khor Baraka delta of southeastern Sudan whose recorded history begins in the 19th century with Ottoman-Egyptian cotton cultivation and the Mahdist War. Its name is of local Beja/Sudanese origin with no pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Basîn",
-        "b_tarr_direct": "Basîn",
-        "b_tarr_hist": "Basîn",
-        "b_origin": "Basîn (Bazin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%B7%D9%88%D9%83%D8%B1",
       "older_name_by_867": {
         "exists": false,
@@ -3516,18 +3073,11 @@
         {
           "form": "ʿAqīq (عقيق)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "carnelian/agate, or deep ravine/watercourse"
         }
       ],
       "etymology_analysis": "Aqiq (also spelled Akik) is a coastal settlement on the Gulf of Aqiq in Sudan. While classical scholars (Crowfoot 1911; Oxford Classical Dictionary) tentatively identify the Aqiq area with Ptolemais Theron, surface surveys found only Islamic-era pottery and the Arabic name Aqiq is not attested by 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Akik",
-        "b_tarr_direct": "Akik",
-        "b_tarr_hist": "Akik",
-        "b_origin": "Akik (constituent holding of Basîn)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://journals.openedition.org/cy/1685",
       "older_name_by_867": {
         "exists": true,
@@ -3564,18 +3114,11 @@
         {
           "form": "Bāzīn (بازين)",
           "language": "Beja / Kunama (via Arabic)",
+          "language_code": "bej",
           "translation": "medieval Beja kingdom; associated with the Kunama people, called 'Bazen' by Abyssinians"
         }
       ],
       "etymology_analysis": "Bazin was one of the six medieval Beja polities first described by al-Ya'qubi (late 9th century AD, c. 872–891 AD) as being at war with Alodia. The name corresponds to 'Bazen', the Abyssinian ethnonym for the Kunama who inhabited part of the kingdom; its earliest written attestation postdates 867 AD by a few years.",
-      "current_repo_state": {
-        "b_tarr": "Wiltrudstat",
-        "b_tarr_direct": "Basîn",
-        "b_tarr_hist": "Basîn",
-        "b_origin": "Wiltrudstat — Disambiguated capital foundation: Municipal foundation chartered by Wiltrud",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Beja_kingdoms",
       "older_name_by_867": {
         "exists": false,
@@ -3610,18 +3153,11 @@
         {
           "form": "isukib / Oosook",
           "language": "Beja (from Arabic sūq)",
+          "language_code": "bej",
           "translation": "at the market (locative of sūq 'market'); Arabicized as Sawākin"
         }
       ],
       "etymology_analysis": "The Beja name for Suakin is Oosook, likely borrowed from Arabic sūq ('market'), whose Beja locative form isukib ('at the market') is the probable source of Arabic Sawākin / Suakin. First attested by name in the 10th century by al-Hamdani.",
-      "current_repo_state": {
-        "b_tarr": "Suwâkin",
-        "b_tarr_direct": "Suwâkin",
-        "b_tarr_hist": "Suwâkin",
-        "b_origin": "Suwâkin (Suakin)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Suakin",
       "older_name_by_867": {
         "exists": true,
@@ -3659,18 +3195,11 @@
         {
           "form": "Dunqunāb (دنقناب)",
           "language": "Beja / Sudanese Arabic",
+          "language_code": "bej",
           "translation": "coastal bay and settlement on the Sudanese Red Sea coast"
         }
       ],
       "etymology_analysis": "Dungunab (also Dongonab) is a coastal village and bay north of Port Sudan in Red Sea State, Sudan. Of local Beja/Sudanese origin, it is unattested in historical sources prior to 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Dungunab",
-        "b_tarr_direct": "Dungunab",
-        "b_tarr_hist": "Dungunab",
-        "b_origin": "Dungunab (constituent holding of Suwâkin)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://worldheritageoutlook.iucn.org/explore-sites/sanganeb-marine-national-park-and-dungonab-bay-mukkawar-island-marine-national-park",
       "older_name_by_867": {
         "exists": false,
@@ -3705,23 +3234,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Qāhira (القاهرة)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the Vanquisher / the Victorious (epithet of Mars, al-Najm al-Qāhir)"
         }
       ],
       "etymology_analysis": "Cairo (Arabic al-Qāhira, 'The Victorious') was founded in 969 AD by the Fatimid Caliphate just north of Fustat, reportedly named after the planet Mars (al-Qāhir) rising at the time of its foundation. Both Fustat (641 AD) and Roman Babylon Fortress (c. 300 AD) predate it on the site.",
-      "current_repo_state": {
-        "b_tarr": "Sêgestat",
-        "b_tarr_direct": "Sêgestat",
-        "b_tarr_hist": "Sêgestat",
-        "b_origin": "Sêgestat (Cairo)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cairo",
       "older_name_by_867": {
         "exists": true,
@@ -3759,18 +3282,11 @@
         {
           "form": "Klŷsma (Κλῦσμα) -> al-Qulzum (القلزم)",
           "language": "Ancient Greek -> Arabic",
+          "language_code": "ara",
           "translation": "surf, waves that break (whence Coptic Peklousma and Arabic al-Qulzum)"
         }
       ],
       "etymology_analysis": "Quzlum (al-Qulzum) is the Arabicized form of Ancient Greek Klŷsma ('surf, waves that break'), a major Roman and early Islamic Red Sea port at the head of the Gulf of Suez (giving the Red Sea its medieval Arabic name Baḥr al-Qulzum).",
-      "current_repo_state": {
-        "b_tarr": "Quzlum",
-        "b_tarr_direct": "Quzlum",
-        "b_tarr_hist": "Quzlum",
-        "b_origin": "Quzlum (constituent holding of Sêgestat)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Clysma",
       "older_name_by_867": {
         "exists": false,
@@ -3805,18 +3321,11 @@
         {
           "form": "Tp-jḥw -> Petpēh -> Aṭfīḥ (أطفيح)",
           "language": "Ancient Egyptian -> Coptic -> Arabic",
+          "language_code": "egy",
           "translation": "the first of the cows (referring to Hathor / Hesat)"
         }
       ],
       "etymology_analysis": "Atfih (Arabic Aṭfīḥ) derives directly via Coptic Petpēh / Tpēh from Ancient Egyptian Tp-jḥw ('first of the cows'), a sacred epithet of the goddess Hathor; it was also called Aphroditopolis by the Greeks.",
-      "current_repo_state": {
-        "b_tarr": "Atfih",
-        "b_tarr_direct": "Atfih",
-        "b_tarr_hist": "Atfih",
-        "b_origin": "Atfih (constituent holding of Sêgestat)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Atfih",
       "older_name_by_867": {
         "exists": false,
@@ -3851,18 +3360,11 @@
         {
           "form": "Ḥulwān / Ḥelwān (حلوان)",
           "language": "Arabic (possibly from Coptic Halwan / Egyptian Ain-an)",
+          "language_code": "ara",
           "translation": "uncertain; either from Egyptian Ain-an ('Spring of the Fish') via Coptic Halwan, or named by 'Abd al-'Aziz ibn Marwan after Hulwan in Iran"
         }
       ],
       "etymology_analysis": "Helwan (Ḥulwān) was made the Umayyad capital of Egypt in 689 AD by 'Abd al-'Aziz ibn Marwan. Scholars derive the name either from Ancient Egyptian Ain-an ('Spring of the Fish', referring to its sulfur springs) via Coptic Halwan, or from the Persian city of Hulwan.",
-      "current_repo_state": {
-        "b_tarr": "Hulwan",
-        "b_tarr_direct": "Hulwan",
-        "b_tarr_hist": "Hulwan",
-        "b_origin": "Hulwan (constituent holding of Sêgestat)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Helwan",
       "older_name_by_867": {
         "exists": false,
@@ -3897,23 +3399,17 @@
         {
           "form": "pꜣ-",
           "language": "Late Egyptian",
+          "language_code": "egy",
           "translation": "the"
         },
         {
           "form": "ym -> Phiom -> al-Fayyūm (الفيوم)",
           "language": "Late Egyptian -> Coptic -> Arabic",
+          "language_code": "egy",
           "translation": "sea, lake (referring to Lake Moeris)"
         }
       ],
       "etymology_analysis": "Al-Fayyum derives via Coptic Phiom / Peiom from Late Egyptian pꜣ-ym ('the sea' or 'the lake'), a reference to the nearby Lake Moeris (Birket Qarun). The city itself dates back to the Old Kingdom as Shedet (Greek Crocodilopolis / Arsinoë).",
-      "current_repo_state": {
-        "b_tarr": "Fajûm",
-        "b_tarr_direct": "Fajûm",
-        "b_tarr_hist": "Fajûm",
-        "b_origin": "Fajûm (Fayyum)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Faiyum",
       "older_name_by_867": {
         "exists": false,
@@ -3948,18 +3444,11 @@
         {
           "form": "Tirsā (ترسا)",
           "language": "Arabic (or Coptic substrate)",
+          "language_code": "ara",
           "translation": "village in Sennuris district, Faiyum Governorate (distinct from Tirsa in Giza)"
         }
       ],
       "etymology_analysis": "Tirsa in the Fayyum (Sennuris district) is first attested in the 1177 AD Ayyubid cadastral survey (al-Rawk al-Ṣalāḥī) recorded by Ibn Mammati. Unlike the homonymous Tirsa in Giza (Coptic Tersō), the Fayyum village has no pre-867 attestation.",
-      "current_repo_state": {
-        "b_tarr": "Tirsa",
-        "b_tarr_direct": "Tirsa",
-        "b_tarr_hist": "Tirsa",
-        "b_origin": "Tirsa (constituent holding of Fajûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D9%82%D8%B1%D9%89_%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9_%D8%A7%D9%84%D9%81%D9%8A%D9%88%D9%85",
       "older_name_by_867": {
         "exists": false,
@@ -3994,18 +3483,11 @@
         {
           "form": "Aqnā (أقنى)",
           "language": "Arabic / Egyptian",
+          "language_code": "ara",
           "translation": "historical village in the Fayyum (shortened from Munyat Aqnā)"
         }
       ],
       "etymology_analysis": "Iqna corresponds to the historical Fayyum village of Munyat Aqnā (منية أقنى), first attested in Ibn Mammati's late 12th-century Qawānīn al-Dawāwīn (1177 AD survey) and later subsumed into al-Mushrik. No pre-867 attestation exists.",
-      "current_repo_state": {
-        "b_tarr": "Iqna",
-        "b_tarr_direct": "Iqna",
-        "b_tarr_hist": "Iqna",
-        "b_origin": "Iqna (constituent holding of Fajûm)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%81%D9%8A%D9%88%D9%85%D9%8A%D8%A9_(%D8%B9%D9%85%D9%84)",
       "older_name_by_867": {
         "exists": false,
@@ -4040,18 +3522,11 @@
         {
           "form": "al-Jīzah (الجيزة)",
           "language": "Arabic (or Middle Persian diz / Egyptian r-gs-ḥr)",
+          "language_code": "ara",
           "translation": "edge, side of the valley (per al-Maqrizi); alternatively Middle Persian diz ('fortress') or Egyptian r-gs-ḥr ('on the side of the pyramid')"
         }
       ],
       "etymology_analysis": "Giza (Arabic al-Jīzah) was founded in 642 AD opposite Fustat. Al-Maqrizi explained it as an Arameo-Arabic term meaning 'edge/side [of the valley]'; alternative scholarly hypotheses link it to Ancient Egyptian r-gs-ḥr ('beside the pyramid') or Middle Persian diz ('fortress').",
-      "current_repo_state": {
-        "b_tarr": "Gîse",
-        "b_tarr_direct": "Gîse",
-        "b_tarr_hist": "Gîse",
-        "b_origin": "Gîse (Giza)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Giza",
       "older_name_by_867": {
         "exists": false,
@@ -4086,23 +3561,17 @@
         {
           "form": "Abū / Bū",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "father of (kunya / place-name prefix)"
         },
         {
           "form": "Ghālib",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "personal name ('victorious')"
         }
       ],
       "etymology_analysis": "Abu Ghalib (Giza Governorate) is first attested in the 1177 AD Ayyubid cadastral survey (al-Rawk al-Ṣalāḥī) recorded by Ibn Mammati as Bū Ghālib, named after an otherwise unattested eponymous figure or founder; unattested by 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Abu Ghalib",
-        "b_tarr_direct": "Abu Ghalib",
-        "b_tarr_hist": "Abu Ghalib",
-        "b_origin": "Abu Ghalib (constituent holding of Gîse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%88_%D8%BA%D8%A7%D9%84%D8%A8_(%D8%A7%D9%84%D8%AC%D9%8A%D8%B2%D8%A9)",
       "older_name_by_867": {
         "exists": false,
@@ -4137,23 +3606,17 @@
         {
           "form": "pr",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "house, temple"
         },
         {
           "form": "wsjr -> Bousiri -> Būṣīr (بوصير)",
           "language": "Ancient Egyptian -> Coptic -> Arabic",
+          "language_code": "egy",
           "translation": "Osiris"
         }
       ],
       "etymology_analysis": "Busir / Abusir (Badrashin, Giza) is the direct phonological descendant of Ancient Egyptian pr wsjr ('House/Temple of Osiris') via Coptic Bousiri and Greek Bousiris. It served as a Fifth Dynasty royal necropolis and was also the site where the last Umayyad caliph Marwan II was killed in 750 AD.",
-      "current_repo_state": {
-        "b_tarr": "Busir",
-        "b_tarr_direct": "Busir",
-        "b_tarr_hist": "Busir",
-        "b_origin": "Busir (constituent holding of Gîse)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Abusir",
       "older_name_by_867": {
         "exists": false,
@@ -4188,18 +3651,11 @@
         {
           "form": "Αὔγιλα (Augila) -> Awjilah (أوجلة)",
           "language": "Libyan/Berber or Tedaga (via Greek -> Arabic)",
+          "language_code": "ber",
           "translation": "oasis name (linked in local tradition to Tebu 'Wajula' meaning 'low-lying land')"
         }
       ],
       "etymology_analysis": "Awjila preserves its ancient Libyan name Augila (Αὔγιλα) attested since Herodotus (5th century BC) and later in Strabo, Ptolemy, and Procopius; conquered by Arab forces under 'Abd Allah ibn Sa'd around 650 AD.",
-      "current_repo_state": {
-        "b_tarr": "Ouschîle",
-        "b_tarr_direct": "Ouschîle",
-        "b_tarr_hist": "Ouschîle",
-        "b_origin": "Ouschîle (Awjila)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Awjila",
       "older_name_by_867": {
         "exists": false,
@@ -4234,18 +3690,11 @@
         {
           "form": "Jālū (جالو)",
           "language": "Berber / Libyan Arabic",
+          "language_code": "ber",
           "translation": "oasis name of uncertain etymology (popularly linked to Arabic tajwāl 'wandering')"
         }
       ],
       "etymology_analysis": "Jalu is a Cyrenaican oasis adjoining Awjila. The origin of the name Jalu is uncertain with no widely accepted linguistic explanation, and it is not attested in written sources by 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Jalu",
-        "b_tarr_direct": "Jalu",
-        "b_tarr_hist": "Jalu",
-        "b_origin": "Jalu (constituent holding of Ouschîle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jalu",
       "older_name_by_867": {
         "exists": false,
@@ -4280,18 +3729,11 @@
         {
           "form": "Ijkharrah / Jikharra (إجخرة)",
           "language": "Berber / Libyan Arabic",
+          "language_code": "ber",
           "translation": "desert oasis northeast of Awjila and Jalu"
         }
       ],
       "etymology_analysis": "Jikharra (Jakharrad / Ijkharrah) is the northeasternmost of the three Awjila-Jalu oases in Cyrenaica. While a modern study has proposed identifying an archaeological site there with Ptolemy's Dioskoron, the name Jikharra itself is unattested by 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Jakharrad",
-        "b_tarr_direct": "Jakharrad",
-        "b_tarr_hist": "Jakharrad",
-        "b_origin": "Jakharrad (constituent holding of Ouschîle)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jikharra",
       "older_name_by_867": {
         "exists": false,
@@ -4326,23 +3768,17 @@
         {
           "form": "Bárkē (Βάρκη) -> Barqah (برقة)",
           "language": "Ancient Libyan / Greek -> Arabic",
+          "language_code": "ber",
           "translation": "Barca (originally a settlement of the Libyan Barraci tribe)"
         },
         {
           "form": "al-Marj (المرج)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the meadows (later medieval name attested by al-Bakri in the 11th century)"
         }
       ],
       "etymology_analysis": "Barca (Greek Bárkē, Arabic Barqah) was an ancient Libyan and Greek city founded c. 560 BC and conquered by the Arabs in 643–644 AD, giving its name to the entire province of Barqah (Cyrenaica). The modern name al-Marj ('the meadows') arose later in the medieval period (attested by al-Bakri in the 11th century).",
-      "current_repo_state": {
-        "b_tarr": "Bârke",
-        "b_tarr_direct": "Bârke",
-        "b_tarr_hist": "Bârke",
-        "b_origin": "Bârke (Barqa)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Barca_(ancient_city)",
       "older_name_by_867": {
         "exists": false,
@@ -4377,23 +3813,17 @@
         {
           "form": "Wādī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "valley, dry riverbed"
         },
         {
           "form": "Masūs (مسوس)",
           "language": "Berber / Libyan Arabic",
+          "language_code": "ber",
           "translation": "toponym of plausible Berber origin (compared to Beni Messous in Algeria; also Arabic masūs 'brackish/slightly fresh water')"
         }
       ],
       "etymology_analysis": "Wadi Masus / Zawiyat Msus is a desert valley and village southeast of Benghazi in Cyrenaica. The element Masūs is likely of Berber origin (or Arabic masūs 'brackish water'), but the place-name is unattested by 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Wadi Masus",
-        "b_tarr_direct": "Wadi Masus",
-        "b_tarr_hist": "Wadi Masus",
-        "b_origin": "Wadi Masus (constituent holding of Bârke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Msus",
       "older_name_by_867": {
         "exists": false,
@@ -4428,23 +3858,17 @@
         {
           "form": "Jabal (جبل)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mountain"
         },
         {
           "form": "al-Gharbī (الغربي)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the western"
         }
       ],
       "etymology_analysis": "Jabal al-Gharbi ('The Western Mountain') is the modern Arabic name for the Nafusa Mountains in northwestern Libya (and a modern Libyan district formed in 1995/2007). In the 8th–9th centuries, the range was known in Arabic sources as Jabal Nafūsa.",
-      "current_repo_state": {
-        "b_tarr": "Jabal Al-Gharbi",
-        "b_tarr_direct": "Jabal Al-Gharbi",
-        "b_tarr_hist": "Jabal Al-Gharbi",
-        "b_origin": "Jabal Al-Gharbi (constituent holding of Bârke)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jabal_al_Gharbi_District",
       "older_name_by_867": {
         "exists": true,
@@ -4481,23 +3905,17 @@
         {
           "form": "Ben / Ibn (بن)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "son of"
         },
         {
           "form": "Ghāzī (غازي)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Ghazi (personal name of the 15th-century saint Sidi Ghazi)"
         }
       ],
       "etymology_analysis": "Benghazi was named in the 15th century (c. 1450 AD) after Sidi Ghazi (Ibn Ghazi), a Tripolitanian saint/benefactor. The site was originally the ancient Greek colony of Euesperides (c. 525 BC), refounded in the 3rd century BC as Berenice.",
-      "current_repo_state": {
-        "b_tarr": "Berenîke",
-        "b_tarr_direct": "Berenîke",
-        "b_tarr_hist": "Berenîke",
-        "b_origin": "Ancient Greek Pentapolis city Berenice / Hesperides (in-game: Benghazi)",
-        "b_anachronism": "15th-century port of Sidi Ghazi fails Burden of Proof on Antiquity; restored to classical Greek Berenice.",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Benghazi",
       "older_name_by_867": {
         "exists": true,
@@ -4535,18 +3953,11 @@
         {
           "form": "Darnis / Darne -> Darnah (درنة)",
           "language": "Ancient Greek / Libyan -> Arabic",
+          "language_code": "grc",
           "translation": "ancient city and episcopal metropolis of Libya Inferior (Marmarica)"
         }
       ],
       "etymology_analysis": "Derna (Arabic Darnah) is the direct phonological continuation of ancient Greek and Roman Darnis / Darne, a Hellenistic city and later Roman metropolis of Libya Inferior (Marmarica) attested from at least the 2nd century AD.",
-      "current_repo_state": {
-        "b_tarr": "Derne",
-        "b_tarr_direct": "Derne",
-        "b_tarr_hist": "Derne",
-        "b_origin": "Derne (Derna)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Derna,_Libya",
       "older_name_by_867": {
         "exists": false,
@@ -4581,23 +3992,17 @@
         {
           "form": "Wādī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "valley, dry riverbed"
         },
         {
           "form": "Makhīl / al-Makhīlī (المخيلي)",
           "language": "Arabic / Berber",
+          "language_code": "ara",
           "translation": "Makhil (desert station and wadi in Cyrenaica)"
         }
       ],
       "etymology_analysis": "Wadi Makhil (modern Mechili / al-Makhili) is first attested in al-Ya'qubi's Kitāb al-Buldān (c. 891 AD), just after the 867 AD baseline, as an established Islamic desert station with a mosque, cisterns, markets, and fort.",
-      "current_repo_state": {
-        "b_tarr": "Wadi Makhil",
-        "b_tarr_direct": "Wadi Makhil",
-        "b_tarr_hist": "Wadi Makhil",
-        "b_origin": "Wadi Makhil (constituent holding of Derne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%AE%D9%8A%D9%84%D9%8A",
       "older_name_by_867": {
         "exists": false,
@@ -4632,18 +4037,11 @@
         {
           "form": "Marāwah (مراوة)",
           "language": "Libyan Arabic / Berber",
+          "language_code": "ara",
           "translation": "village in the Jabal al Akhdar, Cyrenaica"
         }
       ],
       "etymology_analysis": "Marawa (Marawah) is a village in the Jabal al Akhdar highlands of Cyrenaica, Libya, between Marj and Lamluda. It has no attested historical record prior to 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Marawa",
-        "b_tarr_direct": "Marawa",
-        "b_tarr_hist": "Marawa",
-        "b_origin": "Marawa (constituent holding of Derne)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D9%85%D8%B1%D8%A7%D9%88%D8%A9",
       "older_name_by_867": {
         "exists": false,
@@ -4678,18 +4076,11 @@
         {
           "form": "Antípyrgos (Ἀντίπυργος) -> Ṭubruq (طبرق)",
           "language": "Ancient Greek -> Arabic",
+          "language_code": "ara",
           "translation": "across from Pyrgos (in Crete)"
         }
       ],
       "etymology_analysis": "Tobruk (Arabic Ṭubruq) is the direct phonological descendant of Ancient Greek Antipyrgos ('across from Pyrgos [in Crete]'), an ancient Greek colony and Roman frontier fortress attested since Ptolemy (c. 150 AD) and Justinian's 6th-century fortifications.",
-      "current_repo_state": {
-        "b_tarr": "Tobrûch",
-        "b_tarr_direct": "Tobrûch",
-        "b_tarr_hist": "Tobrûch",
-        "b_origin": "Tobrûch (Tobruk)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tobruk",
       "older_name_by_867": {
         "exists": false,
@@ -4724,18 +4115,11 @@
         {
           "form": "Rašīd (رشيد)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "guide / rightly guided (or from Coptic ti-Rashit)"
         }
       ],
       "etymology_analysis": "Arabic Rashīd (Coptic ti-Rashit, ϯⲣⲁϣⲓⲧ) was established by the 9th century on the site of ancient Bolbitine; later Italian/French Crusaders adapted the name to Rosetta/Rosette ('little rose').",
-      "current_repo_state": {
-        "b_tarr": "Buhêre",
-        "b_tarr_direct": "Buhêre",
-        "b_tarr_hist": "Buhêre",
-        "b_origin": "Buhêre (Al-Buhaira)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rosetta",
       "older_name_by_867": {
         "exists": true,
@@ -4772,33 +4156,29 @@
         {
           "form": "pꜣ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "the"
         },
         {
           "form": "dmỉ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "settlement / town"
         },
         {
           "form": "n",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "of"
         },
         {
           "form": "Ḥr.w",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Horus"
         }
       ],
       "etymology_analysis": "Modern Arabic Damanhūr derives directly via Coptic p-Timinhor (ⲡϯⲙⲓⲛ̀ϩⲱⲣ) and Aramaic Temenkhūr from Ancient Egyptian pꜣ-dmỉ-n-Ḥr.w ('City/Settlement of Horus').",
-      "current_repo_state": {
-        "b_tarr": "Damanhur",
-        "b_tarr_direct": "Damanhur",
-        "b_tarr_hist": "Damanhur",
-        "b_origin": "Damanhur (constituent holding of Buhêre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Damanhur",
       "older_name_by_867": {
         "exists": true,
@@ -4835,23 +4215,17 @@
         {
           "form": "Rꜥ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Ra (the sun god)"
         },
         {
           "form": "ms-sw",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "fashioned him / bore him"
         }
       ],
       "etymology_analysis": "Village in Itay al-Barud (Beheira Governorate) preserving the Ancient Egyptian royal name Rꜥ-ms-sw (Ramesses), continuously attested in Arabic administrative records since the 7th-century conquest.",
-      "current_repo_state": {
-        "b_tarr": "Ramsis",
-        "b_tarr_direct": "Ramsis",
-        "b_tarr_hist": "Ramsis",
-        "b_origin": "Ramsis (constituent holding of Buhêre)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%B1%D9%85%D8%B3%D9%8A%D8%B3_(%D8%A5%D9%8A%D8%AA%D8%A7%D9%8A_%D8%A7%D9%84%D8%A8%D8%A7%D8%B1%D9%88%D8%AF)",
       "older_name_by_867": {
         "exists": false,
@@ -4886,28 +4260,23 @@
         {
           "form": "pꜣ",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "the"
         },
         {
           "form": "jw",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "island"
         },
         {
           "form": "nfr",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "good"
         }
       ],
       "etymology_analysis": "Arabic Minūf derives from Coptic Panouf (ⲡⲁⲛⲟⲩϥ, 'southern Panouf' / Minuf al-Ulyah), itself from Ancient Egyptian pꜣ-jw-nfr ('the good island'), Hellenized as Onouphis.",
-      "current_repo_state": {
-        "b_tarr": "Saîs",
-        "b_tarr_direct": "Garbîe",
-        "b_tarr_hist": "Saîs",
-        "b_origin": "Saîs (Saîs / Busîr (in-game: Al-Gharbiya))",
-        "b_anachronism": "Anachronistic foundation evaluated in 1059 Imperial Chancellery audit.",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Menouf",
       "older_name_by_867": {
         "exists": true,
@@ -4945,23 +4314,17 @@
         {
           "form": "ṯb",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "calf (or city)"
         },
         {
           "form": "nṯr",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "god / sacred"
         }
       ],
       "etymology_analysis": "Arabic Samannūd derives via Coptic Jemnouti/Semenout (ϫⲉⲙⲛⲟⲩϯ) and Greek Sebennytos from Ancient Egyptian ṯb-(n)-nṯr ('city of the sacred calf').",
-      "current_repo_state": {
-        "b_tarr": "Samannud",
-        "b_tarr_direct": "Samannud",
-        "b_tarr_hist": "Samannud",
-        "b_origin": "Samannud (constituent holding of Saîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Samannud",
       "older_name_by_867": {
         "exists": true,
@@ -5000,18 +4363,11 @@
         {
           "form": "parálios (παράλιος)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "coastal / by the sea"
         }
       ],
       "etymology_analysis": "Arabic al-Burullus derives via Coptic ti-Paralia (Ϯⲡⲁⲣⲁⲗⲓⲁ) from Ancient Greek parálios/páralos ('coast, seaside'), originally a coastal port and bishopric on the Delta.",
-      "current_repo_state": {
-        "b_tarr": "Burullus",
-        "b_tarr_direct": "Burullus",
-        "b_tarr_hist": "Burullus",
-        "b_origin": "Burullus (constituent holding of Saîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Burullus",
       "older_name_by_867": {
         "exists": true,
@@ -5049,18 +4405,11 @@
         {
           "form": "Ništerōw (ⲛⲓϣⲧⲉⲣⲱⲟⲩ)",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "island/settlement name in the Delta marshes"
         }
       ],
       "etymology_analysis": "Arabic Nastaruh / Nastarāwah derives from Coptic Ništerōw (ⲛⲓϣⲧⲉⲣⲱⲟⲩ), an island settlement in Lake Burullus (which Ibn Hawqal later called the Lake of Nastaruh).",
-      "current_repo_state": {
-        "b_tarr": "Nastarawa",
-        "b_tarr_direct": "Nastarawa",
-        "b_tarr_hist": "Nastarawa",
-        "b_origin": "Nastarawa (constituent holding of Saîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ccdl.claremont.edu/digital/api/collection/cce/id/1439/download",
       "older_name_by_867": {
         "exists": false,
@@ -5095,18 +4444,11 @@
         {
           "form": "ʾābyār / ʾabyār (أبيار)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "wells (plural of biʾr)"
         }
       ],
       "etymology_analysis": "Arabic Ibyār derives from the plural of biʾr ('well'), rendered in Coptic as Abior (ⲁⲃⲓⲟⲣ) and calqued in Coptic as Hahshei (ϩⲁϩϣⲏⲓ, 'many wells').",
-      "current_repo_state": {
-        "b_tarr": "Ibyar",
-        "b_tarr_direct": "Ibyar",
-        "b_tarr_hist": "Ibyar",
-        "b_origin": "Ibyar (constituent holding of Saîs)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ibyar",
       "older_name_by_867": {
         "exists": true,
@@ -5144,18 +4486,11 @@
         {
           "form": "Dmtjw",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "inhabitants of the harbor / port"
         }
       ],
       "etymology_analysis": "Arabic Dumyāṭ (European Damietta) derives from Coptic Tamiati (ⲧⲁⲙⲓⲁϯ) and Greek Tamiathis (Ταμίαθις), traced to Ancient Egyptian Dmtjw ('inhabitants of the harbor').",
-      "current_repo_state": {
-        "b_tarr": "Damjête",
-        "b_tarr_direct": "Damjête",
-        "b_tarr_hist": "Damjête",
-        "b_origin": "Damjête (Damietta)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Damietta",
       "older_name_by_867": {
         "exists": true,
@@ -5193,18 +4528,11 @@
         {
           "form": "Tkehli (Ⲧⲕⲉϩⲗⲓ)",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "toponym of the eastern Delta settlement"
         }
       ],
       "etymology_analysis": "Arabic Daqahlah derives directly from Coptic Tkehli (Ⲧⲕⲉϩⲗⲓ); it served as the capital of an Abbasid kūrah and later gave its name to Dakahlia Governorate.",
-      "current_repo_state": {
-        "b_tarr": "Daqahla",
-        "b_tarr_direct": "Daqahla",
-        "b_tarr_hist": "Daqahla",
-        "b_origin": "Daqahla (constituent holding of Damjête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dakahla",
       "older_name_by_867": {
         "exists": true,
@@ -5241,18 +4569,11 @@
         {
           "form": "Thennesos (Θέννησος) / Thennesi (ⲑⲉⲛⲛⲉⲥⲓ)",
           "language": "Coptic / Greek",
+          "language_code": "cop",
           "translation": "island city in Lake Tinnis (Manzala)"
         }
       ],
       "etymology_analysis": "Arabic Tinnīs derives from Coptic Thennesi (ⲑⲉⲛⲛⲉⲥⲓ) and Greek Thennesos (Θέννησος), an island port in Lake Manzala (formerly Lake Tinnis) that flourished from the 9th to 11th centuries.",
-      "current_repo_state": {
-        "b_tarr": "Tinnis",
-        "b_tarr_direct": "Tinnis",
-        "b_tarr_hist": "Tinnis",
-        "b_origin": "Tinnis (constituent holding of Damjête)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tinnis",
       "older_name_by_867": {
         "exists": true,
@@ -5290,18 +4611,11 @@
         {
           "form": "Phelbes / Phelbēs (Ⲫⲉⲗⲃⲉⲥ)",
           "language": "Coptic",
+          "language_code": "cop",
           "translation": "fortress city on the eastern Delta"
         }
       ],
       "etymology_analysis": "Arabic Bilbays (Bilbeis) derives from Bohairic Coptic Phelbes/Phelbēs (Ⲫⲉⲗⲃⲉⲥ/Ⲫⲉⲗⲃⲏⲥ), an ancient fortress town and Roman bishopric captured by Amr ibn al-As in 640 AD.",
-      "current_repo_state": {
-        "b_tarr": "Bilbês",
-        "b_tarr_direct": "Bilbês",
-        "b_tarr_hist": "Bilbês",
-        "b_origin": "Bilbês (attested secondary seat in tarraconian_titles_1059.md)",
-        "b_anachronism": "",
-        "category": "secondary_variant"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bilbeis",
       "older_name_by_867": {
         "exists": true,
@@ -5338,18 +4652,11 @@
         {
           "form": "Kalliópē (Καλλιόπη)",
           "language": "Ancient Greek",
+          "language_code": "grc",
           "translation": "Calliope (personal name / Muse of epic poetry)"
         }
       ],
       "etymology_analysis": "Arabic Qalyūb derives via Coptic Kaliōpe/Kaliōps (ⲕⲁⲗⲓⲱⲡⲉ) from the Greek personal name Kalliópē (Καλλιόπη).",
-      "current_repo_state": {
-        "b_tarr": "Tschalyub",
-        "b_tarr_direct": "Tschalyub",
-        "b_tarr_hist": "Tschalyub",
-        "b_origin": "Tschalyub (constituent holding of Scharkîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Qalyub",
       "older_name_by_867": {
         "exists": true,
@@ -5386,18 +4693,11 @@
         {
           "form": "Pꜣ-ksm / Phákousa (Φάκουσα)",
           "language": "Ancient Egyptian / Greek",
+          "language_code": "egy",
           "translation": "place of Goshen / Phakousa"
         }
       ],
       "etymology_analysis": "Arabic Fāqūs derives from Greco-Roman Phakousa (Φάκουσα), itself reflecting the Ancient Egyptian prefix pꜣ- ('the') attached to the regional name (often linked to biblical Goshen/Gsm).",
-      "current_repo_state": {
-        "b_tarr": "Faqus",
-        "b_tarr_direct": "Faqus",
-        "b_tarr_hist": "Faqus",
-        "b_origin": "Faqus (constituent holding of Scharkîe)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D9%81%D8%A7%D9%82%D9%88%D8%B3",
       "older_name_by_867": {
         "exists": true,
@@ -5434,28 +4734,23 @@
         {
           "form": "North",
           "language": "English",
+          "language_code": "eng",
           "translation": "north"
         },
         {
           "form": "Jabal (جبل)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mountain"
         },
         {
           "form": "al-Qulzum (القلزم)",
           "language": "Arabic (from Greek Κλύσμα)",
+          "language_code": "ara",
           "translation": "Clysma"
         }
       ],
       "etymology_analysis": "Modern English directional modifier 'North' prefixed to the historical oronym Jabal al-Qulzum (Mount Clysma).",
-      "current_repo_state": {
-        "b_tarr": "Kolsûmberch",
-        "b_tarr_direct": "Kolsûmberch",
-        "b_tarr_hist": "Kolsûmberch",
-        "b_origin": "Kolsûmberch (Jabal Quzlum)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%82%D9%84%D8%B2%D9%85",
       "older_name_by_867": {
         "exists": true,
@@ -5493,28 +4788,23 @@
         {
           "form": "Central",
           "language": "English",
+          "language_code": "eng",
           "translation": "central"
         },
         {
           "form": "Jabal (جبل)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mountain"
         },
         {
           "form": "al-Qulzum (القلزم)",
           "language": "Arabic (from Greek Κλύσμα)",
+          "language_code": "ara",
           "translation": "Clysma"
         }
       ],
       "etymology_analysis": "Modern English directional modifier 'Central' prefixed to the historical oronym Jabal al-Qulzum (Mount Clysma).",
-      "current_repo_state": {
-        "b_tarr": "Middel-Kolsûm",
-        "b_tarr_direct": "Middel-Kolsûm",
-        "b_tarr_hist": "Middel-Kolsûm",
-        "b_origin": "Central range of the classical Red Sea Hills Mount Clysma / Qulzum (in-game: Central Jabal Quzlum)",
-        "b_anachronism": "Colonial English descriptor Central Jabal Quzlum fails Burden of Proof on Antiquity; standardized to Middel-Kolsûm.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%82%D9%84%D8%B2%D9%85",
       "older_name_by_867": {
         "exists": true,
@@ -5552,28 +4842,23 @@
         {
           "form": "South",
           "language": "English",
+          "language_code": "eng",
           "translation": "south"
         },
         {
           "form": "Jabal (جبل)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mountain"
         },
         {
           "form": "al-Qulzum (القلزم)",
           "language": "Arabic (from Greek Κλύσμα)",
+          "language_code": "ara",
           "translation": "Clysma"
         }
       ],
       "etymology_analysis": "Modern English directional modifier 'South' prefixed to the historical oronym Jabal al-Qulzum (Mount Clysma).",
-      "current_repo_state": {
-        "b_tarr": "Sût-Kolsûm",
-        "b_tarr_direct": "Sût-Kolsûm",
-        "b_tarr_hist": "Sût-Kolsûm",
-        "b_origin": "Southern range of the classical Red Sea Hills Mount Clysma monastic zone (in-game: South Jabal Quzlum)",
-        "b_anachronism": "Colonial English descriptor South Jabal Quzlum fails Burden of Proof on Antiquity; standardized to Sût-Kolsûm.",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%82%D9%84%D8%B2%D9%85",
       "older_name_by_867": {
         "exists": true,
@@ -5611,23 +4896,17 @@
         {
           "form": "Umm (أم)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mother of / characterized by"
         },
         {
           "form": "Shāshūba (شاشوبة)",
           "language": "Arabic (local desert dialect)",
+          "language_code": "ara",
           "translation": "local topographic/tribal descriptor"
         }
       ],
       "etymology_analysis": "Arabic desert toponym of the Umm ('characterized by') type referring to an old gold-mining area in the Southeastern Desert near Wadi Allaqi, with no pre-867 AD attestation.",
-      "current_repo_state": {
-        "b_tarr": "Um schaschoba",
-        "b_tarr_direct": "Um schaschoba",
-        "b_tarr_hist": "Um schaschoba",
-        "b_origin": "Um schaschoba (constituent holding of Kolsûmberch)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.researchgate.net/publication/264351545_Geochemical_and_Environmental_Evaluation_of_Um_Shashoba_Gold_Mine_Area_Southeastern_Desert_Egypt",
       "older_name_by_867": {
         "exists": false,
@@ -5662,23 +4941,17 @@
         {
           "form": "al- (ال)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Quṣayr (قصير)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "little fortress / small palace (diminutive of qaṣr)"
         }
       ],
       "etymology_analysis": "Arabic al-Quṣayr ('the little fortress') is a medieval Fatimid-era name first attested c. 1025 AD, replacing the abandoned nearby classical port of Myos Hormos (Quseir al-Qadim, 8 km north).",
-      "current_repo_state": {
-        "b_tarr": "Kusêr",
-        "b_tarr_direct": "Kusêr",
-        "b_tarr_hist": "Kusêr",
-        "b_origin": "Kusêr (Qusayr)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Qoseir",
       "older_name_by_867": {
         "exists": true,
@@ -5716,18 +4989,11 @@
         {
           "form": "Safāgā (سفاجا)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "modern Red Sea coastal toponym of uncertain origin"
         }
       ],
       "etymology_analysis": "Modern Arabic name Safāgā has no pre-867 AD attestation; the ancient settlement at the site was founded in the 3rd century BCE as Ptolemaic Philotera.",
-      "current_repo_state": {
-        "b_tarr": "Safaga",
-        "b_tarr_direct": "Safaga",
-        "b_tarr_hist": "Safaga",
-        "b_origin": "Safaga (constituent holding of Kusêr)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Safaga",
       "older_name_by_867": {
         "exists": true,
@@ -5765,23 +5031,17 @@
         {
           "form": "pr",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "house / temple"
         },
         {
           "form": "Jmn",
           "language": "Ancient Egyptian",
+          "language_code": "egy",
           "translation": "Amun"
         }
       ],
       "etymology_analysis": "Arabic al-Faramā derives via Coptic Peremoun (Ⲡⲉⲣⲉⲙⲟⲩⲛ) from Ancient Egyptian pr-jmn ('House of Amun'), while the Greco-Roman name Pelusium (Πηλούσιον) refers to the muddy/marshy Pelusiac Nile mouth.",
-      "current_repo_state": {
-        "b_tarr": "Farâme",
-        "b_tarr_direct": "Farâme",
-        "b_tarr_hist": "Farâme",
-        "b_origin": "Farâme (Farama)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pelusium",
       "older_name_by_867": {
         "exists": true,
@@ -5819,23 +5079,17 @@
         {
           "form": "al- (ال)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Warrāda (ورادة)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "watering station / place of arrival (from root w-r-d, 'to arrive at water')"
         }
       ],
       "etymology_analysis": "Arabic al-Warrāda derives from the root w-r-d ('to come to water / arrive'), naming a medieval caravan station between al-Farama and al-Arish with no confirmed attestation <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Warrada",
-        "b_tarr_direct": "Warrada",
-        "b_tarr_hist": "Warrada",
-        "b_origin": "Warrada (constituent holding of Farâme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.trismegistos.org/sinai/",
       "older_name_by_867": {
         "exists": false,
@@ -5870,23 +5124,17 @@
         {
           "form": "al- (ال)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "ʿArīsh (عريش)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "huts / palm-branch shelters (or phonetic adaptation of Ariza)"
         }
       ],
       "etymology_analysis": "First attested as Arabic al-ʿArīsh in the 9th century, likely from Arabic ʿarš ('huts/shelters') built after the decline of Byzantine Rhinocorura, or from Hierocles's Ariza.",
-      "current_repo_state": {
-        "b_tarr": "Al-Arisch",
-        "b_tarr_direct": "Al-Arisch",
-        "b_tarr_hist": "Al-Arisch",
-        "b_origin": "Al-Arisch (constituent holding of Farâme)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Arish",
       "older_name_by_867": {
         "exists": true,
@@ -5923,23 +5171,17 @@
         {
           "form": "Jazīrat (جزيرة)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "island of"
         },
         {
           "form": "Firʿawn (فرعون)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Pharaoh"
         }
       ],
       "etymology_analysis": "Arabic Jazīrat Firʿawn ('Pharaoh's Island') is a post-867 medieval/modern name for a small granite island in the Gulf of Aqaba fortified in the 12th century.",
-      "current_repo_state": {
-        "b_tarr": "Faraônsinsel",
-        "b_tarr_direct": "Faraônsinsel",
-        "b_tarr_hist": "Faraônsinsel",
-        "b_origin": "Faraônsinsel (Firaun)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pharaoh%27s_Island",
       "older_name_by_867": {
         "exists": false,
@@ -5974,18 +5216,11 @@
         {
           "form": "Dahab / Dhahab (ذهب)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "gold"
         }
       ],
       "etymology_analysis": "Arabic Dahab ('gold') refers to the golden sands of the Gulf of Aqaba coast; while Nabataean/Byzantine ruins exist nearby and some link it to biblical Di Zahab (Deut. 1:1), the Arabic name itself is unattested <= 867 AD.",
-      "current_repo_state": {
-        "b_tarr": "Dahab",
-        "b_tarr_direct": "Dahab",
-        "b_tarr_hist": "Dahab",
-        "b_origin": "Dahab (constituent holding of Faraônsinsel)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dahab",
       "older_name_by_867": {
         "exists": false,
@@ -6020,23 +5255,17 @@
         {
           "form": "al- (ال)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Ṭūr (طور)",
           "language": "Arabic (from Aramaic ṭūrā)",
+          "language_code": "ara",
           "translation": "mountain (referring to Mount Sinai)"
         }
       ],
       "etymology_analysis": "Arabic al-Ṭūr derives from Aramaic ṭūrā ('mountain', i.e., Mount Sinai); while the regional oronym appears in early Islamic texts, the port town of At-Tur itself was founded in the 13th century near ancient Raithu.",
-      "current_repo_state": {
-        "b_tarr": "Sînai",
-        "b_tarr_direct": "Sînai",
-        "b_tarr_hist": "Sînai",
-        "b_origin": "Sînai (Sinai)",
-        "b_anachronism": "",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Tor,_Egypt",
       "older_name_by_867": {
         "exists": true,
@@ -6074,23 +5303,17 @@
         {
           "form": "Dayr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "monastery"
         },
         {
           "form": "al-Qiddīsa Katrīn",
           "language": "Arabic (from Greek Αἰκατερίνη)",
+          "language_code": "ara",
           "translation": "Saint Catherine (of Alexandria)"
         }
       ],
       "etymology_analysis": "Founded by Emperor Justinian I (548–565 AD) as the Monastery of the Transfiguration; later renamed after Saint Catherine of Alexandria (d. c. 305 AD) following the medieval veneration of her relics there.",
-      "current_repo_state": {
-        "b_tarr": "Zant-Katerîne",
-        "b_tarr_direct": "Zant-Katerîne",
-        "b_tarr_hist": "Zant-Katerîne",
-        "b_origin": "Zant-Katerîne (constituent holding of Sînai)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Saint_Catherine%27s_Monastery",
       "older_name_by_867": {
         "exists": true,
@@ -6128,18 +5351,11 @@
         {
           "form": "Pharán (Φαράν) / Fārān (فاران)",
           "language": "Greek / Semitic / Arabic",
+          "language_code": "ell",
           "translation": "oasis and wadi in southern Sinai"
         }
       ],
       "etymology_analysis": "Arabic Fārān / Fayrān derives directly from Greco-Roman Pharan (Φαράν), a major early Christian oasis and bishopric in southern Sinai.",
-      "current_repo_state": {
-        "b_tarr": "Faran",
-        "b_tarr_direct": "Faran",
-        "b_tarr_hist": "Faran",
-        "b_origin": "Faran (constituent holding of Sînai)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wadi_Feiran",
       "older_name_by_867": {
         "exists": true,
@@ -6176,23 +5392,17 @@
         {
           "form": "Qalʿat (قلعة)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "fortress / citadel of"
         },
         {
           "form": "al-Jundī (الجندي)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the soldier / garrison"
         }
       ],
       "etymology_analysis": "Arabic Qalʿat al-Jundī ('Fortress of the Soldier') is a late 12th-century Ayyubid fortress built by Saladin in 1183–1187 AD.",
-      "current_repo_state": {
-        "b_tarr": "Knechtburch",
-        "b_tarr_direct": "Knechtburch",
-        "b_tarr_hist": "Knechtburch",
-        "b_origin": "Qal'at al-Jundi (Arabic 'Soldier's / Garrison Citadel' on Mount Sudr) (in-game: Knechtburch)",
-        "b_anachronism": "Descriptive Arabic fortress toponym calqued to Tarraconian Knechtburch.",
-        "category": "descriptive_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El-Gendi_Fortress",
       "older_name_by_867": {
         "exists": false,
@@ -6227,23 +5437,17 @@
         {
           "form": "al- (ال)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Tīh (التيه)",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "wandering / wilderness of getting lost"
         }
       ],
       "etymology_analysis": "Arabic al-Tīh ('the wandering', alluding to the biblical/Quranic 40 years of Israelite wandering in Sinai, Quran 5:26) names the central limestone plateau of Sinai.",
-      "current_repo_state": {
-        "b_tarr": "Tih",
-        "b_tarr_direct": "Tih",
-        "b_tarr_hist": "Tih",
-        "b_origin": "Tih (constituent holding of Sînai)",
-        "b_anachronism": "",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://ar.wikipedia.org/wiki/%D9%87%D8%B6%D8%A8%D8%A9_%D8%A7%D9%84%D8%AA%D9%8A%D9%87",
       "older_name_by_867": {
         "exists": false,

@@ -1,18 +1,28 @@
 {
   "metadata": {
+    "empire": "e_amur",
     "scope": "e_amur (all 100 baronies across k_amur and k_aynumosir)",
-    "version": "1.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "true if the barony name is attested as a settlement/fortress/administrative unit by <= 867 CE; false if first attested post-867 CE or unattested.",
-      "older_name_by_867": "Tracks attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name.",
-      "natural_proper_name": "true only when the toponym directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds)."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 100,
@@ -54,27 +64,17 @@
         {
           "form": "Nimen",
           "language": "Tungusic / Negidal (adapted)",
+          "language_code": "evn",
           "translation": "Nimelen River hydronym"
         },
         {
           "form": "尼门 (Nímén)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Nimen, calqued as 'nun + gate'"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_nimen) adopting the name of the Nimelen River (Нимелен), the longest tributary of the Amgun River in Khabarovsk Krai. The repository's sinosphere_calque layer (Nîtôr) derives from a literal calque of the Chinese phonetic characters 尼门 ('nun' + 'gate'). No settlement named Nimen is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Nîtôr",
-        "b_tarr": "Nîtôr",
-        "b_tarr_direct": "Nîtôr",
-        "b_tarr_hist": "Nîtôr",
-        "b_origin": "尼门 [Nîtôr] — Calque: Buddhist nun + Frontier gate",
-        "b_anachronism": "",
-        "b_ipa": "[niː.ˈtoːr]",
-        "b_hanzi": "尼门",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nimelen",
       "older_name_by_867": {
         "exists": false,
@@ -109,27 +109,17 @@
         {
           "form": "Hara",
           "language": "Mongolic / Tungusic",
+          "language_code": "mon",
           "translation": "black (hydronym Khara)"
         },
         {
           "form": "哈拉 (Hālā)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Hara"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_hara) reflecting the Khara River (Хара) hydronym in the Amur basin, from Mongolic *qara ('black', as in Khara Muren for the Amur). No historical settlement of this exact name is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "ChâLâ",
-        "b_tarr": "ChâLâ",
-        "b_tarr_direct": "ChâLâ",
-        "b_tarr_hist": "ChâLâ",
-        "b_origin": "哈拉 [ChâLâ] — Calque: Altaic steppe river transcription Ha- (Harbin) + Steppe",
-        "b_anachronism": "",
-        "b_ipa": "[xaː.ˈlaː]",
-        "b_hanzi": "哈拉",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%B0_(%D0%BF%D1%80%D0%B8%D1%82%D0%BE%D0%BA_%D0%90%D1%80%D1%85%D0%B0%D1%80%D1%8B)",
       "older_name_by_867": {
         "exists": false,
@@ -164,27 +154,17 @@
         {
           "form": "Oronmu",
           "language": "Tungusic-inspired (fictional)",
+          "language_code": "evn",
           "translation": "fictional Amur barony name (cf. Tungusic oron 'reindeer')"
         },
         {
           "form": "奥隆穆 (Àolóngmù)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Oronmu"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_oronmu) with no attested historical settlement or specific named geographic feature. The name evokes Tungusic oron ('reindeer'), and the repository entry (BinnenHôchblûeiStilêr) is a calque of its Chinese phonetic transcription 奥隆穆.",
-      "current_repo_state": {
-        "name": "BinnenHôchblûeiStilêr",
-        "b_tarr": "BinnenHôchblûeiStilêr",
-        "b_tarr_direct": "BinnenHôchblûeiStilêr",
-        "b_tarr_hist": "BinnenHôchblûeiStilêr",
-        "b_origin": "奥隆穆 [BinnenHôchblûeiStilêr] — Calque: Deep interior + Exalted elevation + Solemn majesty",
-        "b_anachronism": "",
-        "b_ipa": "[bɪ.nɛn.hoːx.bluː.ɛɪs.tɪ.ˈleːr]",
-        "b_hanzi": "奥隆穆",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -219,27 +199,17 @@
         {
           "form": "Birija",
           "language": "Tungusic / Jurchen-Manchu (bira)",
+          "language_code": "evn",
           "translation": "river (Bira River hydronym)"
         },
         {
           "form": "必剌牙 (Bìlàyá)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Birija"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_birija) located in d_eman_bureya and named after the Bira River (Бира, from Jurchen/Manchu bira 'river'), a major left tributary of the Amur. No historical settlement named Birija is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "VasteLâHôfward",
-        "b_tarr": "VasteLâHôfward",
-        "b_tarr_direct": "VasteLâHôfward",
-        "b_tarr_hist": "VasteLâHôfward",
-        "b_origin": "必剌牙 [VasteLâHôfward] — Calque: Certain + Altaic steppe transcription (Chalaer clan) + Ivory staff",
-        "b_anachronism": "",
-        "b_ipa": "[ˈvas.tɛ.laː.hoːf.ward]",
-        "b_hanzi": "必剌牙",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bira_(river)",
       "older_name_by_867": {
         "exists": false,
@@ -274,27 +244,17 @@
         {
           "form": "Birigugda",
           "language": "Tungusic-inspired (fictional)",
+          "language_code": "evn",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "比里山 (Bǐlǐshān)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "partial phonetic/semantic rendering ('beside + village + mountain')"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_birigugda) with no attested historical settlement or specific named geographic feature. The repository entry (Bîdorpberch) is a calque of the Chinese rendering 比里山.",
-      "current_repo_state": {
-        "name": "Bîdorpberch",
-        "b_tarr": "Bîdorpberch",
-        "b_tarr_direct": "Bîdorpberch",
-        "b_tarr_hist": "Bîdorpberch",
-        "b_origin": "比里山 [Bîdorpberch] — Calque: Beside + Village settlement + Mountain",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbiː.dɔrp.bɛrx]",
-        "b_hanzi": "比里山",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -329,27 +289,17 @@
         {
           "form": "Turma",
           "language": "Tungusic (adapted from Tyrma)",
+          "language_code": "evn",
           "translation": "Tyrma River hydronym"
         },
         {
           "form": "特尔马 (Tè'ěrmǎ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Turma"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_turma) in d_eman_bureya named after the Tyrma River (Тырма), a major tributary of the Bureya River in Khabarovsk Krai (the modern settlement of Tyrma dates to the 20th century). No settlement of this name is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "BêsterRos",
-        "b_tarr": "BêsterRos",
-        "b_tarr_direct": "BêsterRos",
-        "b_tarr_hist": "BêsterRos",
-        "b_origin": "特尔马 [BêsterRos] — Calque: Exceptional preeminence + Tungusic + Steed horse",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbeːs.tɛ.rɔs]",
-        "b_hanzi": "特尔马",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A2%D1%8B%D1%80%D0%BC%D0%B0_(%D1%80%D0%B5%D0%BA%D0%B0)",
       "older_name_by_867": {
         "exists": false,
@@ -384,27 +334,17 @@
         {
           "form": "Uroure",
           "language": "Tungusic-inspired (fictional)",
+          "language_code": "evn",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "乌罗勒 (Wūluólè)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Uroure"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_uroure) with no attested historical settlement or specific named geographic feature. The repository entry (SwartzLôLê) calques the Chinese phonetic characters 乌罗勒.",
-      "current_repo_state": {
-        "name": "SwartzLôLê",
-        "b_tarr": "SwartzLôLê",
-        "b_tarr_direct": "SwartzLôLê",
-        "b_tarr_hist": "SwartzLôLê",
-        "b_origin": "乌罗勒 [SwartzLôLê] — Calque: Raven + Fine silk net + Bridle",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.loː.ˈleː]",
-        "b_hanzi": "乌罗勒",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -439,27 +379,17 @@
         {
           "form": "Molamu",
           "language": "Tungusic-inspired (fictional)",
+          "language_code": "evn",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "莫拉穆 (Mòlāmù)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Molamu"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_molamu) with no attested historical settlement or specific named geographic feature. The repository entry (MôLâStilêr) calques the Chinese phonetic characters 莫拉穆.",
-      "current_repo_state": {
-        "name": "MôLâStilêr",
-        "b_tarr": "MôLâStilêr",
-        "b_tarr_direct": "MôLâStilêr",
-        "b_tarr_hist": "MôLâStilêr",
-        "b_origin": "莫拉穆 [MôLâStilêr] — Calque: Steppe clan stem Mohe + Steppe + Solemn majesty",
-        "b_anachronism": "",
-        "b_ipa": "[moː.laːs.tɪ.ˈleːr]",
-        "b_hanzi": "莫拉穆",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -494,27 +424,17 @@
         {
           "form": "Amgun",
           "language": "Tungusic / Negidal",
+          "language_code": "evn",
           "translation": "Amgun River hydronym"
         },
         {
           "form": "恨骨 (Hèngǔ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription used in repo calque"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_amgun) adopting the name of the Amgun River (Амгунь) in Khabarovsk Krai, which flows 723 km to join the Amur near Tyr (Nurgan). No historical settlement named Amgun is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Hênbên",
-        "b_tarr": "Hênbên",
-        "b_tarr_direct": "Hênbên",
-        "b_tarr_hist": "Hênbên",
-        "b_origin": "恨骨 [Hênbên] — Calque: Grievance + Bone frame",
-        "b_anachronism": "",
-        "b_ipa": "[heːn.ˈbeːn]",
-        "b_hanzi": "恨骨",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Amgun",
       "older_name_by_867": {
         "exists": false,
@@ -549,27 +469,17 @@
         {
           "form": "Chlya",
           "language": "Nivkh / Lower Amur",
+          "language_code": "qwe",
           "translation": "Lake Chlya hydronym"
         },
         {
           "form": "奇利亚 (Qílìyà)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Chlya"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chlya) named after Lake Chlya (Чля) near the mouth of the Amur in Khabarovsk Krai (first mapped in 1851 CE; a modern village of Chlya sits on its northern shore). No settlement is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "WunderWênNider",
-        "b_tarr": "WunderWênNider",
-        "b_tarr_direct": "WunderWênNider",
-        "b_tarr_hist": "WunderWênNider",
-        "b_origin": "奇利亚 [WunderWênNider] — Calque: Marvelous + Advantage + Secondary",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwʊn.dɛr.weː.nɪ.dər]",
-        "b_hanzi": "奇利亚",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%BB%D1%8F_(%D0%BE%D0%B7%D0%B5%D1%80%D0%BE)",
       "older_name_by_867": {
         "exists": false,
@@ -604,27 +514,17 @@
         {
           "form": "Orel",
           "language": "Nivkh / Lower Amur",
+          "language_code": "qwe",
           "translation": "Lake Orel hydronym"
         },
         {
           "form": "奥列利 (Àolièlì)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Orel"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_orel) named after Lake Orel (Орель) in Nikolayevsky District, Khabarovsk Krai, adjacent to Lake Chlya near the Amur estuary. No settlement named Orel is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "BinnenRîgeWên",
-        "b_tarr": "BinnenRîgeWên",
-        "b_tarr_direct": "BinnenRîgeWên",
-        "b_tarr_hist": "BinnenRîgeWên",
-        "b_origin": "奥列利 [BinnenRîgeWên] — Calque: Deep interior + Array + Advantage",
-        "b_anachronism": "",
-        "b_ipa": "[bɪ.nən.riː.ɣɛ.ˈweːn]",
-        "b_hanzi": "奥列利",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Orel",
       "older_name_by_867": {
         "exists": false,
@@ -659,27 +559,17 @@
         {
           "form": "Nurgan (nu ru (g)ə(n))",
           "language": "Jurchen",
+          "language_code": "juc",
           "translation": "painting or drawing"
         },
         {
           "form": "奴儿干 (Nú'érgān)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Jurchen Nurgan"
         }
       ],
       "etymology_analysis": "Historical administrative outpost and settlement at modern Tyr, Khabarovsk Krai, derived from Jurchen nurugan ('painting'). First attested in 1263 CE under the Yuan dynasty (and prominently in 1409 CE under the Ming Nurgan Regional Military Commission), so it postdates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Nûkenkante",
-        "b_tarr": "Nûkenkante",
-        "b_tarr_direct": "Nûkenkante",
-        "b_tarr_hist": "Nûkenkante",
-        "b_origin": "奴儿干 [Nûkenkante] — Calque: Steppe phonetic stem (Nurgan + Child + Riverbank",
-        "b_anachronism": "",
-        "b_ipa": "[nuː.kɛ.ˈŋkan.tə]",
-        "b_hanzi": "奴儿干",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nurgan_Regional_Military_Commission",
       "older_name_by_867": {
         "exists": false,
@@ -714,27 +604,17 @@
         {
           "form": "Kamer",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "凯梅尔 (Kǎiméi'ěr)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Kamer"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_kamer) with no attested historical settlement or specific named geographic feature. The repository entry (ZêgePrûmener) calques the Chinese phonetic characters 凯梅尔.",
-      "current_repo_state": {
-        "name": "ZêgePrûmener",
-        "b_tarr": "ZêgePrûmener",
-        "b_tarr_direct": "ZêgePrûmener",
-        "b_tarr_hist": "ZêgePrûmener",
-        "b_origin": "凯梅尔 [ZêgePrûmener] — Calque: Triumphant victory + Plum blossom + Tungusic",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtseː.ɣɛ.pruː.mɛ.nər]",
-        "b_hanzi": "凯梅尔",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -769,27 +649,17 @@
         {
           "form": "Ekiti",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "埃基蒂 (Āijīdì)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Ekiti"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_ekiti) with no attested historical settlement or specific named geographic feature. The repository entry (StoupGruntStîel) calques the Chinese phonetic characters 埃基蒂.",
-      "current_repo_state": {
-        "name": "StoupGruntStîel",
-        "b_tarr": "StoupGruntStîel",
-        "b_tarr_direct": "StoupGruntStîel",
-        "b_tarr_hist": "StoupGruntStîel",
-        "b_origin": "埃基蒂 [StoupGruntStîel] — Calque: Dust + Foundation + Stem",
-        "b_anachronism": "",
-        "b_ipa": "[stɔʊp.ɡrʊnts.tiː.ˈɛl]",
-        "b_hanzi": "埃基蒂",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -824,27 +694,17 @@
         {
           "form": "Chagal",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "查嘎尔 (Chágā'ěr)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Chagal"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chagal) with no attested historical settlement or specific named geographic feature. The repository entry (TschâGâer) calques the Chinese phonetic characters 查嘎尔.",
-      "current_repo_state": {
-        "name": "TschâGâer",
-        "b_tarr": "TschâGâer",
-        "b_tarr_direct": "TschâGâer",
-        "b_tarr_hist": "TschâGâer",
-        "b_origin": "查嘎尔 [TschâGâer] — Calque: Mongolic + Steppe + Tungusic",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʃaː.ɣaː.ɛr]",
-        "b_hanzi": "查嘎尔",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -879,27 +739,17 @@
         {
           "form": "Tugur",
           "language": "Tungusic (Evenki / Negidal)",
+          "language_code": "evn",
           "translation": "Tugur River and bay hydronym"
         },
         {
           "form": "图古尔 (Túgǔ'ěr)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Tugur"
         }
       ],
       "etymology_analysis": "Mod barony (b_fic_eman_tugur) matching the real village of Tugur and the Tugur River (Тугур) flowing into Tugur Bay on the Sea of Okhotsk in Khabarovsk Krai. The settlement was first founded in 1652 CE (Tugursky Fortress in 1653 CE), postdating the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "TôAlter",
-        "b_tarr": "TôAlter",
-        "b_tarr_direct": "TôAlter",
-        "b_tarr_hist": "TôAlter",
-        "b_origin": "图古尔 [TôAlter] — Calque: Tungusic coastal bay stem Tugur + Ancient + Tungusic",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtoː.al.tɛr]",
-        "b_hanzi": "图古尔",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tugur,_Khabarovsk_Krai",
       "older_name_by_867": {
         "exists": false,
@@ -934,27 +784,17 @@
         {
           "form": "Usalgin",
           "language": "Tungusic (Evenki)",
+          "language_code": "evn",
           "translation": "Usalgin River hydronym"
         },
         {
           "form": "乌萨尔金 (Wūsà'ěrjīn)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Usalgin"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_usalgin) named after the Usalgin River (Усалгин), a 142 km river in Tuguro-Chumikansky District, Khabarovsk Krai, flowing into Nikolaya Bay of the Sea of Okhotsk. No historical settlement is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "SwartzSatzûerGolt",
-        "b_tarr": "SwartzSatzûerGolt",
-        "b_tarr_direct": "SwartzSatzûerGolt",
-        "b_tarr_hist": "SwartzSatzûerGolt",
-        "b_origin": "乌萨尔金 [SwartzSatzûerGolt] — Calque: Raven + Bodhisattva + Tungusic + Gold",
-        "b_anachronism": "",
-        "b_ipa": "[ˈswar.tsa.tsuː.ɛr.ɡɔlt]",
-        "b_hanzi": "乌萨尔金",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%BB%D0%B3%D0%B8%D0%BD",
       "older_name_by_867": {
         "exists": false,
@@ -989,27 +829,17 @@
         {
           "form": "Ymila",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "伊米拉 (Yīmǐlā)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Ymila"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_ymila) with no attested historical settlement or specific named geographic feature. The repository entry (ÎRîsLâ) calques the Chinese phonetic characters 伊米拉.",
-      "current_repo_state": {
-        "name": "ÎRîsLâ",
-        "b_tarr": "ÎRîsLâ",
-        "b_tarr_direct": "ÎRîsLâ",
-        "b_tarr_hist": "ÎRîsLâ",
-        "b_origin": "伊米拉 [ÎRîsLâ] — Calque: Yi River hydronym + Polished grain rice + Steppe",
-        "b_anachronism": "",
-        "b_ipa": "[iː.riːs.ˈlaː]",
-        "b_hanzi": "伊米拉",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1044,27 +874,17 @@
         {
           "form": "Kerin",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "刻林 (Kèlín)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Kerin"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_kerin) with no attested historical settlement or specific named geographic feature. The repository entry (Snîdwalt) calques the Chinese phonetic characters 刻林.",
-      "current_repo_state": {
-        "name": "Snîdwalt",
-        "b_tarr": "Snîdwalt",
-        "b_tarr_direct": "Snîdwalt",
-        "b_tarr_hist": "Snîdwalt",
-        "b_origin": "刻林 [Snîdwalt] — Calque: Carved + Forest woodland",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsniːd.walt]",
-        "b_hanzi": "刻林",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1099,27 +919,17 @@
         {
           "form": "Pilda",
           "language": "Tungusic (Ulch / Nanai)",
+          "language_code": "evn",
           "translation": "Pilda River hydronym"
         },
         {
           "form": "皮利达 (Pílìdá)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Pilda"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_pilda) named after the Pilda River (Пильда) in Ulchsky District, Khabarovsk Krai, which flows into Lake Udyl in the Lower Amur basin. No historical settlement named Pilda is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "PelzWênRêk",
-        "b_tarr": "PelzWênRêk",
-        "b_tarr_direct": "PelzWênRêk",
-        "b_tarr_hist": "PelzWênRêk",
-        "b_origin": "皮利达 [PelzWênRêk] — Calque: Fur pelt trade + Advantage + Reach destination",
-        "b_anachronism": "",
-        "b_ipa": "[pɛlts.weːn.ˈreːk]",
-        "b_hanzi": "皮利达",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0",
       "older_name_by_867": {
         "exists": false,
@@ -1154,27 +964,17 @@
         {
           "form": "Khadul",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "喀都尔 (Kādū'ěr)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Khadul"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_khadul) with no attested historical settlement or specific named geographic feature. The repository entry (Kaschstater) calques the Chinese phonetic characters 喀都尔.",
-      "current_repo_state": {
-        "name": "Kaschstater",
-        "b_tarr": "Kaschstater",
-        "b_tarr_direct": "Kaschstater",
-        "b_tarr_hist": "Kaschstater",
-        "b_origin": "喀都尔 [Kaschstater] — Calque: Turko-Mongol rocky defile transcription Qash- + Great metropolis + Tungusic",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkaʃ.sta.tər]",
-        "b_hanzi": "喀都尔",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1209,27 +1009,17 @@
         {
           "form": "Chayatin",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "查雅廷 (Cháyǎtíng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Chayatin"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_chayatin) with no attested historical settlement or specific named geographic feature. The repository entry (TschâEdelHôf) calques the Chinese phonetic characters 查雅廷.",
-      "current_repo_state": {
-        "name": "TschâEdelHôf",
-        "b_tarr": "TschâEdelHôf",
-        "b_tarr_direct": "TschâEdelHôf",
-        "b_tarr_hist": "TschâEdelHôf",
-        "b_origin": "查雅廷 [TschâEdelHôf] — Calque: Mongolic + Classical elegance + Imperial court",
-        "b_anachronism": "",
-        "b_ipa": "[tʃaː.ɛ.dɛl.ˈhoːf]",
-        "b_hanzi": "查雅廷",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1264,27 +1054,17 @@
         {
           "form": "Henkon",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "亨坤 (Hēngkūn)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Henkon"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_henkon) with no attested historical settlement or specific named geographic feature. The repository entry (SpôtErde) calques the Chinese phonetic characters 亨坤.",
-      "current_repo_state": {
-        "name": "SpôtErde",
-        "b_tarr": "SpôtErde",
-        "b_tarr_direct": "SpôtErde",
-        "b_tarr_hist": "SpôtErde",
-        "b_origin": "亨坤 [SpôtErde] — Calque: Prosperous + Earth",
-        "b_anachronism": "",
-        "b_ipa": "[spoː.ˈtɛr.də]",
-        "b_hanzi": "亨坤",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1319,27 +1099,17 @@
         {
           "form": "Tudali",
           "language": "Fictional / Mod toponym",
+          "language_code": "und",
           "translation": "fictional Amur barony name"
         },
         {
           "form": "图达里 (Túdálǐ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Tudali"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_tudali) with no attested historical settlement or specific named geographic feature. The repository entry (TôRêkdorp) calques the Chinese phonetic characters 图达里.",
-      "current_repo_state": {
-        "name": "TôRêkdorp",
-        "b_tarr": "TôRêkdorp",
-        "b_tarr_direct": "TôRêkdorp",
-        "b_tarr_hist": "TôRêkdorp",
-        "b_origin": "图达里 [TôRêkdorp] — Calque: Tungusic coastal bay stem Tugur + Reach destination + Village settlement",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtoː.reːk.dɔrp]",
-        "b_hanzi": "图达里",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1374,27 +1144,17 @@
         {
           "form": "Evoron",
           "language": "Tungusic (Evenki / Nanai)",
+          "language_code": "evn",
           "translation": "Lake Evoron hydronym"
         },
         {
           "form": "鄂沃伦 (Èwòlún)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Evoron"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_evoron) named after Lake Evoron (Эворон) in the Gorin River basin of Khabarovsk Krai; the modern village and railway station of Evoron were established in the late 1930s CE. No settlement is attested by 867 CE.",
-      "current_repo_state": {
-        "name": "ÊkVettOrden",
-        "b_tarr": "ÊkVettOrden",
-        "b_tarr_direct": "ÊkVettOrden",
-        "b_tarr_hist": "ÊkVettOrden",
-        "b_origin": "鄂沃伦 [ÊkVettOrden] — Calque: Ancient State of E + Fertile irrigated land + Moral order",
-        "b_anachronism": "",
-        "b_ipa": "[ˈeːk.vɛ.tɔr.dən]",
-        "b_hanzi": "鄂沃伦",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Evoron",
       "older_name_by_867": {
         "exists": false,
@@ -1429,27 +1189,17 @@
         {
           "form": "Bureya",
           "language": "Evenki (via Russian)",
+          "language_code": "evn",
           "translation": "river (from Evenki birija)"
         },
         {
           "form": "布列亚",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Bureya"
         }
       ],
       "etymology_analysis": "Derived from the Bureya River (Russian Бурея, from Evenki birija 'river'); the modern urban-type settlement of Bureya in Amur Oblast was founded in 1913 CE as an Amur Railway station, so it is not historical as a settlement by 867 CE. In the repo, 布列亚 is calqued via character semantics as LînwandRîgeNider.",
-      "current_repo_state": {
-        "name": "LînwandRîgeNider",
-        "b_tarr": "LînwandRîgeNider",
-        "b_tarr_direct": "LînwandRîgeNider",
-        "b_tarr_hist": "LînwandRîgeNider",
-        "b_origin": "布列亚 [LînwandRîgeNider] — Calque: Woven linen cloth + Array + Secondary",
-        "b_anachronism": "",
-        "b_ipa": "[ˈliːn.wan.driː.ɣɛ.nɪ.dər]",
-        "b_hanzi": "布列亚",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bureya,_Russia",
       "older_name_by_867": {
         "exists": false,
@@ -1484,27 +1234,17 @@
         {
           "form": "Yam",
           "language": "Tungusic",
+          "language_code": "evn",
           "translation": "Yam (mountain range name)"
         },
         {
           "form": "alin",
           "language": "Manchu / Tungusic",
+          "language_code": "mnc",
           "translation": "mountain, range"
         }
       ],
       "etymology_analysis": "Fictional barony adopting the oronym Yam-Alin (Russian Ям-Алинь), a mountain range in Amur Oblast and Khabarovsk Krai first mapped in 1851 CE; not attested as a settlement by 867 CE. Repo form Abeêlberch calques the Chinese rendering 杨山 (poplar + mountain).",
-      "current_repo_state": {
-        "name": "Abeêlberch",
-        "b_tarr": "Abeêlberch",
-        "b_tarr_direct": "Abeêlberch",
-        "b_tarr_hist": "Abeêlberch",
-        "b_origin": "杨山 [Abeêlberch] — Calque: Poplar tree + Mountain",
-        "b_anachronism": "",
-        "b_ipa": "[ˈa.bɛ.eːl.bɛrx]",
-        "b_hanzi": "杨山",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yam-Alin",
       "older_name_by_867": {
         "exists": false,
@@ -1539,27 +1279,17 @@
         {
           "form": "Imelen",
           "language": "Tungusic / Manchu",
+          "language_code": "evn",
           "translation": "Nimelen River (Manchu Imile / Imiien)"
         },
         {
           "form": "伊梅伦",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Imelen"
         }
       ],
       "etymology_analysis": "Fictional barony named after the Nimelen River (Manchu Imile bira, Qing Chinese 额密勒河, Russian Нимелен), a major tributary of the Amgun originating in the Yam-Alin range; unattested as a settlement by 867 CE. Repo form ÎPrûmenOrden calques the characters 伊梅伦.",
-      "current_repo_state": {
-        "name": "ÎPrûmenOrden",
-        "b_tarr": "ÎPrûmenOrden",
-        "b_tarr_direct": "ÎPrûmenOrden",
-        "b_tarr_hist": "ÎPrûmenOrden",
-        "b_origin": "伊梅伦 [ÎPrûmenOrden] — Calque: Yi River hydronym + Plum blossom + Moral order",
-        "b_anachronism": "",
-        "b_ipa": "[ˈiː.pruː.mɛ.nɔr.dən]",
-        "b_hanzi": "伊梅伦",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nimelen",
       "older_name_by_867": {
         "exists": false,
@@ -1594,27 +1324,17 @@
         {
           "form": "Dusse",
           "language": "Tungusic",
+          "language_code": "evn",
           "translation": "Dusse (mountain range name)"
         },
         {
           "form": "alin",
           "language": "Manchu / Tungusic",
+          "language_code": "mnc",
           "translation": "mountain, range"
         }
       ],
       "etymology_analysis": "Fictional barony adopting the oronym Dusse-Alin (Russian Дуссе-Алинь), a mountain range in Khabarovsk Krai first mapped by Alexander von Middendorff in 1844 CE; unattested as a settlement by 867 CE. Repo form ScheffelVarweberch calques 斗色山.",
-      "current_repo_state": {
-        "name": "ScheffelVarweberch",
-        "b_tarr": "ScheffelVarweberch",
-        "b_tarr_direct": "ScheffelVarweberch",
-        "b_tarr_hist": "ScheffelVarweberch",
-        "b_origin": "斗色山 [ScheffelVarweberch] — Calque: Dipper + Color + Mountain",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃɛ.fɛl.var.wɛ.bɛrx]",
-        "b_hanzi": "斗色山",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dusse-Alin",
       "older_name_by_867": {
         "exists": false,
@@ -1649,27 +1369,17 @@
         {
           "form": "Choripi",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented toponym"
         },
         {
           "form": "也曼水",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "mod sinosphere rendering (Yeman Water)"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form JeEmanwazzer calques 也曼水.",
-      "current_repo_state": {
-        "name": "JeEmanwazzer",
-        "b_tarr": "JeEmanwazzer",
-        "b_tarr_direct": "JeEmanwazzer",
-        "b_tarr_hist": "JeEmanwazzer",
-        "b_origin": "也曼水 [JeEmanwazzer] — Calque: Indigenous particle + Graceful + Freshwater",
-        "b_anachronism": "",
-        "b_ipa": "[ˈjɛ.ɛ.man.wats.tsər]",
-        "b_hanzi": "也曼水",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1704,27 +1414,17 @@
         {
           "form": "Uada",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented stem"
         },
         {
           "form": "alin",
           "language": "Manchu / Tungusic",
+          "language_code": "mnc",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony combining an invented stem Uada with Tungusic alin ('mountain'); no real mountain or settlement of this name is attested by 867 CE. Repo form SwartzBochtRêk calques 乌阿达.",
-      "current_repo_state": {
-        "name": "SwartzBochtRêk",
-        "b_tarr": "SwartzBochtRêk",
-        "b_tarr_direct": "SwartzBochtRêk",
-        "b_tarr_hist": "SwartzBochtRêk",
-        "b_origin": "乌阿达 [SwartzBochtRêk] — Calque: Raven + River meander mound + Reach destination",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.bɔx.ˈtreːk]",
-        "b_hanzi": "乌阿达",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1759,27 +1459,17 @@
         {
           "form": "Kuru",
           "language": "Manchu / Tungusic",
+          "language_code": "mnc",
           "translation": "Kur River (Manchu Kuru bira)"
         },
         {
           "form": "俱卢",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Kuru"
         }
       ],
       "etymology_analysis": "Fictional barony named after the Kur River (Russian Кур, Manchu Kuru, Qing Chinese 库噜河), which joins the Urmi to form the Tunguska in Khabarovsk Krai; unattested as a settlement by 867 CE. Repo form AlSwartz calques 俱卢.",
-      "current_repo_state": {
-        "name": "AlSwartz",
-        "b_tarr": "AlSwartz",
-        "b_tarr_direct": "AlSwartz",
-        "b_tarr_hist": "AlSwartz",
-        "b_origin": "俱卢 [AlSwartz] — Calque: All + Black",
-        "b_anachronism": "",
-        "b_ipa": "[ˈals.warts]",
-        "b_hanzi": "俱卢",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kur_(Khabarovsk_Krai)",
       "older_name_by_867": {
         "exists": false,
@@ -1814,27 +1504,17 @@
         {
           "form": "bira",
           "language": "Jurchen / Manchu",
+          "language_code": "juc",
           "translation": "river"
         },
         {
           "form": "必剌",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of bira"
         }
       ],
       "etymology_analysis": "Derived from the Bira River (Russian Бира, from Jurchen/Manchu bira 'river'); the modern urban-type settlement of Bira in the Jewish Autonomous Oblast was founded in 1894 CE, post-dating 867 CE. Repo form VasteLâ calques 必剌.",
-      "current_repo_state": {
-        "name": "VasteLâ",
-        "b_tarr": "VasteLâ",
-        "b_tarr_direct": "VasteLâ",
-        "b_tarr_hist": "VasteLâ",
-        "b_origin": "必剌 [VasteLâ] — Calque: Certain + Altaic steppe transcription (Chalaer clan)",
-        "b_anachronism": "",
-        "b_ipa": "[vas.tɛ.ˈlaː]",
-        "b_hanzi": "必剌",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bira,_Russia",
       "older_name_by_867": {
         "exists": false,
@@ -1869,27 +1549,17 @@
         {
           "form": "Bijan",
           "language": "Tungusic / Manchu",
+          "language_code": "evn",
           "translation": "Bidzhan River (from Tungusic bidzen 'permanent settlement')"
         },
         {
           "form": "毕瞻",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "Ming-Qing transcription of Bidzhan"
         }
       ],
       "etymology_analysis": "Fictional barony named after the Bidzhan River (Russian Биджан, Manchu Bijan bira, Ming-Qing Chinese 毕瞻河), a left tributary of the Amur in the Jewish Autonomous Oblast; unattested as a settlement by 867 CE. Repo form VollSchouwe calques 毕瞻.",
-      "current_repo_state": {
-        "name": "VollSchouwe",
-        "b_tarr": "VollSchouwe",
-        "b_tarr_direct": "VollSchouwe",
-        "b_tarr_hist": "VollSchouwe",
-        "b_origin": "毕瞻 [VollSchouwe] — Calque: Complete + Look up to",
-        "b_anachronism": "",
-        "b_ipa": "[vɔʎ.ˈʃɔʊ.wə]",
-        "b_hanzi": "毕瞻",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bidzhan",
       "older_name_by_867": {
         "exists": false,
@@ -1924,27 +1594,17 @@
         {
           "form": "Kimnin",
           "language": "Manchu",
+          "language_code": "mnc",
           "translation": "Qing-era Manchu name for the Bira River"
         },
         {
           "form": "奇穆尼",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "Qing phonetic transcription of Kimnin"
         }
       ],
       "etymology_analysis": "Fictional barony adopting the Qing-era hydronym Kimnin / 奇穆尼 (Qimuni) for the Bira River in the Jewish Autonomous Oblast, attested on 1721 CE and 1728 CE Qing maps; unattested as a settlement by 867 CE. Repo form WunderStilêrNî calques 奇穆尼.",
-      "current_repo_state": {
-        "name": "WunderStilêrNî",
-        "b_tarr": "WunderStilêrNî",
-        "b_tarr_direct": "WunderStilêrNî",
-        "b_tarr_hist": "WunderStilêrNî",
-        "b_origin": "奇穆尼 [WunderStilêrNî] — Calque: Marvelous + Solemn majesty + Buddhist nun",
-        "b_anachronism": "",
-        "b_ipa": "[wʊn.dɛr.stɪ.leːr.ˈniː]",
-        "b_hanzi": "奇穆尼",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://zh.wikipedia.org/zh-cn/%E6%AF%94%E6%8B%89%E6%B2%B3_(%E9%BB%91%E9%BE%8D%E6%B1%9F%E6%94%AF%E6%B5%81)",
       "older_name_by_867": {
         "exists": false,
@@ -1979,27 +1639,17 @@
         {
           "form": "Chula",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented prefix"
         },
         {
           "form": "bira",
           "language": "Jurchen / Manchu",
+          "language_code": "juc",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony combining an invented element Chula with Manchu bira ('river'); no historical settlement or real river of this name is attested by 867 CE. Repo form TschûLâBîLâ calques 楚拉比拉.",
-      "current_repo_state": {
-        "name": "TschûLâBîLâ",
-        "b_tarr": "TschûLâBîLâ",
-        "b_tarr_direct": "TschûLâBîLâ",
-        "b_tarr_hist": "TschûLâBîLâ",
-        "b_origin": "楚拉比拉 [TschûLâBîLâ] — Calque: Ancient Kingdom of Chu + Steppe + Beside + Steppe",
-        "b_anachronism": "",
-        "b_ipa": "[tʃuː.laː.biː.ˈlaː]",
-        "b_hanzi": "楚拉比拉",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2034,27 +1684,17 @@
         {
           "form": "Umilimo",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented toponym"
         },
         {
           "form": "乌米里莫",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "mod phonetic rendering of Umilimo"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SwartzRîsdorpMô calques 乌米里莫.",
-      "current_repo_state": {
-        "name": "SwartzRîsdorpMô",
-        "b_tarr": "SwartzRîsdorpMô",
-        "b_tarr_direct": "SwartzRîsdorpMô",
-        "b_tarr_hist": "SwartzRîsdorpMô",
-        "b_origin": "乌米里莫 [SwartzRîsdorpMô] — Calque: Raven + Polished grain rice + Village settlement + Steppe clan stem Mohe",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.riːs.dɔrp.ˈmoː]",
-        "b_hanzi": "乌米里莫",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2089,27 +1729,17 @@
         {
           "form": "Kulikansiggu",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented toponym"
         },
         {
           "form": "库利坎西古",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "mod phonetic rendering of Kulikansiggu"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SchatzWênKâmWestAlt calques 库利坎西古.",
-      "current_repo_state": {
-        "name": "SchatzWênKâmWestAlt",
-        "b_tarr": "SchatzWênKâmWestAlt",
-        "b_tarr_direct": "SchatzWênKâmWestAlt",
-        "b_tarr_hist": "SchatzWênKâmWestAlt",
-        "b_origin": "库利坎西古 [SchatzWênKâmWestAlt] — Calque: Armory + Advantage + Pit + West + Ancient",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃats.weː.ŋkaːm.wɛs.talt]",
-        "b_hanzi": "库利坎西古",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2144,27 +1774,17 @@
         {
           "form": "Molihewen",
           "language": "Nanai / Tungusic (via Middle Chinese)",
+          "language_code": "evn",
           "translation": "Yuan post-station toponym (末里合温)"
         },
         {
           "form": "hewen",
           "language": "Nanai (Hezhen)",
+          "language_code": "evn",
           "translation": "river / settlement element"
         }
       ],
       "etymology_analysis": "Historical Yuan-dynasty dog-sled post station (末里合温站) recorded in the 1331 CE Jingshi Dadian on the left bank of the lower Amur (near modern Komsomolsk-on-Amur / Melki), later Ming Malehenggu Station; post-dates 867 CE with no earlier written settlement name attested. Repo form EnddorpZâmenWorm calques 末里合温.",
-      "current_repo_state": {
-        "name": "EnddorpZâmenWorm",
-        "b_tarr": "EnddorpZâmenWorm",
-        "b_tarr_direct": "EnddorpZâmenWorm",
-        "b_tarr_hist": "EnddorpZâmenWorm",
-        "b_origin": "末里合温 [EnddorpZâmenWorm] — Calque: Farthest terminus + Village settlement + Confluence + Thermal hot springs",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɛn.dɔrp.tsaː.mən.wɔrm]",
-        "b_hanzi": "末里合温",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://zh.wikipedia.org/zh-cn/%E9%98%BF%E7%A9%86%E5%B0%94%E6%B2%B3%E7%95%94%E5%85%B1%E9%9D%92%E5%9F%8E",
       "older_name_by_867": {
         "exists": false,
@@ -2199,27 +1819,17 @@
         {
           "form": "shang",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "upper"
         },
         {
           "form": "khor",
           "language": "Tungusic (via Chinese 科)",
+          "language_code": "evn",
           "translation": "abbreviated reference to Khor / regional stem"
         }
       ],
       "etymology_analysis": "Fictional directional/positional compound ('Upper Khor', 上科) created for the CK3 mod; not attested as a historical settlement by 867 CE. Repo form ÔverKô calques 上科.",
-      "current_repo_state": {
-        "name": "ÔverKô",
-        "b_tarr": "ÔverKô",
-        "b_tarr_direct": "ÔverKô",
-        "b_tarr_hist": "ÔverKô",
-        "b_origin": "上科 [ÔverKô] — Calque: Upper + Rule",
-        "b_anachronism": "",
-        "b_ipa": "[oː.vɛr.ˈkoː]",
-        "b_hanzi": "上科",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2254,32 +1864,23 @@
         {
           "form": "hei",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "black"
         },
         {
           "form": "sha",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "sand"
         },
         {
           "form": "nan",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "south"
         }
       ],
       "etymology_analysis": "Fictional Sinosphere directional compound ('Black Sand South', 黑沙南) created for the CK3 mod; unattested as a historical settlement by 867 CE. Repo form SwartzsantSût calques 黑沙南.",
-      "current_repo_state": {
-        "name": "SwartzsantSût",
-        "b_tarr": "SwartzsantSût",
-        "b_tarr_direct": "SwartzsantSût",
-        "b_tarr_hist": "SwartzsantSût",
-        "b_origin": "黑沙南 [SwartzsantSût] — Calque: Jet black + Sand + South",
-        "b_anachronism": "",
-        "b_ipa": "[swar.tsan.ˈtsuːt]",
-        "b_hanzi": "黑沙南",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2314,27 +1915,17 @@
         {
           "form": "Bolon",
           "language": "Nanai / Tungusic (via Russian)",
+          "language_code": "evn",
           "translation": "Lake Bolon"
         },
         {
           "form": "波隆",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Bolon"
         }
       ],
       "etymology_analysis": "Fictional barony named after Lake Bolon (Russian Болонь), a large freshwater lake on the Amur floodplain in Khabarovsk Krai; unattested as a settlement by 867 CE. Repo form WelleHôchblûei calques 波隆.",
-      "current_repo_state": {
-        "name": "WelleHôchblûei",
-        "b_tarr": "WelleHôchblûei",
-        "b_tarr_direct": "WelleHôchblûei",
-        "b_tarr_hist": "WelleHôchblûei",
-        "b_origin": "波隆 [WelleHôchblûei] — Calque: Water waves + Exalted elevation",
-        "b_anachronism": "",
-        "b_ipa": "[wɛ.ʎɛ.hoːx.bluː.ˈɛɪ]",
-        "b_hanzi": "波隆",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Bolon",
       "older_name_by_867": {
         "exists": false,
@@ -2369,27 +1960,17 @@
         {
           "form": "Urmi",
           "language": "Tungusic (via Russian)",
+          "language_code": "evn",
           "translation": "Urmi River"
         },
         {
           "form": "乌尔米",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Urmi"
         }
       ],
       "etymology_analysis": "Fictional barony named after the Urmi River (Russian Урми) in Khabarovsk Krai, which joins the Kur to form the Tunguska River; unattested as a settlement by 867 CE. Repo form SwartzerRîs calques 乌尔米.",
-      "current_repo_state": {
-        "name": "SwartzerRîs",
-        "b_tarr": "SwartzerRîs",
-        "b_tarr_direct": "SwartzerRîs",
-        "b_tarr_hist": "SwartzerRîs",
-        "b_origin": "乌尔米 [SwartzerRîs] — Calque: Raven + Tungusic + Polished grain rice",
-        "b_anachronism": "",
-        "b_ipa": "[swar.tsɛ.ˈriːs]",
-        "b_hanzi": "乌尔米",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Urmi_(river)",
       "older_name_by_867": {
         "exists": false,
@@ -2424,27 +2005,17 @@
         {
           "form": "Kirga",
           "language": "Tungusic (via Russian)",
+          "language_code": "evn",
           "translation": "Kirga River"
         },
         {
           "form": "奇尔嘎",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Kirga"
         }
       ],
       "etymology_analysis": "Named after the Kirga River (a left tributary of the Bira) and the modern village/railway siding of Kirga (Кирга, siding opened 1940 CE) in the Jewish Autonomous Oblast; not attested by 867 CE. Repo form WundererGâ calques 奇尔嘎.",
-      "current_repo_state": {
-        "name": "WundererGâ",
-        "b_tarr": "WundererGâ",
-        "b_tarr_direct": "WundererGâ",
-        "b_tarr_hist": "WundererGâ",
-        "b_origin": "奇尔嘎 [WundererGâ] — Calque: Marvelous + Tungusic + Steppe",
-        "b_anachronism": "",
-        "b_ipa": "[wʊn.dɛ.rɛr.ˈɡaː]",
-        "b_hanzi": "奇尔嘎",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%80%D0%B3%D0%B0_(%D0%95%D0%B2%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
       "older_name_by_867": {
         "exists": false,
@@ -2479,22 +2050,11 @@
         {
           "form": "Boli",
           "language": "Mohe / Tungusic (via Middle Chinese 勃利)",
+          "language_code": "ltc",
           "translation": "Tang-era administrative name for Khabarovsk (伯力)"
         }
       ],
       "etymology_analysis": "Historical Tang-dynasty prefecture (勃利州) established in 722 CE for the Heishui Mohe under chieftain Nishuliji at the Amur-Ussuri confluence (later known as Boli 伯力, modern Khabarovsk); directly attested prior to 867 CE. Repo form BôlWên calques 勃利.",
-      "current_repo_state": {
-        "name": "BôlWên",
-        "b_tarr": "BôlWên",
-        "b_tarr_direct": "BôlWên",
-        "b_tarr_hist": "BôlWên",
-        "b_origin": "勃利 [BôlWên] — Calque: Surging waters + Advantage",
-        "b_anachronism": "",
-        "b_ipa": "[boːl.ˈweːn]",
-        "b_hanzi": "勃利",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khabarovsk",
       "older_name_by_867": {
         "exists": false,
@@ -2529,32 +2089,23 @@
         {
           "form": "nan",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "south"
         },
         {
           "form": "shui",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "water"
         },
         {
           "form": "an",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "peace, pacified"
         }
       ],
       "etymology_analysis": "Purely fictional Sinosphere directional compound ('South Water Peace', 南水安) created for the CK3 mod; unattested as a historical settlement by 867 CE. Repo form SûtwazzerFrid calques 南水安.",
-      "current_repo_state": {
-        "name": "SûtwazzerFrid",
-        "b_tarr": "SûtwazzerFrid",
-        "b_tarr_direct": "SûtwazzerFrid",
-        "b_tarr_hist": "SûtwazzerFrid",
-        "b_origin": "南水安 [SûtwazzerFrid] — Calque: South + Freshwater + Pacified peace",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsuːt.wats.tsɛr.frɪd]",
-        "b_hanzi": "南水安",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2589,27 +2140,17 @@
         {
           "form": "Alimenan",
           "language": "Fictional / Pseudo-Tungusic",
+          "language_code": "und",
           "translation": "mod-invented toponym"
         },
         {
           "form": "阿利美",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "mod phonetic rendering of Alimenan"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form BochtWênSchön calques 阿利美.",
-      "current_repo_state": {
-        "name": "BochtWênSchön",
-        "b_tarr": "BochtWênSchön",
-        "b_tarr_direct": "BochtWênSchön",
-        "b_tarr_hist": "BochtWênSchön",
-        "b_origin": "阿利美 [BochtWênSchön] — Calque: River meander mound + Advantage + Beautiful",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɔxt.weːn.ʃøːn]",
-        "b_hanzi": "阿利美",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2644,27 +2185,17 @@
         {
           "form": "Khor",
           "language": "Tungusic (via Russian Хор)",
+          "language_code": "evn",
           "translation": "Khor River"
         },
         {
           "form": "he",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Fictional barony named after the Khor River (Russian Хор, Chinese 霍尔河), a right tributary of the Ussuri in Khabarovsk Krai; the nearby settlement of Khor was founded in 1897 CE, so it is not historical by 867 CE. Repo form KôGlantz calques 科赫.",
-      "current_repo_state": {
-        "name": "KôGlantz",
-        "b_tarr": "KôGlantz",
-        "b_tarr_direct": "KôGlantz",
-        "b_tarr_hist": "KôGlantz",
-        "b_origin": "科赫 [KôGlantz] — Calque: Rule + Radiant fiery brilliance",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkoː.ɡlants]",
-        "b_hanzi": "科赫",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khor_(river)",
       "older_name_by_867": {
         "exists": false,
@@ -2699,27 +2230,17 @@
         {
           "form": "Mohe",
           "language": "Chinese (from Tungusic)",
+          "language_code": "zho",
           "translation": "Mohe (ethnonym)"
         },
         {
           "form": "an",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "pacified, settlement suffix"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony evoking the Mohe ethnonym with a generic suffix; no historical settlement or natural feature of this name is attested by 867 CE. Repo form MôMôch calques 莫罕.",
-      "current_repo_state": {
-        "name": "MôMôch",
-        "b_tarr": "MôMôch",
-        "b_tarr_direct": "MôMôch",
-        "b_tarr_hist": "MôMôch",
-        "b_origin": "莫罕 [MôMôch] — Calque: Steppe clan stem Mohe + Rare",
-        "b_anachronism": "",
-        "b_ipa": "[moː.ˈmoːx]",
-        "b_hanzi": "莫罕",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2754,32 +2275,23 @@
         {
           "form": "wu",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "black, crow"
         },
         {
           "form": "gui",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "return, allegiance"
         },
         {
           "form": "jiang",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Purely fictional CK3 mod barony in the Amur region with no attested historical settlement or natural feature; not historical in 867 CE. Repo form SwartzLûWeêrkeêr calques 乌鲁归.",
-      "current_repo_state": {
-        "name": "SwartzLûWeêrkeêr",
-        "b_tarr": "SwartzLûWeêrkeêr",
-        "b_tarr_direct": "SwartzLûWeêrkeêr",
-        "b_tarr_hist": "SwartzLûWeêrkeêr",
-        "b_origin": "乌鲁归 [SwartzLûWeêrkeêr] — Calque: Raven + Ancient State of Lu + Return to allegiance",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.luː.wɛ.eːr.kɛ.ˈeːr]",
-        "b_hanzi": "乌鲁归",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2814,32 +2326,23 @@
         {
           "form": "也 (yě)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "indigenous transliteration particle"
         },
         {
           "form": "曼 (màn)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "graceful, fine"
         },
         {
           "form": "水 (shuǐ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "water, river"
         }
       ],
       "etymology_analysis": "Fictional Crusader Kings mod barony (b_fic_eman_yemanshui) representing a Sinicized Tungusic-style toponym in the Amur region, rendered in-game as the Germanic calque JeEmanwazzer. Unattested in any historical source prior to or after 867 CE.",
-      "current_repo_state": {
-        "name": "JeEmanwazzer",
-        "b_tarr": "JeEmanwazzer",
-        "b_tarr_direct": "JeEmanwazzer",
-        "b_tarr_hist": "JeEmanwazzer",
-        "b_origin": "也曼水 [JeEmanwazzer] — Calque: Indigenous particle + Graceful + Freshwater",
-        "b_anachronism": "",
-        "b_ipa": "[ˈjɛ.ɛ.man.wats.tsər]",
-        "b_hanzi": "也曼水",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2874,32 +2377,23 @@
         {
           "form": "野 (yě)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "wild, uncultivated"
         },
         {
           "form": "人 (rén)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "person, people"
         },
         {
           "form": "河 (hé)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "river"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_yerenhe) named after the Ming-era Chinese ethnonym Yeren ('Wild Jurchens') combined with he ('river'), calqued in-game as Feltmanflôz. No real historical settlement of this name is attested.",
-      "current_repo_state": {
-        "name": "Feltmanflôz",
-        "b_tarr": "Feltmanflôz",
-        "b_tarr_direct": "Feltmanflôz",
-        "b_tarr_hist": "Feltmanflôz",
-        "b_origin": "野人河 [Feltmanflôz] — Calque: Open wilderness plain + People + Great Northern River",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfɛlt.man.floːts]",
-        "b_hanzi": "野人河",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2934,27 +2428,17 @@
         {
           "form": "额勒 (élè)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription of Tungusic root"
         },
         {
           "form": "江 (jiāng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "large river"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_elejiang) combining a pseudo-Tungusic Mandarin transcription Ele with jiang ('large river'), calqued in-game as StirneLêflôz. Unattested in historical records.",
-      "current_repo_state": {
-        "name": "StirneLêflôz",
-        "b_tarr": "StirneLêflôz",
-        "b_tarr_direct": "StirneLêflôz",
-        "b_tarr_hist": "StirneLêflôz",
-        "b_origin": "额勒江 [StirneLêflôz] — Calque: Forehead + Bridle + Major southern river",
-        "b_anachronism": "",
-        "b_ipa": "[ˈstɪr.nɛ.leː.floːts]",
-        "b_hanzi": "额勒江",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2989,32 +2473,23 @@
         {
           "form": "必 (bì)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "certain, surely"
         },
         {
           "form": "兴 (xīng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "rise, prosper"
         },
         {
           "form": "上 (shàng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "upper"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_bixinshang) formed as an auspicious Mandarin directional compound ('Upper Bixin'), calqued in-game as VasteUpgancÔver. Unattested in historical sources.",
-      "current_repo_state": {
-        "name": "VasteUpgancÔver",
-        "b_tarr": "VasteUpgancÔver",
-        "b_tarr_direct": "VasteUpgancÔver",
-        "b_tarr_hist": "VasteUpgancÔver",
-        "b_origin": "必兴上 [VasteUpgancÔver] — Calque: Certain + Rising prosperity + Upper",
-        "b_anachronism": "",
-        "b_ipa": "[ˈvas.tɔʏp.ɡa.ŋkoː.vər]",
-        "b_hanzi": "必兴上",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3049,32 +2524,23 @@
         {
           "form": "北 (běi)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "north"
         },
         {
           "form": "河 (hé)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "river"
         },
         {
           "form": "岸 (àn)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "bank, shore"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_beihean) formed from a generic Mandarin directional-topographic phrase ('north riverbank'), calqued in-game as Nordflôzouwe. Unattested as a historical settlement.",
-      "current_repo_state": {
-        "name": "Nordflôzouwe",
-        "b_tarr": "Nordflôzouwe",
-        "b_tarr_direct": "Nordflôzouwe",
-        "b_tarr_hist": "Nordflôzouwe",
-        "b_origin": "北河岸 [Nordflôzouwe] — Calque: North + Great Northern River + Riparian riverbank",
-        "b_anachronism": "",
-        "b_ipa": "[nɔrd.floː.ˈtsɔʊ.wə]",
-        "b_hanzi": "北河岸",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3109,27 +2575,17 @@
         {
           "form": "西尔 (xī'ěr)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription syllable"
         },
         {
           "form": "巴基 (bājī)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription syllable"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_silbaki) representing a pseudo-Tungusic toponym transcribed into Mandarin as 西尔巴基 and calqued in-game as WesterBâGrunt. Unattested in historical records.",
-      "current_repo_state": {
-        "name": "WesterBâGrunt",
-        "b_tarr": "WesterBâGrunt",
-        "b_tarr_direct": "WesterBâGrunt",
-        "b_tarr_hist": "WesterBâGrunt",
-        "b_origin": "西尔巴基 [WesterBâGrunt] — Calque: West + Tungusic + Ancient Kingdom of Ba + Foundation",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwɛs.tɛr.baː.ɡrʊnt]",
-        "b_hanzi": "西尔巴基",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3164,32 +2620,23 @@
         {
           "form": "黑 (hēi)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "black"
         },
         {
           "form": "水 (shuǐ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "water"
         },
         {
           "form": "洋 (yáng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "ocean, vast water"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_heishuiyang) in Sikhote-Alin, calqued in-game as Swartzwazzermêr from Mandarin 'black water ocean'. Unattested as a historical settlement in the Amur/Sikhote-Alin region.",
-      "current_repo_state": {
-        "name": "Swartzwazzermêr",
-        "b_tarr": "Swartzwazzermêr",
-        "b_tarr_direct": "Swartzwazzermêr",
-        "b_tarr_hist": "Swartzwazzermêr",
-        "b_origin": "黑水洋 [Swartzwazzermêr] — Calque: Jet black + Freshwater + Vast ocean expanse",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.wats.tsɛr.ˈmeːr]",
-        "b_hanzi": "黑水洋",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3224,27 +2671,17 @@
         {
           "form": "森 (sēn)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "dense forest"
         },
         {
           "form": "克勒 (kèlè)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription suffix"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_senkele) rendered in Mandarin as 森克勒 and calqued in-game as WaltZêgeLê. Unattested in historical records.",
-      "current_repo_state": {
-        "name": "WaltZêgeLê",
-        "b_tarr": "WaltZêgeLê",
-        "b_tarr_direct": "WaltZêgeLê",
-        "b_tarr_hist": "WaltZêgeLê",
-        "b_origin": "森克勒 [WaltZêgeLê] — Calque: Dense forest + Overcome + Bridle",
-        "b_anachronism": "",
-        "b_ipa": "[wal.tseː.ɣɛ.ˈleː]",
-        "b_hanzi": "森克勒",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3279,27 +2716,17 @@
         {
           "form": "梅勒 (méilè)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription syllable"
         },
         {
           "form": "苏基 (sūjī)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "phonetic transcription syllable"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_melersuki) representing a pseudo-Tungusic toponym transcribed into Mandarin as 梅勒苏基 and calqued in-game as PrûmenLêSûzGrunt. Unattested in historical records.",
-      "current_repo_state": {
-        "name": "PrûmenLêSûzGrunt",
-        "b_tarr": "PrûmenLêSûzGrunt",
-        "b_tarr_direct": "PrûmenLêSûzGrunt",
-        "b_tarr_hist": "PrûmenLêSûzGrunt",
-        "b_origin": "梅勒苏基 [PrûmenLêSûzGrunt] — Calque: Plum blossom + Bridle + Perilla mint herb + Foundation",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpruː.mɛn.leː.zuːts.ɡrʊnt]",
-        "b_hanzi": "梅勒苏基",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3334,27 +2761,17 @@
         {
           "form": "乌龟 (wūguī)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "tortoise, turtle"
         },
         {
           "form": "海 (hǎi)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "sea"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_wuguihai) composed of Mandarin wugui ('tortoise') + hai ('sea'), calqued in-game as SwartzSchildpadmêr. Unattested in historical sources.",
-      "current_repo_state": {
-        "name": "SwartzSchildpadmêr",
-        "b_tarr": "SwartzSchildpadmêr",
-        "b_tarr_direct": "SwartzSchildpadmêr",
-        "b_tarr_hist": "SwartzSchildpadmêr",
-        "b_origin": "乌龟海 [SwartzSchildpadmêr] — Calque: Raven + Sacred tortoise shield + Sea",
-        "b_anachronism": "",
-        "b_ipa": "[swarts.ʃɪld.pad.ˈmeːr]",
-        "b_hanzi": "乌龟海",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3389,32 +2806,23 @@
         {
           "form": "水 (shuǐ)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "water"
         },
         {
           "form": "山 (shān)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "mountain"
         },
         {
           "form": "铺 (pù)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "relay post, station"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_shuishanpu) formed as a generic Mandarin compound ('water mountain relay post'), calqued in-game as Wazzerberchpost. Unattested in historical records.",
-      "current_repo_state": {
-        "name": "Wazzerberchpost",
-        "b_tarr": "Wazzerberchpost",
-        "b_tarr_direct": "Wazzerberchpost",
-        "b_tarr_hist": "Wazzerberchpost",
-        "b_origin": "水山铺 [Wazzerberchpost] — Calque: Freshwater + Mountain + Relay post",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwats.tsɛr.bɛrx.pɔst]",
-        "b_hanzi": "水山铺",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3449,32 +2857,23 @@
         {
           "form": "小 (xiǎo)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "little, small"
         },
         {
           "form": "黑 (hēi)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "black"
         },
         {
           "form": "江 (jiāng)",
           "language": "Mandarin Chinese",
+          "language_code": "cmn",
           "translation": "large river"
         }
       ],
       "etymology_analysis": "Fictional mod barony (b_fic_eman_xiaoheijiang) in Sikhote-Alin, calqued in-game as KleinSwartzflôz from Mandarin 'Little Black River'. Unattested as a historical settlement in East Manchuria.",
-      "current_repo_state": {
-        "name": "KleinSwartzflôz",
-        "b_tarr": "KleinSwartzflôz",
-        "b_tarr_direct": "KleinSwartzflôz",
-        "b_tarr_hist": "KleinSwartzflôz",
-        "b_origin": "小黑江 [KleinSwartzflôz] — Calque: Little + Jet black + Major southern river",
-        "b_anachronism": "",
-        "b_ipa": "[ˈklɛɪns.warts.floːts]",
-        "b_hanzi": "小黑江",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3509,27 +2908,17 @@
         {
           "form": "kina",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "grass"
         },
         {
           "form": "sir",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "island, land"
         }
       ],
       "etymology_analysis": "From Ainu kina-sir ('grass island'), the indigenous name of Kunashir Island in the southern Kurils, rendered in Japanese as Kunashiri (国後島) and calqued in-game as Wêdeinsel. First attested in written Japanese cartography in 1644 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Wêdeinsel",
-        "b_tarr": "Wêdeinsel",
-        "b_tarr_direct": "Wêdeinsel",
-        "b_tarr_hist": "Wêdeinsel",
-        "b_origin": "草岛 (キナシリ) [Wêdeinsel] — Calque: Grass meadow + Island",
-        "b_anachronism": "",
-        "b_ipa": "[weː.dɛɪn.ˈsəl]",
-        "b_hanzi": "草岛",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kunashir",
       "older_name_by_867": {
         "exists": false,
@@ -3564,37 +2953,29 @@
         {
           "form": "etu",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "cape, nose"
         },
         {
           "form": "oro",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place, in"
         },
         {
           "form": "o-p",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "thing having"
         },
         {
           "form": "sir",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "island, land"
         }
       ],
       "etymology_analysis": "From Ainu etu-oro-o-p ('place with a cape') plus sir ('island, land'), the indigenous name of Iturup (Etorofu, 択捉島), calqued in-game as KûrVanc via its ateji kanji 択捉. First attested in 1644 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "KûrVanc",
-        "b_tarr": "KûrVanc",
-        "b_tarr_direct": "KûrVanc",
-        "b_tarr_hist": "KûrVanc",
-        "b_origin": "择捉 (エトゥオロオプ) [KûrVanc] — Calque: Select + Grasp",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkuːr.vaŋk]",
-        "b_hanzi": "择捉",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Iturup",
       "older_name_by_867": {
         "exists": false,
@@ -3629,27 +3010,17 @@
         {
           "form": "pi",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "stone, pebble"
         },
         {
           "form": "poro",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "many, large"
         }
       ],
       "etymology_analysis": "From Ainu pi-poro ('place with many stones') or pe-horo ('place with abundant water'), modern Bihoro (美幌) in eastern Hokkaido, calqued in-game as Steinveitflôz. First attested as a formal settlement in 1872 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Steinveitflôz",
-        "b_tarr": "Steinveitflôz",
-        "b_tarr_direct": "Steinveitflôz",
-        "b_tarr_hist": "Steinveitflôz",
-        "b_origin": "石原流 (ピオロ) [Steinveitflôz] — Calque: Stone + High plateau plain + Flowing current",
-        "b_anachronism": "",
-        "b_ipa": "[ˈstɛɪn.vɛɪt.floːts]",
-        "b_hanzi": "石原流",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B9%8C%E7%94%BA",
       "older_name_by_867": {
         "exists": false,
@@ -3684,32 +3055,23 @@
         {
           "form": "o",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river mouth, outlet"
         },
         {
           "form": "perperke",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to split into many branches"
         },
         {
           "form": "-p",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place, thing"
         }
       ],
       "etymology_analysis": "From Ainu o-perperke-p ('place where the river mouth splits into many channels'), the original Ainu name of Obihiro (帯広), calqued in-game as BacheGavel. Unattested in written records until the Meiji settlement era (1883 CE), long after 867 CE.",
-      "current_repo_state": {
-        "name": "BacheGavel",
-        "b_tarr": "BacheGavel",
-        "b_tarr_direct": "BacheGavel",
-        "b_tarr_hist": "BacheGavel",
-        "b_origin": "川岔 (オペレペレケプ) [BacheGavel] — Calque: Flowing stream + River fork",
-        "b_anachronism": "",
-        "b_ipa": "[ba.xɛ.ɣa.ˈvəl]",
-        "b_hanzi": "川岔",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Obihiro",
       "older_name_by_867": {
         "exists": false,
@@ -3744,27 +3106,17 @@
         {
           "form": "tokap",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "breast"
         },
         {
           "form": "usi",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place, abundant in"
         }
       ],
       "etymology_analysis": "From Ainu tokapci / tokap-usi ('breast-like place', referring to the twin-branched mouth of the Tokachi River), modern Tokachi (十勝), calqued in-game as Milchbache. First attested in written records in 1669 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Milchbache",
-        "b_tarr": "Milchbache",
-        "b_tarr_direct": "Milchbache",
-        "b_tarr_hist": "Milchbache",
-        "b_origin": "乳川 (トカプシ) [Milchbache] — Calque: Milk + Flowing stream",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɪlx.ba.xə]",
-        "b_hanzi": "乳川",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tokachi_River",
       "older_name_by_867": {
         "exists": false,
@@ -3799,27 +3151,17 @@
         {
           "form": "kus",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to pass through"
         },
         {
           "form": "ru",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "path, road"
         }
       ],
       "etymology_analysis": "From Ainu kusuri (variously interpreted as kus-ru 'passage/road' or kut-caro 'throat/river outlet', and folk-etymologized as 'medicine spring'), modern Kushiro (釧路), calqued in-game as Krûtbrunn. First attested in 1643 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Krûtbrunn",
-        "b_tarr": "Krûtbrunn",
-        "b_tarr_direct": "Krûtbrunn",
-        "b_tarr_hist": "Krûtbrunn",
-        "b_origin": "药泉 (クスリ) [Krûtbrunn] — Calque: Medicinal herb + Natural spring",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkruːt.brʊn]",
-        "b_hanzi": "药泉",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kushiro",
       "older_name_by_867": {
         "exists": false,
@@ -3854,27 +3196,17 @@
         {
           "form": "cipa",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "sacred altar rock"
         },
         {
           "form": "sir",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "land, rock formation"
         }
       ],
       "etymology_analysis": "From Ainu cipa-sir ('land/rock where the sacred altar is set') or a-pa-siri ('land we found'), the indigenous origin of Abashiri (網走), calqued in-game as MînSchouweFels. Attested only from 1872 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "MînSchouweFels",
-        "b_tarr": "MînSchouweFels",
-        "b_tarr_direct": "MînSchouweFels",
-        "b_tarr_hist": "MînSchouweFels",
-        "b_origin": "我见岩 (チパシリ) [MînSchouweFels] — Calque: Self + Observe scenic prospect + Crag",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmiːn.ʃɔʊ.wɛ.fɛls]",
-        "b_hanzi": "我见岩",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Abashiri",
       "older_name_by_867": {
         "exists": false,
@@ -3909,32 +3241,23 @@
         {
           "form": "ni",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "tree"
         },
         {
           "form": "mu",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "dense, blocked"
         },
         {
           "form": "oro",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place"
         }
       ],
       "etymology_analysis": "From Ainu ni-mu-oro ('place where trees grow thick'), modern Nemuro (根室), calqued in-game as HoltzLêvendelant. First attested in written records in 1773 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "HoltzLêvendelant",
-        "b_tarr": "HoltzLêvendelant",
-        "b_tarr_direct": "HoltzLêvendelant",
-        "b_tarr_hist": "HoltzLêvendelant",
-        "b_origin": "木生地 (ニムオロ) [HoltzLêvendelant] — Calque: Wood + Life renewal + Land",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhɔlts.leː.vən.dɛ.lant]",
-        "b_hanzi": "木生地",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nemuro,_Hokkaido",
       "older_name_by_867": {
         "exists": false,
@@ -3969,27 +3292,17 @@
         {
           "form": "sir",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "earth, land"
         },
         {
           "form": "etok",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "end, tip, protruding point"
         }
       ],
       "etymology_analysis": "From Ainu sir-etok ('end of the earth' or 'protruding land'), the indigenous name of the Shiretoko Peninsula (知床半島), calqued in-game as LantVör. First attested in 1669 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "LantVör",
-        "b_tarr": "LantVör",
-        "b_tarr_direct": "LantVör",
-        "b_tarr_hist": "LantVör",
-        "b_origin": "地先 (シリエトク) [LantVör] — Calque: Land + Fore",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlant.vøːr]",
-        "b_hanzi": "地先",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shiretoko_Peninsula",
       "older_name_by_867": {
         "exists": false,
@@ -4024,26 +3337,17 @@
         {
           "form": "mo",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "quiet, calm"
         },
         {
           "form": "pet",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river"
         }
       ],
       "etymology_analysis": "From Ainu mo-pet ('quiet river'), originally naming the Mobetsu River (藻鼈川) before transferring to the port settlement of Monbetsu (紋別), rendered in-game as Môtpet. First attested in 1685 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Môtpet",
-        "b_tarr": "Môtpet",
-        "b_tarr_direct": "Môtpet",
-        "b_tarr_hist": "Môtpet",
-        "b_origin": "Indigenous Ainu/Nivkh river mouth settlement Mopet (in-game: Môtpet)",
-        "b_anachronism": "Pre-867 native toponym restored over post-867 colonial foundation.",
-        "b_ipa": "[moːt.ˈpɛt]",
-        "holding_type": "castle",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Monbetsu,_Hokkaido",
       "older_name_by_867": {
         "exists": false,
@@ -4078,27 +3382,17 @@
         {
           "form": "so",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "reef, coastal rock"
         },
         {
           "form": "ya",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "shore, landward bank"
         }
       ],
       "etymology_analysis": "From Ainu so-ya ('rocky shore'), modern Sōya (宗谷) near Wakkanai, calqued in-game as Stamdal from its ateji kanji 宗谷 ('ancestral hall + valley'). First attested in 1685 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Stamdal",
-        "b_tarr": "Stamdal",
-        "b_tarr_direct": "Stamdal",
-        "b_tarr_hist": "Stamdal",
-        "b_origin": "宗谷 (ソーヤ) [Stamdal] — Calque: Ancestral temple + Mountain valley",
-        "b_anachronism": "",
-        "b_ipa": "[ˈstam.dal]",
-        "b_hanzi": "宗谷",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cape_S%C5%8Dya",
       "older_name_by_867": {
         "exists": false,
@@ -4133,27 +3427,17 @@
         {
           "form": "nay",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "stream, creek, valley"
         },
         {
           "form": "oro",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "in, midst of"
         }
       ],
       "etymology_analysis": "From Ainu nay-oro ('in the midst of the stream/valley'), modern Nayoro (名寄) at the confluence of the Teshio and Nayoro rivers, calqued in-game as NâmeHôf from its ateji kanji 名寄. First attested in 1857 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "NâmeHôf",
-        "b_tarr": "NâmeHôf",
-        "b_tarr_direct": "NâmeHôf",
-        "b_tarr_hist": "NâmeHôf",
-        "b_origin": "名寄 (ナイオロ) [NâmeHôf] — Calque: Renowned + Lodge",
-        "b_anachronism": "",
-        "b_ipa": "[naː.mɛ.ˈhoːf]",
-        "b_hanzi": "名寄",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E5%90%8D%E5%AF%84%E5%B8%82",
       "older_name_by_867": {
         "exists": false,
@@ -4188,32 +3472,23 @@
         {
           "form": "tes",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "fishing weir"
         },
         {
           "form": "un",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to exist, have"
         },
         {
           "form": "-i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place"
         }
       ],
       "etymology_analysis": "From Ainu tes-un-i ('place where fishing weirs exist', related to tes-o-pet 'river full of fishing weirs'), modern Teshio (天塩), calqued in-game as FischBou. First attested in 1700 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "FischBou",
-        "b_tarr": "FischBou",
-        "b_tarr_direct": "FischBou",
-        "b_tarr_hist": "FischBou",
-        "b_origin": "渔築 (テシウニ) [FischBou] — Calque: Fishing water + Fortified earthwork",
-        "b_anachronism": "",
-        "b_ipa": "[fɪʃ.ˈbɔʊ]",
-        "b_hanzi": "渔築",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Teshio_River",
       "older_name_by_867": {
         "exists": false,
@@ -4248,32 +3523,23 @@
         {
           "form": "kus",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to cross over / opposite side"
         },
         {
           "form": "un",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to be located at"
         },
         {
           "form": "kotan",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "village / settlement"
         }
       ],
       "etymology_analysis": "From Ainu kus-un-kotan ('village on the opposite shore'), referring to the Sakhalin Ainu settlement facing Hokkaido across the La Pérouse Strait (later Japanese Ōdomari, modern Korsakov). Unattested in written records until 1679 CE, well after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Tegenstrantdorp",
-        "b_tarr": "Tegenstrantdorp",
-        "b_tarr_direct": "Tegenstrantdorp",
-        "b_tarr_hist": "Tegenstrantdorp",
-        "b_origin": "对涯村 (クシュンコタン) [Tegenstrantdorp] — Calque: Facing opposite shore + Waterfront shoreline + Rural village",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɛ.ɣəns.trant.dɔrp]",
-        "b_hanzi": "对涯村",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%8F%A4%E4%B8%B9",
       "older_name_by_867": {
         "exists": false,
@@ -4308,32 +3574,23 @@
         {
           "form": "kus",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to pass through / cross"
         },
         {
           "form": "un",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to be at / habitual"
         },
         {
           "form": "nay",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river / stream"
         }
       ],
       "etymology_analysis": "From Ainu kus-un-nay ('river flowing across/through the mountain pass' or 'river regularly traveled by boat'), referring to the narrowest east-west crossing of Sakhalin (modern Ilyinskoye). Unattested in written sources until 1857 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Tegenstrantbache",
-        "b_tarr": "Tegenstrantbache",
-        "b_tarr_direct": "Tegenstrantbache",
-        "b_tarr_hist": "Tegenstrantbache",
-        "b_origin": "对涯川 (クシュンナイ) [Tegenstrantbache] — Calque: Facing opposite shore + Waterfront shoreline + Flowing stream",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɛ.ɣəns.trant.ba.xə]",
-        "b_hanzi": "对涯川",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B9%85%E6%98%A5%E5%86%85%E6%9D%91",
       "older_name_by_867": {
         "exists": false,
@@ -4368,32 +3625,23 @@
         {
           "form": "pon",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "small"
         },
         {
           "form": "to",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "lake / pond"
         },
         {
           "form": "kes",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "end / edge"
         }
       ],
       "etymology_analysis": "From Ainu pon-to-kes ('end of the small lake/marsh'), a locator compound referring to the coastal settlement at modern Nevelsk in southern Sakhalin. Unattested in written records prior to the modern Karafuto period (20th century CE).",
-      "current_repo_state": {
-        "name": "NeckeRechtstûr",
-        "b_tarr": "NeckeRechtstûr",
-        "b_tarr_direct": "NeckeRechtstûr",
-        "b_tarr_hist": "NeckeRechtstûr",
-        "b_origin": "岬端 (ポントゥケシ) [NeckeRechtstûr] — Calque: Maritime cape + Upright integrity",
-        "b_anachronism": "",
-        "b_ipa": "[nɛ.kɛ.rɛçts.ˈtuːr]",
-        "b_hanzi": "岬端",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E6%9C%AC%E6%96%97%E7%94%BA",
       "older_name_by_867": {
         "exists": false,
@@ -4428,22 +3676,11 @@
         {
           "form": "pokobi",
           "language": "Nivkh",
+          "language_code": "qwe",
           "translation": "turning place / cape"
         }
       ],
       "etymology_analysis": "From Nivkh Pokobi / Pogibi, the indigenous name of Cape Pogibi at the narrowest point of the Nevelskoy Strait in northwestern Sakhalin (rendered Hokobei / 鉾部 in Japanese). First recorded in written cartography c. 1810 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "WeitJamatoVaste",
-        "b_tarr": "WeitJamatoVaste",
-        "b_tarr_direct": "WeitJamatoVaste",
-        "b_tarr_hist": "WeitJamatoVaste",
-        "b_origin": "博和必 (ポギビ) [WeitJamatoVaste] — Calque: Broad learning + Harmony + Certain",
-        "b_anachronism": "",
-        "b_ipa": "[wɛɪt.ja.ma.tɔ.ˈvas.tə]",
-        "b_hanzi": "博和必",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D0%B8%D0%B1%D0%B8_(%D1%81%D0%B5%D0%BB%D0%BE)",
       "older_name_by_867": {
         "exists": false,
@@ -4478,22 +3715,11 @@
         {
           "form": "tymy",
           "language": "Nivkh",
+          "language_code": "qwe",
           "translation": "spawning ground"
         }
       ],
       "etymology_analysis": "From Nivkh Tymy ('spawning ground', adapted into Russian as Tym' and Ainu as Tuymi), directly adopting the hydronym of the Tym River in central-northern Sakhalin. Unattested in written records until 1852 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "BêstRîs",
-        "b_tarr": "BêstRîs",
-        "b_tarr_direct": "BêstRîs",
-        "b_tarr_hist": "BêstRîs",
-        "b_origin": "特米 (トゥイミ) [BêstRîs] — Calque: Exceptional preeminence + Polished grain rice",
-        "b_anachronism": "",
-        "b_ipa": "[beːs.ˈtriːs]",
-        "b_hanzi": "特米",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://calendar.libsakh.ru/event/777/",
       "older_name_by_867": {
         "exists": false,
@@ -4528,22 +3754,11 @@
         {
           "form": "idoi",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "settlement name (variant of Otchishi/Doe)"
         }
       ],
       "etymology_analysis": "Japanese cartographic rendering Idoi (イドイ) of the indigenous Ainu/Nivkh settlement at modern Aleksandrovsk-Sakhalinsky (also known as Otchishi or Nivkh Doe). First attested in Mamiya Rinzō's c. 1810 CE map, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Sîdenbrunn",
-        "b_tarr": "Sîdenbrunn",
-        "b_tarr_direct": "Sîdenbrunn",
-        "b_tarr_hist": "Sîdenbrunn",
-        "b_origin": "丝井 (イドイ) [Sîdenbrunn] — Calque: Silk thread + Well",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsiː.dən.brʊn]",
-        "b_hanzi": "丝井",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4578,22 +3793,11 @@
         {
           "form": "tarayka",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "indigenous ethnonym and settlement name on Patience Bay"
         }
       ],
       "etymology_analysis": "From Tarayka (Japanese 多来加), the indigenous name of the eastern Sakhalin settlement and Ainu/Uilta/Nivkh contact zone near Lake Taraika (Nevskoye) and Poronaysk. First documented in Japanese surveys c. 1810 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "MênichKomKâ",
-        "b_tarr": "MênichKomKâ",
-        "b_tarr_direct": "MênichKomKâ",
-        "b_tarr_hist": "MênichKomKâ",
-        "b_origin": "多来加 (タライカ) [MênichKomKâ] — Calque: Abundant + Arrival + Augment",
-        "b_anachronism": "",
-        "b_ipa": "[meː.nɪç.kɔm.ˈkaː]",
-        "b_hanzi": "多来加",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sakhalin_Ainu_language",
       "older_name_by_867": {
         "exists": false,
@@ -4628,22 +3832,11 @@
         {
           "form": "esturi",
           "language": "Sakhalin Ainu",
+          "language_code": "ain",
           "translation": "indigenous coastal place name (exact gloss uncertain)"
         }
       ],
       "etymology_analysis": "From Sakhalin Ainu Esturi (adapted into Japanese as Esutoru / 恵須取, modern Uglegorsk), whose precise lexical meaning is unconfirmed. Unattested in written records until 1905 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Houbtberch",
-        "b_tarr": "Houbtberch",
-        "b_tarr_direct": "Houbtberch",
-        "b_tarr_hist": "Houbtberch",
-        "b_origin": "头山 (エストゥル) [Houbtberch] — Calque: Headland + Mountain",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhɔʊbt.bɛrx]",
-        "b_hanzi": "头山",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E6%81%B5%E9%A0%88%E5%8F%96%E7%94%BA",
       "older_name_by_867": {
         "exists": false,
@@ -4678,22 +3871,11 @@
         {
           "form": "ketongiy",
           "language": "Nivkh",
+          "language_code": "qwe",
           "translation": "upper river"
         }
       ],
       "etymology_analysis": "From Nivkh Ketongiy ('upper river', referring to the Keton River tributary of the Poronai, rendered in Japanese as Keton / 気屯, modern Smirnykh). Unattested in written sources until 1917 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "OuweBou",
-        "b_tarr": "OuweBou",
-        "b_tarr_direct": "OuweBou",
-        "b_tarr_hist": "OuweBou",
-        "b_origin": "岸築 (ケトゥニ) [OuweBou] — Calque: Riparian riverbank + Fortified earthwork",
-        "b_anachronism": "",
-        "b_ipa": "[ɔʊ.wɛ.ˈbɔʊ]",
-        "b_hanzi": "岸築",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%B4%E3%83%95%E8%AA%9E",
       "older_name_by_867": {
         "exists": false,
@@ -4728,22 +3910,11 @@
         {
           "form": "i-ot-i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place where snakes abound"
         }
       ],
       "etymology_analysis": "Commonly derived from Ainu i-ot-i ('place where [snakes] are many', using the taboo word i for snake), or i-o-ci ('place where hot springs flow into the river'). First attested in Shinra no Kiroku in 1646 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "KomRastLêg",
-        "b_tarr": "KomRastLêg",
-        "b_tarr_direct": "KomRastLêg",
-        "b_tarr_hist": "KomRastLêg",
-        "b_origin": "来止卧 (イオチ) [KomRastLêg] — Calque: Arrival + Stationary boundary post + Recumbent",
-        "b_anachronism": "",
-        "b_ipa": "[kɔm.rast.ˈleːɡ]",
-        "b_hanzi": "来止卧",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://adeac.jp/sapporo-lib/text-list/d100010/ht300160",
       "older_name_by_867": {
         "exists": false,
@@ -4778,27 +3949,17 @@
         {
           "form": "seta",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "dog"
         },
         {
           "form": "nay",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river / stream"
         }
       ],
       "etymology_analysis": "From Ainu seta-nay ('dog river', shortened from seta-rupespe-nay, 'river that dogs swim across'). First attested in written records in 1646 CE (Shinra no Kiroku), well after 867 CE.",
-      "current_repo_state": {
-        "name": "Snellbachbache",
-        "b_tarr": "Snellbachbache",
-        "b_tarr_direct": "Snellbachbache",
-        "b_tarr_hist": "Snellbachbache",
-        "b_origin": "濑川 (セタナイ) [Snellbachbache] — Calque: Shallow rapids + Flowing stream",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsnɛʎ.bax.ba.xə]",
-        "b_hanzi": "濑川",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E7%80%AC%E6%A3%9A%E7%94%BA",
       "older_name_by_867": {
         "exists": false,
@@ -4833,32 +3994,23 @@
         {
           "form": "ota",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "sand / sandy beach"
         },
         {
           "form": "or",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "inside / in"
         },
         {
           "form": "nay",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river / stream"
         }
       ],
       "etymology_analysis": "From Ainu ota-or-un-nay ('river running through the sandy beach'), later shortened to Otaru (小樽). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Santbache",
-        "b_tarr": "Santbache",
-        "b_tarr_direct": "Santbache",
-        "b_tarr_hist": "Santbache",
-        "b_origin": "砂川 (オタルナイ) [Santbache] — Calque: Sand + Flowing stream",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsant.ba.xə]",
-        "b_hanzi": "砂川",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Otaru",
       "older_name_by_867": {
         "exists": false,
@@ -4893,26 +4045,17 @@
         {
           "form": "ap-ta",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to make fishhooks"
         },
         {
           "form": "pet",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river"
         }
       ],
       "etymology_analysis": "From Ainu apta-pet ('river where fishhooks were made and used for fishing'), modern Abuta (虻田). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://www.rinya.maff.go.jp/hokkaido/policy/system/rekumori/yagai_sports/34-nakayama_ski/index.html",
       "older_name_by_867": {
         "exists": false,
@@ -4947,27 +4090,17 @@
         {
           "form": "i-sikar-a",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "meandering / winding"
         },
         {
           "form": "pet",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river"
         }
       ],
       "etymology_analysis": "From Ainu Iskar-pet ('winding river' or 'beautifully made river'), directly adopting the hydronym of the Ishikari River (石狩川). First attested in written cartography in 1644 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Krûmmebache",
-        "b_tarr": "Krûmmebache",
-        "b_tarr_direct": "Krûmmebache",
-        "b_tarr_hist": "Krûmmebache",
-        "b_origin": "曲川 (イシカラ) [Krûmmebache] — Calque: Winding river bend + Flowing stream",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkruː.mɛ.ba.xə]",
-        "b_hanzi": "曲川",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E7%9F%B3%E7%8B%A9%E5%9B%BD",
       "older_name_by_867": {
         "exists": false,
@@ -5002,37 +4135,29 @@
         {
           "form": "rur",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "tide / seawater"
         },
         {
           "form": "mo",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "calm / quiet"
         },
         {
           "form": "ot",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "abundant / deep"
         },
         {
           "form": "pe",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "water / river"
         }
       ],
       "etymology_analysis": "From Ainu rur-mo-ot-pe ('river with calm, constant tides'), directly adopting the hydronym of the Rumoi River (留萌川). First attested in written records in 1661 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Sachtleiteflôz",
-        "b_tarr": "Sachtleiteflôz",
-        "b_tarr_direct": "Sachtleiteflôz",
-        "b_tarr_hist": "Sachtleiteflôz",
-        "b_origin": "缓坂流 (ルルモオッペ) [Sachtleiteflôz] — Calque: Gentle slope + Mountain slope + Flowing current",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsaxt.lɛɪ.tɛ.floːts]",
-        "b_hanzi": "缓坂流",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/History_of_Rumoi,_Hokkaido",
       "older_name_by_867": {
         "exists": false,
@@ -5067,27 +4192,17 @@
         {
           "form": "cup",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "sun / east"
         },
         {
           "form": "pet",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "river"
         }
       ],
       "etymology_analysis": "From Ainu Cup-pet ('sun river' or 'eastern river', also interpreted as ci-up-pet 'river with waves'), directly adopting the hydronym of the Chūbetsu River (忠別川) in Asahikawa. First attested in written records in 1797 CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "TrûweScheid",
-        "b_tarr": "TrûweScheid",
-        "b_tarr_direct": "TrûweScheid",
-        "b_tarr_hist": "TrûweScheid",
-        "b_origin": "忠别 (チュプペッ) [TrûweScheid] — Calque: Loyalty + Branch river",
-        "b_anachronism": "",
-        "b_ipa": "[truː.wɛ.ˈʃɛɪd]",
-        "b_hanzi": "忠别",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://adeac.jp/asahikawa-city/timeline/tm000001",
       "older_name_by_867": {
         "exists": false,
@@ -5122,32 +4237,23 @@
         {
           "form": "so",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "waterfall"
         },
         {
           "form": "rap",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to descend"
         },
         {
           "form": "ci",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "plural/nominalizer (cascades)"
         }
       ],
       "etymology_analysis": "From Ainu so-rap-ci ('cascading waterfalls'), directly adopting the hydronym of the Sorachi River (空知川). First attested in written surveys in 1859 CE by Matsuura Takeshirō, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Kleinval",
-        "b_tarr": "Kleinval",
-        "b_tarr_direct": "Kleinval",
-        "b_tarr_hist": "Kleinval",
-        "b_origin": "小泷 (ソラプチ) [Kleinval] — Calque: Little + Rushing waterfall rapids",
-        "b_anachronism": "",
-        "b_ipa": "[ˈklɛɪn.val]",
-        "b_hanzi": "小泷",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://www.town.kamifurano.hokkaido.jp/hp/saguru/100nen/2.05.01.htm",
       "older_name_by_867": {
         "exists": false,
@@ -5182,22 +4288,11 @@
         {
           "form": "sar",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "reed plain / marshy grassland"
         }
       ],
       "etymology_analysis": "From Ainu sar ('reed plain / marshland'), referring to the lower Saru River (沙流川) valley in Hidaka. First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Rietveit",
-        "b_tarr": "Rietveit",
-        "b_tarr_direct": "Rietveit",
-        "b_tarr_hist": "Rietveit",
-        "b_origin": "苇原 (サル) [Rietveit] — Calque: Reed + High plateau plain",
-        "b_anachronism": "",
-        "b_ipa": "[ˈrɪ.ɛt.vɛɪt]",
-        "b_hanzi": "苇原",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikisource.org/wiki/%E6%9D%BE%E5%89%8D%E5%B3%B6%E9%83%B7%E5%B8%B3",
       "older_name_by_867": {
         "exists": false,
@@ -5232,27 +4327,17 @@
         {
           "form": "i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "important place / sacred thing"
         },
         {
           "form": "put",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "mouth of a river / entrance"
         }
       ],
       "etymology_analysis": "From Ainu i-put ('entrance/river mouth leading to an important place'), referring to the confluence area near modern Ebetsu (江別). First attested in written records in 1700 CE (Matsumae-jima Gōchō), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "BacheZâmenstat",
-        "b_tarr": "BacheZâmenstat",
-        "b_tarr_direct": "BacheZâmenstat",
-        "b_tarr_hist": "BacheZâmenstat",
-        "b_origin": "川合所 (イプッ) [BacheZâmenstat] — Calque: Flowing stream + Confluence + Place",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.xɛ.tsaː.mən.stat]",
-        "b_hanzi": "川合所",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://www.hkd.mlit.go.jp/sp/tiiki_sinkou/kluhh40000002h2u.html",
       "older_name_by_867": {
         "exists": false,
@@ -5287,27 +4372,17 @@
         {
           "form": "sipe",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "salmon"
         },
         {
           "form": "icar",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "spawning ground"
         }
       ],
       "etymology_analysis": "From Ainu sipe-ican / sipe-icar ('salmon spawning ground'), directly adopting the historical hydronym of the Shibechari River (modern Shizunai River). First attested in written records in 1669 CE during Shakushain's Revolt, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Grôzsteinveitlant",
-        "b_tarr": "Grôzsteinveitlant",
-        "b_tarr_direct": "Grôzsteinveitlant",
-        "b_tarr_hist": "Grôzsteinveitlant",
-        "b_origin": "大石原地 (シピチャリ) [Grôzsteinveitlant] — Calque: Great + Stone + High plateau plain + Land",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡroːts.tɛɪn.vɛɪt.lant]",
-        "b_hanzi": "大石原地",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shizunai_River",
       "older_name_by_867": {
         "exists": false,
@@ -5342,32 +4417,23 @@
         {
           "form": "mo",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "small / little"
         },
         {
           "form": "rueran",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "descending path / slope"
         },
         {
           "form": "i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place"
         }
       ],
       "etymology_analysis": "From Ainu mo-ruerani ('bottom of a little slope'), modern Muroran (室蘭). Unattested in written records until the late 16th–1700 CE Matsumae period, well after 867 CE.",
-      "current_repo_state": {
-        "name": "KleinNiderleite",
-        "b_tarr": "KleinNiderleite",
-        "b_tarr_direct": "KleinNiderleite",
-        "b_tarr_hist": "KleinNiderleite",
-        "b_origin": "小下坂 (モルラン) [KleinNiderleite] — Calque: Little + Lower + Mountain slope",
-        "b_anachronism": "",
-        "b_ipa": "[klɛɪ.nɪ.dɛr.ˈlɛɪ.tə]",
-        "b_hanzi": "小下坂",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://www.city.muroran.lg.jp/content/?content=1984",
       "older_name_by_867": {
         "exists": false,
@@ -5402,32 +4468,23 @@
         {
           "form": "mat",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "woman / cove"
         },
         {
           "form": "oma",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to be inside"
         },
         {
           "form": "i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place"
         }
       ],
       "etymology_analysis": "From Ainu mat-oma-i ('place where women live' or 'place in front of the cove/bay'), rendered in Japanese as Matsumae (松前). First attested in 1356 CE in the Suwa Daimyōjin Ekotoba, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "PînVör",
-        "b_tarr": "PînVör",
-        "b_tarr_direct": "PînVör",
-        "b_tarr_hist": "PînVör",
-        "b_origin": "松前 (マトマイ) [PînVör] — Calque: Pine tree + Front",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpiːn.vøːr]",
-        "b_hanzi": "松前",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050",
       "older_name_by_867": {
         "exists": false,
@@ -5462,27 +4519,17 @@
         {
           "form": "usor",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "bay / inlet"
         },
         {
           "form": "kes",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "end / edge"
         }
       ],
       "etymology_analysis": "From Ainu usor-kes / us-kes ('end of the bay'), an Ainu locator compound for the fishing settlement at modern Hakodate (函館). First attested in 1356 CE in the Suwa Daimyōjin Ekotoba, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "BuchtRechtstûr",
-        "b_tarr": "BuchtRechtstûr",
-        "b_tarr_direct": "BuchtRechtstûr",
-        "b_tarr_hist": "BuchtRechtstûr",
-        "b_origin": "湾端 (ウスケシ) [BuchtRechtstûr] — Calque: Coastal gulf bay + Upright integrity",
-        "b_anachronism": "",
-        "b_ipa": "[bʊx.trɛçts.ˈtuːr]",
-        "b_hanzi": "湾端",
-        "holding_type": "city",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://adeac.jp/hakodate-city/text-list/d100010/ht030050",
       "older_name_by_867": {
         "exists": false,
@@ -5517,32 +4564,23 @@
         {
           "form": "kaya",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "sail"
         },
         {
           "form": "un",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "to have / be at"
         },
         {
           "form": "pes",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "cliff / precipice"
         }
       ],
       "etymology_analysis": "From Ainu kaya-un-pes ('cliff with sails', referring to sail-shaped coastal rock formations in Kayabe, southern Oshima Peninsula). Unattested in written records until the Edo period (c. 1700 CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Segelklif",
-        "b_tarr": "Segelklif",
-        "b_tarr_direct": "Segelklif",
-        "b_tarr_hist": "Segelklif",
-        "b_origin": "帆崖 (カヤウンペシ) [Segelklif] — Calque: Sail + Precipitous rock cliff",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɛ.ɣɛl.klɪf]",
-        "b_hanzi": "帆崖",
-        "holding_type": "castle",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E8%8C%85%E9%83%A8%E9%83%A1",
       "older_name_by_867": {
         "exists": false,
@@ -5577,32 +4615,23 @@
         {
           "form": "kuma",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "wooden pole for drying fish"
         },
         {
           "form": "us",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "abundant / many"
         },
         {
           "form": "i",
           "language": "Ainu",
+          "language_code": "ain",
           "translation": "place"
         }
       ],
       "etymology_analysis": "From Ainu kuma-us-i ('place with many fish-drying racks'), located at the historical northern boundary of Wajinchi in Oshima/Hiyama (modern Yakumo). First attested in early 17th-century Matsumae records (1615 CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Bêrenstein",
-        "b_tarr": "Bêrenstein",
-        "b_tarr_direct": "Bêrenstein",
-        "b_tarr_hist": "Bêrenstein",
-        "b_origin": "熊石 (クマウシ) [Bêrenstein] — Calque: Bear + Stone",
-        "b_anachronism": "",
-        "b_ipa": "[beː.rən.ˈstɛɪn]",
-        "b_hanzi": "熊石",
-        "holding_type": "church",
-        "category": "sinosphere_calque"
-      },
       "source_url": "https://ja.wikipedia.org/wiki/%E7%86%8A%E7%9F%B3%E7%94%BA",
       "older_name_by_867": {
         "exists": false,

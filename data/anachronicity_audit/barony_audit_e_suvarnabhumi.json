@@ -1,18 +1,28 @@
 {
   "metadata": {
+    "empire": "e_suvarnabhumi",
     "scope": "e_suvarnabhumi (all 180 baronies across k_dvaravati and k_pagan)",
-    "version": "1.0",
-    "reference_start_year": 867,
-    "source_repository": "https://github.com/skachano/tarraconian_hre",
+    "schema_version": "1.1.0",
+    "baseline_year": 867,
     "source_files": [
       "data/ck3_title_tree.json",
-      "data/barony_resolutions.json",
       "data/barony_holdings.json"
     ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "true if the barony name is contemporarily attested as a settlement/fortress/administrative unit by <= 867 CE; false if first attested post-867 CE, only claimed in late retrospective chronicles, or unattested.",
-      "older_name_by_867": "Tracks attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name.",
-      "natural_proper_name": "true only when the toponym directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds)."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 180,
@@ -54,31 +64,23 @@
         {
           "form": "Hari",
           "language": "Sanskrit/Pali",
+          "language_code": "san",
           "translation": "Vishnu / golden / tawny"
         },
         {
           "form": "puñja",
           "language": "Sanskrit/Pali",
+          "language_code": "san",
           "translation": "heap / abundance"
         },
         {
           "form": "-ya",
           "language": "Sanskrit/Pali",
+          "language_code": "san",
           "translation": "toponymic suffix"
         }
       ],
       "etymology_analysis": "From Sanskrit/Pali Haripuñjaya (also Haribhuñjaya), a classical Indic name borne by the Mon kingdom centered at Lamphun. Although archaeological remains in the Lamphun basin predate 867 CE and 15th–16th century CE Pali chronicles (Camadevivamsa, Jinakalamali) claim a 7th-century CE foundation by Queen Camadevi of Lavo, the earliest contemporary epigraphic attestations date to the 11th–13th centuries CE (with dated Lamphun steles from 1213 CE onward), so it is not contemporarily attested by 867 CE.",
-      "current_repo_state": {
-        "name": "Haripundschaje",
-        "b_tarr": "Haripundschaje",
-        "b_tarr_direct": "Haripundschaje",
-        "b_tarr_hist": "Haripundschaje",
-        "b_origin": "Haripundschaje (Haripuñjaya)",
-        "b_anachronism": "",
-        "b_ipa": "[ha.rɪ.pʊn.ˈdʒa.jɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Haripu%C3%B1jaya",
       "older_name_by_867": {
         "exists": false,
@@ -113,26 +115,17 @@
         {
           "form": "Chiang",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "walled city"
         },
         {
           "form": "Mai",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "new"
         }
       ],
       "etymology_analysis": "Northern Thai Chiang ('walled city') + Mai ('new'), founded in 1296 CE by King Mangrai as the new capital of Lan Na. Later chronicles mention a prior Lawa settlement called Wiang Nopburi, but this has no contemporary <= 867 CE written attestation.",
-      "current_repo_state": {
-        "name": "Pîng",
-        "b_tarr": "Pîng",
-        "b_tarr_direct": "Pîng",
-        "b_tarr_hist": "Pîng",
-        "b_origin": "Ancient Mae Ping River basin of the Mon-Dvaravati realm (in-game: Chiang Mai)",
-        "b_anachronism": "1296 new capital of Lan Na fails Burden of Proof on Antiquity; resolved to ancient Ping river hydronym.",
-        "b_ipa": "[piːŋ]",
-        "holding_type": "church",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiang_Mai",
       "older_name_by_867": {
         "exists": false,
@@ -167,26 +160,17 @@
         {
           "form": "Chom",
           "language": "Thai/Northern Thai",
+          "language_code": "tha",
           "translation": "peak / summit"
         },
         {
           "form": "Thong",
           "language": "Thai/Northern Thai",
+          "language_code": "tha",
           "translation": "gold / golden"
         }
       ],
       "etymology_analysis": "From Thai/Northern Thai Chom ('peak, summit') + Thong ('gold'), referring to the hill Doi Chom Thong and the mid-15th century CE temple Wat Phra That Si Chom Thong. No contemporary <= 867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Tschom Thong",
-        "b_tarr": "Tschom Thong",
-        "b_tarr_direct": "Tschom Thong",
-        "b_tarr_hist": "Tschom Thong",
-        "b_origin": "Tschom Thong (constituent holding of Haripundschaje)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃɔm thɔŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chom_Thong_district,_Chiang_Mai",
       "older_name_by_867": {
         "exists": false,
@@ -221,21 +205,11 @@
         {
           "form": "Phrao",
           "language": "Thai/Northern Thai",
+          "language_code": "tha",
           "translation": "coconut"
         }
       ],
       "etymology_analysis": "Northern Thai/Thai Phrao ('coconut'). Named around 1281 CE under King Mangrai of Lan Na, well after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Phrao",
-        "b_tarr": "Phrao",
-        "b_tarr_direct": "Phrao",
-        "b_tarr_hist": "Phrao",
-        "b_origin": "Phrao (constituent holding of Haripundschaje)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈphra.ɔ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phrao_district",
       "older_name_by_867": {
         "exists": false,
@@ -270,26 +244,17 @@
         {
           "form": "hlaing",
           "language": "Karen",
+          "language_code": "sit",
           "translation": "water"
         },
         {
           "form": "bwe",
           "language": "Karen",
+          "language_code": "sit",
           "translation": "flowing around a hill"
         }
       ],
       "etymology_analysis": "Town in Kayin State, Myanmar, named directly after the Hlaingbwe River (from Karen hlaing 'water' + bwe 'to flow around a hill'). No contemporary <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Laingbwe",
-        "b_tarr": "Laingbwe",
-        "b_tarr_direct": "Laingbwe",
-        "b_tarr_hist": "Laingbwe",
-        "b_origin": "Laingbwe (Hlaingbwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlaɪŋb.wɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hlaingbwe",
       "older_name_by_867": {
         "exists": false,
@@ -324,26 +289,17 @@
         {
           "form": "Mueang",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "walled town / principality"
         },
         {
           "form": "Tak",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "to dry in the sun / Tak"
         }
       ],
       "etymology_analysis": "Thai Mueang ('walled town, principality') + Tak. First contemporarily attested in the 1292 CE Ramkhamhaeng Inscription; later chronicle traditions linking it to 7th-century CE Takkasila are retrospective and not contemporarily attested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Mueang Tak",
-        "b_tarr": "Mueang Tak",
-        "b_tarr_direct": "Mueang Tak",
-        "b_tarr_hist": "Mueang Tak",
-        "b_origin": "Mueang Tak (constituent holding of Laingbwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.ɛ.aŋ tak]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mueang_Tak_district",
       "older_name_by_867": {
         "exists": false,
@@ -378,26 +334,17 @@
         {
           "form": "Mae",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "mother / river"
         },
         {
           "form": "Sot",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "Sot stream"
         }
       ],
       "etymology_analysis": "Named after the Mae Sot (Huai Mae Sot) stream, with Thai Mae ('mother', used for rivers) + Sot. Often identified with Mueang Chot of the 1292 CE Ramkhamhaeng Inscription, but unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Mae Sot",
-        "b_tarr": "Mae Sot",
-        "b_tarr_direct": "Mae Sot",
-        "b_tarr_hist": "Mae Sot",
-        "b_origin": "Mae Sot (constituent holding of Laingbwe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ɛ sɔt]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mae_Sot",
       "older_name_by_867": {
         "exists": false,
@@ -432,21 +379,11 @@
         {
           "form": "Hot",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "to reach / arrive"
         }
       ],
       "etymology_analysis": "Northern Thai/Thai Hot (from Northern Thai 'to reach, arrive'). A district town in southern Chiang Mai province with no contemporary written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Hot",
-        "b_tarr": "Hot",
-        "b_tarr_direct": "Hot",
-        "b_tarr_hist": "Hot",
-        "b_origin": "Hot (constituent holding of Laingbwe)",
-        "b_anachronism": "",
-        "b_ipa": "[hɔt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hot_district",
       "older_name_by_867": {
         "exists": false,
@@ -481,26 +418,17 @@
         {
           "form": "Mae",
           "language": "Shan/Northern Thai",
+          "language_code": "shn",
           "translation": "river / mother"
         },
         {
           "form": "Hong Son",
           "language": "Shan/Northern Thai",
+          "language_code": "shn",
           "translation": "elephant-training stream"
         }
       ],
       "etymology_analysis": "Named after the Mae Hong Son stream (Shan/Northern Thai Mae 'river' + Hong Son 'stream where elephants are trained'). Founded in 1831 CE and granted city status in 1874 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Mê Hông Sôn",
-        "b_tarr": "Mê Hông Sôn",
-        "b_tarr_direct": "Mê Hông Sôn",
-        "b_tarr_hist": "Mê Hông Sôn",
-        "b_origin": "Mê Hông Sôn (Mae Hong Son)",
-        "b_anachronism": "",
-        "b_ipa": "[meː hoːŋ soːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mae_Hong_Son",
       "older_name_by_867": {
         "exists": false,
@@ -535,21 +463,11 @@
         {
           "form": "Pai",
           "language": "Northern Thai/Shan",
+          "language_code": "tha",
           "translation": "male elephant / Pai River"
         }
       ],
       "etymology_analysis": "Takes its name directly from the Pai River (locally linked to Northern Thai chang pai 'male elephants' or a Shan term). No contemporary written attestation <= 867 CE exists.",
-      "current_repo_state": {
-        "name": "Pai",
-        "b_tarr": "Pai",
-        "b_tarr_direct": "Pai",
-        "b_tarr_hist": "Pai",
-        "b_origin": "Pai (constituent holding of Mê Hông Sôn)",
-        "b_anachronism": "",
-        "b_ipa": "[paɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pai,_Thailand",
       "older_name_by_867": {
         "exists": false,
@@ -584,21 +502,11 @@
         {
           "form": "Karen",
           "language": "Burmese/English",
+          "language_code": "mya",
           "translation": "Karenic-speaking peoples"
         }
       ],
       "etymology_analysis": "Ethnonym referring to the Karenic-speaking peoples of Lower Myanmar and western Thailand (anglicized from Burmese Kayin). Not contemporarily attested as a polity or settlement <= 867 CE.",
-      "current_repo_state": {
-        "name": "Karen",
-        "b_tarr": "Karen",
-        "b_tarr_direct": "Karen",
-        "b_tarr_hist": "Karen",
-        "b_origin": "Karen (constituent holding of Mê Hông Sôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.rən]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kayin_State",
       "older_name_by_867": {
         "exists": false,
@@ -633,26 +541,17 @@
         {
           "form": "Khu",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "moat / ditch"
         },
         {
           "form": "Bua",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "lotus"
         }
       ],
       "etymology_analysis": "Modern Thai compound Khu Bua ('lotus moat'), referring to the moated Dvaravati archaeological site in Ratchaburi; while the site itself is a major 7th-century CE Dvaravati center, the Thai toponym Khu Bua is not attested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Chu Bue",
-        "b_tarr": "Chu Bue",
-        "b_tarr_direct": "Chu Bue",
-        "b_tarr_hist": "Chu Bue",
-        "b_origin": "Chu Bue (Khu Bua)",
-        "b_anachronism": "",
-        "b_ipa": "[xʊ ˈbʊ.ɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Khu_Bua",
       "older_name_by_867": {
         "exists": false,
@@ -687,26 +586,17 @@
         {
           "form": "Uthai",
           "language": "Thai (from Pali udaya)",
+          "language_code": "tha",
           "translation": "dawn / sunrise"
         },
         {
           "form": "Thani",
           "language": "Thai (from Pali thānī)",
+          "language_code": "tha",
           "translation": "city / abode"
         }
       ],
       "etymology_analysis": "From Pali-derived Thai Uthai ('dawn, sunrise') + Thani ('city'). Although Dvaravati-era artifacts exist in the province, the town of Uthai Thani itself has no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Uthai Thani",
-        "b_tarr": "Uthai Thani",
-        "b_tarr_direct": "Uthai Thani",
-        "b_tarr_hist": "Uthai Thani",
-        "b_origin": "Uthai Thani (constituent holding of Chu Bue)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊt.ˈhaɪ ˈtha.nɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Uthai_Thani",
       "older_name_by_867": {
         "exists": false,
@@ -741,26 +631,17 @@
         {
           "form": "Mueang",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "town / city"
         },
         {
           "form": "Sing",
           "language": "Thai (from Sanskrit siṃha)",
+          "language_code": "tha",
           "translation": "lion"
         }
       ],
       "etymology_analysis": "Thai Mueang ('town') + Sing (from Sanskrit siṃha 'lion'), reflecting the Khmer-period city name Siṃhapura. Built in the Bayon style (late 12th–13th century CE), postdating the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Mueang Sing",
-        "b_tarr": "Mueang Sing",
-        "b_tarr_direct": "Mueang Sing",
-        "b_tarr_hist": "Mueang Sing",
-        "b_origin": "Mueang Sing (constituent holding of Chu Bue)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.ɛ.aŋ sɪŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mueang_Sing_Historical_Park",
       "older_name_by_867": {
         "exists": false,
@@ -795,26 +676,17 @@
         {
           "form": "Lop",
           "language": "Thai (from Lava/Lavo)",
+          "language_code": "tha",
           "translation": "Lava / Lawa"
         },
         {
           "form": "Buri",
           "language": "Thai (from Sanskrit pura/purī)",
+          "language_code": "tha",
           "translation": "fortified city"
         }
       ],
       "etymology_analysis": "Modern Thai form of Sanskrit/Pali Lavapura ('city of Lava/Lavo'), contemporarily attested on 7th–8th century CE Pallava-script silver coins as a major Dvaravati/Lavo center.",
-      "current_repo_state": {
-        "name": "Lopburi",
-        "b_tarr": "Lopburi",
-        "b_tarr_direct": "Lopburi",
-        "b_tarr_hist": "Lopburi",
-        "b_origin": "Lopburi (Lop Buri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlɔp.bʊ.rɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lopburi",
       "older_name_by_867": {
         "exists": false,
@@ -849,26 +721,17 @@
         {
           "form": "Chan",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "sandalwood / moon"
         },
         {
           "form": "Sen",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "one hundred thousand"
         }
       ],
       "etymology_analysis": "Modern Thai name (Chan 'sandalwood/moon' + Sen 'hundred thousand') of an archaeological Dvaravati moated town in Takhli District, Nakhon Sawan. Despite 1st-millennium CE archaeological occupation, it lacks contemporary <= 867 CE epigraphic or chronicle attestation by name.",
-      "current_repo_state": {
-        "name": "Chan Sen",
-        "b_tarr": "Chan Sen",
-        "b_tarr_direct": "Chan Sen",
-        "b_tarr_hist": "Chan Sen",
-        "b_origin": "Chan Sen (constituent holding of Lopburi)",
-        "b_anachronism": "",
-        "b_ipa": "[xan sɛn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chan_Sen",
       "older_name_by_867": {
         "exists": false,
@@ -903,26 +766,17 @@
         {
           "form": "Sri",
           "language": "Thai (from Sanskrit śrī)",
+          "language_code": "tha",
           "translation": "auspicious / illustrious"
         },
         {
           "form": "Thep",
           "language": "Thai (from Sanskrit deva)",
+          "language_code": "tha",
           "translation": "deity / god"
         }
       ],
       "etymology_analysis": "From Sanskrit Śrī Deva ('auspicious deity'), one of the largest first-millennium CE Dvaravati city-states in the Pa Sak valley, contemporarily attested by the 6th–7th century CE Sanskrit inscription K. 978.",
-      "current_repo_state": {
-        "name": "Sri Thep",
-        "b_tarr": "Sri Thep",
-        "b_tarr_direct": "Sri Thep",
-        "b_tarr_hist": "Sri Thep",
-        "b_origin": "Sri Thep (constituent holding of Lopburi)",
-        "b_anachronism": "",
-        "b_ipa": "[srɪ thɛp]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Si_Thep_Historical_Park",
       "older_name_by_867": {
         "exists": false,
@@ -957,26 +811,17 @@
         {
           "form": "Nakhon",
           "language": "Thai (from Pali nagara)",
+          "language_code": "tha",
           "translation": "city"
         },
         {
           "form": "Pathom",
           "language": "Thai (from Pali paṭhama)",
+          "language_code": "tha",
           "translation": "first"
         }
       ],
       "etymology_analysis": "From Pali Nagara Paṭhama ('first city'), a name bestowed by King Mongkut (Rama IV) in the 19th century CE on the ancient Dvaravati capital (attested in 6th–7th century CE inscriptions, silver coins, and Tang Chinese records as Dvāravatī).",
-      "current_repo_state": {
-        "name": "Nachôn Patôm",
-        "b_tarr": "Nachôn Patôm",
-        "b_tarr_direct": "Nachôn Patôm",
-        "b_tarr_hist": "Nachôn Patôm",
-        "b_origin": "Nachôn Patôm (Nakhon Pathom)",
-        "b_anachronism": "",
-        "b_ipa": "[na.ˈxoːn pa.ˈtoːm]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nakhon_Pathom",
       "older_name_by_867": {
         "exists": true,
@@ -1014,26 +859,17 @@
         {
           "form": "Bang",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "riverside village"
         },
         {
           "form": "kok",
           "language": "Thai (from makok)",
+          "language_code": "tha",
           "translation": "hog plum tree"
         }
       ],
       "etymology_analysis": "Shortened from Thai Bang Makok ('village of hog plums', Spondias pinnata), first attested as an Ayutthaya-period settlement in the early 15th century CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Mênam",
-        "b_tarr": "Mênam",
-        "b_tarr_direct": "Mênam",
-        "b_tarr_hist": "Mênam",
-        "b_origin": "Ancient Chao Phraya River basin, Mother of Waters (in-game: Bangkok)",
-        "b_anachronism": "15th-century village / 1782 capital fails Burden of Proof on Antiquity; resolved to ancient Chao Phraya hydronym Mênam.",
-        "b_ipa": "[ˈmeː.nam]",
-        "holding_type": "church",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bangkok",
       "older_name_by_867": {
         "exists": false,
@@ -1068,21 +904,11 @@
         {
           "form": "Ayuthia",
           "language": "Thai (from Sanskrit Ayodhyā)",
+          "language_code": "tha",
           "translation": "unconquerable city"
         }
       ],
       "etymology_analysis": "Named after the sacred Indian city of Ayodhyā (Sanskrit 'unconquerable, invincible'). Founded in 1351 CE on an island at the confluence of the Chao Phraya, Pa Sak, and Lopburi rivers, postdating 867 CE.",
-      "current_repo_state": {
-        "name": "Ayuthia",
-        "b_tarr": "Ayuthia",
-        "b_tarr_direct": "Ayuthia",
-        "b_tarr_hist": "Ayuthia",
-        "b_origin": "Ayuthia (constituent holding of Nachôn Patôm)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈa.jʊt.hɪ.a]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ayutthaya_Kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -1117,26 +943,17 @@
         {
           "form": "U",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "cradle"
         },
         {
           "form": "Thong",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "gold"
         }
       ],
       "etymology_analysis": "Modern Thai compound U ('cradle') + Thong ('gold'), applied to an early Dvaravati urban center in Suphan Buri that yielded the mid-7th century CE Sanskrit copper-plate inscription K. 964 and 7th-century CE silver coinage; the Thai toponym U Thong itself is unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "U Thong",
-        "b_tarr": "U Thong",
-        "b_tarr_direct": "U Thong",
-        "b_tarr_hist": "U Thong",
-        "b_origin": "U Thong (constituent holding of Nachôn Patôm)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊ thɔŋ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dwarawati",
       "older_name_by_867": {
         "exists": false,
@@ -1171,26 +988,17 @@
         {
           "form": "Chiang",
           "language": "Tai Lue/Shan",
+          "language_code": "zha",
           "translation": "walled city"
         },
         {
           "form": "Khaeng",
           "language": "Tai Lue/Shan",
+          "language_code": "zha",
           "translation": "strong / Khaeng"
         }
       ],
       "etymology_analysis": "Tai Lue/Shan Chiang ('walled city') + Khaeng. Founded as a Tai Lue principality in the 15th century CE, well after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Tschjang Chêng",
-        "b_tarr": "Tschjang Chêng",
-        "b_tarr_direct": "Tschjang Chêng",
-        "b_tarr_hist": "Tschjang Chêng",
-        "b_origin": "Tschjang Chêng (Chiang Khaeng)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃjaŋ xeːŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiang_Khaeng",
       "older_name_by_867": {
         "exists": false,
@@ -1225,26 +1033,17 @@
         {
           "form": "Moeng",
           "language": "Tai Lue",
+          "language_code": "zha",
           "translation": "principality / basin"
         },
         {
           "form": "Phong",
           "language": "Tai Lue",
+          "language_code": "zha",
           "translation": "Phong (Tai Lue toponym)"
         }
       ],
       "etymology_analysis": "Tai Lue Moeng ('principality, valley polity') + Phong (Möng Hpawng / Mengpeng in Sipsongpanna). No contemporary <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Moeng Phong",
-        "b_tarr": "Moeng Phong",
-        "b_tarr_direct": "Moeng Phong",
-        "b_tarr_hist": "Moeng Phong",
-        "b_origin": "Moeng Phong (constituent holding of Tschjang Chêng)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔ.ɛŋ phɔŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1279,26 +1078,17 @@
         {
           "form": "Pak",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "river mouth / confluence"
         },
         {
           "form": "Beng",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "Nam Beng river"
         }
       ],
       "etymology_analysis": "Lao Pak ('mouth of a river') + Beng (the Nam Beng river), a locator compound denoting the confluence of the Nam Beng with the Mekong. No contemporary <= 867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Pak Beng",
-        "b_tarr": "Pak Beng",
-        "b_tarr_direct": "Pak Beng",
-        "b_tarr_hist": "Pak Beng",
-        "b_origin": "Pak Beng (constituent holding of Tschjang Chêng)",
-        "b_anachronism": "",
-        "b_ipa": "[pak bɛŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pakbeng",
       "older_name_by_867": {
         "exists": false,
@@ -1333,26 +1123,17 @@
         {
           "form": "Luang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "royal / great"
         },
         {
           "form": "Prabang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "Phra Bang Buddha image"
         }
       ],
       "etymology_analysis": "Lao Luang ('royal, great') + Phra Bang (the sacred Buddha image brought from Angkor in the 14th century CE). Earlier names Muang Sua and Xieng Dong Xieng Thong appear in late Lao chronicles, but lack contemporary <= 867 CE epigraphic or external-chronicle attestation.",
-      "current_repo_state": {
-        "name": "Muang Sue",
-        "b_tarr": "Muang Sue",
-        "b_tarr_direct": "Muang Sue",
-        "b_tarr_hist": "Muang Sue",
-        "b_origin": "Muang Sue (Muang Sua)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ ˈsʊ.ɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Luang_Prabang",
       "older_name_by_867": {
         "exists": false,
@@ -1387,26 +1168,17 @@
         {
           "form": "Sainya",
           "language": "Lao (from Sanskrit jaya)",
+          "language_code": "lao",
           "translation": "victory"
         },
         {
           "form": "buli",
           "language": "Lao (from Sanskrit purī)",
+          "language_code": "lao",
           "translation": "city / town"
         }
       ],
       "etymology_analysis": "From Sanskrit/Pali Jayapurī ('city of victory'), adapted into Lao as Sainyabuli (Xayaburi). No contemporary <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Sainyabuli",
-        "b_tarr": "Sainyabuli",
-        "b_tarr_direct": "Sainyabuli",
-        "b_tarr_hist": "Sainyabuli",
-        "b_origin": "Sainyabuli (constituent holding of Muang Sue)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsaɪ.ɲa.bʊ.lɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sainyabuli",
       "older_name_by_867": {
         "exists": false,
@@ -1441,26 +1213,17 @@
         {
           "form": "Muang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "town / principality"
         },
         {
           "form": "Ngoi",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "Ngoi (Lao toponym)"
         }
       ],
       "etymology_analysis": "Lao Muang ('town, district') + Ngoi. A settlement on the Nam Ou river in northern Laos with no contemporary <= 867 CE written attestation.",
-      "current_repo_state": {
-        "name": "Muang Ngoi",
-        "b_tarr": "Muang Ngoi",
-        "b_tarr_direct": "Muang Ngoi",
-        "b_tarr_hist": "Muang Ngoi",
-        "b_origin": "Muang Ngoi (constituent holding of Muang Sue)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ ˈŋɔ.ɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1495,26 +1258,17 @@
         {
           "form": "Muang",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "town / district"
         },
         {
           "form": "Souy",
           "language": "Lao",
+          "language_code": "lao",
           "translation": "Souy (Lao toponym)"
         }
       ],
       "etymology_analysis": "Lao Muang ('town, district') + Souy (Muang Soui) in Xiangkhouang Province, Laos, established in the 20th century CE (replacing Ban Nong Tang, attested from 1900 CE).",
-      "current_repo_state": {
-        "name": "Zant-Wido",
-        "b_tarr": "Zant-Wido",
-        "b_tarr_direct": "Zant-Wido",
-        "b_tarr_hist": "Zant-Wido",
-        "b_origin": "Zant-Wido (constituent holding of Muang Sue)",
-        "b_anachronism": "",
-        "b_ipa": "[tsant ˈwɪ.dɔ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Muang_Soui",
       "older_name_by_867": {
         "exists": false,
@@ -1549,21 +1303,11 @@
         {
           "form": "Nan",
           "language": "Thai (from Pali Nanda)",
+          "language_code": "tha",
           "translation": "joy / delight (shortened from Nanthaburi)"
         }
       ],
       "etymology_analysis": "Shortened from Nanthaburi (Pali Nanda 'joy' + purī 'city'). Contemporarily attested from the 1292 CE Ramkhamhaeng Inscription; the 677 CE date in the late Rattanakosin-period Ratchawongsapakon chronicle is retrospective.",
-      "current_repo_state": {
-        "name": "Nan",
-        "b_tarr": "Nan",
-        "b_tarr_direct": "Nan",
-        "b_tarr_hist": "Nan",
-        "b_origin": "Nan (Nan)",
-        "b_anachronism": "",
-        "b_ipa": "[nan]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nan_Kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -1598,26 +1342,17 @@
         {
           "form": "Muang",
           "language": "Lao/Tai",
+          "language_code": "lao",
           "translation": "town / principality"
         },
         {
           "form": "Thong",
           "language": "Lao/Tai",
+          "language_code": "lao",
           "translation": "gold / golden"
         }
       ],
       "etymology_analysis": "Lao/Tai Muang ('town, principality') + Thong ('gold, golden'). No contemporary <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Muang Thong",
-        "b_tarr": "Muang Thong",
-        "b_tarr_direct": "Muang Thong",
-        "b_tarr_hist": "Muang Thong",
-        "b_origin": "Muang Thong (constituent holding of Nan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ thɔŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1652,26 +1387,17 @@
         {
           "form": "Chiang",
           "language": "Northern Thai (Sino-Tai)",
+          "language_code": "tha",
           "translation": "walled city, fort"
         },
         {
           "form": "Klang",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "middle, central"
         }
       ],
       "etymology_analysis": "From Northern Thai Chiang (a Sino-Tai loanword meaning walled city or fort) + Klang (middle, central), referring to Nan's 15th-century CE position midway between Chiang Mai and Chiang Thong (Luang Prabang). No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Tschjang Klang",
-        "b_tarr": "Tschjang Klang",
-        "b_tarr_direct": "Tschjang Klang",
-        "b_tarr_hist": "Tschjang Klang",
-        "b_origin": "Tschjang Klang (constituent holding of Nan)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃjaŋ klaŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nan,_Thailand",
       "older_name_by_867": {
         "exists": false,
@@ -1706,26 +1432,17 @@
         {
           "form": "Chiang",
           "language": "Northern Thai (Sino-Tai)",
+          "language_code": "tha",
           "translation": "walled city, fort"
         },
         {
           "form": "Saen",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "Saen Phu (personal name, literally hundred thousand)"
         }
       ],
       "etymology_analysis": "From Northern Thai Chiang (walled city) + Saen (after founder King Saen Phu, 1327–1329 CE). Earlier Yonok and Ngoenyang traditions claiming 6th–9th century CE dates derive solely from late retrospective chronicles without contemporary pre-867 CE epigraphic attestation.",
-      "current_repo_state": {
-        "name": "Ingönjang",
-        "b_tarr": "Ingönjang",
-        "b_tarr_direct": "Ingönjang",
-        "b_tarr_hist": "Ingönjang",
-        "b_origin": "Ingönjang (Ngoenyang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɪ.ŋøː.ɲaŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiang_Saen",
       "older_name_by_867": {
         "exists": false,
@@ -1760,26 +1477,17 @@
         {
           "form": "Mong",
           "language": "Shan (Tai)",
+          "language_code": "shn",
           "translation": "valley polity, principality"
         },
         {
           "form": "Hang",
           "language": "Shan (Tai)",
+          "language_code": "shn",
           "translation": "tail, end, or stream-end"
         }
       ],
       "etymology_analysis": "From Shan Mong (valley principality or town) + Hang (tail, end). No contemporary pre-867 CE epigraphic, numismatic, or chronicle attestation exists.",
-      "current_repo_state": {
-        "name": "Mong Hang",
-        "b_tarr": "Mong Hang",
-        "b_tarr_direct": "Mong Hang",
-        "b_tarr_hist": "Mong Hang",
-        "b_origin": "Mong Hang (constituent holding of Ingönjang)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔŋ haŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.burmalibrary.org/docs/MiMiKhaing-Shan.html",
       "older_name_by_867": {
         "exists": false,
@@ -1814,26 +1522,17 @@
         {
           "form": "Chiang",
           "language": "Northern Thai (Sino-Tai)",
+          "language_code": "tha",
           "translation": "walled city, fort"
         },
         {
           "form": "Rai",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "Mangrai (personal name of the founder)"
         }
       ],
       "etymology_analysis": "From Northern Thai Chiang (walled city) + Rai (abbreviated from founder King Mangrai, 1262 CE). Post-867 CE foundation with no contemporary pre-867 CE attestation.",
-      "current_repo_state": {
-        "name": "Tschjang Rai",
-        "b_tarr": "Tschjang Rai",
-        "b_tarr_direct": "Tschjang Rai",
-        "b_tarr_hist": "Tschjang Rai",
-        "b_origin": "Tschjang Rai (constituent holding of Ingönjang)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃjaŋ raɪ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiang_Rai",
       "older_name_by_867": {
         "exists": false,
@@ -1868,26 +1567,17 @@
         {
           "form": "Chiang",
           "language": "Tai Lü (Sino-Tai)",
+          "language_code": "zha",
           "translation": "walled city, fort"
         },
         {
           "form": "Rung",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "dawn, daybreak"
         }
       ],
       "etymology_analysis": "From Tai Lü Chiang (walled city) + Rung / Hung (dawn), meaning City of Dawn, founded in 1180 CE as the capital of Sipsongpanna (modern Jinghong). Post-867 CE foundation.",
-      "current_repo_state": {
-        "name": "Tschjang Rung",
-        "b_tarr": "Tschjang Rung",
-        "b_tarr_direct": "Tschjang Rung",
-        "b_tarr_hist": "Tschjang Rung",
-        "b_origin": "Tschjang Rung (Chiang Rung)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃjaŋ rʊŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jinghong",
       "older_name_by_867": {
         "exists": false,
@@ -1922,26 +1612,17 @@
         {
           "form": "Mong",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "valley polity, principality"
         },
         {
           "form": "La",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "tea"
         }
       ],
       "etymology_analysis": "From Tai Lü Mong (valley principality) + La (tea), meaning tea-producing principality (modern Mengla County, Xishuangbanna). No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Mong La",
-        "b_tarr": "Mong La",
-        "b_tarr_direct": "Mong La",
-        "b_tarr_hist": "Mong La",
-        "b_origin": "Mong La (constituent holding of Tschjang Rung)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔŋ la]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mengla_County",
       "older_name_by_867": {
         "exists": false,
@@ -1976,26 +1657,17 @@
         {
           "form": "Chiang",
           "language": "Tai Lü (Sino-Tai)",
+          "language_code": "zha",
           "translation": "walled city, fort"
         },
         {
           "form": "Coeng",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "strong, firm (or Khaeng)"
         }
       ],
       "etymology_analysis": "From Tai Lü Chiang (walled city) + Coeng / Khaeng (strong, firm), referring to the Tai Lü principality of Chiang Khaeng (Kengcheng) on the Mekong. No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiang_Khaeng",
       "older_name_by_867": {
         "exists": false,
@@ -2030,26 +1702,17 @@
         {
           "form": "Moeng",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "valley polity, principality"
         },
         {
           "form": "Hing",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "bell, or side/ginger"
         }
       ],
       "etymology_analysis": "From Tai Lü Moeng (valley principality) + Hing (bell or side/ginger). No contemporary pre-867 CE epigraphic or chronicle attestation exists.",
-      "current_repo_state": {
-        "name": "Moeng Hing",
-        "b_tarr": "Moeng Hing",
-        "b_tarr_direct": "Moeng Hing",
-        "b_tarr_hist": "Moeng Hing",
-        "b_origin": "Moeng Hing (constituent holding of Tschjang Rung)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔ.ɛŋ hɪŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2084,26 +1747,17 @@
         {
           "form": "Moeng",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "valley polity, principality"
         },
         {
           "form": "Cae",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "to soak, steep in water"
         }
       ],
       "etymology_analysis": "From Tai Lü Moeng (valley principality) + Cae (to soak in water), referring to the water-soaked basin of Mengzhe (Xishuangbanna). No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Moeng Cae",
-        "b_tarr": "Moeng Cae",
-        "b_tarr_direct": "Moeng Cae",
-        "b_tarr_hist": "Moeng Cae",
-        "b_origin": "Moeng Cae (constituent holding of Tschjang Rung)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔ.ɛŋ ˈka.ɛ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.yunnanexploration.com/mengzhe-town-of-menghai-county-in-xishuangbanna.html",
       "older_name_by_867": {
         "exists": false,
@@ -2138,26 +1792,17 @@
         {
           "form": "Moeng",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "valley polity, principality"
         },
         {
           "form": "Long",
           "language": "Tai Lü",
+          "language_code": "zha",
           "translation": "great, large"
         }
       ],
       "etymology_analysis": "From Tai Lü Moeng (valley principality) + Long (great, large), meaning Great Principality (modern Menglong in Jinghong, Xishuangbanna). Post-867 CE attestation.",
-      "current_repo_state": {
-        "name": "Möng Lông",
-        "b_tarr": "Möng Lông",
-        "b_tarr_direct": "Möng Lông",
-        "b_tarr_hist": "Möng Lông",
-        "b_origin": "Möng Lông (Moeng Long)",
-        "b_anachronism": "",
-        "b_ipa": "[møːŋ loːŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://www.yunnanexploration.com/history-of-jinghong-in-xishuangbanna.html",
       "older_name_by_867": {
         "exists": false,
@@ -2192,26 +1837,17 @@
         {
           "form": "Muang",
           "language": "Lao (Tai)",
+          "language_code": "lao",
           "translation": "valley polity, principality"
         },
         {
           "form": "U",
           "language": "Lao (Tai)",
+          "language_code": "lao",
           "translation": "Ou River (Nam Ou)"
         }
       ],
       "etymology_analysis": "From Lao Muang (valley principality) + U (the Nam Ou river, where Muang Ou Neua and Muang Ou Tai lie at the headwaters). Written records in Phongsaly begin only in the 18th century CE.",
-      "current_repo_state": {
-        "name": "Muang U",
-        "b_tarr": "Muang U",
-        "b_tarr_direct": "Muang U",
-        "b_tarr_hist": "Muang U",
-        "b_origin": "Muang U (constituent holding of Möng Lông)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.aŋ ʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nam_Ou",
       "older_name_by_867": {
         "exists": false,
@@ -2246,26 +1882,17 @@
         {
           "form": "Muang",
           "language": "Lao (Tai)",
+          "language_code": "lao",
           "translation": "valley polity, principality"
         },
         {
           "form": "Sing",
           "language": "Lao (from Sanskrit siṃha)",
+          "language_code": "lao",
           "translation": "lion"
         }
       ],
       "etymology_analysis": "From Lao Muang (valley principality) + Sing (from Sanskrit siṃha, lion). Established as a seat only in the late 19th century CE, with no pre-867 CE attestation.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Muang_Sing",
       "older_name_by_867": {
         "exists": false,
@@ -2300,26 +1927,17 @@
         {
           "form": "Chiang",
           "language": "Tai Khün (Sino-Tai)",
+          "language_code": "zha",
           "translation": "walled city, fort"
         },
         {
           "form": "Tong",
           "language": "Tai Khün",
+          "language_code": "zha",
           "translation": "Tung (banner, reed, or Tungapuri)"
         }
       ],
       "etymology_analysis": "From Tai Khün Chiang (walled city) + Tong / Tung (classical Pali/Sanskritized Tungapuri). Post-867 CE foundation with no contemporary pre-867 CE attestation.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kengtung",
       "older_name_by_867": {
         "exists": false,
@@ -2354,26 +1972,17 @@
         {
           "form": "Cha",
           "language": "Old Thai",
+          "language_code": "tha",
           "translation": "locative/toponymic prefix"
         },
         {
           "form": "kangrao",
           "language": "Old Thai",
+          "language_code": "tha",
           "translation": "Chakangrao (historic Sukhothai city name)"
         }
       ],
       "etymology_analysis": "Old Thai toponym Chakangrao, the 14th-century CE Sukhothai-era name for the fortified city on the east bank of the Ping River that became Kamphaeng Phet. No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Tschakangrau",
-        "b_tarr": "Tschakangrau",
-        "b_tarr_direct": "Tschakangrau",
-        "b_tarr_hist": "Tschakangrau",
-        "b_origin": "Tschakangrau (Chakangrao)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃa.kaŋ.ˈrɔʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kamphaeng_Phet",
       "older_name_by_867": {
         "exists": false,
@@ -2408,26 +2017,17 @@
         {
           "form": "Kamphaeng",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "wall, rampart"
         },
         {
           "form": "Phet",
           "language": "Thai (from Sanskrit vajra)",
+          "language_code": "tha",
           "translation": "diamond, thunderbolt"
         }
       ],
       "etymology_analysis": "From Thai Kamphaeng (wall, rampart) + Phet (from Sanskrit vajra, diamond), meaning Wall of Diamonds, succeeding the 14th-century CE Sukhothai city of Chakangrao.",
-      "current_repo_state": {
-        "name": "Kamphaeng Phet",
-        "b_tarr": "Kamphaeng Phet",
-        "b_tarr_direct": "Kamphaeng Phet",
-        "b_tarr_hist": "Kamphaeng Phet",
-        "b_origin": "Kamphaeng Phet (constituent holding of Tschakangrau)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkamp.ha.ɛŋ phɛt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kamphaeng_Phet_province",
       "older_name_by_867": {
         "exists": false,
@@ -2462,26 +2062,17 @@
         {
           "form": "Thap",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "military camp, army"
         },
         {
           "form": "Chumphon",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "assembly, gathering"
         }
       ],
       "etymology_analysis": "Modern Thai toponym from Thap (army camp) + Chumphon (assembly) applied to a Dvaravati moated site north of Nakhon Sawan whose terracotta kumbha inscription is dated paleographically to the 9th–10th centuries CE, not definitively <= 867 CE.",
-      "current_repo_state": {
-        "name": "Thap Tschumphon",
-        "b_tarr": "Thap Tschumphon",
-        "b_tarr_direct": "Thap Tschumphon",
-        "b_tarr_hist": "Thap Tschumphon",
-        "b_origin": "Thap Tschumphon (constituent holding of Tschakangrau)",
-        "b_anachronism": "",
-        "b_ipa": "[thap tʃʊmp.ˈhɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://journals.lib.washington.edu/index.php/BIPPA/article/view/10808/10668",
       "older_name_by_867": {
         "exists": false,
@@ -2516,26 +2107,17 @@
         {
           "form": "Lam",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "line, row, or prefix"
         },
         {
           "form": "pang",
           "language": "Northern Thai / Lawa",
+          "language_code": "tha",
           "translation": "camp, clearing"
         }
       ],
       "etymology_analysis": "From Northern Thai Lam + pang (camp/clearing), the later name of Nakhon Khelang. Although 15th–16th century CE chronicles attribute Khelang's founding to the 7th–8th centuries CE, contemporary Hariphunchai epigraphy dates only to the 12th–13th centuries CE.",
-      "current_repo_state": {
-        "name": "Lampang",
-        "b_tarr": "Lampang",
-        "b_tarr_direct": "Lampang",
-        "b_tarr_hist": "Lampang",
-        "b_origin": "Lampang (Lampang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlam.paŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Haripu%C3%B1jaya",
       "older_name_by_867": {
         "exists": false,
@@ -2570,26 +2152,17 @@
         {
           "form": "Pha",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "cliff, rock"
         },
         {
           "form": "yao",
           "language": "Northern Thai",
+          "language_code": "tha",
           "translation": "long, tall (from Phu Kam Yao)"
         }
       ],
       "etymology_analysis": "Contracted from Northern Thai Phu Kam Yao, referring to the 11th-century CE principality of Phayao. No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Phayao",
-        "b_tarr": "Phayao",
-        "b_tarr_direct": "Phayao",
-        "b_tarr_hist": "Phayao",
-        "b_origin": "Phayao (constituent holding of Lampang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpha.ja.ɔ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phayao_province",
       "older_name_by_867": {
         "exists": false,
@@ -2624,21 +2197,11 @@
         {
           "form": "Phrae",
           "language": "Northern Thai / Thai",
+          "language_code": "tha",
           "translation": "to spread (from Northern Thai Phae)"
         }
       ],
       "etymology_analysis": "Thai adaptation of Northern Thai Phae (spreading/raft). Contemporary epigraphic attestation begins with the 1292 CE Ram Khamhaeng Inscription; earlier 9th-century CE dates derive only from late Tamnan chronicles.",
-      "current_repo_state": {
-        "name": "Phrae",
-        "b_tarr": "Phrae",
-        "b_tarr_direct": "Phrae",
-        "b_tarr_hist": "Phrae",
-        "b_origin": "Phrae (constituent holding of Lampang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈphra.ɛ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phrae",
       "older_name_by_867": {
         "exists": false,
@@ -2673,26 +2236,17 @@
         {
           "form": "Phetcha",
           "language": "Thai (from Sanskrit vajra)",
+          "language_code": "tha",
           "translation": "diamond"
         },
         {
           "form": "bun",
           "language": "Thai (from Sanskrit pūrṇa)",
+          "language_code": "tha",
           "translation": "full, complete"
         }
       ],
       "etymology_analysis": "From Thai Phetcha (Sanskrit vajra, diamond) + bun (Sanskrit pūrṇa, full), or reinterpreted from earlier Phuenchapura (city plenty of crops). Established in the Sukhothai era, post-867 CE.",
-      "current_repo_state": {
-        "name": "Srî Dêwa",
-        "b_tarr": "Srî Dêwa",
-        "b_tarr_direct": "Petschabûn",
-        "b_tarr_hist": "Srî Dêwa",
-        "b_origin": "Srî Dêwa (Srî Dêwa (in-game: Phetchabun))",
-        "b_anachronism": "Phetchabun is a late Sukhothai/Ayutthaya town; resolves via Option A to the 3rd-8th c. AD Dvaravati metropolis Sri Deva / Si Thep (Srî Dêwa).",
-        "b_ipa": "[sriː ˈdeː.wa]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mueang_Phetchabun_district",
       "older_name_by_867": {
         "exists": false,
@@ -2727,26 +2281,17 @@
         {
           "form": "Phitsanu",
           "language": "Thai (from Sanskrit Viṣṇu)",
+          "language_code": "tha",
           "translation": "Vishnu"
         },
         {
           "form": "lok",
           "language": "Thai (from Sanskrit loka)",
+          "language_code": "tha",
           "translation": "world, realm"
         }
       ],
       "etymology_analysis": "From Thai Phitsanu (Sanskrit Viṣṇu) + lok (Sanskrit loka, world), meaning Realm of Vishnu, renamed from Song Khwae (Two Rivers) in the Sukhothai/Ayutthaya period. No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Phitzanulok",
-        "b_tarr": "Phitzanulok",
-        "b_tarr_direct": "Phitzanulok",
-        "b_tarr_hist": "Phitzanulok",
-        "b_origin": "Phitzanulok (constituent holding of Srî Dêwa)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈphɪ.tsa.nʊ.lɔk]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phitsanulok",
       "older_name_by_867": {
         "exists": false,
@@ -2781,21 +2326,11 @@
         {
           "form": "Phichit",
           "language": "Thai (from Sanskrit vicitra)",
+          "language_code": "tha",
           "translation": "beautiful, variegated"
         }
       ],
       "etymology_analysis": "From Sanskrit vicitra (beautiful, variegated), adopting the name Phichit after earlier names Sra Luang and Okhaburi. Post-867 CE foundation.",
-      "current_repo_state": {
-        "name": "Phichit",
-        "b_tarr": "Phichit",
-        "b_tarr_direct": "Phichit",
-        "b_tarr_hist": "Phichit",
-        "b_origin": "Phichit (constituent holding of Srî Dêwa)",
-        "b_anachronism": "",
-        "b_ipa": "[phɪ.ˈçɪt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phichit",
       "older_name_by_867": {
         "exists": false,
@@ -2830,26 +2365,17 @@
         {
           "form": "Sri",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "auspicious, illustrious"
         },
         {
           "form": "deb",
           "language": "Thai (from Sanskrit deva)",
+          "language_code": "tha",
           "translation": "deity, god"
         }
       ],
       "etymology_analysis": "From Sanskrit Śrī Deva (auspicious deity), a major Dvaravati moated metropolis in the Pa Sak River valley contemporarily attested by 6th–8th century CE Sanskrit and śaṅkhalipi inscriptions and 4th–8th century CE archaeological remains.",
-      "current_repo_state": {
-        "name": "Juttaszelle",
-        "b_tarr": "Juttaszelle",
-        "b_tarr_direct": "Juttaszelle",
-        "b_tarr_hist": "Juttaszelle",
-        "b_origin": "Juttaszelle (constituent holding of Srî Dêwa)",
-        "b_anachronism": "",
-        "b_ipa": "[jʊ.tas.ˈtsɛ.ʎə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Si_Thep_Historical_Park",
       "older_name_by_867": {
         "exists": false,
@@ -2884,26 +2410,17 @@
         {
           "form": "Sukho",
           "language": "Thai (from Sanskrit sukha)",
+          "language_code": "tha",
           "translation": "happiness, pleasant"
         },
         {
           "form": "thai",
           "language": "Thai (from Sanskrit udaya)",
+          "language_code": "tha",
           "translation": "dawn, rising"
         }
       ],
       "etymology_analysis": "From Sanskrit Sukhodaya (sukha, happiness + udaya, rising/dawn), meaning Dawn of Happiness. No contemporary pre-867 CE epigraphic or chronicle attestation exists.",
-      "current_repo_state": {
-        "name": "Tschaljâng",
-        "b_tarr": "Tschaljâng",
-        "b_tarr_direct": "Suchôtai",
-        "b_tarr_hist": "Tschaljâng",
-        "b_origin": "Tschaljâng (Tschaljâng (in-game: Sukhothai))",
-        "b_anachronism": "Sukhothai emerged c. 1238 AD; resolves via Option A to the older Dvaravati-Khmer settlement Chaliang (Tschaljâng) on the Yom river.",
-        "b_ipa": "[tʃa.ˈʎaːŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sukhothai_Kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -2938,26 +2455,17 @@
         {
           "form": "Si",
           "language": "Thai (from Sanskrit śrī)",
+          "language_code": "tha",
           "translation": "auspicious, illustrious"
         },
         {
           "form": "Satchanalai",
           "language": "Thai (from Sanskrit sajjanālaya)",
+          "language_code": "tha",
           "translation": "abode of virtuous people"
         }
       ],
       "etymology_analysis": "From Sanskrit Śrī Sajjanālaya (auspicious abode of virtuous people), founded c. 1250 CE alongside Sukhothai. No contemporary pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Si Satchanalai",
-        "b_tarr": "Si Satchanalai",
-        "b_tarr_direct": "Si Satchanalai",
-        "b_tarr_hist": "Si Satchanalai",
-        "b_origin": "Si Satchanalai (constituent holding of Tschaljâng)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪ sat.xa.na.ˈlaɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Si_Satchanalai_Historical_Park",
       "older_name_by_867": {
         "exists": false,
@@ -2992,26 +2500,17 @@
         {
           "form": "Sawangka",
           "language": "Thai (from Sanskrit svarga)",
+          "language_code": "tha",
           "translation": "heaven"
         },
         {
           "form": "buri",
           "language": "Thai (from Sanskrit purī)",
+          "language_code": "tha",
           "translation": "city, town"
         }
       ],
       "etymology_analysis": "From Thai Sawangka (Sanskrit svarga, heaven) + buri (Sanskrit purī, city), meaning Heavenly City. Attested only in late Ayutthaya/Thonburi-era records.",
-      "current_repo_state": {
-        "name": "Sawangkaburi",
-        "b_tarr": "Sawangkaburi",
-        "b_tarr_direct": "Sawangkaburi",
-        "b_tarr_hist": "Sawangkaburi",
-        "b_origin": "Sawangkaburi (constituent holding of Tschaljâng)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsa.wa.ŋka.bʊ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wat_Khung_Taphao",
       "older_name_by_867": {
         "exists": false,
@@ -3046,26 +2545,17 @@
         {
           "form": "Ban",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "village"
         },
         {
           "form": "Lan",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "clearing, courtyard (from Ban Lan Khoi)"
         }
       ],
       "etymology_analysis": "From Thai Ban (village) + Lan (clearing/courtyard, from Sukhothai-era Ban Lan Khoi). No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Ban Lan",
-        "b_tarr": "Ban Lan",
-        "b_tarr_direct": "Ban Lan",
-        "b_tarr_hist": "Ban Lan",
-        "b_origin": "Ban Lan (constituent holding of Tschaljâng)",
-        "b_anachronism": "",
-        "b_ipa": "[ban lan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ban_Dan_Lan_Hoi_district",
       "older_name_by_867": {
         "exists": false,
@@ -3100,26 +2590,17 @@
         {
           "form": "Phetcha",
           "language": "Thai (from Sanskrit vajra)",
+          "language_code": "tha",
           "translation": "diamond"
         },
         {
           "form": "buri",
           "language": "Thai (from Sanskrit purī)",
+          "language_code": "tha",
           "translation": "city, town"
         }
       ],
       "etymology_analysis": "From Thai Phetcha (Sanskrit vajra, diamond) + buri (Sanskrit purī, city), meaning City of Diamonds, attested as Śrī Jayavajrapura in 1191 CE. No contemporary pre-867 CE attestation of the city name exists.",
-      "current_repo_state": {
-        "name": "Petschaburi",
-        "b_tarr": "Petschaburi",
-        "b_tarr_direct": "Petschaburi",
-        "b_tarr_hist": "Petschaburi",
-        "b_origin": "Petschaburi (Phetchaburi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɛ.tʃa.bʊ.rɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phetchaburi_province",
       "older_name_by_867": {
         "exists": false,
@@ -3154,26 +2635,17 @@
         {
           "form": "Chum",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "gather, assemble"
         },
         {
           "form": "phon",
           "language": "Thai (from Sanskrit bala/vara)",
+          "language_code": "tha",
           "translation": "troops, forces, or blessing"
         }
       ],
       "etymology_analysis": "From Thai Chum (gather, assemble) + phon (troops/blessing, shortened from Chumnumphon), attested from 1098 CE as a frontier city of Nakhon Si Thammarat. No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Tschumpon",
-        "b_tarr": "Tschumpon",
-        "b_tarr_direct": "Tschumpon",
-        "b_tarr_hist": "Tschumpon",
-        "b_origin": "Tschumpon (constituent holding of Petschaburi)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃʊm.ˈpɔn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chumphon",
       "older_name_by_867": {
         "exists": false,
@@ -3208,26 +2680,17 @@
         {
           "form": "Sing",
           "language": "Thai (from Sanskrit siṃha)",
+          "language_code": "tha",
           "translation": "lion"
         },
         {
           "form": "khon",
           "language": "Thai (from Sanskrit nagara/śikhara)",
+          "language_code": "tha",
           "translation": "city, peak"
         }
       ],
       "etymology_analysis": "Named after Singkhon Pass (Dan Singkhon) in the Tenasserim Hills, an Ayutthaya-era border pass first prominently documented in 1760 CE. No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Singkhon",
-        "b_tarr": "Singkhon",
-        "b_tarr_direct": "Singkhon",
-        "b_tarr_hist": "Singkhon",
-        "b_origin": "Singkhon (constituent holding of Petschaburi)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪŋk.ˈhɔn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Singkhon_Pass",
       "older_name_by_867": {
         "exists": false,
@@ -3262,31 +2725,23 @@
         {
           "form": "Thai",
           "language": "English",
+          "language_code": "eng",
           "translation": "Thailand (geographical prefix)"
         },
         {
           "form": "na (นา)",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "paddy field"
         },
         {
           "form": "rang (ราง)",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "trough or channel"
         }
       ],
       "etymology_analysis": "Compound of the modern geographic prefix 'Thai' and Thai 'Na Rang' ('paddy field of the trough/channel'), referring to an Ayutthaya-period town (1351–1767 CE) at the site of Prachuap Khiri Khan. No pre-867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Na Rang",
-        "b_tarr": "Na Rang",
-        "b_tarr_direct": "Na Rang",
-        "b_tarr_hist": "Na Rang",
-        "b_origin": "Na Rang (constituent holding of Petschaburi)",
-        "b_anachronism": "",
-        "b_ipa": "[na raŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mueang_Prachuap_Khiri_Khan_district",
       "older_name_by_867": {
         "exists": false,
@@ -3321,31 +2776,23 @@
         {
           "form": "Thai",
           "language": "English",
+          "language_code": "eng",
           "translation": "Thailand (geographical prefix)"
         },
         {
           "form": "Tanah",
           "language": "Malay",
+          "language_code": "msa",
           "translation": "land"
         },
         {
           "form": "Seri / Sirih",
           "language": "Malay",
+          "language_code": "msa",
           "translation": "splendid or betel"
         }
       ],
       "etymology_analysis": "Combines the prefix 'Thai' with 'Tenasserim' (Burmese Tanintharyi, Thai Tanaosi), derived from Malay Tanah Seri ('glowing/splendid land') or Tanah Sirih ('betel land'). The town itself is first attested only in the late 14th century CE (1383 CE Siamese pillar), well after 867 CE.",
-      "current_repo_state": {
-        "name": "Tenasserim",
-        "b_tarr": "Tenasserim",
-        "b_tarr_direct": "Tenasserim",
-        "b_tarr_hist": "Tenasserim",
-        "b_origin": "Tenasserim (Tenasserim)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɛ.na.sɛ.rɪm]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tanintharyi_(town)",
       "older_name_by_867": {
         "exists": false,
@@ -3380,26 +2827,17 @@
         {
           "form": "Thai",
           "language": "English",
+          "language_code": "eng",
           "translation": "Thailand (geographical prefix)"
         },
         {
           "form": "Mergui (Mrit / Marit)",
           "language": "Burmese / Thai",
+          "language_code": "mya",
           "translation": "coastal port toponym of Mon-Burmese origin"
         }
       ],
       "etymology_analysis": "Combines the prefix 'Thai' with 'Mergui' (Burmese Myeik/Mrit, Mon Poik, Thai Marit), a peninsular port first documented in post-867 CE Pagan-era and 15th–16th century CE maritime records.",
-      "current_repo_state": {
-        "name": "Mergui",
-        "b_tarr": "Mergui",
-        "b_tarr_direct": "Mergui",
-        "b_tarr_hist": "Mergui",
-        "b_origin": "Mergui (constituent holding of Tenasserim)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɛr.ɡɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myeik,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -3434,31 +2872,23 @@
         {
           "form": "Thai",
           "language": "English",
+          "language_code": "eng",
           "translation": "Thailand (geographical prefix)"
         },
         {
           "form": "Kra (กระ / Tra)",
           "language": "Thai",
+          "language_code": "tha",
           "translation": "local isthmus toponym"
         },
         {
           "form": "buri (บุรี)",
           "language": "Thai (from Sanskrit pura)",
+          "language_code": "tha",
           "translation": "fortified town or city"
         }
       ],
       "etymology_analysis": "Combines the prefix 'Thai' with Thai 'Kra Buri' (from earlier Mueang Tra plus Sanskrit-derived 'buri', meaning city/town), an Ayutthaya-era (1351–1767 CE) frontier settlement with no pre-867 CE attestation.",
-      "current_repo_state": {
-        "name": "Kra Buri",
-        "b_tarr": "Kra Buri",
-        "b_tarr_direct": "Kra Buri",
-        "b_tarr_hist": "Kra Buri",
-        "b_origin": "Kra Buri (constituent holding of Tenasserim)",
-        "b_anachronism": "",
-        "b_ipa": "[kra ˈbʊ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kra_Buri_district",
       "older_name_by_867": {
         "exists": false,
@@ -3493,31 +2923,23 @@
         {
           "form": "than (သံ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "iron or tin"
         },
         {
           "form": "byu (ဖြူ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "white"
         },
         {
           "form": "zayat (ဇရပ်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "travelers' rest-house"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'white-tin rest-house' (Mon Dung Jrop-bu), named after a tin-roofed travelers' pavilion erected in 1874 CE; entirely post-867 CE.",
-      "current_repo_state": {
-        "name": "Dawêi",
-        "b_tarr": "Dawêi",
-        "b_tarr_direct": "Tanbjûsajat",
-        "b_tarr_hist": "Dawêi",
-        "b_origin": "Dawêi (Dawêi (in-game: Thanbyuzayat))",
-        "b_anachronism": "Thanbyuzayat is a modern railway settlement; resolves via Option A to ancient Mon port Dawei (Dawêi).",
-        "b_ipa": "[ˈda.weː.ɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thanbyuzayat",
       "older_name_by_867": {
         "exists": false,
@@ -3552,21 +2974,11 @@
         {
           "form": "hawai (ထဝဲါ)",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "to sit cross-legged (Buddha posture)"
         }
       ],
       "etymology_analysis": "Burmese Dawei (earlier English Tavoy) derives from Mon 'hawai' ('to sit cross-legged'). Although nearby Thagara has c. 9th–17th century CE archaeological remains, Dawei itself lacks contemporary <= 867 CE written attestation.",
-      "current_repo_state": {
-        "name": "Dwiszelle",
-        "b_tarr": "Dwiszelle",
-        "b_tarr_direct": "Dwiszelle",
-        "b_tarr_hist": "Dwiszelle",
-        "b_origin": "Dwiszelle (constituent holding of Dawêi)",
-        "b_anachronism": "",
-        "b_ipa": "[dwɪs.ˈtsɛ.ʎə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dawei,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -3601,21 +3013,11 @@
         {
           "form": "Ye / Rew (ရေး / ရေဝ်)",
           "language": "Burmese / Mon",
+          "language_code": "mya",
           "translation": "Mon coastal port toponym"
         }
       ],
       "etymology_analysis": "Burmese Ye (Mon Dung Rew) is a Mon coastal town at the mouth of the Ye River; no contemporary written attestation <= 867 CE is known.",
-      "current_repo_state": {
-        "name": "Ye",
-        "b_tarr": "Ye",
-        "b_tarr_direct": "Ye",
-        "b_tarr_hist": "Ye",
-        "b_origin": "Ye (constituent holding of Dawêi)",
-        "b_anachronism": "",
-        "b_ipa": "[jɛ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ye,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -3650,21 +3052,11 @@
         {
           "form": "Ramu / Ramvu (রামু)",
           "language": "Bengali / Arakanese",
+          "language_code": "ben",
           "translation": "regional settlement toponym associated with Rammabhumi"
         }
       ],
       "etymology_analysis": "Toponym in southeastern Bangladesh (Cox's Bazar) associated with historical Rammabhumi/Ramvu; first clearly attested in 15th-century CE (1437 CE) Arakanese expansion accounts, with no contemporary <= 867 CE attestation of the town.",
-      "current_repo_state": {
-        "name": "Ramu",
-        "b_tarr": "Ramu",
-        "b_tarr_direct": "Ramu",
-        "b_tarr_hist": "Ramu",
-        "b_origin": "Ramu (Ramu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈra.mʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ramu_Upazila",
       "older_name_by_867": {
         "exists": false,
@@ -3699,21 +3091,11 @@
         {
           "form": "Dianga",
           "language": "Bengali / Portuguese",
+          "language_code": "ben",
           "translation": "riverine port settlement opposite Chittagong"
         }
       ],
       "etymology_analysis": "Name of a 16th–17th century CE Portuguese and Arakanese-era port settlement on the southern bank of the Karnaphuli River near Chittagong; entirely unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Dianga",
-        "b_tarr": "Dianga",
-        "b_tarr_direct": "Dianga",
-        "b_tarr_hist": "Dianga",
-        "b_origin": "Dianga (constituent holding of Ramu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdɪ.a.ŋa]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Portuguese_settlement_in_Chittagong",
       "older_name_by_867": {
         "exists": false,
@@ -3748,26 +3130,17 @@
         {
           "form": "than (သံ)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "iron"
         },
         {
           "form": "dwê (တွဲ)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "bound or tied"
         }
       ],
       "etymology_analysis": "Anglicized 'Sandoway' from Arakanese Thandway / Burmese Thandwe ('iron-bound' in folk etymology). Its classical Pali appellation Dvaravati is a later literary attribution, and contemporary epigraphic attestation of Thandaway begins only in the 15th century CE.",
-      "current_repo_state": {
-        "name": "Sandôwei",
-        "b_tarr": "Sandôwei",
-        "b_tarr_direct": "Sandôwei",
-        "b_tarr_hist": "Sandôwei",
-        "b_origin": "Sandôwei (Sandoway)",
-        "b_anachronism": "",
-        "b_ipa": "[san.doː.ˈwɛɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thandwe",
       "older_name_by_867": {
         "exists": false,
@@ -3802,26 +3175,17 @@
         {
           "form": "ramma (ရမ္မ)",
           "language": "Pali / Sanskrit",
+          "language_code": "pli",
           "translation": "pleasant or delightful"
         },
         {
           "form": "vati (ဝတီ)",
           "language": "Pali / Sanskrit",
+          "language_code": "pli",
           "translation": "possessing or region"
         }
       ],
       "etymology_analysis": "Derived from classical Pali/Sanskrit Rammavati ('pleasant region') via the shortened local form Ram Pri Myo, rendered by Portuguese mariners as Ramri and anglicized as Ramree. Unattested before 1327 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ramree",
       "older_name_by_867": {
         "exists": false,
@@ -3856,21 +3220,11 @@
         {
           "form": "An / Ann (အမ်း)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "mountain pass settlement toponym"
         }
       ],
       "etymology_analysis": "Arakanese/Burmese toponym for the strategic pass town founded in 1333–1335 CE by King Min Hti of Launggyet on the route across the Arakan Mountains; post-867 CE.",
-      "current_repo_state": {
-        "name": "An",
-        "b_tarr": "An",
-        "b_tarr_direct": "An",
-        "b_tarr_hist": "An",
-        "b_origin": "An (constituent holding of Sandôwei)",
-        "b_anachronism": "",
-        "b_ipa": "[an]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ann_District",
       "older_name_by_867": {
         "exists": false,
@@ -3905,26 +3259,17 @@
         {
           "form": "thabeik (သပိတ်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "monk's alms bowl"
         },
         {
           "form": "taung (တောင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "hill or mountain"
         }
       ],
       "etymology_analysis": "Burmese descriptive compound meaning 'alms-bowl hill' (thabeik + taung), referring to a modern village tract in Buthidaung Township with no historical attestation by 867 CE.",
-      "current_repo_state": {
-        "name": "Tabêich Taung",
-        "b_tarr": "Tabêich Taung",
-        "b_tarr_direct": "Tabêich Taung",
-        "b_tarr_hist": "Tabêich Taung",
-        "b_origin": "Tabêich Taung (Thabeik Taung)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈta.beː.ɪç tɔʊŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3959,26 +3304,17 @@
         {
           "form": "mata (মাতা)",
           "language": "Bengali",
+          "language_code": "ben",
           "translation": "mother (folk-etymological adaptation of Marma Mamuri)"
         },
         {
           "form": "muhuri (মুহুরি)",
           "language": "Bengali",
+          "language_code": "ben",
           "translation": "seeping stream or water"
         }
       ],
       "etymology_analysis": "Directly adopts the proper hydronym of the Matamuhuri River (Bengali adaptation of Marma 'Mamuri') in southeastern Bangladesh; unattested as a settlement or polity by 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Matamuhuri_River",
       "older_name_by_867": {
         "exists": false,
@@ -4013,21 +3349,11 @@
         {
           "form": "Vesālī (ဝေသာလီ)",
           "language": "Pali / Magadhi Prakrit",
+          "language_code": "pli",
           "translation": "spacious or broad city (named after Indian Vaishali)"
         }
       ],
       "etymology_analysis": "Pali/Prakrit Vesali (Burmese Waithali), named after the ancient Indian city of Vaishali. Contemporarily attested <= 867 CE as the capital of the Arakanese Candra kingdom via the 729 CE Anandachandra inscription and Candra coinage.",
-      "current_repo_state": {
-        "name": "Waisâli",
-        "b_tarr": "Waisâli",
-        "b_tarr_direct": "Waisâli",
-        "b_tarr_hist": "Waisâli",
-        "b_origin": "Waisâli (Vaiśālĩ)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwaɪ.zaː.lɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Waithali_kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -4062,26 +3388,17 @@
         {
           "form": "laung (လောင်း)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "dug-out boat or canoe"
         },
         {
           "form": "gyet (ကြက်)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "to tether or tie"
         }
       ],
       "etymology_analysis": "Arakanese toponym for the final Le-Mro period capital of Arakan (1251–1406 CE), founded in 1251 CE and thus post-867 CE.",
-      "current_repo_state": {
-        "name": "Launggyet",
-        "b_tarr": "Launggyet",
-        "b_tarr_direct": "Launggyet",
-        "b_tarr_hist": "Launggyet",
-        "b_origin": "Launggyet (constituent holding of Waisâli)",
-        "b_anachronism": "",
-        "b_ipa": "[lɔʊŋɡ.ˈjɛt]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Launggyet_dynasty",
       "older_name_by_867": {
         "exists": false,
@@ -4116,26 +3433,17 @@
         {
           "form": "mrauk (မြောက်)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "monkey (folk etymology) or north"
         },
         {
           "form": "u (ဦး)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "egg or head"
         }
       ],
       "etymology_analysis": "Arakanese toponym (popularly glossed as 'monkey egg'), founded in 1430 CE by King Min Saw Mon as the capital of the Mrauk U Kingdom; post-867 CE.",
-      "current_repo_state": {
-        "name": "Mrauk U",
-        "b_tarr": "Mrauk U",
-        "b_tarr_direct": "Mrauk U",
-        "b_tarr_hist": "Mrauk U",
-        "b_origin": "Mrauk U (constituent holding of Waisâli)",
-        "b_anachronism": "",
-        "b_ipa": "[mrɔʊk ʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mrauk_U",
       "older_name_by_867": {
         "exists": false,
@@ -4170,26 +3478,17 @@
         {
           "form": "maha (မဟာ)",
           "language": "Pali / Sanskrit",
+          "language_code": "pli",
           "translation": "great"
         },
         {
           "form": "muni (မုနိ)",
           "language": "Pali / Sanskrit",
+          "language_code": "pli",
           "translation": "sage (epithet of the Buddha)"
         }
       ],
       "etymology_analysis": "Pali/Sanskrit compound Mahamuni ('Great Sage'), referring to the famed Buddha image and shrine near ancient Dhanyawadi; while Dhanyawadi appears in the 729 CE Anandachandra inscription, the toponym Mahamuni itself is not contemporarily attested <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mahamuni_Buddha_Temple",
       "older_name_by_867": {
         "exists": false,
@@ -4224,21 +3523,11 @@
         {
           "form": "A-khyat-daw (အာကျပ်)",
           "language": "Arakanese / Burmese",
+          "language_code": "mya",
           "translation": "royal rear-jawbone (relic stupa name)"
         }
       ],
       "etymology_analysis": "Colonial English Akyab derives from Burmese/Arakanese Akyat-daw (Ahkyaib-daw), the name of a local relic stupa hill; developed into a formal town and port only in 1825–1826 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sittwe",
       "older_name_by_867": {
         "exists": false,
@@ -4273,26 +3562,17 @@
         {
           "form": "hsen (သဵၼ်ႈ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "hundred thousand"
         },
         {
           "form": "wi (ဝီ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "fan or principality"
         }
       ],
       "etymology_analysis": "Shan Hsenwi (Burmese Theinni, Chinese Mubang); late Tai Yai chronicles claim a legendary 6th–7th century CE origin (Siviraṭṭha), but contemporary attestation begins only in Ming dynasty records of 1404 CE.",
-      "current_repo_state": {
-        "name": "Senwî",
-        "b_tarr": "Senwî",
-        "b_tarr_direct": "Senwî",
-        "b_tarr_hist": "Senwî",
-        "b_origin": "Senwî (Hsenwi)",
-        "b_anachronism": "",
-        "b_ipa": "[sɛn.ˈwiː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hsenwi_State",
       "older_name_by_867": {
         "exists": false,
@@ -4327,26 +3607,17 @@
         {
           "form": "möng (မိူင်း)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley-town"
         },
         {
           "form": "hsu (ရှူး)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "local toponym element"
         }
       ],
       "etymology_analysis": "Shan compound with 'möng' ('country/state/valley-town'); established as a distinct Shan polity only in 1857 CE, with no pre-867 CE attestation.",
-      "current_repo_state": {
-        "name": "Monghsu",
-        "b_tarr": "Monghsu",
-        "b_tarr_direct": "Monghsu",
-        "b_tarr_hist": "Monghsu",
-        "b_origin": "Monghsu (constituent holding of Senwî)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔŋh.sʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Hsu",
       "older_name_by_867": {
         "exists": false,
@@ -4381,26 +3652,17 @@
         {
           "form": "hsi (သီႇ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "four"
         },
         {
           "form": "paw (ပေႃႉ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "salt-spring or toponym element"
         }
       ],
       "etymology_analysis": "Shan Hsipaw (Burmese Thibaw), earlier known as Onbaung. Local tradition claims a legendary 58 BCE Duṭṭhavatī origin, but contemporary epigraphic attestation begins only around the turn of the 14th century CE.",
-      "current_repo_state": {
-        "name": "Hsipaw",
-        "b_tarr": "Hsipaw",
-        "b_tarr_direct": "Hsipaw",
-        "b_tarr_hist": "Hsipaw",
-        "b_origin": "Hsipaw (constituent holding of Senwî)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhsɪ.paw]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hsipaw_State",
       "older_name_by_867": {
         "exists": false,
@@ -4435,26 +3697,17 @@
         {
           "form": "möng (မိူင်း)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley-town"
         },
         {
           "form": "mit (မိတ်ႈ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "knife or local toponym element"
         }
       ],
       "etymology_analysis": "Shan compound with 'möng' ('country/state/valley-town'), burmanized as Momeik; founded c. 1238 CE and epigraphically attested in 1557 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Mongmit",
-        "b_tarr": "Mongmit",
-        "b_tarr_direct": "Mongmit",
-        "b_tarr_hist": "Mongmit",
-        "b_origin": "Mongmit (constituent holding of Senwî)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔŋ.ˈmɪt]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Mit",
       "older_name_by_867": {
         "exists": false,
@@ -4489,26 +3742,17 @@
         {
           "form": "möng (မိူင်း)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley-town"
         },
         {
           "form": "nai (ၼၢႆး)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "dew or local toponym element"
         }
       ],
       "etymology_analysis": "Shan compound with 'möng' ('country/state/valley-town'), burmanized as Mone; attributed to 1223 CE or 1318 CE in regional histories and contemporarily attested in 16th-century CE Toungoo records.",
-      "current_repo_state": {
-        "name": "Möngnai",
-        "b_tarr": "Möngnai",
-        "b_tarr_direct": "Möngnai",
-        "b_tarr_hist": "Möngnai",
-        "b_origin": "Möngnai (Mongnai)",
-        "b_anachronism": "",
-        "b_ipa": "[møːŋ.ˈnaɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Nai",
       "older_name_by_867": {
         "exists": false,
@@ -4543,26 +3787,17 @@
         {
           "form": "möng (မိူင်း)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "town or state"
         },
         {
           "form": "nawng (ၼွင်)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "lake or pond"
         }
       ],
       "etymology_analysis": "Shan compound meaning 'town/state by a lake' (burmanized as Maing Naung), using the generic topographic noun 'nawng' ('lake') rather than a proper hydronym; unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Mongnawn",
-        "b_tarr": "Mongnawn",
-        "b_tarr_direct": "Mongnawn",
-        "b_tarr_hist": "Mongnawn",
-        "b_origin": "Mongnawn (constituent holding of Möngnai)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔŋ.nawn]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mong_Nawng",
       "older_name_by_867": {
         "exists": false,
@@ -4597,26 +3832,17 @@
         {
           "form": "mawk (မွၵ်ႇ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "flower or blossom"
         },
         {
           "form": "mai (မႂ်ႇ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "new"
         }
       ],
       "etymology_analysis": "Shan compound meaning 'new flower' (burmanized as Maukme), founded as a Shan state in 1767 CE; entirely post-867 CE.",
-      "current_repo_state": {
-        "name": "Mawkmai",
-        "b_tarr": "Mawkmai",
-        "b_tarr_direct": "Mawkmai",
-        "b_tarr_hist": "Mawkmai",
-        "b_origin": "Mawkmai (constituent holding of Möngnai)",
-        "b_anachronism": "",
-        "b_ipa": "[mawk.ˈmaɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mawkmai_State",
       "older_name_by_867": {
         "exists": false,
@@ -4651,26 +3877,17 @@
         {
           "form": "nyaung (ညောင်)",
           "language": "Burmese (adapting Shan yawng)",
+          "language_code": "mya",
           "translation": "banyan tree (folk-etymological adaptation)"
         },
         {
           "form": "shwe (ရွှေ)",
           "language": "Burmese (adapting Shan hwe)",
+          "language_code": "mya",
           "translation": "gold (folk-etymological adaptation)"
         }
       ],
       "etymology_analysis": "Burmese phonetic and folk-etymological adaptation of Shan Yawnghwe, the capital of Yawnghwe State founded in 1359 CE; post-867 CE.",
-      "current_repo_state": {
-        "name": "Inle-Sê",
-        "b_tarr": "Inle-Sê",
-        "b_tarr_direct": "Njaungschwe",
-        "b_tarr_hist": "Inle-Sê",
-        "b_origin": "Inle-Sê (Inle-Sê (in-game: Nyaungshwe))",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɪn.lɛ seː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yawnghwe",
       "older_name_by_867": {
         "exists": false,
@@ -4705,31 +3922,23 @@
         {
           "form": "taung (တောင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "mountain or hill"
         },
         {
           "form": "gyi (ကြီး)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "big or great"
         },
         {
           "form": "South",
           "language": "English",
+          "language_code": "eng",
           "translation": "southern directional qualifier"
         }
       ],
       "etymology_analysis": "Combines Burmese Taunggyi ('big mountain') with the English directional qualifier 'South'; Taunggyi itself was established as a colonial administrative town in 1894 CE, long after 867 CE.",
-      "current_repo_state": {
-        "name": "Möng Pai",
-        "b_tarr": "Möng Pai",
-        "b_tarr_direct": "Möng Pai",
-        "b_tarr_hist": "Möng Pai",
-        "b_origin": "Möng Pai (constituent holding of Inle-Sê)",
-        "b_anachronism": "",
-        "b_ipa": "[møːŋ paɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taunggyi",
       "older_name_by_867": {
         "exists": false,
@@ -4764,26 +3973,17 @@
         {
           "form": "lai (လၢႆး)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "pattern or valley"
         },
         {
           "form": "hka (ၶႃႈ)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "thatch-grass or local toponym element"
         }
       ],
       "etymology_analysis": "Shan toponym (burmanized as Legya/Lecha) for the Southern Shan state founded in 1505 CE; entirely post-867 CE.",
-      "current_repo_state": {
-        "name": "Laihka",
-        "b_tarr": "Laihka",
-        "b_tarr_direct": "Laihka",
-        "b_tarr_hist": "Laihka",
-        "b_origin": "Laihka (constituent holding of Inle-Sê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlaɪh.ka]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Laihka_State",
       "older_name_by_867": {
         "exists": false,
@@ -4818,26 +4018,17 @@
         {
           "form": "möng (မိူင်း)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley-town"
         },
         {
           "form": "küng (ကိုင်)",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "local toponym element"
         }
       ],
       "etymology_analysis": "Shan compound with 'möng' ('country/state/valley-town'), burmanized as Maingkaing; established as an autonomous state in 1835 CE, with no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Mongkung",
-        "b_tarr": "Mongkung",
-        "b_tarr_direct": "Mongkung",
-        "b_tarr_hist": "Mongkung",
-        "b_origin": "Mongkung (constituent holding of Inle-Sê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔ.ŋkʊŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_K%C3%BCng",
       "older_name_by_867": {
         "exists": false,
@@ -4872,26 +4063,17 @@
         {
           "form": "in (အင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "lake / pond"
         },
         {
           "form": "wa (ဝ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "mouth / entrance"
         }
       ],
       "etymology_analysis": "English 'Ava' is a colonial/European corruption of Burmese Inwa (အင်းဝ), meaning 'entrance to the lake', referring to the site's position at the mouth of the lakes in the Kyaukse basin at the Irrawaddy-Myitnge confluence. Founded in 1364 CE, long after the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Toungbjôn",
-        "b_tarr": "Toungbjôn",
-        "b_tarr_direct": "Awe",
-        "b_tarr_hist": "Toungbjôn",
-        "b_origin": "Toungbjôn (Toungbjôn (in-game: Ava))",
-        "b_anachronism": "Ava (Inwa) was founded in 1364 AD; resolves via Option A to ancient Irrawaddy town Taungbyon (Toungbjôn).",
-        "b_ipa": "[tɔʊŋb.ˈjoːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Inwa",
       "older_name_by_867": {
         "exists": false,
@@ -4926,21 +4108,11 @@
         {
           "form": "pinya (ပင်းယ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Pinya (vernacular toponym of Vijayapura, 'City of Victory')"
         }
       ],
       "etymology_analysis": "Pinya (Burmese: ပင်းယ), classically styled Wizayapura from Pali Vijayapura ('City of Victory'), was established in 1313 CE by Thihathu as the de jure successor capital to Bagan. It has no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Pinya",
-        "b_tarr": "Pinya",
-        "b_tarr_direct": "Pinya",
-        "b_tarr_hist": "Pinya",
-        "b_origin": "Pinya (constituent holding of Toungbjôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɪ.ɲa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pinya",
       "older_name_by_867": {
         "exists": false,
@@ -4975,26 +4147,17 @@
         {
           "form": "taung / ton (တောင်)",
           "language": "Old Burmese",
+          "language_code": "mya",
           "translation": "mound / hill"
         },
         {
           "form": "byon / plon (ပြုံး)",
           "language": "Old Burmese",
+          "language_code": "mya",
           "translation": "eroded / collapsed"
         }
       ],
       "etymology_analysis": "Older Burmese Tonplon (တောင်ပြုံး) means 'eroded mound'. Taungbyon served as a Bagan-era riverine fort and royal domain along the Irrawaddy north of Mandalay, attested from the Bagan period (11th–13th centuries CE) onward, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Promemunster",
-        "b_tarr": "Promemunster",
-        "b_tarr_direct": "Promemunster",
-        "b_tarr_hist": "Promemunster",
-        "b_origin": "Promemunster (constituent holding of Toungbjôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈprɔ.mɛ.mʊn.stər]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taungbyon",
       "older_name_by_867": {
         "exists": false,
@@ -5029,26 +4192,17 @@
         {
           "form": "min (မင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "king / lord"
         },
         {
           "form": "bu (ဘူး)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "gourd / shrine"
         }
       ],
       "etymology_analysis": "Burmese Minbu (မင်းဘူး) is a vernacular toponym composed of min ('lord / king') and bu ('gourd / calabash'). While Pyu-era silver coins have been excavated in the broader Minbu basin, the settlement name Minbu is attested only from the Bagan period (11th–13th centuries CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Minbu",
-        "b_tarr": "Minbu",
-        "b_tarr_direct": "Minbu",
-        "b_tarr_hist": "Minbu",
-        "b_origin": "Minbu (Minbu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɪn.bʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Minbu",
       "older_name_by_867": {
         "exists": false,
@@ -5083,21 +4237,11 @@
         {
           "form": "salin (စလင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Salin (town name in Minbu District)"
         }
       ],
       "etymology_analysis": "Salin (Burmese: စလင်း) is a historic town on the western bank of the Irrawaddy in the Minbu irrigated zone, founded in 1179 CE during the Bagan Dynasty and later a prominent noble appanage. It post-dates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Salin",
-        "b_tarr": "Salin",
-        "b_tarr_direct": "Salin",
-        "b_tarr_hist": "Salin",
-        "b_origin": "Salin (constituent holding of Minbu)",
-        "b_anachronism": "",
-        "b_ipa": "[sa.ˈlɪn]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salin,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -5132,26 +4276,17 @@
         {
           "form": "nga (င)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "personal prefix / fish"
         },
         {
           "form": "pe (ဖဲ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "to turn aside / avoid"
         }
       ],
       "etymology_analysis": "Ngape (Burmese: ငဖဲ) is a town in Minbu District at the eastern foot of the Arakan Yoma pass to An. Its earliest historical associations date to the 11th-century CE Bagan period in Burmese chronicles, with no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Ngape",
-        "b_tarr": "Ngape",
-        "b_tarr_direct": "Ngape",
-        "b_tarr_hist": "Ngape",
-        "b_origin": "Ngape (constituent holding of Minbu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈŋa.pə]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ngape_Township",
       "older_name_by_867": {
         "exists": false,
@@ -5186,31 +4321,23 @@
         {
           "form": "shwe (ရွှေ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "gold / golden"
         },
         {
           "form": "set (စက်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "footprint / wheel mark"
         },
         {
           "form": "taw (တော်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "royal / sacred honorific"
         }
       ],
       "etymology_analysis": "Burmese Shwesettaw (ရွှေစက်တော်) literally means 'Golden Sacred Footprint', referring to the two supposed footprints of Gautama Buddha at Mann Shwesettaw in Minbu. Documented historically from the Toungoo/Konbaung periods (1638 CE), well after 867 CE.",
-      "current_repo_state": {
-        "name": "Schwesettaw",
-        "b_tarr": "Schwesettaw",
-        "b_tarr_direct": "Schwesettaw",
-        "b_tarr_hist": "Schwesettaw",
-        "b_origin": "Schwesettaw (constituent holding of Minbu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃwɛ.zɛ.taw]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shwesettaw_Wildlife_Sanctuary",
       "older_name_by_867": {
         "exists": false,
@@ -5245,21 +4372,11 @@
         {
           "form": "pukam / pugan (ပုဂန် / ပုဂံ)",
           "language": "Old Burmese",
+          "language_code": "mya",
           "translation": "Bagan (capital city; classically Arimaddanapura)"
         }
       ],
       "etymology_analysis": "Modern Bagan derives from Burmese Pugan (ပုဂံ) and Old Burmese Pukam (ပုဂန်), classically styled Arimaddanapura ('City that Tramples on Enemies') in Pali. While 18th–19th century chronicles claim King Pyinbya fortified it in 849 CE, no contemporary <= 867 CE written attestation exists; radiocarbon dates for Old Bagan walls are c. 980–1020 CE and the earliest contemporary written records date to 1004/1005 CE.",
-      "current_repo_state": {
-        "name": "Pagân",
-        "b_tarr": "Pagân",
-        "b_tarr_direct": "Pagân",
-        "b_tarr_hist": "Pagân",
-        "b_origin": "Pagân (Pagan)",
-        "b_anachronism": "",
-        "b_ipa": "[pa.ˈɣaːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bagan",
       "older_name_by_867": {
         "exists": false,
@@ -5294,21 +4411,11 @@
         {
           "form": "popa / puppha (ပုပ္ပား)",
           "language": "Pali/Sanskrit via Burmese",
+          "language_code": "pli",
           "translation": "flower (from Pali puppha / Sanskrit puṣpa)"
         }
       ],
       "etymology_analysis": "Popa (Burmese: ပုပ္ပား, from Pali puppha / Sanskrit puṣpa meaning 'flower') directly adopts the name of the sacred dormant volcano Mount Popa (Popa Taung) in central Myanmar. It is attested in Bagan-era history from the 11th century CE, with no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Popa-Berch",
-        "b_tarr": "Popa-Berch",
-        "b_tarr_direct": "Popa-Berch",
-        "b_tarr_hist": "Popa-Berch",
-        "b_origin": "Classical Burmese sacred volcanic Nat sanctuary Popa Taung (in-game: Mount Popa)",
-        "b_anachronism": "Colonial English descriptor Mount Popa fails Burden of Proof on Antiquity; restored to classical Burmese sacred peak Popa-Berch.",
-        "b_ipa": "[ˈpɔ.pa bɛrx]",
-        "holding_type": "church",
-        "category": "indigenous_restitution"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mount_Popa",
       "older_name_by_867": {
         "exists": false,
@@ -5343,26 +4450,17 @@
         {
           "form": "myit (မြစ်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "river"
         },
         {
           "form": "che / chay (ခြေ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "foot / base / lower reach"
         }
       ],
       "etymology_analysis": "Burmese Myitche / Myit Chay (မြစ်ခြေ) combines myit ('river') and chay ('foot / base'), referring to its location on the lower bank of the Irrawaddy in Pakokku Township. There is no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Myitche",
-        "b_tarr": "Myitche",
-        "b_tarr_direct": "Myitche",
-        "b_tarr_hist": "Myitche",
-        "b_origin": "Myitche (constituent holding of Pagân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmjɪt.xə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myit_Chay",
       "older_name_by_867": {
         "exists": false,
@@ -5397,26 +4495,17 @@
         {
           "form": "tantkyi (တန့်ကြည့်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "pause and look"
         },
         {
           "form": "taung (တောင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "hill / mountain"
         }
       ],
       "etymology_analysis": "Tantkyitaung (တန့်ကြည့်တောင်) is the Burmese name of Tantkyi Hill across the Irrawaddy from Bagan, literally 'pause-and-look mountain'. Its pagoda is dated to 1035 CE in Burmese tradition, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Tantkyitaung",
-        "b_tarr": "Tantkyitaung",
-        "b_tarr_direct": "Tantkyitaung",
-        "b_tarr_hist": "Tantkyitaung",
-        "b_origin": "Tantkyitaung (constituent holding of Pagân)",
-        "b_anachronism": "",
-        "b_ipa": "[tantk.jɪ.ˈtɔʊŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tantkyitaung_Pagoda",
       "older_name_by_867": {
         "exists": false,
@@ -5451,26 +4540,17 @@
         {
           "form": "nyaung (ညောင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "banyan tree"
         },
         {
           "form": "u (ဦး)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "head / upper end"
         }
       ],
       "etymology_analysis": "Burmese Nyaung-U (ညောင်ဦး) combines nyaung ('banyan tree') and u ('head / upstream end'), denoting the northern settlement of the Bagan zone. First attested in the Bagan period (10th–12th centuries CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Nyaung-U",
-        "b_tarr": "Nyaung-U",
-        "b_tarr_direct": "Nyaung-U",
-        "b_tarr_hist": "Nyaung-U",
-        "b_origin": "Nyaung-U (constituent holding of Pagân)",
-        "b_anachronism": "",
-        "b_ipa": "[ɲɔʊŋ ʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nyaung-U",
       "older_name_by_867": {
         "exists": false,
@@ -5505,26 +4585,17 @@
         {
           "form": "phowin (ဖိုလ်ဝင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "isolated meditation / alchemist's retreat"
         },
         {
           "form": "taung (တောင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "mountain / hill"
         }
       ],
       "etymology_analysis": "Powundaung / Phowintaung (ဖိုလ်ဝင်တောင်) directly names the sandstone mountain west of Monywa housing 14th–18th century CE Buddhist cave shrines ('Mountain of Isolated Solitary Meditation'). It post-dates the 867 CE baseline.",
-      "current_repo_state": {
-        "name": "Powundaung",
-        "b_tarr": "Powundaung",
-        "b_tarr_direct": "Powundaung",
-        "b_tarr_hist": "Powundaung",
-        "b_origin": "Powundaung (constituent holding of Pagân)",
-        "b_anachronism": "",
-        "b_ipa": "[pɔ.wʊn.ˈdɔʊŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Phowintaung",
       "older_name_by_867": {
         "exists": false,
@@ -5559,26 +4630,17 @@
         {
           "form": "sit / cac (စစ်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "sit tree (Albizia procera)"
         },
         {
           "form": "kaing (ကိုင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "branch / floodplain"
         }
       ],
       "etymology_analysis": "Sagaing (Burmese: စစ်ကိုင်း, MLCTS: cac kuing:) derives from sit ('Albizia tree') and kaing ('branch / riverside grove'), with the classical Pali title Jayapura ('City of Victory'). Established as a kingdom capital in 1315 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Mû-Flôze",
-        "b_tarr": "Mû-Flôze",
-        "b_tarr_direct": "Sagaing",
-        "b_tarr_hist": "Mû-Flôze",
-        "b_origin": "Mû-Flôze (Mû-Flutz (in-game: Sagaing))",
-        "b_anachronism": "",
-        "b_ipa": "[muː ˈfloː.tsə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sagaing",
       "older_name_by_867": {
         "exists": false,
@@ -5613,21 +4675,11 @@
         {
           "form": "halin / hanlin (ဟန်လင်း)",
           "language": "Pyu/Burmese",
+          "language_code": "mya",
           "translation": "Halin (ancient Pyu walled city-state)"
         }
       ],
       "etymology_analysis": "Halin (also Hanlin or Halingyi; ဟန်လင်း) was one of the three major walled Pyu city-states in Upper Myanmar's Mu valley, occupied from the 2nd century BCE to c. 870 CE. Contemporarily attested <= 867 CE via early Pyu epigraphy (c. 3rd–6th centuries CE) and Tang Chinese chronicles recording the 832 CE Nanzhao sack.",
-      "current_repo_state": {
-        "name": "Halin",
-        "b_tarr": "Halin",
-        "b_tarr_direct": "Halin",
-        "b_tarr_hist": "Halin",
-        "b_origin": "Halin (constituent holding of Mû-Flôze)",
-        "b_anachronism": "",
-        "b_ipa": "[ha.ˈlɪn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hanlin,_Burma",
       "older_name_by_867": {
         "exists": false,
@@ -5662,26 +4714,17 @@
         {
           "form": "myin (မြင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "horse"
         },
         {
           "form": "mu (မူ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "head / chief / Mu river confluence"
         }
       ],
       "etymology_analysis": "Myinmu (Burmese: မြင်းမူ) is a river town on the northern bank of the Irrawaddy near the mouth of the Mu River in Sagaing Region. While prehistoric/Pyu settlements exist in the surrounding township, the toponym Myinmu has no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Myinmu",
-        "b_tarr": "Myinmu",
-        "b_tarr_direct": "Myinmu",
-        "b_tarr_hist": "Myinmu",
-        "b_origin": "Myinmu (constituent holding of Mû-Flôze)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmjɪn.mʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myinmu",
       "older_name_by_867": {
         "exists": false,
@@ -5716,26 +4759,17 @@
         {
           "form": "nwa-me / yame (နွားမည်း / ရမည်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "black cow (phonetically reduced)"
         },
         {
           "form": "thin (သင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "herd / group"
         }
       ],
       "etymology_analysis": "Yamethin (Burmese: ရမည်းသင်း) evolved from earlier Nwamethin (နွားမည်းသင်း, 'herd of black cows') via Namethin. It is documented historically from the late Bagan/Pinya period (14th century CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Beiktanô",
-        "b_tarr": "Beiktanô",
-        "b_tarr_direct": "Jamêtîn",
-        "b_tarr_hist": "Beiktanô",
-        "b_origin": "Beiktanô (Beiktanô (in-game: Yamethin))",
-        "b_anachronism": "Yamethin is a Bagan/Pinya frontier town; resolves via Option A to the 1st-5th c. AD Pyu metropolis Beikthano (Beiktanô).",
-        "b_ipa": "[bɛɪk.ta.ˈnoː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yamethin_Township",
       "older_name_by_867": {
         "exists": false,
@@ -5770,26 +4804,17 @@
         {
           "form": "peikthano / beikthano (ဗိဿနိုး)",
           "language": "Burmese (from Sanskrit)",
+          "language_code": "mya",
           "translation": "Vishnu (Sanskrit Viṣṇu)"
         },
         {
           "form": "myo (မြို့)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "walled city / town"
         }
       ],
       "etymology_analysis": "Peikthanomyo (Beikthano Myo, ဗိဿနိုးမြို့) means 'Vishnu City'. Although the underlying archaeological ruins are one of the oldest Pyu urban centers (c. 200 BCE–610 CE), Michael Aung-Thwin notes that the toponym Beikthano is not attested in contemporary <= 867 CE epigraphy or early chronicles, being applied retroactively.",
-      "current_repo_state": {
-        "name": "Peikthanomyo",
-        "b_tarr": "Peikthanomyo",
-        "b_tarr_direct": "Peikthanomyo",
-        "b_tarr_hist": "Peikthanomyo",
-        "b_origin": "Peikthanomyo (constituent holding of Beiktanô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɛɪkt.ha.nɔm.jɔ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Beikthano",
       "older_name_by_867": {
         "exists": false,
@@ -5824,21 +4849,11 @@
         {
           "form": "binnaka (ဘိန္နက)",
           "language": "Burmese/Pali",
+          "language_code": "mya",
           "translation": "Binnaka (ancient central Myanmar site name)"
         }
       ],
       "etymology_analysis": "Binnaka is an ancient walled site in central Myanmar yielding Pyu, Pagan, Ava, and Konbaung artifacts. However, the name Binnaka itself is absent from contemporary <= 867 CE inscriptions and external chronicles, appearing only in late Burmese chronicles and Konbaung records.",
-      "current_repo_state": {
-        "name": "Binnaka",
-        "b_tarr": "Binnaka",
-        "b_tarr_direct": "Binnaka",
-        "b_tarr_hist": "Binnaka",
-        "b_origin": "Binnaka (constituent holding of Beiktanô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɪ.na.ka]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pyu_city-states",
       "older_name_by_867": {
         "exists": false,
@@ -5873,21 +4888,11 @@
         {
           "form": "dagon / dgun (ဒဂုံ)",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "Dagon (felled tree / log poised horizontally; traditional Mon etymology)"
         }
       ],
       "etymology_analysis": "Dagon (Burmese: ဒဂုံ, Old Mon: dgun) was a Mon settlement around the Shwedagon hill before King Alaungpaya renamed it Yangon in 1755 CE. Founded in the early 11th century CE and attested in 15th-century Mon epigraphy, it post-dates 867 CE.",
-      "current_repo_state": {
-        "name": "Dagôn",
-        "b_tarr": "Dagôn",
-        "b_tarr_direct": "Dagôn",
-        "b_tarr_hist": "Dagôn",
-        "b_origin": "Dagôn (Dagon)",
-        "b_anachronism": "",
-        "b_ipa": "[da.ˈɣoːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yangon",
       "older_name_by_867": {
         "exists": false,
@@ -5922,21 +4927,11 @@
         {
           "form": "sreang / tanyin (သြေၚ် / သန်လျင်)",
           "language": "Mon/Burmese",
+          "language_code": "mnw",
           "translation": "Thanlyin (corrupted in European sources as Syriam)"
         }
       ],
       "etymology_analysis": "Syriam is the European/colonial rendering of Burmese Thanlyin (သန်လျင်, pronounced Tanyin), derived from Mon Sreang (သြေၚ်). It rose to prominence as a major Lower Myanmar port in the 16th–18th centuries CE, with no contemporary <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Syriam",
-        "b_tarr": "Syriam",
-        "b_tarr_direct": "Syriam",
-        "b_tarr_hist": "Syriam",
-        "b_origin": "Syriam (constituent holding of Dagôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɪ.rɪ.am]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thanlyin",
       "older_name_by_867": {
         "exists": false,
@@ -5971,21 +4966,11 @@
         {
           "form": "krapan",
           "language": "Unverified (Mon/Burmese region)",
+          "language_code": "und",
           "translation": "unattested toponym in the Dagon / Lower Myanmar delta"
         }
       ],
       "etymology_analysis": "From Middle Mon Kraban / Old Burmese Krapan (later Khabin), a Lower Burma settlement first attested in a 1198 CE Pagan-period inscription (post-867 CE).",
-      "current_repo_state": {
-        "name": "Krapan",
-        "b_tarr": "Krapan",
-        "b_tarr_direct": "Krapan",
-        "b_tarr_hist": "Krapan",
-        "b_origin": "Krapan (constituent holding of Dagôn)",
-        "b_anachronism": "",
-        "b_ipa": "[kra.ˈpan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6020,26 +5005,17 @@
         {
           "form": "bo (ဘို)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "foreigner / European"
         },
         {
           "form": "kalay (ကလေး)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "little / young"
         }
       ],
       "etymology_analysis": "Bogale (Burmese: ဘိုကလေး, shortened from Bogaleseik ဘိုကလေးဆိပ် 'Little Foreigner Port') originated in the early 19th century CE from the camp of Anglo-Burmese hunter U Maung Kalay (Bo Kalay). It is both post-867 and named after a post-867 person.",
-      "current_repo_state": {
-        "name": "Bogale",
-        "b_tarr": "Bogale",
-        "b_tarr_direct": "Bogale",
-        "b_tarr_hist": "Bogale",
-        "b_origin": "Bogale (constituent holding of Dagôn)",
-        "b_anachronism": "",
-        "b_ipa": "[bɔ.ˈɣa.lɛ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bogale",
       "older_name_by_867": {
         "exists": false,
@@ -6074,21 +5050,11 @@
         {
           "form": "kusima / kusumi",
           "language": "Pali",
+          "language_code": "pli",
           "translation": "Kusima (classical Pali name of Pathein / Bassein)"
         }
       ],
       "etymology_analysis": "Kusumi (Pali: Kusima) is the classical Pali name of Pathein (Bassein, from Old Mon pha-sɛm 'big sea'). First contemporarily attested in a 1165 CE Sri Lankan rock inscription, three centuries after 867 CE.",
-      "current_repo_state": {
-        "name": "Kusumi",
-        "b_tarr": "Kusumi",
-        "b_tarr_direct": "Kusumi",
-        "b_tarr_hist": "Kusumi",
-        "b_origin": "Kusumi (Kusumi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊ.zʊ.mɪ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pathein",
       "older_name_by_867": {
         "exists": false,
@@ -6123,21 +5089,11 @@
         {
           "form": "mongmale (မံၚ်မၠ)",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "where the Myaya plants are"
         }
       ],
       "etymology_analysis": "Burmese Myaungmya (မြောင်းမြ) derives from Mon Mongmale (မံၚ်မၠ), meaning 'where the Myaya plants are'. Attested from the late 11th–14th centuries CE, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myaungmya",
       "older_name_by_867": {
         "exists": false,
@@ -6172,21 +5128,11 @@
         {
           "form": "nagarit / nagaraj (နဂရစ် / नागराज)",
           "language": "Burmese (from Sanskrit)",
+          "language_code": "mya",
           "translation": "dragon king (Sanskrit nāgarāja)"
         }
       ],
       "etymology_analysis": "Negrais is the Portuguese borrowing of Burmese Nagarit (နဂရစ်), from Sanskrit nāgarāja ('dragon king'), referring to Cape Negrais (Mawtin Point) at the southwestern tip of Myanmar. Attested in 16th-century CE maritime and war records, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Negrais",
-        "b_tarr": "Negrais",
-        "b_tarr_direct": "Negrais",
-        "b_tarr_hist": "Negrais",
-        "b_origin": "Negrais (constituent holding of Kusumi)",
-        "b_anachronism": "",
-        "b_ipa": "[nɛ.ˈɡraɪs]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Cape_Negrais",
       "older_name_by_867": {
         "exists": false,
@@ -6221,21 +5167,11 @@
         {
           "form": "sittaung (စစ်တောင်း)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Sittaung (river and walled town near its mouth)"
         }
       ],
       "etymology_analysis": "Sittaung (Burmese: စစ်တောင်း) directly adopts the hydronym of the Sittaung River, located beside the historical walled town of Sittaung in Mon State. While pre-Bagan artifacts exist near nearby Kyaikkatha, the toponym Sittaung is attested in historical records from the Hanthawaddy period (16th century CE), post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Sittaung",
-        "b_tarr": "Sittaung",
-        "b_tarr_direct": "Sittaung",
-        "b_tarr_hist": "Sittaung",
-        "b_origin": "Sittaung (Sittaung)",
-        "b_anachronism": "",
-        "b_ipa": "[sɪ.ˈtɔʊŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sittaung,_Mon",
       "older_name_by_867": {
         "exists": false,
@@ -6270,26 +5206,17 @@
         {
           "form": "shwe (ရွှေ)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "gold"
         },
         {
           "form": "kyin / gyin (ကျင်)",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "panning / washing"
         }
       ],
       "etymology_analysis": "Burmese Shwegyin (ရွှေကျင်) means 'gold-panning' (from shwe 'gold' + kyin 'to pan/sift'), reflecting local alluvial gold deposits along the Shwegyin River. Attested in the modern/Konbaung era, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Schwegyin",
-        "b_tarr": "Schwegyin",
-        "b_tarr_direct": "Schwegyin",
-        "b_tarr_hist": "Schwegyin",
-        "b_origin": "Schwegyin (constituent holding of Sittaung)",
-        "b_anachronism": "",
-        "b_ipa": "[ʃwɛɡ.ˈjɪn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shwegyin_(town)",
       "older_name_by_867": {
         "exists": false,
@@ -6324,21 +5251,11 @@
         {
           "form": "sudhammapura (သုဓမ္မပူရ)",
           "language": "Pali",
+          "language_code": "pli",
           "translation": "city of Sudhamma (the assembly hall of the gods)"
         }
       ],
       "etymology_analysis": "Burmese Thaton (သထုံ) derives from Mon Sadhuim / Sudhuim (သဓီု), itself from Pali Sudhammapura ('City of Sudhamma'). Although Mon tradition claims an ancient Suvannabhumi kingdom from the 6th century BCE, scholarship (including Michael Aung-Thwin) finds no contemporary <= 867 CE epigraphic attestation of Thaton.",
-      "current_repo_state": {
-        "name": "Tatôn",
-        "b_tarr": "Tatôn",
-        "b_tarr_direct": "Tatôn",
-        "b_tarr_hist": "Tatôn",
-        "b_origin": "Tatôn (Thaton)",
-        "b_anachronism": "",
-        "b_ipa": "[ta.ˈtoːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thaton",
       "older_name_by_867": {
         "exists": false,
@@ -6373,26 +5290,17 @@
         {
           "form": "mùh (မုဟ်)",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "spur / cape / point"
         },
         {
           "form": "mò' / tma' (တၟံ)",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "rock / stone"
         }
       ],
       "etymology_analysis": "Muttina (a variant of Muttama / Mottama, historically Martaban) derives from Mon Mumaw (မုဟ်တၟံ, /mùh mɔˀ/), meaning 'rocky spur'. First contemporarily attested in a 1176 CE Bagan inscription of Sithu II, post-dating 867 CE.",
-      "current_repo_state": {
-        "name": "Muttina",
-        "b_tarr": "Muttina",
-        "b_tarr_direct": "Muttina",
-        "b_tarr_hist": "Muttina",
-        "b_origin": "Muttina (constituent holding of Tatôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.tɪ.na]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mottama",
       "older_name_by_867": {
         "exists": false,
@@ -6427,26 +5335,17 @@
         {
           "form": "mòt",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "eye"
         },
         {
           "form": "məlɜ̀m",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "damaged or destroyed"
         }
       ],
       "etymology_analysis": "Burmese adaptation of Mon Mot-mua-lum (Moulmein), meaning 'damaged eye' or 'one-eyed', associated with a Mon royal legend. First contemporarily attested in the 1479 CE Kalyani Stone Inscriptions.",
-      "current_repo_state": {
-        "name": "Mawlamyine",
-        "b_tarr": "Mawlamyine",
-        "b_tarr_direct": "Mawlamyine",
-        "b_tarr_hist": "Mawlamyine",
-        "b_origin": "Mawlamyine (constituent holding of Tatôn)",
-        "b_anachronism": "",
-        "b_ipa": "[maw.lam.ˈjɪ.nə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mawlamyine",
       "older_name_by_867": {
         "exists": false,
@@ -6481,26 +5380,17 @@
         {
           "form": "taik",
           "language": "Burmese/Mon",
+          "language_code": "mya",
           "translation": "brick or laterite structure"
         },
         {
           "form": "kala",
           "language": "Burmese/Mon (from Pali Gola)",
+          "language_code": "mya",
           "translation": "Gola people (Gauḍa/Indian settlers)"
         }
       ],
       "etymology_analysis": "Mon/Burmese rendering of Pali Golamattikanagara ('mud-brick city of the Gola people'). Although 1479 CE Kalyani inscriptions retroactively link it to Ashoka's 3rd-century BCE mission to Suvannabhumi, no contemporary <= 867 CE written attestation of the toponym exists.",
-      "current_repo_state": {
-        "name": "Taikkala",
-        "b_tarr": "Taikkala",
-        "b_tarr_direct": "Taikkala",
-        "b_tarr_hist": "Taikkala",
-        "b_origin": "Taikkala (constituent holding of Tatôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtaɪ.ka.la]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.burmalibrary.org/docs21/History/Khin-May-Aung-2015-Historical_Perspectives_on_Mon_Settlements_in_Myanmar-en.pdf",
       "older_name_by_867": {
         "exists": false,
@@ -6535,21 +5425,11 @@
         {
           "form": "henzada",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "danone rattan palm"
         }
       ],
       "etymology_analysis": "Derived from the Mon name Henzada for the abundant local danone palm (with a Burmese folk etymology linking it to hintha, 'Brahminy duck/sheldrake'). First historically attested in the mid-18th century CE.",
-      "current_repo_state": {
-        "name": "Hintade",
-        "b_tarr": "Hintade",
-        "b_tarr_direct": "Hintade",
-        "b_tarr_hist": "Hintade",
-        "b_origin": "Hintade (Hinthada)",
-        "b_anachronism": "",
-        "b_ipa": "[hɪn.ˈta.də]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hinthada",
       "older_name_by_867": {
         "exists": false,
@@ -6584,26 +5464,17 @@
         {
           "form": "myan",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "quick or swift"
         },
         {
           "form": "aung",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "conquer or succeed"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'succeed quickly', bestowed by King Alaungpaya in 1754 CE on the earlier Mon settlement of Gu Htut (founded c. 1250 CE).",
-      "current_repo_state": {
-        "name": "Myanaung",
-        "b_tarr": "Myanaung",
-        "b_tarr_direct": "Myanaung",
-        "b_tarr_hist": "Myanaung",
-        "b_origin": "Myanaung (constituent holding of Hintade)",
-        "b_anachronism": "",
-        "b_ipa": "[mja.ˈnɔʊŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myanaung",
       "older_name_by_867": {
         "exists": false,
@@ -6638,26 +5509,17 @@
         {
           "form": "ma",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "not"
         },
         {
           "form": "kwe",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "separated or divided"
         }
       ],
       "etymology_analysis": "Burmese toponym traditionally interpreted as 'not separated' (or linked in local tradition to Pali maghava). Unattested before the post-Pagan Ava period (c. 15th century CE).",
-      "current_repo_state": {
-        "name": "Magwê",
-        "b_tarr": "Magwê",
-        "b_tarr_direct": "Magwê",
-        "b_tarr_hist": "Magwê",
-        "b_origin": "Magwê (Magwe)",
-        "b_anachronism": "",
-        "b_ipa": "[maɡ.ˈweː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Magway,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -6692,26 +5554,17 @@
         {
           "form": "shwe",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "gold or golden"
         },
         {
           "form": "myo",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "town or city"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'golden town'. Unattested in contemporary <= 867 CE sources and unoccupied in the repository.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://www.mindat.org/feature-1296521.html",
       "older_name_by_867": {
         "exists": false,
@@ -6746,26 +5599,17 @@
         {
           "form": "śrī",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "auspicious or sacred"
         },
         {
           "form": "kṣetra",
           "language": "Sanskrit",
+          "language_code": "san",
           "translation": "field or domain"
         }
       ],
       "etymology_analysis": "Sanskrit toponym meaning 'auspicious field' (Burmese Thayekhittaya). Major Pyu city-state contemporarily attested via 5th-6th century CE Pyu/Pali inscriptions and 7th-century CE Chinese Tang records (Xuanzang 648 CE, Yijing 675 CE).",
-      "current_repo_state": {
-        "name": "Srîkschetre",
-        "b_tarr": "Srîkschetre",
-        "b_tarr_direct": "Srîkschetre",
-        "b_tarr_hist": "Srîkschetre",
-        "b_origin": "Srîkschetre (Śrīksetra)",
-        "b_anachronism": "",
-        "b_ipa": "[sriːk.ˈʃɛ.trə]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sri_Ksetra_kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -6800,26 +5644,17 @@
         {
           "form": "mye",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "earth or land"
         },
         {
           "form": "htè",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "inside or inland"
         }
       ],
       "etymology_analysis": "Burmese compound (Myayde) meaning 'inland earth/territory'. Attested only from the post-Pagan Ava period (c. 15th century CE), with no <= 867 CE record.",
-      "current_repo_state": {
-        "name": "Myede",
-        "b_tarr": "Myede",
-        "b_tarr_direct": "Myede",
-        "b_tarr_hist": "Myede",
-        "b_origin": "Myede (constituent holding of Srîkschetre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmjɛ.də]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Aunglan,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -6854,26 +5689,17 @@
         {
           "form": "thayet",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "mango"
         },
         {
           "form": "myo",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "town or city"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'mango town'. Attested in the Ava period (c. 15th century CE) and prominent later as a British frontier station; no <= 867 CE attestation exists.",
-      "current_repo_state": {
-        "name": "Thayetmyo",
-        "b_tarr": "Thayetmyo",
-        "b_tarr_direct": "Thayetmyo",
-        "b_tarr_hist": "Thayetmyo",
-        "b_origin": "Thayetmyo (constituent holding of Srîkschetre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtha.jɛtm.jɔ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Thayet",
       "older_name_by_867": {
         "exists": false,
@@ -6908,31 +5734,23 @@
         {
           "form": "taung",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "mountain or south"
         },
         {
           "form": "dwin",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "interior or basin"
         },
         {
           "form": "gyi",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "great or large"
         }
       ],
       "etymology_analysis": "Burmese toponym meaning 'great mountain-basin' (or 'great southern basin'). While the nearby Pyu site of Beikthano dates to the 1st-5th centuries CE, the town of Taungdwingyi itself is unattested before 1365 CE.",
-      "current_repo_state": {
-        "name": "Taungdwingyi",
-        "b_tarr": "Taungdwingyi",
-        "b_tarr_direct": "Taungdwingyi",
-        "b_tarr_hist": "Taungdwingyi",
-        "b_origin": "Taungdwingyi (constituent holding of Srîkschetre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɔʊŋd.wɪŋ.jɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taungdwingyi",
       "older_name_by_867": {
         "exists": false,
@@ -6967,26 +5785,17 @@
         {
           "form": "taung",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "hill or mountain"
         },
         {
           "form": "ngu",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "spur or promontory"
         }
       ],
       "etymology_analysis": "Burmese compound (Taung-ngu) meaning 'hill spur', referring to its position in the narrow Sittaung valley. Founded in 1279 CE, over four centuries after 867 CE.",
-      "current_repo_state": {
-        "name": "Swâ",
-        "b_tarr": "Swâ",
-        "b_tarr_direct": "Tôngû",
-        "b_tarr_hist": "Swâ",
-        "b_origin": "Swâ (Swâ (in-game: Toungoo))",
-        "b_anachronism": "Toungoo was founded 1279/1510 AD; resolves via Option A to ancient Sittaung valley town Swa (Swâ).",
-        "b_ipa": "[swaː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Taungoo",
       "older_name_by_867": {
         "exists": false,
@@ -7021,26 +5830,17 @@
         {
           "form": "möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley"
         },
         {
           "form": "pai",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "bamboo or extremity"
         }
       ],
       "etymology_analysis": "Shan toponym (Burmese Mobye) composed of möng ('state/valley') and pai. Emerged as a Shan princely state in the post-Pagan period and is unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Möng Pai",
-        "b_tarr": "Möng Pai",
-        "b_tarr_direct": "Möng Pai",
-        "b_tarr_hist": "Möng Pai",
-        "b_origin": "Möng Pai (constituent holding of Swâ)",
-        "b_anachronism": "",
-        "b_ipa": "[møːŋ paɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mobye_Narapati",
       "older_name_by_867": {
         "exists": false,
@@ -7075,21 +5875,11 @@
         {
           "form": "swa",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Swa Creek hydronym"
         }
       ],
       "etymology_analysis": "Named after Swa Creek (Swa Chaung), a tributary of the Sittaung River in Yedashe Township. The Swa stream valley is attested from 1191 CE under the Pagan Kingdom, with no <= 867 CE written record.",
-      "current_repo_state": {
-        "name": "Hildeburgstat",
-        "b_tarr": "Hildeburgstat",
-        "b_tarr_direct": "Hildeburgstat",
-        "b_tarr_hist": "Hildeburgstat",
-        "b_origin": "Hildeburgstat (constituent holding of Swâ)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhɪl.dɛ.bʊrɡ.stat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/List_of_rulers_of_Toungoo",
       "older_name_by_867": {
         "exists": false,
@@ -7124,26 +5914,17 @@
         {
           "form": "han",
           "language": "Burmese/Pyu (from Pali haṃsa)",
+          "language_code": "mya",
           "translation": "sheldrake or wild goose"
         },
         {
           "form": "lin",
           "language": "Burmese/Pyu",
+          "language_code": "mya",
           "translation": "bright or expanse"
         }
       ],
       "etymology_analysis": "Ancient Pyu city-state (Halin / Hanlin) in Upper Myanmar, contemporarily attested by Pyu-script inscriptions from c. 300 CE onward (c. 3rd–6th centuries CE) and Tang Chinese accounts of the 832 CE Nanzhao raid.",
-      "current_repo_state": {
-        "name": "Hanlan",
-        "b_tarr": "Hanlan",
-        "b_tarr_direct": "Hanlan",
-        "b_tarr_hist": "Hanlan",
-        "b_origin": "Hanlan (Hanlan)",
-        "b_anachronism": "",
-        "b_ipa": "[han.ˈlan]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hanlin,_Burma",
       "older_name_by_867": {
         "exists": false,
@@ -7178,26 +5959,17 @@
         {
           "form": "mauk",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "crested or elevated"
         },
         {
           "form": "ka-daw",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "ferry or river landing"
         }
       ],
       "etymology_analysis": "Burmese riverine toponym on the Chindwin River in Mingin Township. Unattested in <= 867 CE or Pagan-era sources.",
-      "current_repo_state": {
-        "name": "Maukkadaw",
-        "b_tarr": "Maukkadaw",
-        "b_tarr_direct": "Maukkadaw",
-        "b_tarr_hist": "Maukkadaw",
-        "b_origin": "Maukkadaw (constituent holding of Hanlan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔʊ.ka.daw]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Maukkadaw",
       "older_name_by_867": {
         "exists": false,
@@ -7232,26 +6004,17 @@
         {
           "form": "min",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "king or lord"
         },
         {
           "form": "gin",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "tax-exempt or frontier post"
         }
       ],
       "etymology_analysis": "Romanization variant of Mingin (Burmese မင်းကင်း), a Chindwin River town attested from the Konbaung period (18th century CE) with no <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Mingiu",
-        "b_tarr": "Mingiu",
-        "b_tarr_direct": "Mingiu",
-        "b_tarr_hist": "Mingiu",
-        "b_origin": "Mingiu (constituent holding of Hanlan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɪ.ŋɪ.ʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mingin,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -7286,26 +6049,17 @@
         {
           "form": "karlay",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "town surrounded by four satellite towns"
         },
         {
           "form": "myo",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "town or city"
         }
       ],
       "etymology_analysis": "Derived from earlier Burmese Karlaymyo ('town surrounded by four satellite towns', later folk-etymologized as Kalaymyo, 'town of children'). Earliest contemporary material dates to the 11th-century CE Pagan period.",
-      "current_repo_state": {
-        "name": "Kalê",
-        "b_tarr": "Kalê",
-        "b_tarr_direct": "Kalê",
-        "b_tarr_hist": "Kalê",
-        "b_origin": "Kalê (Kale)",
-        "b_anachronism": "",
-        "b_ipa": "[ka.ˈleː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kalay",
       "older_name_by_867": {
         "exists": false,
@@ -7340,21 +6094,11 @@
         {
           "form": "khyan",
           "language": "Old Burmese",
+          "language_code": "mya",
           "translation": "friend, ally, or hill-dweller"
         }
       ],
       "etymology_analysis": "Ethnonym for the Chin (Zo) peoples of western Myanmar, evolved from Old Burmese Khyan/Khyang first attested in 11th-century CE Pagan inscriptions.",
-      "current_repo_state": {
-        "name": "Chin",
-        "b_tarr": "Chin",
-        "b_tarr_direct": "Chin",
-        "b_tarr_hist": "Chin",
-        "b_origin": "Chin (constituent holding of Kalê)",
-        "b_anachronism": "",
-        "b_ipa": "[xɪn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chin_people",
       "older_name_by_867": {
         "exists": false,
@@ -7389,26 +6133,17 @@
         {
           "form": "hsawng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "two or twin"
         },
         {
           "form": "hsup",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "river mouth or confluence"
         }
       ],
       "etymology_analysis": "Shan name (called Thaungdut in Burmese and Somsok in Manipuri) for an outlying Shan princely state in the Kabaw Valley, founded c. 15th century CE.",
-      "current_repo_state": {
-        "name": "Hsawnghsup",
-        "b_tarr": "Hsawnghsup",
-        "b_tarr_direct": "Hsawnghsup",
-        "b_tarr_hist": "Hsawnghsup",
-        "b_origin": "Hsawnghsup (constituent holding of Kalê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhsawŋh.sʊp]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hsawnghsup",
       "older_name_by_867": {
         "exists": false,
@@ -7443,21 +6178,11 @@
         {
           "form": "madaya",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Madaya settlement toponym"
         }
       ],
       "etymology_analysis": "Burmese toponym (မတ္တရာ) for a town north of Mandalay. Documented in Konbaung-era administrative records and chronicles, with no <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Madâje",
-        "b_tarr": "Madâje",
-        "b_tarr_direct": "Madâje",
-        "b_tarr_hist": "Madâje",
-        "b_origin": "Madâje (Madaya)",
-        "b_anachronism": "",
-        "b_ipa": "[ma.ˈdaː.jɛ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Madaya,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -7492,26 +6217,17 @@
         {
           "form": "möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley"
         },
         {
           "form": "mit",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "knife or gem-bearing"
         }
       ],
       "etymology_analysis": "Burmese rendering of Shan Möng Mit, a northern Shan state on the Shweli River; attested from 1413 CE onward (post-867 CE).",
-      "current_repo_state": {
-        "name": "Momeik",
-        "b_tarr": "Momeik",
-        "b_tarr_direct": "Momeik",
-        "b_tarr_hist": "Momeik",
-        "b_origin": "Momeik (constituent holding of Madâje)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔ.ˈmɛɪk]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Momeik",
       "older_name_by_867": {
         "exists": false,
@@ -7546,26 +6262,17 @@
         {
           "form": "sin",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "elephant or glazed"
         },
         {
           "form": "gu",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "crossing or ford"
         }
       ],
       "etymology_analysis": "Burmese toponym (Singu / Nga Singu) north of Mandalay, first contemporarily attested in 1300 CE during the Myinsaing-Yuan conflict.",
-      "current_repo_state": {
-        "name": "Singu",
-        "b_tarr": "Singu",
-        "b_tarr_direct": "Singu",
-        "b_tarr_hist": "Singu",
-        "b_origin": "Singu (constituent holding of Madâje)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɪ.ŋʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Second_Mongol_invasion_of_Burma",
       "older_name_by_867": {
         "exists": false,
@@ -7600,21 +6307,11 @@
         {
           "form": "takon",
           "language": "Old Burmese",
+          "language_code": "mya",
           "translation": "Tagaung fortress toponym"
         }
       ],
       "etymology_analysis": "Old Burmese spelling (Takôn / Tagaung) of the Upper Irrawaddy riverine town. While archaeology shows Pyu-era habitation, the toponym itself has no contemporary <= 867 CE epigraphic or Tang-era attestation, first appearing in 11th-12th century CE Pagan records.",
-      "current_repo_state": {
-        "name": "Takôn",
-        "b_tarr": "Takôn",
-        "b_tarr_direct": "Takôn",
-        "b_tarr_hist": "Takôn",
-        "b_origin": "Takôn (Takon)",
-        "b_anachronism": "",
-        "b_ipa": "[ta.ˈkoːn]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tagaung_Kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -7649,26 +6346,17 @@
         {
           "form": "wying",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "walled city or town"
         },
         {
           "form": "hsö",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "tiger"
         }
       ],
       "etymology_analysis": "Burmese adaptation of Shan Wying Hsö ('city of the tiger'). First attested historically in 1555 CE during Bayinnaung's Upper Burma campaign.",
-      "current_repo_state": {
-        "name": "Wuntho",
-        "b_tarr": "Wuntho",
-        "b_tarr_direct": "Wuntho",
-        "b_tarr_hist": "Wuntho",
-        "b_origin": "Wuntho (constituent holding of Takôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwʊnt.hɔ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wuntho",
       "older_name_by_867": {
         "exists": false,
@@ -7703,26 +6391,17 @@
         {
           "form": "hti",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "royal umbrella or canopy"
         },
         {
           "form": "gyaing",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "hollow or river bend"
         }
       ],
       "etymology_analysis": "Burmese river-port toponym on the upper Irrawaddy. First attested in 1277 CE during the Mongol-Yuan campaigns against the Pagan Kingdom.",
-      "current_repo_state": {
-        "name": "Htigyaing",
-        "b_tarr": "Htigyaing",
-        "b_tarr_direct": "Htigyaing",
-        "b_tarr_hist": "Htigyaing",
-        "b_origin": "Htigyaing (constituent holding of Takôn)",
-        "b_anachronism": "",
-        "b_ipa": "[htɪɡ.ˈjaɪŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Htigyaing",
       "older_name_by_867": {
         "exists": false,
@@ -7757,26 +6436,17 @@
         {
           "form": "mye",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "earth or soil"
         },
         {
           "form": "du",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "thick or dense"
         }
       ],
       "etymology_analysis": "Burmese toponym in the Mu River valley (Kanbalu Township). First attested in 15th-century CE Ava-period military records, with no <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Myedu",
-        "b_tarr": "Myedu",
-        "b_tarr_direct": "Myedu",
-        "b_tarr_hist": "Myedu",
-        "b_origin": "Myedu (constituent holding of Takôn)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmjɛ.dʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myedu",
       "older_name_by_867": {
         "exists": false,
@@ -7811,26 +6481,17 @@
         {
           "form": "möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, town, or valley"
         },
         {
           "form": "mok",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "flower or mist"
         }
       ],
       "etymology_analysis": "Burmese rendering of Shan Möng Mok (Mauk), a borderland town near Bhamo in Kachin State. Unattested prior to the late pre-colonial/colonial era.",
-      "current_repo_state": {
-        "name": "Momauch",
-        "b_tarr": "Momauch",
-        "b_tarr_direct": "Momauch",
-        "b_tarr_hist": "Momauch",
-        "b_origin": "Momauch (Momauk)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔ.ˈmɔʊx]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Momauk",
       "older_name_by_867": {
         "exists": false,
@@ -7865,26 +6526,17 @@
         {
           "form": "bumang",
           "language": "Tai/Chinese",
+          "language_code": "zha",
           "translation": "Bumang ethnic/local name"
         },
         {
           "form": "dian",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "frontier domain or basin"
         }
       ],
       "etymology_analysis": "Dali Kingdom-era Chinese/Tai administrative name (布茫甸) for the Dehong/Ruili valley, postdating 867 CE.",
-      "current_repo_state": {
-        "name": "Bumangdian",
-        "b_tarr": "Bumangdian",
-        "b_tarr_direct": "Bumangdian",
-        "b_tarr_hist": "Bumangdian",
-        "b_origin": "Bumangdian (constituent holding of Momauch)",
-        "b_anachronism": "",
-        "b_ipa": "[bʊ.maŋ.dɪ.ˈan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://www.yunnanexploration.com/ruili-city-history-in-dehong.html",
       "older_name_by_867": {
         "exists": false,
@@ -7919,26 +6571,17 @@
         {
           "form": "weing",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "walled town or city"
         },
         {
           "form": "maw",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "new"
         }
       ],
       "etymology_analysis": "Shan compound meaning 'new town' (or 'new walled city'). Modern settlement across the Irrawaddy from Myitkyina with no <= 867 CE attestation.",
-      "current_repo_state": {
-        "name": "Waingmaw",
-        "b_tarr": "Waingmaw",
-        "b_tarr_direct": "Waingmaw",
-        "b_tarr_hist": "Waingmaw",
-        "b_origin": "Waingmaw (constituent holding of Momauch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwaɪŋ.maw]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Waingmaw",
       "older_name_by_867": {
         "exists": false,
@@ -7973,26 +6616,17 @@
         {
           "form": "möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country, state, or valley"
         },
         {
           "form": "yang",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "Yang toponymic element"
         }
       ],
       "etymology_analysis": "Burmese rendering (Mohnyin / Monyin) of Shan Möng Yang, a major northern Shan state that emerged in the 13th century CE (post-867 CE).",
-      "current_repo_state": {
-        "name": "Monjin",
-        "b_tarr": "Monjin",
-        "b_tarr_direct": "Monjin",
-        "b_tarr_hist": "Monjin",
-        "b_origin": "Monjin (Monyin)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔ.ˈɲɪn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Yang",
       "older_name_by_867": {
         "exists": false,
@@ -8027,26 +6661,17 @@
         {
           "form": "hpa",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "cliff or rock"
         },
         {
           "form": "kant",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "fall or collapsed"
         }
       ],
       "etymology_analysis": "Borrowed into Burmese from Shan words meaning 'rock fall' or 'building up a wall.' First established as a settlement in 1832 CE, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Hpakant",
-        "b_tarr": "Hpakant",
-        "b_tarr_direct": "Hpakant",
-        "b_tarr_hist": "Hpakant",
-        "b_origin": "Hpakant (constituent holding of Monjin)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhpa.kant]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hpakant",
       "older_name_by_867": {
         "exists": false,
@@ -8081,26 +6706,17 @@
         {
           "form": "Möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country or basin polity"
         },
         {
           "form": "Kawng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "drum"
         }
       ],
       "etymology_analysis": "Burmese Mogaung adapts the Shan state name Möng Kawng ('Land/City of the Drum'). Contemporary written attestation begins in 1295 CE in Yuan records, post-867 CE.",
-      "current_repo_state": {
-        "name": "Mogaung",
-        "b_tarr": "Mogaung",
-        "b_tarr_direct": "Mogaung",
-        "b_tarr_hist": "Mogaung",
-        "b_origin": "Mogaung (constituent holding of Monjin)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔ.ˈɣɔʊŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Kawng",
       "older_name_by_867": {
         "exists": false,
@@ -8135,26 +6751,17 @@
         {
           "form": "shwe",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "golden"
         },
         {
           "form": "gu",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "cave"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'golden cave.' No contemporary <= 867 CE attestation exists for the settlement.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shwegu",
       "older_name_by_867": {
         "exists": false,
@@ -8189,31 +6796,23 @@
         {
           "form": "myit",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "river"
         },
         {
           "form": "kyi",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "big"
         },
         {
           "form": "na",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "near"
         }
       ],
       "etymology_analysis": "Burmese locator compound meaning 'near the big river' (referring to the Irrawaddy). Attested only from the 1890s CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Mjitkjînâ",
-        "b_tarr": "Mjitkjînâ",
-        "b_tarr_direct": "Mjitkjînâ",
-        "b_tarr_hist": "Mjitkjînâ",
-        "b_origin": "Mjitkjînâ (Myitkyina)",
-        "b_anachronism": "",
-        "b_ipa": "[mjɪtk.jiː.ˈnaː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Myitkyina",
       "older_name_by_867": {
         "exists": false,
@@ -8248,21 +6847,11 @@
         {
           "form": "Tanai",
           "language": "Jingpo",
+          "language_code": "sit",
           "translation": "Tanai River proper hydronym"
         }
       ],
       "etymology_analysis": "Adapted into Burmese as Tanai/Danai from the Jingpo hydronym Tanai (Tanai Hka, the upper Chindwin River). No contemporary <= 867 CE settlement attestation exists.",
-      "current_repo_state": {
-        "name": "Danai",
-        "b_tarr": "Danai",
-        "b_tarr_direct": "Danai",
-        "b_tarr_hist": "Danai",
-        "b_origin": "Danai (constituent holding of Mjitkjînâ)",
-        "b_anachronism": "",
-        "b_ipa": "[da.ˈnaɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tanai,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -8297,26 +6886,17 @@
         {
           "form": "sumpra",
           "language": "Jingpo",
+          "language_code": "sit",
           "translation": "jungle grass"
         },
         {
           "form": "bum",
           "language": "Jingpo",
+          "language_code": "sit",
           "translation": "mountain"
         }
       ],
       "etymology_analysis": "Jingpo descriptive topographic compound meaning 'jungle grass mountain.' Unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Sumpra Bum",
-        "b_tarr": "Sumpra Bum",
-        "b_tarr_direct": "Sumpra Bum",
-        "b_tarr_hist": "Sumpra Bum",
-        "b_origin": "Sumpra Bum (constituent holding of Mjitkjînâ)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsʊm.pra bʊm]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sumprabum",
       "older_name_by_867": {
         "exists": false,
@@ -8351,26 +6931,17 @@
         {
           "form": "nán",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "south"
         },
         {
           "form": "diàn",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "upland basin or plain"
         }
       ],
       "etymology_analysis": "Chinese directional-topographic name meaning 'southern basin.' First attested as an administrative unit in 1289 CE under the Yuan dynasty, post-867 CE.",
-      "current_repo_state": {
-        "name": "Nandjan",
-        "b_tarr": "Nandjan",
-        "b_tarr_direct": "Nandjan",
-        "b_tarr_hist": "Nandjan",
-        "b_origin": "Nandjan (Nandian)",
-        "b_anachronism": "",
-        "b_ipa": "[nand.ˈjan]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://zh.wikipedia.org/zh-cn/%E5%8D%97%E7%94%B8%E5%BA%9C",
       "older_name_by_867": {
         "exists": false,
@@ -8405,31 +6976,23 @@
         {
           "form": "Nù",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "Nu River or Nu people"
         },
         {
           "form": "jiāng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "river"
         },
         {
           "form": "Lìsù",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "Lisu ethnic group"
         }
       ],
       "etymology_analysis": "Modern 1954 CE administrative compound combining the Chinese name of the Salween River (Nujiang) with the Lisu ethnonym; post-867 CE.",
-      "current_repo_state": {
-        "name": "Lisu",
-        "b_tarr": "Lisu",
-        "b_tarr_direct": "Lisu",
-        "b_tarr_hist": "Lisu",
-        "b_origin": "Lisu (constituent holding of Nandjan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlɪ.zʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nujiang_Lisu_Autonomous_Prefecture",
       "older_name_by_867": {
         "exists": false,
@@ -8464,21 +7027,11 @@
         {
           "form": "Chihpwi",
           "language": "Lacid",
+          "language_code": "sit",
           "translation": "beeswax"
         }
       ],
       "etymology_analysis": "Likely derived from the Lacid (Lashi) word for 'beeswax,' adapted into Burmese as Chipwi/Chihpwi. Unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Chihpwi",
-        "b_tarr": "Chihpwi",
-        "b_tarr_direct": "Chihpwi",
-        "b_tarr_hist": "Chihpwi",
-        "b_origin": "Chihpwi (constituent holding of Nandjan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈxɪhp.wɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chipwi",
       "older_name_by_867": {
         "exists": false,
@@ -8513,21 +7066,11 @@
         {
           "form": "Hsawlaw",
           "language": "Lhaovo",
+          "language_code": "sit",
           "translation": "hard to breathe"
         }
       ],
       "etymology_analysis": "Likely derived from Lhaovo words meaning 'hard to breathe,' adapted into Burmese as Hsawlaw/Sawlaw. Unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Sawlaw",
-        "b_tarr": "Sawlaw",
-        "b_tarr_direct": "Sawlaw",
-        "b_tarr_hist": "Sawlaw",
-        "b_origin": "Sawlaw (constituent holding of Nandjan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsaw.law]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hsawlaw",
       "older_name_by_867": {
         "exists": false,
@@ -8562,26 +7105,17 @@
         {
           "form": "kao",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "nine"
         },
         {
           "form": "kang",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "guards or households"
         }
       ],
       "etymology_analysis": "Derived from Shan Kao Kang ('nine guards/households') and sinicized as Guogan (果敢) in the late 18th to 19th century CE; post-867 CE.",
-      "current_repo_state": {
-        "name": "Kokang",
-        "b_tarr": "Kokang",
-        "b_tarr_direct": "Kokang",
-        "b_tarr_hist": "Kokang",
-        "b_origin": "Kokang (constituent holding of Nandjan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔ.kaŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Chiefdom_of_Kokang",
       "older_name_by_867": {
         "exists": false,
@@ -8616,21 +7150,11 @@
         {
           "form": "Putao",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Putao local settlement name"
         }
       ],
       "etymology_analysis": "Local settlement name in northern Kachin State (historically centered in the Khamti Shan polity of Hkamti Long). Unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Putau",
-        "b_tarr": "Putau",
-        "b_tarr_direct": "Putau",
-        "b_tarr_hist": "Putau",
-        "b_origin": "Putau (Putao)",
-        "b_anachronism": "",
-        "b_ipa": "[pʊ.ˈtɔʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Putao,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -8665,26 +7189,17 @@
         {
           "form": "nok",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "outside"
         },
         {
           "form": "möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "country"
         }
       ],
       "etymology_analysis": "Derived from Shan ၼွၵ်ႈမိူင်း meaning 'outside the country,' adapted into Burmese as Nogmung/Nongmun. Unattested by 867 CE.",
-      "current_repo_state": {
-        "name": "Nongmun",
-        "b_tarr": "Nongmun",
-        "b_tarr_direct": "Nongmun",
-        "b_tarr_hist": "Nongmun",
-        "b_origin": "Nongmun (constituent holding of Putau)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈnɔŋ.mʊn]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nogmung",
       "older_name_by_867": {
         "exists": false,
@@ -8719,26 +7234,17 @@
         {
           "form": "Kawnglang",
           "language": "Rawang",
+          "language_code": "sit",
           "translation": "Kawnglang clan or founder name"
         },
         {
           "form": "hpu",
           "language": "Rawang",
+          "language_code": "sit",
           "translation": "village"
         }
       ],
       "etymology_analysis": "Derived from Rawang words meaning 'Kawnglang's village.' Unattested in <= 867 CE contemporary records.",
-      "current_repo_state": {
-        "name": "Hkawlanghu",
-        "b_tarr": "Hkawlanghu",
-        "b_tarr_direct": "Hkawlanghu",
-        "b_tarr_hist": "Hkawlanghu",
-        "b_origin": "Hkawlanghu (constituent holding of Putau)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈhkaw.laŋ.hʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kawnglanghpu",
       "older_name_by_867": {
         "exists": false,
@@ -8773,26 +7279,17 @@
         {
           "form": "Möng",
           "language": "Tai Nüa",
+          "language_code": "zha",
           "translation": "state or basin polity"
         },
         {
           "form": "Lem",
           "language": "Tai Nüa",
+          "language_code": "zha",
           "translation": "pointed or corner"
         }
       ],
       "etymology_analysis": "Tai Nüa polity name Möng Lem (sinicized as Menglian 孟连), first attested as a Yuan-era tusi in 1289 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Möng Lâm",
-        "b_tarr": "Möng Lâm",
-        "b_tarr_direct": "Möng Lâm",
-        "b_tarr_hist": "Möng Lâm",
-        "b_origin": "Möng Lâm (Moeng Laem)",
-        "b_anachronism": "",
-        "b_ipa": "[møːŋ laːm]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Lem",
       "older_name_by_867": {
         "exists": false,
@@ -8827,26 +7324,17 @@
         {
           "form": "Keng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "walled city"
         },
         {
           "form": "Tung",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "Tung toponymic root"
         }
       ],
       "etymology_analysis": "Shan/Tai Khün compound Keng Tung ('walled city of Tung,' classical Pali Tungapuri). Attested from the 13th century CE (1243 CE), post-867 CE.",
-      "current_repo_state": {
-        "name": "Keng Tung",
-        "b_tarr": "Keng Tung",
-        "b_tarr_direct": "Keng Tung",
-        "b_tarr_hist": "Keng Tung",
-        "b_origin": "Keng Tung (constituent holding of Möng Lâm)",
-        "b_anachronism": "",
-        "b_ipa": "[kɛŋ tʊŋ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kengtung_State",
       "older_name_by_867": {
         "exists": false,
@@ -8881,26 +7369,17 @@
         {
           "form": "Möng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "state or basin polity"
         },
         {
           "form": "Yang",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "Yang local toponym"
         }
       ],
       "etymology_analysis": "Shan state name Möng Yang (Burmese Mohnyin, Chinese Mengyang 孟养). First attested around the late 13th century CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Mong Yang",
-        "b_tarr": "Mong Yang",
-        "b_tarr_direct": "Mong Yang",
-        "b_tarr_hist": "Mong Yang",
-        "b_origin": "Mong Yang (constituent holding of Möng Lâm)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔŋ jaŋ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/M%C3%B6ng_Yang",
       "older_name_by_867": {
         "exists": false,
@@ -8935,26 +7414,17 @@
         {
           "form": "Asian",
           "language": "English",
+          "language_code": "eng",
           "translation": "of Asia"
         },
         {
           "form": "Wa",
           "language": "Wa",
+          "language_code": "sit",
           "translation": "Wa ethnic group"
         }
       ],
       "etymology_analysis": "Modern English-Wa ethnonymic designation for the Wa people of the Yunnan-Myanmar borderlands; unattested as a polity or settlement by 867 CE.",
-      "current_repo_state": {
-        "name": "Dschingmadjan",
-        "b_tarr": "Dschingmadjan",
-        "b_tarr_direct": "Dschingmadjan",
-        "b_tarr_hist": "Dschingmadjan",
-        "b_origin": "Dschingmadjan (Jingmadian)",
-        "b_anachronism": "",
-        "b_ipa": "[dʒɪŋ.mad.ˈjan]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wa_people",
       "older_name_by_867": {
         "exists": false,
@@ -8989,26 +7459,17 @@
         {
           "form": "Keng",
           "language": "Tai Nüa",
+          "language_code": "zha",
           "translation": "city or settlement"
         },
         {
           "form": "Ma",
           "language": "Tai Nüa",
+          "language_code": "zha",
           "translation": "horse"
         }
       ],
       "etymology_analysis": "Sinicization (耿马) of the Tai name meaning 'city of the white horse.' Attested from the early Ming period (late 14th century CE), post-867 CE.",
-      "current_repo_state": {
-        "name": "Gengma",
-        "b_tarr": "Gengma",
-        "b_tarr_direct": "Gengma",
-        "b_tarr_hist": "Gengma",
-        "b_origin": "Gengma (constituent holding of Dschingmadjan)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡɛŋ.ma]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gengma_Dai_and_Va_Autonomous_County",
       "older_name_by_867": {
         "exists": false,
@@ -9043,26 +7504,17 @@
         {
           "form": "lín",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "facing or overlooking"
         },
         {
           "form": "Cāng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "Lancang River abbreviation"
         }
       ],
       "etymology_analysis": "Chinese directional compound meaning 'facing the Lancang (Mekong) River,' coined in 1954 CE; post-867 CE.",
-      "current_repo_state": {
-        "name": "Mongyou",
-        "b_tarr": "Mongyou",
-        "b_tarr_direct": "Mongyou",
-        "b_tarr_hist": "Mongyou",
-        "b_origin": "Mongyou (constituent holding of Dschingmadjan)",
-        "b_anachronism": "",
-        "b_ipa": "[mɔŋ.ˈjɔʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lincang",
       "older_name_by_867": {
         "exists": false,
@@ -9097,26 +7549,17 @@
         {
           "form": "yǒng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "eternal"
         },
         {
           "form": "chāng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "prosperous"
         }
       ],
       "etymology_analysis": "Auspicious Han-era Chinese administrative name meaning 'eternal prosperity,' established in 69 CE as Yongchang Commandery in modern Baoshan, Yunnan.",
-      "current_repo_state": {
-        "name": "Jongtschang",
-        "b_tarr": "Jongtschang",
-        "b_tarr_direct": "Jongtschang",
-        "b_tarr_hist": "Jongtschang",
-        "b_origin": "Jongtschang (Yongchang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈjɔŋ.tʃaŋ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Baoshan,_Yunnan",
       "older_name_by_867": {
         "exists": false,
@@ -9151,26 +7594,17 @@
         {
           "form": "shèng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "victorious or superior"
         },
         {
           "form": "xiāng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "district"
         }
       ],
       "etymology_analysis": "Chinese administrative name ('superior/victorious district'). Although Yuan Shi (1370 CE) attributes Shengxiang Commandery to Nanzhao in the Tang period, no contemporary <= 867 CE text attests the name Shengxiang; the same site was contemporarily attested as Bonan County (博南縣) in 69 CE.",
-      "current_repo_state": {
-        "name": "Schengxiang",
-        "b_tarr": "Schengxiang",
-        "b_tarr_direct": "Schengxiang",
-        "b_tarr_hist": "Schengxiang",
-        "b_origin": "Schengxiang (constituent holding of Jongtschang)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʃɛŋk.sɪ.aŋ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://zh.wikipedia.org/zh-tw/%E8%83%9C%E4%B9%A1%E9%83%A1",
       "older_name_by_867": {
         "exists": true,
@@ -9207,26 +7641,17 @@
         {
           "form": "qìng",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "auspicious or celebration"
         },
         {
           "form": "diàn",
           "language": "Chinese",
+          "language_code": "zho",
           "translation": "upland basin"
         }
       ],
       "etymology_analysis": "Chinese administrative name ('auspicious basin') for the Yuan-era county in modern Fengqing County, Yunnan; first attested in 1327 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Tschingdian",
-        "b_tarr": "Tschingdian",
-        "b_tarr_direct": "Tschingdian",
-        "b_tarr_hist": "Tschingdian",
-        "b_origin": "Tschingdian (constituent holding of Jongtschang)",
-        "b_anachronism": "",
-        "b_ipa": "[tʃɪŋ.dɪ.ˈan]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://zh.wikipedia.org/zh-cn/%E5%87%A4%E5%BA%86%E5%8E%BF",
       "older_name_by_867": {
         "exists": false,
@@ -9261,21 +7686,11 @@
         {
           "form": "Bago",
           "language": "Mon",
+          "language_code": "mnw",
           "translation": "Pegu Mon toponym"
         }
       ],
       "etymology_analysis": "Burmese Pè-khu / English Pegu derives from the Mon toponym Bago. Despite late chronicle legends claiming 6th-9th century CE origins, contemporary evidence begins in 1195-1212 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Pegu",
-        "b_tarr": "Pegu",
-        "b_tarr_direct": "Pegu",
-        "b_tarr_hist": "Pegu",
-        "b_origin": "Pegu (Pegu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈpɛ.ɣʊ]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bago,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -9310,26 +7725,17 @@
         {
           "form": "sāra",
           "language": "Pali",
+          "language_code": "pli",
           "translation": "essence or excellence"
         },
         {
           "form": "vatī",
           "language": "Pali",
+          "language_code": "pli",
           "translation": "possessing"
         }
       ],
       "etymology_analysis": "Burmese adaptation of Pali Sārāvatī ('possessing essence/excellence'). Attested from the 16th century CE (1574 CE), predating King Tharrawaddy Min (who was named after the town); post-867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tharrawaddy,_Myanmar",
       "older_name_by_867": {
         "exists": false,
@@ -9364,21 +7770,11 @@
         {
           "form": "Phyu",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Pyu ethnonymic toponym"
         }
       ],
       "etymology_analysis": "Named after the Pyu people, though the modern town of Phyu itself is first documented in Hanthawaddy-era records around 1300 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pyu",
       "older_name_by_867": {
         "exists": false,
@@ -9413,26 +7809,17 @@
         {
           "form": "kyauk",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "stone"
         },
         {
           "form": "se",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "weir or dam"
         }
       ],
       "etymology_analysis": "Burmese compound meaning 'stone weir,' referring to its ancient irrigation works. Although Burman settlement likely began around 800 CE, contemporary written attestation begins in 12th-century CE inscriptions, post-867 CE.",
-      "current_repo_state": {
-        "name": "Kjauksê",
-        "b_tarr": "Kjauksê",
-        "b_tarr_direct": "Kjauksê",
-        "b_tarr_hist": "Kjauksê",
-        "b_origin": "Kjauksê (Kyaukse)",
-        "b_anachronism": "",
-        "b_ipa": "[kjɔʊk.ˈseː]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://www.britannica.com/place/Kyaukse",
       "older_name_by_867": {
         "exists": false,
@@ -9467,26 +7854,17 @@
         {
           "form": "Maing",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "city-state or basin"
         },
         {
           "form": "Maw",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "Mao or dazzling"
         }
       ],
       "etymology_analysis": "The post-867 CE name Maingmaw adapts Shan Möng Mao, applied to the 1st-millennium CE Pyu walled urban center (also called Pinle) in the Kyaukse plain; while the underlying Pyu site is archaeologically and numismatically attested before 867 CE, the Shan-derived name Maingmaw is unattested <= 867 CE.",
-      "current_repo_state": {
-        "name": "Maingmaw",
-        "b_tarr": "Maingmaw",
-        "b_tarr_direct": "Maingmaw",
-        "b_tarr_hist": "Maingmaw",
-        "b_origin": "Maingmaw (constituent holding of Kjauksê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmaɪŋ.maw]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Pyu_city-states",
       "older_name_by_867": {
         "exists": false,
@@ -9521,21 +7899,11 @@
         {
           "form": "Mekkhaya",
           "language": "Burmese",
+          "language_code": "mya",
           "translation": "Mekkhaya historical toponym"
         }
       ],
       "etymology_analysis": "Historical Burmese town in Kyaukse District, founded in the 13th century CE and attested in 1297 CE as a Myinsaing co-capital; post-867 CE.",
-      "current_repo_state": {
-        "name": "Mekkhaya",
-        "b_tarr": "Mekkhaya",
-        "b_tarr_direct": "Mekkhaya",
-        "b_tarr_hist": "Mekkhaya",
-        "b_origin": "Mekkhaya (constituent holding of Kjauksê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɛk.ha.ja]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mekkhaya",
       "older_name_by_867": {
         "exists": false,
@@ -9570,26 +7938,17 @@
         {
           "form": "Yawng",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "settlement or basin"
         },
         {
           "form": "Hwe",
           "language": "Shan",
+          "language_code": "shn",
           "translation": "stream valley"
         }
       ],
       "etymology_analysis": "Shan toponym Yawng Hwe (adapted into Burmese as Nyaungshwe). Founded in 1359 CE, post-867 CE.",
-      "current_repo_state": {
-        "name": "Yawnghwe",
-        "b_tarr": "Yawnghwe",
-        "b_tarr_direct": "Yawnghwe",
-        "b_tarr_hist": "Yawnghwe",
-        "b_origin": "Yawnghwe (constituent holding of Kjauksê)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈjawŋh.wɛ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yawnghwe",
       "older_name_by_867": {
         "exists": false,

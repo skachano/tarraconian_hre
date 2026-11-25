@@ -1,12 +1,28 @@
 {
   "metadata": {
     "empire": "e_kanem_bornu",
+    "scope": "e_kanem_bornu (170 baronies across k_darfur, k_hausaland, k_kanem, k_sao)",
+    "schema_version": "1.1.0",
     "baseline_year": 867,
-    "schema_version": "1.0",
+    "source_files": [
+      "data/ck3_title_tree.json",
+      "data/barony_holdings.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
     "schema_notes": {
-      "is_historical_867": "True if the barony name is contemporarily attested as a settlement, fortress, or administrative unit by <= 867 CE.",
-      "natural_proper_name": "True if the barony name directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds).",
-      "older_name_by_867": "Records attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name."
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "modern_name": "Clean modern/vanilla English display name of the audited settlement or holding.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "first_mention_year": "Integer year of earliest documented attestation (negative values = BCE; null if no pre-modern attestation was identified).",
+      "first_mention_attestation": "Summary of the earliest documented textual or epigraphic attestation (or unattested status).",
+      "is_historical_867": "Boolean: true iff first_mention_year is known and <= 867 CE for the audited barony name.",
+      "named_after_post_867_person": "Boolean: true if the title name incorporates a person, saint, or dynasty post-dating 867 CE.",
+      "eponym_details": "Explanatory text for any eponymous origin (both pre-867 and post-867 eponyms); null if not eponymous or unrecorded.",
+      "natural_proper_name": "Object indicating whether the title derives from a hydronym, oronym, choronym, or topographic_feature.",
+      "morphemes": "List of constituent roots/morphemes with form, language, language_code (ISO 639-3 / ISO 639-5), and English translation.",
+      "etymology_analysis": "Linguistic and historical etymology of the audited barony name.",
+      "older_name_by_867": "Object indicating whether a distinct older name strictly attested <= 867 CE exists for the same site or immediate predecessor.",
+      "source_url": "Primary reference URL (typically Wikipedia or regional historical encyclopedia), or null if unavailable."
     },
     "summary_statistics": {
       "total_baronies": 170,
@@ -48,26 +64,17 @@
         {
           "form": "Dār",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "abode, land, territory"
         },
         {
           "form": "al-Rīḥ",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the wind"
         }
       ],
       "etymology_analysis": "Audited from in-game name Dár al-Ríh (Arabic Dār al-Rīḥ, 'Land/Abode of the Wind'), a traditional regional designation in northern Darfur and northern Kordofan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Dâr-er-Rîch",
-        "b_tarr": "Dâr-er-Rîch",
-        "b_tarr_direct": "Dâr-er-Rîch",
-        "b_tarr_hist": "Dâr-er-Rîch",
-        "b_origin": "Dâr-er-Rîch (Dâr-er-Rîch (in-game: Dár al-Ríh))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dâr-er-Rîch).",
-        "b_ipa": "[daːr ɛr riːç]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -102,26 +109,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Māliḥa",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "salty, saline"
         }
       ],
       "etymology_analysis": "From Arabic al-Māliḥa ('the salty'), referring to the saline springs and volcanic crater lake in the Meidob region of North Darfur. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Malha",
-        "b_tarr": "Malha",
-        "b_tarr_direct": "Malha",
-        "b_tarr_hist": "Malha",
-        "b_origin": "Malha (constituent holding of Dâr-er-Rîch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmal.ha]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Al_Maliha",
       "older_name_by_867": {
         "exists": false,
@@ -156,21 +154,11 @@
         {
           "form": "Kerker",
           "language": "Local Sudanic / Nuba-Darfur",
+          "language_code": "ssa",
           "translation": "settlement name (unattested etymology)"
         }
       ],
       "etymology_analysis": "Modern settlement name in western Sudan (Darfur/Nuba region) with no documented pre-867 CE written attestation or established etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -205,21 +193,11 @@
         {
           "form": "Tagabo",
           "language": "Berti / Nilo-Saharan",
+          "language_code": "ssa",
           "translation": "hill/volcanic massif name"
         }
       ],
       "etymology_analysis": "Refers to the Tagabo Hills (also known as the Berti Hills or Kutum Volcanic Field) in North Darfur, Sudan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tagabo_Hills",
       "older_name_by_867": {
         "exists": false,
@@ -254,21 +232,11 @@
         {
           "form": "Teiga",
           "language": "Midob / Nilo-Saharan",
+          "language_code": "nub",
           "translation": "plateau/massif name"
         }
       ],
       "etymology_analysis": "Refers to the Teiga Plateau (Jebel Teiga) in North Darfur, Sudan, a sandstone plateau associated with Midob oral traditions. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Teiga",
-        "b_tarr": "Teiga",
-        "b_tarr_direct": "Teiga",
-        "b_tarr_hist": "Teiga",
-        "b_origin": "Teiga (constituent holding of Dâr-er-Rîch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɛɪ.ɣa]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -303,26 +271,17 @@
         {
           "form": "Dār",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "abode, land, territory"
         },
         {
           "form": "al-Saʿīd",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the south / upper land / fortunate"
         }
       ],
       "etymology_analysis": "Audited from in-game name Dár al-Saíd (Arabic Dār al-Saʿīd), a directional/regional designation for southern Darfur. Excluded from natural proper names as a directional/qualifier compound; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Dâr-es-Saît",
-        "b_tarr": "Dâr-es-Saît",
-        "b_tarr_direct": "Dâr-es-Saît",
-        "b_tarr_hist": "Dâr-es-Saît",
-        "b_origin": "Dâr-es-Saît (Dâr-es-Saît (in-game: Dár al-Saíd))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dâr-es-Saît).",
-        "b_ipa": "[daːr ɛs sa.ˈiːt]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -357,21 +316,11 @@
         {
           "form": "Kundi",
           "language": "Local Sudanic / Arabic",
+          "language_code": "ssa",
           "translation": "lake and settlement name"
         }
       ],
       "etymology_analysis": "Named after Lake Kundi, an endorheic perennial lake in South Darfur near the Bahr al-Arab. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Kundi",
-        "b_tarr": "Kundi",
-        "b_tarr_direct": "Kundi",
-        "b_tarr_hist": "Kundi",
-        "b_origin": "Kundi (constituent holding of Dâr-es-Saît)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊn.dɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Lake_Kundi",
       "older_name_by_867": {
         "exists": false,
@@ -406,21 +355,11 @@
         {
           "form": "Ḥurayz",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "little fortress / guarded place (diminutive of ḥirz)"
         }
       ],
       "etymology_analysis": "Arabic diminutive toponym (Ḥurayz) in Darfur, Sudan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Hurayz",
-        "b_tarr": "Hurayz",
-        "b_tarr_direct": "Hurayz",
-        "b_tarr_hist": "Hurayz",
-        "b_origin": "Hurayz (constituent holding of Dâr-es-Saît)",
-        "b_anachronism": "",
-        "b_ipa": "[hʊ.ˈraɪts]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -455,26 +394,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Fāshir",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "open court/square before the sultan's palace"
         }
       ],
       "etymology_analysis": "Audited from in-game name El-Fasher (Arabic al-Fāshir, 'the royal court/forecourt'). Founded in 1792 CE by Sultan Abd al-Rahman al-Rashid, well after 867 CE.",
-      "current_repo_state": {
-        "name": "Tûrre",
-        "b_tarr": "Tûrre",
-        "b_tarr_direct": "El-Fâscher",
-        "b_tarr_hist": "Tûrre",
-        "b_origin": "Tûrre (Tûrre (in-game: El-Fasher))",
-        "b_anachronism": "*El-Fasher* founded in **1792** by Sultan Abd al-Rahman al-Rashid as the mobile *fāshir* (court) of Darfur.. Resolved via **Turra** (`b_turra`, ancient Daju and Tunjur royal mountain stronghold in the Jebel Marra). $\\rightarrow$ **Magistrat v.",
-        "b_ipa": "[ˈtuː.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Fasher",
       "older_name_by_867": {
         "exists": false,
@@ -509,21 +439,11 @@
         {
           "form": "Turra",
           "language": "Fur",
+          "language_code": "fvr",
           "translation": "ancestral highland stronghold name"
         }
       ],
       "etymology_analysis": "Audited from actual barony Turra (not the Tarr fallback Alptiginstat). Turra is the ancestral heartland of the Fur and burial site of Keira sultans in the northern Jebel Marra (16th–17th centuries CE), with no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Alptiginstat",
-        "b_tarr": "Alptiginstat",
-        "b_tarr_direct": "Alptiginstat",
-        "b_tarr_hist": "Alptiginstat",
-        "b_origin": "Alptiginstat (constituent holding of Tûrre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈalp.tɪ.ɣɪn.stat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Turra",
       "older_name_by_867": {
         "exists": false,
@@ -558,26 +478,17 @@
         {
           "form": "Masa",
           "language": "Local Darfur / Arabic",
+          "language_code": "nic",
           "translation": "place/group qualifier"
         },
         {
           "form": "Fāshir",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "royal court/encampment"
         }
       ],
       "etymology_analysis": "Compound Darfur toponym incorporating Sudanese Arabic fāshir ('royal court/camp'), a term associated with the post-16th-century Darfur Sultanate. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -612,21 +523,11 @@
         {
           "form": "Ḥulayla",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "little village/settlement (diminutive of ḥilla)"
         }
       ],
       "etymology_analysis": "Sudanese Arabic diminutive of ḥilla ('village/quarter'), common in modern Darfur and Kordofan settlement names. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -661,21 +562,11 @@
         {
           "form": "Simiat",
           "language": "Fur / Local Sudanic",
+          "language_code": "fvr",
           "translation": "hill range name"
         }
       ],
       "etymology_analysis": "Refers to the Simiat Hills in North Darfur, Sudan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -710,26 +601,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Ubayyiḍ",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the little white (diminutive of abyaḍ)"
         }
       ],
       "etymology_analysis": "Audited from actual barony El Obeid (Arabic al-Ubayyiḍ, 'the little white'; in-game county-seat fallback Kordofan is first attested in 1672 CE by Evliya Çelebi). Modern city founded in 1821 CE; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Kordofân",
-        "b_tarr": "Kordofân",
-        "b_tarr_direct": "Kordofân",
-        "b_tarr_hist": "Kordofân",
-        "b_origin": "Kordofân (Kordofân (in-game: Kordofan))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kordofân).",
-        "b_ipa": "[kɔr.dɔ.ˈfaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/El_Obeid",
       "older_name_by_867": {
         "exists": false,
@@ -764,26 +646,17 @@
         {
           "form": "East",
           "language": "English",
+          "language_code": "eng",
           "translation": "eastern"
         },
         {
           "form": "Kordofan",
           "language": "Nubian / Arabic",
+          "language_code": "nub",
           "translation": "Kordofan region (possibly from Nubian kurta 'man')"
         }
       ],
       "etymology_analysis": "Audited from actual barony East Kordofan (not the Tarr fallback Thietmarstat). Directional English compound of Kordofan; excluded from natural proper names as a directional compound. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Thietmarstat",
-        "b_tarr": "Thietmarstat",
-        "b_tarr_direct": "Thietmarstat",
-        "b_tarr_hist": "Thietmarstat",
-        "b_origin": "Thietmarstat (constituent holding of Kordofân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈthɪ.ɛt.mar.stat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -818,21 +691,11 @@
         {
           "form": "Sidrah",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Christ's thorn jujube tree (Ziziphus spina-christi)"
         }
       ],
       "etymology_analysis": "From Arabic sidra ('jujube tree'), a common descriptive settlement name in North Kordofan. Excluded from natural proper names as a generic common noun; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Sidrah",
-        "b_tarr": "Sidrah",
-        "b_tarr_direct": "Sidrah",
-        "b_tarr_hist": "Sidrah",
-        "b_origin": "Sidrah (constituent holding of Kordofân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsɪ.drah]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -867,21 +730,11 @@
         {
           "form": "Shatt",
           "language": "Arabic / Daju",
+          "language_code": "ara",
           "translation": "Daju subgroup and hill settlement area in South Kordofan"
         }
       ],
       "etymology_analysis": "Refers to the Shatt people and Shatt Hills southwest of Kadugli in South Kordofan (in-game county-seat fallback South Kordofan is also post-867). No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Sût-Kordofân",
-        "b_tarr": "Sût-Kordofân",
-        "b_tarr_direct": "Sût-Kordofân",
-        "b_tarr_hist": "Sût-Kordofân",
-        "b_origin": "Sût-Kordofân (Sût-Kordofân (in-game: South Kordofan))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Sût-Kordofân).",
-        "b_ipa": "[suːt kɔr.dɔ.ˈfaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Shatt_people",
       "older_name_by_867": {
         "exists": false,
@@ -916,21 +769,11 @@
         {
           "form": "Liguri",
           "language": "Logorik (Daju)",
+          "language_code": "ssa",
           "translation": "Logorik / Liguri community and settlement"
         }
       ],
       "etymology_analysis": "Refers to the Liguri (Logorik), an Eastern Daju-speaking community in the Nuba Mountains of South Kordofan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Liguri",
-        "b_tarr": "Liguri",
-        "b_tarr_direct": "Liguri",
-        "b_tarr_hist": "Liguri",
-        "b_origin": "Liguri (constituent holding of Sût-Kordofân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈlɪ.ɣʊ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Logorik_language",
       "older_name_by_867": {
         "exists": false,
@@ -965,26 +808,17 @@
         {
           "form": "Central",
           "language": "English",
+          "language_code": "eng",
           "translation": "central"
         },
         {
           "form": "Kordofan",
           "language": "Nubian / Arabic",
+          "language_code": "nub",
           "translation": "Kordofan region"
         }
       ],
       "etymology_analysis": "Audited from in-game name Central Kordofan. Directional/locator English compound; excluded from natural proper names. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Middel-Kordofân",
-        "b_tarr": "Middel-Kordofân",
-        "b_tarr_direct": "Middel-Kordofân",
-        "b_tarr_hist": "Middel-Kordofân",
-        "b_origin": "Central savanna reach of the pre-867 Kordofan realm (in-game: Central Kordofan)",
-        "b_anachronism": "Colonial English descriptor Central Kordofan fails Burden of Proof on Antiquity; standardized to Middel-Kordofân.",
-        "b_ipa": "[mɪ.ˈdəl kɔr.dɔ.ˈfaːn]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1019,26 +853,17 @@
         {
           "form": "al-",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the"
         },
         {
           "form": "Nuhūd",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "rising hills/mounds"
         }
       ],
       "etymology_analysis": "Audited from actual barony En Nahud (Arabic al-Nuhūd; in-game county-seat fallback West Kordofan is also post-867). No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "West-Kordofân",
-        "b_tarr": "West-Kordofân",
-        "b_tarr_direct": "West-Kordofân",
-        "b_tarr_hist": "West-Kordofân",
-        "b_origin": "West-Kordofân (West-Kordofân (in-game: West Kordofan))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (West-Kordofân).",
-        "b_ipa": "[wɛst kɔr.dɔ.ˈfaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/En_Nahud",
       "older_name_by_867": {
         "exists": false,
@@ -1073,26 +898,17 @@
         {
           "form": "West",
           "language": "English",
+          "language_code": "eng",
           "translation": "western"
         },
         {
           "form": "Kordofan",
           "language": "Nubian / Arabic",
+          "language_code": "nub",
           "translation": "Kordofan region"
         }
       ],
       "etymology_analysis": "Audited from actual barony West Kordofan (not the Tarr fallback Baldarîchmarct). Directional English compound; excluded from natural proper names. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Baldarîchmarct",
-        "b_tarr": "Baldarîchmarct",
-        "b_tarr_direct": "West-Kordofân",
-        "b_tarr_hist": "West-Kordofân",
-        "b_origin": "Baldarîchmarct — Disambiguated capital foundation: Chartered market borough established by Baldarîch",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈbal.da.riːç.markt]",
-        "holding_type": "city",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1127,21 +943,11 @@
         {
           "form": "Lagowa",
           "language": "Local Kordofanian / Arabic",
+          "language_code": "nic",
           "translation": "town name (al-Laqāwa)"
         }
       ],
       "etymology_analysis": "Town in West Kordofan (Arabic al-Laqāwa) near the Nuba Hills, home to a Dar Fur Daju dialect community. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Lagowa",
-        "b_tarr": "Lagowa",
-        "b_tarr_direct": "Lagowa",
-        "b_tarr_hist": "Lagowa",
-        "b_origin": "Lagowa (constituent holding of West-Kordofân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈla.ɣɔ.wa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1176,26 +982,17 @@
         {
           "form": "Qūz",
           "language": "Chadian Arabic",
+          "language_code": "ara",
           "translation": "sand dune"
         },
         {
           "form": "Bayḍāʾ",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "white"
         }
       ],
       "etymology_analysis": "Audited from actual barony Goz Beïda (Arabic Qūz Bayḍāʾ, 'the white sand dune'), capital of the Sultanate of Dar Sila in eastern Chad. Descriptive common-noun compound; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Dâr-Sîle",
-        "b_tarr": "Dâr-Sîle",
-        "b_tarr_direct": "Dâr-Sîle",
-        "b_tarr_hist": "Dâr-Sîle",
-        "b_origin": "Dâr-Sîle (Dár Sila)",
-        "b_anachronism": "",
-        "b_ipa": "[daːr ˈsiː.lɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Goz_Be%C3%AFda",
       "older_name_by_867": {
         "exists": false,
@@ -1230,26 +1027,17 @@
         {
           "form": "Dār",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "abode, land, territory"
         },
         {
           "form": "Sīlā",
           "language": "Daju / Local",
+          "language_code": "ssa",
           "translation": "Sila region/people"
         }
       ],
       "etymology_analysis": "Arabic Dār Sīlā ('Land of Sila'), denoting the Daju sultanate and region in southeastern Chad. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Dar_Sila",
       "older_name_by_867": {
         "exists": false,
@@ -1284,26 +1072,17 @@
         {
           "form": "East",
           "language": "English",
+          "language_code": "eng",
           "translation": "eastern"
         },
         {
           "form": "Sila",
           "language": "Daju / Local",
+          "language_code": "ssa",
           "translation": "Sila region"
         }
       ],
       "etymology_analysis": "Directional English compound of Sila (Dar Sila). Excluded from natural proper names as a directional compound; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1338,21 +1117,11 @@
         {
           "form": "Fellata",
           "language": "Kanuri / Sudanese Arabic",
+          "language_code": "kau",
           "translation": "Fulani (Fula) people"
         }
       ],
       "etymology_analysis": "From Kanuri/Arabic Fallāta/Fellata, the ethnonym for Fulani (Fula) communities settled in Chad and Sudan. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Fellâte",
-        "b_tarr": "Fellâte",
-        "b_tarr_direct": "Fellâte",
-        "b_tarr_hist": "Fellâte",
-        "b_origin": "Fellâte (Fellata)",
-        "b_anachronism": "",
-        "b_ipa": "[fɛ.ˈʎaː.tə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fula_people",
       "older_name_by_867": {
         "exists": false,
@@ -1387,21 +1156,11 @@
         {
           "form": "Ngama",
           "language": "Local Chadian",
+          "language_code": "cdc",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Town in Chad (Hadjer-Lamis / Chari-Baguirmi area). No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Ngama",
-        "b_tarr": "Ngama",
-        "b_tarr_direct": "Ngama",
-        "b_tarr_hist": "Ngama",
-        "b_origin": "Ngama (constituent holding of Fellâte)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈŋa.ma]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ngama",
       "older_name_by_867": {
         "exists": false,
@@ -1436,21 +1195,11 @@
         {
           "form": "Lairi",
           "language": "Local Chadian",
+          "language_code": "cdc",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Settlement name in central/eastern Chad with no documented written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1485,21 +1234,11 @@
         {
           "form": "Yao",
           "language": "Bilala / Nilo-Saharan",
+          "language_code": "ssa",
           "translation": "capital town near Lake Fitri"
         }
       ],
       "etymology_analysis": "Audited from actual barony Yao (b_yao_fitri; capital of the Bilala Sultanate of Fitri from the 17th century CE). No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Fîtri",
-        "b_tarr": "Fîtri",
-        "b_tarr_direct": "Fîtri",
-        "b_tarr_hist": "Fîtri",
-        "b_origin": "Fîtri (Fitri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈfiː.trɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yao,_Chad",
       "older_name_by_867": {
         "exists": false,
@@ -1534,21 +1273,11 @@
         {
           "form": "Kouki",
           "language": "Local Chadian",
+          "language_code": "cdc",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Settlement in central Chad (Fitri/Batha region) with no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Kouki",
-        "b_tarr": "Kouki",
-        "b_tarr_direct": "Kouki",
-        "b_tarr_hist": "Kouki",
-        "b_origin": "Kouki (constituent holding of Fîtri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔʊ.kɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1583,21 +1312,11 @@
         {
           "form": "Gasga",
           "language": "Local Chadian",
+          "language_code": "cdc",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Settlement in central Chad (Fitri/Batha region) with no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1632,26 +1351,17 @@
         {
           "form": "Baḥr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "sea, large river/watercourse"
         },
         {
           "form": "al-Ghazāl",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "the gazelle"
         }
       ],
       "etymology_analysis": "Audited from in-game name Ghazzal (Arabic Baḥr al-Ghazāl, 'River/Sea of the Gazelle'), a major ephemeral wadi running northeast from Lake Chad toward the Bodélé Depression. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Gassâl",
-        "b_tarr": "Gassâl",
-        "b_tarr_direct": "Gassâl",
-        "b_tarr_hist": "Gassâl",
-        "b_origin": "Gassâl (Ghazzal)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡa.ˈsaːl]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bahr_el-Ghazal_(wadi_in_Chad)",
       "older_name_by_867": {
         "exists": false,
@@ -1686,21 +1396,11 @@
         {
           "form": "Wagna",
           "language": "Local Chadian",
+          "language_code": "cdc",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Settlement name in central Chad with no documented written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1735,21 +1435,11 @@
         {
           "form": "Manga",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Manga subgroup / place name"
         }
       ],
       "etymology_analysis": "Toponym in the Chad Basin associated with the Kanuri-speaking Manga. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Manga",
-        "b_tarr": "Manga",
-        "b_tarr_direct": "Manga",
-        "b_tarr_hist": "Manga",
-        "b_origin": "Manga (constituent holding of Gassâl)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ŋa]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1784,21 +1474,11 @@
         {
           "form": "Kadam",
           "language": "Maba / Local Chadian",
+          "language_code": "ssa",
           "translation": "mountain/massif name"
         }
       ],
       "etymology_analysis": "Refers to Mount Kadam / Kadama in the Wadai highlands of eastern Chad (noted in Wadai history before the capital moved to Wara). No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Kadâm",
-        "b_tarr": "Kadâm",
-        "b_tarr_direct": "Kadâm",
-        "b_tarr_hist": "Kadâm",
-        "b_origin": "Kadâm (Kadam)",
-        "b_anachronism": "",
-        "b_ipa": "[ka.ˈdaːm]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1833,26 +1513,17 @@
         {
           "form": "Kadam",
           "language": "Maba / Local Chadian",
+          "language_code": "ssa",
           "translation": "Kadam massif"
         },
         {
           "form": "West",
           "language": "English",
+          "language_code": "eng",
           "translation": "western"
         }
       ],
       "etymology_analysis": "Audited from in-game name Kadam-West. Directional English compound; excluded from natural proper names. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "West-Kadâm",
-        "b_tarr": "West-Kadâm",
-        "b_tarr_direct": "West-Kadâm",
-        "b_tarr_hist": "West-Kadâm",
-        "b_origin": "Western slopes of the pre-867 Mount Kadam massif (in-game: Kadam-West)",
-        "b_anachronism": "Colonial English descriptor Kadam-West fails Burden of Proof on Antiquity; standardized to West-Kadâm.",
-        "b_ipa": "[wɛst ka.ˈdaːm]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1887,26 +1558,17 @@
         {
           "form": "Kadam",
           "language": "Maba / Local Chadian",
+          "language_code": "ssa",
           "translation": "Kadam massif"
         },
         {
           "form": "South",
           "language": "English",
+          "language_code": "eng",
           "translation": "southern"
         }
       ],
       "etymology_analysis": "Audited from actual barony Kadam-South (not the Tarr fallback Goukounistat). Directional English compound; excluded from natural proper names. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Goukounistat",
-        "b_tarr": "Goukounistat",
-        "b_tarr_direct": "Goukounistat",
-        "b_tarr_hist": "Goukounistat",
-        "b_origin": "Goukounistat (constituent holding of Kadâm)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡɔʊ.kɔʊ.nɪs.tat]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -1941,21 +1603,11 @@
         {
           "form": "Wārā",
           "language": "Maba / Arabic",
+          "language_code": "ssa",
           "translation": "Ouara (walled capital of Wadai)"
         }
       ],
       "etymology_analysis": "Audited from actual barony Ouara/Wara (b_wara), built c. 1635 CE by Abd al-Karim as the capital of the Wadai Sultanate and abandoned in the 19th century when its wells dried up. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Wadâi",
-        "b_tarr": "Wadâi",
-        "b_tarr_direct": "Wadâi",
-        "b_tarr_hist": "Wadâi",
-        "b_origin": "Wadâi (Wadaï)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwa.daː.ɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ouara",
       "older_name_by_867": {
         "exists": false,
@@ -1990,21 +1642,11 @@
         {
           "form": "Absha",
           "language": "Chadian Arabic / Maba",
+          "language_code": "ara",
           "translation": "Abéché (19th-century Wadai capital)"
         }
       ],
       "etymology_analysis": "City in eastern Chad (Arabic Absha) that replaced Ouara as capital of the Wadai Sultanate around 1850 CE. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Abêche",
-        "b_tarr": "Abêche",
-        "b_tarr_direct": "Abêche",
-        "b_tarr_hist": "Abêche",
-        "b_origin": "Abêche (constituent holding of Wadâi)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ˈbeː.çə]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ab%C3%A9ch%C3%A9",
       "older_name_by_867": {
         "exists": false,
@@ -2039,21 +1681,11 @@
         {
           "form": "Waddāy",
           "language": "Arabic / Maba",
+          "language_code": "ara",
           "translation": "Wadai (Ouaddaï) region"
         }
       ],
       "etymology_analysis": "Audited from actual barony Wadai (not the Tarr fallback Adamkirchen). Regional choronym (Arabic Waddāy / French Ouaddaï) for the eastern Chadian highlands and sultanate founded c. 1635 CE. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Adamkirchen",
-        "b_tarr": "Adamkirchen",
-        "b_tarr_direct": "Wadâi",
-        "b_tarr_hist": "Wadâi",
-        "b_origin": "Torfukirchen — Disambiguated capital foundation: Parish collegiate church founded by Adam",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈa.dam.kɪr.xən]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wadai_Sultanate",
       "older_name_by_867": {
         "exists": false,
@@ -2088,26 +1720,17 @@
         {
           "form": "ʿAyn",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "spring, water source"
         },
         {
           "form": "Faraḥ",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "joy, gladness"
         }
       ],
       "etymology_analysis": "Audited from in-game name Ayn Farah (Arabic ʿAyn Faraḥ, 'Spring of Joy'), an archaeological site and spring in the Furnung mountains of North Darfur associated with the Tunjur ruler Shau Dorshid. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Aîn-Farâch",
-        "b_tarr": "Aîn-Farâch",
-        "b_tarr_direct": "Aîn-Farâch",
-        "b_tarr_hist": "Aîn-Farâch",
-        "b_origin": "Aîn-Farâch (Aîn-Farâch (in-game: Ayn Farah))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Aîn-Farâch).",
-        "b_ipa": "[a.ˈiːn fa.ˈraːx]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ain_Farah",
       "older_name_by_867": {
         "exists": false,
@@ -2142,21 +1765,11 @@
         {
           "form": "Kubayh",
           "language": "Fur / Arabic",
+          "language_code": "fvr",
           "translation": "Kobbei (oasis caravan town)"
         }
       ],
       "etymology_analysis": "Deserted oasis town (Kobbei / Kubayh) in North Darfur, peak trading hub of the Darfur Sultanate in the 18th–19th centuries CE along the Darb el-Arba'in route to Asyut. No written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Kubayh",
-        "b_tarr": "Kubayh",
-        "b_tarr_direct": "Kubayh",
-        "b_tarr_hist": "Kubayh",
-        "b_origin": "Kubayh (constituent holding of Aîn-Farâch)",
-        "b_anachronism": "",
-        "b_ipa": "[kʊ.ˈbaɪh]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kobbei",
       "older_name_by_867": {
         "exists": false,
@@ -2191,21 +1804,11 @@
         {
           "form": "Uri",
           "language": "Fur / Tunjur",
+          "language_code": "fvr",
           "translation": "Uri (walled highland capital)"
         }
       ],
       "etymology_analysis": "Ruined walled city in northern Darfur, first capital of the Tunjur kingdom before Ain Farah. Archaeological remains date from c. 1200 CE onward; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Uri",
-        "b_tarr": "Uri",
-        "b_tarr_direct": "Uri",
-        "b_tarr_hist": "Uri",
-        "b_origin": "Uri (constituent holding of Aîn-Farâch)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʊ.rɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tunjur_kingdom",
       "older_name_by_867": {
         "exists": false,
@@ -2240,21 +1843,11 @@
         {
           "form": "Masalit",
           "language": "Masalit / Arabic",
+          "language_code": "ara",
           "translation": "ethnonym of the Masalit people"
         }
       ],
       "etymology_analysis": "Derived from the ethnonym of the Masalit, a Nilo-Saharan (Maban-speaking) people of West Darfur and eastern Chad (Dar Masalit).",
-      "current_repo_state": {
-        "name": "Masalît",
-        "b_tarr": "Masalît",
-        "b_tarr_direct": "Masalît",
-        "b_tarr_hist": "Masalît",
-        "b_origin": "Masalît (Masalît (in-game: Masalit))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Masalît).",
-        "b_ipa": "[ma.za.ˈliːt]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Masalit_people",
       "older_name_by_867": {
         "exists": false,
@@ -2289,26 +1882,17 @@
         {
           "form": "Wādī",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "seasonal watercourse / valley"
         },
         {
           "form": "Azwa",
           "language": "Local / Fur-Arabic",
+          "language_code": "nic",
           "translation": "proper name of the wadi (Azum/Azwa)"
         }
       ],
       "etymology_analysis": "Arabic wādī ('seasonal river valley') combined with the local proper hydronym Azwa (modern Wadi Azum), draining western Darfur.",
-      "current_repo_state": {
-        "name": "Wâdî Azwa",
-        "b_tarr": "Wâdî Azwa",
-        "b_tarr_direct": "Wâdî Azwa",
-        "b_tarr_hist": "Wâdî Azwa",
-        "b_origin": "Wâdî Azwa (constituent holding of Masalît)",
-        "b_anachronism": "",
-        "b_ipa": "[waː.ˈdiː ˈats.wa]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Darfur",
       "older_name_by_867": {
         "exists": false,
@@ -2343,21 +1927,11 @@
         {
           "form": "kebi kebbia",
           "language": "Fur",
+          "language_code": "fvr",
           "translation": "they threw away their shields"
         }
       ],
       "etymology_analysis": "According to Fur tradition, the name derives from the Fur phrase kebi kebbia ('they threw away their shields'), commemorating a Darfuri victory over Wadai under Ahmad Bukr (c. 1700–1720).",
-      "current_repo_state": {
-        "name": "Kabkabîya",
-        "b_tarr": "Kabkabîya",
-        "b_tarr_direct": "Kabkabîya",
-        "b_tarr_hist": "Kabkabîya",
-        "b_origin": "Kabkabîya (constituent holding of Masalît)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkab.ka.biː.ja]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kabkabiya_District",
       "older_name_by_867": {
         "exists": false,
@@ -2392,21 +1966,11 @@
         {
           "form": "Qimr",
           "language": "Arabic / Taman",
+          "language_code": "ara",
           "translation": "ethnonym of the Kimr/Gimr people"
         }
       ],
       "etymology_analysis": "The in-game barony name Qimr (repo 'Kîmer') refers to the Kimr/Gimr (Dar Qimr), a Taman-speaking group in West Darfur and Chad; Tureiq is a local Sudanese Arabic toponym.",
-      "current_repo_state": {
-        "name": "Kîmer",
-        "b_tarr": "Kîmer",
-        "b_tarr_direct": "Kîmer",
-        "b_tarr_hist": "Kîmer",
-        "b_origin": "Kîmer (Kîmer (in-game: Qimr))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kîmer).",
-        "b_ipa": "[ˈkiː.mər]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kimr_people",
       "older_name_by_867": {
         "exists": false,
@@ -2441,21 +2005,11 @@
         {
           "form": "Qimr",
           "language": "Arabic / Taman",
+          "language_code": "ara",
           "translation": "ethnonym of the Kimr/Gimr people"
         }
       ],
       "etymology_analysis": "Named after the Kimr (Gimr/Qimr) ethnic group of West Darfur and eastern Chad, who speak a dialect of Taman.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kimr_people",
       "older_name_by_867": {
         "exists": false,
@@ -2490,21 +2044,11 @@
         {
           "form": "Tama",
           "language": "Tama",
+          "language_code": "ssa",
           "translation": "ethnonym of the Tama people"
         }
       ],
       "etymology_analysis": "Derived from the ethnonym of the Tama people, a Nilo-Saharan (Taman-speaking) community inhabiting eastern Chad and western Darfur.",
-      "current_repo_state": {
-        "name": "Tama",
-        "b_tarr": "Tama",
-        "b_tarr_direct": "Tama",
-        "b_tarr_hist": "Tama",
-        "b_origin": "Tama (constituent holding of Kîmer)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈta.ma]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tama_people",
       "older_name_by_867": {
         "exists": false,
@@ -2539,26 +2083,17 @@
         {
           "form": "Umm",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mother of / place characterized by"
         },
         {
           "form": "Gafala",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "local descriptive element"
         }
       ],
       "etymology_analysis": "Sudanese Arabic toponymic compound with umm ('mother of', common in Sudanese place names); the repo state maps it to 'Ôst-Dârfûr' (in-game: East Darfur).",
-      "current_repo_state": {
-        "name": "Ôst-Dârfûr",
-        "b_tarr": "Ôst-Dârfûr",
-        "b_tarr_direct": "Ôst-Dârfûr",
-        "b_tarr_hist": "Ôst-Dârfûr",
-        "b_origin": "Ôst-Dârfûr (Ôst-Dârfûr (in-game: East Darfur))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ôst-Dârfûr).",
-        "b_ipa": "[oːst daːr.ˈfuːr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -2593,21 +2128,11 @@
         {
           "form": "Ghubaysh",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "diminutive of aghbash (dusty/dusk-colored)"
         }
       ],
       "etymology_analysis": "Sudanese Arabic toponym (غبيش), related to the diminutive pattern from ghabash ('dust-colored / twilight').",
-      "current_repo_state": {
-        "name": "Ghubaysch",
-        "b_tarr": "Ghubaysch",
-        "b_tarr_direct": "Ghubaysch",
-        "b_tarr_hist": "Ghubaysch",
-        "b_origin": "Ghubaysch (constituent holding of Ôst-Dârfûr)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡhʊ.ˈbaɪʃ]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ghubaysh_District",
       "older_name_by_867": {
         "exists": false,
@@ -2642,26 +2167,17 @@
         {
           "form": "Umm",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "mother of / place of"
         },
         {
           "form": "Keddada",
           "language": "Sudanese Arabic",
+          "language_code": "ara",
           "translation": "local descriptive element (from kaddād)"
         }
       ],
       "etymology_analysis": "Sudanese Arabic compound toponym (أم كدادة) formed with umm ('mother of / place of').",
-      "current_repo_state": {
-        "name": "Umm Kedada",
-        "b_tarr": "Umm Kedada",
-        "b_tarr_direct": "Umm Kedada",
-        "b_tarr_hist": "Umm Kedada",
-        "b_origin": "Umm Kedada (constituent holding of Ôst-Dârfûr)",
-        "b_anachronism": "",
-        "b_ipa": "[ʊm ˈkɛ.da.da]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Umm_Keddada",
       "older_name_by_867": {
         "exists": false,
@@ -2696,31 +2212,23 @@
         {
           "form": "East",
           "language": "English",
+          "language_code": "eng",
           "translation": "eastern (directional qualifier)"
         },
         {
           "form": "Dār",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "abode / homeland"
         },
         {
           "form": "Fūr",
           "language": "Fur / Arabic",
+          "language_code": "fvr",
           "translation": "Fur people"
         }
       ],
       "etymology_analysis": "Directional compound ('East Darfur', Arabic Sharq Dārfūr) created in 2012 from Dār Fūr ('abode of the Fur'); the repo state substitutes an ahistorical German-style name 'Wiltrudstat'.",
-      "current_repo_state": {
-        "name": "Wiltrudstat",
-        "b_tarr": "Wiltrudstat",
-        "b_tarr_direct": "Ôst-Dârfûr",
-        "b_tarr_hist": "Ôst-Dârfûr",
-        "b_origin": "Wiltrudstat — Disambiguated capital foundation: Municipal foundation chartered by Wiltrud",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈwɪl.trʊd.stat]",
-        "holding_type": "city",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/East_Darfur",
       "older_name_by_867": {
         "exists": false,
@@ -2755,21 +2263,11 @@
         {
           "form": "Gobir",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "proper name of the Hausa city-state"
         }
       ],
       "etymology_analysis": "Indigenous Hausa polity name for one of the seven Hausa Bakwai states, historically centered at Alkalawa and later Tibiri/Sabon Birni.",
-      "current_repo_state": {
-        "name": "Gobir",
-        "b_tarr": "Gobir",
-        "b_tarr_direct": "Gobir",
-        "b_tarr_hist": "Gobir",
-        "b_origin": "Gobir (Gobir (in-game: Gobir))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Gobir).",
-        "b_ipa": "[ˈɡɔ.bɪr]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gobir",
       "older_name_by_867": {
         "exists": false,
@@ -2804,26 +2302,17 @@
         {
           "form": "Gobir",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "Hausa state of Gobir"
         },
         {
           "form": "East",
           "language": "English",
+          "language_code": "eng",
           "translation": "eastern (directional qualifier)"
         }
       ],
       "etymology_analysis": "In-game directional compound of Gobir ('Gobir-East'); the repo state maps it to 'Rîme' (Rima River), neither of which is attested in writing <= 867 CE.",
-      "current_repo_state": {
-        "name": "Rîme",
-        "b_tarr": "Rîme",
-        "b_tarr_direct": "Rîme",
-        "b_tarr_hist": "Rîme",
-        "b_origin": "Ancient pre-867 Rima River basin in Hausaland (in-game: Gobir-East)",
-        "b_anachronism": "Administrative sector Gobir-East fails Burden of Proof on Antiquity; resolved to ancient Rima river basin.",
-        "b_ipa": "[ˈriː.mə]",
-        "holding_type": "city",
-        "category": "option_b_hydronym"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rima_River",
       "older_name_by_867": {
         "exists": false,
@@ -2858,26 +2347,17 @@
         {
           "form": "Birni",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "walled town / city"
         },
         {
           "form": "Konni",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "local proper name"
         }
       ],
       "etymology_analysis": "Hausa compound birnin ('walled city of') + Konni, a historic Hausa border town in Niger's Tahoua Region.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Birni-N%27Konni",
       "older_name_by_867": {
         "exists": false,
@@ -2912,21 +2392,11 @@
         {
           "form": "Tahoua",
           "language": "Hausa / Tuareg",
+          "language_code": "hau",
           "translation": "local settlement name"
         }
       ],
       "etymology_analysis": "Settlement name in the Ader region of Niger (Hausa/Tuareg contact zone), serving as the modern capital of Tahoua Region.",
-      "current_repo_state": {
-        "name": "Tahoue",
-        "b_tarr": "Tahoue",
-        "b_tarr_direct": "Tahoue",
-        "b_tarr_hist": "Tahoue",
-        "b_origin": "Tahoue (Tahoue (in-game: Tahoua))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Tahoue).",
-        "b_ipa": "[ta.ˈhɔʊ.ɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tahoua",
       "older_name_by_867": {
         "exists": false,
@@ -2961,21 +2431,11 @@
         {
           "form": "Ader",
           "language": "Tuareg / Hausa",
+          "language_code": "ber",
           "translation": "regional landscape name (Ader / Adar)"
         }
       ],
       "etymology_analysis": "Regional choronym (Ader / Adar) for the plateau and valley landscape around Ader Doutchi in south-central Niger.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://de.wikipedia.org/wiki/Ader_(Niger)",
       "older_name_by_867": {
         "exists": false,
@@ -3010,21 +2470,11 @@
         {
           "form": "Matankari",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "settlement name"
         }
       ],
       "etymology_analysis": "Hausa settlement name in the Dallol Maouri valley of Niger, historically the seat of the Arewa polity prior to colonial relocation.",
-      "current_repo_state": {
-        "name": "Matankari",
-        "b_tarr": "Matankari",
-        "b_tarr_direct": "Matankari",
-        "b_tarr_hist": "Matankari",
-        "b_origin": "Matankari (constituent holding of Tahoue)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ta.ŋka.rɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Matankari",
       "older_name_by_867": {
         "exists": false,
@@ -3059,21 +2509,11 @@
         {
           "form": "Fika",
           "language": "Bole",
+          "language_code": "cdc",
           "translation": "town and emirate name"
         }
       ],
       "etymology_analysis": "Toponym of the Bole-speaking Fika Emirate in Yobe State, northeastern Nigeria, established at its present site in 1805.",
-      "current_repo_state": {
-        "name": "Fike",
-        "b_tarr": "Fike",
-        "b_tarr_direct": "Fike",
-        "b_tarr_hist": "Fike",
-        "b_origin": "Fike (Fike (in-game: Fika))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Fike).",
-        "b_ipa": "[ˈfɪ.kə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Fika,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -3108,21 +2548,11 @@
         {
           "form": "Gombe",
           "language": "Fulfulde / Local",
+          "language_code": "ful",
           "translation": "emirate and town name"
         }
       ],
       "etymology_analysis": "Name of the Fulani emirate founded in 1804 CE by Buba Yero in northeastern Nigeria.",
-      "current_repo_state": {
-        "name": "Gombe",
-        "b_tarr": "Gombe",
-        "b_tarr_direct": "Gombe",
-        "b_tarr_hist": "Gombe",
-        "b_origin": "Gombe (constituent holding of Fike)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡɔm.bə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gombe_Emirate",
       "older_name_by_867": {
         "exists": false,
@@ -3157,21 +2587,11 @@
         {
           "form": "Gongola",
           "language": "Local (Chadic / Adamawa)",
+          "language_code": "nic",
           "translation": "river name"
         }
       ],
       "etymology_analysis": "Indigenous hydronym of the Gongola River, the principal tributary of the Benue River in northeastern Nigeria.",
-      "current_repo_state": {
-        "name": "Gongola",
-        "b_tarr": "Gongola",
-        "b_tarr_direct": "Gongola",
-        "b_tarr_hist": "Gongola",
-        "b_origin": "Gongola (constituent holding of Fike)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡɔ.ŋɔ.la]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gongola_River",
       "older_name_by_867": {
         "exists": false,
@@ -3206,21 +2626,11 @@
         {
           "form": "Yerwa",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "goodness / peace / blessing"
         }
       ],
       "etymology_analysis": "Kanuri name Yerwa ('goodness/prosperity') given to the new Bornu capital founded in 1907; the repo state maps it to 'Kaghe' (in-game: Kagha, cf. Kaga LGA in Borno).",
-      "current_repo_state": {
-        "name": "Kaghe",
-        "b_tarr": "Kaghe",
-        "b_tarr_direct": "Kaghe",
-        "b_tarr_hist": "Kaghe",
-        "b_origin": "Kaghe (Kaghe (in-game: Kagha))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kaghe).",
-        "b_ipa": "[ˈkaɡ.hɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Maiduguri",
       "older_name_by_867": {
         "exists": false,
@@ -3255,21 +2665,11 @@
         {
           "form": "Galaga",
           "language": "Kanuri / Local",
+          "language_code": "kau",
           "translation": "local settlement name"
         }
       ],
       "etymology_analysis": "Local settlement toponym in the Borno region of northeastern Nigeria without documented pre-867 written history.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3304,21 +2704,11 @@
         {
           "form": "Viu",
           "language": "Babur / Bura",
+          "language_code": "cdc",
           "translation": "high"
         }
       ],
       "etymology_analysis": "Originally called Viu in the Babur/Bura language, meaning 'high', referring to the elevated Biu Plateau town in Borno State.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Biu,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -3353,21 +2743,11 @@
         {
           "form": "Margi",
           "language": "Margi",
+          "language_code": "cdc",
           "translation": "ethnonym of the Marghi people"
         }
       ],
       "etymology_analysis": "Derived from the ethnonym of the Marghi (Margi), a Chadic-speaking people of northeastern Nigeria and adjacent Cameroon/Chad.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Marghi_people",
       "older_name_by_867": {
         "exists": false,
@@ -3402,21 +2782,11 @@
         {
           "form": "Daura",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "proper name of the city and emirate"
         }
       ],
       "etymology_analysis": "Historic Hausa city-state in Katsina State, northern Nigeria, traditionally associated in Hausa legend with Queen Daurama and Bayajidda.",
-      "current_repo_state": {
-        "name": "Daure",
-        "b_tarr": "Daure",
-        "b_tarr_direct": "Daure",
-        "b_tarr_hist": "Daure",
-        "b_origin": "Daure (Daure (in-game: Daura))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Daure).",
-        "b_ipa": "[ˈdɔʊ.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Daura",
       "older_name_by_867": {
         "exists": false,
@@ -3451,21 +2821,11 @@
         {
           "form": "Zinder",
           "language": "Hausa / Kanuri",
+          "language_code": "hau",
           "translation": "city name (locally Damagaram)"
         }
       ],
       "etymology_analysis": "Name of the historic city in southern Niger (known locally as Damagaram), which became a major Sahelian center in the 18th–19th centuries.",
-      "current_repo_state": {
-        "name": "Zinder",
-        "b_tarr": "Zinder",
-        "b_tarr_direct": "Zinder",
-        "b_tarr_hist": "Zinder",
-        "b_origin": "Zinder (constituent holding of Daure)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtsɪn.dər]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zinder",
       "older_name_by_867": {
         "exists": false,
@@ -3500,21 +2860,11 @@
         {
           "form": "Kano",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "proper name of the city and kingdom"
         }
       ],
       "etymology_analysis": "Indigenous Hausa name for the major Hausa city-state centered around Dala Hill in northern Nigeria.",
-      "current_repo_state": {
-        "name": "Kanô",
-        "b_tarr": "Kanô",
-        "b_tarr_direct": "Kanô",
-        "b_tarr_hist": "Kanô",
-        "b_origin": "Kanô (Kanô (in-game: Kano))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kanô).",
-        "b_ipa": "[ka.ˈnoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kano_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -3549,21 +2899,11 @@
         {
           "form": "Haɗejiya",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "town name"
         }
       ],
       "etymology_analysis": "Hausa town and emirate in Jigawa State, northern Nigeria, historically linked to the Hausa Bakwai state of Biram.",
-      "current_repo_state": {
-        "name": "Hadejia",
-        "b_tarr": "Hadejia",
-        "b_tarr_direct": "Hadejia",
-        "b_tarr_hist": "Hadejia",
-        "b_origin": "Hadejia (constituent holding of Kanô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈha.dɛ.jɪ.a]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Hadejia",
       "older_name_by_867": {
         "exists": false,
@@ -3598,26 +2938,17 @@
         {
           "form": "Kufan",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "ruins / abandoned site of"
         },
         {
           "form": "Kanawa",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "people of Kano"
         }
       ],
       "etymology_analysis": "Hausa phrase meaning 'ruins of the Kano people', an archaeological walled site in southern Niger linked in oral tradition to early Hausa/Kano origins.",
-      "current_repo_state": {
-        "name": "Kufan Kanawa",
-        "b_tarr": "Kufan Kanawa",
-        "b_tarr_direct": "Kufan Kanawa",
-        "b_tarr_hist": "Kufan Kanawa",
-        "b_origin": "Kufan Kanawa (constituent holding of Kanô)",
-        "b_anachronism": "",
-        "b_ipa": "[kʊ.ˈfan ˈka.na.wa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -3652,21 +2983,11 @@
         {
           "form": "Katagum",
           "language": "Hausa / Fulfulde",
+          "language_code": "hau",
           "translation": "town and emirate name"
         }
       ],
       "etymology_analysis": "Toponym of the Katagum Emirate in Bauchi State, northeastern Nigeria, established in 1814 CE on the Jama'are River.",
-      "current_repo_state": {
-        "name": "Katagum",
-        "b_tarr": "Katagum",
-        "b_tarr_direct": "Katagum",
-        "b_tarr_hist": "Katagum",
-        "b_origin": "Katagum (Katagum (in-game: Katagum))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Katagum).",
-        "b_ipa": "[ˈka.ta.ɣʊm]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Katagum",
       "older_name_by_867": {
         "exists": false,
@@ -3701,21 +3022,11 @@
         {
           "form": "Azare",
           "language": "Hausa / Fulfulde",
+          "language_code": "hau",
           "translation": "town name"
         }
       ],
       "etymology_analysis": "Name of the town in Bauchi State, Nigeria, founded by Malam Zaki in 1814 CE.",
-      "current_repo_state": {
-        "name": "Azare",
-        "b_tarr": "Azare",
-        "b_tarr_direct": "Azare",
-        "b_tarr_hist": "Azare",
-        "b_origin": "Azare (constituent holding of Katagum)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ˈtsa.rə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Azare",
       "older_name_by_867": {
         "exists": false,
@@ -3750,21 +3061,11 @@
         {
           "form": "Kudu",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "south"
         }
       ],
       "etymology_analysis": "Hausa directional noun kudu ('south'), used in northern Nigerian place names such as Birnin Kudu ('walled town of the south').",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Birnin_Kudu",
       "older_name_by_867": {
         "exists": false,
@@ -3799,21 +3100,11 @@
         {
           "form": "Gabas",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "east"
         }
       ],
       "etymology_analysis": "Hausa directional noun gabas ('east'), appearing in northern Nigerian place names such as Garun Gabas.",
-      "current_repo_state": {
-        "name": "Gabas",
-        "b_tarr": "Gabas",
-        "b_tarr_direct": "Gabas",
-        "b_tarr_hist": "Gabas",
-        "b_origin": "Gabas (constituent holding of Katagum)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡa.bas]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jigawa_State",
       "older_name_by_867": {
         "exists": false,
@@ -3848,21 +3139,11 @@
         {
           "form": "Rano",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "town and emirate name"
         }
       ],
       "etymology_analysis": "Historic Hausa settlement and emirate name in southern Kano State, northern Nigeria.",
-      "current_repo_state": {
-        "name": "Ranô",
-        "b_tarr": "Ranô",
-        "b_tarr_direct": "Ranô",
-        "b_tarr_hist": "Ranô",
-        "b_origin": "Ranô (Ranô (in-game: Rano))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ranô).",
-        "b_ipa": "[ra.ˈnoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Rano",
       "older_name_by_867": {
         "exists": false,
@@ -3897,21 +3178,11 @@
         {
           "form": "Kura",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "hyena (or local town name)"
         }
       ],
       "etymology_analysis": "Hausa toponym in Kano State (homophonous with Hausa kūra, 'hyena').",
-      "current_repo_state": {
-        "name": "Kura",
-        "b_tarr": "Kura",
-        "b_tarr_direct": "Kura",
-        "b_tarr_hist": "Kura",
-        "b_origin": "Kura (constituent holding of Ranô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊ.ra]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kura,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -3946,21 +3217,11 @@
         {
           "form": "kadduna",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "crocodiles (plural of kada)"
         }
       ],
       "etymology_analysis": "Named after the Kaduna River, whose name derives from the Hausa plural kadduna ('crocodiles'), referring to the crocodiles inhabiting the river.",
-      "current_repo_state": {
-        "name": "Kadune",
-        "b_tarr": "Kadune",
-        "b_tarr_direct": "Kadune",
-        "b_tarr_hist": "Kadune",
-        "b_origin": "Kadune (Kadune (in-game: Kaduna))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kadune).",
-        "b_ipa": "[ka.ˈdʊ.nə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kaduna",
       "older_name_by_867": {
         "exists": false,
@@ -3995,21 +3256,11 @@
         {
           "form": "Turunku",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "proper name of the ancient hill settlement"
         }
       ],
       "etymology_analysis": "Indigenous toponym of the rocky hill-settlement south of Zaria that served as an early capital of the Kingdom of Zazzau.",
-      "current_repo_state": {
-        "name": "Turunku",
-        "b_tarr": "Turunku",
-        "b_tarr_direct": "Turunku",
-        "b_tarr_hist": "Turunku",
-        "b_origin": "Turunku (constituent holding of Kadune)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʊ.rʊ.ŋkʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bakwa_Turunku",
       "older_name_by_867": {
         "exists": false,
@@ -4044,21 +3295,11 @@
         {
           "form": "Katsina",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "proper name of the city and kingdom"
         }
       ],
       "etymology_analysis": "Historic Hausa city-state (one of the Hausa Bakwai) in northern Nigeria; local tradition links the name to Katsina, wife of legendary founder Kumayo.",
-      "current_repo_state": {
-        "name": "Katzine",
-        "b_tarr": "Katzine",
-        "b_tarr_direct": "Katzine",
-        "b_tarr_hist": "Katzine",
-        "b_origin": "Katzine (Katzine (in-game: Katsina))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Katzine).",
-        "b_ipa": "[ka.ˈtsɪ.nə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Katsina_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -4093,21 +3334,11 @@
         {
           "form": "Maranda",
           "language": "Arabic / Tuareg (Mărăndat)",
+          "language_code": "ara",
           "translation": "caravan station and oasis settlement name"
         }
       ],
       "etymology_analysis": "Recorded as Maranda in early Arabic geographies from 872 CE onward, identified with the archaeological and modern settlement of Marandet (Tuareg Mărăndat) southwest of Agadez in Niger.",
-      "current_repo_state": {
-        "name": "Marandi",
-        "b_tarr": "Marandi",
-        "b_tarr_direct": "Marandi",
-        "b_tarr_hist": "Marandi",
-        "b_origin": "Marandi (constituent holding of Katzine)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.ran.dɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://de.wikipedia.org/wiki/Marandet",
       "older_name_by_867": {
         "exists": false,
@@ -4142,21 +3373,11 @@
         {
           "form": "Zazzau",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "indigenous name of the kingdom"
         }
       ],
       "etymology_analysis": "Zazzau (also Zegzeg) is the historic Hausa kingdom name; the in-game name Zaria was coined in the 16th century after Bakwa Turunku's daughter Zaria.",
-      "current_repo_state": {
-        "name": "Sarje",
-        "b_tarr": "Sarje",
-        "b_tarr_direct": "Sarje",
-        "b_tarr_hist": "Sarje",
-        "b_origin": "Sarje (Sarje (in-game: Zaria))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Sarje).",
-        "b_ipa": "[ˈsar.jɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Zazzau",
       "older_name_by_867": {
         "exists": false,
@@ -4191,21 +3412,11 @@
         {
           "form": "Gusau",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "town name"
         }
       ],
       "etymology_analysis": "Hausa settlement name in Zamfara State, northwestern Nigeria, now the state capital.",
-      "current_repo_state": {
-        "name": "Gusau",
-        "b_tarr": "Gusau",
-        "b_tarr_direct": "Gusau",
-        "b_tarr_hist": "Gusau",
-        "b_origin": "Gusau (constituent holding of Sarje)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡʊ.ˈzɔʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gusau",
       "older_name_by_867": {
         "exists": false,
@@ -4240,21 +3451,11 @@
         {
           "form": "Kebbi",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "kingdom and region name (Kabi)"
         }
       ],
       "etymology_analysis": "Name of the historic Hausa-speaking Kingdom of Kebbi (Kabi) along the Rima/Sokoto valley in northwestern Nigeria.",
-      "current_repo_state": {
-        "name": "Kebbi",
-        "b_tarr": "Kebbi",
-        "b_tarr_direct": "Kebbi",
-        "b_tarr_hist": "Kebbi",
-        "b_origin": "Kebbi (Kebbi (in-game: Kebbi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kebbi).",
-        "b_ipa": "[ˈkɛ.bɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Kebbi",
       "older_name_by_867": {
         "exists": false,
@@ -4289,21 +3490,11 @@
         {
           "form": "Gummi",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "town name"
         }
       ],
       "etymology_analysis": "Hausa town name in Zamfara State, northwestern Nigeria.",
-      "current_repo_state": {
-        "name": "Gummi",
-        "b_tarr": "Gummi",
-        "b_tarr_direct": "Gummi",
-        "b_tarr_hist": "Gummi",
-        "b_origin": "Gummi (constituent holding of Kebbi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡʊ.mɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gummi,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -4338,21 +3529,11 @@
         {
           "form": "Sokoto",
           "language": "Hausa / Fulfulde",
+          "language_code": "hau",
           "translation": "city name (from Arabic sūq, 'market' / local name)"
         }
       ],
       "etymology_analysis": "Directional compound ('Sokoto-North') from Sokoto, the capital of the Sokoto Caliphate founded in 1809 CE by Muhammed Bello.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sokoto_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -4387,26 +3568,17 @@
         {
           "form": "Sakkwato",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "Sokoto (market town)"
         },
         {
           "form": "sūq",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "market"
         }
       ],
       "etymology_analysis": "Modern Sokoto is an anglicization of the local Hausa name Sakkwato, derived from Arabic sūq ('market').",
-      "current_repo_state": {
-        "name": "Sokotô",
-        "b_tarr": "Sokotô",
-        "b_tarr_direct": "Sokotô",
-        "b_tarr_hist": "Sokotô",
-        "b_origin": "Sokotô (Sokotô (in-game: Sokoto))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Sokotô).",
-        "b_ipa": "[sɔ.kɔ.ˈtoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sokoto_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -4441,21 +3613,11 @@
         {
           "form": "dutsi",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "rock, stone"
         }
       ],
       "etymology_analysis": "From Hausa dutsi (variant of dutse), meaning 'rock' or 'stone', a generic common noun.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dutsi,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -4490,21 +3652,11 @@
         {
           "form": "Anka",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "Anka (settlement name)"
         }
       ],
       "etymology_analysis": "Indigenous Hausa settlement name in Zamfara State, Nigeria; no verified pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Anka,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -4539,21 +3691,11 @@
         {
           "form": "Zuru",
           "language": "C'Lela / Hausa",
+          "language_code": "hau",
           "translation": "Zuru (settlement name)"
         }
       ],
       "etymology_analysis": "Local toponym in southern Kebbi State, Nigeria; no verified pre-867 CE documentary etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Zuru",
       "older_name_by_867": {
         "exists": false,
@@ -4588,21 +3730,11 @@
         {
           "form": "Yauri",
           "language": "Hausa / Reshe",
+          "language_code": "hau",
           "translation": "Yauri (personal/dynastic name)"
         }
       ],
       "etymology_analysis": "Named after the 5th Sarki of Gungu Kafa in the early 16th century CE; local tradition also links the name to the fish trade along the Niger River.",
-      "current_repo_state": {
-        "name": "Jauri",
-        "b_tarr": "Jauri",
-        "b_tarr_direct": "Jauri",
-        "b_tarr_hist": "Jauri",
-        "b_origin": "Jauri (Jauri (in-game: Yauri))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Jauri).",
-        "b_ipa": "[ˈjɔʊ.rɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Yauri_Emirate",
       "older_name_by_867": {
         "exists": false,
@@ -4637,21 +3769,11 @@
         {
           "form": "Kontokoro",
           "language": "Hausa / Kambari",
+          "language_code": "hau",
           "translation": "Kontokoro (settlement name)"
         }
       ],
       "etymology_analysis": "Local Nigerian settlement name in Mariga LGA, Niger State; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Kontokoro",
-        "b_tarr": "Kontokoro",
-        "b_tarr_direct": "Kontokoro",
-        "b_tarr_hist": "Kontokoro",
-        "b_origin": "Kontokoro (constituent holding of Jauri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɔn.tɔ.kɔ.rɔ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4686,21 +3808,11 @@
         {
           "form": "Ulaira",
           "language": "Local Niger-Benue",
+          "language_code": "nic",
           "translation": "Ulaira (archaeological site name)"
         }
       ],
       "etymology_analysis": "Modern archaeological site name in the Kainji Lake basin, Nigeria; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Ulaira",
-        "b_tarr": "Ulaira",
-        "b_tarr_direct": "Ulaira",
-        "b_tarr_hist": "Ulaira",
-        "b_origin": "Ulaira (constituent holding of Jauri)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈʊ.laɪ.ra]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4735,21 +3847,11 @@
         {
           "form": "Baushe",
           "language": "Hausa / Gerawa",
+          "language_code": "hau",
           "translation": "Baushe (personal name of hunter)"
         }
       ],
       "etymology_analysis": "According to local tradition, named after the hunter Baushe, who inhabited the site prior to Yakubu dan Dadi's foundation of the Bauchi Emirate (1800–1810 CE).",
-      "current_repo_state": {
-        "name": "Bautschi",
-        "b_tarr": "Bautschi",
-        "b_tarr_direct": "Bautschi",
-        "b_tarr_hist": "Bautschi",
-        "b_origin": "Bautschi (Bautschi (in-game: Bauchi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Bautschi).",
-        "b_ipa": "[ˈbɔʊ.tʃɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bauchi_(city)",
       "older_name_by_867": {
         "exists": false,
@@ -4784,21 +3886,11 @@
         {
           "form": "Durum",
           "language": "Hausa / Gerawa",
+          "language_code": "hau",
           "translation": "Durum (village name)"
         }
       ],
       "etymology_analysis": "Local village name in Bauchi State, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Durum",
-        "b_tarr": "Durum",
-        "b_tarr_direct": "Durum",
-        "b_tarr_hist": "Durum",
-        "b_origin": "Durum (constituent holding of Bautschi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdʊ.rʊm]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -4833,21 +3925,11 @@
         {
           "form": "Jos",
           "language": "Berom / Hausa",
+          "language_code": "hau",
           "translation": "Jos (colonial/modern city name, debated origin)"
         }
       ],
       "etymology_analysis": "Early 20th-century colonial mining settlement on the Jos Plateau; its exact etymology (variously linked to Berom or Hausa mispronunciations) remains debated.",
-      "current_repo_state": {
-        "name": "Jos",
-        "b_tarr": "Jos",
-        "b_tarr_direct": "Jos",
-        "b_tarr_hist": "Jos",
-        "b_origin": "Jos (constituent holding of Bautschi)",
-        "b_anachronism": "",
-        "b_ipa": "[jɔs]",
-        "holding_type": "castle",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Jos",
       "older_name_by_867": {
         "exists": false,
@@ -4882,21 +3964,11 @@
         {
           "form": "Gbagyi",
           "language": "Gbagyi",
+          "language_code": "nic",
           "translation": "Gbagyi (ethnonym)"
         }
       ],
       "etymology_analysis": "Derived from the ethnonym of the Gbagyi (Gwari) people of central Nigeria.",
-      "current_repo_state": {
-        "name": "Gbagye",
-        "b_tarr": "Gbagye",
-        "b_tarr_direct": "Gbagye",
-        "b_tarr_hist": "Gbagye",
-        "b_origin": "Gbagye (constituent holding of Bautschi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡbaɡ.jɛ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gbagyi_people",
       "older_name_by_867": {
         "exists": false,
@@ -4931,21 +4003,11 @@
         {
           "form": "kafi",
           "language": "Hausa",
+          "language_code": "hau",
           "translation": "stockade, palisade"
         }
       ],
       "etymology_analysis": "Town in Nasarawa State founded c. 1802 CE; the name Keffi (Hausa kafi) is associated with a fortified stockade/encampment.",
-      "current_repo_state": {
-        "name": "Keffi",
-        "b_tarr": "Keffi",
-        "b_tarr_direct": "Keffi",
-        "b_tarr_hist": "Keffi",
-        "b_origin": "Keffi (Keffi (in-game: Keffi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Keffi).",
-        "b_ipa": "[ˈkɛ.fɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Keffi",
       "older_name_by_867": {
         "exists": false,
@@ -4980,21 +4042,11 @@
         {
           "form": "Moda",
           "language": "Local Chadic / Niger-Congo",
+          "language_code": "cdc",
           "translation": "Moda (settlement name)"
         }
       ],
       "etymology_analysis": "Local Nigerian settlement name; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Moda",
-        "b_tarr": "Moda",
-        "b_tarr_direct": "Moda",
-        "b_tarr_hist": "Moda",
-        "b_origin": "Moda (constituent holding of Keffi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɔ.da]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5029,21 +4081,11 @@
         {
           "form": "Wase",
           "language": "Hausa / Fulfulde",
+          "language_code": "hau",
           "translation": "Wase (town name near Wase Rock)"
         }
       ],
       "etymology_analysis": "Early 19th-century Fulani emirate town built on the northern side of Wase Rock in Plateau State, Nigeria.",
-      "current_repo_state": {
-        "name": "Wase",
-        "b_tarr": "Wase",
-        "b_tarr_direct": "Wase",
-        "b_tarr_hist": "Wase",
-        "b_origin": "Wase (constituent holding of Keffi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwa.zə]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wase,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -5078,26 +4120,17 @@
         {
           "form": "Kororo",
           "language": "Hausa / Jukun",
+          "language_code": "hau",
           "translation": "salt (or Kwana/Kuru/Kworra)"
         },
         {
           "form": "Apa",
           "language": "Jukun",
+          "language_code": "nic",
           "translation": "people of Apa"
         }
       ],
       "etymology_analysis": "Hausa exonym (Kororofa) for the Jukun-led Benue Valley state; scholars (e.g., C. K. Meek) derive it from Kororo-afa ('the salt people'), Kwana Apa, Kuru Apa, or Apa of the Kworra (river).",
-      "current_repo_state": {
-        "name": "Kwararafe",
-        "b_tarr": "Kwararafe",
-        "b_tarr_direct": "Kwararafe",
-        "b_tarr_hist": "Kwararafe",
-        "b_origin": "Kwararafe (Kwararafe (in-game: Kwararafa))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Kwararafe).",
-        "b_ipa": "[kwa.ra.ˈra.fə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kwararafa_Confederacy",
       "older_name_by_867": {
         "exists": false,
@@ -5132,21 +4165,11 @@
         {
           "form": "Wukari",
           "language": "Jukun",
+          "language_code": "nic",
           "translation": "Wukari (capital of the Aku Uka)"
         }
       ],
       "etymology_analysis": "Jukun town and traditional capital of the Wukari Federation in Taraba State, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Wukari",
-        "b_tarr": "Wukari",
-        "b_tarr_direct": "Wukari",
-        "b_tarr_hist": "Wukari",
-        "b_origin": "Wukari (constituent holding of Kwararafe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈwʊ.ka.rɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Wukari",
       "older_name_by_867": {
         "exists": false,
@@ -5181,21 +4204,11 @@
         {
           "form": "Muri",
           "language": "Fulfulde / Jukun",
+          "language_code": "ful",
           "translation": "Muri (emirate and town name)"
         }
       ],
       "etymology_analysis": "Fulbe emirate and town established in 1817 CE in the Benue Valley (Taraba State, Nigeria).",
-      "current_repo_state": {
-        "name": "Muri",
-        "b_tarr": "Muri",
-        "b_tarr_direct": "Muri",
-        "b_tarr_hist": "Muri",
-        "b_origin": "Muri (constituent holding of Kwararafe)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmʊ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Muri,_Taraba_State",
       "older_name_by_867": {
         "exists": false,
@@ -5230,31 +4243,23 @@
         {
           "form": "Birni",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "walled city, capital"
         },
         {
           "form": "Ngazar",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "N'gasar / N'gizim (earlier inhabitants)"
         },
         {
           "form": "gamu",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "leader, monarch, or ancestral spirit"
         }
       ],
       "etymology_analysis": "Kanuri Birni Gazargamo (Hausaized as Ngazargamu), literally 'walled city of Ngazargamu'; proposed etymologies link Ngazar to the earlier N'gasar/N'gizim inhabitants and gamu to a monarch/spirit, or interpret the compound as 'the secure city' or 'city of kings'.",
-      "current_repo_state": {
-        "name": "Gasargamu",
-        "b_tarr": "Gasargamu",
-        "b_tarr_direct": "Gasargamu",
-        "b_tarr_hist": "Gasargamu",
-        "b_origin": "Historic Kanem-Bornu capital Birni Gazargamo (in-game: Gasargamu)",
-        "b_anachronism": "Authentic Historic Capital.",
-        "b_ipa": "[ˈɡa.zar.ɡa.mʊ]",
-        "holding_type": "castle",
-        "category": "classical_antiquity"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ngazargamu",
       "older_name_by_867": {
         "exists": false,
@@ -5289,21 +4294,11 @@
         {
           "form": "Gambaru",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Gambaru (palace/market town name)"
         }
       ],
       "etymology_analysis": "Kanuri settlement and royal palace name in Borno, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Gambaru",
-        "b_tarr": "Gambaru",
-        "b_tarr_direct": "Gambaru",
-        "b_tarr_hist": "Gambaru",
-        "b_origin": "Gambaru (constituent holding of Kânem)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈɡam.ba.rʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Gamboru",
       "older_name_by_867": {
         "exists": false,
@@ -5338,21 +4333,11 @@
         {
           "form": "Diakam",
           "language": "Kanuri / Saharan",
+          "language_code": "kau",
           "translation": "Diakam (place name)"
         }
       ],
       "etymology_analysis": "Minor or unattested Borno/Kanem toponym with no verified pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Diakam",
-        "b_tarr": "Diakam",
-        "b_tarr_direct": "Diakam",
-        "b_tarr_hist": "Diakam",
-        "b_origin": "Diakam (constituent holding of Kânem)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdɪ.a.kam]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5387,26 +4372,17 @@
         {
           "form": "garu",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "wall, fortified enclosure"
         },
         {
           "form": "mele",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "mele (toponymic element)"
         }
       ],
       "etymology_analysis": "Kanuri toponym containing garu ('wall, fortified town') for the medieval brick site in southeastern Niger; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Garumêle",
-        "b_tarr": "Garumêle",
-        "b_tarr_direct": "Garumêle",
-        "b_tarr_hist": "Garumêle",
-        "b_origin": "Garumêle (Garumêle (in-game: Garumele))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Garumêle).",
-        "b_ipa": "[ɡa.rʊ.ˈmeː.lɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5441,21 +4417,11 @@
         {
           "form": "Ajere",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Ajere (settlement name)"
         }
       ],
       "etymology_analysis": "Local settlement name in the Komadugu Yobe valley, northeastern Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Ajere",
-        "b_tarr": "Ajere",
-        "b_tarr_direct": "Ajere",
-        "b_tarr_hist": "Ajere",
-        "b_origin": "Ajere (constituent holding of Garumêle)",
-        "b_anachronism": "",
-        "b_ipa": "[a.ˈjɛ.rə]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5490,21 +4456,11 @@
         {
           "form": "Balbelec",
           "language": "Kanuri / Saharan",
+          "language_code": "kau",
           "translation": "Balbelec (place name)"
         }
       ],
       "etymology_analysis": "Minor or unattested Borno/Niger toponym with no verified pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Balbelec",
-        "b_tarr": "Balbelec",
-        "b_tarr_direct": "Balbelec",
-        "b_tarr_hist": "Balbelec",
-        "b_origin": "Balbelec (constituent holding of Garumêle)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbal.bɛ.lɛk]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5539,21 +4495,11 @@
         {
           "form": "Gaskeru",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Gaskeru (Gueskérou settlement name)"
         }
       ],
       "etymology_analysis": "Local Kanuri/Nigerien settlement name (French spelling Gueskérou) along the Komadugu Yobe; no pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5588,21 +4534,11 @@
         {
           "form": "Diffa",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Diffa (city name)"
         }
       ],
       "etymology_analysis": "Modern city and region name in southeastern Niger; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Diffa",
       "older_name_by_867": {
         "exists": false,
@@ -5637,21 +4573,11 @@
         {
           "form": "Munio",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Munio (Mounio province name)"
         }
       ],
       "etymology_analysis": "Historical Bornu province name in southern Niger; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Mûnjô",
-        "b_tarr": "Mûnjô",
-        "b_tarr_direct": "Mûnjô",
-        "b_tarr_hist": "Mûnjô",
-        "b_origin": "Mûnjô (Mûnjô (in-game: Munio))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Mûnjô).",
-        "b_ipa": "[muː.ˈɲoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5686,21 +4612,11 @@
         {
           "form": "Zamtam",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Zamtam (settlement name)"
         }
       ],
       "etymology_analysis": "Historical Bornu toponym attested in connection with 13th-century CE Sayfawa history; no pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Zamtam",
-        "b_tarr": "Zamtam",
-        "b_tarr_direct": "Zamtam",
-        "b_tarr_hist": "Zamtam",
-        "b_origin": "Zamtam (constituent holding of Mûnjô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtsam.tam]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5735,21 +4651,11 @@
         {
           "form": "Nguru",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Nguru (town name)"
         }
       ],
       "etymology_analysis": "Kanuri town name near the Hadejia River in Yobe State, Nigeria, dating from c. 15th century CE.",
-      "current_repo_state": {
-        "name": "Nguru",
-        "b_tarr": "Nguru",
-        "b_tarr_direct": "Nguru",
-        "b_tarr_hist": "Nguru",
-        "b_origin": "Nguru (constituent holding of Mûnjô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈŋʊ.rʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Nguru,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -5784,21 +4690,11 @@
         {
           "form": "Yau",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Yau / Yo (settlement name)"
         }
       ],
       "etymology_analysis": "Local settlement name in the Komadugu Yobe valley, Borno/Yobe, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Jâu",
-        "b_tarr": "Jâu",
-        "b_tarr_direct": "Jâu",
-        "b_tarr_hist": "Jâu",
-        "b_origin": "Jâu (Jâu (in-game: Yau))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Jâu).",
-        "b_ipa": "[ˈjaː.ʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5833,26 +4729,17 @@
         {
           "form": "kuka",
           "language": "Kanuri / Hausa",
+          "language_code": "kau",
           "translation": "baobab tree"
         },
         {
           "form": "-wa",
           "language": "Kanuri / Hausa",
+          "language_code": "kau",
           "translation": "place/people suffix"
         }
       ],
       "etymology_analysis": "Founded in 1814 CE as Kuka (named after a baobab tree, kuka, a generic common noun), later known as Kukawa.",
-      "current_repo_state": {
-        "name": "Kukawa",
-        "b_tarr": "Kukawa",
-        "b_tarr_direct": "Kukawa",
-        "b_tarr_hist": "Kukawa",
-        "b_origin": "Kukawa (constituent holding of Jâu)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊ.ka.wa]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kukawa",
       "older_name_by_867": {
         "exists": false,
@@ -5887,26 +4774,17 @@
         {
           "form": "garu",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "wall, fortified enclosure"
         },
         {
           "form": "kime",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "red"
         }
       ],
       "etymology_analysis": "Kanuri compound meaning 'red wall', referring to the fired-brick ruins at Monguno, Borno State, Nigeria.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -5941,21 +4819,11 @@
         {
           "form": "Dikwa",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Dikwa (town name)"
         }
       ],
       "etymology_analysis": "Kanuri town name in Borno State, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dikwa",
       "older_name_by_867": {
         "exists": false,
@@ -5990,21 +4858,11 @@
         {
           "form": "Mege",
           "language": "Kanuri / Kotoko",
+          "language_code": "kau",
           "translation": "Mege (settlement name)"
         }
       ],
       "etymology_analysis": "Local settlement name on the firki plains south of Lake Chad; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6039,21 +4897,11 @@
         {
           "form": "Njimi",
           "language": "Kanembu / Kanuri",
+          "language_code": "kau",
           "translation": "Njimi (capital of Kanem)"
         }
       ],
       "etymology_analysis": "Medieval capital of the Kanem Empire east of Lake Chad, first attested in 12th-century CE Arabic geography.",
-      "current_repo_state": {
-        "name": "Dschîmi",
-        "b_tarr": "Dschîmi",
-        "b_tarr_direct": "Dschîmi",
-        "b_tarr_hist": "Dschîmi",
-        "b_origin": "Dschîmi (Dschîmi (in-game: Jimi))",
-        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Dschîmi).",
-        "b_ipa": "[ˈdʒiː.mɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Njimi",
       "older_name_by_867": {
         "exists": false,
@@ -6088,21 +4936,11 @@
         {
           "form": "Tié",
           "language": "Kanembu",
+          "language_code": "kau",
           "translation": "Tié (archaeological site name)"
         }
       ],
       "etymology_analysis": "Modern Chadian toponym for a medieval fired-brick enclosure in central Kanem; no written attestation <= 867 CE.",
-      "current_repo_state": {
-        "name": "Tie",
-        "b_tarr": "Tie",
-        "b_tarr_direct": "Tie",
-        "b_tarr_hist": "Tie",
-        "b_origin": "Tie (constituent holding of Dschîmi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtɪ.ɛ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6137,21 +4975,11 @@
         {
           "form": "Tarazki",
           "language": "Arabic / Zaghawa-Kanembu",
+          "language_code": "ara",
           "translation": "Tarazki (town in Kanem)"
         }
       ],
       "etymology_analysis": "Medieval town name in Kanem recorded in post-867 CE Arabic geographical literature; etymology uncertain.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6186,21 +5014,11 @@
         {
           "form": "Madan",
           "language": "Kanembu / Saharan",
+          "language_code": "kau",
           "translation": "Madan (place name)"
         }
       ],
       "etymology_analysis": "Minor or unattested Kanem/Bornu toponym with no verified pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Madan",
-        "b_tarr": "Madan",
-        "b_tarr_direct": "Madan",
-        "b_tarr_hist": "Madan",
-        "b_origin": "Madan (constituent holding of Dschîmi)",
-        "b_anachronism": "",
-        "b_ipa": "[ma.ˈdan]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6235,21 +5053,11 @@
         {
           "form": "Auno",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Auno (town name)"
         }
       ],
       "etymology_analysis": "Local town name in Borno State, Nigeria; no documented pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6284,21 +5092,11 @@
         {
           "form": "Manān",
           "language": "Arabic / Kanembu",
+          "language_code": "ara",
           "translation": "Manan (early capital of Kanem)"
         }
       ],
       "etymology_analysis": "Early capital of Kanem recorded by al-Idrīsī (1154 CE, sometimes spelled Matan); its exact location and etymology remain uncertain.",
-      "current_repo_state": {
-        "name": "Manân",
-        "b_tarr": "Manân",
-        "b_tarr_direct": "Kânem",
-        "b_tarr_hist": "Manân",
-        "b_origin": "Manân (Manân (in-game: Kanem))",
-        "b_anachronism": "Resolved via verified historical center Manân documented in tarraconian_titles_1059.md.",
-        "b_ipa": "[ma.ˈnaːn]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6333,26 +5131,17 @@
         {
           "form": "n'jié",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "clay pot"
         },
         {
           "form": "kimé",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "red"
         }
       ],
       "etymology_analysis": "From Kanuri n'jié kimé, meaning 'large red clay pot'.",
-      "current_repo_state": {
-        "name": "Nguigmi",
-        "b_tarr": "Nguigmi",
-        "b_tarr_direct": "Nguigmi",
-        "b_tarr_hist": "Nguigmi",
-        "b_origin": "Nguigmi (constituent holding of Manân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈnɡɪɡ.mɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/N%27guigmi",
       "older_name_by_867": {
         "exists": false,
@@ -6387,21 +5176,11 @@
         {
           "form": "anem",
           "language": "Teda / Kanuri",
+          "language_code": "kau",
           "translation": "south"
         }
       ],
       "etymology_analysis": "Derived from anem ('south') in Teda and Kanuri, a directional geographic term referring to the region south of the Sahara / Fezzan.",
-      "current_repo_state": {
-        "name": "Kânem",
-        "b_tarr": "Kânem",
-        "b_tarr_direct": "Kânem",
-        "b_tarr_hist": "Manân",
-        "b_origin": "Kânem — Disambiguated capital seat from sub-barony Manân",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈkaː.nɛm]",
-        "holding_type": "church",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kanem_(historical_region)",
       "older_name_by_867": {
         "exists": false,
@@ -6436,21 +5215,11 @@
         {
           "form": "Kagusti",
           "language": "Kanembu / Saharan",
+          "language_code": "kau",
           "translation": "Kagusti (place name)"
         }
       ],
       "etymology_analysis": "Minor or unattested Kanem toponym with no verified pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Kagusti",
-        "b_tarr": "Kagusti",
-        "b_tarr_direct": "Kagusti",
-        "b_tarr_hist": "Kagusti",
-        "b_origin": "Kagusti (constituent holding of Manân)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈka.ɣʊs.tɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6485,21 +5254,11 @@
         {
           "form": "Massenya",
           "language": "Bagirmi",
+          "language_code": "ssa",
           "translation": "Massenya (capital of Bagirmi)"
         }
       ],
       "etymology_analysis": "Historical capital of the Sultanate of Bagirmi founded in the early 16th century CE; no pre-867 CE etymology.",
-      "current_repo_state": {
-        "name": "Baguirmi",
-        "b_tarr": "Baguirmi",
-        "b_tarr_direct": "Baguirmi",
-        "b_tarr_hist": "Baguirmi",
-        "b_origin": "Baguirmi (Baguirmi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.ɣɪr.mɪ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Massenya",
       "older_name_by_867": {
         "exists": false,
@@ -6534,26 +5293,17 @@
         {
           "form": "Baguirmi",
           "language": "Barma / French",
+          "language_code": "ssa",
           "translation": "Bagirmi (region/sultanate)"
         },
         {
           "form": "West",
           "language": "English",
+          "language_code": "eng",
           "translation": "western cardinal direction"
         }
       ],
       "etymology_analysis": "Directional compound ('Baguirmi-West') formed from the regional/state name Baguirmi plus the English locator '-west'; excluded from natural proper names as a directional compound.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6588,21 +5338,11 @@
         {
           "form": "Baguirmi",
           "language": "Barma / Arabic / French",
+          "language_code": "ssa",
           "translation": "Bagirmi (kingdom/people)"
         }
       ],
       "etymology_analysis": "Audited as Baguirmi (Sultanate of Bagirmi, capital Massenya) rather than the repo's synthetic disambiguated label 'Idrisstat'. Attested in 1578 CE as 'Bakarmi'; the name denotes the Barma-led Bagirmi state southeast of Lake Chad.",
-      "current_repo_state": {
-        "name": "Idrisstat",
-        "b_tarr": "Idrisstat",
-        "b_tarr_direct": "Baguirmi",
-        "b_tarr_hist": "Baguirmi",
-        "b_origin": "Idrisstat — Disambiguated capital foundation: Municipal foundation chartered by Idris",
-        "b_anachronism": "Disambiguated intra-county capital barony.",
-        "b_ipa": "[ˈɪ.drɪs.tat]",
-        "holding_type": "city",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sultanate_of_Bagirmi",
       "older_name_by_867": {
         "exists": false,
@@ -6637,21 +5377,11 @@
         {
           "form": "Biddiri",
           "language": "Fulfulde / Barma",
+          "language_code": "ful",
           "translation": "Biddiri (scholarly settlement)"
         }
       ],
       "etymology_analysis": "Settlement of Fulani Islamic scholars near Massenya in Baguirmi, Chad, attested in post-1500 Bagirmi-Fulani history and 19th-century accounts.",
-      "current_repo_state": {
-        "name": "Biddiri",
-        "b_tarr": "Biddiri",
-        "b_tarr_direct": "Biddiri",
-        "b_tarr_hist": "Biddiri",
-        "b_origin": "Biddiri (constituent holding of Baguirmi)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɪ.dɪ.rɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6686,21 +5416,11 @@
         {
           "form": "Banre",
           "language": "Chadic / Barma",
+          "language_code": "cdc",
           "translation": "Banre (Chari riverine group/place)"
         }
       ],
       "etymology_analysis": "Toponym and ethnonym for a Chari River community in the Baguirmi sphere, documented only in post-18th-century historical accounts.",
-      "current_repo_state": {
-        "name": "Banre",
-        "b_tarr": "Banre",
-        "b_tarr_direct": "Banre",
-        "b_tarr_hist": "Banre",
-        "b_origin": "Banre (Banre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈban.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6735,21 +5455,11 @@
         {
           "form": "Migri",
           "language": "Barma / Chadic",
+          "language_code": "ssa",
           "translation": "Migri (settlement name)"
         }
       ],
       "etymology_analysis": "Historical Baguirmi settlement name (later Anja, then deserted as Kut Anja) recorded in 19th-century Chari-Baguirmi historiography.",
-      "current_repo_state": {
-        "name": "Migri",
-        "b_tarr": "Migri",
-        "b_tarr_direct": "Migri",
-        "b_tarr_hist": "Migri",
-        "b_origin": "Migri (constituent holding of Banre)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɪ.ɡrɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6784,26 +5494,17 @@
         {
           "form": "Logone",
           "language": "Kotoko / Chadic",
+          "language_code": "cdc",
           "translation": "Logone (river/region)"
         },
         {
           "form": "Birni",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "walled town / fort"
         }
       ],
       "etymology_analysis": "Compound of the Logone River name and Kanuri 'birni' ('walled town, fort'), meaning 'Fort Logone'; capital of the Southern Kotoko Kingdom.",
-      "current_repo_state": {
-        "name": "Logone-Birni",
-        "b_tarr": "Logone-Birni",
-        "b_tarr_direct": "Logone-Birni",
-        "b_tarr_hist": "Logone-Birni",
-        "b_origin": "Logone-Birni (constituent holding of Banre)",
-        "b_anachronism": "",
-        "b_ipa": "[lɔ.ˈɣɔ.nə ˈbɪr.nɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Logone-Birni",
       "older_name_by_867": {
         "exists": false,
@@ -6838,21 +5539,11 @@
         {
           "form": "Barma",
           "language": "Barma (Tar Barma)",
+          "language_code": "ssa",
           "translation": "Bagirmi people / autonym"
         }
       ],
       "etymology_analysis": "Audited as Barma (the autonym of the Bagirmi people of Chari-Baguirmi, Chad) rather than the repo's erroneous 'Tendukhede' fallback. No <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Tendukhede",
-        "b_tarr": "Tendukhede",
-        "b_tarr_direct": "Tendukhede",
-        "b_tarr_hist": "Tendukhede",
-        "b_origin": "Tendukhede (Tendukheda)",
-        "b_anachronism": "",
-        "b_ipa": "[tɛn.dʊk.ˈhɛ.də]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bagirmi_people",
       "older_name_by_867": {
         "exists": false,
@@ -6887,21 +5578,11 @@
         {
           "form": "Dam",
           "language": "Chadic / Barma",
+          "language_code": "cdc",
           "translation": "Dam (Chari riverine group/place)"
         }
       ],
       "etymology_analysis": "Local Chari-Baguirmi settlement/ethnonym paired with Barma in the barony key ('b_dam_barma'), attested only in post-18th-century Bagirmi historiography.",
-      "current_repo_state": {
-        "name": "Dam",
-        "b_tarr": "Dam",
-        "b_tarr_direct": "Dam",
-        "b_tarr_hist": "Dam",
-        "b_origin": "Dam (constituent holding of Tendukhede)",
-        "b_anachronism": "",
-        "b_ipa": "[dam]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -6936,21 +5617,11 @@
         {
           "form": "Sarwa",
           "language": "Sarua (East Chadic)",
+          "language_code": "cdc",
           "translation": "Sarua / Sarwa (language and community)"
         }
       ],
       "etymology_analysis": "Ethnonym and glossonym (Sarua/Sarwa) of an East Chadic-speaking community in southwestern Chad near the Chari River.",
-      "current_repo_state": {
-        "name": "Sarwa",
-        "b_tarr": "Sarwa",
-        "b_tarr_direct": "Sarwa",
-        "b_tarr_hist": "Sarwa",
-        "b_origin": "Sarwa (constituent holding of Tendukhede)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈsar.wa]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Sarua_language",
       "older_name_by_867": {
         "exists": false,
@@ -6985,21 +5656,11 @@
         {
           "form": "Kwang",
           "language": "Kwang (East Chadic)",
+          "language_code": "cdc",
           "translation": "Kwang (people/language)"
         }
       ],
       "etymology_analysis": "Audited as Kwang (East Chadic language and people of southwestern Chad) rather than the repo's county-seat fallback 'Kuku'. No <= 867 CE written attestation exists.",
-      "current_repo_state": {
-        "name": "Kuku",
-        "b_tarr": "Kuku",
-        "b_tarr_direct": "Kuku",
-        "b_tarr_hist": "Kuku",
-        "b_origin": "Kuku (Kuku)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkʊ.kʊ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kwang_language",
       "older_name_by_867": {
         "exists": false,
@@ -7034,21 +5695,11 @@
         {
           "form": "Kim",
           "language": "Kim (Mbum)",
+          "language_code": "nic",
           "translation": "Kim (people/language)"
         }
       ],
       "etymology_analysis": "Ethnonym and language name of the Kim people of southern Chad (Mayo-Kebbi Est).",
-      "current_repo_state": {
-        "name": "Kim",
-        "b_tarr": "Kim",
-        "b_tarr_direct": "Kim",
-        "b_tarr_hist": "Kim",
-        "b_origin": "Kim (constituent holding of Kuku)",
-        "b_anachronism": "",
-        "b_ipa": "[kɪm]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kim_language",
       "older_name_by_867": {
         "exists": false,
@@ -7083,21 +5734,11 @@
         {
           "form": "Bousso",
           "language": "Barma / Chadic",
+          "language_code": "ssa",
           "translation": "Bousso (town on the Chari)"
         }
       ],
       "etymology_analysis": "Toponym for the Chari River town of Bousso in south-central Chad (Loug Chari department).",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bousso",
       "older_name_by_867": {
         "exists": false,
@@ -7132,21 +5773,11 @@
         {
           "form": "Masa",
           "language": "Massa (Chadic)",
+          "language_code": "cdc",
           "translation": "Masa (ethnic group/language)"
         }
       ],
       "etymology_analysis": "Ethnonym of the Masa (Massa/Masana) Chadic-speaking people of the Logone valley in Chad and Cameroon.",
-      "current_repo_state": {
-        "name": "Mase",
-        "b_tarr": "Mase",
-        "b_tarr_direct": "Mase",
-        "b_tarr_hist": "Mase",
-        "b_origin": "Mase (Masa)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈma.zə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Masa_people",
       "older_name_by_867": {
         "exists": false,
@@ -7181,21 +5812,11 @@
         {
           "form": "Mbara",
           "language": "Mbara (Chadic)",
+          "language_code": "cdc",
           "translation": "Mbara (language/community)"
         }
       ],
       "etymology_analysis": "Glossonym and ethnonym for the Mbara-speaking community of Chad.",
-      "current_repo_state": {
-        "name": "Mbara",
-        "b_tarr": "Mbara",
-        "b_tarr_direct": "Mbara",
-        "b_tarr_hist": "Mbara",
-        "b_origin": "Mbara (constituent holding of Mase)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmba.ra]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mbara_language_(Chad)",
       "older_name_by_867": {
         "exists": false,
@@ -7230,21 +5851,11 @@
         {
           "form": "Lafana",
           "language": "Chadic / Barma",
+          "language_code": "cdc",
           "translation": "Lafana (settlement name)"
         }
       ],
       "etymology_analysis": "Local settlement name in Chari-Baguirmi, Chad, lacking pre-modern documentary attestation.",
-      "current_repo_state": {
-        "name": "Lafana",
-        "b_tarr": "Lafana",
-        "b_tarr_direct": "Lafana",
-        "b_tarr_hist": "Lafana",
-        "b_origin": "Lafana (constituent holding of Mase)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈla.fa.na]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7279,21 +5890,11 @@
         {
           "form": "Tumak",
           "language": "Tumak (East Chadic)",
+          "language_code": "cdc",
           "translation": "Tumak (people/language)"
         }
       ],
       "etymology_analysis": "Ethnonym and glossonym of the Tumak people of southwestern Chad.",
-      "current_repo_state": {
-        "name": "Tumach",
-        "b_tarr": "Tumach",
-        "b_tarr_direct": "Tumach",
-        "b_tarr_hist": "Tumach",
-        "b_origin": "Tumach (Tumak)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈtʊ.max]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Tumak_language",
       "older_name_by_867": {
         "exists": false,
@@ -7328,21 +5929,11 @@
         {
           "form": "Miltou",
           "language": "Miltu (East Chadic) / French",
+          "language_code": "cdc",
           "translation": "Miltou (settlement and language)"
         }
       ],
       "etymology_analysis": "Settlement on the Chari River near Bousso, associated with the East Chadic Miltu (Gàlì) language.",
-      "current_repo_state": {
-        "name": "Miltou",
-        "b_tarr": "Miltou",
-        "b_tarr_direct": "Miltou",
-        "b_tarr_hist": "Miltou",
-        "b_origin": "Miltou (constituent holding of Tumach)",
-        "b_anachronism": "",
-        "b_ipa": "[mɪl.ˈtɔʊ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Miltu_language",
       "older_name_by_867": {
         "exists": false,
@@ -7377,21 +5968,11 @@
         {
           "form": "Sumray",
           "language": "Somrai (East Chadic)",
+          "language_code": "cdc",
           "translation": "Somrai / Sumray (people and language)"
         }
       ],
       "etymology_analysis": "Exonym/ethnonym for the Sibine (Somrai/Sumray) East Chadic-speaking people of Tandjilé and Laï in Chad.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Somrai_language",
       "older_name_by_867": {
         "exists": false,
@@ -7426,21 +6007,11 @@
         {
           "form": "Niellim",
           "language": "Niellim (Bua) / French",
+          "language_code": "nic",
           "translation": "Niellim (people/sultanate)"
         }
       ],
       "etymology_analysis": "Historical name for the Lwaà (Niellim) Bua-speaking people and 19th-century sultanate along the Chari River.",
-      "current_repo_state": {
-        "name": "Niellim",
-        "b_tarr": "Niellim",
-        "b_tarr_direct": "Niellim",
-        "b_tarr_hist": "Niellim",
-        "b_origin": "Niellim (constituent holding of Tumach)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈnɪ.ɛ.ʎɪm]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Niellim_language",
       "older_name_by_867": {
         "exists": false,
@@ -7475,26 +6046,17 @@
         {
           "form": "Dar",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "abode, territory, land"
         },
         {
           "form": "Rashid",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "Rashid (clan/region name)"
         }
       ],
       "etymology_analysis": "Arabic territorial compound 'Dār Rashīd' ('territory of Rashid'), following the Sudanic-Sahelian naming pattern for regional chiefdoms/territories.",
-      "current_repo_state": {
-        "name": "Dâr Raschît",
-        "b_tarr": "Dâr Raschît",
-        "b_tarr_direct": "Dâr Raschît",
-        "b_tarr_hist": "Dâr Raschît",
-        "b_origin": "Dâr Raschît (Dár Rashíd)",
-        "b_anachronism": "",
-        "b_ipa": "[daːr ra.ˈʃiːt]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7529,21 +6091,11 @@
         {
           "form": "Boa",
           "language": "Bua (Niger-Congo)",
+          "language_code": "nic",
           "translation": "Bua / Boa (people and language)"
         }
       ],
       "etymology_analysis": "Ethnonym and glossonym of the Bua (Boa) people of south-central Chad.",
-      "current_repo_state": {
-        "name": "Boa",
-        "b_tarr": "Boa",
-        "b_tarr_direct": "Boa",
-        "b_tarr_hist": "Boa",
-        "b_origin": "Boa (constituent holding of Dâr Raschît)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɔ.a]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bua_language",
       "older_name_by_867": {
         "exists": false,
@@ -7578,26 +6130,17 @@
         {
           "form": "Melfi",
           "language": "Arabic / Local",
+          "language_code": "ara",
           "translation": "Melfi (town in Guéra)"
         },
         {
           "form": "Sao",
           "language": "Chadic / Kanuri",
+          "language_code": "cdc",
           "translation": "Sao (Lake Chad civilization/qualifier)"
         }
       ],
       "etymology_analysis": "Compound of the Chadian town Melfi with the regional/civilizational qualifier '-Sao' (added for in-game disambiguation).",
-      "current_repo_state": {
-        "name": "Melfi-Sao",
-        "b_tarr": "Melfi-Sao",
-        "b_tarr_direct": "Melfi-Sao",
-        "b_tarr_hist": "Melfi-Sao",
-        "b_origin": "Melfi-Sao (constituent holding of Dâr Raschît)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmɛl.fɪ ˈsa.ɔ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Melfi,_Chad",
       "older_name_by_867": {
         "exists": false,
@@ -7632,21 +6175,11 @@
         {
           "form": "Bogo",
           "language": "Musgum",
+          "language_code": "cdc",
           "translation": "noise (referring to a battle site)"
         }
       ],
       "etymology_analysis": "Audited as Bogo (Diamaré Department, Cameroon) rather than the county-seat fallback 'Diamare'. Per Musgum tradition, 'Bogo' derives from a Musgum word meaning 'noise', commemorating a major battle.",
-      "current_repo_state": {
-        "name": "Diamare",
-        "b_tarr": "Diamare",
-        "b_tarr_direct": "Diamare",
-        "b_tarr_hist": "Diamare",
-        "b_origin": "Diamare (Diamare)",
-        "b_anachronism": "",
-        "b_ipa": "[dɪ.a.ˈma.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bogo,_Cameroon",
       "older_name_by_867": {
         "exists": false,
@@ -7681,21 +6214,11 @@
         {
           "form": "Mindif",
           "language": "Musgum",
+          "language_code": "cdc",
           "translation": "the mouth of man"
         }
       ],
       "etymology_analysis": "Named after the nearby Mindif Peak (Dent de Mindif); per Musgum tradition, 'Mindif' literally means 'the mouth of man'.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Mindif",
       "older_name_by_867": {
         "exists": false,
@@ -7730,21 +6253,11 @@
         {
           "form": "Kalfou",
           "language": "Fulfulde / Chadic",
+          "language_code": "ful",
           "translation": "Kalfou (town/lamidat)"
         }
       ],
       "etymology_analysis": "Town and commune in Far North Cameroon, historically a Fulani lamidat receiving its banner from Sokoto in the 19th century.",
-      "current_repo_state": {
-        "name": "Kalfou",
-        "b_tarr": "Kalfou",
-        "b_tarr_direct": "Kalfou",
-        "b_tarr_hist": "Kalfou",
-        "b_origin": "Kalfou (constituent holding of Diamare)",
-        "b_anachronism": "",
-        "b_ipa": "[kal.ˈfɔʊ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kalfou,_Cameroon",
       "older_name_by_867": {
         "exists": false,
@@ -7779,21 +6292,11 @@
         {
           "form": "Binder",
           "language": "Fulfulde / Chadic",
+          "language_code": "ful",
           "translation": "Binder / Bindir (settlement/lamidat)"
         }
       ],
       "etymology_analysis": "Historic Fulani lamidat and sub-prefecture in southwestern Chad (Mayo-Binder department).",
-      "current_repo_state": {
-        "name": "Bindir",
-        "b_tarr": "Bindir",
-        "b_tarr_direct": "Bindir",
-        "b_tarr_hist": "Bindir",
-        "b_origin": "Bindir (constituent holding of Diamare)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɪn.dɪr]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Binder,_Chad",
       "older_name_by_867": {
         "exists": false,
@@ -7828,21 +6331,11 @@
         {
           "form": "Gizey",
           "language": "Massa (Chadic)",
+          "language_code": "cdc",
           "translation": "Gizay / Gizey (Masa subgroup/dialect)"
         }
       ],
       "etymology_analysis": "Ethnonym and dialect name of the Western Masa (Gizay) community in the Cameroon-Chad borderland.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -7877,21 +6370,11 @@
         {
           "form": "Garoua",
           "language": "Fulfulde / Bata",
+          "language_code": "ful",
           "translation": "Garoua (river port city)"
         }
       ],
       "etymology_analysis": "Capital of Cameroon's North Region on the Benue River, founded by Modibbo Adama in the early 19th century.",
-      "current_repo_state": {
-        "name": "Garoue",
-        "b_tarr": "Garoue",
-        "b_tarr_direct": "Garoue",
-        "b_tarr_hist": "Garoue",
-        "b_origin": "Garoue (Garoua)",
-        "b_anachronism": "",
-        "b_ipa": "[ɡa.ˈrɔʊ.ɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Garoua",
       "older_name_by_867": {
         "exists": false,
@@ -7926,21 +6409,11 @@
         {
           "form": "Bibemi",
           "language": "Fulfulde / Chadic",
+          "language_code": "ful",
           "translation": "Bibemi (town/lamidat)"
         }
       ],
       "etymology_analysis": "Historic Fulani lamidat and commune in the Bénoué valley of northern Cameroon.",
-      "current_repo_state": {
-        "name": "Bibemi",
-        "b_tarr": "Bibemi",
-        "b_tarr_direct": "Bibemi",
-        "b_tarr_hist": "Bibemi",
-        "b_origin": "Bibemi (constituent holding of Garoue)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈbɪ.bɛ.mɪ]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bibemi",
       "older_name_by_867": {
         "exists": false,
@@ -7975,21 +6448,11 @@
         {
           "form": "Babur",
           "language": "Hausa (from Bura-Pabir)",
+          "language_code": "hau",
           "translation": "Bura-Pabir people"
         }
       ],
       "etymology_analysis": "Hausa exonym for the Bura-Pabir people of Biu and Hawul in Borno State, northeastern Nigeria.",
-      "current_repo_state": {
-        "name": "Babur",
-        "b_tarr": "Babur",
-        "b_tarr_direct": "Babur",
-        "b_tarr_hist": "Babur",
-        "b_origin": "Babur (constituent holding of Garoue)",
-        "b_anachronism": "",
-        "b_ipa": "[ba.ˈbʊr]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Babur_and_Bura_people",
       "older_name_by_867": {
         "exists": false,
@@ -8024,21 +6487,11 @@
         {
           "form": "Kera",
           "language": "Kera (East Chadic)",
+          "language_code": "cdc",
           "translation": "Kera (people/language)"
         }
       ],
       "etymology_analysis": "Ethnonym and glossonym of the Kera people of southwestern Chad and Far North Cameroon.",
-      "current_repo_state": {
-        "name": "Kere",
-        "b_tarr": "Kere",
-        "b_tarr_direct": "Kere",
-        "b_tarr_hist": "Kere",
-        "b_origin": "Kere (Kera)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈkɛ.rə]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kera_language",
       "older_name_by_867": {
         "exists": false,
@@ -8073,21 +6526,11 @@
         {
           "form": "Marba",
           "language": "Marba (Chadic)",
+          "language_code": "cdc",
           "translation": "Marba (Azumeina clan/language)"
         }
       ],
       "etymology_analysis": "Ethnonym and glossonym of the Marba (one of the Azumeina clans) in Tandjilé, southwestern Chad.",
-      "current_repo_state": {
-        "name": "Marba",
-        "b_tarr": "Marba",
-        "b_tarr_direct": "Marba",
-        "b_tarr_hist": "Marba",
-        "b_origin": "Marba (constituent holding of Kere)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈmar.ba]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Marba_language",
       "older_name_by_867": {
         "exists": false,
@@ -8122,21 +6565,11 @@
         {
           "form": "Ngambay",
           "language": "Ngambay (Sara)",
+          "language_code": "nic",
           "translation": "Ngambay / Sara Gambai (people/language)"
         }
       ],
       "etymology_analysis": "Ethnonym and language name of the Sara Gambai (Ngambay) people of southern Chad.",
-      "current_repo_state": {
-        "name": "Ngambay",
-        "b_tarr": "Ngambay",
-        "b_tarr_direct": "Ngambay",
-        "b_tarr_hist": "Ngambay",
-        "b_origin": "Ngambay (constituent holding of Kere)",
-        "b_anachronism": "",
-        "b_ipa": "[ŋam.ˈbaɪ]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ngambay_language",
       "older_name_by_867": {
         "exists": false,
@@ -8171,21 +6604,11 @@
         {
           "form": "Makari",
           "language": "Kanuri / Kotoko",
+          "language_code": "kau",
           "translation": "Makari (Kotoko city-state/people)"
         }
       ],
       "etymology_analysis": "Audited as Makary (Makari), a major Kotoko city-state in the Chari delta; 'Makari' is also the Kanuri name for the Kotoko.",
-      "current_repo_state": {
-        "name": "Kotokô",
-        "b_tarr": "Kotokô",
-        "b_tarr_direct": "Kotokô",
-        "b_tarr_hist": "Kotokô",
-        "b_origin": "Kotokô (Kotoko)",
-        "b_anachronism": "",
-        "b_ipa": "[kɔ.tɔ.ˈkoː]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Makary,_Cameroon",
       "older_name_by_867": {
         "exists": false,
@@ -8220,21 +6643,11 @@
         {
           "form": "Ngala",
           "language": "Kanuri / Kotoko",
+          "language_code": "kau",
           "translation": "Ngala (settlement/district)"
         }
       ],
       "etymology_analysis": "Historic settlement in eastern Borno State, Nigeria, near the Cameroon border and Lake Chad basin.",
-      "current_repo_state": {
-        "name": "Ngala",
-        "b_tarr": "Ngala",
-        "b_tarr_direct": "Ngala",
-        "b_tarr_hist": "Ngala",
-        "b_origin": "Ngala (constituent holding of Kotokô)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈŋa.la]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Ngala",
       "older_name_by_867": {
         "exists": false,
@@ -8269,21 +6682,11 @@
         {
           "form": "quṣūr",
           "language": "Arabic",
+          "language_code": "ara",
           "translation": "palaces, fortified settlements (adapted as Kousséri)"
         }
       ],
       "etymology_analysis": "From Arabic 'quṣūr' ('palaces'), applied to the Kotoko city-state known indigenously as Mser at the confluence of the Chari and Logone rivers.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Kouss%C3%A9ri",
       "older_name_by_867": {
         "exists": false,
@@ -8318,21 +6721,11 @@
         {
           "form": "Doulo",
           "language": "Wandala (Mandara)",
+          "language_code": "cdc",
           "translation": "Doulo / Dulo (capital settlement)"
         }
       ],
       "etymology_analysis": "Audited as Doulo (Duolo/Dulo), the 16th–19th century capital of the Wandala/Mandara Kingdom near Mora in Far North Cameroon, rather than the county-seat fallback 'Wandale'.",
-      "current_repo_state": {
-        "name": "Wandale",
-        "b_tarr": "Wandale",
-        "b_tarr_direct": "Wandale",
-        "b_tarr_hist": "Wandale",
-        "b_origin": "Wandale (Wandala)",
-        "b_anachronism": "",
-        "b_ipa": "[wan.ˈda.lɛ]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": null,
       "older_name_by_867": {
         "exists": false,
@@ -8367,21 +6760,11 @@
         {
           "form": "Bama",
           "language": "Kanuri",
+          "language_code": "kau",
           "translation": "Bama (town in Borno)"
         }
       ],
       "etymology_analysis": "Toponym for the town of Bama in Borno State, northeastern Nigeria.",
-      "current_repo_state": {
-        "name": "Bama",
-        "b_tarr": "Bama",
-        "b_tarr_direct": "Bama",
-        "b_tarr_hist": "Bama",
-        "b_origin": "Bama (constituent holding of Wandale)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈba.ma]",
-        "holding_type": "church",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Bama,_Nigeria",
       "older_name_by_867": {
         "exists": false,
@@ -8416,21 +6799,11 @@
         {
           "form": "Dagbamba",
           "language": "Dagbani",
+          "language_code": "mos",
           "translation": "Dagomba people"
         }
       ],
       "etymology_analysis": "Ethnonym of the Dagomba (Dagbamba) people, placed in Wandala in-game in reference to oral traditions of Lake Chad origins.",
-      "current_repo_state": {
-        "name": "Dagwamba",
-        "b_tarr": "Dagwamba",
-        "b_tarr_direct": "Dagwamba",
-        "b_tarr_hist": "Dagwamba",
-        "b_origin": "Dagwamba (constituent holding of Wandale)",
-        "b_anachronism": "",
-        "b_ipa": "[ˈdaɡ.wam.ba]",
-        "holding_type": "city",
-        "category": "sub_barony_adaptation"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Dagomba_people",
       "older_name_by_867": {
         "exists": false,
@@ -8465,21 +6838,11 @@
         {
           "form": "Salamat",
           "language": "Chadian Arabic",
+          "language_code": "ara",
           "translation": "Salamat (river and region name)"
         }
       ],
       "etymology_analysis": "Named after the Bahr Salamat river (from Arabic 'baḥr' 'river/sea' + 'Salamat'), which gives its name to the Salamat region of southeastern Chad.",
-      "current_repo_state": {
-        "name": "Salamat",
-        "b_tarr": "Salamat",
-        "b_tarr_direct": "Salamat",
-        "b_tarr_hist": "Salamat",
-        "b_origin": "Salamat (Salamat)",
-        "b_anachronism": "",
-        "b_ipa": "[sa.la.ˈmat]",
-        "holding_type": "castle",
-        "category": "capital_eponymous"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Salamat_(prefecture)",
       "older_name_by_867": {
         "exists": false,
@@ -8514,21 +6877,11 @@
         {
           "form": "Iro",
           "language": "Gula Iro / Chadic",
+          "language_code": "cdc",
           "translation": "Iro (lake name)"
         }
       ],
       "etymology_analysis": "Natural hydronym of Lake Iro (Lac Iro) in southeastern Chad, associated with the surrounding Gula Iro community.",
-      "current_repo_state": {
-        "name": "",
-        "b_tarr": "",
-        "b_tarr_direct": "",
-        "b_tarr_hist": "",
-        "b_origin": "",
-        "b_anachronism": "",
-        "b_ipa": "",
-        "holding_type": "unoccupied",
-        "category": "unoccupied"
-      },
       "source_url": "https://en.wikipedia.org/wiki/Iro_Lake",
       "older_name_by_867": {
         "exists": false,
