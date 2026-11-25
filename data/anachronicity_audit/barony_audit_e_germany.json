@@ -10,22 +10,22 @@
     },
     "summary_statistics": {
       "total_baronies": 1326,
-      "historical_867_true": 416,
-      "historical_867_false": 910,
+      "historical_867_true": 414,
+      "historical_867_false": 912,
       "first_mention_year_known": 1302,
       "first_mention_year_unknown": 24,
       "named_after_post_867_person": 53,
       "named_after_hydronym": 49,
       "named_after_any_natural_proper_name": 109,
       "has_older_name_by_867_total": 173,
-      "has_older_name_by_867_for_anachronistic": 116,
-      "has_older_name_by_867_for_historical": 57,
+      "has_older_name_by_867_for_anachronistic": 118,
+      "has_older_name_by_867_for_historical": 55,
       "wikipedia_source_attached": 1301,
       "by_kingdom": {
         "k_andalusia": {
           "total": 62,
-          "historical_867": 24,
-          "anachronistic": 38
+          "historical_867": 23,
+          "anachronistic": 39
         },
         "k_badajoz": {
           "total": 32,
@@ -54,8 +54,8 @@
         },
         "k_england": {
           "total": 175,
-          "historical_867": 46,
-          "anachronistic": 129
+          "historical_867": 45,
+          "anachronistic": 130
         },
         "k_frisia": {
           "total": 41,
@@ -516,9 +516,9 @@
         "county": "c_calatrava",
         "holding_type": "church"
       },
-      "first_mention_year": 77,
-      "first_mention_attestation": "Attested as Mentesa Bastia by Pliny the Elder in Naturalis Historia (77 CE) and in Roman itineraries, later appearing as Mantīsa in early Islamic chronicles.",
-      "is_historical_867": true,
+      "first_mention_year": 1244,
+      "first_mention_attestation": "The Castilian fortress name La Guardia (later La Guardia de Jaén) arose after Ferdinand III's conquest of the site in 1244 CE (constituted as a lordship in 1331 CE), succeeding ancient Mentesa Bastia (77 CE).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -559,7 +559,8 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Mentesa Bastia"
+          "Mentesa Bastia",
+          "Mantīsa"
         ],
         "first_mention_year": 77,
         "first_mention_source": "Pliny the Elder, Naturalis Historia (77 CE)",
@@ -8274,7 +8275,7 @@
     },
     "b_rudolfswerde": {
       "barony_key": "b_rudolfswerde",
-      "modern_name": "Novo Mesto (Rudolfswerde)",
+      "modern_name": "Novo Mesto",
       "hierarchy": {
         "empire": "e_germany",
         "kingdom": "k_bavaria",
@@ -9923,7 +9924,7 @@
     },
     "b_vienna": {
       "barony_key": "b_vienna",
-      "modern_name": "Vienna (Wien)",
+      "modern_name": "Vienna",
       "hierarchy": {
         "empire": "e_germany",
         "kingdom": "k_bavaria",
@@ -15328,7 +15329,7 @@
     },
     "b_biel": {
       "barony_key": "b_biel",
-      "modern_name": "Biel/Bienne",
+      "modern_name": "Biel",
       "hierarchy": {
         "empire": "e_germany",
         "kingdom": "k_burgundy",
@@ -21022,7 +21023,7 @@
     },
     "b_casel": {
       "barony_key": "b_casel",
-      "modern_name": "Kassel",
+      "modern_name": "Kasendorf",
       "hierarchy": {
         "empire": "e_germany",
         "kingdom": "k_east_francia",
@@ -21030,8 +21031,8 @@
         "county": "c_bamberg",
         "holding_type": "castle"
       },
-      "first_mention_year": 913,
-      "first_mention_attestation": "First attested in 913 CE as Chasella or Chassalla in two royal deeds signed there by King Conrad I of East Francia.",
+      "first_mention_year": 1286,
+      "first_mention_attestation": "First documented in 1286 CE (receiving market and town rights in 1328 CE) in Upper Franconia near Bamberg.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -21042,12 +21043,17 @@
       },
       "morphemes": [
         {
-          "form": "castellum",
-          "language": "Latin",
-          "translation": "fort, fortification, bridgehead"
+          "form": "Katzen- / Kasen-",
+          "language": "Middle High German",
+          "translation": "cat (reflected in former names Katzendorf/Katzenstadt)"
+        },
+        {
+          "form": "-dorf",
+          "language": "Middle High German",
+          "translation": "village, settlement"
         }
       ],
-      "etymology_analysis": "Attested in 913 CE as Chasella/Chassalla, generally derived from Latin castellum ('fortification'), referring to a fortified bridgehead on the Fulda river.",
+      "etymology_analysis": "Kasendorf (historically attested as Katzendorf and Katzenstadt, reflected in its canting coat of arms) combines Middle High German katze ('cat') with -dorf ('village').",
       "current_repo_state": {
         "name": "Casel",
         "b_tarr": "Casel",
@@ -21059,7 +21065,7 @@
         "holding_type": "castle",
         "category": "sub_barony_adaptation"
       },
-      "source_url": "https://en.wikipedia.org/wiki/Kassel",
+      "source_url": "https://en.wikipedia.org/wiki/Kasendorf",
       "older_name_by_867": {
         "exists": false,
         "names": [],
@@ -24711,8 +24717,8 @@
         "county": "c_hohenberg",
         "holding_type": "city"
       },
-      "first_mention_year": 73,
-      "first_mention_attestation": "Rottweil originated as the Roman military base and municipium 'Arae Flaviae', founded in 73–74 CE and recorded on the Tabula Peutingeriana; the early medieval settlement is attested as 'rotuvilla' in 771 CE.",
+      "first_mention_year": 771,
+      "first_mention_attestation": "The early medieval settlement of Rotuvilla (whence Rottweil) is first attested in 771 CE, succeeding the Roman municipium Arae Flaviae founded in 73–74 CE.",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -35192,9 +35198,9 @@
         "county": "c_cambridgeshire",
         "holding_type": "castle"
       },
-      "first_mention_year": 215,
-      "first_mention_attestation": "Attested in the early 3rd-century CE Antonine Itinerary as the Roman settlement Duroliponte on Castle Hill, later recorded by Bede in his Historia ecclesiastica (731 CE) as Grantacaestir and in the Anglo-Saxon Chronicle (875 CE) as Grantebrycge.",
-      "is_historical_867": true,
+      "first_mention_year": 875,
+      "first_mention_attestation": "The name Grantebrycge (whence Cambridge) is first attested in the Anglo-Saxon Chronicle annal for 875 CE; the earlier Castle Hill site was recorded as Roman Duroliponte (c. 215 CE) and by Bede as Grantacaestir (731 CE).",
+      "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
       "natural_proper_name": {
@@ -35230,7 +35236,8 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "Duroliponte"
+          "Duroliponte",
+          "Grantacaestir"
         ],
         "first_mention_year": 215,
         "first_mention_source": "Antonine Itinerary (early 3rd century CE); Bede, Historia ecclesiastica (731 CE)",
@@ -37236,8 +37243,8 @@
         "county": "c_somerset",
         "holding_type": "castle"
       },
-      "first_mention_year": 150,
-      "first_mention_attestation": "Attested in Ptolemy's Geographia (c. 150 CE) as Aquae Calidae ('warm waters') and in the Antonine Itinerary as Aquis Sulis, later Old English Hāt Bæðu.",
+      "first_mention_year": 675,
+      "first_mention_attestation": "The Old English name Hat Bathu (æt Baðum, whence Bath) first appears in a charter of 675 CE, succeeding the Roman spa town of Aquae Calidae / Aquae Sulis (c. 150 CE).",
       "is_historical_867": true,
       "named_after_post_867_person": false,
       "eponym_details": null,

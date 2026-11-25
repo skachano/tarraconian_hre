@@ -20,13 +20,35 @@
       "has_older_name_by_867_total": 29,
       "has_older_name_by_867_for_anachronistic": 29,
       "has_older_name_by_867_for_historical": 0,
-      "wikipedia_source_attached": 76
+      "wikipedia_source_attached": 76,
+      "by_kingdom": {
+        "k_balhae": {
+          "total": 101,
+          "historical_867": 21,
+          "anachronistic": 80
+        },
+        "k_khitan": {
+          "total": 88,
+          "historical_867": 0,
+          "anachronistic": 88
+        },
+        "k_luzhen": {
+          "total": 56,
+          "historical_867": 8,
+          "anachronistic": 48
+        },
+        "k_raole": {
+          "total": 26,
+          "historical_867": 1,
+          "anachronistic": 25
+        }
+      }
     }
   },
   "baronies": {
     "b_Liao_Xijing": {
       "barony_key": "b_Liao_Xijing",
-      "modern_name": "Linjiang (Xijing / Seogyeong)",
+      "modern_name": "Linjiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -81,7 +103,7 @@
     },
     "b_Liao_Luzhou2": {
       "barony_key": "b_Liao_Luzhou2",
-      "modern_name": "Linjiang (Luzhou)",
+      "modern_name": "Linjiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -128,8 +150,8 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "神州 (Shenzhou / Sinju)",
-          "西京鴨綠府 (Xijing Yalu Fu / Seogyeong Amnokbu)"
+          "Shenzhou / Sinju (神州)",
+          "Xijing Yalu Fu / Seogyeong Amnokbu (西京鴨綠府)"
         ],
         "first_mention_year": 785,
         "first_mention_source": "Jia Dan's Huanghua Sida Ji (c. 785–805 CE), quoted in Xin Tangshu (1060 CE)",
@@ -194,7 +216,7 @@
     },
     "b_FIC_Liao_Changbaishan": {
       "barony_key": "b_FIC_Liao_Changbaishan",
-      "modern_name": "Changbai Mountain (Paektu Mountain)",
+      "modern_name": "Changbai Mountain",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -254,7 +276,7 @@
     },
     "b_FIC_Liao_Tianchi": {
       "barony_key": "b_FIC_Liao_Tianchi",
-      "modern_name": "Heaven Lake (Tianchi)",
+      "modern_name": "Heaven Lake",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -309,7 +331,7 @@
     },
     "b_Liao_Changling": {
       "barony_key": "b_Liao_Changling",
-      "modern_name": "Changling (Balhae Jangnyeong Province)",
+      "modern_name": "Changling",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -479,7 +501,7 @@
     },
     "b_Liao_Zhengzhou": {
       "barony_key": "b_Liao_Zhengzhou",
-      "modern_name": "Tonghua (Balhae Jeongju / Zhengzhou)",
+      "modern_name": "Tonghua",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -594,7 +616,7 @@
     },
     "b_Liao_Huanzhou": {
       "barony_key": "b_Liao_Huanzhou",
-      "modern_name": "Ji'an (Balhae Hwanju / Huanzhou)",
+      "modern_name": "Ji'an",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -704,7 +726,7 @@
     },
     "b_Liao_Hezhou": {
       "barony_key": "b_Liao_Hezhou",
-      "modern_name": "Meihekou (Balhae Haju / Hezhou)",
+      "modern_name": "Meihekou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -874,7 +896,7 @@
     },
     "b_Liao_Changchun2": {
       "barony_key": "b_Liao_Changchun2",
-      "modern_name": "Changchunzhou (Baicheng)",
+      "modern_name": "Changchunzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -929,7 +951,7 @@
     },
     "b_Liao_Weizhou": {
       "barony_key": "b_Liao_Weizhou",
-      "modern_name": "Weizhou (Kaiyuan)",
+      "modern_name": "Weizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -984,7 +1006,7 @@
     },
     "b_Liao_Binzhou": {
       "barony_key": "b_Liao_Binzhou",
-      "modern_name": "Binzhou (Nong'an)",
+      "modern_name": "Binzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1039,7 +1061,7 @@
     },
     "b_Liao_Xiangzhou": {
       "barony_key": "b_Liao_Xiangzhou",
-      "modern_name": "Xiangzhou (Nong'an)",
+      "modern_name": "Xiangzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1094,7 +1116,7 @@
     },
     "b_Liao_Fuzhou2": {
       "barony_key": "b_Liao_Fuzhou2",
-      "modern_name": "Fuyu / Siping (Balhae Buju / Fuzhou)",
+      "modern_name": "Fuyu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1149,7 +1171,7 @@
     },
     "b_Liao_Suzhou": {
       "barony_key": "b_Liao_Suzhou",
-      "modern_name": "Suzhou (Liaoning/Jilin)",
+      "modern_name": "Suzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1259,7 +1281,7 @@
     },
     "b_Liao_Xianzhou2": {
       "barony_key": "b_Liao_Xianzhou2",
-      "modern_name": "Xifeng (Balhae Seonju / Xianzhou)",
+      "modern_name": "Xifeng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1314,7 +1336,7 @@
     },
     "b_Liao_Xinzhou": {
       "barony_key": "b_Liao_Xinzhou",
-      "modern_name": "Huaide / Gongzhuling (Liao Xinzhou)",
+      "modern_name": "Huaide",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1361,8 +1383,8 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "懷遠府 (Huaiyuan Fu / Hoewonbu)",
-          "越喜 (Yuexi / Wolhui)"
+          "Huaiyuan Fu / Hoewonbu (懷遠府)",
+          "Yuexi / Wolhui (越喜)"
         ],
         "first_mention_year": 830,
         "first_mention_source": "Xin Tangshu (1060 CE) recording Balhae's 15 provinces by King Xuan's reign (818–830 CE); Liao Shi (1344 CE)",
@@ -1427,7 +1449,7 @@
     },
     "b_Liao_Yizhou": {
       "barony_key": "b_Liao_Yizhou",
-      "modern_name": "Yizhou (Nong'an)",
+      "modern_name": "Yizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1482,7 +1504,7 @@
     },
     "b_Liao_Fengzhou3": {
       "barony_key": "b_Liao_Fengzhou3",
-      "modern_name": "Fengzhou (Liao)",
+      "modern_name": "Fengzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1490,8 +1512,8 @@
         "county": "c_BAL_yizhou",
         "holding_type": "city"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Recorded in the Liao Shi (1344 CE, juan 37) as a Liao-dynasty prefecture (鳳州) on the former territory of Gaoli (槁離國) and Balhae's Anning Commandery (安寧郡).",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao-dynasty prefecture (鳳州, c. 10th–11th century) on former Gaoli and Balhae Anning Commandery territory, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -1529,8 +1551,8 @@
       "older_name_by_867": {
         "exists": true,
         "names": [
-          "安寧郡 (Anning Commandery)",
-          "槁離國 (Gaoli / Goryeo)"
+          "Anning Commandery (安寧郡)",
+          "Gaoli / Goryeo (槁離國)"
         ],
         "first_mention_year": 830,
         "first_mention_source": "Liao Shi (1344 CE, juan 37), citing Balhae's Anning Commandery (<= 867 CE)",
@@ -1540,7 +1562,7 @@
     },
     "b_Liao_Jizhou": {
       "barony_key": "b_Liao_Jizhou",
-      "modern_name": "Jizhou (Tianjin)",
+      "modern_name": "Jizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1595,7 +1617,7 @@
     },
     "b_Liao_Mozhou": {
       "barony_key": "b_Liao_Mozhou",
-      "modern_name": "Acheng, Harbin (Balhae Makju / Mozhou)",
+      "modern_name": "Acheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1650,7 +1672,7 @@
     },
     "b_Liao_Gaozhou2": {
       "barony_key": "b_Liao_Gaozhou2",
-      "modern_name": "Bin County, Heilongjiang (Balhae Goju / Gaozhou)",
+      "modern_name": "Bin County",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1825,7 +1847,7 @@
     },
     "b_Liao_Suzhou2": {
       "barony_key": "b_Liao_Suzhou2",
-      "modern_name": "Jilin City / Changyi (Balhae Sokju / Suzhou)",
+      "modern_name": "Jilin City",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -1990,7 +2012,7 @@
     },
     "b_Liao_Ningjiang": {
       "barony_key": "b_Liao_Ningjiang",
-      "modern_name": "Fuyu, Jilin (Liao Ningjiangzhou)",
+      "modern_name": "Fuyu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2160,7 +2182,7 @@
     },
     "b_Liao_Tongzhou2": {
       "barony_key": "b_Liao_Tongzhou2",
-      "modern_name": "Haicheng, Liaoning (Balhae Tongzhou)",
+      "modern_name": "Haicheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2270,7 +2292,7 @@
     },
     "b_Liao_Sushen": {
       "barony_key": "b_Liao_Sushen",
-      "modern_name": "Sushen (Balhae Sushen County)",
+      "modern_name": "Sushen",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2375,7 +2397,7 @@
     },
     "b_Liao_Xingzhou": {
       "barony_key": "b_Liao_Xingzhou",
-      "modern_name": "Baihe / Antu (Balhae Heungju / Xingzhou)",
+      "modern_name": "Baihe",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2485,7 +2507,7 @@
     },
     "b_Liao_Luzhou": {
       "barony_key": "b_Liao_Luzhou",
-      "modern_name": "Antu County (Balhae Noju / Luzhou)",
+      "modern_name": "Antu County",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2540,7 +2562,7 @@
     },
     "b_Liao_Zhongjing": {
       "barony_key": "b_Liao_Zhongjing",
-      "modern_name": "Helong / Dunhua (Balhae Junggyeong / Zhongjing)",
+      "modern_name": "Helong",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2595,7 +2617,7 @@
     },
     "b_Liao_Tangzhou2": {
       "barony_key": "b_Liao_Tangzhou2",
-      "modern_name": "Tangzhou (near Liaoyang, Liaoning)",
+      "modern_name": "Tangzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2650,7 +2672,7 @@
     },
     "b_FIC_Liao_Nansuan": {
       "barony_key": "b_FIC_Liao_Nansuan",
-      "modern_name": "Nansuan (synthetic CK3 name)",
+      "modern_name": "Nansuan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2705,7 +2727,7 @@
     },
     "b_FIC_Liao_Erdaojiang": {
       "barony_key": "b_FIC_Liao_Erdaojiang",
-      "modern_name": "Erdaojiang, Tonghua, Jilin",
+      "modern_name": "Erdaojiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2765,7 +2787,7 @@
     },
     "b_Liao_Yingzhou": {
       "barony_key": "b_Liao_Yingzhou",
-      "modern_name": "Yingzhou (Mudanjiang area, Heilongjiang)",
+      "modern_name": "Yingzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2820,7 +2842,7 @@
     },
     "b_FIC_Liao_Yingan": {
       "barony_key": "b_FIC_Liao_Yingan",
-      "modern_name": "Ying'an (synthetic CK3 name)",
+      "modern_name": "Ying'an",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2875,7 +2897,7 @@
     },
     "b_Liao_Shangjing": {
       "barony_key": "b_Liao_Shangjing",
-      "modern_name": "Dongjingcheng, Ning'an, Heilongjiang",
+      "modern_name": "Dongjingcheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2930,7 +2952,7 @@
     },
     "b_Liao_Bozhou": {
       "barony_key": "b_Liao_Bozhou",
-      "modern_name": "Bozhou (Mudanjiang area, Heilongjiang)",
+      "modern_name": "Bozhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -2985,7 +3007,7 @@
     },
     "b_FIC_Liao_Daguokuishan": {
       "barony_key": "b_FIC_Liao_Daguokuishan",
-      "modern_name": "Daguokui Mountain, Shangzhi, Heilongjiang",
+      "modern_name": "Daguokui Mountain",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3045,7 +3067,7 @@
     },
     "b_FIC_Liao_Mudanjiang": {
       "barony_key": "b_FIC_Liao_Mudanjiang",
-      "modern_name": "Mudan River, Heilongjiang",
+      "modern_name": "Mudan River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3100,7 +3122,7 @@
     },
     "b_FIC_Liao_Qingquan": {
       "barony_key": "b_FIC_Liao_Qingquan",
-      "modern_name": "Qingquan (synthetic CK3 name)",
+      "modern_name": "Qingquan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3155,7 +3177,7 @@
     },
     "b_Liao_Diezhou": {
       "barony_key": "b_Liao_Diezhou",
-      "modern_name": "Diezhou (unattested in Liaodong)",
+      "modern_name": "Diezhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3210,7 +3232,7 @@
     },
     "b_Liao_Tongzhou": {
       "barony_key": "b_Liao_Tongzhou",
-      "modern_name": "Ximu, Haicheng, Liaoning",
+      "modern_name": "Ximu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3265,7 +3287,7 @@
     },
     "b_Liao_Kaizhou": {
       "barony_key": "b_Liao_Kaizhou",
-      "modern_name": "Fengcheng, Liaoning",
+      "modern_name": "Fengcheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3324,7 +3346,7 @@
     },
     "b_Liao_Dandong": {
       "barony_key": "b_Liao_Dandong",
-      "modern_name": "Dandong, Liaoning",
+      "modern_name": "Dandong",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3382,7 +3404,7 @@
     },
     "b_Liao_Guidezhou": {
       "barony_key": "b_Liao_Guidezhou",
-      "modern_name": "Fushun, Liaoning",
+      "modern_name": "Fushun",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3445,7 +3467,7 @@
     },
     "b_Liao_Xiyuan": {
       "barony_key": "b_Liao_Xiyuan",
-      "modern_name": "Xiyuan (unattested in Liaodong)",
+      "modern_name": "Xiyuan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3500,7 +3522,7 @@
     },
     "b_Liao_Fengcheng": {
       "barony_key": "b_Liao_Fengcheng",
-      "modern_name": "Fengcheng (unattested in Fushun/Liaodong)",
+      "modern_name": "Fengcheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3555,7 +3577,7 @@
     },
     "b_FIC_Liao_Shaozijiang": {
       "barony_key": "b_FIC_Liao_Shaozijiang",
-      "modern_name": "Shaozijiang (synthetic CK3 name)",
+      "modern_name": "Shaozijiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3615,7 +3637,7 @@
     },
     "b_Liao_Shenyang": {
       "barony_key": "b_Liao_Shenyang",
-      "modern_name": "Shenyang, Liaoning",
+      "modern_name": "Shenyang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3673,7 +3695,7 @@
     },
     "b_Liao_Tangzhou": {
       "barony_key": "b_Liao_Tangzhou",
-      "modern_name": "Tangzhou (unattested in Liaodong)",
+      "modern_name": "Tangzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3728,7 +3750,7 @@
     },
     "b_Liao_Liaoyang": {
       "barony_key": "b_Liao_Liaoyang",
-      "modern_name": "Liaoyang, Liaoning",
+      "modern_name": "Liaoyang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3787,7 +3809,7 @@
     },
     "b_Liao_Haizhou": {
       "barony_key": "b_Liao_Haizhou",
-      "modern_name": "Haicheng, Liaoning",
+      "modern_name": "Haicheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3845,7 +3867,7 @@
     },
     "b_Liao_Yaozhou": {
       "barony_key": "b_Liao_Yaozhou",
-      "modern_name": "Yaozhou (Yingkou / Gaizhou area, Liaoning)",
+      "modern_name": "Yaozhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3902,7 +3924,7 @@
     },
     "b_Liao_Yinzhou": {
       "barony_key": "b_Liao_Yinzhou",
-      "modern_name": "Yinzhou District, Tieling, Liaoning",
+      "modern_name": "Yinzhou District",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -3959,7 +3981,7 @@
     },
     "b_Liao_Qizhou": {
       "barony_key": "b_Liao_Qizhou",
-      "modern_name": "Qizhou (Kangping / Tieling area, Liaoning)",
+      "modern_name": "Qizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4016,7 +4038,7 @@
     },
     "b_Liao_Guangzhou": {
       "barony_key": "b_Liao_Guangzhou",
-      "modern_name": "Guangzhou (Shenyang / Zhangwu area, Liaoning)",
+      "modern_name": "Guangzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4075,7 +4097,7 @@
     },
     "b_FIC_Liao_Huangcaocun": {
       "barony_key": "b_FIC_Liao_Huangcaocun",
-      "modern_name": "Huangcaocun (synthetic CK3 name)",
+      "modern_name": "Huangcaocun",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4135,7 +4157,7 @@
     },
     "b_Liao_Zhenzhou": {
       "barony_key": "b_Liao_Zhenzhou",
-      "modern_name": "Zhenzhou (unattested in Liaodong)",
+      "modern_name": "Zhenzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4190,7 +4212,7 @@
     },
     "b_Liao_Fuping": {
       "barony_key": "b_Liao_Fuping",
-      "modern_name": "Fuping (unattested in Liaodong)",
+      "modern_name": "Fuping",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4245,7 +4267,7 @@
     },
     "b_Liao_Suning": {
       "barony_key": "b_Liao_Suning",
-      "modern_name": "Suning (unattested in Liaodong)",
+      "modern_name": "Suning",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4300,7 +4322,7 @@
     },
     "b_FIC_Liao_Biliujiang": {
       "barony_key": "b_FIC_Liao_Biliujiang",
-      "modern_name": "Biliu River, Liaoning",
+      "modern_name": "Biliu River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4360,7 +4382,7 @@
     },
     "b_FIC_Amur_Fanlinan": {
       "barony_key": "b_FIC_Amur_Fanlinan",
-      "modern_name": "Fanlin'an (synthetic CK3 name)",
+      "modern_name": "Fanlin'an",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4420,7 +4442,7 @@
     },
     "b_FIC_Amur_Pilutidu": {
       "barony_key": "b_FIC_Amur_Pilutidu",
-      "modern_name": "Pilutidu (synthetic CK3 name)",
+      "modern_name": "Pilutidu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4475,7 +4497,7 @@
     },
     "b_FIC_Amur_Nenshuide": {
       "barony_key": "b_FIC_Amur_Nenshuide",
-      "modern_name": "Nenshuide (synthetic CK3 name)",
+      "modern_name": "Nenshuide",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4535,7 +4557,7 @@
     },
     "b_Jiqin_Hari": {
       "barony_key": "b_Jiqin_Hari",
-      "modern_name": "Qiqihar, Heilongjiang",
+      "modern_name": "Qiqihar",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4590,7 +4612,7 @@
     },
     "b_FIC_Amur_Jiaruzhe": {
       "barony_key": "b_FIC_Amur_Jiaruzhe",
-      "modern_name": "Jiaruzhe (synthetic CK3 name)",
+      "modern_name": "Jiaruzhe",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4645,7 +4667,7 @@
     },
     "b_FIC_Amur_Xuduohubo": {
       "barony_key": "b_FIC_Amur_Xuduohubo",
-      "modern_name": "Xuduohubo (synthetic CK3 name)",
+      "modern_name": "Xuduohubo",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4700,7 +4722,7 @@
     },
     "b_FIC_Amur_Nenshidi": {
       "barony_key": "b_FIC_Amur_Nenshidi",
-      "modern_name": "Nenshidi (synthetic CK3 name)",
+      "modern_name": "Nenshidi",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4755,7 +4777,7 @@
     },
     "b_FIC_Amur_Ruzhejiang": {
       "barony_key": "b_FIC_Amur_Ruzhejiang",
-      "modern_name": "Ruzhejiang (synthetic CK3 name)",
+      "modern_name": "Ruzhejiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4810,7 +4832,7 @@
     },
     "b_FIC_Amur_Dalukou": {
       "barony_key": "b_FIC_Amur_Dalukou",
-      "modern_name": "Dalukou (synthetic CK3 name)",
+      "modern_name": "Dalukou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4865,7 +4887,7 @@
     },
     "b_FIC_Amur_Heyucun": {
       "barony_key": "b_FIC_Amur_Heyucun",
-      "modern_name": "Heyucun (synthetic CK3 name)",
+      "modern_name": "Heyucun",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4925,7 +4947,7 @@
     },
     "b_FIC_Amur_Fancao": {
       "barony_key": "b_FIC_Amur_Fancao",
-      "modern_name": "Fancao (synthetic CK3 name)",
+      "modern_name": "Fancao",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -4980,7 +5002,7 @@
     },
     "b_FIC_Amur_Erliuyu": {
       "barony_key": "b_FIC_Amur_Erliuyu",
-      "modern_name": "Erliuyu (synthetic CK3 name)",
+      "modern_name": "Erliuyu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5040,7 +5062,7 @@
     },
     "b_FIC_Amur_Cangcao": {
       "barony_key": "b_FIC_Amur_Cangcao",
-      "modern_name": "Cangcao (synthetic CK3 name)",
+      "modern_name": "Cangcao",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5094,7 +5116,7 @@
     },
     "b_FIC_Amur_Gonghejiang": {
       "barony_key": "b_FIC_Amur_Gonghejiang",
-      "modern_name": "Gonghejiang (synthetic CK3 name)",
+      "modern_name": "Gonghejiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5154,7 +5176,7 @@
     },
     "b_FIC_Amur_Dasenlin": {
       "barony_key": "b_FIC_Amur_Dasenlin",
-      "modern_name": "Dasenlin (synthetic CK3 name)",
+      "modern_name": "Dasenlin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5209,7 +5231,7 @@
     },
     "b_FIC_Amur_Heilonglin": {
       "barony_key": "b_FIC_Amur_Heilonglin",
-      "modern_name": "Heilonglin (黑龙林)",
+      "modern_name": "Heilonglin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5328,7 +5350,7 @@
     },
     "b_FIC_Amur_Lupingyuan": {
       "barony_key": "b_FIC_Amur_Lupingyuan",
-      "modern_name": "Lupingyuan (鹿坪塬)",
+      "modern_name": "Lupingyuan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5442,7 +5464,7 @@
     },
     "b_FIC_Amur_Yerencao": {
       "barony_key": "b_FIC_Amur_Yerencao",
-      "modern_name": "Yerencao (野人草)",
+      "modern_name": "Yerencao",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5502,7 +5524,7 @@
     },
     "b_Amur_Suihua": {
       "barony_key": "b_Amur_Suihua",
-      "modern_name": "Suihua (绥化)",
+      "modern_name": "Suihua",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5557,7 +5579,7 @@
     },
     "b_FIC_Amur_Lindu": {
       "barony_key": "b_FIC_Amur_Lindu",
-      "modern_name": "Lindu (临度)",
+      "modern_name": "Lindu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_balhae",
@@ -5720,7 +5742,7 @@
     },
     "b_FIC_Liao_Dalinuor": {
       "barony_key": "b_FIC_Liao_Dalinuor",
-      "modern_name": "Dalinuoer (达里诺尔)",
+      "modern_name": "Dalinuoer",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -5775,7 +5797,7 @@
     },
     "b_FIC_Liao_Hongdali": {
       "barony_key": "b_FIC_Liao_Hongdali",
-      "modern_name": "Hongdali (红达里)",
+      "modern_name": "Hongdali",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -5830,7 +5852,7 @@
     },
     "b_FIC_Liao_Matudi": {
       "barony_key": "b_FIC_Liao_Matudi",
-      "modern_name": "Matudi (马土地)",
+      "modern_name": "Matudi",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -5998,7 +6020,7 @@
     },
     "b_Liao_Linhuang": {
       "barony_key": "b_Liao_Linhuang",
-      "modern_name": "Linhuang / Liao Shangjing (临潢 / 辽上京)",
+      "modern_name": "Linhuang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6053,7 +6075,7 @@
     },
     "b_Liao_Huaizhou": {
       "barony_key": "b_Liao_Huaizhou",
-      "modern_name": "Huaizhou (怀州)",
+      "modern_name": "Huaizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6110,7 +6132,7 @@
     },
     "b_Liao_Songzhanzhou": {
       "barony_key": "b_Liao_Songzhanzhou",
-      "modern_name": "Songshanzhou (松山州)",
+      "modern_name": "Songshanzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6170,7 +6192,7 @@
     },
     "b_Liao_Zuzhou": {
       "barony_key": "b_Liao_Zuzhou",
-      "modern_name": "Zuzhou (祖州)",
+      "modern_name": "Zuzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6225,7 +6247,7 @@
     },
     "b_Liao_Yungzhou": {
       "barony_key": "b_Liao_Yungzhou",
-      "modern_name": "Yongzhou (永州)",
+      "modern_name": "Yongzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6280,7 +6302,7 @@
     },
     "b_Liao_Longhuazhou": {
       "barony_key": "b_Liao_Longhuazhou",
-      "modern_name": "Longhuazhou (龙化州)",
+      "modern_name": "Longhuazhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6340,7 +6362,7 @@
     },
     "b_Liao_Jiangshengzhou": {
       "barony_key": "b_Liao_Jiangshengzhou",
-      "modern_name": "Jiangshengzhou (降圣州)",
+      "modern_name": "Jiangshengzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6400,7 +6422,7 @@
     },
     "b_FIC_Liao_Huopingan": {
       "barony_key": "b_FIC_Liao_Huopingan",
-      "modern_name": "Huopingan (火平安)",
+      "modern_name": "Huopingan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6460,7 +6482,7 @@
     },
     "b_Liao_Raozhou": {
       "barony_key": "b_Liao_Raozhou",
-      "modern_name": "Raozhou (饶州)",
+      "modern_name": "Raozhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6517,7 +6539,7 @@
     },
     "b_Liao_Qingzhou": {
       "barony_key": "b_Liao_Qingzhou",
-      "modern_name": "Qingzhou (庆州)",
+      "modern_name": "Qingzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6572,7 +6594,7 @@
     },
     "b_FIC_Liao_Xilin": {
       "barony_key": "b_FIC_Liao_Xilin",
-      "modern_name": "Xilin (锡林)",
+      "modern_name": "Xilin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6622,7 +6644,7 @@
     },
     "b_FIC_Liao_Ulanulagai": {
       "barony_key": "b_FIC_Liao_Ulanulagai",
-      "modern_name": "Hula'anwuluhui (忽剌安兀鲁回)",
+      "modern_name": "Hula'anwuluhui",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6677,7 +6699,7 @@
     },
     "b_FIC_Liao_Ulanuer": {
       "barony_key": "b_FIC_Liao_Ulanuer",
-      "modern_name": "Wulan'er (乌兰鄂尔)",
+      "modern_name": "Wulan'er",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6732,7 +6754,7 @@
     },
     "b_FIC_Liao_Charnoer": {
       "barony_key": "b_FIC_Liao_Charnoer",
-      "modern_name": "Chagannuoer (查干诺尔)",
+      "modern_name": "Chagannuoer",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6787,7 +6809,7 @@
     },
     "b_Liao_Changchun": {
       "barony_key": "b_Liao_Changchun",
-      "modern_name": "Changchun (长春)",
+      "modern_name": "Changchun",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6842,7 +6864,7 @@
     },
     "b_FIC_Liao_Yumitudi": {
       "barony_key": "b_FIC_Liao_Yumitudi",
-      "modern_name": "Yumitudi (于米图的)",
+      "modern_name": "Yumitudi",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6897,7 +6919,7 @@
     },
     "b_FIC_Liao_Heihorqin": {
       "barony_key": "b_FIC_Liao_Heihorqin",
-      "modern_name": "Heike'erqin (黑火儿赤纳)",
+      "modern_name": "Heike'erqin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -6952,7 +6974,7 @@
     },
     "b_FIC_Liao_Shuangliao": {
       "barony_key": "b_FIC_Liao_Shuangliao",
-      "modern_name": "Shuangliao (双辽)",
+      "modern_name": "Shuangliao",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7007,7 +7029,7 @@
     },
     "b_FIC_Liao_Horqin": {
       "barony_key": "b_FIC_Liao_Horqin",
-      "modern_name": "Ke'erqin (火儿赤纳)",
+      "modern_name": "Ke'erqin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7165,7 +7187,7 @@
     },
     "b_Liao_Ningzhou": {
       "barony_key": "b_Liao_Ningzhou",
-      "modern_name": "Ningzhou (宁州)",
+      "modern_name": "Ningzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7173,8 +7195,8 @@
         "county": "c_LIAO_ningzhou",
         "holding_type": "castle"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Attested in the History of Liao (Liao Shi, juan 37, compiled 1344 CE) as a Liao touxia military prefecture established on the grazing lands of Prince Guanning; no written attestation <= 867 CE.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao touxia military prefecture (c. 10th–11th century) on the grazing lands of Prince Guanning, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7220,7 +7242,7 @@
     },
     "b_Liao_Fengzhou2": {
       "barony_key": "b_Liao_Fengzhou2",
-      "modern_name": "Fengzhou (丰州)",
+      "modern_name": "Fengzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7228,8 +7250,8 @@
         "county": "c_LIAO_ningzhou",
         "holding_type": "unoccupied"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Attested in the History of Liao (Liao Shi, juan 37, compiled 1344 CE) as a Liao touxia military prefecture 350 li north of Shangjing on the former grazing lands of Yaonian Sengyin; no written attestation <= 867 CE.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao touxia military prefecture (c. 10th–11th century) 350 li north of Shangjing on the former grazing lands of Yaonian Sengyin, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7274,7 +7296,7 @@
     },
     "b_Liao_Taonan": {
       "barony_key": "b_Liao_Taonan",
-      "modern_name": "Taonan (洮南)",
+      "modern_name": "Taonan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7328,7 +7350,7 @@
     },
     "b_Liao_Chunzhou": {
       "barony_key": "b_Liao_Chunzhou",
-      "modern_name": "Chunzhou (春州)",
+      "modern_name": "Chunzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7382,7 +7404,7 @@
     },
     "b_Amur_Taizhou": {
       "barony_key": "b_Amur_Taizhou",
-      "modern_name": "Taizhou (泰州)",
+      "modern_name": "Taizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7437,7 +7459,7 @@
     },
     "b_FIC_Amur_Jianali": {
       "barony_key": "b_FIC_Amur_Jianali",
-      "modern_name": "Jianali (假那礼)",
+      "modern_name": "Jianali",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7497,7 +7519,7 @@
     },
     "b_FIC_Amur_Nalidu": {
       "barony_key": "b_FIC_Amur_Nalidu",
-      "modern_name": "Nalidu (乃力度)",
+      "modern_name": "Nalidu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7557,7 +7579,7 @@
     },
     "b_FIC_Amur_Hongan": {
       "barony_key": "b_FIC_Amur_Hongan",
-      "modern_name": "Hong'an (红安)",
+      "modern_name": "Hong'an",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7612,7 +7634,7 @@
     },
     "b_Liao_Wuzhou2": {
       "barony_key": "b_Liao_Wuzhou2",
-      "modern_name": "Wuzhou (乌州)",
+      "modern_name": "Wuzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7620,8 +7642,8 @@
         "county": "c_LIAO_wuzhou",
         "holding_type": "castle"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Established during the Liao dynasty by Northern Great King Bola (拨剌) on former Wuhuan territory and attested in the History of Liao (Liao Shi, juan 37, compiled 1344 CE); no written attestation <= 867 CE.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao touxia prefecture (c. 10th–11th century) by Northern Great King Bola on former Wuhuan territory, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7667,7 +7689,7 @@
     },
     "b_Liao_Weizhou2": {
       "barony_key": "b_Liao_Weizhou2",
-      "modern_name": "Weizhou (渭州)",
+      "modern_name": "Weizhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7675,8 +7697,8 @@
         "county": "c_LIAO_wuzhou",
         "holding_type": "church"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Established during the Liao dynasty (11th century) by Prince Consort Xiao Changyi (萧昌裔) with dowry households of Princess Hanguo (daughter of Yelü Longqing, d. 1016 CE), as recorded in the History of Liao (Liao Shi, juan 37, compiled 1344 CE); no written attestation <= 867 CE.",
+      "first_mention_year": 1016,
+      "first_mention_attestation": "Established in the early 11th century (c. 1016 CE) by Prince Consort Xiao Changyi with dowry households of Princess Hanguo (daughter of Yelü Longqing, d. 1016 CE), as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7722,7 +7744,7 @@
     },
     "b_Liao_Fuzhou": {
       "barony_key": "b_Liao_Fuzhou",
-      "modern_name": "Fuzhou (福州)",
+      "modern_name": "Fuzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7730,8 +7752,8 @@
         "county": "c_LIAO_wuzhou",
         "holding_type": "city"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Established during the Liao dynasty by Imperial Uncle Xiao Ning (萧宁) using captured Han households, as recorded in the History of Liao (Liao Shi, juan 37, compiled 1344 CE); no written attestation <= 867 CE.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao touxia prefecture (c. 10th–11th century) by Imperial Uncle Xiao Ning using captured Han households, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7777,7 +7799,7 @@
     },
     "b_Liao_Yuanzhou": {
       "barony_key": "b_Liao_Yuanzhou",
-      "modern_name": "Kangping (northwest), Liaoning",
+      "modern_name": "Kangping",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7785,8 +7807,8 @@
         "county": "c_LIAO_wuzhou",
         "holding_type": "castle"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Liao Shi (History of Liao, juan 37, 1344 CE): '原州。本辽东北安平县地。显州东北三百里。国舅金德俘掠汉民建城。' Founded in the Liao dynasty (10th–11th century) by maternal-uncle (guojiu) Jinde.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Founded in the Liao dynasty (c. 10th–11th century) by maternal-uncle (guojiu) Jinde northeast of Xianzhou, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -7834,7 +7856,7 @@
     },
     "b_Liao_Yizhou2": {
       "barony_key": "b_Liao_Yizhou2",
-      "modern_name": "Tayingzi, Fuxin Mongol Autonomous County, Liaoning",
+      "modern_name": "Tayingzi",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7889,7 +7911,7 @@
     },
     "b_Liao_Dading": {
       "barony_key": "b_Liao_Dading",
-      "modern_name": "Daming, Ningcheng County, Inner Mongolia",
+      "modern_name": "Daming",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -7947,7 +7969,7 @@
     },
     "b_Liao_Enzhou": {
       "barony_key": "b_Liao_Enzhou",
-      "modern_name": "Harqin / Ningcheng area, Inner Mongolia",
+      "modern_name": "Harqin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8004,7 +8026,7 @@
     },
     "b_Liao_Songshanzhou": {
       "barony_key": "b_Liao_Songshanzhou",
-      "modern_name": "Songshan / Ongniud area, Chifeng, Inner Mongolia",
+      "modern_name": "Songshan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8012,8 +8034,8 @@
         "county": "c_LIAO_dading",
         "holding_type": "city"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Liao Shi (juan 37 & 39, 1344 CE): '松山州。本辽泽大部落，横帐普古王牧地。有松山。' Established in the Liao dynasty (10th–11th century).",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established in the Liao dynasty (c. 10th–11th century) on the grazing lands of Prince Pugu near Mount Song, as recorded in Liao Shi (juan 37 & 39, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8064,7 +8086,7 @@
     },
     "b_cirlzj_jianting": {
       "barony_key": "b_cirlzj_jianting",
-      "modern_name": "Ningcheng / Chengde area (unattested)",
+      "modern_name": "Ningcheng",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8119,7 +8141,7 @@
     },
     "b_Liao_Fengzhou": {
       "barony_key": "b_Liao_Fengzhou",
-      "modern_name": "Bairin / Ongniud area, Inner Mongolia",
+      "modern_name": "Bairin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8127,8 +8149,8 @@
         "county": "c_liao_fengzhou",
         "holding_type": "castle"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Liao Shi (juan 37, 1344 CE): '丰州。本辽泽大部落，遥辇氏僧隐牧地。北至上京三百五十里。' Established as a Liao touxia prefecture (10th–11th century).",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established as a Liao touxia prefecture (c. 10th–11th century) on the grazing lands of Yaonian Sengyin north of Shangjing, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8174,7 +8196,7 @@
     },
     "b_Liao_Yikunzhou": {
       "barony_key": "b_Liao_Yikunzhou",
-      "modern_name": "Hexigten Banner (southeast), Inner Mongolia",
+      "modern_name": "Hexigten Banner",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8182,8 +8204,8 @@
         "county": "c_liao_fengzhou",
         "holding_type": "church"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Liao Shi (juan 37, 1344 CE): '仪坤州，启圣军，节度。本契丹右大部地。应天皇后建州。' Founded by Empress Yingtian (Shulü Ping, early 10th century).",
+      "first_mention_year": 920,
+      "first_mention_attestation": "Founded in the early 10th century (c. 920 CE) by Empress Yingtian (Shulü Ping) on Khitan Right Great Tribe territory, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -8234,7 +8256,7 @@
     },
     "b_cirlzj_caodangzhen": {
       "barony_key": "b_cirlzj_caodangzhen",
-      "modern_name": "Weichang / Chengde area (unattested)",
+      "modern_name": "Weichang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8294,7 +8316,7 @@
     },
     "b_cirlzj_yudaokou": {
       "barony_key": "b_cirlzj_yudaokou",
-      "modern_name": "Yudaokou, Weichang County, Hebei",
+      "modern_name": "Yudaokou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8354,7 +8376,7 @@
     },
     "b_cirlzj_luexiating": {
       "barony_key": "b_cirlzj_luexiating",
-      "modern_name": "Chengde area (unattested)",
+      "modern_name": "Chengde area",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8414,7 +8436,7 @@
     },
     "b_cirlzj_chengde": {
       "barony_key": "b_cirlzj_chengde",
-      "modern_name": "Chengde, Hebei",
+      "modern_name": "Chengde",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8469,7 +8491,7 @@
     },
     "b_cirlzj_xinghua": {
       "barony_key": "b_cirlzj_xinghua",
-      "modern_name": "Xingzhou / Luanping area, Hebei",
+      "modern_name": "Xingzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8524,7 +8546,7 @@
     },
     "b_cirlzj_qinglonghe": {
       "barony_key": "b_cirlzj_qinglonghe",
-      "modern_name": "Qinglong River, Hebei",
+      "modern_name": "Qinglong River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8584,7 +8606,7 @@
     },
     "b_cirlzj_liuheting": {
       "barony_key": "b_cirlzj_liuheting",
-      "modern_name": "Chengde area (unattested)",
+      "modern_name": "Chengde area",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8644,7 +8666,7 @@
     },
     "b_cirlzj_beian": {
       "barony_key": "b_cirlzj_beian",
-      "modern_name": "Luanhe / Luanping area, Chengde, Hebei",
+      "modern_name": "Luanhe",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8699,7 +8721,7 @@
     },
     "b_cirlzj_chaolijiang": {
       "barony_key": "b_cirlzj_chaolijiang",
-      "modern_name": "Chengde area (unattested)",
+      "modern_name": "Chengde area",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8759,7 +8781,7 @@
     },
     "b_cirlzj_xuefang": {
       "barony_key": "b_cirlzj_xuefang",
-      "modern_name": "Chengde area (unattested)",
+      "modern_name": "Chengde area",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8814,7 +8836,7 @@
     },
     "b_Liao_Wuanzhou": {
       "barony_key": "b_Liao_Wuanzhou",
-      "modern_name": "Aohan Banner / Ningcheng area, Inner Mongolia",
+      "modern_name": "Aohan Banner",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8876,7 +8898,7 @@
     },
     "b_Liao_Jianzhou": {
       "barony_key": "b_Liao_Jianzhou",
-      "modern_name": "Chaoyang / Harqin Left area, Liaoning",
+      "modern_name": "Chaoyang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8933,7 +8955,7 @@
     },
     "b_Liao_Gaozhou": {
       "barony_key": "b_Liao_Gaozhou",
-      "modern_name": "Pingquan / Ningcheng area, Hebei–Inner Mongolia border",
+      "modern_name": "Pingquan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -8990,7 +9012,7 @@
     },
     "b_Amur_Mergen": {
       "barony_key": "b_Amur_Mergen",
-      "modern_name": "Nenjiang City, Heilongjiang",
+      "modern_name": "Nenjiang City",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9040,7 +9062,7 @@
     },
     "b_FIC_Amur_Xijiadamo": {
       "barony_key": "b_FIC_Amur_Xijiadamo",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9100,7 +9122,7 @@
     },
     "b_FIC_Amur_Xiaoqiu": {
       "barony_key": "b_FIC_Amur_Xiaoqiu",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9155,7 +9177,7 @@
     },
     "b_FIC_Amur_Luhean": {
       "barony_key": "b_FIC_Amur_Luhean",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9215,7 +9237,7 @@
     },
     "b_FIC_Amur_Heisenlin": {
       "barony_key": "b_FIC_Amur_Heisenlin",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9270,7 +9292,7 @@
     },
     "b_FIC_Amur_Linyuan": {
       "barony_key": "b_FIC_Amur_Linyuan",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9325,7 +9347,7 @@
     },
     "b_FIC_Amur_Yuanlin": {
       "barony_key": "b_FIC_Amur_Yuanlin",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9380,7 +9402,7 @@
     },
     "b_Amur_Puyu": {
       "barony_key": "b_Amur_Puyu",
-      "modern_name": "Kedong County, Qiqihar, Heilongjiang",
+      "modern_name": "Kedong County",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9430,7 +9452,7 @@
     },
     "b_FIC_Amur_Xipuyu": {
       "barony_key": "b_FIC_Amur_Xipuyu",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9485,7 +9507,7 @@
     },
     "b_FIC_Amur_Fulunshan": {
       "barony_key": "b_FIC_Amur_Fulunshan",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9540,7 +9562,7 @@
     },
     "b_FIC_Amur_Yemaotudi": {
       "barony_key": "b_FIC_Amur_Yemaotudi",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9600,7 +9622,7 @@
     },
     "b_FIC_Amur_Jiashanbei": {
       "barony_key": "b_FIC_Amur_Jiashanbei",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9655,7 +9677,7 @@
     },
     "b_FIC_Amur_Dongweian": {
       "barony_key": "b_FIC_Amur_Dongweian",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9715,7 +9737,7 @@
     },
     "b_FIC_Amur_Nemorjiang": {
       "barony_key": "b_FIC_Amur_Nemorjiang",
-      "modern_name": "Nemor River, Heilongjiang",
+      "modern_name": "Nemor River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9770,7 +9792,7 @@
     },
     "b_FIC_Amur_Jinshuhe": {
       "barony_key": "b_FIC_Amur_Jinshuhe",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9830,7 +9852,7 @@
     },
     "b_FIC_Amur_Jiahuangtou": {
       "barony_key": "b_FIC_Amur_Jiahuangtou",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9885,7 +9907,7 @@
     },
     "b_FIC_Amur_Caoqiu": {
       "barony_key": "b_FIC_Amur_Caoqiu",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -9940,7 +9962,7 @@
     },
     "b_FIC_Amur_Ganheyang": {
       "barony_key": "b_FIC_Amur_Ganheyang",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10000,7 +10022,7 @@
     },
     "b_FIC_Amur_Jialuotuo": {
       "barony_key": "b_FIC_Amur_Jialuotuo",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10055,7 +10077,7 @@
     },
     "b_FIC_Amur_Jinshujiang": {
       "barony_key": "b_FIC_Amur_Jinshujiang",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10115,7 +10137,7 @@
     },
     "b_FIC_Amur_Yalujiang": {
       "barony_key": "b_FIC_Amur_Yalujiang",
-      "modern_name": "Yalu River (Nen River tributary), Heilongjiang",
+      "modern_name": "Yalu River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10170,7 +10192,7 @@
     },
     "b_FIC_Amur_Nendadu": {
       "barony_key": "b_FIC_Amur_Nendadu",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10230,7 +10252,7 @@
     },
     "b_FIC_Amur_Zhongnenjiang": {
       "barony_key": "b_FIC_Amur_Zhongnenjiang",
-      "modern_name": "Middle Nen River (synthetic CK3 name)",
+      "modern_name": "Middle Nen River",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10290,7 +10312,7 @@
     },
     "b_FIC_Amur_Baihetudi": {
       "barony_key": "b_FIC_Amur_Baihetudi",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10350,7 +10372,7 @@
     },
     "b_FIC_Amur_Jindiaotudi": {
       "barony_key": "b_FIC_Amur_Jindiaotudi",
-      "modern_name": "Synthetic CK3 name (Amur region)",
+      "modern_name": "Synthetic CK3 name",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10525,7 +10547,7 @@
     },
     "b_FIC_Amur_Xinganling": {
       "barony_key": "b_FIC_Amur_Xinganling",
-      "modern_name": "Xing'anling (Greater Khingan)",
+      "modern_name": "Xing'anling",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -10580,7 +10602,7 @@
     },
     "b_FIC_Amur_Xianbeishan": {
       "barony_key": "b_FIC_Amur_Xianbeishan",
-      "modern_name": "Xianbeishan (Xianbei Mountain)",
+      "modern_name": "Xianbeishan",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_khitan",
@@ -11155,7 +11177,7 @@
     },
     "b_EMan_Supin": {
       "barony_key": "b_EMan_Supin",
-      "modern_name": "Supin (Ussuriysk)",
+      "modern_name": "Supin",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -11163,7 +11185,7 @@
         "county": "c_BAL_supin",
         "holding_type": "castle"
       },
-      "first_mention_year": 1344,
+      "first_mention_year": 1060,
       "first_mention_attestation": "Documented in Xin Tangshu (1060 CE, vol. 219) as Balhae's Solbin Prefecture (率宾府, also rendered Supin 速频 in Liao/Jin records), established by King Seon's reign (818–830 CE) in the Suifen River basin.",
       "is_historical_867": false,
       "named_after_post_867_person": false,
@@ -11547,7 +11569,7 @@
     },
     "b_EMan_Huligai": {
       "barony_key": "b_EMan_Huligai",
-      "modern_name": "Huligai (Yilan)",
+      "modern_name": "Huligai",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -12330,7 +12352,7 @@
     },
     "b_Amur_Dazhou": {
       "barony_key": "b_Amur_Dazhou",
-      "modern_name": "Dazhou (Tongjiang)",
+      "modern_name": "Dazhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -12500,7 +12522,7 @@
     },
     "b_FIC_EMan_Naolijiang": {
       "barony_key": "b_FIC_EMan_Naolijiang",
-      "modern_name": "Naolijiang (Naoli River)",
+      "modern_name": "Naolijiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -12780,7 +12802,7 @@
     },
     "b_FIC_EMan_Songhuajiang": {
       "barony_key": "b_FIC_EMan_Songhuajiang",
-      "modern_name": "Songhuajiang (Songhua River)",
+      "modern_name": "Songhuajiang",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -12890,7 +12912,7 @@
     },
     "b_EMan_Anzhou": {
       "barony_key": "b_EMan_Anzhou",
-      "modern_name": "Anzhou (Olga)",
+      "modern_name": "Anzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -13065,7 +13087,7 @@
     },
     "b_EMan_Dingzhou": {
       "barony_key": "b_EMan_Dingzhou",
-      "modern_name": "Dingzhou (Partizansk / Mudanjiang)",
+      "modern_name": "Dingzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -13120,7 +13142,7 @@
     },
     "b_EMan_Yongmingcheng": {
       "barony_key": "b_EMan_Yongmingcheng",
-      "modern_name": "Vladivostok (Yongmingcheng)",
+      "modern_name": "Vladivostok",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -13480,7 +13502,7 @@
     },
     "b_EMan_Huazhou": {
       "barony_key": "b_EMan_Huazhou",
-      "modern_name": "Huazhou (Ussuriysk)",
+      "modern_name": "Huazhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -13535,7 +13557,7 @@
     },
     "b_Liao_Jianzhou2": {
       "barony_key": "b_Liao_Jianzhou2",
-      "modern_name": "Jianzhou (Dongning)",
+      "modern_name": "Jianzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_luzhen",
@@ -14099,7 +14121,7 @@
     },
     "b_Liao_Yizhou3": {
       "barony_key": "b_Liao_Yizhou3",
-      "modern_name": "Yi County (Yizhou)",
+      "modern_name": "Yi County",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
@@ -14269,7 +14291,7 @@
     },
     "b_Liao_Liaozhou": {
       "barony_key": "b_Liao_Liaozhou",
-      "modern_name": "Liaozhou (Xinmin)",
+      "modern_name": "Liaozhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
@@ -14332,8 +14354,8 @@
         "county": "c_LIAO_liaozhou",
         "holding_type": "church"
       },
-      "first_mention_year": 1344,
-      "first_mention_attestation": "Established during the Liao dynasty (916-1125 CE) at Shanhe (northwest of modern Zhangwu, Liaoning) and recorded in Liao Shi (1344 CE); no written attestation <= 867 CE.",
+      "first_mention_year": 1000,
+      "first_mention_attestation": "Established during the Liao dynasty (c. 10th–11th century) at Shanhe northwest of Zhangwu, as recorded in Liao Shi (juan 37, 1344 CE).",
       "is_historical_867": false,
       "named_after_post_867_person": false,
       "eponym_details": null,
@@ -14434,7 +14456,7 @@
     },
     "b_Liao_Xianzhou": {
       "barony_key": "b_Liao_Xianzhou",
-      "modern_name": "Xianzhou (Beizhen)",
+      "modern_name": "Xianzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
@@ -14552,7 +14574,7 @@
     },
     "b_Liao_Qianzhou": {
       "barony_key": "b_Liao_Qianzhou",
-      "modern_name": "Qianzhou (Beizhen)",
+      "modern_name": "Qianzhou",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
@@ -14672,7 +14694,7 @@
     },
     "b_pingzhou": {
       "barony_key": "b_pingzhou",
-      "modern_name": "Lulong (Pingzhou)",
+      "modern_name": "Lulong",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
@@ -14947,7 +14969,7 @@
     },
     "b_Liao_Andefu": {
       "barony_key": "b_Liao_Andefu",
-      "modern_name": "Andefu (Andezhou)",
+      "modern_name": "Andefu",
       "hierarchy": {
         "empire": "e_andong",
         "kingdom": "k_raole",
