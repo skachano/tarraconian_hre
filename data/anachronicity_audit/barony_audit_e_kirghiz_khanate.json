@@ -1,0 +1,4722 @@
+{
+  "metadata": {
+    "empire": "e_kirghiz_khanate",
+    "baseline_year": 867,
+    "schema_version": "1.0",
+    "schema_notes": {
+      "is_historical_867": "True if the barony name is contemporarily attested as a settlement, fortress, or administrative unit by <= 867 CE.",
+      "natural_proper_name": "True if the barony name directly adopts a specific proper hydronym, oronym, choronym, or named topographic feature (excluding directional/locator compounds).",
+      "older_name_by_867": "Records attested pre-867 CE names for the same site or immediate predecessor when distinct from the barony name."
+    },
+    "summary_statistics": {
+      "total_baronies": 88,
+      "historical_867_true": 1,
+      "historical_867_false": 87,
+      "first_mention_year_known": 8,
+      "first_mention_year_unknown": 80,
+      "named_after_post_867_person": 0,
+      "named_after_hydronym": 27,
+      "named_after_any_natural_proper_name": 53,
+      "has_older_name_by_867_total": 1,
+      "has_older_name_by_867_for_anachronistic": 1,
+      "has_older_name_by_867_for_historical": 0,
+      "wikipedia_source_attached": 56
+    }
+  },
+  "baronies": {
+    "b_oigon": {
+      "barony_key": "b_oigon",
+      "modern_name": "Oigon Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_oigon",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; saltwater lake in Zavkhan Province, Mongolia, documented in modern geographic and cartographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Oigon Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Ойгон (Oigon)",
+          "language": "Mongolian",
+          "translation": "dense / thick / forested (or lake name)"
+        },
+        {
+          "form": "нуур (nuur)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Ойгон нуур (Oigon nuur), referring to the saltwater lake in Zavkhan Province.",
+      "current_repo_state": {
+        "name": "Oigôn",
+        "b_tarr": "Oigôn",
+        "b_tarr_direct": "Oigôn",
+        "b_tarr_hist": "Oigôn",
+        "b_origin": "Oigôn (Oigon)",
+        "b_anachronism": "",
+        "b_ipa": "[ɔ.ɪ.ˈɣoːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Oigon_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tsetsen_khairkhan": {
+      "barony_key": "b_tsetsen_khairkhan",
+      "modern_name": "Tsetsen Khairkhan (Tsetsen-Uul)",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_oigon",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain and sum in Zavkhan Province, Mongolia, documented in modern geographic and administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Tsetsen Khairkhan"
+      },
+      "morphemes": [
+        {
+          "form": "цэцэн (tsetsen)",
+          "language": "Mongolian",
+          "translation": "wise / sage"
+        },
+        {
+          "form": "хайрхан (khairkhan)",
+          "language": "Mongolian",
+          "translation": "sacred mountain (honorific)"
+        }
+      ],
+      "etymology_analysis": "Mongolian honorific oronym Цэцэн хайрхан (Tsetsen Khairkhan, 'Wise Sacred Mountain'), associated with Tsetsen-Uul sum in Zavkhan Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tsetsen-Uul,_Zavkhan",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tarvagatai": {
+      "barony_key": "b_tarvagatai",
+      "modern_name": "Tarvagatai Mountains",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_tarvagatai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; subrange of the Khangai Mountains in Zavkhan and Arkhangai provinces, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Tarvagatai Mountains"
+      },
+      "morphemes": [
+        {
+          "form": "тарвага (tarvaga)",
+          "language": "Mongolian",
+          "translation": "marmot"
+        },
+        {
+          "form": "-тай (-tai)",
+          "language": "Mongolian",
+          "translation": "comitative suffix ('having / abounding in')"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Тарвагатай (Tarvagatai, 'abounding in marmots'), naming the Tarvagatai Nuruu range of the Khangai Mountains.",
+      "current_repo_state": {
+        "name": "Tarwagatâi",
+        "b_tarr": "Tarwagatâi",
+        "b_tarr_direct": "Tarwagatâi",
+        "b_tarr_hist": "Tarwagatâi",
+        "b_origin": "Tarwagatâi (Tarvagatai)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈtar.wa.ɣa.taː.ɪ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tarvagatai_Nuruu_National_Park",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_galt": {
+      "barony_key": "b_galt",
+      "modern_name": "Galt",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_tarvagatai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) of Khövsgöl Province, Mongolia, documented in 20th-century administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "гал (gal)",
+          "language": "Mongolian",
+          "translation": "fire"
+        },
+        {
+          "form": "-т (-t)",
+          "language": "Mongolian",
+          "translation": "possessive/attributive suffix ('with / having')"
+        }
+      ],
+      "etymology_analysis": "Mongolian place name Галт (Galt, literally 'with fire / fiery'), a sum in southern Khövsgöl Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Galt,_Kh%C3%B6vsg%C3%B6l",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tariat": {
+      "barony_key": "b_tariat",
+      "modern_name": "Tariat",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_tarvagatai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; the 8th-century Uyghur Tariat (Terkh) inscription is named after the modern sum rather than attesting the toponym 'Tariat' itself.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "тариа (taria)",
+          "language": "Mongolian",
+          "translation": "grain / crop"
+        },
+        {
+          "form": "-т (-t)",
+          "language": "Mongolian",
+          "translation": "possessive/attributive suffix ('with / having')"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Тариат (Tariat, 'having grain/crops'), a sum in Arkhangai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tariat",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_telmen": {
+      "barony_key": "b_telmen",
+      "modern_name": "Telmen Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_telmen",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; saltwater lake and sum in Zavkhan Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Telmen Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Тэлмэн (Telmen)",
+          "language": "Mongolian",
+          "translation": "gentle-paced / ambling (horse gait, or proper lake name)"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Тэлмэн нуур (Telmen nuur), naming the saltwater lake in Zavkhan Province.",
+      "current_repo_state": {
+        "name": "Telmên",
+        "b_tarr": "Telmên",
+        "b_tarr_direct": "Telmên",
+        "b_tarr_hist": "Telmên",
+        "b_origin": "Telmên (Telmen)",
+        "b_anachronism": "",
+        "b_ipa": "[tɛl.ˈmeːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Telmen_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ikh_uul": {
+      "barony_key": "b_ikh_uul",
+      "modern_name": "Ikh-Uul",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_arkhangai",
+        "county": "c_telmen",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) in Zavkhan Province, Mongolia, documented in modern administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "их (ikh)",
+          "language": "Mongolian",
+          "translation": "great / big"
+        },
+        {
+          "form": "уул (uul)",
+          "language": "Mongolian",
+          "translation": "mountain"
+        }
+      ],
+      "etymology_analysis": "Mongolian compound Их-Уул (Ikh-Uul, 'Great Mountain'), a modern sum in Zavkhan Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ikh-Uul,_Zavkhan",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sharga": {
+      "barony_key": "b_sharga",
+      "modern_name": "Sharga",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_sharga",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) and desert basin in Govi-Altai Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "шарга (sharga)",
+          "language": "Mongolian",
+          "translation": "cream-colored / pale yellow (esp. horse coat)"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Шарга (Sharga, 'pale yellow / bay'), naming the sum and adjacent Shargyn Gobi basin in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "Scharge",
+        "b_tarr": "Scharge",
+        "b_tarr_direct": "Scharge",
+        "b_tarr_hist": "Scharge",
+        "b_origin": "Scharge (Sharga)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈʃar.ɡə]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sharga,_Govi-Altai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_bumbag_hayrhan_uul": {
+      "barony_key": "b_bumbag_hayrhan_uul",
+      "modern_name": "Bumbag Khairkhan Uul",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_sharga",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain in western Mongolia (Khovd/Govi-Altai region), documented in modern topographic maps.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Bumbag Khairkhan Uul"
+      },
+      "morphemes": [
+        {
+          "form": "бумба (bumba)",
+          "language": "Mongolian",
+          "translation": "ritual vase / dome"
+        },
+        {
+          "form": "-г (-g)",
+          "language": "Mongolian",
+          "translation": "attributive suffix"
+        },
+        {
+          "form": "хайрхан (khairkhan)",
+          "language": "Mongolian",
+          "translation": "sacred mountain (honorific)"
+        },
+        {
+          "form": "уул (uul)",
+          "language": "Mongolian",
+          "translation": "mountain"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Бумбаг Хайрхан уул (Bumbag Khairkhan Uul), combining 'vase/dome-shaped' with the honorific mountain title khairkhan and uul ('mountain').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tseel": {
+      "barony_key": "b_tseel",
+      "modern_name": "Tseel",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_tseel",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) in Govi-Altai Province, Mongolia, documented in modern administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "цээл (tseel)",
+          "language": "Mongolian",
+          "translation": "deep / clear / expansive (water or open space)"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Цээл (Tseel, 'deep/clear/expansive'), a sum in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "Zêl",
+        "b_tarr": "Zêl",
+        "b_tarr_direct": "Zêl",
+        "b_tarr_hist": "Zêl",
+        "b_origin": "Zêl (Tseel)",
+        "b_anachronism": "",
+        "b_ipa": "[tseːl]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tseel,_Govi-Altai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_alag_khairkhan": {
+      "barony_key": "b_alag_khairkhan",
+      "modern_name": "Alag Khairkhan",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_tseel",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain in Bugat sum, Govi-Altai Province, Mongolia, protected as a natural monument in 1996.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Alag Khairkhan"
+      },
+      "morphemes": [
+        {
+          "form": "алаг (alag)",
+          "language": "Mongolian",
+          "translation": "variegated / mottled / piebald"
+        },
+        {
+          "form": "хайрхан (khairkhan)",
+          "language": "Mongolian",
+          "translation": "sacred mountain (honorific)"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Алаг хайрхан (Alag Khairkhan, 'Variegated Sacred Mountain'), referring to the 3,783 m peak in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_aj_bogd": {
+      "barony_key": "b_aj_bogd",
+      "modern_name": "Aj Bogd",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_tseel",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; branch mountain range of the Mongolian Altai in Govi-Altai Province, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Aj Bogd"
+      },
+      "morphemes": [
+        {
+          "form": "аж (aj)",
+          "language": "Mongolian",
+          "translation": "life / livelihood / being"
+        },
+        {
+          "form": "богд (bogd)",
+          "language": "Mongolian",
+          "translation": "saint / sacred / holy"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Аж Богд (Aj Bogd), a major branch range of the Mongolian Altai in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_nutsgen_uul": {
+      "barony_key": "b_nutsgen_uul",
+      "modern_name": "Nutsgen Uul",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_zarman",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain feature in western/southern Mongolia (audited for barony key b_nutsgen_uul rather than county-seat fallback Zarman).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Nutsgen Uul"
+      },
+      "morphemes": [
+        {
+          "form": "нүцгэн (nütsgen)",
+          "language": "Mongolian",
+          "translation": "bare / naked / treeless"
+        },
+        {
+          "form": "уул (uul)",
+          "language": "Mongolian",
+          "translation": "mountain"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Нүцгэн уул (Nütsgen Uul, 'Bare Mountain'), referring to a treeless desert/steppe mountain.",
+      "current_repo_state": {
+        "name": "Zarmân",
+        "b_tarr": "Zarmân",
+        "b_tarr_direct": "Zarmân",
+        "b_tarr_hist": "Zarmân",
+        "b_origin": "Zarmân (Zarman)",
+        "b_anachronism": "",
+        "b_ipa": "[tsar.ˈmaːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_eej_khairkhan": {
+      "barony_key": "b_eej_khairkhan",
+      "modern_name": "Eej Khairkhan",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_zarman",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sacred granite mountain in Tsogt sum, Govi-Altai Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Eej Khairkhan"
+      },
+      "morphemes": [
+        {
+          "form": "ээж (eej)",
+          "language": "Mongolian",
+          "translation": "mother"
+        },
+        {
+          "form": "хайрхан (khairkhan)",
+          "language": "Mongolian",
+          "translation": "sacred mountain (honorific)"
+        }
+      ],
+      "etymology_analysis": "Mongolian honorific oronym Ээж хайрхан (Eej Khairkhan, 'Mother Sacred Mountain'), a natural monument in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_zarman": {
+      "barony_key": "b_zarman",
+      "modern_name": "Zarman",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_gobi_altai",
+        "county": "c_zarman",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; semi-desert basin and oasis (Zakhui-Zarman Gobi) in Govi-Altai Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Zarman"
+      },
+      "morphemes": [
+        {
+          "form": "Зарман (Zarman)",
+          "language": "Mongolian",
+          "translation": "Zarman (oasis / desert basin name)"
+        }
+      ],
+      "etymology_analysis": "Mongolian topographic name Зарман (Zarman), designating the Zarman semi-desert oasis basin in Govi-Altai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tofalaria": {
+      "barony_key": "b_tofalaria",
+      "modern_name": "Tofalaria",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_burugu_aallar",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1939,
+      "first_mention_attestation": "Modern Russian/Soviet regional name (Tofalar National Region established in 1939 in Irkutsk Oblast; audited for barony key b_tofalaria rather than county-seat fallback Burugu Aallar).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "тофа (tofa)",
+          "language": "Tofalar",
+          "translation": "Tofa (endonym of the Tofalar people)"
+        },
+        {
+          "form": "-лар (-lar)",
+          "language": "Turkic",
+          "translation": "plural suffix"
+        },
+        {
+          "form": "-ия (-iya)",
+          "language": "Russian",
+          "translation": "territorial/country suffix"
+        }
+      ],
+      "etymology_analysis": "Modern Russian choronym Тофалария (Tofalaria), formed from the Turkic ethnonym Tofalar (Tofa + plural -lar) with the Russian territorial suffix -iya.",
+      "current_repo_state": {
+        "name": "Burugu Âllâr",
+        "b_tarr": "Burugu Âllâr",
+        "b_tarr_direct": "Burugu Âllâr",
+        "b_tarr_hist": "Burugu Âllâr",
+        "b_origin": "Burugu Âllâr (Burugu Aallar)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈbʊ.rʊ.ɣʊ aː.ˈʎaːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tofalaria",
+      "older_name_by_867": {
+        "exists": true,
+        "names": [
+          "Dubo (都播)"
+        ],
+        "first_mention_year": 636,
+        "first_mention_source": "Book of Sui (Suishu), 636 CE",
+        "relationship": "same_site_earlier_name",
+        "notes": "Chinese Sui and Tang chronicles record the Dubo (都播) in the Eastern Sayan region as the direct ancestors of the Tofalar and Tozhu Tuvan peoples."
+      }
+    },
+    "b_miirchun": {
+      "barony_key": "b_miirchun",
+      "modern_name": "Mirichun",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_burugu_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1771,
+      "first_mention_attestation": "No written attestation <= 867 CE; the Mirichun River (tributary of the Biryusa in Irkutsk Oblast) is first recorded in Russian gold-mining records from 1771.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Mirichun"
+      },
+      "morphemes": [
+        {
+          "form": "Миричун (Mirichun)",
+          "language": "Sayan Turkic / Samoyedic substrate",
+          "translation": "Mirichun (river and karst area name)"
+        }
+      ],
+      "etymology_analysis": "Siberian hydronym Миричун (Mirichun), a river and karst district in the Eastern Sayan highlands of Nizhneudinsky District, Irkutsk Oblast.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ikh_orgil": {
+      "barony_key": "b_ikh_orgil",
+      "modern_name": "Ikh Orgil",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_burugu_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Mongolian descriptive compound ('Great Peak') used as a barony name in the Eastern Sayan/Tofalaria region.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "их (ikh)",
+          "language": "Mongolian",
+          "translation": "great / big"
+        },
+        {
+          "form": "оргил (orgil)",
+          "language": "Mongolian",
+          "translation": "peak / summit"
+        }
+      ],
+      "etymology_analysis": "Mongolian descriptive compound Их Оргил (Ikh Orgil, 'Great Peak').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kandat_uul": {
+      "barony_key": "b_kandat_uul",
+      "modern_name": "Kandat Uul",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_chagdy_aallar",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Kandat river and mountain area in the Sayan/Krasnoyarsk region, documented in modern Russian geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Kandat Uul"
+      },
+      "morphemes": [
+        {
+          "form": "Кандат (Kandat)",
+          "language": "Yeniseian / Samoyedic substrate",
+          "translation": "Kandat (Siberian river/mountain name)"
+        },
+        {
+          "form": "уул (uul)",
+          "language": "Mongolian",
+          "translation": "mountain"
+        }
+      ],
+      "etymology_analysis": "Hybrid toponym combining the Siberian substrate name Kandat (attested in the Kandat River of Krasnoyarsk Krai) with Mongolian uul ('mountain').",
+      "current_repo_state": {
+        "name": "Tschagdy Âllâr",
+        "b_tarr": "Tschagdy Âllâr",
+        "b_tarr_direct": "Tschagdy Âllâr",
+        "b_tarr_hist": "Tschagdy Âllâr",
+        "b_origin": "Tschagdy Âllâr (Chagdy Aallar)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈtʃaɡ.dɪ aː.ˈʎaːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kazyr": {
+      "barony_key": "b_kazyr",
+      "modern_name": "Kazyr River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_chagdy_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; river in the Eastern Sayan Mountains (Irkutsk Oblast and Krasnoyarsk Krai, Russia), documented in modern Russian geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Kazyr River"
+      },
+      "morphemes": [
+        {
+          "form": "Казыр (Kazyr)",
+          "language": "Sayan Turkic",
+          "translation": "fierce / rapid / steep (from Turkic qazïr)"
+        }
+      ],
+      "etymology_analysis": "Sayan Turkic hydronym Казыр (Kazyr, 'fierce / rapid'), describing the turbulent mountain river that joins the Amyl to form the Tuba.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kazyr",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kazas": {
+      "barony_key": "b_kazas",
+      "modern_name": "Kazas",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_chagdy_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Shor settlement and river in Kemerovo Oblast, southern Siberia, documented in modern Russian administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Казас (Kazas)",
+          "language": "Shor / Yeniseian substrate",
+          "translation": "Kazas (Shor river and settlement name)"
+        }
+      ],
+      "etymology_analysis": "Southern Siberian toponym Казас (Kazas), naming a historical Shor settlement and tributary in Mountainous Shoria.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ergaki": {
+      "barony_key": "b_ergaki",
+      "modern_name": "Ergaki",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_songuu_aallar",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain range in the Western Sayan Mountains, Krasnoyarsk Krai, Russia, documented in modern Russian geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Ergaki"
+      },
+      "morphemes": [
+        {
+          "form": "Ергаки (Ergaki)",
+          "language": "Sayan Turkic",
+          "translation": "fingers / jagged peaks (cf. Tuvan ergek 'thumb/finger')"
+        }
+      ],
+      "etymology_analysis": "Sayan Turkic oronym Ергаки (Ergaki), traditionally linked to Tuvan ergek ('thumb / finger'), referring to the jagged granite spires of the Western Sayan range.",
+      "current_repo_state": {
+        "name": "Songû Âllâr",
+        "b_tarr": "Songû Âllâr",
+        "b_tarr_direct": "Songû Âllâr",
+        "b_tarr_hist": "Songû Âllâr",
+        "b_origin": "Songû Âllâr (Songuu Aallar)",
+        "b_anachronism": "",
+        "b_ipa": "[sɔ.ˈŋuː aː.ˈʎaːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ergaki",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_orgogdon_rok": {
+      "barony_key": "b_orgogdon_rok",
+      "modern_name": "Orgogdon Rok",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_songuu_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; unattested/synthetic CK3 barony name in the Sayan region without documented pre-867 historical records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "өргөгдөн (örgögdön)",
+          "language": "Mongolian",
+          "translation": "uplifted / elevated (pass. of örgö- 'to raise')"
+        },
+        {
+          "form": "rok",
+          "language": "English / Russian",
+          "translation": "rock / crag (or CK3 suffix)"
+        }
+      ],
+      "etymology_analysis": "Compound toponym combining Mongolian örgögdön ('uplifted/elevated') with rok ('rock').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_baldyrgannyg": {
+      "barony_key": "b_baldyrgannyg",
+      "modern_name": "Baldyrgannyg",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_kargassia",
+        "county": "c_songuu_aallar",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain ridge (Khrebet Baldyrgannyg) in the Sayan/Tuva region, documented in modern Russian topographic surveys.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Baldyrgannyg"
+      },
+      "morphemes": [
+        {
+          "form": "балдырган (baldyrgan)",
+          "language": "Tuvan",
+          "translation": "hogweed / angelica (Heracleum)"
+        },
+        {
+          "form": "-ныг (-nyg)",
+          "language": "Tuvan",
+          "translation": "attributive suffix ('abounding in')"
+        }
+      ],
+      "etymology_analysis": "Tuvan oronym Балдырганныг (Baldyrgannyg, 'abounding in hogweed/angelica'), naming the Baldyrgannyg mountain ridge in southern Siberia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kara_khol_TUV": {
+      "barony_key": "b_kara_khol_TUV",
+      "modern_name": "Kara-Khol",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_katu_yaryk",
+        "county": "c_kara_khol",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; lake and settlement in Bay-Tayginsky District, Tuva Republic, Russia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Kara-Khol"
+      },
+      "morphemes": [
+        {
+          "form": "кара (kara)",
+          "language": "Tuvan",
+          "translation": "black"
+        },
+        {
+          "form": "хөл (khöl)",
+          "language": "Tuvan",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Tuvan hydronym Кара-Хөл (Kara-Khöl, 'Black Lake'), referring to the dark reflection of the surrounding mountains on the lake's waters.",
+      "current_repo_state": {
+        "name": "Kara-Chôl",
+        "b_tarr": "Kara-Chôl",
+        "b_tarr_direct": "Kara-Chôl",
+        "b_tarr_hist": "Kara-Chôl",
+        "b_origin": "Kara-Chôl (Kara Khol)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈka.ra xoːl]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tsagaan_gazar": {
+      "barony_key": "b_tsagaan_gazar",
+      "modern_name": "Tsagaan Gazar",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_katu_yaryk",
+        "county": "c_kara_khol",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; generic Mongolian descriptive term ('white/open treeless plain') without pre-867 documentary attestation.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "цагаан (tsagaan)",
+          "language": "Mongolian",
+          "translation": "white / clear / bare"
+        },
+        {
+          "form": "газар (gazar)",
+          "language": "Mongolian",
+          "translation": "land / place / ground"
+        }
+      ],
+      "etymology_analysis": "Mongolian descriptive compound Цагаан газар (Tsagaan gazar, 'white/open land', meaning a flat, treeless steppe).",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_katu_yaryk": {
+      "barony_key": "b_katu_yaryk",
+      "modern_name": "Katu-Yaryk",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_katu_yaryk",
+        "county": "c_katu_yaryk",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain pass descending into the Chulyshman River valley in the Altai Republic, Russia (modern road pass constructed 1987–1989).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Katu-Yaryk"
+      },
+      "morphemes": [
+        {
+          "form": "кату (katu)",
+          "language": "Altai Turkic",
+          "translation": "hard / steep / harsh"
+        },
+        {
+          "form": "ярык (yaryk)",
+          "language": "Altai Turkic",
+          "translation": "cleft / gorge / crevice"
+        }
+      ],
+      "etymology_analysis": "Altai Turkic topographic name Кату-Ярык (Katu-Yaryk, 'Steep Gorge / Hard Cleft'), naming the dramatic pass into the Chulyshman valley.",
+      "current_repo_state": {
+        "name": "Katu-Jarîch",
+        "b_tarr": "Katu-Jarîch",
+        "b_tarr_direct": "Katu-Jarîch",
+        "b_tarr_hist": "Katu-Jarîch",
+        "b_origin": "Katu-Jarîch (Katu-Yaryk)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈka.tʊ ja.ˈriːç]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_altyn_kol": {
+      "barony_key": "b_altyn_kol",
+      "modern_name": "Altyn-Köl (Lake Teletskoye)",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_katu_yaryk",
+        "county": "c_katu_yaryk",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 1624,
+      "first_mention_attestation": "No written attestation <= 867 CE; first documented in Russian Cossack expedition records from 1624–1633 and later cartography as Altin / Teletskoye.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Altyn-Köl"
+      },
+      "morphemes": [
+        {
+          "form": "алтын (altyn)",
+          "language": "Altai Turkic",
+          "translation": "golden"
+        },
+        {
+          "form": "кӧл (köl)",
+          "language": "Altai Turkic",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Altai Turkic hydronym Алтын Кӧл (Altyn-Köl, 'Golden Lake'), the indigenous name for Lake Teletskoye in the Altai Mountains.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Lake_Teletskoye",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_darkhad": {
+      "barony_key": "b_darkhad",
+      "modern_name": "Darkhad Valley",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_darkhad_valley",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; valley in northwestern Khövsgöl Province, Mongolia, named after the Darkhad Mongol subgroup (post-13th century).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "дархад (darkhad)",
+          "language": "Mongolian",
+          "translation": "craftsmen / tax-exempt people (pl. of darkhan)"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Дархад (Darkhad), plural of darkhan ('smith / tax-exempt'), naming the Darkhad people and the Darkhad Valley in Khövsgöl Province.",
+      "current_repo_state": {
+        "name": "Darchad-Tal",
+        "b_tarr": "Darchad-Tal",
+        "b_tarr_direct": "Darchad-Tal",
+        "b_tarr_hist": "Darchad-Tal",
+        "b_origin": "Darchad-Tal (Darkhad Valley)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈdar.xad tal]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Darkhad_Valley",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khoridol_saridag": {
+      "barony_key": "b_khoridol_saridag",
+      "modern_name": "Khoridol Saridag",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_darkhad_valley",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; 150 km mountain range between Lake Khövsgöl and the Darkhad Valley in Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Khoridol Saridag"
+      },
+      "morphemes": [
+        {
+          "form": "Хорьдол (Khoridol)",
+          "language": "Mongolian",
+          "translation": "Khoridol (mountain range name)"
+        },
+        {
+          "form": "сарьдаг (saridag)",
+          "language": "Mongolian",
+          "translation": "bare alpine peak / tundra ridge"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Хорьдол Сарьдаг (Khoridol Saridag), combining the proper name Khoridol with saridag ('high bare mountain peak').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khoridol_Saridag_mountains",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tsagaanuur": {
+      "barony_key": "b_tsagaanuur",
+      "modern_name": "Tsagaannuur",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_darkhad_valley",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) in northwestern Khövsgöl Province, Mongolia, documented in 20th-century administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "цагаан (tsagaan)",
+          "language": "Mongolian",
+          "translation": "white"
+        },
+        {
+          "form": "нуур (nuur)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian compound Цагааннуур (Tsagaannuur, 'White Lake'), naming the sum in Khövsgöl Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tsagaannuur,_Kh%C3%B6vsg%C3%B6l",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tomorbulag": {
+      "barony_key": "b_tomorbulag",
+      "modern_name": "Tömörbulag",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_tomorbulag",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) in Khövsgöl Province, Mongolia, documented in 20th-century administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "төмөр (tömör)",
+          "language": "Mongolian",
+          "translation": "iron"
+        },
+        {
+          "form": "булаг (bulag)",
+          "language": "Mongolian",
+          "translation": "spring / water source"
+        }
+      ],
+      "etymology_analysis": "Mongolian compound Төмөрбулаг (Tömörbulag, 'Iron Spring'), naming the sum in Khövsgöl Province.",
+      "current_repo_state": {
+        "name": "Tömörbulach",
+        "b_tarr": "Tömörbulach",
+        "b_tarr_direct": "Tömörbulach",
+        "b_tarr_hist": "Tömörbulach",
+        "b_origin": "Tömörbulach (Tömörbulag)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈtøː.møːr.bʊ.lax]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/T%C3%B6m%C3%B6rbulag,_Kh%C3%B6vsg%C3%B6l",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_karates": {
+      "barony_key": "b_karates",
+      "modern_name": "Karates",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_tomorbulag",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; unattested/synthetic CK3 barony name in the Khövsgöl region without documented pre-867 historical records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "kara",
+          "language": "Turkic",
+          "translation": "black"
+        },
+        {
+          "form": "tes",
+          "language": "Turkic / Mongolian",
+          "translation": "Tes (river/element, cf. Tes River)"
+        }
+      ],
+      "etymology_analysis": "Apparent Turkic-Mongolic compound (kara 'black' + tes, possibly referencing the Tes/Tez River basin), unattested as a historical settlement.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sangiin_dalai": {
+      "barony_key": "b_sangiin_dalai",
+      "modern_name": "Sangiin Dalai Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_tomorbulag",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; saltwater lake on the border of Khövsgöl and Zavkhan provinces, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Sangiin Dalai Lake"
+      },
+      "morphemes": [
+        {
+          "form": "сан (san)",
+          "language": "Mongolian",
+          "translation": "treasury / storehouse"
+        },
+        {
+          "form": "-гийн (-giin)",
+          "language": "Mongolian",
+          "translation": "genitive suffix"
+        },
+        {
+          "form": "далай (dalai)",
+          "language": "Mongolian",
+          "translation": "ocean / vast lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Сангийн далай (Sangiin Dalai, 'Treasury Ocean/Lake'), naming the large saltwater lake in northern Mongolia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sangiin_Dalai_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_dood_tsagaan_nuur": {
+      "barony_key": "b_dood_tsagaan_nuur",
+      "modern_name": "Dood Tsagaan Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_ulantaiga",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; lake in the Darkhad Valley, Khövsgöl Province, Mongolia (audited for barony key b_dood_tsagaan_nuur rather than county-seat fallback Ulantaiga).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "доод (dood)",
+          "language": "Mongolian",
+          "translation": "lower"
+        },
+        {
+          "form": "цагаан (tsagaan)",
+          "language": "Mongolian",
+          "translation": "white"
+        },
+        {
+          "form": "нуур (nuur)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Доод Цагаан нуур (Dood Tsagaan Nuur, 'Lower White Lake'), using the locator qualifier dood ('lower').",
+      "current_repo_state": {
+        "name": "Ulantâige",
+        "b_tarr": "Ulantâige",
+        "b_tarr_direct": "Ulantâige",
+        "b_tarr_hist": "Ulantâige",
+        "b_origin": "Ulantâige (Ulantaiga)",
+        "b_anachronism": "",
+        "b_ipa": "[ʊ.lan.taː.ˈɪ.ɣə]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Dood_Tsagaan_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ulaantaiga": {
+      "barony_key": "b_ulaantaiga",
+      "modern_name": "Ulaan Taiga",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_khovsgol",
+        "county": "c_ulantaiga",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain range in northwestern Khövsgöl Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Ulaan Taiga"
+      },
+      "morphemes": [
+        {
+          "form": "улаан (ulaan)",
+          "language": "Mongolian",
+          "translation": "red"
+        },
+        {
+          "form": "тайга (taiga)",
+          "language": "Mongolian / Turkic",
+          "translation": "taiga / boreal mountain forest"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Улаан Тайга (Ulaan Taiga, 'Red Taiga'), naming the mountain range bordering the Darkhad Valley and Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ulaan_Taiga",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_bombogor": {
+      "barony_key": "b_bombogor",
+      "modern_name": "Bömbögör",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_bombogor",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; sum (district) in Bayankhongor Province, Mongolia, documented in 20th-century administrative records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "бөмбөгөр (bömbögör)",
+          "language": "Mongolian",
+          "translation": "dome / rounded / globular"
+        }
+      ],
+      "etymology_analysis": "Mongolian descriptive toponym Бөмбөгөр (Bömbögör, 'Dome / Rounded'), naming the sum in Bayankhongor Province.",
+      "current_repo_state": {
+        "name": "Bombögör",
+        "b_tarr": "Bombögör",
+        "b_tarr_direct": "Bombögör",
+        "b_tarr_hist": "Bombögör",
+        "b_origin": "Bombögör (Bombögör)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈbɔm.bøː.ɣøːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/B%C3%B6mb%C3%B6g%C3%B6r,_Bayankhongor",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_boon_tsagaan": {
+      "barony_key": "b_boon_tsagaan",
+      "modern_name": "Böön Tsagaan Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_bombogor",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; large endorheic lake in Bayankhongor Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Böön Tsagaan Lake"
+      },
+      "morphemes": [
+        {
+          "form": "бөөн (böön)",
+          "language": "Mongolian",
+          "translation": "mass / cluster / whole"
+        },
+        {
+          "form": "цагаан (tsagaan)",
+          "language": "Mongolian",
+          "translation": "white"
+        },
+        {
+          "form": "нуур (nuur)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Бөөн Цагаан нуур (Böön Tsagaan Nuur, 'Mass White Lake'), naming the largest lake in the Valley of the Lakes.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/B%C3%B6%C3%B6n_Tsagaan_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khutag": {
+      "barony_key": "b_khutag",
+      "modern_name": "Khutag",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_bombogor",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Mongolian toponym ('blessed/sanctity') in the Bayankhongor/Gobi region without pre-867 documentary records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "хутаг (khutag)",
+          "language": "Mongolian",
+          "translation": "blessing / sanctity / good fortune"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Хутаг (Khutag, 'blessing / sanctity').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gobi_gashunn": {
+      "barony_key": "b_gobi_gashunn",
+      "modern_name": "Gobi Gashuun",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_gobi_gurvan_saikhan",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Gobi desert locality (audited for barony key b_gobi_gashunn rather than county-seat fallback Gurvan Saikhan).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "говь (govi)",
+          "language": "Mongolian",
+          "translation": "Gobi / gravel desert"
+        },
+        {
+          "form": "гашуун (gashuun)",
+          "language": "Mongolian",
+          "translation": "bitter / brackish (water)"
+        }
+      ],
+      "etymology_analysis": "Mongolian descriptive compound Говь Гашуун (Govi Gashuun, 'Gobi Brackish [Spring/Basin]').",
+      "current_repo_state": {
+        "name": "Gurwan Sêchân",
+        "b_tarr": "Gurwan Sêchân",
+        "b_tarr_direct": "Gurwan Sêchân",
+        "b_tarr_hist": "Gurwan Sêchân",
+        "b_origin": "Gurwan Sêchân (Gurwan Sêchân (in-game: Gurvan Saikhan))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Gurwan Sêchân).",
+        "b_ipa": "[ɡʊr.ˈwan seː.ˈçaːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gobi_gurvan_saikhan": {
+      "barony_key": "b_gobi_gurvan_saikhan",
+      "modern_name": "Gobi Gurvansaikhan",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_gobi_gurvan_saikhan",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; mountain range ('Three Beauties of the Gobi') in Ömnögovi Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Gobi Gurvansaikhan"
+      },
+      "morphemes": [
+        {
+          "form": "говь (govi)",
+          "language": "Mongolian",
+          "translation": "Gobi / desert"
+        },
+        {
+          "form": "гурван (gurvan)",
+          "language": "Mongolian",
+          "translation": "three"
+        },
+        {
+          "form": "сайхан (saikhan)",
+          "language": "Mongolian",
+          "translation": "beautiful / beauty"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Говь Гурвансайхан (Govi Gurvansaikhan, 'Three Beauties of the Gobi'), referring to the eastern, middle, and western Saikhan subranges.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gobi_Gurvansaikhan_National_Park",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gobi_khatan_suudal": {
+      "barony_key": "b_gobi_khatan_suudal",
+      "modern_name": "Khatan Suudal",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_gobi_gurvan_saikhan",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; extinct volcanic peak and steppe locality in Bayankhongor Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Khatan Suudal"
+      },
+      "morphemes": [
+        {
+          "form": "хатан (khatan)",
+          "language": "Mongolian",
+          "translation": "queen / noble lady"
+        },
+        {
+          "form": "суудал (suudal)",
+          "language": "Mongolian",
+          "translation": "seat / throne"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Хатан Суудал (Khatan Suudal, 'Queen's Seat'), naming the volcanic outcrop and surrounding steppe in southern Mongolia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ikh_bogd": {
+      "barony_key": "b_ikh_bogd",
+      "modern_name": "Ikh Bogd",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ikh_bogd",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; highest mountain of the Gobi-Altai range in Bayankhongor Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Ikh Bogd"
+      },
+      "morphemes": [
+        {
+          "form": "их (ikh)",
+          "language": "Mongolian",
+          "translation": "great / big"
+        },
+        {
+          "form": "богд (bogd)",
+          "language": "Mongolian",
+          "translation": "saint / sacred / holy"
+        }
+      ],
+      "etymology_analysis": "Mongolian honorific oronym Их Богд (Ikh Bogd, 'Great Saint'), naming the 3,957 m summit of the Gobi-Altai Mountains.",
+      "current_repo_state": {
+        "name": "Ich Bogd",
+        "b_tarr": "Ich Bogd",
+        "b_tarr_direct": "Ich Bogd",
+        "b_tarr_hist": "Ich Bogd",
+        "b_origin": "Ich Bogd (Ich Bogd (in-game: Ikh Bogd))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ich Bogd).",
+        "b_ipa": "[ɪç bɔɡd]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ikh_Bogd",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tuin": {
+      "barony_key": "b_tuin",
+      "modern_name": "Tuin River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ikh_bogd",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; river flowing south from the Khangai Mountains through Bayankhongor Province, Mongolia, documented in modern geographic records.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Tuin River"
+      },
+      "morphemes": [
+        {
+          "form": "Түй (Tüi)",
+          "language": "Mongolian",
+          "translation": "Tüi (river name)"
+        },
+        {
+          "form": "-н (-n)",
+          "language": "Mongolian",
+          "translation": "genitive/attributive suffix"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Туйн гол (Tuin Gol), naming the river flowing past Bayankhongor into Orog Lake.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_orog": {
+      "barony_key": "b_orog",
+      "modern_name": "Orog Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ikh_bogd",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented as a saline lake in the Valley of the Lakes in modern Mongolian and Russian geographical literature.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Orog Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Orog (Орог)",
+          "language": "Mongolian",
+          "translation": "orog (a proper lake name, possibly linked to Mongolian orog 'grayish/dun' or 'place/bed')"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Orog nuur (Classical Mongolian: oroɣ naɣur), referring to the endorheic saline lake in Bogd sum, Bayankhongor Province, fed by the Tuin River.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Orog_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khasagt_khairkhan": {
+      "barony_key": "b_khasagt_khairkhan",
+      "modern_name": "Khasagt Khairkhan",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_khasagt_khairkhan",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geographical surveys as a major peak of the Gobi-Altai Mountains.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Khasagt Khairkhan"
+      },
+      "morphemes": [
+        {
+          "form": "Khasagt (Хасагт)",
+          "language": "Mongolian",
+          "translation": "having wagons/carts or related to the Khoshot/Kazakh ethnonym"
+        },
+        {
+          "form": "khairkhan (хайрхан)",
+          "language": "Mongolian",
+          "translation": "gracious/sacred (honorific term for a sacred mountain)"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Khasagt Khairkhan (Хасагт хайрхан), combining Khasagt with the reverential mountain epithet khairkhan ('gracious/sacred mountain').",
+      "current_repo_state": {
+        "name": "Chasagt Chêrchân",
+        "b_tarr": "Chasagt Chêrchân",
+        "b_tarr_direct": "Chasagt Chêrchân",
+        "b_tarr_hist": "Chasagt Chêrchân",
+        "b_origin": "Chasagt Chêrchân (Khasagt Khairkhan)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈxa.zaɡt xeːr.ˈxaːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khasagt_Khairkhan",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gegeen": {
+      "barony_key": "b_gegeen",
+      "modern_name": "Gegeen Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_khasagt_khairkhan",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": 2008,
+      "first_mention_attestation": "Created in 2008 CE by the construction of the Taishir Hydro Power Station and dam on the Zavkhan River in Govi-Altai Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Gegeen (Гэгээн)",
+          "language": "Mongolian",
+          "translation": "bright, luminous, holy"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Modern Mongolian name Gegeen nuur ('bright/holy lake'), given to the artificial reservoir formed in 2008 by the Taishir hydroelectric dam.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Gegeen_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_taigan": {
+      "barony_key": "b_taigan",
+      "modern_name": "Taigan Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_khasagt_khairkhan",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geographical and limnological surveys in Govi-Altai Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Taigan Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Taigan (Тайган)",
+          "language": "Mongolian",
+          "translation": "taigan (proper name, possibly related to Turkic/Mongolic taiga 'mountain forest' or taigan 'sighthound')"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Taigan nuur, a saline tectonic lake in Govi-Altai Province, western Mongolia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ongi": {
+      "barony_key": "b_ongi",
+      "modern_name": "Ongi River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ongi",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE for the hydronym itself; the 8th-century Old Turkic Ongin inscription (c. 716–735 CE) was discovered near the river in 1891, but its text does not mention the name Ongi.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Ongi River"
+      },
+      "morphemes": [
+        {
+          "form": "Ongi (Онги)",
+          "language": "Mongolian",
+          "translation": "Ongi (proper river name)"
+        },
+        {
+          "form": "gol (гол)",
+          "language": "Mongolian",
+          "translation": "river"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Ongi gol (Онги гол), flowing from the southeastern Khangai Mountains through Övörkhangai and Dundgovi provinces.",
+      "current_repo_state": {
+        "name": "Ongî",
+        "b_tarr": "Ongî",
+        "b_tarr_direct": "Ongî",
+        "b_tarr_hist": "Ongî",
+        "b_origin": "Ongî (Ongî (in-game: Ongi))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Ongî).",
+        "b_ipa": "[ɔ.ˈŋiː]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ongi_River",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_taatsiin_tsagaan": {
+      "barony_key": "b_taatsiin_tsagaan",
+      "modern_name": "Taatsiin Tsagaan Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ongi",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geographical and Ramsar wetland surveys.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Taatsiin Tsagaan Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Taatsiin (Таацын)",
+          "language": "Mongolian",
+          "translation": "of the Taats (genitive of Taats, the feeding river)"
+        },
+        {
+          "form": "Tsagaan (Цагаан)",
+          "language": "Mongolian",
+          "translation": "white"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Taatsiin Tsagaan nuur ('White Lake of the Taats [River]'), a saline lake in the Valley of the Lakes in Övörkhangai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Taatsiin_Tsagaan_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_myangan_yamaat": {
+      "barony_key": "b_myangan_yamaat",
+      "modern_name": "Myangan Yamaat",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_ongi",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian topographic maps as the highest peak of Baga Bogd in Övörkhangai Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Myangan Yamaat"
+      },
+      "morphemes": [
+        {
+          "form": "Myangan (Мянган)",
+          "language": "Mongolian",
+          "translation": "thousand"
+        },
+        {
+          "form": "yamaat (ямаат)",
+          "language": "Mongolian",
+          "translation": "having goats (yamaa 'goat' + -t possessive suffix)"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Myangan Yamaat ('Having a Thousand Goats'), the highest summit (3,620 m) of the Baga Bogd massif in the Gobi-Altai range.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tovkhon": {
+      "barony_key": "b_tovkhon",
+      "modern_name": "Tövkhön Monastery",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_tovkhon",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1653,
+      "first_mention_attestation": "Founded in 1653 CE by Zanabazar (originally called Bayasgalant Aglag Oron) upon his return from Tibet.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Tövkhön (Төвхөн)",
+          "language": "Mongolian",
+          "translation": "tövkhön (proper name, from töv 'center/upright' + diminutive -khön)"
+        },
+        {
+          "form": "khiid (хийд)",
+          "language": "Mongolian",
+          "translation": "monastery"
+        }
+      ],
+      "etymology_analysis": "Mongolian monastery name Tövkhön khiid (Төвхөн хийд), established in 1653 CE in Övörkhangai Province as Zanabazar's mountain retreat.",
+      "current_repo_state": {
+        "name": "Tövchön",
+        "b_tarr": "Tövchön",
+        "b_tarr_direct": "Tövchön",
+        "b_tarr_hist": "Tövchön",
+        "b_origin": "Tövchön (Tövchön (in-game: Tövkhön))",
+        "b_anachronism": "Authentic pre-867 indigenous physical toponym and territorial catchment (Tövchön).",
+        "b_ipa": "[ˈtøːv.xøːn]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/T%C3%B6vkh%C3%B6n_Monastery",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_guchin_us": {
+      "barony_key": "b_guchin_us",
+      "modern_name": "Guchin-Us",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_tovkhon",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented as a modern sum (district) of Övörkhangai Province in Mongolia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Guchin (Гучин)",
+          "language": "Mongolian",
+          "translation": "thirty"
+        },
+        {
+          "form": "us (ус)",
+          "language": "Mongolian",
+          "translation": "water"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Guchin-Us (Гучин-Ус), literally 'Thirty Waters', referring to a sum (district) in southern Övörkhangai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Guchin-Us,_%C3%96v%C3%B6rkhangai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_avraikheer": {
+      "barony_key": "b_avraikheer",
+      "modern_name": "Arvaikheer",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_tovkhon",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian history as the capital of Övörkhangai Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Arvai (Арвай)",
+          "language": "Mongolian",
+          "translation": "barley"
+        },
+        {
+          "form": "kheer (хээр)",
+          "language": "Mongolian",
+          "translation": "steppe, plain"
+        }
+      ],
+      "etymology_analysis": "Mongolian settlement name Arvaikheer (Арвайхээр, 'Barley Steppe'; rendered in-game/CK3 as Avraikheer), the capital of Övörkhangai Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Arvaikheer",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khuisiin_naiman_nuur": {
+      "barony_key": "b_khuisiin_naiman_nuur",
+      "modern_name": "Khuisiin Naiman Nuur",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ovorkhangai",
+        "county": "c_tovkhon",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as the Eight Lakes (Naiman Nuur) Nature Reserve in Khangai Nuruu National Park.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Khuisiin Naiman Nuur"
+      },
+      "morphemes": [
+        {
+          "form": "Khuisiin (Хүйсийн)",
+          "language": "Mongolian",
+          "translation": "of the navel/center (genitive of khüis)"
+        },
+        {
+          "form": "naiman (найман)",
+          "language": "Mongolian",
+          "translation": "eight"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake(s)"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Khuisiin Naiman Nuur (Хүйсийн Найман нуур, 'Eight Lakes of the Navel/Center'), a group of eight volcanic lakes in the Khangai Mountains.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khangai_Nuruu_National_Park",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khemchiq": {
+      "barony_key": "b_khemchiq",
+      "modern_name": "Khemchik River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_central_tannu",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE for the Khemchik tributary itself (though the main Yenisei river is attested as Kem/Jian in 7th–8th century Chinese and Orkhon Turkic sources).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Khemchik River"
+      },
+      "morphemes": [
+        {
+          "form": "Khem (Хем)",
+          "language": "Tuvan",
+          "translation": "river (specifically the Yenisei, Old Turkic Käm)"
+        },
+        {
+          "form": "-chik (-чик)",
+          "language": "Tuvan",
+          "translation": "diminutive suffix ('little river')"
+        }
+      ],
+      "etymology_analysis": "Tuvan hydronym Khemchik (Хемчик, 'Little Khem / Little Yenisei'), formed from Tuvan khem ('river', cognate with Old Turkic Käm) plus the diminutive suffix -chik.",
+      "current_repo_state": {
+        "name": "Midden-Tannu",
+        "b_tarr": "Midden-Tannu",
+        "b_tarr_direct": "Midden-Tannu",
+        "b_tarr_hist": "Midden-Tannu",
+        "b_origin": "Midden-Tannu (Central Tannu)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈmɪ.dən ˈta.nʊ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khemchik",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sagly": {
+      "barony_key": "b_sagly",
+      "modern_name": "Sagly",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_central_tannu",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; the Iron Age Sagly-Bazhy culture (5th–2nd centuries BCE) is named after the modern Tuvan locality of Sagly.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Sagly (Саглы)",
+          "language": "Tuvan",
+          "translation": "Sagly (toponym in Ovyursky Kozhuun, Western Tannu-Ola)"
+        }
+      ],
+      "etymology_analysis": "Tuvan toponym Sagly (Саглы), designating a village, river, and the highest summit (3,061 m) of the Western Tannu-Ola range in Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sagly-Bazhy_culture",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_karatangdy": {
+      "barony_key": "b_karatangdy",
+      "modern_name": "Kara-Tangdy",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_eastern_tannu",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; represents a CK3 compound/toponym combining Tuvan kara ('black') and Tangdy (Tannu-Ola).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Kara (Кара)",
+          "language": "Tuvan",
+          "translation": "black"
+        },
+        {
+          "form": "Tangdy (Таңды)",
+          "language": "Tuvan",
+          "translation": "high mountain (Tannu-Ola)"
+        }
+      ],
+      "etymology_analysis": "Tuvan compound Kara-Tangdy ('Black Tannu-Ola'), combining kara ('black') and Tangdy ('high mountain', the Tuvan name of the Tannu-Ola range).",
+      "current_repo_state": {
+        "name": "Ôst-Tannu",
+        "b_tarr": "Ôst-Tannu",
+        "b_tarr_direct": "Ôst-Tannu",
+        "b_tarr_hist": "Ôst-Tannu",
+        "b_origin": "Ôst-Tannu (Eastern Tannu)",
+        "b_anachronism": "",
+        "b_ipa": "[oːst ˈta.nʊ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_despen": {
+      "barony_key": "b_despen",
+      "modern_name": "Despen",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_eastern_tannu",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern geography as the highest peak (2,591 m) of the Eastern Tannu-Ola range and the Despen River valley in southern Tuva.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Despen (Дэспэн)",
+          "language": "Tuvan",
+          "translation": "Despen (proper name of a peak and river in Eastern Tannu-Ola)"
+        }
+      ],
+      "etymology_analysis": "Tuvan oronym and hydronym Despen, designating the highest point (2,591 m) of the Eastern Tannu-Ola mountains and its adjacent river valley in Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_turgen_uul_bis": {
+      "barony_key": "b_turgen_uul_bis",
+      "modern_name": "Türgen Uul",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_western_tannu",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a mountain range in the Uvs Lake Basin.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Türgen Uul"
+      },
+      "morphemes": [
+        {
+          "form": "Türgen (Түргэн)",
+          "language": "Mongolian",
+          "translation": "swift, rapid"
+        },
+        {
+          "form": "uul (уул)",
+          "language": "Mongolian",
+          "translation": "mountain"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Türgen Uul (Түргэн уул, 'Swift Mountain'), a glaciated massif (3,965 m) in western Uvs Province.",
+      "current_repo_state": {
+        "name": "West-Tannu",
+        "b_tarr": "West-Tannu",
+        "b_tarr_direct": "West-Tannu",
+        "b_tarr_hist": "West-Tannu",
+        "b_origin": "West-Tannu (Western Tannu)",
+        "b_anachronism": "",
+        "b_ipa": "[wɛst ˈta.nʊ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake_Basin",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_mungun_taiga": {
+      "barony_key": "b_mungun_taiga",
+      "modern_name": "Möngün-Taiga",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_western_tannu",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Russian and Tuvan geography as the highest massif in Tuva (3,970 m).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Möngün-Taiga"
+      },
+      "morphemes": [
+        {
+          "form": "Möngün (Мөңгүн)",
+          "language": "Tuvan",
+          "translation": "silver"
+        },
+        {
+          "form": "taiga (тайга)",
+          "language": "Tuvan",
+          "translation": "snow-capped mountain / taiga"
+        }
+      ],
+      "etymology_analysis": "Tuvan oronym Möngün-Taiga (Мөңгүн-Тайга, 'Silver Mountain'), referring to the glaciated massif in southwestern Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Mongun-Taiga",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khindigtik_khol": {
+      "barony_key": "b_khindigtik_khol",
+      "modern_name": "Khindiktig-Khol",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_tannu_ola",
+        "county": "c_western_tannu",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Russian and Tuvan hydrographic registers as a glacial lake in Mongun-Tayginsky Kozhuun, Tuva.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Khindiktig-Khol"
+      },
+      "morphemes": [
+        {
+          "form": "Khindiktig (Хиндиктиг)",
+          "language": "Tuvan",
+          "translation": "having a navel (khindik 'navel' + -tig, referring to its central island)"
+        },
+        {
+          "form": "khol (хөл)",
+          "language": "Tuvan",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Tuvan hydronym Khindiktig-Khol (Хиндиктиг-Хөл, 'Lake with a Navel'), named for the prominent mountain island in the center of the lake.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_tesiin_gol": {
+      "barony_key": "b_tesiin_gol",
+      "modern_name": "Tes River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_tesiin_gol",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 759,
+      "first_mention_attestation": "Attested in 759 CE as Old Turkic 'tez' (t(ä)z) in the Uyghur Shine Usu (Selenge Stone) inscription ('tez bašïnta', 'at the head of the Tez [River]'), and in the contemporaneous Tes inscription (c. 750–762 CE).",
+      "is_historical_867": true,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Tes River"
+      },
+      "morphemes": [
+        {
+          "form": "Tesiin (Тэсийн)",
+          "language": "Mongolian",
+          "translation": "of the Tes (genitive of Tes, attested in Old Turkic as Tez)"
+        },
+        {
+          "form": "gol (гол)",
+          "language": "Mongolian",
+          "translation": "river"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Tesiin gol (Тэсийн гол; Tuvan: Tes-Khem), continuing the Old Turkic river name Tez attested in 8th-century Uyghur runiform inscriptions.",
+      "current_repo_state": {
+        "name": "Tesîn-Gôl",
+        "b_tarr": "Tesîn-Gôl",
+        "b_tarr_direct": "Tesîn-Gôl",
+        "b_tarr_hist": "Tesîn-Gôl",
+        "b_origin": "Tesîn-Gôl (Tesiin Gol)",
+        "b_anachronism": "",
+        "b_ipa": "[tɛ.ˈziːn ɡoːl]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Tes_River",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_bayan_UVS": {
+      "barony_key": "b_bayan_UVS",
+      "modern_name": "Bayan (Uvs)",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_tesiin_gol",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; generic Mongolian toponymic element Bayan ('rich') paired with the Uvs province identifier.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Bayan (Баян)",
+          "language": "Mongolian",
+          "translation": "rich, abundant"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponymic element Bayan ('rich, abundant'), used in CK3 for a barony in the Uvs / Tesiin Gol region.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_altan_els": {
+      "barony_key": "b_altan_els",
+      "modern_name": "Altan Els",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_tesiin_gol",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a sand dune massif in the Uvs Lake Basin.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Altan Els"
+      },
+      "morphemes": [
+        {
+          "form": "Altan (Алтан)",
+          "language": "Mongolian",
+          "translation": "golden"
+        },
+        {
+          "form": "els (элс)",
+          "language": "Mongolian",
+          "translation": "sand"
+        }
+      ],
+      "etymology_analysis": "Mongolian topographic name Altan Els (Алтан элс, 'Golden Sands'), a protected sand dune region in the Uvs Lake Basin.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake_Basin",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ulaangom": {
+      "barony_key": "b_ulaangom",
+      "modern_name": "Ulaangom",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_ulaangom",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1686,
+      "first_mention_attestation": "Founded in 1686 CE (with late 17th-century grain cultivation and the 1871 Dechinravjaa Monastery).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ulaan (Улаан)",
+          "language": "Mongolian",
+          "translation": "red"
+        },
+        {
+          "form": "gom (гом)",
+          "language": "Mongolian",
+          "translation": "valley, hollow"
+        }
+      ],
+      "etymology_analysis": "Mongolian settlement name Ulaangom (Улаангом, 'Red Valley'), the capital of Uvs Province.",
+      "current_repo_state": {
+        "name": "Ulângôm",
+        "b_tarr": "Ulângôm",
+        "b_tarr_direct": "Ulângôm",
+        "b_tarr_hist": "Ulângôm",
+        "b_origin": "Ulângôm (Ulaangom)",
+        "b_anachronism": "",
+        "b_ipa": "[ʊ.laː.ˈŋoːm]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ulaangom",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_turgen": {
+      "barony_key": "b_turgen",
+      "modern_name": "Türgen",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_ulaangom",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented as a modern sum (district) of Uvs Province in western Mongolia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Türgen (Түргэн)",
+          "language": "Mongolian",
+          "translation": "swift, rapid"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Türgen (Түргэн, 'Swift'), designating a sum (district) in Uvs Province named after the nearby Türgen Uul / Türgen River.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/T%C3%BCrgen,_Uvs",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khyarhgas": {
+      "barony_key": "b_khyarhgas",
+      "modern_name": "Khyargas Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_ulaangom",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE for the lake name itself (the lake is named after the Kyrgyz ethnonym, which is attested earlier, but the Mongolian hydronym Khyargas Nuur is post-867).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Khyargas Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Khyargas (Хяргас)",
+          "language": "Mongolian",
+          "translation": "Kyrgyz (ethnonym)"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Khyargas (nuur) (Хяргас нуур), derived from the ethnonym Kyrgyz (Kirghiz), reflecting historical Kyrgyz presence in western Mongolia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khyargas_Nuur",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_uvs_nuur": {
+      "barony_key": "b_uvs_nuur",
+      "modern_name": "Uvs Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_uvs_nuur",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in later Mongolian and Russian geographical sources as Mongolia's largest saline lake.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Uvs Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Uvs (Увс)",
+          "language": "Mongolian",
+          "translation": "Uvs / Ubsu (from Mongolic übsün/subsen, bitter/saline sediment)"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Uvs nuur (Увс нуур; Classical Mongolian: ubsu naɣur), traditionally derived from a Mongolic word for the bitter sediment left in fermented mare's milk (airag), referring to the lake's high salinity.",
+      "current_repo_state": {
+        "name": "Uws-Nûr",
+        "b_tarr": "Uws-Nûr",
+        "b_tarr_direct": "Uws-Nûr",
+        "b_tarr_hist": "Uws-Nûr",
+        "b_origin": "Uws-Nûr (Uvs Nuur)",
+        "b_anachronism": "",
+        "b_ipa": "[ʊws nuːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Uvs_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khan_khokhii": {
+      "barony_key": "b_khan_khokhii",
+      "modern_name": "Khan Khökhii",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_uvs_nuur",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a sacred mountain range in Uvs Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Khan Khökhii"
+      },
+      "morphemes": [
+        {
+          "form": "Khan (Хан)",
+          "language": "Mongolian",
+          "translation": "khan, king, royal"
+        },
+        {
+          "form": "khökhii (хөхий)",
+          "language": "Mongolian",
+          "translation": "blue, sky-colored (from khökh 'blue')"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Khan Khökhii (Хан хөхий), a sacred mountain range separating the Uvs Lake and Khyargas Lake basins in Uvs Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khan_Kh%C3%B6khii",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khan_huhiin": {
+      "barony_key": "b_khan_huhiin",
+      "modern_name": "Khan Khökhii",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_ubsunur_hollow",
+        "county": "c_uvs_nuur",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; CK3 barony representing the genitive form (Khan Khökhiin) of the Khan Khökhii mountain range in Uvs Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Khan Khökhii"
+      },
+      "morphemes": [
+        {
+          "form": "Khan (Хан)",
+          "language": "Mongolian",
+          "translation": "khan, king, royal"
+        },
+        {
+          "form": "khökhiin (хөхийн)",
+          "language": "Mongolian",
+          "translation": "of the blue/sky-colored (genitive of khökhii)"
+        }
+      ],
+      "etymology_analysis": "Genitive form (Khan Khökhiin, Хан хөхийн) of the Mongolian oronym Khan Khökhii, used in phrases such as Khan Khökhiin nuruu ('Khan Khökhii Range').",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khan_Kh%C3%B6khii",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_gosudar": {
+      "barony_key": "b_gosudar",
+      "modern_name": "Gosudar",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_kantegir",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Russian common noun/title gosudar ('sovereign, ruler') used as a CK3 barony name in the Western Sayan.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Gosudar (государь)",
+          "language": "Russian",
+          "translation": "sovereign, monarch, lord"
+        }
+      ],
+      "etymology_analysis": "Russian title gosudar ('sovereign/lord'), appearing in early modern Russian-Siberian archival contexts and used as a barony key in CK3.",
+      "current_repo_state": {
+        "name": "Kantegîr",
+        "b_tarr": "Kantegîr",
+        "b_tarr_direct": "Kantegîr",
+        "b_tarr_hist": "Kantegîr",
+        "b_origin": "Kantegîr (Kantegir)",
+        "b_anachronism": "",
+        "b_ipa": "[kan.tɛ.ˈɣiːr]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_kantegir": {
+      "barony_key": "b_kantegir",
+      "modern_name": "Kantegir River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_kantegir",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Russian and Khakas geographical sources as a left tributary of the Yenisei.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Kantegir River"
+      },
+      "morphemes": [
+        {
+          "form": "Kan (Хан)",
+          "language": "Khakas",
+          "translation": "khan, ruler"
+        },
+        {
+          "form": "tegir (тигір)",
+          "language": "Khakas",
+          "translation": "sky, heaven (cognate with Old Turkic täŋri)"
+        }
+      ],
+      "etymology_analysis": "Russian adaptation (Кантегир) of Khakas Khan-Tigir (Хан-Тигір, 'Khan-Sky' or 'Heavenly Khan'), a mountain river in the Western Sayan flowing into the Yenisei.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Kantegir",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sayanchu": {
+      "barony_key": "b_sayanchu",
+      "modern_name": "Sayanchu",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_sayanchu",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; CK3 barony name derived from the Sayan Mountains (Sayany).",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Sayan (Саян)",
+          "language": "Turkic/Samoyedic",
+          "translation": "Sayan (mountain range name, linked to the Soyan/Sayan tribe)"
+        },
+        {
+          "form": "-chu",
+          "language": "CK3/Mongolic",
+          "translation": "derivational suffix"
+        }
+      ],
+      "etymology_analysis": "CK3 toponym Sayanchu, derived from the Sayan Mountains (Russian Sayany, Tuvan Sayan) in southern Siberia.",
+      "current_repo_state": {
+        "name": "Sajantschû",
+        "b_tarr": "Sajantschû",
+        "b_tarr_direct": "Sajantschû",
+        "b_tarr_hist": "Sajantschû",
+        "b_origin": "Sajantschû (Sayanchu)",
+        "b_anachronism": "",
+        "b_ipa": "[sa.jan.ˈtʃuː]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_sutkhol": {
+      "barony_key": "b_sutkhol",
+      "modern_name": "Sut-Khol",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_sayanchu",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Russian and Tuvan hydrographic registers as a mountain lake in Tuva.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Sut-Khol"
+      },
+      "morphemes": [
+        {
+          "form": "Sut (Сүт)",
+          "language": "Tuvan",
+          "translation": "milk"
+        },
+        {
+          "form": "khol (хөл)",
+          "language": "Tuvan",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Tuvan hydronym Süt-Khöl (Сүт-Хөл, 'Milk Lake'), a sacred alpine lake in the Western Sayan / Sut-Kholsky Kozhuun of Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_stoyanka": {
+      "barony_key": "b_stoyanka",
+      "modern_name": "Stoyanka",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_stoyanka",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; Russian generic common noun stoyanka ('camp, halting place, archaeological site').",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "stoyanka (стоянка)",
+          "language": "Russian",
+          "translation": "camp, halting place, archaeological station"
+        }
+      ],
+      "etymology_analysis": "Russian common noun stoyanka ('camp, station'), commonly used in Siberian archaeology and topography for campsites and Paleolithic stations in the Western Sayan.",
+      "current_repo_state": {
+        "name": "Stojanke",
+        "b_tarr": "Stojanke",
+        "b_tarr_direct": "Stojanke",
+        "b_tarr_hist": "Stojanke",
+        "b_origin": "Stojanke (Stoyanka)",
+        "b_anachronism": "",
+        "b_ipa": "[stɔ.ˈja.ŋkɛ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_urbun": {
+      "barony_key": "b_urbun",
+      "modern_name": "Urbun River",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_stoyanka",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Russian and Tuvan geographical sources as a left tributary of the Yenisei.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Urbun River"
+      },
+      "morphemes": [
+        {
+          "form": "Urbun (Урбун)",
+          "language": "Tuvan",
+          "translation": "Urbun (proper name of a river and locality in Tuva)"
+        }
+      ],
+      "etymology_analysis": "Tuvan hydronym Urbun (Урбун), a mountain tributary of the Upper Yenisei in the Sayano-Shushensky Nature Reserve region of Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ulaan_gol": {
+      "barony_key": "b_ulaan_gol",
+      "modern_name": "Ulaan Gol",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_stoyanka",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Siberian/Sayan topographical sources as Ulan-Gol.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Ulaan Gol"
+      },
+      "morphemes": [
+        {
+          "form": "Ulaan (Улаан)",
+          "language": "Mongolian",
+          "translation": "red"
+        },
+        {
+          "form": "gol (гол)",
+          "language": "Mongolian",
+          "translation": "river"
+        }
+      ],
+      "etymology_analysis": "Mongolic hydronym Ulaan gol ('Red River'), attested in modern Russian cartography of the Sayan region as Ulan-Gol.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_arja": {
+      "barony_key": "b_arja",
+      "modern_name": "Arzhan",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_western_sayan",
+        "county": "c_stoyanka",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; while the Arzhan royal kurgans in Tuva date to the 9th–7th centuries BCE, the Tuvan toponym Arzhaan is modern.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Arzhaan (Аржаан)",
+          "language": "Tuvan",
+          "translation": "mineral/medicinal spring (ultimately from Sanskrit rasāyana via Mongolic arshaan)"
+        }
+      ],
+      "etymology_analysis": "CK3 rendering (Arja) of Tuvan Arzhaan (Аржаан, 'medicinal spring'), the name of a village and famous early Saka kurgan complex in Tuva.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Arzhan_culture",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_khar_us": {
+      "barony_key": "b_khar_us",
+      "modern_name": "Khar-Us Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_khar_us",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a major freshwater lake in the Great Lakes Depression.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Khar-Us Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Khar (Хар)",
+          "language": "Mongolian",
+          "translation": "black"
+        },
+        {
+          "form": "us (ус)",
+          "language": "Mongolian",
+          "translation": "water"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Khar-Us nuur (Хар-Ус нуур, 'Black Water Lake'), located in Khovd Province in the Great Lakes Depression of western Mongolia.",
+      "current_repo_state": {
+        "name": "Char-Ûs",
+        "b_tarr": "Char-Ûs",
+        "b_tarr_direct": "Char-Ûs",
+        "b_tarr_hist": "Char-Ûs",
+        "b_origin": "Char-Ûs (Khar Us)",
+        "b_anachronism": "",
+        "b_ipa": "[xar uːs]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Khar-Us_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_durgun": {
+      "barony_key": "b_durgun",
+      "modern_name": "Dörgön Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_khar_us",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a saltwater lake in Khovd Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Dörgön Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Dörgön (Дөргөн)",
+          "language": "Mongolian",
+          "translation": "Dörgön (proper lake name, also Russianized as Durgun)"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Dörgön nuur (Дөргөн нуур; Russianized as Durgun), a saline lake in the Great Lakes Depression of western Mongolia.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/D%C3%B6rg%C3%B6n_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_elsen_tasarkhai": {
+      "barony_key": "b_elsen_tasarkhai",
+      "modern_name": "Elsen Tasarkhai",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_khar_us",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a sand dune belt.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Elsen Tasarkhai"
+      },
+      "morphemes": [
+        {
+          "form": "Elsen (Элсэн)",
+          "language": "Mongolian",
+          "translation": "sandy (attributive of els 'sand')"
+        },
+        {
+          "form": "tasarkhai (тасархай)",
+          "language": "Mongolian",
+          "translation": "torn-off piece, isolated fragment"
+        }
+      ],
+      "etymology_analysis": "Mongolian topographic name Elsen Tasarkhai (Элсэн тасархай, 'Isolated Fragment of Sand'), referring to a strip of sand dunes amidst steppe.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": null,
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_uliastai": {
+      "barony_key": "b_uliastai",
+      "modern_name": "Uliastai",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_uliastai",
+        "holding_type": "castle"
+      },
+      "first_mention_year": 1733,
+      "first_mention_attestation": "Founded in 1733 CE as a Qing Manchu military garrison and administrative center for Outer Mongolia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Ulias (Улиас)",
+          "language": "Mongolian",
+          "translation": "poplar tree"
+        },
+        {
+          "form": "-tai (-тай)",
+          "language": "Mongolian",
+          "translation": "possessive suffix ('having, place with')"
+        }
+      ],
+      "etymology_analysis": "Mongolian settlement name Uliastai (Улиастай, 'Place with Poplars'), founded in 1733 CE as the Qing military headquarters in western Mongolia.",
+      "current_repo_state": {
+        "name": "Uljastâi",
+        "b_tarr": "Uljastâi",
+        "b_tarr_direct": "Uljastâi",
+        "b_tarr_hist": "Uljastâi",
+        "b_origin": "Uljastâi (Uliastai)",
+        "b_anachronism": "",
+        "b_ipa": "[ˈʊ.ʎas.taː.ɪ]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Uliastai",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_ulaagchiin_khar": {
+      "barony_key": "b_ulaagchiin_khar",
+      "modern_name": "Ulaagchinii Khar Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_uliastai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a freshwater lake in Zavkhan Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Ulaagchinii Khar Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Ulaagchinii (Улаагчны)",
+          "language": "Mongolian",
+          "translation": "of the red-coated/bay mare (genitive of ulaagchin)"
+        },
+        {
+          "form": "khar (хар)",
+          "language": "Mongolian",
+          "translation": "black"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Ulaagchinii Khar nuur (Улаагчны Хар нуур), a freshwater lake in Zavkhan Province bordered by sand dunes.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Ulaagchinii_Khar_Nuur_National_Park",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_otgontenger": {
+      "barony_key": "b_otgontenger",
+      "modern_name": "Otgontenger",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_uliastai",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as the highest peak of the Khangai Mountains.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Otgontenger"
+      },
+      "morphemes": [
+        {
+          "form": "Otgon (Отгон)",
+          "language": "Mongolian",
+          "translation": "youngest"
+        },
+        {
+          "form": "tenger (тэнгэр)",
+          "language": "Mongolian",
+          "translation": "sky, heaven"
+        }
+      ],
+      "etymology_analysis": "Mongolian oronym Otgontenger (Отгонтэнгэр, 'Youngest Sky'), the highest and only glaciated peak (4,021 m) of the Khangai Mountains in Zavkhan Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Otgontenger",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_airag": {
+      "barony_key": "b_airag",
+      "modern_name": "Airag Lake",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_urgamal",
+        "holding_type": "castle"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented in modern Mongolian geography as a freshwater lake in the Great Lakes Depression.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Airag Lake"
+      },
+      "morphemes": [
+        {
+          "form": "Airag (Айраг)",
+          "language": "Mongolian",
+          "translation": "fermented mare's milk (kumis)"
+        },
+        {
+          "form": "nuur (нуур)",
+          "language": "Mongolian",
+          "translation": "lake"
+        }
+      ],
+      "etymology_analysis": "Mongolian hydronym Airag nuur (Айраг нуур, 'Airag Lake'), a freshwater lake in the Great Lakes Depression connected to Khyargas Lake.",
+      "current_repo_state": {
+        "name": "Urgamâl",
+        "b_tarr": "Urgamâl",
+        "b_tarr_direct": "Urgamâl",
+        "b_tarr_hist": "Urgamâl",
+        "b_origin": "Urgamâl (Urgamal)",
+        "b_anachronism": "",
+        "b_ipa": "[ʊr.ɡa.ˈmaːl]",
+        "holding_type": "castle",
+        "category": "capital_eponymous"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Airag_Lake",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_urgamal": {
+      "barony_key": "b_urgamal",
+      "modern_name": "Urgamal",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_urgamal",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; documented as a modern sum (district) of Zavkhan Province in western Mongolia.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Urgamal (Ургамал)",
+          "language": "Mongolian",
+          "translation": "plant, vegetation (from urga- 'to grow')"
+        }
+      ],
+      "etymology_analysis": "Mongolian toponym Urgamal (Ургамал, 'Plant/Vegetation'), a sum (district) in western Zavkhan Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Urgamal,_Zavkhan",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    },
+    "b_setsen_sart": {
+      "barony_key": "b_setsen_sart",
+      "modern_name": "Setsen Sart",
+      "hierarchy": {
+        "empire": "e_kirghiz_khanate",
+        "kingdom": "k_naimania",
+        "duchy": "d_zavkhan",
+        "county": "c_urgamal",
+        "holding_type": "unoccupied"
+      },
+      "first_mention_year": null,
+      "first_mention_attestation": "No written attestation <= 867 CE; derives from the Qing-era Khalkha Mongol banner Tsetsen Sartuulyn khoshuu ('Wise Sartuul's Banner') in Zavkhan Province.",
+      "is_historical_867": false,
+      "named_after_post_867_person": false,
+      "eponym_details": null,
+      "natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "morphemes": [
+        {
+          "form": "Setsen (Сэцэн)",
+          "language": "Mongolian",
+          "translation": "wise, sage"
+        },
+        {
+          "form": "Sart (Сарт)",
+          "language": "Mongolian",
+          "translation": "Sart / Sartuul (clan/ethnonym)"
+        }
+      ],
+      "etymology_analysis": "Mongolian banner/clan name Setsen Sart (from Qing-era Tsetsen Sartuulyn khoshuu, 'Wise Sartuul Banner'), associated with Zavkhan Province.",
+      "current_repo_state": {
+        "name": "",
+        "b_tarr": "",
+        "b_tarr_direct": "",
+        "b_tarr_hist": "",
+        "b_origin": "",
+        "b_anachronism": "",
+        "b_ipa": "",
+        "holding_type": "unoccupied",
+        "category": "unoccupied"
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Sartuul",
+      "older_name_by_867": {
+        "exists": false,
+        "names": [],
+        "first_mention_year": null,
+        "first_mention_source": null,
+        "relationship": null,
+        "notes": null
+      }
+    }
+  }
+}
