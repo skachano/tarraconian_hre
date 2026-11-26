@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_aegyptus",
     "scope": "e_aegyptus (all 125 baronies across k_blemmyia and k_egypt)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -3233,7 +3233,7 @@
           "translation": "unattested toponym in the Badi–Aqiq region (possibly a corruption or variant of a Beja clan or local Arabic name, cf. Kubir noted by al-Ya'qubi)"
         }
       ],
-      "etymology_analysis": "No historical settlement named Ka'abir is attested in the Badi/Aqiq region of the Sudanese Red Sea coast. It is left empty in barony_resolutions.json as an unoccupied holding and lacks pre-867 attestation.",
+      "etymology_analysis": "No historical settlement named Ka'abir is attested in the Badi/Aqiq region of the Sudanese Red Sea coast; it lacks pre-867 attestation.",
       "historical_names": [],
       "source_url": null
     },

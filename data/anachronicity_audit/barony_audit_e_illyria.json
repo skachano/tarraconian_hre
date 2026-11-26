@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_illyria",
     "scope": "e_illyria (all 165 baronies across k_croatia, k_epirus, k_sicily, and k_venice)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -5184,7 +5184,7 @@
       "first_mention_year": 1294,
       "first_mention_attestation": "1294 AD, first attested when Nikephoros I Komnenos Doukas gave it as dowry to Philip I of Taranto (called 'Gello Castro' in the Livre de la Conqueste).",
       "eponym": {
-        "year": 1294,
+        "year": 1250,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after the Byzantine Angelos (Komnenos Doukas) dynasty that founded the Despotate of Epirus in the 13th century."

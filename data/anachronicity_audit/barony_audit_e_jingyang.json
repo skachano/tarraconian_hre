@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_jingyang",
     "scope": "e_jingyang (308 baronies across k_fujian, k_huainan, k_hunan, k_jiangdong, k_jiangxi, k_liangzhe, k_shannan)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -43,7 +43,7 @@
       "named_after_any_natural_proper_name": 33,
       "has_historical_names_total": 58,
       "has_historical_names_for_post_867": 41,
-      "vanilla_ck3_name_differs_from_modern_name": 84,
+      "vanilla_ck3_name_differs_from_modern_name": 83,
       "wikipedia_source_attached": 292,
       "anachronism_type_counts": {
         "attested_pre_867": 262,
@@ -1029,7 +1029,7 @@
       "barony_key": "b_huichuan_2",
       "vanilla_ck3_name": "Huichuan",
       "modern_name": "Huichuan",
-      "modern_name_note": "unattested in Quanzhou",
+      "modern_name_note": null,
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_fujian",
@@ -2154,8 +2154,8 @@
     "b_jinghai": {
       "barony_key": "b_jinghai",
       "vanilla_ck3_name": "Jinghai",
-      "modern_name": "Nantong / Chongchuan",
-      "modern_name_note": "静海",
+      "modern_name": "Nantong",
+      "modern_name_note": "Chongchuan; 静海",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_huainan",
@@ -2351,8 +2351,8 @@
     "b_liuhe": {
       "barony_key": "b_liuhe",
       "vanilla_ck3_name": "Liuhe",
-      "modern_name": "Luhe / Liuhe",
-      "modern_name_note": "Nanjing (六合)",
+      "modern_name": "Luhe",
+      "modern_name_note": "Liuhe; Nanjing (六合)",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_huainan",
@@ -2395,8 +2395,8 @@
     "b_dingcheng": {
       "barony_key": "b_dingcheng",
       "vanilla_ck3_name": "Dingcheng",
-      "modern_name": "Dingcheng / Huangchuan",
-      "modern_name_note": "定城",
+      "modern_name": "Dingcheng",
+      "modern_name_note": "Huangchuan; 定城",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_huainan",
@@ -2835,8 +2835,8 @@
     "b_shen": {
       "barony_key": "b_shen",
       "vanilla_ck3_name": "Shen",
-      "modern_name": "Feidong / Liangyuan",
-      "modern_name_note": "慎",
+      "modern_name": "Feidong",
+      "modern_name_note": "Liangyuan; 慎",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_huainan",
@@ -8723,8 +8723,8 @@
     "b_xinchang": {
       "barony_key": "b_xinchang",
       "vanilla_ck3_name": "Xinchang",
-      "modern_name": "Yifeng / Xinchang",
-      "modern_name_note": "新昌",
+      "modern_name": "Yifeng",
+      "modern_name_note": "Xinchang; 新昌",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_jiangxi",
@@ -9075,8 +9075,8 @@
     "b_qianhua": {
       "barony_key": "b_qianhua",
       "vanilla_ck3_name": "Qianhua",
-      "modern_name": "Ningdu / Qianhua",
-      "modern_name_note": "虔化",
+      "modern_name": "Ningdu",
+      "modern_name_note": "Qianhua; 虔化",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_jiangxi",
@@ -9174,8 +9174,8 @@
     "b_gan": {
       "barony_key": "b_gan",
       "vanilla_ck3_name": "Gan",
-      "modern_name": "Ganxian / Gan",
-      "modern_name_note": "赣",
+      "modern_name": "Ganxian",
+      "modern_name_note": "Gan; 赣",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_jiangxi",
@@ -9476,8 +9476,8 @@
     "b_mao": {
       "barony_key": "b_mao",
       "vanilla_ck3_name": "Mao",
-      "modern_name": "Yinzhou / Mao",
-      "modern_name_note": "鄮",
+      "modern_name": "Yinzhou",
+      "modern_name_note": "Mao; 鄮",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -9602,8 +9602,8 @@
     "b_wengshan": {
       "barony_key": "b_wengshan",
       "vanilla_ck3_name": "Wengshan",
-      "modern_name": "Dinghai / Zhoushan / Wengshan",
-      "modern_name_note": "翁山",
+      "modern_name": "Dinghai",
+      "modern_name_note": "Zhoushan / Wengshan; 翁山",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -9690,8 +9690,8 @@
     "b_lean": {
       "barony_key": "b_lean",
       "vanilla_ck3_name": "Lean",
-      "modern_name": "Xianju / Le'an",
-      "modern_name_note": "乐安",
+      "modern_name": "Xianju",
+      "modern_name_note": "Le'an; 乐安",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -9866,8 +9866,8 @@
     "b_yuecheng": {
       "barony_key": "b_yuecheng",
       "vanilla_ck3_name": "Yuecheng",
-      "modern_name": "Yueqing / Yuecheng",
-      "modern_name_note": "乐城",
+      "modern_name": "Yueqing",
+      "modern_name_note": "Yuecheng; 乐城",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -9910,8 +9910,8 @@
     "b_angu": {
       "barony_key": "b_angu",
       "vanilla_ck3_name": "Angu",
-      "modern_name": "Rui'an / Angu",
-      "modern_name_note": "安固",
+      "modern_name": "Rui'an",
+      "modern_name_note": "Angu; 安固",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -9954,8 +9954,8 @@
     "b_hengyang": {
       "barony_key": "b_hengyang",
       "vanilla_ck3_name": "Hengyang",
-      "modern_name": "Pingyang / Hengyang",
-      "modern_name_note": "横阳",
+      "modern_name": "Pingyang",
+      "modern_name_note": "Hengyang; 横阳",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10042,8 +10042,8 @@
     "b_puyang_1": {
       "barony_key": "b_puyang_1",
       "vanilla_ck3_name": "Puyang",
-      "modern_name": "Pujiang / Puyang",
-      "modern_name_note": "浦阳",
+      "modern_name": "Pujiang",
+      "modern_name_note": "Puyang; 浦阳",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10174,8 +10174,8 @@
     "b_xinan": {
       "barony_key": "b_xinan",
       "vanilla_ck3_name": "Xinan",
-      "modern_name": "Quzhou / Xin'an",
-      "modern_name_note": "信安",
+      "modern_name": "Quzhou",
+      "modern_name_note": "Xin'an; 信安",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10218,8 +10218,8 @@
     "b_longqiu": {
       "barony_key": "b_longqiu",
       "vanilla_ck3_name": "Longqiu",
-      "modern_name": "Longyou / Longqiu",
-      "modern_name_note": "龙丘",
+      "modern_name": "Longyou",
+      "modern_name_note": "Longqiu; 龙丘",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10262,8 +10262,8 @@
     "b_xujiang": {
       "barony_key": "b_xujiang",
       "vanilla_ck3_name": "Xujiang",
-      "modern_name": "Jiangshan / Xujiang",
-      "modern_name_note": "须江",
+      "modern_name": "Jiangshan",
+      "modern_name_note": "Xujiang; 须江",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10306,8 +10306,8 @@
     "b_kuaiji": {
       "barony_key": "b_kuaiji",
       "vanilla_ck3_name": "Kuaiji",
-      "modern_name": "Shaoxing / Kuaiji",
-      "modern_name_note": "会稽",
+      "modern_name": "Shaoxing",
+      "modern_name_note": "Kuaiji; 会稽",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",
@@ -10438,8 +10438,8 @@
     "b_shan_1": {
       "barony_key": "b_shan_1",
       "vanilla_ck3_name": "Shan",
-      "modern_name": "Shengzhou / Shan",
-      "modern_name_note": "剡",
+      "modern_name": "Shengzhou",
+      "modern_name_note": "Shan; 剡",
       "hierarchy": {
         "empire": "e_jingyang",
         "kingdom": "k_liangzhe",

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_amur",
     "scope": "e_amur (all 100 baronies across k_amur and k_aynumosir)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,

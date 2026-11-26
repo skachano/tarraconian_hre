@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_mali",
     "scope": "e_mali (251 baronies across k_ghana, k_gurma, k_jenne, k_kaabu, k_mali, k_songhay, k_takrur)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -6279,7 +6279,7 @@
       "first_mention_year": 1720,
       "first_mention_attestation": "c. 1720s CE (founded in the 1720s by Fulani/Dialonke settlers and named after their chief Manga Labé, becoming a principal province of the Imamate of Futa Jallon).",
       "eponym": {
-        "year": 1720,
+        "year": 1725,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Manga Labé (early 18th century CE), the Fulani/Dialonke chief credited with founding the town in the 1720s."

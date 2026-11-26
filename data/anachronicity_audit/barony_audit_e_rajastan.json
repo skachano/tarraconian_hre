@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_rajastan",
     "scope": "e_rajastan (398 baronies across k_delhi, k_gujarat, k_himalaya, k_kashmir, k_kosala, k_malwa, k_punjab, k_rajputana, k_sindh)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2793,7 +2793,7 @@
       "first_mention_year": 1140,
       "first_mention_attestation": "Renamed Siddhapura after Chaulukya king Jayasimha Siddharaja (r. 1092–1142 CE), who completed the Rudra Mahalaya temple there (begun earlier at Śrīsthala by Mularaja in 943 CE).",
       "eponym": {
-        "year": 1142,
+        "year": 1092,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Siddhapura after Chaulukya king Jayasimha Siddharaja (r. 1092–1142 CE), who completed the Rudra Mahalaya temple there."
@@ -4587,7 +4587,7 @@
       "first_mention_year": 1559,
       "first_mention_attestation": "Attested from 1559 CE, when Dravya Shah conquered Liglig and renamed the kingdom Gorkha after the Nath yogi Gorakhnath.",
       "eponym": {
-        "year": 1559,
+        "year": 1050,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after the Nath yogi saint Gorakhnath (c. 11th–12th century CE), who is venerated at a cave in Gorkha."
@@ -7694,7 +7694,7 @@
       "first_mention_year": 1180,
       "first_mention_attestation": "Founded c. 1180 CE by Raja Mānik Chand (Māṇikyacandra), brother of Gahadavala king Jayachandra of Kannauj.",
       "eponym": {
-        "year": 1180,
+        "year": 1175,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Raja Manik Chand (Māṇikyacandra, fl. late 12th century CE), brother of Gahadavala ruler Jayachandra of Kannauj."
@@ -8480,7 +8480,7 @@
       "first_mention_year": 1100,
       "first_mention_attestation": "Named after the medieval Nath yogi saint Gorakhnath (c. 11th–12th century CE); attested in medieval records thereafter.",
       "eponym": {
-        "year": 1100,
+        "year": 1050,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after the medieval Nath Hindu yogi saint Gorakhnath (c. 11th–12th century CE)."
@@ -8951,7 +8951,7 @@
       "first_mention_year": 1351,
       "first_mention_attestation": "Founded in the mid-to-late 14th century CE (reign of Firuz Shah Tughlaq, 1351–1388 CE) by Shaikh Sarang, an amir of the Delhi Sultanate.",
       "eponym": {
-        "year": 1351,
+        "year": 1350,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Shaikh Sarang, a 14th-century CE amir of Sultan Firuz Shah Tughlaq who founded the town."
@@ -9076,7 +9076,7 @@
       "first_mention_year": 1791,
       "first_mention_attestation": "Founded in 1791 CE as a cantonment (Chaoni Umedpura) by Jhala Zalim Singh, Dewan of Kota State.",
       "eponym": {
-        "year": 1823,
+        "year": 1730,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Jhala Zalim Singh (1730–1823 CE), the Jhala Rajput Dewan of Kota State who established the settlement in 1791 CE."
@@ -9320,7 +9320,7 @@
       "first_mention_year": 1050,
       "first_mention_attestation": "Named after Paramara King Bhoja (r. c. 1000–1055 CE); attested in an undated 11th-century Jain statue pedestal inscription mentioning Bhoja and a 1100 CE (VS 1157) inscription.",
       "eponym": {
-        "year": 1055,
+        "year": 1000,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Bhoja of the Paramara dynasty (r. c. 1000–1055 CE), who built the Bhojeshwar temple and dams here."
@@ -9495,7 +9495,7 @@
       "first_mention_year": 1388,
       "first_mention_attestation": "Founded in 1388 CE by Malik Nasir Khan of the Faruqi dynasty of Khandesh.",
       "eponym": {
-        "year": 1337,
+        "year": 1256,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after the medieval Chishti Sufi saint Burhan-ud-Din Gharib (1256–1337 CE) when founded by Malik Nasir Khan in 1388 CE."
@@ -9582,7 +9582,7 @@
       "first_mention_year": 1300,
       "first_mention_attestation": "Named after the 13th–14th century CE yogi Changdev Maharaj (contemporary of Sant Dnyaneshwar and Muktabai, c. 1300 CE); earlier known as Sundarpur and Bhingnapur.",
       "eponym": {
-        "year": 1300,
+        "year": 1325,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after yogi Changdev Maharaj (c. late 13th–early 14th century CE), who took samadhi at the site."
@@ -10229,7 +10229,7 @@
       "first_mention_year": 901,
       "first_mention_attestation": "Founded in the 10th century CE by King Agria Bhil, who built the Baijnath Mahadev temple.",
       "eponym": {
-        "year": 901,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Agria Bhil, who founded the town in the 10th century CE."
@@ -10845,7 +10845,7 @@
       "first_mention_year": 1540,
       "first_mention_attestation": "Historic fort and town in Mardan district, Khyber Pakhtunkhwa, associated with the 16th-century Suri era of Sher Shah Suri (r. 1540–1545 CE); unattested in pre-867 CE written sources.",
       "eponym": {
-        "year": 1545,
+        "year": 1540,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Associated with the 16th-century Suri ruler Sher Shah Suri (r. 1540–1545 CE), after whom numerous Suri-era strongholds across northern India and the northwest frontier were named Shergarh."
@@ -11695,7 +11695,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in contemporary sources by 867 CE; the present town is over 500 years old (late medieval/Mughal era), though built on an older archaeological mound yielding coins from c. 323 BCE.",
       "eponym": {
-        "year": null,
+        "year": 1550,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Popularly attributed to Chunni, daughter of Raja Todar Mal (16th century CE), revenue minister to Mughal emperor Akbar."
@@ -11982,7 +11982,7 @@
       "first_mention_year": 1300,
       "first_mention_attestation": "The modern settlement of Kamalia was founded in the 14th century CE by Kamal Khan, a chief of the Kharal tribe; Alexander Cunningham identified the nearby ancient mound with a Mallian town of 325 BCE.",
       "eponym": {
-        "year": 1300,
+        "year": 1350,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after Kamal Khan (Kot Kamal -> Kamalia), a 14th-century CE chief of the Kharal tribe."
@@ -12075,7 +12075,7 @@
       "first_mention_year": 1100,
       "first_mention_attestation": "Local tradition records that Rahon was called Raghupur until the 12th century CE, when Raj Pal renamed it Rahon after a lady named Raho; earliest historical records include the 1710 CE Battle of Rahon.",
       "eponym": {
-        "year": 1100,
+        "year": 1150,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Traditionally renamed in the 12th century CE by Raj Pal from Raghupur to Rahon after a lady named Raho."
@@ -12189,7 +12189,7 @@
       "first_mention_year": 890,
       "first_mention_attestation": "Although the state was traditionally founded c. 697 CE by Raja Bir Chand, it was named Kahlur only after Raja Kahal Chand (r. 890–930 CE) built Kahlur Fort.",
       "eponym": {
-        "year": 930,
+        "year": 890,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Raja Kahal Chand (r. 890–930 CE), who built Kahlur Fort (Kahal-pur -> Kahlur)."
@@ -12282,7 +12282,7 @@
       "first_mention_year": 1480,
       "first_mention_attestation": "Founded at the end of the 15th century CE by the Dodai Baloch chieftain Ghazi Khan, son of Haji Khan Mirani.",
       "eponym": {
-        "year": 1480,
+        "year": 1475,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Dodai Baloch chieftain Ghazi Khan Mirani, who founded the settlement in the late 15th century CE."
@@ -12823,7 +12823,7 @@
       "first_mention_year": 1500,
       "first_mention_attestation": "Founded in the 16th century CE and named after the Sufi saint Baba Pir Kabir; attested in British colonial records as a tehsil of Multan District.",
       "eponym": {
-        "year": 1500,
+        "year": 1550,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after the 16th-century CE Sufi saint Baba Pir Kabir (Hazrat Kabiruddin)."
@@ -13223,7 +13223,7 @@
       "first_mention_year": 1100,
       "first_mention_attestation": "Dates back to the 12th century CE in local tradition (founded by Abheraj Bhatti as Abhegarh) and is attested in the 14th century CE via Tughluq-era sources (Shams-i Siraj 'Afif) and the 16th-century Ain-i-Akbari.",
       "eponym": {
-        "year": 1100,
+        "year": 1150,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Traditionally founded in the 12th century CE by Abheraj Bhatti (Abhegarh -> Abohar)."
@@ -13398,7 +13398,7 @@
       "first_mention_year": 1113,
       "first_mention_attestation": "Earliest attested mention of Ajayameru (modern Ajmer) occurs in Palha's Pattavali copied in 1113 CE (1170 VS) at Dhara, and in Vigraharaja IV's Adhai Din Ka Jhonpra prashasti crediting Chahamana king Ajayaraja II with its founding.",
       "eponym": {
-        "year": 1113,
+        "year": 1125,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Chahamana ruler Ajayaraja II (early 12th century CE; 'Invincible Hill of Ajaya')."
@@ -13632,7 +13632,7 @@
       "first_mention_year": 1600,
       "first_mention_attestation": "Founded in the 17th century CE by Gurjar sardar Sabal Singh, a noble in the court of the rulers of Karauli.",
       "eponym": {
-        "year": 1600,
+        "year": 1650,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after 17th-century CE Gurjar chieftain Sabal Singh Gujjar, who founded the town and fort."
@@ -13763,7 +13763,7 @@
       "first_mention_year": 1700,
       "first_mention_attestation": "Established in the 18th century CE (originally named Kushalgarh by Kushaliram Haldiya) and renamed Gangapur after his brother Gangaram.",
       "eponym": {
-        "year": 1700,
+        "year": 1750,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Gangaram (18th century CE), brother of Kushaliram Haldiya."
@@ -14020,7 +14020,7 @@
       "first_mention_year": 1500,
       "first_mention_attestation": "Founded in the early 16th century CE by Kachwaha Rajput prince Sangaji (or associated with Rana Sanga); famous for 16th–17th-century block printing.",
       "eponym": {
-        "year": 1500,
+        "year": 1525,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Kachwaha Rajput prince Sangaji (early 16th century CE)."
@@ -14762,7 +14762,7 @@
       "first_mention_year": 1436,
       "first_mention_attestation": "Documented in a 1436 CE copper-plate record and a 1439 CE pillar inscription at the Chaturmukha Jain temple.",
       "eponym": {
-        "year": 1468,
+        "year": 1433,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Rana Kumbha (r. 1433–1468 CE), ruler of Mewar, who patronized the construction of the Ranakpur Jain temple."
@@ -16315,7 +16315,7 @@
       "first_mention_year": 1742,
       "first_mention_attestation": "First documented in 18th-century records (1742 CE Dutch document as Karachee; local legend places Mai Kolachi in the 11th century CE).",
       "eponym": {
-        "year": 1742,
+        "year": 1050,
         "post_867": true,
         "type": "deity_or_myth",
         "details": "Named after Mai Kolachi, a legendary 11th-century CE fisherwoman who settled near the Indus delta during the Soomra dynasty."

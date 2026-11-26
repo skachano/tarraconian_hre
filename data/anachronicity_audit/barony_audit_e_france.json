@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_france",
     "scope": "e_france (de jure Empire of Francia in skachano/tarraconian_hre)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -43,7 +43,7 @@
       "named_after_any_natural_proper_name": 97,
       "has_historical_names_total": 71,
       "has_historical_names_for_post_867": 28,
-      "vanilla_ck3_name_differs_from_modern_name": 52,
+      "vanilla_ck3_name_differs_from_modern_name": 51,
       "wikipedia_source_attached": 309,
       "anachronism_type_counts": {
         "attested_pre_867": 154,
@@ -251,7 +251,7 @@
       "first_mention_year": 869,
       "first_mention_attestation": "c. 869–870 (Oppidum Pauli / Sancti Paulinanni Leonini Fanum; 884 Vita Pauli Aureliani)",
       "eponym": {
-        "year": 869,
+        "year": 550,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Paul Aurelian (6th-century Breton bishop, pre-867)"
@@ -431,7 +431,7 @@
       "first_mention_year": 1050,
       "first_mention_attestation": "11th century (Castellum Brienti; castle founded c. 1015–1050)",
       "eponym": {
-        "year": 1050,
+        "year": 1015,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Brient (11th-century Breton baron who built the castle c. 1015–1050)"
@@ -480,7 +480,7 @@
       "first_mention_year": 1032,
       "first_mention_attestation": "1032 (Sanctus Briocus; monastery founded by St. Brioc in the 6th c.)",
       "eponym": {
-        "year": 1032,
+        "year": 409,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Brioc (c. 409–c. 502, 5th–6th c. Welsh/Breton saint, pre-867)"
@@ -573,7 +573,7 @@
       "first_mention_year": 1146,
       "first_mention_attestation": "12th century (episcopal seat transferred from Alet to Insula Aaronis / Saint-Malo in 1146; St. Malo lived 6th–7th c.)",
       "eponym": {
-        "year": 867,
+        "year": 520,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Malo / Maclovius (c. 520–621, pre-867), though the island was called Insula Aaronis in 867"
@@ -1174,7 +1174,7 @@
       "barony_key": "b_sarthe",
       "vanilla_ck3_name": "Ballon",
       "modern_name": "Sarthe",
-      "modern_name_note": "in-game mapped to Ballon",
+      "modern_name_note": "Ballon",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -2600,7 +2600,7 @@
       "first_mention_year": 1123,
       "first_mention_attestation": "12th century (renamed after Bishop Bertrand of Comminges, d. 1123; ancient site was Lugdunum Convenarum, 72 BC)",
       "eponym": {
-        "year": 1123,
+        "year": 1050,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after Saint Bertrand of Comminges (c. 1050–1123, Bishop of Comminges from 1073–1123, lived well after 867)"
@@ -4451,7 +4451,7 @@
       "barony_key": "b_balaguer",
       "vanilla_ck3_name": "Ordanyá",
       "modern_name": "Organyà",
-      "modern_name_note": "in-game Ordanyá",
+      "modern_name_note": "Ordanyá",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -7030,7 +7030,7 @@
       "first_mention_year": 923,
       "first_mention_attestation": "923 (Castrum Theodorici in Flodoard's Annals; earlier Merovingian/Carolingian name was Otmus / pagus Otmensis)",
       "eponym": {
-        "year": 923,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Tradition links it to Merovingian king Theuderic IV (pre-867), or a 9th–10th c. lord Theuderic; however, the name Castrum Theodorici is unattested before 923"
@@ -8009,7 +8009,7 @@
       "first_mention_year": 1042,
       "first_mention_attestation": "1042 (Villa Sancti Audomari; in 867 the town was still called Sithiu, attested 662 & 685)",
       "eponym": {
-        "year": 867,
+        "year": 600,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Audomar / Omer (c. 600–670, Bishop of Thérouanne, pre-867), though the settlement was still named Sithiu in 867"
@@ -9945,7 +9945,7 @@
       "first_mention_year": 298,
       "first_mention_attestation": "Late 3rd / 4th century AD (Constantia in Ammianus Marcellinus & Notitia Dignitatum; earlier Cosedia)",
       "eponym": {
-        "year": 306,
+        "year": 293,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Roman Emperor Constantius Chlorus (r. 293–306 AD, pre-867)"
@@ -10623,7 +10623,7 @@
       "first_mention_year": 1030,
       "first_mention_attestation": "1030–1035 (Herolcurt; early 12th c. Orderic Vitalis: Harulfi Curtis)",
       "eponym": {
-        "year": 1030,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a 10th-century Scandinavian/Norman settler named Hárolfr / Harulf (settled in Normandy after 911, post-867)"
@@ -10803,7 +10803,7 @@
       "first_mention_year": 1000,
       "first_mention_attestation": "11th century (Castrum Nogenti; '-le-Rotrou' added in the 11th–12th c. after the Rotrou Counts of Perche)",
       "eponym": {
-        "year": 1000,
+        "year": null,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "The '-le-Rotrou' determinant is named after the Rotrou dynasty (Lords of Nogent and Counts of Perche, 10th–12th c., post-867)"
@@ -10940,7 +10940,7 @@
       "first_mention_year": 960,
       "first_mention_attestation": "Mid-10th century (Castrum Rainardi, castle built by Count Renard I of Sens, r. 951–996)",
       "eponym": {
-        "year": 960,
+        "year": 937,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Renard I the Old (Count of Sens, c. 937–996, who built the castle in the mid-10th c., post-867)"
@@ -10989,7 +10989,7 @@
       "first_mention_year": -52,
       "first_mention_attestation": "52 BC (Caesar: Cenabum; 3rd–4th c. Civitas Aurelianorum / Aurelianis)",
       "eponym": {
-        "year": 275,
+        "year": 270,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Roman Emperor Aurelian (r. 270–275 AD, pre-867) or the gens Aurelia"
@@ -11163,7 +11163,7 @@
       "first_mention_year": 1034,
       "first_mention_attestation": "1034 (castrum sancti Satyri; 1129 castrum Sanceri; pre-867 name was Gartona / Gordona)",
       "eponym": {
-        "year": 1034,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Satyrus (4th-c. saint, pre-867), though the town was called Gartona / Gordona before the 11th c."
@@ -12140,7 +12140,7 @@
       "first_mention_year": 996,
       "first_mention_attestation": "996 (Sanctus Florus, priory founded c. 996; earlier settlement name was Indiciacum; St. Florus was 4th c.)",
       "eponym": {
-        "year": 1025,
+        "year": 350,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Florus (4th-c. apostle of Auvergne, pre-867), though the town was called Indiciacum until the Cluniac priory of Saint-Flour was founded c. 996–1025"
@@ -12637,8 +12637,8 @@
     "b_la_peyrade": {
       "barony_key": "b_la_peyrade",
       "vanilla_ck3_name": "La Peyrade",
-      "modern_name": "La Peyrade / Peyre",
-      "modern_name_note": null,
+      "modern_name": "La Peyrade",
+      "modern_name_note": "Peyre",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -13152,7 +13152,7 @@
       "first_mention_year": 999,
       "first_mention_attestation": "999 (Mons Fortis; fortress built at the end of the 10th c. by Robert II / William of Hainaut)",
       "eponym": {
-        "year": 999,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Note: modern '-l'Amaury' honors Amaury I of Montfort (11th c., post-867), while the bare key b_montfort reflects the 999 castle Mons Fortis"
@@ -13470,7 +13470,7 @@
       "first_mention_year": 641,
       "first_mention_attestation": "7th century (basilica of Saint-Quentin rebuilt by St. Eligius in 641; earlier Roman Augusta Viromanduorum)",
       "eponym": {
-        "year": 641,
+        "year": 250,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Quentin (Latin Quintinus, 3rd-century Christian martyr, pre-867)"
@@ -13579,7 +13579,7 @@
       "first_mention_year": 475,
       "first_mention_attestation": "5th–7th century (basilica of Saint Denis built c. 475 and royal abbey expanded by Dagobert I c. 630; earlier Catulliacus)",
       "eponym": {
-        "year": 475,
+        "year": 250,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Denis / Dionysius (3rd-century first Bishop of Paris and martyr, pre-867)"

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_scandinavia",
     "scope": "e_scandinavia (all baronies across k_denmark, k_finland, k_norway, k_sapmi, and k_sweden)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -562,7 +562,7 @@
       "first_mention_year": 1354,
       "first_mention_attestation": "Attested in 1354 CE as the ancestral seat of the Hvas family (and recorded prior to 1371 CE).",
       "eponym": {
-        "year": 1354,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Orm (an Old Danish personal name; unattested individual, not a documented post-867 historical figure)."
@@ -611,7 +611,7 @@
       "first_mention_year": 988,
       "first_mention_attestation": "Imperial charter of Otto III dated 18 March 988 CE, granting privileges to the bishopric of 'Othenesuuig'.",
       "eponym": {
-        "year": 988,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Odin (Old Norse: Óðinn), the Norse god."
@@ -836,7 +836,7 @@
       "first_mention_year": 1075,
       "first_mention_attestation": "Adam of Bremen's Gesta Hammaburgensis ecclesiae pontificum (c. 1075 CE, as 'Roschilde'; coins minted under King Cnut c. 1020s).",
       "eponym": {
-        "year": 1075,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Ro / Hróarr (legendary king/founder in medieval Danish tradition, though linguists also debate Old Norse 'hross' [horse] or personal name *Ro)."
@@ -885,7 +885,7 @@
       "first_mention_year": 1231,
       "first_mention_attestation": "King Valdemar's Census Book (1231 CE), as 'Helsingør'.",
       "eponym": {
-        "year": 1231,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Helsingar (inhabitants of the 'hals', i.e., the narrow neck of the Øresund strait)."
@@ -1306,7 +1306,7 @@
       "first_mention_year": 1250,
       "first_mention_attestation": "Medieval Halland records (13th century CE; pagan cult site of Odin dating to the late Viking Age).",
       "eponym": {
-        "year": 1250,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Odin (Old Norse: Óðinn), the Norse god."
@@ -1481,7 +1481,7 @@
       "first_mention_year": 1155,
       "first_mention_attestation": "Attested in 1155 CE as 'Tummathorp' (modern Östra Tommarp).",
       "eponym": {
-        "year": 1155,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Tummi (Old Danish personal name; unattested individual, not a documented post-867 historical figure)."
@@ -1530,7 +1530,7 @@
       "first_mention_year": 1085,
       "first_mention_attestation": "Deed of gift of King Canute the Holy (1085 CE), as 'Guthisbo' (later 'Gythinga hærath' in the 13th century CE).",
       "eponym": {
-        "year": 1085,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Guthir (Old Danish personal name; unattested individual, not a documented post-867 historical figure)."
@@ -1579,7 +1579,7 @@
       "first_mention_year": 1085,
       "first_mention_attestation": "Deed of gift of King Canute the Holy dated 21 May 1085 CE.",
       "eponym": {
-        "year": 1085,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Helsingar (inhabitants of the 'hals', the narrow neck of the Øresund strait)."
@@ -2429,7 +2429,7 @@
       "first_mention_year": 1311,
       "first_mention_attestation": "1311 CE ecclesiastical/historical records (bishop's church permission 1332 CE; town charter 1365 CE).",
       "eponym": {
-        "year": 1311,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the personal name Ulvi (from Old Norse Úlfr, 'wolf') via Swedish Ulvsby ('Ulf's village'); the eponymous Ulf is an undated medieval figure rather than a documented post-867 historical person."
@@ -2478,7 +2478,7 @@
       "first_mention_year": 1395,
       "first_mention_attestation": "1395 CE written mention of Liinmaa Castle (Swedish Vreghdenborg).",
       "eponym": {
-        "year": 1395,
+        "year": 1375,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "The castle's Swedish name Vreghdenborg was named after German noble mercenary Dietrich Vieregge (Wereghede, fl. late 14th century CE), whereas the Finnish name Liinmaa ('castle land' or 'flax land') is topographic."
@@ -3573,7 +3573,7 @@
       "first_mention_year": 1617,
       "first_mention_attestation": "1617 CE record of the first Lutheran church (first priest mentioned in 1632 CE; parish founded 1635 CE).",
       "eponym": {
-        "year": 1617,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Karelian/Finnish surname or personal name Parikka + -la; no specific post-867 historical individual is identified."
@@ -4032,7 +4032,7 @@
       "first_mention_year": 1348,
       "first_mention_attestation": "1348 CE trade statute issued by King Magnus Eriksson mentioning Pedersöre.",
       "eponym": {
-        "year": 1348,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Folk-etymologically associated with the Swedish personal name Peder (Peter), though linguists derive it from an original Finnish name *Petrasaari ('deer island')."
@@ -4256,7 +4256,7 @@
       "first_mention_year": 1323,
       "first_mention_attestation": "1323 CE Treaty of Nöteborg (mentioning Savilahti pogost; the name Mikkeli / S:t Michel arose later from the parish patron saint).",
       "eponym": {
-        "year": 1323,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after the Archangel Michael (Swedish S:t Michel, Finnish Mikkeli), the biblical patron saint of the medieval Savilahti parish."
@@ -4997,7 +4997,7 @@
       "first_mention_year": 1170,
       "first_mention_attestation": "Historia Norwegiæ (c. 1170 CE) and Heimskringla (c. 1230 CE) as Guðbrandsdalir / Dalir",
       "eponym": {
-        "year": 1021,
+        "year": 850,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after a ruling chieftain dynasty bearing the name Guðbrandr (Dale-Gudbrand), first recorded in Heimskringla as Guðbrandr hersir in the time of Halfdan the Black (mid-9th century CE, pre-867), with a later descendant Dale-Gudbrand active in 1021 CE."
@@ -5052,7 +5052,7 @@
       "first_mention_year": 1170,
       "first_mention_attestation": "Historia Norwegiæ (c. 1170 CE) and Heimskringla (c. 1230 CE) as Guðbrandsdalir / norðr í Dǫlum",
       "eponym": {
-        "year": 1021,
+        "year": 850,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after a ruling chieftain dynasty bearing the name Guðbrandr (Dale-Gudbrand), first recorded in Heimskringla as Guðbrandr hersir in the time of Halfdan the Black (mid-9th century CE, pre-867), with a later descendant Dale-Gudbrand active in 1021 CE."
@@ -6139,7 +6139,7 @@
       "first_mention_year": 1687,
       "first_mention_attestation": "1687 CE (first town in Iceland granted a commercial charter by the King of Denmark on 14 April 1687 CE)",
       "eponym": {
-        "year": 1687,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a post-867 CE Norse-Icelandic settler or landowner named Óláfr (Old Norse Óláfr), whose bay (vík) it was."
@@ -6490,7 +6490,7 @@
       "first_mention_year": 1200,
       "first_mention_attestation": "Medieval Norse/Swedish sources as Fræseyjar (12th–13th century CE; the c. 1050 CE Frösö Runestone stands on the island and mentions Jamtaland)",
       "eponym": {
-        "year": 1200,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after the Norse Vanir fertility god Freyr (Old Swedish Frö)."
@@ -6835,7 +6835,7 @@
       "first_mention_year": 1200,
       "first_mention_attestation": "c. 1200 CE in Færeyinga saga ('þar er höfn sú er heitir í Þórshöfn'), describing Viking Age assemblies.",
       "eponym": {
-        "year": 1200,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Thor (Old Norse Þórr), the Norse god of thunder."
@@ -8008,7 +8008,7 @@
       "first_mention_year": 551,
       "first_mention_attestation": "551 CE in Jordanes's Getica (3.23–24) as 'Aeragnaricii' and 'Ranii'.",
       "eponym": {
-        "year": 551,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Rán, the Old Norse sea goddess (traditionally cited in folklore, though philologists also link the name to rani 'snout/promontory' or raðr 'swift current')."
@@ -8277,7 +8277,7 @@
       "first_mention_year": 890,
       "first_mention_attestation": "c. 890 CE as Old English 'Sciringes heal' in Ohthere of Hålogaland's account in the Old English Orosius.",
       "eponym": {
-        "year": 890,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Freyr (Old Norse Frøy / Skíringr 'the shining one'), Norse god of fertility and prosperity (one scholarly etymology)."
@@ -8364,7 +8364,7 @@
       "first_mention_year": 1170,
       "first_mention_attestation": "c. 1170 CE in Historia Norwegiæ and c. 1230 CE in Heimskringla as 'Hringaríki'.",
       "eponym": {
-        "year": 1170,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "King Hringr (mythological/legendary eponymous king in Orkneyinga saga; alternatively derived from a river name *Ringa or ring-shaped settlement)."
@@ -8545,7 +8545,7 @@
       "first_mention_year": 551,
       "first_mention_attestation": "551 CE in Jordanes's Getica (3.23) as 'Raumarici' (also in Old English Beowulf and Widsith as 'Heaðo-Reamas').",
       "eponym": {
-        "year": 551,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "King Raum the Old (Raumr inn gamli), legendary eponym in Hversu Noregr byggðist (though linguistically from the river name Raumelfr / Glomma)."
@@ -13577,7 +13577,7 @@
       "first_mention_year": 1390,
       "first_mention_attestation": "1390 CE document as 'Thorsas'",
       "eponym": {
-        "year": 1390,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after the Norse god Thor (Old Norse Þórr)."
@@ -13670,7 +13670,7 @@
       "first_mention_year": 1278,
       "first_mention_attestation": "1278 CE charter as 'in castro Junakøpung'; city charter granted in 1284 CE",
       "eponym": {
-        "year": 1278,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the Junebäcken stream (Old Swedish Junæbækær)."
@@ -13939,7 +13939,7 @@
       "first_mention_year": 1320,
       "first_mention_attestation": "1320 CE charter ('bona ista... Huluszrydh') when Saint Bridget inherited land there",
       "eponym": {
-        "year": 1320,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after nearby Lake Hulingen."
@@ -14384,7 +14384,7 @@
       "first_mention_year": 1314,
       "first_mention_attestation": "1314 CE document as 'De oklabo'",
       "eponym": {
-        "year": 1314,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after an old lake name *Ukle (modern Lake Bysjön)."
@@ -14867,7 +14867,7 @@
       "first_mention_year": 1304,
       "first_mention_attestation": "1304 CE construction by Dukes Erik and Valdemar Magnusson, recorded in Erikskrönikan (c. 1330 CE)",
       "eponym": {
-        "year": 1304,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the province of Dal (Dalsland)."
@@ -15004,7 +15004,7 @@
       "first_mention_year": 1355,
       "first_mention_attestation": "1355 CE document as 'Jusedzherad'",
       "eponym": {
-        "year": 1355,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the passage at Jösseforsen."
@@ -15411,7 +15411,7 @@
       "first_mention_year": 1306,
       "first_mention_attestation": "1306 CE as 'Kindahus' (attacked by King Eric Menved of Denmark); 'Kindaholm' form attested c. 1450 CE in Karlskrönikan",
       "eponym": {
-        "year": 1306,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Kinds härad (Kinds Hundred)."

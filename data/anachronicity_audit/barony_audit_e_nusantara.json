@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_nusantara",
     "scope": "e_nusantara (203 baronies across k_kabisay-an, k_liuqiu, k_lusung, k_maluku, k_ruucuu, k_sulawesi)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -47,13 +47,12 @@
       "wikipedia_source_attached": 191,
       "anachronism_type_counts": {
         "attested_pre_867": 1,
-        "early_modern_foundation": 76,
-        "fictional_placeholder": 4,
+        "early_modern_foundation": 77,
         "high_late_medieval_attestation": 17,
         "modern_anachronism": 18,
         "post_867_eponym": 2,
         "renamed_post_867": 1,
-        "unattested_indigenous_or_minor": 84
+        "unattested_indigenous_or_minor": 87
       }
     }
   },
@@ -2101,7 +2100,7 @@
         "county": "c_amis",
         "holding_type": "church"
       },
-      "anachronism_type": "fictional_placeholder",
+      "anachronism_type": "unattested_indigenous_or_minor",
       "is_historical_at": {
         "867": false,
         "1066": false,
@@ -2139,7 +2138,7 @@
         "county": "c_amis",
         "holding_type": "unoccupied"
       },
-      "anachronism_type": "fictional_placeholder",
+      "anachronism_type": "unattested_indigenous_or_minor",
       "is_historical_at": {
         "867": false,
         "1066": false,
@@ -2177,7 +2176,7 @@
         "county": "c_amis",
         "holding_type": "unoccupied"
       },
-      "anachronism_type": "fictional_placeholder",
+      "anachronism_type": "early_modern_foundation",
       "is_historical_at": {
         "867": false,
         "1066": false,
@@ -2335,7 +2334,7 @@
         "county": "c_hoanya",
         "holding_type": "church"
       },
-      "anachronism_type": "fictional_placeholder",
+      "anachronism_type": "unattested_indigenous_or_minor",
       "is_historical_at": {
         "867": false,
         "1066": false,
@@ -2654,7 +2653,7 @@
       "first_mention_year": 1966,
       "first_mention_attestation": "Created as Quirino Province on June 18, 1966 CE under Republic Act No. 4734, carved out of Nueva Vizcaya.",
       "eponym": {
-        "year": 1956,
+        "year": 1890,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Elpidio Quirino (1890–1956 CE), sixth President of the Philippines (1948–1953 CE)."

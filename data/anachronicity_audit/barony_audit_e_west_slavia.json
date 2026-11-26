@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_west_slavia",
     "scope": "e_west_slavia (all 242 baronies across k_bohemia, k_galicia-volhynia, k_moravia, k_poland)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -76,7 +76,7 @@
       "first_mention_year": 935,
       "first_mention_attestation": "935 AD (or 929 AD; martyrdom of Duke Wenceslaus I at the gate of the Church of Sts. Cosmas and Damian in Boleslav, recorded in early Wenceslaus legends and Chronica Boemorum; gord founded c. 900 under Spytihněv I).",
       "eponym": {
-        "year": 935,
+        "year": 915,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Duke Boleslaus I of Bohemia (c. 915–967/972), who fortified the Přemyslid gord with stone walls in the first third of the 10th century. The prefix Stará ('Old') was added by the 14th century to distinguish it from Mladá Boleslav."
@@ -125,7 +125,7 @@
       "first_mention_year": 1264,
       "first_mention_attestation": "1264 AD (first written mention of the village; royal castle founded by King Ottokar II in the second half of the 13th century, largely completed by 1279).",
       "eponym": {
-        "year": 1264,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Bezděd ('without grandfather/ancestor'), not a known post-867 historical figure."
@@ -212,7 +212,7 @@
       "first_mention_year": 981,
       "first_mention_attestation": "981 AD (Chronica Boemorum by Cosmas of Prague, mentioning the border castle of Netolice under the year 981).",
       "eponym": {
-        "year": 981,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Netol, not a known post-867 historical figure."
@@ -261,7 +261,7 @@
       "first_mention_year": 1250,
       "first_mention_attestation": "1250 AD (first written mention of Rožmberk Castle, built shortly before 1250 by Vok I of Prčice; town founded in 1262).",
       "eponym": {
-        "year": 1250,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the heraldic five-petaled rose on the coat of arms of its founder, Vok I of Prčice (House of Rosenberg / Rožmberk), not after a person's given name."
@@ -354,7 +354,7 @@
       "first_mention_year": 981,
       "first_mention_attestation": "981 AD (Chronica Boemorum by Cosmas of Prague, naming the early medieval gord of Chýnov under the year 981).",
       "eponym": {
-        "year": 981,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Chýna, not a known post-867 historical figure."
@@ -403,7 +403,7 @@
       "first_mention_year": 1120,
       "first_mention_attestation": "c. 1120 AD (Chronica Boemorum by Cosmas of Prague, referencing provincia Bechin / Bechyně gord retrospectively for 993 AD; first contemporary charter mention 1167 AD).",
       "eponym": {
-        "year": 1120,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Bech, not a known post-867 historical figure."
@@ -540,7 +540,7 @@
       "first_mention_year": 1126,
       "first_mention_attestation": "1126 AD (first written mention of Jaroměř; early 11th-century Přemyslid gord).",
       "eponym": {
-        "year": 1126,
+        "year": 975,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Duke Jaromír of Bohemia (c. 975–1035), or according to the Chronicle of Dalimil after Bishop Jaromír (c. 1040–1090, son of Bretislav I)."
@@ -633,7 +633,7 @@
       "first_mention_year": 1057,
       "first_mention_attestation": "1057 AD (founding charter of the Litoměřice Chapter by Duke Spytihněv II, the oldest written evidence of the town).",
       "eponym": {
-        "year": 1057,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Derived from the Slavic personal name Ľutomír (or the tribe Litoměřici named after him), not a known post-867 historical figure."
@@ -726,7 +726,7 @@
       "first_mention_year": 993,
       "first_mention_attestation": "993 AD (first written mention of the Děčín province, with Děčín as its Přemyslid administrative gord; first mentioned as a town in 1283).",
       "eponym": {
-        "year": 993,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Děk, not a known post-867 historical figure."
@@ -939,7 +939,7 @@
       "first_mention_year": 993,
       "first_mention_attestation": "993 AD (deed of Duke Boleslaus II mentioning the settlement of Domažlice; royal town founded in 1265).",
       "eponym": {
-        "year": 993,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Old Czech personal name Domažil, not a known post-867 historical figure."
@@ -1266,7 +1266,7 @@
       "first_mention_year": 1184,
       "first_mention_attestation": "1184 AD (first written mention concerning nobleman Jiří of Milevsko; Premonstratensian monastery founded 1187).",
       "eponym": {
-        "year": 1184,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Milej (via Milejovice > Milevice > Milevsko), not a known post-867 historical figure."
@@ -1359,7 +1359,7 @@
       "first_mention_year": 1183,
       "first_mention_attestation": "1183 AD (first written mention 'in Kadan'; donated to the Knights Hospitaller in 1186).",
       "eponym": {
-        "year": 1183,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Kadan, not a known post-867 historical figure."
@@ -1490,7 +1490,7 @@
       "first_mention_year": 1264,
       "first_mention_attestation": "1264 AD (foundation of the royal town by King Ottokar II next to the 9th–11th century gord Hrádek; church of St. Michael dates to 1130).",
       "eponym": {
-        "year": 1264,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Čáslav, not a known post-867 historical figure."
@@ -1539,7 +1539,7 @@
       "first_mention_year": 1073,
       "first_mention_attestation": "1073 AD (first written mention as 'Wratislaw'; early medieval gord built at the turn of the 10th and 11th centuries).",
       "eponym": {
-        "year": 1073,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Slavic personal name Vratislav (shortened to Vraclav in the 16th century); not definitively proven to be a specific post-867 duke."
@@ -1588,7 +1588,7 @@
       "first_mention_year": 1055,
       "first_mention_attestation": "1055 AD (Chronica Boemorum, recording that Duke Bretislav I died at Chrudim in 1055).",
       "eponym": {
-        "year": 1055,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the unattested Slavic personal name Chrudim, not a known post-867 historical figure."
@@ -1927,7 +1927,7 @@
       "first_mention_year": 1152,
       "first_mention_attestation": "First confirmed written mention in 1152 (traditionally founded in 1031 by Grand Prince Yaroslav the Wise).",
       "eponym": {
-        "year": 1054,
+        "year": 1019,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Grand Prince Yaroslav the Wise (Yaroslav Vladimirovich, r. 1019–1054), who according to tradition founded the stronghold in 1031."
@@ -2228,7 +2228,7 @@
       "first_mention_year": 1256,
       "first_mention_attestation": "First mentioned in the Galician–Volhynian Chronicle under 1256 AD, founded by King Daniel of Galicia.",
       "eponym": {
-        "year": 1256,
+        "year": 1228,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Leo I of Galicia (Lev Danylovych, c. 1228–1301), eldest son of King Daniel of Ruthenia."
@@ -2541,7 +2541,7 @@
       "first_mention_year": 1427,
       "first_mention_attestation": "First mentioned in written sources in 1427 (and granted Magdeburg town rights in 1522 by King Sigismund I the Old to Jerzy Czortkowski).",
       "eponym": {
-        "year": 1427,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "In 1522 King Sigismund I the Old granted ownership to Polish nobleman Jerzy Czortkowski and permitted him to name the town after himself (Czortków / Chortkiv)."
@@ -2590,7 +2590,7 @@
       "first_mention_year": 1390,
       "first_mention_attestation": "Zaslav (modern Iziaslav in Volhynia) was first mentioned in written records in 1390 AD (though archaeological remains date back to the 11th century).",
       "eponym": {
-        "year": 1390,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a post-867 Rurikid prince Iziaslav (shortened to Zaslav), founder of the Volhynian stronghold."
@@ -3161,7 +3161,7 @@
       "first_mention_year": 988,
       "first_mention_attestation": "First mentioned in the Primary Chronicle under 988 AD, when Grand Prince Vladimir the Great founded/named the city and gave it to his son Vsevolod.",
       "eponym": {
-        "year": 988,
+        "year": 958,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Grand Prince Vladimir the Great (Volodymyr Sviatoslavych, c. 958–1015)."
@@ -3746,7 +3746,7 @@
       "first_mention_year": 1131,
       "first_mention_attestation": "First written mention of the settlement/castle in 1131 (and 1141) in Bishop Jindřich Zdík's charter.",
       "eponym": {
-        "year": 1061,
+        "year": 1055,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Duke Spytihněv II of Bohemia (r. 1055–1061), who established or fortified the border castle."
@@ -3959,7 +3959,7 @@
       "first_mention_year": 1056,
       "first_mention_attestation": "First mentioned in 1056; named after its founder, Duke Bretislav I of Bohemia (r. 1034–1055).",
       "eponym": {
-        "year": 1055,
+        "year": 1034,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Duke Bretislav I of Bohemia (r. 1034–1055), who founded Břeclav Castle."
@@ -4845,7 +4845,7 @@
       "first_mention_year": 907,
       "first_mention_attestation": "First mentioned in 907 AD in the Annales Iuvavenses as Brezalauspurc (Battle of Pressburg); Pozsony is first attested in 1002.",
       "eponym": {
-        "year": 907,
+        "year": 884,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Brezalauspurc ('Braslav's castle') is named after Braslav, Duke of Lower Pannonia (fl. 884–896); Pozsony is attributed to a 10th-century prince/noble Božan (before 950)."
@@ -7727,7 +7727,7 @@
       "first_mention_year": 1280,
       "first_mention_attestation": "1280 AD (granted town rights by Duke Przemko of Ścinawa and named after him)",
       "eponym": {
-        "year": 1280,
+        "year": 1255,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Duke Przemko of Ścinawa (c. 1255–1289), a Silesian Piast duke who granted the settlement town rights in 1280."
@@ -8172,7 +8172,7 @@
       "first_mention_year": 1313,
       "first_mention_attestation": "First mentioned in written records on 23 April 1313 in the ducal titulature of Siemowit II of Masovia (as Warszewa).",
       "eponym": {
-        "year": 1313,
+        "year": 1250,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Likely derived from the possessive form of the Old Polish personal name Warsz (shortened from Warcisław or Wrocisław), hypothesized to be a 13th-century nobleman of the Rawa clan who held a ducal grant on the site."
@@ -8303,7 +8303,7 @@
       "first_mention_year": 1386,
       "first_mention_attestation": "First recorded in medieval written notes in 1386 (and 1404); received its town charter in 1423.",
       "eponym": {
-        "year": 1386,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the medieval Old Polish personal name Garwoł (dates of the eponymous bearer unknown)."
@@ -8352,7 +8352,7 @@
       "first_mention_year": 1240,
       "first_mention_attestation": "Expanded around 1240 by Duke Konrad I of Masovia (burned in 1286; castellany by 1329). An archaeological Slavic gord existed nearby in the 6th–8th centuries.",
       "eponym": {
-        "year": 1240,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Old Polish personal name Gostynia / Gościna (from gość 'guest')."
@@ -8483,7 +8483,7 @@
       "first_mention_year": 1136,
       "first_mention_attestation": "First mentioned as Loviche in the Papal Bull of Gniezno issued by Pope Innocent II on 7 July 1136.",
       "eponym": {
-        "year": 1136,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from the Old Polish personal name Łowik (from łowić 'to hunt') or directly from a hunting ground."
@@ -8796,7 +8796,7 @@
       "first_mention_year": 1065,
       "first_mention_attestation": "First mentioned in the 1065 Mogilno document of King Bolesław II the Bold as one of 19 grods (castrum) paying tithes to Mogilno Abbey.",
       "eponym": {
-        "year": 1065,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Old Polish personal name Ciechan (shortened from Ciechosław)."
@@ -8927,7 +8927,7 @@
       "first_mention_year": 1203,
       "first_mention_attestation": "The village of Wyszków was first documented in 1203; granted town rights in 1502.",
       "eponym": {
-        "year": 1203,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from the Old Polish personal name Wyszek / Wysz (from Wyszesław) or from wysok- ('high' escarpment above the Bug)."
@@ -9014,7 +9014,7 @@
       "first_mention_year": 1136,
       "first_mention_attestation": "Originally recorded as Bitom in 1136 (Bull of Gniezno); archaeological gord dates to the early 11th century.",
       "eponym": {
-        "year": 1136,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from an Old Polish personal name Bytom (shortened from a compound name in Byto-)."
@@ -9189,7 +9189,7 @@
       "first_mention_year": 1155,
       "first_mention_attestation": "First mentioned as Otemochow in 1155 (Bull of Adrian IV); also Othmuchow in the 13th-century Book of Henryków.",
       "eponym": {
-        "year": 1155,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from an Old Polish personal name *Otmuch (or *Otemoch)."
@@ -9238,7 +9238,7 @@
       "first_mention_year": 1155,
       "first_mention_attestation": "First historically attested as Tescin in the Papal Bull of Adrian IV (1155). The 810 AD Three Brothers founding story is legendary.",
       "eponym": {
-        "year": 1155,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possessive from the Old Polish personal name Ciesza (shortened from Cieszymir/Cieszysław), or folk etymology from cieszym się ('we rejoice')."
@@ -9583,7 +9583,7 @@
       "first_mention_year": 1108,
       "first_mention_attestation": "First explicitly mentioned by name as Ratibor in Gallus Anonymus's chronicle (1108 / 1112–1116). The 845 Bavarian Geographer mentions Golensizi (5 civitates) without naming Racibórz.",
       "eponym": {
-        "year": 1108,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Slavic personal name Racibor (Proto-Slavic *Ratiborъ, 'war-fighter')."
@@ -9790,7 +9790,7 @@
       "first_mention_year": 1250,
       "first_mention_attestation": "First recorded in written documents in 1250 (Lisiec ante Conin) and 1283 (civitas nostra Kunyn).",
       "eponym": {
-        "year": 1250,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the zoonymic Old Polish personal name Koń ('horse')."
@@ -9883,7 +9883,7 @@
       "first_mention_year": 1232,
       "first_mention_attestation": "Oldest known mention comes from 1232 as a village owned by the Knights Templar (Cosmin opido Polonie c. 1300).",
       "eponym": {
-        "year": 1232,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Likely from the Old Polish personal name Koźma (Cosmas) or kozieł ('goat')."
@@ -10020,7 +10020,7 @@
       "first_mention_year": 1370,
       "first_mention_attestation": "First mentioned in 1370 in the chronicle of Jan of Czarnków (and granted Magdeburg rights in 1370). An 8th-century Slavic settlement existed archaeologically.",
       "eponym": {
-        "year": 1370,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Likely from the Old Polish personal name Złoty ('golden') or from złoto ('gold')."
@@ -10201,7 +10201,7 @@
       "first_mention_year": 1241,
       "first_mention_attestation": "First mentioned in documents in 1241 (and 1244 as Zulenche), when Henry I the Bearded / Bishop Henry granted it to Mroczko of Pogorzela.",
       "eponym": {
-        "year": 1241,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Old Polish personal name Sulęta (shortened from Sulimir or Sulisław)."
@@ -10250,7 +10250,7 @@
       "first_mention_year": 1297,
       "first_mention_attestation": "Founded on the site of a 10th-century fort; first documented in the late 13th century (German Reppen, 1297/1329).",
       "eponym": {
-        "year": 1297,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from Old Polish Rzepa ('turnip') or a personal nickname Rzepa."
@@ -10299,7 +10299,7 @@
       "first_mention_year": 970,
       "first_mention_attestation": "Earliest known written reference is in Thietmar of Merseburg's chronicle for the year 970 (episcopus Posnaniensis, 'bishop of Poznań') and 1005 (ab urbe Posnani).",
       "eponym": {
-        "year": 970,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from an Old Polish personal name *Poznan (participle of poznać 'to know/recognize')."
@@ -10392,7 +10392,7 @@
       "first_mention_year": 1108,
       "first_mention_attestation": "First mentioned as Carnkou / Charncou for 1108 in Gallus Anonymus's Gesta principum Polonorum (1112–1116) when reconquered by Bolesław III Wrymouth.",
       "eponym": {
-        "year": 1108,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Old Polish personal name Czarnek ('black/dark one')."
@@ -10523,7 +10523,7 @@
       "first_mention_year": 1290,
       "first_mention_attestation": "First mentioned in 1290 as Frovenstat (Fraustadt) in a charter of Duke Henry of Głogów, and as Weschowam in the Liber fundationis episcopatus Vratislaviensis (1295–1305).",
       "eponym": {
-        "year": 1290,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Alternatively derived from Old Polish personal name Wiesz (shortened from Wielisław), or from wschować ('to shelter/hide')."
@@ -10572,7 +10572,7 @@
       "first_mention_year": 1242,
       "first_mention_attestation": "First recorded in written sources in 1242 in the form Costan.",
       "eponym": {
-        "year": 1242,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from an Old Polish personal name Kościan/Kościen, or from a wetland plant name."
@@ -10615,7 +10615,7 @@
       "first_mention_year": 1136,
       "first_mention_attestation": "First mentioned in writing as Zrem in the Papal Bull of Gniezno (1136); archaeological stronghold dates to the second half of the 10th century.",
       "eponym": {
-        "year": 1136,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Possibly from an Old Polish personal name *Śrzem / *Srem."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_japan",
     "scope": "e_japan (all 237 baronies across k_azuma, k_hitakami, k_tsukushi, k_yamato)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2113,7 +2113,17 @@
           "notes": "Attested as Harube-kohori in the late 7th century and standardized as Harube-gun (春部郡) in 701 CE; the modern spelling Kasugai-gun emerged in the Edo period."
         },
         {
-          "name": "Harube-gun / Kasukabe-gun",
+          "name": "Harube-gun",
+          "native_script": "春部郡",
+          "language": null,
+          "attested_from": 690,
+          "attested_to": 1600,
+          "source": "Asuka-kyo wooden tablet (mokkan, late 7th c.) reading 'Owari-no-kuni Harube-kohori Ikeda-sato' (尾治国春部評池田里)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Attested as Harube-kohori in the late 7th century and standardized as Harube-gun (春部郡) in 701 CE; the modern spelling Kasugai-gun emerged in the Edo period."
+        },
+        {
+          "name": "Kasukabe-gun",
           "native_script": "春部郡",
           "language": null,
           "attested_from": 690,

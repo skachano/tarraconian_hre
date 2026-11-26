@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_mongolia",
     "scope": "e_mongolia (315 baronies across k_buryatia, k_gobi, k_otuken, k_shiwei)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -1207,7 +1207,7 @@
       "first_mention_year": 1877,
       "first_mention_attestation": "Named in the late 19th century (post-1870s) after Polish-Russian geologist Jan Czerski (Ivan Chersky, 1845–1892), who explored the Baikal Range.",
       "eponym": {
-        "year": 1877,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Polish-Russian geologist and explorer Jan Czerski (Ivan Chersky, 1845–1892), who surveyed Lake Baikal and the Baikal Mountains in the 1870s–1880s."
@@ -3462,7 +3462,7 @@
       "first_mention_year": 1865,
       "first_mention_attestation": "Unattested <= 867 CE; the Kropotkin Range in the Eastern Sayan was explored by Peter Kropotkin in 1865 and subsequently named in his honor.",
       "eponym": {
-        "year": 1865,
+        "year": 1842,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Russian geographer, geologist, and anarchist Peter Alekseevich Kropotkin (1842–1921), who explored the Eastern Sayan Mountains in 1865."
@@ -3713,7 +3713,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in written sources <= 867 CE; synthetic CK3 compound combining Mongolian 'white' with the post-1865 Kropotkin Range name.",
       "eponym": {
-        "year": null,
+        "year": 1842,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Derived from the Kropotkin Range (Eastern Sayan), named after Russian geographer and anarchist Peter Kropotkin (1842–1921)."

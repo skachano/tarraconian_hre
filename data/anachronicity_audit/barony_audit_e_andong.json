@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_andong",
     "scope": "e_andong (271 baronies across k_balhae, k_khitan, k_luzhen, k_raole)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -144,7 +144,7 @@
       "etymology_analysis": "Liao-dynasty prefecture name 渌州 (Lùzhōu), combining 渌 (clear green water, referencing the Yalu River) and 州 (prefecture), coined after 926 CE to replace Balhae's Shenzhou (神州).",
       "historical_names": [
         {
-          "name": "Shenzhou / Sinju",
+          "name": "Shenzhou",
           "native_script": "神州",
           "language": null,
           "attested_from": 785,
@@ -154,7 +154,27 @@
           "notes": "Before the Liao conquest of 926 CE, this site was Shenzhou (神州), the seat of Balhae's Western Capital Yalu Province (西京鴨綠府)."
         },
         {
-          "name": "Xijing Yalu Fu / Seogyeong Amnokbu",
+          "name": "Sinju",
+          "native_script": "神州",
+          "language": null,
+          "attested_from": 785,
+          "attested_to": 926,
+          "source": "Jia Dan's Huanghua Sida Ji (c. 785–805 CE), quoted in Xin Tangshu (1060 CE)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Before the Liao conquest of 926 CE, this site was Shenzhou (神州), the seat of Balhae's Western Capital Yalu Province (西京鴨綠府)."
+        },
+        {
+          "name": "Xijing Yalu Fu",
+          "native_script": "西京鴨綠府",
+          "language": null,
+          "attested_from": 785,
+          "attested_to": 926,
+          "source": "Jia Dan's Huanghua Sida Ji (c. 785–805 CE), quoted in Xin Tangshu (1060 CE)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Before the Liao conquest of 926 CE, this site was Shenzhou (神州), the seat of Balhae's Western Capital Yalu Province (西京鴨綠府)."
+        },
+        {
+          "name": "Seogyeong Amnokbu",
           "native_script": "西京鴨綠府",
           "language": null,
           "attested_from": 785,
@@ -1157,7 +1177,7 @@
       "etymology_analysis": "Liao-dynasty prefecture name 信州 (Xìnzhōu, 'Fidelity Prefecture'), established at modern Qinjiatun Ancient City in Gongzhuling, Jilin.",
       "historical_names": [
         {
-          "name": "Huaiyuan Fu / Hoewonbu",
+          "name": "Huaiyuan Fu",
           "native_script": "懷遠府",
           "language": null,
           "attested_from": 830,
@@ -1167,7 +1187,27 @@
           "notes": "Liao Shi juan 38 states Xinzhou was built on the old city of Yuexi (越喜) where Balhae had previously established Huaiyuan Province (懷遠府)."
         },
         {
-          "name": "Yuexi / Wolhui",
+          "name": "Hoewonbu",
+          "native_script": "懷遠府",
+          "language": null,
+          "attested_from": 830,
+          "attested_to": 1012,
+          "source": "Xin Tangshu (1060 CE) recording Balhae's 15 provinces by King Xuan's reign (818–830 CE); Liao Shi (1344 CE)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Liao Shi juan 38 states Xinzhou was built on the old city of Yuexi (越喜) where Balhae had previously established Huaiyuan Province (懷遠府)."
+        },
+        {
+          "name": "Yuexi",
+          "native_script": "越喜",
+          "language": null,
+          "attested_from": 830,
+          "attested_to": 1012,
+          "source": "Xin Tangshu (1060 CE) recording Balhae's 15 provinces by King Xuan's reign (818–830 CE); Liao Shi (1344 CE)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Liao Shi juan 38 states Xinzhou was built on the old city of Yuexi (越喜) where Balhae had previously established Huaiyuan Province (懷遠府)."
+        },
+        {
+          "name": "Wolhui",
           "native_script": "越喜",
           "language": null,
           "attested_from": 830,
@@ -1320,7 +1360,17 @@
           "notes": "Liao Shi juan 37 states that Liao's Fengzhou lay in the former territory of Gaoli and Balhae's Anning Commandery."
         },
         {
-          "name": "Gaoli / Goryeo",
+          "name": "Gaoli",
+          "native_script": "槁離國",
+          "language": null,
+          "attested_from": 830,
+          "attested_to": 1000,
+          "source": "Liao Shi (1344 CE, juan 37), citing Balhae's Anning Commandery (<= 867 CE)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Liao Shi juan 37 states that Liao's Fengzhou lay in the former territory of Gaoli and Balhae's Anning Commandery."
+        },
+        {
+          "name": "Goryeo",
           "native_script": "槁離國",
           "language": null,
           "attested_from": 830,
@@ -2848,7 +2898,17 @@
           "notes": "Han-era Xi'anping County of Liaodong Commandery (Hanshu, 111 CE) and Goguryeo/Tang Bakjak Fortress (Bozhuo, Xin Tangshu) stood in the immediate Dandong area along the lower Yalu River."
         },
         {
-          "name": "Bakjak-gu / Bozhuo",
+          "name": "Bakjak-gu",
+          "native_script": "泊汋口",
+          "language": null,
+          "attested_from": 111,
+          "attested_to": 1965,
+          "source": "Hanshu (111 CE) and Xin Tangshu (juan 43B, Jia Dan's Daoliji)",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Han-era Xi'anping County of Liaodong Commandery (Hanshu, 111 CE) and Goguryeo/Tang Bakjak Fortress (Bozhuo, Xin Tangshu) stood in the immediate Dandong area along the lower Yalu River."
+        },
+        {
+          "name": "Bozhuo",
           "native_script": "泊汋口",
           "language": null,
           "attested_from": 111,
@@ -3296,7 +3356,17 @@
       "etymology_analysis": "Chinese administrative toponym ('Sea Prefecture'), coined by the Liao dynasty from Balhae's Nanhai-fu ('Southern Sea Capital').",
       "historical_names": [
         {
-          "name": "Shabeicheng / Sabi-seong",
+          "name": "Shabeicheng",
+          "native_script": "沙卑城",
+          "language": null,
+          "attested_from": 645,
+          "attested_to": 926,
+          "source": "Xin Tangshu (juan 219) and Liao Shi (juan 38)",
+          "relationship": "same_site_earlier_name",
+          "notes": "Liao Shi (juan 38) notes the site was Goguryeo's Sabi-seong (attacked by Tang Li Shiji in 645 CE) and Balhae's Southern Capital Nanhai-fu (<= 830 CE)."
+        },
+        {
+          "name": "Sabi-seong",
           "native_script": "沙卑城",
           "language": null,
           "attested_from": 645,

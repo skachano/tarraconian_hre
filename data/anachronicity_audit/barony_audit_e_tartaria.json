@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_tartaria",
     "scope": "e_tartaria (300 baronies across k_cuman, k_dzungaria, k_kipchak, k_saryarka, k_zhetysu)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -6579,7 +6579,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No written attestation <= 867 CE; Chingiztau is named after Genghis Khan (1162–1227) and documented in post-Mongol and modern Kazakh/Russian sources.",
       "eponym": {
-        "year": null,
+        "year": 1162,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Genghis Khan (Chinggis Khan, c. 1162–1227), founder of the Mongol Empire."
@@ -10468,7 +10468,7 @@
       "first_mention_year": 1786,
       "first_mention_attestation": "Founded in 1786 after Russian officer Philip Ridder discovered gold, silver, and polymetallic ore deposits on May 31, 1786. No written attestation <= 867 CE.",
       "eponym": {
-        "year": 1786,
+        "year": 1759,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Philip Ridder (1759–1838), a Russian mining officer who discovered rich gold, silver, and polymetallic ore deposits at the site on May 31, 1786."

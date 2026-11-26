@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_azania",
     "scope": "e_azania (106 baronies across k_ajuraan, k_bale, k_zanj)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2307,7 +2307,7 @@
       "first_mention_year": 1892,
       "first_mention_attestation": "First attested in 1892–1893 CE during Italian explorer Vittorio Bottego's expedition, who named the Weyib River (Webi Gestro) after Italian entomologist Raffaello Gestro.",
       "eponym": {
-        "year": 1893,
+        "year": 1845,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named by Italian explorer Vittorio Bottego during his 1892–1893 CE expedition after the Italian entomologist and museum director Raffaello Gestro (1845–1936 CE)."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_byzantium",
     "scope": "e_byzantium (301 baronies across k_bulgaria, k_cyprus, k_krete, k_nikaea, k_pontus, k_serbia, x_script_4359, x_script_4774, x_script_6373, x_script_6717, x_script_7238)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -5854,8 +5854,8 @@
     "b_kyzikos": {
       "barony_key": "b_kyzikos",
       "vanilla_ck3_name": "Kyzikos",
-      "modern_name": "Erdek / Balkız",
-      "modern_name_note": "Cyzicus",
+      "modern_name": "Erdek",
+      "modern_name_note": "Balkız; Cyzicus",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6067,8 +6067,8 @@
     "b_dorylaion": {
       "barony_key": "b_dorylaion",
       "vanilla_ck3_name": "Dorylaion",
-      "modern_name": "Eskişehir / Şarhöyük",
-      "modern_name_note": "Dorylaeum",
+      "modern_name": "Eskişehir",
+      "modern_name_note": "Şarhöyük; Dorylaeum",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6111,8 +6111,8 @@
     "b_midaeum_OPSI": {
       "barony_key": "b_midaeum_OPSI",
       "vanilla_ck3_name": "Midaeum",
-      "modern_name": "Karahüyük / Midas City area",
-      "modern_name_note": "Midaeium",
+      "modern_name": "Karahüyük",
+      "modern_name_note": "Midas City area; Midaeium",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6231,8 +6231,8 @@
     "b_helge": {
       "barony_key": "b_helge",
       "vanilla_ck3_name": "Helge",
-      "modern_name": "Tahtalı / Yaylacık",
-      "modern_name_note": "Germanicopolis / Helge",
+      "modern_name": "Tahtalı",
+      "modern_name_note": "Yaylacık; Germanicopolis / Helge",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6433,8 +6433,8 @@
     "b_chelai": {
       "barony_key": "b_chelai",
       "vanilla_ck3_name": "Chelai",
-      "modern_name": "Cebeci / Keçili Limanı",
-      "modern_name_note": "Chelae",
+      "modern_name": "Cebeci",
+      "modern_name_note": "Keçili Limanı; Chelae",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6527,7 +6527,7 @@
       "barony_key": "b_crius",
       "vanilla_ck3_name": "Crius",
       "modern_name": "Gemlik",
-      "modern_name_note": "historically Cius",
+      "modern_name_note": "Cius",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6623,8 +6623,8 @@
     "b_prusias_ad_hypium": {
       "barony_key": "b_prusias_ad_hypium",
       "vanilla_ck3_name": "Prusias ad Hypium",
-      "modern_name": "Konuralp / Üskübü",
-      "modern_name_note": "Prusias ad Hypium",
+      "modern_name": "Konuralp",
+      "modern_name_note": "Üskübü; Prusias ad Hypium",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -6765,8 +6765,8 @@
     "b_laodikeia": {
       "barony_key": "b_laodikeia",
       "vanilla_ck3_name": "Laodikeia",
-      "modern_name": "Denizli / Eskihisar",
-      "modern_name_note": "Laodicea on the Lycus",
+      "modern_name": "Denizli",
+      "modern_name_note": "Eskihisar; Laodicea on the Lycus",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -7149,7 +7149,7 @@
       "barony_key": "b_akrainos",
       "vanilla_ck3_name": "Akrainos",
       "modern_name": "İlyaslar",
-      "modern_name_note": "historically Acrassus",
+      "modern_name_note": "Acrassus",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -7295,8 +7295,8 @@
     "b_sebaste": {
       "barony_key": "b_sebaste",
       "vanilla_ck3_name": "Sebaste",
-      "modern_name": "Selçikler / Sivaslı",
-      "modern_name_note": "Sebaste in Phrygia",
+      "modern_name": "Selçikler",
+      "modern_name_note": "Sivaslı; Sebaste in Phrygia",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "k_nikaea",
@@ -7619,7 +7619,7 @@
         {
           "form": "Dalanda / Daranda",
           "language": "Pre-Greek Anatolian (Luwian/Hittite)",
-          "language_code": "und",
+          "language_code": "ine",
           "translation": "Anatolian toponym with characteristic -nda suffix"
         }
       ],
@@ -11848,8 +11848,8 @@
     "b_paphlagonia": {
       "barony_key": "b_paphlagonia",
       "vanilla_ck3_name": "Stephane",
-      "modern_name": "İstifan / Çaylıoğlu",
-      "modern_name_note": "Stephane",
+      "modern_name": "İstifan",
+      "modern_name_note": "Çaylıoğlu; Stephane",
       "hierarchy": {
         "empire": "e_byzantium",
         "kingdom": "x_script_4774",
@@ -11885,7 +11885,7 @@
           "translation": "toponymic suffix"
         }
       ],
-      "etymology_analysis": "In English CK3 localisation (titles_l_english.yml), b_paphlagonia is named 'Stephane' (Ancient Greek Στεφάνη / Στεφανίς), an ancient Paphlagonian port near modern İstifan (Çaylıoğlu, Sinop Province), rather than the region of Paphlagonia itself.",
+      "etymology_analysis": "In English CK3 localisation, b_paphlagonia is named 'Stephane' (Ancient Greek Στεφάνη / Στεφανίς), an ancient Paphlagonian port near modern İstifan (Çaylıoğlu, Sinop Province), rather than the region of Paphlagonia itself.",
       "historical_names": [],
       "source_url": "https://en.wikipedia.org/wiki/Stephane_(Paphlagonia)"
     },

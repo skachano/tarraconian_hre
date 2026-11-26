@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_oriens",
     "scope": "e_oriens (all baronies across k_syria)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2291,7 +2291,7 @@
       "first_mention_year": -245,
       "first_mention_attestation": "Founded before 245 BCE by the Orontid king Sames I of Sophene.",
       "eponym": {
-        "year": -245,
+        "year": -260,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sames I, Orontid king of Sophene (c. 260-245 BCE), from Middle/Old Persian *Sāmašād / *Sāmašiyāti- ('joy of Sames')."

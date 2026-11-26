@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_suvarnabhumi",
     "scope": "e_suvarnabhumi (all 180 baronies across k_dvaravati and k_pagan)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -1433,7 +1433,7 @@
       "first_mention_year": 1329,
       "first_mention_attestation": "Founded 1327–1329 CE by King Saen Phu of Lan Na (Northern Thai chronicles; early Lan Na epigraphy begins 1370 CE at Wat Phra Yün); Yonok/Ngoenyang legends claiming 545 CE or 850 CE are late retrospective chronicles",
       "eponym": {
-        "year": 1334,
+        "year": 1325,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Saen Phu of Lan Na (r. 1325–1334 CE), grandson of King Mangrai, who founded Chiang Saen in 1327–1329 CE."
@@ -1526,7 +1526,7 @@
       "first_mention_year": 1262,
       "first_mention_attestation": "Founded in 1262 CE by King Mangrai as the capital of Ngoenyang/Lan Na (Northern Thai chronicles; early Lan Na epigraphy from 1370 CE onward)",
       "eponym": {
-        "year": 1311,
+        "year": 1238,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Mangrai (1238–1311 CE), who founded Chiang Rai in 1262 CE and later established the Lan Na Kingdom."
@@ -4935,7 +4935,7 @@
       "first_mention_year": 1800,
       "first_mention_attestation": "Named in the early 19th century CE as Bogaleseik ('Little Foreigner Port') after the hunting camp of Anglo-Burmese hunter U Maung Kalay; unattested <= 867 CE.",
       "eponym": {
-        "year": 1800,
+        "year": 1825,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Bo Kalay ('little foreigner/European'), an early 19th-century Anglo-Burmese hunter (U Maung Kalay) whose hunting camp in the Irrawaddy Delta became Bogaleseik ('Little Foreigner Port')."
@@ -7309,7 +7309,7 @@
         {
           "form": "Wa",
           "language": "Wa",
-          "language_code": "sit",
+          "language_code": "aav",
           "translation": "Wa ethnic group"
         }
       ],

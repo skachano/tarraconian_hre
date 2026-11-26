@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_russia",
     "scope": "e_russia (all 270 baronies across k_bjarmaland, k_novgorod, k_opolye, k_ruthenia, k_white_rus)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -121,7 +121,7 @@
       "first_mention_year": 1419,
       "first_mention_attestation": "Archangel Michael Monastery at Cape Pur-Navolok first mentioned in chronicles under 1419; town founded 1584 as Novokholmogory and renamed Arkhangelsky gorod in 1613.",
       "eponym": {
-        "year": 1419,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the Archangel Michael (biblical figure, pre-867) via the 14th/15th-century Archangel Michael Monastery."
@@ -894,7 +894,7 @@
       "first_mention_year": 1397,
       "first_mention_attestation": "Founded in 1397 when Moscow monk St. Kirill of Beloozero established the Kirillo-Belozersky Monastery on Lake Siverskoye; proclaimed town in 1776.",
       "eponym": {
-        "year": 1397,
+        "year": 1337,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after St. Kirill of Beloozero (1337–1427), founder of the Kirillo-Belozersky Monastery in 1397."
@@ -1157,7 +1157,7 @@
       "first_mention_year": 1492,
       "first_mention_attestation": "Guard post established in 1492 on Kadnikovskaya pustosh to protect the trade route; town status granted in 1780.",
       "eponym": {
-        "year": 1492,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a personal nickname Kadnik ('cooper'), attested in the 1492 Kadnikovskaya pustosh."
@@ -2326,7 +2326,7 @@
       "first_mention_year": 1457,
       "first_mention_attestation": "Mentioned as village Danilovskoye in a charter of Grand Prince Vasily II dated March 20, 1457.",
       "eponym": {
-        "year": 1457,
+        "year": 1261,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Prince Daniil of Moscow (1261–1303) / Danilovskoye estate."
@@ -3023,7 +3023,7 @@
       "first_mention_year": 1501,
       "first_mention_attestation": "First mentioned in the 1501 cadastral book of the Vodskaya Pyatina as Saritsa (Saari); became Tsarskoye Selo in 1710 and was renamed Pushkin in 1937.",
       "eponym": {
-        "year": 1937,
+        "year": 1799,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Renamed Pushkin in 1937 in honor of Russian poet Alexander Sergeyevich Pushkin (1799–1837), who studied at the Tsarskoye Selo Lyceum."
@@ -4111,7 +4111,7 @@
       "first_mention_year": 1617,
       "first_mention_attestation": "First mentioned in 1617 in a Kostroma cadastre (pistsovaya kniga) as the village of Manturovo on the Unzha River.",
       "eponym": {
-        "year": 1617,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a local post-867 Russian/Tatar personal name or founder (Mantur)."
@@ -4286,7 +4286,7 @@
       "first_mention_year": 1221,
       "first_mention_attestation": "Founded in 1221 by Grand Prince Yury II Vsevolodovich of Vladimir as Nizhny Novgorod at the Volga-Oka confluence, on the site associated in Erzya tradition with Obran Osh.",
       "eponym": {
-        "year": 1221,
+        "year": 1150,
         "post_867": true,
         "type": "deity_or_myth",
         "details": "Obran Osh ('Obran's town') is named after the legendary Erzyan leader/founder Obran (Inäzor Obram) associated with 12th–13th century Mordvin traditions."
@@ -4854,7 +4854,7 @@
       "first_mention_year": 1152,
       "first_mention_attestation": "Founded in 1152 by Prince Yury Dolgorukiy as Yuryev-Polsky ('Yury's [town] in the fields').",
       "eponym": {
-        "year": 1152,
+        "year": 1099,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Prince Yury Dolgorukiy (c. 1099–1157) / his patron saint St. George (Yury)."
@@ -4947,7 +4947,7 @@
       "first_mention_year": 1561,
       "first_mention_attestation": "First mentioned in 1561 (or reliably in 1608) as the village of Ivanovo (merged with Voznesensky Posad in 1871 as Ivanovo-Voznesensk).",
       "eponym": {
-        "year": 1561,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a local post-867 Russian landowner/founder Ivan."
@@ -4996,7 +4996,7 @@
       "first_mention_year": 1434,
       "first_mention_attestation": "First mentioned in a legal document in 1434 as the settlement of Gavrilovskoye (traditionally attributed to 13th-century foundation by Vsevolod the Big Nest).",
       "eponym": {
-        "year": 1434,
+        "year": 1196,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Traditionally named after Svyatoslav Vsevolodovich (1196–1252), whose Christian baptismal name was Gavriil."
@@ -5209,7 +5209,7 @@
       "first_mention_year": 990,
       "first_mention_attestation": "First mentioned in 990 (or founded in 1108 by Vladimir Monomakh according to the Lvov Chronicle and Soviet-era historiography).",
       "eponym": {
-        "year": 990,
+        "year": 1053,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after either Vladimir the Great (c. 958–1015) or Vladimir II Monomakh (1053–1125), both post-867."
@@ -5434,7 +5434,7 @@
       "first_mention_year": 1010,
       "first_mention_attestation": "Traditionally founded in 1010 by Prince Yaroslav the Wise; first reliably mentioned in chronicles under 1071.",
       "eponym": {
-        "year": 1010,
+        "year": 978,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Prince Yaroslav I the Wise (c. 978–1054), who founded it around 1010."
@@ -5729,7 +5729,7 @@
       "first_mention_year": 1566,
       "first_mention_attestation": "First mentioned in a charter of Ivan IV (the Terrible) dated April 5, 1566 as the village of Pavlovo.",
       "eponym": {
-        "year": 1566,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a local post-867 Russian founder/landowner Pavel."
@@ -5860,7 +5860,7 @@
       "first_mention_year": 1153,
       "first_mention_attestation": "Founded in 1153 (6661 AM) by Prince Rostislav Yaroslavich of Ryazan on the Oka River (Nikon Chronicle).",
       "eponym": {
-        "year": 1153,
+        "year": 1150,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after its founder, Prince Rostislav Yaroslavich of Ryazan (12th century)."
@@ -5909,7 +5909,7 @@
       "first_mention_year": 1629,
       "first_mention_attestation": "Founded in 1629 as the sloboda of Vaskina Polyana (renamed Spassk in 1778, now Spassk-Ryazansky).",
       "eponym": {
-        "year": 1629,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a post-867 local founder/settler Vaska (diminutive of Vasily)."
@@ -6732,7 +6732,7 @@
       "first_mention_year": 1146,
       "first_mention_attestation": "First mentioned in the Hypatian Chronicle under 1146.",
       "eponym": {
-        "year": 1146,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Derived from a Turkic/Slavic personal name or title Karach (cf. Turkic qaracy, 'chieftain/counselor'), though the exact bearer is unrecorded."
@@ -7390,7 +7390,7 @@
       "first_mention_year": 1032,
       "first_mention_attestation": "Founded in 1032 by Grand Prince Yaroslav the Wise (first attested as Yuryiv in the Hypatian Codex under 1115).",
       "eponym": {
-        "year": 1054,
+        "year": 1019,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Yaroslav the Wise (r. 1019-1054), whose Christian baptismal name was Yuri (George)."
@@ -7741,7 +7741,7 @@
       "first_mention_year": 1580,
       "first_mention_attestation": "First mentioned around 1580 (or early 1600s) as a fortified town on the Dniester.",
       "eponym": {
-        "year": 1580,
+        "year": 1542,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Polish Crown Hetman Jan Zamoyski (1542-1605), originally rendered as Janpol ('Jan's city')."
@@ -8417,7 +8417,7 @@
       "first_mention_year": 1015,
       "first_mention_attestation": "Locality first mentioned in 1015 as Borysove pole ('Boris's Field') in connection with the murder of Prince Boris (town Boryspil attested 1590).",
       "eponym": {
-        "year": 1015,
+        "year": 986,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Prince Boris Vladimirovich (c. 986-1015), son of Vladimir the Great, murdered near the Alta River in 1015."
@@ -8844,7 +8844,7 @@
       "first_mention_year": 1949,
       "first_mention_attestation": "Founded in 1949 (town status 1954) as a settlement for the Cherepet power plant, named after the nearby village of Suvorovo.",
       "eponym": {
-        "year": 1949,
+        "year": 1450,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the nearby village Suvorova, itself derived from the 15th-16th century personal name/surname Suvor/Suvorov."
@@ -9271,7 +9271,7 @@
       "first_mention_year": 985,
       "first_mention_attestation": "Founded in 985 by Grand Prince Vladimir the Great as Izyaslavl for Rogneda and their son Izyaslav.",
       "eponym": {
-        "year": 985,
+        "year": 978,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Prince Izyaslav of Polotsk (c. 978–1001), son of Vladimir the Great and Rogneda."
@@ -9583,7 +9583,7 @@
       "first_mention_year": 1560,
       "first_mention_attestation": "Earliest historical mention of Kalinkavichy dates to 1560.",
       "eponym": {
-        "year": 1560,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic village name from post-867 Christian/personal name Kalenik / Kalina."
@@ -9720,7 +9720,7 @@
       "first_mention_year": 1627,
       "first_mention_attestation": "Village of Baranavichy attested from the 17th century (1627); modern town grew from the 1871 railway station.",
       "eponym": {
-        "year": 1627,
+        "year": 1650,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic settlement name from a 17th-century founder/family named Baran."
@@ -9945,7 +9945,7 @@
       "first_mention_year": 1500,
       "first_mention_attestation": "First mentioned in historical documents in 1500.",
       "eponym": {
-        "year": 1500,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic settlement name from personal name Zhitko (post-867 estate/village founder)."
@@ -9994,7 +9994,7 @@
       "first_mention_year": 1690,
       "first_mention_attestation": "Archaeological settlement dated to 1690; 1785 private estate.",
       "eponym": {
-        "year": 1690,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic settlement name from Mikash (popular form of Christian name Mikhail/Mikolai)."
@@ -10565,7 +10565,7 @@
       "first_mention_year": 1478,
       "first_mention_attestation": "First mentioned in a chronicle in 1478.",
       "eponym": {
-        "year": 1478,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Possessive estate name from a post-867 personal nickname Lotosha."
@@ -10707,7 +10707,7 @@
       "first_mention_year": 1581,
       "first_mention_attestation": "First references in historical documents dated to 1581.",
       "eponym": {
-        "year": 1581,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic settlement name from post-867 Christian name Klim (Kliment)."
@@ -10888,7 +10888,7 @@
       "first_mention_year": 1156,
       "first_mention_attestation": "First mentioned in the Hypatian Chronicle in 1156 (founded c. 1135 by Prince Rostislav in honor of his father Mstislav).",
       "eponym": {
-        "year": 1156,
+        "year": 1076,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Grand Prince Mstislav I of Kiev (1076–1132) by his son Rostislav."
@@ -11069,7 +11069,7 @@
       "first_mention_year": 1489,
       "first_mention_attestation": "Volost first mentioned 23 July 1489 (as Dubna); Andreapol estate/station founded in 1906.",
       "eponym": {
-        "year": 1489,
+        "year": 1950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after 19th/20th-century landowner Andrey Kushelev (pseudo-Greek -pol 'city of Andrey')."
@@ -11206,7 +11206,7 @@
       "first_mention_year": 1290,
       "first_mention_attestation": "First written mention of Stepan dates back to 1290 (1292).",
       "eponym": {
-        "year": 1290,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after post-867 Christian personal name Stepan (Stephen)."
@@ -11249,7 +11249,7 @@
       "first_mention_year": 1484,
       "first_mention_attestation": "First mentioned in historical documents in 1484 (as Lubieszów).",
       "eponym": {
-        "year": 1484,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Possessive settlement name from post-867 personal name Liubesh."
@@ -11456,7 +11456,7 @@
       "first_mention_year": 1569,
       "first_mention_attestation": "First mentioned in 1569 (Grand Duchy of Lithuania / Polish-Lithuanian Commonwealth).",
       "eponym": {
-        "year": 1569,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Patronymic settlement name from post-867 personal name Lelko/Lelich."
@@ -11505,7 +11505,7 @@
       "first_mention_year": 980,
       "first_mention_attestation": "First mentioned in the Primary Chronicle (Tale of Bygone Years) under 980.",
       "eponym": {
-        "year": 980,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Traditionally named after 10th-century Prince Tur (attested 980), though also linked to *tur* ('aurochs')."

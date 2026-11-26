@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_caspian-pontic_steppe",
     "scope": "e_caspian-pontic_steppe (all baronies across k_caspian_steppe, k_caucasus, k_pontic_steppe, k_qara_dala, and x_script_5503)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -204,7 +204,7 @@
       "first_mention_year": 1992,
       "first_mention_attestation": "Renamed Zhaksybai in 1992 CE (previously Sverdlovo); the Zhaksybai River and personal/clan name are unattested in pre-867 CE sources.",
       "eponym": {
-        "year": 1992,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the Kazakh personal/clan name or river Zhaksybai (lit. 'good rich man / noble')."
@@ -1056,7 +1056,7 @@
       "first_mention_year": 630,
       "first_mention_attestation": "Attested in the 630s–650s CE as the capital of the Baranjar/Khazar state and site of the 652 CE Arab-Khazar Battle of Balanjar.",
       "eponym": {
-        "year": 630,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendary founder Balanjar ibn Yafith mentioned by later medieval chroniclers Ibn al-Faqih and Abu al-Fida."
@@ -1181,7 +1181,7 @@
       "first_mention_year": 650,
       "first_mention_attestation": "Attested in the 7th century CE as Dourtsk (Դուրծկք) in Anania Shirakatsi's Geography of Armenia and in medieval Georgian chronicles.",
       "eponym": {
-        "year": 650,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Linked in later Georgian chronicle tradition to a legendary eponymous ancestor Durdzuk."
@@ -3199,7 +3199,7 @@
       "first_mention_year": 1859,
       "first_mention_attestation": "1859 CE (first written mention of the Don Cossack khutor of Frolov in the List of Inhabited Places of the Don Host Oblast)",
       "eponym": {
-        "year": 1859,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Frolov, the Cossack founder/eponym of khutor Frolov (from the Russian personal name Frol, < Latin Florus)."
@@ -4565,7 +4565,7 @@
       "first_mention_year": 1670,
       "first_mention_attestation": "1670s CE settlement of Orchyk; renamed Karlivka in the 18th century CE.",
       "eponym": {
-        "year": 1670,
+        "year": 1750,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named in the 18th century CE after a post-867 CE noble owner named Karl (replacing the earlier 1670s CE settlement name Orchyk / Minikhpol)."
@@ -5068,7 +5068,7 @@
       "first_mention_year": 1779,
       "first_mention_attestation": "1779–1780 CE (Russian imperial founding of Mariupol on the site of the Cossack outpost Domakha for resettled Crimean Greeks)",
       "eponym": {
-        "year": 1779,
+        "year": 1759,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named in honor of Grand Duchess Maria Feodorovna (1759–1828), wife of the future Tsar Paul I (with secondary association to the Virgin Mary)."
@@ -5117,7 +5117,7 @@
       "first_mention_year": 1827,
       "first_mention_attestation": "Attested prior to 1827 CE as a Nogai Tatar aul (Kutur-Ogly) on the site of modern Berdyansk",
       "eponym": {
-        "year": 1827,
+        "year": null,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Turkic/Nogai patronymic 'Kutur-Ogly' ('son of Kutur'), referring to a post-867 Nogai clan or founder."
@@ -5254,7 +5254,7 @@
       "first_mention_year": 1791,
       "first_mention_attestation": "1791 CE (founded as Kakhovka on the site of the 1492 CE Crimean Tatar fortress Islam-Kermen)",
       "eponym": {
-        "year": 1791,
+        "year": 1738,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Russian governor Vasily Kakhovsky (1738–1795)."
@@ -5391,7 +5391,7 @@
       "first_mention_year": 1702,
       "first_mention_attestation": "1702 CE (fortress built by Peter the Great and named Oranienburg, later Ranenburg and Chaplygin)",
       "eponym": {
-        "year": 1702,
+        "year": 1627,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Transferred in 1702 CE by Peter the Great from Oranienburg in Brandenburg, which itself was renamed in 1652 CE after Countess Louise Henriette of Nassau (1627–1667), Princess of Orange (House of Orange-Nassau)."
@@ -5659,7 +5659,7 @@
       "first_mention_year": 1750,
       "first_mention_attestation": "18th century CE (village of Durovka in Kozlov uyezd, Tambov Governorate, owned by landowner Maria Durova)",
       "eponym": {
-        "year": 1750,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after landowner Maria Durova (or the Durov noble family) of Kozlov uyezd."
@@ -5708,7 +5708,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Post-16th century CE Russian estate toponym (derived from the Muscovite boyar/noble surname Kolychev)",
       "eponym": {
-        "year": null,
+        "year": 1350,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Derived from the Russian noble surname Kolychev (attested from the 14th–15th century CE onward)."
@@ -7134,7 +7134,7 @@
       "first_mention_year": 1879,
       "first_mention_attestation": "Founded by Russian settlers in 1879 CE as Nikolaevsk (in honor of Tsar Nicholas II) and renamed Kustanay/Kostanay upon receiving city status in 1893–1895 CE.",
       "eponym": {
-        "year": 1879,
+        "year": 1750,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Folk etymology sometimes links the name to an 18th-century CE Kazakh warrior, batyr Kostan (Kostan Almambetuly), though scholarly sources treat Qostanay as a Turkic toponym."
@@ -8196,7 +8196,7 @@
       "first_mention_year": 1752,
       "first_mention_attestation": "Founded in 1752 CE as the Russian military Fortress of Saint Peter (St. Peter and St. Paul) on the Ishim River; granted city status as Petropavlovsk in 1807 CE.",
       "eponym": {
-        "year": 1752,
+        "year": 50,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after the Christian apostles Saint Peter and Saint Paul (1st century CE), following the 1752 CE Russian Fortress of Saint Peter."
@@ -8464,7 +8464,7 @@
       "first_mention_year": 1333,
       "first_mention_attestation": "First recorded as Hajji Tarkhan by Ibn Battuta in 1333 CE (modern Astrakhan established in 1558 CE).",
       "eponym": {
-        "year": 1333,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "According to a Tatar legend recorded by Ibn Battuta, Hajji Tarkhan was named after a Turkic pilgrim (hajji) granted tax-exempt (tarkhan) status."

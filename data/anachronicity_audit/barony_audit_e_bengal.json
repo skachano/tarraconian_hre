@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_bengal",
     "scope": "e_bengal (205 baronies across k_bengal, k_bihar, k_gondwana, k_kamarupa, k_orissa)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -342,7 +342,7 @@
       "first_mention_year": 1096,
       "first_mention_attestation": "Attested from the late 11th–12th century CE (r. Vijayasena, c. 1096–1159 CE) as the Sena capital Vijayapura in Bengal (and in Pavana-duta of Dhoyi, 12th century CE).",
       "eponym": {
-        "year": 1159,
+        "year": 1096,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Sena ruler Vijayasena (r. c. 1096–1159 CE), who established Vijayapura as his capital in Bengal."
@@ -957,7 +957,7 @@
       "first_mention_year": 1100,
       "first_mention_attestation": "Named after Queen Mainamati (Madanavati) of the Chandra dynasty (10th–11th century CE) in medieval Bengali Nath literature (c. 11th–12th century CE); the site itself was earlier known as Pattikera/Devaparvata.",
       "eponym": {
-        "year": 1100,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Queen Mainamati (mother of Govindachandra of the Chandra dynasty, 10th–11th century CE) in regional Nath tradition."
@@ -1000,7 +1000,7 @@
       "first_mention_year": 1567,
       "first_mention_attestation": "Renamed Udaipur in 1567 CE by Tripura ruler Udai Manikya (r. 1567–1572 CE), replacing the earlier 15th-century Manikya royal capital name Rangamati on the Gomati River.",
       "eponym": {
-        "year": 1572,
+        "year": 1567,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after Maharaja Udai Manikya of the Manikya dynasty of Tripura (r. 1567–1572 CE), who renamed the royal capital Rangamati to Udaipur in 1567 CE."
@@ -1401,7 +1401,7 @@
       "first_mention_year": 1080,
       "first_mention_attestation": "Founded and attested in the late 11th century CE (c. 1080–1100 CE) during the reign of Pala Emperor Ramapala (r. c. 1077–1130 CE), who established it as his new imperial capital in Varendra, celebrated in Sandhyakara Nandi's Ramacharitam.",
       "eponym": {
-        "year": 1130,
+        "year": 1077,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Pala Emperor Ramapala (r. c. 1077–1130 CE), who founded Ramavati as his new imperial capital in Varendra."
@@ -1549,7 +1549,7 @@
       "first_mention_year": 1179,
       "first_mention_attestation": "Renamed Laksmanavati (later Persianized as Lakhnauti) after Sena king Lakshmana Sena (r. c. 1179–1206 CE), who made the ancient city of Gauda (Gaur) in Malda his imperial capital; attested as 'Lakhnauti' in Minhaj-i Siraj's Tabaqat-i Nasiri (13th century CE).",
       "eponym": {
-        "year": 1206,
+        "year": 1179,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Sena king Lakshmana Sena (r. c. 1179–1206 CE), who renamed the historic Bengal metropolis of Gauda (Gaur) as Laksmanavati ('City of Lakshmana')."
@@ -3765,7 +3765,7 @@
       "first_mention_year": 1350,
       "first_mention_attestation": "Founded c. 1350 CE by Bengal Sultan Haji Shamsuddin Ilyas Shah, after whom the town is named.",
       "eponym": {
-        "year": 1358,
+        "year": 1342,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Haji Shamsuddin Ilyas Shah (r. 1342–1358 CE), founder of the Bengal Sultanate, who established the city c. 1350 CE."
@@ -4274,7 +4274,7 @@
       "first_mention_year": 1486,
       "first_mention_attestation": "Attested in late 15th-century CE tradition: either built by a 15th-century Koch chieftain named Bokai or by Majlis Khan Humayun under Sultan Saifuddin Firuz Shah II (r. 1486–1489 CE).",
       "eponym": {
-        "year": 1486,
+        "year": 1450,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after a 15th-century CE Koch tribal chieftain named Bokai, who according to local tradition built the fort and gave it his name."
@@ -4373,7 +4373,7 @@
       "first_mention_year": 1519,
       "first_mention_attestation": "Established and named Nasirabad in the early 16th century CE during the reign of Bengal Sultan Nasiruddin Nusrat Shah (r. 1519–1533 CE), corresponding to modern Mymensingh in Bangladesh.",
       "eponym": {
-        "year": 1533,
+        "year": 1519,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Bengal Sultan Nasiruddin Nusrat Shah (r. 1519–1533 CE) of the Hussain Shahi dynasty, after whom the town of Nasirabad (modern Mymensingh) was named."
@@ -4431,7 +4431,7 @@
         {
           "form": "Chutia",
           "language": "Mundari / Nagpuri",
-          "language_code": "sit",
+          "language_code": "mun",
           "translation": "historic Nagvanshi capital settlement (associated with Chutia-Nagpur)"
         }
       ],
@@ -4586,7 +4586,7 @@
       "first_mention_year": 1405,
       "first_mention_attestation": "Founded and first attested c. 1405 CE when Sultan Hoshang Shah Ghori of the Malwa Sultanate (r. 1405–1435 CE) built a fort on the Narmada River and named the town Hoshangabad (officially renamed Narmadapuram in 2022).",
       "eponym": {
-        "year": 1435,
+        "year": 1405,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Sultan Hoshang Shah Ghori (Alap Khan, r. 1405–1435 CE), second ruler of the Malwa Sultanate, who fortified the town on the Narmada c. 1405 CE."
@@ -5007,7 +5007,7 @@
       "first_mention_year": 1114,
       "first_mention_attestation": "Attested as Ratnapura in the 1114 CE Ratanpur stone inscription of Jajalladeva I, recording its foundation by his grandfather Ratnadeva I (r. c. 1045–1065 CE).",
       "eponym": {
-        "year": 1065,
+        "year": 1045,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Kalachuri king Ratnadeva I (alias Ratnaraja, r. c. 1045–1065 CE), who established Ratnapura as the capital of the Ratnapura Kalachuri dynasty."
@@ -6461,7 +6461,7 @@
       "first_mention_year": 1790,
       "first_mention_attestation": "Founded as Habibganj by Syed Habib Ullah of the Taraf zamindar family (post-15th century CE) and established as a British thana in 1790 CE.",
       "eponym": {
-        "year": 1790,
+        "year": 1450,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after Syed Habib Ullah (of the post-15th-century CE Syed zamindar dynasty of Taraf), who founded the market town as Habibganj."
@@ -7213,7 +7213,7 @@
       "first_mention_year": 922,
       "first_mention_attestation": "c. 922–955 CE (copper-plate inscriptions of Somavamshi king Yayati I Mahashivagupta issued from Yayatinagara)",
       "eponym": {
-        "year": 955,
+        "year": 922,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the Somavamshi king Yayati I (Mahashivagupta I, r. c. 922–955 CE), who renamed or established the capital as Yayatinagara ('city of Yayati')."
@@ -8335,7 +8335,7 @@
         {
           "form": "da",
           "language": "Munda/local",
-          "language_code": "sit",
+          "language_code": "mun",
           "translation": "water / settlement"
         }
       ],
@@ -9078,7 +9078,7 @@
       "first_mention_year": 1400,
       "first_mention_attestation": "c. 1400 CE (Raipur stone inscription of Kalachuri ruler Brahmadeva of the Raipur branch, late 14th to early 15th century CE)",
       "eponym": {
-        "year": 1400,
+        "year": 1425,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Traditionally named after Brahmdeo Rai (Brahmadeva), the late 14th- to early 15th-century CE Kalachuri ruler of the Raipur branch (son of Ramachandra)."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_abyssinia",
     "scope": "e_abyssinia (all baronies across k_abyssinia, k_adal, k_nubia, x_script_2942, and k_damot)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2633,7 +2633,7 @@
       "first_mention_year": 1221,
       "first_mention_attestation": "No documented written attestation <= 867 CE; originally known as Roha/Adefa, the town was renamed Lalibela after Zagwe King Gebre Mesqel Lalibela (r. c. 1181–1221 CE) following his death in the early 13th century CE.",
       "eponym": {
-        "year": 1221,
+        "year": 1181,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Gebre Mesqel Lalibela of the Zagwe dynasty (r. c. 1181–1221 CE), who commissioned the rock-hewn churches at the site originally called Roha/Adefa."
@@ -3404,7 +3404,7 @@
       "first_mention_year": 1856,
       "first_mention_attestation": "Ruined Adal-era town and saint's shrine first recorded in Western literature by Richard Francis Burton in 1856 CE (as 'Ao Barhe' in First Footsteps in East Africa); flourished as an Adal Sultanate town in the 15th–16th centuries CE.",
       "eponym": {
-        "year": 1856,
+        "year": null,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after Sheikh Aw Barre (Awbare), an Adal-era Muslim patron saint (post-867 CE) whose tomb lies just west of the town."
@@ -9573,7 +9573,7 @@
       "first_mention_year": 1899,
       "first_mention_attestation": "1899 CE (founded shortly after 1899 CE by Greek merchant Konstantinos 'Kostas' Mourikis)",
       "eponym": {
-        "year": 1937,
+        "year": 1867,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Konstantinos 'Kostas' Mourikis (1867–1937 CE), a Greek merchant who established a trading store on the White Nile there shortly after 1899 CE."

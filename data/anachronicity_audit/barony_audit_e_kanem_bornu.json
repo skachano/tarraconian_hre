@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_kanem_bornu",
     "scope": "e_kanem_bornu (170 baronies across k_darfur, k_hausaland, k_kanem, k_sao)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -3657,7 +3657,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No contemporary written attestation <= 867 CE. Its first capital, Bin Yauri (Birnin Yauri), was founded in the early 16th century CE (or traditionally 1411 CE) by the 5th Sarki of Gungu Kafa.",
       "eponym": {
-        "year": null,
+        "year": 1525,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Yauri, the 5th Sarki (ruler) of Gungu Kafa (Gungawa), who founded Bin Yauri in the early 16th century CE."
@@ -3776,7 +3776,7 @@
       "first_mention_year": 1809,
       "first_mention_attestation": "Founded in the early 19th century CE (1800–1810 CE, c. 1809) by Yakubu dan Dadi as the capital of the Bauchi Emirate; no written attestation <= 867 CE.",
       "eponym": {
-        "year": 1809,
+        "year": 1825,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Baushe, a hunter who settled in the area and advised Yakubu dan Dadi where to build the city in the early 19th century CE."

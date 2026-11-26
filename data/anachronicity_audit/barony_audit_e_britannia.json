@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_britannia",
     "scope": "e_britannia (all baronies across k_ireland and k_scotland)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2912,7 +2912,7 @@
       "first_mention_year": 1150,
       "first_mention_attestation": "12th-century ecclesiastical records (St Andrews / Villa Sancti Andreae replacing earlier Kilrymont)",
       "eponym": {
-        "year": 1150,
+        "year": 50,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Andrew the Apostle (1st century AD)."
@@ -2982,7 +2982,7 @@
       "first_mention_year": 1150,
       "first_mention_attestation": "12th century (colloquial Scots 'St John's Toun' / 'St Johnston' from St John's Kirk, established mid-12th century; Perth itself attested c. 1128)",
       "eponym": {
-        "year": 1150,
+        "year": 50,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint John the Baptist (1st century AD), patron saint of St John's Kirk."
@@ -4243,7 +4243,7 @@
       "first_mention_year": 1150,
       "first_mention_attestation": "Mid-12th century source mentioning 'Portus Regine' (later 'Passagium Sancte Margarete Regine')",
       "eponym": {
-        "year": 1150,
+        "year": 1045,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Saint Margaret of Scotland (c. 1045-1093), Queen consort of King Malcolm III, who established the ferry across the Firth of Forth for pilgrims."
@@ -4391,7 +4391,7 @@
       "first_mention_year": 1139,
       "first_mention_attestation": "1139 charter of King David I granting a toft 'in burgo meo de Hadintun' to the monks of St Andrews",
       "eponym": {
-        "year": 1139,
+        "year": 550,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after an unrecorded 6th-7th century Anglo-Saxon leader Hadda (OE personal name Hadda + -inga- + tun)"
@@ -4748,7 +4748,7 @@
       "first_mention_year": 1593,
       "first_mention_attestation": "1593 foundation of the planned burgh by George Keith, 5th Earl Marischal (previously 'Peterugie' / 'Inverugie of St Peter' in 1560)",
       "eponym": {
-        "year": 1593,
+        "year": 50,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Peter (biblical apostle, 1st century AD), patron saint of the parish church, combined with 'head' (promontory)"
@@ -4967,7 +4967,7 @@
       "first_mention_year": 1745,
       "first_mention_attestation": "1745 Jacobite rising records (19 August 1745 raising of the Jacobite standard at Glenfinnan)",
       "eponym": {
-        "year": 1745,
+        "year": 650,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after the River Finnan (or St Finnan, 6th/7th-century saint)"
@@ -5620,7 +5620,7 @@
       "first_mention_year": 1350,
       "first_mention_attestation": "14th-15th century Argyll medieval church and Campbell/MacTavish records ('Kilmartine')",
       "eponym": {
-        "year": 1350,
+        "year": 350,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after Saint Martin of Tours (4th-century bishop)"

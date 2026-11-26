@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_turan",
     "scope": "e_turan (all baronies across k_transoxiana, k_oghuz_il, k_khotan, and k_syr_darya)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -3969,7 +3969,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Unattested before 867 CE; local name Davlet-Girei applied in the 18th–19th centuries CE to the ruined fortress of Kurgancha-kala on the Ustyurt Plateau.",
       "eponym": {
-        "year": null,
+        "year": 1750,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named in 18th–19th century CE local Karakalpak and Kazakh tradition after a figure bearing the post-867 Turco-Mongol dynastic name Davlet-Girei (Devlet Giray), applied to the ruins of Kurgancha-kala."
@@ -4106,7 +4106,7 @@
       "first_mention_year": 1847,
       "first_mention_attestation": "Russian military outpost Fort Raim (Raimskoe) established in 1847 CE at the mouth of the Syr Darya around the ruined mausoleum of 18th-century Kazakh warrior Raiymbek Batyr.",
       "eponym": {
-        "year": 1785,
+        "year": 1705,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the 18th-century Kazakh warrior Raiymbek Batyr (1705–1785 CE), around whose ruined mausoleum the Russian fort was constructed in 1847 CE."
@@ -5459,7 +5459,7 @@
       "first_mention_year": 1931,
       "first_mention_attestation": "1931 CE (renamed Engels after Friedrich Engels; originally founded in 1747 CE as Pokrovskaya Sloboda).",
       "eponym": {
-        "year": 1931,
+        "year": 1820,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Renamed Engels in 1931 CE after German socialist philosopher Friedrich Engels (1820–1895 CE)."
@@ -6389,7 +6389,7 @@
       "first_mention_year": 1857,
       "first_mention_attestation": "1857 CE (renamed Fort-Aleksandrovsky after Tsar Alexander II; originally founded in 1846 CE as Novopetrovskoye).",
       "eponym": {
-        "year": 1857,
+        "year": 1818,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Renamed Fort-Aleksandrovskii in 1857 CE after Russian Emperor Alexander II (1818–1881 CE)."
@@ -6482,7 +6482,7 @@
       "first_mention_year": 1834,
       "first_mention_attestation": "Russian military fortification Novo-Aleksandrovskoye (New Alexander Fort) built in 1834 CE on the southern coast of Dead Kultuk / Kaydak Bay (abandoned in 1846 CE).",
       "eponym": {
-        "year": 1834,
+        "year": 1777,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Novo-Aleksandrovskoye in 1834 CE after Russian Emperor Alexander I (1777–1825 CE) or Tsarevich Alexander (later Alexander II, 1818–1881 CE)."
@@ -9551,7 +9551,7 @@
       "first_mention_year": 951,
       "first_mention_attestation": "Attested on a Samanid copper fals minted at Nasrabad in 340 AH (951 CE) and described by al-Muqaddasi (c. 985 CE) as a large town built for Nasr.",
       "eponym": {
-        "year": 892,
+        "year": 864,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the Samanid prince Nasr I ibn Ahmad (r. 864–892 CE), for whom his father Ahmad ibn Asad (d. 864/865 CE) built the town according to al-Muqaddasi."
@@ -9600,7 +9600,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No documented written attestation <= 867 CE; named in later local tradition after the 11th-century figure Arslanbob-Ata.",
       "eponym": {
-        "year": null,
+        "year": 1050,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after Arslanbob-Ata (Arslanbab), an 11th-century Islamic saint and legendary walnut-grove founder in Ferghana."
@@ -12863,7 +12863,7 @@
       "first_mention_year": 1078,
       "first_mention_attestation": "1078–1079 CE (fortified caravanserai built by Karakhanid ruler Shams al-Mulk Nasr ibn Ibrahim on the road between Samarkand and Bukhara; no documented written attestation <= 867 CE)",
       "eponym": {
-        "year": 1080,
+        "year": 1068,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the Karakhanid ruler Shams al-Mulk Nasr ibn Ibrahim (r. 1068–1080 CE, titled al-Malik), who built the caravanserai in 1078–1079 CE."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_guinea",
     "scope": "e_guinea (295 baronies across k_akan, k_borgu, k_guinea, k_gur, k_igbo-benue, k_kong, k_yorubaland)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -5404,7 +5404,7 @@
       "first_mention_year": 1870,
       "first_mention_attestation": "No written attestation <= 867 CE; oral traditions date its founding to c. 14th–16th century CE, and it was first documented in writing by Benjamin Anderson in Narrative of a Journey to Musardu (1870).",
       "eponym": {
-        "year": 1870,
+        "year": 1350,
         "post_867": true,
         "type": "deity_or_myth",
         "details": "Named after Zo Musa (Musa Kòma), the legendary founder of Moussadougou in Konyan oral tradition (c. 14th–16th century CE), combined with Manding -dugu ('village/town/land')."
@@ -8947,7 +8947,7 @@
       "first_mention_year": 1899,
       "first_mention_attestation": "French colonial records establishing a military post at Bouaké in 1899 CE (following its 19th-century founding as Gbèkèkro).",
       "eponym": {
-        "year": 1899,
+        "year": 1850,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after 19th-century Baoulé leader Gossan Kwa Gbeke; originally Gbèkèkro ('settlement of Gbeke'), later adapted to Bouaké."
@@ -10630,7 +10630,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No written attestation <= 867 CE. Founded in the 18th century CE by the Oyo warrior Aro and documented in 19th-century Yoruba war and British colonial records.",
       "eponym": {
-        "year": null,
+        "year": 1750,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Aro, an 18th-century warrior who migrated from Oyo and founded the town (Ìlú Àró, 'settlement of Aro')."
@@ -11449,7 +11449,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No written attestation <= 867 CE. Documented in 19th-century Niger River exploration and Yoruba/Nupe accounts.",
       "eponym": {
-        "year": null,
+        "year": 1850,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after 19th-century warrior/chief Okedare Lanloke (nicknamed Ajebaba): local tradition derives Ijeba (anglicized Jebba) from 'ibi ti Lanloke Ajebaba ba si' ('where Lanloke Ajebaba settled')."

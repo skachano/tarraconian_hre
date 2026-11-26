@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_macedonia",
     "scope": "e_macedonia (all baronies across k_hellas and k_thessalonika)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -74,7 +74,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 1.145 (c. 440 BCE), listing Patrees (Patrai) among the twelve Achaean cities.",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after the mythological Achaean founder Patreus (Pausanias, Description of Greece 7.18.5)."
@@ -285,7 +285,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 2.570 (c. 8th century BCE) as Korinthos; also attested in Mycenaean Linear B (ko-ri-to, c. 1200 BCE).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked to Corinthus, son of Zeus or Marathon (Pausanias 2.1.1), though linguistically pre-Greek."
@@ -389,7 +389,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 2.559 (c. 8th century BCE).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically associated with Argos, son of Zeus and Niobe, though etymologically a topographic/pre-Greek term."
@@ -563,7 +563,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 2.581 (c. 8th century BCE) as Lakedaimon; also attested in Mycenaean Linear B (ra-ke-da-mi-ni-jo).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Lacedaemon, son of Zeus and Taygete."
@@ -791,7 +791,7 @@
       "first_mention_year": 1125,
       "first_mention_attestation": "First attested as the Venetian/Frankish form 'Modon' in 1125 CE (following Venetian Doge Domenico Michiel's 1124–1125 expedition and 12th-century Italian/Crusader sources).",
       "eponym": {
-        "year": 1125,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked by Pausanias to Mothone, daughter of Oeneus, or the harbour rock Mothon."
@@ -870,7 +870,7 @@
         {
           "form": "Abydos",
           "language": "Pre-Greek / Thracian-Phrygian",
-          "language_code": "und",
+          "language_code": "ine",
           "translation": "uncertain pre-Greek substrate toponym"
         }
       ],
@@ -899,7 +899,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 5.117 and 6.37 (c. 440 BCE); colonized by Phocaea/Miletus in the 7th century BCE.",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Lampsake, a local Bebrycian princess who aided Phocaean colonists."
@@ -963,7 +963,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 1.71 (c. 8th century BCE) as Ilion / Ilios; corresponds to Hittite Wilusa (13th century BCE).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Mythologically named after Ilus, legendary founder of Troy."
@@ -1135,7 +1135,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Odyssey 3.170 (c. 8th century BCE); also attested in Mycenaean Linear B (ki-si-wi-jo).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked to Chios, son of Poseidon (Pausanias 7.4.8)."
@@ -1216,7 +1216,7 @@
       "first_mention_year": -600,
       "first_mention_attestation": "Fragments of Alcaeus and Sappho (c. 600 BCE) and Herodotus, Histories 1.160 (c. 440 BCE); founded in the 11th century BCE.",
       "eponym": {
-        "year": -600,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Mytilene, daughter of Macareus (Diodorus Siculus 5.81)."
@@ -1335,7 +1335,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 5.28 and 6.96 (c. 440 BCE); Pindar, Pythian 4.88 (c. 462 BCE).",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Naxos, leader of the Carians who settled the island."
@@ -1378,7 +1378,7 @@
       "first_mention_year": -462,
       "first_mention_attestation": "Pindar, Pythian Ode 4.10–20 (462 BCE) and Herodotus, Histories 4.147–150 (c. 440 BCE).",
       "eponym": {
-        "year": -462,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after the legendary Dorian leader Theras, son of Autesion (Herodotus 4.147)."
@@ -1421,7 +1421,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 4.33 and 8.111 (c. 440 BCE); Thucydides 4.42.",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Andreus, a Cretan general of Rhadamanthus (Diodorus Siculus 5.79)."
@@ -1464,7 +1464,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 4.33, 6.97, and 8.66 (c. 440 BCE) as Tenos.",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Tenos, leader of Ionian colonists."
@@ -1507,7 +1507,7 @@
       "first_mention_year": -408,
       "first_mention_attestation": "Synoecized city of Rhodos founded in 408 BCE (Diodorus Siculus 13.75); the island name Rhodos is earlier attested in Homer, Iliad 2.654 (c. 8th century BCE).",
       "eponym": {
-        "year": -408,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked to the nymph Rhode, daughter of Poseidon."
@@ -1550,7 +1550,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 2.677 (c. 8th century BCE).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked to Kos, daughter of Merops."
@@ -1564,7 +1564,7 @@
         {
           "form": "Kos",
           "language": "Pre-Greek / Anatolian",
-          "language_code": "und",
+          "language_code": "ine",
           "translation": "Dodecanese island name"
         }
       ],
@@ -1593,7 +1593,7 @@
       "first_mention_year": -750,
       "first_mention_attestation": "Homer, Iliad 2.656 (c. 8th century BCE).",
       "eponym": {
-        "year": -750,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically named after Lindus, grandson of Helios."
@@ -1892,7 +1892,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 8.32 (as Amphissa, c. 440 BCE)",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Mythologically linked to Amphissa, daughter of Macar and beloved of Apollo."
@@ -2175,7 +2175,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 7.42 (c. 440 BCE; city founded 6th century BCE)",
       "eponym": {
-        "year": -440,
+        "year": -550,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Adramytos, brother of Croesus and son of Lydian King Alyattes (6th century BCE), according to Aristotle."
@@ -2517,7 +2517,7 @@
       "first_mention_year": 400,
       "first_mention_attestation": "Renamed under Eastern Roman Emperor Arcadius (r. 395–408 CE); attested in 5th–6th century Byzantine sources (e.g., Hierocles, Synecdemus)",
       "eponym": {
-        "year": 408,
+        "year": 395,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Eastern Roman Emperor Arcadius (r. 395–408 CE), who refounded the city c. 400 CE."
@@ -2587,7 +2587,7 @@
       "first_mention_year": -440,
       "first_mention_attestation": "Herodotus, Histories 6.33 (c. 440 BCE; Megarian colony founded c. 7th century BCE)",
       "eponym": {
-        "year": -440,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after its legendary Thracian founder Selys (Thracian 'Selys-bria', town of Selys)."

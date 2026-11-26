@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_tibet",
     "scope": "e_tibet (all baronies across k_amdo, k_guge, k_gyalrong, k_kham, k_lhomon, k_maryul, k_tsang, and k_u)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -7491,8 +7491,18 @@
       "etymology_analysis": "Tibetan name 'Ba' lung (འབའ་ལུང, ZWPY: Balung) for Weixi Lisu Autonomous County, containing lung ('valley').",
       "historical_names": [
         {
-          "name": "Shenchuan Dudufu / Tieqiao",
-          "native_script": "神川都督府 / 铁桥",
+          "name": "Shenchuan Dudufu",
+          "native_script": "神川都督府",
+          "language": null,
+          "attested_from": 794,
+          "attested_to": 1730,
+          "source": "Chinese Tang/Nanzhao records (794 CE) and Yu Qingyuan's Weixi Jianwenji",
+          "relationship": "immediate_predecessor_or_nearby_site",
+          "notes": "Early Tibetan Empire established Tieqiao Jiedushi / Shenchuan Dudufu (with its West City at Qizong Village in Weixi), captured by Nanzhao in 794 CE."
+        },
+        {
+          "name": "Tieqiao",
+          "native_script": "铁桥",
           "language": null,
           "attested_from": 794,
           "attested_to": 1730,
@@ -10818,7 +10828,7 @@
       "first_mention_year": 1163,
       "first_mention_attestation": "Originated with a hermitage founded in 1163 CE by Lama Zhang Dorje Drakpa, called Zhangang ('Lama Zhang's ridge'), which evolved into Zhemgang; formal dzong built in 1655 CE.",
       "eponym": {
-        "year": 1193,
+        "year": 1123,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Lama Zhang Dorje Drakpa (1123–1193 CE), a Drukpa Kagyu master who founded a hermitage on the ridge in 1163 CE; the original name Zhangang ('Lama Zhang's ridge') evolved into Zhemgang."

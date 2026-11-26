@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_maghreb",
     "scope": "e_maghreb (all baronies across k_africa, k_anbiya, and k_sahara)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -801,7 +801,7 @@
       "first_mention_year": 946,
       "first_mention_attestation": "Founded in 946 CE by Fatimid caliph al-Mansur bi-Nasr Allah just south of Kairouan.",
       "eponym": {
-        "year": 953,
+        "year": 946,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the third Fatimid caliph al-Mansur bi-Nasr Allah (Abu Tahir Isma'il, r. 946–953 CE), whose regnal title al-Mansur means 'the Victorious'."
@@ -1317,7 +1317,7 @@
       "first_mention_year": 313,
       "first_mention_attestation": "Rebuilt and renamed Colonia Constantiniana (Constantina) in 313 CE under Emperor Constantine the Great.",
       "eponym": {
-        "year": 337,
+        "year": 306,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Roman Emperor Constantine the Great (Flavius Valerius Constantinus, r. 306–337 CE), who rebuilt the city in 313 CE after its destruction in 311 CE."
@@ -1611,7 +1611,7 @@
       "first_mention_year": 1068,
       "first_mention_attestation": "Al-Bakri (1068 CE) and later medieval Arabic geographers record the Misrata tribe/settlement on the Tripolitanian coast.",
       "eponym": {
-        "year": 1068,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the Misrata (Misratah) tribe, a sub-tribe of the Berber Hawwara confederation."
@@ -2197,7 +2197,7 @@
       "first_mention_year": 1312,
       "first_mention_attestation": "Oldest dated monument (Alal'a Mosque) rebuilt in 1312 CE; earliest mentions of Nalut appear in post-867 CE medieval Ibadi/Maghrebi chronicles.",
       "eponym": {
-        "year": 1312,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Possibly linked to Tala, a pre-Islamic Berber goddess of springs."
@@ -2409,7 +2409,7 @@
       "first_mention_year": 916,
       "first_mention_attestation": "Founded in 916 CE (officially inaugurated in 921 CE) by the first Fatimid Caliph, Ubayd Allah al-Mahdi Billah.",
       "eponym": {
-        "year": 934,
+        "year": 909,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Ubayd Allah al-Mahdi Billah (r. 909–934 CE), founder of the Fatimid Caliphate."
@@ -2609,7 +2609,7 @@
       "first_mention_year": -241,
       "first_mention_attestation": "Polybius (Histories, 1.66) records Sicca during the Mercenary War (c. 241 BCE), later Roman Sicca Veneria, Arabicized as Siqqabanariya / Shaqbanariya.",
       "eponym": {
-        "year": -241,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Veneria refers to the Roman goddess Venus (equated with Punic Astarte), whose temple stood in the city."

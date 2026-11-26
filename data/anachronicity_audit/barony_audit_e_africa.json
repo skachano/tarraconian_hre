@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_africa",
     "scope": "e_africa (all baronies across k_maghreb and k_tahert)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -253,7 +253,7 @@
       "first_mention_year": 1339,
       "first_mention_attestation": "Angelino Dulcert's portolan chart (1339) as 'Insula de Lanzarotus Marocelus'",
       "eponym": {
-        "year": 1339,
+        "year": 1312,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the 14th-century Genoese navigator Lancelotto Malocello (fl. 1312–1339)."

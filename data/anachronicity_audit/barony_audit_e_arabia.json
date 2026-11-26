@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_arabia",
     "scope": "e_arabia (all baronies across k_persia, k_arabia, k_jazira, k_mesopotamia, k_yemen, k_armenia, and k_jerusalem)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -976,7 +976,7 @@
       "first_mention_year": 630,
       "first_mention_attestation": "c. 630 CE (early Islamic chronicles recording the delegations of the Ghamid tribe to Muhammad, plus pre-Islamic poetry)",
       "eponym": {
-        "year": 630,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the Arab tribe of Ghamid (Banu Ghamid, a branch of Azd), attested in pre-Islamic and early Islamic sources."
@@ -1288,7 +1288,7 @@
       "first_mention_year": 650,
       "first_mention_attestation": "c. 644–656 CE (wells dug by Abu Musa al-Ash'ari during the caliphate of Uthman along the Basra–Mecca route)",
       "eponym": {
-        "year": 662,
+        "year": 644,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Historically known as Hafar Abi Musa al-Ash'ari, after the Companion and Basran governor Abu Musa al-Ash'ari (d. c. 662 CE), who ordered the wells dug during the reign of Caliph Uthman (644–656 CE)."
@@ -1419,7 +1419,7 @@
       "first_mention_year": 600,
       "first_mention_attestation": "c. 600 CE (pre-Islamic and early Islamic name for Bahrain Island, named after the pre-Islamic deity Awal)",
       "eponym": {
-        "year": 600,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after Awāl (Uwāl), a pre-Islamic deity worshipped on Bahrain Island."
@@ -1734,7 +1734,7 @@
       "first_mention_year": 780,
       "first_mention_attestation": "c. 780–846 CE (pre-Abbasid/early Abbasid station on Darb Zubaydah, documented by Ibn Khordadbeh c. 846 CE)",
       "eponym": {
-        "year": 780,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Attributed in Saudi heritage sources to Zubalah ibn al-Harith."
@@ -2306,7 +2306,7 @@
       "first_mention_year": 700,
       "first_mention_attestation": "Attested as al-Sawariqiyyah (السوارقية) in early Islamic tradition (7th–8th century CE accounts of Khubayb ibn Abd Allah ibn al-Zubayr preserved in al-Bakri, and 9th-century geographer Arram al-Sulami).",
       "eponym": {
-        "year": 700,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Traditional local accounts associate the name with Abu Bakr Muhammad ibn Atiq al-Sawariqi, though the settlement dates to the pre-Islamic/early Islamic era of Banu Sulaym."
@@ -3062,7 +3062,7 @@
       "first_mention_year": 985,
       "first_mention_attestation": "Attested as Bada / Bada Ya'qub (بدا / بدا يعقوب) in al-Maqdisi's Ahsan al-Taqasim (985 CE) and al-Bakri (11th century CE); no confirmed written attestation <= 867 CE.",
       "eponym": {
-        "year": 985,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Later medieval sources associate the oasis with the prophet Jacob (Bada Ya'qub)."
@@ -4371,7 +4371,7 @@
       "first_mention_year": 1986,
       "first_mention_attestation": "The desert region Rimāl Āl Wahībah (Wahiba Sands) entered scientific documentation in 1986 CE via the Royal Geographical Society expedition; no <= 867 CE written attestation.",
       "eponym": {
-        "year": 1986,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the Banu Wahiba (Āl Wahībah) Arab tribe."
@@ -6098,7 +6098,7 @@
       "first_mention_year": 160,
       "first_mention_attestation": "Founded in the 2nd century CE (c. 160 CE) by Arsacid King Vologases I (Vagharsh I) of Armenia as Vagharshakert / Valarshakert on the site of Urartian Anashe.",
       "eponym": {
-        "year": 144,
+        "year": 117,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after King Vologases I (Vagharsh I) of Armenia (r. c. 117–144 CE / Arsacid founder)."
@@ -7035,7 +7035,7 @@
       "first_mention_year": 360,
       "first_mention_attestation": "Attested as Zarishat in Pawstos Buzand's 5th-century CE History of the Armenians for 4th-century CE Sasanian campaigns.",
       "eponym": {
-        "year": 360,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditionally associated with Orontid king Zariadres (Zareh)."
@@ -7312,7 +7312,7 @@
       "first_mention_year": 969,
       "first_mention_attestation": "Named after Byzantine Emperor John I Tzimiskes (c. 925–976 CE, r. 969–976 CE), who was born there (modern Çemişgezek).",
       "eponym": {
-        "year": 925,
+        "year": 969,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Byzantine Emperor John I Tzimiskes (born c. 925 CE, reigned 969–976 CE), whose sobriquet Tzimiskes (Armenian Chmshkik) gave rise to Tzimisca / Çemişgezek."
@@ -7496,7 +7496,7 @@
       "first_mention_year": 415,
       "first_mention_attestation": "Founded/renamed Theodosiopolis c. 415–422 CE by the Eastern Roman Empire under Emperor Theodosius II.",
       "eponym": {
-        "year": 450,
+        "year": 402,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Roman Emperor Theodosius II (r. 402–450 CE)."
@@ -7773,7 +7773,7 @@
       "first_mention_year": 390,
       "first_mention_attestation": "Documented as Manazkert / Manzikert from 390 CE (earlier Manavazakert in Movses Khorenatsi).",
       "eponym": {
-        "year": -786,
+        "year": -810,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Tradition attributes foundation to Manavaz (descendant of Hayk), likely reflecting Urartian King Minua (r. c. 810–786 BCE)."
@@ -7871,7 +7871,7 @@
       "first_mention_year": 1554,
       "first_mention_attestation": "Earliest documented written mention of Varto is in 1554 CE as Varto kavar ('Vart's district').",
       "eponym": {
-        "year": 1554,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Linked to the Armenian personal name Vart / Vartan (no specific post-867 historical figure identified)."
@@ -8190,7 +8190,7 @@
       "first_mention_year": -150,
       "first_mention_attestation": "Documented as Adamakert since the 2nd century BCE (from Urartian Adamma) and contested between Parthia and Eastern Rome from 385 CE.",
       "eponym": {
-        "year": -150,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Folk etymology attributed it to Adam; actually from Urartian Adamma."
@@ -8489,7 +8489,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in written sources by 867 CE; medieval Arabic fortress name associated with the Birkleyn Caves / Tigris source north of Amid.",
       "eponym": {
-        "year": -323,
+        "year": -356,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Dhu al-Qarnayn ('He of the Two Horns'), the Quranic figure commonly identified with Alexander the Great (356–323 BCE)."
@@ -8614,7 +8614,7 @@
       "first_mention_year": -240,
       "first_mention_attestation": "Founded c. 240 BCE as Arsamosata (Armenian Aršamašat) by Orontid king Arsames I; attested in Arabic as Shimshat in 9th-century CE accounts (e.g., Siege of Arsamosata, 837 CE).",
       "eponym": {
-        "year": -228,
+        "year": -260,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Arsames I, Orontid king of Sophene and Commagene (r. c. 260–228 BCE); Middle Persian *Aršāmšād* means 'Joy of Arsames'."
@@ -8663,7 +8663,7 @@
       "first_mention_year": 639,
       "first_mention_attestation": "Attested as Hakariyye/al-Hakkariyya as early as 639 CE during the Muslim conquests.",
       "eponym": {
-        "year": 639,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the local Kurdish tribe of Hakkari."
@@ -9022,7 +9022,7 @@
       "first_mention_year": 1030,
       "first_mention_attestation": "Founded in the 11th century CE (c. 1011–1061 CE) by Marwanid ruler Nasr al-Dawla Ahmad ibn Marwan as al-Madinat al-Nasriyya near Mayyafariqin.",
       "eponym": {
-        "year": 1061,
+        "year": 1011,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Nasr al-Dawla Ahmad ibn Marwan, Kurdish Marwanid emir of Mayyafariqin and Diyar Bakr (r. 1011–1061 CE)."
@@ -10016,7 +10016,7 @@
       "first_mention_year": 985,
       "first_mention_attestation": "Described by the Arab geographer al-Muqaddasi (c. 985 CE) as Mar/Marj Juhayna, the first stage south of Mosul on the road to Baghdad, and later by Yaqut al-Hamawi (c. 1225 CE).",
       "eponym": {
-        "year": 985,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the pre-Islamic Arab tribe of Juhayna (a branch of Quda'a) and its eponymous ancestor."
@@ -10423,7 +10423,7 @@
       "first_mention_year": 350,
       "first_mention_attestation": "First attested in the 4th century CE as a Christian settlement (Syriac Pēšābūr), linked with the Sasanian name Peroz-Shapur.",
       "eponym": {
-        "year": 350,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditional etymology links Pēšābūr / Faysh Khabur to Sasanian king Shapur (Peroz-Shapur), later blended with the Khabur River."
@@ -10893,7 +10893,7 @@
       "first_mention_year": -1800,
       "first_mention_attestation": "Attested as Ha-na-at in Old Babylonian cuneiform texts (c. 1800 BCE), A-na-at in Neo-Assyrian inscriptions (885 BCE), Anatha in Ammianus Marcellinus (363 CE), and Arabic 'Āna (657 CE).",
       "eponym": {
-        "year": -1800,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Connected in scholarship with the ancient Semitic war goddess Anat."
@@ -10980,7 +10980,7 @@
       "first_mention_year": 977,
       "first_mention_attestation": "Attested in 10th-century CE Arabic geographers (Ibn Hawqal c. 977 CE, al-Muqaddasi c. 985 CE) and Yaqut al-Hamawi (c. 1225 CE) as the dam/town of Sukayr al-'Abbās on the Hirmas/Khabur.",
       "eponym": {
-        "year": 977,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after an individual called al-'Abbās (likely an Abbasid-era builder or patron of the weir/dam)."
@@ -14702,7 +14702,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Unattested in pre-867 CE written sources under this specific compound name.",
       "eponym": {
-        "year": 531,
+        "year": 488,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Contains the name of Sasanian King Kavadh I (Arabic Qubadh, r. 488–531 CE), though the specific toponym Raushanqubad lacks a verified pre-867 CE attestation."
@@ -15242,7 +15242,7 @@
       "first_mention_year": 846,
       "first_mention_attestation": "c. 846 CE (attested in early Abbasid geographical works such as Ibn Khordadbeh and later al-Ya'qubi; named after Lakhmid king al-Nu'man III, r. 580–602 CE)",
       "eponym": {
-        "year": 602,
+        "year": 580,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the Lakhmid king al-Nu'man III ibn al-Mundhir (r. 580–602 CE)."
@@ -15508,7 +15508,7 @@
       "first_mention_year": 380,
       "first_mention_attestation": "Late 4th-century CE Sasanian coinage bearing the mint signature DA/DAL/DALAPKR (Darabgerd), and al-Tabari's account of Ardashir I serving as argbad (castellan) of Darabgerd in the early 3rd century CE.",
       "eponym": {
-        "year": 380,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditionally attributed to a Parthian or legendary ruler named Dara (Darius), after whom the circular fortress-city was named."
@@ -16577,7 +16577,7 @@
       "first_mention_year": 266,
       "first_mention_attestation": "266 CE foundation of Bishapur (Weh-Sabuhr) by Sasanian emperor Shapur I, attested in Sasanian inscriptions, coinage (BYŠ), and 646 CE Arab conquest accounts (Arabic Sabur).",
       "eponym": {
-        "year": 270,
+        "year": 240,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian emperor Shapur I (r. 240-270 CE)."
@@ -17562,7 +17562,7 @@
       "first_mention_year": 1225,
       "first_mention_attestation": "First mentioned in written geographical sources as Uzvarah by Yaqut al-Hamawi (Mu'jam al-Buldan, c. 1225 CE), later Zuvarah (Zavareh) in Mustawfi (1340 CE).",
       "eponym": {
-        "year": 1225,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named in Persian tradition after Zavara (Zavareh), brother of the mythical hero Rostam in the Shahnameh."
@@ -18027,7 +18027,7 @@
       "first_mention_year": 1330,
       "first_mention_attestation": "Attested as Firuzan, chief town of the Khanlanjan district south of Isfahan, by Ibn Battuta (c. 1330 CE).",
       "eponym": {
-        "year": 1330,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the Persian personal name Firuzan (Middle Persian Pērōzān), though the specific namesake is unattested."
@@ -18076,7 +18076,7 @@
       "first_mention_year": 390,
       "first_mention_attestation": "Founded c. 390 CE by Sasanian King Bahram IV, who bore the title Kirmanshah ('King of Kirman').",
       "eponym": {
-        "year": 399,
+        "year": 388,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian King Bahram IV (r. 388-399 CE), whose earlier princely title was Kirmanshah ('King of Kirman')."
@@ -18365,7 +18365,7 @@
       "first_mention_year": 270,
       "first_mention_attestation": "Founded under the Sasanian Empire by Shapur I (r. 240-270 CE) or Shapur II (4th century CE) as Shapurkhwast (Arabic Saburkhwast).",
       "eponym": {
-        "year": 270,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian King Shapur I (or Shapur II), meaning 'Shapur's Desire'."
@@ -18910,7 +18910,7 @@
       "first_mention_year": 271,
       "first_mention_attestation": "Founded by Sasanian King Hormizd I (r. 270-271 CE) as Ram-Hormizd-Ardashir; Umayyad silver dirhams minted there by 714-715 CE.",
       "eponym": {
-        "year": 271,
+        "year": 270,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian King Hormizd I (r. 270-271 CE)."
@@ -19243,7 +19243,7 @@
       "first_mention_year": 271,
       "first_mention_attestation": "Founded c. 271 CE by Sasanian King Shapur I as Weh-Andiyok-Shapur (Middle Persian Gundēšāhpūr; Syriac Beth Lapat).",
       "eponym": {
-        "year": 270,
+        "year": 240,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian King Shapur I (r. 240-270 CE)."
@@ -21277,7 +21277,7 @@
       "first_mention_year": 951,
       "first_mention_attestation": "c. 951 CE (al-Istakhri, Kitab Masalik al-Mamalik, and al-Muqaddasi, 985 CE, as Shahr-i Babak)",
       "eponym": {
-        "year": 951,
+        "year": 225,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Babak (Middle Persian Papak, fl. early 3rd century CE), father of the Sasanian founder Ardashir I."
@@ -21458,7 +21458,7 @@
       "first_mention_year": 582,
       "first_mention_attestation": "582 CE (Sasanian silver drachms of Hormizd IV with mintmark YZ for Yazd; also Sasanian seals)",
       "eponym": {
-        "year": 420,
+        "year": 399,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditionally linked to Sasanian king Yazdegerd I (r. 399-420 CE) or Middle Persian yazad ('divine, holy')."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_wendish_empire",
     "scope": "e_wendish_empire (all baronies across k_esthonia and k_lithuania)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -1359,7 +1359,7 @@
       "first_mention_year": 1184,
       "first_mention_attestation": "1184–1185 CE in the Chronicle of Henry of Livonia (Ykescola / Ykescole), when Saint Meinhard arrived to missionize the Livonians.",
       "eponym": {
-        "year": 1184,
+        "year": 1150,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "According to linguist Urmas Sutrop, named after a 12th-century CE Livonian local ruler named Ike (Ike's son's ford/islet, Ykescola)."
@@ -1716,7 +1716,7 @@
       "first_mention_year": 1670,
       "first_mention_attestation": "1670 CE charter by Duke Jacob Kettler granting Magdeburg town rights to Jēkabmiests (German: Jakobstadt).",
       "eponym": {
-        "year": 1682,
+        "year": 1610,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Jacob Kettler (1610–1682 CE), Duke of Courland and Semigallia, who granted the town Magdeburg rights in 1670 CE."
@@ -1985,7 +1985,7 @@
       "first_mention_year": 1323,
       "first_mention_attestation": "1323 CE first mention as a town (German: Wolmar; castle/church site from 1224/1283 CE).",
       "eponym": {
-        "year": 1214,
+        "year": 1212,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Derived from the personal name Waldemar / Vladimir, attributed either to Prince Vladimir Mstislavich of Pskov (fl. 1212–1214 CE) or King Valdemar II of Denmark (1170–1241 CE)."
@@ -2435,7 +2435,7 @@
       "first_mention_year": 1361,
       "first_mention_attestation": "1361 CE in Wigand of Marburg's Chronica nova Prutenica (attested in Teutonic sources).",
       "eponym": {
-        "year": 1361,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Hypothesized unknown Baltic personal name *Kaunas (from adjective kaunus 'pugnacious, liking to fight'), though a topographic/hydronymic origin is also proposed."
@@ -2848,7 +2848,7 @@
       "first_mention_year": 1360,
       "first_mention_attestation": "1360 CE Teutonic Order document mentioning the fort Ortulfsburg",
       "eponym": {
-        "year": 1360,
+        "year": 1350,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Ortolf von Trier, a 14th-century knight of the Teutonic Order and Komtur of Elbing (Elbląg), who founded the fort between 1350 and 1360 CE."
@@ -3325,7 +3325,7 @@
       "first_mention_year": 1301,
       "first_mention_attestation": "1301 CE Teutonic Order foundation of Lautenburg (Lidzbark)",
       "eponym": {
-        "year": 1301,
+        "year": 1350,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Otto von Lutterberg, a 14th-century Teutonic Komtur of Chełmno Land."
@@ -3649,7 +3649,7 @@
       "first_mention_year": 1274,
       "first_mention_attestation": "1274 CE Teutonic Order foundation of Ordensburg Marienburg",
       "eponym": {
-        "year": 1274,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after the Virgin Mary (pre-867 CE biblical figure), patron saint of the Teutonic Order."
@@ -4018,7 +4018,7 @@
       "first_mention_year": 1254,
       "first_mention_attestation": "1254 CE town charter founding Brunsberg/Braunsberg (named in honor of Bishop Bruno von Schauenburg during King Ottokar II of Bohemia’s 1254–1255 crusade).",
       "eponym": {
-        "year": 1281,
+        "year": 1205,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Brunsberg after Bruno von Schauenburg (1205–1281 CE), Bishop of Olomouc in Moravia, who accompanied King Ottokar II of Bohemia on the Prussian crusade."
@@ -4325,7 +4325,7 @@
       "first_mention_year": 1259,
       "first_mention_attestation": "1259 CE Teutonic Knights' Ordensburg castle of Georgenburg",
       "eponym": {
-        "year": 1259,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Derived from German Georgenburg ('George's Castle'), named after Saint George (pre-867 CE Christian martyr)."

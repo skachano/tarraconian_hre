@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_persia",
     "scope": "e_persia (all baronies across k_khorasan, k_daylam, k_makran, and k_kabulistan)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -834,7 +834,7 @@
       "first_mention_year": 1220,
       "first_mention_attestation": "First attested as Deh-Nakhirjan in Yaqut al-Hamawi (early 13th century CE), who derived it from Nakhirjan, treasurer of Khosrow II.",
       "eponym": {
-        "year": 628,
+        "year": 590,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditional etymology in Yaqut al-Hamawi derives the name from Nakhirjan, treasurer of Sasanian King Khosrow II (r. 590–628 CE)."
@@ -1331,7 +1331,7 @@
       "first_mention_year": 982,
       "first_mention_attestation": "First attested as Lafjan (Lahijan) in the Persian geography Hudud al-Alam (982 CE).",
       "eponym": {
-        "year": 982,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendary tradition attributes its foundation to Lahij ibn Sam ibn Nuh, a mythical/biblical figure not attested in early Arabic geographies."
@@ -1571,7 +1571,7 @@
       "first_mention_year": 1072,
       "first_mention_attestation": "Oghuz Turkic tribe first attested as Awshar in Mahmud al-Kashgari's Diwan Lughat al-Turk (1072–1074 CE), entering Iran during the Seljuk era.",
       "eponym": {
-        "year": 1072,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendary eponym Afshar, son of Yildiz Khan and grandson of Oghuz Khan (recorded by Rashid al-Din Hamadani, 14th century CE)."
@@ -1614,7 +1614,7 @@
       "first_mention_year": 951,
       "first_mention_attestation": "First attested in 10th-century CE Islamic geographers (al-Istakhri c. 951 CE, Ibn Hawqal c. 977 CE) as a town in Jibal.",
       "eponym": {
-        "year": 951,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Derived from the pre-Islamic Iranian personal name Sohrab (Suxrap-kart / Suhrav-gerd), per Theodor Nöldeke and Josef Marquart."
@@ -1701,7 +1701,7 @@
       "first_mention_year": 716,
       "first_mention_attestation": "Attested as Dihistān in early Islamic histories (al-Tabari; al-Baladhuri) during Yazid ibn al-Muhallab's 716–717 CE campaign against the Sul/Chol Turks; named after the Dahae confederacy attested in Strabo (1st century BCE).",
       "eponym": {
-        "year": 716,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after the ancient Dahae (Old Iranian *Dāha-) nomadic confederacy."
@@ -1920,7 +1920,7 @@
       "first_mention_year": 977,
       "first_mention_attestation": "Attested in 10th-century CE Islamic geographers (Ibn Hawqal, c. 977 CE) as the industrial left-bank suburb of Gorgan (Jorjān) across the Gorgan River; no written attestation <= 867 CE.",
       "eponym": {
-        "year": 977,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Compound with personal name Bakr + -ābād ('settled/built by Bakr'); specific historical eponym unattested."
@@ -2840,7 +2840,7 @@
       "first_mention_year": 420,
       "first_mention_attestation": "Attested by Sasanian mint signature 'AM' from Bahram V (r. 420–438 CE), as a Syriac diocese in 554 CE (Bishop Surin of 'Amol and Gilan'), and as Abbasid capital of Tabaristan from 760 CE; named after the ancient Amardi tribe.",
       "eponym": {
-        "year": 420,
+        "year": null,
         "post_867": false,
         "type": "dynasty_or_tribe",
         "details": "Named after the ancient Amardi (Mardi / Amui) tribe of the southern Caspian coast."
@@ -2921,7 +2921,7 @@
       "first_mention_year": 712,
       "first_mention_attestation": "Reconstructed/founded under Dabuyid ruler Farrukhan the Great (r. 712–728 CE), who named it Saruyeh/Sariya after his son Saruya and made it capital of Tabaristan.",
       "eponym": {
-        "year": 728,
+        "year": 712,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Saruya (Saruyeh), son of the Dabuyid ispahbadh Farrukhan the Great (r. 712–728 CE)."
@@ -3950,7 +3950,7 @@
       "first_mention_year": 951,
       "first_mention_attestation": "Attested as Bakrāwādh (for Bakrābād) in al-Muqaddasi (985 CE), while al-Istakhri (951 CE) and Ibn Hawqal (977 CE) give the form Takīnābādh (also mentioned by Gardizi for Ya'qub's 870 CE campaign).",
       "eponym": {
-        "year": 951,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Bakrābād ('Bakr's settlement') incorporates the Arabic personal name Bakr; the variant/earlier name Takīnābādh incorporates the Turkic title/name Tegin (Takīn)."
@@ -3999,7 +3999,7 @@
       "first_mention_year": 680,
       "first_mention_attestation": "Arabic Qandahār is attested in accounts of Umayyad governor Abbad ibn Ziyad's campaign (673–681 CE) and Hisham ibn Amr al-Taghlibi under al-Mansur (754–775 CE) in al-Baladhuri, as well as in Ibn Khordadbeh (c. 846 CE).",
       "eponym": {
-        "year": -323,
+        "year": -356,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Often linked in tradition to Iskandar (Alexander the Great, 356–323 BCE), who founded Alexandria in Arachosia on the site in 330 BCE; modern scholarship also connects the name to Gandhara."
@@ -4391,7 +4391,7 @@
       "first_mention_year": 985,
       "first_mention_attestation": "c. 985 CE (al-Muqaddasi, Ahsan al-Taqasim, p. 291, as Ribat Dhi'l-Kifl, a fortified river-crossing station on the Oxus opposite Ribat Dhi'l-Qarnayn on the Balkh–Tirmidh/Bukhara route). No documented written attestation <= 867 CE.",
       "eponym": {
-        "year": 985,
+        "year": null,
         "post_867": false,
         "type": "saint_or_religious",
         "details": "Named after the Quranic prophet Dhu'l-Kifl (Quran 21:85, 38:48, traditionally identified with Ezekiel), whose shrine/ribat stood at the Oxus crossing."
@@ -4440,7 +4440,7 @@
       "first_mention_year": 891,
       "first_mention_attestation": "891 CE (al-Ya'qubi, Kitab al-Buldan, p. 287, as Shaburkan, noting an earlier local principality there); later 10th-century CE geographers (al-Istakhri, Ibn Hawqal, Hudud al-'Alam). No documented written attestation <= 867 CE.",
       "eponym": {
-        "year": 270,
+        "year": 240,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Attributed to Sasanian king Shapur I (r. 240–270 CE) or Shapur II (r. 309–379 CE): Middle Persian Šāpūr-gān ('city/place of Shapur')."
@@ -5541,7 +5541,7 @@
       "first_mention_year": 588,
       "first_mention_attestation": "588 CE Synod of Ishoyahb I (mentioning a Nestorian bishopric at Pushang/Bushang); later conquered by Arab forces in 652–653 CE (al-Baladhuri, Futuh al-Buldan, p. 405, 409; al-Tabari, ii, p. 79).",
       "eponym": {
-        "year": 270,
+        "year": 240,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Medieval Iranian tradition attributed its foundation to the mythical hero Pashang (folk etymology) or to Sasanian king Shapur I (r. 240–270 CE)."
@@ -7150,7 +7150,7 @@
       "first_mention_year": 1,
       "first_mention_attestation": "Identifiable with Parthian Apauarktikē mentioned by Isidore of Charax (Parthian Stations, c. 1st century CE); later attested as a Sasanian Nestorian bishopric at the synod of 553 CE and conquered by 'Abd Allah ibn 'Amir in 651–652 CE.",
       "eponym": {
-        "year": 1,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendarily attributed by Yaqut al-Hamawi to Bāvard, son of Gūdarz (a mythical Iranian hero of the Shahnameh tradition, pre-867 CE)."
@@ -7577,7 +7577,7 @@
       "first_mention_year": 856,
       "first_mention_attestation": "Earliest references to the name Dāmghān date to the mid-9th century CE (Qudama ibn Ja'far, Kitab al-Kharaj; al-Baladhuri, Futuh al-Buldan; al-Ya'qubi) and the devastating 20 December 856 CE Damghan earthquake.",
       "eponym": {
-        "year": 856,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Legendarily ascribed by Persian historiographers to the mythical Pishdadian king Hushang (pre-867 CE)."
@@ -7695,7 +7695,7 @@
       "first_mention_year": 856,
       "first_mention_attestation": "Attested by the mid-9th century CE as Bastām/Bistām in Qumis: birthplace and home of Sufi mystic Bayazid Bastami (804–874 CE) and affected by the 856 CE Damghan/Qumis earthquake.",
       "eponym": {
-        "year": 856,
+        "year": 575,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditionally attributed to Vistāhm (Bistām), uncle of Sasanian king Khosrau II (late 6th century CE, pre-867 CE)."
@@ -7782,7 +7782,7 @@
       "first_mention_year": 250,
       "first_mention_attestation": "Founded or rebuilt in the 3rd century CE (c. 250 CE) by Sasanian king Shapur I as Nēw-Šāhpūr, administrative capital of Abarshahr; conquered by Arabs in 651–652 CE and made Tahirid capital in 830 CE.",
       "eponym": {
-        "year": 270,
+        "year": 240,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Sasanian king Shapur I (r. 240–270 CE), from Middle Persian Nēw-Šāhpūr ('Fair/Good City of Shapur')."
@@ -7907,7 +7907,7 @@
       "first_mention_year": 978,
       "first_mention_attestation": "Attested as Farjird/Fargard on Ibn Hawqal's map (Surat al-Ard, c. 978 CE) and in al-Muqaddasi (c. 985 CE) as the chief town of the Asfand district of Nishapur.",
       "eponym": {
-        "year": 978,
+        "year": null,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Traditionally attributed to Farhād (Farhād-gerd, 'built/made by Farhad', a pre-867 Iranian name)."
@@ -8120,7 +8120,7 @@
       "first_mention_year": 400,
       "first_mention_attestation": "Attested as Tūs in Sasanian and 5th-century Syriac Christian records (and earlier as Greek Susia in 330 BCE); conquered by Umayyads in the 7th century and site of Caliph Harun al-Rashid's death in 809 CE.",
       "eponym": {
-        "year": 400,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendarily attributed in the Shahnameh tradition to Tūs, son of Nowzar (mythical Iranian hero, pre-867 CE)."
@@ -8338,7 +8338,7 @@
       "first_mention_year": 651,
       "first_mention_attestation": "Attested as Asbarā'īn (Esfarāyen) in al-Baladhuri's Futuh al-Buldan (d. 892 CE) among the districts of Nishapur conquered by 'Abd Allah ibn 'Amir in 30–31 AH (651–652 CE).",
       "eponym": {
-        "year": 651,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Legendarily attributed to the Iranian epic hero Esfandiyār (pre-867 CE), with a folk etymology 'shield bearers' (Siparāyin) noted by Yaqut."

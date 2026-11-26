@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_anatolia",
     "scope": "e_anatolia (all baronies across k_anatolia and k_georgia)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -1862,7 +1862,7 @@
       "first_mention_year": -9,
       "first_mention_attestation": "Renamed Caesarea (Καισάρεια, Kaisareia) in honor of Emperor Augustus by King Archelaus of Cappadocia c. 12–9 BCE (earlier attested as Mazaca / Eusebeia in Strabo).",
       "eponym": {
-        "year": -9,
+        "year": -25,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Roman Emperor Augustus (Caesar Augustus) in the late 1st century BCE."
@@ -2305,7 +2305,7 @@
       "first_mention_year": -150,
       "first_mention_attestation": "Founded as a Hellenistic polis in the 2nd century BCE (c. 150 BCE) around an older Carian sanctuary of Aphrodite.",
       "eponym": {
-        "year": -150,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Named after the Greek goddess Aphrodite, whose cult image was housed in the city."
@@ -2398,7 +2398,7 @@
       "first_mention_year": -150,
       "first_mention_attestation": "Founded in the 2nd century BCE (c. 200–150 BCE) by King Attalus II of Pergamon (r. 159–138 BCE).",
       "eponym": {
-        "year": -138,
+        "year": -159,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after King Attalus II Philadelphus of Pergamon (r. 159–138 BCE)."
@@ -2456,7 +2456,7 @@
         {
           "form": "Phasel-",
           "language": "Pre-Greek Anatolian / Lycian",
-          "language_code": "und",
+          "language_code": "ine",
           "translation": "pre-Greek local toponymic root"
         },
         {
@@ -3314,7 +3314,7 @@
       "first_mention_year": -295,
       "first_mention_attestation": "Founded in the early 3rd century BCE (c. 295 BCE) by Seleucus I Nicator as Seleucia on the Calycadnus (Seleucia ad Calycadnum).",
       "eponym": {
-        "year": -281,
+        "year": -358,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Seleucus I Nicator (c. 358–281 BCE), founder of the Seleucid Empire."
@@ -3500,7 +3500,7 @@
       "first_mention_year": 800,
       "first_mention_attestation": "Founded in the 8th century AD by the Abbasids as the frontier fortress of Tall Hamdūn (تل حمدون, modern Toprakkale, Osmaniye).",
       "eponym": {
-        "year": 800,
+        "year": 750,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after an early Abbasid-era figure Hamdūn (8th century AD, pre-867)."
@@ -3549,7 +3549,7 @@
       "first_mention_year": 799,
       "first_mention_attestation": "Founded in 799 AD (183 AH) under Abbasid Caliph Harun al-Rashid as the frontier fortress of al-Hārūniyya (modern Düziçi).",
       "eponym": {
-        "year": 809,
+        "year": 786,
         "post_867": false,
         "type": "ruler_or_person",
         "details": "Named after Abbasid Caliph Harun al-Rashid (r. 786–809 AD), pre-867."
@@ -4607,7 +4607,7 @@
       "first_mention_year": 1089,
       "first_mention_attestation": "First mentioned in medieval Georgian annals as a military post established by King David IV (r. 1089–1125); its name 'Queen's spring' is traditionally linked to Queen Tamar (r. 1184–1213).",
       "eponym": {
-        "year": 1213,
+        "year": 1184,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named 'Queen's spring' (Dedoplis-tsqaro) after Queen Tamar of Georgia (r. 1184–1213), who resided at nearby Khornabuji and piped water from the spring."
@@ -4814,7 +4814,7 @@
       "first_mention_year": -299,
       "first_mention_attestation": "Capital of the Kingdom of Iberia from the 3rd century BCE to the 5th century CE, extensively recorded in the Georgian Chronicles and Classical sources.",
       "eponym": {
-        "year": -299,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Traditionally attributed in the Georgian Chronicles to the mythical eponymous founder Mtskhetos, son of Kartlos."
@@ -5316,7 +5316,7 @@
       "first_mention_year": -450,
       "first_mention_attestation": "Rock-cut settlement attested along the Kura River from at least the 5th century BCE (archaeologically inhabited from the 2nd millennium BCE; mentioned in Georgian annals from the 1st c. BCE / 7th c. CE).",
       "eponym": {
-        "year": -450,
+        "year": null,
         "post_867": false,
         "type": "deity_or_myth",
         "details": "Georgian written tradition attributes its foundation to the mythical Uplos, son of Mtskhetos."

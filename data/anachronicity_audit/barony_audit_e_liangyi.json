@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_liangyi",
     "scope": "e_liangyi (261 baronies across k_dali, k_dongchuan, k_kuizhou, k_qianzhong, k_xichuan, k_xingyuan)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -43,7 +43,7 @@
       "named_after_any_natural_proper_name": 54,
       "has_historical_names_total": 92,
       "has_historical_names_for_post_867": 30,
-      "vanilla_ck3_name_differs_from_modern_name": 38,
+      "vanilla_ck3_name_differs_from_modern_name": 36,
       "wikipedia_source_attached": 157,
       "anachronism_type_counts": {
         "attested_pre_867": 218,
@@ -2030,7 +2030,7 @@
         {
           "form": "步日 (Bùrì)",
           "language": "Wa / Austroasiatic (transliterated into Chinese)",
-          "language_code": "sit",
+          "language_code": "aav",
           "translation": "exonym for the Bulang ('my brother', Wa Paaex)"
         }
       ],
@@ -5088,8 +5088,8 @@
     "b_ningyi": {
       "barony_key": "b_ningyi",
       "vanilla_ck3_name": "Chengle",
-      "modern_name": "Chengle / Ningyi",
-      "modern_name_note": "Yanhe / Dejiang area, Guizhou",
+      "modern_name": "Chengle",
+      "modern_name_note": "Ningyi; Yanhe / Dejiang area, Guizhou",
       "hierarchy": {
         "empire": "e_liangyi",
         "kingdom": "k_kuizhou",
@@ -6096,8 +6096,8 @@
     "b_baoshun": {
       "barony_key": "b_baoshun",
       "vanilla_ck3_name": "Baoshun",
-      "modern_name": "Baoshun / Baojing",
-      "modern_name_note": "Baojing County, Hunan",
+      "modern_name": "Baoshun",
+      "modern_name_note": "Baojing; Baojing County, Hunan",
       "hierarchy": {
         "empire": "e_liangyi",
         "kingdom": "k_kuizhou",

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_siberia",
     "scope": "e_siberia (139 baronies across k_ob, k_sibir, k_yugra)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -2327,7 +2327,7 @@
       "first_mention_year": 1691,
       "first_mention_attestation": "First mentioned in 1691 (and marked as Vikulova sloboda on Semyon Remezov's 1698 map) on the Ishim River in Tyumen Oblast.",
       "eponym": {
-        "year": 1691,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a post-867 Russian settler bearing the personal name Vikul (Vikula) with the possessive suffix -ovo."
@@ -3176,7 +3176,7 @@
       "first_mention_year": 1861,
       "first_mention_attestation": "Founded in 1720 as the Koryakovsky outpost on the Irtysh River and renamed Pavlodar in 1861.",
       "eponym": {
-        "year": 1861,
+        "year": 1860,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Pavlodar ('Gift of Paul') in 1861 in honor of Grand Duke Paul Alexandrovich of Russia (1860–1919)."
@@ -4258,7 +4258,7 @@
       "first_mention_year": 1730,
       "first_mention_attestation": "Founded in 1730 CE (also cited as 1736 CE in local records) as a Russian settler village in Znamensky District, Omsk Oblast.",
       "eponym": {
-        "year": 1730,
+        "year": 1750,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after an 18th-century Russian settler/founder with the surname Zavyalov."
@@ -4345,7 +4345,7 @@
       "first_mention_year": 1719,
       "first_mention_attestation": "Founded around 1719 CE as a Russian village on the Irtysh route between Tara and Omsk (modern Muromtsevsky District, Omsk Oblast).",
       "eponym": {
-        "year": 1719,
+        "year": 1725,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after an early 18th-century Russian settler/founder with the surname or nickname Kartash / Kartashev."
@@ -5167,7 +5167,7 @@
       "first_mention_year": 1680,
       "first_mention_attestation": "Founded in 1680 CE in Verkhotursky District, Sverdlovsk Oblast.",
       "eponym": {
-        "year": 1680,
+        "year": 1650,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the 17th-century Russian Cossack/settler Fyodor Deryaba."
@@ -5594,7 +5594,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No written attestation <= 867 CE; late 16th-century Vogul (Mansi) settlement mentioned in N. M. Karamzin's History of the Russian State.",
       "eponym": {
-        "year": null,
+        "year": 1575,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Koshuk Araslanov, a late 16th-century Bashkir/Tatar leader of the local Vogul (Mansi) yurts."

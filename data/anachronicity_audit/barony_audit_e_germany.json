@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_germany",
     "scope": "e_germany (1326 baronies across k_andalusia, k_badajoz, k_bavaria, k_burgundy, k_castille, k_east_francia, k_england, k_frisia, k_hungary, k_italy, k_leon, k_lotharingia, k_navarra, k_pomerania, k_romagna, k_sardinia, k_sorbia, k_spanish_galicia, k_valencia, x_script_3965, x_script_4328)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -6988,7 +6988,7 @@
       "first_mention_year": 1365,
       "first_mention_attestation": "First attested on 7 April 1365 CE as Růdolfswerde, when Habsburg Duke Rudolf IV of Austria founded the town and granted it municipal rights.",
       "eponym": {
-        "year": 1365,
+        "year": 1339,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Rudolfswerde (later Rudolfswerth) after Rudolf IV, Duke of Austria (1339–1365), who founded and chartered the town on 7 April 1365."
@@ -8446,7 +8446,7 @@
       "first_mention_year": 1786,
       "first_mention_attestation": "Founded in 1786 CE when Floridus Leeb, Provost of Klosterneuburg Abbey, granted land east of Am Spitz to settlers and the new settlement was named Floridsdorf in his honor.",
       "eponym": {
-        "year": 1786,
+        "year": 1731,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Floridus Leeb (1731–1799), Provost of Klosterneuburg Abbey, who granted land to settlers in 1786."
@@ -14721,7 +14721,7 @@
       "first_mention_year": 1952,
       "first_mention_attestation": "Originally attested as San Leonardo in a 1173 CE privilege of Alfonso VIII, the village was renamed San Leonardo de Yagüe in 1952 CE following the death of Francoist general Juan Yagüe.",
       "eponym": {
-        "year": 1952,
+        "year": 1891,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named in part after Spanish general Juan Yagüe (1891–1952), whose surname was appended to San Leonardo in the mid-20th century; the base name honors the 6th-century Frankish saint Leonard of Noblac."
@@ -17679,7 +17679,7 @@
       "first_mention_year": 902,
       "first_mention_attestation": "First attested in 902 CE as Babenburg Castle in connection with the Babenberg Feud between the Popponids and Conradines.",
       "eponym": {
-        "year": 906,
+        "year": 880,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Likely named Babenburg after Poppo II, Margrave of Thuringia (fl. c. 880–906 CE), whose name was also rendered as Babo."
@@ -22384,7 +22384,7 @@
       "first_mention_year": 1322,
       "first_mention_attestation": "The settlement is first documented around 830 CE as Carolingian 'villa Luthra' in the Lorsch Reichsurbar, whereas the prefix 'Kaisers-' honors Emperor Frederick I Barbarossa (r. 1152–1190) and is first attested as 'Keyserslûtern' in 1322 CE.",
       "eponym": {
-        "year": 1190,
+        "year": 1152,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "The 'Kaisers-' prefix ('Emperor's') honors Holy Roman Emperor Frederick I Barbarossa (r. 1152–1190), who built an imperial palace (Kaiserpfalz) at Lautern."
@@ -24221,7 +24221,7 @@
       "first_mention_year": 1187,
       "first_mention_attestation": "Burg Wittgenstein (Schloss Wittgenstein) above Bad Laasphe is first mentioned in 1187 CE as 'Widegensteyne'; no written attestation exists <= 867 CE.",
       "eponym": {
-        "year": 1187,
+        "year": 1175,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Count Widekind I of Battenberg and Wittgenstein (fl. late 12th century, post-867 CE)."
@@ -26406,7 +26406,7 @@
       "first_mention_year": 1150,
       "first_mention_attestation": "First attested in Welsh as Aper Tyui (c. 1150 CE) and on coins from the 1140s / in Gerald of Wales (1188 CE) as Sweynsei.",
       "eponym": {
-        "year": 1150,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after an Old Norse personal name Sveinn (anglicized Sweyn), a Viking leader or settler (post-867 Viking activity on the Gower coast)."
@@ -28277,7 +28277,7 @@
       "first_mention_year": 1086,
       "first_mention_attestation": "First attested in the Domesday Book of 1086 CE as Medeltone, with the manorial affix Mowbray added in the 12th century.",
       "eponym": {
-        "year": 1086,
+        "year": 1075,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "The affix 'Mowbray' derives from the Anglo-Norman de Mowbray family (such as Robert de Mowbray, fl. late 11th century), who became lords of the manor after the Norman Conquest of 1066."
@@ -28905,7 +28905,7 @@
       "first_mention_year": 985,
       "first_mention_attestation": "First attested in a charter of King Æthelred II in 985 CE granting ten hides at Heantune to Lady Wulfrun (later Wulfrūnehēantūn from 1070 CE).",
       "eponym": {
-        "year": 994,
+        "year": 943,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Wulfrun (fl. 943–994 CE), an Anglo-Saxon noblewoman who received the estate of Heantune in 985 CE and endowed its collegiate church in 994 CE."
@@ -29927,7 +29927,7 @@
       "first_mention_year": 1086,
       "first_mention_attestation": "First recorded in the Domesday Book of 1086 CE as Papeworde; no written attestation exists on or before 867 CE.",
       "eponym": {
-        "year": 1086,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "The affix 'Everard' commemorates Everard de Beche, a Norman knight who was granted the manor of Papworth after the 1066 Norman Conquest."
@@ -32210,7 +32210,7 @@
       "first_mention_year": 966,
       "first_mention_attestation": "According to Icelandic saga tradition (Kormáks saga), founded c. 966 CE as Skarðaborg by the Viking raider Thorgils Skarthi; a 4th-century Roman signal station previously stood on the headland.",
       "eponym": {
-        "year": 966,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Thorgils Skarthi (10th-century Viking raider nicknamed Skarthi, 'hare-lip')"
@@ -34775,7 +34775,7 @@
       "first_mention_year": 1220,
       "first_mention_attestation": "First attested in written charters in 1220 CE under the form 'Bekues'.",
       "eponym": {
-        "year": 1220,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Possibly named after its first medieval castle steward (ispán), Békés, in the 11th century."
@@ -34868,7 +34868,7 @@
       "first_mention_year": 1466,
       "first_mention_attestation": "First mentioned in written records in 1466 CE as 'Orosháza', before being destroyed during the Ottoman wars and resettled in 1744 CE.",
       "eponym": {
-        "year": 1466,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after a medieval Hungarian landowner named Oros (a diminutive personal name derived from 'úr', meaning 'lord')."
@@ -35175,7 +35175,7 @@
       "first_mention_year": 1067,
       "first_mention_attestation": "The area first appears in written documents around 1067 CE, and in 1092 CE King Ladislaus I convened a famous synod at the fortress ('in civitate Zabolch').",
       "eponym": {
-        "year": 1067,
+        "year": 950,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after Szabolcs, a 10th-century Hungarian tribal chieftain recorded in the Gesta Hungarorum as the builder of the earthen fortress by the Tisza River."
@@ -35361,7 +35361,7 @@
       "first_mention_year": 1200,
       "first_mention_attestation": "First mentioned in the Gesta Hungarorum (c. 1200 CE) as 'castrum Zotmar', referring to a 10th-century fortified settlement; Szatmár and Németi were united in 1715 CE.",
       "eponym": {
-        "year": 1200,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "The historical Hungarian name Szatmár derives from 'castrum Zotmar' ('Zotmar's fort'), named after a 10th-century knight or chieftain Zotmar."
@@ -35580,7 +35580,7 @@
       "first_mention_year": 1264,
       "first_mention_attestation": "Existed as an estate center by 1264 CE and is recorded in medieval charters as 'Karul' in 1320 CE and 'Karol' in 1385 CE.",
       "eponym": {
-        "year": 1264,
+        "year": null,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after the Károlyi noble family (branch of the Kaplon clan), whose ancestral estate center was Károly (Nagykároly)."
@@ -35865,7 +35865,7 @@
       "first_mention_year": 1153,
       "first_mention_attestation": "Mentioned as an important city in 1153 CE, having developed as Sopronvár in the 11th century on the ruins of the Roman city Scarbantia.",
       "eponym": {
-        "year": 1153,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named in Hungarian after an 11th-century castle steward (ispán) named Suprun."
@@ -36089,7 +36089,7 @@
       "first_mention_year": 1183,
       "first_mention_attestation": "Founded in 1183 CE when King Béla III of Hungary established a Cistercian abbey at the confluence of the Rába and Lapincs rivers in honor of Saint Gotthard.",
       "eponym": {
-        "year": 1038,
+        "year": 960,
         "post_867": true,
         "type": "saint_or_religious",
         "details": "Named after Saint Gotthard of Hildesheim (960–1038 CE, canonized 1131 CE), to whom the Cistercian abbey founded in 1183 CE was dedicated."
@@ -36269,7 +36269,7 @@
       "first_mention_year": 1150,
       "first_mention_attestation": "Baranyavár is attested in 12th–13th century chronicles and charters (c. 1150 CE in the Gesta Hungarorum as 'castrum Borona' and 1232–1235 CE as 'Baranawar').",
       "eponym": {
-        "year": 1150,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Likely named after its first 11th-century Hungarian castle steward (ispán), Brangna/Baranya, or derived from Slavic 'bara' (marsh)."
@@ -36928,7 +36928,7 @@
       "first_mention_year": 1078,
       "first_mention_attestation": "First officially mentioned as the town of Orod between 1078 and 1081 CE (with the surrounding area first noted in 1028 CE).",
       "eponym": {
-        "year": 1078,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after its first medieval ispán (count), Arad (11th century CE)."
@@ -37262,7 +37262,7 @@
       "first_mention_year": 1091,
       "first_mention_attestation": "First mentioned during the Kingdom of Hungary in 1091 CE under the Latinized name Bechey, and later in 1238 CE as Becse.",
       "eponym": {
-        "year": 1091,
+        "year": null,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after the medieval Bechey (Becse) noble family/clan that held possessions in the area."
@@ -37991,7 +37991,7 @@
       "first_mention_year": 1046,
       "first_mention_attestation": "The first known written record pertaining to Abaújvár dates to 1046 CE (as Novum Castrum / Újvár, built by King Samuel Aba).",
       "eponym": {
-        "year": 1044,
+        "year": 1041,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the Aba kindred (genus Aba) and King Samuel Aba (r. 1041–1044 CE), who built the stone castle (Újvár, 'New Castle') here."
@@ -38128,7 +38128,7 @@
       "first_mention_year": 1108,
       "first_mention_attestation": "The medieval village and castle of Borsod (later incorporated into Edelény) are first attested in written records in 1108 CE.",
       "eponym": {
-        "year": 1108,
+        "year": 950,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Bors, an early medieval Hungarian magnate (10th–11th century CE) who held the castle."
@@ -38177,7 +38177,7 @@
       "first_mention_year": 1200,
       "first_mention_attestation": "First attested around 1200 CE as 'que nunc vocatur Miscoucy' (and in 1225 CE as de Myschouch).",
       "eponym": {
-        "year": 1200,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Associated with the medieval Miskolc kindred (de genere Myscouch), derived from the Slavic personal name Miško (a diminutive of Michael)."
@@ -38226,7 +38226,7 @@
       "first_mention_year": 1317,
       "first_mention_attestation": "First mentioned in written records in 1317 CE.",
       "eponym": {
-        "year": 1317,
+        "year": null,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after its medieval Hungarian owner, Szend (post-867 CE)."
@@ -38808,7 +38808,7 @@
       "first_mention_year": 1135,
       "first_mention_attestation": "First mentioned in historical records in 1135 CE written as Byn.",
       "eponym": {
-        "year": 1135,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Bény, son of Hont (11th century CE), to whom King Stephen I granted the estate."
@@ -38939,7 +38939,7 @@
       "first_mention_year": 1075,
       "first_mention_attestation": "First officially recorded in 1075 CE under the name Zounok in a royal charter of the Kingdom of Hungary.",
       "eponym": {
-        "year": 1075,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Szolnok (Zounok), an 11th-century Hungarian nobleman who served as the first ispán (royal count) of Szolnok County."
@@ -39234,7 +39234,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "No written attestation <= 867 CE for Csákvár; the medieval settlement is first documented in 13th-century Hungarian royal charters as an ancestral estate of the Csák kindred.",
       "eponym": {
-        "year": null,
+        "year": 950,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after the Csák kindred (gens Csák), whose eponymous 10th–11th century ancestor held the estate and castle."
@@ -43339,7 +43339,7 @@
       "first_mention_year": 1387,
       "first_mention_attestation": "The Esla bluff settlement is attested in late antiquity as Castrum Coviacense (later Coyanza) in 457 CE, before being renamed Valencia de Campos in the 13th century and Valencia de Don Juan in 1387 CE after Infante John of Portugal.",
       "eponym": {
-        "year": 1387,
+        "year": 1349,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "The modern modifier 'de Don Juan' honors Infante John of Portugal (1349–1397), who was created Duke of Valencia de Campos in 1387 CE."
@@ -43507,7 +43507,7 @@
       "first_mention_year": 1161,
       "first_mention_attestation": "Ciudad Rodrigo was repopulated and fortified in 1161 CE under King Ferdinand II of León, taking its name from Count Rodrigo González Girón who had earlier rebuilt the settlement.",
       "eponym": {
-        "year": 1161,
+        "year": 1150,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Count Rodrigo González Girón (fl. 12th century), who led the 12th-century repopulation of the town."
@@ -47646,7 +47646,7 @@
       "first_mention_year": 1044,
       "first_mention_attestation": "Founded in the 11th century as Racisburg, first attested in historical records around 1044 CE when Christian missionaries led by Ansverus established a monastery there.",
       "eponym": {
-        "year": 1044,
+        "year": 1050,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after the 11th-century Polabian Slavic prince Ratibor (nicknamed Ratse), ruler of the Polabians."
@@ -48278,7 +48278,7 @@
       "first_mention_year": 1699,
       "first_mention_attestation": "Originally attested in 1265 CE as Rosenfelde, the village and estate were renamed Friedrichsfelde in 1699 CE after Frederick III, Elector of Brandenburg.",
       "eponym": {
-        "year": 1699,
+        "year": 1657,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Renamed Friedrichsfelde in 1699 after Frederick III, Elector of Brandenburg (1657–1713, later King Frederick I in Prussia)."
@@ -48553,7 +48553,7 @@
       "first_mention_year": 1754,
       "first_mention_attestation": "Originally attested in 1333 CE as Klenow, the ducal residence was renamed Ludwigslust ('Ludwig's pleasure') in 1754 CE after Duke Christian Ludwig II of Mecklenburg-Schwerin.",
       "eponym": {
-        "year": 1754,
+        "year": 1683,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Ludwigslust ('Ludwig's pleasure') in 1754 after Duke Christian Ludwig II of Mecklenburg-Schwerin (1683–1756), who built a hunting lodge on the site of Klenow in 1724."
@@ -49162,7 +49162,7 @@
       "first_mention_year": 1635,
       "first_mention_attestation": "First officially recorded in 1635 as the fort Władysławowo on the Hel Peninsula (designed in 1634 by Fryderyk Getkant), while the modern fishing port was built in 1936–1938 on the site of Wielka Wieś (Großendorf); no written attestation <= 867 CE.",
       "eponym": {
-        "year": 1635,
+        "year": 1595,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after King Władysław IV Vasa of Poland (1595–1648), who initiated the construction of the Polish Navy and commissioned the nearby fort Władysławowo in 1634–1635."
@@ -56618,7 +56618,7 @@
       "first_mention_year": 1012,
       "first_mention_attestation": "First documented under its current name in the early 11th century (1012 CE) with the establishment of the Taifa of Albarracín by the Berber Banu Razin dynasty ('Ibn Razin' / 'Aben Razin'); no written attestation of the name Albarracín exists <= 867 CE.",
       "eponym": {
-        "year": 1104,
+        "year": 1012,
         "post_867": true,
         "type": "dynasty_or_tribe",
         "details": "Named after the Berber Banu Razin ('Ibn Razin') family, who ruled the Taifa of Albarracín from 1012 to 1104 CE."

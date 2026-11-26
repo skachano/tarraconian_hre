@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_carpathia",
     "scope": "e_carpathia (112 baronies across k_dacia, k_moldavia)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -1471,7 +1471,7 @@
       "first_mention_year": 1265,
       "first_mention_attestation": "First recorded in 1265 as Hungnod (and 1278 as Huniad; 1409 Hwnyadwar; 1575 Vayda Hunyadi).",
       "eponym": {
-        "year": 1409,
+        "year": 1406,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Hungarian 'Vajdahunyad' ('Voivode Hunyad', attested 1575) refers directly to John Hunyadi (c. 1406–1456), Voivode of Transylvania and Regent of Hungary, whose family was granted Hunyad Castle in 1409."
@@ -3159,7 +3159,7 @@
       "first_mention_year": 1392,
       "first_mention_attestation": "1392 CE (30 March 1392), Moldavian charter issued by Voivode Roman I Mușat ('in our fortress of Roman').",
       "eponym": {
-        "year": 1394,
+        "year": 1391,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Roman I Mușat, Voivode of Moldavia (r. 1391–1394 CE), who founded and fortified the town."

@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_zhongyuan",
     "scope": "e_zhongyuan (all 283 baronies across k_daibei, k_hebei, k_hedong, k_henan, k_qingxu, k_youji)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,

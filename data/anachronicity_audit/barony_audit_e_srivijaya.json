@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_srivijaya",
     "scope": "e_srivijaya (226 baronies across k_hujung_medini, k_malayadvipa, k_tanjungnagara, k_yavakadvipa)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -4487,7 +4487,7 @@
         {
           "form": "Marakele",
           "language": "Great Andamanese",
-          "language_code": "sit",
+          "language_code": "und",
           "translation": "our homeland / the Andaman archipelago"
         }
       ],
@@ -4536,7 +4536,7 @@
         {
           "form": "Önge",
           "language": "Onge (Ongan)",
-          "language_code": "sit",
+          "language_code": "und",
           "translation": "man, person, human being"
         }
       ],
@@ -5025,7 +5025,7 @@
         {
           "form": "Mūöt",
           "language": "Nancowry (Central Nicobarese)",
-          "language_code": "sit",
+          "language_code": "aav",
           "translation": "indigenous island and language endonym"
         }
       ],
@@ -6949,7 +6949,7 @@
       "first_mention_year": null,
       "first_mention_attestation": "Known from Sarikei oral history as a settlement existing roughly 300 years ago (c. 17th–18th century CE); no pre-867 CE attestation.",
       "eponym": {
-        "year": null,
+        "year": 1650,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Sigalang, a revered local headman of the early settlement between the Sarikei and Nyelong rivers (c. 17th–18th century CE)."

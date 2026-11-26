@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_deccan",
     "scope": "e_deccan (231 baronies across k_andhra, k_karnata, k_lanka, k_maharastra, k_tamilakam, k_telingana)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
@@ -615,7 +615,7 @@
       "first_mention_year": 919,
       "first_mention_attestation": "Founded by Eastern Chalukya king Ammaraja I (r. 919–934 CE), and later prominent under Rajaraja Narendra (r. 1022–1061 CE).",
       "eponym": {
-        "year": 934,
+        "year": 919,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Rajamahendrapuram / Rajamahendravaram after the 10th–11th century Eastern Chalukya rulers (Ammaraja I, r. 919–934 CE, titled Rajamahendra, and Rajaraja Narendra, r. 1022–1061 CE)."
@@ -796,7 +796,7 @@
       "first_mention_year": 1325,
       "first_mention_attestation": "Vilasa Copper Plate grant of Musunuri Prolaya Nayaka (1325 CE), recording that the donee Vennaya renamed the village Vilasa to Prolavaram after King Prola.",
       "eponym": {
-        "year": 1333,
+        "year": 1325,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named Prolavaram (modern Polavaram) after Musunuri Prolaya Nayaka (r. c. 1325–1333 CE), who granted the village of Vilasa in 1325 CE."
@@ -7380,7 +7380,7 @@
       "first_mention_year": 1025,
       "first_mention_attestation": "Founded c. 1025 CE by Chola Emperor Rajendra Chola I to commemorate his northern Indian campaign to the Ganges, serving as the imperial Chola capital for roughly 250 years.",
       "eponym": {
-        "year": 1044,
+        "year": 1014,
         "post_867": true,
         "type": "ruler_or_person",
         "details": "Named after Chola Emperor Rajendra Chola I (r. 1014–1044 CE), who assumed the title 'Gangaikonda Chola' ('the Chola who conquered the Ganges') after his northern expedition and founded the city c. 1025 CE."

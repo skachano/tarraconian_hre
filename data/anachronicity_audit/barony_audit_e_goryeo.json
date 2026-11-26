@@ -2,7 +2,7 @@
   "metadata": {
     "empire": "e_goryeo",
     "scope": "e_goryeo (all 150 baronies across k_baekje, k_goguryeo, k_silla)",
-    "schema_version": "2.0.0",
+    "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
       1066,
