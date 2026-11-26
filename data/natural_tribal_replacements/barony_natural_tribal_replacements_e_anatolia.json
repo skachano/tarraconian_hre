@@ -1,0 +1,2909 @@
+{
+  "metadata": {
+    "empire": "e_anatolia",
+    "scope": "e_anatolia (20 non-867 baronies across k_anatolia and k_georgia; excludes baronies where is_historical_at['867'] is true)",
+    "schema_version": "2.0.0",
+    "source_audit_schema_version": "2.0.1",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
+    "source_files": [
+      "data/anachronicity_audit/barony_audit_e_anatolia.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
+    "schema_notes": {
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding.",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier; null if none.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "anachronism_type": "Historicity category from barony_audit_e_anatolia.json.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}; all entries here have '867': false.",
+      "existing_natural_proper_name": "Existing natural_proper_name object from barony_audit_e_anatolia.json.",
+      "replacement_candidates": "List of exactly 3 associated natural feature names and historical tribal/ethnonym names (>=1 tribe per barony) usable as localisation replacements.",
+      "category_subtype_taxonomy": {
+        "choronym": [
+          "region"
+        ],
+        "hydronym": [
+          "bay",
+          "estuary",
+          "lake",
+          "river",
+          "sea",
+          "strait",
+          "stream"
+        ],
+        "oronym": [
+          "hill",
+          "mountain",
+          "mountain_range",
+          "plateau"
+        ],
+        "topographic_feature": [
+          "coastal_feature",
+          "forest",
+          "marsh",
+          "valley"
+        ],
+        "tribe": [
+          "ainuic_people",
+          "anatolian_tribe",
+          "aquitani_tribe",
+          "arab_tribe",
+          "atlantic_people",
+          "austroasiatic_people",
+          "austronesian_people",
+          "baltic_tribe",
+          "bantu_tribe",
+          "belgae_tribe",
+          "berber_tribe",
+          "bhil_people",
+          "brittonic_tribe",
+          "caucasian_tribe",
+          "celtiberian_tribe",
+          "celtic_tribe",
+          "chadic_people",
+          "cushitic_tribe",
+          "dacian_tribe",
+          "dravidian_people",
+          "egyptian_people",
+          "ethio_semitic_people",
+          "finnic_tribe",
+          "gaelic_tribe",
+          "gaulish_tribe",
+          "germanic_tribe",
+          "gur_people",
+          "hellenic_tribe",
+          "hmong_mien_people",
+          "iberian_tribe",
+          "illyrian_tribe",
+          "indo_aryan_people",
+          "iranian_tribe",
+          "italic_tribe",
+          "japonic_people",
+          "koreanic_people",
+          "kra_dai_people",
+          "kwa_people",
+          "lusitanian_tribe",
+          "mande_people",
+          "medieval_people",
+          "mongolic_tribe",
+          "munda_people",
+          "niger_congo_people",
+          "nilo_saharan_people",
+          "nilotic_tribe",
+          "nivkh_people",
+          "nubian_people",
+          "omotic_people",
+          "paleo_sardinian_tribe",
+          "papuan_people",
+          "pictish_tribe",
+          "rhaetic_tribe",
+          "saharan_people",
+          "sami_people",
+          "sarmatian_tribe",
+          "semitic_tribe",
+          "sinitic_people",
+          "slavic_tribe",
+          "songhai_people",
+          "south_arabian_tribe",
+          "thracian_tribe",
+          "tibeto_burman_people",
+          "tungusic_tribe",
+          "turkic_tribe",
+          "uralic_tribe",
+          "vasconic_tribe",
+          "volta_niger_people",
+          "yeniseian_tribe"
+        ]
+      },
+      "name": "Clean display name of the replacement candidate (Wikipedia disambiguation suffixes extracted to disambiguation_note).",
+      "disambiguation_note": "Optional disambiguator extracted from parenthetical/comma qualifiers (e.g. 'Liao', 'Orkney', 'river'); null if none.",
+      "localisation_stem": "Clean CK3-ready toponym stem stripped of redundant generic English feature suffixes/prefixes ('River', 'Mount', 'Lake', 'people', etc.) while preserving meaningful compounds.",
+      "attestation_basis": "Historicity classification distinguishing genuinely pre-867/pre-literate entities from medieval post-867 ethnogeneses: attested_pre_867 | indigenous_pre_literate | attested_867_to_1066 | attested_1066_to_1178.",
+      "valid_for_bookmarks": "Bookmark-keyed booleans {'867', '1066', '1178'} indicating whether the replacement candidate is historically non-anachronistic for that bookmark (true for both attested_pre_867 and indigenous_pre_literate; bookmark-gated for attested_867_to_1066 and attested_1066_to_1178).",
+      "candidates_with_multilingual_variants": "Count of replacement candidates having more than 1 distinct language_code (ISO 639-3 / ISO 639-5 or documented proto-stage code) across language_variants.",
+      "language_variants_policy": "Include core local/classical forms plus regionally scoped vernaculars and genuinely distinct exonyms; exclude out-of-region exonym padding and redundant eng copies (eng is retained only when no non-English variant exists). Uses ISO 639-3 / ISO 639-5 language_code values plus documented Wiktionary proto/stage codes (sla-pro, gem-pro, cel-pro, cel-bry, urj-fin-pro); reconstructed proto/ancient forms carry a leading '*'.",
+      "language_variants": "List of cultural/historical name forms: {form, native_script, language, language_code, notes}. form is always clean Latin script (or romanization) suitable for CK3 localisation; native_script holds the native non-Latin script form or null when the language natively uses Latin script.",
+      "relationship": "Prose description of the geographical, ecological, or historical relationship between the replacement entity and the audited barony.",
+      "etymology_notes": "Linguistic etymology, onomastic origin, or geographic/ethnographic characterization of the replacement entity (incorporating attested onomastic notes from language variants where documented)."
+    },
+    "summary_statistics": {
+      "total_baronies_in_source_audit": 125,
+      "skipped_historical_867": 105,
+      "target_baronies_audited": 20,
+      "candidates_per_barony": 3,
+      "total_replacement_candidates": 60,
+      "unique_replacement_names": 60,
+      "candidates_with_multilingual_variants": 49,
+      "wikipedia_source_attached": 60,
+      "unique_source_urls": 60,
+      "candidates_by_category": {
+        "choronym": 2,
+        "hydronym": 20,
+        "oronym": 18,
+        "topographic_feature": 0,
+        "tribe": 20
+      },
+      "baronies_with_category": {
+        "has_choronym_candidate": 2,
+        "has_hydronym_candidate": 18,
+        "has_oronym_candidate": 16,
+        "has_topographic_feature_candidate": 0,
+        "has_tribe_candidate": 20
+      },
+      "unique_language_codes": [
+        "abk",
+        "aze",
+        "ell",
+        "grc",
+        "hit",
+        "hye",
+        "kat",
+        "lat",
+        "oss",
+        "sva",
+        "tur",
+        "xhu",
+        "xmf"
+      ],
+      "anachronism_type_counts": {
+        "early_modern_foundation": 2,
+        "high_late_medieval_attestation": 7,
+        "post_867_eponym": 1,
+        "renamed_post_867": 4,
+        "unattested_indigenous_or_minor": 6
+      },
+      "candidates_by_attestation_basis": {
+        "attested_pre_867": 37,
+        "indigenous_pre_literate": 23
+      },
+      "bookmark_valid_candidates": {
+        "867": 60,
+        "1066": 60,
+        "1178": 60
+      },
+      "baronies_with_867_valid_candidate": 20,
+      "unique_localisation_stems": 60
+    }
+  },
+  "baronies": {
+    "b_laranalia": {
+      "barony_key": "b_laranalia",
+      "vanilla_ck3_name": "Laranalia",
+      "modern_name": "Laranalia",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_anatolia",
+        "duchy": "d_anatolia",
+        "county": "c_isauria",
+        "holding_type": "city"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Luwians",
+          "disambiguation_note": null,
+          "localisation_stem": "Luwians",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Bronze Age Anatolian inhabitants of southern Anatolia including Rough Cilicia and Isauria.",
+          "language_variants": [
+            {
+              "form": "Luwili",
+              "native_script": null,
+              "language": "Hittite",
+              "language_code": "hit",
+              "notes": "Hittite adverbial designation for Luwian-speaking lands"
+            },
+            {
+              "form": "Loúbioi",
+              "native_script": "Λούβιοι",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern scholarly Greek rendering"
+            },
+            {
+              "form": "Luviler",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish historical ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -1600,
+          "earliest_attestation_note": "c. 1600 BCE (Hittite Old Kingdom texts from Hattusa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Indo-European Anatolian ethnonym attested in Hittite cuneiform as Luwili / Luwiya.",
+          "source_url": "https://en.wikipedia.org/wiki/Luwians"
+        },
+        {
+          "name": "Göksu",
+          "disambiguation_note": null,
+          "localisation_stem": "Göksu",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river flowing through Isauria and Rough Cilicia to the Mediterranean.",
+          "language_variants": [
+            {
+              "form": "Göksu Nehri",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name ('Sky-blue Water')"
+            },
+            {
+              "form": "Kalýkadnos",
+              "native_script": "Καλύκαδνος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Kalykadnos)"
+            },
+            {
+              "form": "Calycadnus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Roman-era Latin name"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "c. 400 BCE (classical Greek geographical sources as Kalykadnos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Turkish Göksu ('sky-blue water'); classical Kalykadnos of uncertain Anatolian origin.",
+          "source_url": "https://en.wikipedia.org/wiki/G%C3%B6ksu"
+        },
+        {
+          "name": "Taurus Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taurus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range dominating Isauria.",
+          "language_variants": [
+            {
+              "form": "Toros Dağları",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Tauros",
+              "native_script": "Ταυρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Tauros)"
+            },
+            {
+              "form": "Taurus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "Attested in Classical Greek geography (Xenophon, Strabo) from the 4th–1st century BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Ancient Greek Tauros ('bull'), possibly from Semitic or Anatolian root for mountain.",
+          "source_url": "https://en.wikipedia.org/wiki/Taurus_Mountains"
+        }
+      ]
+    },
+    "b_salda": {
+      "barony_key": "b_salda",
+      "vanilla_ck3_name": "Salda",
+      "modern_name": "Salda",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_anatolia",
+        "duchy": "d_anatolia",
+        "county": "c_pisidia",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Lake Salda (Salda Gölü)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Solymoi",
+          "disambiguation_note": null,
+          "localisation_stem": "Solymoi",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient indigenous people of southwestern Anatolia in the Pisidia-Lycia borderlands.",
+          "language_variants": [
+            {
+              "form": "Sólymoi",
+              "native_script": "Σόλυμοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym"
+            },
+            {
+              "form": "Solymi",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            },
+            {
+              "form": "Solymoslular",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Turkish historical rendering"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 6.184)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-Greek Anatolian ethnonym recorded by Homer and Strabo in the mountains of Pisidia and Lycia.",
+          "source_url": "https://en.wikipedia.org/wiki/Solymoi"
+        },
+        {
+          "name": "Lake Burdur",
+          "disambiguation_note": null,
+          "localisation_stem": "Burdur",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large tectonic saline lake in Pisidia near the Yeşilova basin.",
+          "language_variants": [
+            {
+              "form": "Burdur Gölü",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Askanía límnē",
+              "native_script": "Ἀσκανία λίμνη",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Ascania Limne)"
+            },
+            {
+              "form": "Ascania",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Roman-era Latin name"
+            }
+          ],
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Strabo, Geography, as Lake Ascania)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Turkish Burdur Gölü; identified with classical Lake Ascania in Pisidia.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Burdur"
+        },
+        {
+          "name": "Paroreios Phrygia",
+          "disambiguation_note": null,
+          "localisation_stem": "Paroreios Phrygia",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Classical Greek and Roman name for the mountain-lined Pisidian-Phrygian borderland along the Sultan Dağları.",
+          "language_variants": [
+            {
+              "form": "Parṓreios Phrygía",
+              "native_script": "Παρώρειος Φρυγία",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Strabo's Greek name ('Phrygia by the Mountains')"
+            },
+            {
+              "form": "Phrygia Paroreios",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -20,
+          "earliest_attestation_note": "Attested in Strabo (Geographica, c. 20 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Greek Parṓreios ('beside the mountain range'), predating Seljuk Sultan Dağları.",
+          "source_url": "https://en.wikipedia.org/wiki/Sultan_Mountains"
+        }
+      ]
+    },
+    "b_lykandos": {
+      "barony_key": "b_lykandos",
+      "vanilla_ck3_name": "Lykandos",
+      "modern_name": "Lykandos",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_anatolia",
+        "duchy": "d_cilicia",
+        "county": "c_lycandus",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Hittites",
+          "disambiguation_note": null,
+          "localisation_stem": "Hittites",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Bronze Age Anatolian people who ruled central and eastern Anatolia including Cataonia.",
+          "language_variants": [
+            {
+              "form": "Nešili",
+              "native_script": null,
+              "language": "Hittite",
+              "language_code": "hit",
+              "notes": "Endonym for the Hittite language ('of Neša')"
+            },
+            {
+              "form": "Chettaîoi",
+              "native_script": "Χετταῖοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Septuagint Greek rendering"
+            },
+            {
+              "form": "Hititler",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -1650,
+          "earliest_attestation_note": "c. 1650 BCE (Hittite Old Kingdom royal annals from Hattusa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Bronze Age land of Hatti in central Anatolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Hittites"
+        },
+        {
+          "name": "Ceyhan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Ceyhan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river rising in the Elbistan-Lykandos basin and flowing to the Mediterranean.",
+          "language_variants": [
+            {
+              "form": "Ceyhan Nehri",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Pýramos",
+              "native_script": "Πύραμος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Pyramos)"
+            },
+            {
+              "form": "Pyramus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -401,
+          "earliest_attestation_note": "401 BCE (Xenophon, Anabasis 1.4.1, as Pyramus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Pyramus; medieval Arabic Jayhan, whence Turkish Ceyhan.",
+          "source_url": "https://en.wikipedia.org/wiki/Ceyhan_River"
+        },
+        {
+          "name": "Anti-Taurus Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Anti-Taurus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the Lykandos and Cataonia basin in eastern Anatolia.",
+          "language_variants": [
+            {
+              "form": "Antítauros",
+              "native_script": "Ἀντίταυρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Antitauros)"
+            },
+            {
+              "form": "Antitaurus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Aladağlar",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name for the main range"
+            }
+          ],
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Strabo, Geography, as Antitauros)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Greek Antitauros ('opposite the Taurus'), describing the northern parallel range.",
+          "source_url": "https://en.wikipedia.org/wiki/Anti-Taurus_Mountains"
+        }
+      ]
+    },
+    "b_ayas": {
+      "barony_key": "b_ayas",
+      "vanilla_ck3_name": "Ayas",
+      "modern_name": "Ayas",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_anatolia",
+        "duchy": "d_cilicia",
+        "county": "c_tall_hamid",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Hurrians",
+          "disambiguation_note": null,
+          "localisation_stem": "Hurrians",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Bronze Age people of Kizzuwatna and Cilicia.",
+          "language_variants": [
+            {
+              "form": "Hurri",
+              "native_script": null,
+              "language": "Hurrian",
+              "language_code": "xhu",
+              "notes": "Ancient cuneiform ethnonym"
+            },
+            {
+              "form": "Hurriler",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish historical ethnonym"
+            },
+            {
+              "form": "Khurriner",
+              "native_script": "Խուռիներ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian historical ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -2200,
+          "earliest_attestation_note": "c. 2200 BCE (Akkadian and Hurrian cuneiform inscriptions)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in Mesopotamian and Hittite cuneiform as Hurri / Hurrite.",
+          "source_url": "https://en.wikipedia.org/wiki/Hurrians"
+        },
+        {
+          "name": "Gulf of Alexandretta",
+          "disambiguation_note": null,
+          "localisation_stem": "Gulf of Alexandretta",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Northeasternmost bay of the Mediterranean Sea where Ayas (Aegeae) is situated.",
+          "language_variants": [
+            {
+              "form": "İskenderun Körfezi",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Issikòs kólpos",
+              "native_script": "Ἰσσικὸς κόλπος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Issic Gulf)"
+            },
+            {
+              "form": "Sinus Issicus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -333,
+          "earliest_attestation_note": "333 BCE (classical accounts of the Battle of Issus, as Issic Gulf)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after ancient Issus (Sinus Issicus) and later Alexandretta (İskenderun).",
+          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Alexandretta"
+        },
+        {
+          "name": "Nur Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Nur",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Ancient Mount Amanus separating Cilicia from northern Syria along the Gulf of Alexandretta.",
+          "language_variants": [
+            {
+              "form": "Nur Dağları",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name ('Mountains of Light')"
+            },
+            {
+              "form": "Amanos",
+              "native_script": "Ἀμανος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Amanos)"
+            },
+            {
+              "form": "Amanus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -850,
+          "earliest_attestation_note": "Attested as Khamanu in Assyrian annals (9th century BCE) and Amanos in Strabo (1st century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Amanus (possibly Semitic/Hurrian origin); Turkish Nur Dağları ('Mountains of Light').",
+          "source_url": "https://en.wikipedia.org/wiki/Nur_Mountains"
+        }
+      ]
+    },
+    "b_seti": {
+      "barony_key": "b_seti",
+      "vanilla_ck3_name": "Seti",
+      "modern_name": "Seti",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_abkhazia",
+        "county": "c_odishi",
+        "holding_type": "city"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Svans",
+          "disambiguation_note": null,
+          "localisation_stem": "Svans",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Kartvelian ethnic subgroup indigenous to Upper Svaneti around Mestia (Seti).",
+          "language_variants": [
+            {
+              "form": "Svanebi",
+              "native_script": "სვანები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Svanebi)"
+            },
+            {
+              "form": "Shûanär",
+              "native_script": "შუ̂ანა̈რ",
+              "language": "Svan",
+              "language_code": "sva",
+              "notes": "Endonym (Shwanär)"
+            },
+            {
+              "form": "Sóanes",
+              "native_script": "Σόανες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym in Strabo (Soanes)"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 11.2.19, as Soanes)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Endonym Shwanär / Georgian Svanebi; attested by Strabo as Soanes.",
+          "source_url": "https://en.wikipedia.org/wiki/Svans"
+        },
+        {
+          "name": "Enguri",
+          "disambiguation_note": null,
+          "localisation_stem": "Enguri",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing from Upper Svaneti past Mestia (Seti) to the Black Sea.",
+          "language_variants": [
+            {
+              "form": "Enguri",
+              "native_script": "ენგური",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Enguri)"
+            },
+            {
+              "form": "Ingiri",
+              "native_script": "ინგირი",
+              "language": "Mingrelian",
+              "language_code": "xmf",
+              "notes": "Mingrelian name (Ingiri)"
+            },
+            {
+              "form": "Yegry",
+              "native_script": "Егры",
+              "language": "Abkhaz",
+              "language_code": "abk",
+              "notes": "Abkhaz name (Egry)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Georgian and European travelers' records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Kartvelian hydronym; Georgian Enguri, Mingrelian Ingiri.",
+          "source_url": "https://en.wikipedia.org/wiki/Enguri"
+        },
+        {
+          "name": "Ushba",
+          "disambiguation_note": null,
+          "localisation_stem": "Ushba",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent twin-peaked mountain towering above Mestia (Seti) in Upper Svaneti.",
+          "language_variants": [
+            {
+              "form": "Ushba",
+              "native_script": "უშბა",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian and Svan name (Ushba)"
+            },
+            {
+              "form": "Ushba",
+              "native_script": "Ушба",
+              "language": "Abkhaz",
+              "language_code": "abk",
+              "notes": "Abkhaz rendering"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (traditional Svan toponymy recorded in early modern sources)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Svan, traditionally glossed as 'Sabbath of the storm' or 'terrible mountain'.",
+          "source_url": "https://en.wikipedia.org/wiki/Ushba"
+        }
+      ]
+    },
+    "b_zugdidi": {
+      "barony_key": "b_zugdidi",
+      "vanilla_ck3_name": "Zugdidi",
+      "modern_name": "Zugdidi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_abkhazia",
+        "county": "c_odishi",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Zugdidi (big hill)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Mingrelians",
+          "disambiguation_note": null,
+          "localisation_stem": "Mingrelians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Kartvelian ethnic subgroup indigenous to Samegrelo (Odishi) around Zugdidi.",
+          "language_variants": [
+            {
+              "form": "Megrelebi",
+              "native_script": "მეგრელები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Megrelebi)"
+            },
+            {
+              "form": "Margalepi",
+              "native_script": "მარგალეფი",
+              "language": "Mingrelian",
+              "language_code": "xmf",
+              "notes": "Endonym (Margalepi)"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "12th century CE (medieval Georgian chronicles of Samegrelo/Egrisi)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Egrisi / Margali, the historical Kartvelian designation for Mingrelia.",
+          "source_url": "https://en.wikipedia.org/wiki/Mingrelians"
+        },
+        {
+          "name": "Khobi",
+          "disambiguation_note": null,
+          "localisation_stem": "Khobi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing through Samegrelo (Odishi) near Zugdidi into the Black Sea.",
+          "language_variants": [
+            {
+              "form": "Khobi",
+              "native_script": "ხობი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Khobi / Khobistsqali)"
+            },
+            {
+              "form": "Chō̂bos",
+              "native_script": "Χῶβος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name in Arrian (Chobos)"
+            }
+          ],
+          "earliest_attestation_year": 131,
+          "earliest_attestation_note": "131 CE (Arrian, Periplus of the Euxine Sea, as Chobos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in classical periploi as Chobos / Chobus; Georgian Khobistsqali.",
+          "source_url": "https://en.wikipedia.org/wiki/Khobi_(river)"
+        },
+        {
+          "name": "Colchis",
+          "disambiguation_note": null,
+          "localisation_stem": "Colchis",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Classical historical region of western Georgia encompassing Samegrelo.",
+          "language_variants": [
+            {
+              "form": "K'olkheti",
+              "native_script": "კოლხეთი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Kolkheti)"
+            },
+            {
+              "form": "Kolchís",
+              "native_script": "Κολχίς",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Kolchis)"
+            },
+            {
+              "form": "Colchis",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Urartian inscriptions as Qulha; Greek Eumelus/Herodotus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Urartian Qulha, rendered in Ancient Greek as Kolchis.",
+          "source_url": "https://en.wikipedia.org/wiki/Colchis"
+        }
+      ]
+    },
+    "b_tsageri": {
+      "barony_key": "b_tsageri",
+      "vanilla_ck3_name": "Tsageri",
+      "modern_name": "Tsageri",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_abkhazia",
+        "county": "c_odishi",
+        "holding_type": "church"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Heniochi",
+          "disambiguation_note": null,
+          "localisation_stem": "Heniochi",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient tribe inhabiting the northwestern Caucasus and Colchian highlands.",
+          "language_variants": [
+            {
+              "form": "Hēníochoi",
+              "native_script": "Ἡνίοχοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Heniochoi)"
+            },
+            {
+              "form": "Heniochi",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            },
+            {
+              "form": "Heniokhebi",
+              "native_script": "ჰენიოხები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical rendering"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "c. 400 BCE (Pseudo-Scylax and classical Greek periploi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Greek Heniochoi ('charioteers'), likely a Greek folk-etymological adaptation of a local ethnonym.",
+          "source_url": "https://en.wikipedia.org/wiki/Heniochi"
+        },
+        {
+          "name": "Tskhenistsqali",
+          "disambiguation_note": null,
+          "localisation_stem": "Tskhenistsqali",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing directly past Tsageri through Lechkhumi into the Rioni.",
+          "language_variants": [
+            {
+              "form": "Tskhenists'q'ali",
+              "native_script": "ცხენისწყალი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name ('Horse Water')"
+            },
+            {
+              "form": "Híppos",
+              "native_script": "Ἵππος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek calque (Hippos)"
+            }
+          ],
+          "earliest_attestation_year": 131,
+          "earliest_attestation_note": "131 CE (Arrian, Periplus of the Euxine Sea, as Hippos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Tskhenis-tsqali ('horse water'), translated into Ancient Greek as Hippos. Onomastic note: Ancient Greek 'Híppos' (Classical Greek calque (Hippos)).",
+          "source_url": "https://en.wikipedia.org/wiki/Tskhenistsqali"
+        },
+        {
+          "name": "Lechkhumi Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Lechkhumi",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising above Tsageri in Lechkhumi.",
+          "language_variants": [
+            {
+              "form": "Lechkhumis Kedi",
+              "native_script": "ლეჩხუმის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Lechkhumis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "17th century CE (early modern Georgian geographical records of Lechkhumi)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the historical Georgian province of Lechkhumi (medieval Takveri).",
+          "source_url": "https://en.wikipedia.org/wiki/Lechkhumi_Range"
+        }
+      ]
+    },
+    "b_ambrolauri": {
+      "barony_key": "b_ambrolauri",
+      "vanilla_ck3_name": "Ambrolauri",
+      "modern_name": "Ambrolauri",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_abkhazia",
+        "county": "c_svaneti",
+        "holding_type": "city"
+      },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Abkhazians",
+          "disambiguation_note": null,
+          "localisation_stem": "Abkhazians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Northwest Caucasian ethnic group giving its name to the duchy of Abkhazia.",
+          "language_variants": [
+            {
+              "form": "Apsuaa",
+              "native_script": "Апсуаа",
+              "language": "Abkhaz",
+              "language_code": "abk",
+              "notes": "Endonym (Apswaa)"
+            },
+            {
+              "form": "Apkhazebi",
+              "native_script": "აფხაზები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Apkhazebi)"
+            },
+            {
+              "form": "Abasgoí",
+              "native_script": "Ἀβασγοί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical/Byzantine Greek ethnonym (Abasgoi)"
+            }
+          ],
+          "earliest_attestation_year": 131,
+          "earliest_attestation_note": "131 CE (Arrian, Periplus of the Euxine Sea, as Abasgoi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Apkhazebi, related to classical Abasgoi / Abasgi; endonym Apswaa.",
+          "source_url": "https://en.wikipedia.org/wiki/Abkhazians"
+        },
+        {
+          "name": "Rioni",
+          "disambiguation_note": null,
+          "localisation_stem": "Rioni",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of western Georgia flowing through Ambrolauri in Racha.",
+          "language_variants": [
+            {
+              "form": "Rioni",
+              "native_script": "რიონი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Rioni)"
+            },
+            {
+              "form": "Phâsis",
+              "native_script": "Φᾶσις",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Phasis)"
+            },
+            {
+              "form": "Phasis",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Hesiod, Theogony 340, as Phasis)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Phasis; medieval Georgian Rioni, from an indigenous Caucasian hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Rioni"
+        },
+        {
+          "name": "Racha Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Racha",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range bordering the upper Rioni valley and Ambrolauri.",
+          "language_variants": [
+            {
+              "form": "Rach'is Kedi",
+              "native_script": "რაჭის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Rachis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles mentioning Racha)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the historical highland province of Racha in western Georgia.",
+          "source_url": "https://en.wikipedia.org/wiki/Racha_Range"
+        }
+      ]
+    },
+    "b_kvara": {
+      "barony_key": "b_kvara",
+      "vanilla_ck3_name": "Kvara",
+      "modern_name": "Kvara",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_abkhazia",
+        "county": "c_svaneti",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Apsilae",
+          "disambiguation_note": null,
+          "localisation_stem": "Apsilae",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ancient and early medieval people of the western Caucasus and Abkhazia.",
+          "language_variants": [
+            {
+              "form": "Apsílai",
+              "native_script": "Ἀψίλαι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Apsilai)"
+            },
+            {
+              "form": "Apsilae",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym (Pliny)"
+            },
+            {
+              "form": "Apshilebi",
+              "native_script": "აფშილები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical ethnonym (Apshilebi)"
+            }
+          ],
+          "earliest_attestation_year": 77,
+          "earliest_attestation_note": "77 CE (Pliny the Elder, Natural History 6.4, as Absilae)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in Pliny and Arrian; cognate with Abkhaz endonym Apswa.",
+          "source_url": "https://en.wikipedia.org/wiki/Apsilae"
+        },
+        {
+          "name": "Kodori",
+          "disambiguation_note": null,
+          "localisation_stem": "Kodori",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of Abkhazia draining the western Greater Caucasus.",
+          "language_variants": [
+            {
+              "form": "K'odori",
+              "native_script": "კოდორი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Kodori)"
+            },
+            {
+              "form": "Ka·ydry",
+              "native_script": "Каыдры",
+              "language": "Abkhaz",
+              "language_code": "abk",
+              "notes": "Abkhaz name (Kwydry)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Caucasian geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Indigenous Abkhaz-Georgian hydronym (Abkhaz Kwydry, Georgian Kodori).",
+          "source_url": "https://en.wikipedia.org/wiki/Kodori_(river)"
+        },
+        {
+          "name": "Tetnuldi",
+          "disambiguation_note": null,
+          "localisation_stem": "Tetnuldi",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent snow-capped peak in the central Greater Caucasus of Svaneti.",
+          "language_variants": [
+            {
+              "form": "Tetnuldi",
+              "native_script": "თეთნულდი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Tetnuldi)"
+            },
+            {
+              "form": "Tetnuld",
+              "native_script": "თეთნულდ",
+              "language": "Svan",
+              "language_code": "sva",
+              "notes": "Svan name ('White Mountain')"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (traditional Svan toponymy)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Svan meaning 'White Mountain' (cf. Georgian tetri 'white').",
+          "source_url": "https://en.wikipedia.org/wiki/Tetnuldi"
+        }
+      ]
+    },
+    "b_zaqatala": {
+      "barony_key": "b_zaqatala",
+      "vanilla_ck3_name": "Zaqatala",
+      "modern_name": "Zaqatala",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_georgia",
+        "county": "c_hereti",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Legae",
+          "disambiguation_note": null,
+          "localisation_stem": "Legae",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient Northeast Caucasian tribe recorded near the eastern Greater Caucasus and Albania.",
+          "language_variants": [
+            {
+              "form": "Lē̂gai",
+              "native_script": "Λῆγαι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Legai)"
+            },
+            {
+              "form": "Legae",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            },
+            {
+              "form": "Lek'ebi",
+              "native_script": "ლეკები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical ethnonym (Lekebi)"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 11.5.1, as Legai)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Legai/Legae, corresponding to Georgian Lekebi for Dagestani/Lezgic peoples.",
+          "source_url": "https://en.wikipedia.org/wiki/Legae"
+        },
+        {
+          "name": "Alazani",
+          "disambiguation_note": null,
+          "localisation_stem": "Alazani",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of Kakheti and Hereti flowing near Zaqatala.",
+          "language_variants": [
+            {
+              "form": "Alazani",
+              "native_script": "ალაზანი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Alazani)"
+            },
+            {
+              "form": "Qanıx",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name (Qanıx)"
+            },
+            {
+              "form": "Alazónios",
+              "native_script": "Ἀλαζόνιος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Alazonios)"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 11.3.2, as Alazonios)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in Strabo and Pliny as Alazonius; Georgian Alazani.",
+          "source_url": "https://en.wikipedia.org/wiki/Alazani"
+        },
+        {
+          "name": "Greater Caucasus",
+          "disambiguation_note": null,
+          "localisation_stem": "Greater Caucasus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Main mountain range of the Caucasus rising immediately north of Zaqatala.",
+          "language_variants": [
+            {
+              "form": "Didi K'avk'asioni",
+              "native_script": "დიდი კავკასიონი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Didi Kavkasioni)"
+            },
+            {
+              "form": "Böyük Qafqaz",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name"
+            },
+            {
+              "form": "Kaukasos",
+              "native_script": "Καυκασος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Kaukasos)"
+            }
+          ],
+          "earliest_attestation_year": -470,
+          "earliest_attestation_note": "c. 470 BCE (Aeschylus and Herodotus, as Kaukasos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Kaukasos, possibly from a Scythian or Caucasian root meaning 'ice-shining' or 'white-peak'.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Caucasus"
+        }
+      ]
+    },
+    "b_dedoplitskhara": {
+      "barony_key": "b_dedoplitskhara",
+      "vanilla_ck3_name": "Dedoplitskhara",
+      "modern_name": "Dedoplitskhara",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_georgia",
+        "county": "c_hereti",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "post_867_eponym",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Dedoplis-tsqaro (Queen's spring)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Kakhetians",
+          "disambiguation_note": null,
+          "localisation_stem": "Kakhetians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ethnographic subgroup of Georgians inhabiting Kakheti and Hereti.",
+          "language_variants": [
+            {
+              "form": "K'akhelebi",
+              "native_script": "კახელები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Kakhelebi)"
+            }
+          ],
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th century CE (medieval Georgian chronicles of Kakheti)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the historical region of Kakheti (earlier Kakha / Kukheti).",
+          "source_url": "https://en.wikipedia.org/wiki/Kakhetians"
+        },
+        {
+          "name": "Iori",
+          "disambiguation_note": null,
+          "localisation_stem": "Iori",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing through Kakheti and the Dedoplistsqaro steppe into the Mingachevir basin.",
+          "language_variants": [
+            {
+              "form": "Iori",
+              "native_script": "იორი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Iori)"
+            },
+            {
+              "form": "Qabırrı",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name (Qabırrı)"
+            },
+            {
+              "form": "Kambýsēs",
+              "native_script": "Καμβύσης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Cambyses)"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 11.4.1, as Cambyses)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Identified with classical Cambyses; Georgian Iori.",
+          "source_url": "https://en.wikipedia.org/wiki/Iori_(river)"
+        },
+        {
+          "name": "Tsiv-Gombori Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Tsiv-Gombori",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range in Kakheti separating the Alazani and Iori valleys.",
+          "language_variants": [
+            {
+              "form": "Tsiv-Gomboris Kedi",
+              "native_script": "ცივ-გომბორის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Tsiv-Gomboris kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Georgian geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Compound of Georgian Tsivi ('cold') and Gombori, a local toponym.",
+          "source_url": "https://en.wikipedia.org/wiki/Tsiv-Gombori_Range"
+        }
+      ]
+    },
+    "b_nukhpata": {
+      "barony_key": "b_nukhpata",
+      "vanilla_ck3_name": "Nukhpata",
+      "modern_name": "Nukhpata",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_georgia",
+        "county": "c_hereti",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Udi people",
+          "disambiguation_note": null,
+          "localisation_stem": "Udi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous Lezgic people of the Shaki-Hereti region, descendants of the classical Utii.",
+          "language_variants": [
+            {
+              "form": "Udiebi",
+              "native_script": "უდიები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Udiebi)"
+            },
+            {
+              "form": "Udilər",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani ethnonym"
+            },
+            {
+              "form": "Oútioi",
+              "native_script": "Οὔτιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Utioi)"
+            }
+          ],
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus, Histories 3.93, as Utioi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested by Herodotus and Strabo as Utioi / Utians; endonym Udi.",
+          "source_url": "https://en.wikipedia.org/wiki/Udi_people"
+        },
+        {
+          "name": "Kura",
+          "disambiguation_note": null,
+          "localisation_stem": "Kura",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of the eastern South Caucasus basin.",
+          "language_variants": [
+            {
+              "form": "Mt'k'vari",
+              "native_script": "მტკვარი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Mtkvari)"
+            },
+            {
+              "form": "Kür",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name (Kür)"
+            },
+            {
+              "form": "Kyros",
+              "native_script": "Κυρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Kyros)"
+            }
+          ],
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Strabo and Plutarch, as Kyros / Cyrus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Kyros / Cyrus; Georgian Mtkvari ('slow' or 'good water').",
+          "source_url": "https://en.wikipedia.org/wiki/Kura_(South_Caucasus_river)"
+        },
+        {
+          "name": "Mount Bazardüzü",
+          "disambiguation_note": null,
+          "localisation_stem": "Bazardüzü",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the eastern Greater Caucasus near the Shaki-Hereti frontier.",
+          "language_variants": [
+            {
+              "form": "Bazardüzü dağı",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name ('Market Plain')"
+            },
+            {
+              "form": "Bazarduzu",
+              "native_script": "ბაზარდუზუ",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian rendering"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Azerbaijani and Lezgian toponymy)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Azerbaijani Bazardüzü ('market flat/plain'); Lezgian Kichen suv ('mountain of fear').",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Bazard%C3%BCz%C3%BC"
+        }
+      ]
+    },
+    "b_lori": {
+      "barony_key": "b_lori",
+      "vanilla_ck3_name": "Lori",
+      "modern_name": "Lori",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_georgia",
+        "county": "c_lori",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Armenians",
+          "disambiguation_note": null,
+          "localisation_stem": "Armenians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous people of the Armenian Highlands including Gugark and Lori.",
+          "language_variants": [
+            {
+              "form": "Hayer",
+              "native_script": "Հայեր",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Endonym (Hayer)"
+            },
+            {
+              "form": "Somkhebi",
+              "native_script": "სომხები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Somkhebi)"
+            },
+            {
+              "form": "Arménioi",
+              "native_script": "Ἀρμένιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Armenioi)"
+            }
+          ],
+          "earliest_attestation_year": -520,
+          "earliest_attestation_note": "Attested as Armina in the Behistun Inscription of Darius I (520 BCE) and in Hecataeus/Herodotus.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Exonym from Old Persian Armina; endonym Hayk/Hayer.",
+          "source_url": "https://en.wikipedia.org/wiki/Armenians"
+        },
+        {
+          "name": "Debed",
+          "disambiguation_note": null,
+          "localisation_stem": "Debed",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river of the Lori region flowing north into Georgia.",
+          "language_variants": [
+            {
+              "form": "Debed",
+              "native_script": "Դեբեդ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Debed)"
+            },
+            {
+              "form": "Debeda",
+              "native_script": "დებედა",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Debeda)"
+            }
+          ],
+          "earliest_attestation_year": 900,
+          "earliest_attestation_note": "10th century CE (medieval Armenian and Georgian chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Medieval Armenian Debed / Georgian Debeda.",
+          "source_url": "https://en.wikipedia.org/wiki/Debed"
+        },
+        {
+          "name": "Dzoraget",
+          "disambiguation_note": null,
+          "localisation_stem": "Dzoraget",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of Lori flowing through a deep gorge to join the Pambak and form the Debed.",
+          "language_variants": [
+            {
+              "form": "Dzoraget",
+              "native_script": "Ձորագետ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name ('Gorge River')"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Armenian regional toponymy)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Armenian Dzoraget, compound of dzor ('gorge') and get ('river').",
+          "source_url": "https://en.wikipedia.org/wiki/Dzoraget_(river)"
+        }
+      ]
+    },
+    "b_kayan": {
+      "barony_key": "b_kayan",
+      "vanilla_ck3_name": "Kayan",
+      "modern_name": "Kayan",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_georgia",
+        "county": "c_lori",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Saspeires",
+          "disambiguation_note": null,
+          "localisation_stem": "Saspeires",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient people of the South Caucasus and northeastern Anatolia attested by Herodotus.",
+          "language_variants": [
+            {
+              "form": "Sáspeires",
+              "native_script": "Σάσπειρες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Saspeires)"
+            },
+            {
+              "form": "Sasp'erebi",
+              "native_script": "სასპერები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical ethnonym (Sasperebi)"
+            }
+          ],
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus, Histories 3.94, as Saspeires)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in Herodotus between Media and Colchis; linked by scholars to early Iberians/Sper.",
+          "source_url": "https://en.wikipedia.org/wiki/Saspeires"
+        },
+        {
+          "name": "Aghstev",
+          "disambiguation_note": null,
+          "localisation_stem": "Aghstev",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing through northern Armenia near Kayan into the Kura basin.",
+          "language_variants": [
+            {
+              "form": "Aghstev",
+              "native_script": "Աղստև",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Aghstev)"
+            },
+            {
+              "form": "Ağstafaçay",
+              "native_script": null,
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name (Ağstafaçay)"
+            }
+          ],
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "13th century CE (medieval Armenian and Caucasian chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Armenian Aghstev; Azerbaijani Ağstafaçay.",
+          "source_url": "https://en.wikipedia.org/wiki/Aghstev_(river)"
+        },
+        {
+          "name": "Pambak",
+          "disambiguation_note": null,
+          "localisation_stem": "Pambak",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River in northern Armenia joining the Dzoraget to form the Debed.",
+          "language_variants": [
+            {
+              "form": "P'ambak",
+              "native_script": "Փամբակ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Pambak)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Armenian geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Traditional Armenian hydronym for the upper Debed tributary.",
+          "source_url": "https://en.wikipedia.org/wiki/Pambak_(river)"
+        }
+      ]
+    },
+    "b_tskhinvali": {
+      "barony_key": "b_tskhinvali",
+      "vanilla_ck3_name": "Tskhinvali",
+      "modern_name": "Tskhinvali",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_kartli",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Alans",
+          "disambiguation_note": null,
+          "localisation_stem": "Alans",
+          "category": "tribe",
+          "feature_subtype": "sarmatian_tribe",
+          "relationship": "Iranic nomadic people of the Caucasus whose descendants settled in Shida Kartli.",
+          "language_variants": [
+            {
+              "form": "Allon",
+              "native_script": "Аллон",
+              "language": "Ossetian",
+              "language_code": "oss",
+              "notes": "Ossetian historical self-designation"
+            },
+            {
+              "form": "Alanebi",
+              "native_script": "ალანები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Alanebi)"
+            },
+            {
+              "form": "Alani",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": 50,
+          "earliest_attestation_note": "1st century CE (Seneca, Lucan, Josephus, and Chinese Hou Hanshu)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Old Iranian *Aryana ('Aryan').",
+          "source_url": "https://en.wikipedia.org/wiki/Alans"
+        },
+        {
+          "name": "Great Liakhvi",
+          "disambiguation_note": null,
+          "localisation_stem": "Great Liakhvi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River rising in the Greater Caucasus and flowing directly through Tskhinvali.",
+          "language_variants": [
+            {
+              "form": "Didi Liakhvi",
+              "native_script": "დიდი ლიახვი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Didi Liakhvi)"
+            },
+            {
+              "form": "Styr Leuakhi",
+              "native_script": "Стыр Леуахи",
+              "language": "Ossetian",
+              "language_code": "oss",
+              "notes": "Ossetian name (Styr Lewakhi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Didi Liakhvi ('Great Liakhvi'); Ossetian Styr Lewakhi.",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Liakhvi"
+        },
+        {
+          "name": "Trialeti Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Trialeti",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range bordering Shida Kartli to the south.",
+          "language_variants": [
+            {
+              "form": "Trialetis Kedi",
+              "native_script": "თრიალეთის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Trialetis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles mentioning Trialeti)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the historical Georgian district of Trialeti.",
+          "source_url": "https://en.wikipedia.org/wiki/Trialeti_Range"
+        }
+      ]
+    },
+    "b_gori": {
+      "barony_key": "b_gori",
+      "vanilla_ck3_name": "Gori",
+      "modern_name": "Gori",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_kartli",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Gori (hill)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Georgians",
+          "disambiguation_note": null,
+          "localisation_stem": "Georgians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Kartvelian people of Kartli and the central South Caucasus.",
+          "language_variants": [
+            {
+              "form": "Kartvelebi",
+              "native_script": "ქართველები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Endonym (Kartvelebi)"
+            },
+            {
+              "form": "Geōrgianoí",
+              "native_script": "Γεωργιανοί",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Greek ethnonym"
+            },
+            {
+              "form": "Gürcüler",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Turkish ethnonym"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles as Kartveli; Latin/Greek Georgia)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Endonym Kartveli (from Kartli); exonym Georgians via Persian Gurj / Greek Georgios.",
+          "source_url": "https://en.wikipedia.org/wiki/Georgians"
+        },
+        {
+          "name": "Tedzami",
+          "disambiguation_note": null,
+          "localisation_stem": "Tedzami",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right tributary of the Kura flowing through Shida Kartli near Gori.",
+          "language_variants": [
+            {
+              "form": "Tedzami",
+              "native_script": "თეძამი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Tedzami)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Georgian geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian hydronym for the river draining the northern Trialeti slopes.",
+          "source_url": "https://en.wikipedia.org/wiki/Tedzami"
+        },
+        {
+          "name": "Likhi Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Likhi",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range separating eastern and western Georgia on the western edge of Shida Kartli.",
+          "language_variants": [
+            {
+              "form": "Likhis Kedi",
+              "native_script": "ლიხის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Likhis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles, also Surami Range)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Likhis kedi, named after the Likhi pass and district.",
+          "source_url": "https://en.wikipedia.org/wiki/Likhi_Range"
+        }
+      ]
+    },
+    "b_tmogvi": {
+      "barony_key": "b_tmogvi",
+      "vanilla_ck3_name": "Tmogvi",
+      "modern_name": "Tmogvi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_klarjeti",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Meskhetians",
+          "disambiguation_note": null,
+          "localisation_stem": "Meskhetians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ethnographic subgroup of Georgians indigenous to Samtskhe and Javakheti.",
+          "language_variants": [
+            {
+              "form": "Meskhebi",
+              "native_script": "მესხები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian ethnonym (Meskhebi)"
+            },
+            {
+              "form": "Móschoi",
+              "native_script": "Μόσχοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Moschoi)"
+            }
+          ],
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus, Histories 3.94, as Moschoi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Meskhebi, linked to classical Moschoi.",
+          "source_url": "https://en.wikipedia.org/wiki/Meskhetians"
+        },
+        {
+          "name": "Paravani Lake",
+          "disambiguation_note": null,
+          "localisation_stem": "Paravani",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Largest lake in Georgia, situated on the Javakheti Plateau.",
+          "language_variants": [
+            {
+              "form": "Paravnis T'ba",
+              "native_script": "ფარავნის ტბა",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Paravnis tba)"
+            },
+            {
+              "form": "P'arvana Lich",
+              "native_script": "Փարվանա լիճ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Parvana lich)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Paravnis tba / Armenian Parvana.",
+          "source_url": "https://en.wikipedia.org/wiki/Paravani_Lake"
+        },
+        {
+          "name": "Javakheti Plateau",
+          "disambiguation_note": null,
+          "localisation_stem": "Javakheti",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Volcanic plateau in southern Georgia traversed by the upper Kura near Tmogvi.",
+          "language_variants": [
+            {
+              "form": "Javakhetis P'lat'o",
+              "native_script": "ჯავახეთის პლატო",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Javakhetis plato)"
+            },
+            {
+              "form": "Javakhk'i Bardzravandak",
+              "native_script": "Ջավახքի բարձրավանդակ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Javakhki bardzravandak)"
+            }
+          ],
+          "earliest_attestation_year": -785,
+          "earliest_attestation_note": "c. 785 BCE (Urartian inscriptions of Argishti I as Zabakha)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Urartian Zabakha, whence Georgian Javakheti and Armenian Javakhk.",
+          "source_url": "https://en.wikipedia.org/wiki/Javakheti_Plateau"
+        }
+      ]
+    },
+    "b_akhaltsikhe": {
+      "barony_key": "b_akhaltsikhe",
+      "vanilla_ck3_name": "Akhaltsikhe",
+      "modern_name": "Akhaltsikhe",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_klarjeti",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Mushki",
+          "disambiguation_note": null,
+          "localisation_stem": "Mushki",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Iron Age people of eastern Anatolia and the southern Caucasus borderlands.",
+          "language_variants": [
+            {
+              "form": "Muški",
+              "native_script": null,
+              "language": "Hittite",
+              "language_code": "hit",
+              "notes": "Assyrian/Anatolian cuneiform ethnonym"
+            },
+            {
+              "form": "Móschoi",
+              "native_script": "Μόσχοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering (Moschoi)"
+            },
+            {
+              "form": "Mushkebi",
+              "native_script": "მუშქები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "c. 1114 BCE (Assyrian inscriptions of Tiglath-Pileser I)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Attested in Assyrian annals as Muški; often connected with classical Moschoi.",
+          "source_url": "https://en.wikipedia.org/wiki/Mushki"
+        },
+        {
+          "name": "Meskheti Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Meskheti",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range bordering Samtskhe and Akhaltsikhe to the north.",
+          "language_variants": [
+            {
+              "form": "Meskhetis Kedi",
+              "native_script": "მესხეთის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Meskhetis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles of Meskheti)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the historical Georgian region of Meskheti.",
+          "source_url": "https://en.wikipedia.org/wiki/Meskheti_Range"
+        },
+        {
+          "name": "Samsari Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Samsari",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Volcanic mountain range in Samtskhe-Javakheti.",
+          "language_variants": [
+            {
+              "form": "Samsris Kedi",
+              "native_script": "სამსრის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Samsris kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Georgian geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Samsris kedi, named after Mount Didi Abuli and Samsari.",
+          "source_url": "https://en.wikipedia.org/wiki/Samsari_Range"
+        }
+      ]
+    },
+    "b_tortomi": {
+      "barony_key": "b_tortomi",
+      "vanilla_ck3_name": "Tortomi",
+      "modern_name": "Tortomi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_tao",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Taochi",
+          "disambiguation_note": null,
+          "localisation_stem": "Taochi",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient people of Tao in northeastern Anatolia attested by Xenophon.",
+          "language_variants": [
+            {
+              "form": "Táochoi",
+              "native_script": "Τάοχοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Taochoi)"
+            },
+            {
+              "form": "T'aokhebi",
+              "native_script": "ტაოხები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical ethnonym (Taokhebi)"
+            },
+            {
+              "form": "Tayk'",
+              "native_script": "Տայք",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian regional name (Tayk)"
+            }
+          ],
+          "earliest_attestation_year": -401,
+          "earliest_attestation_note": "401 BCE (Xenophon, Anabasis 4.7.1, as Taochoi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Related to Urartian Diauehi / Daiaeni; Armenian Tayk and Georgian Tao.",
+          "source_url": "https://en.wikipedia.org/wiki/Taochi"
+        },
+        {
+          "name": "Çoruh",
+          "disambiguation_note": null,
+          "localisation_stem": "Çoruh",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of northeastern Anatolia and Tao-Klarjeti flowing into the Black Sea.",
+          "language_variants": [
+            {
+              "form": "Çoruh Nehri",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Ch'orokhi",
+              "native_script": "ჭოროხი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Chorokhi)"
+            },
+            {
+              "form": "Chorokh",
+              "native_script": "Ճորոխ",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Chorokh)"
+            }
+          ],
+          "earliest_attestation_year": 550,
+          "earliest_attestation_note": "6th century CE (Procopius, as Boas / Akampsis; medieval Georgian Chorokhi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Kartvelian/Armenian Chorokhi, Turkish Çoruh.",
+          "source_url": "https://en.wikipedia.org/wiki/%C3%87oruh"
+        },
+        {
+          "name": "Kaçkar Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Kaçkar",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain range rising northwest of Tortum in the eastern Pontic Alps.",
+          "language_variants": [
+            {
+              "form": "Kaçkar Dağları",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "K'ajk'ar",
+              "native_script": "Քաջքար",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Kajkar)"
+            },
+            {
+              "form": "K'achk'aris Mtebi",
+              "native_script": "კაჩკარის მთები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian rendering"
+            }
+          ],
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "17th century CE (early modern Armenian and Ottoman records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Armenian Kajkar ('brave stone' / 'cross-stone').",
+          "source_url": "https://en.wikipedia.org/wiki/Ka%C3%A7kar_Mountains"
+        }
+      ]
+    },
+    "b_taoskari": {
+      "barony_key": "b_taoskari",
+      "vanilla_ck3_name": "Taoskari",
+      "modern_name": "Taoskari",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_anatolia",
+        "kingdom": "k_georgia",
+        "duchy": "d_tao-klarjeti",
+        "county": "c_tao",
+        "holding_type": "church"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Chalybes",
+          "disambiguation_note": null,
+          "localisation_stem": "Chalybes",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient iron-working people of northeastern Anatolia and the Pontic-Caucasian borderlands.",
+          "language_variants": [
+            {
+              "form": "Chálybes",
+              "native_script": "Χάλυβες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Chalybes)"
+            },
+            {
+              "form": "Khalibebi",
+              "native_script": "ხალიბები",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian historical ethnonym (Khalibebi)"
+            },
+            {
+              "form": "Khaghtik'",
+              "native_script": "Խաղտիք",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian historical name (Khaghtik)"
+            }
+          ],
+          "earliest_attestation_year": -480,
+          "earliest_attestation_note": "5th century BCE (Herodotus and Xenophon, Anabasis)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Chalybes, associated with early metallurgy and Byzantine Chaldia.",
+          "source_url": "https://en.wikipedia.org/wiki/Chalybes"
+        },
+        {
+          "name": "Yalnızçam Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yalnızçam",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range (Arsiani Range) along the Tao-Ardahan watershed.",
+          "language_variants": [
+            {
+              "form": "Yalnızçam Dağları",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name ('Lone Pine Mountains')"
+            },
+            {
+              "form": "Arsianis Kedi",
+              "native_script": "არსიანის ქედი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Arsianis kedi)"
+            }
+          ],
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "11th century CE (medieval Georgian chronicles as Arsiani)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Georgian Arsiani; Turkish Yalnızçam ('lone pine').",
+          "source_url": "https://en.wikipedia.org/wiki/Yaln%C4%B1z%C3%A7am_Mountains"
+        },
+        {
+          "name": "Lesser Caucasus",
+          "disambiguation_note": null,
+          "localisation_stem": "Lesser Caucasus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain system spanning northeastern Anatolia and southern Georgia.",
+          "language_variants": [
+            {
+              "form": "Mtsire K'avk'asioni",
+              "native_script": "მცირე კავკასიონი",
+              "language": "Georgian",
+              "language_code": "kat",
+              "notes": "Georgian name (Mtsire Kavkasioni)"
+            },
+            {
+              "form": "P'vok'r Kovkas",
+              "native_script": "Փոքր Կովկաս",
+              "language": "Armenian",
+              "language_code": "hye",
+              "notes": "Armenian name (Pokr Kovkas)"
+            },
+            {
+              "form": "Küçük Kafkaslar",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Turkish name"
+            }
+          ],
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "The Caucasus system is attested in Aeschylus and Herodotus (5th century BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Southern branch of the Caucasus mountain system.",
+          "source_url": "https://en.wikipedia.org/wiki/Lesser_Caucasus"
+        }
+      ]
+    }
+  }
+}

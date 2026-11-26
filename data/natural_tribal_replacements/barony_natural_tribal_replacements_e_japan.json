@@ -1,0 +1,4397 @@
+{
+  "metadata": {
+    "empire": "e_japan",
+    "scope": "e_japan (34 non-867 baronies across k_azuma, k_hitakami, k_tsukushi, and k_yamato; excludes baronies where is_historical_at['867'] is true)",
+    "schema_version": "2.0.0",
+    "source_audit_schema_version": "2.0.1",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
+    "source_files": [
+      "data/anachronicity_audit/barony_audit_e_japan.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
+    "schema_notes": {
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding.",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier; null if none.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "anachronism_type": "Historicity category from barony_audit_e_japan.json.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}; all entries here have '867': false.",
+      "existing_natural_proper_name": "Existing natural_proper_name object from barony_audit_e_japan.json.",
+      "replacement_candidates": "List of exactly 3 associated natural feature names and historical tribal/ethnonym names (>=1 tribe per barony) usable as localisation replacements.",
+      "category_subtype_taxonomy": {
+        "choronym": [
+          "region"
+        ],
+        "hydronym": [
+          "bay",
+          "estuary",
+          "lake",
+          "river",
+          "sea",
+          "strait",
+          "stream"
+        ],
+        "oronym": [
+          "hill",
+          "mountain",
+          "mountain_range",
+          "plateau"
+        ],
+        "topographic_feature": [
+          "coastal_feature",
+          "forest",
+          "marsh",
+          "valley"
+        ],
+        "tribe": [
+          "ainuic_people",
+          "anatolian_tribe",
+          "aquitani_tribe",
+          "arab_tribe",
+          "atlantic_people",
+          "austroasiatic_people",
+          "austronesian_people",
+          "baltic_tribe",
+          "bantu_tribe",
+          "belgae_tribe",
+          "berber_tribe",
+          "bhil_people",
+          "brittonic_tribe",
+          "caucasian_tribe",
+          "celtiberian_tribe",
+          "celtic_tribe",
+          "chadic_people",
+          "cushitic_tribe",
+          "dacian_tribe",
+          "dravidian_people",
+          "egyptian_people",
+          "ethio_semitic_people",
+          "finnic_tribe",
+          "gaelic_tribe",
+          "gaulish_tribe",
+          "germanic_tribe",
+          "gur_people",
+          "hellenic_tribe",
+          "hmong_mien_people",
+          "iberian_tribe",
+          "illyrian_tribe",
+          "indo_aryan_people",
+          "iranian_tribe",
+          "italic_tribe",
+          "japonic_people",
+          "koreanic_people",
+          "kra_dai_people",
+          "kwa_people",
+          "lusitanian_tribe",
+          "mande_people",
+          "medieval_people",
+          "mongolic_tribe",
+          "munda_people",
+          "niger_congo_people",
+          "nilo_saharan_people",
+          "nilotic_tribe",
+          "nivkh_people",
+          "nubian_people",
+          "omotic_people",
+          "paleo_sardinian_tribe",
+          "papuan_people",
+          "pictish_tribe",
+          "rhaetic_tribe",
+          "saharan_people",
+          "sami_people",
+          "sarmatian_tribe",
+          "semitic_tribe",
+          "sinitic_people",
+          "slavic_tribe",
+          "songhai_people",
+          "south_arabian_tribe",
+          "thracian_tribe",
+          "tibeto_burman_people",
+          "tungusic_tribe",
+          "turkic_tribe",
+          "uralic_tribe",
+          "vasconic_tribe",
+          "volta_niger_people",
+          "yeniseian_tribe"
+        ]
+      },
+      "name": "Clean display name of the replacement candidate (Wikipedia disambiguation suffixes extracted to disambiguation_note).",
+      "disambiguation_note": "Optional disambiguator extracted from parenthetical/comma qualifiers (e.g. 'Liao', 'Orkney', 'river'); null if none.",
+      "localisation_stem": "Clean CK3-ready toponym stem stripped of redundant generic English feature suffixes/prefixes ('River', 'Mount', 'Lake', 'people', etc.) while preserving meaningful compounds.",
+      "attestation_basis": "Historicity classification distinguishing genuinely pre-867/pre-literate entities from medieval post-867 ethnogeneses: attested_pre_867 | indigenous_pre_literate | attested_867_to_1066 | attested_1066_to_1178.",
+      "valid_for_bookmarks": "Bookmark-keyed booleans {'867', '1066', '1178'} indicating whether the replacement candidate is historically non-anachronistic for that bookmark (true for both attested_pre_867 and indigenous_pre_literate; bookmark-gated for attested_867_to_1066 and attested_1066_to_1178).",
+      "candidates_with_multilingual_variants": "Count of replacement candidates having more than 1 distinct language_code (ISO 639-3 / ISO 639-5 or documented proto-stage code) across language_variants.",
+      "language_variants_policy": "Include core local/classical forms plus regionally scoped vernaculars and genuinely distinct exonyms; exclude out-of-region exonym padding and redundant eng copies (eng is retained only when no non-English variant exists). Uses ISO 639-3 / ISO 639-5 language_code values plus documented Wiktionary proto/stage codes (sla-pro, gem-pro, cel-pro, cel-bry, urj-fin-pro); reconstructed proto/ancient forms carry a leading '*'.",
+      "language_variants": "List of cultural/historical name forms: {form, native_script, language, language_code, notes}. form is always clean Latin script (or romanization) suitable for CK3 localisation; native_script holds the native non-Latin script form or null when the language natively uses Latin script.",
+      "relationship": "Prose description of the geographical, ecological, or historical relationship between the replacement entity and the audited barony.",
+      "etymology_notes": "Linguistic etymology, onomastic origin, or geographic/ethnographic characterization of the replacement entity (incorporating attested onomastic notes from language variants where documented)."
+    },
+    "summary_statistics": {
+      "total_baronies_in_source_audit": 237,
+      "skipped_historical_867": 203,
+      "target_baronies_audited": 34,
+      "candidates_per_barony": 3,
+      "total_replacement_candidates": 102,
+      "unique_replacement_names": 72,
+      "candidates_with_multilingual_variants": 55,
+      "wikipedia_source_attached": 102,
+      "unique_source_urls": 72,
+      "candidates_by_category": {
+        "choronym": 0,
+        "hydronym": 42,
+        "oronym": 21,
+        "topographic_feature": 5,
+        "tribe": 34
+      },
+      "baronies_with_category": {
+        "has_choronym_candidate": 0,
+        "has_hydronym_candidate": 32,
+        "has_oronym_candidate": 20,
+        "has_topographic_feature_candidate": 5,
+        "has_tribe_candidate": 34
+      },
+      "unique_language_codes": [
+        "ain",
+        "jpn",
+        "lzh",
+        "ojp"
+      ],
+      "anachronism_type_counts": {
+        "early_modern_foundation": 1,
+        "high_late_medieval_attestation": 17,
+        "renamed_post_867": 14,
+        "unattested_indigenous_or_minor": 2
+      },
+      "candidates_by_attestation_basis": {
+        "attested_pre_867": 72,
+        "indigenous_pre_literate": 30
+      },
+      "bookmark_valid_candidates": {
+        "867": 102,
+        "1066": 102,
+        "1178": 102
+      },
+      "baronies_with_867_valid_candidate": 34,
+      "unique_localisation_stems": 72
+    }
+  },
+  "baronies": {
+    "b_ichinomiya": {
+      "barony_key": "b_ichinomiya",
+      "vanilla_ck3_name": "Ichinomiya",
+      "modern_name": "Ichinomiya",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_east_bando",
+        "county": "c_kazusa",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Kazusa Province in eastern Honshu.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Isumi River",
+          "disambiguation_note": null,
+          "localisation_stem": "Isumi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river draining southern Kazusa just south of Ichinomiya.",
+          "language_variants": [
+            {
+              "form": "Isumi-gawa",
+              "native_script": "夷隅川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Isumi-gawa, flowing through Isumi and southern Kazusa"
+            }
+          ],
+          "earliest_attestation_year": 713,
+          "earliest_attestation_note": "713 CE (Isumi district recorded in early Nara-period provincial gazetteers)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Isumi (夷隅) district of Kazusa Province.",
+          "source_url": "https://en.wikipedia.org/wiki/Isumi_River"
+        },
+        {
+          "name": "Kujūkuri Beach",
+          "disambiguation_note": null,
+          "localisation_stem": "Kujūkuri Beach",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Long Pacific sandy coastline bordering Ichinomiya on the Bōsō Peninsula.",
+          "language_variants": [
+            {
+              "form": "Kujūkurihama",
+              "native_script": "九十九里浜",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kujūkuri-hama, literally 'ninety-nine ri beach'"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period coastal survey and traditional ri measurement)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named for its length of roughly ninety-nine traditional ri (about 60 km) along eastern Kazusa and Shimōsa.",
+          "source_url": "https://en.wikipedia.org/wiki/Kuj%C5%ABkuri_Beach"
+        }
+      ]
+    },
+    "b_utsunomiya": {
+      "barony_key": "b_utsunomiya",
+      "vanilla_ck3_name": "Utsunomiya",
+      "modern_name": "Utsunomiya",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_east_bando",
+        "county": "c_shimotsuke",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Shimotsuke Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Kinugawa River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kinugawa",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Tone River tributary flowing past Utsunomiya.",
+          "language_variants": [
+            {
+              "form": "Kinugawa",
+              "native_script": "鬼怒川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kinugawa; historically also written 衣川 (Kinu-gawa)"
+            }
+          ],
+          "earliest_attestation_year": 797,
+          "earliest_attestation_note": "797 CE (Attested as Kenu/Kinu in early Heian and Nara records)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Traditionally derived from Kenu/Kinu (毛野), the ancient name of the northern Kantō region.",
+          "source_url": "https://en.wikipedia.org/wiki/Kinugawa_River"
+        },
+        {
+          "name": "Mount Nantai",
+          "disambiguation_note": null,
+          "localisation_stem": "Nantai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred volcano dominating the Nikkō range northwest of Utsunomiya.",
+          "language_variants": [
+            {
+              "form": "Nantai-san",
+              "native_script": "男体山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Nantai-san, also known historically as Futarasan (二荒山)"
+            }
+          ],
+          "earliest_attestation_year": 782,
+          "earliest_attestation_note": "782 CE (Ascended and named Futarasan by the monk Shōdō Shōnin)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Known in early Heian sources as Futarasan; Nantai-san ('Male Body Mountain') contrasts with nearby Mount Nyohō.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Nantai"
+        }
+      ]
+    },
+    "b_shioya": {
+      "barony_key": "b_shioya",
+      "vanilla_ck3_name": "Shioya",
+      "modern_name": "Shioya",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_east_bando",
+        "county": "c_shimotsuke",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of northern Shimotsuke.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Mount Takahara",
+          "disambiguation_note": null,
+          "localisation_stem": "Takahara",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic massif rising directly over Shioya District.",
+          "language_variants": [
+            {
+              "form": "Takahara-yama",
+              "native_script": "高原山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Takahara-yama"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Edo-period Shimotsuke geographical records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Descriptive Japanese oronym meaning 'high plateau mountain'.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Takahara"
+        },
+        {
+          "name": "Mount Nasu",
+          "disambiguation_note": null,
+          "localisation_stem": "Nasu",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Active volcanic group bordering northern Shioya in Shimotsuke.",
+          "language_variants": [
+            {
+              "form": "Nasu-dake",
+              "native_script": "那須岳",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Nasu-dake"
+            }
+          ],
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "c. 700 CE (Nasu district and hot springs attested in Nara-period records)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Nasu (那須) district of northern Shimotsuke.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Nasu"
+        }
+      ]
+    },
+    "b_uonuma": {
+      "barony_key": "b_uonuma",
+      "vanilla_ck3_name": "Uonuma",
+      "modern_name": "Uonuma",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_hokurikudo",
+        "county": "c_echigo",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Echigo Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Shinano River",
+          "disambiguation_note": null,
+          "localisation_stem": "Shinano",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Longest river of Japan flowing north through the Uonuma basin.",
+          "language_variants": [
+            {
+              "form": "Shinano-gawa",
+              "native_script": "信濃川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Shinano-gawa"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Shinano province attested in the Kojiki; river named for its origin there)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Shinano Province, where its upper course (the Chikuma River) originates.",
+          "source_url": "https://en.wikipedia.org/wiki/Shinano_River"
+        },
+        {
+          "name": "Mount Naeba",
+          "disambiguation_note": null,
+          "localisation_stem": "Naeba",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major volcanic peak on the Echigo–Shinano border south of Uonuma.",
+          "language_variants": [
+            {
+              "form": "Naeba-san",
+              "native_script": "苗場山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Naeba-san"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Edo-period Echigo mountain pilgrimage records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named for its flat summit wetlands resembling rice-seedling beds (naeba).",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Naeba"
+        }
+      ]
+    },
+    "b_kashima": {
+      "barony_key": "b_kashima",
+      "vanilla_ck3_name": "Kashima",
+      "modern_name": "Kashima",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_hokurikudo",
+        "county": "c_noto",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Noto Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Noto Peninsula",
+          "disambiguation_note": null,
+          "localisation_stem": "Noto",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Major Sea of Japan peninsula enclosing Kashima District.",
+          "language_variants": [
+            {
+              "form": "Noto Hantō",
+              "native_script": "能登半島",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Noto-hantō"
+            },
+            {
+              "form": "Noto",
+              "native_script": "能登",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Noto, attested as a province from 718 CE"
+            }
+          ],
+          "earliest_attestation_year": 718,
+          "earliest_attestation_note": "718 CE (Noto Province established from Echizen in the Yōrō period)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Etymology debated; often linked to an Ainu-like root *not ('cape/promontory') or Old Japanese coastal terms.",
+          "source_url": "https://en.wikipedia.org/wiki/Noto_Peninsula"
+        },
+        {
+          "name": "Toyama Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Toyama",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Deep Sea of Japan bay bordering the eastern coast of Kashima.",
+          "language_variants": [
+            {
+              "form": "Toyama-wan",
+              "native_script": "富山湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Toyama-wan"
+            }
+          ],
+          "earliest_attestation_year": 1580,
+          "earliest_attestation_note": "c. 1580 CE (Late Sengoku/early Edo maritime references to Toyama coast)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Toyama on the Etchū plain facing the bay.",
+          "source_url": "https://en.wikipedia.org/wiki/Toyama_Bay"
+        }
+      ]
+    },
+    "b_shitara": {
+      "barony_key": "b_shitara",
+      "vanilla_ck3_name": "Shitara",
+      "modern_name": "Shitara",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tokaido",
+        "county": "c_mikawa",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of eastern Mikawa Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Toyo River",
+          "disambiguation_note": null,
+          "localisation_stem": "Toyo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river draining the Shitara highlands into Mikawa Bay.",
+          "language_variants": [
+            {
+              "form": "Toyo-kawa",
+              "native_script": "豊川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Toyo-gawa"
+            }
+          ],
+          "earliest_attestation_year": 927,
+          "earliest_attestation_note": "927 CE (Toyokawa and Mikawa waterways noted in Heian-period records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Means 'abundant/fertile river' in Japanese.",
+          "source_url": "https://en.wikipedia.org/wiki/Toyo_River"
+        },
+        {
+          "name": "Yahagi River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yahagi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Mikawa river flowing along the western flank of the Shitara hills.",
+          "language_variants": [
+            {
+              "form": "Yahagi-gawa",
+              "native_script": "矢作川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yahagi-gawa"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Yahagi place-name tradition recorded in early chronicles)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Traditionally linked to arrow-making (ya-hagi) guilds of ancient Mikawa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yahagi_River"
+        }
+      ]
+    },
+    "b_kasugai": {
+      "barony_key": "b_kasugai",
+      "vanilla_ck3_name": "Kasugai",
+      "modern_name": "Kasugai",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tokaido",
+        "county": "c_owari",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Owari Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Shōnai River",
+          "disambiguation_note": null,
+          "localisation_stem": "Shōnai",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing past Kasugai across the Nōbi Plain into Ise Bay.",
+          "language_variants": [
+            {
+              "form": "Shōnai-gawa",
+              "native_script": "庄内川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Shōnai-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "c. 1400 CE (Medieval Owari estate and river records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after medieval estates (shō) along its lower course in Owari.",
+          "source_url": "https://en.wikipedia.org/wiki/Sh%C5%8Dnai_River"
+        },
+        {
+          "name": "Kiso River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kiso",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river forming the northern boundary of the Owari plain near Kasugai.",
+          "language_variants": [
+            {
+              "form": "Kiso-gawa",
+              "native_script": "木曽川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kiso-gawa"
+            }
+          ],
+          "earliest_attestation_year": 702,
+          "earliest_attestation_note": "702 CE (Kiso valley and route attested in the Shoku Nihongi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Kiso valley in Shinano where the river rises.",
+          "source_url": "https://en.wikipedia.org/wiki/Kiso_River"
+        }
+      ]
+    },
+    "b_toyoda": {
+      "barony_key": "b_toyoda",
+      "vanilla_ck3_name": "Toyoda",
+      "modern_name": "Toyoda",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tokaido",
+        "county": "c_totomi",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Tōtōmi Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Tenryū River",
+          "disambiguation_note": null,
+          "localisation_stem": "Tenryū",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing through western Tōtōmi past Toyoda.",
+          "language_variants": [
+            {
+              "form": "Tenryū-gawa",
+              "native_script": "天竜川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Tenryū-gawa, literally 'Heavenly Dragon River'"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 1100 CE (Late Heian and Kamakura chronicle references)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Meaning 'Heavenly Dragon River', applied in medieval times to the turbulent lower course of the Suwa outlet.",
+          "source_url": "https://en.wikipedia.org/wiki/Tenry%C5%AB_River"
+        },
+        {
+          "name": "Lake Hamana",
+          "disambiguation_note": null,
+          "localisation_stem": "Hamana",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large brackish lagoon in western Tōtōmi near the Tenryū mouth.",
+          "language_variants": [
+            {
+              "form": "Hamana-ko",
+              "native_script": "浜名湖",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hamana-ko"
+            },
+            {
+              "form": "Hamana",
+              "native_script": "浜名",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Hamana, attested in the Engishiki (927 CE)"
+            }
+          ],
+          "earliest_attestation_year": 927,
+          "earliest_attestation_note": "927 CE (Hamana bridge and district recorded in the Engishiki)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Hamana (浜名) district of Tōtōmi.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Hamana"
+        }
+      ]
+    },
+    "b_ono_hida": {
+      "barony_key": "b_ono_hida",
+      "vanilla_ck3_name": "Ōno",
+      "modern_name": "Ono Hida",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tosando",
+        "county": "c_hida",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Hida Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Shō River",
+          "disambiguation_note": null,
+          "localisation_stem": "Shō",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Mountain river rising in northwestern Ōno District of Hida.",
+          "language_variants": [
+            {
+              "form": "Shō-gawa",
+              "native_script": "庄川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Shō-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Late medieval Etchū–Hida valley records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from medieval shōen estates along the river valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Sh%C5%8D_River"
+        },
+        {
+          "name": "Mount Haku",
+          "disambiguation_note": null,
+          "localisation_stem": "Haku",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred peak rising on the western border of Ōno and Hida.",
+          "language_variants": [
+            {
+              "form": "Hakusan",
+              "native_script": "白山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hakusan / Shirayama"
+            },
+            {
+              "form": "Hakusan",
+              "native_script": "白山",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Shirayama, sacred mountain worshipped from the Nara period"
+            }
+          ],
+          "earliest_attestation_year": 717,
+          "earliest_attestation_note": "717 CE (First climbed by the monk Taichō according to early tradition)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'White Mountain', referring to its persistent snowcap. Onomastic note: Old Japanese 'Hakusan' (Shirayama, sacred mountain worshipped from the Nara period).",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Haku"
+        }
+      ]
+    },
+    "b_yoshiki_hida": {
+      "barony_key": "b_yoshiki_hida",
+      "vanilla_ck3_name": "Yoshiki",
+      "modern_name": "Yoshiki Hida",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tosando",
+        "county": "c_hida",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of northern Hida Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Jinzū River",
+          "disambiguation_note": null,
+          "localisation_stem": "Jinzū",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river formed by the Miya and Takahara rivers in Yoshiki.",
+          "language_variants": [
+            {
+              "form": "Jinzū-gawa",
+              "native_script": "神通川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Jinzū-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "c. 1300 CE (Medieval Etchū–Hida riverine records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Divine Penetration River', named for its passage through the Hida–Etchū gorges.",
+          "source_url": "https://en.wikipedia.org/wiki/Jinz%C5%AB_River"
+        },
+        {
+          "name": "Mount Norikura",
+          "disambiguation_note": null,
+          "localisation_stem": "Norikura",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic massif on the eastern border of Hida and Shinano.",
+          "language_variants": [
+            {
+              "form": "Norikura-dake",
+              "native_script": "乗鞍岳",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Norikura-dake"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period Hida–Shinano mountain records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named for its saddle-like (norikura) silhouette between twin summits.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Norikura"
+        }
+      ]
+    },
+    "b_mashita": {
+      "barony_key": "b_mashita",
+      "vanilla_ck3_name": "Mashita",
+      "modern_name": "Mashita",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tosando",
+        "county": "c_hida",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of southern Hida Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Hida River",
+          "disambiguation_note": null,
+          "localisation_stem": "Hida",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river flowing south through Mashita District.",
+          "language_variants": [
+            {
+              "form": "Hida-gawa",
+              "native_script": "飛騨川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hida-gawa"
+            },
+            {
+              "form": "Hida",
+              "native_script": "斐陀",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Hida, province attested in 8th-century Nara records"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Hida province attested in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Hida Province through which the river flows.",
+          "source_url": "https://en.wikipedia.org/wiki/Hida_River"
+        },
+        {
+          "name": "Mount Ontake",
+          "disambiguation_note": null,
+          "localisation_stem": "Ontake",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred volcano straddling the Hida–Shinano border east of Mashita.",
+          "language_variants": [
+            {
+              "form": "Ontake-san",
+              "native_script": "御嶽山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Ontake-san"
+            }
+          ],
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Late medieval Shugendō mountain pilgrimage records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Honorific title 'August Peak' (On-take) in Japanese mountain worship.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Ontake"
+        }
+      ]
+    },
+    "b_zenko_ji": {
+      "barony_key": "b_zenko_ji",
+      "vanilla_ck3_name": "Zenkō-ji",
+      "modern_name": "Zenko Ji",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_tosando",
+        "county": "c_shinano",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of northern Shinano Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Sai River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sai",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Chikuma tributary flowing past Zenkō-ji in the Nagano Basin.",
+          "language_variants": [
+            {
+              "form": "Sai-gawa",
+              "native_script": "犀川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Sai-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1553,
+          "earliest_attestation_note": "1553 CE (Recorded during the Sengoku-period Battles of Kawanakajima)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Rhinoceros River', historically prominent in the Kawanakajima plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Sai_River_(Nagano)"
+        },
+        {
+          "name": "Mount Togakushi",
+          "disambiguation_note": null,
+          "localisation_stem": "Togakushi",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain range rising northwest of Zenkō-ji.",
+          "language_variants": [
+            {
+              "form": "Togakushi-yama",
+              "native_script": "戸隠山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Togakushi-yama"
+            }
+          ],
+          "earliest_attestation_year": 1058,
+          "earliest_attestation_note": "1058 CE (Togakushi shrine-temple complex attested in late Heian records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Linked in Japanese myth to the 'hidden door' (to-gakushi) of the heavenly rock cave.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Togakushi"
+        }
+      ]
+    },
+    "b_agatsuma": {
+      "barony_key": "b_agatsuma",
+      "vanilla_ck3_name": "Agatsuma",
+      "modern_name": "Agatsuma",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_azuma",
+        "duchy": "d_west_bando",
+        "county": "c_kozuke",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Kōzuke Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Tone River",
+          "disambiguation_note": null,
+          "localisation_stem": "Tone",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Primary river of Kōzuke receiving the drainage of the Agatsuma valley.",
+          "language_variants": [
+            {
+              "form": "Tone-gawa",
+              "native_script": "利根川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Tone-gawa"
+            },
+            {
+              "form": "Tone",
+              "native_script": "利根",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Tone, attested in the Man'yōshū"
+            }
+          ],
+          "earliest_attestation_year": 759,
+          "earliest_attestation_note": "759 CE (Attested in the Man'yōshū)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Old Japanese toponym recorded in eastern Azuma-uta poems of the Man'yōshū.",
+          "source_url": "https://en.wikipedia.org/wiki/Tone_River"
+        },
+        {
+          "name": "Mount Kusatsu-Shirane",
+          "disambiguation_note": null,
+          "localisation_stem": "Kusatsu-Shirane",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Active volcano at the western head of the Agatsuma valley.",
+          "language_variants": [
+            {
+              "form": "Kusatsu-Shirane-san",
+              "native_script": "草津白根山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kusatsu-Shirane-san"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Edo-period Kusatsu hot spring and mountain records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Kusatsu hot springs and its white-peaked (shirane) volcanic ridge.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Kusatsu-Shirane"
+        }
+      ]
+    },
+    "b_nukanobu": {
+      "barony_key": "b_nukanobu",
+      "vanilla_ck3_name": "Nukanobu",
+      "modern_name": "Nukanobu",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_hitakami",
+        "duchy": "d_hitakami",
+        "county": "c_isawa",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Emishi",
+          "disambiguation_note": null,
+          "localisation_stem": "Emishi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous people of northern Mutsu and the Kitakami–Mabechi corridor.",
+          "language_variants": [
+            {
+              "form": "Ezo",
+              "native_script": "蝦夷",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Emishi / Ezo"
+            },
+            {
+              "form": "Máorén",
+              "native_script": "毛人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Early Chinese and Yamato court designation ('hairy people')"
+            }
+          ],
+          "earliest_attestation_year": 478,
+          "earliest_attestation_note": "478 CE (Recorded in the Book of Song memorial of King Bu of Wa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient and early medieval inhabitants of northeastern Honshu (Mutsu and Dewa), distinct from the Yamato court.",
+          "source_url": "https://en.wikipedia.org/wiki/Emishi"
+        },
+        {
+          "name": "Mabechi River",
+          "disambiguation_note": null,
+          "localisation_stem": "Mabechi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing north through the historical Nukanobu region.",
+          "language_variants": [
+            {
+              "form": "Mabechi-gawa",
+              "native_script": "馬淵川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Mabechi-gawa"
+            },
+            {
+              "form": "Mapeci",
+              "native_script": "マペチ",
+              "language": "Ainu",
+              "language_code": "ain",
+              "notes": "Proposed Ainu-derived hydronym"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period Nanbu domain river records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Often traced to an Ainu-derived hydronym or early Nanbu horse-pasture traditions.",
+          "source_url": "https://en.wikipedia.org/wiki/Mabechi_River"
+        },
+        {
+          "name": "Mount Hayachine",
+          "disambiguation_note": null,
+          "localisation_stem": "Hayachine",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the Kitakami Mountains in northern Iwate.",
+          "language_variants": [
+            {
+              "form": "Hayachine-san",
+              "native_script": "早池峰山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hayachine-san"
+            }
+          ],
+          "earliest_attestation_year": 807,
+          "earliest_attestation_note": "807 CE (Associated with early Heian Tendai/Shugendō mountain worship)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sacred peak of the Kitakami range, venerated since the early Heian period.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Hayachine"
+        }
+      ]
+    },
+    "b_kuriyagawa": {
+      "barony_key": "b_kuriyagawa",
+      "vanilla_ck3_name": "Kuriyagawa",
+      "modern_name": "Kuriyagawa",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_hitakami",
+        "duchy": "d_hitakami",
+        "county": "c_isawa",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Emishi",
+          "disambiguation_note": null,
+          "localisation_stem": "Emishi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous people of the central Kitakami valley around Kuriyagawa.",
+          "language_variants": [
+            {
+              "form": "Ezo",
+              "native_script": "蝦夷",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Emishi / Ezo"
+            },
+            {
+              "form": "Máorén",
+              "native_script": "毛人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Early Chinese and Yamato court designation ('hairy people')"
+            }
+          ],
+          "earliest_attestation_year": 478,
+          "earliest_attestation_note": "478 CE (Recorded in the Book of Song memorial of King Bu of Wa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient and early medieval inhabitants of northeastern Honshu (Mutsu and Dewa), distinct from the Yamato court.",
+          "source_url": "https://en.wikipedia.org/wiki/Emishi"
+        },
+        {
+          "name": "Kitakami River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kitakami",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of Mutsu flowing directly past Kuriyagawa.",
+          "language_variants": [
+            {
+              "form": "Kitakami-gawa",
+              "native_script": "北上川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kitakami-gawa"
+            }
+          ],
+          "earliest_attestation_year": 802,
+          "earliest_attestation_note": "802 CE (Isawa/Kitakami frontier recorded in the Nihon Kōki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named for its course through northern Mutsu ('North-Going River' or Ainu-influenced adaptation).",
+          "source_url": "https://en.wikipedia.org/wiki/Kitakami_River"
+        },
+        {
+          "name": "Mount Iwate",
+          "disambiguation_note": null,
+          "localisation_stem": "Iwate",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent stratovolcano overlooking Kuriyagawa from the northwest.",
+          "language_variants": [
+            {
+              "form": "Iwate-san",
+              "native_script": "岩手山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Iwate-san"
+            }
+          ],
+          "earliest_attestation_year": 807,
+          "earliest_attestation_note": "807 CE (Iwate district and peak attested in early Heian frontier records)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Iwate District; traditionally explained from a rock-hand legend or Ainu root.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Iwate"
+        }
+      ]
+    },
+    "b_adachi": {
+      "barony_key": "b_adachi",
+      "vanilla_ck3_name": "Adachi",
+      "modern_name": "Adachi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_hitakami",
+        "duchy": "d_hitakami",
+        "county": "c_iwase",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Emishi",
+          "disambiguation_note": null,
+          "localisation_stem": "Emishi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Historical inhabitants of southern Mutsu prior to Yamato integration.",
+          "language_variants": [
+            {
+              "form": "Ezo",
+              "native_script": "蝦夷",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Emishi / Ezo"
+            },
+            {
+              "form": "Máorén",
+              "native_script": "毛人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Early Chinese and Yamato court designation ('hairy people')"
+            }
+          ],
+          "earliest_attestation_year": 478,
+          "earliest_attestation_note": "478 CE (Recorded in the Book of Song memorial of King Bu of Wa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient and early medieval inhabitants of northeastern Honshu (Mutsu and Dewa), distinct from the Yamato court.",
+          "source_url": "https://en.wikipedia.org/wiki/Emishi"
+        },
+        {
+          "name": "Abukuma River",
+          "disambiguation_note": null,
+          "localisation_stem": "Abukuma",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing north through Adachi District.",
+          "language_variants": [
+            {
+              "form": "Abukuma-gawa",
+              "native_script": "阿武隈川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Abukuma-gawa"
+            }
+          ],
+          "earliest_attestation_year": 905,
+          "earliest_attestation_note": "905 CE (Attested in the Kokin Wakashū and Heian poetry)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Mutsu hydronym celebrated in Heian-period utamakura poetry.",
+          "source_url": "https://en.wikipedia.org/wiki/Abukuma_River"
+        },
+        {
+          "name": "Mount Adatara",
+          "disambiguation_note": null,
+          "localisation_stem": "Adatara",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic massif rising directly west of Adachi District.",
+          "language_variants": [
+            {
+              "form": "Adatara-yama",
+              "native_script": "安達太良山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Adatara-yama"
+            },
+            {
+              "form": "Adatara",
+              "native_script": "安達太良",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Adatara, attested in the Man'yōshū"
+            }
+          ],
+          "earliest_attestation_year": 759,
+          "earliest_attestation_note": "759 CE (Mentioned in the Man'yōshū)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Mutsu toponym recorded in the Man'yōshū as a landmark of Michinoku.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Adatara"
+        }
+      ]
+    },
+    "b_hotta": {
+      "barony_key": "b_hotta",
+      "vanilla_ck3_name": "Hotta",
+      "modern_name": "Hotta",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_hitakami",
+        "duchy": "d_nushiro",
+        "county": "c_nushiro",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Emishi",
+          "disambiguation_note": null,
+          "localisation_stem": "Emishi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous people of northern Dewa Province.",
+          "language_variants": [
+            {
+              "form": "Ezo",
+              "native_script": "蝦夷",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Emishi / Ezo"
+            },
+            {
+              "form": "Máorén",
+              "native_script": "毛人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Early Chinese and Yamato court designation ('hairy people')"
+            }
+          ],
+          "earliest_attestation_year": 478,
+          "earliest_attestation_note": "478 CE (Recorded in the Book of Song memorial of King Bu of Wa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient and early medieval inhabitants of northeastern Honshu (Mutsu and Dewa), distinct from the Yamato court.",
+          "source_url": "https://en.wikipedia.org/wiki/Emishi"
+        },
+        {
+          "name": "Yoneshiro River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yoneshiro",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of northern Dewa flowing past Noshiro.",
+          "language_variants": [
+            {
+              "form": "Yoneshiro-gawa",
+              "native_script": "米代川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yoneshiro-gawa"
+            },
+            {
+              "form": "Nusiro",
+              "native_script": "ヌシロ",
+              "language": "Ainu",
+              "language_code": "ain",
+              "notes": "Linked to ancient Nushiro/Noshiro toponymy"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period Akita domain records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Flows past ancient Nushiro (Noshiro), attested in the Nihon Shoki (658 CE).",
+          "source_url": "https://en.wikipedia.org/wiki/Yoneshiro_River"
+        },
+        {
+          "name": "Oga Peninsula",
+          "disambiguation_note": null,
+          "localisation_stem": "Oga",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Rugged Sea of Japan peninsula just southwest of Noshiro.",
+          "language_variants": [
+            {
+              "form": "Oga Hantō",
+              "native_script": "男鹿半島",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Oga-hantō"
+            }
+          ],
+          "earliest_attestation_year": 733,
+          "earliest_attestation_note": "733 CE (Oga/Akita coast recorded in Nara-period Dewa frontier annals)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Toponym of northern Dewa coastal geography, possibly preserving an Ainuic substrate.",
+          "source_url": "https://en.wikipedia.org/wiki/Oga_Peninsula"
+        }
+      ]
+    },
+    "b_usori": {
+      "barony_key": "b_usori",
+      "vanilla_ck3_name": "Usori",
+      "modern_name": "Usori",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_hitakami",
+        "duchy": "x_script_1505",
+        "county": "c_tsugaru",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "Usori (宇曽利山・宇曽利湖)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Emishi",
+          "disambiguation_note": null,
+          "localisation_stem": "Emishi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous people of northernmost Honshu and the Tsugaru–Shimokita region.",
+          "language_variants": [
+            {
+              "form": "Ezo",
+              "native_script": "蝦夷",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Emishi / Ezo"
+            },
+            {
+              "form": "Máorén",
+              "native_script": "毛人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Early Chinese and Yamato court designation ('hairy people')"
+            }
+          ],
+          "earliest_attestation_year": 478,
+          "earliest_attestation_note": "478 CE (Recorded in the Book of Song memorial of King Bu of Wa)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient and early medieval inhabitants of northeastern Honshu (Mutsu and Dewa), distinct from the Yamato court.",
+          "source_url": "https://en.wikipedia.org/wiki/Emishi"
+        },
+        {
+          "name": "Tsugaru Strait",
+          "disambiguation_note": null,
+          "localisation_stem": "Tsugaru",
+          "category": "hydronym",
+          "feature_subtype": "strait",
+          "relationship": "Major strait separating northern Honshu from Hokkaido north of Usori.",
+          "language_variants": [
+            {
+              "form": "Tsugaru-kaikyō",
+              "native_script": "津軽海峡",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Tsugaru-kaikyō"
+            },
+            {
+              "form": "Tsugaru",
+              "native_script": "都加留",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Tsugaru, attested in the Nihon Shoki (655 CE)"
+            }
+          ],
+          "earliest_attestation_year": 655,
+          "earliest_attestation_note": "655 CE (Tsugaru recorded in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Tsugaru region of northernmost Honshu.",
+          "source_url": "https://en.wikipedia.org/wiki/Tsugaru_Strait"
+        },
+        {
+          "name": "Mutsu Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Mutsu",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Sheltered bay enclosed by the Shimokita and Tsugaru peninsulas.",
+          "language_variants": [
+            {
+              "form": "Mutsu-wan",
+              "native_script": "陸奥湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Mutsu-wan"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Mutsu/Michinoku province established in the Taika era)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Mutsu Province (陸奥国), the northernmost province of ancient Honshu.",
+          "source_url": "https://en.wikipedia.org/wiki/Mutsu_Bay"
+        }
+      ]
+    },
+    "b_hiko": {
+      "barony_key": "b_hiko",
+      "vanilla_ck3_name": "Hiko",
+      "modern_name": "Hiko",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_tsukushi",
+        "duchy": "d_north_saikaido",
+        "county": "c_buzen",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Hikosan (彦山 / 英彦山)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Buzen Province in northern Kyushu.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Yamakuni River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamakuni",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River rising near the Hiko massif and flowing north through Buzen.",
+          "language_variants": [
+            {
+              "form": "Yamakuni-gawa",
+              "native_script": "山国川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yamakuni-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "c. 1300 CE (Medieval Buzen provincial river records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named for the mountainous inland valley (yamakuni) of Buzen and Bungo.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamakuni_River"
+        },
+        {
+          "name": "Kunisaki Peninsula",
+          "disambiguation_note": null,
+          "localisation_stem": "Kunisaki",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic peninsula of northeastern Kyushu near Buzen.",
+          "language_variants": [
+            {
+              "form": "Kunisaki Hantō",
+              "native_script": "国東半島",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kunisaki-hantō"
+            }
+          ],
+          "earliest_attestation_year": 718,
+          "earliest_attestation_note": "718 CE (Kunisaki district attested in Nara-period Bungo records)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Kunisaki (国埼/国東) district of Bungo Province.",
+          "source_url": "https://en.wikipedia.org/wiki/Kunisaki_Peninsula"
+        }
+      ]
+    },
+    "b_mizuma": {
+      "barony_key": "b_mizuma",
+      "vanilla_ck3_name": "Mizuma",
+      "modern_name": "Mizuma",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_tsukushi",
+        "duchy": "d_north_saikaido",
+        "county": "c_chikugo",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Kumaso",
+          "disambiguation_note": null,
+          "localisation_stem": "Kumaso",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ancient regional people of central and southern Kyushu.",
+          "language_variants": [
+            {
+              "form": "Kumaso",
+              "native_script": "熊襲",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Kumaso"
+            },
+            {
+              "form": "Kumaso",
+              "native_script": "熊襲",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Kojiki orthography Kumaso for southern/central Kyushu peoples"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Attested in the Kojiki and 720 CE Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient people of southern and central Kyushu recorded in early Japanese chronicles prior to Yamato consolidation.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumaso"
+        },
+        {
+          "name": "Chikugo River",
+          "disambiguation_note": null,
+          "localisation_stem": "Chikugo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Largest river of Kyushu flowing through Mizuma District.",
+          "language_variants": [
+            {
+              "form": "Chikugo-gawa",
+              "native_script": "筑後川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Chikugo-gawa"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Chikugo province attested in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Chikugo Province; historically known as the Tsukushi-no-Ōkawa.",
+          "source_url": "https://en.wikipedia.org/wiki/Chikugo_River"
+        },
+        {
+          "name": "Ariake Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Ariake Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Tidal inland sea receiving the Chikugo River west of Mizuma.",
+          "language_variants": [
+            {
+              "form": "Ariake-kai",
+              "native_script": "有明海",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Ariake-kai"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period Chikugo and Hizen maritime records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Means 'Dawn Sea' (Ariake), famed for the largest tidal range in Japan.",
+          "source_url": "https://en.wikipedia.org/wiki/Ariake_Sea"
+        }
+      ]
+    },
+    "b_kurate": {
+      "barony_key": "b_kurate",
+      "vanilla_ck3_name": "Kurate",
+      "modern_name": "Kurate",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_tsukushi",
+        "duchy": "d_north_saikaido",
+        "county": "c_chikuzen",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Chikuzen Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Hakata Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Hakata",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Major natural harbor of Chikuzen just west of Kurate.",
+          "language_variants": [
+            {
+              "form": "Hakata-wan",
+              "native_script": "博多湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hakata-wan"
+            }
+          ],
+          "earliest_attestation_year": 759,
+          "earliest_attestation_note": "759 CE (Hakata port attested in the Shoku Nihongi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient international port of Hakata in Chikuzen.",
+          "source_url": "https://en.wikipedia.org/wiki/Hakata_Bay"
+        },
+        {
+          "name": "Genkai Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Genkai Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Sea off northern Chikuzen bordering the Kurate coast.",
+          "language_variants": [
+            {
+              "form": "Genkai-nada",
+              "native_script": "玄界灘",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Genkai-nada"
+            }
+          ],
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "c. 1400 CE (Medieval maritime routes between Kyushu and Korea)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named in medieval navigation for the rough open waters north of Chikuzen.",
+          "source_url": "https://en.wikipedia.org/wiki/Genkai_Sea"
+        }
+      ]
+    },
+    "b_yora": {
+      "barony_key": "b_yora",
+      "vanilla_ck3_name": "Yora",
+      "modern_name": "Yora",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_tsukushi",
+        "duchy": "d_north_saikaido",
+        "county": "c_tsushima",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Japonic island population of Tsushima Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Tsushima Strait",
+          "disambiguation_note": null,
+          "localisation_stem": "Tsushima",
+          "category": "hydronym",
+          "feature_subtype": "strait",
+          "relationship": "Eastern channel of the Korea Strait surrounding Yora on Tsushima.",
+          "language_variants": [
+            {
+              "form": "Tsushima Kaikyō",
+              "native_script": "対馬海峡",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Tsushima-kaikyō"
+            },
+            {
+              "form": "Duìmǎ",
+              "native_script": "對馬",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Attested in the 3rd-century Records of the Three Kingdoms"
+            }
+          ],
+          "earliest_attestation_year": 280,
+          "earliest_attestation_note": "c. 280 CE (Tsushima island recorded in the Wei Zhi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Tsushima Island, attested as a strategic stepping stone since the 3rd century.",
+          "source_url": "https://en.wikipedia.org/wiki/Tsushima_Strait"
+        },
+        {
+          "name": "Asō Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Asō",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Deep ria bay bisecting Tsushima Island just north of Yora.",
+          "language_variants": [
+            {
+              "form": "Asō-wan",
+              "native_script": "浅茅湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Asō-wan"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Edo-period Tsushima coastal charts)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ria inlet separating Kami-jima and Shimo-jima of Tsushima.",
+          "source_url": "https://en.wikipedia.org/wiki/As%C5%8D_Bay"
+        }
+      ]
+    },
+    "b_isa": {
+      "barony_key": "b_isa",
+      "vanilla_ck3_name": "Isa",
+      "modern_name": "Isa",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_tsukushi",
+        "duchy": "d_south_saikaido",
+        "county": "c_satsuma",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Hayato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Hayato",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous southern Kyushu people of Satsuma and Ōsumi.",
+          "language_variants": [
+            {
+              "form": "Hayato",
+              "native_script": "隼人",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Japanese ethnonym Hayato ('falcon people')"
+            },
+            {
+              "form": "Hayato",
+              "native_script": "隼人",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Attested in the Kojiki and Nihon Shoki for southern Kyushu groups"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Attested in the Kojiki; 720 CE in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient people of Satsuma and Ōsumi in southern Kyushu, noted in Nara-period chronicles as imperial palace guards.",
+          "source_url": "https://en.wikipedia.org/wiki/Hayato_people"
+        },
+        {
+          "name": "Mount Kirishima",
+          "disambiguation_note": null,
+          "localisation_stem": "Kirishima",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic range rising directly southeast of Isa.",
+          "language_variants": [
+            {
+              "form": "Kirishima-yama",
+              "native_script": "霧島山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kirishima-yama"
+            },
+            {
+              "form": "Kirishima",
+              "native_script": "霧島",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Kirishima, linked to Takachiho myths in the Kojiki and Nihon Shoki"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Takachiho-Kirishima peaks attested in the Kojiki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Mist Island Mountain', rising above sea-like valley fogs.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Kirishima"
+        },
+        {
+          "name": "Kagoshima Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Kagoshima",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Deep volcanic bay south of Isa in Satsuma.",
+          "language_variants": [
+            {
+              "form": "Kagoshima-wan",
+              "native_script": "鹿児島湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kagoshima-wan"
+            }
+          ],
+          "earliest_attestation_year": 1340,
+          "earliest_attestation_note": "c. 1340 CE (Kagoshima attested as a Nanboku-chō Shimazu stronghold)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Kagoshima on its western shore.",
+          "source_url": "https://en.wikipedia.org/wiki/Kagoshima_Bay"
+        }
+      ]
+    },
+    "b_fukuhara": {
+      "barony_key": "b_fukuhara",
+      "vanilla_ck3_name": "Fukuhara",
+      "modern_name": "Fukuhara",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_kinai",
+        "county": "c_settsu",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Core Japonic population of Settsu Province in the Kinai.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Mount Rokkō",
+          "disambiguation_note": null,
+          "localisation_stem": "Rokkō",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Granite mountain range rising directly behind Fukuhara.",
+          "language_variants": [
+            {
+              "form": "Rokkō-san",
+              "native_script": "六甲山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Rokkō-san"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Mukō/Muko region attested in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Historically written 武庫山 (Muko-yama) and later 六甲山 (Rokkō-san).",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Rokk%C5%8D"
+        },
+        {
+          "name": "Muko River",
+          "disambiguation_note": null,
+          "localisation_stem": "Muko",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Settsu river flowing east of the Rokkō massif into Osaka Bay.",
+          "language_variants": [
+            {
+              "form": "Muko-gawa",
+              "native_script": "武庫川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Muko-gawa"
+            },
+            {
+              "form": "Muko",
+              "native_script": "武庫",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Muko, attested in the Nihon Shoki and Man'yōshū"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Muko port and river region attested in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Muko (武庫) district and harbor of Settsu.",
+          "source_url": "https://en.wikipedia.org/wiki/Muko_River"
+        }
+      ]
+    },
+    "b_watanabe": {
+      "barony_key": "b_watanabe",
+      "vanilla_ck3_name": "Watanabe",
+      "modern_name": "Watanabe",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_kinai",
+        "county": "c_settsu",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Core Japonic population of Settsu Province in the Kinai.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Yodo River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yodo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of the Kinai flowing past Watanabe-zu into Osaka Bay.",
+          "language_variants": [
+            {
+              "form": "Yodo-gawa",
+              "native_script": "淀川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yodo-gawa"
+            }
+          ],
+          "earliest_attestation_year": 794,
+          "earliest_attestation_note": "794 CE (Yodo port and river recorded in early Heian chronicles)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the port of Yodo south of Heian-kyō.",
+          "source_url": "https://en.wikipedia.org/wiki/Yodo_River"
+        },
+        {
+          "name": "Osaka Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Osaka",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Easternmost bay of the Seto Inland Sea bordering Watanabe.",
+          "language_variants": [
+            {
+              "form": "Ōsaka-wan",
+              "native_script": "大阪湾",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Ōsaka-wan"
+            },
+            {
+              "form": "Naniwa-tsu",
+              "native_script": "難波津",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Naniwa-zu, ancient name of the bay and harbor"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Naniwa bay and harbor attested in the Kojiki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Historically known as Naniwa-zu / Chinu-no-umi before the late medieval rise of Ōsaka.",
+          "source_url": "https://en.wikipedia.org/wiki/Osaka_Bay"
+        }
+      ]
+    },
+    "b_omine": {
+      "barony_key": "b_omine",
+      "vanilla_ck3_name": "Ōmine",
+      "modern_name": "Omine",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_kinai",
+        "county": "c_yamato",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Ōmine"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Core Japonic population of Yamato Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Yoshino River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yoshino",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing west through southern Yamato north of the Ōmine range.",
+          "language_variants": [
+            {
+              "form": "Yoshino-gawa",
+              "native_script": "吉野川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yoshino-gawa"
+            },
+            {
+              "form": "Yoshino",
+              "native_script": "吉野",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Yoshino, attested in the Kojiki and Nihon Shoki"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Yoshino attested in the Kojiki and Man'yōshū)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Yoshino region of southern Yamato.",
+          "source_url": "https://en.wikipedia.org/wiki/Yoshino_River"
+        },
+        {
+          "name": "Mount Yoshino",
+          "disambiguation_note": null,
+          "localisation_stem": "Mount Yoshino",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain ridge at the northern gateway to the Ōmine range.",
+          "language_variants": [
+            {
+              "form": "Yoshino-yama",
+              "native_script": "吉野山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Yoshino-yama"
+            },
+            {
+              "form": "Yoshino",
+              "native_script": "吉野",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Yoshino, imperial retreat and Shugendō center"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Attested in the Kojiki and Man'yōshū)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Northernmost ridge of the Ōmine-Yoshino mountain system.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Yoshino"
+        }
+      ]
+    },
+    "b_totsukawa": {
+      "barony_key": "b_totsukawa",
+      "vanilla_ck3_name": "Totsukawa",
+      "modern_name": "Totsukawa",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_kinai",
+        "county": "c_yamato",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Totsukawa (Tōtsukawa)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Core Japonic population of southern Yamato Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Kumano River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kumano",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river draining southern Yamato through the Kii Mountains.",
+          "language_variants": [
+            {
+              "form": "Kumano-gawa",
+              "native_script": "熊野川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kumano-gawa"
+            },
+            {
+              "form": "Kumano",
+              "native_script": "熊野",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Kumano, attested in the Kojiki and Nihon Shoki"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Kumano attested in the Kojiki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the sacred Kumano region of the southern Kii Peninsula.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumano_River"
+        },
+        {
+          "name": "Kii Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Kii",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Rugged mountain range enclosing the remote Totsukawa valleys.",
+          "language_variants": [
+            {
+              "form": "Kii Sanchi",
+              "native_script": "紀伊山地",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kii-sanchi"
+            },
+            {
+              "form": "Kii",
+              "native_script": "紀伊",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ki / Kii, ancient province of the Kii Peninsula"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Kii province attested in the Kojiki and Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Kii Province ('Land of Trees').",
+          "source_url": "https://en.wikipedia.org/wiki/Kii_Mountains"
+        }
+      ]
+    },
+    "b_tsurugi": {
+      "barony_key": "b_tsurugi",
+      "vanilla_ck3_name": "Tsurugi",
+      "modern_name": "Tsurugi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_nankaido",
+        "county": "c_awa",
+        "holding_type": "church"
+      },
+      "anachronism_type": "early_modern_foundation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Tsurugisan"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Awa Province on Shikoku.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Shikoku Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Shikoku",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Central mountain spine of Shikoku running across western Awa.",
+          "language_variants": [
+            {
+              "form": "Shikoku Sanchi",
+              "native_script": "四国山地",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Shikoku-sanchi"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Geographical designation for the mountain spine of the Four Provinces)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Shikoku ('Four Provinces': Awa, Sanuki, Iyo, and Tosa).",
+          "source_url": "https://en.wikipedia.org/wiki/Shikoku_Mountains"
+        },
+        {
+          "name": "Iya Valley",
+          "disambiguation_note": null,
+          "localisation_stem": "Iya",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Deep mountain gorge in western Awa adjacent to the Tsurugi massif.",
+          "language_variants": [
+            {
+              "form": "Iya-kei",
+              "native_script": "祖谷渓",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Iya-kei"
+            }
+          ],
+          "earliest_attestation_year": 1185,
+          "earliest_attestation_note": "c. 1185 CE (Tradition of Taira clan refuge after the Battle of Dan-no-ura)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Remote gorge of the Iya River in western Tokushima.",
+          "source_url": "https://en.wikipedia.org/wiki/Iya_Valley"
+        }
+      ]
+    },
+    "b_kaifu": {
+      "barony_key": "b_kaifu",
+      "vanilla_ck3_name": "Kaifu",
+      "modern_name": "Kaifu",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_nankaido",
+        "county": "c_awa",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of southern Awa Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Naka River",
+          "disambiguation_note": null,
+          "localisation_stem": "Naka",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of southern Awa just north of Kaifu District.",
+          "language_variants": [
+            {
+              "form": "Naka-gawa",
+              "native_script": "那賀川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Naka-gawa"
+            }
+          ],
+          "earliest_attestation_year": 927,
+          "earliest_attestation_note": "927 CE (Naka district of Awa attested in the Engishiki)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Naka (那賀) district of Awa Province.",
+          "source_url": "https://en.wikipedia.org/wiki/Naka_River_(Tokushima)"
+        },
+        {
+          "name": "Kii Channel",
+          "disambiguation_note": null,
+          "localisation_stem": "Kii Channel",
+          "category": "hydronym",
+          "feature_subtype": "strait",
+          "relationship": "Maritime channel separating eastern Awa from the Kii Peninsula.",
+          "language_variants": [
+            {
+              "form": "Kii Suidō",
+              "native_script": "紀伊水道",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Kii-suidō"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Sea route between Kii and Awa attested in early chronicles)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Kii Province on its eastern shore.",
+          "source_url": "https://en.wikipedia.org/wiki/Kii_Channel"
+        }
+      ]
+    },
+    "b_kotohira": {
+      "barony_key": "b_kotohira",
+      "vanilla_ck3_name": "Kotohira",
+      "modern_name": "Kotohira",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_nankaido",
+        "county": "c_sanuki",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Sanuki Province on Shikoku.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Doki River",
+          "disambiguation_note": null,
+          "localisation_stem": "Doki",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of the Marugame plain flowing past Kotohira.",
+          "language_variants": [
+            {
+              "form": "Doki-gawa",
+              "native_script": "土器川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Doki-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Edo-period Sanuki irrigation and river records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Earthenware River', associated with ancient pottery kilns along its banks.",
+          "source_url": "https://en.wikipedia.org/wiki/Doki_River"
+        },
+        {
+          "name": "Sanuki Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanuki",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "East–west mountain range forming the southern border of Sanuki south of Kotohira.",
+          "language_variants": [
+            {
+              "form": "Sanuki Sanmyaku",
+              "native_script": "讃岐山脈",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Sanuki-sanmyaku"
+            },
+            {
+              "form": "Sanuki",
+              "native_script": "讃岐",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Sanuki, attested in the Kojiki and Nihon Shoki"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Sanuki province attested in the Kojiki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after Sanuki Province on northern Shikoku.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanuki_Mountains"
+        }
+      ]
+    },
+    "b_hino": {
+      "barony_key": "b_hino",
+      "vanilla_ck3_name": "Hino",
+      "modern_name": "Hino",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_west_sanindo",
+        "county": "c_hoki",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Hōki Province in Chūgoku.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Mount Daisen",
+          "disambiguation_note": null,
+          "localisation_stem": "Daisen",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic massif dominating Hōki Province northeast of Hino.",
+          "language_variants": [
+            {
+              "form": "Daisen",
+              "native_script": "大山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Daisen"
+            },
+            {
+              "form": "Ōmiwa-dake",
+              "native_script": "大神岳",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ōkami-no-take, attested in the Izumo Fudoki (733 CE)"
+            }
+          ],
+          "earliest_attestation_year": 733,
+          "earliest_attestation_note": "733 CE (Attested as Ōkami-no-take in the Izumo no Kuni Fudoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Great Mountain', revered in San'in mountain worship since the Nara period.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Daisen"
+        },
+        {
+          "name": "Nakaumi",
+          "disambiguation_note": null,
+          "localisation_stem": "Nakaumi",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Brackish coastal lagoon between Hōki and Izumo.",
+          "language_variants": [
+            {
+              "form": "Nakaumi",
+              "native_script": "中海",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Nakaumi"
+            }
+          ],
+          "earliest_attestation_year": 733,
+          "earliest_attestation_note": "733 CE (Lagoon geography described in the Izumo no Kuni Fudoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Middle Sea', lying between Shimane Peninsula and the mainland.",
+          "source_url": "https://en.wikipedia.org/wiki/Nakaumi"
+        }
+      ]
+    },
+    "b_ochi": {
+      "barony_key": "b_ochi",
+      "vanilla_ck3_name": "Ochi",
+      "modern_name": "Ochi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_west_sanindo",
+        "county": "c_iwami",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Iwami Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Gōnokawa River",
+          "disambiguation_note": null,
+          "localisation_stem": "Gōnokawa",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Largest river of the Chūgoku region flowing directly through Ōchi District.",
+          "language_variants": [
+            {
+              "form": "Gōnokawa",
+              "native_script": "江の川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Gōnokawa"
+            }
+          ],
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "c. 1300 CE (Medieval Iwami–Aki riverine records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'River of the Inlet/Estuary', flowing from Aki through Ōchi to Gōtsu.",
+          "source_url": "https://en.wikipedia.org/wiki/G%C5%8Dnokawa_River"
+        },
+        {
+          "name": "Mount Sanbe",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanbe",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Volcanic massif on the border of Ōchi and Iishi in Iwami.",
+          "language_variants": [
+            {
+              "form": "Sanbe-san",
+              "native_script": "三瓶山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Sanbe-san"
+            },
+            {
+              "form": "Sahime-yama",
+              "native_script": "佐比売山",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Sahime-yama, attested in the Izumo Fudoki (733 CE)"
+            }
+          ],
+          "earliest_attestation_year": 733,
+          "earliest_attestation_note": "733 CE (Attested as Sahime-yama in the Izumo no Kuni Fudoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient boundary peak between Izumo and Iwami, recorded in the 733 CE Izumo Fudoki.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Sanbe"
+        }
+      ]
+    },
+    "b_mikami": {
+      "barony_key": "b_mikami",
+      "vanilla_ck3_name": "Mikami",
+      "modern_name": "Mikami",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_west_sanyodo",
+        "county": "c_bingo",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of northern Bingo Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Ashida River",
+          "disambiguation_note": null,
+          "localisation_stem": "Ashida",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of Bingo Province flowing south to the Seto Inland Sea.",
+          "language_variants": [
+            {
+              "form": "Ashida-gawa",
+              "native_script": "芦田川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Ashida-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "c. 1300 CE (Medieval Bingo provincial records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Ashida district of Bingo Province.",
+          "source_url": "https://en.wikipedia.org/wiki/Ashida_River"
+        },
+        {
+          "name": "Mount Hiba",
+          "disambiguation_note": null,
+          "localisation_stem": "Hiba",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain range on the Bingo–Izumo border north of Mikami.",
+          "language_variants": [
+            {
+              "form": "Hiba-yama",
+              "native_script": "比婆山",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Hiba-yama"
+            },
+            {
+              "form": "Hiba",
+              "native_script": "比婆",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Hiba, traditional Kojiki site of Izanami's burial"
+            }
+          ],
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Mount Hiba mentioned in the Kojiki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Identified in tradition with the Mount Hiba where Izanami was buried on the Izumo–Hōki border.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Hiba"
+        }
+      ]
+    },
+    "b_tsuno": {
+      "barony_key": "b_tsuno",
+      "vanilla_ck3_name": "Tsuno",
+      "modern_name": "Tsuno",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_japan",
+        "kingdom": "k_yamato",
+        "duchy": "d_west_sanyodo",
+        "county": "c_suo",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Yamato people",
+          "disambiguation_note": null,
+          "localisation_stem": "Yamato",
+          "category": "tribe",
+          "feature_subtype": "japonic_people",
+          "relationship": "Dominant Japonic population of Suō Province.",
+          "language_variants": [
+            {
+              "form": "Yamato Minzoku",
+              "native_script": "大和民族",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese ethnonym Yamato minzoku"
+            },
+            {
+              "form": "Wa",
+              "native_script": "倭",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient exonym and endonym Wa / Yamato attested in early chronicles"
+            },
+            {
+              "form": "Wōrén",
+              "native_script": "倭人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation Woren in dynastic histories"
+            }
+          ],
+          "earliest_attestation_year": 57,
+          "earliest_attestation_note": "57 CE (Wa people recorded in the Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the Yamato polity of the Nara Basin; early Chinese chronicles refer to the archipelago's Japonic inhabitants as Wa.",
+          "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
+        },
+        {
+          "name": "Nishiki River",
+          "disambiguation_note": null,
+          "localisation_stem": "Nishiki",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Longest river of Suō Province flowing east of Tsuno.",
+          "language_variants": [
+            {
+              "form": "Nishiki-gawa",
+              "native_script": "錦川",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Nishiki-gawa"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Early Edo-period Iwakuni and Suō river records)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Brocade River', celebrated for its clear waters in Suō.",
+          "source_url": "https://en.wikipedia.org/wiki/Nishiki_River"
+        },
+        {
+          "name": "Seto Inland Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Seto Inland Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Inland sea bordering the southern coast of Tsuno in Suō.",
+          "language_variants": [
+            {
+              "form": "Seto Naikai",
+              "native_script": "瀬戸内海",
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Seto-naikai"
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Inland sea route attested in the Nihon Shoki)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Literally 'Inland Sea of the Straits', linking Kinai and Kyushu.",
+          "source_url": "https://en.wikipedia.org/wiki/Seto_Inland_Sea"
+        }
+      ]
+    }
+  }
+}

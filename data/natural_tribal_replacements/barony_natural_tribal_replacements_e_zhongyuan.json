@@ -1,0 +1,3978 @@
+{
+  "metadata": {
+    "empire": "e_zhongyuan",
+    "scope": "e_zhongyuan (27 non-867 baronies across k_daibei, k_qingxu, and k_youji; excludes baronies where is_historical_at['867'] is true)",
+    "schema_version": "2.0.0",
+    "source_audit_schema_version": "2.0.1",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
+    "source_files": [
+      "data/anachronicity_audit/barony_audit_e_zhongyuan.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
+    "schema_notes": {
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding.",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier; null if none.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "anachronism_type": "Historicity category from barony_audit_e_zhongyuan.json.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}; all entries here have '867': false.",
+      "existing_natural_proper_name": "Existing natural_proper_name object from barony_audit_e_zhongyuan.json.",
+      "replacement_candidates": "List of exactly 3 associated natural feature names and historical tribal/ethnonym names (>=1 tribe per barony) usable as localisation replacements.",
+      "category_subtype_taxonomy": {
+        "choronym": [
+          "region"
+        ],
+        "hydronym": [
+          "bay",
+          "estuary",
+          "lake",
+          "river",
+          "sea",
+          "strait",
+          "stream"
+        ],
+        "oronym": [
+          "hill",
+          "mountain",
+          "mountain_range",
+          "plateau"
+        ],
+        "topographic_feature": [
+          "coastal_feature",
+          "forest",
+          "marsh",
+          "valley"
+        ],
+        "tribe": [
+          "ainuic_people",
+          "anatolian_tribe",
+          "aquitani_tribe",
+          "arab_tribe",
+          "atlantic_people",
+          "austroasiatic_people",
+          "austronesian_people",
+          "baltic_tribe",
+          "bantu_tribe",
+          "belgae_tribe",
+          "berber_tribe",
+          "bhil_people",
+          "brittonic_tribe",
+          "caucasian_tribe",
+          "celtiberian_tribe",
+          "celtic_tribe",
+          "chadic_people",
+          "cushitic_tribe",
+          "dacian_tribe",
+          "dravidian_people",
+          "egyptian_people",
+          "ethio_semitic_people",
+          "finnic_tribe",
+          "gaelic_tribe",
+          "gaulish_tribe",
+          "germanic_tribe",
+          "gur_people",
+          "hellenic_tribe",
+          "hmong_mien_people",
+          "iberian_tribe",
+          "illyrian_tribe",
+          "indo_aryan_people",
+          "iranian_tribe",
+          "italic_tribe",
+          "japonic_people",
+          "koreanic_people",
+          "kra_dai_people",
+          "kwa_people",
+          "lusitanian_tribe",
+          "mande_people",
+          "medieval_people",
+          "mongolic_tribe",
+          "munda_people",
+          "niger_congo_people",
+          "nilo_saharan_people",
+          "nilotic_tribe",
+          "nivkh_people",
+          "nubian_people",
+          "omotic_people",
+          "paleo_sardinian_tribe",
+          "papuan_people",
+          "pictish_tribe",
+          "rhaetic_tribe",
+          "saharan_people",
+          "sami_people",
+          "sarmatian_tribe",
+          "semitic_tribe",
+          "sinitic_people",
+          "slavic_tribe",
+          "songhai_people",
+          "south_arabian_tribe",
+          "thracian_tribe",
+          "tibeto_burman_people",
+          "tungusic_tribe",
+          "turkic_tribe",
+          "uralic_tribe",
+          "vasconic_tribe",
+          "volta_niger_people",
+          "yeniseian_tribe"
+        ]
+      },
+      "name": "Clean display name of the replacement candidate (Wikipedia disambiguation suffixes extracted to disambiguation_note).",
+      "disambiguation_note": "Optional disambiguator extracted from parenthetical/comma qualifiers (e.g. 'Liao', 'Orkney', 'river'); null if none.",
+      "localisation_stem": "Clean CK3-ready toponym stem stripped of redundant generic English feature suffixes/prefixes ('River', 'Mount', 'Lake', 'people', etc.) while preserving meaningful compounds.",
+      "attestation_basis": "Historicity classification distinguishing genuinely pre-867/pre-literate entities from medieval post-867 ethnogeneses: attested_pre_867 | indigenous_pre_literate | attested_867_to_1066 | attested_1066_to_1178.",
+      "valid_for_bookmarks": "Bookmark-keyed booleans {'867', '1066', '1178'} indicating whether the replacement candidate is historically non-anachronistic for that bookmark (true for both attested_pre_867 and indigenous_pre_literate; bookmark-gated for attested_867_to_1066 and attested_1066_to_1178).",
+      "candidates_with_multilingual_variants": "Count of replacement candidates having more than 1 distinct language_code (ISO 639-3 / ISO 639-5 or documented proto-stage code) across language_variants.",
+      "language_variants_policy": "Include core local/classical forms plus regionally scoped vernaculars and genuinely distinct exonyms; exclude out-of-region exonym padding and redundant eng copies (eng is retained only when no non-English variant exists). Uses ISO 639-3 / ISO 639-5 language_code values plus documented Wiktionary proto/stage codes (sla-pro, gem-pro, cel-pro, cel-bry, urj-fin-pro); reconstructed proto/ancient forms carry a leading '*'.",
+      "language_variants": "List of cultural/historical name forms: {form, native_script, language, language_code, notes}. form is always clean Latin script (or romanization) suitable for CK3 localisation; native_script holds the native non-Latin script form or null when the language natively uses Latin script.",
+      "relationship": "Prose description of the geographical, ecological, or historical relationship between the replacement entity and the audited barony.",
+      "etymology_notes": "Linguistic etymology, onomastic origin, or geographic/ethnographic characterization of the replacement entity (incorporating attested onomastic notes from language variants where documented)."
+    },
+    "summary_statistics": {
+      "total_baronies_in_source_audit": 283,
+      "skipped_historical_867": 256,
+      "target_baronies_audited": 27,
+      "candidates_per_barony": 3,
+      "total_replacement_candidates": 81,
+      "unique_replacement_names": 30,
+      "candidates_with_multilingual_variants": 81,
+      "wikipedia_source_attached": 81,
+      "unique_source_urls": 30,
+      "candidates_by_category": {
+        "choronym": 4,
+        "hydronym": 22,
+        "oronym": 27,
+        "topographic_feature": 1,
+        "tribe": 27
+      },
+      "baronies_with_category": {
+        "has_choronym_candidate": 4,
+        "has_hydronym_candidate": 20,
+        "has_oronym_candidate": 23,
+        "has_topographic_feature_candidate": 1,
+        "has_tribe_candidate": 27
+      },
+      "unique_language_codes": [
+        "bod",
+        "lzh",
+        "mon",
+        "otk",
+        "zho"
+      ],
+      "anachronism_type_counts": {
+        "high_late_medieval_attestation": 8,
+        "modern_anachronism": 1,
+        "renamed_post_867": 15,
+        "unattested_indigenous_or_minor": 3
+      },
+      "candidates_by_attestation_basis": {
+        "attested_pre_867": 74,
+        "indigenous_pre_literate": 7
+      },
+      "bookmark_valid_candidates": {
+        "867": 81,
+        "1066": 81,
+        "1178": 81
+      },
+      "baronies_with_867_valid_candidate": 27,
+      "unique_localisation_stems": 30
+    }
+  },
+  "baronies": {
+    "b_baishui": {
+      "barony_key": "b_baishui",
+      "vanilla_ck3_name": "Baishui",
+      "modern_name": "Baishui",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_huaian",
+        "holding_type": "church"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "白水 (Baishui)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic garrison and pastoralist population of the Sanggan frontier.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river flowing through the Huaian-Sanggan basin.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern mountain barrier framing the Sanggan valley.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        }
+      ]
+    },
+    "b_guanshan": {
+      "barony_key": "b_guanshan",
+      "vanilla_ck3_name": "Chayouqian",
+      "modern_name": "Guanshan",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_jiushijiuquan",
+        "holding_type": "city"
+      },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Xianbei",
+          "disambiguation_note": null,
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Tuoba Xianbei steppe confederation historically centered in Ulanqab and Dai.",
+          "language_variants": [
+            {
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-Wei ethnonym Xianbei"
+            },
+            {
+              "form": "Xiānbēi",
+              "native_script": "鲜卑",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Xianbei"
+            },
+            {
+              "form": "Syanbi",
+              "native_script": "Сянби",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian rendering of the proto-Mongolic confederation"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Proto-Mongolic steppe confederation whose Tuoba branch established Northern Wei in Shengle and Pingcheng (Datong).",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
+        },
+        {
+          "name": "Lake Dai",
+          "disambiguation_note": null,
+          "localisation_stem": "Dai",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Endorheic steppe lake located in Chayouqian / Ulanqab.",
+          "language_variants": [
+            {
+              "form": "Dài Hǎi",
+              "native_script": "岱海",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Daihai"
+            },
+            {
+              "form": "Dài Hǎi",
+              "native_script": "岱海",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical name for the endorheic steppe lake in Ulanqab"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Recorded in Northern Wei geographic accounts of Dai/Ulanqab)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Endorheic salt lake on the southern edge of the Inner Mongolian plateau in Ulanqab.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Dai"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Steppe-border mountain range north of Ulanqab.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        }
+      ]
+    },
+    "b_jining": {
+      "barony_key": "b_jining",
+      "vanilla_ck3_name": "Jining",
+      "modern_name": "Jining",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_jiushijiuquan",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan nomadic confederation controlling the Ulanqab-Daibei steppe corridor.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the Jining highland in Ulanqab.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        },
+        {
+          "name": "Bashang Grasslands",
+          "disambiguation_note": null,
+          "localisation_stem": "Bashang Grasslands",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Adjacent highland steppe plateau on the Inner Mongolian rim.",
+          "language_variants": [
+            {
+              "form": "Bàshàng",
+              "native_script": "壩上",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Bashang (above the escarpment)"
+            },
+            {
+              "form": "Bàshàng",
+              "native_script": "坝上",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Bashang"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 1100 CE (Liao-Jin frontier records of the steppe plateau north of the Yan Mountains)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Highland steppe plateau on the southern rim of the Inner Mongolian plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Bashang_Grasslands"
+        }
+      ]
+    },
+    "b_rouyuan": {
+      "barony_key": "b_rouyuan",
+      "vanilla_ck3_name": "Rouyuan",
+      "modern_name": "Rouyuan",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_rouyuan",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Xianbei",
+          "disambiguation_note": null,
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Xianbei pastoralist population of the northern Sanggan-Ulanqab frontier.",
+          "language_variants": [
+            {
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-Wei ethnonym Xianbei"
+            },
+            {
+              "form": "Xiānbēi",
+              "native_script": "鲜卑",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Xianbei"
+            },
+            {
+              "form": "Syanbi",
+              "native_script": "Сянби",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian rendering of the proto-Mongolic confederation"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Proto-Mongolic steppe confederation whose Tuoba branch established Northern Wei in Shengle and Pingcheng (Datong).",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
+        },
+        {
+          "name": "Bashang Grasslands",
+          "disambiguation_note": null,
+          "localisation_stem": "Bashang Grasslands",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland steppe plateau spanning the Xinghe-Shangdu frontier.",
+          "language_variants": [
+            {
+              "form": "Bàshàng",
+              "native_script": "壩上",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Bashang (above the escarpment)"
+            },
+            {
+              "form": "Bàshàng",
+              "native_script": "坝上",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Bashang"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 1100 CE (Liao-Jin frontier records of the steppe plateau north of the Yan Mountains)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Highland steppe plateau on the southern rim of the Inner Mongolian plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Bashang_Grasslands"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River system draining the southern slopes of the Rouyuan frontier.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        }
+      ]
+    },
+    "b_goupo": {
+      "barony_key": "b_goupo",
+      "vanilla_ck3_name": "Goupo",
+      "modern_name": "Goupo",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_rouyuan",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "狗泊 (Goupo)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan frontier tribes ranging across the Zhangbei-Ulanqab steppe.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Bashang Grasslands",
+          "disambiguation_note": null,
+          "localisation_stem": "Bashang Grasslands",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Steppe plateau around the Goupo / Zhangbei escarpment.",
+          "language_variants": [
+            {
+              "form": "Bàshàng",
+              "native_script": "壩上",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Bashang (above the escarpment)"
+            },
+            {
+              "form": "Bàshàng",
+              "native_script": "坝上",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Bashang"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 1100 CE (Liao-Jin frontier records of the steppe plateau north of the Yan Mountains)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Highland steppe plateau on the southern rim of the Inner Mongolian plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Bashang_Grasslands"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Southern fringe of the Yin Mountains overlooking the plateau.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        }
+      ]
+    },
+    "b_yongxing": {
+      "barony_key": "b_yongxing",
+      "vanilla_ck3_name": "Yongxing",
+      "modern_name": "Yongxing",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_yongxing",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic military population settled in the Xuanhua-Zhuolu basin.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river crossing the Zhuolu-Xuanhua valley.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Yongding River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yongding",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Downstream river formed by the Sanggan near Zhuolu.",
+          "language_variants": [
+            {
+              "form": "Yǒngdìng Hé",
+              "native_script": "永定河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yongding He"
+            },
+            {
+              "form": "Lúgōu Hé",
+              "native_script": "盧溝河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Earlier medieval name Lugouhe (Black Ditch River)"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu records the river as Wuding/Lugou; renamed Yongding in 1698 CE)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Principal river draining the Sanggan-Yanghe basin through the Yan Mountains to the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Yongding_River"
+        }
+      ]
+    },
+    "b_wende": {
+      "barony_key": "b_wende",
+      "vanilla_ck3_name": "Wende",
+      "modern_name": "Wende",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_yongxing",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan frontier population controlling the Huailai-Yanqing corridor.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Yongding River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yongding",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River cutting through the Guanting gorge below Huailai.",
+          "language_variants": [
+            {
+              "form": "Yǒngdìng Hé",
+              "native_script": "永定河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yongding He"
+            },
+            {
+              "form": "Lúgōu Hé",
+              "native_script": "盧溝河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Earlier medieval name Lugouhe (Black Ditch River)"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu records the river as Wuding/Lugou; renamed Yongding in 1698 CE)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Principal river draining the Sanggan-Yanghe basin through the Yan Mountains to the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Yongding_River"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range enclosing the Huailai basin on the north.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        }
+      ]
+    },
+    "b_longmen": {
+      "barony_key": "b_longmen",
+      "vanilla_ck3_name": "Longmen",
+      "modern_name": "Longmen",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_sanggan",
+        "county": "c_yongxing",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "龙门山 (Longmen Mountain)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan steppe-frontier population along the Chicheng mountain passes.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range enclosing the Chicheng-Longmen valley.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        },
+        {
+          "name": "Chaobai River",
+          "disambiguation_note": null,
+          "localisation_stem": "Chaobai",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Upper Bai/Chaobai watershed rising in the Chicheng highlands.",
+          "language_variants": [
+            {
+              "form": "Cháobái Hé",
+              "native_script": "潮白河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Chaobai He"
+            },
+            {
+              "form": "Cháo Hé",
+              "native_script": "潮河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical name for the Chao and Bai confluence"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu describes the Chao/Baoqiu and Bai/Gu rivers south of Chengde)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "River formed by the confluence of the Chao and Bai rivers at Miyun northeast of Beijing.",
+          "source_url": "https://en.wikipedia.org/wiki/Chaobai_River"
+        }
+      ]
+    },
+    "b_xiazhou_dejing_east": {
+      "barony_key": "b_xiazhou_dejing_east",
+      "vanilla_ck3_name": "Datong",
+      "modern_name": "Xiazhou Dejing East",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_fuzhou",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tangut people",
+          "disambiguation_note": null,
+          "localisation_stem": "Tangut",
+          "category": "tribe",
+          "feature_subtype": "tibeto_burman_people",
+          "relationship": "Dangxiang (Tangut) people settled along the Fugu-Ordos frontier.",
+          "language_variants": [
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "黨項",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese ethnonym Dangxiang"
+            },
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "党项",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Dangxiang"
+            },
+            {
+              "form": "Mi-nyag",
+              "native_script": "མི་ཉག",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan ethnonym Mi-nyag for the Tangut"
+            },
+            {
+              "form": "Tangut",
+              "native_script": "𐱃𐰭𐰍𐱃",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Tangut"
+            }
+          ],
+          "earliest_attestation_year": 580,
+          "earliest_attestation_note": "Attested as Dangxiang Qiang in Sui and Tang dynasty Chinese chronicles (late 6th century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Tibeto-Burman people known in Chinese as Dangxiang and in Turkic/Mongolic as Tangut, settled in the Ordos and northern Shaanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Tangut_people"
+        },
+        {
+          "name": "Yellow River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yellow River",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Great river forming the eastern boundary of Fugu.",
+          "language_variants": [
+            {
+              "form": "Huáng Hé",
+              "native_script": "潢河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Huanghe"
+            },
+            {
+              "form": "Huáng Hé",
+              "native_script": "黄河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Huang He"
+            },
+            {
+              "form": "Khatan gol",
+              "native_script": "Хатан гол",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Khatan Gol (Queen River)"
+            }
+          ],
+          "earliest_attestation_year": -1000,
+          "earliest_attestation_note": "1st millennium BCE (attested as He 河 in Shang–Zhou texts)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Second-longest river in China, forming the great Ordos Loop around northern Shaanxi and Inner Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Yellow_River"
+        },
+        {
+          "name": "Ordos Plateau",
+          "disambiguation_note": null,
+          "localisation_stem": "Ordos",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Semi-arid plateau extending west from Fugu.",
+          "language_variants": [
+            {
+              "form": "È'ěrduōsī Gāoyuán",
+              "native_script": "鄂爾多斯高原",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical rendering of Ordos"
+            },
+            {
+              "form": "È'ěrduōsī Gāoyuán",
+              "native_script": "鄂爾多斯高原",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese E'erduosi Gaoyuan"
+            },
+            {
+              "form": "Ordos",
+              "native_script": "Ордос",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Ordos (palaces/yurts)"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "215 BCE (attested as Henan 'South of the River' in Qin–Han chronicles)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semi-arid plateau enclosed by the great northern bend of the Yellow River.",
+          "source_url": "https://en.wikipedia.org/wiki/Ordos_Plateau"
+        }
+      ]
+    },
+    "b_jinghua": {
+      "barony_key": "b_jinghua",
+      "vanilla_ck3_name": "Jinghua",
+      "modern_name": "Jinghua",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_fuzhou",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tangut people",
+          "disambiguation_note": null,
+          "localisation_stem": "Tangut",
+          "category": "tribe",
+          "feature_subtype": "tibeto_burman_people",
+          "relationship": "Dangxiang (Tangut) population of the northern Shaanxi-Ordos borderland.",
+          "language_variants": [
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "黨項",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese ethnonym Dangxiang"
+            },
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "党项",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Dangxiang"
+            },
+            {
+              "form": "Mi-nyag",
+              "native_script": "མི་ཉག",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan ethnonym Mi-nyag for the Tangut"
+            },
+            {
+              "form": "Tangut",
+              "native_script": "𐱃𐰭𐰍𐱃",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Tangut"
+            }
+          ],
+          "earliest_attestation_year": 580,
+          "earliest_attestation_note": "Attested as Dangxiang Qiang in Sui and Tang dynasty Chinese chronicles (late 6th century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Tibeto-Burman people known in Chinese as Dangxiang and in Turkic/Mongolic as Tangut, settled in the Ordos and northern Shaanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Tangut_people"
+        },
+        {
+          "name": "Wuding River",
+          "disambiguation_note": null,
+          "localisation_stem": "Wuding",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major tributary draining the Shenmu-Ordos frontier to the Yellow River.",
+          "language_variants": [
+            {
+              "form": "Wúdìng Hé",
+              "native_script": "無定河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Wudinghe (Unsettled River)"
+            },
+            {
+              "form": "Wúdìng Hé",
+              "native_script": "無定河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Wuding He"
+            }
+          ],
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "1st century BCE (attested as Sheyanshui in Han texts; Tang-era Wuding)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Yellow River tributary draining the Ordos-Shaanxi frontier, named for its shifting sandy bed.",
+          "source_url": "https://en.wikipedia.org/wiki/Wuding_River"
+        },
+        {
+          "name": "Mu Us Desert",
+          "disambiguation_note": null,
+          "localisation_stem": "Mu Us",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sandy steppe basin bordering Shenmu and Fugu.",
+          "language_variants": [
+            {
+              "form": "Máo'wūsù Shādì",
+              "native_script": "毛烏素沙地",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Maowusu"
+            },
+            {
+              "form": "Máo'wūsù Shādì",
+              "native_script": "毛烏素沙地",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Maowusu Shadi"
+            },
+            {
+              "form": "Muu Us",
+              "native_script": "Муу Ус",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Muu Us (bad water)"
+            }
+          ],
+          "earliest_attestation_year": 407,
+          "earliest_attestation_note": "5th century CE (sandy region around Tongwancheng in southern Ordos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sandy basin in the southern Ordos Plateau between Inner Mongolia and northern Shaanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Mu_Us_Desert"
+        }
+      ]
+    },
+    "b_cirlxj_dongshengzhou": {
+      "barony_key": "b_cirlxj_dongshengzhou",
+      "vanilla_ck3_name": "Dongshengzhou",
+      "modern_name": "Cirlxj Dongshengzhou",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_lxj_yunneizhou",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tangut people",
+          "disambiguation_note": null,
+          "localisation_stem": "Tangut",
+          "category": "tribe",
+          "feature_subtype": "tibeto_burman_people",
+          "relationship": "Dangxiang (Tangut) and northern frontier population of Dongsheng.",
+          "language_variants": [
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "黨項",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese ethnonym Dangxiang"
+            },
+            {
+              "form": "Dǎngxiàng",
+              "native_script": "党项",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Dangxiang"
+            },
+            {
+              "form": "Mi-nyag",
+              "native_script": "མི་ཉག",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan ethnonym Mi-nyag for the Tangut"
+            },
+            {
+              "form": "Tangut",
+              "native_script": "𐱃𐰭𐰍𐱃",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Tangut"
+            }
+          ],
+          "earliest_attestation_year": 580,
+          "earliest_attestation_note": "Attested as Dangxiang Qiang in Sui and Tang dynasty Chinese chronicles (late 6th century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Tibeto-Burman people known in Chinese as Dangxiang and in Turkic/Mongolic as Tangut, settled in the Ordos and northern Shaanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Tangut_people"
+        },
+        {
+          "name": "Ordos Plateau",
+          "disambiguation_note": null,
+          "localisation_stem": "Ordos",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Plateau cradling Dongsheng in the Yellow River loop.",
+          "language_variants": [
+            {
+              "form": "È'ěrduōsī Gāoyuán",
+              "native_script": "鄂爾多斯高原",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical rendering of Ordos"
+            },
+            {
+              "form": "È'ěrduōsī Gāoyuán",
+              "native_script": "鄂爾多斯高原",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese E'erduosi Gaoyuan"
+            },
+            {
+              "form": "Ordos",
+              "native_script": "Ордос",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Ordos (palaces/yurts)"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "215 BCE (attested as Henan 'South of the River' in Qin–Han chronicles)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semi-arid plateau enclosed by the great northern bend of the Yellow River.",
+          "source_url": "https://en.wikipedia.org/wiki/Ordos_Plateau"
+        },
+        {
+          "name": "Kubuqi Desert",
+          "disambiguation_note": null,
+          "localisation_stem": "Kubuqi",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Dune belt stretching north of Dongsheng toward the Yellow River.",
+          "language_variants": [
+            {
+              "form": "Kùbùqí Shāmò",
+              "native_script": "庫布齊沙漠",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Kubuqi"
+            },
+            {
+              "form": "Kùbùqí Shāmò",
+              "native_script": "库布齐沙漠",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Kubuqi"
+            },
+            {
+              "form": "Khövch",
+              "native_script": "Хөвч",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Khövch (bowstring)"
+            }
+          ],
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Mongolian name Khövch for the dune belt south of the Yellow River)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Dune belt stretching along the southern bank of the Yellow River in northern Ordos.",
+          "source_url": "https://en.wikipedia.org/wiki/Kubuqi_Desert"
+        }
+      ]
+    },
+    "b_cirlxj_heishabao": {
+      "barony_key": "b_cirlxj_heishabao",
+      "vanilla_ck3_name": "Heishabao",
+      "modern_name": "Cirlxj Heishabao",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_qingshan",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "topographic_feature",
+        "name": "黑沙 (Heisha)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Xiongnu",
+          "disambiguation_note": null,
+          "localisation_stem": "Xiongnu",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ancient Xiongnu confederation of the Yin Mountains and Yellow River bend.",
+          "language_variants": [
+            {
+              "form": "Xiōngnú",
+              "native_script": "匈奴",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Warring States and Han ethnonym Xiongnu"
+            },
+            {
+              "form": "Xiōngnú",
+              "native_script": "匈奴",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Xiongnu"
+            }
+          ],
+          "earliest_attestation_year": -318,
+          "earliest_attestation_note": "318 BCE (Chinese Warring States records / Shiji)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient nomadic confederation of the Ordos Loop and Yin Mountains frontier.",
+          "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising directly above Baotou and Qingshan.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        },
+        {
+          "name": "Ulansuhai Nur",
+          "disambiguation_note": null,
+          "localisation_stem": "Ulansuhai Nur",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Oxbow lake on the northern bend of the Yellow River west of Baotou.",
+          "language_variants": [
+            {
+              "form": "Wūliángsù Hǎi",
+              "native_script": "烏梁素海",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Wuliangsuhai"
+            },
+            {
+              "form": "Wūliángsù Hǎi",
+              "native_script": "乌梁素海",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Wuliangsuhai"
+            },
+            {
+              "form": "Ulaan suukhay nuur",
+              "native_script": "Улаан суухай нуур",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Ulaan Suukhai Nuur (Red Tamarisk Lake)"
+            }
+          ],
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Mongolian hydronym for the oxbow lake of the Yellow River near Baotou)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Large freshwater oxbow lake on the northern bend of the Yellow River.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulansuhai_Nur"
+        }
+      ]
+    },
+    "b_cirlxj_heicheng": {
+      "barony_key": "b_cirlxj_heicheng",
+      "vanilla_ck3_name": "Heicheng",
+      "modern_name": "Cirlxj Heicheng",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_qingshan",
+        "holding_type": "city"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Xianbei",
+          "disambiguation_note": null,
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Xianbei pastoralists of the Yin Mountains-Hetao corridor.",
+          "language_variants": [
+            {
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-Wei ethnonym Xianbei"
+            },
+            {
+              "form": "Xiānbēi",
+              "native_script": "鲜卑",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Xianbei"
+            },
+            {
+              "form": "Syanbi",
+              "native_script": "Сянби",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian rendering of the proto-Mongolic confederation"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Proto-Mongolic steppe confederation whose Tuoba branch established Northern Wei in Shengle and Pingcheng (Datong).",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
+        },
+        {
+          "name": "Hetao",
+          "disambiguation_note": null,
+          "localisation_stem": "Hetao",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Fertile alluvial plain along the northern Yellow River bend.",
+          "language_variants": [
+            {
+              "form": "Hétào",
+              "native_script": "河套",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Hetao (River Loop)"
+            },
+            {
+              "form": "Hétào",
+              "native_script": "河套",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation for the Ordos Yellow River bend"
+            }
+          ],
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Alluvial plains along the northern and western bend of the Yellow River.",
+          "source_url": "https://en.wikipedia.org/wiki/Hetao"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain barrier overlooking the Baotou plain.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        }
+      ]
+    },
+    "b_heiqing": {
+      "barony_key": "b_heiqing",
+      "vanilla_ck3_name": "Heiqing",
+      "modern_name": "Heiqing",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_shengzhou",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Xianbei",
+          "disambiguation_note": null,
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Tuoba Xianbei homeland centered at Shengle (Horinger).",
+          "language_variants": [
+            {
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-Wei ethnonym Xianbei"
+            },
+            {
+              "form": "Xiānbēi",
+              "native_script": "鲜卑",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese form Xianbei"
+            },
+            {
+              "form": "Syanbi",
+              "native_script": "Сянби",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian rendering of the proto-Mongolic confederation"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Proto-Mongolic steppe confederation whose Tuoba branch established Northern Wei in Shengle and Pingcheng (Datong).",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the Hohhot-Shengle plain on the north.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        },
+        {
+          "name": "Hetao",
+          "disambiguation_note": null,
+          "localisation_stem": "Hetao",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Alluvial river-bend region extending west from Horinger.",
+          "language_variants": [
+            {
+              "form": "Hétào",
+              "native_script": "河套",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Hetao (River Loop)"
+            },
+            {
+              "form": "Hétào",
+              "native_script": "河套",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese designation for the Ordos Yellow River bend"
+            }
+          ],
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Alluvial plains along the northern and western bend of the Yellow River.",
+          "source_url": "https://en.wikipedia.org/wiki/Hetao"
+        }
+      ]
+    },
+    "b_jinsu": {
+      "barony_key": "b_jinsu",
+      "vanilla_ck3_name": "Jinsu",
+      "modern_name": "Jinsu",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_xinan",
+        "county": "c_shengzhou",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic frontier forces stationed along the Yellow River-Shengle pass.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Yellow River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yellow River",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River carving the Jin-Shaan-Meng gorge past Qingshuihe.",
+          "language_variants": [
+            {
+              "form": "Huáng Hé",
+              "native_script": "潢河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Huanghe"
+            },
+            {
+              "form": "Huáng Hé",
+              "native_script": "黄河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Huang He"
+            },
+            {
+              "form": "Khatan gol",
+              "native_script": "Хатан гол",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Khatan Gol (Queen River)"
+            }
+          ],
+          "earliest_attestation_year": -1000,
+          "earliest_attestation_note": "1st millennium BCE (attested as He 河 in Shang–Zhou texts)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Second-longest river in China, forming the great Ordos Loop around northern Shaanxi and Inner Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Yellow_River"
+        },
+        {
+          "name": "Ordos Desert",
+          "disambiguation_note": null,
+          "localisation_stem": "Ordos Desert",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Arid steppe basin across the Yellow River from Qingshuihe.",
+          "language_variants": [
+            {
+              "form": "È'ěrduōsī Shāmò",
+              "native_script": "鄂爾多斯沙漠",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese E'erduosi Shamo"
+            },
+            {
+              "form": "È'ěrduōsī Shāmò",
+              "native_script": "鄂爾多斯沙漠",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese E'erduosi Shamo"
+            },
+            {
+              "form": "Ordosïn tsöl",
+              "native_script": null,
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Ordosyn Tsöl"
+            }
+          ],
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "2nd century BCE (arid steppe-desert inside the Yellow River loop)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arid steppe and dune basin enclosed by the Yellow River bend.",
+          "source_url": "https://en.wikipedia.org/wiki/Ordos_Desert"
+        }
+      ]
+    },
+    "b_huairen_2": {
+      "barony_key": "b_huairen_2",
+      "vanilla_ck3_name": "Huairen",
+      "modern_name": "Huairen 2",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_datong_2",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic heartland population in the Datong-Shuozhou basin.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing across the Huairen plain.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Mount Heng",
+          "disambiguation_note": "Shanxi",
+          "localisation_stem": "Heng",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain rising southeast of the Huairen basin.",
+          "language_variants": [
+            {
+              "form": "Héngshān",
+              "native_script": "恆山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Hengshan (Northern Sacred Mountain)"
+            },
+            {
+              "form": "Héngshān",
+              "native_script": "恒山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Heng Shan"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Erya and Shangshu as the Northern Marchmount)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Northern Sacred Mountain of China, rising above Hunyuan in northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Heng_(Shanxi)"
+        }
+      ]
+    },
+    "b_xuande": {
+      "barony_key": "b_xuande",
+      "vanilla_ck3_name": "Xuande",
+      "modern_name": "Xuande",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_datong_2",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic military center in the Datong-Yanggao valley.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river draining the Datong basin.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Yin Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern mountain rim beyond the Datong-Yanggao frontier.",
+          "language_variants": [
+            {
+              "form": "Yīn Shān",
+              "native_script": "陰山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Yinshan"
+            },
+            {
+              "form": "Yīn Shān",
+              "native_script": "阴山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yinshan"
+            }
+          ],
+          "earliest_attestation_year": -215,
+          "earliest_attestation_note": "Attested as Yinshan in Sima Qian's Shiji for Qin campaigns of 215 BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Steppe-border mountain range north of the Ordos Loop and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Yin_Mountains"
+        }
+      ]
+    },
+    "b_yongning": {
+      "barony_key": "b_yongning",
+      "vanilla_ck3_name": "Yongning",
+      "modern_name": "Yongning",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_hongzhou_2",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo population of the upper Sanggan corridor at Yangyuan.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River bisecting the Yangyuan valley.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Mount Heng",
+          "disambiguation_note": "Shanxi",
+          "localisation_stem": "Heng",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Mountain massif bordering the southern Yangyuan basin.",
+          "language_variants": [
+            {
+              "form": "Héngshān",
+              "native_script": "恆山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Hengshan (Northern Sacred Mountain)"
+            },
+            {
+              "form": "Héngshān",
+              "native_script": "恒山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Heng Shan"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Erya and Shangshu as the Northern Marchmount)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Northern Sacred Mountain of China, rising above Hunyuan in northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Heng_(Shanxi)"
+        }
+      ]
+    },
+    "b_shunsheng": {
+      "barony_key": "b_shunsheng",
+      "vanilla_ck3_name": "Shunsheng",
+      "modern_name": "Shunsheng",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_hongzhou_2",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan frontier population holding the Yu-Yangyuan basin.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Sanggan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sanggan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river of the Hongzhou-Yangyuan basin.",
+          "language_variants": [
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑乾河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Sangganhe"
+            },
+            {
+              "form": "Sānggān Hé",
+              "native_script": "桑干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Sanggan He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu as the Sanggan River)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of the Datong-Zhangjiakou basin, feeding the Yongding River.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanggan_River"
+        },
+        {
+          "name": "Taihang Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taihang",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising south of the Yu-Yangyuan valley.",
+          "language_variants": [
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Taihang Shan"
+            },
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym attested in the Shanhaijing and Liezi"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "400 BCE (Shang Shu Yu Gong and Liezi attest the Taihang range)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major mountain range separating the Shanxi plateau from the North China Plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Taihang_Mountains"
+        }
+      ]
+    },
+    "b_huanyuan": {
+      "barony_key": "b_huanyuan",
+      "vanilla_ck3_name": "Huanyuan",
+      "modern_name": "Huanyuan",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_yingzhou_5",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Hunyuan River (渾源川 / 渾河)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo Turkic garrison and population of Yingzhou (Hunyuan).",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Mount Heng",
+          "disambiguation_note": "Shanxi",
+          "localisation_stem": "Heng",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain rising directly south of Hunyuan.",
+          "language_variants": [
+            {
+              "form": "Héngshān",
+              "native_script": "恆山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Hengshan (Northern Sacred Mountain)"
+            },
+            {
+              "form": "Héngshān",
+              "native_script": "恒山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Heng Shan"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Erya and Shangshu as the Northern Marchmount)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Northern Sacred Mountain of China, rising above Hunyuan in northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Heng_(Shanxi)"
+        },
+        {
+          "name": "Mount Wutai",
+          "disambiguation_note": null,
+          "localisation_stem": "Wutai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred Buddhist massif southwest of Hunyuan.",
+          "language_variants": [
+            {
+              "form": "Wǔtái Shān",
+              "native_script": "五臺山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Wutaishan (Five-Terrace Mountain)"
+            },
+            {
+              "form": "Wǔtái Shān",
+              "native_script": "五台山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Wutai Shan"
+            },
+            {
+              "form": "Ri-bo-rtse-lnga",
+              "native_script": "རི་བོ་རྩེ་ལྔ",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan Ri-bo rtse-lnga (Five-Peaked Mountain)"
+            },
+            {
+              "form": "Utay uul",
+              "native_script": "Утай уул",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Utai Uul"
+            }
+          ],
+          "earliest_attestation_year": 400,
+          "earliest_attestation_note": "c. 400 CE (Northern Wei Buddhist records of Mount Wutai in northeastern Shanxi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sacred Buddhist mountain massif in northeastern Shanxi, south of Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Wutai"
+        }
+      ]
+    },
+    "b_lingxian": {
+      "barony_key": "b_lingxian",
+      "vanilla_ck3_name": "Lingxian",
+      "modern_name": "Lingxian",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_yuzhou",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Shatuo",
+          "disambiguation_note": null,
+          "localisation_stem": "Shatuo",
+          "category": "tribe",
+          "feature_subtype": "turkic_tribe",
+          "relationship": "Shatuo frontier population in the Lingqiu mountain passes.",
+          "language_variants": [
+            {
+              "form": "Shātuó",
+              "native_script": "沙陀",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Shatuo"
+            },
+            {
+              "form": "Shātuótūjué",
+              "native_script": "沙陀突厥",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Tang-era historiographical designation (Shatuo Turks)"
+            },
+            {
+              "form": "Šatuo",
+              "native_script": null,
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic tribal name associated with the Western Turkic Chuyue confederation"
+            }
+          ],
+          "earliest_attestation_year": 650,
+          "earliest_attestation_note": "c. 650 CE (Tang dynasty chronicles recording the Chuyue/Shatuo near Barkol before their resettlement in Daibei)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the Turkic name for the sandy desert steppe around Lake Barkol; later the ruling military elite of Daibei and northern Shanxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shatuo"
+        },
+        {
+          "name": "Taihang Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taihang",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern Taihang range enclosing Lingqiu.",
+          "language_variants": [
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Taihang Shan"
+            },
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym attested in the Shanhaijing and Liezi"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "400 BCE (Shang Shu Yu Gong and Liezi attest the Taihang range)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major mountain range separating the Shanxi plateau from the North China Plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Taihang_Mountains"
+        },
+        {
+          "name": "Mount Wutai",
+          "disambiguation_note": null,
+          "localisation_stem": "Wutai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "High massif bordering Lingqiu on the southwest.",
+          "language_variants": [
+            {
+              "form": "Wǔtái Shān",
+              "native_script": "五臺山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Wutaishan (Five-Terrace Mountain)"
+            },
+            {
+              "form": "Wǔtái Shān",
+              "native_script": "五台山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Wutai Shan"
+            },
+            {
+              "form": "Ri-bo-rtse-lnga",
+              "native_script": "རི་བོ་རྩེ་ལྔ",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan Ri-bo rtse-lnga (Five-Peaked Mountain)"
+            },
+            {
+              "form": "Utay uul",
+              "native_script": "Утай уул",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian Utai Uul"
+            }
+          ],
+          "earliest_attestation_year": 400,
+          "earliest_attestation_note": "c. 400 CE (Northern Wei Buddhist records of Mount Wutai in northeastern Shanxi)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sacred Buddhist mountain massif in northeastern Shanxi, south of Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Wutai"
+        }
+      ]
+    },
+    "b_dingan_2": {
+      "barony_key": "b_dingan_2",
+      "vanilla_ck3_name": "Ding'an",
+      "modern_name": "Dingan 2",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_daibei",
+        "duchy": "d_yunshuo",
+        "county": "c_yuzhou",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan population of Yu County along the Taihang-Sanggan passes.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Taihang Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taihang",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern Taihang range enclosing the Yu County basin.",
+          "language_variants": [
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Taihang Shan"
+            },
+            {
+              "form": "Tàiháng Shān",
+              "native_script": "太行山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym attested in the Shanhaijing and Liezi"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "400 BCE (Shang Shu Yu Gong and Liezi attest the Taihang range)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major mountain range separating the Shanxi plateau from the North China Plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Taihang_Mountains"
+        },
+        {
+          "name": "Juma River",
+          "disambiguation_note": null,
+          "localisation_stem": "Juma",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River rising near the Yu County-Laiyuan divide.",
+          "language_variants": [
+            {
+              "form": "Jùmǎ Hé",
+              "native_script": "拒馬河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Jumahe"
+            },
+            {
+              "form": "Jùmǎ Hé",
+              "native_script": "拒马河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Juma He"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu along the Taihang-Hebei border)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "River rising near Laiyuan in the Taihang Mountains and flowing across northern Hebei.",
+          "source_url": "https://en.wikipedia.org/wiki/Juma_River"
+        }
+      ]
+    },
+    "b_changyi": {
+      "barony_key": "b_changyi",
+      "vanilla_ck3_name": "Changyi",
+      "modern_name": "Changyi",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_qingxu",
+        "duchy": "d_ziqing",
+        "county": "c_weizhou_4",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Han Chinese",
+          "disambiguation_note": null,
+          "localisation_stem": "Han Chinese",
+          "category": "tribe",
+          "feature_subtype": "sinitic_people",
+          "relationship": "Indigenous Sinitic population of the Shandong coastal plain.",
+          "language_variants": [
+            {
+              "form": "Hànrén",
+              "native_script": "漢人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical ethnonym Hanren"
+            },
+            {
+              "form": "Hànzú",
+              "native_script": "汉族",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Hanzu"
+            }
+          ],
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "202 BCE (Derived from the Han dynasty; used as an ethnonym from the Han-Jin period onward)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sinitic majority people named after the Han dynasty, itself named for the Han River.",
+          "source_url": "https://en.wikipedia.org/wiki/Han_Chinese"
+        },
+        {
+          "name": "Laizhou Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Laizhou",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Bay of the Bohai Sea directly bordering Changyi.",
+          "language_variants": [
+            {
+              "form": "Láizhōu Wān",
+              "native_script": "萊州灣",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Laizhouwan"
+            },
+            {
+              "form": "Láizhōu Wān",
+              "native_script": "莱州湾",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Laizhou Wan"
+            }
+          ],
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "c. 600 CE (Named for Sui-Tang Laizhou Prefecture on the northern Shandong coast)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Southernmost bay of the Bohai Sea bordering northern Shandong and Changyi.",
+          "source_url": "https://en.wikipedia.org/wiki/Laizhou_Bay"
+        },
+        {
+          "name": "Bohai Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Bohai Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Inland sea north of the Shandong coast at Changyi.",
+          "language_variants": [
+            {
+              "form": "Bóhǎi",
+              "native_script": "渤海",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Bohai"
+            },
+            {
+              "form": "Bóhǎi",
+              "native_script": "渤海",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-era name for the innermost gulf of the Yellow Sea"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Attested in the Shiji and Han Shu as Bohai)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Innermost sea gulf enclosed by Shandong, Hebei, and Liaodong.",
+          "source_url": "https://en.wikipedia.org/wiki/Bohai_Sea"
+        }
+      ]
+    },
+    "b_jinshan_2": {
+      "barony_key": "b_jinshan_2",
+      "vanilla_ck3_name": "Jinshan",
+      "modern_name": "Jinshan 2",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_youji",
+        "duchy": "d_youzhou",
+        "county": "c_guizhou_2",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "oronym",
+        "name": "Jinyun Mountain / Jinshan (缙云山 / 缙山)"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan frontier population holding the Yanqing-Guizhou basin.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Jundu Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Jundu",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range enclosing the Yanqing basin.",
+          "language_variants": [
+            {
+              "form": "Jūndū Shān",
+              "native_script": "軍都山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese Jundushan"
+            },
+            {
+              "form": "Jūndū Shān",
+              "native_script": "军都山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Jundu Shan"
+            }
+          ],
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Attested in Han-era administrative and geographic records of Jundu County)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Western branch of the Yan Mountains north of Beijing and Yanqing.",
+          "source_url": "https://en.wikipedia.org/wiki/Jundu_Mountains"
+        },
+        {
+          "name": "Yongding River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yongding",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing just southwest of the Yanqing-Huailai corridor.",
+          "language_variants": [
+            {
+              "form": "Yǒngdìng Hé",
+              "native_script": "永定河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yongding He"
+            },
+            {
+              "form": "Lúgōu Hé",
+              "native_script": "盧溝河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Earlier medieval name Lugouhe (Black Ditch River)"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu records the river as Wuding/Lugou; renamed Yongding in 1698 CE)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Principal river draining the Sanggan-Yanghe basin through the Yan Mountains to the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Yongding_River"
+        }
+      ]
+    },
+    "b_zunhua": {
+      "barony_key": "b_zunhua",
+      "vanilla_ck3_name": "Zunhua",
+      "modern_name": "Zunhua",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_youji",
+        "duchy": "d_youzhou",
+        "county": "c_jizhou_1",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan population of the eastern Yan Mountains foothills at Zunhua.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising directly north of Zunhua.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        },
+        {
+          "name": "Luan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Luan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river draining the eastern Yan foothills near Zunhua.",
+          "language_variants": [
+            {
+              "form": "Luán Hé",
+              "native_script": "灤河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Traditional Chinese Luanhe"
+            },
+            {
+              "form": "Luán Hé",
+              "native_script": "滦河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Luan He"
+            }
+          ],
+          "earliest_attestation_year": 207,
+          "earliest_attestation_note": "207 CE (Attested as Rushui in Han-Wei chronicles and Shuijing Zhu)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river flowing from the northern steppe through the Yan Mountains into the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Luan_River"
+        }
+      ]
+    },
+    "b_anxi_2": {
+      "barony_key": "b_anxi_2",
+      "vanilla_ck3_name": "Anxi",
+      "modern_name": "Anxi 2",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_youji",
+        "duchy": "d_youzhou",
+        "county": "c_pinzhou",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Han Chinese",
+          "disambiguation_note": null,
+          "localisation_stem": "Han Chinese",
+          "category": "tribe",
+          "feature_subtype": "sinitic_people",
+          "relationship": "Sinitic population of the Pinggu-Sanhe plain east of Youzhou.",
+          "language_variants": [
+            {
+              "form": "Hànrén",
+              "native_script": "漢人",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical ethnonym Hanren"
+            },
+            {
+              "form": "Hànzú",
+              "native_script": "汉族",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Hanzu"
+            }
+          ],
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "202 BCE (Derived from the Han dynasty; used as an ethnonym from the Han-Jin period onward)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Sinitic majority people named after the Han dynasty, itself named for the Han River.",
+          "source_url": "https://en.wikipedia.org/wiki/Han_Chinese"
+        },
+        {
+          "name": "Ju River",
+          "disambiguation_note": null,
+          "localisation_stem": "Ju",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river flowing through Pinggu and Sanhe.",
+          "language_variants": [
+            {
+              "form": "Jū Hé",
+              "native_script": "泃河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Ju He"
+            },
+            {
+              "form": "Jū Shuǐ",
+              "native_script": "泃水",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical hydronym Jushui"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Shui Jing Zhu east of Beijing)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Tributary of the Hai River system flowing through Pinggu and Sanhe.",
+          "source_url": "https://en.wikipedia.org/wiki/Ju_River"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain foothills bordering Pinggu on the north.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        }
+      ]
+    },
+    "b_xingtang": {
+      "barony_key": "b_xingtang",
+      "vanilla_ck3_name": "Xingtang",
+      "modern_name": "Xingtang",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_zhongyuan",
+        "kingdom": "k_youji",
+        "duchy": "d_youzhou",
+        "county": "c_tanzhou_2",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Khitan",
+          "disambiguation_note": null,
+          "localisation_stem": "Khitan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Khitan garrison and frontier population at Miyun.",
+          "language_variants": [
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese ethnonym Qidan"
+            },
+            {
+              "form": "Qìdān",
+              "native_script": "契丹",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Northern Wei and Tang dynastic records"
+            },
+            {
+              "form": "Kidan",
+              "native_script": "Кидан",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolic form Kidan / Qidan"
+            },
+            {
+              "form": "Qïtañ",
+              "native_script": "𐰶𐰃𐱃𐰪",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon Turkic Qïtañ"
+            }
+          ],
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records Northern Wei campaigns against the Khitan along the Xar Moron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Para-Mongolic ethnonym of the Liao-Yan frontier confederation that later founded the Liao dynasty across Youji and Daibei.",
+          "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
+        },
+        {
+          "name": "Chaobai River",
+          "disambiguation_note": null,
+          "localisation_stem": "Chaobai",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River formed by the Chao and Bai confluence at Miyun.",
+          "language_variants": [
+            {
+              "form": "Cháobái Hé",
+              "native_script": "潮白河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Chaobai He"
+            },
+            {
+              "form": "Cháo Hé",
+              "native_script": "潮河",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical name for the Chao and Bai confluence"
+            }
+          ],
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu describes the Chao/Baoqiu and Bai/Gu rivers south of Chengde)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "River formed by the confluence of the Chao and Bai rivers at Miyun northeast of Beijing.",
+          "source_url": "https://en.wikipedia.org/wiki/Chaobai_River"
+        },
+        {
+          "name": "Yan Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Yan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing Miyun along the northern frontier.",
+          "language_variants": [
+            {
+              "form": "Yānshān",
+              "native_script": "燕山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Standard Chinese Yanshan"
+            },
+            {
+              "form": "Yān Shān",
+              "native_script": "燕山",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical oronym named after the ancient state of Yan"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "East-west mountain range forming the northern barrier of Hebei and Beijing. Onomastic note: Literary Chinese 'Yān Shān' (Classical oronym named after the ancient state of Yan).",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
+        }
+      ]
+    }
+  }
+}

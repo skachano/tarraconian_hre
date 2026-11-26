@@ -1,0 +1,1909 @@
+{
+  "metadata": {
+    "empire": "e_macedonia",
+    "scope": "e_macedonia (12 non-867 baronies across k_hellas; excludes baronies where is_historical_at['867'] is true)",
+    "schema_version": "2.0.0",
+    "source_audit_schema_version": "2.0.1",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
+    "source_files": [
+      "data/anachronicity_audit/barony_audit_e_macedonia.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
+    "schema_notes": {
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding.",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier; null if none.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "anachronism_type": "Historicity category from barony_audit_e_macedonia.json.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}; all entries here have '867': false.",
+      "existing_natural_proper_name": "Existing natural_proper_name object from barony_audit_e_macedonia.json.",
+      "replacement_candidates": "List of exactly 3 associated natural feature names and historical tribal/ethnonym names (>=1 tribe per barony) usable as localisation replacements.",
+      "category_subtype_taxonomy": {
+        "choronym": [
+          "region"
+        ],
+        "hydronym": [
+          "bay",
+          "estuary",
+          "lake",
+          "river",
+          "sea",
+          "strait",
+          "stream"
+        ],
+        "oronym": [
+          "hill",
+          "mountain",
+          "mountain_range",
+          "plateau"
+        ],
+        "topographic_feature": [
+          "coastal_feature",
+          "forest",
+          "marsh",
+          "valley"
+        ],
+        "tribe": [
+          "ainuic_people",
+          "anatolian_tribe",
+          "aquitani_tribe",
+          "arab_tribe",
+          "atlantic_people",
+          "austroasiatic_people",
+          "austronesian_people",
+          "baltic_tribe",
+          "bantu_tribe",
+          "belgae_tribe",
+          "berber_tribe",
+          "bhil_people",
+          "brittonic_tribe",
+          "caucasian_tribe",
+          "celtiberian_tribe",
+          "celtic_tribe",
+          "chadic_people",
+          "cushitic_tribe",
+          "dacian_tribe",
+          "dravidian_people",
+          "egyptian_people",
+          "ethio_semitic_people",
+          "finnic_tribe",
+          "gaelic_tribe",
+          "gaulish_tribe",
+          "germanic_tribe",
+          "gur_people",
+          "hellenic_tribe",
+          "hmong_mien_people",
+          "iberian_tribe",
+          "illyrian_tribe",
+          "indo_aryan_people",
+          "iranian_tribe",
+          "italic_tribe",
+          "japonic_people",
+          "koreanic_people",
+          "kra_dai_people",
+          "kwa_people",
+          "lusitanian_tribe",
+          "mande_people",
+          "medieval_people",
+          "mongolic_tribe",
+          "munda_people",
+          "niger_congo_people",
+          "nilo_saharan_people",
+          "nilotic_tribe",
+          "nivkh_people",
+          "nubian_people",
+          "omotic_people",
+          "paleo_sardinian_tribe",
+          "papuan_people",
+          "pictish_tribe",
+          "rhaetic_tribe",
+          "saharan_people",
+          "sami_people",
+          "sarmatian_tribe",
+          "semitic_tribe",
+          "sinitic_people",
+          "slavic_tribe",
+          "songhai_people",
+          "south_arabian_tribe",
+          "thracian_tribe",
+          "tibeto_burman_people",
+          "tungusic_tribe",
+          "turkic_tribe",
+          "uralic_tribe",
+          "vasconic_tribe",
+          "volta_niger_people",
+          "yeniseian_tribe"
+        ]
+      },
+      "name": "Clean display name of the replacement candidate (Wikipedia disambiguation suffixes extracted to disambiguation_note).",
+      "disambiguation_note": "Optional disambiguator extracted from parenthetical/comma qualifiers (e.g. 'Liao', 'Orkney', 'river'); null if none.",
+      "localisation_stem": "Clean CK3-ready toponym stem stripped of redundant generic English feature suffixes/prefixes ('River', 'Mount', 'Lake', 'people', etc.) while preserving meaningful compounds.",
+      "attestation_basis": "Historicity classification distinguishing genuinely pre-867/pre-literate entities from medieval post-867 ethnogeneses: attested_pre_867 | indigenous_pre_literate | attested_867_to_1066 | attested_1066_to_1178.",
+      "valid_for_bookmarks": "Bookmark-keyed booleans {'867', '1066', '1178'} indicating whether the replacement candidate is historically non-anachronistic for that bookmark (true for both attested_pre_867 and indigenous_pre_literate; bookmark-gated for attested_867_to_1066 and attested_1066_to_1178).",
+      "candidates_with_multilingual_variants": "Count of replacement candidates having more than 1 distinct language_code (ISO 639-3 / ISO 639-5 or documented proto-stage code) across language_variants.",
+      "language_variants_policy": "Include core local/classical forms plus regionally scoped vernaculars and genuinely distinct exonyms; exclude out-of-region exonym padding and redundant eng copies (eng is retained only when no non-English variant exists). Uses ISO 639-3 / ISO 639-5 language_code values plus documented Wiktionary proto/stage codes (sla-pro, gem-pro, cel-pro, cel-bry, urj-fin-pro); reconstructed proto/ancient forms carry a leading '*'.",
+      "language_variants": "List of cultural/historical name forms: {form, native_script, language, language_code, notes}. form is always clean Latin script (or romanization) suitable for CK3 localisation; native_script holds the native non-Latin script form or null when the language natively uses Latin script.",
+      "relationship": "Prose description of the geographical, ecological, or historical relationship between the replacement entity and the audited barony.",
+      "etymology_notes": "Linguistic etymology, onomastic origin, or geographic/ethnographic characterization of the replacement entity (incorporating attested onomastic notes from language variants where documented)."
+    },
+    "summary_statistics": {
+      "total_baronies_in_source_audit": 63,
+      "skipped_historical_867": 51,
+      "target_baronies_audited": 12,
+      "candidates_per_barony": 3,
+      "total_replacement_candidates": 36,
+      "unique_replacement_names": 36,
+      "candidates_with_multilingual_variants": 36,
+      "wikipedia_source_attached": 36,
+      "unique_source_urls": 36,
+      "candidates_by_category": {
+        "choronym": 0,
+        "hydronym": 15,
+        "oronym": 7,
+        "topographic_feature": 2,
+        "tribe": 12
+      },
+      "baronies_with_category": {
+        "has_choronym_candidate": 0,
+        "has_hydronym_candidate": 11,
+        "has_oronym_candidate": 7,
+        "has_topographic_feature_candidate": 1,
+        "has_tribe_candidate": 12
+      },
+      "unique_language_codes": [
+        "bul",
+        "ell",
+        "grc",
+        "lat",
+        "tur"
+      ],
+      "anachronism_type_counts": {
+        "high_late_medieval_attestation": 2,
+        "renamed_post_867": 10
+      },
+      "candidates_by_attestation_basis": {
+        "attested_pre_867": 34,
+        "indigenous_pre_literate": 2
+      },
+      "bookmark_valid_candidates": {
+        "867": 36,
+        "1066": 36,
+        "1178": 36
+      },
+      "baronies_with_867_valid_candidate": 12,
+      "unique_localisation_stems": 36
+    }
+  },
+  "baronies": {
+    "b_vostitsa": {
+      "barony_key": "b_vostitsa",
+      "vanilla_ck3_name": "Vostitsa",
+      "modern_name": "Vostitsa",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Achaeans",
+          "disambiguation_note": null,
+          "localisation_stem": "Achaeans",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Ancient Greek tribe inhabiting Achaea in the northern Peloponnese.",
+          "language_variants": [
+            {
+              "form": "Achaioí",
+              "native_script": "Ἀχαιοί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Akhaioi)"
+            },
+            {
+              "form": "Achaioí",
+              "native_script": "Ἀχαιοί",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Achaei",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Akhaioi; one of the four major Hellenic tribes of classical antiquity.",
+          "source_url": "https://en.wikipedia.org/wiki/Achaeans_(tribe)"
+        },
+        {
+          "name": "Selinountas",
+          "disambiguation_note": null,
+          "localisation_stem": "Selinountas",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River of Achaea flowing into the Gulf of Corinth near Aigio (Vostitsa).",
+          "language_variants": [
+            {
+              "form": "Selinoûs",
+              "native_script": "Σελινοῦς",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Selinous)"
+            },
+            {
+              "form": "Selinoúntas",
+              "native_script": "Σελινούντας",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Selinountas)"
+            },
+            {
+              "form": "Selinus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "c. 400 BCE (Xenophon, Anabasis 5.3.8, and Pausanias)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Ancient Greek selinon ('wild celery').",
+          "source_url": "https://en.wikipedia.org/wiki/Selinountas_(river)"
+        },
+        {
+          "name": "Panachaiko",
+          "disambiguation_note": null,
+          "localisation_stem": "Panachaiko",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Mountain massif overlooking northern Achaea and the Gulf of Corinth.",
+          "language_variants": [
+            {
+              "form": "Panachaïkón",
+              "native_script": "Παναχαϊκόν",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Panakhaikon)"
+            },
+            {
+              "form": "Panachaïkó",
+              "native_script": "Παναχαϊκό",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Panachaiko)"
+            }
+          ],
+          "earliest_attestation_year": -150,
+          "earliest_attestation_note": "c. 150 BCE (Polybius, Histories 5.30)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Greek Panakhaikon ('of all the Achaeans').",
+          "source_url": "https://en.wikipedia.org/wiki/Panachaiko"
+        }
+      ]
+    },
+    "b_andravida": {
+      "barony_key": "b_andravida",
+      "vanilla_ck3_name": "Andravida",
+      "modern_name": "Andravida",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Dorians",
+          "disambiguation_note": null,
+          "localisation_stem": "Dorians",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Major ancient Greek tribe that settled across the Peloponnese.",
+          "language_variants": [
+            {
+              "form": "Dōrieîs",
+              "native_script": "Δωριεῖς",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Dorieis)"
+            },
+            {
+              "form": "Dōrieís",
+              "native_script": "Δωριείς",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Dores",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Homer, Odyssey 19.177, and Tyrtaeus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Greek Dorieis, traditionally linked to Doris in central Greece.",
+          "source_url": "https://en.wikipedia.org/wiki/Dorians"
+        },
+        {
+          "name": "Pineios",
+          "disambiguation_note": null,
+          "localisation_stem": "Pineios",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river of Elis flowing past Andravida into the Ionian Sea.",
+          "language_variants": [
+            {
+              "form": "Pēneiós",
+              "native_script": "Πηνειός",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Peneios)"
+            },
+            {
+              "form": "Pēneiós",
+              "native_script": "Πηνειός",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Pineios)"
+            },
+            {
+              "form": "Peneus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE (classical Greek sources on Elis, Strabo/Pausanias)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Greek Peneios, shared with the Thessalian river.",
+          "source_url": "https://en.wikipedia.org/wiki/Pineios_(Peloponnese)"
+        },
+        {
+          "name": "Mount Erymanthos",
+          "disambiguation_note": null,
+          "localisation_stem": "Erymanthos",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Mountain massif on the border of Achaea and Elis.",
+          "language_variants": [
+            {
+              "form": "Erýmanthos",
+              "native_script": "Ἐρύμανθος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Erymanthos)"
+            },
+            {
+              "form": "Erýmanthos",
+              "native_script": "Ἐρύμανθος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Erymanthos)"
+            },
+            {
+              "form": "Erymanthus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Homer, Odyssey 6.103)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-Greek Aegean oronym attested since Homer.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Erymanthos"
+        }
+      ]
+    },
+    "b_kalavryta": {
+      "barony_key": "b_kalavryta",
+      "vanilla_ck3_name": "Kalavryta",
+      "modern_name": "Kalavryta",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_achaia",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Kalavryta"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ezeritai",
+          "disambiguation_note": null,
+          "localisation_stem": "Ezeritai",
+          "category": "tribe",
+          "feature_subtype": "slavic_tribe",
+          "relationship": "Early medieval Slavic tribe that settled in the Peloponnese.",
+          "language_variants": [
+            {
+              "form": "Ezerîtai",
+              "native_script": "Ἐζερῖται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek ethnonym (Ezeritai)"
+            },
+            {
+              "form": "Ezeriti",
+              "native_script": "Эзерити",
+              "language": "Bulgarian",
+              "language_code": "bul",
+              "notes": "South Slavic rendering"
+            }
+          ],
+          "earliest_attestation_year": 950,
+          "earliest_attestation_note": "c. 950 CE (Constantine VII Porphyrogenitus, De Administrando Imperio 50)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From South Slavic *jezero ('lake'), 'lake-dwellers'.",
+          "source_url": "https://en.wikipedia.org/wiki/Ezeritai"
+        },
+        {
+          "name": "Vouraikos",
+          "disambiguation_note": null,
+          "localisation_stem": "Vouraikos",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River rising near Kalavryta and flowing through a deep gorge to the Gulf of Corinth.",
+          "language_variants": [
+            {
+              "form": "Bouraïkós",
+              "native_script": "Βουραϊκός",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Bouraikos)"
+            },
+            {
+              "form": "Bouraïkós",
+              "native_script": "Βουραϊκός",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Vouraikos)"
+            },
+            {
+              "form": "Buraicus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 8.7.5; Pausanias 7.25.10)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the ancient Achaean city of Boura.",
+          "source_url": "https://en.wikipedia.org/wiki/Vouraikos"
+        },
+        {
+          "name": "Aroania",
+          "disambiguation_note": null,
+          "localisation_stem": "Aroania",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "High mountain massif (Mount Chelmos) rising directly above Kalavryta.",
+          "language_variants": [
+            {
+              "form": "Aroánia",
+              "native_script": "Ἀροάνια",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Aroania)"
+            },
+            {
+              "form": "Aroánia",
+              "native_script": "Ἀροάνια",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Aroania)"
+            }
+          ],
+          "earliest_attestation_year": 170,
+          "earliest_attestation_note": "c. 170 CE (Pausanias, Description of Greece 8.18)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Classical Greek Aroania; medieval Slavic name Chelmos from *chlŭmŭ ('hill/summit').",
+          "source_url": "https://en.wikipedia.org/wiki/Aroania_(mountain)"
+        }
+      ]
+    },
+    "b_nikli": {
+      "barony_key": "b_nikli",
+      "vanilla_ck3_name": "Nikli",
+      "modern_name": "Nikli",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Pelasgians",
+          "disambiguation_note": null,
+          "localisation_stem": "Pelasgians",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Pre-Hellenic Aegean people associated with Arcadia and the Peloponnese.",
+          "language_variants": [
+            {
+              "form": "Pelasgoí",
+              "native_script": "Πελασγοί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Pelasgoi)"
+            },
+            {
+              "form": "Pelasgoí",
+              "native_script": "Πελασγοί",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Pelasgi",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 2.840; Herodotus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek ethnonym for pre-classical inhabitants of Greece.",
+          "source_url": "https://en.wikipedia.org/wiki/Pelasgians"
+        },
+        {
+          "name": "Alfeios",
+          "disambiguation_note": null,
+          "localisation_stem": "Alfeios",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Longest river of the Peloponnese, rising in the Tegea-Tripoli basin near Nikli.",
+          "language_variants": [
+            {
+              "form": "Alpheiós",
+              "native_script": "Ἀλφειός",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Alpheios)"
+            },
+            {
+              "form": "Alpheiós",
+              "native_script": "Ἀλφειός",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Alfeios)"
+            },
+            {
+              "form": "Alpheus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 2.592)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Alpheios, attested since Homer.",
+          "source_url": "https://en.wikipedia.org/wiki/Alfeios"
+        },
+        {
+          "name": "Mainalo",
+          "disambiguation_note": null,
+          "localisation_stem": "Mainalo",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Mountain massif overlooking the Tegea-Nikli plain in central Arcadia.",
+          "language_variants": [
+            {
+              "form": "Maínalos",
+              "native_script": "Μαίναλος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Mainalos)"
+            },
+            {
+              "form": "Maínalo",
+              "native_script": "Μαίναλο",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Mainalo)"
+            },
+            {
+              "form": "Maenalus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE (classical Greek poetry and Pausanias 8.36)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Mainalos / Mainalon.",
+          "source_url": "https://en.wikipedia.org/wiki/Mainalo"
+        }
+      ]
+    },
+    "b_damala": {
+      "barony_key": "b_damala",
+      "vanilla_ck3_name": "Damala",
+      "modern_name": "Damala",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_korinthos",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Dryopes",
+          "disambiguation_note": null,
+          "localisation_stem": "Dryopes",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Ancient Greek tribe that settled in Asine and Hermione in Argolis.",
+          "language_variants": [
+            {
+              "form": "Drýopes",
+              "native_script": "Δρύοπες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Dryopes)"
+            },
+            {
+              "form": "Drýopes",
+              "native_script": "Δρύοπες",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Dryopes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus, Histories 8.43 and 8.73)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek ethnonym, traditionally associated with oak-woodland (*drys).",
+          "source_url": "https://en.wikipedia.org/wiki/Dryopes"
+        },
+        {
+          "name": "Inachos",
+          "disambiguation_note": null,
+          "localisation_stem": "Inachos",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of Argolis in the northeastern Peloponnese.",
+          "language_variants": [
+            {
+              "form": "Ínachos",
+              "native_script": "Ἴναχος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Inachos)"
+            },
+            {
+              "form": "Ínachos",
+              "native_script": "Ἴναχος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Inachos)"
+            },
+            {
+              "form": "Inachus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -470,
+          "earliest_attestation_note": "c. 470 BCE (Aeschylus and Herodotus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-Greek hydronym personified as the first king of Argos.",
+          "source_url": "https://en.wikipedia.org/wiki/Inachos_(river)"
+        },
+        {
+          "name": "Saronic Gulf",
+          "disambiguation_note": null,
+          "localisation_stem": "Saronic",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Gulf of the Aegean Sea bordering Troezen (Damala) and Corinthia.",
+          "language_variants": [
+            {
+              "form": "Sarōnikós kólpos",
+              "native_script": "Σαρωνικός κόλπος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Saronikos kolpos)"
+            },
+            {
+              "form": "Sarōnikós kólpos",
+              "native_script": "Σαρωνικός κόλπος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name"
+            }
+          ],
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE (Aeschylus, Agamemnon 307; Strabo)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the legendary King Saron of Troezen.",
+          "source_url": "https://en.wikipedia.org/wiki/Saronic_Gulf"
+        }
+      ]
+    },
+    "b_mistra": {
+      "barony_key": "b_mistra",
+      "vanilla_ck3_name": "Mistra",
+      "modern_name": "Mistra",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_laconia",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Melingoi",
+          "disambiguation_note": null,
+          "localisation_stem": "Melingoi",
+          "category": "tribe",
+          "feature_subtype": "slavic_tribe",
+          "relationship": "Slavic tribe that settled on the slopes of Mount Taygetus in Laconia.",
+          "language_variants": [
+            {
+              "form": "Mēlingoí",
+              "native_script": "Μηλιγγοί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek ethnonym (Melingoi)"
+            },
+            {
+              "form": "Milingi",
+              "native_script": "Милинги",
+              "language": "Bulgarian",
+              "language_code": "bul",
+              "notes": "South Slavic rendering"
+            },
+            {
+              "form": "Mēlingoí",
+              "native_script": "Μηλιγγοί",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 950,
+          "earliest_attestation_note": "c. 950 CE (Constantine VII Porphyrogenitus, De Administrando Imperio 50)",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Byzantine Greek rendering of a South Slavic tribal name in the Taygetus.",
+          "source_url": "https://en.wikipedia.org/wiki/Melingoi"
+        },
+        {
+          "name": "Evrotas",
+          "disambiguation_note": null,
+          "localisation_stem": "Evrotas",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river of Laconia flowing through the Spartan plain below Mistra.",
+          "language_variants": [
+            {
+              "form": "Eurṓtas",
+              "native_script": "Εὐρώτας",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Eurotas)"
+            },
+            {
+              "form": "Eurṓtas",
+              "native_script": "Εὐρώτας",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Evrotas)"
+            },
+            {
+              "form": "Eurotas",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus and Euripides)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Eurotas, attested in classical Spartan and Attic sources.",
+          "source_url": "https://en.wikipedia.org/wiki/Evrotas_(river)"
+        },
+        {
+          "name": "Taygetus",
+          "disambiguation_note": null,
+          "localisation_stem": "Taygetus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range on whose eastern foothills Mistra was built.",
+          "language_variants": [
+            {
+              "form": "Taǘgetos",
+              "native_script": "Ταΰγετος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Taygetos)"
+            },
+            {
+              "form": "Taǘgetos",
+              "native_script": "Ταΰγετος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Taygetos)"
+            },
+            {
+              "form": "Taygetus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Homer, Odyssey 6.103)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-Greek oronym attested since Homer.",
+          "source_url": "https://en.wikipedia.org/wiki/Taygetus"
+        }
+      ]
+    },
+    "b_karytaina": {
+      "barony_key": "b_karytaina",
+      "vanilla_ck3_name": "Karytaina",
+      "modern_name": "Karytaina",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ionians",
+          "disambiguation_note": null,
+          "localisation_stem": "Ionians",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "One of the four major ancient Greek tribes with early Peloponnesian presence.",
+          "language_variants": [
+            {
+              "form": "Íōnes",
+              "native_script": "Ἴωνες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Iones)"
+            },
+            {
+              "form": "Íōnes",
+              "native_script": "Ἴωνες",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Iones",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 13.685)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Iaones / Iones.",
+          "source_url": "https://en.wikipedia.org/wiki/Ionians"
+        },
+        {
+          "name": "Lousios",
+          "disambiguation_note": null,
+          "localisation_stem": "Lousios",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River flowing through a deep gorge just north of Karytaina into the Alfeios.",
+          "language_variants": [
+            {
+              "form": "Loúsios",
+              "native_script": "Λούσιος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Lousios)"
+            },
+            {
+              "form": "Loúsios",
+              "native_script": "Λούσιος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Lousios)"
+            },
+            {
+              "form": "Lusius",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": 170,
+          "earliest_attestation_note": "c. 170 CE (Pausanias, Description of Greece 8.28.2)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Greek louo ('to wash/bathe'), after the mythical bathing of infant Zeus.",
+          "source_url": "https://en.wikipedia.org/wiki/Lousios"
+        },
+        {
+          "name": "Mount Lykaion",
+          "disambiguation_note": null,
+          "localisation_stem": "Lykaion",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred Arcadian mountain southwest of Karytaina.",
+          "language_variants": [
+            {
+              "form": "Lýkaion óros",
+              "native_script": "Λύκαιον ὄρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Lykaion oros)"
+            },
+            {
+              "form": "Lýkaio",
+              "native_script": "Λύκαιο",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Lykaio)"
+            },
+            {
+              "form": "Mons Lycaeus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -470,
+          "earliest_attestation_note": "c. 470 BCE (Pindar, Olympian Odes, and Pausanias)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Greek lykos ('wolf') or lyke ('light').",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Lykaion"
+        }
+      ]
+    },
+    "b_arcadia": {
+      "barony_key": "b_arcadia",
+      "vanilla_ck3_name": "Arcadia",
+      "modern_name": "Arcadia",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "choronym",
+        "name": "Arcadia"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Caucones",
+          "disambiguation_note": null,
+          "localisation_stem": "Caucones",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Ancient tribe of Triphylia and western Messenia near Kyparissia.",
+          "language_variants": [
+            {
+              "form": "Kaúkōnes",
+              "native_script": "Καύκωνες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Kaukones)"
+            },
+            {
+              "form": "Caucones",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Homer, Odyssey 3.366; Herodotus 4.148)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-classical Aegean/Peloponnesian tribal name attested in the Odyssey and Herodotus.",
+          "source_url": "https://en.wikipedia.org/wiki/Caucones"
+        },
+        {
+          "name": "Neda",
+          "disambiguation_note": null,
+          "localisation_stem": "Neda",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River forming the border between Messenia and Elis north of Kyparissia.",
+          "language_variants": [
+            {
+              "form": "Néda",
+              "native_script": "Νέδα",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Neda)"
+            },
+            {
+              "form": "Néda",
+              "native_script": "Νέδα",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Neda)"
+            }
+          ],
+          "earliest_attestation_year": 170,
+          "earliest_attestation_note": "c. 170 CE (Pausanias, Description of Greece 4.20.1 and 8.41)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the nymph Neda in Arcadian-Messenian myth.",
+          "source_url": "https://en.wikipedia.org/wiki/Neda_(river)"
+        },
+        {
+          "name": "Gulf of Kyparissia",
+          "disambiguation_note": null,
+          "localisation_stem": "Gulf of Kyparissia",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Large Ionian Sea bay along the coast of Kyparissia (medieval Arcadia).",
+          "language_variants": [
+            {
+              "form": "Kyparissiakós kólpos",
+              "native_script": "Κυπαρισσιακός κόλπος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name"
+            },
+            {
+              "form": "Kyparissḗeis kólpos",
+              "native_script": "Κυπαρισσήεις κόλπος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 8.3.22, as Kyparissian Gulf)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after ancient Kyparissia ('cypress-town').",
+          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Kyparissia"
+        }
+      ]
+    },
+    "b_kalamata": {
+      "barony_key": "b_kalamata",
+      "vanilla_ck3_name": "Kalamata",
+      "modern_name": "Kalamata",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Messenians",
+          "disambiguation_note": null,
+          "localisation_stem": "Messenians",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Ancient Greek people inhabiting Messenia, including the Pamisos plain and Kalamata (ancient Pharai).",
+          "language_variants": [
+            {
+              "form": "Messēnioi",
+              "native_script": "Μεσσηνιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym"
+            },
+            {
+              "form": "Messínioi",
+              "native_script": "Μεσσίνιοι",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek"
+            },
+            {
+              "form": "Messenii",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "Attested in archaic Greek poetry (Tyrtaeus, 7th century BCE) and Herodotus (circa 700 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Derived from the regional name Messene / Messenia.",
+          "source_url": "https://en.wikipedia.org/wiki/Messenians"
+        },
+        {
+          "name": "Pamisos",
+          "disambiguation_note": null,
+          "localisation_stem": "Pamisos",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Largest river of Messenia, emptying into the Messenian Gulf west of Kalamata.",
+          "language_variants": [
+            {
+              "form": "Pámisos",
+              "native_script": "Πάμισος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Pamisos)"
+            },
+            {
+              "form": "Pámisos",
+              "native_script": "Πάμισος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Pamisos)"
+            },
+            {
+              "form": "Pamisus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 5.544; Strabo; Pausanias)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Pre-Greek Messenian hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Pamisos_(river)"
+        },
+        {
+          "name": "Messenian Gulf",
+          "disambiguation_note": null,
+          "localisation_stem": "Messenian",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Gulf of the Ionian Sea at whose northern head Kalamata lies.",
+          "language_variants": [
+            {
+              "form": "Messēniakós kólpos",
+              "native_script": "Μεσσηνιακός κόλπος",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name"
+            },
+            {
+              "form": "Messēniakòs kólpos",
+              "native_script": "Μεσσηνιακὸς κόλπος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "c. 20 CE (Strabo, Geography 8.4.1, as Messenian Gulf)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after the region of Messenia.",
+          "source_url": "https://en.wikipedia.org/wiki/Messenian_Gulf"
+        }
+      ]
+    },
+    "b_modon": {
+      "barony_key": "b_modon",
+      "vanilla_ck3_name": "Modon",
+      "modern_name": "Modon",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_achaia",
+        "county": "c_messenia",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Leleges",
+          "disambiguation_note": null,
+          "localisation_stem": "Leleges",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Pre-Hellenic Aegean people associated with early Laconia and Messenia.",
+          "language_variants": [
+            {
+              "form": "Léleges",
+              "native_script": "Λέλεγες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Leleges)"
+            },
+            {
+              "form": "Léleges",
+              "native_script": "Λέλεγες",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Leleges",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 10.429; Pausanias 3.1.1)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Aegean ethnonym of pre-Greek origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Leleges"
+        },
+        {
+          "name": "Sapientza",
+          "disambiguation_note": null,
+          "localisation_stem": "Sapientza",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Island lying directly off the coast of Methoni (Modon).",
+          "language_variants": [
+            {
+              "form": "Sapiéntza",
+              "native_script": "Σαπιέντζα",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name"
+            },
+            {
+              "form": "Oinoûssai",
+              "native_script": "Οἰνοῦσσαι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek group name (Oinoussai)"
+            }
+          ],
+          "earliest_attestation_year": 170,
+          "earliest_attestation_note": "c. 170 CE (Pausanias 4.34.12 as Oinoussai; Venetian Sapienza)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Oinoussai; medieval Venetian Sapienza ('wisdom').",
+          "source_url": "https://en.wikipedia.org/wiki/Sapientza"
+        },
+        {
+          "name": "Cape Matapan",
+          "disambiguation_note": null,
+          "localisation_stem": "Cape Matapan",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Southernmost cape of the Peloponnese near the Messenian-Laconian littoral.",
+          "language_variants": [
+            {
+              "form": "Taínaron",
+              "native_script": "Ταίναρον",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Tainaron)"
+            },
+            {
+              "form": "Akrōtḗrio Taínaro",
+              "native_script": "Ἀκρωτήριο Ταίναρο",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name"
+            },
+            {
+              "form": "Taenarum",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Homeric Hymn to Apollo 412, as Tainaron)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Tainaron; medieval Matapan possibly from Doric metopon ('forehead').",
+          "source_url": "https://en.wikipedia.org/wiki/Cape_Matapan"
+        }
+      ]
+    },
+    "b_pagaea": {
+      "barony_key": "b_pagaea",
+      "vanilla_ck3_name": "Pagaea",
+      "modern_name": "Pagaea",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_aegean_islands",
+        "county": "c_abydos",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": true,
+        "type": "hydronym",
+        "name": "Pegai"
+      },
+      "replacement_candidates": [
+        {
+          "name": "Mysians",
+          "disambiguation_note": null,
+          "localisation_stem": "Mysians",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient inhabitants of Mysia in northwestern Anatolia.",
+          "language_variants": [
+            {
+              "form": "Mysoí",
+              "native_script": "Μυσοί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Mysoi)"
+            },
+            {
+              "form": "Mysi",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            },
+            {
+              "form": "Misyalılar",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Turkish historical ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "8th century BCE (Homer, Iliad 2.858)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Anatolian ethnonym attested in Homer and Herodotus.",
+          "source_url": "https://en.wikipedia.org/wiki/Mysians"
+        },
+        {
+          "name": "Biga Çayı",
+          "disambiguation_note": null,
+          "localisation_stem": "Biga Çayı",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Ancient Granicus River emptying into the Sea of Marmara near Karabiga (Pagaea).",
+          "language_variants": [
+            {
+              "form": "Biga Çayı",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Granikós",
+              "native_script": "Γρανικός",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Granikos)"
+            },
+            {
+              "form": "Granicus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "c. 700 BCE (Hesiod, Theogony 342, as Granikos)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Granikos; Turkish Biga Çayı.",
+          "source_url": "https://en.wikipedia.org/wiki/Biga_%C3%87ay%C4%B1"
+        },
+        {
+          "name": "Sea of Marmara",
+          "disambiguation_note": null,
+          "localisation_stem": "Sea of Marmara",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Inland sea (ancient Propontis) on whose southern shore Pagaea sits.",
+          "language_variants": [
+            {
+              "form": "Marmara Denizi",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Modern Turkish name"
+            },
+            {
+              "form": "Propontís",
+              "native_script": "Προποντίς",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Propontis)"
+            },
+            {
+              "form": "Propontis",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -470,
+          "earliest_attestation_note": "c. 470 BCE (Aeschylus and Herodotus, as Propontis)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Propontis ('before the Pontus/Black Sea'); Marmara from marble-rich Proconnesus.",
+          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Marmara"
+        }
+      ]
+    },
+    "b_boudounitsa": {
+      "barony_key": "b_boudounitsa",
+      "vanilla_ck3_name": "Boudounitsa",
+      "modern_name": "Boudounitsa",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_macedonia",
+        "kingdom": "k_hellas",
+        "duchy": "d_athens",
+        "county": "c_boeotia",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Locrians",
+          "disambiguation_note": null,
+          "localisation_stem": "Locrians",
+          "category": "tribe",
+          "feature_subtype": "hellenic_tribe",
+          "relationship": "Ancient Greek tribe of Epicnemidian Locris where Mendenitsa (Boudounitsa) sits.",
+          "language_variants": [
+            {
+              "form": "Lokroí",
+              "native_script": "Λοκροί",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym (Lokroi)"
+            },
+            {
+              "form": "Lokroí",
+              "native_script": "Λοκροί",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek ethnonym"
+            },
+            {
+              "form": "Locri",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "c. 750 BCE (Homer, Iliad 2.527)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient Greek Lokroi, attested since Homer.",
+          "source_url": "https://en.wikipedia.org/wiki/Locrians"
+        },
+        {
+          "name": "Spercheios",
+          "disambiguation_note": null,
+          "localisation_stem": "Spercheios",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river north of Mount Kallidromo and Thermopylae.",
+          "language_variants": [
+            {
+              "form": "Spercheiós",
+              "native_script": "Σπερχειός",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Sperkheios)"
+            },
+            {
+              "form": "Spercheiós",
+              "native_script": "Σπερχειός",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Spercheios)"
+            },
+            {
+              "form": "Spercheus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "8th century BCE (Homer, Iliad 16.174)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Greek sperkho ('to hasten/rush').",
+          "source_url": "https://en.wikipedia.org/wiki/Spercheios"
+        },
+        {
+          "name": "Kallidromo",
+          "disambiguation_note": null,
+          "localisation_stem": "Kallidromo",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Mountain ridge directly above Mendenitsa (Boudounitsa) and Thermopylae.",
+          "language_variants": [
+            {
+              "form": "Kallídromon",
+              "native_script": "Καλλίδρομον",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Kallidromon)"
+            },
+            {
+              "form": "Kallídromo",
+              "native_script": "Καλλίδρομο",
+              "language": "Greek",
+              "language_code": "ell",
+              "notes": "Modern Greek name (Kallidromo)"
+            },
+            {
+              "form": "Callidromus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -191,
+          "earliest_attestation_note": "191 BCE (Livy, Ab Urbe Condita 36.15, as Callidromus)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Greek Kallidromon ('fair-running' / 'good path').",
+          "source_url": "https://en.wikipedia.org/wiki/Kallidromo"
+        }
+      ]
+    }
+  }
+}

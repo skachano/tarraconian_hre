@@ -1,0 +1,3277 @@
+{
+  "metadata": {
+    "empire": "e_oriens",
+    "scope": "e_oriens (21 non-867 baronies across k_syria; excludes baronies where is_historical_at['867'] is true)",
+    "schema_version": "2.0.0",
+    "source_audit_schema_version": "2.0.1",
+    "supported_bookmarks": [
+      867,
+      1066,
+      1178
+    ],
+    "source_files": [
+      "data/anachronicity_audit/barony_audit_e_oriens.json"
+    ],
+    "hierarchy_note": "hierarchy reflects data/ck3_title_tree.json (save-derived de jure tree including x_script_* dynamic titles); downstream localisation/historicity mods should key on barony_key and join against their target landed_titles tree.",
+    "schema_notes": {
+      "barony_key": "CK3 landed_titles barony identifier (b_*).",
+      "vanilla_ck3_name": "Exact English localisation string from CK3 titles_l_english.yml.",
+      "modern_name": "Clean modern/standard English display name of the audited settlement or holding.",
+      "modern_name_note": "Optional administrative parent, alternate designation, or native-script qualifier; null if none.",
+      "hierarchy": "De jure title hierarchy from data/ck3_title_tree.json (empire, kingdom, duchy, county, holding_type).",
+      "anachronism_type": "Historicity category from barony_audit_e_oriens.json.",
+      "is_historical_at": "Bookmark-keyed booleans {'867', '1066', '1178'}; all entries here have '867': false.",
+      "existing_natural_proper_name": "Existing natural_proper_name object from barony_audit_e_oriens.json.",
+      "replacement_candidates": "List of exactly 3 associated natural feature names and historical tribal/ethnonym names (>=1 tribe per barony) usable as localisation replacements.",
+      "category_subtype_taxonomy": {
+        "choronym": [
+          "region"
+        ],
+        "hydronym": [
+          "bay",
+          "estuary",
+          "lake",
+          "river",
+          "sea",
+          "strait",
+          "stream"
+        ],
+        "oronym": [
+          "hill",
+          "mountain",
+          "mountain_range",
+          "plateau"
+        ],
+        "topographic_feature": [
+          "coastal_feature",
+          "forest",
+          "marsh",
+          "valley"
+        ],
+        "tribe": [
+          "ainuic_people",
+          "anatolian_tribe",
+          "aquitani_tribe",
+          "arab_tribe",
+          "atlantic_people",
+          "austroasiatic_people",
+          "austronesian_people",
+          "baltic_tribe",
+          "bantu_tribe",
+          "belgae_tribe",
+          "berber_tribe",
+          "bhil_people",
+          "brittonic_tribe",
+          "caucasian_tribe",
+          "celtiberian_tribe",
+          "celtic_tribe",
+          "chadic_people",
+          "cushitic_tribe",
+          "dacian_tribe",
+          "dravidian_people",
+          "egyptian_people",
+          "ethio_semitic_people",
+          "finnic_tribe",
+          "gaelic_tribe",
+          "gaulish_tribe",
+          "germanic_tribe",
+          "gur_people",
+          "hellenic_tribe",
+          "hmong_mien_people",
+          "iberian_tribe",
+          "illyrian_tribe",
+          "indo_aryan_people",
+          "iranian_tribe",
+          "italic_tribe",
+          "japonic_people",
+          "koreanic_people",
+          "kra_dai_people",
+          "kwa_people",
+          "lusitanian_tribe",
+          "mande_people",
+          "medieval_people",
+          "mongolic_tribe",
+          "munda_people",
+          "niger_congo_people",
+          "nilo_saharan_people",
+          "nilotic_tribe",
+          "nivkh_people",
+          "nubian_people",
+          "omotic_people",
+          "paleo_sardinian_tribe",
+          "papuan_people",
+          "pictish_tribe",
+          "rhaetic_tribe",
+          "saharan_people",
+          "sami_people",
+          "sarmatian_tribe",
+          "semitic_tribe",
+          "sinitic_people",
+          "slavic_tribe",
+          "songhai_people",
+          "south_arabian_tribe",
+          "thracian_tribe",
+          "tibeto_burman_people",
+          "tungusic_tribe",
+          "turkic_tribe",
+          "uralic_tribe",
+          "vasconic_tribe",
+          "volta_niger_people",
+          "yeniseian_tribe"
+        ]
+      },
+      "name": "Clean display name of the replacement candidate (Wikipedia disambiguation suffixes extracted to disambiguation_note).",
+      "disambiguation_note": "Optional disambiguator extracted from parenthetical/comma qualifiers (e.g. 'Liao', 'Orkney', 'river'); null if none.",
+      "localisation_stem": "Clean CK3-ready toponym stem stripped of redundant generic English feature suffixes/prefixes ('River', 'Mount', 'Lake', 'people', etc.) while preserving meaningful compounds.",
+      "attestation_basis": "Historicity classification distinguishing genuinely pre-867/pre-literate entities from medieval post-867 ethnogeneses: attested_pre_867 | indigenous_pre_literate | attested_867_to_1066 | attested_1066_to_1178.",
+      "valid_for_bookmarks": "Bookmark-keyed booleans {'867', '1066', '1178'} indicating whether the replacement candidate is historically non-anachronistic for that bookmark (true for both attested_pre_867 and indigenous_pre_literate; bookmark-gated for attested_867_to_1066 and attested_1066_to_1178).",
+      "candidates_with_multilingual_variants": "Count of replacement candidates having more than 1 distinct language_code (ISO 639-3 / ISO 639-5 or documented proto-stage code) across language_variants.",
+      "language_variants_policy": "Include core local/classical forms plus regionally scoped vernaculars and genuinely distinct exonyms; exclude out-of-region exonym padding and redundant eng copies (eng is retained only when no non-English variant exists). Uses ISO 639-3 / ISO 639-5 language_code values plus documented Wiktionary proto/stage codes (sla-pro, gem-pro, cel-pro, cel-bry, urj-fin-pro); reconstructed proto/ancient forms carry a leading '*'.",
+      "language_variants": "List of cultural/historical name forms: {form, native_script, language, language_code, notes}. form is always clean Latin script (or romanization) suitable for CK3 localisation; native_script holds the native non-Latin script form or null when the language natively uses Latin script.",
+      "relationship": "Prose description of the geographical, ecological, or historical relationship between the replacement entity and the audited barony.",
+      "etymology_notes": "Linguistic etymology, onomastic origin, or geographic/ethnographic characterization of the replacement entity (incorporating attested onomastic notes from language variants where documented)."
+    },
+    "summary_statistics": {
+      "total_baronies_in_source_audit": 62,
+      "skipped_historical_867": 41,
+      "target_baronies_audited": 21,
+      "candidates_per_barony": 3,
+      "total_replacement_candidates": 63,
+      "unique_replacement_names": 33,
+      "candidates_with_multilingual_variants": 57,
+      "wikipedia_source_attached": 63,
+      "unique_source_urls": 33,
+      "candidates_by_category": {
+        "choronym": 4,
+        "hydronym": 22,
+        "oronym": 14,
+        "topographic_feature": 2,
+        "tribe": 21
+      },
+      "baronies_with_category": {
+        "has_choronym_candidate": 4,
+        "has_hydronym_candidate": 19,
+        "has_oronym_candidate": 13,
+        "has_topographic_feature_candidate": 2,
+        "has_tribe_candidate": 21
+      },
+      "unique_language_codes": [
+        "ara",
+        "arc",
+        "fas",
+        "grc",
+        "kur",
+        "lat",
+        "pal",
+        "peo",
+        "syc"
+      ],
+      "anachronism_type_counts": {
+        "high_late_medieval_attestation": 5,
+        "modern_anachronism": 1,
+        "renamed_post_867": 13,
+        "unattested_indigenous_or_minor": 2
+      },
+      "candidates_by_attestation_basis": {
+        "attested_pre_867": 61,
+        "indigenous_pre_literate": 2
+      },
+      "bookmark_valid_candidates": {
+        "867": 63,
+        "1066": 63,
+        "1178": 63
+      },
+      "baronies_with_867_valid_candidate": 21,
+      "unique_localisation_stems": 33
+    }
+  },
+  "baronies": {
+    "b_tall_afrin": {
+      "barony_key": "b_tall_afrin",
+      "vanilla_ck3_name": "Tall Afrin",
+      "modern_name": "Tall Afrin",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_aleppo",
+        "county": "c_aleppo",
+        "holding_type": "city"
+      },
+      "anachronism_type": "modern_anachronism",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Kurds",
+          "disambiguation_note": null,
+          "localisation_stem": "Kurds",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Historical people inhabiting the Aleppo region encompassing Tall Afrin.",
+          "language_variants": [
+            {
+              "form": "Kurd",
+              "native_script": null,
+              "language": "Kurdish",
+              "language_code": "kur",
+              "notes": "Kurdish endonym"
+            },
+            {
+              "form": "Kord",
+              "native_script": "کرد",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "New Persian ethnonym"
+            },
+            {
+              "form": "Kwrt",
+              "native_script": null,
+              "language": "Middle Persian",
+              "language_code": "pal",
+              "notes": "Sasanian Middle Persian form (Kar-Namag)"
+            },
+            {
+              "form": "Akrād",
+              "native_script": "أكراد",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Classical Arabic plural ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Polybius as Kyrtioi in Media; Middle Persian Kwrt in 3rd century CE)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Iranian ethnonym of disputed origin, associated with Zagros pastoralist populations (cf. ancient Cyrtii/Karduchoi).",
+          "source_url": "https://en.wikipedia.org/wiki/Kurds"
+        },
+        {
+          "name": "Kurd Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Kurd",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Aleppo landscape around Tall Afrin.",
+          "language_variants": [
+            {
+              "form": "Çiyayê Kurmênc",
+              "native_script": null,
+              "language": "Kurdish",
+              "language_code": "kur",
+              "notes": "Kurdish name of the range"
+            },
+            {
+              "form": "Jabal al-Akrād",
+              "native_script": "جبل الأكراد",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            }
+          ],
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "Attested as Jabal al-Akrad in medieval Arabic chronicles of northern Syria (12th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Limestone mountain massif in northwestern Syria bordering the Afrin valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Kurd_Mountains"
+        },
+        {
+          "name": "Orontes River",
+          "disambiguation_note": null,
+          "localisation_stem": "Orontes",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aleppo landscape around Tall Afrin.",
+          "language_variants": [
+            {
+              "form": "Al-ʿĀṣī",
+              "native_script": "العاصي",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the rebel', flowing north)"
+            },
+            {
+              "form": "Orontēs",
+              "native_script": "Ὀροντης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Orontes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym"
+            },
+            {
+              "form": "ʿĀṣī",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Arantu in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of western Syria; Greek Orontes derives from Assyrian Arantu, while Arabic al-Asi means 'rebellious'.",
+          "source_url": "https://en.wikipedia.org/wiki/Orontes_River"
+        }
+      ]
+    },
+    "b_buzaa": {
+      "barony_key": "b_buzaa",
+      "vanilla_ck3_name": "Buza'a",
+      "modern_name": "Buza'a",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_aleppo",
+        "county": "c_aleppo",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tanukhids",
+          "disambiguation_note": null,
+          "localisation_stem": "Tanukhids",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Aleppo region encompassing Buza'a.",
+          "language_variants": [
+            {
+              "form": "Tanūkh",
+              "native_script": "تنوخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal confederation name"
+            },
+            {
+              "form": "Tanūkhāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac chronicle form"
+            },
+            {
+              "form": "Tanouitai",
+              "native_script": "Τανουιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 270,
+          "earliest_attestation_note": "Attested in the Umm al-Jimal inscription and Greco-Roman accounts of late 3rd-century CE Syria.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arabic tribal confederation name traditionally linked to the root t-n-kh ('to settle, remain').",
+          "source_url": "https://en.wikipedia.org/wiki/Tanukhids"
+        },
+        {
+          "name": "Queiq River",
+          "disambiguation_note": null,
+          "localisation_stem": "Queiq",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aleppo landscape around Buza'a.",
+          "language_variants": [
+            {
+              "form": "Quwayq",
+              "native_script": "قويق",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Chalos",
+              "native_script": "Χαλος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Xenophon)"
+            }
+          ],
+          "earliest_attestation_year": -401,
+          "earliest_attestation_note": "Attested as Chalos in Xenophon's Anabasis (401 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "River flowing south from the Gaziantep plateau through Aleppo.",
+          "source_url": "https://en.wikipedia.org/wiki/Queiq_River"
+        },
+        {
+          "name": "Mount Simeon",
+          "disambiguation_note": null,
+          "localisation_stem": "Simeon",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major mountain associated with the Aleppo landscape around Buza'a.",
+          "language_variants": [
+            {
+              "form": "Jabal Simʿān",
+              "native_script": "جبل سمعان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            },
+            {
+              "form": "Ṭūrā d-Mār Shemʿōn",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac name"
+            }
+          ],
+          "earliest_attestation_year": 460,
+          "earliest_attestation_note": "Named after St. Simeon Stylites (d. 459 CE) in late antique Syriac and Greek hagiography.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Highland ridge west of Aleppo in northern Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Simeon"
+        }
+      ]
+    },
+    "b_artah": {
+      "barony_key": "b_artah",
+      "vanilla_ck3_name": "Artah",
+      "modern_name": "Artah",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_aleppo",
+        "county": "c_qinnasrin",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Qinnasrin (Aleppo) region encompassing Artah.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Amuq Valley",
+          "disambiguation_note": null,
+          "localisation_stem": "Amuq",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Major valley associated with the Qinnasrin (Aleppo) landscape around Artah.",
+          "language_variants": [
+            {
+              "form": "Al-ʿAmq",
+              "native_script": "العمق",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the depression/valley')"
+            },
+            {
+              "form": "ʿAmqā",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -850,
+          "earliest_attestation_note": "Attested as Unqi/Amqu in Neo-Assyrian and Aramaic inscriptions (9th–8th century BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Semitic root ʿ-m-q ('deep'), referring to the fertile plain at the lower Orontes bend.",
+          "source_url": "https://en.wikipedia.org/wiki/Amuq_Valley"
+        },
+        {
+          "name": "Orontes River",
+          "disambiguation_note": null,
+          "localisation_stem": "Orontes",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Qinnasrin (Aleppo) landscape around Artah.",
+          "language_variants": [
+            {
+              "form": "Al-ʿĀṣī",
+              "native_script": "العاصي",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the rebel', flowing north)"
+            },
+            {
+              "form": "Orontēs",
+              "native_script": "Ὀροντης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Orontes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym"
+            },
+            {
+              "form": "ʿĀṣī",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Arantu in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of western Syria; Greek Orontes derives from Assyrian Arantu, while Arabic al-Asi means 'rebellious'.",
+          "source_url": "https://en.wikipedia.org/wiki/Orontes_River"
+        }
+      ]
+    },
+    "b_alexandretta": {
+      "barony_key": "b_alexandretta",
+      "vanilla_ck3_name": "Alexandretta",
+      "modern_name": "Alexandretta",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_antioch",
+        "county": "c_alexandretta",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Alexandretta (Antioch) region encompassing Alexandretta.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Nur Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Nur",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Alexandretta (Antioch) landscape around Alexandretta.",
+          "language_variants": [
+            {
+              "form": "Amanos",
+              "native_script": "Ἀμανος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Amanus)"
+            },
+            {
+              "form": "Amanus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Jabal al-Lukkām",
+              "native_script": "جبل اللكام",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name"
+            }
+          ],
+          "earliest_attestation_year": -850,
+          "earliest_attestation_note": "Attested as Khamanu in Assyrian annals (9th century BCE) and Amanos in Strabo (1st century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Mountain range separating Cilicia from northern Syria along the Gulf of Iskenderun.",
+          "source_url": "https://en.wikipedia.org/wiki/Nur_Mountains"
+        },
+        {
+          "name": "Levantine Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Levantine Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Major sea associated with the Alexandretta (Antioch) landscape around Alexandretta.",
+          "language_variants": [
+            {
+              "form": "Baḥr al-Shām",
+              "native_script": "بحر الشام",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name ('Sea of Syria')"
+            },
+            {
+              "form": "Mare Syriacum",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "Attested as the Syrian Sea in classical Greco-Roman and medieval Arabic geographies (1st–10th century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Easternmost basin of the Mediterranean Sea washing the coasts of Syria and Cilicia.",
+          "source_url": "https://en.wikipedia.org/wiki/Levantine_Sea"
+        }
+      ]
+    },
+    "b_as-suwaydiya": {
+      "barony_key": "b_as-suwaydiya",
+      "vanilla_ck3_name": "As-Suwaydiya",
+      "modern_name": "As-Suwaydiya",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_antioch",
+        "county": "c_antiocheia",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Antiocheia (Antioch) region encompassing As-Suwaydiya.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Jebel Aqra",
+          "disambiguation_note": null,
+          "localisation_stem": "Jebel Aqra",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major mountain associated with the Antiocheia (Antioch) landscape around As-Suwaydiya.",
+          "language_variants": [
+            {
+              "form": "Jabal al-Aqraʿ",
+              "native_script": "جبل الأقرع",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the bald mountain')"
+            },
+            {
+              "form": "Kasion",
+              "native_script": "Κασιον",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Mount Casius)"
+            },
+            {
+              "form": "Casius",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": -1400,
+          "earliest_attestation_note": "Attested as Mount Hazzi in Hittite and Ugaritic texts (2nd millennium BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Coastal peak south of the Orontes mouth, sacred Mount Zaphon/Hazzi of ancient Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Jebel_Aqra"
+        },
+        {
+          "name": "Orontes River",
+          "disambiguation_note": null,
+          "localisation_stem": "Orontes",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Antiocheia (Antioch) landscape around As-Suwaydiya.",
+          "language_variants": [
+            {
+              "form": "Al-ʿĀṣī",
+              "native_script": "العاصي",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the rebel', flowing north)"
+            },
+            {
+              "form": "Orontēs",
+              "native_script": "Ὀροντης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Orontes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym"
+            },
+            {
+              "form": "ʿĀṣī",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Arantu in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of western Syria; Greek Orontes derives from Assyrian Arantu, while Arabic al-Asi means 'rebellious'.",
+          "source_url": "https://en.wikipedia.org/wiki/Orontes_River"
+        }
+      ]
+    },
+    "b_zurra": {
+      "barony_key": "b_zurra",
+      "vanilla_ck3_name": "Zurra",
+      "modern_name": "Zurra",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_damascus",
+        "county": "c_damascus",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ghassanids",
+          "disambiguation_note": null,
+          "localisation_stem": "Ghassanids",
+          "category": "tribe",
+          "feature_subtype": "arab_tribe",
+          "relationship": "Historical people inhabiting the Damascus region encompassing Zurra.",
+          "language_variants": [
+            {
+              "form": "Ghassān",
+              "native_script": "غسان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal and dynastic name"
+            },
+            {
+              "form": "Gassānāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac ecclesiastical chronicle form"
+            },
+            {
+              "form": "Kassanitai",
+              "native_script": "Κασσανιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "Attested as Ghassan in Old South Arabian inscriptions (c. 220–260 CE) and 4th century CE Syriac/Greek sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after a watering place in southern Arabia or the Tihamah before migrating to Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Ghassanids"
+        },
+        {
+          "name": "Hauran",
+          "disambiguation_note": null,
+          "localisation_stem": "Hauran",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Major region associated with the Damascus landscape around Zurra.",
+          "language_variants": [
+            {
+              "form": "Ḥawrān",
+              "native_script": "حوران",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic regional name"
+            },
+            {
+              "form": "Auranitis",
+              "native_script": "Αὐρανιτις",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Hellenistic Greek name"
+            },
+            {
+              "form": "Ḥawrān",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Aramaic form"
+            }
+          ],
+          "earliest_attestation_year": -841,
+          "earliest_attestation_note": "Attested as Ḫaurānu in Assyrian annals of Shalmaneser III (841 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Volcanic plateau of southern Syria and northern Jordan.",
+          "source_url": "https://en.wikipedia.org/wiki/Hauran"
+        },
+        {
+          "name": "Yarmouk River",
+          "disambiguation_note": null,
+          "localisation_stem": "Yarmouk",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Damascus landscape around Zurra.",
+          "language_variants": [
+            {
+              "form": "Al-Yarmūk",
+              "native_script": "اليرموك",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Hieromax",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin form (Pliny)"
+            }
+          ],
+          "earliest_attestation_year": 77,
+          "earliest_attestation_note": "Attested as Hieromax in Pliny the Elder's Natural History (77 CE) and in early Islamic chronicles (636 CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Largest tributary of the Jordan River, draining the Hauran plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Yarmouk_River"
+        }
+      ]
+    },
+    "b_as-suwaida-hauran": {
+      "barony_key": "b_as-suwaida-hauran",
+      "vanilla_ck3_name": "As-Suwaida-Hauran",
+      "modern_name": "As-Suwaida-Hauran",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_damascus",
+        "county": "c_hauran",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Nabataeans",
+          "disambiguation_note": null,
+          "localisation_stem": "Nabataeans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Hauran (Damascus) region encompassing As-Suwaida-Hauran.",
+          "language_variants": [
+            {
+              "form": "Nabāṭū",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Nabataean Aramaic self-designation"
+            },
+            {
+              "form": "Al-Anbāṭ",
+              "native_script": "الأنباط",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Nabataioi",
+              "native_script": "Ναβαταιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym"
+            },
+            {
+              "form": "Nabataei",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -312,
+          "earliest_attestation_note": "Attested in 312 BCE in Greek accounts of Antigonus I's campaign (preserved in Diodorus Siculus).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic tribal name from the root n-b-ṭ ('to well up, draw water'), reflecting desert oasis mastery.",
+          "source_url": "https://en.wikipedia.org/wiki/Nabataeans"
+        },
+        {
+          "name": "Bashan",
+          "disambiguation_note": null,
+          "localisation_stem": "Bashan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Major region associated with the Hauran (Damascus) landscape around As-Suwaida-Hauran.",
+          "language_variants": [
+            {
+              "form": "Batanaia",
+              "native_script": "Βαταναια",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Hellenistic Greek form"
+            },
+            {
+              "form": "Al-Bathaniyya",
+              "native_script": "البثنية",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic form"
+            }
+          ],
+          "earliest_attestation_year": -1350,
+          "earliest_attestation_note": "Attested as Batana in the Amarna Letters (14th century BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Ancient geographical region of southern Syria east of the Jordan River.",
+          "source_url": "https://en.wikipedia.org/wiki/Bashan"
+        },
+        {
+          "name": "Mount Hermon",
+          "disambiguation_note": null,
+          "localisation_stem": "Hermon",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major mountain associated with the Hauran (Damascus) landscape around As-Suwaida-Hauran.",
+          "language_variants": [
+            {
+              "form": "Jabal al-Shaykh",
+              "native_script": "جبل الشيخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            },
+            {
+              "form": "Hermōn",
+              "native_script": "Ἑρμων",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Septuagint Greek form"
+            },
+            {
+              "form": "Ṭūrā d-Ḥermōn",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -1200,
+          "earliest_attestation_note": "Attested in Bronze Age Canaanite/Ugaritic and biblical texts (late 2nd–1st millennium BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Highest peak of the Anti-Lebanon range overlooking Damascus and the Hauran.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Hermon"
+        }
+      ]
+    },
+    "b_juwair": {
+      "barony_key": "b_juwair",
+      "vanilla_ck3_name": "Juwair",
+      "modern_name": "Juwair",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_damascus",
+        "county": "c_juwair",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ghassanids",
+          "disambiguation_note": null,
+          "localisation_stem": "Ghassanids",
+          "category": "tribe",
+          "feature_subtype": "arab_tribe",
+          "relationship": "Historical people inhabiting the Juwair (Damascus) region encompassing Juwair.",
+          "language_variants": [
+            {
+              "form": "Ghassān",
+              "native_script": "غسان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal and dynastic name"
+            },
+            {
+              "form": "Gassānāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac ecclesiastical chronicle form"
+            },
+            {
+              "form": "Kassanitai",
+              "native_script": "Κασσανιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "Attested as Ghassan in Old South Arabian inscriptions (c. 220–260 CE) and 4th century CE Syriac/Greek sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after a watering place in southern Arabia or the Tihamah before migrating to Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Ghassanids"
+        },
+        {
+          "name": "Barada",
+          "disambiguation_note": null,
+          "localisation_stem": "Barada",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Juwair (Damascus) landscape around Juwair.",
+          "language_variants": [
+            {
+              "form": "Baradā",
+              "native_script": "بردى",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Chrysorrhoas",
+              "native_script": "Χρυσορῥοας",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name ('golden stream')"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "Attested as Abana/Amana in early 1st-millennium BCE Aramaic/Hebrew texts and Chrysorrhoas in Greek.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Main river watering the Damascus Ghouta oasis; Arabic Barada reflects Aramaic barad ('cold').",
+          "source_url": "https://en.wikipedia.org/wiki/Barada"
+        },
+        {
+          "name": "Anti-Lebanon Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Anti-Lebanon",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Juwair (Damascus) landscape around Juwair.",
+          "language_variants": [
+            {
+              "form": "Al-Jibāl al-Sharqiyya",
+              "native_script": "الجبال الشرقية",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            },
+            {
+              "form": "Antilibanos",
+              "native_script": "Ἀντιλιβανος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Strabo)"
+            },
+            {
+              "form": "Antilibanus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "Attested as Antilibanos in Strabo's Geography (c. 20 CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Mountain range running parallel to Mount Lebanon along the Syrian-Lebanese frontier.",
+          "source_url": "https://en.wikipedia.org/wiki/Anti-Lebanon_Mountains"
+        }
+      ]
+    },
+    "b_al-qastal": {
+      "barony_key": "b_al-qastal",
+      "vanilla_ck3_name": "Al-Qastal",
+      "modern_name": "Al-Qastal",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_damascus",
+        "county": "c_juwair",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ghassanids",
+          "disambiguation_note": null,
+          "localisation_stem": "Ghassanids",
+          "category": "tribe",
+          "feature_subtype": "arab_tribe",
+          "relationship": "Historical people inhabiting the Juwair (Damascus) region encompassing Al-Qastal.",
+          "language_variants": [
+            {
+              "form": "Ghassān",
+              "native_script": "غسان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal and dynastic name"
+            },
+            {
+              "form": "Gassānāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac ecclesiastical chronicle form"
+            },
+            {
+              "form": "Kassanitai",
+              "native_script": "Κασσανιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "Attested as Ghassan in Old South Arabian inscriptions (c. 220–260 CE) and 4th century CE Syriac/Greek sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after a watering place in southern Arabia or the Tihamah before migrating to Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Ghassanids"
+        },
+        {
+          "name": "Qalamun Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Qalamun",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Juwair (Damascus) landscape around Al-Qastal.",
+          "language_variants": [
+            {
+              "form": "Jibāl al-Qalamūn",
+              "native_script": "جبال القلمون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            }
+          ],
+          "earliest_attestation_year": 1225,
+          "earliest_attestation_note": "Attested as Qalamun in Yaqut al-Hamawi's Mu'jam al-Buldan (1225 CE).",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Northeastern extension of the Anti-Lebanon range north of Damascus.",
+          "source_url": "https://en.wikipedia.org/wiki/Qalamun_Mountains"
+        },
+        {
+          "name": "Barada",
+          "disambiguation_note": null,
+          "localisation_stem": "Barada",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Juwair (Damascus) landscape around Al-Qastal.",
+          "language_variants": [
+            {
+              "form": "Baradā",
+              "native_script": "بردى",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Chrysorrhoas",
+              "native_script": "Χρυσορῥοας",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name ('golden stream')"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "Attested as Abana/Amana in early 1st-millennium BCE Aramaic/Hebrew texts and Chrysorrhoas in Greek.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Main river watering the Damascus Ghouta oasis; Arabic Barada reflects Aramaic barad ('cold').",
+          "source_url": "https://en.wikipedia.org/wiki/Barada"
+        }
+      ]
+    },
+    "b_aintab": {
+      "barony_key": "b_aintab",
+      "vanilla_ck3_name": "Aintab",
+      "modern_name": "Aintab",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_edessa",
+        "county": "c_aintab",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Aintab (Edessa) region encompassing Aintab.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Sajur River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sajur",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aintab (Edessa) landscape around Aintab.",
+          "language_variants": [
+            {
+              "form": "Nahr al-Sājūr",
+              "native_script": "نهر الساجور",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Sagura in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Right-bank tributary of the Euphrates flowing from Gaziantep through northern Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Sajur_River"
+        },
+        {
+          "name": "Taurus Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taurus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Aintab (Edessa) landscape around Aintab.",
+          "language_variants": [
+            {
+              "form": "Tauros",
+              "native_script": "Ταυρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            },
+            {
+              "form": "Taurus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Jibāl Ṭawrūs",
+              "native_script": "جبال طوروس",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic rendering"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "Attested in Classical Greek geography (Xenophon, Strabo) from the 4th–1st century BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major mountain chain of southern Anatolia bordering northern Syria and Commagene.",
+          "source_url": "https://en.wikipedia.org/wiki/Taurus_Mountains"
+        }
+      ]
+    },
+    "b_tall_bashir": {
+      "barony_key": "b_tall_bashir",
+      "vanilla_ck3_name": "Tall Bashir",
+      "modern_name": "Tall Bashir",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_edessa",
+        "county": "c_aintab",
+        "holding_type": "church"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tanukhids",
+          "disambiguation_note": null,
+          "localisation_stem": "Tanukhids",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Aintab (Edessa) region encompassing Tall Bashir.",
+          "language_variants": [
+            {
+              "form": "Tanūkh",
+              "native_script": "تنوخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal confederation name"
+            },
+            {
+              "form": "Tanūkhāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac chronicle form"
+            },
+            {
+              "form": "Tanouitai",
+              "native_script": "Τανουιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 270,
+          "earliest_attestation_note": "Attested in the Umm al-Jimal inscription and Greco-Roman accounts of late 3rd-century CE Syria.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arabic tribal confederation name traditionally linked to the root t-n-kh ('to settle, remain').",
+          "source_url": "https://en.wikipedia.org/wiki/Tanukhids"
+        },
+        {
+          "name": "Sajur River",
+          "disambiguation_note": null,
+          "localisation_stem": "Sajur",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aintab (Edessa) landscape around Tall Bashir.",
+          "language_variants": [
+            {
+              "form": "Nahr al-Sājūr",
+              "native_script": "نهر الساجور",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Sagura in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Right-bank tributary of the Euphrates flowing from Gaziantep through northern Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Sajur_River"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aintab (Edessa) landscape around Tall Bashir.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        }
+      ]
+    },
+    "b_jarabulus": {
+      "barony_key": "b_jarabulus",
+      "vanilla_ck3_name": "Jarabulus",
+      "modern_name": "Jarabulus",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_edessa",
+        "county": "c_aintab",
+        "holding_type": "castle"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Aintab (Edessa) region encompassing Jarabulus.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aintab (Edessa) landscape around Jarabulus.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        },
+        {
+          "name": "Balikh River",
+          "disambiguation_note": null,
+          "localisation_stem": "Balikh",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Aintab (Edessa) landscape around Jarabulus.",
+          "language_variants": [
+            {
+              "form": "Nahr al-Balīkh",
+              "native_script": "نهر البليخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Balicha",
+              "native_script": "Βαλιχα",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek form"
+            }
+          ],
+          "earliest_attestation_year": -1800,
+          "earliest_attestation_note": "Attested as Baliḫu in Bronze Age Mari and Assyrian inscriptions (c. 1800 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Perennial tributary of the Euphrates in Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Balikh_River"
+        }
+      ]
+    },
+    "b_duluk-teluch": {
+      "barony_key": "b_duluk-teluch",
+      "vanilla_ck3_name": "Duluk-Teluch",
+      "modern_name": "Duluk-Teluch",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_edessa",
+        "county": "c_aintab",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Arameans",
+          "disambiguation_note": null,
+          "localisation_stem": "Arameans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Aintab (Edessa) region encompassing Duluk-Teluch.",
+          "language_variants": [
+            {
+              "form": "Arāmāyē",
+              "native_script": "ܐܪ̈ܡܝܐ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Classical Syriac ethnonym"
+            },
+            {
+              "form": "Arāmāyē",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Imperial Aramaic self-designation"
+            },
+            {
+              "form": "Al-Arāmiyyūn",
+              "native_script": "الآراميون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Aramaioi",
+              "native_script": "Ἀραμαιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": -1114,
+          "earliest_attestation_note": "Attested in inscriptions of Tiglath-Pileser I of Assyria (1114–1076 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic ethnonym derived from the ancient region of Aram in Syria and Upper Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Arameans"
+        },
+        {
+          "name": "Taurus Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Taurus",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Aintab (Edessa) landscape around Duluk-Teluch.",
+          "language_variants": [
+            {
+              "form": "Tauros",
+              "native_script": "Ταυρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            },
+            {
+              "form": "Taurus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Jibāl Ṭawrūs",
+              "native_script": "جبال طوروس",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic rendering"
+            }
+          ],
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "Attested in Classical Greek geography (Xenophon, Strabo) from the 4th–1st century BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major mountain chain of southern Anatolia bordering northern Syria and Commagene.",
+          "source_url": "https://en.wikipedia.org/wiki/Taurus_Mountains"
+        },
+        {
+          "name": "Mount Nemrut",
+          "disambiguation_note": null,
+          "localisation_stem": "Nemrut",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major mountain associated with the Aintab (Edessa) landscape around Duluk-Teluch.",
+          "language_variants": [
+            {
+              "form": "Çiyayê Nemrûd",
+              "native_script": null,
+              "language": "Kurdish",
+              "language_code": "kur",
+              "notes": "Kurdish name"
+            },
+            {
+              "form": "Jabal Namrūd",
+              "native_script": "جبل نمرود",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            }
+          ],
+          "earliest_attestation_year": -50,
+          "earliest_attestation_note": "Sanctuary built by Antiochus I of Commagene in the 1st century BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Prominent peak in the eastern Taurus mountains overlooking the upper Euphrates.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Nemrut"
+        }
+      ]
+    },
+    "b_qalat_ar-rum": {
+      "barony_key": "b_qalat_ar-rum",
+      "vanilla_ck3_name": "Qalat Rr-Rum",
+      "modern_name": "Qal'at ar-Rum",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_edessa",
+        "county": "c_marash",
+        "holding_type": "city"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Kurds",
+          "disambiguation_note": null,
+          "localisation_stem": "Kurds",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Historical people inhabiting the Marash (Edessa) region encompassing Qalat Rr-Rum.",
+          "language_variants": [
+            {
+              "form": "Kurd",
+              "native_script": null,
+              "language": "Kurdish",
+              "language_code": "kur",
+              "notes": "Kurdish endonym"
+            },
+            {
+              "form": "Kord",
+              "native_script": "کرد",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "New Persian ethnonym"
+            },
+            {
+              "form": "Kwrt",
+              "native_script": null,
+              "language": "Middle Persian",
+              "language_code": "pal",
+              "notes": "Sasanian Middle Persian form (Kar-Namag)"
+            },
+            {
+              "form": "Akrād",
+              "native_script": "أكراد",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Classical Arabic plural ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Polybius as Kyrtioi in Media; Middle Persian Kwrt in 3rd century CE)",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Iranian ethnonym of disputed origin, associated with Zagros pastoralist populations (cf. ancient Cyrtii/Karduchoi).",
+          "source_url": "https://en.wikipedia.org/wiki/Kurds"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Marash (Edessa) landscape around Qalat Rr-Rum.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        },
+        {
+          "name": "Mount Nemrut",
+          "disambiguation_note": null,
+          "localisation_stem": "Nemrut",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Major mountain associated with the Marash (Edessa) landscape around Qalat Rr-Rum.",
+          "language_variants": [
+            {
+              "form": "Çiyayê Nemrûd",
+              "native_script": null,
+              "language": "Kurdish",
+              "language_code": "kur",
+              "notes": "Kurdish name"
+            },
+            {
+              "form": "Jabal Namrūd",
+              "native_script": "جبل نمرود",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            }
+          ],
+          "earliest_attestation_year": -50,
+          "earliest_attestation_note": "Sanctuary built by Antiochus I of Commagene in the 1st century BCE.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Prominent peak in the eastern Taurus mountains overlooking the upper Euphrates.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Nemrut"
+        }
+      ]
+    },
+    "b_rafaniya-krak": {
+      "barony_key": "b_rafaniya-krak",
+      "vanilla_ck3_name": "Rafaniya-Krak",
+      "modern_name": "Rafaniya-Krak",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_homs",
+        "county": "c_homs",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tanukhids",
+          "disambiguation_note": null,
+          "localisation_stem": "Tanukhids",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Homs region encompassing Rafaniya-Krak.",
+          "language_variants": [
+            {
+              "form": "Tanūkh",
+              "native_script": "تنوخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal confederation name"
+            },
+            {
+              "form": "Tanūkhāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac chronicle form"
+            },
+            {
+              "form": "Tanouitai",
+              "native_script": "Τανουιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 270,
+          "earliest_attestation_note": "Attested in the Umm al-Jimal inscription and Greco-Roman accounts of late 3rd-century CE Syria.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arabic tribal confederation name traditionally linked to the root t-n-kh ('to settle, remain').",
+          "source_url": "https://en.wikipedia.org/wiki/Tanukhids"
+        },
+        {
+          "name": "Syrian Coastal Mountain Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Syrian Coastal Mountain Range",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Homs landscape around Rafaniya-Krak.",
+          "language_variants": [
+            {
+              "form": "Jabal Bahrāʾ",
+              "native_script": "جبل بهراء",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name"
+            },
+            {
+              "form": "Bargylos",
+              "native_script": "Βαργυλος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Pliny/Strabo)"
+            }
+          ],
+          "earliest_attestation_year": 77,
+          "earliest_attestation_note": "Attested as Bargylus in Pliny the Elder (77 CE) and Jabal Bahra in medieval Arabic sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Coastal mountain range running parallel to the Mediterranean coast of western Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range"
+        },
+        {
+          "name": "Lake Homs",
+          "disambiguation_note": null,
+          "localisation_stem": "Homs",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Major lake associated with the Homs landscape around Rafaniya-Krak.",
+          "language_variants": [
+            {
+              "form": "Buḥayrat Qaṭīna",
+              "native_script": "بحيرة قطينة",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            }
+          ],
+          "earliest_attestation_year": 280,
+          "earliest_attestation_note": "Dammed under Roman emperor Diocletian (c. 284 CE) and noted in medieval Arabic chronicles.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Lake on the Orontes River near Homs in central Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Homs"
+        }
+      ]
+    },
+    "b_jusiya": {
+      "barony_key": "b_jusiya",
+      "vanilla_ck3_name": "Jusiya",
+      "modern_name": "Jusiya",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_homs",
+        "county": "c_homs",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": true,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Ghassanids",
+          "disambiguation_note": null,
+          "localisation_stem": "Ghassanids",
+          "category": "tribe",
+          "feature_subtype": "arab_tribe",
+          "relationship": "Historical people inhabiting the Homs region encompassing Jusiya.",
+          "language_variants": [
+            {
+              "form": "Ghassān",
+              "native_script": "غسان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal and dynastic name"
+            },
+            {
+              "form": "Gassānāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac ecclesiastical chronicle form"
+            },
+            {
+              "form": "Kassanitai",
+              "native_script": "Κασσανιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "Attested as Ghassan in Old South Arabian inscriptions (c. 220–260 CE) and 4th century CE Syriac/Greek sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Named after a watering place in southern Arabia or the Tihamah before migrating to Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Ghassanids"
+        },
+        {
+          "name": "Beqaa Valley",
+          "disambiguation_note": null,
+          "localisation_stem": "Beqaa",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Major valley associated with the Homs landscape around Jusiya.",
+          "language_variants": [
+            {
+              "form": "Al-Biqāʿ",
+              "native_script": "البقاع",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the valley/plain')"
+            },
+            {
+              "form": "Koílē Syría",
+              "native_script": "Κοίλη Συρία",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Hellenistic Greek name ('Hollow Syria')"
+            }
+          ],
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Attested as Coele-Syria in Hellenistic Greek sources (3rd century BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Fertile valley between Mount Lebanon and the Anti-Lebanon Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Beqaa_Valley"
+        },
+        {
+          "name": "Orontes River",
+          "disambiguation_note": null,
+          "localisation_stem": "Orontes",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Homs landscape around Jusiya.",
+          "language_variants": [
+            {
+              "form": "Al-ʿĀṣī",
+              "native_script": "العاصي",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the rebel', flowing north)"
+            },
+            {
+              "form": "Orontēs",
+              "native_script": "Ὀροντης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Orontes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym"
+            },
+            {
+              "form": "ʿĀṣī",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Arantu in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of western Syria; Greek Orontes derives from Assyrian Arantu, while Arabic al-Asi means 'rebellious'.",
+          "source_url": "https://en.wikipedia.org/wiki/Orontes_River"
+        }
+      ]
+    },
+    "b_masyaf": {
+      "barony_key": "b_masyaf",
+      "vanilla_ck3_name": "Masyaf",
+      "modern_name": "Masyaf",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_homs",
+        "county": "c_shayzar",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Tanukhids",
+          "disambiguation_note": null,
+          "localisation_stem": "Tanukhids",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Shayzar (Homs) region encompassing Masyaf.",
+          "language_variants": [
+            {
+              "form": "Tanūkh",
+              "native_script": "تنوخ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal confederation name"
+            },
+            {
+              "form": "Tanūkhāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac chronicle form"
+            },
+            {
+              "form": "Tanouitai",
+              "native_script": "Τανουιται",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 270,
+          "earliest_attestation_note": "Attested in the Umm al-Jimal inscription and Greco-Roman accounts of late 3rd-century CE Syria.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arabic tribal confederation name traditionally linked to the root t-n-kh ('to settle, remain').",
+          "source_url": "https://en.wikipedia.org/wiki/Tanukhids"
+        },
+        {
+          "name": "Orontes River",
+          "disambiguation_note": null,
+          "localisation_stem": "Orontes",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Shayzar (Homs) landscape around Masyaf.",
+          "language_variants": [
+            {
+              "form": "Al-ʿĀṣī",
+              "native_script": "العاصي",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('the rebel', flowing north)"
+            },
+            {
+              "form": "Orontēs",
+              "native_script": "Ὀροντης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Orontes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym"
+            },
+            {
+              "form": "ʿĀṣī",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac form"
+            }
+          ],
+          "earliest_attestation_year": -853,
+          "earliest_attestation_note": "Attested as Arantu in Assyrian inscriptions of Shalmaneser III (853 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Major river of western Syria; Greek Orontes derives from Assyrian Arantu, while Arabic al-Asi means 'rebellious'.",
+          "source_url": "https://en.wikipedia.org/wiki/Orontes_River"
+        },
+        {
+          "name": "Syrian Coastal Mountain Range",
+          "disambiguation_note": null,
+          "localisation_stem": "Syrian Coastal Mountain Range",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Shayzar (Homs) landscape around Masyaf.",
+          "language_variants": [
+            {
+              "form": "Jabal Bahrāʾ",
+              "native_script": "جبل بهراء",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name"
+            },
+            {
+              "form": "Bargylos",
+              "native_script": "Βαργυλος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Pliny/Strabo)"
+            }
+          ],
+          "earliest_attestation_year": 77,
+          "earliest_attestation_note": "Attested as Bargylus in Pliny the Elder (77 CE) and Jabal Bahra in medieval Arabic sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Coastal mountain range running parallel to the Mediterranean coast of western Syria.",
+          "source_url": "https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range"
+        }
+      ]
+    },
+    "b_antartus": {
+      "barony_key": "b_antartus",
+      "vanilla_ck3_name": "Antartus",
+      "modern_name": "Antartus",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_lebanon",
+        "county": "c_tripoli",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": true
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Phoenicians",
+          "disambiguation_note": null,
+          "localisation_stem": "Phoenicians",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Tripoli (Lebanon) region encompassing Antartus.",
+          "language_variants": [
+            {
+              "form": "Phoinikes",
+              "native_script": "Φοινικες",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek exonym for Levantine maritime cities"
+            },
+            {
+              "form": "Poeni",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            },
+            {
+              "form": "Al-Fīnīqiyyūn",
+              "native_script": "الفينيقيون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical rendering"
+            }
+          ],
+          "earliest_attestation_year": -750,
+          "earliest_attestation_note": "Attested as Phoinikes in Homeric Greek epics (c. 8th century BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Ancient Greek phoinix ('crimson, purple'), referring to the Tyrian purple dye industry of the Levant.",
+          "source_url": "https://en.wikipedia.org/wiki/Phoenicia"
+        },
+        {
+          "name": "Mount Lebanon",
+          "disambiguation_note": null,
+          "localisation_stem": "Lebanon",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range associated with the Tripoli (Lebanon) landscape around Antartus.",
+          "language_variants": [
+            {
+              "form": "Jabal Lubnān",
+              "native_script": "جبل لبنان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
+            },
+            {
+              "form": "Libanos",
+              "native_script": "Λιβανος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            },
+            {
+              "form": "Lebnān",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac name"
+            }
+          ],
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Attested as Labnanu in Mesopotamian and Egyptian texts (early 2nd millennium BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From Semitic root l-b-n ('white'), referring to its snow-capped peaks.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Lebanon"
+        },
+        {
+          "name": "Levantine Sea",
+          "disambiguation_note": null,
+          "localisation_stem": "Levantine Sea",
+          "category": "hydronym",
+          "feature_subtype": "sea",
+          "relationship": "Major sea associated with the Tripoli (Lebanon) landscape around Antartus.",
+          "language_variants": [
+            {
+              "form": "Baḥr al-Shām",
+              "native_script": "بحر الشام",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name ('Sea of Syria')"
+            },
+            {
+              "form": "Mare Syriacum",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            }
+          ],
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "Attested as the Syrian Sea in classical Greco-Roman and medieval Arabic geographies (1st–10th century CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Easternmost basin of the Mediterranean Sea washing the coasts of Syria and Cilicia.",
+          "source_url": "https://en.wikipedia.org/wiki/Levantine_Sea"
+        }
+      ]
+    },
+    "b_judr": {
+      "barony_key": "b_judr",
+      "vanilla_ck3_name": "Judr",
+      "modern_name": "Judr",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_palmyra",
+        "county": "c_qaryatan",
+        "holding_type": "city"
+      },
+      "anachronism_type": "unattested_indigenous_or_minor",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Nabataeans",
+          "disambiguation_note": null,
+          "localisation_stem": "Nabataeans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Qaryatan (Palmyra) region encompassing Judr.",
+          "language_variants": [
+            {
+              "form": "Nabāṭū",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Nabataean Aramaic self-designation"
+            },
+            {
+              "form": "Al-Anbāṭ",
+              "native_script": "الأنباط",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Nabataioi",
+              "native_script": "Ναβαταιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym"
+            },
+            {
+              "form": "Nabataei",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -312,
+          "earliest_attestation_note": "Attested in 312 BCE in Greek accounts of Antigonus I's campaign (preserved in Diodorus Siculus).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic tribal name from the root n-b-ṭ ('to well up, draw water'), reflecting desert oasis mastery.",
+          "source_url": "https://en.wikipedia.org/wiki/Nabataeans"
+        },
+        {
+          "name": "Syrian Desert",
+          "disambiguation_note": null,
+          "localisation_stem": "Syrian",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Major region associated with the Qaryatan (Palmyra) landscape around Judr.",
+          "language_variants": [
+            {
+              "form": "Bādiyat al-Shām",
+              "native_script": "بادية الشام",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('Steppe of Syria')"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "Attested as Arabia Deserta in classical Greco-Roman geography (from c. 500 BCE) and Badiyat al-Sham in early Arabic sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arid steppe and desert stretching between the Levant and the Euphrates.",
+          "source_url": "https://en.wikipedia.org/wiki/Syrian_Desert"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Qaryatan (Palmyra) landscape around Judr.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        }
+      ]
+    },
+    "b_dair_ar-ruman": {
+      "barony_key": "b_dair_ar-ruman",
+      "vanilla_ck3_name": "Dair Ar-Ruman",
+      "modern_name": "Dair Ar-Ruman",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_palmyra",
+        "county": "c_sukhna",
+        "holding_type": "city"
+      },
+      "anachronism_type": "renamed_post_867",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Lakhmids",
+          "disambiguation_note": null,
+          "localisation_stem": "Lakhmids",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Sukhna (Palmyra) region encompassing Dair Ar-Ruman.",
+          "language_variants": [
+            {
+              "form": "Banū Lakhm",
+              "native_script": "بنو لخم",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic tribal name"
+            },
+            {
+              "form": "Lakhmāyē",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac chronicle form"
+            },
+            {
+              "form": "Lachmidai",
+              "native_script": "Λαχμιδαι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek rendering"
+            }
+          ],
+          "earliest_attestation_year": 290,
+          "earliest_attestation_note": "Attested in the Paikuli inscription of Narseh (c. 293 CE) and the Namara inscription (328 CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arabic tribal confederation of Iraq and the Syrian desert frontier allied with the Sasanian Empire.",
+          "source_url": "https://en.wikipedia.org/wiki/Lakhmids"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Sukhna (Palmyra) landscape around Dair Ar-Ruman.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        },
+        {
+          "name": "Khabur",
+          "disambiguation_note": null,
+          "localisation_stem": "Khabur",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Sukhna (Palmyra) landscape around Dair Ar-Ruman.",
+          "language_variants": [
+            {
+              "form": "Al-Khābūr",
+              "native_script": "الخابور",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Chabōras",
+              "native_script": "Χαβωρας",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek form"
+            },
+            {
+              "form": "Ḥābōrā",
+              "native_script": null,
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            }
+          ],
+          "earliest_attestation_year": -1800,
+          "earliest_attestation_note": "Attested in Old Babylonian Mari tablets and Assyrian annals (c. 1800 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Largest perennial tributary of the Euphrates in Syrian Jazira.",
+          "source_url": "https://en.wikipedia.org/wiki/Khabur"
+        }
+      ]
+    },
+    "b_urd": {
+      "barony_key": "b_urd",
+      "vanilla_ck3_name": "Urd",
+      "modern_name": "Urd",
+      "modern_name_note": null,
+      "hierarchy": {
+        "empire": "e_oriens",
+        "kingdom": "k_syria",
+        "duchy": "d_palmyra",
+        "county": "c_sukhna",
+        "holding_type": "church"
+      },
+      "anachronism_type": "high_late_medieval_attestation",
+      "is_historical_at": {
+        "867": false,
+        "1066": false,
+        "1178": false
+      },
+      "existing_natural_proper_name": {
+        "is_natural_name": false,
+        "type": null,
+        "name": null
+      },
+      "replacement_candidates": [
+        {
+          "name": "Nabataeans",
+          "disambiguation_note": null,
+          "localisation_stem": "Nabataeans",
+          "category": "tribe",
+          "feature_subtype": "semitic_tribe",
+          "relationship": "Historical people inhabiting the Sukhna (Palmyra) region encompassing Urd.",
+          "language_variants": [
+            {
+              "form": "Nabāṭū",
+              "native_script": null,
+              "language": "Aramaic",
+              "language_code": "arc",
+              "notes": "Nabataean Aramaic self-designation"
+            },
+            {
+              "form": "Al-Anbāṭ",
+              "native_script": "الأنباط",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic historical ethnonym"
+            },
+            {
+              "form": "Nabataioi",
+              "native_script": "Ναβαταιοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek ethnonym"
+            },
+            {
+              "form": "Nabataei",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym"
+            }
+          ],
+          "earliest_attestation_year": -312,
+          "earliest_attestation_note": "Attested in 312 BCE in Greek accounts of Antigonus I's campaign (preserved in Diodorus Siculus).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Semitic tribal name from the root n-b-ṭ ('to well up, draw water'), reflecting desert oasis mastery.",
+          "source_url": "https://en.wikipedia.org/wiki/Nabataeans"
+        },
+        {
+          "name": "Syrian Desert",
+          "disambiguation_note": null,
+          "localisation_stem": "Syrian",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Major region associated with the Sukhna (Palmyra) landscape around Urd.",
+          "language_variants": [
+            {
+              "form": "Bādiyat al-Shām",
+              "native_script": "بادية الشام",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name ('Steppe of Syria')"
+            }
+          ],
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "Attested as Arabia Deserta in classical Greco-Roman geography (from c. 500 BCE) and Badiyat al-Sham in early Arabic sources.",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Arid steppe and desert stretching between the Levant and the Euphrates.",
+          "source_url": "https://en.wikipedia.org/wiki/Syrian_Desert"
+        },
+        {
+          "name": "Euphrates",
+          "disambiguation_note": null,
+          "localisation_stem": "Euphrates",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river associated with the Sukhna (Palmyra) landscape around Urd.",
+          "language_variants": [
+            {
+              "form": "Al-Furāt",
+              "native_script": "الفرات",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic hydronym"
+            },
+            {
+              "form": "Prāṯ",
+              "native_script": "ܦܪܬ",
+              "language": "Syriac",
+              "language_code": "syc",
+              "notes": "Syriac hydronym"
+            },
+            {
+              "form": "Euphrátēs",
+              "native_script": "Εὐφράτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek hydronym"
+            },
+            {
+              "form": "Ufrātu",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form"
+            }
+          ],
+          "earliest_attestation_year": -2400,
+          "earliest_attestation_note": "Attested as Buranuna in Early Dynastic Sumerian and Akkadian inscriptions (c. 2400 BCE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Longest river of Western Asia, flowing from Anatolia through Syria and Mesopotamia.",
+          "source_url": "https://en.wikipedia.org/wiki/Euphrates"
+        }
+      ]
+    }
+  }
+}

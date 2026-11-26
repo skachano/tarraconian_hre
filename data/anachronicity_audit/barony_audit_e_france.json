@@ -1,7 +1,7 @@
 {
   "metadata": {
     "empire": "e_france",
-    "scope": "e_france (de jure Empire of Francia in skachano/tarraconian_hre)",
+    "scope": "e_france (all 310 baronies across k_brittany and k_france)",
     "schema_version": "2.0.1",
     "supported_bookmarks": [
       867,
@@ -6114,8 +6114,8 @@
     "b_champs": {
       "barony_key": "b_champs",
       "vanilla_ck3_name": "Champs",
-      "modern_name": "Champs-sur-Yonne",
-      "modern_name_note": null,
+      "modern_name": "Champs",
+      "modern_name_note": "Eastern Haute-Marne site east of Langres",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -6147,7 +6147,7 @@
       ],
       "etymology_analysis": "First attested in 1188 as Campi (Old French Chams > Champs, 'fields'). Unattested prior to 867; anachronistic for 867.",
       "historical_names": [],
-      "source_url": "https://fr.wikipedia.org/wiki/Champs-sur-Yonne"
+      "source_url": null
     },
     "b_macon": {
       "barony_key": "b_macon",
@@ -9600,7 +9600,7 @@
       "barony_key": "b_montlaur",
       "vanilla_ck3_name": "Montlaur",
       "modern_name": "Montlaur",
-      "modern_name_note": null,
+      "modern_name_note": "Vivarais/Ardèche–Gard site northwest of Uzès",
       "hierarchy": {
         "empire": "e_france",
         "kingdom": "k_france",
@@ -9638,7 +9638,7 @@
       ],
       "etymology_analysis": "From Occitan Montlaur (< Latin Mons Laurus, 'laurel hill'), a medieval castle/village name first attested in the late 11th century. Unattested prior to 867; anachronistic for 867.",
       "historical_names": [],
-      "source_url": "https://fr.wikipedia.org/wiki/Montlaur_(Haute-Garonne)"
+      "source_url": "https://fr.wikipedia.org/wiki/Montlaur"
     },
     "b_uses": {
       "barony_key": "b_uses",
